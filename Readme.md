@@ -36,7 +36,7 @@ git clone https://github.com/iib0011/omni-tools.git
 cd web
 ```
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENCE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 For any questions or suggestions, feel free to open an issue or contact us at:
