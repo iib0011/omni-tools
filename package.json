@@ -1,0 +1,54 @@
+{
+  "name": "omni-tools",
+  "description": "This project offers a variety of online tools to help with everyday tasks, \nall available for free and open for community contributions",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "Ibrahima Gaye Coulibaly",
+    "email": "ibracool99@gmail.com",
+    "url": "https://github.com/iib0011"
+  },
+  "bugs": {
+    "url": "https://github.com/iib0011/omni-tools/issues",
+    "email": "ibracool99@gmail.com"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "lint": "eslint src --max-warnings=0",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^14.3.1",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitejs/plugin-react-swc": "^3.7.0",
+    "@vitest/ui": "^1.6.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-tailwindcss": "^3.17.0",
+    "happy-dom": "^12.10.3",
+    "postcss": "^8.4.38",
+    "prettier": "3.1.1",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.6.0"
+  }
+}
