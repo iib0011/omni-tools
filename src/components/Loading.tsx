@@ -1,6 +1,5 @@
 import Typography from "@mui/material/Typography";
 import {useState} from "react";
-import clsx from "clsx";
 import Box from "@mui/material/Box";
 import {useTimeout} from "../hooks";
 
@@ -22,11 +21,6 @@ function FuseLoading(props: FuseLoadingProps) {
 
   return (
     <div
-      className={clsx(
-        className,
-        "flex flex-1 h-full w-full self-center flex-col items-center justify-center p-24",
-        !showLoading ? "hidden" : "",
-      )}
     >
       <Typography
         className="-mb-16 text-13 font-medium sm:text-20"
