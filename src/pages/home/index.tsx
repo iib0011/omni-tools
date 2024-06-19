@@ -1,21 +1,25 @@
-import {Box, Grid, Icon, Input, Stack, TextField} from "@mui/material";
+import {Box, Icon, Input, Stack, TextField} from "@mui/material";
+import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import SearchIcon from '@mui/icons-material/Search';
+import {useNavigate} from "react-router-dom";
 
+const exampleTools: { label: string; url: string }[] = [{
+  label: 'Create a transparent image',
+  url: ''
+},
+  {label: 'Convert text to morse code', url: ''},
+  {label: 'Change GIF speed', url: ''},
+  {label: 'Pick a random item', url: ''},
+  {label: 'Find and replace text', url: ''},
+  {label: 'Convert emoji to image', url: ''},
+  {label: 'Split a string', url: '/string/split'},
+  {label: 'Calculate number sum', url: ''},
+  {label: 'Pixelate an image', url: ''},
+]
 export default function Home() {
-  const exampleTools: { label: string; url: string }[] = [{
-    label: 'Create a transparent image',
-    url: ''
-  },
-    {label: 'Convert text to morse code', url: ''},
-    {label: 'Change GIF speed', url: ''},
-    {label: 'Pick a random item', url: ''},
-    {label: 'Find and replace text', url: ''},
-    {label: 'Convert emoji to image', url: ''},
-    {label: 'Split a string', url: ''},
-    {label: 'Calculate number sum', url: ''},
-    {label: 'Pixelate an image', url: ''},
-  ]
+  const navigate = useNavigate()
+
   return (<Box padding={5} display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'center'}
                width={'100%'}>
     <Box width={"60%"}>
@@ -38,6 +42,7 @@ export default function Home() {
       <Grid container spacing={1} mt={2}>
         {exampleTools.map((tool) => (
           <Grid
+            onClick={() => navigate(tool.url)}
             item
             xs={4}
             key={tool.label}
