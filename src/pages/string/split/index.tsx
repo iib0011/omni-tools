@@ -13,27 +13,28 @@ import ToolTextResult from '../../../components/result/ToolTextResult'
 import SettingsIcon from '@mui/icons-material/Settings'
 import { Field, Formik, FormikProps } from 'formik'
 import * as Yup from 'yup'
+import ToolOptions from '../../../components/ToolOptions'
 
 type SplitOperatorType = 'symbol' | 'regex' | 'length' | 'chunks';
 const initialValues = {
   splitSeparatorType: 'symbol',
-  splitSeparator: ' '
+  symbolValue: ' ',
+  regexValue: '/\\s+/',
+  lengthValue: '16',
+  chunksValue: '4'
 }
 const initialSplitOperators: {
   title: string;
   description: string;
-  defaultValue: string;
   type: SplitOperatorType
 }[] = [{
   title: 'Use a Symbol for Splitting', description: 'Character that will be used to\n' +
     'break text into parts.\n' +
     '(Space by default.)',
-  defaultValue: ' ',
   type: 'symbol'
 },
   {
     title: 'Use a Regex for Splitting',
-    defaultValue: '/\\s+/',
     type: 'regex',
     description: 'Regular expression that will be\n' +
       'used to break text into parts.\n' +
@@ -42,13 +43,11 @@ const initialSplitOperators: {
   {
     title: 'Use Length for Splitting', description: 'Number of symbols that will be\n' +
       'put in each output chunk.',
-    defaultValue: '16',
     type: 'length'
   },
   {
     title: 'Use a Number of Chunks', description: 'Number of chunks of equal\n' +
       'length in the output.',
-    defaultValue: '4',
     type: 'chunks'
   }]
 
@@ -56,7 +55,7 @@ const CustomRadioButton = ({
                              fieldName,
                              type,
                              title,
-                             setFieldValue,
+                             onTypeChange,
                              value,
                              description,
                              onTextChange
@@ -64,12 +63,12 @@ const CustomRadioButton = ({
   fieldName: string;
   title: string;
   type: SplitOperatorType;
-  setFieldValue: (fieldName: string, val: string) => void;
+  onTypeChange: (val: string) => void;
   value: string;
   description: string;
-  onTextChange: (type: SplitOperatorType, value: string) => void;
+  onTextChange: (value: string) => void;
 }) => {
-  const onChange = () => setFieldValue(fieldName, type)
+  const onChange = () => onTypeChange(type)
   return (<Box>
       <Stack direction={'row'} sx={{ mt: 2, mb: 1, cursor: 'pointer' }} onClick={onChange} alignItems={'center'}
              spacing={1}>
@@ -82,7 +81,7 @@ const CustomRadioButton = ({
         <Typography>{title}</Typography>
       </Stack>
       <TextField sx={{ backgroundColor: 'white' }} value={value}
-                 onChange={event => onTextChange(type, event.target.value)} />
+                 onChange={event => onTextChange(event.target.value)} />
       <Typography fontSize={12} mt={1}>{description}</Typography>
     </Box>
   )
@@ -91,14 +90,6 @@ export default function SplitText() {
   const [input, setInput] = useState<string>('')
   const [result, setResult] = useState<string>('')
   const formRef = useRef<FormikProps<typeof initialValues>>()
-  const theme = useTheme()
-  const [splitOperators, setSplitOperators] = useState<{
-    title: string;
-    description: string;
-    defaultValue: string;
-    type: SplitOperatorType;
-    value: string
-  }[]>(initialSplitOperators.map(operator => ({ ...operator, value: operator.defaultValue })))
   useEffect(() => {
     setResult(input.split(' ').join('\n'))
   }, [input])
@@ -107,15 +98,6 @@ export default function SplitText() {
     splitSeparator: Yup.string().required('The separator is required')
   })
 
-  const onSplitOperatorTextChange = (type: SplitOperatorType, value: string) => {
-    const splitOperatorsClone = [...splitOperators].map(splitOperator => {
-      if (splitOperator.type === type) {
-        splitOperator.value = value
-      }
-      return splitOperator
-    })
-    setSplitOperators(splitOperatorsClone)
-  }
   return (
     <ToolLayout>
       <ToolHeader
@@ -133,11 +115,7 @@ export default function SplitText() {
           <ToolTextResult title={'Text pieces'} value={result} />
         </Grid>
       </Grid>
-      <Box sx={{ mb: 2, borderRadius: 2, padding: 2, backgroundColor: theme.palette.background.default }} mt={2}>
-        <Stack direction={'row'} spacing={1} alignItems={'center'}>
-          <SettingsIcon />
-          <Typography fontSize={22}>Tool options</Typography>
-        </Stack>
+      <ToolOptions>
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -145,25 +123,26 @@ export default function SplitText() {
           onSubmit={() => {
           }}
         >
-          {({ setFieldValue }) => (
+          {({ setFieldValue, values }) => (
             <Stack direction={'row'}>
               <Box>
                 <Typography fontSize={22}>Split separator options</Typography>
-                {splitOperators.map(({ title, description, type, value }) => <CustomRadioButton
-                  type={type}
-                  title={title}
-                  fieldName={'splitSeparatorType'}
-                  description={description}
-                  value={value}
-                  setFieldValue={setFieldValue}
-                  onTextChange={onSplitOperatorTextChange}
-                />)}
+                {initialSplitOperators.map(({ title, description, type }) =>
+                  <CustomRadioButton
+                    type={type}
+                    title={title}
+                    fieldName={'splitSeparatorType'}
+                    description={description}
+                    value={values[`${type}Value`]}
+                    onTypeChange={(type) => setFieldValue('splitSeparatorType', type)}
+                    onTextChange={(val) => setFieldValue(`${type}Value`, val)}
+                  />)}
               </Box>
               <Box></Box>
             </Stack>
           )}
         </Formik>
-      </Box>
+      </ToolOptions>
     </ToolLayout>
   )
 }
