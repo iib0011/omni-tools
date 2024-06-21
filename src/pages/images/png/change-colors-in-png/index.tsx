@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
 
-export default function ChangeColorsInPng(){
-  return(<Box></Box>)
+export default function ChangeColorsInPng() {
+  return <Box></Box>;
 }
