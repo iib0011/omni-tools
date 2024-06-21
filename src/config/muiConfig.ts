@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material'
+import { createTheme } from '@mui/material';
 
 const theme = createTheme({
   typography: {
@@ -6,7 +6,8 @@ const theme = createTheme({
       textTransform: 'none'
     }
   },
-  palette: { background: { default: '#ebf5ff' } }
-})
+  palette: { background: { default: '#ebf5ff' } },
+  zIndex: { snackbar: 100000 }
+});
 
-export default theme
+export default theme;

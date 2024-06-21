@@ -3,13 +3,14 @@ import ToolLayout from '../../../components/ToolLayout';
 import { Box, Stack, TextField } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import ToolTextInput from '../../../components/input/ToolTextInput';
 import ToolTextResult from '../../../components/result/ToolTextResult';
 import { Field, Formik, FormikProps, useFormikContext } from 'formik';
 import * as Yup from 'yup';
 import ToolOptions from '../../../components/ToolOptions';
 import { splitIntoChunks, splitTextByLength } from './service';
+import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
 
 type SplitOperatorType = 'symbol' | 'regex' | 'length' | 'chunks';
 const initialValues = {
@@ -142,38 +143,45 @@ export default function SplitText() {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const formRef = useRef<FormikProps<typeof initialValues>>(null);
+  const { showSnackBar } = useContext(CustomSnackBarContext);
+
   const FormikListenerComponent = () => {
     const { values } = useFormikContext<typeof initialValues>();
 
     useEffect(() => {
-      const {
-        splitSeparatorType,
-        outputSeparator,
-        charBeforeChunk,
-        charAfterChunk,
-        chunksValue,
-        symbolValue,
-        regexValue,
-        lengthValue
-      } = values;
-      let splitText;
-      switch (splitSeparatorType) {
-        case 'symbol':
-          splitText = input.split(symbolValue);
-          break;
-        case 'regex':
-          splitText = input.split(new RegExp(regexValue));
-          break;
-        case 'length':
-          splitText = splitTextByLength(input, Number(lengthValue));
-          break;
-        case 'chunks':
-          splitText = splitIntoChunks(input, Number(chunksValue)).map(
-            (chunk) => `${charBeforeChunk}${chunk}${charAfterChunk}`
-          );
+      try {
+        const {
+          splitSeparatorType,
+          outputSeparator,
+          charBeforeChunk,
+          charAfterChunk,
+          chunksValue,
+          symbolValue,
+          regexValue,
+          lengthValue
+        } = values;
+        let splitText;
+        switch (splitSeparatorType) {
+          case 'symbol':
+            splitText = input.split(symbolValue);
+            break;
+          case 'regex':
+            splitText = input.split(new RegExp(regexValue));
+            break;
+          case 'length':
+            splitText = splitTextByLength(input, Number(lengthValue));
+            break;
+          case 'chunks':
+            splitText = splitIntoChunks(input, Number(chunksValue)).map(
+              (chunk) => `${charBeforeChunk}${chunk}${charAfterChunk}`
+            );
+        }
+        const res = splitText.join(outputSeparator);
+        setResult(res);
+      } catch (exception: unknown) {
+        if (exception instanceof Error)
+          showSnackBar(exception.message, 'error');
       }
-      const res = splitText.join(outputSeparator);
-      setResult(res);
     }, [values, input]);
 
     return null; // This component doesn't render anything
