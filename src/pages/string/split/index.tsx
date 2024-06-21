@@ -6,13 +6,14 @@ import Typography from '@mui/material/Typography';
 import React, { useEffect, useRef, useState } from 'react';
 import ToolTextInput from '../../../components/input/ToolTextInput';
 import ToolTextResult from '../../../components/result/ToolTextResult';
-import { Field, Formik, FormikProps } from 'formik';
+import { Field, Formik, FormikProps, useFormikContext } from 'formik';
 import * as Yup from 'yup';
 import ToolOptions from '../../../components/ToolOptions';
+import { splitIntoChunks, splitTextByLength } from './service';
 
 type SplitOperatorType = 'symbol' | 'regex' | 'length' | 'chunks';
 const initialValues = {
-  splitSeparatorType: 'symbol',
+  splitSeparatorType: 'symbol' as SplitOperatorType,
   symbolValue: ' ',
   regexValue: '/\\s+/',
   lengthValue: '16',
@@ -136,14 +137,47 @@ const InputWithDesc = ({
     </Box>
   );
 };
+
 export default function SplitText() {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  const formRef = useRef<FormikProps<typeof initialValues>>();
-  useEffect(() => {
-    setResult(input.split(' ').join('\n'));
-  }, [input]);
+  const formRef = useRef<FormikProps<typeof initialValues>>(null);
+  const FormikListenerComponent = () => {
+    const { values } = useFormikContext<typeof initialValues>();
 
+    useEffect(() => {
+      const {
+        splitSeparatorType,
+        outputSeparator,
+        charBeforeChunk,
+        charAfterChunk,
+        chunksValue,
+        symbolValue,
+        regexValue,
+        lengthValue
+      } = values;
+      let splitText;
+      switch (splitSeparatorType) {
+        case 'symbol':
+          splitText = input.split(symbolValue);
+          break;
+        case 'regex':
+          splitText = input.split(new RegExp(regexValue));
+          break;
+        case 'length':
+          splitText = splitTextByLength(input, Number(lengthValue));
+          break;
+        case 'chunks':
+          splitText = splitIntoChunks(input, Number(chunksValue)).map(
+            (chunk) => `${charBeforeChunk}${chunk}${charAfterChunk}`
+          );
+      }
+      const res = splitText.join(outputSeparator);
+      setResult(res);
+    }, [values, input]);
+
+    return null; // This component doesn't render anything
+  };
   const validationSchema = Yup.object({
     // splitSeparator: Yup.string().required('The separator is required')
   });
@@ -174,6 +208,7 @@ export default function SplitText() {
         >
           {({ setFieldValue, values }) => (
             <Stack direction={'row'} spacing={2}>
+              <FormikListenerComponent />
               <Box>
                 <Typography fontSize={22}>Split separator options</Typography>
                 {splitOperators.map(({ title, description, type }) => (
