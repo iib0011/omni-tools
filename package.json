@@ -19,7 +19,8 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "lint": "eslint src --max-warnings=0",
-    "typecheck": "tsc --project tsconfig.json --noEmit"
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -36,6 +37,8 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^14.3.1",
     "@types/node": "^20.12.12",
@@ -53,6 +56,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-tailwindcss": "^3.17.0",
     "happy-dom": "^12.10.3",
+    "husky": "^9.0.11",
     "postcss": "^8.4.38",
     "prettier": "3.1.1",
     "tailwindcss": "^3.4.3",
