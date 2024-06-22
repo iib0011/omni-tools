@@ -1,5 +1,5 @@
-import {useCallback, useEffect, useRef} from "react";
-import _ from "lodash";
+import { useCallback, useEffect, useRef } from 'react';
+import _ from 'lodash';
 
 /**
  * Debounce hook.
@@ -9,7 +9,7 @@ import _ from "lodash";
  */
 function useDebounce<T extends (...args: never[]) => void>(
   callback: T,
-  delay: number,
+  delay: number
 ): T {
   const callbackRef = useRef<T>(callback);
 
@@ -22,7 +22,7 @@ function useDebounce<T extends (...args: never[]) => void>(
     _.debounce((...args: never[]) => {
       callbackRef.current(...args);
     }, delay),
-    [delay],
+    [delay]
   );
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
 /**
  * The useTimeout function is a custom hook that sets a timeout for a given callback function.
@@ -15,7 +15,7 @@ function useTimeout(callback: () => void, delay: number) {
   useEffect(() => {
     let timer: NodeJS.Timeout | undefined;
 
-    if (delay !== null && callback && typeof callback === "function") {
+    if (delay !== null && callback && typeof callback === 'function') {
       timer = setTimeout(callbackRef.current, delay);
     }
 

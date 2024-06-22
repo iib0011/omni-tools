@@ -1,5 +1,5 @@
-import {Box} from "@mui/material";
+import { Box } from '@mui/material';
 
 export default function ImageHome() {
-  return (<Box></Box>)
+  return <Box></Box>;
 }

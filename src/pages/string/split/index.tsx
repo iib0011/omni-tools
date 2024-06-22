@@ -186,12 +186,7 @@ export default function SplitText() {
   });
 
   return (
-    <ToolLayout
-      title={'Text Splitter'}
-      description={
-        "World's simplest browser-based utility for splitting text. Load your text in the input form on the left and you'll automatically get pieces of this text on the right. Powerful, free, and fast. Load text – get chunks."
-      }
-    >
+    <Box>
       <Grid container spacing={2}>
         <Grid item xs={6}>
           <ToolTextInput value={input} onChange={setInput} />
@@ -242,6 +237,6 @@ export default function SplitText() {
           )}
         </Formik>
       </ToolOptions>
-    </ToolLayout>
+    </Box>
   );
 }

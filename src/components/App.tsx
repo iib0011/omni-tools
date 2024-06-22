@@ -7,9 +7,14 @@ import { ThemeProvider } from '@mui/material';
 import theme from '../config/muiConfig';
 import { CustomSnackBarProvider } from '../contexts/CustomSnackBarContext';
 import { SnackbarProvider } from 'notistack';
+import { tools } from '../tools';
 
 const AppRoutes = () => {
-  return useRoutes(routesConfig);
+  const updatedRoutesConfig = [...routesConfig];
+  tools.forEach((tool) => {
+    updatedRoutesConfig.push({ path: tool.path, element: tool.component() });
+  });
+  return useRoutes(updatedRoutesConfig);
 };
 
 function App() {

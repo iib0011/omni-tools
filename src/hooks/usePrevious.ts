@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
 /**
  * The usePrevious function is a custom hook that returns the previous value of a variable.

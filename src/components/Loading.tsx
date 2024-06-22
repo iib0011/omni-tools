@@ -1,7 +1,7 @@
-import Typography from '@mui/material/Typography'
-import { useState } from 'react'
-import Box from '@mui/material/Box'
-import { useTimeout } from '../hooks'
+import Typography from '@mui/material/Typography';
+import { useState } from 'react';
+import Box from '@mui/material/Box';
+import { useTimeout } from '../hooks';
 
 export type FuseLoadingProps = {
   delay?: number;
@@ -12,16 +12,15 @@ export type FuseLoadingProps = {
  * FuseLoading displays a loading state with an optional delay
  */
 function FuseLoading(props: FuseLoadingProps) {
-  const { delay = 0, className } = props
-  const [showLoading, setShowLoading] = useState(!delay)
+  const { delay = 0, className } = props;
+  const [showLoading, setShowLoading] = useState(!delay);
 
   useTimeout(() => {
-    setShowLoading(true)
-  }, delay)
+    setShowLoading(true);
+  }, delay);
 
   return (
-    <div
-    >
+    <div>
       <Typography
         className="-mb-16 text-13 font-medium sm:text-20"
         color="text.secondary"
@@ -41,7 +40,7 @@ function FuseLoading(props: FuseLoadingProps) {
         <div className="bounce3" />
       </Box>
     </div>
-  )
+  );
 }
 
-export default FuseLoading
+export default FuseLoading;
