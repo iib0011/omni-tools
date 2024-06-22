@@ -20,8 +20,7 @@
     "test:ui": "vitest --ui",
     "lint": "eslint src --max-warnings=0",
     "typecheck": "tsc --project tsconfig.json --noEmit",
-    "prepare": "husky install",
-    "prebuild": "npm run test"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",

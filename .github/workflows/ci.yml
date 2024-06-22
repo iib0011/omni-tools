@@ -33,7 +33,7 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: ./build
+          publish-dir: ./dist
           production-branch: main
           deploy-message: Deploy from GitHub Actions
           enable-pull-request-comment: true
