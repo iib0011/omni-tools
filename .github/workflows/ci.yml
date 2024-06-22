@@ -35,7 +35,7 @@ jobs:
         with:
           publish-dir: ./dist
           production-branch: main
-          deploy-message: ${{ github.event.workflow_run.head_commit.message }}
+          deploy-message: ${{ github.event.head_commit.message }}
           enable-pull-request-comment: true
           enable-commit-comment: true
           overwrites-pull-request-comment: true
