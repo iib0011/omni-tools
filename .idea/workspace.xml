@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: remove prebuild" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2i6g3WkUxdCURKYvUIJ9LMY5Qsc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/HP/IdeaProjects/omni-tools/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "npm.prebuild.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\prettier",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
+    "ts.external.directory.path": "C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\IdeaProjects\omni-tools\public" />
+      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\assets" />
+      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src" />
+      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\string" />
+      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\images" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.prebuild">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="prebuild" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prebuild" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.prebuild" />
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="" />
+      <created>1718816243156</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718816243156</updated>
+      <workItem from="1718816244509" duration="13061000" />
+      <workItem from="1718991004992" duration="25000" />
+      <workItem from="1718991057845" duration="85000" />
+      <workItem from="1718991144614" duration="6968000" />
+      <workItem from="1718998317252" duration="8533000" />
+      <workItem from="1719006887776" duration="7000" />
+      <workItem from="1719006951159" duration="2377000" />
+      <workItem from="1719021128819" duration="3041000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: use vite and ts">
+      <option name="closed" value="true" />
+      <created>1718816900959</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718816900959</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: initial commit">
+      <option name="closed" value="true" />
+      <created>1718820618078</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718820618078</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: initial commit">
+      <option name="closed" value="true" />
+      <created>1718821853210</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718821853210</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: example tools">
+      <option name="closed" value="true" />
+      <created>1718822309352</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718822309352</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: Split string">
+      <option name="closed" value="true" />
+      <created>1718828318468</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718828318468</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: netlify">
+      <option name="closed" value="true" />
+      <created>1718831745853</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718831745853</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix: netlify">
+      <option name="closed" value="true" />
+      <created>1718833519062</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1718833519062</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix: index title">
+      <option name="closed" value="true" />
+      <created>1718836910916</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718836910916</updated>
+    </task>
+    <task id="LOCAL-00009" summary="chore: split string tools ui">
+      <option name="closed" value="true" />
+      <created>1718996769014</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718996769014</updated>
+    </task>
+    <task id="LOCAL-00010" summary="chore: use formik">
+      <option name="closed" value="true" />
+      <created>1718997842506</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718997842506</updated>
+    </task>
+    <task id="LOCAL-00011" summary="chore: output selector">
+      <option name="closed" value="true" />
+      <created>1718999826771</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718999826771</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: text split">
+      <option name="closed" value="true" />
+      <created>1719003559965</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1719003559965</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix: text split try catch">
+      <option name="closed" value="true" />
+      <created>1719005757859</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1719005757859</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix: readme">
+      <option name="closed" value="true" />
+      <created>1719006274218</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1719006274218</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ubf">
+      <option name="closed" value="true" />
+      <created>1719006515710</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1719006515710</updated>
+    </task>
+    <task id="LOCAL-00016" summary="ubf jn">
+      <option name="closed" value="true" />
+      <created>1719006829016</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1719006829016</updated>
+    </task>
+    <task id="LOCAL-00017" summary="ubf jn">
+      <option name="closed" value="true" />
+      <created>1719007125575</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1719007125575</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: conventional commit">
+      <option name="closed" value="true" />
+      <created>1719007195103</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1719007195103</updated>
+    </task>
+    <task id="LOCAL-00019" summary="test: init">
+      <option name="closed" value="true" />
+      <created>1719023377131</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1719023377131</updated>
+    </task>
+    <task id="LOCAL-00020" summary="chore: remove prebuild">
+      <option name="closed" value="true" />
+      <created>1719023691491</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1719023691491</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="feat: use vite and ts" />
+    <MESSAGE value="feat: initial commit" />
+    <MESSAGE value="feat: example tools" />
+    <MESSAGE value="feat: Split string" />
+    <MESSAGE value="fix: netlify" />
+    <MESSAGE value="fix: index title" />
+    <MESSAGE value="chore: split string tools ui" />
+    <MESSAGE value="chore: use formik" />
+    <MESSAGE value="chore: output selector" />
+    <MESSAGE value="feat: text split" />
+    <MESSAGE value="fix: text split try catch" />
+    <MESSAGE value="fix: readme" />
+    <MESSAGE value="ubf" />
+    <MESSAGE value="ubf jn" />
+    <MESSAGE value="feat: conventional commit" />
+    <MESSAGE value="test: init" />
+    <MESSAGE value="chore: remove prebuild" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: remove prebuild" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
