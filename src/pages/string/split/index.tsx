@@ -9,10 +9,9 @@ import ToolTextResult from '../../../components/result/ToolTextResult';
 import { Field, Formik, FormikProps, useFormikContext } from 'formik';
 import * as Yup from 'yup';
 import ToolOptions from '../../../components/ToolOptions';
-import { splitIntoChunks, splitTextByLength } from './service';
+import { compute, SplitOperatorType } from './service';
 import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
 
-type SplitOperatorType = 'symbol' | 'regex' | 'length' | 'chunks';
 const initialValues = {
   splitSeparatorType: 'symbol' as SplitOperatorType,
   symbolValue: ' ',
@@ -160,24 +159,20 @@ export default function SplitText() {
           regexValue,
           lengthValue
         } = values;
-        let splitText;
-        switch (splitSeparatorType) {
-          case 'symbol':
-            splitText = input.split(symbolValue);
-            break;
-          case 'regex':
-            splitText = input.split(new RegExp(regexValue));
-            break;
-          case 'length':
-            splitText = splitTextByLength(input, Number(lengthValue));
-            break;
-          case 'chunks':
-            splitText = splitIntoChunks(input, Number(chunksValue)).map(
-              (chunk) => `${charBeforeChunk}${chunk}${charAfterChunk}`
-            );
-        }
-        const res = splitText.join(outputSeparator);
-        setResult(res);
+
+        setResult(
+          compute(
+            splitSeparatorType,
+            input,
+            symbolValue,
+            regexValue,
+            Number(lengthValue),
+            Number(chunksValue),
+            charBeforeChunk,
+            charAfterChunk,
+            outputSeparator
+          )
+        );
       } catch (exception: unknown) {
         if (exception instanceof Error)
           showSnackBar(exception.message, 'error');
