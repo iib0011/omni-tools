@@ -1,8 +1,11 @@
-import { Box, Stack, TextField } from '@mui/material';
+import { Autocomplete, Box, Stack, TextField } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from 'react-router-dom';
+import { filterTools, tools } from '../../tools';
+import { useState } from 'react';
+import { DefinedTool } from '../../tools/defineTool';
 
 const exampleTools: { label: string; url: string }[] = [
   {
@@ -20,7 +23,15 @@ const exampleTools: { label: string; url: string }[] = [
 ];
 export default function Home() {
   const navigate = useNavigate();
-
+  const [inputValue, setInputValue] = useState<string>('');
+  const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
+  const handleInputChange = (
+    event: React.ChangeEvent<{}>,
+    newInputValue: string
+  ) => {
+    setInputValue(newInputValue);
+    setFilteredTools(filterTools(tools, newInputValue));
+  };
   return (
     <Box
       padding={5}
@@ -32,7 +43,6 @@ export default function Home() {
     >
       <Box width={'60%'}>
         <Stack mb={1} direction={'row'} spacing={1}>
-          {' '}
           <Typography fontSize={30}>Transform Your Workflow with </Typography>
           <Typography fontSize={30} color={'primary'}>
             Omni Tools
@@ -45,13 +55,36 @@ export default function Home() {
           your browser.
         </Typography>
 
-        <TextField
-          fullWidth
-          placeholder={'Search all tools'}
-          sx={{ borderRadius: 2 }}
-          InputProps={{
-            endAdornment: <SearchIcon />
-          }}
+        <Autocomplete
+          sx={{ mb: 2 }}
+          autoHighlight
+          options={filteredTools}
+          getOptionLabel={(option) => option.name}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              fullWidth
+              placeholder={'Search all tools'}
+              sx={{ borderRadius: 2 }}
+              InputProps={{
+                ...params.InputProps,
+                endAdornment: <SearchIcon />
+              }}
+              onChange={(event) => handleInputChange(event, event.target.value)}
+            />
+          )}
+          renderOption={(props, option) => (
+            <Box
+              component="li"
+              {...props}
+              onClick={() => navigate(option.path)}
+            >
+              <Box>
+                <Typography fontWeight={'bold'}>{option.name}</Typography>
+                <Typography fontSize={12}>{option.description}</Typography>
+              </Box>
+            </Box>
+          )}
         />
         <Grid container spacing={1} mt={2}>
           {exampleTools.map((tool) => (

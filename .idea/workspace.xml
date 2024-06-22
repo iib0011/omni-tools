@@ -4,43 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: react helmet">
-      <change afterPath="$PROJECT_DIR$/src/pages/images/imageTools.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/images/png/change-colors-in-png/meta.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/images/png/pngTools.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/string/split/meta.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/string/stringTools.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: tools normalized">
       <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vitest/setup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.vitest/setup.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Loading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/routesConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/routesConfig.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useDebounce.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useDebounce.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/usePrevious.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/usePrevious.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useTimeout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useTimeout.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useUpdateEffect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUpdateEffect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/images/ImagesConfig.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/images/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/images/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/images/png/PngConfig.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/images/png/change-colors-in-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/images/png/change-colors-in-png/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/images/png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/images/png/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/StringConfig.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/split/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/split/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/images/png/change-colors-in-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/images/png/change-colors-in-png/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,32 +39,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/HP/IdeaProjects/omni-tools/src/pages/string/split",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "npm.prebuild.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\prettier",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
-    "ts.external.directory.path": "C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/omni-tools/src/pages/string/split&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -161,7 +131,8 @@
       <workItem from="1719006887776" duration="7000" />
       <workItem from="1719006951159" duration="2377000" />
       <workItem from="1719021128819" duration="3239000" />
-      <workItem from="1719083989394" duration="6308000" />
+      <workItem from="1719083989394" duration="7971000" />
+      <workItem from="1719092003308" duration="3285000" />
     </task>
     <task id="LOCAL-00001" summary="feat: use vite and ts">
       <option name="closed" value="true" />
@@ -339,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719085085537</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat: tools normalized">
+      <option name="closed" value="true" />
+      <created>1719090379202</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1719090379202</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +358,8 @@
     <MESSAGE value="chore: remove prebuild" />
     <MESSAGE value="chore: idea config" />
     <MESSAGE value="feat: react helmet" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: react helmet" />
+    <MESSAGE value="feat: tools normalized" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: tools normalized" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

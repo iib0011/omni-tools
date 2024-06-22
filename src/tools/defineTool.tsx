@@ -9,7 +9,7 @@ interface ToolOptions {
   description: string;
 }
 
-interface DefinedTool {
+export interface DefinedTool {
   path: string;
   name: string;
   description: string;
