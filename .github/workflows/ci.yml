@@ -35,7 +35,6 @@ jobs:
         with:
           publish-dir: ./dist
           production-branch: main
-          deploy-message: Deploy from GitHub Actions
           enable-pull-request-comment: true
           enable-commit-comment: true
           overwrites-pull-request-comment: true

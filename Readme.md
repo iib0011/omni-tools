@@ -2,8 +2,7 @@
 
 Welcome to **OmniTools**, an open-source alternative to OnlineTools.com.
 This project offers a variety of online tools to help with everyday tasks,
-all available for free and open for community contributions. Our goal is to provide reliable and
-efficient online tools while fostering a community-driven development process.
+all available for free and open for community contributions. Please don't forget to star the repo if you find it useful.
 
 ## Table of Contents
 
