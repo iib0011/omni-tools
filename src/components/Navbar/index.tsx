@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { Link, useNavigate } from 'react-router-dom';
-import githubIcon from '../../assets/github-mark.png'; // Adjust the path to your GitHub icon
+import githubIcon from '@assets/github-mark.png'; // Adjust the path to your GitHub icon
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
