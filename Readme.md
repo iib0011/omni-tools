@@ -52,6 +52,8 @@ npm run dev
 npm run script:create:tool my-tool-name folder1/folder2
 ```
 
+Use `folder1\folder2` on Windows
+
 ## Contributors
 
 <a href="https://github.com/iib0011/omni-tools/graphs/contributors">
