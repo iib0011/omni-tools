@@ -4,9 +4,7 @@ export function mergeText(
   deleteTrailingSpaces: boolean = true,
   joinCharacter: string = ''
 ): string {
-  const lines = text.split('\n');
-
-  let processedLines: string[] = lines;
+  let processedLines: string[] = text.split('\n');
   if (deleteTrailingSpaces) {
     processedLines = processedLines.map((line) => line.trimEnd());
   }
