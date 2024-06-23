@@ -2,7 +2,7 @@
 
 Welcome to **OmniTools**, an open-source alternative to OnlineTools.com.
 This project offers a variety of online tools to help with everyday tasks,
-all available for free and open for community contributions. Please don't forget to star the repo if you find it useful.
+all available for free and open for community contributions. Please don't forget to star the repo to support us.
 
 ## Table of Contents
 
@@ -37,7 +37,9 @@ OmniTools includes a variety of tools, such as:
 
 ## Installation
 
-### Clone the Repository
+### Contribute
+
+### Project setup
 
 ```bash
 git clone https://github.com/iib0011/omni-tools.git
@@ -45,6 +47,12 @@ cd omni-tools
 npm i
 npm run dev
 ```
+
+## Contributors
+
+<a href="https://github.com/iib0011/omni-tools/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=iib0011/omni-tools" />
+</a>
 
 ## License
 

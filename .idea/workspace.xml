@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="test: join service">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: result copy and download">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/images/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/images/png/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/index.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,35 +38,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Vitest.mergeText.executor": "Run",
-    "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
-    "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/HP/IdeaProjects/omni-tools/src/pages/string/split",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "npm.prebuild.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\prettier",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
-    "ts.external.directory.path": "C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Vitest.mergeText.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/omni-tools/src/pages/string/split&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -132,7 +135,8 @@
       <workItem from="1719006951159" duration="2377000" />
       <workItem from="1719021128819" duration="3239000" />
       <workItem from="1719083989394" duration="7971000" />
-      <workItem from="1719092003308" duration="14114000" />
+      <workItem from="1719092003308" duration="14856000" />
+      <workItem from="1719164664347" duration="399000" />
     </task>
     <task id="LOCAL-00001" summary="feat: use vite and ts">
       <option name="closed" value="true" />
@@ -382,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719154187887</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="feat: result copy and download">
+      <option name="closed" value="true" />
+      <created>1719154927957</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1719154927957</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,7 +415,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: example tools" />
     <MESSAGE value="feat: Split string" />
     <MESSAGE value="fix: netlify" />
     <MESSAGE value="fix: index title" />
@@ -428,7 +439,8 @@
     <MESSAGE value="refactor: tool options components" />
     <MESSAGE value="fix: join text service" />
     <MESSAGE value="test: join service" />
-    <option name="LAST_COMMIT_MESSAGE" value="test: join service" />
+    <MESSAGE value="feat: result copy and download" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: result copy and download" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
