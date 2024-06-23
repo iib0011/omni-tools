@@ -23,7 +23,7 @@ export default function ToolTextInput({
       .writeText(value)
       .then(() => showSnackBar('Text copied', 'success'))
       .catch((err) => {
-        showSnackBar('Failed to copy: ', err);
+        showSnackBar('Failed to copy: ' + err, 'error');
       });
   };
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {

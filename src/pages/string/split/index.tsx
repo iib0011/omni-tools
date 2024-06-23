@@ -6,9 +6,11 @@ import ToolTextInput from '../../../components/input/ToolTextInput';
 import ToolTextResult from '../../../components/result/ToolTextResult';
 import { Field, Formik, FormikProps, useFormikContext } from 'formik';
 import * as Yup from 'yup';
-import ToolOptions from '../../../components/ToolOptions';
+import ToolOptions from '../../../components/options/ToolOptions';
 import { compute, SplitOperatorType } from './service';
 import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
+import RadioWithTextField from '../../../components/options/RadioWithTextField';
+import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
 
 const initialValues = {
   splitSeparatorType: 'symbol' as SplitOperatorType,
@@ -74,72 +76,11 @@ const outputOptions: {
     accessor: 'charAfterChunk'
   }
 ];
-const CustomRadioButton = ({
-  fieldName,
-  type,
-  title,
-  onTypeChange,
-  value,
-  description,
-  onTextChange
-}: {
-  fieldName: string;
-  title: string;
-  type: SplitOperatorType;
-  onTypeChange: (val: string) => void;
-  value: string;
-  description: string;
-  onTextChange: (value: string) => void;
-}) => {
-  const onChange = () => onTypeChange(type);
-  return (
-    <Box>
-      <Stack
-        direction={'row'}
-        sx={{ mt: 2, mb: 1, cursor: 'pointer' }}
-        onClick={onChange}
-        alignItems={'center'}
-        spacing={1}
-      >
-        <Field type="radio" name={fieldName} value={type} onChange={onChange} />
-        <Typography>{title}</Typography>
-      </Stack>
-      <InputWithDesc
-        value={value}
-        onChange={onTextChange}
-        description={description}
-      />
-    </Box>
-  );
-};
-
-const InputWithDesc = ({
-  description,
-  value,
-  onChange
-}: {
-  description: string;
-  value: string;
-  onChange: (value: string) => void;
-}) => {
-  return (
-    <Box>
-      <TextField
-        sx={{ backgroundColor: 'white' }}
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-      />
-      <Typography fontSize={12} mt={1}>
-        {description}
-      </Typography>
-    </Box>
-  );
-};
 
 export default function SplitText() {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  const formRef = useRef<FormikProps<typeof initialValues>>(null);
+  // const formRef = useRef<FormikProps<typeof initialValues>>(null);
   const { showSnackBar } = useContext(CustomSnackBarContext);
 
   const FormikListenerComponent = () => {
@@ -197,7 +138,6 @@ export default function SplitText() {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          innerRef={formRef}
           onSubmit={() => {}}
         >
           {({ setFieldValue, values }) => (
@@ -206,7 +146,7 @@ export default function SplitText() {
               <Box>
                 <Typography fontSize={22}>Split separator options</Typography>
                 {splitOperators.map(({ title, description, type }) => (
-                  <CustomRadioButton
+                  <RadioWithTextField
                     key={type}
                     type={type}
                     title={title}
@@ -223,7 +163,7 @@ export default function SplitText() {
               <Box>
                 <Typography fontSize={22}>Output separator options</Typography>
                 {outputOptions.map((option) => (
-                  <InputWithDesc
+                  <TextFieldWithDesc
                     key={option.accessor}
                     value={values[option.accessor]}
                     onChange={(value) => setFieldValue(option.accessor, value)}

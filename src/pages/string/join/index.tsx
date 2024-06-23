@@ -12,9 +12,11 @@ import { Formik, FormikProps, useFormikContext } from 'formik';
 import * as Yup from 'yup';
 import ToolTextInput from '../../../components/input/ToolTextInput';
 import ToolTextResult from '../../../components/result/ToolTextResult';
-import ToolOptions from '../../../components/ToolOptions';
+import ToolOptions from '../../../components/options/ToolOptions';
 import { mergeText } from './service';
 import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
+import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
+import CheckboxWithDesc from '../../../components/options/CheckboxWithDesc';
 
 const initialValues = {
   joinCharacter: '',
@@ -52,66 +54,8 @@ const blankTrailingOptions: {
   }
 ];
 
-const InputWithDesc = ({
-  placeholder,
-  description,
-  value,
-  onChange
-}: {
-  placeholder: string;
-  description: string;
-  value: string;
-  onChange: (value: string) => void;
-}) => {
-  return (
-    <Box width={240}>
-      <TextField
-        sx={{ backgroundColor: 'white', padding: 0 }}
-        size="small"
-        placeholder={placeholder}
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-      />
-      <Typography fontSize={12} mt={1}>
-        {description}
-      </Typography>
-    </Box>
-  );
-};
-
-const CheckboxWithDesc = ({
-  title,
-  description,
-  checked,
-  onChange
-}: {
-  title: string;
-  description: string;
-  checked: boolean;
-  onChange: (value: boolean) => void;
-}) => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(event.target.checked);
-  };
-
-  return (
-    <Box>
-      <FormControlLabel
-        control={
-          <Checkbox defaultChecked checked={checked} onChange={handleChange} />
-        }
-        label={title}
-      />
-      <Typography fontSize={12} mt={1}>
-        {description}
-      </Typography>
-    </Box>
-  );
-};
-
 export default function JoinText() {
   const [input, setInput] = useState<string>('');
-  const formRef = useRef<FormikProps<typeof initialValues>>(null);
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const [result, setResult] = useState<string>('');
 
@@ -121,7 +65,6 @@ export default function JoinText() {
 
     useEffect(() => {
       try {
-        console.log('Form values:', values['joinCharacter']);
         setResult(mergeText(input, deleteBlank, deleteTrailing, joinCharacter));
       } catch (exception: unknown) {
         if (exception instanceof Error)
@@ -129,7 +72,6 @@ export default function JoinText() {
       }
     }, [values, input]);
 
-    console.log('deleteBlank', deleteBlank);
     return null;
   };
 
@@ -151,7 +93,6 @@ export default function JoinText() {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          innerRef={formRef}
           onSubmit={() => {}}
         >
           {({ setFieldValue, values }) => (
@@ -159,7 +100,7 @@ export default function JoinText() {
               <FormikListenerComponent input={input} />
               <Box>
                 <Typography fontSize={22}>Text Merged Options</Typography>
-                <InputWithDesc
+                <TextFieldWithDesc
                   placeholder={mergeOptions.placeholder}
                   value={values['joinCharacter']}
                   onChange={(value) =>
