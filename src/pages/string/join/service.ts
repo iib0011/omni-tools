@@ -6,37 +6,14 @@ export function mergeText(
 ): string {
   const lines = text.split('\n');
 
-  let processedLines = lines;
-  if (deleteBlankLines) {
-    lines.map((line) =>
-      deleteTrailingSpaces
-        ? line
-            // .split('  ')
-            // .join('')
-            // .replace(/|\r\n|\n|\r/gm, '')
-            .trimEnd()
-        : line
-    );
-  } else {
-    lines;
+  let processedLines: string[] = lines;
+  if (deleteTrailingSpaces) {
+    processedLines = processedLines.map((line) => line.trimEnd());
   }
 
   if (deleteBlankLines) {
-    processedLines = lines.filter(
-      (line) => !deleteBlankLines || line.trim() !== ''
-    );
-  } else {
-    lines;
+    processedLines = processedLines.filter((line) => line.trim());
   }
 
   return processedLines.join(joinCharacter);
 }
-
-// Example usage
-const text: string = `This is a line with trailing spaces    
-Another line with trailing spaces   
-   
-Final line without trailing spaces`;
-
-export const mergedTextWithBlankLines: string = mergeText(text, false);
-export const mergedTextWithoutBlankLines: string = mergeText(text, true);

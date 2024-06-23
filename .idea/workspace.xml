@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: copy and import file">
-      <change afterPath="$PROJECT_DIR$/src/components/options/CheckboxWithDesc.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/options/RadioWithTextField.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/options/TextFieldWithDesc.tsx" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: tool options components">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/split/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/split/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/join/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +129,7 @@
       <workItem from="1719006951159" duration="2377000" />
       <workItem from="1719021128819" duration="3239000" />
       <workItem from="1719083989394" duration="7971000" />
-      <workItem from="1719092003308" duration="11298000" />
+      <workItem from="1719092003308" duration="12297000" />
     </task>
     <task id="LOCAL-00001" summary="feat: use vite and ts">
       <option name="closed" value="true" />
@@ -361,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719103372481</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="refactor: tool options components">
+      <option name="closed" value="true" />
+      <created>1719152057230</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1719152057230</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +408,8 @@
     <MESSAGE value="fix: deploy message" />
     <MESSAGE value="chore: tools by category" />
     <MESSAGE value="feat: copy and import file" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: copy and import file" />
+    <MESSAGE value="refactor: tool options components" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: tool options components" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
