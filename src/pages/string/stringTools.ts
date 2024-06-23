@@ -1,3 +1,4 @@
 import { tool as stringSplit } from './split/meta';
+import { tool as stringJoin } from './join/meta';
 
-export const stringTools = [stringSplit];
+export const stringTools = [stringSplit, stringJoin];
