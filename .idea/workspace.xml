@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: join text service">
-      <change afterPath="$PROJECT_DIR$/src/pages/string/join/string-join.test.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="test: join service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/join/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Vitest.mergeText.executor": "Run",
     "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
+    "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -87,34 +87,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\tools" />
     </key>
   </component>
-  <component name="RunManager" selected="Vitest.mergeText">
-    <configuration name="mergeText" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/pages/string/join/string-join.test.ts" />
-      <test-names>
-        <test-name value="mergeText" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="mergeText.should merge lines and preserve blank lines when deleteBlankLines is false" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/pages/string/join/string-join.test.ts" />
-      <test-names>
-        <test-name value="mergeText" />
-        <test-name value="should merge lines and preserve blank lines when deleteBlankLines is false" />
-      </test-names>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -137,8 +110,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Vitest.mergeText" />
-        <item itemvalue="Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.prebuild" />
       </list>
@@ -161,7 +132,7 @@
       <workItem from="1719006951159" duration="2377000" />
       <workItem from="1719021128819" duration="3239000" />
       <workItem from="1719083989394" duration="7971000" />
-      <workItem from="1719092003308" duration="13183000" />
+      <workItem from="1719092003308" duration="14114000" />
     </task>
     <task id="LOCAL-00001" summary="feat: use vite and ts">
       <option name="closed" value="true" />
@@ -403,7 +374,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719153044395</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="test: join service">
+      <option name="closed" value="true" />
+      <created>1719154187887</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1719154187887</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,7 +403,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: initial commit" />
     <MESSAGE value="feat: example tools" />
     <MESSAGE value="feat: Split string" />
     <MESSAGE value="fix: netlify" />
@@ -449,7 +427,8 @@
     <MESSAGE value="feat: copy and import file" />
     <MESSAGE value="refactor: tool options components" />
     <MESSAGE value="fix: join text service" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: join text service" />
+    <MESSAGE value="test: join service" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: join service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
