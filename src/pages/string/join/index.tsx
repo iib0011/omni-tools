@@ -17,7 +17,7 @@ import { mergeText } from './service';
 import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
 
 const initialValues = {
-  joinCharacter: ' ',
+  joinCharacter: '',
   deleteBlank: true,
   deleteTrailing: true
 };
@@ -29,6 +29,7 @@ const validationSchema = Yup.object().shape({
 });
 
 const mergeOptions = {
+  placeholder: 'Join Character',
   description:
     'Symbol that connects broken\n' + 'pieces of text. (Space by default.)\n',
   accessor: 'joinCharacter' as keyof typeof initialValues
@@ -41,29 +42,33 @@ const blankTrailingOptions: {
 }[] = [
   {
     title: 'Delete Blank Lines',
-    description: "Delete lines that don't have\n" + 'text symbols.\n',
+    description: "Delete lines that don't have\n text symbols.\n",
     accessor: 'deleteBlank'
   },
   {
     title: 'Delete Trailing Spaces',
-    description: 'Remove spaces and tabs at\n' + 'the end of the lines.\n',
+    description: 'Remove spaces and tabs at\n the end of the lines.\n',
     accessor: 'deleteTrailing'
   }
 ];
 
 const InputWithDesc = ({
+  placeholder,
   description,
   value,
   onChange
 }: {
+  placeholder: string;
   description: string;
   value: string;
   onChange: (value: string) => void;
 }) => {
   return (
-    <Box>
+    <Box width={240}>
       <TextField
-        sx={{ backgroundColor: 'white' }}
+        sx={{ backgroundColor: 'white', padding: 0 }}
+        size="small"
+        placeholder={placeholder}
         value={value}
         onChange={(event) => onChange(event.target.value)}
       />
@@ -116,6 +121,7 @@ export default function JoinText() {
 
     useEffect(() => {
       try {
+        console.log('Form values:', values['joinCharacter']);
         setResult(mergeText(input, deleteBlank, deleteTrailing, joinCharacter));
       } catch (exception: unknown) {
         if (exception instanceof Error)
@@ -123,6 +129,7 @@ export default function JoinText() {
       }
     }, [values, input]);
 
+    console.log('deleteBlank', deleteBlank);
     return null;
   };
 
@@ -153,8 +160,11 @@ export default function JoinText() {
               <Box>
                 <Typography fontSize={22}>Text Merged Options</Typography>
                 <InputWithDesc
-                  value={values.joinCharacter}
-                  onChange={(value) => setFieldValue('joinCharacter', value)}
+                  placeholder={mergeOptions.placeholder}
+                  value={values['joinCharacter']}
+                  onChange={(value) =>
+                    setFieldValue(mergeOptions.accessor, value)
+                  }
                   description={mergeOptions.description}
                 />
               </Box>

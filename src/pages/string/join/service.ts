@@ -6,11 +6,29 @@ export function mergeText(
 ): string {
   const lines = text.split('\n');
 
-  const processedLines = lines
-    .map((line) =>
-      deleteTrailingSpaces ? line.replace(/  |\r\n|\n|\r/gm, '') : line
-    )
-    .filter((line) => !deleteBlankLines || line.trim() !== '');
+  let processedLines = lines;
+  if (deleteBlankLines) {
+    lines.map((line) =>
+      deleteTrailingSpaces
+        ? line
+            // .split('  ')
+            // .join('')
+            // .replace(/|\r\n|\n|\r/gm, '')
+            .trimEnd()
+        : line
+    );
+  } else {
+    lines;
+  }
+
+  if (deleteBlankLines) {
+    processedLines = lines.filter(
+      (line) => !deleteBlankLines || line.trim() !== ''
+    );
+  } else {
+    lines;
+  }
+
   return processedLines.join(joinCharacter);
 }
 
@@ -21,7 +39,4 @@ Another line with trailing spaces
 Final line without trailing spaces`;
 
 export const mergedTextWithBlankLines: string = mergeText(text, false);
-console.log('With blank lines:\n', mergedTextWithBlankLines);
-
 export const mergedTextWithoutBlankLines: string = mergeText(text, true);
-console.log('Without blank lines:\n', mergedTextWithoutBlankLines);
