@@ -27,6 +27,9 @@
     "paths": {
       "@tools/*": [
         "./tools/*"
+      ],
+      "@assets/*": [
+        "./assets/*"
       ]
     }
   },

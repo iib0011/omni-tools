@@ -1,5 +1,6 @@
-import { mkdir, readFile, writeFile } from 'fs/promises'
-import { dirname, join } from 'path'
+import { readFile, writeFile } from 'fs/promises'
+import fs from 'fs'
+import { dirname, join, sep } from 'path'
 import { fileURLToPath } from 'url'
 
 const currentDirname = dirname(fileURLToPath(import.meta.url))
@@ -8,7 +9,6 @@ const toolName = process.argv[2]
 const folder = process.argv[3]
 
 const toolsDir = join(currentDirname, '..', 'src', 'pages', folder ?? '')
-
 if (!toolName) {
   throw new Error('Please specify a toolname.')
 }
@@ -17,12 +17,35 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
+function createFolderStructure(basePath, foldersToCreateIndexCount) {
+  const folderArray = basePath.split(sep)
+
+  function recursiveCreate(currentBase, index) {
+    if (index >= folderArray.length) {
+      return
+    }
+    const currentPath = join(currentBase, folderArray[index])
+    if (!fs.existsSync(currentPath)) {
+      fs.mkdirSync(currentPath, { recursive: true })
+    }
+    const indexPath = join(currentPath, 'index.ts')
+    if (!fs.existsSync(indexPath) && index < folderArray.length - 1 && index >= folderArray.length - 1 - foldersToCreateIndexCount) {
+      fs.writeFileSync(indexPath, '// index.ts file')
+    }
+    // Recursively create the next folder
+    recursiveCreate(currentPath, index + 1)
+  }
+
+  // Start the recursive folder creation
+  recursiveCreate('.', 0)
+}
+
 const toolNameCamelCase = toolName.replace(/-./g, (x) => x[1].toUpperCase())
 const toolNameTitleCase =
   toolName[0].toUpperCase() + toolName.slice(1).replace(/-/g, ' ')
 const toolDir = join(toolsDir, toolName)
 
-await mkdir(toolDir)
+await createFolderStructure(toolDir, folder.split(sep).length)
 console.log(`Directory created: ${toolDir}`)
 
 const createToolFile = async (name, content) => {
@@ -53,12 +76,12 @@ createToolFile(
   `
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
-import image from '../../../assets/text.png';
+// import image from '@assets/text.png';
 
 export const tool = defineTool('${folder}', {
   name: '${toolNameTitleCase}',
   path: '/${toolName}',
-  image,
+  // image,
   description: '',
   keywords: ['${toolName.split('-').join('\', \'')}'],
   component: lazy(() => import('./index'))
