@@ -48,7 +48,9 @@ npm run dev
 
 ### Create a new tool
 
-`npm run script:create:tool my-tool-name folder1/folder2`
+```bash
+npm run script:create:tool my-tool-name folder1/folder2
+```
 
 ## Contributors
 
