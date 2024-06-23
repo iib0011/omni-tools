@@ -8,6 +8,7 @@ import theme from '../config/muiConfig';
 import { CustomSnackBarProvider } from '../contexts/CustomSnackBarContext';
 import { SnackbarProvider } from 'notistack';
 import { tools } from '../tools';
+import './index.css';
 
 const AppRoutes = () => {
   const updatedRoutesConfig = [...routesConfig];

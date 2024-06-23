@@ -6,10 +6,12 @@ import ToolHeader from './ToolHeader';
 export default function ToolLayout({
   children,
   title,
-  description
+  description,
+  image
 }: {
   title: string;
   description: string;
+  image?: string;
   children: ReactNode;
 }) {
   return (
@@ -23,7 +25,7 @@ export default function ToolLayout({
         <title>{`${title} - Omni Tools`}</title>
       </Helmet>
       <Box width={'85%'}>
-        <ToolHeader title={title} description={description} />
+        <ToolHeader title={title} description={description} image={image} />
         {children}
       </Box>
     </Box>

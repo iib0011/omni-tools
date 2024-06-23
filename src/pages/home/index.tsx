@@ -1,11 +1,19 @@
-import { Autocomplete, Box, Stack, TextField } from '@mui/material';
+import {
+  Autocomplete,
+  Box,
+  Card,
+  CardContent,
+  Stack,
+  TextField
+} from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import SearchIcon from '@mui/icons-material/Search';
-import { useNavigate } from 'react-router-dom';
-import { filterTools, tools } from '../../tools';
+import { Link, useNavigate } from 'react-router-dom';
+import { filterTools, getToolsByCategory, tools } from '../../tools';
 import { useState } from 'react';
 import { DefinedTool } from '../../tools/defineTool';
+import Button from '@mui/material/Button';
 
 const exampleTools: { label: string; url: string }[] = [
   {
@@ -86,27 +94,59 @@ export default function Home() {
             </Box>
           )}
         />
-        <Grid container spacing={1} mt={2}>
+        <Grid container spacing={2} mt={2}>
           {exampleTools.map((tool) => (
             <Grid
               onClick={() => navigate(tool.url)}
               item
               xs={4}
               key={tool.label}
-              display="flex"
-              flexDirection="row"
-              justifyContent="center"
-              alignItems="center"
-              padding={2}
-              sx={{
-                borderWidth: 1,
-                borderRadius: 3,
-                borderColor: 'grey',
-                borderStyle: 'solid',
-                cursor: 'pointer'
-              }}
             >
-              <Typography>{tool.label}</Typography>
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderWidth: 1,
+                  padding: 1,
+                  borderRadius: 3,
+                  borderColor: 'grey',
+                  borderStyle: 'solid',
+                  cursor: 'pointer'
+                }}
+              >
+                <Typography>{tool.label}</Typography>
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
+        <Grid container mt={2} spacing={2}>
+          {getToolsByCategory().map((category) => (
+            <Grid key={category.type} item xs={6}>
+              <Card>
+                <CardContent>
+                  <Link
+                    style={{ fontSize: 20 }}
+                    to={'/categories/' + category.type}
+                  >
+                    {category.title}
+                  </Link>
+                  <Typography sx={{ mt: 2 }}>{category.description}</Typography>
+                  <Stack
+                    mt={2}
+                    direction={'row'}
+                    justifyContent={'space-between'}
+                  >
+                    <Button
+                      variant={'contained'}
+                    >{`See all ${category.title}`}</Button>
+                    <Button
+                      onClick={() => navigate(category.example.path)}
+                      variant={'outlined'}
+                    >{`Try ${category.example.title}`}</Button>
+                  </Stack>
+                </CardContent>
+              </Card>
             </Grid>
           ))}
         </Grid>
