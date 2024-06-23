@@ -1,5 +1,5 @@
-import { stringTools } from '../pages/string/stringTools';
-import { imageTools } from '../pages/images/imageTools';
+import { stringTools } from '../pages/string';
+import { imageTools } from '../pages/image';
 import { DefinedTool } from './defineTool';
 import { capitalizeFirstLetter } from '../utils/string';
 

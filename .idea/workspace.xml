@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: contributors graph">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: readme">
+      <change afterPath="$PROJECT_DIR$/scripts/create-tool.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/change-colors-in-png.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/images/imageTools.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/images/png/change-colors-in-png/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/images/png/change-colors-in-png/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/images/png/pngTools.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/join/string-join.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/string-join.service.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/split/string-split.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/split/string-split.service.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/stringTools.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +61,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/omni-tools/src/pages/string/split&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/omni-tools/src/pages/string&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -56,6 +69,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
     &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
+    &quot;npm.script:create:tool.executor&quot;: &quot;Run&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -76,11 +90,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\string" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\string\split" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\images" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\public" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\assets" />
-      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
@@ -88,7 +102,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\tools" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.script:create:tool">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -109,8 +123,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="script:create:tool" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="script:create:tool" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.script:create:tool" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.prebuild" />
       </list>
@@ -134,7 +159,9 @@
       <workItem from="1719021128819" duration="3239000" />
       <workItem from="1719083989394" duration="7971000" />
       <workItem from="1719092003308" duration="14856000" />
-      <workItem from="1719164664347" duration="918000" />
+      <workItem from="1719164664347" duration="2033000" />
+      <workItem from="1719166718305" duration="1783000" />
+      <workItem from="1719168519203" duration="179000" />
     </task>
     <task id="LOCAL-00001" summary="feat: use vite and ts">
       <option name="closed" value="true" />
@@ -400,7 +427,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719165093734</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="fix: readme">
+      <option name="closed" value="true" />
+      <created>1719165600245</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1719165600245</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +463,6 @@
     <MESSAGE value="chore: output selector" />
     <MESSAGE value="feat: text split" />
     <MESSAGE value="fix: text split try catch" />
-    <MESSAGE value="fix: readme" />
     <MESSAGE value="ubf" />
     <MESSAGE value="ubf jn" />
     <MESSAGE value="feat: conventional commit" />
@@ -446,7 +480,8 @@
     <MESSAGE value="test: join service" />
     <MESSAGE value="feat: result copy and download" />
     <MESSAGE value="feat: contributors graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: contributors graph" />
+    <MESSAGE value="fix: readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: readme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

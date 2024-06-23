@@ -18,6 +18,7 @@
     "serve": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui",
+    "script:create:tool": "node scripts/create-tool.mjs",
     "lint": "eslint src --max-warnings=0",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "prepare": "husky install"

@@ -46,6 +46,10 @@ npm i
 npm run dev
 ```
 
+### Create a new tool
+
+`npm run script:create:tool my-tool-name folder1/folder2`
+
 ## Contributors
 
 <a href="https://github.com/iib0011/omni-tools/graphs/contributors">
