@@ -71,7 +71,6 @@ export default function ${capitalizeFirstLetter(toolNameCamelCase)}() {
 }
 `
 )
-
 createToolFile(
   `meta.ts`,
   `
@@ -79,7 +78,7 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 // import image from '@assets/text.png';
 
-export const tool = defineTool('${folder}', {
+export const tool = defineTool('${folder.split(sep)[folder.split(sep).length - 1]}', {
   name: '${toolNameTitleCase}',
   path: '/${toolName}',
   // image,

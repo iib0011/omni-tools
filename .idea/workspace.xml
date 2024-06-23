@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="ci: fix">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/image/gif/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/image/gif/reverse/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/image/gif/reverse/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/image/gif/reverse/reverse.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/image/gif/reverse/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/create-tool.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/create-tool.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +95,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\tools" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -131,9 +138,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.script:create:tool" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.prebuild" />
       </list>
     </recent_temporary>
@@ -158,7 +165,7 @@
       <workItem from="1719092003308" duration="14856000" />
       <workItem from="1719164664347" duration="2033000" />
       <workItem from="1719166718305" duration="1783000" />
-      <workItem from="1719168519203" duration="6180000" />
+      <workItem from="1719168519203" duration="7011000" />
     </task>
     <task id="LOCAL-00001" summary="feat: use vite and ts">
       <option name="closed" value="true" />
@@ -488,7 +495,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719185893875</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="ci: fix">
+      <option name="closed" value="true" />
+      <created>1719186106818</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1719186106818</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
