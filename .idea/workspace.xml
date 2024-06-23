@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: build">
-      <change afterPath="$PROJECT_DIR$/CODEOWNERS" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: CODEOWNERS">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +160,7 @@
       <workItem from="1719092003308" duration="14856000" />
       <workItem from="1719164664347" duration="2033000" />
       <workItem from="1719166718305" duration="1783000" />
-      <workItem from="1719168519203" duration="5029000" />
+      <workItem from="1719168519203" duration="6018000" />
     </task>
     <task id="LOCAL-00001" summary="feat: use vite and ts">
       <option name="closed" value="true" />
@@ -474,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719172147719</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="chore: CODEOWNERS">
+      <option name="closed" value="true" />
+      <created>1719184899883</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1719184899883</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +503,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: output selector" />
     <MESSAGE value="feat: text split" />
     <MESSAGE value="fix: text split try catch" />
     <MESSAGE value="ubf" />
@@ -520,7 +527,8 @@
     <MESSAGE value="fix: create tool" />
     <MESSAGE value="fix: readme" />
     <MESSAGE value="fix: build" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: build" />
+    <MESSAGE value="chore: CODEOWNERS" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: CODEOWNERS" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
