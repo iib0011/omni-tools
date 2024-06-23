@@ -58,6 +58,8 @@ npm run script:create:tool my-tool-name folder1/folder2
   <img src="https://contrib.rocks/image?repo=iib0011/omni-tools" />
 </a>
 
+[//]: # (<img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date">)
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

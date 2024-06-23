@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: readme">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: build">
+      <change afterPath="$PROJECT_DIR$/CODEOWNERS" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/join/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/split/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/split/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +160,7 @@
       <workItem from="1719092003308" duration="14856000" />
       <workItem from="1719164664347" duration="2033000" />
       <workItem from="1719166718305" duration="1783000" />
-      <workItem from="1719168519203" duration="3583000" />
+      <workItem from="1719168519203" duration="5029000" />
     </task>
     <task id="LOCAL-00001" summary="feat: use vite and ts">
       <option name="closed" value="true" />
@@ -468,7 +466,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719171905785</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="fix: build">
+      <option name="closed" value="true" />
+      <created>1719172147719</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1719172147719</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,7 +495,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: use formik" />
     <MESSAGE value="chore: output selector" />
     <MESSAGE value="feat: text split" />
     <MESSAGE value="fix: text split try catch" />
@@ -514,7 +519,8 @@
     <MESSAGE value="fix: missing files" />
     <MESSAGE value="fix: create tool" />
     <MESSAGE value="fix: readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: readme" />
+    <MESSAGE value="fix: build" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: build" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
