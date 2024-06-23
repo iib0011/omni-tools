@@ -35,9 +35,7 @@ OmniTools includes a variety of tools, such as:
 
 - JSON, XML tools, etc.
 
-## Installation
-
-### Contribute
+## Contribute
 
 ### Project setup
 

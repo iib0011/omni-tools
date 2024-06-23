@@ -1,14 +1,6 @@
-import {
-  Box,
-  Checkbox,
-  FormControlLabel,
-  Grid,
-  Stack,
-  TextField,
-  Typography
-} from '@mui/material';
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { Formik, FormikProps, useFormikContext } from 'formik';
+import { Box, Grid, Stack, Typography } from '@mui/material';
+import React, { useContext, useEffect, useState } from 'react';
+import { Formik, useFormikContext } from 'formik';
 import * as Yup from 'yup';
 import ToolTextInput from '../../../components/input/ToolTextInput';
 import ToolTextResult from '../../../components/result/ToolTextResult';

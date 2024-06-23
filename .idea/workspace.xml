@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: result copy and download">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: contributors graph">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/images/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/images/png/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +134,7 @@
       <workItem from="1719021128819" duration="3239000" />
       <workItem from="1719083989394" duration="7971000" />
       <workItem from="1719092003308" duration="14856000" />
-      <workItem from="1719164664347" duration="399000" />
+      <workItem from="1719164664347" duration="918000" />
     </task>
     <task id="LOCAL-00001" summary="feat: use vite and ts">
       <option name="closed" value="true" />
@@ -394,7 +392,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719154927957</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="feat: contributors graph">
+      <option name="closed" value="true" />
+      <created>1719165093734</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1719165093734</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +421,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: Split string" />
     <MESSAGE value="fix: netlify" />
     <MESSAGE value="fix: index title" />
     <MESSAGE value="chore: split string tools ui" />
@@ -440,7 +445,8 @@
     <MESSAGE value="fix: join text service" />
     <MESSAGE value="test: join service" />
     <MESSAGE value="feat: result copy and download" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: result copy and download" />
+    <MESSAGE value="feat: contributors graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: contributors graph" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
