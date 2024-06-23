@@ -44,7 +44,7 @@ export default function ToolTextInput({
     fileInputRef.current?.click();
   };
   return (
-    <Box>
+    <Box id="tool">
       <Typography fontSize={30} color={'primary'}>
         {title}
       </Typography>

@@ -11,8 +11,6 @@ export function mergeText(
       deleteTrailingSpaces ? line.replace(/  |\r\n|\n|\r/gm, '') : line
     )
     .filter((line) => !deleteBlankLines || line.trim() !== '');
-
-  // Join lines and remove spaces right after each line
   return processedLines.join(joinCharacter);
 }
 
