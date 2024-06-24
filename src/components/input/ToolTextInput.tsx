@@ -5,6 +5,8 @@ import PublishIcon from '@mui/icons-material/Publish';
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import React, { useContext, useRef } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
+import InputHeader from '../InputHeader';
+import InputFooter from './InputFooter';
 
 export default function ToolTextInput({
   value,
@@ -45,9 +47,7 @@ export default function ToolTextInput({
   };
   return (
     <Box id="tool">
-      <Typography fontSize={30} color={'primary'}>
-        {title}
-      </Typography>
+      <InputHeader title={title} />
       <TextField
         value={value}
         onChange={(event) => onChange(event.target.value)}
@@ -55,14 +55,7 @@ export default function ToolTextInput({
         multiline
         rows={10}
       />
-      <Stack mt={1} direction={'row'} spacing={2}>
-        <Button onClick={handleImportClick} startIcon={<PublishIcon />}>
-          Import from file
-        </Button>
-        <Button onClick={handleCopy} startIcon={<ContentPasteIcon />}>
-          Copy to clipboard
-        </Button>
-      </Stack>
+      <InputFooter handleCopy={handleCopy} handleImport={handleImportClick} />
       <input
         type="file"
         accept="*"
