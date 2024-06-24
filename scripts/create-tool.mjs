@@ -80,7 +80,7 @@ import { lazy } from 'react';
 
 export const tool = defineTool('${folder.split(sep)[folder.split(sep).length - 1]}', {
   name: '${toolNameTitleCase}',
-  path: '/${toolName}',
+  path: '${toolName}',
   // image,
   description: '',
   keywords: ['${toolName.split('-').join('\', \'')}'],

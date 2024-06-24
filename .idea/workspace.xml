@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: create-tool.mjs">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/create-tool.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/create-tool.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +160,7 @@
       <workItem from="1719092003308" duration="14856000" />
       <workItem from="1719164664347" duration="2033000" />
       <workItem from="1719166718305" duration="1783000" />
-      <workItem from="1719168519203" duration="7368000" />
+      <workItem from="1719168519203" duration="8034000" />
     </task>
     <task id="LOCAL-00001" summary="feat: use vite and ts">
       <option name="closed" value="true" />
@@ -505,7 +506,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719187088285</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="fix: readme">
+      <option name="closed" value="true" />
+      <created>1719187190823</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1719187190823</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,12 +555,12 @@
     <MESSAGE value="feat: create tool script" />
     <MESSAGE value="fix: missing files" />
     <MESSAGE value="fix: create tool" />
-    <MESSAGE value="fix: readme" />
     <MESSAGE value="fix: build" />
     <MESSAGE value="chore: CODEOWNERS" />
     <MESSAGE value="ci: fix" />
     <MESSAGE value="fix: create-tool.mjs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: create-tool.mjs" />
+    <MESSAGE value="fix: readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: readme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

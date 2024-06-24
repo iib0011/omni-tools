@@ -4,7 +4,7 @@ import image from '@assets/text.png';
 
 export const tool = defineTool('png', {
   name: 'Change colors in png',
-  path: '/change-colors-in-png',
+  path: 'change-colors-in-png',
   image,
   description: '',
   keywords: ['change', 'colors', 'in', 'png'],
