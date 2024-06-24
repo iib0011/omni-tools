@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 import React from 'react';
 import InputHeader from '../InputHeader';
 import greyPattern from '@assets/grey-pattern.png';
+import { globalInputHeight } from '../../config/uiConfig';
 
 export default function ToolFileResult({
   title = 'Result',
@@ -29,7 +30,7 @@ export default function ToolFileResult({
       <Box
         sx={{
           width: '100%',
-          height: 250,
+          height: globalInputHeight,
           border: preview ? 0 : 1,
           borderRadius: 2,
           boxShadow: '5'
@@ -49,7 +50,7 @@ export default function ToolFileResult({
             <img
               src={preview}
               alt="Result"
-              style={{ maxWidth: '100%', maxHeight: 250 }}
+              style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
             />
           </Box>
         )}

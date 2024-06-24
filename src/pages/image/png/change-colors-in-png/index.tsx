@@ -1,14 +1,18 @@
-import { Box } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import * as Yup from 'yup';
 import Grid from '@mui/material/Grid';
-import ToolTextInput from '../../../../components/input/ToolTextInput';
-import ToolTextResult from '../../../../components/result/ToolTextResult';
 import ToolFileInput from '../../../../components/input/ToolFileInput';
 import ToolFileResult from '../../../../components/result/ToolFileResult';
+import ToolOptions from '../../../../components/options/ToolOptions';
+import Typography from '@mui/material/Typography';
+import { Formik, useFormikContext } from 'formik';
+import ColorSelector from '../../../../components/options/ColorSelector';
+import Color from 'color';
 
 const initialValues = {
-  rgba: [0, 0, 0, 0]
+  fromColor: 'white',
+  toColor: 'black'
 };
 const validationSchema = Yup.object({
   // splitSeparator: Yup.string().required('The separator is required')
@@ -17,9 +21,27 @@ export default function ChangeColorsInPng() {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
-  useEffect(() => {
-    if (input) {
-      const processImage = async (file: File) => {
+  const FormikListenerComponent = ({ input }: { input: File }) => {
+    const { values } = useFormikContext<typeof initialValues>();
+    const { fromColor, toColor } = values;
+
+    useEffect(() => {
+      let fromRgb: [number, number, number];
+      let toRgb: [number, number, number];
+      try {
+        //@ts-ignore
+        fromRgb = Color(fromColor).rgb().array();
+        //@ts-ignore
+        toRgb = Color(toColor).rgb().array();
+      } catch (err) {
+        return;
+      }
+      const processImage = async (
+        file: File,
+        fromColor: [number, number, number],
+        toColor: [number, number, number],
+        similarity: number
+      ) => {
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
         if (ctx == null) return;
@@ -34,12 +56,28 @@ export default function ChangeColorsInPng() {
 
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
         const data: Uint8ClampedArray = imageData.data;
+
+        const colorDistance = (
+          c1: [number, number, number],
+          c2: [number, number, number]
+        ) => {
+          return Math.sqrt(
+            Math.pow(c1[0] - c2[0], 2) +
+              Math.pow(c1[1] - c2[1], 2) +
+              Math.pow(c1[2] - c2[2], 2)
+          );
+        };
+
         for (let i = 0; i < data.length; i += 4) {
-          // Check for white pixel
-          if (data[i] === 255 && data[i + 1] === 255 && data[i + 2] === 255) {
-            data[i] = 255; // Red
-            data[i + 1] = 0; // Green
-            data[i + 2] = 0; // Blue
+          const currentColor: [number, number, number] = [
+            data[i],
+            data[i + 1],
+            data[i + 2]
+          ];
+          if (colorDistance(currentColor, fromColor) <= similarity) {
+            data[i] = toColor[0]; // Red
+            data[i + 1] = toColor[1]; // Green
+            data[i + 2] = toColor[2]; // Blue
           }
         }
 
@@ -53,9 +91,12 @@ export default function ChangeColorsInPng() {
         }, 'image/png');
       };
 
-      processImage(input);
-    }
-  }, [input]);
+      processImage(input, fromRgb, toRgb, 10);
+    }, [input, fromColor, toColor]);
+
+    return null;
+  };
+
   return (
     <Box>
       <Grid container spacing={2}>
@@ -71,6 +112,33 @@ export default function ChangeColorsInPng() {
           <ToolFileResult title={'Output PNG with new colors'} value={result} />
         </Grid>
       </Grid>
+      <ToolOptions>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={() => {}}
+        >
+          {({ setFieldValue, values }) => (
+            <Stack direction={'row'} spacing={2}>
+              {input && <FormikListenerComponent input={input} />}
+              <Box>
+                <Typography fontSize={22}>From color and to color</Typography>
+                <ColorSelector
+                  value={values.fromColor}
+                  onChange={(val) => setFieldValue('fromColor', val)}
+                  description={'Replace this color (from color)'}
+                />
+                <ColorSelector
+                  value={values.toColor}
+                  onChange={(val) => setFieldValue('toColor', val)}
+                  description={'With this color (to color).\n'}
+                />
+              </Box>
+              <Box></Box>
+            </Stack>
+          )}
+        </Formik>
+      </ToolOptions>
     </Box>
   );
 }

@@ -5,6 +5,7 @@ import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import greyPattern from '@assets/grey-pattern.png';
+import { globalInputHeight } from '../../config/uiConfig';
 
 interface ToolFileInputProps {
   value: File | null;
@@ -57,7 +58,7 @@ export default function ToolFileInput({
       <Box
         sx={{
           width: '100%',
-          height: 250,
+          height: globalInputHeight,
           border: preview ? 0 : 1,
           borderRadius: 2,
           boxShadow: '5'
@@ -77,7 +78,7 @@ export default function ToolFileInput({
             <img
               src={preview}
               alt="Preview"
-              style={{ maxWidth: '100%', maxHeight: 250 }}
+              style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
             />
           </Box>
         ) : (
