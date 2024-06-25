@@ -3,7 +3,7 @@ import { lazy } from 'react';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('number', {
-  name: 'Generate',
+  name: 'Generate numbers',
   path: 'generate',
   shortDescription: 'Quickly calculate a list of integers in your browser',
   // image,

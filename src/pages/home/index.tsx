@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <Box
-      padding={5}
+      padding={{ xs: 1, md: 3, lg: 5 }}
       display={'flex'}
       flexDirection={'column'}
       alignItems={'center'}
@@ -21,7 +21,7 @@ export default function Home() {
       <Hero />
       <Grid width={'80%'} container mt={2} spacing={2}>
         {getToolsByCategory().map((category) => (
-          <Grid key={category.type} item xs={6}>
+          <Grid key={category.type} item xs={12} md={6}>
             <Card>
               <CardContent>
                 <Link
@@ -31,20 +31,22 @@ export default function Home() {
                   {category.title}
                 </Link>
                 <Typography sx={{ mt: 2 }}>{category.description}</Typography>
-                <Stack
-                  mt={2}
-                  direction={'row'}
-                  justifyContent={'space-between'}
-                >
-                  <Button
-                    onClick={() => navigate('/categories/' + category.type)}
-                    variant={'contained'}
-                  >{`See all ${category.title}`}</Button>
-                  <Button
-                    onClick={() => navigate(category.example.path)}
-                    variant={'outlined'}
-                  >{`Try ${category.example.title}`}</Button>
-                </Stack>
+                <Grid mt={1} container spacing={2}>
+                  <Grid item xs={12} md={6}>
+                    <Button
+                      fullWidth
+                      onClick={() => navigate('/categories/' + category.type)}
+                      variant={'contained'}
+                    >{`See all ${category.title}`}</Button>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <Button
+                      fullWidth
+                      onClick={() => navigate(category.example.path)}
+                      variant={'outlined'}
+                    >{`Try ${category.example.title}`}</Button>
+                  </Grid>
+                </Grid>
               </CardContent>
             </Card>
           </Grid>

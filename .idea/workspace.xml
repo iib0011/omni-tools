@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: generate numbers">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: merging branches">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/number/generate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/generate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,14 +197,6 @@
       <workItem from="1719294110005" duration="3842000" />
       <workItem from="1719339559458" duration="303000" />
       <workItem from="1719340295244" duration="772000" />
-    </task>
-    <task id="LOCAL-00011" summary="chore: output selector">
-      <option name="closed" value="true" />
-      <created>1718999826771</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1718999826771</updated>
     </task>
     <task id="LOCAL-00012" summary="feat: text split">
       <option name="closed" value="true" />
@@ -587,7 +582,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719349760930</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="fix: merging branches">
+      <option name="closed" value="true" />
+      <created>1719350066784</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1719350066784</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,7 +611,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: join text service" />
     <MESSAGE value="test: join service" />
     <MESSAGE value="feat: result copy and download" />
     <MESSAGE value="feat: contributors graph" />
@@ -633,7 +635,8 @@
     <MESSAGE value="feat: create transparent png" />
     <MESSAGE value="fix: ToolFileInput.tsx" />
     <MESSAGE value="fix: generate numbers" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: generate numbers" />
+    <MESSAGE value="fix: merging branches" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: merging branches" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

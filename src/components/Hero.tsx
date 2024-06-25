@@ -33,14 +33,24 @@ export default function Hero() {
     setFilteredTools(filterTools(tools, newInputValue));
   };
   return (
-    <Box width={'60%'}>
-      <Stack mb={1} direction={'row'} spacing={1}>
-        <Typography fontSize={30}>Transform Your Workflow with </Typography>
-        <Typography fontSize={30} color={'primary'}>
-          Omni Tools
+    <Box width={{ xs: '90%', md: '80%', lg: '60%' }}>
+      <Stack mb={1} direction={'row'} spacing={1} justifyContent={'center'}>
+        <Typography sx={{ textAlign: 'center' }} fontSize={{ xs: 25, md: 30 }}>
+          Transform Your Workflow with{' '}
+          <Typography
+            fontSize={{ xs: 25, md: 30 }}
+            display={'inline'}
+            color={'primary'}
+          >
+            Omni Tools
+          </Typography>
         </Typography>
       </Stack>
-      <Typography fontSize={20} mb={2}>
+      <Typography
+        sx={{ textAlign: 'center' }}
+        fontSize={{ xs: 15, md: 20 }}
+        mb={2}
+      >
         Boost your productivity with Omni Tools, the ultimate toolkit for
         getting things done quickly! Access thousands of user-friendly utilities
         for editing images, text, lists, and data, all directly from your
@@ -76,7 +86,14 @@ export default function Hero() {
       />
       <Grid container spacing={2} mt={2}>
         {exampleTools.map((tool) => (
-          <Grid onClick={() => navigate(tool.url)} item xs={4} key={tool.label}>
+          <Grid
+            onClick={() => navigate(tool.url)}
+            item
+            xs={12}
+            md={6}
+            lg={4}
+            key={tool.label}
+          >
             <Box
               sx={{
                 display: 'flex',
