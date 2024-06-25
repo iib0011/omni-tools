@@ -28,7 +28,11 @@ const ColorSelector: React.FC<ColorSelectorProps> = ({
   return (
     <Box mb={1}>
       <Stack direction={'row'}>
-        <TextField value={color} onChange={handleColorChange} />
+        <TextField
+          sx={{ backgroundColor: 'white' }}
+          value={color}
+          onChange={handleColorChange}
+        />
         <IconButton onClick={() => inputRef.current?.click()}>
           <PaletteIcon />
         </IconButton>

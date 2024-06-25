@@ -9,10 +9,12 @@ import Typography from '@mui/material/Typography';
 import { Formik, useFormikContext } from 'formik';
 import ColorSelector from '../../../../components/options/ColorSelector';
 import Color from 'color';
+import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
 
 const initialValues = {
   fromColor: 'white',
-  toColor: 'black'
+  toColor: 'black',
+  similarity: '10'
 };
 const validationSchema = Yup.object({
   // splitSeparator: Yup.string().required('The separator is required')
@@ -23,7 +25,7 @@ export default function ChangeColorsInPng() {
 
   const FormikListenerComponent = ({ input }: { input: File }) => {
     const { values } = useFormikContext<typeof initialValues>();
-    const { fromColor, toColor } = values;
+    const { fromColor, toColor, similarity } = values;
 
     useEffect(() => {
       let fromRgb: [number, number, number];
@@ -95,7 +97,7 @@ export default function ChangeColorsInPng() {
         }, 'image/png');
       };
 
-      processImage(input, fromRgb, toRgb, 10);
+      processImage(input, fromRgb, toRgb, Number(similarity));
     }, [input, fromColor, toColor]);
 
     return null;
@@ -140,6 +142,13 @@ export default function ChangeColorsInPng() {
                   value={values.toColor}
                   onChange={(val) => setFieldValue('toColor', val)}
                   description={'With this color (to color)'}
+                />
+                <TextFieldWithDesc
+                  value={values.similarity}
+                  onChange={(val) => setFieldValue('similarity', val)}
+                  description={
+                    'Match this % of similar colors of the from color. For example, 10% white will match white and a little bit of gray.'
+                  }
                 />
               </Box>
               <Box></Box>

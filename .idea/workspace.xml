@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: change colors in png">
-      <change afterPath="$PROJECT_DIR$/src/components/result/ResultFooter.tsx" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: ResultFooter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ColorSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ColorSelector.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +163,7 @@
       <workItem from="1719166718305" duration="1783000" />
       <workItem from="1719168519203" duration="17675000" />
       <workItem from="1719197816332" duration="1453000" />
-      <workItem from="1719273044735" duration="1047000" />
+      <workItem from="1719273044735" duration="2109000" />
     </task>
     <task id="LOCAL-00001" summary="feat: use vite and ts">
       <option name="closed" value="true" />
@@ -542,7 +541,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719197875189</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="chore: ResultFooter">
+      <option name="closed" value="true" />
+      <created>1719274243788</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1719274243788</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,7 +570,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: conventional commit" />
     <MESSAGE value="test: init" />
     <MESSAGE value="chore: remove prebuild" />
     <MESSAGE value="chore: idea config" />
@@ -588,7 +594,8 @@
     <MESSAGE value="fix: create-tool.mjs" />
     <MESSAGE value="feat: change colors in png init" />
     <MESSAGE value="feat: change colors in png" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: change colors in png" />
+    <MESSAGE value="chore: ResultFooter" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: ResultFooter" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
