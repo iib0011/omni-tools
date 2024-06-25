@@ -4,37 +4,38 @@ import { Field } from 'formik';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 import TextFieldWithDesc from './TextFieldWithDesc';
+import { globalDescriptionFontSize } from '../../config/uiConfig';
+import SimpleRadio from './SimpleRadio';
 
 const RadioWithTextField = <T,>({
   fieldName,
-  type,
+  radioValue,
   title,
-  onTypeChange,
+  onRadioChange,
   value,
   description,
-  onTextChange
+  onTextChange,
+  typeDescription
 }: {
   fieldName: string;
   title: string;
-  type: T;
-  onTypeChange: (val: T) => void;
+  radioValue: T;
+  onRadioChange: (val: T) => void;
   value: string;
   description: string;
   onTextChange: (value: string) => void;
+  typeDescription?: string;
 }) => {
-  const onChange = () => onTypeChange(type);
+  const onChange = () => onRadioChange(radioValue);
   return (
     <Box>
-      <Stack
-        direction={'row'}
-        sx={{ mt: 2, mb: 1, cursor: 'pointer' }}
-        onClick={onChange}
-        alignItems={'center'}
-        spacing={1}
-      >
-        <Field type="radio" name={fieldName} value={type} onChange={onChange} />
-        <Typography>{title}</Typography>
-      </Stack>
+      <SimpleRadio
+        value={radioValue}
+        onChange={onChange}
+        fieldName={fieldName}
+        title={title}
+        description={typeDescription}
+      />
       <TextFieldWithDesc
         value={value}
         onChange={onTextChange}

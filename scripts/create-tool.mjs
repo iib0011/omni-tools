@@ -30,7 +30,7 @@ function createFolderStructure(basePath, foldersToCreateIndexCount) {
     }
     const indexPath = join(currentPath, 'index.ts')
     if (!fs.existsSync(indexPath) && index < folderArray.length - 1 && index >= folderArray.length - 1 - foldersToCreateIndexCount) {
-      fs.writeFileSync(indexPath, '// index.ts file')
+      fs.writeFileSync(indexPath, `export const ${currentPath.split(sep)[currentPath.split(sep).length - 1]}Tools = [];\n`)
       console.log(`File created: ${indexPath}`)
     }
     // Recursively create the next folder

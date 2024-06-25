@@ -26,7 +26,7 @@ const exampleTools: { label: string; url: string }[] = [
   { label: 'Find and replace text', url: '' },
   { label: 'Convert emoji to image', url: '' },
   { label: 'Split a string', url: '/string/split' },
-  { label: 'Calculate number sum', url: '' },
+  { label: 'Calculate number sum', url: '/number/sum' },
   { label: 'Pixelate an image', url: '' }
 ];
 export default function Home() {

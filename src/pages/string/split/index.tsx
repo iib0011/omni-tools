@@ -151,12 +151,12 @@ export default function SplitText() {
                       ({ title, description, type }) => (
                         <RadioWithTextField
                           key={type}
-                          type={type}
+                          radioValue={type}
                           title={title}
                           fieldName={'splitSeparatorType'}
                           description={description}
                           value={values[`${type}Value`]}
-                          onTypeChange={(type) =>
+                          onRadioChange={(type) =>
                             setFieldValue('splitSeparatorType', type)
                           }
                           onTextChange={(val) =>

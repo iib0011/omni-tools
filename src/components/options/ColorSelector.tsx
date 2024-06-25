@@ -3,7 +3,7 @@ import { Box, Stack, TextField } from '@mui/material';
 import PaletteIcon from '@mui/icons-material/Palette';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { descriptionFontSize } from '../../config/uiConfig';
+import { globalDescriptionFontSize } from '../../config/uiConfig';
 
 interface ColorSelectorProps {
   value: string;
@@ -44,7 +44,9 @@ const ColorSelector: React.FC<ColorSelectorProps> = ({
           onChange={handleColorChange}
         />
       </Stack>
-      <Typography fontSize={descriptionFontSize}>{description}</Typography>
+      <Typography fontSize={globalDescriptionFontSize}>
+        {description}
+      </Typography>
     </Box>
   );
 };
