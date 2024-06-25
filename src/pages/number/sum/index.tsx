@@ -12,6 +12,7 @@ import RadioWithTextField from '../../../components/options/RadioWithTextField';
 import ToolOptionGroups from '../../../components/options/ToolOptionGroups';
 import SimpleRadio from '../../../components/options/SimpleRadio';
 import CheckboxWithDesc from '../../../components/options/CheckboxWithDesc';
+import ToolInputAndResult from '../../../components/ToolInputAndResult';
 
 const initialValues = {
   extractionType: 'smart' as NumberExtractionType,
@@ -69,14 +70,10 @@ export default function SplitText() {
 
   return (
     <Box>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <ToolTextInput value={input} onChange={setInput} />
-        </Grid>
-        <Grid item xs={6}>
-          <ToolTextResult title={'Text pieces'} value={result} />
-        </Grid>
-      </Grid>
+      <ToolInputAndResult
+        input={<ToolTextInput value={input} onChange={setInput} />}
+        result={<ToolTextResult title={'Total'} value={result} />}
+      />
       <ToolOptions>
         <Formik
           initialValues={initialValues}

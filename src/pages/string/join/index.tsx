@@ -10,6 +10,7 @@ import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
 import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '../../../components/options/CheckboxWithDesc';
 import ToolOptionGroups from '../../../components/options/ToolOptionGroups';
+import ToolInputAndResult from '../../../components/ToolInputAndResult';
 
 const initialValues = {
   joinCharacter: '',
@@ -70,18 +71,16 @@ export default function JoinText() {
 
   return (
     <Box>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
+      <ToolInputAndResult
+        input={
           <ToolTextInput
             title={'Text Pieces'}
             value={input}
             onChange={setInput}
           />
-        </Grid>
-        <Grid item xs={6}>
-          <ToolTextResult title={'Joined Text'} value={result} />
-        </Grid>
-      </Grid>
+        }
+        result={<ToolTextResult title={'Joined Text'} value={result} />}
+      />
       <ToolOptions>
         <Formik
           initialValues={initialValues}

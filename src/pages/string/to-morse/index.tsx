@@ -10,6 +10,7 @@ import { compute } from './service';
 import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
 import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
 import ToolOptionGroups from '../../../components/options/ToolOptionGroups';
+import ToolInputAndResult from '../../../components/ToolInputAndResult';
 
 const initialValues = {
   dotSymbol: '.',
@@ -44,14 +45,10 @@ export default function ToMorse() {
 
   return (
     <Box>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <ToolTextInput value={input} onChange={setInput} />
-        </Grid>
-        <Grid item xs={6}>
-          <ToolTextResult title={'Morse code'} value={result} />
-        </Grid>
-      </Grid>
+      <ToolInputAndResult
+        input={<ToolTextInput value={input} onChange={setInput} />}
+        result={<ToolTextResult title={'Morse code'} value={result} />}
+      />
       <ToolOptions>
         <Formik
           initialValues={initialValues}

@@ -11,6 +11,7 @@ import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
 import RadioWithTextField from '../../../components/options/RadioWithTextField';
 import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
 import ToolOptionGroups from '../../../components/options/ToolOptionGroups';
+import ToolInputAndResult from '../../../components/ToolInputAndResult';
 
 const initialValues = {
   splitSeparatorType: 'symbol' as SplitOperatorType,
@@ -126,14 +127,10 @@ export default function SplitText() {
 
   return (
     <Box>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <ToolTextInput value={input} onChange={setInput} />
-        </Grid>
-        <Grid item xs={6}>
-          <ToolTextResult title={'Text pieces'} value={result} />
-        </Grid>
-      </Grid>
+      <ToolInputAndResult
+        input={<ToolTextInput value={input} onChange={setInput} />}
+        result={<ToolTextResult title={'Text pieces'} value={result} />}
+      />
       <ToolOptions>
         <Formik
           initialValues={initialValues}

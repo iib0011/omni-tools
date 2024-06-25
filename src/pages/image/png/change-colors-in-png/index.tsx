@@ -1,15 +1,15 @@
-import { Box, Stack } from '@mui/material';
+import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import * as Yup from 'yup';
-import Grid from '@mui/material/Grid';
 import ToolFileInput from '../../../../components/input/ToolFileInput';
 import ToolFileResult from '../../../../components/result/ToolFileResult';
 import ToolOptions from '../../../../components/options/ToolOptions';
-import Typography from '@mui/material/Typography';
 import { Formik, useFormikContext } from 'formik';
 import ColorSelector from '../../../../components/options/ColorSelector';
 import Color from 'color';
 import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
+import ToolInputAndResult from '../../../../components/ToolInputAndResult';
+import ToolOptionGroups from '../../../../components/options/ToolOptionGroups';
 
 const initialValues = {
   fromColor: 'white',
@@ -105,23 +105,23 @@ export default function ChangeColorsInPng() {
 
   return (
     <Box>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
+      <ToolInputAndResult
+        input={
           <ToolFileInput
             value={input}
             onChange={setInput}
             accept={['image/png']}
             title={'Input PNG'}
           />
-        </Grid>
-        <Grid item xs={6}>
+        }
+        result={
           <ToolFileResult
             title={'Output PNG with new colors'}
             value={result}
             extension={'png'}
           />
-        </Grid>
-      </Grid>
+        }
+      />
       <ToolOptions>
         <Formik
           initialValues={initialValues}
@@ -129,30 +129,37 @@ export default function ChangeColorsInPng() {
           onSubmit={() => {}}
         >
           {({ setFieldValue, values }) => (
-            <Stack direction={'row'} spacing={2}>
+            <Box>
               {input && <FormikListenerComponent input={input} />}
-              <Box>
-                <Typography fontSize={22}>From color and to color</Typography>
-                <ColorSelector
-                  value={values.fromColor}
-                  onChange={(val) => setFieldValue('fromColor', val)}
-                  description={'Replace this color (from color)'}
-                />
-                <ColorSelector
-                  value={values.toColor}
-                  onChange={(val) => setFieldValue('toColor', val)}
-                  description={'With this color (to color)'}
-                />
-                <TextFieldWithDesc
-                  value={values.similarity}
-                  onChange={(val) => setFieldValue('similarity', val)}
-                  description={
-                    'Match this % of similar colors of the from color. For example, 10% white will match white and a little bit of gray.'
+              <ToolOptionGroups
+                groups={[
+                  {
+                    title: 'From color and to color',
+                    component: (
+                      <Box>
+                        <ColorSelector
+                          value={values.fromColor}
+                          onChange={(val) => setFieldValue('fromColor', val)}
+                          description={'Replace this color (from color)'}
+                        />
+                        <ColorSelector
+                          value={values.toColor}
+                          onChange={(val) => setFieldValue('toColor', val)}
+                          description={'With this color (to color)'}
+                        />
+                        <TextFieldWithDesc
+                          value={values.similarity}
+                          onChange={(val) => setFieldValue('similarity', val)}
+                          description={
+                            'Match this % of similar colors of the from color. For example, 10% white will match white and a little bit of gray.'
+                          }
+                        />
+                      </Box>
+                    )
                   }
-                />
-              </Box>
-              <Box></Box>
-            </Stack>
+                ]}
+              />
+            </Box>
           )}
         </Formik>
       </ToolOptions>
