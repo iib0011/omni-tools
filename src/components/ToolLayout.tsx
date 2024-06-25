@@ -19,7 +19,6 @@ export default function ToolLayout({
   image?: string;
   type: string;
   children: ReactNode;
-  type: string;
 }) {
   const otherCategoryTools =
     getToolsByCategory()

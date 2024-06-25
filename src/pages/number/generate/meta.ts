@@ -5,6 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('number', {
   name: 'Generate',
   path: 'generate',
+  shortDescription: 'Quickly calculate a list of integers in your browser',
   // image,
   description:
     'Quickly calculate a list of integers in your browser. To get your list, just specify the first integer, change value and total count in the options below, and this utility will generate that many integers',
