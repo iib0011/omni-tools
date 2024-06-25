@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: create transparent png">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: ToolFileInput.tsx">
+      <change afterPath="$PROJECT_DIR$/src/components/ToolBreadcrumb.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/create-transparent/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +20,11 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="string-join" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -183,14 +190,8 @@
       <workItem from="1719197816332" duration="1453000" />
       <workItem from="1719273044735" duration="9847000" />
       <workItem from="1719294110005" duration="3842000" />
-    </task>
-    <task id="LOCAL-00009" summary="chore: split string tools ui">
-      <option name="closed" value="true" />
-      <created>1718996769014</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1718996769014</updated>
+      <workItem from="1719339559458" duration="303000" />
+      <workItem from="1719340295244" duration="772000" />
     </task>
     <task id="LOCAL-00010" summary="chore: use formik">
       <option name="closed" value="true" />
@@ -576,7 +577,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719297880629</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="fix: ToolFileInput.tsx">
+      <option name="closed" value="true" />
+      <created>1719305172029</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1719305172029</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,7 +606,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: copy and import file" />
     <MESSAGE value="refactor: tool options components" />
     <MESSAGE value="fix: join text service" />
     <MESSAGE value="test: join service" />
@@ -622,7 +630,8 @@
     <MESSAGE value="fix: readme" />
     <MESSAGE value="refactor: tool input and result" />
     <MESSAGE value="feat: create transparent png" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: create transparent png" />
+    <MESSAGE value="fix: ToolFileInput.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: ToolFileInput.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

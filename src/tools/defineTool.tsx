@@ -35,7 +35,12 @@ export const defineTool = (
     keywords,
     component: () => {
       return (
-        <ToolLayout title={name} description={description} image={image}>
+        <ToolLayout
+          title={name}
+          description={description}
+          image={image}
+          type={basePath}
+        >
           <Component />
         </ToolLayout>
       );
