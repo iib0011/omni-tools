@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: tool input and result">
-      <change afterPath="$PROJECT_DIR$/src/pages/image/png/create-transparent/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/image/png/create-transparent/meta.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/image/png/create-transparent/service.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: create transparent png">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/create-tool.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/create-tool.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/image/png/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/number/sum/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/sum/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/create-transparent/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/service.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,15 +182,7 @@
       <workItem from="1719168519203" duration="17675000" />
       <workItem from="1719197816332" duration="1453000" />
       <workItem from="1719273044735" duration="9847000" />
-      <workItem from="1719294110005" duration="3709000" />
-    </task>
-    <task id="LOCAL-00008" summary="fix: index title">
-      <option name="closed" value="true" />
-      <created>1718836910916</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1718836910916</updated>
+      <workItem from="1719294110005" duration="3842000" />
     </task>
     <task id="LOCAL-00009" summary="chore: split string tools ui">
       <option name="closed" value="true" />
@@ -581,7 +568,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719296145699</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="feat: create transparent png">
+      <option name="closed" value="true" />
+      <created>1719297880629</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1719297880629</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,7 +597,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: tools by category" />
     <MESSAGE value="feat: copy and import file" />
     <MESSAGE value="refactor: tool options components" />
     <MESSAGE value="fix: join text service" />
@@ -627,7 +621,8 @@
     <MESSAGE value="chore: sum tests" />
     <MESSAGE value="fix: readme" />
     <MESSAGE value="refactor: tool input and result" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: tool input and result" />
+    <MESSAGE value="feat: create transparent png" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: create transparent png" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
