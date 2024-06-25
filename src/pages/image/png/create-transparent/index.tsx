@@ -13,7 +13,6 @@ import ToolOptionGroups from '../../../../components/options/ToolOptionGroups';
 
 const initialValues = {
   fromColor: 'white',
-  toColor: 'black',
   similarity: '10'
 };
 const validationSchema = Yup.object({
@@ -25,23 +24,19 @@ export default function ChangeColorsInPng() {
 
   const FormikListenerComponent = ({ input }: { input: File }) => {
     const { values } = useFormikContext<typeof initialValues>();
-    const { fromColor, toColor, similarity } = values;
+    const { fromColor, similarity } = values;
 
     useEffect(() => {
       let fromRgb: [number, number, number];
-      let toRgb: [number, number, number];
       try {
         //@ts-ignore
         fromRgb = Color(fromColor).rgb().array();
-        //@ts-ignore
-        toRgb = Color(toColor).rgb().array();
       } catch (err) {
         return;
       }
       const processImage = async (
         file: File,
         fromColor: [number, number, number],
-        toColor: [number, number, number],
         similarity: number
       ) => {
         const canvas = document.createElement('canvas');
@@ -81,9 +76,7 @@ export default function ChangeColorsInPng() {
             data[i + 2]
           ];
           if (colorDistance(currentColor, fromColor) <= similarityThreshold) {
-            data[i] = toColor[0]; // Red
-            data[i + 1] = toColor[1]; // Green
-            data[i + 2] = toColor[2]; // Blue
+            data[i + 3] = 0; // Set alpha to 0 (transparent)
           }
         }
 
@@ -97,8 +90,8 @@ export default function ChangeColorsInPng() {
         }, 'image/png');
       };
 
-      processImage(input, fromRgb, toRgb, Number(similarity));
-    }, [input, fromColor, toColor]);
+      processImage(input, fromRgb, Number(similarity));
+    }, [input, fromColor]);
 
     return null;
   };
@@ -116,7 +109,7 @@ export default function ChangeColorsInPng() {
         }
         result={
           <ToolFileResult
-            title={'Output PNG with new colors'}
+            title={'Transparent PNG'}
             value={result}
             extension={'png'}
           />
@@ -134,18 +127,13 @@ export default function ChangeColorsInPng() {
               <ToolOptionGroups
                 groups={[
                   {
-                    title: 'From color and to color',
+                    title: 'From color and similarity',
                     component: (
                       <Box>
                         <ColorSelector
                           value={values.fromColor}
                           onChange={(val) => setFieldValue('fromColor', val)}
                           description={'Replace this color (from color)'}
-                        />
-                        <ColorSelector
-                          value={values.toColor}
-                          onChange={(val) => setFieldValue('toColor', val)}
-                          description={'With this color (to color)'}
                         />
                         <TextFieldWithDesc
                           value={values.similarity}

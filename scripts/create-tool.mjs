@@ -30,7 +30,7 @@ function createFolderStructure(basePath, foldersToCreateIndexCount) {
     }
     const indexPath = join(currentPath, 'index.ts')
     if (!fs.existsSync(indexPath) && index < folderArray.length - 1 && index >= folderArray.length - 1 - foldersToCreateIndexCount) {
-      fs.writeFileSync(indexPath, '// index.ts file')
+      fs.writeFileSync(indexPath, `export const ${currentPath.split(sep)[currentPath.split(sep).length - 1]}Tools = [];\n`)
       console.log(`File created: ${indexPath}`)
     }
     // Recursively create the next folder
@@ -45,7 +45,7 @@ const toolNameCamelCase = toolName.replace(/-./g, (x) => x[1].toUpperCase())
 const toolNameTitleCase =
   toolName[0].toUpperCase() + toolName.slice(1).replace(/-/g, ' ')
 const toolDir = join(toolsDir, toolName)
-
+const type = folder.split(sep)[folder.split(sep).length - 1]
 await createFolderStructure(toolDir, folder.split(sep).length)
 console.log(`Directory created: ${toolDir}`)
 
@@ -71,7 +71,6 @@ export default function ${capitalizeFirstLetter(toolNameCamelCase)}() {
 }
 `
 )
-
 createToolFile(
   `meta.ts`,
   `
@@ -79,9 +78,9 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 // import image from '@assets/text.png';
 
-export const tool = defineTool('${folder}', {
+export const tool = defineTool('${type}', {
   name: '${toolNameTitleCase}',
-  path: '/${toolName}',
+  path: '${toolName}',
   // image,
   description: '',
   keywords: ['${toolName.split('-').join('\', \'')}'],
@@ -133,7 +132,7 @@ const indexContent = await readFile(toolsIndex, { encoding: 'utf-8' }).then(
 indexContent.splice(
   0,
   0,
-  `import { tool as ${toolNameCamelCase} } from './${toolName}/meta';`
+  `import { tool as ${type}${capitalizeFirstLetter(toolNameCamelCase)} } from './${toolName}/meta';`
 )
 writeFile(toolsIndex, indexContent.join('\n'))
 console.log(`Added import in: ${toolsIndex}`)

@@ -9,6 +9,8 @@ import { mergeText } from './service';
 import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
 import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '../../../components/options/CheckboxWithDesc';
+import ToolOptionGroups from '../../../components/options/ToolOptionGroups';
+import ToolInputAndResult from '../../../components/ToolInputAndResult';
 
 import Info from './Info';
 import Separator from '../../../tools/Separator';
@@ -56,12 +58,12 @@ const exampleCards = [
     title: 'Merge a To-Do List',
     description:
       "In this example, we merge a bullet point list into one sentence, separating each item by the word 'and'. We also remove all empty lines and trailing spaces. If we didn't remove the empty lines, then they'd be joined with the separator word, making the separator word appear multiple times. If we didn't remove the trailing tabs and spaces, then they'd create extra spacing in the joined text and it wouldn't look nice.",
-    sampleText: `clean the house    
+    sampleText: `clean the house
 
-go shopping   
+go shopping
 feed the cat
 
-make dinner   
+make dinner
 build a rocket ship and fly away`,
     sampleResult: `clean the house and go shopping and feed the cat and make dinner and build a rocket ship and fly away`,
     requiredOptions: {
@@ -177,18 +179,16 @@ export default function JoinText() {
 
   return (
     <Box>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
+      <ToolInputAndResult
+        input={
           <ToolTextInput
             title={'Text Pieces'}
             value={input}
             onChange={setInput}
           />
-        </Grid>
-        <Grid item xs={6}>
-          <ToolTextResult title={'Joined Text'} value={result} />
-        </Grid>
-      </Grid>
+        }
+        result={<ToolTextResult title={'Joined Text'} value={result} />}
+      />
       <ToolOptions>
         <Formik
           initialValues={initialValues}
@@ -198,31 +198,37 @@ export default function JoinText() {
           {({ setFieldValue, values }) => (
             <Stack direction={'row'} spacing={2}>
               <FormikListenerComponent input={input} />
-              <Box>
-                <Typography fontSize={22}>Text Merged Options</Typography>
-                <TextFieldWithDesc
-                  placeholder={mergeOptions.placeholder}
-                  value={values['joinCharacter']}
-                  onChange={(value) =>
-                    setFieldValue(mergeOptions.accessor, value)
+              <ToolOptionGroups
+                groups={[
+                  {
+                    title: 'Text Merged Options',
+                    component: (
+                      <TextFieldWithDesc
+                        placeholder={mergeOptions.placeholder}
+                        value={values['joinCharacter']}
+                        onChange={(value) =>
+                          setFieldValue(mergeOptions.accessor, value)
+                        }
+                        description={mergeOptions.description}
+                      />
+                    )
+                  },
+                  {
+                    title: 'Blank Lines and Trailing Spaces',
+                    component: blankTrailingOptions.map((option) => (
+                      <CheckboxWithDesc
+                        key={option.accessor}
+                        title={option.title}
+                        checked={!!values[option.accessor]}
+                        onChange={(value) =>
+                          setFieldValue(option.accessor, value)
+                        }
+                        description={option.description}
+                      />
+                    ))
                   }
-                  description={mergeOptions.description}
-                />
-              </Box>
-              <Box>
-                <Typography fontSize={22}>
-                  Blank Lines and Trailing Spaces
-                </Typography>
-                {blankTrailingOptions.map((option, index) => (
-                  <CheckboxWithDesc
-                    key={index}
-                    title={option.title}
-                    checked={!!values[option.accessor]}
-                    onChange={(value) => setFieldValue(option.accessor, value)}
-                    description={option.description}
-                  />
-                ))}
-              </Box>
+                ]}
+              />
             </Stack>
           )}
         </Formik>

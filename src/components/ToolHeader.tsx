@@ -29,7 +29,7 @@ export default function ToolHeader({
   description
 }: ToolHeaderProps) {
   return (
-    <Stack direction={'row'} alignItems={'center'} spacing={2} mt={4}>
+    <Stack direction={'row'} alignItems={'center'} spacing={2} my={4}>
       <Box>
         <Typography mb={2} fontSize={30} color={'primary'}>
           {title}

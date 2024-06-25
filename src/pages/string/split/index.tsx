@@ -1,16 +1,17 @@
-import { Box, Stack, TextField } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ToolTextInput from '../../../components/input/ToolTextInput';
 import ToolTextResult from '../../../components/result/ToolTextResult';
-import { Field, Formik, FormikProps, useFormikContext } from 'formik';
+import { Formik, useFormikContext } from 'formik';
 import * as Yup from 'yup';
 import ToolOptions from '../../../components/options/ToolOptions';
 import { compute, SplitOperatorType } from './service';
 import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
 import RadioWithTextField from '../../../components/options/RadioWithTextField';
 import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
+import ToolOptionGroups from '../../../components/options/ToolOptionGroups';
+import ToolInputAndResult from '../../../components/ToolInputAndResult';
 
 const initialValues = {
   splitSeparatorType: 'symbol' as SplitOperatorType,
@@ -126,14 +127,10 @@ export default function SplitText() {
 
   return (
     <Box>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <ToolTextInput value={input} onChange={setInput} />
-        </Grid>
-        <Grid item xs={6}>
-          <ToolTextResult title={'Text pieces'} value={result} />
-        </Grid>
-      </Grid>
+      <ToolInputAndResult
+        input={<ToolTextInput value={input} onChange={setInput} />}
+        result={<ToolTextResult title={'Text pieces'} value={result} />}
+      />
       <ToolOptions>
         <Formik
           initialValues={initialValues}
@@ -143,34 +140,44 @@ export default function SplitText() {
           {({ setFieldValue, values }) => (
             <Stack direction={'row'} spacing={2}>
               <FormikListenerComponent />
-              <Box>
-                <Typography fontSize={22}>Split separator options</Typography>
-                {splitOperators.map(({ title, description, type }) => (
-                  <RadioWithTextField
-                    key={type}
-                    type={type}
-                    title={title}
-                    fieldName={'splitSeparatorType'}
-                    description={description}
-                    value={values[`${type}Value`]}
-                    onTypeChange={(type) =>
-                      setFieldValue('splitSeparatorType', type)
-                    }
-                    onTextChange={(val) => setFieldValue(`${type}Value`, val)}
-                  />
-                ))}
-              </Box>
-              <Box>
-                <Typography fontSize={22}>Output separator options</Typography>
-                {outputOptions.map((option) => (
-                  <TextFieldWithDesc
-                    key={option.accessor}
-                    value={values[option.accessor]}
-                    onChange={(value) => setFieldValue(option.accessor, value)}
-                    description={option.description}
-                  />
-                ))}
-              </Box>
+              <ToolOptionGroups
+                groups={[
+                  {
+                    title: 'Split separator options',
+                    component: splitOperators.map(
+                      ({ title, description, type }) => (
+                        <RadioWithTextField
+                          key={type}
+                          radioValue={type}
+                          title={title}
+                          fieldName={'splitSeparatorType'}
+                          description={description}
+                          value={values[`${type}Value`]}
+                          onRadioChange={(type) =>
+                            setFieldValue('splitSeparatorType', type)
+                          }
+                          onTextChange={(val) =>
+                            setFieldValue(`${type}Value`, val)
+                          }
+                        />
+                      )
+                    )
+                  },
+                  {
+                    title: 'Output separator options',
+                    component: outputOptions.map((option) => (
+                      <TextFieldWithDesc
+                        key={option.accessor}
+                        value={values[option.accessor]}
+                        onChange={(value) =>
+                          setFieldValue(option.accessor, value)
+                        }
+                        description={option.description}
+                      />
+                    ))
+                  }
+                ]}
+              />
             </Stack>
           )}
         </Formik>

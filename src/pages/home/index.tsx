@@ -12,21 +12,21 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Link, useNavigate } from 'react-router-dom';
 import { filterTools, getToolsByCategory, tools } from '../../tools';
 import { useState } from 'react';
-import { DefinedTool } from '../../tools/defineTool';
+import { DefinedTool } from '@tools/defineTool';
 import Button from '@mui/material/Button';
 
 const exampleTools: { label: string; url: string }[] = [
   {
     label: 'Create a transparent image',
-    url: ''
+    url: '/png/create-transparent'
   },
-  { label: 'Convert text to morse code', url: '' },
+  { label: 'Convert text to morse code', url: '/string/to-morse' },
   { label: 'Change GIF speed', url: '' },
   { label: 'Pick a random item', url: '' },
   { label: 'Find and replace text', url: '' },
   { label: 'Convert emoji to image', url: '' },
   { label: 'Split a string', url: '/string/split' },
-  { label: 'Calculate number sum', url: '' },
+  { label: 'Calculate number sum', url: '/number/sum' },
   { label: 'Pixelate an image', url: '' }
 ];
 export default function Home() {

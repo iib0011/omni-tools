@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: readme">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: create transparent png">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/join/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/split/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/split/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/create-transparent/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/service.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,37 +36,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Vitest.mergeText.executor": "Run",
-    "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
-    "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/HP/IdeaProjects/omni-tools/src/pages/string",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "npm.prebuild.executor": "Run",
-    "npm.script:create:tool.executor": "Run",
-    "npm.test.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\prettier",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
-    "ts.external.directory.path": "C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Vitest.compute function (1).executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.compute function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/omni-tools/src/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
+    &quot;npm.script:create:tool.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -80,11 +80,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\assets" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\string" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\string\split" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\images" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\public" />
-      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
@@ -92,22 +92,38 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\tools" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test">
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="compute function (1)" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/pages/number/sum/sum.service.test.ts" />
+      <test-names>
+        <test-name value="compute function" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="compute function" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/pages/string/to-morse/to-morse.service.test.ts" />
+      <test-names>
+        <test-name value="compute function" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="prebuild" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="prebuild" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -135,10 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="Vitest.compute function (1)" />
+        <item itemvalue="Vitest.compute function" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.script:create:tool" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.prebuild" />
       </list>
     </recent_temporary>
   </component>
@@ -162,71 +179,10 @@
       <workItem from="1719092003308" duration="14856000" />
       <workItem from="1719164664347" duration="2033000" />
       <workItem from="1719166718305" duration="1783000" />
-      <workItem from="1719168519203" duration="3583000" />
-    </task>
-    <task id="LOCAL-00001" summary="feat: use vite and ts">
-      <option name="closed" value="true" />
-      <created>1718816900959</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1718816900959</updated>
-    </task>
-    <task id="LOCAL-00002" summary="feat: initial commit">
-      <option name="closed" value="true" />
-      <created>1718820618078</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1718820618078</updated>
-    </task>
-    <task id="LOCAL-00003" summary="feat: initial commit">
-      <option name="closed" value="true" />
-      <created>1718821853210</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1718821853210</updated>
-    </task>
-    <task id="LOCAL-00004" summary="feat: example tools">
-      <option name="closed" value="true" />
-      <created>1718822309352</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1718822309352</updated>
-    </task>
-    <task id="LOCAL-00005" summary="feat: Split string">
-      <option name="closed" value="true" />
-      <created>1718828318468</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1718828318468</updated>
-    </task>
-    <task id="LOCAL-00006" summary="fix: netlify">
-      <option name="closed" value="true" />
-      <created>1718831745853</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1718831745853</updated>
-    </task>
-    <task id="LOCAL-00007" summary="fix: netlify">
-      <option name="closed" value="true" />
-      <created>1718833519062</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1718833519062</updated>
-    </task>
-    <task id="LOCAL-00008" summary="fix: index title">
-      <option name="closed" value="true" />
-      <created>1718836910916</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1718836910916</updated>
+      <workItem from="1719168519203" duration="17675000" />
+      <workItem from="1719197816332" duration="1453000" />
+      <workItem from="1719273044735" duration="9847000" />
+      <workItem from="1719294110005" duration="3842000" />
     </task>
     <task id="LOCAL-00009" summary="chore: split string tools ui">
       <option name="closed" value="true" />
@@ -468,7 +424,159 @@
       <option name="project" value="LOCAL" />
       <updated>1719171905785</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="fix: build">
+      <option name="closed" value="true" />
+      <created>1719172147719</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1719172147719</updated>
+    </task>
+    <task id="LOCAL-00040" summary="chore: CODEOWNERS">
+      <option name="closed" value="true" />
+      <created>1719184899883</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1719184899883</updated>
+    </task>
+    <task id="LOCAL-00041" summary="ci: fix">
+      <option name="closed" value="true" />
+      <created>1719185893875</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1719185893875</updated>
+    </task>
+    <task id="LOCAL-00042" summary="ci: fix">
+      <option name="closed" value="true" />
+      <created>1719186106818</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1719186106818</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix: create-tool.mjs">
+      <option name="closed" value="true" />
+      <created>1719187088285</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1719187088285</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fix: readme">
+      <option name="closed" value="true" />
+      <created>1719187190823</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1719187190823</updated>
+    </task>
+    <task id="LOCAL-00045" summary="fix: create-tool.mjs">
+      <option name="closed" value="true" />
+      <created>1719188162583</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1719188162583</updated>
+    </task>
+    <task id="LOCAL-00046" summary="feat: change colors in png init">
+      <option name="closed" value="true" />
+      <created>1719193884293</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1719193884293</updated>
+    </task>
+    <task id="LOCAL-00047" summary="feat: change colors in png">
+      <option name="closed" value="true" />
+      <created>1719197875189</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1719197875189</updated>
+    </task>
+    <task id="LOCAL-00048" summary="chore: ResultFooter">
+      <option name="closed" value="true" />
+      <created>1719274243788</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1719274243788</updated>
+    </task>
+    <task id="LOCAL-00049" summary="feat: change color in png finished">
+      <option name="closed" value="true" />
+      <created>1719275214988</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1719275214988</updated>
+    </task>
+    <task id="LOCAL-00050" summary="feat: string to morse">
+      <option name="closed" value="true" />
+      <created>1719277679968</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1719277679969</updated>
+    </task>
+    <task id="LOCAL-00051" summary="feat: sum numbers init">
+      <option name="closed" value="true" />
+      <created>1719281510362</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1719281510362</updated>
+    </task>
+    <task id="LOCAL-00052" summary="fix: compilation">
+      <option name="closed" value="true" />
+      <created>1719281605998</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1719281605999</updated>
+    </task>
+    <task id="LOCAL-00053" summary="chore: printRunningSum">
+      <option name="closed" value="true" />
+      <created>1719282009150</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1719282009150</updated>
+    </task>
+    <task id="LOCAL-00054" summary="chore: sum tests">
+      <option name="closed" value="true" />
+      <created>1719282131977</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1719282131977</updated>
+    </task>
+    <task id="LOCAL-00055" summary="fix: readme">
+      <option name="closed" value="true" />
+      <created>1719283122691</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1719283122691</updated>
+    </task>
+    <task id="LOCAL-00056" summary="refactor: tool input and result">
+      <option name="closed" value="true" />
+      <created>1719296145698</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1719296145699</updated>
+    </task>
+    <task id="LOCAL-00057" summary="feat: create transparent png">
+      <option name="closed" value="true" />
+      <created>1719297880629</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1719297880629</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,21 +597,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: use formik" />
-    <MESSAGE value="chore: output selector" />
-    <MESSAGE value="feat: text split" />
-    <MESSAGE value="fix: text split try catch" />
-    <MESSAGE value="ubf" />
-    <MESSAGE value="ubf jn" />
-    <MESSAGE value="feat: conventional commit" />
-    <MESSAGE value="test: init" />
-    <MESSAGE value="chore: remove prebuild" />
-    <MESSAGE value="chore: idea config" />
-    <MESSAGE value="feat: react helmet" />
-    <MESSAGE value="feat: tools normalized" />
-    <MESSAGE value="feat: search tools" />
-    <MESSAGE value="fix: deploy message" />
-    <MESSAGE value="chore: tools by category" />
     <MESSAGE value="feat: copy and import file" />
     <MESSAGE value="refactor: tool options components" />
     <MESSAGE value="fix: join text service" />
@@ -513,8 +606,23 @@
     <MESSAGE value="feat: create tool script" />
     <MESSAGE value="fix: missing files" />
     <MESSAGE value="fix: create tool" />
+    <MESSAGE value="fix: build" />
+    <MESSAGE value="chore: CODEOWNERS" />
+    <MESSAGE value="ci: fix" />
+    <MESSAGE value="fix: create-tool.mjs" />
+    <MESSAGE value="feat: change colors in png init" />
+    <MESSAGE value="feat: change colors in png" />
+    <MESSAGE value="chore: ResultFooter" />
+    <MESSAGE value="feat: change color in png finished" />
+    <MESSAGE value="feat: string to morse" />
+    <MESSAGE value="feat: sum numbers init" />
+    <MESSAGE value="fix: compilation" />
+    <MESSAGE value="chore: printRunningSum" />
+    <MESSAGE value="chore: sum tests" />
     <MESSAGE value="fix: readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: readme" />
+    <MESSAGE value="refactor: tool input and result" />
+    <MESSAGE value="feat: create transparent png" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: create transparent png" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

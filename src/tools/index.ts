@@ -2,8 +2,13 @@ import { stringTools } from '../pages/string';
 import { imageTools } from '../pages/image';
 import { DefinedTool } from './defineTool';
 import { capitalizeFirstLetter } from '../utils/string';
+import { numberTools } from '../pages/number';
 
-export const tools: DefinedTool[] = [...imageTools, ...stringTools];
+export const tools: DefinedTool[] = [
+  ...imageTools,
+  ...stringTools,
+  ...numberTools
+];
 const categoriesDescriptions: { type: string; value: string }[] = [
   {
     type: 'string',
@@ -14,6 +19,11 @@ const categoriesDescriptions: { type: string; value: string }[] = [
     type: 'png',
     value:
       'Tools for working with PNG images – convert PNGs to JPGs, create transparent PNGs, change PNG colors, crop, rotate, resize PNGs, and much more.'
+  },
+  {
+    type: 'number',
+    value:
+      'Tools for working with numbers – generate number sequences, convert numbers to words and words to numbers, sort, round, factor numbers, and much more.'
   }
 ];
 export const filterTools = (
