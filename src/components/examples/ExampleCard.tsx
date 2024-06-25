@@ -1,0 +1,108 @@
+import React from 'react';
+import { ExampleCardProps } from './Examples';
+import {
+  Box,
+  Stack,
+  Card,
+  CardContent,
+  Typography,
+  TextField
+} from '@mui/material';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import RequiredOptions from './RequiredOptions';
+
+export default function ExampleCard({
+  title,
+  description,
+  sampleText,
+  sampleResult,
+  requiredOptions
+}: ExampleCardProps) {
+  const handleSampleTextClick = () => {
+    console.log('TextField clicked');
+  };
+
+  const handleSampleResultClick = () => {
+    console.log('TextField clicked');
+  };
+
+  return (
+    <Card
+      raised
+      sx={{
+        bgcolor: '#d1d9e6',
+        height: '100%',
+        overflow: 'hidden',
+        borderRadius: 2,
+        transition: 'background-color 0.3s ease',
+        '&:hover': {
+          boxShadow: '12px 9px 11px 2px #b8b9be, -6px -6px 12px #fff'
+        }
+      }}
+    >
+      <CardContent>
+        <Box display="flex" justifyContent="space-between" borderRadius="5px">
+          <Typography variant="h5" component="h2">
+            {title}
+          </Typography>
+        </Box>
+        <Stack direction={'column'} alignItems={'center'} spacing={2}>
+          <Typography variant="body2" color="text.secondary">
+            {description}
+          </Typography>
+          <Box
+            display="flex"
+            onClick={handleSampleTextClick}
+            sx={{
+              width: '100%',
+              padding: '5px 10px',
+              borderRadius: '5px',
+              boxShadow: 'inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;'
+            }}
+          >
+            <TextField
+              value={sampleText}
+              disabled
+              fullWidth
+              multiline
+              sx={{
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': {
+                    border: 'none'
+                  }
+                }
+              }}
+            />
+          </Box>
+          <ArrowDownwardIcon />
+          <Box
+            display="flex"
+            onClick={handleSampleResultClick}
+            sx={{
+              width: '100%',
+              padding: '5px 10px',
+              borderRadius: '5px',
+              boxShadow: 'inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;'
+            }}
+          >
+            <TextField
+              value={sampleResult}
+              disabled
+              fullWidth
+              multiline
+              sx={{
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': {
+                    border: 'none'
+                  }
+                }
+              }}
+            />
+          </Box>
+
+          <RequiredOptions options={requiredOptions} />
+        </Stack>
+      </CardContent>
+    </Card>
+  );
+}
