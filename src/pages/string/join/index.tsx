@@ -113,39 +113,6 @@ s
   }
 ];
 
-const toolCards = [
-  {
-    title: 'Split Text',
-    description: 'Quickly split text into chunks.',
-    link: '/string/split'
-  },
-  {
-    title: 'Join Text',
-    description: 'Quickly merge lines of text together via a delimiter.',
-    link: '/string/join'
-  },
-  {
-    title: 'Join Text',
-    description: 'Quickly merge lines of text together via a delimiter.',
-    link: '/string/join'
-  },
-  {
-    title: 'Join Text',
-    description: 'Quickly merge lines of text together via a delimiter.',
-    link: '/string/join'
-  },
-  {
-    title: 'Join Text',
-    description: 'Quickly merge lines of text together via a delimiter.',
-    link: '/string/join'
-  },
-  {
-    title: 'Join Text',
-    description: 'Quickly merge lines of text together via a delimiter.',
-    link: '/string/join'
-  }
-];
-
 export default function JoinText() {
   const [input, setInput] = useState<string>('');
   const { showSnackBar } = useContext(CustomSnackBarContext);
@@ -246,8 +213,6 @@ export default function JoinText() {
           changeInputResult
         }))}
       />
-      <Separator backgroundColor="#5581b5" margin="50px" />
-      <AllTools title="All Text Tools" toolCards={toolCards} />
     </Box>
   );
 }

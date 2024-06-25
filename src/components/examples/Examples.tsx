@@ -28,7 +28,7 @@ export default function Examples({
   exampleCards
 }: ExampleProps) {
   return (
-    <Box mt={4}>
+    <Box id={'examples'} mt={4}>
       <Box mt={4} display="flex" gap={1} alignItems="center">
         <Typography mb={2} fontSize={30} color={'primary'}>
           {title}

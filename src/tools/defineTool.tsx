@@ -8,6 +8,7 @@ interface ToolOptions {
   image?: string;
   name: string;
   description: string;
+  shortDescription: string;
 }
 
 export interface DefinedTool {
@@ -15,6 +16,7 @@ export interface DefinedTool {
   path: string;
   name: string;
   description: string;
+  shortDescription: string;
   image?: string;
   keywords: string[];
   component: () => JSX.Element;
@@ -24,7 +26,15 @@ export const defineTool = (
   basePath: string,
   options: ToolOptions
 ): DefinedTool => {
-  const { image, path, name, description, keywords, component } = options;
+  const {
+    image,
+    path,
+    name,
+    description,
+    keywords,
+    component,
+    shortDescription
+  } = options;
   const Component = component;
   return {
     type: basePath,
@@ -32,10 +42,16 @@ export const defineTool = (
     name,
     image,
     description,
+    shortDescription,
     keywords,
     component: () => {
       return (
-        <ToolLayout title={name} description={description} image={image}>
+        <ToolLayout
+          type={basePath}
+          title={name}
+          description={description}
+          image={image}
+        >
           <Component />
         </ToolLayout>
       );

@@ -9,7 +9,7 @@ export default function ToolInputAndResult({
   result: ReactNode;
 }) {
   return (
-    <Grid container spacing={2}>
+    <Grid id="tool" container spacing={2}>
       <Grid item xs={6}>
         {input}
       </Grid>

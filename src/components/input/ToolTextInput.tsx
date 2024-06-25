@@ -46,7 +46,7 @@ export default function ToolTextInput({
     fileInputRef.current?.click();
   };
   return (
-    <Box id="tool">
+    <Box>
       <InputHeader title={title} />
       <TextField
         value={value}

@@ -5,7 +5,8 @@ import {
   Card,
   CardContent,
   Typography,
-  TextField
+  TextField,
+  useTheme
 } from '@mui/material';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import RequiredOptions from './RequiredOptions';
@@ -18,11 +19,12 @@ export default function ExampleCard({
   requiredOptions,
   changeInputResult
 }: ExampleCardProps) {
+  const theme = useTheme();
   return (
     <Card
       raised
       sx={{
-        bgcolor: '#d1d9e6',
+        bgcolor: theme.palette.background.default,
         height: '100%',
         overflow: 'hidden',
         borderRadius: 2,

@@ -8,6 +8,7 @@ export const tool = defineTool('string', {
   image,
   description:
     "World's Simplest Text Tool World's simplest browser-based utility for joining text. Load your text in the input form on the left and you'll automatically get merged text on the right. Powerful, free, and fast. Load text – get joined lines",
+  shortDescription: 'Quickly merge texts',
   keywords: ['text', 'join'],
   component: lazy(() => import('./index'))
 });

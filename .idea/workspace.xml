@@ -6,8 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: create transparent png">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/create-tool.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/create-tool.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolInputAndResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolInputAndResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/allTools/ToolCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/allTools/ToolCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/examples/Examples.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/Examples.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/create-transparent/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/sum/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/sum/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/join/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/split/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/split/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/to-morse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/to-morse/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +31,9 @@
   </component>
   <component name="FormatOnSaveOptions">
     <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,39 +54,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Vitest.compute function (1).executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.compute function.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.mergeText.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/omni-tools/src/assets&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
-    &quot;npm.script:create:tool.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Vitest.compute function (1).executor": "Run",
+    "Vitest.compute function.executor": "Run",
+    "Vitest.mergeText.executor": "Run",
+    "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
+    "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
+    "git-widget-placeholder": "string-join",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/HP/IdeaProjects/omni-tools/src/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "npm.prebuild.executor": "Run",
+    "npm.script:create:tool.executor": "Run",
+    "npm.test.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\prettier",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
+    "ts.external.directory.path": "C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>

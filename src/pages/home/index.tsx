@@ -89,7 +89,7 @@ export default function Home() {
             >
               <Box>
                 <Typography fontWeight={'bold'}>{option.name}</Typography>
-                <Typography fontSize={12}>{option.description}</Typography>
+                <Typography fontSize={12}>{option.shortDescription}</Typography>
               </Box>
             </Box>
           )}
