@@ -6,6 +6,7 @@ import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import React, { useContext } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import InputHeader from '../InputHeader';
+import ResultFooter from './ResultFooter';
 
 export default function ToolTextResult({
   title = 'Result',
@@ -40,14 +41,7 @@ export default function ToolTextResult({
     <Box>
       <InputHeader title={title} />
       <TextField value={value} fullWidth multiline rows={10} />
-      <Stack mt={1} direction={'row'} spacing={2}>
-        <Button onClick={handleDownload} startIcon={<DownloadIcon />}>
-          Save as
-        </Button>
-        <Button onClick={handleCopy} startIcon={<ContentPasteIcon />}>
-          Copy to clipboard
-        </Button>
-      </Stack>
+      <ResultFooter handleCopy={handleCopy} handleDownload={handleDownload} />
     </Box>
   );
 }

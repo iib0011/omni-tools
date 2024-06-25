@@ -67,6 +67,10 @@ export default function ChangeColorsInPng() {
               Math.pow(c1[2] - c2[2], 2)
           );
         };
+        const maxColorDistance = Math.sqrt(
+          Math.pow(255, 2) + Math.pow(255, 2) + Math.pow(255, 2)
+        );
+        const similarityThreshold = (similarity / 100) * maxColorDistance;
 
         for (let i = 0; i < data.length; i += 4) {
           const currentColor: [number, number, number] = [
@@ -74,7 +78,7 @@ export default function ChangeColorsInPng() {
             data[i + 1],
             data[i + 2]
           ];
-          if (colorDistance(currentColor, fromColor) <= similarity) {
+          if (colorDistance(currentColor, fromColor) <= similarityThreshold) {
             data[i] = toColor[0]; // Red
             data[i + 1] = toColor[1]; // Green
             data[i + 2] = toColor[2]; // Blue
@@ -109,7 +113,11 @@ export default function ChangeColorsInPng() {
           />
         </Grid>
         <Grid item xs={6}>
-          <ToolFileResult title={'Output PNG with new colors'} value={result} />
+          <ToolFileResult
+            title={'Output PNG with new colors'}
+            value={result}
+            extension={'png'}
+          />
         </Grid>
       </Grid>
       <ToolOptions>
@@ -131,7 +139,7 @@ export default function ChangeColorsInPng() {
                 <ColorSelector
                   value={values.toColor}
                   onChange={(val) => setFieldValue('toColor', val)}
-                  description={'With this color (to color).\n'}
+                  description={'With this color (to color)'}
                 />
               </Box>
               <Box></Box>

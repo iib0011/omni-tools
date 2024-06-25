@@ -1,17 +1,22 @@
 import { Box } from '@mui/material';
-import React from 'react';
+import React, { useContext } from 'react';
 import InputHeader from '../InputHeader';
 import greyPattern from '@assets/grey-pattern.png';
 import { globalInputHeight } from '../../config/uiConfig';
+import ResultFooter from './ResultFooter';
+import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 
 export default function ToolFileResult({
   title = 'Result',
-  value
+  value,
+  extension
 }: {
   title?: string;
   value: File | null;
+  extension: string;
 }) {
   const [preview, setPreview] = React.useState<string | null>(null);
+  const { showSnackBar } = useContext(CustomSnackBarContext);
 
   React.useEffect(() => {
     if (value) {
@@ -24,6 +29,35 @@ export default function ToolFileResult({
     }
   }, [value]);
 
+  const handleCopy = () => {
+    if (value) {
+      const blob = new Blob([value], { type: value.type });
+      const clipboardItem = new ClipboardItem({ [value.type]: blob });
+
+      navigator.clipboard
+        .write([clipboardItem])
+        .then(() => showSnackBar('File copied', 'success'))
+        .catch((err) => {
+          showSnackBar('Failed to copy: ' + err, 'error');
+        });
+    }
+  };
+
+  const handleDownload = () => {
+    if (value) {
+      const filename = 'output-omni-tools.' + extension;
+
+      const blob = new Blob([value], { type: value.type });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
+    }
+  };
   return (
     <Box>
       <InputHeader title={title} />
@@ -55,6 +89,11 @@ export default function ToolFileResult({
           </Box>
         )}
       </Box>
+      <ResultFooter
+        disabled={!value}
+        handleCopy={handleCopy}
+        handleDownload={handleDownload}
+      />
     </Box>
   );
 }
