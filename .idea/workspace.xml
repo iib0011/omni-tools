@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: make responsive">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolBreadcrumb.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolBreadcrumb.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolInputAndResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolInputAndResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/allTools/AllTools.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/allTools/AllTools.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptionGroups.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptionGroups.tsx" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: make tool responsive">
+      <change beforePath="$PROJECT_DIR$/src/components/examples/Examples.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/Examples.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,14 +192,6 @@
       <workItem from="1719294110005" duration="3842000" />
       <workItem from="1719339559458" duration="303000" />
       <workItem from="1719340295244" duration="772000" />
-    </task>
-    <task id="LOCAL-00013" summary="fix: text split try catch">
-      <option name="closed" value="true" />
-      <created>1719005757859</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1719005757859</updated>
     </task>
     <task id="LOCAL-00014" summary="fix: readme">
       <option name="closed" value="true" />
@@ -590,7 +577,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719358195260</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="feat: make tool responsive">
+      <option name="closed" value="true" />
+      <created>1719359243293</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1719359243294</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +606,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: result copy and download" />
     <MESSAGE value="feat: contributors graph" />
     <MESSAGE value="feat: create tool script" />
     <MESSAGE value="fix: missing files" />
@@ -636,7 +630,8 @@
     <MESSAGE value="fix: generate numbers" />
     <MESSAGE value="fix: merging branches" />
     <MESSAGE value="feat: make responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: make responsive" />
+    <MESSAGE value="feat: make tool responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: make tool responsive" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
