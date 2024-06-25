@@ -26,12 +26,17 @@ export default function ToolFileInput({
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleCopy = () => {
-    navigator.clipboard
-      .writeText(value?.name ?? '')
-      .then(() => showSnackBar('Text copied', 'success'))
-      .catch((err) => {
-        showSnackBar('Failed to copy: ' + err, 'error');
-      });
+    if (value) {
+      const blob = new Blob([value], { type: value.type });
+      const clipboardItem = new ClipboardItem({ [value.type]: blob });
+
+      navigator.clipboard
+        .write([clipboardItem])
+        .then(() => showSnackBar('File copied', 'success'))
+        .catch((err) => {
+          showSnackBar('Failed to copy: ' + err, 'error');
+        });
+    }
   };
   useEffect(() => {
     if (value) {
