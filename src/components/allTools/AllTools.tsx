@@ -21,7 +21,7 @@ export default function AllTools({ title, toolCards }: AllToolsProps) {
       <Stack direction={'row'} alignItems={'center'} spacing={2}>
         <Grid container spacing={2}>
           {toolCards.map((card, index) => (
-            <Grid item xs={4} key={index}>
+            <Grid item xs={12} md={6} lg={4} key={index}>
               <ToolCard
                 title={card.title}
                 description={card.description}

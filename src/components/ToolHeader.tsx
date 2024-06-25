@@ -2,6 +2,7 @@ import { Button, Box, Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import ToolBreadcrumb from './ToolBreadcrumb';
 import { capitalizeFirstLetter } from '../utils/string';
+import Grid from '@mui/material/Grid';
 
 interface ToolHeaderProps {
   title: string;
@@ -12,17 +13,23 @@ interface ToolHeaderProps {
 
 function ToolLinks() {
   return (
-    <Box display="flex" gap={2} my={2}>
-      <Button variant="outlined" href="#tool">
-        Use This Tool
-      </Button>
-      <Button variant="outlined" href="#examples">
-        See Examples
-      </Button>
-      <Button variant="outlined" href="#tour">
-        Learn How to Use
-      </Button>
-    </Box>
+    <Grid container spacing={2} mt={1}>
+      <Grid item md={12} lg={4}>
+        <Button fullWidth variant="outlined" href="#tool">
+          Use This Tool
+        </Button>
+      </Grid>
+      <Grid item md={12} lg={4}>
+        <Button fullWidth variant="outlined" href="#examples">
+          See Examples
+        </Button>
+      </Grid>
+      <Grid item md={12} lg={4}>
+        <Button fullWidth variant="outlined" href="#tour">
+          Learn How to Use
+        </Button>
+      </Grid>
+    </Grid>
   );
 }
 
@@ -44,16 +51,23 @@ export default function ToolHeader({
           { title }
         ]}
       />
-      <Stack direction={'row'} alignItems={'center'} spacing={2}>
-        <Box>
+      <Grid mt={1} container spacing={2}>
+        <Grid item xs={12} md={8}>
           <Typography mb={2} fontSize={30} color={'primary'}>
             {title}
           </Typography>
           <Typography fontSize={20}>{description}</Typography>
           <ToolLinks />
-        </Box>
-        {image && <img width={'250'} src={image} />}
-      </Stack>
+        </Grid>
+
+        {image && (
+          <Grid item xs={12} md={4}>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+              <img width={'250'} src={image} />
+            </Box>
+          </Grid>
+        )}
+      </Grid>
     </Box>
   );
 }
