@@ -5,6 +5,7 @@ import ToolHeader from './ToolHeader';
 import Separator from '@tools/Separator';
 import AllTools from './allTools/AllTools';
 import { getToolsByCategory } from '@tools/index';
+import { capitalizeFirstLetter } from '../utils/string';
 
 export default function ToolLayout({
   children,
@@ -43,7 +44,10 @@ export default function ToolLayout({
         <ToolHeader title={title} description={description} image={image} />
         {children}
         <Separator backgroundColor="#5581b5" margin="50px" />
-        <AllTools title="All Text Tools" toolCards={otherCategoryTools} />
+        <AllTools
+          title={`All ${capitalizeFirstLetter(type)} tools`}
+          toolCards={otherCategoryTools}
+        />
       </Box>
     </Box>
   );

@@ -4,25 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: create transparent png">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: shortDescription">
+      <change afterPath="$PROJECT_DIR$/src/assets/tools.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/create-tool.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/create-tool.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolInputAndResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolInputAndResult.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/allTools/ToolCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/allTools/ToolCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/examples/Examples.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/Examples.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/routesConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/routesConfig.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/create-transparent/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/number/sum/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/sum/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/join/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/split/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/split/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/to-morse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/to-morse/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/string.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/string.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,14 +191,6 @@
       <workItem from="1719197816332" duration="1453000" />
       <workItem from="1719273044735" duration="9847000" />
       <workItem from="1719294110005" duration="3842000" />
-    </task>
-    <task id="LOCAL-00009" summary="chore: split string tools ui">
-      <option name="closed" value="true" />
-      <created>1718996769014</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1718996769014</updated>
     </task>
     <task id="LOCAL-00010" summary="chore: use formik">
       <option name="closed" value="true" />
@@ -594,7 +576,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719297880629</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="feat: shortDescription">
+      <option name="closed" value="true" />
+      <created>1719301172510</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1719301172510</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +605,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: copy and import file" />
     <MESSAGE value="refactor: tool options components" />
     <MESSAGE value="fix: join text service" />
     <MESSAGE value="test: join service" />
@@ -640,7 +629,8 @@
     <MESSAGE value="fix: readme" />
     <MESSAGE value="refactor: tool input and result" />
     <MESSAGE value="feat: create transparent png" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: create transparent png" />
+    <MESSAGE value="feat: shortDescription" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: shortDescription" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
