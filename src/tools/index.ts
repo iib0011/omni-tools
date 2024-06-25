@@ -38,6 +38,7 @@ export const filterTools = (
     (tool) =>
       tool.name.toLowerCase().includes(lowerCaseQuery) ||
       tool.description.toLowerCase().includes(lowerCaseQuery) ||
+      tool.shortDescription.toLowerCase().includes(lowerCaseQuery) ||
       tool.keywords.some((keyword) =>
         keyword.toLowerCase().includes(lowerCaseQuery)
       )
@@ -49,6 +50,7 @@ export const getToolsByCategory = (): {
   description: string;
   type: string;
   example: { title: string; path: string };
+  tools: DefinedTool[];
 }[] => {
   const grouped: Partial<Record<string, DefinedTool[]>> = Object.groupBy(
     tools,
@@ -60,6 +62,7 @@ export const getToolsByCategory = (): {
       description:
         categoriesDescriptions.find((desc) => desc.type === type)?.value ?? '',
       type,
+      tools: tls ?? [],
       example: tls
         ? { title: tls[0].name, path: tls[0].path }
         : { title: '', path: '' }

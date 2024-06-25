@@ -83,6 +83,7 @@ export const tool = defineTool('${type}', {
   path: '${toolName}',
   // image,
   description: '',
+  shortDescription: '',
   keywords: ['${toolName.split('-').join('\', \'')}'],
   component: lazy(() => import('./index'))
 });
