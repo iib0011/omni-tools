@@ -7,7 +7,7 @@ all available for free and open for community contributions. Please don't forget
 ## Table of Contents
 
 - [Features](#features)
-- [Installation](#installation)
+- [Contribute](#contribute)
 - [License](#license)
 - [Contact](#contact)
 
@@ -54,7 +54,7 @@ npm run script:create:tool my-tool-name folder1/folder2
 
 Use `folder1\folder2` on Windows
 
-## Contributors
+### Contributors
 
 <a href="https://github.com/iib0011/omni-tools/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=iib0011/omni-tools" />

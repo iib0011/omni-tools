@@ -90,7 +90,20 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\tools" />
     </key>
   </component>
-  <component name="RunManager" selected="Vitest.compute function">
+  <component name="RunManager" selected="Vitest.compute function (1)">
+    <configuration name="compute function (1)" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/pages/number/sum/sum.service.test.ts" />
+      <test-names>
+        <test-name value="compute function" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="compute function" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -109,16 +122,6 @@
       <command value="run" />
       <scripts>
         <script value="dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="prebuild" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="prebuild" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -146,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Vitest.compute function (1)" />
         <item itemvalue="Vitest.compute function" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.script:create:tool" />
-        <item itemvalue="npm.prebuild" />
       </list>
     </recent_temporary>
   </component>
