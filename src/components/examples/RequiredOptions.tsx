@@ -1,5 +1,5 @@
 import { Box, Stack, TextField, Typography } from '@mui/material';
-import { RequiredOptionsProps } from '../../../components/examples/Examples';
+import { RequiredOptionsProps } from './Examples';
 import CheckboxWithDesc from 'components/options/CheckboxWithDesc';
 
 export default function RequiredOptions({
@@ -27,7 +27,6 @@ export default function RequiredOptions({
       </Typography>
 
       <Box
-        display="flex"
         onClick={handleBoxClick}
         sx={{
           zIndex: '2',

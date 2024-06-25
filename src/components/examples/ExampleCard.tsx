@@ -50,13 +50,18 @@ export default function ExampleCard({
           <Typography variant="body2" color="text.secondary">
             {description}
           </Typography>
+
           <Box
-            display="flex"
             onClick={handleSampleTextClick}
             sx={{
+              display: 'flex',
+              zIndex: '2',
               width: '100%',
+              height: '100%',
+              bgcolor: 'transparent',
               padding: '5px 10px',
               borderRadius: '5px',
+              cursor: 'pointer',
               boxShadow: 'inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;'
             }}
           >
@@ -67,6 +72,7 @@ export default function ExampleCard({
               multiline
               sx={{
                 '& .MuiOutlinedInput-root': {
+                  zIndex: '-1',
                   '& fieldset': {
                     border: 'none'
                   }
@@ -74,14 +80,19 @@ export default function ExampleCard({
               }}
             />
           </Box>
+
           <ArrowDownwardIcon />
           <Box
-            display="flex"
             onClick={handleSampleResultClick}
             sx={{
+              display: 'flex',
+              zIndex: '2',
               width: '100%',
+              height: '100%',
+              bgcolor: 'transparent',
               padding: '5px 10px',
               borderRadius: '5px',
+              cursor: 'pointer',
               boxShadow: 'inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;'
             }}
           >
@@ -92,6 +103,7 @@ export default function ExampleCard({
               multiline
               sx={{
                 '& .MuiOutlinedInput-root': {
+                  zIndex: '-1',
                   '& fieldset': {
                     border: 'none'
                   }
