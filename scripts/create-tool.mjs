@@ -45,7 +45,7 @@ const toolNameCamelCase = toolName.replace(/-./g, (x) => x[1].toUpperCase())
 const toolNameTitleCase =
   toolName[0].toUpperCase() + toolName.slice(1).replace(/-/g, ' ')
 const toolDir = join(toolsDir, toolName)
-
+const type = folder.split(sep)[folder.split(sep).length - 1]
 await createFolderStructure(toolDir, folder.split(sep).length)
 console.log(`Directory created: ${toolDir}`)
 
@@ -78,7 +78,7 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 // import image from '@assets/text.png';
 
-export const tool = defineTool('${folder.split(sep)[folder.split(sep).length - 1]}', {
+export const tool = defineTool('${type}', {
   name: '${toolNameTitleCase}',
   path: '${toolName}',
   // image,
@@ -132,7 +132,7 @@ const indexContent = await readFile(toolsIndex, { encoding: 'utf-8' }).then(
 indexContent.splice(
   0,
   0,
-  `import { tool as ${toolNameCamelCase} } from './${toolName}/meta';`
+  `import { tool as ${type}${capitalizeFirstLetter(toolNameCamelCase)} } from './${toolName}/meta';`
 )
 writeFile(toolsIndex, indexContent.join('\n'))
 console.log(`Added import in: ${toolsIndex}`)

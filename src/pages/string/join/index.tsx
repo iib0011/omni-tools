@@ -9,6 +9,7 @@ import { mergeText } from './service';
 import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
 import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '../../../components/options/CheckboxWithDesc';
+import ToolOptionGroups from '../../../components/options/ToolOptionGroups';
 
 const initialValues = {
   joinCharacter: '',
@@ -90,31 +91,37 @@ export default function JoinText() {
           {({ setFieldValue, values }) => (
             <Stack direction={'row'} spacing={2}>
               <FormikListenerComponent input={input} />
-              <Box>
-                <Typography fontSize={22}>Text Merged Options</Typography>
-                <TextFieldWithDesc
-                  placeholder={mergeOptions.placeholder}
-                  value={values['joinCharacter']}
-                  onChange={(value) =>
-                    setFieldValue(mergeOptions.accessor, value)
+              <ToolOptionGroups
+                groups={[
+                  {
+                    title: 'Text Merged Options',
+                    component: (
+                      <TextFieldWithDesc
+                        placeholder={mergeOptions.placeholder}
+                        value={values['joinCharacter']}
+                        onChange={(value) =>
+                          setFieldValue(mergeOptions.accessor, value)
+                        }
+                        description={mergeOptions.description}
+                      />
+                    )
+                  },
+                  {
+                    title: 'Blank Lines and Trailing Spaces',
+                    component: blankTrailingOptions.map((option) => (
+                      <CheckboxWithDesc
+                        key={option.accessor}
+                        title={option.title}
+                        checked={!!values[option.accessor]}
+                        onChange={(value) =>
+                          setFieldValue(option.accessor, value)
+                        }
+                        description={option.description}
+                      />
+                    ))
                   }
-                  description={mergeOptions.description}
-                />
-              </Box>
-              <Box>
-                <Typography fontSize={22}>
-                  Blank Lines and Trailing Spaces
-                </Typography>
-                {blankTrailingOptions.map((option) => (
-                  <CheckboxWithDesc
-                    key={option.accessor}
-                    title={option.title}
-                    checked={!!values[option.accessor]}
-                    onChange={(value) => setFieldValue(option.accessor, value)}
-                    description={option.description}
-                  />
-                ))}
-              </Box>
+                ]}
+              />
             </Stack>
           )}
         </Formik>
