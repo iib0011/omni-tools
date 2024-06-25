@@ -22,7 +22,16 @@ export const compute = (
       .filter((part) => !isNaN(Number(part)) && part.trim() !== '')
       .map(Number);
   }
-  return numbers
-    .reduce((previousValue, currentValue) => previousValue + currentValue, 0)
-    .toString();
+  if (printRunningSum) {
+    let result: string = '';
+    let sum: number = 0;
+    for (const i of numbers) {
+      sum = sum + i;
+      result = result + sum + '\n';
+    }
+    return result;
+  } else
+    return numbers
+      .reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+      .toString();
 };

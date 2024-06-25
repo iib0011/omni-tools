@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: sum numbers init">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: compilation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/number/sum/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/sum/service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,15 +176,7 @@
       <workItem from="1719166718305" duration="1783000" />
       <workItem from="1719168519203" duration="17675000" />
       <workItem from="1719197816332" duration="1453000" />
-      <workItem from="1719273044735" duration="8486000" />
-    </task>
-    <task id="LOCAL-00003" summary="feat: initial commit">
-      <option name="closed" value="true" />
-      <created>1718821853210</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1718821853210</updated>
+      <workItem from="1719273044735" duration="8860000" />
     </task>
     <task id="LOCAL-00004" summary="feat: example tools">
       <option name="closed" value="true" />
@@ -569,7 +562,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719281510362</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="fix: compilation">
+      <option name="closed" value="true" />
+      <created>1719281605998</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1719281605999</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +591,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: react helmet" />
     <MESSAGE value="feat: tools normalized" />
     <MESSAGE value="feat: search tools" />
     <MESSAGE value="fix: deploy message" />
@@ -615,7 +615,8 @@
     <MESSAGE value="feat: change color in png finished" />
     <MESSAGE value="feat: string to morse" />
     <MESSAGE value="feat: sum numbers init" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: sum numbers init" />
+    <MESSAGE value="fix: compilation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: compilation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
