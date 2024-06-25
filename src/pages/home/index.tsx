@@ -18,7 +18,7 @@ import Button from '@mui/material/Button';
 const exampleTools: { label: string; url: string }[] = [
   {
     label: 'Create a transparent image',
-    url: ''
+    url: '/png/create-transparent'
   },
   { label: 'Convert text to morse code', url: '/string/to-morse' },
   { label: 'Change GIF speed', url: '' },
