@@ -1,6 +1,6 @@
 // Import necessary modules and functions
 import { describe, it, expect } from 'vitest';
-import { listOfIntegers } from './service';
+import { listOfIntegers} from './service';
 
 // Define test cases for the listOfIntegers function
 describe('listOfIntegers function', () => {
@@ -52,5 +52,25 @@ describe('listOfIntegers function', () => {
 
         const result = listOfIntegers(initialValue, count, step, separator);
         expect(result).toBe('-10 -7.5 -5 -2.5 0');
+    }); 
+
+    it('should generate a constant sequence if the step is 0', () => {
+        const initialValue =  1;
+        const step = 0;
+        const count = 5;
+        const separator = ' ';
+
+        const result = listOfIntegers(initialValue, count, step, separator);
+        expect(result).toBe('1 1 1 1 1');
+    }); 
+
+    it('should generate a constant sequence if the step is 0', () => {
+        const initialValue =  1;
+        const step = 0;
+        const count = 5;
+        const separator = ' ';
+
+        const result = listOfIntegers(initialValue, count, step, separator);
+        expect(result).toBe('1 1 1 1 1');
     }); 
 });
