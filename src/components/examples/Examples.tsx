@@ -7,6 +7,7 @@ export interface ExampleCardProps {
   sampleText: string;
   sampleResult: string;
   requiredOptions: RequiredOptionsProps;
+  changeInputResult: (input: string, result: string) => void;
 }
 
 export interface RequiredOptionsProps {
@@ -39,14 +40,15 @@ export default function Examples({
 
       <Stack direction={'row'} alignItems={'center'} spacing={2}>
         <Grid container spacing={2}>
-          {exampleCards.map((card) => (
-            <Grid item xs={4} key={card.title}>
+          {exampleCards.map((card, index) => (
+            <Grid item xs={4} key={index}>
               <ExampleCard
                 title={card.title}
                 description={card.description}
                 sampleText={card.sampleText}
                 sampleResult={card.sampleResult}
                 requiredOptions={card.requiredOptions}
+                changeInputResult={card.changeInputResult}
               />
             </Grid>
           ))}

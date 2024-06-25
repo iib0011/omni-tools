@@ -1,4 +1,3 @@
-import React from 'react';
 import { ExampleCardProps } from './Examples';
 import {
   Box,
@@ -16,16 +15,9 @@ export default function ExampleCard({
   description,
   sampleText,
   sampleResult,
-  requiredOptions
+  requiredOptions,
+  changeInputResult
 }: ExampleCardProps) {
-  const handleSampleTextClick = () => {
-    console.log('TextField clicked');
-  };
-
-  const handleSampleResultClick = () => {
-    console.log('TextField clicked');
-  };
-
   return (
     <Card
       raised
@@ -52,7 +44,7 @@ export default function ExampleCard({
           </Typography>
 
           <Box
-            onClick={handleSampleTextClick}
+            onClick={() => changeInputResult(sampleText, sampleResult)}
             sx={{
               display: 'flex',
               zIndex: '2',
@@ -83,7 +75,7 @@ export default function ExampleCard({
 
           <ArrowDownwardIcon />
           <Box
-            onClick={handleSampleResultClick}
+            onClick={() => changeInputResult(sampleText, sampleResult)}
             sx={{
               display: 'flex',
               zIndex: '2',

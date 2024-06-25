@@ -165,6 +165,16 @@ export default function JoinText() {
     return null;
   };
 
+  function changeInputResult(input: string, result: string) {
+    setInput(input);
+    setResult(result);
+
+    const toolsElement = document.getElementById('tool');
+    if (toolsElement) {
+      toolsElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     <Box>
       <Grid container spacing={2}>
@@ -203,9 +213,9 @@ export default function JoinText() {
                 <Typography fontSize={22}>
                   Blank Lines and Trailing Spaces
                 </Typography>
-                {blankTrailingOptions.map((option) => (
+                {blankTrailingOptions.map((option, index) => (
                   <CheckboxWithDesc
-                    key={option.accessor}
+                    key={index}
                     title={option.title}
                     checked={!!values[option.accessor]}
                     onChange={(value) => setFieldValue(option.accessor, value)}
@@ -225,7 +235,10 @@ export default function JoinText() {
       <Examples
         title="Text Joiner Examples"
         subtitle="Click to try!"
-        exampleCards={exampleCards}
+        exampleCards={exampleCards.map((card) => ({
+          ...card,
+          changeInputResult
+        }))}
       />
       <Separator backgroundColor="#5581b5" margin="50px" />
       <AllTools title="All Text Tools" toolCards={toolCards} />

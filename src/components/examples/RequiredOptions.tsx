@@ -14,7 +14,6 @@ export default function RequiredOptions({
     if (toolsElement) {
       toolsElement.scrollIntoView({ behavior: 'smooth' });
     }
-    console.log('tool clicked');
   };
 
   return (

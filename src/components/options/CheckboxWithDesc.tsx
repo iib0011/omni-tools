@@ -23,7 +23,6 @@ const CheckboxWithDesc = ({
       <FormControlLabel
         control={
           <Checkbox
-            defaultChecked
             checked={checked}
             onChange={handleChange}
             disabled={disabled}
