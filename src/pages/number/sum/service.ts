@@ -11,7 +11,7 @@ export const compute = (
   extractionType: NumberExtractionType,
   printRunningSum: boolean,
   separator: string
-) => {
+): string => {
   let numbers: number[] = [];
   if (extractionType === 'smart') {
     numbers = getAllNumbers(input);
@@ -22,8 +22,7 @@ export const compute = (
       .filter((part) => !isNaN(Number(part)) && part.trim() !== '')
       .map(Number);
   }
-  return numbers.reduce(
-    (previousValue, currentValue) => previousValue + currentValue,
-    0
-  );
+  return numbers
+    .reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+    .toString();
 };
