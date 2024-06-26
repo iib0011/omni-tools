@@ -1,22 +1,17 @@
-import { Box, Grid, Stack, Typography } from '@mui/material';
-import React, { useContext, useEffect, useState } from 'react';
-import { Formik, useFormikContext } from 'formik';
+import { Box } from '@mui/material';
+import React, { useState } from 'react';
 import * as Yup from 'yup';
 import ToolTextInput from '../../../components/input/ToolTextInput';
 import ToolTextResult from '../../../components/result/ToolTextResult';
 import ToolOptions from '../../../components/options/ToolOptions';
 import { mergeText } from './service';
-import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
 import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '../../../components/options/CheckboxWithDesc';
-import ToolOptionGroups from '../../../components/options/ToolOptionGroups';
 import ToolInputAndResult from '../../../components/ToolInputAndResult';
 
-import Info from './Info';
+import ToolInfo from '../../../components/ToolInfo';
 import Separator from '../../../tools/Separator';
-import AllTools from '../../../components/allTools/AllTools';
 import Examples from '../../../components/examples/Examples';
-import ColorSelector from '../../../components/options/ColorSelector';
 
 const initialValues = {
   joinCharacter: '',
@@ -178,7 +173,7 @@ export default function JoinText() {
         input={input}
         validationSchema={validationSchema}
       />
-      <Info
+      <ToolInfo
         title="What Is a Text Joiner?"
         description="With this tool you can join parts of the text together. It takes a list of text values, separated by newlines, and merges them together. You can set the character that will be placed between the parts of the combined text. Also, you can ignore all empty lines and remove spaces and tabs at the end of all lines. Textabulous!"
       />

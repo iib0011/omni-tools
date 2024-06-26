@@ -40,7 +40,13 @@ export default function ToolTextResult({
   return (
     <Box>
       <InputHeader title={title} />
-      <TextField value={value} fullWidth multiline rows={10} />
+      <TextField
+        value={value}
+        fullWidth
+        multiline
+        rows={10}
+        inputProps={{ 'data-testid': 'text-result' }}
+      />
       <ResultFooter handleCopy={handleCopy} handleDownload={handleDownload} />
     </Box>
   );
