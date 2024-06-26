@@ -1,32 +1,20 @@
 import Typography from '@mui/material/Typography';
-import { useState } from 'react';
 import Box from '@mui/material/Box';
-import { useTimeout } from '../hooks';
+import './Loading.css';
 
-export type FuseLoadingProps = {
-  delay?: number;
-  className?: string;
-};
-
-/**
- * FuseLoading displays a loading state with an optional delay
- */
-function FuseLoading(props: FuseLoadingProps) {
-  const { delay = 0, className } = props;
-  const [showLoading, setShowLoading] = useState(!delay);
-
-  useTimeout(() => {
-    setShowLoading(true);
-  }, delay);
-
+function Loading() {
   return (
-    <div>
-      <Typography
-        className="text-13 sm:text-20 -mb-16 font-medium"
-        color="text.secondary"
-      >
-        Loading
-      </Typography>
+    <Box
+      sx={{
+        width: '100%',
+        height: 0.8 * window.innerHeight,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
+    >
+      <Typography color="primary">Loading</Typography>
       <Box
         id="spinner"
         sx={{
@@ -39,8 +27,8 @@ function FuseLoading(props: FuseLoadingProps) {
         <div className="bounce2" />
         <div className="bounce3" />
       </Box>
-    </div>
+    </Box>
   );
 }
 
-export default FuseLoading;
+export default Loading;

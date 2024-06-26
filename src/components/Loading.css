@@ -1,0 +1,51 @@
+#spinner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 56px;
+}
+
+#spinner > div {
+  width: 12px;
+  height: 12px;
+  background-color: #1e96f7;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: fuse-bouncedelay 1s infinite ease-in-out both;
+  animation: fuse-bouncedelay 1s infinite ease-in-out both;
+}
+
+#spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+#spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes fuse-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes fuse-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
