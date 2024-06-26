@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: loading screen">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: shuffle tools search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptionGroups.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptionGroups.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/create-transparent/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/sum/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/sum/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/split/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/split/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/to-morse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/to-morse/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,15 +200,8 @@
       <workItem from="1719294110005" duration="3842000" />
       <workItem from="1719339559458" duration="303000" />
       <workItem from="1719340295244" duration="772000" />
-      <workItem from="1719363272227" duration="330000" />
-    </task>
-    <task id="LOCAL-00016" summary="ubf jn">
-      <option name="closed" value="true" />
-      <created>1719006829016</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1719006829016</updated>
+      <workItem from="1719363272227" duration="390000" />
+      <workItem from="1719379971872" duration="4208000" />
     </task>
     <task id="LOCAL-00017" summary="ubf jn">
       <option name="closed" value="true" />
@@ -587,7 +587,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719360545177</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="chore: shuffle tools search">
+      <option name="closed" value="true" />
+      <created>1719363656541</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1719363656541</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,7 +616,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: missing files" />
     <MESSAGE value="fix: create tool" />
     <MESSAGE value="fix: build" />
     <MESSAGE value="chore: CODEOWNERS" />
@@ -633,7 +640,8 @@
     <MESSAGE value="feat: make tool responsive" />
     <MESSAGE value="chore: make tool examples responsive" />
     <MESSAGE value="chore: loading screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: loading screen" />
+    <MESSAGE value="chore: shuffle tools search" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: shuffle tools search" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

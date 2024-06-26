@@ -12,6 +12,7 @@ import RadioWithTextField from '../../../components/options/RadioWithTextField';
 import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
 import ToolOptionGroups from '../../../components/options/ToolOptionGroups';
 import ToolInputAndResult from '../../../components/ToolInputAndResult';
+import CheckboxWithDesc from '../../../components/options/CheckboxWithDesc';
 
 const initialValues = {
   splitSeparatorType: 'symbol' as SplitOperatorType,
@@ -82,44 +83,31 @@ export default function SplitText() {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   // const formRef = useRef<FormikProps<typeof initialValues>>(null);
-  const { showSnackBar } = useContext(CustomSnackBarContext);
+  const computeExternal = (optionsValues: typeof initialValues, input: any) => {
+    const {
+      splitSeparatorType,
+      outputSeparator,
+      charBeforeChunk,
+      charAfterChunk,
+      chunksValue,
+      symbolValue,
+      regexValue,
+      lengthValue
+    } = optionsValues;
 
-  const FormikListenerComponent = () => {
-    const { values } = useFormikContext<typeof initialValues>();
-
-    useEffect(() => {
-      try {
-        const {
-          splitSeparatorType,
-          outputSeparator,
-          charBeforeChunk,
-          charAfterChunk,
-          chunksValue,
-          symbolValue,
-          regexValue,
-          lengthValue
-        } = values;
-
-        setResult(
-          compute(
-            splitSeparatorType,
-            input,
-            symbolValue,
-            regexValue,
-            Number(lengthValue),
-            Number(chunksValue),
-            charBeforeChunk,
-            charAfterChunk,
-            outputSeparator
-          )
-        );
-      } catch (exception: unknown) {
-        if (exception instanceof Error)
-          showSnackBar(exception.message, 'error');
-      }
-    }, [values, input]);
-
-    return null; // This component doesn't render anything
+    setResult(
+      compute(
+        splitSeparatorType,
+        input,
+        symbolValue,
+        regexValue,
+        Number(lengthValue),
+        Number(chunksValue),
+        charBeforeChunk,
+        charAfterChunk,
+        outputSeparator
+      )
+    );
   };
   const validationSchema = Yup.object({
     // splitSeparator: Yup.string().required('The separator is required')
@@ -131,57 +119,42 @@ export default function SplitText() {
         input={<ToolTextInput value={input} onChange={setInput} />}
         result={<ToolTextResult title={'Text pieces'} value={result} />}
       />
-      <ToolOptions>
-        <Formik
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={() => {}}
-        >
-          {({ setFieldValue, values }) => (
-            <Stack direction={'row'} spacing={2}>
-              <FormikListenerComponent />
-              <ToolOptionGroups
-                groups={[
-                  {
-                    title: 'Split separator options',
-                    component: splitOperators.map(
-                      ({ title, description, type }) => (
-                        <RadioWithTextField
-                          key={type}
-                          radioValue={type}
-                          title={title}
-                          fieldName={'splitSeparatorType'}
-                          description={description}
-                          value={values[`${type}Value`]}
-                          onRadioChange={(type) =>
-                            setFieldValue('splitSeparatorType', type)
-                          }
-                          onTextChange={(val) =>
-                            setFieldValue(`${type}Value`, val)
-                          }
-                        />
-                      )
-                    )
-                  },
-                  {
-                    title: 'Output separator options',
-                    component: outputOptions.map((option) => (
-                      <TextFieldWithDesc
-                        key={option.accessor}
-                        value={values[option.accessor]}
-                        onChange={(value) =>
-                          setFieldValue(option.accessor, value)
-                        }
-                        description={option.description}
-                      />
-                    ))
-                  }
-                ]}
+      <ToolOptions
+        compute={computeExternal}
+        getGroups={({ values, setFieldValue }) => [
+          {
+            title: 'Split separator options',
+            component: splitOperators.map(({ title, description, type }) => (
+              <RadioWithTextField
+                key={type}
+                radioValue={type}
+                title={title}
+                fieldName={'splitSeparatorType'}
+                description={description}
+                value={values[`${type}Value`]}
+                onRadioChange={(type) =>
+                  setFieldValue('splitSeparatorType', type)
+                }
+                onTextChange={(val) => setFieldValue(`${type}Value`, val)}
               />
-            </Stack>
-          )}
-        </Formik>
-      </ToolOptions>
+            ))
+          },
+          {
+            title: 'Output separator options',
+            component: outputOptions.map((option) => (
+              <TextFieldWithDesc
+                key={option.accessor}
+                value={values[option.accessor]}
+                onChange={(value) => setFieldValue(option.accessor, value)}
+                description={option.description}
+              />
+            ))
+          }
+        ]}
+        initialValues={initialValues}
+        input={input}
+        validationSchema={validationSchema}
+      />
     </Box>
   );
 }

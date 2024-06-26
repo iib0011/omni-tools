@@ -1,9 +1,8 @@
 import Typography from '@mui/material/Typography';
 import React, { ReactNode } from 'react';
-import { Box, Stack } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
-interface ToolOptionGroup {
+export interface ToolOptionGroup {
   title: string;
   component: ReactNode;
 }
