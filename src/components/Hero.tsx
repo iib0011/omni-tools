@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { DefinedTool } from '@tools/defineTool';
 import { filterTools, tools } from '@tools/index';
 import { useNavigate } from 'react-router-dom';
+import _ from 'lodash';
 
 const exampleTools: { label: string; url: string }[] = [
   {
@@ -23,14 +24,16 @@ const exampleTools: { label: string; url: string }[] = [
 ];
 export default function Hero() {
   const [inputValue, setInputValue] = useState<string>('');
-  const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
+  const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(
+    _.shuffle(tools)
+  );
   const navigate = useNavigate();
   const handleInputChange = (
     event: React.ChangeEvent<{}>,
     newInputValue: string
   ) => {
     setInputValue(newInputValue);
-    setFilteredTools(filterTools(tools, newInputValue));
+    setFilteredTools(_.shuffle(filterTools(tools, newInputValue)));
   };
   return (
     <Box width={{ xs: '90%', md: '80%', lg: '60%' }}>
@@ -61,6 +64,7 @@ export default function Hero() {
         sx={{ mb: 2 }}
         autoHighlight
         options={filteredTools}
+        inputValue={inputValue}
         getOptionLabel={(option) => option.name}
         renderInput={(params) => (
           <TextField
