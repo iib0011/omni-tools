@@ -1,18 +1,13 @@
-import { Box, Stack } from '@mui/material';
-import Grid from '@mui/material/Grid';
-import React, { useContext, useEffect, useState } from 'react';
+import { Box } from '@mui/material';
+import React, { useState } from 'react';
 import ToolTextInput from '../../../components/input/ToolTextInput';
 import ToolTextResult from '../../../components/result/ToolTextResult';
-import { Formik, useFormikContext } from 'formik';
 import * as Yup from 'yup';
 import ToolOptions from '../../../components/options/ToolOptions';
 import { compute, SplitOperatorType } from './service';
-import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
 import RadioWithTextField from '../../../components/options/RadioWithTextField';
 import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
-import ToolOptionGroups from '../../../components/options/ToolOptionGroups';
 import ToolInputAndResult from '../../../components/ToolInputAndResult';
-import CheckboxWithDesc from '../../../components/options/CheckboxWithDesc';
 
 const initialValues = {
   splitSeparatorType: 'symbol' as SplitOperatorType,

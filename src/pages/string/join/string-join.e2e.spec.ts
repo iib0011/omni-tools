@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('JoinText Component', () => {
   test.beforeEach(async ({ page }) => {

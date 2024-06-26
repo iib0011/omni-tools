@@ -8,12 +8,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link, useNavigate } from 'react-router-dom';
 import githubIcon from '@assets/github-mark.png'; // Adjust the path to your GitHub icon
 import {
-  Stack,
   Drawer,
   List,
-  ListItem,
+  ListItemButton,
   ListItemText,
-  ListItemButton
+  Stack
 } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';

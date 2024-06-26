@@ -1,18 +1,9 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  Divider,
-  Stack,
-  useTheme
-} from '@mui/material';
+import { Box, Divider, Stack, useTheme } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { getToolsByCategory, tools } from '../../tools';
-import Button from '@mui/material/Button';
+import { getToolsByCategory } from '../../tools';
 import Hero from 'components/Hero';
-import AllTools from '../../components/allTools/AllTools';
 import { capitalizeFirstLetter } from '../../utils/string';
 import toolsPng from '@assets/tools.png';
 

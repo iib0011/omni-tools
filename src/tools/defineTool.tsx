@@ -1,5 +1,5 @@
 import ToolLayout from '../components/ToolLayout';
-import React, { LazyExoticComponent, JSXElementConstructor } from 'react';
+import React, { JSXElementConstructor, LazyExoticComponent } from 'react';
 
 interface ToolOptions {
   path: string;

@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Stack } from '@mui/material';
+import { Box, Card, CardContent } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Link, useNavigate } from 'react-router-dom';

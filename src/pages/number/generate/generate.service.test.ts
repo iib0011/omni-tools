@@ -1,5 +1,5 @@
 // Import necessary modules and functions
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { listOfIntegers } from './service';
 
 // Define test cases for the listOfIntegers function

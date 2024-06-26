@@ -1,10 +1,6 @@
-import { SplitOperatorType } from '../../pages/string/split/service';
-import { Box, Stack } from '@mui/material';
-import { Field } from 'formik';
-import Typography from '@mui/material/Typography';
+import { Box } from '@mui/material';
 import React from 'react';
 import TextFieldWithDesc from './TextFieldWithDesc';
-import { globalDescriptionFontSize } from '../../config/uiConfig';
 import SimpleRadio from './SimpleRadio';
 
 const RadioWithTextField = <T,>({

@@ -1,8 +1,4 @@
-import Typography from '@mui/material/Typography';
-import { Box, Stack, TextField } from '@mui/material';
-import Button from '@mui/material/Button';
-import DownloadIcon from '@mui/icons-material/Download';
-import ContentPasteIcon from '@mui/icons-material/ContentPaste';
+import { Box, TextField } from '@mui/material';
 import React, { useContext } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import InputHeader from '../InputHeader';
