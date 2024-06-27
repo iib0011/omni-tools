@@ -21,7 +21,7 @@
     "test:e2e:run": "playwright test",
     "test:ui": "vitest --ui",
     "script:create:tool": "node scripts/create-tool.mjs",
-    "lint": "eslint src --max-warnings=0",
+    "lint": "eslint src --max-warnings=0 --fix",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "prepare": "husky install"
   },
