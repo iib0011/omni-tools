@@ -1,9 +1,7 @@
-import { string } from "yup";
-
 // utils function that choose the way of numeric sorting mixed types of array
-function customNumericSort(a: number | string, b: number | string, order: string): number {
+function customNumericSort(a: number | string, b: number | string, increasing: boolean): number {
     if (typeof a === 'number' && typeof b === 'number') {
-        let result: number = order === "increasing" ? (a - b) : (b - a);
+        let result: number = increasing ? (a - b) : (b - a);
         return result;
     } else if (typeof a === 'string' && typeof b === 'string') {
         return a.localeCompare(b); // Lexicographical comparison for strings
@@ -16,42 +14,42 @@ function customNumericSort(a: number | string, b: number | string, order: string
 
 export function numericSort(
     array: any[], // array we build after parsing the input
-    order: string, // select value has to be increasing for increasing order and decreasing for decreasing order (set a default value)
+    increasing: boolean,
     separator: string,
-    remove_duplicated: number // the value if the checkbox has been selected 1 else 0
+    removeDuplicated: boolean // the value if the checkbox has been selected 1 else 0
 ) {
-    array.sort((a, b) => customNumericSort(a, b, order));
-    if (remove_duplicated === 1) {
+    array.sort((a, b) => customNumericSort(a, b, increasing));
+    if (removeDuplicated) {
         array = array.filter((item, index) => array.indexOf(item) === index);
     }
     return array.join(separator);
 }
 
 // utils function that choose the way of numeric sorting mixed types of array
-function customLengthSort(a: number | string, b: number | string, order: string): number {
-    let result: number = order === "increasing" ? (a.toString().length - b.toString().length) : (b.toString().length - a.toString().length);
+function customLengthSort(a: number | string, b: number | string, increasing: boolean): number {
+    let result: number = increasing ? (a.toString().length - b.toString().length) : (b.toString().length - a.toString().length);
     return result;
 }
 
 export function lengthSort(
     array: any[], // array we build after parsing the input
-    order: string, // select value has to be increasing for increasing order and decreasing for decreasing order
+    increasing: boolean, // select value has to be increasing for increasing order and decreasing for decreasing order
     separator: string,
-    remove_duplicated: number // the value if the checkbox has been selected 1 else 0
+    removeDuplicated: boolean // the value if the checkbox has been selected 1 else 0
 ) {
-    array.sort((a, b) => customLengthSort(a, b, order));
-    if (remove_duplicated === 1) {
+    array.sort((a, b) => customLengthSort(a, b, increasing));
+    if (removeDuplicated) {
         array = array.filter((item, index) => array.indexOf(item) === index);
     }
     return array.join(separator);
 }
 
 // Utils function that chooses the way of alphabetic sorting mixed types of array
-function customAlphabeticSort(a: number | string, b: number | string, case_sensitive: number): number {
+function customAlphabeticSort(a: number | string, b: number | string, caseSensitive: boolean): number {
     const stringA : string = a.toString();
     const stringB : string = b.toString();
 
-    if (case_sensitive === 0) {
+    if (!caseSensitive) {
         // Case-insensitive comparison
         return stringA.toLowerCase().localeCompare(stringB.toLowerCase());
     } else {
@@ -62,20 +60,18 @@ function customAlphabeticSort(a: number | string, b: number | string, case_sensi
 
 export function alphabeticSort(
     array: any[], // array we build after parsing the input
-    order: string, // select value has to be "increasing" for increasing order and "decreasing" for decreasing order
+    increasing: boolean, // select value has to be "increasing" for increasing order and "decreasing" for decreasing order
     separator: string,
-    remove_duplicated: number, // the value if the checkbox has been selected 1 else 0
-    case_sensitive: number // the value if the checkbox has been selected 1 else 0
+    removeDuplicated: boolean, // the value if the checkbox has been selected 1 else 0
+    caseSensitive: boolean // the value if the checkbox has been selected 1 else 0
 ) 
 {
-    array.sort((a, b) => customAlphabeticSort(a, b, case_sensitive));
-    if (order === "decreasing"){
+    array.sort((a, b) => customAlphabeticSort(a, b, caseSensitive));
+    if (!increasing){
         array.reverse();
     } 
-    if (remove_duplicated === 1) {
+    if (removeDuplicated) {
         array = array.filter((item, index) => array.indexOf(item) === index);
     }
-    return array.join(separator);
-
-    
+    return array.join(separator);  
 }
