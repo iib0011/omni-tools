@@ -8,7 +8,7 @@ export const tool = defineTool('gif', {
   // image,
   description:
     'This online utility lets you change the speed of a GIF animation. You can speed it up or slow it down. You can set the same constant delay between all frames or change the delays of individual frames. You can also play both the input and output GIFs at the same time and compare their speeds',
-  shortDescription: '',
+  shortDescription: 'Quickly change GIF speed',
   keywords: ['change', 'speed'],
   component: lazy(() => import('./index'))
 });

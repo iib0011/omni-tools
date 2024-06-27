@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: optimize imports">
-      <change afterPath="$PROJECT_DIR$/src/pages/video/gif/change-speed/change-speed.service.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/video/gif/change-speed/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/video/gif/change-speed/meta.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/video/gif/change-speed/service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/video/gif/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/video/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/gif.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: change gif speed">
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/RadioWithTextField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/RadioWithTextField.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/TextFieldWithDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/TextFieldWithDesc.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/Separator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Separator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/video/gif/change-speed/change-speed.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/video/gif/change-speed/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/video/gif/change-speed/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/video/gif/change-speed/service.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,15 +202,7 @@
       <workItem from="1719363272227" duration="390000" />
       <workItem from="1719379971872" duration="8943000" />
       <workItem from="1719464673797" duration="38000" />
-      <workItem from="1719475764139" duration="12528000" />
-    </task>
-    <task id="LOCAL-00020" summary="chore: remove prebuild">
-      <option name="closed" value="true" />
-      <created>1719023691491</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1719023691491</updated>
+      <workItem from="1719475764139" duration="12743000" />
     </task>
     <task id="LOCAL-00021" summary="chore: idea config">
       <option name="closed" value="true" />
@@ -609,7 +588,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719388927238</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="feat: change gif speed">
+      <option name="closed" value="true" />
+      <created>1719488380275</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1719488380275</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -630,7 +617,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ci: fix" />
     <MESSAGE value="fix: create-tool.mjs" />
     <MESSAGE value="feat: change colors in png init" />
     <MESSAGE value="feat: change colors in png" />
@@ -655,7 +641,8 @@
     <MESSAGE value="refactor: toolOptions" />
     <MESSAGE value="feat: playwright" />
     <MESSAGE value="refactor: optimize imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: optimize imports" />
+    <MESSAGE value="feat: change gif speed" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: change gif speed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
