@@ -3,11 +3,13 @@ import { imageTools } from '../pages/image';
 import { DefinedTool } from './defineTool';
 import { capitalizeFirstLetter } from '../utils/string';
 import { numberTools } from '../pages/number';
+import { videoTools } from '../pages/video';
 
 export const tools: DefinedTool[] = [
   ...imageTools,
   ...stringTools,
-  ...numberTools
+  ...numberTools,
+  ...videoTools
 ];
 const categoriesDescriptions: { type: string; value: string }[] = [
   {
@@ -24,6 +26,11 @@ const categoriesDescriptions: { type: string; value: string }[] = [
     type: 'number',
     value:
       'Tools for working with numbers – generate number sequences, convert numbers to words and words to numbers, sort, round, factor numbers, and much more.'
+  },
+  {
+    type: 'gif',
+    value:
+      'Tools for working with GIF animations – create transparent GIFs, extract GIF frames, add text to GIF, crop, rotate, reverse GIFs, and much more.'
   }
 ];
 export const filterTools = (

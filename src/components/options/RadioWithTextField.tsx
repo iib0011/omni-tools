@@ -34,7 +34,10 @@ const RadioWithTextField = <T,>({
       />
       <TextFieldWithDesc
         value={value}
-        onChange={onTextChange}
+        onChange={(val) => {
+          if (typeof val === 'string') onTextChange(val);
+          else onTextChange(val.target.value);
+        }}
         description={description}
       />
     </Box>

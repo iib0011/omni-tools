@@ -6,6 +6,28 @@ import { Formik, FormikProps, FormikValues, useFormikContext } from 'formik';
 import ToolOptionGroups, { ToolOptionGroup } from './ToolOptionGroups';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 
+const FormikListenerComponent = <T,>({
+  initialValues,
+  input,
+  compute
+}: {
+  initialValues: T;
+  input: any;
+  compute: (optionsValues: T, input: any) => void;
+}) => {
+  const { values } = useFormikContext<typeof initialValues>();
+  const { showSnackBar } = useContext(CustomSnackBarContext);
+
+  useEffect(() => {
+    try {
+      if (values && input) compute(values, input);
+    } catch (exception: unknown) {
+      if (exception instanceof Error) showSnackBar(exception.message, 'error');
+    }
+  }, [values, input]);
+
+  return null; // This component doesn't render anything
+};
 export default function ToolOptions<T extends FormikValues>({
   children,
   initialValues,
@@ -24,21 +46,7 @@ export default function ToolOptions<T extends FormikValues>({
   formRef?: RefObject<FormikProps<T>>;
 }) {
   const theme = useTheme();
-  const FormikListenerComponent = () => {
-    const { values } = useFormikContext<typeof initialValues>();
-    const { showSnackBar } = useContext(CustomSnackBarContext);
 
-    useEffect(() => {
-      try {
-        compute(values, input);
-      } catch (exception: unknown) {
-        if (exception instanceof Error)
-          showSnackBar(exception.message, 'error');
-      }
-    }, [values, showSnackBar]);
-
-    return null; // This component doesn't render anything
-  };
   return (
     <Box
       sx={{
@@ -62,7 +70,11 @@ export default function ToolOptions<T extends FormikValues>({
         >
           {(formikProps) => (
             <Stack direction={'row'} spacing={2}>
-              <FormikListenerComponent />
+              <FormikListenerComponent
+                compute={compute}
+                input={input}
+                initialValues={initialValues}
+              />
               <ToolOptionGroups groups={getGroups(formikProps)} />
               {children}
             </Stack>

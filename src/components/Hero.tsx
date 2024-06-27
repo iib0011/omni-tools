@@ -14,7 +14,7 @@ const exampleTools: { label: string; url: string }[] = [
     url: '/png/create-transparent'
   },
   { label: 'Convert text to morse code', url: '/string/to-morse' },
-  { label: 'Change GIF speed', url: '' },
+  { label: 'Change GIF speed', url: '/gif/change-speed' },
   { label: 'Pick a random item', url: '' },
   { label: 'Find and replace text', url: '' },
   { label: 'Convert emoji to image', url: '' },

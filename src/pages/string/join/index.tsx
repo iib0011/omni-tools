@@ -10,7 +10,7 @@ import CheckboxWithDesc from '../../../components/options/CheckboxWithDesc';
 import ToolInputAndResult from '../../../components/ToolInputAndResult';
 
 import ToolInfo from '../../../components/ToolInfo';
-import Separator from '../../../tools/Separator';
+import Separator from '../../../components/Separator';
 import Examples from '../../../components/examples/Examples';
 
 const initialValues = {
