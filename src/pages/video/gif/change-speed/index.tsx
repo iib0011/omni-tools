@@ -21,6 +21,7 @@ export default function ChangeSpeed() {
   const [result, setResult] = useState<File | null>(null);
 
   const compute = (optionsValues: typeof initialValues, input: File) => {
+    if (!input) return;
     const { newSpeed } = optionsValues;
 
     const processImage = async (file: File, newSpeed: number) => {
@@ -123,14 +124,14 @@ export default function ChangeSpeed() {
       />
       <ToolOptions
         compute={compute}
-        getGroups={({ values, setFieldValue }) => [
+        getGroups={({ values, updateField }) => [
           {
             title: 'New GIF speed',
             component: (
               <Box>
                 <TextFieldWithDesc
                   value={values.newSpeed}
-                  onOwnChange={(val) => setFieldValue('newSpeed', val)}
+                  onOwnChange={(val) => updateField('newSpeed', Number(val))}
                   description={'Default new GIF speed.'}
                   InputProps={{ endAdornment: <Typography>ms</Typography> }}
                   type={'number'}

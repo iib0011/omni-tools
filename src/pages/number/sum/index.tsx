@@ -53,7 +53,7 @@ export default function SplitText() {
         result={<ToolTextResult title={'Total'} value={result} />}
       />
       <ToolOptions
-        getGroups={({ values, setFieldValue }) => [
+        getGroups={({ values, updateField }) => [
           {
             title: 'Number extraction',
             component: extractionTypes.map(
@@ -76,17 +76,17 @@ export default function SplitText() {
                         ? values[textValueAccessor].toString()
                         : ''
                     }
-                    onRadioClick={() => setFieldValue('extractionType', type)}
+                    onRadioClick={() => updateField('extractionType', type)}
                     onTextChange={(val) =>
                       textValueAccessor
-                        ? setFieldValue(textValueAccessor, val)
+                        ? updateField(textValueAccessor, val)
                         : null
                     }
                   />
                 ) : (
                   <SimpleRadio
                     key={title}
-                    onClick={() => setFieldValue('extractionType', type)}
+                    onClick={() => updateField('extractionType', type)}
                     checked={values.extractionType === type}
                     description={description}
                     title={title}
@@ -101,7 +101,7 @@ export default function SplitText() {
                 title={'Print Running Sum'}
                 description={"Display the sum as it's calculated step by step."}
                 checked={values.printRunningSum}
-                onChange={(value) => setFieldValue('printRunningSum', value)}
+                onChange={(value) => updateField('printRunningSum', value)}
               />
             )
           }

@@ -116,7 +116,7 @@ export default function SplitText() {
       />
       <ToolOptions
         compute={computeExternal}
-        getGroups={({ values, setFieldValue }) => [
+        getGroups={({ values, updateField }) => [
           {
             title: 'Split separator options',
             component: splitOperators.map(({ title, description, type }) => (
@@ -127,8 +127,8 @@ export default function SplitText() {
                 fieldName={'splitSeparatorType'}
                 description={description}
                 value={values[`${type}Value`]}
-                onRadioClick={() => setFieldValue('splitSeparatorType', type)}
-                onTextChange={(val) => setFieldValue(`${type}Value`, val)}
+                onRadioClick={() => updateField('splitSeparatorType', type)}
+                onTextChange={(val) => updateField(`${type}Value`, val)}
               />
             ))
           },
@@ -138,7 +138,7 @@ export default function SplitText() {
               <TextFieldWithDesc
                 key={option.accessor}
                 value={values[option.accessor]}
-                onOwnChange={(value) => setFieldValue(option.accessor, value)}
+                onOwnChange={(value) => updateField(option.accessor, value)}
                 description={option.description}
               />
             ))

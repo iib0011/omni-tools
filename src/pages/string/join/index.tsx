@@ -142,7 +142,7 @@ export default function JoinText() {
       />
       <ToolOptions
         compute={compute}
-        getGroups={({ values, setFieldValue }) => [
+        getGroups={({ values, updateField }) => [
           {
             title: 'Text Merged Options',
             component: (
@@ -150,7 +150,7 @@ export default function JoinText() {
                 placeholder={mergeOptions.placeholder}
                 value={values['joinCharacter']}
                 onOwnChange={(value) =>
-                  setFieldValue(mergeOptions.accessor, value)
+                  updateField(mergeOptions.accessor, value)
                 }
                 description={mergeOptions.description}
               />
@@ -163,7 +163,7 @@ export default function JoinText() {
                 key={option.accessor}
                 title={option.title}
                 checked={!!values[option.accessor]}
-                onChange={(value) => setFieldValue(option.accessor, value)}
+                onChange={(value) => updateField(option.accessor, value)}
                 description={option.description}
               />
             ))

@@ -26,7 +26,7 @@ export default function SplitText() {
         result={<ToolTextResult title={'Total'} value={result} />}
       />
       <ToolOptions
-        getGroups={({ values, setFieldValue }) => [
+        getGroups={({ values, updateField }) => [
           {
             title: 'Arithmetic sequence option',
             component: (
@@ -34,19 +34,19 @@ export default function SplitText() {
                 <TextFieldWithDesc
                   description={'Start sequence from this number.'}
                   value={values.firstValue}
-                  onOwnChange={(val) => setFieldValue('firstValue', val)}
+                  onOwnChange={(val) => updateField('firstValue', val)}
                   type={'number'}
                 />
                 <TextFieldWithDesc
                   description={'Increase each element by this amount'}
                   value={values.step}
-                  onOwnChange={(val) => setFieldValue('step', val)}
+                  onOwnChange={(val) => updateField('step', val)}
                   type={'number'}
                 />
                 <TextFieldWithDesc
                   description={'Number of elements in sequence.'}
                   value={values.numberOfNumbers}
-                  onOwnChange={(val) => setFieldValue('numberOfNumbers', val)}
+                  onOwnChange={(val) => updateField('numberOfNumbers', val)}
                   type={'number'}
                 />
               </Box>
@@ -60,7 +60,7 @@ export default function SplitText() {
                   'Separate elements in the arithmetic sequence by this character.'
                 }
                 value={values.separator}
-                onOwnChange={(val) => setFieldValue('separator', val)}
+                onOwnChange={(val) => updateField('separator', val)}
               />
             )
           }

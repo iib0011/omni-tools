@@ -33,7 +33,7 @@ export default function ToMorse() {
       />
       <ToolOptions
         compute={computeOptions}
-        getGroups={({ values, setFieldValue }) => [
+        getGroups={({ values, updateField }) => [
           {
             title: 'Short Signal',
             component: (
@@ -42,7 +42,7 @@ export default function ToMorse() {
                   'Symbol that will correspond to the dot in Morse code.'
                 }
                 value={values.dotSymbol}
-                onOwnChange={(val) => setFieldValue('dotSymbol', val)}
+                onOwnChange={(val) => updateField('dotSymbol', val)}
               />
             )
           },
@@ -54,7 +54,7 @@ export default function ToMorse() {
                   'Symbol that will correspond to the dash in Morse code.'
                 }
                 value={values.dashSymbol}
-                onOwnChange={(val) => setFieldValue('dashSymbol', val)}
+                onOwnChange={(val) => updateField('dashSymbol', val)}
               />
             )
           }

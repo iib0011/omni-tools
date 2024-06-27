@@ -30,6 +30,43 @@ const FormikListenerComponent = <T,>({
 
   return null; // This component doesn't render anything
 };
+
+interface FormikHelperProps<T> {
+  compute: (optionsValues: T, input: any) => void;
+  input: any;
+  children?: ReactNode;
+  getGroups: (
+    formikProps: FormikProps<T> & { updateField: UpdateField<T> }
+  ) => ToolOptionGroup[];
+  formikProps: FormikProps<T>;
+}
+
+const ToolBody = <T,>({
+  compute,
+  input,
+  children,
+  getGroups,
+  formikProps
+}: FormikHelperProps<T>) => {
+  const { values, setFieldValue } = useFormikContext<T>();
+
+  const updateField: UpdateField<T> = (field, value) => {
+    // @ts-ignore
+    setFieldValue(field, value);
+  };
+
+  return (
+    <Stack direction={'row'} spacing={2}>
+      <FormikListenerComponent<T>
+        compute={compute}
+        input={input}
+        initialValues={values}
+      />
+      <ToolOptionGroups groups={getGroups({ ...formikProps, updateField })} />
+      {children}
+    </Stack>
+  );
+};
 export default function ToolOptions<T extends FormikValues>({
   children,
   initialValues,
@@ -50,10 +87,6 @@ export default function ToolOptions<T extends FormikValues>({
   formRef?: RefObject<FormikProps<T>>;
 }) {
   const theme = useTheme();
-  const updateField: UpdateField<T> = (field, value) => {
-    // @ts-ignore
-    formRef?.current?.setFieldValue(field, value);
-  };
   return (
     <Box
       sx={{
@@ -76,17 +109,14 @@ export default function ToolOptions<T extends FormikValues>({
           onSubmit={() => {}}
         >
           {(formikProps) => (
-            <Stack direction={'row'} spacing={2}>
-              <FormikListenerComponent
-                compute={compute}
-                input={input}
-                initialValues={initialValues}
-              />
-              <ToolOptionGroups
-                groups={getGroups({ ...formikProps, updateField })}
-              />
+            <ToolBody
+              compute={compute}
+              input={input}
+              getGroups={getGroups}
+              formikProps={formikProps}
+            >
               {children}
-            </Stack>
+            </ToolBody>
           )}
         </Formik>
       </Box>

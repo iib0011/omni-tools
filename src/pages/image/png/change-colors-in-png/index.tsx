@@ -22,6 +22,7 @@ export default function ChangeColorsInPng() {
   const [result, setResult] = useState<File | null>(null);
 
   const compute = (optionsValues: typeof initialValues, input: any) => {
+    if (!input) return;
     const { fromColor, toColor, similarity } = optionsValues;
     let fromRgb: [number, number, number];
     let toRgb: [number, number, number];
@@ -117,24 +118,24 @@ export default function ChangeColorsInPng() {
       />
       <ToolOptions
         compute={compute}
-        getGroups={({ values, setFieldValue }) => [
+        getGroups={({ values, updateField }) => [
           {
             title: 'From color and to color',
             component: (
               <Box>
                 <ColorSelector
                   value={values.fromColor}
-                  onChange={(val) => setFieldValue('fromColor', val)}
+                  onChange={(val) => updateField('fromColor', val)}
                   description={'Replace this color (from color)'}
                 />
                 <ColorSelector
                   value={values.toColor}
-                  onChange={(val) => setFieldValue('toColor', val)}
+                  onChange={(val) => updateField('toColor', val)}
                   description={'With this color (to color)'}
                 />
                 <TextFieldWithDesc
                   value={values.similarity}
-                  onOwnChange={(val) => setFieldValue('similarity', val)}
+                  onOwnChange={(val) => updateField('similarity', val)}
                   description={
                     'Match this % of similar colors of the from color. For example, 10% white will match white and a little bit of gray.'
                   }
