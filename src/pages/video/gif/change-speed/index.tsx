@@ -40,7 +40,7 @@ export default function ChangeSpeed() {
             .map((_, k) => {
               const image = new ImageData(info.width, info.height);
 
-              reader.decodeAndBlitFrameRGBA(k, image.data as any);
+              reader.decodeAndBlitFrameRGBA(k, image.data);
 
               return image;
             });
@@ -51,7 +51,6 @@ export default function ChangeSpeed() {
             { loop: 20 }
           );
 
-          // Decode the GIF
           imageDataArr.forEach((imageData) => {
             const palette = [];
             const pixels = new Uint8Array(imageData.width * imageData.height);
@@ -81,9 +80,8 @@ export default function ChangeSpeed() {
 
             const delay = newSpeed / 10; // Delay in hundredths of a sec (100 = 1s)
             const options: FrameOptions = {
-              // @ts-ignore
-              palette: new Uint32Array(palette),
-              delay: delay
+              palette,
+              delay
             };
             gif.addFrame(
               0,

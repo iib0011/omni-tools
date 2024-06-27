@@ -22,7 +22,7 @@ export default function Home() {
       <Grid width={'80%'} container mt={2} spacing={2}>
         {getToolsByCategory().map((category) => (
           <Grid key={category.type} item xs={12} md={6}>
-            <Card>
+            <Card sx={{ height: '100%' }}>
               <CardContent>
                 <Link
                   style={{ fontSize: 20 }}
