@@ -138,7 +138,7 @@ export default function SplitText() {
               <TextFieldWithDesc
                 key={option.accessor}
                 value={values[option.accessor]}
-                onChange={(value) => setFieldValue(option.accessor, value)}
+                onOwnChange={(value) => setFieldValue(option.accessor, value)}
                 description={option.description}
               />
             ))

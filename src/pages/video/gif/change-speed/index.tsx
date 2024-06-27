@@ -130,7 +130,7 @@ export default function ChangeSpeed() {
               <Box>
                 <TextFieldWithDesc
                   value={values.newSpeed}
-                  onChange={(val) => setFieldValue('newSpeed', val)}
+                  onOwnChange={(val) => setFieldValue('newSpeed', val)}
                   description={'Default new GIF speed.'}
                   InputProps={{ endAdornment: <Typography>ms</Typography> }}
                   type={'number'}

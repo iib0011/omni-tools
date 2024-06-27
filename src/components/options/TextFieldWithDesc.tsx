@@ -5,13 +5,13 @@ import React from 'react';
 type OwnProps = {
   description?: string;
   value: string | number;
-  onChange: (value: string) => void;
+  onOwnChange: (value: string) => void;
   placeholder?: string;
 };
 const TextFieldWithDesc = ({
   description,
   value,
-  onChange,
+  onOwnChange,
   placeholder,
   ...props
 }: TextFieldProps & OwnProps) => {
@@ -21,7 +21,7 @@ const TextFieldWithDesc = ({
         placeholder={placeholder}
         sx={{ backgroundColor: 'white' }}
         value={value}
-        onChange={(event) => onChange(event.target.value)}
+        onChange={(event) => onOwnChange(event.target.value)}
         {...props}
       />
       {description && (

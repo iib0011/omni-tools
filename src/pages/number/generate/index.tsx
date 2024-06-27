@@ -34,19 +34,19 @@ export default function SplitText() {
                 <TextFieldWithDesc
                   description={'Start sequence from this number.'}
                   value={values.firstValue}
-                  onChange={(val) => setFieldValue('firstValue', val)}
+                  onOwnChange={(val) => setFieldValue('firstValue', val)}
                   type={'number'}
                 />
                 <TextFieldWithDesc
                   description={'Increase each element by this amount'}
                   value={values.step}
-                  onChange={(val) => setFieldValue('step', val)}
+                  onOwnChange={(val) => setFieldValue('step', val)}
                   type={'number'}
                 />
                 <TextFieldWithDesc
                   description={'Number of elements in sequence.'}
                   value={values.numberOfNumbers}
-                  onChange={(val) => setFieldValue('numberOfNumbers', val)}
+                  onOwnChange={(val) => setFieldValue('numberOfNumbers', val)}
                   type={'number'}
                 />
               </Box>
@@ -60,7 +60,7 @@ export default function SplitText() {
                   'Separate elements in the arithmetic sequence by this character.'
                 }
                 value={values.separator}
-                onChange={(val) => setFieldValue('separator', val)}
+                onOwnChange={(val) => setFieldValue('separator', val)}
               />
             )
           }

@@ -6,6 +6,8 @@ import { Formik, FormikProps, FormikValues, useFormikContext } from 'formik';
 import ToolOptionGroups, { ToolOptionGroup } from './ToolOptionGroups';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 
+type UpdateField<T> = <Y extends keyof T>(field: Y, value: T[Y]) => void;
+
 const FormikListenerComponent = <T,>({
   initialValues,
   input,
@@ -42,11 +44,16 @@ export default function ToolOptions<T extends FormikValues>({
   validationSchema: any | (() => any);
   compute: (optionsValues: T, input: any) => void;
   input?: any;
-  getGroups: (formikProps: FormikProps<T>) => ToolOptionGroup[];
+  getGroups: (
+    formikProps: FormikProps<T> & { updateField: UpdateField<T> }
+  ) => ToolOptionGroup[];
   formRef?: RefObject<FormikProps<T>>;
 }) {
   const theme = useTheme();
-
+  const updateField: UpdateField<T> = (field, value) => {
+    // @ts-ignore
+    formRef?.current?.setFieldValue(field, value);
+  };
   return (
     <Box
       sx={{
@@ -75,7 +82,9 @@ export default function ToolOptions<T extends FormikValues>({
                 input={input}
                 initialValues={initialValues}
               />
-              <ToolOptionGroups groups={getGroups(formikProps)} />
+              <ToolOptionGroups
+                groups={getGroups({ ...formikProps, updateField })}
+              />
               {children}
             </Stack>
           )}

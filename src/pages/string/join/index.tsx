@@ -149,7 +149,7 @@ export default function JoinText() {
               <TextFieldWithDesc
                 placeholder={mergeOptions.placeholder}
                 value={values['joinCharacter']}
-                onChange={(value) =>
+                onOwnChange={(value) =>
                   setFieldValue(mergeOptions.accessor, value)
                 }
                 description={mergeOptions.description}

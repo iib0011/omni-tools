@@ -7,6 +7,7 @@ import ToolOptions from '../../../components/options/ToolOptions';
 import { Sort, SortingMethod, SplitOperatorType } from './service';
 import ToolInputAndResult from '../../../components/ToolInputAndResult';
 import SimpleRadio from '../../../components/options/SimpleRadio';
+import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
 
 const initialValues = {
   splitSeparatorType: 'symbol' as SplitOperatorType,
@@ -80,18 +81,27 @@ export default function SplitText() {
       />
       <ToolOptions
         compute={computeExternal}
-        getGroups={({ values, setFieldValue, handleChange }) => [
+        getGroups={({ values, updateField }) => [
           {
             title: 'Input item separator',
-            component: splitOperators.map(({ title, description, type }) => (
-              <SimpleRadio
-                key={type}
-                onClick={() => setFieldValue('splitSeparatorType', type)}
-                title={title}
-                description={description}
-                checked={values.splitSeparatorType === type}
-              />
-            ))
+            component: (
+              <Box>
+                {splitOperators.map(({ title, description, type }) => (
+                  <SimpleRadio
+                    key={type}
+                    onClick={() => updateField('splitSeparatorType', type)}
+                    title={title}
+                    description={description}
+                    checked={values.splitSeparatorType === type}
+                  />
+                ))}
+                <TextFieldWithDesc
+                  description={'Set a delimiting symbol or regular expression.'}
+                  value={values.splitSeparator}
+                  onOwnChange={(val) => updateField('splitSeparator', val)}
+                />
+              </Box>
+            )
           },
           {
             title: 'Sort method',

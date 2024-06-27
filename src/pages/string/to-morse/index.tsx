@@ -42,7 +42,7 @@ export default function ToMorse() {
                   'Symbol that will correspond to the dot in Morse code.'
                 }
                 value={values.dotSymbol}
-                onChange={(val) => setFieldValue('dotSymbol', val)}
+                onOwnChange={(val) => setFieldValue('dotSymbol', val)}
               />
             )
           },
@@ -54,7 +54,7 @@ export default function ToMorse() {
                   'Symbol that will correspond to the dash in Morse code.'
                 }
                 value={values.dashSymbol}
-                onChange={(val) => setFieldValue('dashSymbol', val)}
+                onOwnChange={(val) => setFieldValue('dashSymbol', val)}
               />
             )
           }

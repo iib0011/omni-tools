@@ -134,7 +134,7 @@ export default function ChangeColorsInPng() {
                 />
                 <TextFieldWithDesc
                   value={values.similarity}
-                  onChange={(val) => setFieldValue('similarity', val)}
+                  onOwnChange={(val) => setFieldValue('similarity', val)}
                   description={
                     'Match this % of similar colors of the from color. For example, 10% white will match white and a little bit of gray.'
                   }
