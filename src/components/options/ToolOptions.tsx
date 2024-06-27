@@ -20,7 +20,7 @@ const FormikListenerComponent = <T,>({
 
   useEffect(() => {
     try {
-      if (values && input) compute(values, input);
+      compute(values, input);
     } catch (exception: unknown) {
       if (exception instanceof Error) showSnackBar(exception.message, 'error');
     }
@@ -41,7 +41,7 @@ export default function ToolOptions<T extends FormikValues>({
   initialValues: T;
   validationSchema: any | (() => any);
   compute: (optionsValues: T, input: any) => void;
-  input: any;
+  input?: any;
   getGroups: (formikProps: FormikProps<T>) => ToolOptionGroup[];
   formRef?: RefObject<FormikProps<T>>;
 }) {
