@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet';
 import ToolHeader from './ToolHeader';
-import Separator from '@tools/Separator';
+import Separator from './Separator';
 import AllTools from './allTools/AllTools';
 import { getToolsByCategory } from '@tools/index';
 import { capitalizeFirstLetter } from '../utils/string';

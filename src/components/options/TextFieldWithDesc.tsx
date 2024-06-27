@@ -1,18 +1,20 @@
-import { Box, TextField } from '@mui/material';
+import { Box, TextField, TextFieldProps } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
+type OwnProps = {
+  description: string;
+  value: string | number;
+  onChange: (value: string) => void;
+  placeholder?: string;
+};
 const TextFieldWithDesc = ({
   description,
   value,
   onChange,
-  placeholder
-}: {
-  description: string;
-  value: string;
-  onChange: (value: string) => void;
-  placeholder?: string;
-}) => {
+  placeholder,
+  ...props
+}: TextFieldProps & OwnProps) => {
   return (
     <Box>
       <TextField
@@ -20,6 +22,7 @@ const TextFieldWithDesc = ({
         sx={{ backgroundColor: 'white' }}
         value={value}
         onChange={(event) => onChange(event.target.value)}
+        {...props}
       />
       <Typography fontSize={12} mt={1}>
         {description}

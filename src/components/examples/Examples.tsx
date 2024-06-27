@@ -41,7 +41,7 @@ export default function Examples({
       <Stack direction={'row'} alignItems={'center'} spacing={2}>
         <Grid container spacing={2}>
           {exampleCards.map((card, index) => (
-            <Grid item xs={4} key={index}>
+            <Grid item xs={12} md={6} lg={4} key={index}>
               <ExampleCard
                 title={card.title}
                 description={card.description}

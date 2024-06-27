@@ -5,7 +5,7 @@ interface ExampleProps {
   description: string;
 }
 
-export default function Example({ title, description }: ExampleProps) {
+export default function ToolInfo({ title, description }: ExampleProps) {
   return (
     <Stack direction={'row'} alignItems={'center'} spacing={2} mt={4}>
       <Box>

@@ -1,20 +1,16 @@
-import { Box, Grid, Stack, Typography } from '@mui/material';
-import React, { useContext, useEffect, useState } from 'react';
-import { Formik, useFormikContext } from 'formik';
+import { Box } from '@mui/material';
+import React, { useState } from 'react';
 import * as Yup from 'yup';
 import ToolTextInput from '../../../components/input/ToolTextInput';
 import ToolTextResult from '../../../components/result/ToolTextResult';
 import ToolOptions from '../../../components/options/ToolOptions';
 import { mergeText } from './service';
-import { CustomSnackBarContext } from '../../../contexts/CustomSnackBarContext';
 import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '../../../components/options/CheckboxWithDesc';
-import ToolOptionGroups from '../../../components/options/ToolOptionGroups';
 import ToolInputAndResult from '../../../components/ToolInputAndResult';
 
-import Info from './Info';
-import Separator from '../../../tools/Separator';
-import AllTools from '../../../components/allTools/AllTools';
+import ToolInfo from '../../../components/ToolInfo';
+import Separator from '../../../components/Separator';
 import Examples from '../../../components/examples/Examples';
 
 const initialValues = {
@@ -115,23 +111,11 @@ s
 
 export default function JoinText() {
   const [input, setInput] = useState<string>('');
-  const { showSnackBar } = useContext(CustomSnackBarContext);
   const [result, setResult] = useState<string>('');
 
-  const FormikListenerComponent = ({ input }: { input: string }) => {
-    const { values } = useFormikContext<typeof initialValues>();
-    const { joinCharacter, deleteBlank, deleteTrailing } = values;
-
-    useEffect(() => {
-      try {
-        setResult(mergeText(input, deleteBlank, deleteTrailing, joinCharacter));
-      } catch (exception: unknown) {
-        if (exception instanceof Error)
-          showSnackBar(exception.message, 'error');
-      }
-    }, [values, input]);
-
-    return null;
+  const compute = (optionsValues: typeof initialValues, input: any) => {
+    const { joinCharacter, deleteBlank, deleteTrailing } = optionsValues;
+    setResult(mergeText(input, deleteBlank, deleteTrailing, joinCharacter));
   };
 
   function changeInputResult(input: string, result: string) {
@@ -156,51 +140,40 @@ export default function JoinText() {
         }
         result={<ToolTextResult title={'Joined Text'} value={result} />}
       />
-      <ToolOptions>
-        <Formik
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={() => {}}
-        >
-          {({ setFieldValue, values }) => (
-            <Stack direction={'row'} spacing={2}>
-              <FormikListenerComponent input={input} />
-              <ToolOptionGroups
-                groups={[
-                  {
-                    title: 'Text Merged Options',
-                    component: (
-                      <TextFieldWithDesc
-                        placeholder={mergeOptions.placeholder}
-                        value={values['joinCharacter']}
-                        onChange={(value) =>
-                          setFieldValue(mergeOptions.accessor, value)
-                        }
-                        description={mergeOptions.description}
-                      />
-                    )
-                  },
-                  {
-                    title: 'Blank Lines and Trailing Spaces',
-                    component: blankTrailingOptions.map((option) => (
-                      <CheckboxWithDesc
-                        key={option.accessor}
-                        title={option.title}
-                        checked={!!values[option.accessor]}
-                        onChange={(value) =>
-                          setFieldValue(option.accessor, value)
-                        }
-                        description={option.description}
-                      />
-                    ))
-                  }
-                ]}
+      <ToolOptions
+        compute={compute}
+        getGroups={({ values, setFieldValue }) => [
+          {
+            title: 'Text Merged Options',
+            component: (
+              <TextFieldWithDesc
+                placeholder={mergeOptions.placeholder}
+                value={values['joinCharacter']}
+                onChange={(value) =>
+                  setFieldValue(mergeOptions.accessor, value)
+                }
+                description={mergeOptions.description}
               />
-            </Stack>
-          )}
-        </Formik>
-      </ToolOptions>
-      <Info
+            )
+          },
+          {
+            title: 'Blank Lines and Trailing Spaces',
+            component: blankTrailingOptions.map((option) => (
+              <CheckboxWithDesc
+                key={option.accessor}
+                title={option.title}
+                checked={!!values[option.accessor]}
+                onChange={(value) => setFieldValue(option.accessor, value)}
+                description={option.description}
+              />
+            ))
+          }
+        ]}
+        initialValues={initialValues}
+        input={input}
+        validationSchema={validationSchema}
+      />
+      <ToolInfo
         title="What Is a Text Joiner?"
         description="With this tool you can join parts of the text together. It takes a list of text values, separated by newlines, and merges them together. You can set the character that will be placed between the parts of the combined text. Also, you can ignore all empty lines and remove spaces and tabs at the end of all lines. Textabulous!"
       />

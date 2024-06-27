@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: generate numbers">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="style: lint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/number/generate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/generate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolInputAndResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolInputAndResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/generate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/generate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/generate/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/generate/service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +50,8 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Playwright.JoinText Component.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.JoinText Component.should merge text pieces with specified join character.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Vitest.compute function (1).executor&quot;: &quot;Run&quot;,
@@ -69,6 +73,7 @@
     &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
     &quot;npm.script:create:tool.executor&quot;: &quot;Run&quot;,
     &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e.executor&quot;: &quot;Run&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -96,35 +101,35 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\images\png\change-colors-in-png" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\tools" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
-    <configuration name="compute function (1)" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="JoinText Component" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <playwright-package value="$PROJECT_DIR$/node_modules/@playwright/test" />
       <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/pages/number/sum/sum.service.test.ts" />
+      <test-file value="$PROJECT_DIR$/src/pages/string/join/string-join.e2e.spec.ts" />
       <test-names>
-        <test-name value="compute function" />
+        <test-name value="JoinText Component" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="compute function" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="JoinText Component.should merge text pieces with specified join character" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <playwright-package value="$PROJECT_DIR$/node_modules/@playwright/test" />
       <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
       <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/pages/string/to-morse/to-morse.service.test.ts" />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/pages/string/join/string-join.e2e.spec.ts" />
       <test-names>
-        <test-name value="compute function" />
+        <test-name value="JoinText Component" />
+        <test-name value="should merge text pieces with specified join character" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -148,11 +153,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="test:e2e" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="test" />
+        <script value="test:e2e" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -161,10 +166,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.test" />
         <item itemvalue="npm.lint" />
-        <item itemvalue="Vitest.compute function (1)" />
-        <item itemvalue="Vitest.compute function" />
+        <item itemvalue="npm.test:e2e" />
+        <item itemvalue="Playwright.JoinText Component.should merge text pieces with specified join character" />
+        <item itemvalue="Playwright.JoinText Component" />
       </list>
     </recent_temporary>
   </component>
@@ -194,110 +199,12 @@
       <workItem from="1719294110005" duration="3842000" />
       <workItem from="1719339559458" duration="303000" />
       <workItem from="1719340295244" duration="772000" />
-    </task>
-    <task id="LOCAL-00011" summary="chore: output selector">
-      <option name="closed" value="true" />
-      <created>1718999826771</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1718999826771</updated>
-    </task>
-    <task id="LOCAL-00012" summary="feat: text split">
-      <option name="closed" value="true" />
-      <created>1719003559965</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1719003559965</updated>
-    </task>
-    <task id="LOCAL-00013" summary="fix: text split try catch">
-      <option name="closed" value="true" />
-      <created>1719005757859</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1719005757859</updated>
-    </task>
-    <task id="LOCAL-00014" summary="fix: readme">
-      <option name="closed" value="true" />
-      <created>1719006274218</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1719006274218</updated>
-    </task>
-    <task id="LOCAL-00015" summary="ubf">
-      <option name="closed" value="true" />
-      <created>1719006515710</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1719006515710</updated>
-    </task>
-    <task id="LOCAL-00016" summary="ubf jn">
-      <option name="closed" value="true" />
-      <created>1719006829016</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1719006829016</updated>
-    </task>
-    <task id="LOCAL-00017" summary="ubf jn">
-      <option name="closed" value="true" />
-      <created>1719007125575</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1719007125575</updated>
-    </task>
-    <task id="LOCAL-00018" summary="feat: conventional commit">
-      <option name="closed" value="true" />
-      <created>1719007195103</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1719007195103</updated>
-    </task>
-    <task id="LOCAL-00019" summary="test: init">
-      <option name="closed" value="true" />
-      <created>1719023377131</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1719023377131</updated>
-    </task>
-    <task id="LOCAL-00020" summary="chore: remove prebuild">
-      <option name="closed" value="true" />
-      <created>1719023691491</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1719023691491</updated>
-    </task>
-    <task id="LOCAL-00021" summary="chore: idea config">
-      <option name="closed" value="true" />
-      <created>1719024346455</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1719024346455</updated>
-    </task>
-    <task id="LOCAL-00022" summary="feat: react helmet">
-      <option name="closed" value="true" />
-      <created>1719085085537</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1719085085537</updated>
-    </task>
-    <task id="LOCAL-00023" summary="feat: tools normalized">
-      <option name="closed" value="true" />
-      <created>1719090379202</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1719090379202</updated>
+      <workItem from="1719363272227" duration="390000" />
+      <workItem from="1719379971872" duration="8943000" />
+      <workItem from="1719464673797" duration="38000" />
+      <workItem from="1719475764139" duration="14903000" />
+      <workItem from="1719492452780" duration="8000" />
+      <workItem from="1719496624579" duration="6148000" />
     </task>
     <task id="LOCAL-00024" summary="feat: search tools">
       <option name="closed" value="true" />
@@ -587,7 +494,111 @@
       <option name="project" value="LOCAL" />
       <updated>1719349760930</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="fix: merging branches">
+      <option name="closed" value="true" />
+      <created>1719350066784</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1719350066784</updated>
+    </task>
+    <task id="LOCAL-00061" summary="feat: make responsive">
+      <option name="closed" value="true" />
+      <created>1719358195260</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1719358195260</updated>
+    </task>
+    <task id="LOCAL-00062" summary="feat: make tool responsive">
+      <option name="closed" value="true" />
+      <created>1719359243293</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1719359243294</updated>
+    </task>
+    <task id="LOCAL-00063" summary="chore: make tool examples responsive">
+      <option name="closed" value="true" />
+      <created>1719359368236</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1719359368236</updated>
+    </task>
+    <task id="LOCAL-00064" summary="chore: loading screen">
+      <option name="closed" value="true" />
+      <created>1719360545177</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1719360545177</updated>
+    </task>
+    <task id="LOCAL-00065" summary="chore: shuffle tools search">
+      <option name="closed" value="true" />
+      <created>1719363656541</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1719363656541</updated>
+    </task>
+    <task id="LOCAL-00066" summary="refactor: toolOptions">
+      <option name="closed" value="true" />
+      <created>1719384439535</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1719384439535</updated>
+    </task>
+    <task id="LOCAL-00067" summary="feat: playwright">
+      <option name="closed" value="true" />
+      <created>1719388760134</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1719388760134</updated>
+    </task>
+    <task id="LOCAL-00068" summary="refactor: optimize imports">
+      <option name="closed" value="true" />
+      <created>1719388927238</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1719388927238</updated>
+    </task>
+    <task id="LOCAL-00069" summary="feat: change gif speed">
+      <option name="closed" value="true" />
+      <created>1719488380275</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1719488380275</updated>
+    </task>
+    <task id="LOCAL-00070" summary="chore: remove unused deps">
+      <option name="closed" value="true" />
+      <created>1719488576835</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1719488576835</updated>
+    </task>
+    <task id="LOCAL-00071" summary="fix: misc">
+      <option name="closed" value="true" />
+      <created>1719491470485</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1719491470485</updated>
+    </task>
+    <task id="LOCAL-00072" summary="style: lint">
+      <option name="closed" value="true" />
+      <created>1719499895862</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1719499895862</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,19 +619,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: join text service" />
-    <MESSAGE value="test: join service" />
-    <MESSAGE value="feat: result copy and download" />
-    <MESSAGE value="feat: contributors graph" />
-    <MESSAGE value="feat: create tool script" />
-    <MESSAGE value="fix: missing files" />
-    <MESSAGE value="fix: create tool" />
-    <MESSAGE value="fix: build" />
-    <MESSAGE value="chore: CODEOWNERS" />
-    <MESSAGE value="ci: fix" />
-    <MESSAGE value="fix: create-tool.mjs" />
-    <MESSAGE value="feat: change colors in png init" />
-    <MESSAGE value="feat: change colors in png" />
     <MESSAGE value="chore: ResultFooter" />
     <MESSAGE value="feat: change color in png finished" />
     <MESSAGE value="feat: string to morse" />
@@ -633,7 +631,20 @@
     <MESSAGE value="feat: create transparent png" />
     <MESSAGE value="fix: ToolFileInput.tsx" />
     <MESSAGE value="fix: generate numbers" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: generate numbers" />
+    <MESSAGE value="fix: merging branches" />
+    <MESSAGE value="feat: make responsive" />
+    <MESSAGE value="feat: make tool responsive" />
+    <MESSAGE value="chore: make tool examples responsive" />
+    <MESSAGE value="chore: loading screen" />
+    <MESSAGE value="chore: shuffle tools search" />
+    <MESSAGE value="refactor: toolOptions" />
+    <MESSAGE value="feat: playwright" />
+    <MESSAGE value="refactor: optimize imports" />
+    <MESSAGE value="feat: change gif speed" />
+    <MESSAGE value="chore: remove unused deps" />
+    <MESSAGE value="fix: misc" />
+    <MESSAGE value="style: lint" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: lint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

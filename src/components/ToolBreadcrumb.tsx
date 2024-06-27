@@ -14,7 +14,7 @@ interface BreadcrumbComponentProps {
 const ToolBreadcrumb: React.FC<BreadcrumbComponentProps> = ({ items }) => {
   const theme = useTheme();
   return (
-    <Breadcrumbs aria-label="breadcrumb">
+    <Breadcrumbs>
       {items.map((item, index) => {
         if (index === items.length - 1 || !item.link) {
           return (

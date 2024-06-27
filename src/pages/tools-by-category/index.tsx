@@ -1,18 +1,9 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  Divider,
-  Stack,
-  useTheme
-} from '@mui/material';
+import { Box, Divider, Stack, useTheme } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { getToolsByCategory, tools } from '../../tools';
-import Button from '@mui/material/Button';
+import { getToolsByCategory } from '../../tools';
 import Hero from 'components/Hero';
-import AllTools from '../../components/allTools/AllTools';
 import { capitalizeFirstLetter } from '../../utils/string';
 import toolsPng from '@assets/tools.png';
 
@@ -23,7 +14,7 @@ export default function Home() {
   return (
     <Box>
       <Box
-        padding={5}
+        padding={{ xs: 1, md: 3, lg: 5 }}
         display={'flex'}
         flexDirection={'column'}
         alignItems={'center'}
@@ -33,7 +24,7 @@ export default function Home() {
         <Hero />
       </Box>
       <Divider sx={{ borderColor: theme.palette.primary.main }} />
-      <Box width={'100%'} mt={3} ml={7} padding={3}>
+      <Box width={'100%'} mt={3} ml={{ xs: 1, md: 2, lg: 3 }} padding={3}>
         <Typography
           fontSize={22}
           color={theme.palette.primary.main}
@@ -42,7 +33,7 @@ export default function Home() {
           {getToolsByCategory()
             .find(({ type }) => type === categoryName)
             ?.tools?.map((tool) => (
-              <Grid item xs={12} md={4} key={tool.path}>
+              <Grid item xs={12} md={6} lg={4} key={tool.path}>
                 <Stack
                   sx={{
                     cursor: 'pointer',

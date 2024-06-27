@@ -1,8 +1,4 @@
-import { Box, Stack, TextField } from '@mui/material';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import PublishIcon from '@mui/icons-material/Publish';
-import ContentPasteIcon from '@mui/icons-material/ContentPaste';
+import { Box, TextField } from '@mui/material';
 import React, { useContext, useRef } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import InputHeader from '../InputHeader';
@@ -54,6 +50,7 @@ export default function ToolTextInput({
         fullWidth
         multiline
         rows={10}
+        inputProps={{ 'data-testid': 'text-input' }}
       />
       <InputFooter handleCopy={handleCopy} handleImport={handleImportClick} />
       <input
