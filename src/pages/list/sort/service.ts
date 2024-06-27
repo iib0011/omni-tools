@@ -1,15 +1,17 @@
+import { isNumber } from 'utils/string';
+
+export type SortingMethod = 'numeric' | 'alphabetic' | 'length';
+export type SplitOperatorType = 'symbol' | 'regex';
+
 // utils function that choose the way of numeric sorting mixed types of array
-function customNumericSort(
-  a: number | string,
-  b: number | string,
-  increasing: boolean
-): number {
-  if (typeof a === 'number' && typeof b === 'number') {
-    let result: number = increasing ? a - b : b - a;
-    return result;
-  } else if (typeof a === 'string' && typeof b === 'string') {
-    return a.localeCompare(b); // Lexicographical comparison for strings
-  } else if (typeof a === 'number' && typeof b === 'string') {
+function customNumericSort(a: string, b: string, increasing: boolean): number {
+  const formattedA = isNumber(a) ? Number(a) : a;
+  const formattedB = isNumber(b) ? Number(b) : b;
+  if (typeof formattedA === 'number' && typeof formattedB === 'number') {
+    return increasing ? formattedA - formattedB : formattedB - formattedA;
+  } else if (typeof formattedA === 'string' && typeof formattedB === 'string') {
+    return formattedA.localeCompare(formattedB); // Lexicographical comparison for strings
+  } else if (typeof formattedA === 'number' && typeof formattedB === 'string') {
     return -1; // Numbers before strings
   } else {
     return 1; // Strings after numbers
@@ -17,65 +19,55 @@ function customNumericSort(
 }
 
 export function numericSort(
-  array: any[], // array we build after parsing the input
+  array: string[], // array we build after parsing the input
   increasing: boolean,
-  separator: string,
+  joinSeparator: string,
   removeDuplicated: boolean // the value if the checkbox has been selected 1 else 0
 ) {
   array.sort((a, b) => customNumericSort(a, b, increasing));
   if (removeDuplicated) {
     array = array.filter((item, index) => array.indexOf(item) === index);
   }
-  return array.join(separator);
+  return array.join(joinSeparator);
 }
 
 // utils function that choose the way of numeric sorting mixed types of array
-function customLengthSort(
-  a: number | string,
-  b: number | string,
-  increasing: boolean
-): number {
-  let result: number = increasing
-    ? a.toString().length - b.toString().length
-    : b.toString().length - a.toString().length;
-  return result;
+function customLengthSort(a: string, b: string, increasing: boolean): number {
+  return increasing ? a.length - b.length : b.length - a.length;
 }
 
 export function lengthSort(
-  array: any[], // array we build after parsing the input
+  array: string[], // array we build after parsing the input
   increasing: boolean, // select value has to be increasing for increasing order and decreasing for decreasing order
-  separator: string,
+  joinSeparator: string,
   removeDuplicated: boolean // the value if the checkbox has been selected 1 else 0
 ) {
   array.sort((a, b) => customLengthSort(a, b, increasing));
   if (removeDuplicated) {
     array = array.filter((item, index) => array.indexOf(item) === index);
   }
-  return array.join(separator);
+  return array.join(joinSeparator);
 }
 
 // Utils function that chooses the way of alphabetic sorting mixed types of array
 function customAlphabeticSort(
-  a: number | string,
-  b: number | string,
+  a: string,
+  b: string,
   caseSensitive: boolean
 ): number {
-  const stringA: string = a.toString();
-  const stringB: string = b.toString();
-
   if (!caseSensitive) {
     // Case-insensitive comparison
-    return stringA.toLowerCase().localeCompare(stringB.toLowerCase());
+    return a.toLowerCase().localeCompare(b.toLowerCase());
   } else {
     // Case-sensitive comparison
-    return stringA.charCodeAt(0) - stringB.charCodeAt(0);
+    return a.charCodeAt(0) - b.charCodeAt(0);
   }
 }
 
 export function alphabeticSort(
-  array: any[], // array we build after parsing the input
+  array: string[], // array we build after parsing the input
   increasing: boolean, // select value has to be "increasing" for increasing order and "decreasing" for decreasing order
-  separator: string,
+  joinSeparator: string,
   removeDuplicated: boolean, // the value if the checkbox has been selected 1 else 0
   caseSensitive: boolean // the value if the checkbox has been selected 1 else 0
 ) {
@@ -86,5 +78,46 @@ export function alphabeticSort(
   if (removeDuplicated) {
     array = array.filter((item, index) => array.indexOf(item) === index);
   }
-  return array.join(separator);
+  return array.join(joinSeparator);
+}
+
+// main function
+export function Sort(
+  sortingMethod: SortingMethod,
+  splitOperatorType: SplitOperatorType,
+  input: string,
+  increasing: boolean,
+  splitSeparator: string,
+  joinSeparator: string,
+  removeDuplicated: boolean,
+  caseSensitive: boolean
+) {
+  let array: string[];
+  switch (splitOperatorType) {
+    case 'symbol':
+      array = input.split(splitSeparator);
+      break;
+    case 'regex':
+      array = input.split(new RegExp(splitSeparator));
+      break;
+  }
+  let result: string;
+  switch (sortingMethod) {
+    case 'numeric':
+      result = numericSort(array, increasing, joinSeparator, removeDuplicated);
+      break;
+    case 'length':
+      result = lengthSort(array, increasing, joinSeparator, removeDuplicated);
+      break;
+    case 'alphabetic':
+      result = alphabeticSort(
+        array,
+        increasing,
+        joinSeparator,
+        removeDuplicated,
+        caseSensitive
+      );
+      break;
+  }
+  return result;
 }
