@@ -80,7 +80,11 @@ export default function Hero() {
           />
         )}
         renderOption={(props, option) => (
-          <Box component="li" {...props} onClick={() => navigate(option.path)}>
+          <Box
+            component="li"
+            {...props}
+            onClick={() => navigate('/' + option.path)}
+          >
             <Box>
               <Typography fontWeight={'bold'}>{option.name}</Typography>
               <Typography fontSize={12}>{option.shortDescription}</Typography>

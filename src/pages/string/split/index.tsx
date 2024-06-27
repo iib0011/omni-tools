@@ -122,14 +122,12 @@ export default function SplitText() {
             component: splitOperators.map(({ title, description, type }) => (
               <RadioWithTextField
                 key={type}
-                radioValue={type}
+                checked={type === values.splitSeparatorType}
                 title={title}
                 fieldName={'splitSeparatorType'}
                 description={description}
                 value={values[`${type}Value`]}
-                onRadioChange={(type) =>
-                  setFieldValue('splitSeparatorType', type)
-                }
+                onRadioClick={() => setFieldValue('splitSeparatorType', type)}
                 onTextChange={(val) => setFieldValue(`${type}Value`, val)}
               />
             ))

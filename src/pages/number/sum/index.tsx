@@ -67,7 +67,7 @@ export default function SplitText() {
                 withTextField ? (
                   <RadioWithTextField
                     key={type}
-                    radioValue={type}
+                    checked={type === values.extractionType}
                     title={title}
                     fieldName={'extractionType'}
                     description={description}
@@ -76,9 +76,7 @@ export default function SplitText() {
                         ? values[textValueAccessor].toString()
                         : ''
                     }
-                    onRadioChange={(type) =>
-                      setFieldValue('extractionType', type)
-                    }
+                    onRadioClick={() => setFieldValue('extractionType', type)}
                     onTextChange={(val) =>
                       textValueAccessor
                         ? setFieldValue(textValueAccessor, val)
@@ -88,9 +86,8 @@ export default function SplitText() {
                 ) : (
                   <SimpleRadio
                     key={title}
-                    onChange={() => setFieldValue('extractionType', type)}
-                    fieldName={'extractionType'}
-                    value={values.extractionType}
+                    onClick={() => setFieldValue('extractionType', type)}
+                    checked={values.extractionType === type}
                     description={description}
                     title={title}
                   />

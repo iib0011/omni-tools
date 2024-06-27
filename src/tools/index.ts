@@ -4,12 +4,14 @@ import { DefinedTool } from './defineTool';
 import { capitalizeFirstLetter } from '../utils/string';
 import { numberTools } from '../pages/number';
 import { videoTools } from '../pages/video';
+import { listTools } from '../pages/list';
 
 export const tools: DefinedTool[] = [
   ...imageTools,
   ...stringTools,
   ...numberTools,
-  ...videoTools
+  ...videoTools,
+  ...listTools
 ];
 const categoriesDescriptions: { type: string; value: string }[] = [
   {
@@ -31,6 +33,11 @@ const categoriesDescriptions: { type: string; value: string }[] = [
     type: 'gif',
     value:
       'Tools for working with GIF animations – create transparent GIFs, extract GIF frames, add text to GIF, crop, rotate, reverse GIFs, and much more.'
+  },
+  {
+    type: 'list',
+    value:
+      'Tools for working with lists – sort, reverse, randomize lists, find unique and duplicate list items, change list item separators, and much more.'
   }
 ];
 export const filterTools = (

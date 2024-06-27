@@ -1,39 +1,31 @@
-import { Box, Stack } from '@mui/material';
-import { Field } from 'formik';
+import { Box, Radio, Stack } from '@mui/material';
+import { Field, useFormikContext } from 'formik';
 import Typography from '@mui/material/Typography';
-import { globalDescriptionFontSize } from '../../config/uiConfig';
 import React from 'react';
+import { globalDescriptionFontSize } from '../../config/uiConfig';
 
 interface SimpleRadioProps {
-  onChange: () => void;
-  fieldName: string;
-  value: any;
   title: string;
   description?: string;
+  checked: boolean;
+  onClick: () => void;
 }
 
-export default function SimpleRadio({
-  onChange,
-  fieldName,
-  value,
+const SimpleRadio: React.FC<SimpleRadioProps> = ({
+  onClick,
   title,
-  description
-}: SimpleRadioProps) {
+  description,
+  checked
+}) => {
   return (
     <Box>
       <Stack
         direction={'row'}
         sx={{ mt: 2, mb: 1, cursor: 'pointer' }}
-        onClick={onChange}
         alignItems={'center'}
-        spacing={1}
+        onClick={onClick}
       >
-        <Field
-          type="radio"
-          name={fieldName}
-          value={value}
-          onChange={onChange}
-        />
+        <Radio checked={checked} onClick={onClick} />
         <Typography>{title}</Typography>
       </Stack>
       {description && (
@@ -43,4 +35,6 @@ export default function SimpleRadio({
       )}
     </Box>
   );
-}
+};
+
+export default SimpleRadio;

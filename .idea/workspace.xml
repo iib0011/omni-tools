@@ -6,12 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="style: lint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/RadioWithTextField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/RadioWithTextField.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/SimpleRadio.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/SimpleRadio.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/TextFieldWithDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/TextFieldWithDesc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/list/sort/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/sort/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/list/sort/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/sort/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/sort/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/sort/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/sort/sort.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/sort/sort.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/string.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/string.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/sum/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/sum/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/split/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/split/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,7 @@
     "Vitest.mergeText.executor": "Run",
     "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
     "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
-    "git-widget-placeholder": "chesterkxng",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/HP/IdeaProjects/omni-tools/src/assets",
@@ -109,7 +113,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\tools" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="JoinText Component.should merge text pieces with specified join character" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <playwright-package value="$PROJECT_DIR$/node_modules/@playwright/test" />
@@ -165,8 +169,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.test:e2e" />
         <item itemvalue="Playwright.JoinText Component.should merge text pieces with specified join character" />
@@ -205,14 +209,6 @@
       <workItem from="1719475764139" duration="14903000" />
       <workItem from="1719492452780" duration="8000" />
       <workItem from="1719496624579" duration="6148000" />
-    </task>
-    <task id="LOCAL-00024" summary="feat: search tools">
-      <option name="closed" value="true" />
-      <created>1719095463056</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1719095463056</updated>
     </task>
     <task id="LOCAL-00025" summary="fix: deploy message">
       <option name="closed" value="true" />
@@ -598,7 +594,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719499895862</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="fix: misc">
+      <option name="closed" value="true" />
+      <created>1719510922051</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1719510922051</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -654,9 +658,9 @@
     <MESSAGE value="refactor: optimize imports" />
     <MESSAGE value="feat: change gif speed" />
     <MESSAGE value="chore: remove unused deps" />
-    <MESSAGE value="fix: misc" />
     <MESSAGE value="style: lint" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: lint" />
+    <MESSAGE value="fix: misc" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: misc" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

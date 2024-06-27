@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 type OwnProps = {
-  description: string;
+  description?: string;
   value: string | number;
   onChange: (value: string) => void;
   placeholder?: string;
@@ -24,9 +24,11 @@ const TextFieldWithDesc = ({
         onChange={(event) => onChange(event.target.value)}
         {...props}
       />
-      <Typography fontSize={12} mt={1}>
-        {description}
-      </Typography>
+      {description && (
+        <Typography fontSize={12} mt={1}>
+          {description}
+        </Typography>
+      )}
     </Box>
   );
 };

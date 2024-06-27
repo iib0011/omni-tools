@@ -1,2 +1,3 @@
 import { tool as listSort } from './sort/meta';
-export const listTools = [];
+
+export const listTools = [listSort];

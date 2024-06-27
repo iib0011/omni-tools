@@ -3,34 +3,31 @@ import React from 'react';
 import TextFieldWithDesc from './TextFieldWithDesc';
 import SimpleRadio from './SimpleRadio';
 
-const RadioWithTextField = <T,>({
-  fieldName,
-  radioValue,
+const RadioWithTextField = ({
   title,
-  onRadioChange,
+  onRadioClick,
+  checked,
   value,
   description,
   onTextChange,
-  typeDescription
+  radioDescription
 }: {
   fieldName: string;
   title: string;
-  radioValue: T;
-  onRadioChange: (val: T) => void;
+  checked: boolean;
+  onRadioClick: () => void;
   value: string;
   description: string;
   onTextChange: (value: string) => void;
-  typeDescription?: string;
+  radioDescription?: string;
 }) => {
-  const onChange = () => onRadioChange(radioValue);
   return (
     <Box>
       <SimpleRadio
-        value={radioValue}
-        onChange={onChange}
-        fieldName={fieldName}
+        checked={checked}
+        onClick={onRadioClick}
         title={title}
-        description={typeDescription}
+        description={radioDescription}
       />
       <TextFieldWithDesc
         value={value}
