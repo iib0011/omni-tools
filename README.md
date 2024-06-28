@@ -54,6 +54,18 @@ npm run script:create:tool my-tool-name folder1/folder2
 
 Use `folder1\folder2` on Windows
 
+### Run tests
+
+```bash
+npm run test
+```
+
+- For e2e tests
+
+```bash
+npm run test:e2e:run
+```
+
 ### Contributors
 
 <a href="https://github.com/iib0011/omni-tools/graphs/contributors">
