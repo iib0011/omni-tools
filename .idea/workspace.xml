@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: formik updateField">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: ci">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/change-colors-in-png.e2e.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/change-colors-in-png.e2e.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/color.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/color.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playwright.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/playwright.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="4-convert-jpg-to-png" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,7 +58,7 @@
     "Vitest.mergeText.executor": "Run",
     "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
     "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
-    "git-widget-placeholder": "4-convert-jpg-to-png",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/HP/IdeaProjects/omni-tools/src/assets",
@@ -201,64 +200,6 @@
       <workItem from="1719475764139" duration="14903000" />
       <workItem from="1719492452780" duration="8000" />
       <workItem from="1719496624579" duration="6148000" />
-      <workItem from="1719571065018" duration="13000" />
-      <workItem from="1719583866571" duration="1595000" />
-    </task>
-    <task id="LOCAL-00028" summary="feat: copy and import file">
-      <option name="closed" value="true" />
-      <created>1719103372481</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1719103372481</updated>
-    </task>
-    <task id="LOCAL-00029" summary="refactor: tool options components">
-      <option name="closed" value="true" />
-      <created>1719152057230</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1719152057230</updated>
-    </task>
-    <task id="LOCAL-00030" summary="fix: join text service">
-      <option name="closed" value="true" />
-      <created>1719153044395</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1719153044395</updated>
-    </task>
-    <task id="LOCAL-00031" summary="test: join service">
-      <option name="closed" value="true" />
-      <created>1719154187887</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1719154187887</updated>
-    </task>
-    <task id="LOCAL-00032" summary="feat: result copy and download">
-      <option name="closed" value="true" />
-      <created>1719154927957</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1719154927957</updated>
-    </task>
-    <task id="LOCAL-00033" summary="feat: contributors graph">
-      <option name="closed" value="true" />
-      <created>1719165093734</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1719165093734</updated>
-    </task>
-    <task id="LOCAL-00034" summary="fix: readme">
-      <option name="closed" value="true" />
-      <created>1719165600245</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1719165600245</updated>
     </task>
     <task id="LOCAL-00035" summary="feat: create tool script">
       <option name="closed" value="true" />
@@ -588,15 +529,71 @@
       <option name="project" value="LOCAL" />
       <updated>1719519913328</updated>
     </task>
-    <task id="LOCAL-00076" summary="fix: formik updateField">
+    <task id="LOCAL-00076" summary="ci: run e2e tests">
       <option name="closed" value="true" />
-      <created>1719521563441</created>
+      <created>1719586077004</created>
       <option name="number" value="00076" />
       <option name="presentableId" value="LOCAL-00076" />
       <option name="project" value="LOCAL" />
-      <updated>1719521563441</updated>
+      <updated>1719586077005</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="ci: run e2e tests">
+      <option name="closed" value="true" />
+      <created>1719587132558</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1719587132558</updated>
+    </task>
+    <task id="LOCAL-00078" summary="ci: run e2e tests">
+      <option name="closed" value="true" />
+      <created>1719587281298</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1719587281298</updated>
+    </task>
+    <task id="LOCAL-00079" summary="fix: ci">
+      <option name="closed" value="true" />
+      <created>1719588326608</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1719588326608</updated>
+    </task>
+    <task id="LOCAL-00080" summary="fix: ci">
+      <option name="closed" value="true" />
+      <created>1719588378907</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1719588378907</updated>
+    </task>
+    <task id="LOCAL-00081" summary="fix: ci">
+      <option name="closed" value="true" />
+      <created>1719588501953</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1719588501953</updated>
+    </task>
+    <task id="LOCAL-00082" summary="fix: ci">
+      <option name="closed" value="true" />
+      <created>1719588854025</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1719588854025</updated>
+    </task>
+    <task id="LOCAL-00083" summary="fix: ci">
+      <option name="closed" value="true" />
+      <created>1719589144843</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1719589144843</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,7 +626,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: sum numbers init" />
     <MESSAGE value="fix: compilation" />
     <MESSAGE value="chore: printRunningSum" />
     <MESSAGE value="chore: sum tests" />
@@ -653,8 +649,9 @@
     <MESSAGE value="fix: misc" />
     <MESSAGE value="fix: radio and list sort init" />
     <MESSAGE value="chore: formik updateField" />
-    <MESSAGE value="fix: formik updateField" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: formik updateField" />
+    <MESSAGE value="ci: run e2e tests" />
+    <MESSAGE value="fix: ci" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: ci" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

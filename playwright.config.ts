@@ -6,8 +6,12 @@ export default defineConfig({
   fullyParallel: true,
   retries: 1,
   use: {
-    baseURL: 'http://localhost:5173',
+    baseURL: 'http://localhost:4173',
     trace: 'on-first-retry'
+  },
+  webServer: {
+    command: 'npm run build && npm run serve',
+    url: 'http://localhost:4173'
   },
   projects: [
     {
