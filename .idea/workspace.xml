@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: package.json">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playwright.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/playwright.config.ts" afterDir="false" />
-    </list>
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: playwright report" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,14 +198,6 @@
       <workItem from="1719475764139" duration="14903000" />
       <workItem from="1719492452780" duration="8000" />
       <workItem from="1719496624579" duration="6148000" />
-    </task>
-    <task id="LOCAL-00037" summary="fix: create tool">
-      <option name="closed" value="true" />
-      <created>1719171439639</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1719171439639</updated>
     </task>
     <task id="LOCAL-00038" summary="fix: readme">
       <option name="closed" value="true" />
@@ -594,7 +583,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719591700496</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="feat: playwright report">
+      <option name="closed" value="true" />
+      <created>1719600693979</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1719600693979</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,7 +635,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: sum tests" />
     <MESSAGE value="fix: readme" />
     <MESSAGE value="refactor: tool input and result" />
     <MESSAGE value="feat: create transparent png" />
@@ -663,7 +659,8 @@
     <MESSAGE value="fix: ci" />
     <MESSAGE value="chore: jimp types" />
     <MESSAGE value="fix: package.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: package.json" />
+    <MESSAGE value="feat: playwright report" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: playwright report" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
