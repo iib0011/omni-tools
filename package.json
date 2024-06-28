@@ -36,6 +36,7 @@
     "@types/omggif": "^1.0.5",
     "color": "^4.2.3",
     "formik": "^2.4.6",
+    "jimp": "^0.22.12",
     "lodash": "^4.17.21",
     "morsee": "^1.0.9",
     "notistack": "^3.0.1",

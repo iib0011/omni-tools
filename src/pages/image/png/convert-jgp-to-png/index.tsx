@@ -133,20 +133,21 @@ export default function ConvertJgpToPng() {
         compute={compute}
         getGroups={({ values, updateField }) => [
           {
-            title: 'From color and to color',
+            title: 'PNG Transparency Color',
             component: (
               <Box>
                 <CheckboxWithDesc
                   key="enableTransparency"
-                  title="PNG Transparency Color"
+                  title="Enable PNG Transparency"
                   checked={!!values.enableTransparency}
                   onChange={(value) => updateField('enableTransparency', value)}
                   description="Make the color below transparent."
                 />
                 <ColorSelector
                   value={values.color}
-                  onChange={(val) => updateField('color', val)}
+                  onColorChange={(val) => updateField('color', val)}
                   description={'With this color (to color)'}
+                  inputProps={{ 'data-testid': 'color-input' }}
                 />
                 <TextFieldWithDesc
                   value={values.similarity}

@@ -118,7 +118,7 @@ export default function ChangeColorsInPng() {
               <Box>
                 <ColorSelector
                   value={values.fromColor}
-                  onChange={(val) => updateField('fromColor', val)}
+                  onColorChange={(val) => updateField('fromColor', val)}
                   description={'Replace this color (from color)'}
                 />
                 <TextFieldWithDesc
