@@ -36,4 +36,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-test-results
+/test-results
+/playwright-report
