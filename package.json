@@ -17,7 +17,7 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "test": "vitest",
-    "test:e2e": "playwright test",
+    "test:e2e": "npm run build && playwright test",
     "test:ui": "vitest --ui",
     "script:create:tool": "node scripts/create-tool.mjs",
     "lint": "eslint src --max-warnings=0 --fix",

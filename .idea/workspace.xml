@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: ci">
+      <change afterPath="$PROJECT_DIR$/src/typed/jimp.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playwright.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/playwright.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +18,7 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/string-join" />
+    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -58,7 +57,7 @@
     "Vitest.mergeText.executor": "Run",
     "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
     "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "4-convert-jpg-to-png",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/HP/IdeaProjects/omni-tools/src/assets",
@@ -107,7 +106,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\tools" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test:e2e:run">
+  <component name="RunManager" selected="npm.test:e2e">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -148,23 +147,12 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:e2e:run" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:e2e:run" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test:e2e:run" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.test" />
-        <item itemvalue="npm.lint" />
         <item itemvalue="npm.test:e2e" />
+        <item itemvalue="npm.test" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.lint" />
       </list>
     </recent_temporary>
   </component>
