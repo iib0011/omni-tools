@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build-and-test:
+  test-and-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -29,7 +29,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-  playwright:
+  e2e-test:
     name: 'Playwright Tests'
     runs-on: ubuntu-latest
     steps:
@@ -42,7 +42,7 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
-        run: npm run test:e2e:run
+        run: npx playwright test
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
@@ -51,7 +51,9 @@ jobs:
           retention-days: 30
   deploy:
     if: github.ref == 'refs/heads/main'
-    needs: build-and-test
+    needs:
+      - test-and-build
+      - playwright
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
