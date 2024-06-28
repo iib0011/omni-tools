@@ -127,11 +127,13 @@ export default function ChangeColorsInPng() {
                   value={values.fromColor}
                   onColorChange={(val) => updateField('fromColor', val)}
                   description={'Replace this color (from color)'}
+                  inputProps={{ 'data-testid': 'from-color-input' }}
                 />
                 <ColorSelector
                   value={values.toColor}
                   onColorChange={(val) => updateField('toColor', val)}
                   description={'With this color (to color)'}
+                  inputProps={{ 'data-testid': 'to-color-input' }}
                 />
                 <TextFieldWithDesc
                   value={values.similarity}
