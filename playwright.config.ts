@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 
-const baseUrl = process.env.BASE_URL || 'http://localhost:5050';
+const isCI = !!process.env.CI;
 
 export default defineConfig({
   testDir: './src',
@@ -8,7 +8,7 @@ export default defineConfig({
   fullyParallel: true,
   retries: 1,
   use: {
-    baseURL: 'http://localhost:5173',
+    baseURL: isCI ? 'http://localhost:4173' : 'http://localhost:5173',
     trace: 'on-first-retry'
   },
   webServer: {
