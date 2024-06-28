@@ -12,7 +12,7 @@ export default defineConfig({
     trace: 'on-first-retry'
   },
   webServer: {
-    command: 'npm run serve',
+    command: 'npm run build && npm run serve',
     url: 'http://localhost:4173'
   },
   projects: [

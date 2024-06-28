@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="ci: run e2e tests">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: ci">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playwright.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/playwright.config.ts" afterDir="false" />
     </list>
@@ -199,30 +198,6 @@
       <workItem from="1719475764139" duration="14903000" />
       <workItem from="1719492452780" duration="8000" />
       <workItem from="1719496624579" duration="6148000" />
-    </task>
-    <task id="LOCAL-00030" summary="fix: join text service">
-      <option name="closed" value="true" />
-      <created>1719153044395</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1719153044395</updated>
-    </task>
-    <task id="LOCAL-00031" summary="test: join service">
-      <option name="closed" value="true" />
-      <created>1719154187887</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1719154187887</updated>
-    </task>
-    <task id="LOCAL-00032" summary="feat: result copy and download">
-      <option name="closed" value="true" />
-      <created>1719154927957</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1719154927957</updated>
     </task>
     <task id="LOCAL-00033" summary="feat: contributors graph">
       <option name="closed" value="true" />
@@ -592,7 +567,31 @@
       <option name="project" value="LOCAL" />
       <updated>1719587281298</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="fix: ci">
+      <option name="closed" value="true" />
+      <created>1719588326608</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1719588326608</updated>
+    </task>
+    <task id="LOCAL-00080" summary="fix: ci">
+      <option name="closed" value="true" />
+      <created>1719588378907</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1719588378907</updated>
+    </task>
+    <task id="LOCAL-00081" summary="fix: ci">
+      <option name="closed" value="true" />
+      <created>1719588501953</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1719588501953</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -625,7 +624,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: sum numbers init" />
     <MESSAGE value="fix: compilation" />
     <MESSAGE value="chore: printRunningSum" />
     <MESSAGE value="chore: sum tests" />
@@ -650,7 +648,8 @@
     <MESSAGE value="fix: radio and list sort init" />
     <MESSAGE value="chore: formik updateField" />
     <MESSAGE value="ci: run e2e tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="ci: run e2e tests" />
+    <MESSAGE value="fix: ci" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: ci" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
