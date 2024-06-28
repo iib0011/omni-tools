@@ -20,3 +20,15 @@ export function areColorsSimilar(
 
   return colorDistance(color1, color2) <= similarityThreshold;
 }
+
+export function convertHexToRGBA(color: string): number {
+  // Remove the leading '#' if present
+  if (color.startsWith('#')) {
+    color = color.slice(1);
+  }
+
+  // Convert the color to a number and add the alpha channel
+  const colorValue = parseInt(color, 16);
+  const alphaChannel = 0xff;
+  return (colorValue << 8) | alphaChannel;
+}

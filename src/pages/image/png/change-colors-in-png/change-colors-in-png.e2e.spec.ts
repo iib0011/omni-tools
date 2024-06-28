@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test';
 import { Buffer } from 'buffer';
 import path from 'path';
 import Jimp from 'jimp';
+import { convertHexToRGBA } from '../../../../utils/color';
 
 test.describe('Change colors in png', () => {
   test.beforeEach(async ({ page }) => {
@@ -15,7 +16,8 @@ test.describe('Change colors in png', () => {
     await fileInput?.setInputFiles(imagePath);
 
     await page.getByTestId('from-color-input').fill('#FF0000');
-    await page.getByTestId('to-color-input').fill('#0000FF');
+    const toColor = '#0000FF';
+    await page.getByTestId('to-color-input').fill(toColor);
 
     // Click on download
     const downloadPromise = page.waitForEvent('download');
@@ -36,6 +38,6 @@ test.describe('Change colors in png', () => {
     // Check that the first pixel is transparent
     const image = await Jimp.read(fileContent);
     const color = image.getPixelColor(0, 0);
-    expect(color).toBe(0x0000ffff);
+    expect(color).toBe(convertHexToRGBA(toColor));
   });
 });
