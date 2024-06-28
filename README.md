@@ -63,7 +63,7 @@ npm run test
 - For e2e tests
 
 ```bash
-npm run test:e2e:run
+npm run test:e2e
 ```
 
 ### Contributors

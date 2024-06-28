@@ -1,14 +1,12 @@
 import { defineConfig, devices } from '@playwright/test';
 
-const isCI = !!process.env.CI;
-
 export default defineConfig({
   testDir: './src',
   testMatch: /\.e2e\.(spec\.)?ts$/,
   fullyParallel: true,
   retries: 1,
   use: {
-    baseURL: isCI ? 'http://localhost:4173' : 'http://localhost:5173',
+    baseURL: 'http://localhost:4173',
     trace: 'on-first-retry'
   },
   webServer: {
