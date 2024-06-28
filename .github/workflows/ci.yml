@@ -53,7 +53,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     needs:
       - test-and-build
-      - playwright
+      - e2e-test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
