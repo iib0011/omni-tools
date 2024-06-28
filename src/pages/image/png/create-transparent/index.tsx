@@ -8,6 +8,7 @@ import ColorSelector from '../../../../components/options/ColorSelector';
 import Color from 'color';
 import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
 import ToolInputAndResult from '../../../../components/ToolInputAndResult';
+import { areColorsSimilar } from 'utils/color';
 
 const initialValues = {
   fromColor: 'white',
@@ -51,28 +52,13 @@ export default function ChangeColorsInPng() {
       const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
       const data: Uint8ClampedArray = imageData.data;
 
-      const colorDistance = (
-        c1: [number, number, number],
-        c2: [number, number, number]
-      ) => {
-        return Math.sqrt(
-          Math.pow(c1[0] - c2[0], 2) +
-            Math.pow(c1[1] - c2[1], 2) +
-            Math.pow(c1[2] - c2[2], 2)
-        );
-      };
-      const maxColorDistance = Math.sqrt(
-        Math.pow(255, 2) + Math.pow(255, 2) + Math.pow(255, 2)
-      );
-      const similarityThreshold = (similarity / 100) * maxColorDistance;
-
       for (let i = 0; i < data.length; i += 4) {
         const currentColor: [number, number, number] = [
           data[i],
           data[i + 1],
           data[i + 2]
         ];
-        if (colorDistance(currentColor, fromColor) <= similarityThreshold) {
+        if (areColorsSimilar(currentColor, fromColor, similarity)) {
           data[i + 3] = 0; // Set alpha to 0 (transparent)
         }
       }
