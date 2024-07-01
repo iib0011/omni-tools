@@ -18,7 +18,6 @@ describe('shuffle function', () => {
             splitSeparator,
             joinSeparator  
         );
-        console.log(result);
         expect(result.split(joinSeparator).length).toBe(4);
       });
 
