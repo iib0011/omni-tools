@@ -10,6 +10,7 @@ describe('wrap function', () => {
         const splitOperatorType: SplitOperatorType = 'symbol';
         const splitSeparator = ', ';
         const joinSeparator = ', ';
+        const deleteEmptyItems = false;
 
 
         const result = wrapList(
@@ -17,6 +18,7 @@ describe('wrap function', () => {
             input,
             splitSeparator,
             joinSeparator,
+            deleteEmptyItems
         );
 
         expect(result).toBe('apple, pineaple, lemon, orange, mango');
@@ -29,12 +31,14 @@ describe('wrap function', () => {
         const splitSeparator = ', ';
         const joinSeparator = ', ';
         const left = 'the ';
+        const deleteEmptyItems = false;
 
         const result = wrapList(
             splitOperatorType,
             input,
             splitSeparator,
             joinSeparator,
+            deleteEmptyItems,
             left);
 
         expect(result).toBe('the apple, the pineaple, the lemon, the orange, the mango');
@@ -48,12 +52,14 @@ describe('wrap function', () => {
         const joinSeparator = ', ';
         const left = '';
         const right = 'z';
+        const deleteEmptyItems = false;
 
         const result = wrapList(
             splitOperatorType,
             input,
             splitSeparator,
             joinSeparator,
+            deleteEmptyItems,
             left,
             right);
 
@@ -65,6 +71,7 @@ describe('wrap function', () => {
         const splitOperatorType: SplitOperatorType = 'symbol';
         const splitSeparator = ', ';
         const joinSeparator = ', ';
+        const deleteEmptyItems = false;
         const left = 'K';
         const right = 'z';
 
@@ -73,6 +80,52 @@ describe('wrap function', () => {
             input,
             splitSeparator,
             joinSeparator,
+            deleteEmptyItems,
+            left,
+            right);
+
+        expect(result).toBe('Kapplez, Kpineaplez, Klemonz, Korangez, Kmangoz');
+
+    });
+
+    it('should append to both side if both defined and not delete empty items', () => {
+        const input: string = 'apple, pineaple, lemon, orange, mango, ';
+        const splitOperatorType: SplitOperatorType = 'symbol';
+        const splitSeparator = ', ';
+        const joinSeparator = ', ';
+        const deleteEmptyItems = false;
+        const left = 'K';
+        const right = 'z';
+
+        const result = wrapList(
+            splitOperatorType,
+            input,
+            splitSeparator,
+            joinSeparator,
+            deleteEmptyItems,
+            left,
+            right);
+
+        expect(result).toBe('Kapplez, Kpineaplez, Klemonz, Korangez, Kmangoz, Kz');
+
+    });
+
+
+    it('should append to both side if both defined and delete empty items', () => {
+        const input: string = 'apple, pineaple, lemon, , orange, mango';
+        const splitOperatorType: SplitOperatorType = 'symbol';
+        const splitSeparator = ', ';
+        const joinSeparator = ', ';
+        const deleteEmptyItems = true;
+        const left = 'K';
+        const right = 'z';
+
+        const result = wrapList(
+            splitOperatorType,
+            input,
+            splitSeparator,
+            joinSeparator,
+            deleteEmptyItems,
             left,
             right);
 

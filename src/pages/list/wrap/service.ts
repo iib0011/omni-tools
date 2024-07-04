@@ -9,8 +9,10 @@ export function wrapList(
     input: string,
     splitSeparator: string,
     joinSeparator: string,
+    deleteEmptyItems: boolean,
     left: string = '',
-    right: string = ''
+    right: string = '',
+    
 ): string {
     let array: string[];
     let wrappedArray: string[];
@@ -21,6 +23,9 @@ export function wrapList(
         case 'regex':
             array = input.split(new RegExp(splitSeparator));
             break;
+    }
+    if (deleteEmptyItems) {
+        array = array.filter(Boolean);
     }
     wrappedArray = wrap(array, left, right);
     return wrappedArray.join(joinSeparator);
