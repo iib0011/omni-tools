@@ -2,7 +2,7 @@ export type SplitOperatorType = 'symbol' | 'regex';
 export type DisplayFormat = 'count' | 'percentage' | 'total';
 export type SortingMethod = 'count' | 'alphabetic';
 
-// Function that analyzes the array and returns a dict of element occurrences and handle the ignoreItemCase
+// Function that takes the array as arg  and returns a dict of element occurrences and handle the ignoreItemCase
 function dictMaker(array: string[],
     ignoreItemCase: boolean
 ): { [key: string]: number } {
