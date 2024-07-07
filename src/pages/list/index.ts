@@ -1,3 +1,4 @@
+import { tool as listFindUnique } from './find-unique/meta';
 import { tool as listFindMostPopular } from './find-most-popular/meta';
 import { tool as listGroup } from './group/meta';
 import { tool as listWrap } from './wrap/meta';
