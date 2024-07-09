@@ -124,7 +124,9 @@ export default function SplitText() {
                     { label: 'Increasing order', value: true },
                     { label: 'Decreasing order', value: false }
                   ]}
-                  onChange={(value) => updateField('increasing', value)}
+                  onChange={(value) => {
+                    updateField('increasing', value);
+                  }}
                   description={'Select a sorting order.'}
                 />
                 <CheckboxWithDesc

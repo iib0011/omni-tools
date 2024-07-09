@@ -1,8 +1,9 @@
 import { Box, TextField } from '@mui/material';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import InputHeader from '../InputHeader';
 import ResultFooter from './ResultFooter';
+import { replaceSpecialCharacters } from '../../utils/string';
 
 export default function ToolTextResult({
   title = 'Result',
@@ -37,7 +38,7 @@ export default function ToolTextResult({
     <Box>
       <InputHeader title={title} />
       <TextField
-        value={value}
+        value={replaceSpecialCharacters(value)}
         fullWidth
         multiline
         rows={10}

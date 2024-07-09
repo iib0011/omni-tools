@@ -24,7 +24,11 @@ const SelectWithDesc = <T extends string | boolean>({
   description: string;
 }) => {
   const handleChange = (event: SelectChangeEvent<T>) => {
-    onChange(event.target.value as T);
+    const newValue =
+      typeof selected === 'boolean'
+        ? event.target.value === 'true'
+        : event.target.value;
+    onChange(newValue as T);
   };
 
   return (
