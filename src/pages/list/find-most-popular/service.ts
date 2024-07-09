@@ -44,7 +44,7 @@ function displayFormater(
   dict: { [key: string]: number },
   displayFormat: DisplayFormat
 ): string[] {
-  let formattedOutput: string[] = [];
+  const formattedOutput: string[] = [];
   const total = Object.values(dict).reduce((acc, val) => acc + val, 0);
 
   switch (displayFormat) {

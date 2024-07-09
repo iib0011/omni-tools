@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: find most popular ui">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: misc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/SelectWithDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/SelectWithDesc.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/find-most-popular/find-most-popular.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/find-most-popular/find-most-popular.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/sort/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/sort/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/string.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/string.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,15 +201,7 @@
       <workItem from="1719492452780" duration="8000" />
       <workItem from="1719496624579" duration="6148000" />
       <workItem from="1720542757452" duration="5355000" />
-      <workItem from="1720557527691" duration="1135000" />
-    </task>
-    <task id="LOCAL-00041" summary="ci: fix">
-      <option name="closed" value="true" />
-      <created>1719185893875</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1719185893875</updated>
+      <workItem from="1720557527691" duration="3245000" />
     </task>
     <task id="LOCAL-00042" summary="ci: fix">
       <option name="closed" value="true" />
@@ -600,7 +587,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720546921899</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="fix: misc">
+      <option name="closed" value="true" />
+      <created>1720558690146</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1720558690147</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -658,7 +653,6 @@
     <MESSAGE value="feat: change gif speed" />
     <MESSAGE value="chore: remove unused deps" />
     <MESSAGE value="style: lint" />
-    <MESSAGE value="fix: misc" />
     <MESSAGE value="fix: radio and list sort init" />
     <MESSAGE value="chore: formik updateField" />
     <MESSAGE value="ci: run e2e tests" />
@@ -669,7 +663,8 @@
     <MESSAGE value="chore: idea config" />
     <MESSAGE value="feat: sort list" />
     <MESSAGE value="feat: find most popular ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: find most popular ui" />
+    <MESSAGE value="fix: misc" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: misc" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
