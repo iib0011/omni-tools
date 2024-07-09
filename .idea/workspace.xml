@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: playwright report" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: idea config">
+      <change afterPath="$PROJECT_DIR$/src/components/options/SelectWithDesc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptionGroups.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptionGroups.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/sort/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/sort/index.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +62,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/HP/IdeaProjects/omni-tools/src/assets",
+    "last_opened_file_path": "C:/Users/HP/IdeaProjects/omni-tools/src/components/options",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,11 +95,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\assets" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\string" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\string\split" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\images" />
-      <recent name="C:\Users\HP\IdeaProjects\omni-tools\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components" />
@@ -102,7 +108,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\tools" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test:e2e">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="JoinText Component.should merge text pieces with specified join character" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <playwright-package value="$PROJECT_DIR$/node_modules/@playwright/test" />
@@ -158,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.test:e2e" />
         <item itemvalue="Playwright.JoinText Component.should merge text pieces with specified join character" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.lint" />
-        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -198,14 +204,7 @@
       <workItem from="1719475764139" duration="14903000" />
       <workItem from="1719492452780" duration="8000" />
       <workItem from="1719496624579" duration="6148000" />
-    </task>
-    <task id="LOCAL-00038" summary="fix: readme">
-      <option name="closed" value="true" />
-      <created>1719171905785</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1719171905785</updated>
+      <workItem from="1720542757452" duration="2683000" />
     </task>
     <task id="LOCAL-00039" summary="fix: build">
       <option name="closed" value="true" />
@@ -591,7 +590,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719600693979</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="chore: idea config">
+      <option name="closed" value="true" />
+      <created>1719600739052</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1719600739052</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -635,7 +642,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: readme" />
     <MESSAGE value="refactor: tool input and result" />
     <MESSAGE value="feat: create transparent png" />
     <MESSAGE value="fix: ToolFileInput.tsx" />
@@ -660,7 +666,8 @@
     <MESSAGE value="chore: jimp types" />
     <MESSAGE value="fix: package.json" />
     <MESSAGE value="feat: playwright report" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: playwright report" />
+    <MESSAGE value="chore: idea config" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: idea config" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

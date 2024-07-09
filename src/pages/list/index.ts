@@ -9,4 +9,15 @@ import { tool as listTruncate } from './truncate/meta';
 import { tool as listShuffle } from './shuffle/meta';
 import { tool as listSort } from './sort/meta';
 
-export const listTools = [listSort];
+export const listTools = [
+  listSort,
+  listUnwrap,
+  listReverse,
+  listFindUnique,
+  listFindMostPopular,
+  listGroup,
+  listWrap,
+  listRotate,
+  listShuffle,
+  listTruncate
+];
