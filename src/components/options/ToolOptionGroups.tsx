@@ -15,7 +15,7 @@ export default function ToolOptionGroups({
   return (
     <Grid container spacing={2}>
       {groups.map((group) => (
-        <Grid item xs={12} md={6} key={group.title}>
+        <Grid item xs={12} md={4} key={group.title}>
           <Typography mb={1} fontSize={22}>
             {group.title}
           </Typography>
