@@ -1,3 +1,4 @@
+import { tool as listDuplicate } from './duplicate/meta';
 import { tool as listUnwrap } from './unwrap/meta';
 import { tool as listReverse } from './reverse/meta';
 import { tool as listFindUnique } from './find-unique/meta';
