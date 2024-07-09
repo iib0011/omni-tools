@@ -1,11 +1,11 @@
 import { expect, describe, it } from 'vitest';
 
-import { TopItemsList } from './service';
+import { findUniqueCompute } from './service';
 
 describe('TopItemsList Function', () => {
   test('should return unique items ignoring case sensitivity', () => {
     const input = 'apple,banana,Apple,orange,Banana,apple';
-    const result = TopItemsList(
+    const result = findUniqueCompute(
       'symbol',
       ',',
       '\n',
@@ -20,7 +20,7 @@ describe('TopItemsList Function', () => {
 
   test('should return unique items considering case sensitivity', () => {
     const input = 'apple,banana,Apple,orange,Banana,apple';
-    const result = TopItemsList(
+    const result = findUniqueCompute(
       'symbol',
       ',',
       '\n',
@@ -35,7 +35,7 @@ describe('TopItemsList Function', () => {
 
   test('should return all unique items ignoring case sensitivity', () => {
     const input = 'apple,banana,Apple,orange,Banana,apple';
-    const result = TopItemsList(
+    const result = findUniqueCompute(
       'symbol',
       ',',
       '\n',
@@ -50,7 +50,7 @@ describe('TopItemsList Function', () => {
 
   test('should return all unique items considering case sensitivity', () => {
     const input = 'apple,banana,Apple,orange,Banana,apple';
-    const result = TopItemsList(
+    const result = findUniqueCompute(
       'symbol',
       ',',
       '\n',
@@ -65,7 +65,7 @@ describe('TopItemsList Function', () => {
 
   test('should handle empty items deletion', () => {
     const input = 'apple,,banana, ,orange';
-    const result = TopItemsList(
+    const result = findUniqueCompute(
       'symbol',
       ',',
       '\n',
@@ -80,7 +80,7 @@ describe('TopItemsList Function', () => {
 
   test('should handle trimming items', () => {
     const input = ' apple , banana , orange ';
-    const result = TopItemsList(
+    const result = findUniqueCompute(
       'symbol',
       ',',
       '\n',
@@ -95,7 +95,7 @@ describe('TopItemsList Function', () => {
 
   test('should handle regex split', () => {
     const input = 'apple banana orange';
-    const result = TopItemsList(
+    const result = findUniqueCompute(
       'regex',
       '\\s+',
       '\n',

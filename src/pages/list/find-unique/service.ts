@@ -21,7 +21,7 @@ function uniqueListBuilder(
   return Object.keys(dict);
 }
 
-export function TopItemsList(
+export function findUniqueCompute(
   splitOperatorType: SplitOperatorType,
   splitSeparator: string,
   joinSeparator: string = '\n',
