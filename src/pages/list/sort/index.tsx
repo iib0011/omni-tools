@@ -40,8 +40,7 @@ const splitOperators: {
 export default function SplitText() {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  // const formRef = useRef<FormikProps<typeof initialValues>>(null);
-  const computeExternal = (optionsValues: typeof initialValues, input: any) => {
+  const compute = (optionsValues: typeof initialValues, input: any) => {
     const {
       splitSeparatorType,
       joinSeparator,
@@ -82,7 +81,7 @@ export default function SplitText() {
         result={<ToolTextResult title={'Sorted list'} value={result} />}
       />
       <ToolOptions
-        compute={computeExternal}
+        compute={compute}
         getGroups={({ values, updateField }) => [
           {
             title: 'Input item separator',
