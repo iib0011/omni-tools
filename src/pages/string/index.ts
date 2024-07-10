@@ -1,3 +1,4 @@
+import { tool as stringUppercase } from './uppercase/meta';
 import { tool as stringExtractSubstring } from './extract-substring/meta';
 import { tool as stringCreatePalindrome } from './create-palindrome/meta';
 import { tool as stringPalindrome } from './palindrome/meta';
