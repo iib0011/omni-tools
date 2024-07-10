@@ -1,3 +1,3 @@
-export function toUppercase(input: string): string {
+export function UppercaseInput(input: string): string {
     return input.toUpperCase();
 }
