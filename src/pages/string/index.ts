@@ -1,3 +1,4 @@
+import { tool as stringRandomizeCase } from './randomize-case/meta';
 import { tool as stringUppercase } from './uppercase/meta';
 import { tool as stringExtractSubstring } from './extract-substring/meta';
 import { tool as stringCreatePalindrome } from './create-palindrome/meta';
