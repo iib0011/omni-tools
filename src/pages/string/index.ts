@@ -1,3 +1,4 @@
+import { tool as stringExtractSubstring } from './extract-substring/meta';
 import { tool as stringCreatePalindrome } from './create-palindrome/meta';
 import { tool as stringPalindrome } from './palindrome/meta';
 import { tool as stringToMorse } from './to-morse/meta';
