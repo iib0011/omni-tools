@@ -1,4 +1,4 @@
-type SplitOperatorType = 'symbol' | 'regex';
+export type SplitOperatorType = 'symbol' | 'regex';
 
 export function reverseList(
   splitOperatorType: SplitOperatorType,
