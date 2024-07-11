@@ -3,10 +3,14 @@
 Welcome to **OmniTools**, an open-source alternative to OnlineTools.com.
 This project offers a variety of online tools to help with everyday tasks,
 all available for free and open for community contributions. Please don't forget to star the repo to support us.
+Here is the [live](https://omnitools.netlify.app/) website.
+
+![img.png](img.png)
 
 ## Table of Contents
 
 - [Features](#features)
+- [Self-host](#self-host)
 - [Contribute](#contribute)
 - [License](#license)
 - [Contact](#contact)
@@ -23,9 +27,9 @@ OmniTools includes a variety of tools, such as:
 
 - Generate prime numbers, generate perfect numbers etc.
 
-3. **Text Tools**
+3. **String/List Tools**
 
-- Case converters, text cleaners, text formatters, etc.
+- Case converters, shuffle list, text formatters, etc.
 
 4. **Date and Time Tools**
 
@@ -33,7 +37,13 @@ OmniTools includes a variety of tools, such as:
 
 5. **Miscellaneous Tools**
 
-- JSON, XML tools, etc.
+- JSON, XML tools, CSV tools etc.
+
+## Self-host
+
+```bash
+docker run -d --name omni-tools --restart unless-stopped -p 8080:80 iib0011/omni-tools:latest
+```
 
 ## Contribute
 
