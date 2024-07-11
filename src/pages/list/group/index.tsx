@@ -9,6 +9,7 @@ import ToolInputAndResult from '../../../components/ToolInputAndResult';
 import SimpleRadio from '../../../components/options/SimpleRadio';
 import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '../../../components/options/CheckboxWithDesc';
+import { formatNumber } from '../../../utils/number';
 
 const initialValues = {
   splitOperatorType: 'symbol' as SplitOperatorType,
@@ -121,7 +122,7 @@ export default function FindUnique() {
                   description={'Number of items in a group'}
                   type={'number'}
                   onOwnChange={(value) =>
-                    updateField('groupNumber', Number(value))
+                    updateField('groupNumber', formatNumber(value, 1))
                   }
                 />
                 <TextFieldWithDesc
