@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: style">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: find unique ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/find-unique/find-unique.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/find-unique/find-unique.service.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/list/find-unique/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/find-unique/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/find-unique/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/find-unique/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/group/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/group/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,15 +204,9 @@
       <workItem from="1719496624579" duration="6148000" />
       <workItem from="1720542757452" duration="5355000" />
       <workItem from="1720557527691" duration="3245000" />
-      <workItem from="1720564427492" duration="1153000" />
-    </task>
-    <task id="LOCAL-00043" summary="fix: create-tool.mjs">
-      <option name="closed" value="true" />
-      <created>1719187088285</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1719187088285</updated>
+      <workItem from="1720564427492" duration="1523000" />
+      <workItem from="1720613598176" duration="8000" />
+      <workItem from="1720655252208" duration="1526000" />
     </task>
     <task id="LOCAL-00044" summary="fix: readme">
       <option name="closed" value="true" />
@@ -599,7 +592,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720564711406</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="feat: find unique ui">
+      <option name="closed" value="true" />
+      <created>1720565760853</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1720565760853</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +644,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: generate numbers" />
     <MESSAGE value="fix: merging branches" />
     <MESSAGE value="feat: make responsive" />
     <MESSAGE value="feat: make tool responsive" />
@@ -668,7 +668,8 @@
     <MESSAGE value="feat: find most popular ui" />
     <MESSAGE value="fix: misc" />
     <MESSAGE value="fix: style" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: style" />
+    <MESSAGE value="feat: find unique ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: find unique ui" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

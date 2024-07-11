@@ -4,12 +4,11 @@ import ToolTextInput from '../../../components/input/ToolTextInput';
 import ToolTextResult from '../../../components/result/ToolTextResult';
 import * as Yup from 'yup';
 import ToolOptions from '../../../components/options/ToolOptions';
-import { SplitOperatorType, findUniqueCompute } from './service';
+import { findUniqueCompute, SplitOperatorType } from './service';
 import ToolInputAndResult from '../../../components/ToolInputAndResult';
 import SimpleRadio from '../../../components/options/SimpleRadio';
 import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '../../../components/options/CheckboxWithDesc';
-import SelectWithDesc from '../../../components/options/SelectWithDesc';
 
 const initialValues = {
   splitOperatorType: 'symbol' as SplitOperatorType,
@@ -142,6 +141,14 @@ export default function FindUnique() {
                   }
                   checked={values.absolutelyUnique}
                   onChange={(value) => updateField('absolutelyUnique', value)}
+                />
+                <CheckboxWithDesc
+                  title={'Case Sensitive Items'}
+                  description={
+                    'Output items with different case as unique elements in the list.'
+                  }
+                  checked={values.caseSensitive}
+                  onChange={(value) => updateField('caseSensitive', value)}
                 />
               </Box>
             )
