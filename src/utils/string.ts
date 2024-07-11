@@ -16,3 +16,7 @@ export const replaceSpecialCharacters = (str: string) => {
     .replace(/\\f/g, '\f')
     .replace(/\\v/g, '\v');
 };
+
+export function reverseString(input: string): string {
+  return input.split('').reverse().join('');
+}
