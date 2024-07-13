@@ -4,38 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: remove validation schema">
-      <change beforePath="$PROJECT_DIR$/src/pages/list/duplicate/duplicate.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/duplicate/duplicate.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/find-most-popular/find-most-popular.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/find-most-popular/find-most-popular.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/find-most-popular/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/find-most-popular/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/find-unique/find-unique.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/find-unique/find-unique.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/find-unique/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/find-unique/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/group/group.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/group/group.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/group/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/group/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/reverse/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/reverse/reverse.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/reverse/reverse.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/rotate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/rotate/rotate.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/rotate/rotate.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/rotate/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/rotate/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/shuffle/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/shuffle/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/shuffle/shuffle.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/shuffle/shuffle.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/sort/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/sort/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/sort/sort.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/sort/sort.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/truncate/truncate.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/truncate/truncate.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/unwrap/unwrap.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/unwrap/unwrap.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/wrap/wrap.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/wrap/wrap.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/number/generate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/generate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/number/sum/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/sum/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/create-palindrome/create-palindrome.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/create-palindrome/create-palindrome.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/extract-substring/extract-substring.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/extract-substring/extract-substring.service.test.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: optimize imports">
       <change beforePath="$PROJECT_DIR$/src/pages/string/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/palindrome/palindrome.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/palindrome/palindrome.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/randomize-case/randomize-case.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/randomize-case/randomize-case.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/reverse/reverse.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/reverse/reverse.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/split/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/split/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/to-morse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/to-morse/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/uppercase/uppercase.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/uppercase/uppercase.service.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,15 +243,7 @@
       <workItem from="1720661825389" duration="4305000" />
       <workItem from="1720729165596" duration="3258000" />
       <workItem from="1720911748039" duration="331000" />
-      <workItem from="1720912096050" duration="2539000" />
-    </task>
-    <task id="LOCAL-00051" summary="feat: sum numbers init">
-      <option name="closed" value="true" />
-      <created>1719281510362</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1719281510362</updated>
+      <workItem from="1720912096050" duration="2637000" />
     </task>
     <task id="LOCAL-00052" summary="fix: compilation">
       <option name="closed" value="true" />
@@ -667,7 +629,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720914492812</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="refactor: optimize imports">
+      <option name="closed" value="true" />
+      <created>1720914702655</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1720914702656</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -712,7 +682,6 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feat: playwright" />
-    <MESSAGE value="refactor: optimize imports" />
     <MESSAGE value="feat: change gif speed" />
     <MESSAGE value="chore: remove unused deps" />
     <MESSAGE value="style: lint" />
@@ -736,7 +705,8 @@
     <MESSAGE value="feat: rotate ui" />
     <MESSAGE value="feat: shuffle ui" />
     <MESSAGE value="refactor: remove validation schema" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: remove validation schema" />
+    <MESSAGE value="refactor: optimize imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: optimize imports" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
