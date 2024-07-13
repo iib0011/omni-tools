@@ -4,10 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: self host">
-      <change afterPath="$PROJECT_DIR$/src/utils/number.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: format number">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/group/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/group/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/duplicate/duplicate.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/duplicate/duplicate.service.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/duplicate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/duplicate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/duplicate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/duplicate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/duplicate/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/duplicate/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/rotate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/create-palindrome/create-palindrome.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/create-palindrome/create-palindrome.service.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/create-palindrome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/create-palindrome/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/create-palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/create-palindrome/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/create-palindrome/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/create-palindrome/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/extract-substring/extract-substring.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/extract-substring/extract-substring.service.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/extract-substring/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/extract-substring/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/extract-substring/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/extract-substring/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/extract-substring/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/extract-substring/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/palindrome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/palindrome/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/palindrome/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/palindrome/palindrome.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/palindrome/palindrome.service.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/palindrome/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/palindrome/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/randomize-case/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/randomize-case/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/randomize-case/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/randomize-case/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/randomize-case/randomize-case.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/randomize-case/randomize-case.service.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/randomize-case/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/randomize-case/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/reverse/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/reverse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/reverse/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/reverse/reverse.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/reverse/reverse.service.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/reverse/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/reverse/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/uppercase/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/uppercase/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/uppercase/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/uppercase/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/uppercase/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/uppercase/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/uppercase/uppercase.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/uppercase/uppercase.service.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +56,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;iib0011&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools&quot;,
+    &quot;accountId&quot;: &quot;59b4836a-7ded-49a0-a358-5e8d81d0d44b&quot;
+  }
+}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
@@ -117,7 +156,6 @@
         <settings>
           <option name="imageTag" value="omnitools" />
           <option name="buildCliOptions" value="--target build" />
-          <option name="buildKitEnabled" value="true" />
           <option name="containerName" value="omni-tools" />
           <option name="publishAllPorts" value="true" />
           <option name="sourceFilePath" value="Dockerfile" />
@@ -179,12 +217,20 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.lint" />
         <item itemvalue="Docker.Dockerfile build" />
         <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="npm.lint" />
         <item itemvalue="npm.test:e2e" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -224,15 +270,9 @@
       <workItem from="1720613598176" duration="8000" />
       <workItem from="1720655252208" duration="3975000" />
       <workItem from="1720661825389" duration="4305000" />
-      <workItem from="1720729165596" duration="730000" />
-    </task>
-    <task id="LOCAL-00047" summary="feat: change colors in png">
-      <option name="closed" value="true" />
-      <created>1719197875189</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1719197875189</updated>
+      <workItem from="1720729165596" duration="3258000" />
+      <workItem from="1720911748039" duration="331000" />
+      <workItem from="1720912096050" duration="810000" />
     </task>
     <task id="LOCAL-00048" summary="chore: ResultFooter">
       <option name="closed" value="true" />
@@ -618,7 +658,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720665220408</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="chore: format number">
+      <option name="closed" value="true" />
+      <created>1720730102816</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1720730102817</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -662,7 +710,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: make tool examples responsive" />
     <MESSAGE value="chore: loading screen" />
     <MESSAGE value="chore: shuffle tools search" />
     <MESSAGE value="refactor: toolOptions" />
@@ -687,7 +734,8 @@
     <MESSAGE value="feat: group list ui" />
     <MESSAGE value="feat: reverse list ui" />
     <MESSAGE value="feat: self host" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: self host" />
+    <MESSAGE value="chore: format number" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: format number" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
