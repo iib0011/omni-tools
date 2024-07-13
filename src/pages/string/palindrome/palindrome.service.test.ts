@@ -1,4 +1,4 @@
-import { expect, describe, it } from 'vitest';
+import { describe, expect } from 'vitest';
 import { palindromeList } from './service';
 
 describe('palindromeList', () => {

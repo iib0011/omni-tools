@@ -1,4 +1,3 @@
-import { isNumber } from 'utils/string';
 export type SplitOperatorType = 'symbol' | 'regex';
 
 function rotateArray(array: string[], step: number, right: boolean): string[] {

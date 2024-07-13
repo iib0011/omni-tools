@@ -20,5 +20,6 @@ export const listTools = [
   listWrap,
   listRotate,
   listShuffle,
-  listTruncate
+  listTruncate,
+  listDuplicate
 ];

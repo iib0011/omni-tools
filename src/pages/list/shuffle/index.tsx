@@ -2,13 +2,11 @@ import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import ToolTextInput from '../../../components/input/ToolTextInput';
 import ToolTextResult from '../../../components/result/ToolTextResult';
-import * as Yup from 'yup';
 import ToolOptions from '../../../components/options/ToolOptions';
 import { shuffleList, SplitOperatorType } from './service';
 import ToolInputAndResult from '../../../components/ToolInputAndResult';
 import SimpleRadio from '../../../components/options/SimpleRadio';
 import TextFieldWithDesc from '../../../components/options/TextFieldWithDesc';
-import { formatNumber } from '../../../utils/number';
 import { isNumber } from '../../../utils/string';
 
 const initialValues = {

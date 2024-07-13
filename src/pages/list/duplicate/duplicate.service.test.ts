@@ -1,4 +1,4 @@
-import { expect, describe, it } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { duplicateList } from './service';
 
 describe('duplicateList function', () => {

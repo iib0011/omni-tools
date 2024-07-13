@@ -2,7 +2,6 @@ import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import ToolTextInput from '../../../components/input/ToolTextInput';
 import ToolTextResult from '../../../components/result/ToolTextResult';
-import * as Yup from 'yup';
 import ToolOptions from '../../../components/options/ToolOptions';
 import { compute, NumberExtractionType } from './service';
 import RadioWithTextField from '../../../components/options/RadioWithTextField';

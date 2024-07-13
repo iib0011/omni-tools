@@ -1,5 +1,5 @@
-import { expect, describe, it } from 'vitest';
-import { SplitOperatorType, rotateList } from './service';
+import { describe, expect, it } from 'vitest';
+import { rotateList, SplitOperatorType } from './service';
 
 describe('rotate function', () => {
   it('should rotate right side if right is set to true', () => {

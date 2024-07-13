@@ -1,10 +1,5 @@
-import { expect, describe, it } from 'vitest';
-import {
-  TopItemsList,
-  SplitOperatorType,
-  SortingMethod,
-  DisplayFormat
-} from './service';
+import { describe, expect, it } from 'vitest';
+import { TopItemsList } from './service';
 
 describe('TopItemsList function', () => {
   it('should handle sorting alphabetically ignoring case', () => {

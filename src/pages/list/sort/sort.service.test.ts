@@ -1,12 +1,12 @@
 // Import necessary modules and functions
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import {
   alphabeticSort,
   lengthSort,
   numericSort,
   Sort,
-  SplitOperatorType,
-  SortingMethod
+  SortingMethod,
+  SplitOperatorType
 } from './service';
 
 // Define test cases for the numericSort function

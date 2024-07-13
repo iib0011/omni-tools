@@ -1,5 +1,5 @@
-import { expect, describe, it } from 'vitest';
-import { createPalindromeList, createPalindrome } from './service';
+import { describe, expect } from 'vitest';
+import { createPalindrome, createPalindromeList } from './service';
 
 describe('createPalindrome', () => {
   test('should create palindrome by reversing the entire string', () => {

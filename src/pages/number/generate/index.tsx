@@ -1,7 +1,6 @@
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import ToolTextResult from '../../../components/result/ToolTextResult';
-import * as Yup from 'yup';
 import ToolOptions from '../../../components/options/ToolOptions';
 import { listOfIntegers } from './service';
 import ToolInputAndResult from '../../../components/ToolInputAndResult';

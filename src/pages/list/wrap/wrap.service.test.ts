@@ -1,4 +1,4 @@
-import { expect, describe, it } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { SplitOperatorType, wrapList } from './service';
 
 describe('wrap function', () => {

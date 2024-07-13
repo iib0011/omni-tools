@@ -1,4 +1,4 @@
-import { expect, describe, it } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { shuffleList, SplitOperatorType } from './service';
 
 describe('shuffle function', () => {

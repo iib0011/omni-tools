@@ -1,4 +1,4 @@
-import { expect, describe, it } from 'vitest';
+import { describe, expect } from 'vitest';
 import { reverseList } from './service';
 
 describe('reverseList Function', () => {
