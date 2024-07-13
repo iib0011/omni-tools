@@ -118,7 +118,7 @@ export default function Rotate() {
                 {rotationDirections.map(({ title, description, value }) => (
                   <SimpleRadio
                     key={`${value}`}
-                    onClick={() => updateField('right', Boolean(value))}
+                    onClick={() => updateField('right', value)}
                     title={title}
                     description={description}
                     checked={values.right === value}

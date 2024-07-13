@@ -4,37 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: format number">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: rotate ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/duplicate/duplicate.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/duplicate/duplicate.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/duplicate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/duplicate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/duplicate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/duplicate/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/list/duplicate/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/duplicate/service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/list/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/rotate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/create-palindrome/create-palindrome.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/create-palindrome/create-palindrome.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/create-palindrome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/create-palindrome/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/create-palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/create-palindrome/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/create-palindrome/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/create-palindrome/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/extract-substring/extract-substring.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/extract-substring/extract-substring.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/extract-substring/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/extract-substring/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/extract-substring/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/extract-substring/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/extract-substring/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/extract-substring/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/palindrome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/palindrome/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/palindrome/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/palindrome/palindrome.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/palindrome/palindrome.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/palindrome/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/palindrome/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/randomize-case/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/randomize-case/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/randomize-case/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/randomize-case/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/randomize-case/randomize-case.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/randomize-case/randomize-case.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/randomize-case/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/randomize-case/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/reverse/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/reverse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/reverse/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/reverse/reverse.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/reverse/reverse.service.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/reverse/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/reverse/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/uppercase/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/uppercase/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/uppercase/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/uppercase/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/uppercase/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/uppercase/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/uppercase/uppercase.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/uppercase/uppercase.service.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/shuffle/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/shuffle/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,15 +245,7 @@
       <workItem from="1720661825389" duration="4305000" />
       <workItem from="1720729165596" duration="3258000" />
       <workItem from="1720911748039" duration="331000" />
-      <workItem from="1720912096050" duration="810000" />
-    </task>
-    <task id="LOCAL-00048" summary="chore: ResultFooter">
-      <option name="closed" value="true" />
-      <created>1719274243788</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1719274243788</updated>
+      <workItem from="1720912096050" duration="1586000" />
     </task>
     <task id="LOCAL-00049" summary="feat: change color in png finished">
       <option name="closed" value="true" />
@@ -666,7 +631,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720730102817</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="feat: rotate ui">
+      <option name="closed" value="true" />
+      <created>1720913013183</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1720913013183</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -710,7 +683,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: loading screen" />
     <MESSAGE value="chore: shuffle tools search" />
     <MESSAGE value="refactor: toolOptions" />
     <MESSAGE value="feat: playwright" />
@@ -735,7 +707,8 @@
     <MESSAGE value="feat: reverse list ui" />
     <MESSAGE value="feat: self host" />
     <MESSAGE value="chore: format number" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: format number" />
+    <MESSAGE value="feat: rotate ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: rotate ui" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
