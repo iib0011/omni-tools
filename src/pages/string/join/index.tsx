@@ -171,7 +171,6 @@ export default function JoinText() {
         ]}
         initialValues={initialValues}
         input={input}
-        validationSchema={validationSchema}
       />
       <ToolInfo
         title="What Is a Text Joiner?"

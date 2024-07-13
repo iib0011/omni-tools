@@ -51,9 +51,6 @@ export default function Shuffle() {
       )
     );
   };
-  const validationSchema = Yup.object({
-    // splitSeparator: Yup.string().required('The separator is required')
-  });
 
   return (
     <Box>
@@ -118,7 +115,6 @@ export default function Shuffle() {
         ]}
         initialValues={initialValues}
         input={input}
-        validationSchema={validationSchema}
       />
     </Box>
   );

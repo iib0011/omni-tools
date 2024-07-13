@@ -21,9 +21,6 @@ export default function ToMorse() {
     const { dotSymbol, dashSymbol } = optionsValues;
     setResult(compute(input, dotSymbol, dashSymbol));
   };
-  const validationSchema = Yup.object({
-    // splitSeparator: Yup.string().required('The separator is required')
-  });
 
   return (
     <Box>
@@ -61,7 +58,6 @@ export default function ToMorse() {
         ]}
         initialValues={initialValues}
         input={input}
-        validationSchema={validationSchema}
       />
     </Box>
   );

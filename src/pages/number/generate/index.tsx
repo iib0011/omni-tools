@@ -16,10 +16,6 @@ const initialValues = {
 export default function SplitText() {
   const [result, setResult] = useState<string>('');
 
-  const validationSchema = Yup.object({
-    // splitSeparator: Yup.string().required('The separator is required')
-  });
-
   return (
     <Box>
       <ToolInputAndResult
@@ -78,7 +74,6 @@ export default function SplitText() {
           );
         }}
         initialValues={initialValues}
-        validationSchema={validationSchema}
       />
     </Box>
   );

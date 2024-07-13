@@ -121,7 +121,6 @@ export default function ChangeColorsInPng() {
         ]}
         initialValues={initialValues}
         input={input}
-        validationSchema={validationSchema}
       />
     </Box>
   );

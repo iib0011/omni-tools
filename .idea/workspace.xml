@@ -4,10 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: rotate ui">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: shuffle ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/convert-jgp-to-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/convert-jgp-to-png/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/image/png/create-transparent/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/find-most-popular/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/find-most-popular/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/find-unique/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/find-unique/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/group/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/group/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/reverse/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/list/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/rotate/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/list/shuffle/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/shuffle/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/sort/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/sort/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/generate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/generate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/sum/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/number/sum/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/join/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/split/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/split/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/to-morse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/to-morse/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/video/gif/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/video/gif/change-speed/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,15 +260,7 @@
       <workItem from="1720661825389" duration="4305000" />
       <workItem from="1720729165596" duration="3258000" />
       <workItem from="1720911748039" duration="331000" />
-      <workItem from="1720912096050" duration="1586000" />
-    </task>
-    <task id="LOCAL-00049" summary="feat: change color in png finished">
-      <option name="closed" value="true" />
-      <created>1719275214988</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1719275214988</updated>
+      <workItem from="1720912096050" duration="2231000" />
     </task>
     <task id="LOCAL-00050" summary="feat: string to morse">
       <option name="closed" value="true" />
@@ -639,7 +646,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720913013183</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="feat: shuffle ui">
+      <option name="closed" value="true" />
+      <created>1720913810733</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1720913810733</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,7 +698,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: shuffle tools search" />
     <MESSAGE value="refactor: toolOptions" />
     <MESSAGE value="feat: playwright" />
     <MESSAGE value="refactor: optimize imports" />
@@ -708,7 +722,8 @@
     <MESSAGE value="feat: self host" />
     <MESSAGE value="chore: format number" />
     <MESSAGE value="feat: rotate ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: rotate ui" />
+    <MESSAGE value="feat: shuffle ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: shuffle ui" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

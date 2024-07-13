@@ -148,7 +148,6 @@ export default function ConvertJgpToPng() {
         ]}
         initialValues={initialValues}
         input={input}
-        validationSchema={validationSchema}
       />
     </Box>
   );

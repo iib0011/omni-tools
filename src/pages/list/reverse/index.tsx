@@ -41,9 +41,6 @@ export default function Reverse() {
       reverseList(splitOperatorType, splitSeparator, joinSeparator, input)
     );
   };
-  const validationSchema = Yup.object({
-    // splitSeparator: Yup.string().required('The separator is required')
-  });
 
   return (
     <Box>
@@ -103,7 +100,6 @@ export default function Reverse() {
         ]}
         initialValues={initialValues}
         input={input}
-        validationSchema={validationSchema}
       />
     </Box>
   );

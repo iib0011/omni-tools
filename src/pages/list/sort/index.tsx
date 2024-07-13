@@ -64,9 +64,6 @@ export default function SplitText() {
       )
     );
   };
-  const validationSchema = Yup.object({
-    // splitSeparator: Yup.string().required('The separator is required')
-  });
 
   return (
     <Box>
@@ -163,7 +160,6 @@ export default function SplitText() {
         ]}
         initialValues={initialValues}
         input={input}
-        validationSchema={validationSchema}
       />
     </Box>
   );

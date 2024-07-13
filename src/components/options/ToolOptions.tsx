@@ -5,6 +5,7 @@ import React, { ReactNode, RefObject, useContext, useEffect } from 'react';
 import { Formik, FormikProps, FormikValues, useFormikContext } from 'formik';
 import ToolOptionGroups, { ToolOptionGroup } from './ToolOptionGroups';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
+import * as Yup from 'yup';
 
 type UpdateField<T> = <Y extends keyof T>(field: Y, value: T[Y]) => void;
 
@@ -78,7 +79,7 @@ export default function ToolOptions<T extends FormikValues>({
 }: {
   children?: ReactNode;
   initialValues: T;
-  validationSchema: any | (() => any);
+  validationSchema?: any | (() => any);
   compute: (optionsValues: T, input: any) => void;
   input?: any;
   getGroups: (

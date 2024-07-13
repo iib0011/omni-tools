@@ -73,9 +73,6 @@ export default function FindUnique() {
       )
     );
   };
-  const validationSchema = Yup.object({
-    // splitSeparator: Yup.string().required('The separator is required')
-  });
 
   return (
     <Box>
@@ -181,7 +178,6 @@ export default function FindUnique() {
         ]}
         initialValues={initialValues}
         input={input}
-        validationSchema={validationSchema}
       />
     </Box>
   );

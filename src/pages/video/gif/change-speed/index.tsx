@@ -142,7 +142,6 @@ export default function ChangeSpeed() {
         ]}
         initialValues={initialValues}
         input={input}
-        validationSchema={validationSchema}
       />
     </Box>
   );
