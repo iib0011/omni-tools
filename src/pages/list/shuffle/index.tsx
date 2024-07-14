@@ -60,7 +60,7 @@ export default function Shuffle() {
             onChange={setInput}
           />
         }
-        result={<ToolTextResult title={'Rotated list'} value={result} />}
+        result={<ToolTextResult title={'Shuffled list'} value={result} />}
       />
       <ToolOptions
         compute={compute}

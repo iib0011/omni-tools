@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: optimize imports">
-      <change beforePath="$PROJECT_DIR$/src/pages/string/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/index.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: use string tools">
+      <change beforePath="$PROJECT_DIR$/src/pages/list/shuffle/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/list/shuffle/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,15 +243,7 @@
       <workItem from="1720661825389" duration="4305000" />
       <workItem from="1720729165596" duration="3258000" />
       <workItem from="1720911748039" duration="331000" />
-      <workItem from="1720912096050" duration="2637000" />
-    </task>
-    <task id="LOCAL-00052" summary="fix: compilation">
-      <option name="closed" value="true" />
-      <created>1719281605998</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1719281605999</updated>
+      <workItem from="1720912096050" duration="3065000" />
     </task>
     <task id="LOCAL-00053" summary="chore: printRunningSum">
       <option name="closed" value="true" />
@@ -637,7 +629,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720914702656</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="chore: use string tools">
+      <option name="closed" value="true" />
+      <created>1720914810712</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1720914810713</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,7 +681,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: playwright" />
     <MESSAGE value="feat: change gif speed" />
     <MESSAGE value="chore: remove unused deps" />
     <MESSAGE value="style: lint" />
@@ -706,7 +705,8 @@
     <MESSAGE value="feat: shuffle ui" />
     <MESSAGE value="refactor: remove validation schema" />
     <MESSAGE value="refactor: optimize imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: optimize imports" />
+    <MESSAGE value="chore: use string tools" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: use string tools" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
