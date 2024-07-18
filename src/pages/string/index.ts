@@ -1,3 +1,6 @@
+import { tool as stringRotate } from './rotate/meta';
+import { tool as stringQuote } from './quote/meta';
+import { tool as stringRot13 } from './rot13/meta';
 import { tool as stringReverse } from './reverse/meta';
 import { tool as stringRandomizeCase } from './randomize-case/meta';
 import { tool as stringUppercase } from './uppercase/meta';
