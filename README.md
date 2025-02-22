@@ -1,9 +1,9 @@
 # OmniTools
 
-Welcome to **OmniTools**, an open-source alternative to OnlineTools.com.
+Welcome to **OmniTools**, a self hosted alternative to OnlineTools.com.
 This project offers a variety of online tools to help with everyday tasks,
 all available for free and open for community contributions. Please don't forget to star the repo to support us.
-Here is the [live](https://omnitools.netlify.app/) website.
+Here is the [demo](https://omnitools.netlify.app/) website.
 
 ![img.png](img.png)
 
@@ -76,20 +76,27 @@ npm run test
 npm run test:e2e
 ```
 
-### Contributors
-
-<a href="https://github.com/iib0011/omni-tools/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=iib0011/omni-tools" />
-</a>
-
 [//]: # (<img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date">)
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
+## 🤝 Looking to contribute?
 
-For any questions or suggestions, feel free to open an issue or contact us at:
+We welcome contributions! You can help by:
 
-Email: ibracool99@gmail.com
+- ✅ Reporting bugs
+- ✅ Suggesting new features
+- ✅ Improving documentation
+- ✅ Submitting pull requests
+
+Check CONTRIBUTING.md inside each subproject for details.
+
+You can also join our [Discord server](https://discord.gg/A6eMSNwg)
+
+### Contributors
+
+<a href="https://github.com/iib0011/omni-tools/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=iib0011/omni-tools" />
+</a>

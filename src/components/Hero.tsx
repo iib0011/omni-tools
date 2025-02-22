@@ -39,7 +39,7 @@ export default function Hero() {
     <Box width={{ xs: '90%', md: '80%', lg: '60%' }}>
       <Stack mb={1} direction={'row'} spacing={1} justifyContent={'center'}>
         <Typography sx={{ textAlign: 'center' }} fontSize={{ xs: 25, md: 30 }}>
-          Transform Your Workflow with{' '}
+          Get Things Done Quickly with{' '}
           <Typography
             fontSize={{ xs: 25, md: 30 }}
             display={'inline'}

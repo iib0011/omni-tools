@@ -38,6 +38,14 @@ export default function ToolFileInput({
         });
     }
   };
+  const handlePaste = (event: ClipboardEvent) => {
+    const clipboardItems = event.clipboardData?.items ?? [];
+    const item = clipboardItems[0];
+    if (item.type.includes('image')) {
+      const file = item.getAsFile();
+      onChange(file!);
+    }
+  };
   useEffect(() => {
     if (value) {
       const objectUrl = URL.createObjectURL(value);
@@ -57,6 +65,15 @@ export default function ToolFileInput({
   const handleImportClick = () => {
     fileInputRef.current?.click();
   };
+
+  useEffect(() => {
+    window.addEventListener('paste', handlePaste);
+
+    return () => {
+      window.removeEventListener('paste', handlePaste);
+    };
+  }, [handlePaste]);
+
   return (
     <Box>
       <InputHeader title={title} />

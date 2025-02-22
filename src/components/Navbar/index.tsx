@@ -26,28 +26,26 @@ const Navbar: React.FC = () => {
   const toggleDrawer = (open: boolean) => () => {
     setDrawerOpen(open);
   };
+  const navItems: { label: string; path: string }[] = [
+    // { label: 'Features', path: '/features' }
+    // { label: 'About Us', path: '/about-us' }
+  ];
 
   const drawerList = (
     <List>
-      <ListItemButton onClick={() => navigate('/features')}>
-        <ListItemText primary="Features" />
-      </ListItemButton>
-      <ListItemButton onClick={() => navigate('/about-us')}>
-        <ListItemText primary="About Us" />
-      </ListItemButton>
-      <ListItemButton
-        component="a"
-        href="https://github.com/iib0011/omni-tools"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src={githubIcon}
-          alt="GitHub"
-          style={{ height: '24px', marginRight: '8px' }}
-        />
-        <Typography variant="button">Star us</Typography>
-      </ListItemButton>
+      {navItems.map((navItem) => (
+        <ListItemButton onClick={() => navigate(navItem.path)}>
+          <ListItemText primary={navItem.label} />
+        </ListItemButton>
+      ))}
+      <iframe
+        src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large"
+        frameBorder="0"
+        scrolling="0"
+        width="170"
+        height="30"
+        title="GitHub"
+      ></iframe>
     </List>
   );
 
@@ -59,15 +57,27 @@ const Navbar: React.FC = () => {
       <Toolbar sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
         <Typography
           onClick={() => navigate('/')}
-          fontSize={20}
-          sx={{ cursor: 'pointer' }}
+          fontSize={25}
+          sx={{
+            cursor: 'pointer',
+            fontWeight: 600,
+            textShadow: '1px 1px 2px rgba(0,0,0,0.2)'
+          }}
           color={'primary'}
         >
           OmniTools
         </Typography>
         {isMobile ? (
           <>
-            <IconButton color="inherit" onClick={toggleDrawer(true)}>
+            <IconButton
+              color="inherit"
+              onClick={toggleDrawer(true)}
+              sx={{
+                '&:hover': {
+                  backgroundColor: theme.palette.primary.main
+                }
+              }}
+            >
               <MenuIcon />
             </IconButton>
             <Drawer
@@ -79,36 +89,35 @@ const Navbar: React.FC = () => {
             </Drawer>
           </>
         ) : (
-          <Stack direction={'row'}>
-            <Button color="inherit">
-              <Link
-                to="/features"
-                style={{ textDecoration: 'none', color: 'inherit' }}
+          <Stack direction={'row'} spacing={2}>
+            {navItems.map((item) => (
+              <Button
+                key={item.label}
+                color="inherit"
+                sx={{
+                  '&:hover': {
+                    color: theme.palette.primary.main,
+                    transition: 'color 0.3s ease',
+                    backgroundColor: 'white'
+                  }
+                }}
               >
-                Features
-              </Link>
-            </Button>
-            <Button color="inherit">
-              <Link
-                to="/about-us"
-                style={{ textDecoration: 'none', color: 'inherit' }}
-              >
-                About Us
-              </Link>
-            </Button>
-            <IconButton
-              color="primary"
-              href="https://github.com/iib0011/omni-tools"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={githubIcon}
-                alt="GitHub"
-                style={{ height: '24px', marginRight: '8px' }}
-              />
-              <Typography variant="button">Star us</Typography>
-            </IconButton>
+                <Link
+                  to={item.path}
+                  style={{ textDecoration: 'none', color: 'inherit' }}
+                >
+                  {item.label}
+                </Link>
+              </Button>
+            ))}
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
+              frameBorder="0"
+              scrolling="0"
+              width="170"
+              height="30"
+              title="GitHub"
+            ></iframe>
           </Stack>
         )}
       </Toolbar>
