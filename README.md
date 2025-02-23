@@ -83,7 +83,7 @@ npm run dev
 ### Create a new tool
 
 ```bash
-npm run script:create:tool my-tool-name folder1/folder2
+npm run script:create:tool my-tool-name folder1/folder2 ## examples string/join or image/png/compress
 ```
 
 Use `folder1\folder2` on Windows
