@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: update readme">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: compress png">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/compress-png.service.test.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +124,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\images\png\change-colors-in-png" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.test">
     <configuration name="Dockerfile build" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -174,11 +171,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:e2e" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="test:e2e" />
+        <script value="test" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -187,17 +184,17 @@
     <list>
       <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="Docker.Dockerfile build" />
+      <item itemvalue="npm.test" />
       <item itemvalue="npm.dev" />
       <item itemvalue="npm.lint" />
-      <item itemvalue="npm.test:e2e" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.lint" />
         <item itemvalue="Docker.Dockerfile build" />
         <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="npm.test:e2e" />
       </list>
     </recent_temporary>
   </component>
@@ -257,22 +254,6 @@
       <workItem from="1740300354462" duration="1059000" />
       <workItem from="1740301493702" duration="8924000" />
       <workItem from="1740318886545" duration="856000" />
-    </task>
-    <task id="LOCAL-00055" summary="fix: readme">
-      <option name="closed" value="true" />
-      <created>1719283122691</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1719283122691</updated>
-    </task>
-    <task id="LOCAL-00056" summary="refactor: tool input and result">
-      <option name="closed" value="true" />
-      <created>1719296145698</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1719296145699</updated>
     </task>
     <task id="LOCAL-00057" summary="feat: create transparent png">
       <option name="closed" value="true" />
@@ -650,7 +631,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740276092528</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="feat: compress png">
+      <option name="closed" value="true" />
+      <created>1740321721526</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1740321721526</updated>
+    </task>
+    <task id="LOCAL-00105" summary="feat: compress png">
+      <option name="closed" value="true" />
+      <created>1740321912140</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1740321912140</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -682,7 +679,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="style: lint" />
     <MESSAGE value="fix: radio and list sort init" />
     <MESSAGE value="chore: formik updateField" />
     <MESSAGE value="ci: run e2e tests" />
@@ -707,7 +703,8 @@
     <MESSAGE value="chore: use string tools" />
     <MESSAGE value="fix: ctrl v" />
     <MESSAGE value="feat: update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update readme" />
+    <MESSAGE value="feat: compress png" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: compress png" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
