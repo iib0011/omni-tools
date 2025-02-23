@@ -3,7 +3,7 @@
 
 [//]: # ([![Docker Pulls]&#40;https://img.shields.io/docker/pulls/iib0011/omni-tools&#41;]&#40;https://hub.docker.com/r/iib0011/omni-tools&#41;)
 
-[![Discord](https://img.shields.io/discord/1342971141823664179?label=Discord)](https://discord.gg/SDbbn3hT4b)
+[//]: # ([![Discord]&#40;https://img.shields.io/discord/1342971141823664179?label=Discord&#41;]&#40;https://discord.gg/SDbbn3hT4b&#41;)
 
 Welcome to OmniTools, a self-hosted platform offering a variety of online tools to simplify everyday tasks.
 Whether you are manipulating images, crunching numbers, or

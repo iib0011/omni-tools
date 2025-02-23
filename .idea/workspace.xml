@@ -124,7 +124,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\images\png\change-colors-in-png" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="Dockerfile build" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -190,9 +190,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="npm.test" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.lint" />
         <item itemvalue="Docker.Dockerfile build" />
       </list>
@@ -254,22 +254,7 @@
       <workItem from="1740300354462" duration="1059000" />
       <workItem from="1740301493702" duration="8924000" />
       <workItem from="1740318886545" duration="856000" />
-    </task>
-    <task id="LOCAL-00059" summary="fix: generate numbers">
-      <option name="closed" value="true" />
-      <created>1719349760930</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1719349760930</updated>
-    </task>
-    <task id="LOCAL-00060" summary="fix: merging branches">
-      <option name="closed" value="true" />
-      <created>1719350066784</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1719350066784</updated>
+      <workItem from="1740348963270" duration="388000" />
     </task>
     <task id="LOCAL-00061" summary="feat: make responsive">
       <option name="closed" value="true" />
@@ -647,7 +632,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740324026721</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="fix: docs">
+      <option name="closed" value="true" />
+      <created>1740324069359</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1740324069359</updated>
+    </task>
+    <task id="LOCAL-00109" summary="fix: docs">
+      <option name="closed" value="true" />
+      <created>1740324274955</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1740324274955</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
