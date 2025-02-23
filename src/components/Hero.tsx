@@ -16,7 +16,7 @@ const exampleTools: { label: string; url: string }[] = [
   { label: 'Convert text to morse code', url: '/string/to-morse' },
   { label: 'Change GIF speed', url: '/gif/change-speed' },
   { label: 'Sort a list', url: 'list/sort' },
-  { label: 'Repeat text', url: 'string/repeat' },
+  { label: 'Compress PNG', url: 'png/compress-png' },
   { label: 'Split a text', url: '/string/split' },
   { label: 'Calculate number sum', url: '/number/sum' },
   { label: 'Shuffle a list', url: 'list/shuffle' },
