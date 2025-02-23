@@ -3,7 +3,7 @@
 Welcome to **OmniTools**, a self-hosted alternative to OnlineTools.com.
 
 This project offers a variety of online tools to help with everyday tasks,
-all available for free and open for community contributions. We want it to be complete. Please don't forget to star the
+all available for free and open for community contributions. Whether you are manipulating images, crunching numbers, or coding, OmniTools has you covered. Please don't forget to star the
 repo to support us.
 Here is the [demo](https://omnitools.netlify.app/) website.
 
