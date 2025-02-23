@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: compress png">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: compress png">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/compress-png.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +125,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\images\png\change-colors-in-png" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test">
+  <component name="RunManager" selected="Docker.Dockerfile">
     <configuration name="Dockerfile build" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -190,11 +191,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.lint" />
         <item itemvalue="Docker.Dockerfile build" />
-        <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -254,14 +255,6 @@
       <workItem from="1740300354462" duration="1059000" />
       <workItem from="1740301493702" duration="8924000" />
       <workItem from="1740318886545" duration="856000" />
-    </task>
-    <task id="LOCAL-00057" summary="feat: create transparent png">
-      <option name="closed" value="true" />
-      <created>1719297880629</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1719297880629</updated>
     </task>
     <task id="LOCAL-00058" summary="fix: ToolFileInput.tsx">
       <option name="closed" value="true" />
@@ -647,7 +640,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740321912140</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="fix: compress png">
+      <option name="closed" value="true" />
+      <created>1740322444616</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1740322444616</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +680,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: radio and list sort init" />
     <MESSAGE value="chore: formik updateField" />
     <MESSAGE value="ci: run e2e tests" />
     <MESSAGE value="fix: ci" />
@@ -704,7 +704,8 @@
     <MESSAGE value="fix: ctrl v" />
     <MESSAGE value="feat: update readme" />
     <MESSAGE value="feat: compress png" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: compress png" />
+    <MESSAGE value="fix: compress png" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: compress png" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
