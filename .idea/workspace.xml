@@ -4,12 +4,234 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: use string tools">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: ctrl v">
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/change-colors-in-png.e2e.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/convert-jgp-to-png.e2e.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/create-transparent.e2e.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/duplicate.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/find-most-popular.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/find-unique/find-unique.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/find-unique/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/find-unique/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/find-unique/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/group/group.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/group/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/group/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/group/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/reverse.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/rotate/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/rotate/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/rotate/rotate.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/rotate/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/shuffle.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/sort/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/sort/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/sort/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/sort/sort.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/truncate/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/truncate/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/truncate/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/truncate/truncate.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/unwrap/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/unwrap/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/unwrap/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/unwrap/unwrap.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/wrap/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/wrap/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/wrap/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/list/wrap/wrap.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/number/generate/generate.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/number/generate/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/number/generate/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/number/generate/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/number/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/sum.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/create-palindrome.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/extract-substring.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/join/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/join/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/join/string-join.e2e.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/join/string-join.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/palindrome/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/palindrome/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/palindrome/palindrome.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/palindrome/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/randomize-case.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/reverse.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/split/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/split/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/split/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/split/string-split.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/to-morse.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/uppercase/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/uppercase/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/uppercase/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/uppercase/uppercase.service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/video/gif/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/video/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/ToolFileInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolFileInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/change-colors-in-png.e2e.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/change-colors-in-png/test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/convert-jgp-to-png/convert-jgp-to-png.e2e.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/convert-jgp-to-png/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/convert-jgp-to-png/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/convert-jgp-to-png/test.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/create-transparent.e2e.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/create-transparent/test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/image/png/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/duplicate/duplicate.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/duplicate/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/duplicate/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/duplicate/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/find-most-popular/find-most-popular.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/find-most-popular/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/find-most-popular/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/find-most-popular/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/find-unique/find-unique.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/find-unique/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/find-unique/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/find-unique/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/group/group.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/group/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/group/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/group/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/reverse/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/reverse/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/reverse/reverse.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/reverse/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/rotate/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/rotate/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/rotate/rotate.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/rotate/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/shuffle/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/shuffle/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/shuffle/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/shuffle/shuffle.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/sort/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/sort/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/sort/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/sort/sort.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/truncate/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/truncate/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/truncate/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/truncate/truncate.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/unwrap/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/unwrap/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/unwrap/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/unwrap/unwrap.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/wrap/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/wrap/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/wrap/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/list/wrap/wrap.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/generate/generate.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/generate/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/generate/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/generate/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/sum/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/sum/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/sum/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/number/sum/sum.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/create-palindrome/create-palindrome.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/create-palindrome/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/create-palindrome/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/create-palindrome/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/extract-substring/extract-substring.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/extract-substring/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/extract-substring/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/extract-substring/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/join/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/join/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/join/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/join/string-join.e2e.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/join/string-join.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/palindrome/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/palindrome/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/palindrome/palindrome.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/palindrome/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/randomize-case/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/randomize-case/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/randomize-case/randomize-case.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/randomize-case/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/reverse/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/reverse/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/reverse/reverse.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/reverse/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/split/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/split/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/split/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/split/string-split.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/to-morse/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/to-morse/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/to-morse/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/to-morse/to-morse.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/uppercase/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/uppercase/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/uppercase/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/uppercase/uppercase.service.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/video/gif/change-speed/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/video/gif/change-speed/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/video/gif/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/video/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +259,12 @@
     &quot;assignee&quot;: &quot;iib0011&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/iib0011/omni-tools.git",
-    "accountId": "45f8cd51-000f-4ba4-a4c6-c4d96ac9b1e5"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
+    &quot;accountId&quot;: &quot;45f8cd51-000f-4ba4-a4c6-c4d96ac9b1e5&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
@@ -61,47 +283,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Docker.Dockerfile build.executor": "Run",
-    "Docker.Dockerfile.executor": "Run",
-    "Playwright.JoinText Component.executor": "Run",
-    "Playwright.JoinText Component.should merge text pieces with specified join character.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.compute function (1).executor": "Run",
-    "Vitest.compute function.executor": "Run",
-    "Vitest.mergeText.executor": "Run",
-    "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
-    "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/HP/IdeaProjects/omni-tools/src/components/options",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "npm.lint.executor": "Run",
-    "npm.prebuild.executor": "Run",
-    "npm.script:create:tool.executor": "Run",
-    "npm.test.executor": "Run",
-    "npm.test:e2e.executor": "Run",
-    "npm.test:e2e:run.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\HP\\IdeaProjects\\omni-tools\\node_modules\\prettier",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
-    "ts.external.directory.path": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.Dockerfile build.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.JoinText Component.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.JoinText Component.should merge text pieces with specified join character.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.compute function (1).executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.compute function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/omni-tools/src/components/options&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
+    &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
+    &quot;npm.script:create:tool.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e:run.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -120,10 +342,11 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\tools" />
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\categories" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\images\png\change-colors-in-png" />
-      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\tools" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -249,15 +472,8 @@
       <workItem from="1720729165596" duration="3258000" />
       <workItem from="1720911748039" duration="331000" />
       <workItem from="1720912096050" duration="3065000" />
-      <workItem from="1740259920741" duration="4992000" />
-    </task>
-    <task id="LOCAL-00053" summary="chore: printRunningSum">
-      <option name="closed" value="true" />
-      <created>1719282009150</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1719282009150</updated>
+      <workItem from="1740259920741" duration="7742000" />
+      <workItem from="1740270391152" duration="690000" />
     </task>
     <task id="LOCAL-00054" summary="chore: sum tests">
       <option name="closed" value="true" />
@@ -643,7 +859,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720914810713</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="fix: ctrl v">
+      <option name="closed" value="true" />
+      <created>1740267666455</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1740267666455</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,7 +911,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: change gif speed" />
     <MESSAGE value="chore: remove unused deps" />
     <MESSAGE value="style: lint" />
     <MESSAGE value="fix: radio and list sort init" />
@@ -712,7 +935,8 @@
     <MESSAGE value="refactor: remove validation schema" />
     <MESSAGE value="refactor: optimize imports" />
     <MESSAGE value="chore: use string tools" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: use string tools" />
+    <MESSAGE value="fix: ctrl v" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: ctrl v" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

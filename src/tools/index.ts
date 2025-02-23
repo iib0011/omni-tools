@@ -1,10 +1,11 @@
-import { stringTools } from '../pages/string';
-import { imageTools } from '../pages/image';
-import { DefinedTool } from './defineTool';
+import { stringTools } from '../pages/tools/string';
+import { imageTools } from '../pages/tools/image';
+import { DefinedTool, ToolCategory } from './defineTool';
 import { capitalizeFirstLetter } from '../utils/string';
-import { numberTools } from '../pages/number';
-import { videoTools } from '../pages/video';
-import { listTools } from '../pages/list';
+import { numberTools } from '../pages/tools/number';
+import { videoTools } from '../pages/tools/video';
+import { listTools } from '../pages/tools/list';
+import { Entries } from 'type-fest';
 
 export const tools: DefinedTool[] = [
   ...imageTools,
@@ -13,9 +14,14 @@ export const tools: DefinedTool[] = [
   ...videoTools,
   ...listTools
 ];
-const categoriesDescriptions: { type: string; value: string }[] = [
+const categoriesConfig: {
+  type: ToolCategory;
+  value: string;
+  title?: string;
+}[] = [
   {
     type: 'string',
+    title: 'Text',
     value:
       'Tools for working with text – convert text to images, find and replace text, split text into fragments, join text lines, repeat text, and much more.'
   },
@@ -66,20 +72,23 @@ export const getToolsByCategory = (): {
   example: { title: string; path: string };
   tools: DefinedTool[];
 }[] => {
-  const grouped: Partial<Record<string, DefinedTool[]>> = Object.groupBy(
-    tools,
-    ({ type }) => type
+  const groupedByType: Partial<Record<ToolCategory, DefinedTool[]>> =
+    Object.groupBy(tools, ({ type }) => type);
+  return (Object.entries(groupedByType) as Entries<typeof groupedByType>).map(
+    ([type, tools]) => {
+      return {
+        title: `${
+          categoriesConfig.find((config) => config.type === type)?.title ??
+          capitalizeFirstLetter(type)
+        } Tools`,
+        description:
+          categoriesConfig.find((desc) => desc.type === type)?.value ?? '',
+        type,
+        tools: tools ?? [],
+        example: tools
+          ? { title: tools[0].name, path: tools[0].path }
+          : { title: '', path: '' }
+      };
+    }
   );
-  return Object.entries(grouped).map(([type, tls]) => {
-    return {
-      title: `${capitalizeFirstLetter(type)} Tools`,
-      description:
-        categoriesDescriptions.find((desc) => desc.type === type)?.value ?? '',
-      type,
-      tools: tls ?? [],
-      example: tls
-        ? { title: tls[0].name, path: tls[0].path }
-        : { title: '', path: '' }
-    };
-  });
 };

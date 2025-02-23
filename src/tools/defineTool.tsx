@@ -11,8 +11,10 @@ interface ToolOptions {
   shortDescription: string;
 }
 
+export type ToolCategory = 'string' | 'png' | 'number' | 'gif' | 'list';
+
 export interface DefinedTool {
-  type: string;
+  type: ToolCategory;
   path: string;
   name: string;
   description: string;
@@ -23,7 +25,7 @@ export interface DefinedTool {
 }
 
 export const defineTool = (
-  basePath: string,
+  basePath: ToolCategory,
   options: ToolOptions
 ): DefinedTool => {
   const {

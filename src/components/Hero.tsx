@@ -15,12 +15,12 @@ const exampleTools: { label: string; url: string }[] = [
   },
   { label: 'Convert text to morse code', url: '/string/to-morse' },
   { label: 'Change GIF speed', url: '/gif/change-speed' },
-  { label: 'Pick a random item', url: '' },
-  { label: 'Find and replace text', url: '' },
-  { label: 'Convert emoji to image', url: '' },
-  { label: 'Split a string', url: '/string/split' },
+  { label: 'Sort a list', url: 'list/sort' },
+  { label: 'Repeat text', url: 'string/repeat' },
+  { label: 'Split a text', url: '/string/split' },
   { label: 'Calculate number sum', url: '/number/sum' },
-  { label: 'Pixelate an image', url: '' }
+  { label: 'Shuffle a list', url: 'list/shuffle' },
+  { label: 'Change colors in image', url: 'png/change-colors-in-png' }
 ];
 export default function Hero() {
   const [inputValue, setInputValue] = useState<string>('');
