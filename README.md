@@ -1,6 +1,6 @@
 # OmniTools
 
-Welcome to **OmniTools**, a self-hosted alternative to OnlineTools.com.
+Welcome to **OmniTools**, a self-hosted alternative to PineTools.com.
 
 This project offers a variety of online tools to help with everyday tasks,
 all available for free and open for community contributions. Whether you are manipulating images, crunching numbers, or coding, OmniTools has you covered. Please don't forget to star the
