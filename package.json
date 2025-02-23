@@ -27,6 +27,8 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@hugeicons/core-free-icons": "^1.0.10",
+    "@hugeicons/react": "^1.0.3",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "@playwright/test": "^1.45.0",

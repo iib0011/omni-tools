@@ -1,59 +1,75 @@
-import { readFile, writeFile } from 'fs/promises'
-import fs from 'fs'
-import { dirname, join, sep } from 'path'
-import { fileURLToPath } from 'url'
+import { readFile, writeFile } from 'fs/promises';
+import fs from 'fs';
+import { dirname, join, sep } from 'path';
+import { fileURLToPath } from 'url';
 
-const currentDirname = dirname(fileURLToPath(import.meta.url))
+const currentDirname = dirname(fileURLToPath(import.meta.url));
 
-const toolName = process.argv[2]
-const folder = process.argv[3]
+const toolName = process.argv[2];
+const folder = process.argv[3];
 
-const toolsDir = join(currentDirname, '..', 'src', 'pages', folder ?? '')
+const toolsDir = join(
+  currentDirname,
+  '..',
+  'src',
+  'pages',
+  'tools',
+  folder ?? ''
+);
 if (!toolName) {
-  throw new Error('Please specify a toolname.')
+  throw new Error('Please specify a toolname.');
 }
 
 function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1)
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function createFolderStructure(basePath, foldersToCreateIndexCount) {
-  const folderArray = basePath.split(sep)
+  const folderArray = basePath.split(sep);
 
   function recursiveCreate(currentBase, index) {
     if (index >= folderArray.length) {
-      return
+      return;
     }
-    const currentPath = join(currentBase, folderArray[index])
+    const currentPath = join(currentBase, folderArray[index]);
     if (!fs.existsSync(currentPath)) {
-      fs.mkdirSync(currentPath, { recursive: true })
+      fs.mkdirSync(currentPath, { recursive: true });
     }
-    const indexPath = join(currentPath, 'index.ts')
-    if (!fs.existsSync(indexPath) && index < folderArray.length - 1 && index >= folderArray.length - 1 - foldersToCreateIndexCount) {
-      fs.writeFileSync(indexPath, `export const ${currentPath.split(sep)[currentPath.split(sep).length - 1]}Tools = [];\n`)
-      console.log(`File created: ${indexPath}`)
+    const indexPath = join(currentPath, 'index.ts');
+    if (
+      !fs.existsSync(indexPath) &&
+      index < folderArray.length - 1 &&
+      index >= folderArray.length - 1 - foldersToCreateIndexCount
+    ) {
+      fs.writeFileSync(
+        indexPath,
+        `export const ${
+          currentPath.split(sep)[currentPath.split(sep).length - 1]
+        }Tools = [];\n`
+      );
+      console.log(`File created: ${indexPath}`);
     }
     // Recursively create the next folder
-    recursiveCreate(currentPath, index + 1)
+    recursiveCreate(currentPath, index + 1);
   }
 
   // Start the recursive folder creation
-  recursiveCreate('.', 0)
+  recursiveCreate('.', 0);
 }
 
-const toolNameCamelCase = toolName.replace(/-./g, (x) => x[1].toUpperCase())
+const toolNameCamelCase = toolName.replace(/-./g, (x) => x[1].toUpperCase());
 const toolNameTitleCase =
-  toolName[0].toUpperCase() + toolName.slice(1).replace(/-/g, ' ')
-const toolDir = join(toolsDir, toolName)
-const type = folder.split(sep)[folder.split(sep).length - 1]
-await createFolderStructure(toolDir, folder.split(sep).length)
-console.log(`Directory created: ${toolDir}`)
+  toolName[0].toUpperCase() + toolName.slice(1).replace(/-/g, ' ');
+const toolDir = join(toolsDir, toolName);
+const type = folder.split(sep)[folder.split(sep).length - 1];
+await createFolderStructure(toolDir, folder.split(sep).length);
+console.log(`Directory created: ${toolDir}`);
 
 const createToolFile = async (name, content) => {
-  const filePath = join(toolDir, name)
-  await writeFile(filePath, content.trim())
-  console.log(`File created: ${filePath}`)
-}
+  const filePath = join(toolDir, name);
+  await writeFile(filePath, content.trim());
+  console.log(`File created: ${filePath}`);
+};
 
 createToolFile(
   `index.tsx`,
@@ -70,7 +86,7 @@ export default function ${capitalizeFirstLetter(toolNameCamelCase)}() {
   return <Box>Lorem ipsum</Box>;
 }
 `
-)
+);
 createToolFile(
   `meta.ts`,
   `
@@ -84,13 +100,13 @@ export const tool = defineTool('${type}', {
   // image,
   description: '',
   shortDescription: '',
-  keywords: ['${toolName.split('-').join('\', \'')}'],
+  keywords: ['${toolName.split('-').join("', '")}'],
   component: lazy(() => import('./index'))
 });
 `
-)
+);
 
-createToolFile(`service.ts`, ``)
+createToolFile(`service.ts`, ``);
 createToolFile(
   `${toolName}.service.test.ts`,
   `
@@ -101,7 +117,7 @@ import { expect, describe, it } from 'vitest';
 //
 // })
 `
-)
+);
 
 // createToolFile(
 //   `${toolName}.e2e.spec.ts`,
@@ -125,15 +141,17 @@ import { expect, describe, it } from 'vitest';
 // `
 // )
 
-const toolsIndex = join(toolsDir, 'index.ts')
+const toolsIndex = join(toolsDir, 'index.ts');
 const indexContent = await readFile(toolsIndex, { encoding: 'utf-8' }).then(
   (r) => r.split('\n')
-)
+);
 
 indexContent.splice(
   0,
   0,
-  `import { tool as ${type}${capitalizeFirstLetter(toolNameCamelCase)} } from './${toolName}/meta';`
-)
-writeFile(toolsIndex, indexContent.join('\n'))
-console.log(`Added import in: ${toolsIndex}`)
+  `import { tool as ${type}${capitalizeFirstLetter(
+    toolNameCamelCase
+  )} } from './${toolName}/meta';`
+);
+writeFile(toolsIndex, indexContent.join('\n'));
+console.log(`Added import in: ${toolsIndex}`);

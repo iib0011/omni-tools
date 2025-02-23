@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, useNavigate } from 'react-router-dom';
-import githubIcon from '@assets/github-mark.png'; // Adjust the path to your GitHub icon
+import logo from 'assets/logo.png';
 import {
   Drawer,
   List,
@@ -22,7 +21,6 @@ const Navbar: React.FC = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [drawerOpen, setDrawerOpen] = useState(false);
-
   const toggleDrawer = (open: boolean) => () => {
     setDrawerOpen(open);
   };
@@ -55,17 +53,12 @@ const Navbar: React.FC = () => {
       style={{ backgroundColor: 'white', color: 'black' }}
     >
       <Toolbar sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
-        <Typography
+        <img
           onClick={() => navigate('/')}
-          fontSize={25}
-          sx={{
-            cursor: 'pointer',
-            textShadow: '1px 1px 2px rgba(0,0,0,0.2)'
-          }}
-          color={'primary'}
-        >
-          OmniTools
-        </Typography>
+          style={{ cursor: 'pointer' }}
+          src={logo}
+          width={isMobile ? '80px' : '150px'}
+        />
         {isMobile ? (
           <>
             <IconButton

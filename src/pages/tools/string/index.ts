@@ -11,11 +11,11 @@ import { tool as stringJoin } from './join/meta';
 export const stringTools = [
   stringSplit,
   stringJoin,
-  stringToMorse,
-  stringReverse,
-  stringRandomizeCase,
-  stringUppercase,
-  stringExtractSubstring,
-  stringCreatePalindrome,
-  stringPalindrome
+  stringToMorse
+  // stringReverse,
+  // stringRandomizeCase,
+  // stringUppercase,
+  // stringExtractSubstring,
+  // stringCreatePalindrome,
+  // stringPalindrome
 ];

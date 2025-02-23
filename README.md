@@ -1,9 +1,13 @@
-# OmniTools
+<p align="center"><img src="src/assets/logo.png" width="80"></p>
+<h1 align="center">OmniTools</h1>
 
-Welcome to **OmniTools**, a self-hosted alternative to PineTools.com.
+[//]: # ([![Docker Pulls]&#40;https://img.shields.io/docker/pulls/iib0011/omni-tools&#41;]&#40;https://hub.docker.com/r/iib0011/omni-tools&#41;)
 
-This project offers a variety of online tools to help with everyday tasks,
-all available for free and open for community contributions. Whether you are manipulating images, crunching numbers, or coding, OmniTools has you covered. Please don't forget to star the
+[![Discord](https://img.shields.io/discord/1342971141823664179?label=Discord)](https://discord.gg/SDbbn3hT4b)
+
+Welcome to OmniTools, a self-hosted platform offering a variety of online tools to simplify everyday tasks.
+Whether you are manipulating images, crunching numbers, or
+coding, OmniTools has you covered. Please don't forget to star the
 repo to support us.
 Here is the [demo](https://omnitools.netlify.app/) website.
 
@@ -19,27 +23,43 @@ Here is the [demo](https://omnitools.netlify.app/) website.
 
 ## Features
 
-OmniTools includes a variety of tools, such as:
+We strive to offer a variety of tools, including:
 
-1. **Image/Video/Binary tools**
+## **Image/Video/Binary Tools**
 
-- Image Resizer, Image converter, Video trimmer, video reverser, etc.
+- Image Resizer
+- Image Converter
+- Video Trimmer
+- Video Reverser
+- And more...
 
-2. **Math tools**
+## **String/List Tools**
 
-- Generate prime numbers, generate perfect numbers etc.
+- Case Converters
+- List Shuffler
+- Text Formatters
+- And more...
 
-3. **String/List Tools**
+## **Date and Time Tools**
 
-- Case converters, shuffle list, text formatters, etc.
+- Date Calculators
+- Time Zone Converters
+- And more...
 
-4. **Date and Time Tools**
+## **Math Tools**
 
-- Date calculators, time zone converters, etc.
+- Generate Prime Numbers
+- Generate Perfect Numbers
+- And more...
 
-5. **Miscellaneous Tools**
+## **Miscellaneous Tools**
 
-- JSON, XML tools, CSV tools etc.
+- JSON Tools
+- XML Tools
+- CSV Tools
+- And more...
+
+Stay tuned as we continue to expand and improve our collection!
 
 ## Self-host/Run
 
@@ -48,6 +68,8 @@ docker run -d --name omni-tools --restart unless-stopped -p 8080:80 iib0011/omni
 ```
 
 ## Contribute
+
+This is a React Project with Typescript Material UI.
 
 ### Project setup
 

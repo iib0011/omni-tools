@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: ctrl v">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: update readme">
+      <change afterPath="$PROJECT_DIR$/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/home/Categories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/create-tool.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/create-tool.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +88,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/omni-tools/src/components/options&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ibrahima/IdeaProjects/omni-tools/src/assets&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -111,11 +121,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\assets" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\assets" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\string" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\string\split" />
-      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\tools" />
@@ -250,15 +260,11 @@
       <workItem from="1720912096050" duration="3065000" />
       <workItem from="1740259920741" duration="7742000" />
       <workItem from="1740270391152" duration="690000" />
-      <workItem from="1740274898695" duration="1168000" />
-    </task>
-    <task id="LOCAL-00054" summary="chore: sum tests">
-      <option name="closed" value="true" />
-      <created>1719282131977</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1719282131977</updated>
+      <workItem from="1740274898695" duration="2231000" />
+      <workItem from="1740295530385" duration="1120000" />
+      <workItem from="1740300354462" duration="1059000" />
+      <workItem from="1740301493702" duration="8924000" />
+      <workItem from="1740318886545" duration="856000" />
     </task>
     <task id="LOCAL-00055" summary="fix: readme">
       <option name="closed" value="true" />
@@ -644,7 +650,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740267666455</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="feat: update readme">
+      <option name="closed" value="true" />
+      <created>1740276092528</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1740276092528</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,7 +690,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: remove unused deps" />
     <MESSAGE value="style: lint" />
     <MESSAGE value="fix: radio and list sort init" />
     <MESSAGE value="chore: formik updateField" />
@@ -701,7 +714,8 @@
     <MESSAGE value="refactor: optimize imports" />
     <MESSAGE value="chore: use string tools" />
     <MESSAGE value="fix: ctrl v" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: ctrl v" />
+    <MESSAGE value="feat: update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update readme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

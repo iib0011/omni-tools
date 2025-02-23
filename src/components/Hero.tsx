@@ -71,10 +71,12 @@ export default function Hero() {
             {...params}
             fullWidth
             placeholder={'Search all tools'}
-            sx={{ borderRadius: 2 }}
             InputProps={{
               ...params.InputProps,
-              endAdornment: <SearchIcon />
+              endAdornment: <SearchIcon />,
+              sx: {
+                borderRadius: 4
+              }
             }}
             onChange={(event) => handleInputChange(event, event.target.value)}
           />
@@ -112,7 +114,8 @@ export default function Hero() {
                 borderRadius: 3,
                 borderColor: 'grey',
                 borderStyle: 'solid',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                '&:hover': { backgroundColor: '#FAFAFD' }
               }}
             >
               <Typography>{tool.label}</Typography>
