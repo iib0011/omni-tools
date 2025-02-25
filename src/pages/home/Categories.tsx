@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
+import { categoriesColors } from 'config/uiConfig';
 
 type ArrayElement<ArrayType extends readonly unknown[]> =
   ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
@@ -74,7 +75,6 @@ const SingleCategory = function ({
     </Grid>
   );
 };
-const categoriesColors: string[] = ['#8FBC5D', '#3CB6E2', '#FFD400', '#AB6993'];
 export default function Categories() {
   return (
     <Grid width={'80%'} container mt={2} spacing={2}>
