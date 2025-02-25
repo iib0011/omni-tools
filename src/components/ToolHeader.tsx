@@ -1,10 +1,18 @@
-import { Box, Button } from '@mui/material';
+import { Box, Button, styled, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import ToolBreadcrumb from './ToolBreadcrumb';
 import { capitalizeFirstLetter } from '../utils/string';
 import Grid from '@mui/material/Grid';
 import { Icon, IconifyIcon } from '@iconify/react';
 import { categoriesColors } from '../config/uiConfig';
+
+const StyledButton = styled(Button)(({ theme }) => ({
+  backgroundColor: 'white',
+  '&:hover': {
+    backgroundColor: theme.palette.primary.main,
+    color: 'white'
+  }
+}));
 
 interface ToolHeaderProps {
   title: string;
@@ -14,37 +22,29 @@ interface ToolHeaderProps {
 }
 
 function ToolLinks() {
+  const theme = useTheme();
+
   return (
     <Grid container spacing={2} mt={1}>
       <Grid item md={12} lg={4}>
-        <Button
+        <StyledButton
           sx={{ backgroundColor: 'white' }}
           fullWidth
           variant="outlined"
           href="#tool"
         >
           Use This Tool
-        </Button>
+        </StyledButton>
       </Grid>
       <Grid item md={12} lg={4}>
-        <Button
-          sx={{ backgroundColor: 'white' }}
-          fullWidth
-          variant="outlined"
-          href="#examples"
-        >
+        <StyledButton fullWidth variant="outlined" href="#examples">
           See Examples
-        </Button>
+        </StyledButton>
       </Grid>
       <Grid item md={12} lg={4}>
-        <Button
-          sx={{ backgroundColor: 'white' }}
-          fullWidth
-          variant="outlined"
-          href="#tour"
-        >
+        <StyledButton fullWidth variant="outlined" href="#tour">
           Learn How to Use
-        </Button>
+        </StyledButton>
       </Grid>
     </Grid>
   );

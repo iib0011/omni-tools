@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: ui changes">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: broken links">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ToolHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolHeader.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -258,31 +257,7 @@
       <workItem from="1740348963270" duration="388000" />
       <workItem from="1740399426653" duration="627000" />
       <workItem from="1740459961271" duration="66000" />
-      <workItem from="1740460036909" duration="4540000" />
-    </task>
-    <task id="LOCAL-00064" summary="chore: loading screen">
-      <option name="closed" value="true" />
-      <created>1719360545177</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1719360545177</updated>
-    </task>
-    <task id="LOCAL-00065" summary="chore: shuffle tools search">
-      <option name="closed" value="true" />
-      <created>1719363656541</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1719363656541</updated>
-    </task>
-    <task id="LOCAL-00066" summary="refactor: toolOptions">
-      <option name="closed" value="true" />
-      <created>1719384439535</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1719384439535</updated>
+      <workItem from="1740460036909" duration="8299000" />
     </task>
     <task id="LOCAL-00067" summary="feat: playwright">
       <option name="closed" value="true" />
@@ -652,7 +627,31 @@
       <option name="project" value="LOCAL" />
       <updated>1740464250449</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="fix: tsc">
+      <option name="closed" value="true" />
+      <created>1740464642001</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1740464642001</updated>
+    </task>
+    <task id="LOCAL-00114" summary="fix: readme">
+      <option name="closed" value="true" />
+      <created>1740468159111</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1740468159111</updated>
+    </task>
+    <task id="LOCAL-00115" summary="fix: broken links">
+      <option name="closed" value="true" />
+      <created>1740488522618</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1740488522618</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -684,9 +683,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: jimp types" />
-    <MESSAGE value="fix: package.json" />
-    <MESSAGE value="feat: playwright report" />
     <MESSAGE value="chore: idea config" />
     <MESSAGE value="feat: sort list" />
     <MESSAGE value="feat: find most popular ui" />
@@ -709,7 +705,10 @@
     <MESSAGE value="fix: docs" />
     <MESSAGE value="feat: funding" />
     <MESSAGE value="feat: ui changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: ui changes" />
+    <MESSAGE value="fix: tsc" />
+    <MESSAGE value="fix: readme" />
+    <MESSAGE value="fix: broken links" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: broken links" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
