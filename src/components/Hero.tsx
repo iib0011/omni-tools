@@ -75,7 +75,8 @@ export default function Hero() {
               ...params.InputProps,
               endAdornment: <SearchIcon />,
               sx: {
-                borderRadius: 4
+                borderRadius: 4,
+                backgroundColor: 'white'
               }
             }}
             onChange={(event) => handleInputChange(event, event.target.value)}
@@ -114,6 +115,7 @@ export default function Hero() {
                 borderRadius: 3,
                 borderColor: 'grey',
                 borderStyle: 'solid',
+                backgroundColor: 'white',
                 cursor: 'pointer',
                 '&:hover': { backgroundColor: '#FAFAFD' }
               }}

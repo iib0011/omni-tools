@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('list', {
   name: 'Group',
   path: 'group',
-  // image,
+  icon: 'pajamas:group',
   description: '',
   shortDescription: '',
   keywords: ['group'],

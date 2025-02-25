@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('list', {
   name: 'Shuffle',
   path: 'shuffle',
-  // image,
+  icon: 'material-symbols-light:shuffle',
   description: '',
   shortDescription: '',
   keywords: ['shuffle'],

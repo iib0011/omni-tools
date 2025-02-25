@@ -50,9 +50,18 @@ const Navbar: React.FC = () => {
   return (
     <AppBar
       position="static"
-      style={{ backgroundColor: 'white', color: 'black' }}
+      style={{
+        backgroundColor: 'white',
+        color: 'black'
+      }}
     >
-      <Toolbar sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
+      <Toolbar
+        sx={{
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          boxShadow: '0px 2px 2px #C8C9CE'
+        }}
+      >
         <img
           onClick={() => navigate('/')}
           style={{ cursor: 'pointer' }}

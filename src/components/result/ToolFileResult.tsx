@@ -67,7 +67,8 @@ export default function ToolFileResult({
           height: globalInputHeight,
           border: preview ? 0 : 1,
           borderRadius: 2,
-          boxShadow: '5'
+          boxShadow: '5',
+          bgcolor: 'white'
         }}
       >
         {preview && (

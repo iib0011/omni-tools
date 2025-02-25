@@ -50,7 +50,14 @@ export default function ToolTextInput({
         fullWidth
         multiline
         rows={10}
-        inputProps={{ 'data-testid': 'text-input' }}
+        sx={{
+          '&.MuiTextField-root': {
+            backgroundColor: 'white'
+          }
+        }}
+        inputProps={{
+          'data-testid': 'text-input'
+        }}
       />
       <InputFooter handleCopy={handleCopy} handleImport={handleImportClick} />
       <input

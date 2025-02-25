@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('list', {
   name: 'Unwrap',
   path: 'unwrap',
-  // image,
+  icon: 'mdi:unwrap',
   description: '',
   shortDescription: '',
   keywords: ['unwrap'],

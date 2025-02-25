@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('list', {
   name: 'Reverse',
   path: 'reverse',
-  // image,
+  icon: 'proicons:reverse',
   description: '',
   shortDescription: '',
   keywords: ['reverse'],

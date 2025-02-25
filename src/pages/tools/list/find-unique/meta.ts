@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('list', {
   name: 'Find unique',
   path: 'find-unique',
-  // image,
+  icon: 'mynaui:one',
   description: '',
   shortDescription: '',
   keywords: ['find', 'unique'],

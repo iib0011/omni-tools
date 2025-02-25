@@ -5,14 +5,15 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { getToolsByCategory } from '../../tools';
 import Hero from 'components/Hero';
 import { capitalizeFirstLetter } from '../../utils/string';
-import toolsPng from '@assets/tools.png';
+import { Icon } from '@iconify/react';
+import { categoriesColors } from 'config/uiConfig';
 
 export default function Home() {
   const navigate = useNavigate();
   const theme = useTheme();
   const { categoryName } = useParams();
   return (
-    <Box>
+    <Box sx={{ backgroundColor: '#F5F5FA' }}>
       <Box
         padding={{ xs: 1, md: 3, lg: 5 }}
         display={'flex'}
@@ -32,10 +33,12 @@ export default function Home() {
         <Grid container spacing={2} mt={2}>
           {getToolsByCategory()
             .find(({ type }) => type === categoryName)
-            ?.tools?.map((tool) => (
+            ?.tools?.map((tool, index) => (
               <Grid item xs={12} md={6} lg={4} key={tool.path}>
                 <Stack
                   sx={{
+                    backgroundColor: 'white',
+                    boxShadow: '5px 4px 2px #E9E9ED',
                     cursor: 'pointer',
                     '&:hover': {
                       backgroundColor: theme.palette.background.default // Change this to your desired hover color
@@ -45,10 +48,14 @@ export default function Home() {
                   direction={'row'}
                   spacing={2}
                   padding={2}
-                  border={1}
+                  border={`1px solid ${theme.palette.background.default}`}
                   borderRadius={2}
                 >
-                  <img width={100} src={tool.image ?? toolsPng} />
+                  <Icon
+                    icon={tool.icon ?? 'ph:compass-tool-thin'}
+                    fontSize={'100px'}
+                    color={categoriesColors[index % categoriesColors.length]}
+                  />
                   <Box>
                     <Link to={'/' + tool.path}>{tool.name}</Link>
                     <Typography sx={{ mt: 2 }}>

@@ -92,12 +92,11 @@ createToolFile(
   `
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
-// import image from '@assets/text.png';
 
 export const tool = defineTool('${type}', {
   name: '${toolNameTitleCase}',
   path: '${toolName}',
-  // image,
+  icon: '',
   description: '',
   shortDescription: '',
   keywords: ['${toolName.split('-').join("', '")}'],

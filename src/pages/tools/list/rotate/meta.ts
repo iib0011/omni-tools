@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('list', {
   name: 'Rotate',
   path: 'rotate',
-  // image,
+  icon: 'material-symbols-light:rotate-right',
   description: '',
   shortDescription: '',
   keywords: ['rotate'],

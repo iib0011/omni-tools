@@ -1,5 +1,4 @@
-<p align="center"><img src="src/assets/logo.png" width="80"></p>
-<h1 align="center">OmniTools</h1>
+<p align="center"><img src="src/assets/logo.png" width="150"></p>
 
 [//]: # ([![Docker Pulls]&#40;https://img.shields.io/docker/pulls/iib0011/omni-tools&#41;]&#40;https://hub.docker.com/r/iib0011/omni-tools&#41;)
 
@@ -100,7 +99,7 @@ npm run test
 npm run test:e2e
 ```
 
-[//]: # (<img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date">)
+<img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date">
 
 ## 🤝 Looking to contribute?
 

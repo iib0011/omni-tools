@@ -54,6 +54,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@iconify/react": "^5.2.0",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^14.3.1",
     "@types/color": "^3.0.6",

@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('list', {
   name: 'Find most popular',
   path: 'find-most-popular',
-  // image,
+  icon: 'material-symbols-light:query-stats',
   description: '',
   shortDescription: '',
   keywords: ['find', 'most', 'popular'],
