@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 import Hero from 'components/Hero';
 import Categories from './Categories';
+import background from '@assets/background.svg';
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
         xs: 1,
         md: 3,
         lg: 5,
-        background: 'url(assets/background.svg)',
+        background: `url(${background})`,
         backgroundColor: '#F5F5FA'
       }}
       display={'flex'}
