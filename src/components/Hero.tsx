@@ -15,12 +15,12 @@ const exampleTools: { label: string; url: string }[] = [
   },
   { label: 'Convert text to morse code', url: '/string/to-morse' },
   { label: 'Change GIF speed', url: '/gif/change-speed' },
-  { label: 'Sort a list', url: 'list/sort' },
-  { label: 'Compress PNG', url: 'png/compress-png' },
+  { label: 'Sort a list', url: '/list/sort' },
+  { label: 'Compress PNG', url: '/png/compress-png' },
   { label: 'Split a text', url: '/string/split' },
   { label: 'Calculate number sum', url: '/number/sum' },
-  { label: 'Shuffle a list', url: 'list/shuffle' },
-  { label: 'Change colors in image', url: 'png/change-colors-in-png' }
+  { label: 'Shuffle a list', url: '/list/shuffle' },
+  { label: 'Change colors in image', url: '/png/change-colors-in-png' }
 ];
 export default function Hero() {
   const [inputValue, setInputValue] = useState<string>('');
@@ -98,7 +98,9 @@ export default function Hero() {
       <Grid container spacing={2} mt={2}>
         {exampleTools.map((tool) => (
           <Grid
-            onClick={() => navigate(tool.url)}
+            onClick={() =>
+              navigate(tool.url.startsWith('/') ? tool.url : `/${tool.url}`)
+            }
             item
             xs={12}
             md={6}
