@@ -9,7 +9,7 @@ export default function Home() {
         xs: 1,
         md: 3,
         lg: 5,
-        background: 'url(src/assets/background.svg)',
+        background: 'url(assets/background.svg)',
         backgroundColor: '#F5F5FA'
       }}
       display={'flex'}

@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="style: background svg">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="docs: img">
+      <change beforePath="$PROJECT_DIR$/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,15 +258,7 @@
       <workItem from="1740459961271" duration="66000" />
       <workItem from="1740460036909" duration="8299000" />
       <workItem from="1740490890760" duration="1889000" />
-      <workItem from="1740503199053" duration="61000" />
-    </task>
-    <task id="LOCAL-00070" summary="chore: remove unused deps">
-      <option name="closed" value="true" />
-      <created>1719488576835</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1719488576835</updated>
+      <workItem from="1740503199053" duration="208000" />
     </task>
     <task id="LOCAL-00071" summary="fix: misc">
       <option name="closed" value="true" />
@@ -654,7 +644,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740491737480</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="docs: img">
+      <option name="closed" value="true" />
+      <created>1740503310227</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1740503310228</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -686,7 +684,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: misc" />
     <MESSAGE value="fix: style" />
     <MESSAGE value="feat: find unique ui" />
     <MESSAGE value="feat: group list ui" />
@@ -711,7 +708,8 @@
     <MESSAGE value="chore: style buttons" />
     <MESSAGE value="chore: style" />
     <MESSAGE value="style: background svg" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: background svg" />
+    <MESSAGE value="docs: img" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: img" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
