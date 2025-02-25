@@ -99,7 +99,7 @@ npm run test
 npm run test:e2e
 ```
 
-<img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date">
+<img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date"/>
 
 ## 🤝 Looking to contribute?
 
