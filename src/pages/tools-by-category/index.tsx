@@ -46,6 +46,7 @@ export default function Home() {
                   }}
                   onClick={() => navigate('/' + tool.path)}
                   direction={'row'}
+                  alignItems={'center'}
                   spacing={2}
                   padding={2}
                   border={`1px solid ${theme.palette.background.default}`}
@@ -53,11 +54,13 @@ export default function Home() {
                 >
                   <Icon
                     icon={tool.icon ?? 'ph:compass-tool-thin'}
-                    fontSize={'100px'}
+                    fontSize={'60px'}
                     color={categoriesColors[index % categoriesColors.length]}
                   />
                   <Box>
-                    <Link to={'/' + tool.path}>{tool.name}</Link>
+                    <Link style={{ fontSize: 20 }} to={'/' + tool.path}>
+                      {tool.name}
+                    </Link>
                     <Typography sx={{ mt: 2 }}>
                       {tool.shortDescription}
                     </Typography>
