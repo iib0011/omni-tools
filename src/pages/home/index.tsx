@@ -5,7 +5,13 @@ import Categories from './Categories';
 export default function Home() {
   return (
     <Box
-      padding={{ xs: 1, md: 3, lg: 5, backgroundColor: '#F5F5FA' }}
+      padding={{
+        xs: 1,
+        md: 3,
+        lg: 5,
+        background: 'url(src/assets/background.svg)',
+        backgroundColor: '#F5F5FA'
+      }}
       display={'flex'}
       flexDirection={'column'}
       alignItems={'center'}
