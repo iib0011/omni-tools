@@ -4,43 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: funding">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: ui changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/create-tool.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/create-tool.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ToolHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/ToolFileInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolFileInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/uiConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/uiConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Categories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-unique/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-unique/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/group/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/group/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/reverse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/rotate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/rotate/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/shuffle/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/sort/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/sort/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/unwrap/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/unwrap/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generate/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/sum/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/join/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/join/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/split/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/split/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/to-morse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,23 +258,7 @@
       <workItem from="1740348963270" duration="388000" />
       <workItem from="1740399426653" duration="627000" />
       <workItem from="1740459961271" duration="66000" />
-      <workItem from="1740460036909" duration="4124000" />
-    </task>
-    <task id="LOCAL-00062" summary="feat: make tool responsive">
-      <option name="closed" value="true" />
-      <created>1719359243293</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1719359243294</updated>
-    </task>
-    <task id="LOCAL-00063" summary="chore: make tool examples responsive">
-      <option name="closed" value="true" />
-      <created>1719359368236</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1719359368236</updated>
+      <workItem from="1740460036909" duration="4540000" />
     </task>
     <task id="LOCAL-00064" summary="chore: loading screen">
       <option name="closed" value="true" />
@@ -685,7 +636,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740460017596</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="feat: ui changes">
+      <option name="closed" value="true" />
+      <created>1740464231905</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1740464231905</updated>
+    </task>
+    <task id="LOCAL-00112" summary="feat: ui changes">
+      <option name="closed" value="true" />
+      <created>1740464250449</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1740464250449</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -717,7 +684,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: ci" />
     <MESSAGE value="chore: jimp types" />
     <MESSAGE value="fix: package.json" />
     <MESSAGE value="feat: playwright report" />
@@ -742,7 +708,8 @@
     <MESSAGE value="fix: compress png" />
     <MESSAGE value="fix: docs" />
     <MESSAGE value="feat: funding" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: funding" />
+    <MESSAGE value="feat: ui changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: ui changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

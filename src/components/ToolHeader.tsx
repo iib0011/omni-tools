@@ -9,7 +9,7 @@ import { categoriesColors } from '../config/uiConfig';
 interface ToolHeaderProps {
   title: string;
   description: string;
-  icon?: IconifyIcon;
+  icon?: IconifyIcon | string;
   type: string;
 }
 
