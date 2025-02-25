@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: docs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,6 +254,7 @@
       <workItem from="1740301493702" duration="8924000" />
       <workItem from="1740318886545" duration="856000" />
       <workItem from="1740348963270" duration="388000" />
+      <workItem from="1740399426653" duration="627000" />
     </task>
     <task id="LOCAL-00061" summary="feat: make responsive">
       <option name="closed" value="true" />
