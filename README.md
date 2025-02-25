@@ -10,7 +10,7 @@ coding, OmniTools has you covered. Please don't forget to star the
 repo to support us.
 Here is the [demo](https://omnitools.netlify.app/) website.
 
-![img_2.png](img.png)
+![img.png](img.png)
 
 ## Table of Contents
 
