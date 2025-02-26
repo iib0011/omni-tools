@@ -1,8 +1,27 @@
-<p align="center"><img src="src/assets/logo.png" width="150"></p>
+<p align="center">
+        <img src="src/assets/logo.png" width="300" />
+        <br /><br />
+        <a href="https://github.com/iib0011/omni-tools/releases">
+          <img src="https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge" />
+        </a>
+        <a href="https://hub.docker.com/r/iib0011/omni-tools">
+          <img src="https://img.shields.io/docker/pulls/iib0011/omni-tools?style=for-the-badge&logo=docker" />
+        </a>
+        <a href="https://github.com/iib0011">
+          <img src="https://img.shields.io/github/stars/iib0011/omni-tools?style=for-the-badge&logo=github" />
+        </a>
+        <a href="https://github.com/iib0011/omni-tools/blob/main/LICENSE">
+          <img src="https://img.shields.io/github/license/iib0011/omni-tools?style=for-the-badge" />
+        </a>
+     <!--
+        <a href="https://discord.gg/SDbbn3hT4b">
+          <img src="https://img.shields.io/discord/1342971141823664179?label=Discord&style=for-the-badge" />
+        </a>
+     -->
+        <br /><br />
+</p>
 
 [//]: # ([![Docker Pulls]&#40;https://img.shields.io/docker/pulls/iib0011/omni-tools&#41;]&#40;https://hub.docker.com/r/iib0011/omni-tools&#41;)
-
-[//]: # ([![Discord]&#40;https://img.shields.io/discord/1342971141823664179?label=Discord&#41;]&#40;https://discord.gg/SDbbn3hT4b&#41;)
 
 Welcome to OmniTools, a self-hosted platform offering a variety of online tools to simplify everyday tasks.
 Whether you are manipulating images, crunching numbers, or
@@ -51,7 +70,7 @@ We strive to offer a variety of tools, including:
 - Generate Perfect Numbers
 - And more...
 
-## **Miscellaneous Tools**
+## **Data Tools**
 
 - JSON Tools
 - XML Tools
