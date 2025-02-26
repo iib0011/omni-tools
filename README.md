@@ -4,7 +4,7 @@
 
 [//]: # ([![Discord]&#40;https://img.shields.io/discord/1342971141823664179?label=Discord&#41;]&#40;https://discord.gg/SDbbn3hT4b&#41;)
 
-Welcome to OmniTools, a self-hosted platform offering a variety of online tools to simplify everyday tasks.
+Welcome to OmniTools, a self-hosted web app offering a variety of online tools to simplify everyday tasks.
 Whether you are manipulating images, crunching numbers, or
 coding, OmniTools has you covered. Please don't forget to star the
 repo to support us.
