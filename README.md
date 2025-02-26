@@ -21,10 +21,9 @@
         <br /><br />
 </p>
 
-Welcome to OmniTools, a self-hosted platform offering a variety of online tools to simplify everyday tasks.
-Whether you are manipulating images, crunching numbers, or
-coding, OmniTools has you covered. Please don't forget to star the
-repo to support us.
+Welcome to OmniTools, a self-hosted web app offering a variety of online tools to simplify everyday tasks.
+Whether you are coding, manipulating images, crunching numbers, or OmniTools has you covered. Please don't forget to
+star the repo to support us.
 Here is the [demo](https://omnitools.netlify.app/) website.
 
 ![img.png](img.png)
