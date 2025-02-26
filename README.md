@@ -21,8 +21,6 @@
         <br /><br />
 </p>
 
-[//]: # ([![Docker Pulls]&#40;https://img.shields.io/docker/pulls/iib0011/omni-tools&#41;]&#40;https://hub.docker.com/r/iib0011/omni-tools&#41;)
-
 Welcome to OmniTools, a self-hosted platform offering a variety of online tools to simplify everyday tasks.
 Whether you are manipulating images, crunching numbers, or
 coding, OmniTools has you covered. Please don't forget to star the
@@ -70,7 +68,7 @@ We strive to offer a variety of tools, including:
 - Generate Perfect Numbers
 - And more...
 
-## **Data Tools**
+## **Miscellaneous Tools**
 
 - JSON Tools
 - XML Tools
