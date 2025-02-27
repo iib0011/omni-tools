@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url("PlusJakartaSans-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: "Italic";
+  src: url("PlusJakartaSans-Italic-VariableFont_wght.ttf");
+}

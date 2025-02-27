@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: remove prettify test">
-      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: prettify json in home">
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/plus-jakarta/PlusJakartaSans-Italic-VariableFont_wght.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/plus-jakarta/PlusJakartaSans-VariableFont_wght.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/plus-jakarta/plus-jakarta.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +81,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/assets",
+    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/public/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -109,11 +114,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\.github" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\assets" />
-      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\pages\string" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
@@ -261,14 +266,8 @@
       <workItem from="1740503199053" duration="4853000" />
       <workItem from="1740584243965" duration="17000" />
       <workItem from="1740613094492" duration="9615000" />
-    </task>
-    <task id="LOCAL-00085" summary="fix: package.json">
-      <option name="closed" value="true" />
-      <created>1719591700496</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1719591700496</updated>
+      <workItem from="1740664266923" duration="145000" />
+      <workItem from="1740665190253" duration="323000" />
     </task>
     <task id="LOCAL-00086" summary="feat: playwright report">
       <option name="closed" value="true" />
@@ -654,7 +653,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740662016902</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="chore: prettify json in home">
+      <option name="closed" value="true" />
+      <created>1740662154978</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1740662154978</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -713,7 +720,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: use string tools" />
     <MESSAGE value="fix: ctrl v" />
     <MESSAGE value="feat: update readme" />
     <MESSAGE value="feat: compress png" />
@@ -738,7 +744,8 @@
     <MESSAGE value="style: tool categories" />
     <MESSAGE value="chore: compute only if value" />
     <MESSAGE value="chore: remove prettify test" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: remove prettify test" />
+    <MESSAGE value="chore: prettify json in home" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: prettify json in home" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

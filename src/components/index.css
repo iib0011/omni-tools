@@ -5,3 +5,7 @@ a {
 a:hover {
   color: #030362;
 }
+
+* {
+  font-family: Plus Jakarta Sans, sans-serif;
+}
