@@ -122,7 +122,7 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
   const formRef = useRef<FormikProps<InitialValuesType>>(null);
   const compute = (optionsValues: InitialValuesType, input: any) => {
     const { indentationType, spacesCount } = optionsValues;
-    setResult(beautifyJson(input, indentationType, spacesCount));
+    if (input) setResult(beautifyJson(input, indentationType, spacesCount));
   };
 
   const getGroups: GetGroupsType<InitialValuesType> = ({

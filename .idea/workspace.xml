@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: json pretty">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Categories.tsx" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="style: tool categories">
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,14 +261,6 @@
       <workItem from="1740503199053" duration="4853000" />
       <workItem from="1740584243965" duration="17000" />
       <workItem from="1740613094492" duration="9615000" />
-    </task>
-    <task id="LOCAL-00082" summary="fix: ci">
-      <option name="closed" value="true" />
-      <created>1719588854025</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1719588854025</updated>
     </task>
     <task id="LOCAL-00083" summary="fix: ci">
       <option name="closed" value="true" />
@@ -655,7 +646,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740661540908</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="style: tool categories">
+      <option name="closed" value="true" />
+      <created>1740661744828</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1740661744828</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -714,7 +713,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: shuffle ui" />
     <MESSAGE value="refactor: remove validation schema" />
     <MESSAGE value="refactor: optimize imports" />
     <MESSAGE value="chore: use string tools" />
@@ -739,7 +737,8 @@
     <MESSAGE value="refact: examples" />
     <MESSAGE value="fix: examples" />
     <MESSAGE value="feat: json pretty" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: json pretty" />
+    <MESSAGE value="style: tool categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: tool categories" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
