@@ -1,4 +1,3 @@
-import { ExampleCardProps } from './Examples';
 import {
   Box,
   Card,
@@ -9,14 +8,25 @@ import {
   useTheme
 } from '@mui/material';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import RequiredOptions from './RequiredOptions';
+import ExampleOptions from './ExampleOptions';
+import { GetGroupsType } from '@components/options/ToolOptions';
+
+export interface ExampleCardProps<T> {
+  title: string;
+  description: string;
+  sampleText: string;
+  sampleResult: string;
+  sampleOptions: T;
+  changeInputResult: (newOptions: T) => void;
+  getGroups: GetGroupsType<T>;
+}
 
 export default function ExampleCard<T>({
   title,
   description,
   sampleText,
   sampleResult,
-  requiredOptions,
+  sampleOptions,
   changeInputResult,
   getGroups
 }: ExampleCardProps<T>) {
@@ -25,7 +35,7 @@ export default function ExampleCard<T>({
     <Card
       raised
       onClick={() => {
-        changeInputResult(sampleText, sampleResult);
+        changeInputResult(sampleOptions);
       }}
       sx={{
         bgcolor: theme.palette.background.default,
@@ -108,7 +118,7 @@ export default function ExampleCard<T>({
             />
           </Box>
 
-          <RequiredOptions options={requiredOptions} getGroups={getGroups} />
+          <ExampleOptions options={sampleOptions} getGroups={getGroups} />
         </Stack>
       </CardContent>
     </Card>

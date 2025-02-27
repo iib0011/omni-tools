@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import * as Yup from 'yup';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
@@ -12,13 +12,14 @@ import ToolInputAndResult from '@components/ToolInputAndResult';
 import ToolInfo from '@components/ToolInfo';
 import Separator from '@components/Separator';
 import Examples from '@components/examples/Examples';
+import { FormikProps } from 'formik';
 
 const initialValues = {
   joinCharacter: '',
   deleteBlank: true,
   deleteTrailing: true
 };
-
+type InitialValuesType = typeof initialValues;
 const validationSchema = Yup.object().shape({
   joinCharacter: Yup.string().required('Join character is required'),
   deleteBlank: Yup.boolean().required('Delete blank is required'),
@@ -29,13 +30,13 @@ const mergeOptions = {
   placeholder: 'Join Character',
   description:
     'Symbol that connects broken\n' + 'pieces of text. (Space by default.)\n',
-  accessor: 'joinCharacter' as keyof typeof initialValues
+  accessor: 'joinCharacter' as keyof InitialValuesType
 };
 
 const blankTrailingOptions: {
   title: string;
   description: string;
-  accessor: keyof typeof initialValues;
+  accessor: keyof InitialValuesType;
 }[] = [
   {
     title: 'Delete Blank Lines',
@@ -62,7 +63,7 @@ feed the cat
 make dinner
 build a rocket ship and fly away`,
     sampleResult: `clean the house and go shopping and feed the cat and make dinner and build a rocket ship and fly away`,
-    requiredOptions: {
+    sampleOptions: {
       joinCharacter: 'and',
       deleteBlank: true,
       deleteTrailing: true
@@ -78,7 +79,7 @@ processor
 mouse
 keyboard`,
     sampleResult: `computer, memory, processor, mouse, keyboard`,
-    requiredOptions: {
+    sampleOptions: {
       joinCharacter: ',',
       deleteBlank: false,
       deleteTrailing: false
@@ -101,7 +102,7 @@ u
 s
 !`,
     sampleResult: `Textabulous!`,
-    requiredOptions: {
+    sampleOptions: {
       joinCharacter: '',
       deleteBlank: false,
       deleteTrailing: false
@@ -112,15 +113,14 @@ s
 export default function JoinText() {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-
-  const compute = (optionsValues: typeof initialValues, input: any) => {
+  const optionsFormRef = useRef<FormikProps<InitialValuesType>>(null);
+  const compute = (optionsValues: InitialValuesType, input: any) => {
     const { joinCharacter, deleteBlank, deleteTrailing } = optionsValues;
     setResult(mergeText(input, deleteBlank, deleteTrailing, joinCharacter));
   };
 
-  function changeInputResult(input: string, result: string) {
-    setInput(input);
-    setResult(result);
+  function changeInputResult(newOptions: InitialValuesType) {
+    optionsFormRef.current?.setValues(newOptions);
 
     const toolsElement = document.getElementById('tool');
     if (toolsElement) {
@@ -128,7 +128,7 @@ export default function JoinText() {
     }
   }
 
-  const getGroups: GetGroupsType<typeof initialValues> = ({
+  const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
     updateField
   }) => [
@@ -169,6 +169,7 @@ export default function JoinText() {
         result={<ToolTextResult title={'Joined Text'} value={result} />}
       />
       <ToolOptions
+        formRef={optionsFormRef}
         compute={compute}
         getGroups={getGroups}
         initialValues={initialValues}
@@ -182,11 +183,7 @@ export default function JoinText() {
       <Examples
         title="Text Joiner Examples"
         subtitle="Click to try!"
-        exampleCards={exampleCards.map((card) => ({
-          ...card,
-          changeInputResult,
-          getGroups
-        }))}
+        exampleCards={exampleCards}
         getGroups={getGroups}
         changeInputResult={changeInputResult}
       />

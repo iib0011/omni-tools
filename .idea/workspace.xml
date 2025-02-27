@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: handle enter press on search">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: show tooloptions in example">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/examples/Examples.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/Examples.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/examples/RequiredOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/RequiredOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/examples/RequiredOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/ExampleOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptionGroups.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptionGroups.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -265,15 +265,7 @@
       <workItem from="1740490890760" duration="1889000" />
       <workItem from="1740503199053" duration="4853000" />
       <workItem from="1740584243965" duration="17000" />
-      <workItem from="1740613094492" duration="6422000" />
-    </task>
-    <task id="LOCAL-00078" summary="ci: run e2e tests">
-      <option name="closed" value="true" />
-      <created>1719587281298</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1719587281298</updated>
+      <workItem from="1740613094492" duration="7661000" />
     </task>
     <task id="LOCAL-00079" summary="fix: ci">
       <option name="closed" value="true" />
@@ -659,7 +651,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740614957672</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="chore: show tooloptions in example">
+      <option name="closed" value="true" />
+      <created>1740619610168</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1740619610169</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -691,7 +691,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: reverse list ui" />
     <MESSAGE value="feat: self host" />
     <MESSAGE value="chore: format number" />
     <MESSAGE value="feat: rotate ui" />
@@ -716,7 +715,8 @@
     <MESSAGE value="fix: bg" />
     <MESSAGE value="docs: readme" />
     <MESSAGE value="chore: handle enter press on search" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: handle enter press on search" />
+    <MESSAGE value="chore: show tooloptions in example" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: show tooloptions in example" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

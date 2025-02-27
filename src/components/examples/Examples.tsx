@@ -1,24 +1,14 @@
 import { Box, Grid, Stack, Typography } from '@mui/material';
-import ExampleCard from './ExampleCard';
+import ExampleCard, { ExampleCardProps } from './ExampleCard';
 import React from 'react';
 import { GetGroupsType } from '@components/options/ToolOptions';
-
-export interface ExampleCardProps<T> {
-  title: string;
-  description: string;
-  sampleText: string;
-  sampleResult: string;
-  requiredOptions: T;
-  changeInputResult: (input: string, result: string) => void;
-  getGroups: GetGroupsType<T>;
-}
 
 interface ExampleProps<T> {
   title: string;
   subtitle: string;
-  exampleCards: ExampleCardProps<T>[];
+  exampleCards: Omit<ExampleCardProps<T>, 'getGroups' | 'changeInputResult'>[];
   getGroups: GetGroupsType<T>;
-  changeInputResult: (input: string, result: string) => void;
+  changeInputResult: (newOptions: T) => void;
 }
 
 export default function Examples<T>({
@@ -48,7 +38,7 @@ export default function Examples<T>({
                 description={card.description}
                 sampleText={card.sampleText}
                 sampleResult={card.sampleResult}
-                requiredOptions={card.requiredOptions}
+                sampleOptions={card.sampleOptions}
                 getGroups={getGroups}
                 changeInputResult={changeInputResult}
               />
