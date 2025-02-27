@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="style: tool categories">
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: remove prettify test">
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,22 +261,6 @@
       <workItem from="1740503199053" duration="4853000" />
       <workItem from="1740584243965" duration="17000" />
       <workItem from="1740613094492" duration="9615000" />
-    </task>
-    <task id="LOCAL-00083" summary="fix: ci">
-      <option name="closed" value="true" />
-      <created>1719589144843</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1719589144843</updated>
-    </task>
-    <task id="LOCAL-00084" summary="chore: jimp types">
-      <option name="closed" value="true" />
-      <created>1719591262232</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1719591262232</updated>
     </task>
     <task id="LOCAL-00085" summary="fix: package.json">
       <option name="closed" value="true" />
@@ -654,7 +638,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740661744828</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="chore: compute only if value">
+      <option name="closed" value="true" />
+      <created>1740661864615</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1740661864615</updated>
+    </task>
+    <task id="LOCAL-00133" summary="chore: remove prettify test">
+      <option name="closed" value="true" />
+      <created>1740662016902</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1740662016902</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -713,8 +713,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: remove validation schema" />
-    <MESSAGE value="refactor: optimize imports" />
     <MESSAGE value="chore: use string tools" />
     <MESSAGE value="fix: ctrl v" />
     <MESSAGE value="feat: update readme" />
@@ -738,7 +736,9 @@
     <MESSAGE value="fix: examples" />
     <MESSAGE value="feat: json pretty" />
     <MESSAGE value="style: tool categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: tool categories" />
+    <MESSAGE value="chore: compute only if value" />
+    <MESSAGE value="chore: remove prettify test" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: remove prettify test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

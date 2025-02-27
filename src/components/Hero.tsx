@@ -13,7 +13,7 @@ const exampleTools: { label: string; url: string }[] = [
     label: 'Create a transparent image',
     url: '/png/create-transparent'
   },
-  { label: 'Convert text to morse code', url: '/string/to-morse' },
+  { label: 'Prettify JSON', url: '/json/prettify' },
   { label: 'Change GIF speed', url: '/gif/change-speed' },
   { label: 'Sort a list', url: '/list/sort' },
   { label: 'Compress PNG', url: '/png/compress-png' },
