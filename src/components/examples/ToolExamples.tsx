@@ -2,30 +2,44 @@ import { Box, Grid, Stack, Typography } from '@mui/material';
 import ExampleCard, { ExampleCardProps } from './ExampleCard';
 import React from 'react';
 import { GetGroupsType } from '@components/options/ToolOptions';
+import { FormikProps } from 'formik';
 
-interface ExampleProps<T> {
+export type CardExampleType<T> = Omit<
+  ExampleCardProps<T>,
+  'getGroups' | 'changeInputResult'
+>;
+
+export interface ExampleProps<T> {
   title: string;
-  subtitle: string;
-  exampleCards: Omit<ExampleCardProps<T>, 'getGroups' | 'changeInputResult'>[];
+  subtitle?: string;
+  exampleCards: CardExampleType<T>[];
   getGroups: GetGroupsType<T>;
-  changeInputResult: (newOptions: T) => void;
+  formRef: React.RefObject<FormikProps<T>>;
 }
 
-export default function Examples<T>({
+export default function ToolExamples<T>({
   title,
   subtitle,
   exampleCards,
   getGroups,
-  changeInputResult
+  formRef
 }: ExampleProps<T>) {
+  function changeInputResult(newOptions: T) {
+    formRef.current?.setValues(newOptions);
+    const toolsElement = document.getElementById('tool');
+    if (toolsElement) {
+      toolsElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     <Box id={'examples'} mt={4}>
       <Box mt={4} display="flex" gap={1} alignItems="center">
         <Typography mb={2} fontSize={30} color={'primary'}>
-          {title}
+          {`${title} Examples`}
         </Typography>
         <Typography mb={2} fontSize={30} color={'secondary'}>
-          {subtitle}
+          {subtitle ?? 'Click to try!'}
         </Typography>
       </Box>
 

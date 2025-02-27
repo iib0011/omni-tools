@@ -4,7 +4,7 @@ import { IconifyIcon } from '@iconify/react';
 
 interface ToolOptions {
   path: string;
-  component: LazyExoticComponent<JSXElementConstructor<NonNullable<unknown>>>;
+  component: LazyExoticComponent<JSXElementConstructor<ToolComponentProps>>;
   keywords: string[];
   icon?: IconifyIcon | string;
   name: string;
@@ -23,6 +23,10 @@ export interface DefinedTool {
   icon?: IconifyIcon | string;
   keywords: string[];
   component: () => JSX.Element;
+}
+
+export interface ToolComponentProps {
+  title?: any;
 }
 
 export const defineTool = (
@@ -55,7 +59,7 @@ export const defineTool = (
           icon={icon}
           type={basePath}
         >
-          <Component />
+          <Component title={name} />
         </ToolLayout>
       );
     }

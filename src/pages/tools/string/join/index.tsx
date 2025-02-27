@@ -11,8 +11,11 @@ import ToolInputAndResult from '@components/ToolInputAndResult';
 
 import ToolInfo from '@components/ToolInfo';
 import Separator from '@components/Separator';
-import Examples from '@components/examples/Examples';
+import ToolExamples, {
+  CardExampleType
+} from '@components/examples/ToolExamples';
 import { FormikProps } from 'formik';
+import { ToolComponentProps } from '@tools/defineTool';
 
 const initialValues = {
   joinCharacter: '',
@@ -50,7 +53,7 @@ const blankTrailingOptions: {
   }
 ];
 
-const exampleCards = [
+const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Merge a To-Do List',
     description:
@@ -110,23 +113,14 @@ s
   }
 ];
 
-export default function JoinText() {
+export default function JoinText({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  const optionsFormRef = useRef<FormikProps<InitialValuesType>>(null);
+  const formRef = useRef<FormikProps<InitialValuesType>>(null);
   const compute = (optionsValues: InitialValuesType, input: any) => {
     const { joinCharacter, deleteBlank, deleteTrailing } = optionsValues;
     setResult(mergeText(input, deleteBlank, deleteTrailing, joinCharacter));
   };
-
-  function changeInputResult(newOptions: InitialValuesType) {
-    optionsFormRef.current?.setValues(newOptions);
-
-    const toolsElement = document.getElementById('tool');
-    if (toolsElement) {
-      toolsElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
 
   const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
@@ -169,7 +163,7 @@ export default function JoinText() {
         result={<ToolTextResult title={'Joined Text'} value={result} />}
       />
       <ToolOptions
-        formRef={optionsFormRef}
+        formRef={formRef}
         compute={compute}
         getGroups={getGroups}
         initialValues={initialValues}
@@ -180,12 +174,11 @@ export default function JoinText() {
         description="With this tool you can join parts of the text together. It takes a list of text values, separated by newlines, and merges them together. You can set the character that will be placed between the parts of the combined text. Also, you can ignore all empty lines and remove spaces and tabs at the end of all lines. Textabulous!"
       />
       <Separator backgroundColor="#5581b5" margin="50px" />
-      <Examples
-        title="Text Joiner Examples"
-        subtitle="Click to try!"
+      <ToolExamples
+        title={title}
         exampleCards={exampleCards}
         getGroups={getGroups}
-        changeInputResult={changeInputResult}
+        formRef={formRef}
       />
     </Box>
   );
