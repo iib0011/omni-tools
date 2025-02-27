@@ -1,6 +1,6 @@
 import { getToolsByCategory } from '@tools/index';
 import Grid from '@mui/material/Grid';
-import { Card, CardContent, Stack } from '@mui/material';
+import { Box, Card, CardContent, Stack } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -35,41 +35,49 @@ const SingleCategory = function ({
           backgroundColor: hovered ? '#FAFAFD' : 'white'
         }}
       >
-        <CardContent>
-          <Stack direction={'row'} spacing={2} alignItems={'center'}>
-            <Icon
-              icon={category.icon}
-              fontSize={'60px'}
-              style={{
-                transform: `scale(${hovered ? 1.1 : 1}`
-              }}
-              color={categoriesColors[index % categoriesColors.length]}
-            />
-            <Link
-              style={{ fontSize: 20, fontWeight: 700, color: 'black' }}
-              to={'/categories/' + category.type}
-            >
-              {category.title}
-            </Link>
+        <CardContent sx={{ height: '100%' }}>
+          <Stack
+            direction={'column'}
+            height={'100%'}
+            justifyContent={'space-between'}
+          >
+            <Box>
+              <Stack direction={'row'} spacing={2} alignItems={'center'}>
+                <Icon
+                  icon={category.icon}
+                  fontSize={'60px'}
+                  style={{
+                    transform: `scale(${hovered ? 1.1 : 1}`
+                  }}
+                  color={categoriesColors[index % categoriesColors.length]}
+                />
+                <Link
+                  style={{ fontSize: 20, fontWeight: 700, color: 'black' }}
+                  to={'/categories/' + category.type}
+                >
+                  {category.title}
+                </Link>
+              </Stack>
+              <Typography sx={{ mt: 2 }}>{category.description}</Typography>
+            </Box>
+            <Grid mt={1} container spacing={2}>
+              <Grid item xs={12} md={6}>
+                <Button
+                  fullWidth
+                  onClick={() => navigate('/categories/' + category.type)}
+                  variant={'contained'}
+                >{`See all ${category.title}`}</Button>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Button
+                  sx={{ backgroundColor: 'white' }}
+                  fullWidth
+                  onClick={() => navigate(category.example.path)}
+                  variant={'outlined'}
+                >{`Try ${category.example.title}`}</Button>
+              </Grid>
+            </Grid>
           </Stack>
-          <Typography sx={{ mt: 2 }}>{category.description}</Typography>
-          <Grid mt={1} container spacing={2}>
-            <Grid item xs={12} md={6}>
-              <Button
-                fullWidth
-                onClick={() => navigate('/categories/' + category.type)}
-                variant={'contained'}
-              >{`See all ${category.title}`}</Button>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Button
-                sx={{ backgroundColor: 'white' }}
-                fullWidth
-                onClick={() => navigate(category.example.path)}
-                variant={'outlined'}
-              >{`Try ${category.example.title}`}</Button>
-            </Grid>
-          </Grid>
         </CardContent>
       </Card>
     </Grid>

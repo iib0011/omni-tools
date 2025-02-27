@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: examples">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: json pretty">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/create-tool.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/create-tool.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/examples/ToolExamples.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/ToolExamples.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Categories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/split/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/split/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/string.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/string.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,22 +262,6 @@
       <workItem from="1740503199053" duration="4853000" />
       <workItem from="1740584243965" duration="17000" />
       <workItem from="1740613094492" duration="9615000" />
-    </task>
-    <task id="LOCAL-00080" summary="fix: ci">
-      <option name="closed" value="true" />
-      <created>1719588378907</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1719588378907</updated>
-    </task>
-    <task id="LOCAL-00081" summary="fix: ci">
-      <option name="closed" value="true" />
-      <created>1719588501953</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1719588501953</updated>
     </task>
     <task id="LOCAL-00082" summary="fix: ci">
       <option name="closed" value="true" />
@@ -665,7 +639,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740620866551</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="feat: json pretty">
+      <option name="closed" value="true" />
+      <created>1740661424202</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1740661424202</updated>
+    </task>
+    <task id="LOCAL-00130" summary="feat: json pretty">
+      <option name="closed" value="true" />
+      <created>1740661540908</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1740661540908</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -724,7 +714,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: rotate ui" />
     <MESSAGE value="feat: shuffle ui" />
     <MESSAGE value="refactor: remove validation schema" />
     <MESSAGE value="refactor: optimize imports" />
@@ -749,7 +738,8 @@
     <MESSAGE value="chore: show tooloptions in example" />
     <MESSAGE value="refact: examples" />
     <MESSAGE value="fix: examples" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: examples" />
+    <MESSAGE value="feat: json pretty" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: json pretty" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
