@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import * as Yup from 'yup';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import ToolOptions from '@components/options/ToolOptions';
+import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
 import { mergeText } from './service';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
@@ -64,8 +64,8 @@ build a rocket ship and fly away`,
     sampleResult: `clean the house and go shopping and feed the cat and make dinner and build a rocket ship and fly away`,
     requiredOptions: {
       joinCharacter: 'and',
-      deleteBlankLines: true,
-      deleteTrailingSpaces: true
+      deleteBlank: true,
+      deleteTrailing: true
     }
   },
   {
@@ -80,8 +80,8 @@ keyboard`,
     sampleResult: `computer, memory, processor, mouse, keyboard`,
     requiredOptions: {
       joinCharacter: ',',
-      deleteBlankLines: false,
-      deleteTrailingSpaces: false
+      deleteBlank: false,
+      deleteTrailing: false
     }
   },
   {
@@ -103,8 +103,8 @@ s
     sampleResult: `Textabulous!`,
     requiredOptions: {
       joinCharacter: '',
-      deleteBlankLines: false,
-      deleteTrailingSpaces: false
+      deleteBlank: false,
+      deleteTrailing: false
     }
   }
 ];
@@ -128,6 +128,34 @@ export default function JoinText() {
     }
   }
 
+  const getGroups: GetGroupsType<typeof initialValues> = ({
+    values,
+    updateField
+  }) => [
+    {
+      title: 'Text Merged Options',
+      component: (
+        <TextFieldWithDesc
+          placeholder={mergeOptions.placeholder}
+          value={values['joinCharacter']}
+          onOwnChange={(value) => updateField(mergeOptions.accessor, value)}
+          description={mergeOptions.description}
+        />
+      )
+    },
+    {
+      title: 'Blank Lines and Trailing Spaces',
+      component: blankTrailingOptions.map((option) => (
+        <CheckboxWithDesc
+          key={option.accessor}
+          title={option.title}
+          checked={!!values[option.accessor]}
+          onChange={(value) => updateField(option.accessor, value)}
+          description={option.description}
+        />
+      ))
+    }
+  ];
   return (
     <Box>
       <ToolInputAndResult
@@ -142,33 +170,7 @@ export default function JoinText() {
       />
       <ToolOptions
         compute={compute}
-        getGroups={({ values, updateField }) => [
-          {
-            title: 'Text Merged Options',
-            component: (
-              <TextFieldWithDesc
-                placeholder={mergeOptions.placeholder}
-                value={values['joinCharacter']}
-                onOwnChange={(value) =>
-                  updateField(mergeOptions.accessor, value)
-                }
-                description={mergeOptions.description}
-              />
-            )
-          },
-          {
-            title: 'Blank Lines and Trailing Spaces',
-            component: blankTrailingOptions.map((option) => (
-              <CheckboxWithDesc
-                key={option.accessor}
-                title={option.title}
-                checked={!!values[option.accessor]}
-                onChange={(value) => updateField(option.accessor, value)}
-                description={option.description}
-              />
-            ))
-          }
-        ]}
+        getGroups={getGroups}
         initialValues={initialValues}
         input={input}
       />
@@ -182,8 +184,11 @@ export default function JoinText() {
         subtitle="Click to try!"
         exampleCards={exampleCards.map((card) => ({
           ...card,
-          changeInputResult
+          changeInputResult,
+          getGroups
         }))}
+        getGroups={getGroups}
+        changeInputResult={changeInputResult}
       />
     </Box>
   );

@@ -1,32 +1,33 @@
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import ExampleCard from './ExampleCard';
+import React from 'react';
+import { GetGroupsType } from '@components/options/ToolOptions';
 
-export interface ExampleCardProps {
+export interface ExampleCardProps<T> {
   title: string;
   description: string;
   sampleText: string;
   sampleResult: string;
-  requiredOptions: RequiredOptionsProps;
+  requiredOptions: T;
+  changeInputResult: (input: string, result: string) => void;
+  getGroups: GetGroupsType<T>;
+}
+
+interface ExampleProps<T> {
+  title: string;
+  subtitle: string;
+  exampleCards: ExampleCardProps<T>[];
+  getGroups: GetGroupsType<T>;
   changeInputResult: (input: string, result: string) => void;
 }
 
-export interface RequiredOptionsProps {
-  joinCharacter: string;
-  deleteBlankLines: boolean;
-  deleteTrailingSpaces: boolean;
-}
-
-interface ExampleProps {
-  title: string;
-  subtitle: string;
-  exampleCards: ExampleCardProps[];
-}
-
-export default function Examples({
+export default function Examples<T>({
   title,
   subtitle,
-  exampleCards
-}: ExampleProps) {
+  exampleCards,
+  getGroups,
+  changeInputResult
+}: ExampleProps<T>) {
   return (
     <Box id={'examples'} mt={4}>
       <Box mt={4} display="flex" gap={1} alignItems="center">
@@ -48,7 +49,8 @@ export default function Examples({
                 sampleText={card.sampleText}
                 sampleResult={card.sampleResult}
                 requiredOptions={card.requiredOptions}
-                changeInputResult={card.changeInputResult}
+                getGroups={getGroups}
+                changeInputResult={changeInputResult}
               />
             </Grid>
           ))}

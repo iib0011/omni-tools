@@ -7,7 +7,7 @@ import ToolOptionGroups, { ToolOptionGroup } from './ToolOptionGroups';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import * as Yup from 'yup';
 
-type UpdateField<T> = <Y extends keyof T>(field: Y, value: T[Y]) => void;
+export type UpdateField<T> = <Y extends keyof T>(field: Y, value: T[Y]) => void;
 
 const FormikListenerComponent = <T,>({
   initialValues,
@@ -68,6 +68,10 @@ const ToolBody = <T,>({
     </Stack>
   );
 };
+
+export type GetGroupsType<T> = (
+  formikProps: FormikProps<T> & { updateField: UpdateField<T> }
+) => ToolOptionGroup[];
 export default function ToolOptions<T extends FormikValues>({
   children,
   initialValues,
@@ -82,9 +86,7 @@ export default function ToolOptions<T extends FormikValues>({
   validationSchema?: any | (() => any);
   compute: (optionsValues: T, input: any) => void;
   input?: any;
-  getGroups: (
-    formikProps: FormikProps<T> & { updateField: UpdateField<T> }
-  ) => ToolOptionGroup[];
+  getGroups: GetGroupsType<T>;
   formRef?: RefObject<FormikProps<T>>;
 }) {
   const theme = useTheme();
