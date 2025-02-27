@@ -1,9 +1,9 @@
 import { Box } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import * as Yup from 'yup';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import ToolOptions from '@components/options/ToolOptions';
+import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
 import { mergeText } from './service';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
@@ -11,14 +11,18 @@ import ToolInputAndResult from '@components/ToolInputAndResult';
 
 import ToolInfo from '@components/ToolInfo';
 import Separator from '@components/Separator';
-import Examples from '@components/examples/Examples';
+import ToolExamples, {
+  CardExampleType
+} from '@components/examples/ToolExamples';
+import { FormikProps } from 'formik';
+import { ToolComponentProps } from '@tools/defineTool';
 
 const initialValues = {
   joinCharacter: '',
   deleteBlank: true,
   deleteTrailing: true
 };
-
+type InitialValuesType = typeof initialValues;
 const validationSchema = Yup.object().shape({
   joinCharacter: Yup.string().required('Join character is required'),
   deleteBlank: Yup.boolean().required('Delete blank is required'),
@@ -29,13 +33,13 @@ const mergeOptions = {
   placeholder: 'Join Character',
   description:
     'Symbol that connects broken\n' + 'pieces of text. (Space by default.)\n',
-  accessor: 'joinCharacter' as keyof typeof initialValues
+  accessor: 'joinCharacter' as keyof InitialValuesType
 };
 
 const blankTrailingOptions: {
   title: string;
   description: string;
-  accessor: keyof typeof initialValues;
+  accessor: keyof InitialValuesType;
 }[] = [
   {
     title: 'Delete Blank Lines',
@@ -49,7 +53,7 @@ const blankTrailingOptions: {
   }
 ];
 
-const exampleCards = [
+const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Merge a To-Do List',
     description:
@@ -62,10 +66,10 @@ feed the cat
 make dinner
 build a rocket ship and fly away`,
     sampleResult: `clean the house and go shopping and feed the cat and make dinner and build a rocket ship and fly away`,
-    requiredOptions: {
+    sampleOptions: {
       joinCharacter: 'and',
-      deleteBlankLines: true,
-      deleteTrailingSpaces: true
+      deleteBlank: true,
+      deleteTrailing: true
     }
   },
   {
@@ -78,10 +82,10 @@ processor
 mouse
 keyboard`,
     sampleResult: `computer, memory, processor, mouse, keyboard`,
-    requiredOptions: {
+    sampleOptions: {
       joinCharacter: ',',
-      deleteBlankLines: false,
-      deleteTrailingSpaces: false
+      deleteBlank: false,
+      deleteTrailing: false
     }
   },
   {
@@ -101,33 +105,51 @@ u
 s
 !`,
     sampleResult: `Textabulous!`,
-    requiredOptions: {
+    sampleOptions: {
       joinCharacter: '',
-      deleteBlankLines: false,
-      deleteTrailingSpaces: false
+      deleteBlank: false,
+      deleteTrailing: false
     }
   }
 ];
 
-export default function JoinText() {
+export default function JoinText({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-
-  const compute = (optionsValues: typeof initialValues, input: any) => {
+  const formRef = useRef<FormikProps<InitialValuesType>>(null);
+  const compute = (optionsValues: InitialValuesType, input: any) => {
     const { joinCharacter, deleteBlank, deleteTrailing } = optionsValues;
     setResult(mergeText(input, deleteBlank, deleteTrailing, joinCharacter));
   };
 
-  function changeInputResult(input: string, result: string) {
-    setInput(input);
-    setResult(result);
-
-    const toolsElement = document.getElementById('tool');
-    if (toolsElement) {
-      toolsElement.scrollIntoView({ behavior: 'smooth' });
+  const getGroups: GetGroupsType<InitialValuesType> = ({
+    values,
+    updateField
+  }) => [
+    {
+      title: 'Text Merged Options',
+      component: (
+        <TextFieldWithDesc
+          placeholder={mergeOptions.placeholder}
+          value={values['joinCharacter']}
+          onOwnChange={(value) => updateField(mergeOptions.accessor, value)}
+          description={mergeOptions.description}
+        />
+      )
+    },
+    {
+      title: 'Blank Lines and Trailing Spaces',
+      component: blankTrailingOptions.map((option) => (
+        <CheckboxWithDesc
+          key={option.accessor}
+          title={option.title}
+          checked={!!values[option.accessor]}
+          onChange={(value) => updateField(option.accessor, value)}
+          description={option.description}
+        />
+      ))
     }
-  }
-
+  ];
   return (
     <Box>
       <ToolInputAndResult
@@ -141,34 +163,9 @@ export default function JoinText() {
         result={<ToolTextResult title={'Joined Text'} value={result} />}
       />
       <ToolOptions
+        formRef={formRef}
         compute={compute}
-        getGroups={({ values, updateField }) => [
-          {
-            title: 'Text Merged Options',
-            component: (
-              <TextFieldWithDesc
-                placeholder={mergeOptions.placeholder}
-                value={values['joinCharacter']}
-                onOwnChange={(value) =>
-                  updateField(mergeOptions.accessor, value)
-                }
-                description={mergeOptions.description}
-              />
-            )
-          },
-          {
-            title: 'Blank Lines and Trailing Spaces',
-            component: blankTrailingOptions.map((option) => (
-              <CheckboxWithDesc
-                key={option.accessor}
-                title={option.title}
-                checked={!!values[option.accessor]}
-                onChange={(value) => updateField(option.accessor, value)}
-                description={option.description}
-              />
-            ))
-          }
-        ]}
+        getGroups={getGroups}
         initialValues={initialValues}
         input={input}
       />
@@ -177,13 +174,11 @@ export default function JoinText() {
         description="With this tool you can join parts of the text together. It takes a list of text values, separated by newlines, and merges them together. You can set the character that will be placed between the parts of the combined text. Also, you can ignore all empty lines and remove spaces and tabs at the end of all lines. Textabulous!"
       />
       <Separator backgroundColor="#5581b5" margin="50px" />
-      <Examples
-        title="Text Joiner Examples"
-        subtitle="Click to try!"
-        exampleCards={exampleCards.map((card) => ({
-          ...card,
-          changeInputResult
-        }))}
+      <ToolExamples
+        title={title}
+        exampleCards={exampleCards}
+        getGroups={getGroups}
+        formRef={formRef}
       />
     </Box>
   );

@@ -26,7 +26,7 @@ function ToolLinks() {
 
   return (
     <Grid container spacing={2} mt={1}>
-      <Grid item md={12} lg={4}>
+      <Grid item md={12} lg={6}>
         <StyledButton
           sx={{ backgroundColor: 'white' }}
           fullWidth
@@ -36,16 +36,16 @@ function ToolLinks() {
           Use This Tool
         </StyledButton>
       </Grid>
-      <Grid item md={12} lg={4}>
+      <Grid item md={12} lg={6}>
         <StyledButton fullWidth variant="outlined" href="#examples">
           See Examples
         </StyledButton>
       </Grid>
-      <Grid item md={12} lg={4}>
-        <StyledButton fullWidth variant="outlined" href="#tour">
-          Learn How to Use
-        </StyledButton>
-      </Grid>
+      {/*<Grid item md={12} lg={4}>*/}
+      {/*  <StyledButton fullWidth variant="outlined" href="#tour">*/}
+      {/*    Learn How to Use*/}
+      {/*  </StyledButton>*/}
+      {/*</Grid>*/}
     </Grid>
   );
 }
