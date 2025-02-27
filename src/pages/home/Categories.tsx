@@ -1,12 +1,12 @@
 import { getToolsByCategory } from '@tools/index';
 import Grid from '@mui/material/Grid';
 import { Card, CardContent, Stack } from '@mui/material';
-import { HugeiconsIcon } from '@hugeicons/react';
 import { Link, useNavigate } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
 import { categoriesColors } from 'config/uiConfig';
+import { Icon } from '@iconify/react';
 
 type ArrayElement<ArrayType extends readonly unknown[]> =
   ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
@@ -20,7 +20,6 @@ const SingleCategory = function ({
 }) {
   const navigate = useNavigate();
   const [hovered, setHovered] = useState<boolean>(false);
-  const Icon = category.icon;
   const toggleHover = () => setHovered((prevState) => !prevState);
   return (
     <Grid
@@ -38,8 +37,9 @@ const SingleCategory = function ({
       >
         <CardContent>
           <Stack direction={'row'} spacing={2} alignItems={'center'}>
-            <HugeiconsIcon
-              icon={Icon}
+            <Icon
+              icon={category.icon}
+              fontSize={'60px'}
               style={{
                 transform: `scale(${hovered ? 1.1 : 1}`
               }}

@@ -12,7 +12,13 @@ interface ToolOptions {
   shortDescription: string;
 }
 
-export type ToolCategory = 'string' | 'png' | 'number' | 'gif' | 'list';
+export type ToolCategory =
+  | 'string'
+  | 'png'
+  | 'number'
+  | 'gif'
+  | 'list'
+  | 'json';
 
 export interface DefinedTool {
   type: ToolCategory;

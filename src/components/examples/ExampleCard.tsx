@@ -17,7 +17,7 @@ export interface ExampleCardProps<T> {
   sampleText: string;
   sampleResult: string;
   sampleOptions: T;
-  changeInputResult: (newOptions: T) => void;
+  changeInputResult: (newInput: string, newOptions: T) => void;
   getGroups: GetGroupsType<T>;
 }
 
@@ -35,7 +35,7 @@ export default function ExampleCard<T>({
     <Card
       raised
       onClick={() => {
-        changeInputResult(sampleOptions);
+        changeInputResult(sampleText, sampleOptions);
       }}
       sx={{
         bgcolor: theme.palette.background.default,

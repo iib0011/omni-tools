@@ -79,6 +79,7 @@ import React from 'react';
 import * as Yup from 'yup';
 
 const initialValues = {};
+type InitialValuesType = typeof initialValues;
 const validationSchema = Yup.object({
   // splitSeparator: Yup.string().required('The separator is required')
 });

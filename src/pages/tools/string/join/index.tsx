@@ -179,6 +179,7 @@ export default function JoinText({ title }: ToolComponentProps) {
         exampleCards={exampleCards}
         getGroups={getGroups}
         formRef={formRef}
+        setInput={setInput}
       />
     </Box>
   );

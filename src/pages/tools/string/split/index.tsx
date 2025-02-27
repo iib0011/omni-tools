@@ -211,6 +211,7 @@ export default function SplitText({ title }: ToolComponentProps) {
         exampleCards={exampleCards}
         getGroups={getGroups}
         formRef={formRef}
+        setInput={setInput}
       />
     </Box>
   );

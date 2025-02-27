@@ -15,6 +15,7 @@ export interface ExampleProps<T> {
   exampleCards: CardExampleType<T>[];
   getGroups: GetGroupsType<T>;
   formRef: React.RefObject<FormikProps<T>>;
+  setInput: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export default function ToolExamples<T>({
@@ -22,9 +23,11 @@ export default function ToolExamples<T>({
   subtitle,
   exampleCards,
   getGroups,
-  formRef
+  formRef,
+  setInput
 }: ExampleProps<T>) {
-  function changeInputResult(newOptions: T) {
+  function changeInputResult(newInput: string, newOptions: T) {
+    setInput(newInput);
     formRef.current?.setValues(newOptions);
     const toolsElement = document.getElementById('tool');
     if (toolsElement) {
