@@ -38,3 +38,5 @@ yarn-error.log*
 
 /test-results
 /playwright-report
+
+dist.zip

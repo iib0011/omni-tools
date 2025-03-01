@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: jakarta font">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: img">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +85,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
     &quot;npm.lint.executor&quot;: &quot;Run&quot;,
     &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
@@ -124,19 +127,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
-    <configuration name="Dockerfile build" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="imageTag" value="omnitools" />
-          <option name="buildCliOptions" value="--target build" />
-          <option name="containerName" value="omni-tools" />
-          <option name="publishAllPorts" value="true" />
-          <option name="sourceFilePath" value="Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="npm.build">
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -149,6 +140,16 @@
       <deployment type="dockerfile">
         <settings />
       </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -183,18 +184,18 @@
     </configuration>
     <list>
       <item itemvalue="Docker.Dockerfile" />
-      <item itemvalue="Docker.Dockerfile build" />
+      <item itemvalue="npm.build" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.dev" />
       <item itemvalue="npm.lint" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.lint" />
-        <item itemvalue="Docker.Dockerfile build" />
       </list>
     </recent_temporary>
   </component>
@@ -264,15 +265,9 @@
       <workItem from="1740613094492" duration="9615000" />
       <workItem from="1740664266923" duration="145000" />
       <workItem from="1740665190253" duration="496000" />
-      <workItem from="1740670449847" duration="2091000" />
-    </task>
-    <task id="LOCAL-00087" summary="chore: idea config">
-      <option name="closed" value="true" />
-      <created>1719600739052</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1719600739052</updated>
+      <workItem from="1740670449847" duration="4776000" />
+      <workItem from="1740702343843" duration="657000" />
+      <workItem from="1740788381920" duration="465000" />
     </task>
     <task id="LOCAL-00088" summary="feat: sort list">
       <option name="closed" value="true" />
@@ -658,7 +653,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740665609483</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="chore: img">
+      <option name="closed" value="true" />
+      <created>1740680778110</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1740680778110</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -717,7 +720,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: update readme" />
     <MESSAGE value="feat: compress png" />
     <MESSAGE value="fix: compress png" />
     <MESSAGE value="fix: docs" />
@@ -742,7 +744,8 @@
     <MESSAGE value="chore: remove prettify test" />
     <MESSAGE value="chore: prettify json in home" />
     <MESSAGE value="feat: jakarta font" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: jakarta font" />
+    <MESSAGE value="chore: img" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: img" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
