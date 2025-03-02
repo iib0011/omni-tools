@@ -6,7 +6,7 @@ interface ToolOptions {
   path: string;
   component: LazyExoticComponent<JSXElementConstructor<ToolComponentProps>>;
   keywords: string[];
-  icon?: IconifyIcon | string;
+  icon: IconifyIcon | string;
   name: string;
   description: string;
   shortDescription: string;
@@ -26,7 +26,7 @@ export interface DefinedTool {
   name: string;
   description: string;
   shortDescription: string;
-  icon?: IconifyIcon | string;
+  icon: IconifyIcon | string;
   keywords: string[];
   component: () => JSX.Element;
 }

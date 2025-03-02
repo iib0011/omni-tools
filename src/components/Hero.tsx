@@ -7,6 +7,7 @@ import { DefinedTool } from '@tools/defineTool';
 import { filterTools, tools } from '@tools/index';
 import { useNavigate } from 'react-router-dom';
 import _ from 'lodash';
+import { Icon } from '@iconify/react';
 
 const exampleTools: { label: string; url: string }[] = [
   {
@@ -97,10 +98,13 @@ export default function Hero() {
             {...props}
             onClick={() => navigate('/' + option.path)}
           >
-            <Box>
-              <Typography fontWeight={'bold'}>{option.name}</Typography>
-              <Typography fontSize={12}>{option.shortDescription}</Typography>
-            </Box>
+            <Stack direction={'row'} spacing={2} alignItems={'center'}>
+              <Icon fontSize={20} icon={option.icon} />
+              <Box>
+                <Typography fontWeight={'bold'}>{option.name}</Typography>
+                <Typography fontSize={12}>{option.shortDescription}</Typography>
+              </Box>
+            </Stack>
           </Box>
         )}
         onKeyDown={(event) => {

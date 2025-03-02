@@ -78,8 +78,8 @@ import { Box } from '@mui/material';
 import React from 'react';
 import * as Yup from 'yup';
 
-const initialValues = {};
-type InitialValuesType = typeof initialValues;
+type InitialValuesType = {};
+const initialValues: InitialValuesType = {};
 const validationSchema = Yup.object({
   // splitSeparator: Yup.string().required('The separator is required')
 });
