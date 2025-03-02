@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: tsc">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/allTools/AllTools.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/allTools/AllTools.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/allTools/ToolCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/allTools/ToolCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="style: optimizations">
+      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,15 +289,7 @@
       <workItem from="1740788856134" duration="659000" />
       <workItem from="1740880919391" duration="4395000" />
       <workItem from="1740923024259" duration="23000" />
-      <workItem from="1740933006573" duration="3365000" />
-    </task>
-    <task id="LOCAL-00091" summary="fix: style">
-      <option name="closed" value="true" />
-      <created>1720564711406</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1720564711406</updated>
+      <workItem from="1740933006573" duration="3679000" />
     </task>
     <task id="LOCAL-00092" summary="feat: find unique ui">
       <option name="closed" value="true" />
@@ -688,7 +675,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740884971378</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="style: optimizations">
+      <option name="closed" value="true" />
+      <created>1740936527951</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1740936527951</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -747,7 +742,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: compress png" />
     <MESSAGE value="fix: docs" />
     <MESSAGE value="feat: funding" />
     <MESSAGE value="feat: ui changes" />
@@ -772,7 +766,8 @@
     <MESSAGE value="docs: readme" />
     <MESSAGE value="feat: remove duplicate lines" />
     <MESSAGE value="fix: tsc" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: tsc" />
+    <MESSAGE value="style: optimizations" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: optimizations" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
