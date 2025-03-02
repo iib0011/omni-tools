@@ -28,7 +28,8 @@ export default function ToolLayout({
       .map((tool) => ({
         title: tool.name,
         description: tool.shortDescription,
-        link: '/' + tool.path
+        link: '/' + tool.path,
+        icon: tool.icon
       })) ?? [];
 
   return (

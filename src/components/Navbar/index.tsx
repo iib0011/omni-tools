@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
@@ -9,12 +9,14 @@ import logo from 'assets/logo.png';
 import {
   Drawer,
   List,
+  ListItem,
   ListItemButton,
   ListItemText,
   Stack
 } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import { Icon } from '@iconify/react';
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
@@ -28,22 +30,51 @@ const Navbar: React.FC = () => {
     // { label: 'Features', path: '/features' }
     // { label: 'About Us', path: '/about-us' }
   ];
-
+  const buttons: ReactNode[] = [
+    <Icon
+      onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
+      style={{ cursor: 'pointer' }}
+      fontSize={30}
+      icon={'ic:baseline-discord'}
+    />,
+    <iframe
+      src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
+      frameBorder="0"
+      scrolling="0"
+      width="130"
+      height="30"
+      title="GitHub"
+    ></iframe>,
+    <Button
+      onClick={() => {
+        window.open('https://buymeacoffee.com/iib0011', '_blank');
+      }}
+      sx={{ borderRadius: '100px' }}
+      variant={'contained'}
+      startIcon={
+        <Icon
+          style={{ cursor: 'pointer' }}
+          fontSize={25}
+          icon={'mdi:heart-outline'}
+        />
+      }
+    >
+      Buy me a coffee
+    </Button>
+  ];
   const drawerList = (
     <List>
       {navItems.map((navItem) => (
-        <ListItemButton onClick={() => navigate(navItem.path)}>
+        <ListItemButton
+          key={navItem.path}
+          onClick={() => navigate(navItem.path)}
+        >
           <ListItemText primary={navItem.label} />
         </ListItemButton>
       ))}
-      <iframe
-        src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large"
-        frameBorder="0"
-        scrolling="0"
-        width="170"
-        height="30"
-        title="GitHub"
-      ></iframe>
+      {buttons.map((button) => (
+        <ListItem>{button}</ListItem>
+      ))}
     </List>
   );
 
@@ -51,15 +82,14 @@ const Navbar: React.FC = () => {
     <AppBar
       position="static"
       style={{
-        backgroundColor: 'white',
+        backgroundColor: '#F5F5FA',
         color: 'black'
       }}
     >
       <Toolbar
         sx={{
           justifyContent: 'space-between',
-          alignItems: 'center',
-          boxShadow: '0px 2px 2px #C8C9CE'
+          alignItems: 'center'
         }}
       >
         <img
@@ -90,7 +120,7 @@ const Navbar: React.FC = () => {
             </Drawer>
           </>
         ) : (
-          <Stack direction={'row'} spacing={2}>
+          <Stack direction={'row'} spacing={3} alignItems={'center'}>
             {navItems.map((item) => (
               <Button
                 key={item.label}
@@ -111,14 +141,7 @@ const Navbar: React.FC = () => {
                 </Link>
               </Button>
             ))}
-            <iframe
-              src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
-              frameBorder="0"
-              scrolling="0"
-              width="170"
-              height="30"
-              title="GitHub"
-            ></iframe>
+            {buttons}
           </Stack>
         )}
       </Toolbar>

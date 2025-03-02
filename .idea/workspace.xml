@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: remove duplicate lines">
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/duplicate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/truncate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/truncate/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/wrap/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/wrap/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/palindrome/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/uppercase/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/uppercase/meta.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: tsc">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/allTools/AllTools.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/allTools/AllTools.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/allTools/ToolCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/allTools/ToolCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +33,12 @@
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;assignee&quot;: &quot;iib0011&quot;
+    }
+  ],
   &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;iib0011&quot;
   }
 }</component>
@@ -65,51 +66,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Docker.Dockerfile build.executor": "Run",
-    "Docker.Dockerfile.executor": "Run",
-    "Playwright.JoinText Component.executor": "Run",
-    "Playwright.JoinText Component.should merge text pieces with specified join character.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.compute function (1).executor": "Run",
-    "Vitest.compute function.executor": "Run",
-    "Vitest.mergeText.executor": "Run",
-    "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
-    "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
-    "Vitest.removeDuplicateLines function.executor": "Run",
-    "Vitest.removeDuplicateLines function.newlines option.executor": "Run",
-    "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/public/assets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.lint.executor": "Run",
-    "npm.prebuild.executor": "Run",
-    "npm.script:create:tool.executor": "Run",
-    "npm.test.executor": "Run",
-    "npm.test:e2e.executor": "Run",
-    "npm.test:e2e:run.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
-    "ts.external.directory.path": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.Dockerfile build.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.JoinText Component.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.JoinText Component.should merge text pieces with specified join character.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.compute function (1).executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.compute function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.newlines option.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ibrahima/IdeaProjects/omni-tools/public/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
+    &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
+    &quot;npm.script:create:tool.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e:run.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -135,7 +136,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
     </key>
   </component>
-  <component name="RunManager" selected="Vitest.removeDuplicateLines function">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="removeDuplicateLines function" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -213,10 +214,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="Vitest.removeDuplicateLines function" />
         <item itemvalue="Vitest.removeDuplicateLines function.newlines option" />
         <item itemvalue="Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -291,15 +292,9 @@
       <workItem from="1740702343843" duration="657000" />
       <workItem from="1740788381920" duration="465000" />
       <workItem from="1740788856134" duration="659000" />
-      <workItem from="1740880919391" duration="3993000" />
-    </task>
-    <task id="LOCAL-00090" summary="fix: misc">
-      <option name="closed" value="true" />
-      <created>1720558690146</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1720558690147</updated>
+      <workItem from="1740880919391" duration="4395000" />
+      <workItem from="1740923024259" duration="23000" />
+      <workItem from="1740933006573" duration="3365000" />
     </task>
     <task id="LOCAL-00091" summary="fix: style">
       <option name="closed" value="true" />
@@ -685,7 +680,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740884332735</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="fix: tsc">
+      <option name="closed" value="true" />
+      <created>1740884971377</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1740884971378</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -748,7 +751,6 @@
     <MESSAGE value="fix: docs" />
     <MESSAGE value="feat: funding" />
     <MESSAGE value="feat: ui changes" />
-    <MESSAGE value="fix: tsc" />
     <MESSAGE value="fix: readme" />
     <MESSAGE value="fix: broken links" />
     <MESSAGE value="chore: style buttons" />
@@ -769,7 +771,8 @@
     <MESSAGE value="chore: img" />
     <MESSAGE value="docs: readme" />
     <MESSAGE value="feat: remove duplicate lines" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: remove duplicate lines" />
+    <MESSAGE value="fix: tsc" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: tsc" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
