@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('string', {
   name: 'Randomize case',
   path: 'randomize-case',
-  // image,
+  icon: '',
   description: '',
   shortDescription: '',
   keywords: ['randomize', 'case'],

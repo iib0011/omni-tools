@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('string', {
   name: 'Create palindrome',
   path: 'create-palindrome',
-  // image,
+  icon: '',
   description: '',
   shortDescription: '',
   keywords: ['create', 'palindrome'],

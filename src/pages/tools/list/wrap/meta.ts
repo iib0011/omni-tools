@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('list', {
   name: 'Wrap',
   path: 'wrap',
-  // image,
+  icon: '',
   description: '',
   shortDescription: '',
   keywords: ['wrap'],

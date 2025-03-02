@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('string', {
   name: 'Uppercase',
   path: 'uppercase',
-  // image,
+  icon: '',
   description: '',
   shortDescription: '',
   keywords: ['uppercase'],

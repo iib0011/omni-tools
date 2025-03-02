@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="docs: readme">
-      <change afterPath="$PROJECT_DIR$/.codebuddy/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.codebuddy/summary.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/meta.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/remove-duplicate-lines.service.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/create-tool.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/create-tool.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: remove duplicate lines">
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/duplicate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/truncate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/truncate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/wrap/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/wrap/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/palindrome/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/uppercase/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/uppercase/meta.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,15 +291,7 @@
       <workItem from="1740702343843" duration="657000" />
       <workItem from="1740788381920" duration="465000" />
       <workItem from="1740788856134" duration="659000" />
-      <workItem from="1740880919391" duration="3339000" />
-    </task>
-    <task id="LOCAL-00089" summary="feat: find most popular ui">
-      <option name="closed" value="true" />
-      <created>1720546921899</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1720546921899</updated>
+      <workItem from="1740880919391" duration="3993000" />
     </task>
     <task id="LOCAL-00090" summary="fix: misc">
       <option name="closed" value="true" />
@@ -687,7 +677,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740788899030</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="feat: remove duplicate lines">
+      <option name="closed" value="true" />
+      <created>1740884332734</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1740884332735</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -746,7 +744,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: compress png" />
     <MESSAGE value="fix: compress png" />
     <MESSAGE value="fix: docs" />
     <MESSAGE value="feat: funding" />
@@ -771,7 +768,8 @@
     <MESSAGE value="feat: jakarta font" />
     <MESSAGE value="chore: img" />
     <MESSAGE value="docs: readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: readme" />
+    <MESSAGE value="feat: remove duplicate lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: remove duplicate lines" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

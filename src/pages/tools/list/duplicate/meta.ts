@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('list', {
   name: 'Duplicate',
   path: 'duplicate',
-  // image,
+  icon: '',
   description: '',
   shortDescription: '',
   keywords: ['duplicate'],

@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('string', {
   name: 'Extract substring',
   path: 'extract-substring',
-  // image,
+  icon: '',
   description: '',
   shortDescription: '',
   keywords: ['extract', 'substring'],
