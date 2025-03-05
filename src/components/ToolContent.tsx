@@ -10,7 +10,7 @@ import ToolExamples, {
 } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 
-interface ToolContentPropsBase<T> extends ToolComponentProps {
+interface ToolContentPropsBase<T, I> extends ToolComponentProps {
   // Input/Output components
   inputComponent: ReactNode;
   resultComponent: ReactNode;
@@ -20,7 +20,7 @@ interface ToolContentPropsBase<T> extends ToolComponentProps {
   getGroups: GetGroupsType<T>;
 
   // Computation function
-  compute: (optionsValues: T, input: any) => void;
+  compute: (optionsValues: T, input: I) => void;
 
   // Tool info (optional)
   toolInfo?: {
@@ -29,27 +29,29 @@ interface ToolContentPropsBase<T> extends ToolComponentProps {
   };
 
   // Input value to pass to the compute function
-  input: any;
+  input: I;
 
   // Validation schema (optional)
   validationSchema?: any;
 }
 
-interface ToolContentPropsWithExamples<T> extends ToolContentPropsBase<T> {
+interface ToolContentPropsWithExamples<T, I>
+  extends ToolContentPropsBase<T, I> {
   exampleCards: CardExampleType<T>[];
-  setInput: React.Dispatch<React.SetStateAction<string>>;
+  setInput: React.Dispatch<React.SetStateAction<I>>;
 }
 
-interface ToolContentPropsWithoutExamples<T> extends ToolContentPropsBase<T> {
-  exampleCards?: undefined;
-  setInput?: undefined;
+interface ToolContentPropsWithoutExamples<T, I>
+  extends ToolContentPropsBase<T, I> {
+  exampleCards?: never;
+  setInput?: never;
 }
 
-type ToolContentProps<T> =
-  | ToolContentPropsWithExamples<T>
-  | ToolContentPropsWithoutExamples<T>;
+type ToolContentProps<T, I> =
+  | ToolContentPropsWithExamples<T, I>
+  | ToolContentPropsWithoutExamples<T, I>;
 
-export default function ToolContent<T extends FormikValues>({
+export default function ToolContent<T extends FormikValues, I>({
   title,
   inputComponent,
   resultComponent,
@@ -61,7 +63,7 @@ export default function ToolContent<T extends FormikValues>({
   input,
   setInput,
   validationSchema
-}: ToolContentProps<T>) {
+}: ToolContentProps<T, I>) {
   const formRef = useRef<FormikProps<T>>(null);
 
   return (

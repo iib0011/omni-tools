@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { GetGroupsType } from '@components/options/ToolOptions';
@@ -7,7 +7,6 @@ import { reverseList, SplitOperatorType } from './service';
 import SimpleRadio from '@components/options/SimpleRadio';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { CardExampleType } from '@components/examples/ToolExamples';
-import { FormikProps } from 'formik';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolContent from '@components/ToolContent';
 

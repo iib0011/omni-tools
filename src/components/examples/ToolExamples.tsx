@@ -15,7 +15,7 @@ export interface ExampleProps<T> {
   exampleCards: CardExampleType<T>[];
   getGroups: GetGroupsType<T>;
   formRef: React.RefObject<FormikProps<T>>;
-  setInput: React.Dispatch<React.SetStateAction<string>>;
+  setInput: React.Dispatch<React.SetStateAction<any>>;
 }
 
 export default function ToolExamples<T>({

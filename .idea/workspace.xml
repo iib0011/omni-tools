@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="style: optimizations">
-      <change afterPath="$PROJECT_DIR$/src/components/ToolContent.tsx" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: ToolContent.tsx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolContent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/examples/ToolExamples.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/ToolExamples.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/list/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -292,14 +294,6 @@
       <workItem from="1740880919391" duration="4395000" />
       <workItem from="1740923024259" duration="23000" />
       <workItem from="1740933006573" duration="3679000" />
-    </task>
-    <task id="LOCAL-00092" summary="feat: find unique ui">
-      <option name="closed" value="true" />
-      <created>1720565760853</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1720565760853</updated>
     </task>
     <task id="LOCAL-00093" summary="feat: group list ui">
       <option name="closed" value="true" />
@@ -685,7 +679,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740936527951</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="feat: ToolContent.tsx">
+      <option name="closed" value="true" />
+      <created>1741211604972</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1741211604972</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -744,7 +746,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: docs" />
     <MESSAGE value="feat: funding" />
     <MESSAGE value="feat: ui changes" />
     <MESSAGE value="fix: readme" />
@@ -769,7 +770,8 @@
     <MESSAGE value="feat: remove duplicate lines" />
     <MESSAGE value="fix: tsc" />
     <MESSAGE value="style: optimizations" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: optimizations" />
+    <MESSAGE value="feat: ToolContent.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: ToolContent.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

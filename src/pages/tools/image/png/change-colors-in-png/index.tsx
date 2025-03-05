@@ -3,12 +3,14 @@ import React, { useState } from 'react';
 import * as Yup from 'yup';
 import ToolFileInput from '@components/input/ToolFileInput';
 import ToolFileResult from '@components/result/ToolFileResult';
-import ToolOptions from '@components/options/ToolOptions';
+import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
 import ColorSelector from '@components/options/ColorSelector';
 import Color from 'color';
 import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
 import ToolInputAndResult from '@components/ToolInputAndResult';
 import { areColorsSimilar } from 'utils/color';
+import ToolContent from '@components/ToolContent';
+import { ToolComponentProps } from '@tools/defineTool';
 
 const initialValues = {
   fromColor: 'white',
@@ -18,7 +20,7 @@ const initialValues = {
 const validationSchema = Yup.object({
   // splitSeparator: Yup.string().required('The separator is required')
 });
-export default function ChangeColorsInPng() {
+export default function ChangeColorsInPng({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
@@ -83,58 +85,65 @@ export default function ChangeColorsInPng() {
 
     processImage(input, fromRgb, toRgb, Number(similarity));
   };
+  const getGroups: GetGroupsType<typeof initialValues> = ({
+    values,
+    updateField
+  }) => [
+    {
+      title: 'From color and to color',
+      component: (
+        <Box>
+          <ColorSelector
+            value={values.fromColor}
+            onColorChange={(val) => updateField('fromColor', val)}
+            description={'Replace this color (from color)'}
+            inputProps={{ 'data-testid': 'from-color-input' }}
+          />
+          <ColorSelector
+            value={values.toColor}
+            onColorChange={(val) => updateField('toColor', val)}
+            description={'With this color (to color)'}
+            inputProps={{ 'data-testid': 'to-color-input' }}
+          />
+          <TextFieldWithDesc
+            value={values.similarity}
+            onOwnChange={(val) => updateField('similarity', val)}
+            description={
+              'Match this % of similar colors of the from color. For example, 10% white will match white and a little bit of gray.'
+            }
+          />
+        </Box>
+      )
+    }
+  ];
   return (
-    <Box>
-      <ToolInputAndResult
-        input={
-          <ToolFileInput
-            value={input}
-            onChange={setInput}
-            accept={['image/png']}
-            title={'Input PNG'}
-          />
-        }
-        result={
-          <ToolFileResult
-            title={'Output PNG with new colors'}
-            value={result}
-            extension={'png'}
-          />
-        }
-      />
-      <ToolOptions
-        compute={compute}
-        getGroups={({ values, updateField }) => [
-          {
-            title: 'From color and to color',
-            component: (
-              <Box>
-                <ColorSelector
-                  value={values.fromColor}
-                  onColorChange={(val) => updateField('fromColor', val)}
-                  description={'Replace this color (from color)'}
-                  inputProps={{ 'data-testid': 'from-color-input' }}
-                />
-                <ColorSelector
-                  value={values.toColor}
-                  onColorChange={(val) => updateField('toColor', val)}
-                  description={'With this color (to color)'}
-                  inputProps={{ 'data-testid': 'to-color-input' }}
-                />
-                <TextFieldWithDesc
-                  value={values.similarity}
-                  onOwnChange={(val) => updateField('similarity', val)}
-                  description={
-                    'Match this % of similar colors of the from color. For example, 10% white will match white and a little bit of gray.'
-                  }
-                />
-              </Box>
-            )
-          }
-        ]}
-        initialValues={initialValues}
-        input={input}
-      />
-    </Box>
+    <ToolContent
+      title={title}
+      initialValues={initialValues}
+      getGroups={getGroups}
+      compute={compute}
+      input={input}
+      validationSchema={validationSchema}
+      inputComponent={
+        <ToolFileInput
+          value={input}
+          onChange={setInput}
+          accept={['image/png']}
+          title={'Input PNG'}
+        />
+      }
+      resultComponent={
+        <ToolFileResult
+          title={'Transparent PNG'}
+          value={result}
+          extension={'png'}
+        />
+      }
+      toolInfo={{
+        title: 'Make Colors Transparent',
+        description:
+          'This tool allows you to make specific colors in a PNG image transparent. You can select the color to replace and adjust the similarity threshold to include similar colors.'
+      }}
+    />
   );
 }
