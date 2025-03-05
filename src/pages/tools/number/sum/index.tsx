@@ -1,15 +1,20 @@
 import { Box } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import ToolOptions from '@components/options/ToolOptions';
+import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
 import { compute, NumberExtractionType } from './service';
 import RadioWithTextField from '@components/options/RadioWithTextField';
 import SimpleRadio from '@components/options/SimpleRadio';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import ToolInputAndResult from '@components/ToolInputAndResult';
-import { CardExampleType } from '@components/examples/ToolExamples';
+import ToolExamples, {
+  CardExampleType
+} from '@components/examples/ToolExamples';
 import ToolInfo from '@components/ToolInfo';
+import Separator from '@components/Separator';
+import { ToolComponentProps } from '@tools/defineTool';
+import { FormikProps } from 'formik';
 
 const initialValues = {
   extractionType: 'smart' as NumberExtractionType,
@@ -44,7 +49,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Sum of Ten Positive Numbers',
     description:
-      "In this example, we calculate the sum of ten positive integers. These integers are listed as a column and their total sum equals 19494.",
+      'In this example, we calculate the sum of ten positive integers. These integers are listed as a column and their total sum equals 19494.',
     sampleText: `0
 1
 20
@@ -118,11 +123,57 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-
-export default function SplitText() {
+export default function SumNumbers({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
+  const formRef = useRef<FormikProps<typeof initialValues>>(null);
 
+  const getGroups: GetGroupsType<InitialValuesType> = ({
+    values,
+    updateField
+  }) => [
+    {
+      title: 'Number extraction',
+      component: extractionTypes.map(
+        ({ title, description, type, withTextField, textValueAccessor }) =>
+          withTextField ? (
+            <RadioWithTextField
+              key={type}
+              checked={type === values.extractionType}
+              title={title}
+              fieldName={'extractionType'}
+              description={description}
+              value={
+                textValueAccessor ? values[textValueAccessor].toString() : ''
+              }
+              onRadioClick={() => updateField('extractionType', type)}
+              onTextChange={(val) =>
+                textValueAccessor ? updateField(textValueAccessor, val) : null
+              }
+            />
+          ) : (
+            <SimpleRadio
+              key={title}
+              onClick={() => updateField('extractionType', type)}
+              checked={values.extractionType === type}
+              description={description}
+              title={title}
+            />
+          )
+      )
+    },
+    {
+      title: 'Running Sum',
+      component: (
+        <CheckboxWithDesc
+          title={'Print Running Sum'}
+          description={"Display the sum as it's calculated step by step."}
+          checked={values.printRunningSum}
+          onChange={(value) => updateField('printRunningSum', value)}
+        />
+      )
+    }
+  ];
   return (
     <Box>
       <ToolInputAndResult
@@ -130,59 +181,8 @@ export default function SplitText() {
         result={<ToolTextResult title={'Total'} value={result} />}
       />
       <ToolOptions
-        getGroups={({ values, updateField }) => [
-          {
-            title: 'Number extraction',
-            component: extractionTypes.map(
-              ({
-                title,
-                description,
-                type,
-                withTextField,
-                textValueAccessor
-              }) =>
-                withTextField ? (
-                  <RadioWithTextField
-                    key={type}
-                    checked={type === values.extractionType}
-                    title={title}
-                    fieldName={'extractionType'}
-                    description={description}
-                    value={
-                      textValueAccessor
-                        ? values[textValueAccessor].toString()
-                        : ''
-                    }
-                    onRadioClick={() => updateField('extractionType', type)}
-                    onTextChange={(val) =>
-                      textValueAccessor
-                        ? updateField(textValueAccessor, val)
-                        : null
-                    }
-                  />
-                ) : (
-                  <SimpleRadio
-                    key={title}
-                    onClick={() => updateField('extractionType', type)}
-                    checked={values.extractionType === type}
-                    description={description}
-                    title={title}
-                  />
-                )
-            )
-          },
-          {
-            title: 'Running Sum',
-            component: (
-              <CheckboxWithDesc
-                title={'Print Running Sum'}
-                description={"Display the sum as it's calculated step by step."}
-                checked={values.printRunningSum}
-                onChange={(value) => updateField('printRunningSum', value)}
-              />
-            )
-          }
-        ]}
+        formRef={formRef}
+        getGroups={getGroups}
         compute={(optionsValues, input) => {
           const { extractionType, printRunningSum, separator } = optionsValues;
           setResult(compute(input, extractionType, printRunningSum, separator));
@@ -190,10 +190,18 @@ export default function SplitText() {
         initialValues={initialValues}
         input={input}
       />
-        <ToolInfo
-            title="What Is a Number Sum Calculator?"
-            description="This is an online browser-based utility for calculating the sum of a bunch of numbers. You can enter the numbers separated by a comma, space, or any other character, including the line break. You can also simply paste a fragment of textual data that contains numerical values that you want to sum up and the utility will extract them and find their sum."
-          />
+      <ToolInfo
+        title="What Is a Number Sum Calculator?"
+        description="This is an online browser-based utility for calculating the sum of a bunch of numbers. You can enter the numbers separated by a comma, space, or any other character, including the line break. You can also simply paste a fragment of textual data that contains numerical values that you want to sum up and the utility will extract them and find their sum."
+      />
+      <Separator backgroundColor="#5581b5" margin="50px" />
+      <ToolExamples
+        title={title}
+        exampleCards={exampleCards}
+        getGroups={getGroups}
+        formRef={formRef}
+        setInput={setInput}
+      />
     </Box>
   );
 }

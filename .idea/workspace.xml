@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="style: optimizations">
-      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="docs: img">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/sum/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,16 +29,37 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;history&quot;: [
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
     {
-      &quot;assignee&quot;: &quot;iib0011&quot;
+      "assignee": "iib0011"
+    },
+    {
+      "state": "OPEN"
     }
   ],
-  &quot;lastFilter&quot;: {
-    &quot;assignee&quot;: &quot;iib0011&quot;
+  "lastFilter": {
+    "state": "OPEN"
   }
-}</component>
+}]]></component>
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts51PkS9",
+        "number": 22
+      },
+      "lastSeen": 1741207144695
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6NiNYl",
+        "number": 32
+      },
+      "lastSeen": 1741207323147
+    }
+  ]
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
@@ -61,51 +84,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Docker.Dockerfile build.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Playwright.JoinText Component.executor&quot;: &quot;Run&quot;,
-    &quot;Playwright.JoinText Component.should merge text pieces with specified join character.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Vitest.compute function (1).executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.compute function.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.mergeText.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.removeDuplicateLines function.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.removeDuplicateLines function.newlines option.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ibrahima/IdeaProjects/omni-tools/public/assets&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
-    &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
-    &quot;npm.script:create:tool.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test:e2e.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test:e2e:run.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Docker.Dockerfile build.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Playwright.JoinText Component.executor": "Run",
+    "Playwright.JoinText Component.should merge text pieces with specified join character.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Vitest.compute function (1).executor": "Run",
+    "Vitest.compute function.executor": "Run",
+    "Vitest.mergeText.executor": "Run",
+    "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
+    "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
+    "Vitest.removeDuplicateLines function.executor": "Run",
+    "Vitest.removeDuplicateLines function.newlines option.executor": "Run",
+    "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
+    "git-widget-placeholder": "#32 on chesterkxng",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/public/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.lint.executor": "Run",
+    "npm.prebuild.executor": "Run",
+    "npm.script:create:tool.executor": "Run",
+    "npm.test.executor": "Run",
+    "npm.test:e2e.executor": "Run",
+    "npm.test:e2e:run.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
+    "ts.external.directory.path": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -289,15 +312,9 @@
       <workItem from="1740788856134" duration="659000" />
       <workItem from="1740880919391" duration="4395000" />
       <workItem from="1740923024259" duration="23000" />
-      <workItem from="1740933006573" duration="3679000" />
-    </task>
-    <task id="LOCAL-00092" summary="feat: find unique ui">
-      <option name="closed" value="true" />
-      <created>1720565760853</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1720565760853</updated>
+      <workItem from="1740933006573" duration="4417000" />
+      <workItem from="1741107957446" duration="1943000" />
+      <workItem from="1741207101329" duration="1257000" />
     </task>
     <task id="LOCAL-00093" summary="feat: group list ui">
       <option name="closed" value="true" />
@@ -683,7 +700,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740936527951</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="docs: img">
+      <option name="closed" value="true" />
+      <created>1740936812936</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1740936812936</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -750,7 +775,6 @@
     <MESSAGE value="chore: style buttons" />
     <MESSAGE value="chore: style" />
     <MESSAGE value="style: background svg" />
-    <MESSAGE value="docs: img" />
     <MESSAGE value="fix: bg" />
     <MESSAGE value="chore: handle enter press on search" />
     <MESSAGE value="chore: show tooloptions in example" />
@@ -767,7 +791,8 @@
     <MESSAGE value="feat: remove duplicate lines" />
     <MESSAGE value="fix: tsc" />
     <MESSAGE value="style: optimizations" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: optimizations" />
+    <MESSAGE value="docs: img" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: img" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

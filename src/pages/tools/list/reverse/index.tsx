@@ -1,14 +1,19 @@
 import { Box } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import ToolOptions from '@components/options/ToolOptions';
+import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
 import { reverseList, SplitOperatorType } from './service';
 import ToolInputAndResult from '@components/ToolInputAndResult';
 import SimpleRadio from '@components/options/SimpleRadio';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
-import { CardExampleType } from '@components/examples/ToolExamples';
+import ToolExamples, {
+  CardExampleType
+} from '@components/examples/ToolExamples';
 import ToolInfo from '@components/ToolInfo';
+import { FormikProps } from 'formik';
+import Separator from '@components/Separator';
+import { ToolComponentProps } from '@tools/defineTool';
 
 const initialValues = {
   splitOperatorType: 'symbol' as SplitOperatorType,
@@ -37,12 +42,12 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Reverse a List of Digits',
     description:
-      "In this example, we load a list of digits in the input. The digits are separated by a mix of dot, comma, and semicolon characters, so we use the regular expression split mode and enter a regular expression that matches all these characters as the input item separator. In the output, we get a reversed list of digits that all use the semicolon as a separator.",
+      'In this example, we load a list of digits in the input. The digits are separated by a mix of dot, comma, and semicolon characters, so we use the regular expression split mode and enter a regular expression that matches all these characters as the input item separator. In the output, we get a reversed list of digits that all use the semicolon as a separator.',
     sampleText: `2, 9, 6; 3; 7. 4. 4. 2, 1; 4, 8. 4; 4. 8, 2, 5; 1; 7; 7. 0`,
     sampleResult: `0; 7; 7; 1; 5; 2; 8; 4; 4; 8; 4; 1; 2; 4; 4; 7; 3; 6; 9; 2`,
     sampleOptions: {
       splitOperatorType: 'regex',
-      splitSeparator: '/[;,.]\\s*/',
+      splitSeparator: '[;,.]\\s*',
       joinSeparator: '; '
     }
   },
@@ -110,9 +115,56 @@ argument`,
   }
 ];
 
-export default function Reverse() {
+export default function Reverse({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
+  const formRef = useRef<FormikProps<typeof initialValues>>(null);
+
+  const getGroups: GetGroupsType<InitialValuesType> = ({
+    values,
+    updateField
+  }) => [
+    {
+      title: 'Splitter Mode',
+      component: (
+        <Box>
+          {splitOperators.map(({ title, description, type }) => (
+            <SimpleRadio
+              key={type}
+              onClick={() => updateField('splitOperatorType', type)}
+              title={title}
+              description={description}
+              checked={values.splitOperatorType === type}
+            />
+          ))}
+        </Box>
+      )
+    },
+    {
+      title: 'Item Separator',
+      component: (
+        <Box>
+          <TextFieldWithDesc
+            description={'Set a delimiting symbol or regular expression.'}
+            value={values.splitSeparator}
+            onOwnChange={(val) => updateField('splitSeparator', val)}
+          />
+        </Box>
+      )
+    },
+    {
+      title: 'Output List Options',
+      component: (
+        <Box>
+          <TextFieldWithDesc
+            description={'Output list item separator.'}
+            value={values.joinSeparator}
+            onOwnChange={(val) => updateField('joinSeparator', val)}
+          />
+        </Box>
+      )
+    }
+  ];
   const compute = (optionsValues: typeof initialValues, input: any) => {
     const { splitOperatorType, splitSeparator, joinSeparator } = optionsValues;
 
@@ -134,56 +186,24 @@ export default function Reverse() {
         result={<ToolTextResult title={'Reversed list'} value={result} />}
       />
       <ToolOptions
+        formRef={formRef}
         compute={compute}
-        getGroups={({ values, updateField }) => [
-          {
-            title: 'Splitter Mode',
-            component: (
-              <Box>
-                {splitOperators.map(({ title, description, type }) => (
-                  <SimpleRadio
-                    key={type}
-                    onClick={() => updateField('splitOperatorType', type)}
-                    title={title}
-                    description={description}
-                    checked={values.splitOperatorType === type}
-                  />
-                ))}
-              </Box>
-            )
-          },
-          {
-            title: 'Item Separator',
-            component: (
-              <Box>
-                <TextFieldWithDesc
-                  description={'Set a delimiting symbol or regular expression.'}
-                  value={values.splitSeparator}
-                  onOwnChange={(val) => updateField('splitSeparator', val)}
-                />
-              </Box>
-            )
-          },
-          {
-            title: 'Output List Options',
-            component: (
-              <Box>
-                <TextFieldWithDesc
-                  description={'Output list item separator.'}
-                  value={values.joinSeparator}
-                  onOwnChange={(val) => updateField('joinSeparator', val)}
-                />
-              </Box>
-            )
-          }
-        ]}
+        getGroups={getGroups}
         initialValues={initialValues}
         input={input}
       />
       <ToolInfo
-              title="What Is a List Reverser?"
-              description="With this utility, you can reverse the order of items in a list. The utility first splits the input list into individual items and then iterates through them from the last item to the first item, printing each item to the output during the iteration. The input list may contain anything that can be represented as textual data, which includes digits, numbers, strings, words, sentences, etc. The input item separator can also be a regular expression. For example, the regex /[;,]/ will allow you to use items that are either comma- or semicolon-separated. The input and output list items delimiters can be customized in the options. By default, both input and output lists are comma-separated. Listabulous!"
-        />
+        title="What Is a List Reverser?"
+        description="With this utility, you can reverse the order of items in a list. The utility first splits the input list into individual items and then iterates through them from the last item to the first item, printing each item to the output during the iteration. The input list may contain anything that can be represented as textual data, which includes digits, numbers, strings, words, sentences, etc. The input item separator can also be a regular expression. For example, the regex /[;,]/ will allow you to use items that are either comma- or semicolon-separated. The input and output list items delimiters can be customized in the options. By default, both input and output lists are comma-separated. Listabulous!"
+      />
+      <Separator backgroundColor="#5581b5" margin="50px" />
+      <ToolExamples
+        title={title}
+        exampleCards={exampleCards}
+        getGroups={getGroups}
+        formRef={formRef}
+        setInput={setInput}
+      />
     </Box>
   );
 }
