@@ -2,18 +2,14 @@ import { Box } from '@mui/material';
 import React, { useRef, useState } from 'react';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
+import { GetGroupsType } from '@components/options/ToolOptions';
 import { reverseList, SplitOperatorType } from './service';
-import ToolInputAndResult from '@components/ToolInputAndResult';
 import SimpleRadio from '@components/options/SimpleRadio';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
-import ToolExamples, {
-  CardExampleType
-} from '@components/examples/ToolExamples';
-import ToolInfo from '@components/ToolInfo';
+import { CardExampleType } from '@components/examples/ToolExamples';
 import { FormikProps } from 'formik';
-import Separator from '@components/Separator';
 import { ToolComponentProps } from '@tools/defineTool';
+import ToolContent from '@components/ToolContent';
 
 const initialValues = {
   splitOperatorType: 'symbol' as SplitOperatorType,
@@ -118,7 +114,6 @@ argument`,
 export default function Reverse({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  const formRef = useRef<FormikProps<typeof initialValues>>(null);
 
   const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
@@ -174,36 +169,25 @@ export default function Reverse({ title }: ToolComponentProps) {
   };
 
   return (
-    <Box>
-      <ToolInputAndResult
-        input={
-          <ToolTextInput
-            title={'Input list'}
-            value={input}
-            onChange={setInput}
-          />
-        }
-        result={<ToolTextResult title={'Reversed list'} value={result} />}
-      />
-      <ToolOptions
-        formRef={formRef}
-        compute={compute}
-        getGroups={getGroups}
-        initialValues={initialValues}
-        input={input}
-      />
-      <ToolInfo
-        title="What Is a List Reverser?"
-        description="With this utility, you can reverse the order of items in a list. The utility first splits the input list into individual items and then iterates through them from the last item to the first item, printing each item to the output during the iteration. The input list may contain anything that can be represented as textual data, which includes digits, numbers, strings, words, sentences, etc. The input item separator can also be a regular expression. For example, the regex /[;,]/ will allow you to use items that are either comma- or semicolon-separated. The input and output list items delimiters can be customized in the options. By default, both input and output lists are comma-separated. Listabulous!"
-      />
-      <Separator backgroundColor="#5581b5" margin="50px" />
-      <ToolExamples
-        title={title}
-        exampleCards={exampleCards}
-        getGroups={getGroups}
-        formRef={formRef}
-        setInput={setInput}
-      />
-    </Box>
+    <ToolContent
+      title={title}
+      initialValues={initialValues}
+      getGroups={getGroups}
+      compute={compute}
+      input={input}
+      setInput={setInput}
+      inputComponent={
+        <ToolTextInput title={'Input list'} value={input} onChange={setInput} />
+      }
+      resultComponent={
+        <ToolTextResult title={'Reversed list'} value={result} />
+      }
+      toolInfo={{
+        title: 'What Is a List Reverser?',
+        description:
+          'With this utility, you can reverse the order of items in a list. The utility first splits the input list into individual items and then iterates through them from the last item to the first item, printing each item to the output during the iteration. The input list may contain anything that can be represented as textual data, which includes digits, numbers, strings, words, sentences, etc. The input item separator can also be a regular expression. For example, the regex /[;,]/ will allow you to use items that are either comma- or semicolon-separated. The input and output list items delimiters can be customized in the options. By default, both input and output lists are comma-separated. Listabulous!'
+      }}
+      exampleCards={exampleCards}
+    />
   );
 }
