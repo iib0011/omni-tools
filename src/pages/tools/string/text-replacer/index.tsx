@@ -108,6 +108,7 @@ export default function Replacer({ title }: ToolComponentProps) {
         <Box>
           <TextFieldWithDesc
             description={'Enter the pattern to use for replacement.'}
+            placeholder={'New text'}
             value={values.replaceValue}
             onOwnChange={(val) => updateField('replaceValue', val)}
             type={'text'}
@@ -127,13 +128,13 @@ export default function Replacer({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title="Text to replace."
+          title="Text to replace"
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={'Text to replace.'} value={result} />
+        <ToolTextResult title={'Text with replacements'} value={result} />
       }
       toolInfo={{
         title: 'Text Replacer',
@@ -141,6 +142,6 @@ export default function Replacer({ title }: ToolComponentProps) {
           'Easily replace specific text in your content with this simple, browser-based tool. Just input your text, set the text you want to replace and the replacement value, and instantly get the updated version.'
       }}
       exampleCards={exampleCards}
-    ></ToolContent>
+    />
   );
 }
