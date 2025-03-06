@@ -2,7 +2,7 @@ import { Autocomplete, Box, Stack, TextField } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import SearchIcon from '@mui/icons-material/Search';
 import Grid from '@mui/material/Grid';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { DefinedTool } from '@tools/defineTool';
 import { filterTools, tools } from '@tools/index';
 import { useNavigate } from 'react-router-dom';
@@ -28,7 +28,6 @@ export default function Hero() {
   const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(
     _.shuffle(tools)
   );
-  const [pendingNavigation, setPendingNavigation] = useState<boolean>(false);
   const navigate = useNavigate();
   const handleInputChange = (
     event: React.ChangeEvent<{}>,
@@ -37,13 +36,6 @@ export default function Hero() {
     setInputValue(newInputValue);
     setFilteredTools(_.shuffle(filterTools(tools, newInputValue)));
   };
-
-  useEffect(() => {
-    if (pendingNavigation && filteredTools.length > 0) {
-      navigate('/' + filteredTools[0].path);
-      setPendingNavigation(false);
-    }
-  }, [pendingNavigation, filteredTools, navigate]);
 
   return (
     <Box width={{ xs: '90%', md: '80%', lg: '60%' }}>
@@ -107,9 +99,9 @@ export default function Hero() {
             </Stack>
           </Box>
         )}
-        onKeyDown={(event) => {
-          if (event.key === 'Enter') {
-            setPendingNavigation(true);
+        onChange={(event, newValue) => {
+          if (newValue) {
+            navigate('/' + newValue.path);
           }
         }}
       />
