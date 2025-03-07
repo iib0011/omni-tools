@@ -9,13 +9,15 @@ import { tool as stringToMorse } from './to-morse/meta';
 import { tool as stringSplit } from './split/meta';
 import { tool as stringJoin } from './join/meta';
 import { tool as stringReplace } from './text-replacer/meta';
+import { tool as stringRepeat } from './repeat/meta';
 
 export const stringTools = [
   stringSplit,
   stringJoin,
   stringRemoveDuplicateLines,
   stringToMorse,
-  stringReplace
+  stringReplace,
+  stringRepeat
   // stringReverse,
   // stringRandomizeCase,
   // stringUppercase,
