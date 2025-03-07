@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: replace text service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/quote/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/quote/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/rot13/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/rot13/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/string/rotate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/rotate/meta.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,38 +40,38 @@
     &quot;assignee&quot;: &quot;iib0011&quot;
     }
     }</component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOMJIfts51PkS9",
-        "number": 22
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts51PkS9&quot;,
+        &quot;number&quot;: 22
       },
-      "lastSeen": 1741207144695
+      &quot;lastSeen&quot;: 1741207144695
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NiNYl",
-        "number": 32
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NiNYl&quot;,
+        &quot;number&quot;: 32
       },
-      "lastSeen": 1741209723869
+      &quot;lastSeen&quot;: 1741209723869
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Nheyd",
-        "number": 31
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Nheyd&quot;,
+        &quot;number&quot;: 31
       },
-      "lastSeen": 1741213371410
+      &quot;lastSeen&quot;: 1741213371410
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NmRBs",
-        "number": 33
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NmRBs&quot;,
+        &quot;number&quot;: 33
       },
-      "lastSeen": 1741282429036
+      &quot;lastSeen&quot;: 1741282429036
     }
   ]
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">{
     &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
@@ -114,7 +116,7 @@
     "Vitest.removeDuplicateLines function.newlines option.executor": "Run",
     "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
-    "git-widget-placeholder": "#33 on fork/EugSh1/main",
+    "git-widget-placeholder": "#22 on truncate",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/public/assets",
