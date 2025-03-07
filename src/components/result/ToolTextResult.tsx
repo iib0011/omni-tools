@@ -41,6 +41,11 @@ export default function ToolTextResult({
         value={replaceSpecialCharacters(value)}
         fullWidth
         multiline
+        sx={{
+          '&.MuiTextField-root': {
+            backgroundColor: 'white'
+          }
+        }}
         rows={10}
         inputProps={{ 'data-testid': 'text-result' }}
       />

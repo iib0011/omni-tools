@@ -9,6 +9,7 @@ export function isNumber(number: any) {
 
 export const replaceSpecialCharacters = (str: string) => {
   return str
+    .replace(/\\"/g, '"')
     .replace(/\\n/g, '\n')
     .replace(/\\t/g, '\t')
     .replace(/\\r/g, '\r')

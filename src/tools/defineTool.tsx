@@ -1,33 +1,46 @@
 import ToolLayout from '../components/ToolLayout';
 import React, { JSXElementConstructor, LazyExoticComponent } from 'react';
+import { IconifyIcon } from '@iconify/react';
 
 interface ToolOptions {
   path: string;
-  component: LazyExoticComponent<JSXElementConstructor<NonNullable<unknown>>>;
+  component: LazyExoticComponent<JSXElementConstructor<ToolComponentProps>>;
   keywords: string[];
-  image?: string;
+  icon: IconifyIcon | string;
   name: string;
   description: string;
   shortDescription: string;
 }
 
+export type ToolCategory =
+  | 'string'
+  | 'png'
+  | 'number'
+  | 'gif'
+  | 'list'
+  | 'json';
+
 export interface DefinedTool {
-  type: string;
+  type: ToolCategory;
   path: string;
   name: string;
   description: string;
   shortDescription: string;
-  image?: string;
+  icon: IconifyIcon | string;
   keywords: string[];
   component: () => JSX.Element;
 }
 
+export interface ToolComponentProps {
+  title?: any;
+}
+
 export const defineTool = (
-  basePath: string,
+  basePath: ToolCategory,
   options: ToolOptions
 ): DefinedTool => {
   const {
-    image,
+    icon,
     path,
     name,
     description,
@@ -40,7 +53,7 @@ export const defineTool = (
     type: basePath,
     path: `${basePath}/${path}`,
     name,
-    image,
+    icon,
     description,
     shortDescription,
     keywords,
@@ -49,10 +62,10 @@ export const defineTool = (
         <ToolLayout
           title={name}
           description={description}
-          image={image}
+          icon={icon}
           type={basePath}
         >
-          <Component />
+          <Component title={name} />
         </ToolLayout>
       );
     }

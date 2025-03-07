@@ -1,10 +1,12 @@
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import ToolCard from './ToolCard';
+import { IconifyIcon } from '@iconify/react';
 
 export interface ToolCardProps {
   title: string;
   description: string;
   link: string;
+  icon: IconifyIcon | string;
 }
 
 interface AllToolsProps {
@@ -26,6 +28,7 @@ export default function AllTools({ title, toolCards }: AllToolsProps) {
                 title={card.title}
                 description={card.description}
                 link={card.link}
+                icon={card.icon}
               />
             </Grid>
           ))}

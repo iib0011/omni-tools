@@ -5,8 +5,9 @@ import React, { ReactNode, RefObject, useContext, useEffect } from 'react';
 import { Formik, FormikProps, FormikValues, useFormikContext } from 'formik';
 import ToolOptionGroups, { ToolOptionGroup } from './ToolOptionGroups';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
+import * as Yup from 'yup';
 
-type UpdateField<T> = <Y extends keyof T>(field: Y, value: T[Y]) => void;
+export type UpdateField<T> = <Y extends keyof T>(field: Y, value: T[Y]) => void;
 
 const FormikListenerComponent = <T,>({
   initialValues,
@@ -67,6 +68,10 @@ const ToolBody = <T,>({
     </Stack>
   );
 };
+
+export type GetGroupsType<T> = (
+  formikProps: FormikProps<T> & { updateField: UpdateField<T> }
+) => ToolOptionGroup[];
 export default function ToolOptions<T extends FormikValues>({
   children,
   initialValues,
@@ -78,12 +83,10 @@ export default function ToolOptions<T extends FormikValues>({
 }: {
   children?: ReactNode;
   initialValues: T;
-  validationSchema: any | (() => any);
+  validationSchema?: any | (() => any);
   compute: (optionsValues: T, input: any) => void;
   input?: any;
-  getGroups: (
-    formikProps: FormikProps<T> & { updateField: UpdateField<T> }
-  ) => ToolOptionGroup[];
+  getGroups: GetGroupsType<T>;
   formRef?: RefObject<FormikProps<T>>;
 }) {
   const theme = useTheme();
@@ -93,7 +96,8 @@ export default function ToolOptions<T extends FormikValues>({
         mb: 2,
         borderRadius: 2,
         padding: 2,
-        backgroundColor: theme.palette.background.default
+        backgroundColor: theme.palette.background.default,
+        boxShadow: '2'
       }}
       mt={2}
     >

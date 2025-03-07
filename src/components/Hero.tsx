@@ -7,20 +7,21 @@ import { DefinedTool } from '@tools/defineTool';
 import { filterTools, tools } from '@tools/index';
 import { useNavigate } from 'react-router-dom';
 import _ from 'lodash';
+import { Icon } from '@iconify/react';
 
 const exampleTools: { label: string; url: string }[] = [
   {
     label: 'Create a transparent image',
     url: '/png/create-transparent'
   },
-  { label: 'Convert text to morse code', url: '/string/to-morse' },
+  { label: 'Prettify JSON', url: '/json/prettify' },
   { label: 'Change GIF speed', url: '/gif/change-speed' },
-  { label: 'Pick a random item', url: '' },
-  { label: 'Find and replace text', url: '' },
-  { label: 'Convert emoji to image', url: '' },
-  { label: 'Split a string', url: '/string/split' },
+  { label: 'Sort a list', url: '/list/sort' },
+  { label: 'Compress PNG', url: '/png/compress-png' },
+  { label: 'Split a text', url: '/string/split' },
   { label: 'Calculate number sum', url: '/number/sum' },
-  { label: 'Pixelate an image', url: '' }
+  { label: 'Shuffle a list', url: '/list/shuffle' },
+  { label: 'Change colors in image', url: '/png/change-colors-in-png' }
 ];
 export default function Hero() {
   const [inputValue, setInputValue] = useState<string>('');
@@ -35,11 +36,12 @@ export default function Hero() {
     setInputValue(newInputValue);
     setFilteredTools(_.shuffle(filterTools(tools, newInputValue)));
   };
+
   return (
     <Box width={{ xs: '90%', md: '80%', lg: '60%' }}>
       <Stack mb={1} direction={'row'} spacing={1} justifyContent={'center'}>
         <Typography sx={{ textAlign: 'center' }} fontSize={{ xs: 25, md: 30 }}>
-          Transform Your Workflow with{' '}
+          Get Things Done Quickly with{' '}
           <Typography
             fontSize={{ xs: 25, md: 30 }}
             display={'inline'}
@@ -71,10 +73,13 @@ export default function Hero() {
             {...params}
             fullWidth
             placeholder={'Search all tools'}
-            sx={{ borderRadius: 2 }}
             InputProps={{
               ...params.InputProps,
-              endAdornment: <SearchIcon />
+              endAdornment: <SearchIcon />,
+              sx: {
+                borderRadius: 4,
+                backgroundColor: 'white'
+              }
             }}
             onChange={(event) => handleInputChange(event, event.target.value)}
           />
@@ -85,17 +90,27 @@ export default function Hero() {
             {...props}
             onClick={() => navigate('/' + option.path)}
           >
-            <Box>
-              <Typography fontWeight={'bold'}>{option.name}</Typography>
-              <Typography fontSize={12}>{option.shortDescription}</Typography>
-            </Box>
+            <Stack direction={'row'} spacing={2} alignItems={'center'}>
+              <Icon fontSize={20} icon={option.icon} />
+              <Box>
+                <Typography fontWeight={'bold'}>{option.name}</Typography>
+                <Typography fontSize={12}>{option.shortDescription}</Typography>
+              </Box>
+            </Stack>
           </Box>
         )}
+        onChange={(event, newValue) => {
+          if (newValue) {
+            navigate('/' + newValue.path);
+          }
+        }}
       />
       <Grid container spacing={2} mt={2}>
         {exampleTools.map((tool) => (
           <Grid
-            onClick={() => navigate(tool.url)}
+            onClick={() =>
+              navigate(tool.url.startsWith('/') ? tool.url : `/${tool.url}`)
+            }
             item
             xs={12}
             md={6}
@@ -112,7 +127,9 @@ export default function Hero() {
                 borderRadius: 3,
                 borderColor: 'grey',
                 borderStyle: 'solid',
-                cursor: 'pointer'
+                backgroundColor: 'white',
+                cursor: 'pointer',
+                '&:hover': { backgroundColor: '#FAFAFD' }
               }}
             >
               <Typography>{tool.label}</Typography>

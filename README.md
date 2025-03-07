@@ -1,51 +1,90 @@
-# OmniTools
+<p align="center">
+        <img src="src/assets/logo.png" width="300" />
+        <br /><br />
+        <a href="https://github.com/iib0011/omni-tools/releases">
+          <img src="https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge" />
+        </a>
+        <a href="https://hub.docker.com/r/iib0011/omni-tools">
+          <img src="https://img.shields.io/docker/pulls/iib0011/omni-tools?style=for-the-badge&logo=docker" />
+        </a>
+        <a href="https://github.com/iib0011">
+          <img src="https://img.shields.io/github/stars/iib0011/omni-tools?style=for-the-badge&logo=github" />
+        </a>
+        <a href="https://github.com/iib0011/omni-tools/blob/main/LICENSE">
+          <img src="https://img.shields.io/github/license/iib0011/omni-tools?style=for-the-badge" />
+        </a>
+     <!--
+        <a href="https://discord.gg/SDbbn3hT4b">
+          <img src="https://img.shields.io/discord/1342971141823664179?label=Discord&style=for-the-badge" />
+        </a>
+     -->
+        <br /><br />
+</p>
 
-Welcome to **OmniTools**, an open-source alternative to OnlineTools.com.
-This project offers a variety of online tools to help with everyday tasks,
-all available for free and open for community contributions. Please don't forget to star the repo to support us.
-Here is the [live](https://omnitools.netlify.app/) website.
+Welcome to OmniTools, a self-hosted web app offering a variety of online tools to simplify everyday tasks.
+Whether you are coding, manipulating images or crunching numbers, OmniTools has you covered. Please don't forget to
+star the repo to support us.
+Here is the [demo](https://omnitools.netlify.app/) website.
 
 ![img.png](img.png)
 
 ## Table of Contents
 
 - [Features](#features)
-- [Self-host](#self-host)
+- [Self-host](#self-hostrun)
 - [Contribute](#contribute)
 - [License](#license)
 - [Contact](#contact)
 
 ## Features
 
-OmniTools includes a variety of tools, such as:
+We strive to offer a variety of tools, including:
 
-1. **Image/Video/Binary tools**
+## **Image/Video/Binary Tools**
 
-- Image Resizer, Image converter, Video trimmer, video reverser, etc.
+- Image Resizer
+- Image Converter
+- Video Trimmer
+- Video Reverser
+- And more...
 
-2. **Math tools**
+## **String/List Tools**
 
-- Generate prime numbers, generate perfect numbers etc.
+- Case Converters
+- List Shuffler
+- Text Formatters
+- And more...
 
-3. **String/List Tools**
+## **Date and Time Tools**
 
-- Case converters, shuffle list, text formatters, etc.
+- Date Calculators
+- Time Zone Converters
+- And more...
 
-4. **Date and Time Tools**
+## **Math Tools**
 
-- Date calculators, time zone converters, etc.
+- Generate Prime Numbers
+- Generate Perfect Numbers
+- And more...
 
-5. **Miscellaneous Tools**
+## **Miscellaneous Tools**
 
-- JSON, XML tools, CSV tools etc.
+- JSON Tools
+- XML Tools
+- CSV Tools
+- And more...
 
-## Self-host
+Stay tuned as we continue to expand and improve our collection!
+
+## Self-host/Run
 
 ```bash
 docker run -d --name omni-tools --restart unless-stopped -p 8080:80 iib0011/omni-tools:latest
 ```
 
 ## Contribute
+
+This is a React Project with Typescript Material UI.
 
 ### Project setup
 
@@ -59,7 +98,7 @@ npm run dev
 ### Create a new tool
 
 ```bash
-npm run script:create:tool my-tool-name folder1/folder2
+npm run script:create:tool my-tool-name folder1/folder2 # npm run script:create:tool compress image/png
 ```
 
 Use `folder1\folder2` on Windows
@@ -76,20 +115,30 @@ npm run test
 npm run test:e2e
 ```
 
+<img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date"/>
+
+## 🤝 Looking to contribute?
+
+We welcome contributions! You can help by:
+
+- ✅ Reporting bugs
+- ✅ Suggesting new features in Github issues or [here](https://tally.so/r/nrkkx2)
+- ✅ Improving documentation
+- ✅ Submitting pull requests
+
+You can also join our [Discord server](https://discord.gg/SDbbn3hT4b)
+
 ### Contributors
 
 <a href="https://github.com/iib0011/omni-tools/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=iib0011/omni-tools" />
 </a>
 
-[//]: # (<img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date">)
+## Contact
+
+For any questions or suggestions, feel free to open an issue or contact me at:
+[ibracool99@gmail.com](mailto:ibracool99@gmail.com)
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any questions or suggestions, feel free to open an issue or contact us at:
-
-Email: ibracool99@gmail.com

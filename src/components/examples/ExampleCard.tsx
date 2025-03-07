@@ -1,4 +1,3 @@
-import { ExampleCardProps } from './Examples';
 import {
   Box,
   Card,
@@ -9,26 +8,42 @@ import {
   useTheme
 } from '@mui/material';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import RequiredOptions from './RequiredOptions';
+import ExampleOptions from './ExampleOptions';
+import { GetGroupsType } from '@components/options/ToolOptions';
 
-export default function ExampleCard({
+export interface ExampleCardProps<T> {
+  title: string;
+  description: string;
+  sampleText: string;
+  sampleResult: string;
+  sampleOptions: T;
+  changeInputResult: (newInput: string, newOptions: T) => void;
+  getGroups: GetGroupsType<T>;
+}
+
+export default function ExampleCard<T>({
   title,
   description,
   sampleText,
   sampleResult,
-  requiredOptions,
-  changeInputResult
-}: ExampleCardProps) {
+  sampleOptions,
+  changeInputResult,
+  getGroups
+}: ExampleCardProps<T>) {
   const theme = useTheme();
   return (
     <Card
       raised
+      onClick={() => {
+        changeInputResult(sampleText, sampleOptions);
+      }}
       sx={{
         bgcolor: theme.palette.background.default,
         height: '100%',
         overflow: 'hidden',
         borderRadius: 2,
         transition: 'background-color 0.3s ease',
+        cursor: 'pointer',
         '&:hover': {
           boxShadow: '12px 9px 11px 2px #b8b9be, -6px -6px 12px #fff'
         }
@@ -46,7 +61,6 @@ export default function ExampleCard({
           </Typography>
 
           <Box
-            onClick={() => changeInputResult(sampleText, sampleResult)}
             sx={{
               display: 'flex',
               zIndex: '2',
@@ -55,7 +69,6 @@ export default function ExampleCard({
               bgcolor: 'transparent',
               padding: '5px 10px',
               borderRadius: '5px',
-              cursor: 'pointer',
               boxShadow: 'inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;'
             }}
           >
@@ -77,7 +90,6 @@ export default function ExampleCard({
 
           <ArrowDownwardIcon />
           <Box
-            onClick={() => changeInputResult(sampleText, sampleResult)}
             sx={{
               display: 'flex',
               zIndex: '2',
@@ -106,7 +118,7 @@ export default function ExampleCard({
             />
           </Box>
 
-          <RequiredOptions options={requiredOptions} />
+          <ExampleOptions options={sampleOptions} getGroups={getGroups} />
         </Stack>
       </CardContent>
     </Card>

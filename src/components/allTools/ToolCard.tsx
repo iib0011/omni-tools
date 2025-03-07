@@ -1,9 +1,15 @@
-import { Box, Card, CardContent, Link, Typography } from '@mui/material';
+import { Box, Card, CardContent, Link, Stack, Typography } from '@mui/material';
 import { ToolCardProps } from './AllTools';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { useNavigate } from 'react-router-dom';
+import { Icon } from '@iconify/react';
 
-export default function ToolCard({ title, description, link }: ToolCardProps) {
+export default function ToolCard({
+  title,
+  description,
+  link,
+  icon
+}: ToolCardProps) {
   const navigate = useNavigate();
   return (
     <Card
@@ -28,9 +34,12 @@ export default function ToolCard({ title, description, link }: ToolCardProps) {
             borderColor: '#ffffff70'
           }}
         >
-          <Typography variant="h5" component="h2">
-            {title}
-          </Typography>
+          <Stack direction={'row'} spacing={2} alignItems={'center'}>
+            <Icon icon={icon} fontSize={25} />
+            <Typography variant="h5" component="h2">
+              {title}
+            </Typography>
+          </Stack>
           <Link href={link} underline="none" sx={{ color: '#fff' }}>
             <ChevronRightIcon />
           </Link>

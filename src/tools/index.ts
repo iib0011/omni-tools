@@ -1,43 +1,64 @@
-import { stringTools } from '../pages/string';
-import { imageTools } from '../pages/image';
-import { DefinedTool } from './defineTool';
+import { stringTools } from '../pages/tools/string';
+import { imageTools } from '../pages/tools/image';
+import { DefinedTool, ToolCategory } from './defineTool';
 import { capitalizeFirstLetter } from '../utils/string';
-import { numberTools } from '../pages/number';
-import { videoTools } from '../pages/video';
-import { listTools } from '../pages/list';
+import { numberTools } from '../pages/tools/number';
+import { videoTools } from '../pages/tools/video';
+import { listTools } from '../pages/tools/list';
+import { Entries } from 'type-fest';
+import { jsonTools } from '../pages/tools/json';
+import { IconifyIcon } from '@iconify/react';
 
 export const tools: DefinedTool[] = [
   ...imageTools,
   ...stringTools,
-  ...numberTools,
+  ...jsonTools,
+  ...listTools,
   ...videoTools,
-  ...listTools
+  ...numberTools
 ];
-const categoriesDescriptions: { type: string; value: string }[] = [
+const categoriesConfig: {
+  type: ToolCategory;
+  value: string;
+  title?: string;
+  icon: IconifyIcon | string;
+}[] = [
   {
     type: 'string',
+    title: 'Text',
+    icon: 'solar:text-bold-duotone',
     value:
       'Tools for working with text – convert text to images, find and replace text, split text into fragments, join text lines, repeat text, and much more.'
   },
   {
     type: 'png',
+    icon: 'ph:file-png-thin',
     value:
       'Tools for working with PNG images – convert PNGs to JPGs, create transparent PNGs, change PNG colors, crop, rotate, resize PNGs, and much more.'
   },
   {
     type: 'number',
+    icon: 'lsicon:number-filled',
     value:
       'Tools for working with numbers – generate number sequences, convert numbers to words and words to numbers, sort, round, factor numbers, and much more.'
   },
   {
     type: 'gif',
+    icon: 'material-symbols-light:gif-rounded',
     value:
       'Tools for working with GIF animations – create transparent GIFs, extract GIF frames, add text to GIF, crop, rotate, reverse GIFs, and much more.'
   },
   {
     type: 'list',
+    icon: 'solar:list-bold-duotone',
     value:
       'Tools for working with lists – sort, reverse, randomize lists, find unique and duplicate list items, change list item separators, and much more.'
+  },
+  {
+    type: 'json',
+    icon: 'lets-icons:json-light',
+    value:
+      'Tools for working with JSON data structures – prettify and minify JSON objects, flatten JSON arrays, stringify JSON values, analyze data, and much more'
   }
 ];
 export const filterTools = (
@@ -62,24 +83,28 @@ export const filterTools = (
 export const getToolsByCategory = (): {
   title: string;
   description: string;
+  icon: IconifyIcon | string;
   type: string;
   example: { title: string; path: string };
   tools: DefinedTool[];
 }[] => {
-  const grouped: Partial<Record<string, DefinedTool[]>> = Object.groupBy(
-    tools,
-    ({ type }) => type
+  const groupedByType: Partial<Record<ToolCategory, DefinedTool[]>> =
+    Object.groupBy(tools, ({ type }) => type);
+  return (Object.entries(groupedByType) as Entries<typeof groupedByType>).map(
+    ([type, tools]) => {
+      const categoryConfig = categoriesConfig.find(
+        (config) => config.type === type
+      );
+      return {
+        title: `${categoryConfig?.title ?? capitalizeFirstLetter(type)} Tools`,
+        description: categoryConfig?.value ?? '',
+        type,
+        icon: categoryConfig!.icon,
+        tools: tools ?? [],
+        example: tools
+          ? { title: tools[0].name, path: tools[0].path }
+          : { title: '', path: '' }
+      };
+    }
   );
-  return Object.entries(grouped).map(([type, tls]) => {
-    return {
-      title: `${capitalizeFirstLetter(type)} Tools`,
-      description:
-        categoriesDescriptions.find((desc) => desc.type === type)?.value ?? '',
-      type,
-      tools: tls ?? [],
-      example: tls
-        ? { title: tls[0].name, path: tls[0].path }
-        : { title: '', path: '' }
-    };
-  });
 };

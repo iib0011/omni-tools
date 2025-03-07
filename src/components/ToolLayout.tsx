@@ -6,17 +6,18 @@ import Separator from './Separator';
 import AllTools from './allTools/AllTools';
 import { getToolsByCategory } from '@tools/index';
 import { capitalizeFirstLetter } from '../utils/string';
+import { IconifyIcon } from '@iconify/react';
 
 export default function ToolLayout({
   children,
   title,
   description,
-  image,
+  icon,
   type
 }: {
   title: string;
   description: string;
-  image?: string;
+  icon?: IconifyIcon | string;
   type: string;
   children: ReactNode;
 }) {
@@ -27,7 +28,8 @@ export default function ToolLayout({
       .map((tool) => ({
         title: tool.name,
         description: tool.shortDescription,
-        link: '/' + tool.path
+        link: '/' + tool.path,
+        icon: tool.icon
       })) ?? [];
 
   return (
@@ -36,6 +38,7 @@ export default function ToolLayout({
       display={'flex'}
       flexDirection={'column'}
       alignItems={'center'}
+      sx={{ backgroundColor: '#F5F5FA' }}
     >
       <Helmet>
         <title>{`${title} - Omni Tools`}</title>
@@ -44,7 +47,7 @@ export default function ToolLayout({
         <ToolHeader
           title={title}
           description={description}
-          image={image}
+          icon={icon}
           type={type}
         />
         {children}
