@@ -104,7 +104,7 @@ export default function Replacer({ title }: ToolComponentProps) {
         <ToolTextResult title={'Repeated text'} value={result} />
       }
       toolInfo={{
-        title: 'Text Replacer',
+        title: 'Repeat text',
         description:
           'This tool allows you to repeat a given text multiple times with an optional separator.'
       }}
