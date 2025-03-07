@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('string', {
   name: 'Quote',
   path: 'quote',
-  // image,
+  icon: 'proicons:quote',
   description: '',
   shortDescription: '',
   keywords: ['quote'],
