@@ -15,7 +15,7 @@ import { FormikProps } from 'formik';
 import { ToolComponentProps } from '@tools/defineTool';
 import RadioWithTextField from '@components/options/RadioWithTextField';
 import SimpleRadio from '@components/options/SimpleRadio';
-import { isNumber } from '../../../../utils/string';
+import { isNumber, updateNumberField } from '../../../../utils/string';
 
 type InitialValuesType = {
   indentationType: 'tab' | 'space';
@@ -141,7 +141,7 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
             value={values.spacesCount.toString()}
             onRadioClick={() => updateField('indentationType', 'space')}
             onTextChange={(val) =>
-              isNumber(val) ? updateField('spacesCount', Number(val)) : null
+              updateNumberField(val, 'spacesCount', updateField)
             }
           />
           <SimpleRadio
