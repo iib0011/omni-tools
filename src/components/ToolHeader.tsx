@@ -24,6 +24,9 @@ interface ToolHeaderProps {
 function ToolLinks() {
   const theme = useTheme();
 
+  const scrollToElement = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <Grid container spacing={2} mt={1}>
       <Grid item md={12} lg={6}>
@@ -31,13 +34,17 @@ function ToolLinks() {
           sx={{ backgroundColor: 'white' }}
           fullWidth
           variant="outlined"
-          href="#tool"
+          onClick={() => scrollToElement('tool')}
         >
           Use This Tool
         </StyledButton>
       </Grid>
       <Grid item md={12} lg={6}>
-        <StyledButton fullWidth variant="outlined" href="#examples">
+        <StyledButton
+          fullWidth
+          variant="outlined"
+          onClick={() => scrollToElement('examples')}
+        >
           See Examples
         </StyledButton>
       </Grid>
