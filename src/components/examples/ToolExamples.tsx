@@ -13,7 +13,7 @@ export interface ExampleProps<T> {
   title: string;
   subtitle?: string;
   exampleCards: CardExampleType<T>[];
-  getGroups: GetGroupsType<T>;
+  getGroups: GetGroupsType<T> | null;
   formRef: React.RefObject<FormikProps<T>>;
   setInput: React.Dispatch<React.SetStateAction<any>>;
 }

@@ -18,7 +18,7 @@ export interface ExampleCardProps<T> {
   sampleResult: string;
   sampleOptions: T;
   changeInputResult: (newInput: string, newOptions: T) => void;
-  getGroups: GetGroupsType<T>;
+  getGroups: GetGroupsType<T> | null;
 }
 
 export default function ExampleCard<T>({

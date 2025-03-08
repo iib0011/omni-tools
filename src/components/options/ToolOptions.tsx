@@ -86,44 +86,45 @@ export default function ToolOptions<T extends FormikValues>({
   validationSchema?: any | (() => any);
   compute: (optionsValues: T, input: any) => void;
   input?: any;
-  getGroups: GetGroupsType<T>;
+  getGroups: GetGroupsType<T> | null;
   formRef?: RefObject<FormikProps<T>>;
 }) {
   const theme = useTheme();
-  return (
-    <Box
-      sx={{
-        mb: 2,
-        borderRadius: 2,
-        padding: 2,
-        backgroundColor: theme.palette.background.default,
-        boxShadow: '2'
-      }}
-      mt={2}
-    >
-      <Stack direction={'row'} spacing={1} alignItems={'center'}>
-        <SettingsIcon />
-        <Typography fontSize={22}>Tool options</Typography>
-      </Stack>
-      <Box mt={2}>
-        <Formik
-          innerRef={formRef}
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={() => {}}
-        >
-          {(formikProps) => (
-            <ToolBody
-              compute={compute}
-              input={input}
-              getGroups={getGroups}
-              formikProps={formikProps}
-            >
-              {children}
-            </ToolBody>
-          )}
-        </Formik>
+  if (getGroups)
+    return (
+      <Box
+        sx={{
+          mb: 2,
+          borderRadius: 2,
+          padding: 2,
+          backgroundColor: theme.palette.background.default,
+          boxShadow: '2'
+        }}
+        mt={2}
+      >
+        <Stack direction={'row'} spacing={1} alignItems={'center'}>
+          <SettingsIcon />
+          <Typography fontSize={22}>Tool options</Typography>
+        </Stack>
+        <Box mt={2}>
+          <Formik
+            innerRef={formRef}
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={() => {}}
+          >
+            {(formikProps) => (
+              <ToolBody
+                compute={compute}
+                input={input}
+                getGroups={getGroups}
+                formikProps={formikProps}
+              >
+                {children}
+              </ToolBody>
+            )}
+          </Formik>
+        </Box>
       </Box>
-    </Box>
-  );
+    );
 }

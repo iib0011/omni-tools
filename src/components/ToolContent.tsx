@@ -17,7 +17,7 @@ interface ToolContentPropsBase<T, I> extends ToolComponentProps {
 
   // Tool options
   initialValues: T;
-  getGroups: GetGroupsType<T>;
+  getGroups: GetGroupsType<T> | null;
 
   // Computation function
   compute: (optionsValues: T, input: I) => void;
