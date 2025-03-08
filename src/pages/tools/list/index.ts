@@ -12,7 +12,7 @@ import { tool as listSort } from './sort/meta';
 
 export const listTools = [
   listSort,
-  listUnwrap,
+  // listUnwrap,
   listReverse,
   listFindUnique,
   listFindMostPopular,

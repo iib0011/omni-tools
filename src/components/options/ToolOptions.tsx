@@ -5,7 +5,6 @@ import React, { ReactNode, RefObject, useContext, useEffect } from 'react';
 import { Formik, FormikProps, FormikValues, useFormikContext } from 'formik';
 import ToolOptionGroups, { ToolOptionGroup } from './ToolOptionGroups';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
-import * as Yup from 'yup';
 
 export type UpdateField<T> = <Y extends keyof T>(field: Y, value: T[Y]) => void;
 
@@ -26,6 +25,7 @@ const FormikListenerComponent = <T,>({
       compute(values, input);
     } catch (exception: unknown) {
       if (exception instanceof Error) showSnackBar(exception.message, 'error');
+      else console.error(exception);
     }
   }, [values, input]);
 
