@@ -40,6 +40,7 @@ export default function Home() {
                     backgroundColor: 'white',
                     boxShadow: '5px 4px 2px #E9E9ED',
                     cursor: 'pointer',
+                    height: '100%',
                     '&:hover': {
                       backgroundColor: theme.palette.background.default // Change this to your desired hover color
                     }
