@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: update meta">
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/meta.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/service.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: change pgn opacity">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typed/jimp.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,14 +329,6 @@
       <workItem from="1740880919391" duration="4395000" />
       <workItem from="1740923024259" duration="23000" />
       <workItem from="1740933006573" duration="3679000" />
-    </task>
-    <task id="LOCAL-00099" summary="refactor: remove validation schema">
-      <option name="closed" value="true" />
-      <created>1720914492812</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1720914492812</updated>
     </task>
     <task id="LOCAL-00100" summary="refactor: optimize imports">
       <option name="closed" value="true" />
@@ -730,7 +714,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741419527557</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="feat: change pgn opacity">
+      <option name="closed" value="true" />
+      <created>1741423117739</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1741423117739</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -789,7 +781,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="style: background svg" />
     <MESSAGE value="docs: img" />
     <MESSAGE value="fix: bg" />
     <MESSAGE value="chore: handle enter press on search" />
@@ -814,7 +805,8 @@
     <MESSAGE value="feat: arithmetic sequence" />
     <MESSAGE value="style: tools height" />
     <MESSAGE value="chore: update meta" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: update meta" />
+    <MESSAGE value="feat: change pgn opacity" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: change pgn opacity" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
