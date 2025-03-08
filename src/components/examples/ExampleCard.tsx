@@ -14,10 +14,10 @@ import { GetGroupsType } from '@components/options/ToolOptions';
 export interface ExampleCardProps<T> {
   title: string;
   description: string;
-  sampleText: string;
+  sampleText?: string;
   sampleResult: string;
   sampleOptions: T;
-  changeInputResult: (newInput: string, newOptions: T) => void;
+  changeInputResult: (newInput: string | undefined, newOptions: T) => void;
   getGroups: GetGroupsType<T> | null;
 }
 

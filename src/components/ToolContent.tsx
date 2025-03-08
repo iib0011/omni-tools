@@ -10,7 +10,7 @@ import ToolExamples, {
 } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 
-interface ToolContentPropsBase<T, I> extends ToolComponentProps {
+interface ToolContentProps<T, I> extends ToolComponentProps {
   // Input/Output components
   inputComponent: ReactNode;
   resultComponent: ReactNode;
@@ -29,27 +29,14 @@ interface ToolContentPropsBase<T, I> extends ToolComponentProps {
   };
 
   // Input value to pass to the compute function
-  input: I;
+  input?: I;
+
+  exampleCards?: CardExampleType<T>[];
+  setInput?: React.Dispatch<React.SetStateAction<I>>;
 
   // Validation schema (optional)
   validationSchema?: any;
 }
-
-interface ToolContentPropsWithExamples<T, I>
-  extends ToolContentPropsBase<T, I> {
-  exampleCards: CardExampleType<T>[];
-  setInput: React.Dispatch<React.SetStateAction<I>>;
-}
-
-interface ToolContentPropsWithoutExamples<T, I>
-  extends ToolContentPropsBase<T, I> {
-  exampleCards?: never;
-  setInput?: never;
-}
-
-type ToolContentProps<T, I> =
-  | ToolContentPropsWithExamples<T, I>
-  | ToolContentPropsWithoutExamples<T, I>;
 
 export default function ToolContent<T extends FormikValues, I>({
   title,
