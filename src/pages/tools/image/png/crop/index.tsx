@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import * as Yup from 'yup';
 import ToolFileInput from '@components/input/ToolFileInput';
 import ToolFileResult from '@components/result/ToolFileResult';
-import { GetGroupsType } from '@components/options/ToolOptions';
+import { GetGroupsType, UpdateField } from '@components/options/ToolOptions';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -16,7 +16,7 @@ const initialValues = {
   cropHeight: '100',
   cropShape: 'rectangular' as 'rectangular' | 'circular'
 };
-
+type InitialValuesType = typeof initialValues;
 const validationSchema = Yup.object({
   xPosition: Yup.number()
     .min(0, 'X position must be positive')
@@ -36,7 +36,7 @@ export default function CropPng({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
-  const compute = (optionsValues: typeof initialValues, input: any) => {
+  const compute = (optionsValues: InitialValuesType, input: any) => {
     if (!input) return;
 
     const { xPosition, yPosition, cropWidth, cropHeight, cropShape } =
@@ -110,8 +110,19 @@ export default function CropPng({ title }: ToolComponentProps) {
 
     processImage(input, x, y, width, height, isCircular);
   };
+  const handleCropChange =
+    (values: InitialValuesType, updateField: UpdateField<InitialValuesType>) =>
+    (
+      position: { x: number; y: number },
+      size: { width: number; height: number }
+    ) => {
+      updateField('xPosition', position.x.toString());
+      updateField('yPosition', position.y.toString());
+      updateField('cropWidth', size.width.toString());
+      updateField('cropHeight', size.height.toString());
+    };
 
-  const getGroups: GetGroupsType<typeof initialValues> = ({
+  const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
     updateField
   }) => [
@@ -182,7 +193,28 @@ export default function CropPng({ title }: ToolComponentProps) {
       )
     }
   ];
-
+  const renderCustomInput = (
+    values: InitialValuesType,
+    updateField: UpdateField<InitialValuesType>
+  ) => (
+    <ToolFileInput
+      value={input}
+      onChange={setInput}
+      accept={['image/png']}
+      title={'Input PNG'}
+      showCropOverlay={!!input}
+      cropShape={values.cropShape as 'rectangular' | 'circular'}
+      cropPosition={{
+        x: parseInt(values.xPosition || '0'),
+        y: parseInt(values.yPosition || '0')
+      }}
+      cropSize={{
+        width: parseInt(values.cropWidth || '100'),
+        height: parseInt(values.cropHeight || '100')
+      }}
+      onCropChange={handleCropChange(values, updateField)}
+    />
+  );
   return (
     <ToolContent
       title={title}
@@ -191,14 +223,7 @@ export default function CropPng({ title }: ToolComponentProps) {
       compute={compute}
       input={input}
       validationSchema={validationSchema}
-      inputComponent={
-        <ToolFileInput
-          value={input}
-          onChange={setInput}
-          accept={['image/png']}
-          title={'Input PNG'}
-        />
-      }
+      renderCustomInput={renderCustomInput}
       resultComponent={
         <ToolFileResult
           title={'Cropped PNG'}

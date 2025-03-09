@@ -1,7 +1,10 @@
-import React, { useRef, useState, ReactNode } from 'react';
+import React, { useRef, useState, ReactNode, useEffect } from 'react';
 import { Box } from '@mui/material';
 import { FormikProps, FormikValues } from 'formik';
-import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
+import ToolOptions, {
+  GetGroupsType,
+  UpdateField
+} from '@components/options/ToolOptions';
 import ToolInputAndResult from '@components/ToolInputAndResult';
 import ToolInfo from '@components/ToolInfo';
 import Separator from '@components/Separator';
@@ -12,8 +15,13 @@ import { ToolComponentProps } from '@tools/defineTool';
 
 interface ToolContentProps<T, I> extends ToolComponentProps {
   // Input/Output components
-  inputComponent: ReactNode;
+  inputComponent?: ReactNode;
   resultComponent: ReactNode;
+
+  renderCustomInput?: (
+    values: T,
+    setFieldValue: (fieldName: string, value: any) => void
+  ) => ReactNode;
 
   // Tool options
   initialValues: T;
@@ -49,13 +57,31 @@ export default function ToolContent<T extends FormikValues, I>({
   exampleCards,
   input,
   setInput,
-  validationSchema
+  validationSchema,
+  renderCustomInput
 }: ToolContentProps<T, I>) {
   const formRef = useRef<FormikProps<T>>(null);
 
+  const [initialized, forceUpdate] = useState(0);
+  useEffect(() => {
+    if (formRef.current && !initialized) {
+      forceUpdate((n) => n + 1);
+    }
+  }, [initialized]);
   return (
     <Box>
-      <ToolInputAndResult input={inputComponent} result={resultComponent} />
+      <ToolInputAndResult
+        input={
+          inputComponent ??
+          (renderCustomInput &&
+            formRef.current &&
+            renderCustomInput(
+              formRef.current.values,
+              formRef.current.setFieldValue
+            ))
+        }
+        result={resultComponent}
+      />
 
       <ToolOptions
         formRef={formRef}
