@@ -2,7 +2,7 @@
 
 - [ ] Create `ToolContent` component if it doesn't exist.
 - [ ] Identify tools that do not use `ToolContent`.
-- [ ] For each identified tool:
+- [x] For each identified tool:
   - [ ]  Implement `ToolContent` wrapper.
   - [ ]  Adjust styling as needed to match existing design.
   - [ ]  Test the tool to ensure it functions correctly.
