@@ -11,6 +11,7 @@ import ToolExamples, {
 } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import { FormikProps } from 'formik';
+import ToolContent from '@components/ToolContent';
 
 const initialValues = {
   splitOperatorType: 'symbol' as SplitOperatorType,
@@ -76,7 +77,6 @@ const exampleCards: CardExampleType<typeof initialValues>[] = [
 export default function Palindrome({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  const formRef = useRef<FormikProps<typeof initialValues>>(null);
 
   const computeExternal = (
     optionsValues: typeof initialValues,
@@ -109,24 +109,18 @@ export default function Palindrome({ title }: ToolComponentProps) {
   ];
 
   return (
-    <Box>
-      <ToolInputAndResult
-        input={<ToolTextInput value={input} onChange={setInput} />}
-        result={<ToolTextResult title={'Palindrome results'} value={result} />}
-      />
-      <ToolOptions
-        compute={computeExternal}
-        getGroups={getGroups}
-        initialValues={initialValues}
-        input={input}
-      />
-      <ToolExamples
-        title={title}
-        exampleCards={exampleCards}
-        getGroups={getGroups}
-        formRef={formRef}
-        setInput={setInput}
-      />
-    </Box>
+    <ToolContent
+      title={title}
+      initialValues={initialValues}
+      getGroups={getGroups}
+      compute={computeExternal}
+      input={input}
+      setInput={setInput}
+      inputComponent={<ToolTextInput value={input} onChange={setInput} />}
+      resultComponent={
+        <ToolTextResult title={'Palindrome results'} value={result} />
+      }
+      exampleCards={exampleCards}
+    />
   );
 }
