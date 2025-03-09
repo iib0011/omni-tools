@@ -11,7 +11,7 @@ import { tool as listShuffle } from './shuffle/meta';
 import { tool as listSort } from './sort/meta';
 
 export const listTools = [
-  listSort, // TODO: Check if uses ToolContent - Needs update to use ToolContent
+  listSort, // TODO: Check if uses ToolContent - Needs update to use ToolContent - Implemented ToolContent
   // listUnwrap,
   listReverse, // TODO: Check if uses ToolContent - Needs update to use ToolContent
   listFindUnique, // TODO: Check if uses ToolContent - Needs update to use ToolContent
