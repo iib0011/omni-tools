@@ -1,3 +1,4 @@
+import { tool as pngCrop } from './crop/meta';
 import { tool as pngCompressPng } from './compress-png/meta';
 import { tool as convertJgpToPng } from './convert-jgp-to-png/meta';
 import { tool as pngCreateTransparent } from './create-transparent/meta';
@@ -9,5 +10,6 @@ export const pngTools = [
   pngCreateTransparent,
   changeColorsInPng,
   convertJgpToPng,
-  changeOpacity
+  changeOpacity,
+  pngCrop
 ];
