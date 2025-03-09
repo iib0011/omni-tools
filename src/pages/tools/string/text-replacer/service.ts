@@ -34,7 +34,7 @@ function replaceTextWithRegexp(
       return text.replace(new RegExp(searchRegexp, 'g'), replaceValue);
     }
   } catch (err) {
-    console.error('Invalid regular expression:', err);
+    // console.error('Invalid regular expression:', err);
     return text;
   }
 }

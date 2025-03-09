@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 import { Buffer } from 'buffer';
 import path from 'path';
 import Jimp from 'jimp';
-import { convertHexToRGBA } from '../../../../../utils/color';
+import { convertHexToRGBA } from '@utils/color';
 
 test.describe('Change colors in png', () => {
   test.beforeEach(async ({ page }) => {
