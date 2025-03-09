@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: missing tools">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: prettify json">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/group/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/group/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/rotate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/sort/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/sort/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/split/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/split/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/sum/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,23 +334,7 @@
       <workItem from="1741475969294" duration="4215000" />
       <workItem from="1741494053121" duration="178000" />
       <workItem from="1741537936314" duration="1294000" />
-      <workItem from="1741539602311" duration="3899000" />
-    </task>
-    <task id="LOCAL-00108" summary="fix: docs">
-      <option name="closed" value="true" />
-      <created>1740324069359</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1740324069359</updated>
-    </task>
-    <task id="LOCAL-00109" summary="fix: docs">
-      <option name="closed" value="true" />
-      <created>1740324274955</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1740324274955</updated>
+      <workItem from="1741539602311" duration="4370000" />
     </task>
     <task id="LOCAL-00110" summary="feat: funding">
       <option name="closed" value="true" />
@@ -739,7 +712,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741542318259</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="refactor: use ToolContent">
+      <option name="closed" value="true" />
+      <created>1741543593426</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1741543593427</updated>
+    </task>
+    <task id="LOCAL-00158" summary="fix: prettify json">
+      <option name="closed" value="true" />
+      <created>1741543732607</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1741543732607</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -786,7 +775,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: examples" />
     <MESSAGE value="feat: json pretty" />
     <MESSAGE value="style: tool categories" />
     <MESSAGE value="chore: compute only if value" />
@@ -809,9 +797,10 @@
     <MESSAGE value="feat: crop png" />
     <MESSAGE value="chore: remove unnecessary files" />
     <MESSAGE value="refactor: validateJson" />
-    <MESSAGE value="refactor: use ToolContent" />
     <MESSAGE value="feat: missing tools" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: missing tools" />
+    <MESSAGE value="refactor: use ToolContent" />
+    <MESSAGE value="fix: prettify json" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: prettify json" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
