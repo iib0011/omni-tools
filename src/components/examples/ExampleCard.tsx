@@ -60,33 +60,36 @@ export default function ExampleCard<T>({
             {description}
           </Typography>
 
-          <Box
-            sx={{
-              display: 'flex',
-              zIndex: '2',
-              width: '100%',
-              height: '100%',
-              bgcolor: 'transparent',
-              padding: '5px 10px',
-              borderRadius: '5px',
-              boxShadow: 'inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;'
-            }}
-          >
-            <TextField
-              value={sampleText}
-              disabled
-              fullWidth
-              multiline
+          {sampleText && (
+            <Box
               sx={{
-                '& .MuiOutlinedInput-root': {
-                  zIndex: '-1',
-                  '& fieldset': {
-                    border: 'none'
-                  }
-                }
+                display: 'flex',
+                zIndex: '2',
+                width: '100%',
+                height: '100%',
+                bgcolor: 'transparent',
+                padding: '5px 10px',
+                borderRadius: '5px',
+                boxShadow:
+                  'inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;'
               }}
-            />
-          </Box>
+            >
+              <TextField
+                value={sampleText}
+                disabled
+                fullWidth
+                multiline
+                sx={{
+                  '& .MuiOutlinedInput-root': {
+                    zIndex: '-1',
+                    '& fieldset': {
+                      border: 'none'
+                    }
+                  }
+                }}
+              />
+            </Box>
+          )}
 
           <ArrowDownwardIcon />
           <Box
