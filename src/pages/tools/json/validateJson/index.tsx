@@ -1,16 +1,10 @@
-import { Box } from '@mui/material';
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import ToolInputAndResult from '@components/ToolInputAndResult';
-import ToolInfo from '@components/ToolInfo';
-import Separator from '@components/Separator';
-import ToolExamples, {
-  CardExampleType
-} from '@components/examples/ToolExamples';
-import { FormikProps } from 'formik';
-import { validateJson } from './servcie';
+import { CardExampleType } from '@components/examples/ToolExamples';
+import { validateJson } from './service';
 import { ToolComponentProps } from '@tools/defineTool';
+import ToolContent from '@components/ToolContent';
 
 const exampleCards: CardExampleType<{}>[] = [
   {
@@ -54,15 +48,8 @@ const exampleCards: CardExampleType<{}>[] = [
 export default function ValidateJson({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  const formRef = useRef<FormikProps<{}>>(null);
 
-  useEffect(() => {
-    if (input) {
-      compute(input);
-    }
-  }, [input]);
-
-  const compute = (input: string) => {
+  const compute = (options: any, input: string) => {
     const { valid, error } = validateJson(input);
 
     if (valid) {
@@ -73,37 +60,33 @@ export default function ValidateJson({ title }: ToolComponentProps) {
   };
 
   return (
-    <Box>
-      <ToolInputAndResult
-        input={
-          <ToolTextInput title="Input JSON" value={input} onChange={setInput} />
-        }
-        result={<ToolTextResult title="Validation Result" value={result} />}
-      />
-
-      <ToolInfo
-        title="What is JSON Validation?"
-        description="
+    <ToolContent
+      title={title}
+      inputComponent={
+        <ToolTextInput title="Input JSON" value={input} onChange={setInput} />
+      }
+      resultComponent={
+        <ToolTextResult title="Validation Result" value={result} />
+      }
+      initialValues={{}}
+      getGroups={null}
+      toolInfo={{
+        title: 'What is JSON Validation?',
+        description: `
           JSON (JavaScript Object Notation) is a lightweight data-interchange format.
           JSON validation ensures that the structure of the data conforms to the JSON standard.
           A valid JSON object must have:
           - Property names enclosed in double quotes.
-          - Properly balanced curly braces `{}`.
+          - Properly balanced curly braces {}.
           - No trailing commas after the last key-value pair.
           - Proper nesting of objects and arrays.
           This tool checks the input JSON and provides feedback to help identify and fix common errors.
-        "
-      />
-
-      <Separator backgroundColor="#5581b5" margin="50px" />
-
-      <ToolExamples
-        title={title}
-        exampleCards={exampleCards}
-        getGroups={() => []}
-        formRef={formRef}
-        setInput={setInput}
-      />
-    </Box>
+          `
+      }}
+      exampleCards={exampleCards}
+      input={input}
+      setInput={setInput}
+      compute={compute}
+    />
   );
 }

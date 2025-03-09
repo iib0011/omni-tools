@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: remove unnecessary files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/validateJson/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/validateJson/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/validateJson/servcie.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/validateJson/service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,16 +30,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;history&quot;: [
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
     {
-      &quot;assignee&quot;: &quot;iib0011&quot;
+      "assignee": "iib0011"
+    },
+    {
+      "state": "OPEN"
     }
   ],
-  &quot;lastFilter&quot;: {
-    &quot;assignee&quot;: &quot;iib0011&quot;
+  "lastFilter": {
+    "assignee": "iib0011"
   }
-}</component>
+}]]></component>
   <component name="GitHubPullRequestState">{
   &quot;prStates&quot;: [
     {
@@ -116,7 +120,7 @@
     "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "#44 on fork/ady-cf/feature/validate-json",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/.husky",
@@ -167,7 +171,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
     </key>
   </component>
-  <component name="RunManager" selected="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="replaceText function (regexp mode).should return the original text when passed an invalid regexp" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -240,10 +244,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.test:e2e" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="Vitest.replaceText function" />
       </list>
     </recent_temporary>
