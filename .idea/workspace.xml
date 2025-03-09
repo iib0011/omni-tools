@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: crop png">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolContent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/input/ToolFileInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolFileInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/crop/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/crop/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -333,14 +329,6 @@
       <workItem from="1740923024259" duration="23000" />
       <workItem from="1740933006573" duration="3679000" />
       <workItem from="1741475969294" duration="4215000" />
-    </task>
-    <task id="LOCAL-00103" summary="feat: update readme">
-      <option name="closed" value="true" />
-      <created>1740276092528</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1740276092528</updated>
     </task>
     <task id="LOCAL-00104" summary="feat: compress png">
       <option name="closed" value="true" />
@@ -726,7 +714,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741487735223</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="feat: crop png">
+      <option name="closed" value="true" />
+      <created>1741492688761</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1741492688761</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

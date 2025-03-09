@@ -80,15 +80,6 @@ export default function ToolFileInput({
     }
   };
 
-  const handlePaste = (event: ClipboardEvent) => {
-    const clipboardItems = event.clipboardData?.items ?? [];
-    const item = clipboardItems[0];
-    if (item && item.type.includes('image')) {
-      const file = item.getAsFile();
-      if (file) onChange(file);
-    }
-  };
-
   useEffect(() => {
     if (value) {
       const objectUrl = URL.createObjectURL(value);
@@ -138,7 +129,6 @@ export default function ToolFileInput({
     }
   };
 
-  // Handle crop changes from react-image-crop
   const handleCropChange = (newCrop: Crop) => {
     setCrop(newCrop);
   };
@@ -156,12 +146,20 @@ export default function ToolFileInput({
   };
 
   useEffect(() => {
+    const handlePaste = (event: ClipboardEvent) => {
+      const clipboardItems = event.clipboardData?.items ?? [];
+      const item = clipboardItems[0];
+      if (item && item.type.includes('image')) {
+        const file = item.getAsFile();
+        if (file) onChange(file);
+      }
+    };
     window.addEventListener('paste', handlePaste);
 
     return () => {
       window.removeEventListener('paste', handlePaste);
     };
-  }, [handlePaste]);
+  }, [onChange]);
 
   return (
     <Box>
