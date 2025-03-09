@@ -1,17 +1,13 @@
-import { Box } from '@mui/material';
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
+import { GetGroupsType } from '@components/options/ToolOptions';
 import { extractSubstring } from './service';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
-import ToolInputAndResult from '@components/ToolInputAndResult';
-import ToolExamples, {
-  CardExampleType
-} from '@components/examples/ToolExamples';
+import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
-import { FormikProps } from 'formik';
+import ToolContent from '@components/ToolContent';
 
 const initialValues = {
   start: '1',
@@ -48,7 +44,7 @@ const exampleCards: CardExampleType<typeof initialValues>[] = [
     title: 'Multi-line Extraction with Reversal',
     description: 'Extract characters 1-3 from each line and reverse them.',
     sampleText: 'First line\nSecond line\nThird line',
-    sampleResult: 'riF\neS\nihT',
+    sampleResult: 'riF\nceS\nihT',
     sampleOptions: {
       ...initialValues,
       start: '1',
@@ -62,7 +58,6 @@ const exampleCards: CardExampleType<typeof initialValues>[] = [
 export default function ExtractSubstring({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  const formRef = useRef<FormikProps<typeof initialValues>>(null);
 
   const computeExternal = (
     optionsValues: typeof initialValues,
@@ -128,25 +123,20 @@ export default function ExtractSubstring({ title }: ToolComponentProps) {
   ];
 
   return (
-    <Box>
-      <ToolInputAndResult
-        input={<ToolTextInput value={input} onChange={setInput} />}
-        result={<ToolTextResult title={'Extracted text'} value={result} />}
-      />
-      <ToolOptions
-        compute={computeExternal}
-        getGroups={getGroups}
-        initialValues={initialValues}
-        input={input}
-        formRef={formRef}
-      />
-      <ToolExamples
-        title={title}
-        exampleCards={exampleCards}
-        getGroups={getGroups}
-        formRef={formRef}
-        setInput={setInput}
-      />
-    </Box>
+    <ToolContent
+      title={title}
+      initialValues={initialValues}
+      getGroups={getGroups}
+      compute={computeExternal}
+      input={input}
+      setInput={setInput}
+      inputComponent={
+        <ToolTextInput title={'Input text'} value={input} onChange={setInput} />
+      }
+      resultComponent={
+        <ToolTextResult title={'Extracted text'} value={result} />
+      }
+      exampleCards={exampleCards}
+    />
   );
 }

@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: csv to json">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: use ToolContent">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/split/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/split/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,15 +333,7 @@
       <workItem from="1740880919391" duration="4395000" />
       <workItem from="1740923024259" duration="23000" />
       <workItem from="1740933006573" duration="3679000" />
-      <workItem from="1741475969294" duration="6527000" />
-    </task>
-    <task id="LOCAL-00102" summary="fix: ctrl v">
-      <option name="closed" value="true" />
-      <created>1740267666455</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1740267666455</updated>
+      <workItem from="1741475969294" duration="6863000" />
     </task>
     <task id="LOCAL-00103" summary="feat: update readme">
       <option name="closed" value="true" />
@@ -733,7 +719,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741480927080</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="refactor: use ToolContent">
+      <option name="closed" value="true" />
+      <created>1741483345639</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1741483345639</updated>
+    </task>
+    <option name="localTasksCounter" value="152" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -792,7 +786,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: bg" />
     <MESSAGE value="chore: handle enter press on search" />
     <MESSAGE value="chore: show tooloptions in example" />
     <MESSAGE value="refact: examples" />
@@ -817,7 +810,8 @@
     <MESSAGE value="chore: update meta" />
     <MESSAGE value="feat: change pgn opacity" />
     <MESSAGE value="feat: csv to json" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: csv to json" />
+    <MESSAGE value="refactor: use ToolContent" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: use ToolContent" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
