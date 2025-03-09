@@ -36,9 +36,11 @@ interface FormikHelperProps<T> {
   compute: (optionsValues: T, input: any) => void;
   input: any;
   children?: ReactNode;
-  getGroups: (
-    formikProps: FormikProps<T> & { updateField: UpdateField<T> }
-  ) => ToolOptionGroup[];
+  getGroups:
+    | null
+    | ((
+        formikProps: FormikProps<T> & { updateField: UpdateField<T> }
+      ) => ToolOptionGroup[]);
   formikProps: FormikProps<T>;
 }
 
@@ -63,7 +65,9 @@ const ToolBody = <T,>({
         input={input}
         initialValues={values}
       />
-      <ToolOptionGroups groups={getGroups({ ...formikProps, updateField })} />
+      <ToolOptionGroups
+        groups={getGroups?.({ ...formikProps, updateField }) ?? []}
+      />
       {children}
     </Stack>
   );
@@ -90,41 +94,41 @@ export default function ToolOptions<T extends FormikValues>({
   formRef?: RefObject<FormikProps<T>>;
 }) {
   const theme = useTheme();
-  if (getGroups)
-    return (
-      <Box
-        sx={{
-          mb: 2,
-          borderRadius: 2,
-          padding: 2,
-          backgroundColor: theme.palette.background.default,
-          boxShadow: '2'
-        }}
-        mt={2}
-      >
-        <Stack direction={'row'} spacing={1} alignItems={'center'}>
-          <SettingsIcon />
-          <Typography fontSize={22}>Tool options</Typography>
-        </Stack>
-        <Box mt={2}>
-          <Formik
-            innerRef={formRef}
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-            onSubmit={() => {}}
-          >
-            {(formikProps) => (
-              <ToolBody
-                compute={compute}
-                input={input}
-                getGroups={getGroups}
-                formikProps={formikProps}
-              >
-                {children}
-              </ToolBody>
-            )}
-          </Formik>
-        </Box>
+  return (
+    <Box
+      sx={{
+        mb: 2,
+        borderRadius: 2,
+        padding: 2,
+        backgroundColor: theme.palette.background.default,
+        boxShadow: '2',
+        display: getGroups ? 'block' : 'none'
+      }}
+      mt={2}
+    >
+      <Stack direction={'row'} spacing={1} alignItems={'center'}>
+        <SettingsIcon />
+        <Typography fontSize={22}>Tool options</Typography>
+      </Stack>
+      <Box mt={2}>
+        <Formik
+          innerRef={formRef}
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={() => {}}
+        >
+          {(formikProps) => (
+            <ToolBody
+              compute={compute}
+              input={input}
+              getGroups={getGroups}
+              formikProps={formikProps}
+            >
+              {children}
+            </ToolBody>
+          )}
+        </Formik>
       </Box>
-    );
+    </Box>
+  );
 }

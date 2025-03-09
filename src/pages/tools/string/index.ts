@@ -20,11 +20,11 @@ export const stringTools = [
   stringRemoveDuplicateLines,
   stringToMorse,
   stringReplace,
-  stringRepeat
-  // stringReverse,
-  // stringRandomizeCase,
-  // stringUppercase,
-  // stringExtractSubstring,
-  // stringCreatePalindrome,
-  // stringPalindrome
+  stringRepeat,
+  stringReverse,
+  stringRandomizeCase,
+  stringUppercase,
+  stringExtractSubstring,
+  stringCreatePalindrome,
+  stringPalindrome
 ];
