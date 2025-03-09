@@ -138,6 +138,7 @@ export default function ExtractSubstring({ title }: ToolComponentProps) {
         getGroups={getGroups}
         initialValues={initialValues}
         input={input}
+        formRef={formRef}
       />
       <ToolExamples
         title={title}

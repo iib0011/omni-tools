@@ -6,6 +6,7 @@ import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { generateArithmeticSequence } from './service';
 import * as Yup from 'yup';
 import { CardExampleType } from '@components/examples/ToolExamples';
+import { ToolComponentProps } from '@tools/defineTool';
 
 type InitialValuesType = {
   firstTerm: string;
@@ -68,11 +69,12 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function ArithmeticSequence() {
+export default function ArithmeticSequence({ title }: ToolComponentProps) {
   const [result, setResult] = useState<string>('');
 
   return (
     <ToolContent
+      title={title}
       inputComponent={null}
       resultComponent={
         <ToolTextResult title="Generated Sequence" value={result} />

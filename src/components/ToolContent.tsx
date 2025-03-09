@@ -25,7 +25,7 @@ interface ToolContentProps<T, I> extends ToolComponentProps {
   // Tool info (optional)
   toolInfo?: {
     title: string;
-    description: string;
+    description?: string;
   };
 
   // Input value to pass to the compute function
@@ -66,7 +66,7 @@ export default function ToolContent<T extends FormikValues, I>({
         validationSchema={validationSchema}
       />
 
-      {toolInfo && (
+      {toolInfo && toolInfo.title && toolInfo.description && (
         <ToolInfo title={toolInfo.title} description={toolInfo.description} />
       )}
 
