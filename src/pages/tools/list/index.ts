@@ -11,15 +11,15 @@ import { tool as listShuffle } from './shuffle/meta';
 import { tool as listSort } from './sort/meta';
 
 export const listTools = [
-  listSort,
+  listSort, // TODO: Check if uses ToolContent
   // listUnwrap,
-  listReverse,
-  listFindUnique,
-  listFindMostPopular,
-  listGroup,
+  listReverse, // TODO: Check if uses ToolContent
+  listFindUnique, // TODO: Check if uses ToolContent
+  listFindMostPopular, // TODO: Check if uses ToolContent
+  listGroup, // TODO: Check if uses ToolContent
   // listWrap,
-  listRotate,
-  listShuffle
+  listRotate, // TODO: Check if uses ToolContent
+  listShuffle // TODO: Check if uses ToolContent
   // listTruncate,
   // listDuplicate
 ];
