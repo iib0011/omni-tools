@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: validateJson">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: use ToolContent">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/CheckboxWithDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/CheckboxWithDesc.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/list/duplicate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-unique/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-unique/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/list/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/shuffle/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/truncate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/truncate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/unwrap/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/unwrap/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/wrap/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/wrap/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/quote/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/quote/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/rot13/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/rot13/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/rotate/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,53 +114,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Docker.Dockerfile build.executor": "Run",
-    "Docker.Dockerfile.executor": "Run",
-    "Playwright.JoinText Component.executor": "Run",
-    "Playwright.JoinText Component.should merge text pieces with specified join character.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.compute function (1).executor": "Run",
-    "Vitest.compute function.executor": "Run",
-    "Vitest.mergeText.executor": "Run",
-    "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
-    "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
-    "Vitest.removeDuplicateLines function.executor": "Run",
-    "Vitest.removeDuplicateLines function.newlines option.executor": "Run",
-    "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
-    "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
-    "Vitest.replaceText function.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/pages/tools/list/duplicate/index.tsx",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.lint.executor": "Run",
-    "npm.prebuild.executor": "Run",
-    "npm.script:create:tool.executor": "Run",
-    "npm.test.executor": "Run",
-    "npm.test:e2e.executor": "Run",
-    "npm.test:e2e:run.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "refactai_advanced_settings",
-    "ts.external.directory.path": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.Dockerfile build.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.JoinText Component.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.JoinText Component.should merge text pieces with specified join character.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.compute function (1).executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.compute function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.newlines option.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.replaceText function.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ibrahima/IdeaProjects/omni-tools/src/pages/tools/list/duplicate/index.tsx&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
+    &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
+    &quot;npm.script:create:tool.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e:run.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;refactai_advanced_settings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -183,7 +186,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
     </key>
   </component>
-  <component name="RunManager" selected="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="replaceText function (regexp mode).should return the original text when passed an invalid regexp" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -256,10 +259,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.test:e2e" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="Vitest.replaceText function" />
       </list>
     </recent_temporary>
@@ -340,15 +343,7 @@
       <workItem from="1741475969294" duration="4215000" />
       <workItem from="1741494053121" duration="178000" />
       <workItem from="1741537936314" duration="1294000" />
-      <workItem from="1741539602311" duration="1240000" />
-    </task>
-    <task id="LOCAL-00106" summary="fix: compress png">
-      <option name="closed" value="true" />
-      <created>1740322444616</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1740322444616</updated>
+      <workItem from="1741539602311" duration="2441000" />
     </task>
     <task id="LOCAL-00107" summary="fix: docs">
       <option name="closed" value="true" />
@@ -734,7 +729,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741535390090</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="refactor: use ToolContent">
+      <option name="closed" value="true" />
+      <created>1741540939154</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1741540939154</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -781,7 +784,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: show tooloptions in example" />
     <MESSAGE value="refact: examples" />
     <MESSAGE value="fix: examples" />
     <MESSAGE value="feat: json pretty" />
@@ -806,7 +808,8 @@
     <MESSAGE value="feat: crop png" />
     <MESSAGE value="chore: remove unnecessary files" />
     <MESSAGE value="refactor: validateJson" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: validateJson" />
+    <MESSAGE value="refactor: use ToolContent" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: use ToolContent" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

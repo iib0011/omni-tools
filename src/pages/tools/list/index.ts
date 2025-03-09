@@ -12,14 +12,14 @@ import { tool as listSort } from './sort/meta';
 
 export const listTools = [
   listSort,
-  // listUnwrap,
+  listUnwrap,
   listReverse,
   listFindUnique,
   listFindMostPopular,
   listGroup,
-  // listWrap,
+  listWrap,
   listRotate,
-  listShuffle
-  // listTruncate,
-  // listDuplicate
+  listShuffle,
+  listTruncate,
+  listDuplicate
 ];

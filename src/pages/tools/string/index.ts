@@ -26,5 +26,8 @@ export const stringTools = [
   stringUppercase,
   stringExtractSubstring,
   stringCreatePalindrome,
-  stringPalindrome
+  stringPalindrome,
+  stringQuote,
+  stringRotate,
+  stringRot13
 ];
