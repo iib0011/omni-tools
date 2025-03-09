@@ -1,0 +1,6 @@
+---
+files:
+- path: src\pages\tools\list\duplicate\index.tsx
+  readOnly: false
+- path: src\pages\tools\list\index.ts
+  readOnly: false
