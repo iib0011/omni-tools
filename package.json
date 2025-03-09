@@ -38,6 +38,7 @@
     "color": "^4.2.3",
     "formik": "^2.4.6",
     "jimp": "^0.22.12",
+    "lint-staged": "^15.4.3",
     "lodash": "^4.17.21",
     "morsee": "^1.0.9",
     "notistack": "^3.0.1",
@@ -83,5 +84,8 @@
     "vite": "^5.2.11",
     "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.6.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json}": "prettier --write"
   }
 }

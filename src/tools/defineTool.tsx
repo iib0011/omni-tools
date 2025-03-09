@@ -18,7 +18,8 @@ export type ToolCategory =
   | 'number'
   | 'gif'
   | 'list'
-  | 'json';
+  | 'json'
+  | 'csv';
 
 export interface DefinedTool {
   type: ToolCategory;
