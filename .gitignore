@@ -40,3 +40,4 @@ yarn-error.log*
 /playwright-report
 
 dist.zip
+.aider*

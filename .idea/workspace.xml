@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: remove unnecessary files">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: validateJson">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/duplicate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-unique/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-unique/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/shuffle/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +29,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="truncate" />
+        <entry key="$PROJECT_DIR$" value="fork/ady-cf/feature/validate-json" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,6 +74,13 @@
         &quot;number&quot;: 33
       },
       &quot;lastSeen&quot;: 1741282429036
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts5zyFTs&quot;,
+        &quot;number&quot;: 15
+      },
+      &quot;lastSeen&quot;: 1741535540953
     }
   ]
 }</component>
@@ -77,6 +90,9 @@
     &quot;accountId&quot;: &quot;45f8cd51-000f-4ba4-a4c6-c4d96ac9b1e5&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/react-image-crop/dist/index.d.ts" root0="SKIP_INSPECTION" />
+  </component>
   <component name="KubernetesApiProvider">{
     &quot;isMigrated&quot;: true
     }</component>
@@ -119,7 +135,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/.husky",
+    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/pages/tools/list/duplicate/index.tsx",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -137,7 +153,7 @@
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
+    "settings.editor.selected.configurable": "refactai_advanced_settings",
     "ts.external.directory.path": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -323,14 +339,8 @@
       <workItem from="1740933006573" duration="3679000" />
       <workItem from="1741475969294" duration="4215000" />
       <workItem from="1741494053121" duration="178000" />
-    </task>
-    <task id="LOCAL-00105" summary="feat: compress png">
-      <option name="closed" value="true" />
-      <created>1740321912140</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1740321912140</updated>
+      <workItem from="1741537936314" duration="1294000" />
+      <workItem from="1741539602311" duration="1240000" />
     </task>
     <task id="LOCAL-00106" summary="fix: compress png">
       <option name="closed" value="true" />
@@ -716,7 +726,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741492943849</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="refactor: validateJson">
+      <option name="closed" value="true" />
+      <created>1741535390090</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1741535390090</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -763,7 +781,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: handle enter press on search" />
     <MESSAGE value="chore: show tooloptions in example" />
     <MESSAGE value="refact: examples" />
     <MESSAGE value="fix: examples" />
@@ -788,7 +805,8 @@
     <MESSAGE value="feat: change pgn opacity" />
     <MESSAGE value="feat: crop png" />
     <MESSAGE value="chore: remove unnecessary files" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: remove unnecessary files" />
+    <MESSAGE value="refactor: validateJson" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: validateJson" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

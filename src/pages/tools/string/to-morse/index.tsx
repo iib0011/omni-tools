@@ -1,11 +1,9 @@
-import { Box } from '@mui/material';
+import ToolContent from '@components/ToolContent';
 import React, { useState } from 'react';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import ToolOptions from '@components/options/ToolOptions';
 import { compute } from './service';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
-import ToolInputAndResult from '@components/ToolInputAndResult';
 
 const initialValues = {
   dotSymbol: '.',
@@ -22,42 +20,40 @@ export default function ToMorse() {
   };
 
   return (
-    <Box>
-      <ToolInputAndResult
-        input={<ToolTextInput value={input} onChange={setInput} />}
-        result={<ToolTextResult title={'Morse code'} value={result} />}
-      />
-      <ToolOptions
-        compute={computeOptions}
-        getGroups={({ values, updateField }) => [
-          {
-            title: 'Short Signal',
-            component: (
-              <TextFieldWithDesc
-                description={
-                  'Symbol that will correspond to the dot in Morse code.'
-                }
-                value={values.dotSymbol}
-                onOwnChange={(val) => updateField('dotSymbol', val)}
-              />
-            )
-          },
-          {
-            title: 'Long Signal',
-            component: (
-              <TextFieldWithDesc
-                description={
-                  'Symbol that will correspond to the dash in Morse code.'
-                }
-                value={values.dashSymbol}
-                onOwnChange={(val) => updateField('dashSymbol', val)}
-              />
-            )
-          }
-        ]}
-        initialValues={initialValues}
-        input={input}
-      />
-    </Box>
+    <ToolContent
+      title="To Morse"
+      initialValues={initialValues}
+      compute={computeOptions}
+      input={input}
+      setInput={setInput}
+      inputComponent={<ToolTextInput value={input} onChange={setInput} />}
+      resultComponent={<ToolTextResult title={'Morse code'} value={result} />}
+      getGroups={({ values, updateField }) => [
+        {
+          title: 'Short Signal',
+          component: (
+            <TextFieldWithDesc
+              description={
+                'Symbol that will correspond to the dot in Morse code.'
+              }
+              value={values.dotSymbol}
+              onOwnChange={(val) => updateField('dotSymbol', val)}
+            />
+          )
+        },
+        {
+          title: 'Long Signal',
+          component: (
+            <TextFieldWithDesc
+              description={
+                'Symbol that will correspond to the dash in Morse code.'
+              }
+              value={values.dashSymbol}
+              onOwnChange={(val) => updateField('dashSymbol', val)}
+            />
+          )
+        }
+      ]}
+    />
   );
 }

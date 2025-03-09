@@ -1,20 +1,13 @@
-import { Box } from '@mui/material';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import * as Yup from 'yup';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
+import ToolContent from '@components/ToolContent';
+import { GetGroupsType } from '@components/options/ToolOptions';
 import { mergeText } from './service';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
-import ToolInputAndResult from '@components/ToolInputAndResult';
-
-import ToolInfo from '@components/ToolInfo';
-import Separator from '@components/Separator';
-import ToolExamples, {
-  CardExampleType
-} from '@components/examples/ToolExamples';
-import { FormikProps } from 'formik';
+import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 
 const initialValues = {
@@ -116,7 +109,6 @@ s
 export default function JoinText({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  const formRef = useRef<FormikProps<InitialValuesType>>(null);
   const compute = (optionsValues: InitialValuesType, input: any) => {
     const { joinCharacter, deleteBlank, deleteTrailing } = optionsValues;
     setResult(mergeText(input, deleteBlank, deleteTrailing, joinCharacter));
@@ -151,36 +143,27 @@ export default function JoinText({ title }: ToolComponentProps) {
     }
   ];
   return (
-    <Box>
-      <ToolInputAndResult
-        input={
-          <ToolTextInput
-            title={'Text Pieces'}
-            value={input}
-            onChange={setInput}
-          />
-        }
-        result={<ToolTextResult title={'Joined Text'} value={result} />}
-      />
-      <ToolOptions
-        formRef={formRef}
-        compute={compute}
-        getGroups={getGroups}
-        initialValues={initialValues}
-        input={input}
-      />
-      <ToolInfo
-        title="What Is a Text Joiner?"
-        description="With this tool you can join parts of the text together. It takes a list of text values, separated by newlines, and merges them together. You can set the character that will be placed between the parts of the combined text. Also, you can ignore all empty lines and remove spaces and tabs at the end of all lines. Textabulous!"
-      />
-      <Separator backgroundColor="#5581b5" margin="50px" />
-      <ToolExamples
-        title={title}
-        exampleCards={exampleCards}
-        getGroups={getGroups}
-        formRef={formRef}
-        setInput={setInput}
-      />
-    </Box>
+    <ToolContent
+      title={title}
+      initialValues={initialValues}
+      compute={compute}
+      input={input}
+      setInput={setInput}
+      inputComponent={
+        <ToolTextInput
+          title={'Text Pieces'}
+          value={input}
+          onChange={setInput}
+        />
+      }
+      resultComponent={<ToolTextResult title={'Joined Text'} value={result} />}
+      getGroups={getGroups}
+      toolInfo={{
+        title: 'What Is a Text Joiner?',
+        description:
+          'With this tool you can join parts of the text together. It takes a list of text values, separated by newlines, and merges them together. You can set the character that will be placed between the parts of the combined text. Also, you can ignore all empty lines and remove spaces and tabs at the end of all lines. Textabulous!'
+      }}
+      exampleCards={exampleCards}
+    />
   );
 }
