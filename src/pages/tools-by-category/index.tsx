@@ -4,14 +4,23 @@ import Typography from '@mui/material/Typography';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { getToolsByCategory } from '../../tools';
 import Hero from 'components/Hero';
-import { capitalizeFirstLetter } from '../../utils/string';
+import { capitalizeFirstLetter } from '@utils/string';
 import { Icon } from '@iconify/react';
 import { categoriesColors } from 'config/uiConfig';
+import React, { useEffect } from 'react';
 
 export default function Home() {
   const navigate = useNavigate();
   const theme = useTheme();
+  const mainContentRef = React.useRef<HTMLDivElement>(null);
   const { categoryName } = useParams();
+
+  useEffect(() => {
+    if (mainContentRef.current) {
+      mainContentRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <Box sx={{ backgroundColor: '#F5F5FA' }}>
       <Box
@@ -25,7 +34,7 @@ export default function Home() {
         <Hero />
       </Box>
       <Divider sx={{ borderColor: theme.palette.primary.main }} />
-      <Box width={'100%'} mt={3} ml={{ xs: 1, md: 2, lg: 3 }} padding={3}>
+      <Box ref={mainContentRef} mt={3} ml={{ xs: 1, md: 2, lg: 3 }} padding={3}>
         <Typography
           fontSize={22}
           color={theme.palette.primary.main}
