@@ -7,6 +7,7 @@ import { videoTools } from '../pages/tools/video';
 import { listTools } from '../pages/tools/list';
 import { Entries } from 'type-fest';
 import { jsonTools } from '../pages/tools/json';
+import { csvTools } from '../pages/tools/csv';
 import { IconifyIcon } from '@iconify/react';
 
 export const tools: DefinedTool[] = [
@@ -14,6 +15,7 @@ export const tools: DefinedTool[] = [
   ...stringTools,
   ...jsonTools,
   ...listTools,
+  ...csvTools,
   ...videoTools,
   ...numberTools
 ];
@@ -59,6 +61,12 @@ const categoriesConfig: {
     icon: 'lets-icons:json-light',
     value:
       'Tools for working with JSON data structures – prettify and minify JSON objects, flatten JSON arrays, stringify JSON values, analyze data, and much more'
+  },
+  {
+    type: 'csv',
+    icon: 'material-symbols-light:csv-outline',
+    value:
+      'Tools for working with CSV files - convert CSV to different formats, manipulate CSV data, validate CSV structure, and process CSV files efficiently.'
   }
 ];
 export const filterTools = (

@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: use ToolContent in palindrome">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: change pgn opacity">
+      <change afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/csv/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/uppercase/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/uppercase/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,65 +31,60 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="truncate" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;history&quot;: [
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
     {
-      &quot;assignee&quot;: &quot;iib0011&quot;
+      "assignee": "iib0011"
     }
   ],
-  &quot;lastFilter&quot;: {}
-}</component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+  "lastFilter": {
+    "assignee": "iib0011"
+  }
+}]]></component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOMJIfts51PkS9",
-        "number": 22
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts51PkS9&quot;,
+        &quot;number&quot;: 22
       },
-      "lastSeen": 1741207144695
+      &quot;lastSeen&quot;: 1741207144695
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NiNYl",
-        "number": 32
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NiNYl&quot;,
+        &quot;number&quot;: 32
       },
-      "lastSeen": 1741209723869
+      &quot;lastSeen&quot;: 1741209723869
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Nheyd",
-        "number": 31
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Nheyd&quot;,
+        &quot;number&quot;: 31
       },
-      "lastSeen": 1741213371410
+      &quot;lastSeen&quot;: 1741213371410
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NmRBs",
-        "number": 33
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NmRBs&quot;,
+        &quot;number&quot;: 33
       },
-      "lastSeen": 1741282429036
-    },
-    {
-      "id": {
-        "id": "PR_kwDOMJIfts6N3tkj",
-        "number": 41
-      },
-      "lastSeen": 1741481724148
+      &quot;lastSeen&quot;: 1741282429036
     }
   ]
-}]]></component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
-    &quot;accountId&quot;: &quot;45f8cd51-000f-4ba4-a4c6-c4d96ac9b1e5&quot;
-  }
 }</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/iib0011/omni-tools.git",
+    "accountId": "45f8cd51-000f-4ba4-a4c6-c4d96ac9b1e5"
+  }
+}]]></component>
   <component name="KubernetesApiProvider">{
     &quot;isMigrated&quot;: true
     }</component>
@@ -124,7 +123,7 @@
     "Vitest.removeDuplicateLines function.newlines option.executor": "Run",
     "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
-    "git-widget-placeholder": "#41 on fork/TheLukasHenry/createUIsForTools",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/.husky",
@@ -337,7 +336,39 @@
       <workItem from="1740880919391" duration="4395000" />
       <workItem from="1740923024259" duration="23000" />
       <workItem from="1740933006573" duration="3679000" />
-      <workItem from="1741475969294" duration="8262000" />
+      <workItem from="1741475969294" duration="4215000" />
+    </task>
+    <task id="LOCAL-00101" summary="chore: use string tools">
+      <option name="closed" value="true" />
+      <created>1720914810712</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1720914810713</updated>
+    </task>
+    <task id="LOCAL-00102" summary="fix: ctrl v">
+      <option name="closed" value="true" />
+      <created>1740267666455</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1740267666455</updated>
+    </task>
+    <task id="LOCAL-00103" summary="feat: update readme">
+      <option name="closed" value="true" />
+      <created>1740276092528</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1740276092528</updated>
+    </task>
+    <task id="LOCAL-00104" summary="feat: compress png">
+      <option name="closed" value="true" />
+      <created>1740321721526</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1740321721526</updated>
     </task>
     <task id="LOCAL-00105" summary="feat: compress png">
       <option name="closed" value="true" />
@@ -699,39 +730,7 @@
       <option name="project" value="LOCAL" />
       <updated>1741423587662</updated>
     </task>
-    <task id="LOCAL-00150" summary="feat: csv to json">
-      <option name="closed" value="true" />
-      <created>1741480927080</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1741480927080</updated>
-    </task>
-    <task id="LOCAL-00151" summary="refactor: use ToolContent">
-      <option name="closed" value="true" />
-      <created>1741483345639</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1741483345639</updated>
-    </task>
-    <task id="LOCAL-00152" summary="refactor: use ToolContent in ExtractSubstring">
-      <option name="closed" value="true" />
-      <created>1741483603658</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1741483603658</updated>
-    </task>
-    <task id="LOCAL-00153" summary="refactor: use ToolContent in palindrome">
-      <option name="closed" value="true" />
-      <created>1741483792562</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1741483792562</updated>
-    </task>
-    <option name="localTasksCounter" value="154" />
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -790,6 +789,10 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="docs: img" />
+    <MESSAGE value="fix: bg" />
+    <MESSAGE value="chore: handle enter press on search" />
+    <MESSAGE value="chore: show tooloptions in example" />
     <MESSAGE value="refact: examples" />
     <MESSAGE value="fix: examples" />
     <MESSAGE value="feat: json pretty" />
@@ -811,11 +814,7 @@
     <MESSAGE value="style: tools height" />
     <MESSAGE value="chore: update meta" />
     <MESSAGE value="feat: change pgn opacity" />
-    <MESSAGE value="feat: csv to json" />
-    <MESSAGE value="refactor: use ToolContent" />
-    <MESSAGE value="refactor: use ToolContent in ExtractSubstring" />
-    <MESSAGE value="refactor: use ToolContent in palindrome" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: use ToolContent in palindrome" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: change pgn opacity" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
