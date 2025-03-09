@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import * as Yup from 'yup';
 import ToolFileInput from '@components/input/ToolFileInput';
 import ToolFileResult from '@components/result/ToolFileResult';
-import ToolOptions from '@components/options/ToolOptions';
 import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
-import ToolInputAndResult from '@components/ToolInputAndResult';
 import imageCompression from 'browser-image-compression';
 import Typography from '@mui/material/Typography';
+import ToolContent from '@components/ToolContent';
+import { ToolComponentProps } from '@tools/defineTool';
 
 const initialValues = {
   rate: '50'
@@ -16,7 +16,7 @@ const validationSchema = Yup.object({
   // splitSeparator: Yup.string().required('The separator is required')
 });
 
-export default function ChangeColorsInPng() {
+export default function ChangeColorsInPng({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [originalSize, setOriginalSize] = useState<number | null>(null); // Store original file size
@@ -52,62 +52,60 @@ export default function ChangeColorsInPng() {
   };
 
   return (
-    <Box>
-      <ToolInputAndResult
-        input={
-          <ToolFileInput
-            value={input}
-            onChange={setInput}
-            accept={['image/png']}
-            title={'Input PNG'}
-          />
-        }
-        result={
-          <ToolFileResult
-            title={'Compressed PNG'}
-            value={result}
-            extension={'png'}
-          />
-        }
-      />
-      <ToolOptions
-        compute={compute}
-        getGroups={({ values, updateField }) => [
-          {
-            title: 'Compression options',
-            component: (
+    <ToolContent
+      title={title}
+      input={input}
+      inputComponent={
+        <ToolFileInput
+          value={input}
+          onChange={setInput}
+          accept={['image/png']}
+          title={'Input PNG'}
+        />
+      }
+      resultComponent={
+        <ToolFileResult
+          title={'Compressed PNG'}
+          value={result}
+          extension={'png'}
+        />
+      }
+      initialValues={initialValues}
+      getGroups={({ values, updateField }) => [
+        {
+          title: 'Compression options',
+          component: (
+            <Box>
+              <TextFieldWithDesc
+                value={values.rate}
+                onOwnChange={(val) => updateField('rate', val)}
+                description={'Compression rate (1-100)'}
+              />
+            </Box>
+          )
+        },
+        {
+          title: 'File sizes',
+          component: (
+            <Box>
               <Box>
-                <TextFieldWithDesc
-                  value={values.rate}
-                  onOwnChange={(val) => updateField('rate', val)}
-                  description={'Compression rate (1-100)'}
-                />
+                {originalSize !== null && (
+                  <Typography>
+                    Original Size: {(originalSize / 1024).toFixed(2)} KB
+                  </Typography>
+                )}
+                {compressedSize !== null && (
+                  <Typography>
+                    Compressed Size: {(compressedSize / 1024).toFixed(2)} KB
+                  </Typography>
+                )}
               </Box>
-            )
-          },
-          {
-            title: 'File sizes',
-            component: (
-              <Box>
-                <Box>
-                  {originalSize !== null && (
-                    <Typography>
-                      Original Size: {(originalSize / 1024).toFixed(2)} KB
-                    </Typography>
-                  )}
-                  {compressedSize !== null && (
-                    <Typography>
-                      Compressed Size: {(compressedSize / 1024).toFixed(2)} KB
-                    </Typography>
-                  )}
-                </Box>
-              </Box>
-            )
-          }
-        ]}
-        initialValues={initialValues}
-        input={input}
-      />
-    </Box>
+            </Box>
+          )
+        }
+      ]}
+      compute={compute}
+      setInput={setInput}
+    />
   );
 }

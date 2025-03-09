@@ -3,21 +3,24 @@ import React, { useState } from 'react';
 import * as Yup from 'yup';
 import ToolFileInput from '@components/input/ToolFileInput';
 import ToolFileResult from '@components/result/ToolFileResult';
-import ToolOptions from '@components/options/ToolOptions';
 import ColorSelector from '@components/options/ColorSelector';
 import Color from 'color';
 import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
-import ToolInputAndResult from '@components/ToolInputAndResult';
 import { areColorsSimilar } from 'utils/color';
+import ToolContent from '@components/ToolContent';
+import { ToolComponentProps } from '@tools/defineTool';
+import { GetGroupsType } from '@components/options/ToolOptions';
 
 const initialValues = {
   fromColor: 'white',
   similarity: '10'
 };
+
 const validationSchema = Yup.object({
   // splitSeparator: Yup.string().required('The separator is required')
 });
-export default function ChangeColorsInPng() {
+
+export default function CreateTransparent({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
@@ -76,52 +79,60 @@ export default function ChangeColorsInPng() {
     processImage(input, fromRgb, Number(similarity));
   };
 
+  const getGroups: GetGroupsType<typeof initialValues> = ({
+    values,
+    updateField
+  }) => [
+    {
+      title: 'From color and similarity',
+      component: (
+        <Box>
+          <ColorSelector
+            value={values.fromColor}
+            onColorChange={(val) => updateField('fromColor', val)}
+            description={'Replace this color (from color)'}
+            inputProps={{ 'data-testid': 'color-input' }}
+          />
+          <TextFieldWithDesc
+            value={values.similarity}
+            onOwnChange={(val) => updateField('similarity', val)}
+            description={
+              'Match this % of similar colors of the from color. For example, 10% white will match white and a little bit of gray.'
+            }
+          />
+        </Box>
+      )
+    }
+  ];
+
   return (
-    <Box>
-      <ToolInputAndResult
-        input={
-          <ToolFileInput
-            value={input}
-            onChange={setInput}
-            accept={['image/png']}
-            title={'Input PNG'}
-          />
-        }
-        result={
-          <ToolFileResult
-            title={'Transparent PNG'}
-            value={result}
-            extension={'png'}
-          />
-        }
-      />
-      <ToolOptions
-        compute={compute}
-        getGroups={({ values, updateField }) => [
-          {
-            title: 'From color and similarity',
-            component: (
-              <Box>
-                <ColorSelector
-                  value={values.fromColor}
-                  onColorChange={(val) => updateField('fromColor', val)}
-                  description={'Replace this color (from color)'}
-                  inputProps={{ 'data-testid': 'color-input' }}
-                />
-                <TextFieldWithDesc
-                  value={values.similarity}
-                  onOwnChange={(val) => updateField('similarity', val)}
-                  description={
-                    'Match this % of similar colors of the from color. For example, 10% white will match white and a little bit of gray.'
-                  }
-                />
-              </Box>
-            )
-          }
-        ]}
-        initialValues={initialValues}
-        input={input}
-      />
-    </Box>
+    <ToolContent
+      title={title}
+      inputComponent={
+        <ToolFileInput
+          value={input}
+          onChange={setInput}
+          accept={['image/png']}
+          title={'Input PNG'}
+        />
+      }
+      resultComponent={
+        <ToolFileResult
+          title={'Transparent PNG'}
+          value={result}
+          extension={'png'}
+        />
+      }
+      initialValues={initialValues}
+      getGroups={getGroups}
+      compute={compute}
+      input={input}
+      validationSchema={validationSchema}
+      toolInfo={{
+        title: 'Create Transparent PNG',
+        description:
+          'This tool allows you to make specific colors in a PNG image transparent. You can select the color to replace and adjust the similarity threshold to include similar colors.'
+      }}
+    />
   );
 }

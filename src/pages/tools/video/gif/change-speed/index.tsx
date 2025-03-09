@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import * as Yup from 'yup';
 import ToolFileInput from '@components/input/ToolFileInput';
 import ToolFileResult from '@components/result/ToolFileResult';
-import ToolOptions from '@components/options/ToolOptions';
 import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
-import ToolInputAndResult from '@components/ToolInputAndResult';
 import Typography from '@mui/material/Typography';
 import { FrameOptions, GifReader, GifWriter } from 'omggif';
-import { gifBinaryToFile } from '../../../../../utils/gif';
+import { gifBinaryToFile } from '@utils/gif';
+import ToolContent from '@components/ToolContent';
+import { ToolComponentProps } from '@tools/defineTool';
 
 const initialValues = {
   newSpeed: 200
@@ -16,11 +16,11 @@ const initialValues = {
 const validationSchema = Yup.object({
   // splitSeparator: Yup.string().required('The separator is required')
 });
-export default function ChangeSpeed() {
+export default function ChangeSpeed({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
-  const compute = (optionsValues: typeof initialValues, input: File) => {
+  const compute = (optionsValues: typeof initialValues, input: File | null) => {
     if (!input) return;
     const { newSpeed } = optionsValues;
 
@@ -104,45 +104,43 @@ export default function ChangeSpeed() {
     processImage(input, newSpeed);
   };
   return (
-    <Box>
-      <ToolInputAndResult
-        input={
-          <ToolFileInput
-            value={input}
-            onChange={setInput}
-            accept={['image/gif']}
-            title={'Input GIF'}
-          />
+    <ToolContent
+      title={title}
+      input={input}
+      inputComponent={
+        <ToolFileInput
+          value={input}
+          onChange={setInput}
+          accept={['image/gif']}
+          title={'Input GIF'}
+        />
+      }
+      resultComponent={
+        <ToolFileResult
+          title={'Output GIF with new speed'}
+          value={result}
+          extension={'gif'}
+        />
+      }
+      initialValues={initialValues}
+      getGroups={({ values, updateField }) => [
+        {
+          title: 'New GIF speed',
+          component: (
+            <Box>
+              <TextFieldWithDesc
+                value={values.newSpeed}
+                onOwnChange={(val) => updateField('newSpeed', Number(val))}
+                description={'Default new GIF speed.'}
+                InputProps={{ endAdornment: <Typography>ms</Typography> }}
+                type={'number'}
+              />
+            </Box>
+          )
         }
-        result={
-          <ToolFileResult
-            title={'Output GIF with new speed'}
-            value={result}
-            extension={'gif'}
-          />
-        }
-      />
-      <ToolOptions
-        compute={compute}
-        getGroups={({ values, updateField }) => [
-          {
-            title: 'New GIF speed',
-            component: (
-              <Box>
-                <TextFieldWithDesc
-                  value={values.newSpeed}
-                  onOwnChange={(val) => updateField('newSpeed', Number(val))}
-                  description={'Default new GIF speed.'}
-                  InputProps={{ endAdornment: <Typography>ms</Typography> }}
-                  type={'number'}
-                />
-              </Box>
-            )
-          }
-        ]}
-        initialValues={initialValues}
-        input={input}
-      />
-    </Box>
+      ]}
+      compute={compute}
+      setInput={setInput}
+    />
   );
 }

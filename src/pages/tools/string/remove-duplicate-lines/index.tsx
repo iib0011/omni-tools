@@ -2,10 +2,8 @@ import { Box } from '@mui/material';
 import React, { useRef, useState } from 'react';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
 import SimpleRadio from '@components/options/SimpleRadio';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
-import ToolInputAndResult from '@components/ToolInputAndResult';
 import ToolExamples, {
   CardExampleType
 } from '@components/examples/ToolExamples';
@@ -16,6 +14,7 @@ import removeDuplicateLines, {
   DuplicateRemoverOptions,
   NewlineOption
 } from './service';
+import ToolContent from '@components/ToolContent';
 
 // Initial values for our form
 const initialValues: DuplicateRemoverOptions = {
@@ -174,7 +173,6 @@ Elderberry`,
 export default function RemoveDuplicateLines({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  const formRef = useRef<FormikProps<typeof initialValues>>(null);
 
   const computeExternal = (
     optionsValues: typeof initialValues,
@@ -183,78 +181,65 @@ export default function RemoveDuplicateLines({ title }: ToolComponentProps) {
     setResult(removeDuplicateLines(inputText, optionsValues));
   };
 
-  const getGroups: GetGroupsType<typeof initialValues> = ({
-    values,
-    updateField
-  }) => [
-    {
-      title: 'Operation Mode',
-      component: operationModes.map(({ title, description, value }) => (
-        <SimpleRadio
-          key={value}
-          checked={value === values.mode}
-          title={title}
-          description={description}
-          onClick={() => updateField('mode', value)}
-        />
-      ))
-    },
-    {
-      title: 'Newlines, Tabs and Spaces',
-      component: [
-        ...newlineOptions.map(({ title, description, value }) => (
-          <SimpleRadio
-            key={value}
-            checked={value === values.newlines}
-            title={title}
-            description={description}
-            onClick={() => updateField('newlines', value)}
-          />
-        )),
-        <CheckboxWithDesc
-          key="trimTextLines"
-          checked={values.trimTextLines}
-          title="Trim Text Lines"
-          description="Before filtering uniques, remove tabs and spaces from the beginning and end of all lines."
-          onChange={(checked) => updateField('trimTextLines', checked)}
-        />
-      ]
-    },
-    {
-      title: 'Sort Lines',
-      component: [
-        <CheckboxWithDesc
-          key="sortLines"
-          checked={values.sortLines}
-          title="Sort the Output Lines"
-          description="After removing the duplicates, sort the unique lines."
-          onChange={(checked) => updateField('sortLines', checked)}
-        />
-      ]
-    }
-  ];
-
   return (
-    <Box>
-      <ToolInputAndResult
-        input={<ToolTextInput value={input} onChange={setInput} />}
-        result={
-          <ToolTextResult title={'Text without duplicates'} value={result} />
+    <ToolContent
+      title={title}
+      input={input}
+      inputComponent={<ToolTextInput value={input} onChange={setInput} />}
+      resultComponent={
+        <ToolTextResult title={'Text without duplicates'} value={result} />
+      }
+      initialValues={initialValues}
+      getGroups={({ values, updateField }) => [
+        {
+          title: 'Operation Mode',
+          component: operationModes.map(({ title, description, value }) => (
+            <SimpleRadio
+              key={value}
+              checked={value === values.mode}
+              title={title}
+              description={description}
+              onClick={() => updateField('mode', value)}
+            />
+          ))
+        },
+        {
+          title: 'Newlines, Tabs and Spaces',
+          component: [
+            ...newlineOptions.map(({ title, description, value }) => (
+              <SimpleRadio
+                key={value}
+                checked={value === values.newlines}
+                title={title}
+                description={description}
+                onClick={() => updateField('newlines', value)}
+              />
+            )),
+            <CheckboxWithDesc
+              key="trimTextLines"
+              checked={values.trimTextLines}
+              title="Trim Text Lines"
+              description="Before filtering uniques, remove tabs and spaces from the beginning and end of all lines."
+              onChange={(checked) => updateField('trimTextLines', checked)}
+            />
+          ]
+        },
+        {
+          title: 'Sort Lines',
+          component: [
+            <CheckboxWithDesc
+              key="sortLines"
+              checked={values.sortLines}
+              title="Sort the Output Lines"
+              description="After removing the duplicates, sort the unique lines."
+              onChange={(checked) => updateField('sortLines', checked)}
+            />
+          ]
         }
-      />
-      <ToolOptions
-        compute={computeExternal}
-        getGroups={getGroups}
-        initialValues={initialValues}
-        input={input}
-      />
-      <ToolExamples
-        title={title}
-        exampleCards={exampleCards}
-        getGroups={getGroups}
-        formRef={formRef}
-        setInput={setInput}
-      />
-    </Box>
+      ]}
+      compute={computeExternal}
+      setInput={setInput}
+      exampleCards={exampleCards}
+    />
   );
 }
