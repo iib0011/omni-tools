@@ -2,7 +2,7 @@ import { Box, Grid, Stack, Typography } from '@mui/material';
 import ExampleCard, { ExampleCardProps } from './ExampleCard';
 import React from 'react';
 import { GetGroupsType } from '@components/options/ToolOptions';
-import { FormikProps } from 'formik';
+import { useFormikContext } from 'formik';
 
 export type CardExampleType<T> = Omit<
   ExampleCardProps<T>,
@@ -14,7 +14,6 @@ export interface ExampleProps<T> {
   subtitle?: string;
   exampleCards: CardExampleType<T>[];
   getGroups: GetGroupsType<T> | null;
-  formRef: React.RefObject<FormikProps<T>>;
   setInput?: React.Dispatch<React.SetStateAction<any>>;
 }
 
@@ -23,12 +22,13 @@ export default function ToolExamples<T>({
   subtitle,
   exampleCards,
   getGroups,
-  formRef,
   setInput
 }: ExampleProps<T>) {
+  const { setValues } = useFormikContext<T>();
+
   function changeInputResult(newInput: string | undefined, newOptions: T) {
     setInput?.(newInput);
-    formRef.current?.setValues(newOptions);
+    setValues(newOptions);
     const toolsElement = document.getElementById('tool');
     if (toolsElement) {
       toolsElement.scrollIntoView({ behavior: 'smooth' });

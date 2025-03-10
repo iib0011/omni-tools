@@ -1,10 +1,7 @@
-import React, { useRef, useState, ReactNode, useEffect } from 'react';
+import React, { useRef, ReactNode, useState } from 'react';
 import { Box } from '@mui/material';
-import { FormikProps, FormikValues } from 'formik';
-import ToolOptions, {
-  GetGroupsType,
-  UpdateField
-} from '@components/options/ToolOptions';
+import { Formik, FormikProps, FormikValues } from 'formik';
+import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
 import ToolInputAndResult from '@components/ToolInputAndResult';
 import ToolInfo from '@components/ToolInfo';
 import Separator from '@components/Separator';
@@ -60,54 +57,53 @@ export default function ToolContent<T extends FormikValues, I>({
   validationSchema,
   renderCustomInput
 }: ToolContentProps<T, I>) {
-  const formRef = useRef<FormikProps<T>>(null);
-
-  const [initialized, forceUpdate] = useState(0);
-  useEffect(() => {
-    if (formRef.current && !initialized) {
-      forceUpdate((n) => n + 1);
-    }
-  }, [initialized]);
   return (
     <Box>
-      <ToolInputAndResult
-        input={
-          inputComponent ??
-          (renderCustomInput &&
-            formRef.current &&
-            renderCustomInput(
-              formRef.current.values,
-              formRef.current.setFieldValue
-            ))
-        }
-        result={resultComponent}
-      />
-
-      <ToolOptions
-        formRef={formRef}
-        compute={compute}
-        getGroups={getGroups}
+      <Formik
         initialValues={initialValues}
-        input={input}
         validationSchema={validationSchema}
-      />
+        onSubmit={() => {}}
+      >
+        {({ values, setFieldValue }) => {
+          return (
+            <>
+              <ToolInputAndResult
+                input={
+                  inputComponent ??
+                  (renderCustomInput &&
+                    renderCustomInput(values, setFieldValue))
+                }
+                result={resultComponent}
+              />
 
-      {toolInfo && toolInfo.title && toolInfo.description && (
-        <ToolInfo title={toolInfo.title} description={toolInfo.description} />
-      )}
+              <ToolOptions
+                compute={compute}
+                getGroups={getGroups}
+                input={input}
+              />
 
-      {exampleCards && exampleCards.length > 0 && (
-        <>
-          <Separator backgroundColor="#5581b5" margin="50px" />
-          <ToolExamples
-            title={title}
-            exampleCards={exampleCards}
-            getGroups={getGroups}
-            formRef={formRef}
-            setInput={setInput}
-          />
-        </>
-      )}
+              {toolInfo && toolInfo.title && toolInfo.description && (
+                <ToolInfo
+                  title={toolInfo.title}
+                  description={toolInfo.description}
+                />
+              )}
+
+              {exampleCards && exampleCards.length > 0 && (
+                <>
+                  <Separator backgroundColor="#5581b5" margin="50px" />
+                  <ToolExamples
+                    title={title}
+                    exampleCards={exampleCards}
+                    getGroups={getGroups}
+                    setInput={setInput}
+                  />
+                </>
+              )}
+            </>
+          );
+        }}
+      </Formik>
     </Box>
   );
 }

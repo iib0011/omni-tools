@@ -22,6 +22,12 @@ interface ToolFileInputProps {
     position: { x: number; y: number },
     size: { width: number; height: number }
   ) => void;
+  type?: 'image' | 'video' | 'audio';
+  // Video specific props
+  showTrimControls?: boolean;
+  onTrimChange?: (trimStart: number, trimEnd: number) => void;
+  trimStart?: number;
+  trimEnd?: number;
 }
 
 export default function ToolFileInput({
@@ -33,15 +39,22 @@ export default function ToolFileInput({
   cropShape = 'rectangular',
   cropPosition = { x: 0, y: 0 },
   cropSize = { width: 100, height: 100 },
-  onCropChange
+  onCropChange,
+  type = 'image',
+  showTrimControls = false,
+  onTrimChange,
+  trimStart = 0,
+  trimEnd = 100
 }: ToolFileInputProps) {
   const [preview, setPreview] = useState<string | null>(null);
   const theme = useTheme();
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [imgWidth, setImgWidth] = useState(0);
   const [imgHeight, setImgHeight] = useState(0);
+  const [videoDuration, setVideoDuration] = useState(0);
 
   // Convert position and size to crop format used by ReactCrop
   const [crop, setCrop] = useState<Crop>({
@@ -129,6 +142,17 @@ export default function ToolFileInput({
     }
   };
 
+  // Handle video load to set duration
+  const onVideoLoad = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const duration = e.currentTarget.duration;
+    setVideoDuration(duration);
+
+    // Initialize trim with full duration if needed
+    if (onTrimChange && trimStart === 0 && trimEnd === 100) {
+      onTrimChange(0, duration);
+    }
+  };
+
   const handleCropChange = (newCrop: Crop) => {
     setCrop(newCrop);
   };
@@ -145,11 +169,20 @@ export default function ToolFileInput({
     }
   };
 
+  const handleTrimChange = (start: number, end: number) => {
+    if (onTrimChange) {
+      onTrimChange(start, end);
+    }
+  };
+
   useEffect(() => {
     const handlePaste = (event: ClipboardEvent) => {
       const clipboardItems = event.clipboardData?.items ?? [];
       const item = clipboardItems[0];
-      if (item && item.type.includes('image')) {
+      if (
+        item &&
+        (item.type.includes('image') || item.type.includes('video'))
+      ) {
         const file = item.getAsFile();
         if (file) onChange(file);
       }
@@ -160,6 +193,15 @@ export default function ToolFileInput({
       window.removeEventListener('paste', handlePaste);
     };
   }, [onChange]);
+
+  // Format seconds to MM:SS format
+  const formatTime = (seconds: number) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${minutes.toString().padStart(2, '0')}:${remainingSeconds
+      .toString()
+      .padStart(2, '0')}`;
+  };
 
   return (
     <Box>
@@ -188,14 +230,24 @@ export default function ToolFileInput({
               overflow: 'hidden'
             }}
           >
-            {showCropOverlay ? (
-              <ReactCrop
-                crop={crop}
-                onChange={handleCropChange}
-                onComplete={handleCropComplete}
-                circularCrop={cropShape === 'circular'}
-                style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
-              >
+            {type === 'image' &&
+              (showCropOverlay ? (
+                <ReactCrop
+                  crop={crop}
+                  onChange={handleCropChange}
+                  onComplete={handleCropComplete}
+                  circularCrop={cropShape === 'circular'}
+                  style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
+                >
+                  <img
+                    ref={imageRef}
+                    src={preview}
+                    alt="Preview"
+                    style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
+                    onLoad={onImageLoad}
+                  />
+                </ReactCrop>
+              ) : (
                 <img
                   ref={imageRef}
                   src={preview}
@@ -203,14 +255,98 @@ export default function ToolFileInput({
                   style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
                   onLoad={onImageLoad}
                 />
-              </ReactCrop>
-            ) : (
-              <img
-                ref={imageRef}
+              ))}
+            {type === 'video' && (
+              <Box
+                sx={{
+                  position: 'relative',
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+              >
+                <video
+                  ref={videoRef}
+                  src={preview}
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: showTrimControls ? 'calc(100% - 50px)' : '100%'
+                  }}
+                  onLoadedMetadata={onVideoLoad}
+                  controls={!showTrimControls}
+                />
+
+                {showTrimControls && videoDuration > 0 && (
+                  <Box
+                    sx={{
+                      width: '100%',
+                      padding: '10px 20px',
+                      position: 'absolute',
+                      bottom: 0,
+                      left: 0,
+                      backgroundColor: 'rgba(0,0,0,0.5)',
+                      color: 'white',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: 1
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center'
+                      }}
+                    >
+                      <Typography variant="caption">
+                        Start: {formatTime(trimStart || 0)}
+                      </Typography>
+                      <Typography variant="caption">
+                        End: {formatTime(trimEnd || videoDuration)}
+                      </Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                      <input
+                        type="range"
+                        min={0}
+                        max={videoDuration}
+                        step={0.1}
+                        value={trimStart || 0}
+                        onChange={(e) =>
+                          handleTrimChange(
+                            parseFloat(e.target.value),
+                            trimEnd || videoDuration
+                          )
+                        }
+                        style={{ flex: 1 }}
+                      />
+                      <input
+                        type="range"
+                        min={trimStart || 0}
+                        max={videoDuration}
+                        step={0.1}
+                        value={trimEnd || videoDuration}
+                        onChange={(e) =>
+                          handleTrimChange(
+                            trimStart || 0,
+                            parseFloat(e.target.value)
+                          )
+                        }
+                        style={{ flex: 1 }}
+                      />
+                    </Box>
+                  </Box>
+                )}
+              </Box>
+            )}
+            {type === 'audio' && (
+              <audio
                 src={preview}
-                alt="Preview"
-                style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
-                onLoad={onImageLoad}
+                controls
+                style={{ width: '100%', maxWidth: '500px' }}
               />
             )}
           </Box>
@@ -228,8 +364,8 @@ export default function ToolFileInput({
             }}
           >
             <Typography color={theme.palette.grey['600']}>
-              Click here to select an image from your device, press Ctrl+V to
-              use an image from your clipboard, drag and drop a file from
+              Click here to select a {type} from your device, press Ctrl+V to
+              use a {type} from your clipboard, drag and drop a file from
               desktop
             </Typography>
           </Box>

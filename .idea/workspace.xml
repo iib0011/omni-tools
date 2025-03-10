@@ -4,8 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: tools by category scroll">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: missing meta">
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolContent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/examples/ToolExamples.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/ToolExamples.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/ToolFileInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolFileInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/shuffle/shuffle.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/shuffle.service.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,14 +350,7 @@
       <workItem from="1741537936314" duration="1294000" />
       <workItem from="1741539602311" duration="4557000" />
       <workItem from="1741547560596" duration="1671000" />
-    </task>
-    <task id="LOCAL-00112" summary="feat: ui changes">
-      <option name="closed" value="true" />
-      <created>1740464250449</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1740464250449</updated>
+      <workItem from="1741567442768" duration="12099000" />
     </task>
     <task id="LOCAL-00113" summary="fix: tsc">
       <option name="closed" value="true" />
@@ -728,7 +736,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741548044897</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="fix: missing meta">
+      <option name="closed" value="true" />
+      <created>1741568170877</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1741568170877</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -775,7 +791,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: compute only if value" />
     <MESSAGE value="chore: remove prettify test" />
     <MESSAGE value="chore: prettify json in home" />
     <MESSAGE value="feat: jakarta font" />
@@ -800,7 +815,8 @@
     <MESSAGE value="fix: prettify json" />
     <MESSAGE value="refactor: sum" />
     <MESSAGE value="fix: tools by category scroll" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: tools by category scroll" />
+    <MESSAGE value="fix: missing meta" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: missing meta" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

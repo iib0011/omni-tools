@@ -1,99 +1,62 @@
 import { Box, Stack, useTheme } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 import Typography from '@mui/material/Typography';
-import React, { ReactNode, RefObject, useContext, useEffect } from 'react';
-import { Formik, FormikProps, FormikValues, useFormikContext } from 'formik';
+import React, { ReactNode, useContext } from 'react';
+import { FormikProps, FormikValues, useFormikContext } from 'formik';
 import ToolOptionGroups, { ToolOptionGroup } from './ToolOptionGroups';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 
 export type UpdateField<T> = <Y extends keyof T>(field: Y, value: T[Y]) => void;
 
 const FormikListenerComponent = <T,>({
-  initialValues,
   input,
   compute
 }: {
-  initialValues: T;
   input: any;
   compute: (optionsValues: T, input: any) => void;
 }) => {
-  const { values } = useFormikContext<typeof initialValues>();
+  const { values } = useFormikContext<T>();
   const { showSnackBar } = useContext(CustomSnackBarContext);
 
-  useEffect(() => {
+  React.useEffect(() => {
     try {
       compute(values, input);
     } catch (exception: unknown) {
       if (exception instanceof Error) showSnackBar(exception.message, 'error');
       else console.error(exception);
     }
-  }, [values, input]);
+  }, [values, input, showSnackBar]);
 
   return null; // This component doesn't render anything
-};
-
-interface FormikHelperProps<T> {
-  compute: (optionsValues: T, input: any) => void;
-  input: any;
-  children?: ReactNode;
-  getGroups:
-    | null
-    | ((
-        formikProps: FormikProps<T> & { updateField: UpdateField<T> }
-      ) => ToolOptionGroup[]);
-  formikProps: FormikProps<T>;
-}
-
-const ToolBody = <T,>({
-  compute,
-  input,
-  children,
-  getGroups,
-  formikProps
-}: FormikHelperProps<T>) => {
-  const { values, setFieldValue } = useFormikContext<T>();
-
-  const updateField: UpdateField<T> = (field, value) => {
-    // @ts-ignore
-    setFieldValue(field, value);
-  };
-
-  return (
-    <Stack direction={'row'} spacing={2}>
-      <FormikListenerComponent<T>
-        compute={compute}
-        input={input}
-        initialValues={values}
-      />
-      <ToolOptionGroups
-        groups={getGroups?.({ ...formikProps, updateField }) ?? []}
-      />
-      {children}
-    </Stack>
-  );
 };
 
 export type GetGroupsType<T> = (
   formikProps: FormikProps<T> & { updateField: UpdateField<T> }
 ) => ToolOptionGroup[];
+
 export default function ToolOptions<T extends FormikValues>({
   children,
-  initialValues,
-  validationSchema,
   compute,
   input,
-  getGroups,
-  formRef
+  getGroups
 }: {
   children?: ReactNode;
-  initialValues: T;
-  validationSchema?: any | (() => any);
   compute: (optionsValues: T, input: any) => void;
   input?: any;
   getGroups: GetGroupsType<T> | null;
-  formRef?: RefObject<FormikProps<T>>;
 }) {
   const theme = useTheme();
+  const formikContext = useFormikContext<T>();
+
+  // Early return if no groups to display
+  if (!getGroups) {
+    return null;
+  }
+
+  const updateField: UpdateField<T> = (field, value) => {
+    formikContext.setFieldValue(field as string, value);
+  };
+
   return (
     <Box
       sx={{
@@ -101,8 +64,7 @@ export default function ToolOptions<T extends FormikValues>({
         borderRadius: 2,
         padding: 2,
         backgroundColor: theme.palette.background.default,
-        boxShadow: '2',
-        display: getGroups ? 'block' : 'none'
+        boxShadow: '2'
       }}
       mt={2}
     >
@@ -111,23 +73,13 @@ export default function ToolOptions<T extends FormikValues>({
         <Typography fontSize={22}>Tool options</Typography>
       </Stack>
       <Box mt={2}>
-        <Formik
-          innerRef={formRef}
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={() => {}}
-        >
-          {(formikProps) => (
-            <ToolBody
-              compute={compute}
-              input={input}
-              getGroups={getGroups}
-              formikProps={formikProps}
-            >
-              {children}
-            </ToolBody>
-          )}
-        </Formik>
+        <Stack direction={'row'} spacing={2}>
+          <FormikListenerComponent<T> compute={compute} input={input} />
+          <ToolOptionGroups
+            groups={getGroups({ ...formikContext, updateField }) ?? []}
+          />
+          {children}
+        </Stack>
       </Box>
     </Box>
   );

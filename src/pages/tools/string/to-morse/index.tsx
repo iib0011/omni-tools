@@ -13,7 +13,6 @@ const initialValues = {
 export default function ToMorse() {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  // const formRef = useRef<FormikProps<typeof initialValues>>(null);
   const computeOptions = (optionsValues: typeof initialValues, input: any) => {
     const { dotSymbol, dashSymbol } = optionsValues;
     setResult(compute(input, dotSymbol, dashSymbol));

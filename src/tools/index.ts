@@ -67,6 +67,12 @@ const categoriesConfig: {
     icon: 'material-symbols-light:csv-outline',
     value:
       'Tools for working with CSV files - convert CSV to different formats, manipulate CSV data, validate CSV structure, and process CSV files efficiently.'
+  },
+  {
+    type: 'video',
+    icon: 'lets-icons:video-light',
+    value:
+      'Tools for working with videos – extract frames from videos, create GIFs from videos, convert videos to different formats, and much more.'
   }
 ];
 export const filterTools = (

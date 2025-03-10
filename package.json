@@ -27,10 +27,14 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
     "@jimp/types": "^1.6.0",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "@playwright/test": "^1.45.0",
+    "@types/ffmpeg": "^1.0.7",
     "@types/lodash": "^4.17.5",
     "@types/morsee": "^1.0.2",
     "@types/omggif": "^1.0.5",
@@ -50,6 +54,7 @@
     "react-image-crop": "^11.0.7",
     "react-router-dom": "^6.23.1",
     "type-fest": "^4.35.0",
+    "use-deep-compare-effect": "^1.8.1",
     "yup": "^1.4.0"
   },
   "devDependencies": {

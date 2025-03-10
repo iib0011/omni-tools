@@ -18,6 +18,7 @@ export type ToolCategory =
   | 'png'
   | 'number'
   | 'gif'
+  | 'video'
   | 'list'
   | 'json'
   | 'csv';
