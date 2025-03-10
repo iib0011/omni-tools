@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: sum">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: tools by category scroll">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,15 +334,7 @@
       <workItem from="1741494053121" duration="178000" />
       <workItem from="1741537936314" duration="1294000" />
       <workItem from="1741539602311" duration="4557000" />
-      <workItem from="1741547560596" duration="374000" />
-    </task>
-    <task id="LOCAL-00111" summary="feat: ui changes">
-      <option name="closed" value="true" />
-      <created>1740464231905</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1740464231905</updated>
+      <workItem from="1741547560596" duration="1671000" />
     </task>
     <task id="LOCAL-00112" summary="feat: ui changes">
       <option name="closed" value="true" />
@@ -729,7 +720,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741544086061</updated>
     </task>
-    <option name="localTasksCounter" value="160" />
+    <task id="LOCAL-00160" summary="fix: tools by category scroll">
+      <option name="closed" value="true" />
+      <created>1741548044897</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1741548044897</updated>
+    </task>
+    <option name="localTasksCounter" value="161" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -776,7 +775,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="style: tool categories" />
     <MESSAGE value="chore: compute only if value" />
     <MESSAGE value="chore: remove prettify test" />
     <MESSAGE value="chore: prettify json in home" />
@@ -801,7 +799,8 @@
     <MESSAGE value="refactor: use ToolContent" />
     <MESSAGE value="fix: prettify json" />
     <MESSAGE value="refactor: sum" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: sum" />
+    <MESSAGE value="fix: tools by category scroll" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: tools by category scroll" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

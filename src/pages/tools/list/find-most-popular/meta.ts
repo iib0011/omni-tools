@@ -6,8 +6,9 @@ export const tool = defineTool('list', {
   name: 'Find most popular',
   path: 'find-most-popular',
   icon: 'material-symbols-light:query-stats',
-  description: '',
-  shortDescription: '',
+  description:
+    'A tool to identify and count the most frequently occurring items in a list. Useful for data analysis, finding trends, or identifying common elements.',
+  shortDescription: 'Find most common items in a list.',
   keywords: ['find', 'most', 'popular'],
   component: lazy(() => import('./index'))
 });
