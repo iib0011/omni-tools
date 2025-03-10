@@ -8,6 +8,8 @@ import InputFooter from './InputFooter';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import greyPattern from '@assets/grey-pattern.png';
 import { globalInputHeight } from '../../config/uiConfig';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
 interface ToolFileInputProps {
   value: File | null;
@@ -309,34 +311,25 @@ export default function ToolFileInput({
                       </Typography>
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                      <input
-                        type="range"
-                        min={0}
-                        max={videoDuration}
-                        step={0.1}
-                        value={trimStart || 0}
-                        onChange={(e) =>
-                          handleTrimChange(
-                            parseFloat(e.target.value),
-                            trimEnd || videoDuration
-                          )
-                        }
-                        style={{ flex: 1 }}
-                      />
-                      <input
-                        type="range"
-                        min={trimStart || 0}
-                        max={videoDuration}
-                        step={0.1}
-                        value={trimEnd || videoDuration}
-                        onChange={(e) =>
-                          handleTrimChange(
-                            trimStart || 0,
-                            parseFloat(e.target.value)
-                          )
-                        }
-                        style={{ flex: 1 }}
-                      />
+                      <div
+                        className="range-slider-container"
+                        style={{ margin: '20px 0', width: '100%' }}
+                      >
+                        <Slider
+                          range
+                          min={0}
+                          max={videoDuration}
+                          step={0.1}
+                          value={[trimStart || 0, trimEnd || videoDuration]}
+                          onChange={(values) => {
+                            if (Array.isArray(values)) {
+                              handleTrimChange(values[0], values[1]);
+                            }
+                          }}
+                          allowCross={false}
+                          pushable={0.1} // Minimum distance between handles
+                        />
+                      </div>
                     </Box>
                   </Box>
                 )}
