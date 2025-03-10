@@ -131,7 +131,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
         <ToolFileResult
           title={'Trimmed Video'}
           value={result}
-          extension={'webm'}
+          extension={'mp4'}
         />
       }
       initialValues={initialValues}
