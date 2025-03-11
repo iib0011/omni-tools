@@ -10,6 +10,7 @@ import ToolContent from '@components/ToolContent';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import SimpleRadio from '@components/options/SimpleRadio';
+import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
@@ -107,8 +108,8 @@ export default function Truncate({ title }: ToolComponentProps) {
             onOwnChange={(val) => updateField('maxLength', val)}
             type={'number'}
           />
-          <SimpleRadio
-            onClick={() => updateField('lineByLine', !values.lineByLine)}
+          <CheckboxWithDesc
+            onChange={(val) => updateField('lineByLine', val)}
             checked={values.lineByLine}
             title={'Line-by-line Truncating'}
             description={'Truncate each line separately.'}
@@ -120,10 +121,11 @@ export default function Truncate({ title }: ToolComponentProps) {
       title: 'Suffix and Affix',
       component: (
         <Box>
-          <SimpleRadio
-            onClick={() => updateField('addIndicator', !values.addIndicator)}
+          <CheckboxWithDesc
+            onChange={(val) => updateField('addIndicator', val)}
             checked={values.addIndicator}
             title={'Add Truncation Indicator'}
+            description={''}
           />
           <TextFieldWithDesc
             description={
