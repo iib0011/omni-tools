@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: replace text service">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: trim video">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/quote/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/quote/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/rot13/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/rot13/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/string/rotate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/string/rotate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/change-colors-in-png.e2e.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/change-colors-in-png.e2e.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/create-transparent.e2e.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/create-transparent.e2e.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,24 +22,25 @@
     <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fork/EugSh1/main" />
+        <entry key="$PROJECT_DIR$" value="fork/ady-cf/feature/validate-json" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-    &quot;history&quot;: [
+  &quot;history&quot;: [
     {
-    &quot;assignee&quot;: &quot;iib0011&quot;
+      &quot;assignee&quot;: &quot;iib0011&quot;
     }
-    ],
-    &quot;lastFilter&quot;: {
+  ],
+  &quot;lastFilter&quot;: {
     &quot;assignee&quot;: &quot;iib0011&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="GitHubPullRequestState">{
   &quot;prStates&quot;: [
     {
@@ -69,15 +70,25 @@
         &quot;number&quot;: 33
       },
       &quot;lastSeen&quot;: 1741282429036
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts5zyFTs&quot;,
+        &quot;number&quot;: 15
+      },
+      &quot;lastSeen&quot;: 1741535540953
     }
   ]
 }</component>
   <component name="GithubPullRequestsUISettings">{
-    &quot;selectedUrlAndAccountId&quot;: {
+  &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
     &quot;accountId&quot;: &quot;45f8cd51-000f-4ba4-a4c6-c4d96ac9b1e5&quot;
-    }
-    }</component>
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/react-image-crop/dist/index.d.ts" root0="SKIP_INSPECTION" />
+  </component>
   <component name="KubernetesApiProvider">{
     &quot;isMigrated&quot;: true
     }</component>
@@ -102,6 +113,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Docker.Dockerfile build.executor": "Run",
     "Docker.Dockerfile.executor": "Run",
+    "Playwright.Create transparent PNG.should make png color transparent.executor": "Run",
     "Playwright.JoinText Component.executor": "Run",
     "Playwright.JoinText Component.should merge text pieces with specified join character.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -115,11 +127,12 @@
     "Vitest.removeDuplicateLines function.executor": "Run",
     "Vitest.removeDuplicateLines function.newlines option.executor": "Run",
     "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
+    "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
-    "git-widget-placeholder": "#22 on truncate",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/public/assets",
+    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/pages/tools/list/duplicate/index.tsx",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -137,7 +150,7 @@
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
+    "settings.editor.selected.configurable": "refactai_advanced_settings",
     "ts.external.directory.path": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -153,11 +166,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\.husky" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\.github" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
-      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
@@ -167,59 +180,31 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
-    <configuration name="removeDuplicateLines function" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.test:e2e">
+    <configuration name="Create transparent PNG.should make png color transparent" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <playwright-package value="$PROJECT_DIR$/node_modules/@playwright/test" />
       <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
       <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/remove-duplicate-lines.service.test.ts" />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/create-transparent.e2e.spec.ts" />
       <test-names>
-        <test-name value="removeDuplicateLines function" />
+        <test-name value="Create transparent PNG" />
+        <test-name value="should make png color transparent" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="removeDuplicateLines function.newlines option" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/remove-duplicate-lines.service.test.ts" />
-      <test-names>
-        <test-name value="removeDuplicateLines function" />
-        <test-name value="newlines option" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+    <configuration name="replaceText function (regexp mode).should return the original text when passed an invalid regexp" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
       <vitest-options value="--run" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/remove-duplicate-lines.service.test.ts" />
-      <test-names>
-        <test-name value="removeDuplicateLines function" />
-        <test-name value="newlines option" />
-        <test-name value="should filter newlines when newlines is set to filter" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="replaceText function" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="SUITE" />
       <test-file value="$PROJECT_DIR$/src/pages/tools/string/text-replacer/replaceText.service.test.ts" />
       <test-names>
-        <test-name value="replaceText function" />
+        <test-name value="replaceText function (regexp mode)" />
+        <test-name value="should return the original text when passed an invalid regexp" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -239,20 +224,40 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:e2e" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:e2e" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="npm.test" />
+      <item itemvalue="npm.test:e2e" />
       <item itemvalue="npm.dev" />
-      <item itemvalue="Vitest.replaceText function" />
-      <item itemvalue="Vitest.removeDuplicateLines function" />
-      <item itemvalue="Vitest.removeDuplicateLines function.newlines option" />
-      <item itemvalue="Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter" />
+      <item itemvalue="Playwright.Create transparent PNG.should make png color transparent" />
+      <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test:e2e" />
+        <item itemvalue="Playwright.Create transparent PNG.should make png color transparent" />
         <item itemvalue="npm.dev" />
-        <item itemvalue="Vitest.replaceText function" />
-        <item itemvalue="Vitest.removeDuplicateLines function" />
-        <item itemvalue="Vitest.removeDuplicateLines function.newlines option" />
-        <item itemvalue="Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter" />
+        <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
+        <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
   </component>
@@ -329,182 +334,12 @@
       <workItem from="1740880919391" duration="4395000" />
       <workItem from="1740923024259" duration="23000" />
       <workItem from="1740933006573" duration="3679000" />
-    </task>
-    <task id="LOCAL-00093" summary="feat: group list ui">
-      <option name="closed" value="true" />
-      <created>1720656867853</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1720656867853</updated>
-    </task>
-    <task id="LOCAL-00094" summary="feat: reverse list ui">
-      <option name="closed" value="true" />
-      <created>1720658257129</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1720658257129</updated>
-    </task>
-    <task id="LOCAL-00095" summary="feat: self host">
-      <option name="closed" value="true" />
-      <created>1720665220407</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1720665220408</updated>
-    </task>
-    <task id="LOCAL-00096" summary="chore: format number">
-      <option name="closed" value="true" />
-      <created>1720730102816</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1720730102817</updated>
-    </task>
-    <task id="LOCAL-00097" summary="feat: rotate ui">
-      <option name="closed" value="true" />
-      <created>1720913013183</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1720913013183</updated>
-    </task>
-    <task id="LOCAL-00098" summary="feat: shuffle ui">
-      <option name="closed" value="true" />
-      <created>1720913810733</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1720913810733</updated>
-    </task>
-    <task id="LOCAL-00099" summary="refactor: remove validation schema">
-      <option name="closed" value="true" />
-      <created>1720914492812</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1720914492812</updated>
-    </task>
-    <task id="LOCAL-00100" summary="refactor: optimize imports">
-      <option name="closed" value="true" />
-      <created>1720914702655</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1720914702656</updated>
-    </task>
-    <task id="LOCAL-00101" summary="chore: use string tools">
-      <option name="closed" value="true" />
-      <created>1720914810712</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1720914810713</updated>
-    </task>
-    <task id="LOCAL-00102" summary="fix: ctrl v">
-      <option name="closed" value="true" />
-      <created>1740267666455</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1740267666455</updated>
-    </task>
-    <task id="LOCAL-00103" summary="feat: update readme">
-      <option name="closed" value="true" />
-      <created>1740276092528</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1740276092528</updated>
-    </task>
-    <task id="LOCAL-00104" summary="feat: compress png">
-      <option name="closed" value="true" />
-      <created>1740321721526</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1740321721526</updated>
-    </task>
-    <task id="LOCAL-00105" summary="feat: compress png">
-      <option name="closed" value="true" />
-      <created>1740321912140</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1740321912140</updated>
-    </task>
-    <task id="LOCAL-00106" summary="fix: compress png">
-      <option name="closed" value="true" />
-      <created>1740322444616</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1740322444616</updated>
-    </task>
-    <task id="LOCAL-00107" summary="fix: docs">
-      <option name="closed" value="true" />
-      <created>1740324026721</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1740324026721</updated>
-    </task>
-    <task id="LOCAL-00108" summary="fix: docs">
-      <option name="closed" value="true" />
-      <created>1740324069359</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1740324069359</updated>
-    </task>
-    <task id="LOCAL-00109" summary="fix: docs">
-      <option name="closed" value="true" />
-      <created>1740324274955</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1740324274955</updated>
-    </task>
-    <task id="LOCAL-00110" summary="feat: funding">
-      <option name="closed" value="true" />
-      <created>1740460017596</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1740460017596</updated>
-    </task>
-    <task id="LOCAL-00111" summary="feat: ui changes">
-      <option name="closed" value="true" />
-      <created>1740464231905</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1740464231905</updated>
-    </task>
-    <task id="LOCAL-00112" summary="feat: ui changes">
-      <option name="closed" value="true" />
-      <created>1740464250449</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1740464250449</updated>
-    </task>
-    <task id="LOCAL-00113" summary="fix: tsc">
-      <option name="closed" value="true" />
-      <created>1740464642001</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1740464642001</updated>
-    </task>
-    <task id="LOCAL-00114" summary="fix: readme">
-      <option name="closed" value="true" />
-      <created>1740468159111</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1740468159111</updated>
+      <workItem from="1741475969294" duration="4215000" />
+      <workItem from="1741494053121" duration="178000" />
+      <workItem from="1741537936314" duration="1294000" />
+      <workItem from="1741539602311" duration="4557000" />
+      <workItem from="1741547560596" duration="1671000" />
+      <workItem from="1741567442768" duration="14127000" />
     </task>
     <task id="LOCAL-00115" summary="fix: broken links">
       <option name="closed" value="true" />
@@ -722,7 +557,183 @@
       <option name="project" value="LOCAL" />
       <updated>1741211604972</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="chore: smooth scroll for use this tool and examles">
+      <option name="closed" value="true" />
+      <created>1741414797155</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1741414797155</updated>
+    </task>
+    <task id="LOCAL-00143" summary="feat: minify json">
+      <option name="closed" value="true" />
+      <created>1741416193639</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1741416193639</updated>
+    </task>
+    <task id="LOCAL-00144" summary="feat: stringify json">
+      <option name="closed" value="true" />
+      <created>1741417920442</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1741417920442</updated>
+    </task>
+    <task id="LOCAL-00145" summary="feat: arithmetic sequence">
+      <option name="closed" value="true" />
+      <created>1741419142510</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1741419142510</updated>
+    </task>
+    <task id="LOCAL-00146" summary="style: tools height">
+      <option name="closed" value="true" />
+      <created>1741419188990</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1741419188990</updated>
+    </task>
+    <task id="LOCAL-00147" summary="chore: update meta">
+      <option name="closed" value="true" />
+      <created>1741419527557</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1741419527557</updated>
+    </task>
+    <task id="LOCAL-00148" summary="feat: change pgn opacity">
+      <option name="closed" value="true" />
+      <created>1741423117739</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1741423117739</updated>
+    </task>
+    <task id="LOCAL-00149" summary="feat: change pgn opacity">
+      <option name="closed" value="true" />
+      <created>1741423587662</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1741423587662</updated>
+    </task>
+    <task id="LOCAL-00150" summary="feat: crop png">
+      <option name="closed" value="true" />
+      <created>1741487705292</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1741487705292</updated>
+    </task>
+    <task id="LOCAL-00151" summary="feat: crop png">
+      <option name="closed" value="true" />
+      <created>1741487735223</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1741487735223</updated>
+    </task>
+    <task id="LOCAL-00152" summary="feat: crop png">
+      <option name="closed" value="true" />
+      <created>1741492688761</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1741492688761</updated>
+    </task>
+    <task id="LOCAL-00153" summary="chore: remove unnecessary files">
+      <option name="closed" value="true" />
+      <created>1741492943849</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1741492943849</updated>
+    </task>
+    <task id="LOCAL-00154" summary="refactor: validateJson">
+      <option name="closed" value="true" />
+      <created>1741535390090</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1741535390090</updated>
+    </task>
+    <task id="LOCAL-00155" summary="refactor: use ToolContent">
+      <option name="closed" value="true" />
+      <created>1741540939154</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1741540939154</updated>
+    </task>
+    <task id="LOCAL-00156" summary="feat: missing tools">
+      <option name="closed" value="true" />
+      <created>1741542318259</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1741542318259</updated>
+    </task>
+    <task id="LOCAL-00157" summary="refactor: use ToolContent">
+      <option name="closed" value="true" />
+      <created>1741543593426</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1741543593427</updated>
+    </task>
+    <task id="LOCAL-00158" summary="fix: prettify json">
+      <option name="closed" value="true" />
+      <created>1741543732607</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1741543732607</updated>
+    </task>
+    <task id="LOCAL-00159" summary="refactor: sum">
+      <option name="closed" value="true" />
+      <created>1741544086061</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1741544086061</updated>
+    </task>
+    <task id="LOCAL-00160" summary="fix: tools by category scroll">
+      <option name="closed" value="true" />
+      <created>1741548044897</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1741548044897</updated>
+    </task>
+    <task id="LOCAL-00161" summary="fix: missing meta">
+      <option name="closed" value="true" />
+      <created>1741568170877</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1741568170877</updated>
+    </task>
+    <task id="LOCAL-00162" summary="feat: trim video">
+      <option name="closed" value="true" />
+      <created>1741580004784</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1741580004784</updated>
+    </task>
+    <task id="LOCAL-00163" summary="feat: trim video">
+      <option name="closed" value="true" />
+      <created>1741580736359</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1741580736359</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -759,19 +770,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/examples" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -781,23 +780,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: funding" />
-    <MESSAGE value="feat: ui changes" />
-    <MESSAGE value="fix: readme" />
-    <MESSAGE value="fix: broken links" />
-    <MESSAGE value="chore: style buttons" />
-    <MESSAGE value="chore: style" />
-    <MESSAGE value="style: background svg" />
-    <MESSAGE value="docs: img" />
-    <MESSAGE value="fix: bg" />
-    <MESSAGE value="chore: handle enter press on search" />
-    <MESSAGE value="chore: show tooloptions in example" />
-    <MESSAGE value="refact: examples" />
-    <MESSAGE value="fix: examples" />
-    <MESSAGE value="feat: json pretty" />
-    <MESSAGE value="style: tool categories" />
-    <MESSAGE value="chore: compute only if value" />
-    <MESSAGE value="chore: remove prettify test" />
     <MESSAGE value="chore: prettify json in home" />
     <MESSAGE value="feat: jakarta font" />
     <MESSAGE value="chore: img" />
@@ -806,7 +788,24 @@
     <MESSAGE value="fix: tsc" />
     <MESSAGE value="style: optimizations" />
     <MESSAGE value="fix: replace text service" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: replace text service" />
+    <MESSAGE value="chore: smooth scroll for use this tool and examles" />
+    <MESSAGE value="feat: minify json" />
+    <MESSAGE value="feat: stringify json" />
+    <MESSAGE value="feat: arithmetic sequence" />
+    <MESSAGE value="style: tools height" />
+    <MESSAGE value="chore: update meta" />
+    <MESSAGE value="feat: change pgn opacity" />
+    <MESSAGE value="feat: crop png" />
+    <MESSAGE value="chore: remove unnecessary files" />
+    <MESSAGE value="refactor: validateJson" />
+    <MESSAGE value="feat: missing tools" />
+    <MESSAGE value="refactor: use ToolContent" />
+    <MESSAGE value="fix: prettify json" />
+    <MESSAGE value="refactor: sum" />
+    <MESSAGE value="fix: tools by category scroll" />
+    <MESSAGE value="fix: missing meta" />
+    <MESSAGE value="feat: trim video" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: trim video" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

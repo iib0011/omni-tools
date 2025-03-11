@@ -17,9 +17,9 @@ export const listTools = [
   listFindUnique,
   listFindMostPopular,
   listGroup,
-  // listWrap,
+  listWrap,
   listRotate,
-  listShuffle
-  // listTruncate,
-  // listDuplicate
+  listShuffle,
+  listTruncate,
+  listDuplicate
 ];

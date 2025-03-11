@@ -22,11 +22,14 @@ export const stringTools = [
   stringToMorse,
   stringReplace,
   stringRepeat,
-  stringTruncate
-  // stringReverse,
-  // stringRandomizeCase,
-  // stringUppercase,
-  // stringExtractSubstring,
-  // stringCreatePalindrome,
-  // stringPalindrome
+  stringTruncate,
+  stringReverse,
+  stringRandomizeCase,
+  stringUppercase,
+  stringExtractSubstring,
+  stringCreatePalindrome,
+  stringPalindrome,
+  stringQuote,
+  stringRotate,
+  stringRot13
 ];

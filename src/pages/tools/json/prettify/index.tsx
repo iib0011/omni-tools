@@ -2,10 +2,7 @@ import { Box } from '@mui/material';
 import React, { useRef, useState } from 'react';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
 import { beautifyJson } from './service';
-import ToolInputAndResult from '@components/ToolInputAndResult';
-
 import ToolInfo from '@components/ToolInfo';
 import Separator from '@components/Separator';
 import ToolExamples, {
@@ -15,7 +12,8 @@ import { FormikProps } from 'formik';
 import { ToolComponentProps } from '@tools/defineTool';
 import RadioWithTextField from '@components/options/RadioWithTextField';
 import SimpleRadio from '@components/options/SimpleRadio';
-import { isNumber } from '../../../../utils/string';
+import { isNumber, updateNumberField } from '../../../../utils/string';
+import ToolContent from '@components/ToolContent';
 
 type InitialValuesType = {
   indentationType: 'tab' | 'space';
@@ -119,72 +117,55 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 export default function PrettifyJson({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  const formRef = useRef<FormikProps<InitialValuesType>>(null);
+
   const compute = (optionsValues: InitialValuesType, input: any) => {
     const { indentationType, spacesCount } = optionsValues;
     if (input) setResult(beautifyJson(input, indentationType, spacesCount));
   };
 
-  const getGroups: GetGroupsType<InitialValuesType> = ({
-    values,
-    updateField
-  }) => [
-    {
-      title: 'Indentation',
-      component: (
-        <Box>
-          <RadioWithTextField
-            checked={values.indentationType === 'space'}
-            title={'Use Spaces'}
-            fieldName={'indentationType'}
-            description={'Indent output with spaces'}
-            value={values.spacesCount.toString()}
-            onRadioClick={() => updateField('indentationType', 'space')}
-            onTextChange={(val) =>
-              isNumber(val) ? updateField('spacesCount', Number(val)) : null
-            }
-          />
-          <SimpleRadio
-            onClick={() => updateField('indentationType', 'tab')}
-            checked={values.indentationType === 'tab'}
-            description={'Indent output with tabs.'}
-            title={'Use Tabs'}
-          />
-        </Box>
-      )
-    }
-  ];
   return (
-    <Box>
-      <ToolInputAndResult
-        input={
-          <ToolTextInput
-            title={'Input JSON'}
-            value={input}
-            onChange={setInput}
-          />
+    <ToolContent
+      title={title}
+      input={input}
+      inputComponent={
+        <ToolTextInput title={'Input JSON'} value={input} onChange={setInput} />
+      }
+      resultComponent={<ToolTextResult title={'Pretty JSON'} value={result} />}
+      initialValues={initialValues}
+      getGroups={({ values, updateField }) => [
+        {
+          title: 'Indentation',
+          component: (
+            <Box>
+              <RadioWithTextField
+                checked={values.indentationType === 'space'}
+                title={'Use Spaces'}
+                fieldName={'indentationType'}
+                description={'Indent output with spaces'}
+                value={values.spacesCount.toString()}
+                onRadioClick={() => updateField('indentationType', 'space')}
+                onTextChange={(val) =>
+                  updateNumberField(val, 'spacesCount', updateField)
+                }
+              />
+              <SimpleRadio
+                onClick={() => updateField('indentationType', 'tab')}
+                checked={values.indentationType === 'tab'}
+                description={'Indent output with tabs.'}
+                title={'Use Tabs'}
+              />
+            </Box>
+          )
         }
-        result={<ToolTextResult title={'Pretty JSON'} value={result} />}
-      />
-      <ToolOptions
-        formRef={formRef}
-        compute={compute}
-        getGroups={getGroups}
-        initialValues={initialValues}
-        input={input}
-      />
-      <ToolInfo
-        title="What Is a JSON Prettifier?"
-        description="This tool adds consistent formatting to the data in JavaScript Object Notation (JSON) format. This transformation makes the JSON code more readable, making it easier to understand and edit. The program parses the JSON data structure into tokens and then reformats them by adding indentation and line breaks. If the data is hierarchial, then it adds indentation at the beginning of lines to visually show the depth of the JSON and adds newlines to break long single-line JSON arrays into multiple shorter, more readable ones. Additionally, this utility can remove unnecessary spaces and tabs from your JSON code (especially leading and trailing whitespaces), making it more compact. You can choose the line indentation method in the options: indent with spaces or indent with tabs. When using spaces, you can also specify how many spaces to use for each indentation level (usually 2 or 4 spaces). "
-      />
-      <Separator backgroundColor="#5581b5" margin="50px" />
-      <ToolExamples
-        title={title}
-        exampleCards={exampleCards}
-        getGroups={getGroups}
-        formRef={formRef}
-        setInput={setInput}
-      />
-    </Box>
+      ]}
+      compute={compute}
+      setInput={setInput}
+      exampleCards={exampleCards}
+      toolInfo={{
+        title: 'What Is a JSON Prettifier?',
+        description:
+          'This tool adds consistent formatting to the data in JavaScript Object Notation (JSON) format. This transformation makes the JSON code more readable, making it easier to understand and edit. The program parses the JSON data structure into tokens and then reformats them by adding indentation and line breaks. If the data is hierarchial, then it adds indentation at the beginning of lines to visually show the depth of the JSON and adds newlines to break long single-line JSON arrays into multiple shorter, more readable ones. Additionally, this utility can remove unnecessary spaces and tabs from your JSON code (especially leading and trailing whitespaces), making it more compact. You can choose the line indentation method in the options: indent with spaces or indent with tabs. When using spaces, you can also specify how many spaces to use for each indentation level (usually 2 or 4 spaces). '
+      }}
+    />
   );
 }

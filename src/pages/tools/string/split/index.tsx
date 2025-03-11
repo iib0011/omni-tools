@@ -2,16 +2,15 @@ import { Box } from '@mui/material';
 import React, { useRef, useState } from 'react';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
 import { compute, SplitOperatorType } from './service';
 import RadioWithTextField from '@components/options/RadioWithTextField';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
-import ToolInputAndResult from '@components/ToolInputAndResult';
 import ToolExamples, {
   CardExampleType
 } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import { FormikProps } from 'formik';
+import ToolContent from '@components/ToolContent';
 
 const initialValues = {
   splitSeparatorType: 'symbol' as SplitOperatorType,
@@ -135,8 +134,11 @@ easy`,
 export default function SplitText({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  const formRef = useRef<FormikProps<typeof initialValues>>(null);
-  const computeExternal = (optionsValues: typeof initialValues, input: any) => {
+
+  const computeExternal = (
+    optionsValues: typeof initialValues,
+    input: string
+  ) => {
     const {
       splitSeparatorType,
       outputSeparator,
@@ -163,56 +165,44 @@ export default function SplitText({ title }: ToolComponentProps) {
     );
   };
 
-  const getGroups: GetGroupsType<typeof initialValues> = ({
-    values,
-    updateField
-  }) => [
-    {
-      title: 'Split separator options',
-      component: splitOperators.map(({ title, description, type }) => (
-        <RadioWithTextField
-          key={type}
-          checked={type === values.splitSeparatorType}
-          title={title}
-          fieldName={'splitSeparatorType'}
-          description={description}
-          value={values[`${type}Value`]}
-          onRadioClick={() => updateField('splitSeparatorType', type)}
-          onTextChange={(val) => updateField(`${type}Value`, val)}
-        />
-      ))
-    },
-    {
-      title: 'Output separator options',
-      component: outputOptions.map((option) => (
-        <TextFieldWithDesc
-          key={option.accessor}
-          value={values[option.accessor]}
-          onOwnChange={(value) => updateField(option.accessor, value)}
-          description={option.description}
-        />
-      ))
-    }
-  ];
   return (
-    <Box>
-      <ToolInputAndResult
-        input={<ToolTextInput value={input} onChange={setInput} />}
-        result={<ToolTextResult title={'Text pieces'} value={result} />}
-      />
-      <ToolOptions
-        compute={computeExternal}
-        getGroups={getGroups}
-        initialValues={initialValues}
-        input={input}
-      />
-      <ToolExamples
-        title={title}
-        exampleCards={exampleCards}
-        getGroups={getGroups}
-        formRef={formRef}
-        setInput={setInput}
-      />
-    </Box>
+    <ToolContent
+      title={title}
+      input={input}
+      inputComponent={<ToolTextInput value={input} onChange={setInput} />}
+      resultComponent={<ToolTextResult title={'Text pieces'} value={result} />}
+      initialValues={initialValues}
+      getGroups={({ values, updateField }) => [
+        {
+          title: 'Split separator options',
+          component: splitOperators.map(({ title, description, type }) => (
+            <RadioWithTextField
+              key={type}
+              checked={type === values.splitSeparatorType}
+              title={title}
+              fieldName={'splitSeparatorType'}
+              description={description}
+              value={values[`${type}Value`]}
+              onRadioClick={() => updateField('splitSeparatorType', type)}
+              onTextChange={(val) => updateField(`${type}Value`, val)}
+            />
+          ))
+        },
+        {
+          title: 'Output separator options',
+          component: outputOptions.map((option) => (
+            <TextFieldWithDesc
+              key={option.accessor}
+              value={values[option.accessor]}
+              onOwnChange={(value) => updateField(option.accessor, value)}
+              description={option.description}
+            />
+          ))
+        }
+      ]}
+      compute={computeExternal}
+      setInput={setInput}
+      exampleCards={exampleCards}
+    />
   );
 }

@@ -58,6 +58,18 @@ export default function ToolFileResult({
       window.URL.revokeObjectURL(url);
     }
   };
+
+  // Determine the file type based on MIME type
+  const getFileType = () => {
+    if (!value) return 'unknown';
+    if (value.type.startsWith('image/')) return 'image';
+    if (value.type.startsWith('video/')) return 'video';
+    if (value.type.startsWith('audio/')) return 'audio';
+    return 'unknown';
+  };
+
+  const fileType = getFileType();
+
   return (
     <Box>
       <InputHeader title={title} />
@@ -82,11 +94,32 @@ export default function ToolFileResult({
               backgroundImage: `url(${greyPattern})`
             }}
           >
-            <img
-              src={preview}
-              alt="Result"
-              style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
-            />
+            {fileType === 'image' && (
+              <img
+                src={preview}
+                alt="Result"
+                style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
+              />
+            )}
+            {fileType === 'video' && (
+              <video
+                src={preview}
+                controls
+                style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
+              />
+            )}
+            {fileType === 'audio' && (
+              <audio
+                src={preview}
+                controls
+                style={{ width: '100%', maxWidth: '500px' }}
+              />
+            )}
+            {fileType === 'unknown' && (
+              <Box sx={{ padding: 2, textAlign: 'center' }}>
+                File processed successfully. Click download to save the result.
+              </Box>
+            )}
           </Box>
         )}
       </Box>

@@ -9,7 +9,7 @@ const CheckboxWithDesc = ({
   disabled
 }: {
   title: string;
-  description: string;
+  description?: string;
   checked: boolean;
   onChange: (value: boolean) => void;
   disabled?: boolean;
@@ -30,9 +30,11 @@ const CheckboxWithDesc = ({
         }
         label={title}
       />
-      <Typography fontSize={12} mt={1}>
-        {description}
-      </Typography>
+      {description && (
+        <Typography fontSize={12} mt={1}>
+          {description}
+        </Typography>
+      )}
     </Box>
   );
 };

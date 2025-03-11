@@ -10,6 +10,7 @@ interface ToolOptions {
   name: string;
   description: string;
   shortDescription: string;
+  longDescription?: string;
 }
 
 export type ToolCategory =
@@ -17,8 +18,10 @@ export type ToolCategory =
   | 'png'
   | 'number'
   | 'gif'
+  | 'video'
   | 'list'
-  | 'json';
+  | 'json'
+  | 'csv';
 
 export interface DefinedTool {
   type: ToolCategory;
@@ -32,7 +35,8 @@ export interface DefinedTool {
 }
 
 export interface ToolComponentProps {
-  title?: any;
+  title: string;
+  longDescription?: string;
 }
 
 export const defineTool = (
@@ -46,7 +50,8 @@ export const defineTool = (
     description,
     keywords,
     component,
-    shortDescription
+    shortDescription,
+    longDescription
   } = options;
   const Component = component;
   return {
@@ -65,7 +70,7 @@ export const defineTool = (
           icon={icon}
           type={basePath}
         >
-          <Component title={name} />
+          <Component title={name} longDescription={longDescription} />
         </ToolLayout>
       );
     }

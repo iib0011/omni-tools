@@ -1,15 +1,15 @@
 import { Box } from '@mui/material';
-import ToolInputAndResult from 'components/ToolInputAndResult';
 import ToolFileInput from 'components/input/ToolFileInput';
 import CheckboxWithDesc from 'components/options/CheckboxWithDesc';
 import ColorSelector from 'components/options/ColorSelector';
 import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
-import ToolOptions from 'components/options/ToolOptions';
 import ToolFileResult from 'components/result/ToolFileResult';
 import Color from 'color';
 import React, { useState } from 'react';
 import * as Yup from 'yup';
 import { areColorsSimilar } from 'utils/color';
+import ToolContent from '@components/ToolContent';
+import { ToolComponentProps } from '@tools/defineTool';
 
 const initialValues = {
   enableTransparency: false,
@@ -19,7 +19,7 @@ const initialValues = {
 const validationSchema = Yup.object({
   // splitSeparator: Yup.string().required('The separator is required')
 });
-export default function ConvertJgpToPng() {
+export default function ConvertJgpToPng({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
@@ -97,58 +97,52 @@ export default function ConvertJgpToPng() {
   };
 
   return (
-    <Box>
-      <ToolInputAndResult
-        input={
-          <ToolFileInput
-            value={input}
-            onChange={setInput}
-            accept={['image/jpeg']}
-            title={'Input JPG'}
-          />
+    <ToolContent
+      title={title}
+      input={input}
+      inputComponent={
+        <ToolFileInput
+          value={input}
+          onChange={setInput}
+          accept={['image/jpeg']}
+          title={'Input JPG'}
+        />
+      }
+      resultComponent={
+        <ToolFileResult title={'Output PNG'} value={result} extension={'png'} />
+      }
+      initialValues={initialValues}
+      getGroups={({ values, updateField }) => [
+        {
+          title: 'PNG Transparency Color',
+          component: (
+            <Box>
+              <CheckboxWithDesc
+                key="enableTransparency"
+                title="Enable PNG Transparency"
+                checked={!!values.enableTransparency}
+                onChange={(value) => updateField('enableTransparency', value)}
+                description="Make the color below transparent."
+              />
+              <ColorSelector
+                value={values.color}
+                onColorChange={(val) => updateField('color', val)}
+                description={'With this color (to color)'}
+                inputProps={{ 'data-testid': 'color-input' }}
+              />
+              <TextFieldWithDesc
+                value={values.similarity}
+                onOwnChange={(val) => updateField('similarity', val)}
+                description={
+                  'Match this % of similar. For example, 10% white will match white and a little bit of gray.'
+                }
+              />
+            </Box>
+          )
         }
-        result={
-          <ToolFileResult
-            title={'Output PNG'}
-            value={result}
-            extension={'png'}
-          />
-        }
-      />
-      <ToolOptions
-        compute={compute}
-        getGroups={({ values, updateField }) => [
-          {
-            title: 'PNG Transparency Color',
-            component: (
-              <Box>
-                <CheckboxWithDesc
-                  key="enableTransparency"
-                  title="Enable PNG Transparency"
-                  checked={!!values.enableTransparency}
-                  onChange={(value) => updateField('enableTransparency', value)}
-                  description="Make the color below transparent."
-                />
-                <ColorSelector
-                  value={values.color}
-                  onColorChange={(val) => updateField('color', val)}
-                  description={'With this color (to color)'}
-                  inputProps={{ 'data-testid': 'color-input' }}
-                />
-                <TextFieldWithDesc
-                  value={values.similarity}
-                  onOwnChange={(val) => updateField('similarity', val)}
-                  description={
-                    'Match this % of similar. For example, 10% white will match white and a little bit of gray.'
-                  }
-                />
-              </Box>
-            )
-          }
-        ]}
-        initialValues={initialValues}
-        input={input}
-      />
-    </Box>
+      ]}
+      compute={compute}
+      setInput={setInput}
+    />
   );
 }

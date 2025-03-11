@@ -1,20 +1,14 @@
-import { Box } from '@mui/material';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
+import { GetGroupsType } from '@components/options/ToolOptions';
 import { compute, NumberExtractionType } from './service';
 import RadioWithTextField from '@components/options/RadioWithTextField';
 import SimpleRadio from '@components/options/SimpleRadio';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
-import ToolInputAndResult from '@components/ToolInputAndResult';
-import ToolExamples, {
-  CardExampleType
-} from '@components/examples/ToolExamples';
-import ToolInfo from '@components/ToolInfo';
-import Separator from '@components/Separator';
+import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
-import { FormikProps } from 'formik';
+import ToolContent from '@components/ToolContent';
 
 const initialValues = {
   extractionType: 'smart' as NumberExtractionType,
@@ -126,7 +120,6 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 export default function SumNumbers({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
-  const formRef = useRef<FormikProps<typeof initialValues>>(null);
 
   const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
@@ -175,33 +168,24 @@ export default function SumNumbers({ title }: ToolComponentProps) {
     }
   ];
   return (
-    <Box>
-      <ToolInputAndResult
-        input={<ToolTextInput value={input} onChange={setInput} />}
-        result={<ToolTextResult title={'Total'} value={result} />}
-      />
-      <ToolOptions
-        formRef={formRef}
-        getGroups={getGroups}
-        compute={(optionsValues, input) => {
-          const { extractionType, printRunningSum, separator } = optionsValues;
-          setResult(compute(input, extractionType, printRunningSum, separator));
-        }}
-        initialValues={initialValues}
-        input={input}
-      />
-      <ToolInfo
-        title="What Is a Number Sum Calculator?"
-        description="This is an online browser-based utility for calculating the sum of a bunch of numbers. You can enter the numbers separated by a comma, space, or any other character, including the line break. You can also simply paste a fragment of textual data that contains numerical values that you want to sum up and the utility will extract them and find their sum."
-      />
-      <Separator backgroundColor="#5581b5" margin="50px" />
-      <ToolExamples
-        title={title}
-        exampleCards={exampleCards}
-        getGroups={getGroups}
-        formRef={formRef}
-        setInput={setInput}
-      />
-    </Box>
+    <ToolContent
+      title={title}
+      input={input}
+      inputComponent={<ToolTextInput value={input} onChange={setInput} />}
+      resultComponent={<ToolTextResult title={'Total'} value={result} />}
+      initialValues={initialValues}
+      getGroups={getGroups}
+      compute={(optionsValues, input) => {
+        const { extractionType, printRunningSum, separator } = optionsValues;
+        setResult(compute(input, extractionType, printRunningSum, separator));
+      }}
+      setInput={setInput}
+      toolInfo={{
+        title: 'What Is a Number Sum Calculator?',
+        description:
+          'This is an online browser-based utility for calculating the sum of a bunch of numbers. You can enter the numbers separated by a comma, space, or any other character, including the line break. You can also simply paste a fragment of textual data that contains numerical values that you want to sum up and the utility will extract them and find their sum.'
+      }}
+      exampleCards={exampleCards}
+    />
   );
 }

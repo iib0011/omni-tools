@@ -6,8 +6,9 @@ export const tool = defineTool('list', {
   name: 'Unwrap',
   path: 'unwrap',
   icon: 'mdi:unwrap',
-  description: '',
-  shortDescription: '',
+  description:
+    'A tool to remove characters from the beginning and end of each item in a list. Perfect for cleaning up formatted data or removing unwanted wrappers.',
+  shortDescription: 'Remove characters around list items.',
   keywords: ['unwrap'],
   component: lazy(() => import('./index'))
 });

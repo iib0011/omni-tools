@@ -31,7 +31,6 @@ describe('shuffle function', () => {
       joinSeparator,
       length
     );
-    console.log(result);
     expect(result.split(joinSeparator).length).toBe(2);
   });
 
@@ -49,7 +48,6 @@ describe('shuffle function', () => {
       joinSeparator,
       length
     );
-    console.log(result);
     expect(result.split(joinSeparator).length).toBe(4);
   });
 
@@ -66,7 +64,6 @@ describe('shuffle function', () => {
       joinSeparator,
       length
     );
-    console.log(result);
     expect(result.split(joinSeparator)).toContain('apple');
   });
 
@@ -83,7 +80,6 @@ describe('shuffle function', () => {
       joinSeparator,
       length
     );
-    console.log(result);
     expect(result).toBe('');
   });
 });

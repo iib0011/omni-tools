@@ -27,9 +27,14 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "@jimp/types": "^1.6.0",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "@playwright/test": "^1.45.0",
+    "@types/ffmpeg": "^1.0.7",
     "@types/lodash": "^4.17.5",
     "@types/morsee": "^1.0.2",
     "@types/omggif": "^1.0.5",
@@ -37,16 +42,20 @@
     "color": "^4.2.3",
     "formik": "^2.4.6",
     "jimp": "^0.22.12",
+    "lint-staged": "^15.4.3",
     "lodash": "^4.17.21",
     "morsee": "^1.0.9",
     "notistack": "^3.0.1",
     "omggif": "^1.0.10",
     "playwright": "^1.45.0",
+    "rc-slider": "^11.1.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
+    "react-image-crop": "^11.0.7",
     "react-router-dom": "^6.23.1",
     "type-fest": "^4.35.0",
+    "use-deep-compare-effect": "^1.8.1",
     "yup": "^1.4.0"
   },
   "devDependencies": {
@@ -82,5 +91,8 @@
     "vite": "^5.2.11",
     "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.6.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json}": "prettier --write"
   }
 }

@@ -7,12 +7,12 @@ export default function ExampleOptions<T>({
   getGroups
 }: {
   options: T;
-  getGroups: GetGroupsType<T>;
+  getGroups: GetGroupsType<T> | null;
 }) {
   return (
     <ToolOptionGroups
       // @ts-ignore
-      groups={getGroups({ values: options })}
+      groups={getGroups?.({ values: options }) ?? []}
       vertical
     />
   );
