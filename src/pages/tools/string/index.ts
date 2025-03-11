@@ -13,6 +13,7 @@ import { tool as stringSplit } from './split/meta';
 import { tool as stringJoin } from './join/meta';
 import { tool as stringReplace } from './text-replacer/meta';
 import { tool as stringRepeat } from './repeat/meta';
+import { tool as stringTruncate } from './truncate/meta';
 
 export const stringTools = [
   stringSplit,
@@ -21,6 +22,7 @@ export const stringTools = [
   stringToMorse,
   stringReplace,
   stringRepeat,
+  stringTruncate,
   stringReverse,
   stringRandomizeCase,
   stringUppercase,
