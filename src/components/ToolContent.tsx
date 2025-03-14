@@ -1,6 +1,6 @@
-import React, { useRef, ReactNode, useState } from 'react';
+import React, { ReactNode, useContext } from 'react';
 import { Box } from '@mui/material';
-import { Formik, FormikProps, FormikValues } from 'formik';
+import { Formik, FormikValues, useFormikContext } from 'formik';
 import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
 import ToolInputAndResult from '@components/ToolInputAndResult';
 import ToolInfo from '@components/ToolInfo';
@@ -9,6 +9,29 @@ import ToolExamples, {
   CardExampleType
 } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
+import { CustomSnackBarContext } from '../contexts/CustomSnackBarContext';
+
+const FormikListenerComponent = <T,>({
+  input,
+  compute
+}: {
+  input: any;
+  compute: (optionsValues: T, input: any) => void;
+}) => {
+  const { values } = useFormikContext<T>();
+  const { showSnackBar } = useContext(CustomSnackBarContext);
+
+  React.useEffect(() => {
+    try {
+      compute(values, input);
+    } catch (exception: unknown) {
+      if (exception instanceof Error) showSnackBar(exception.message, 'error');
+      else console.error(exception);
+    }
+  }, [values, input, showSnackBar]);
+
+  return null; // This component doesn't render anything
+};
 
 interface ToolContentProps<T, I> extends ToolComponentProps {
   // Input/Output components
@@ -75,12 +98,8 @@ export default function ToolContent<T extends FormikValues, I>({
                 }
                 result={resultComponent}
               />
-
-              <ToolOptions
-                compute={compute}
-                getGroups={getGroups}
-                input={input}
-              />
+              <FormikListenerComponent<T> compute={compute} input={input} />
+              <ToolOptions getGroups={getGroups} />
 
               {toolInfo && toolInfo.title && toolInfo.description && (
                 <ToolInfo
