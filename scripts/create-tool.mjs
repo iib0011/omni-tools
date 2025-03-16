@@ -75,16 +75,65 @@ createToolFile(
   `index.tsx`,
   `
 import { Box } from '@mui/material';
-import React from 'react';
-import * as Yup from 'yup';
+import React, { useState } from 'react';
+import ToolContent from '@components/ToolContent';
+import { ToolComponentProps } from '@tools/defineTool';
+import ToolTextInput from '@components/input/ToolTextInput';
+import ToolTextResult from '@components/result/ToolTextResult';
+import { GetGroupsType } from '@components/options/ToolOptions';
+import { CardExampleType } from '@components/examples/ToolExamples';
+import { main } from './service';
+import { InitialValuesType } from './types';
 
-type InitialValuesType = {};
-const initialValues: InitialValuesType = {};
-const validationSchema = Yup.object({
-  // splitSeparator: Yup.string().required('The separator is required')
-});
-export default function ${capitalizeFirstLetter(toolNameCamelCase)}() {
-  return <Box>Lorem ipsum</Box>;
+const initialValues: InitialValuesType = {
+  // splitSeparator: '\\n'
+};
+
+const exampleCards: CardExampleType<InitialValuesType>[] = [
+  {
+    title: 'Split a String',
+    description: 'This example shows how to split a string into multiple lines',
+    sampleText: 'Hello World,Hello World',
+    sampleResult: \`Hello World
+Hello World\`,
+    sampleOptions: {
+      //     splitSeparator: ','
+    }
+  }
+];
+export default function ${capitalizeFirstLetter(toolNameCamelCase)}({
+  title,
+  longDescription
+}: ToolComponentProps) {
+  const [input, setInput] = useState<string>('');
+  const [result, setResult] = useState<string>('');
+
+  const compute = (values: InitialValuesType, input: string) => {
+    setResult(main(input, values));
+  };
+
+  const getGroups: GetGroupsType<InitialValuesType> | null = ({
+    values,
+    updateField
+  }) => [
+    {
+      title: 'Example Settings',
+      component: <Box></Box>
+    }
+  ];
+  return (
+    <ToolContent
+      title={title}
+      input={input}
+      inputComponent={<ToolTextInput value={input} onChange={setInput} />}
+      resultComponent={<ToolTextResult value={result} />}
+      initialValues={initialValues}
+      exampleCards={exampleCards}
+      getGroups={getGroups}
+      compute={compute}
+      toolInfo={{ title: \`What is a \${title}?\`, description: longDescription }}
+    />
+  );
 }
 `
 );
@@ -101,17 +150,35 @@ export const tool = defineTool('${type}', {
   description: '',
   shortDescription: '',
   keywords: ['${toolName.split('-').join("', '")}'],
+  longDescription: '',
   component: lazy(() => import('./index'))
 });
 `
 );
 
-createToolFile(`service.ts`, ``);
+createToolFile(
+  `service.ts`,
+  `
+import { InitialValuesType } from './types';
+
+export function main(input: string, options: InitialValuesType): string {
+  return input;
+}
+`
+);
+createToolFile(
+  `types.ts`,
+  `
+export type InitialValuesType = {
+  // splitSeparator: string;
+};
+`
+);
 createToolFile(
   `${toolName}.service.test.ts`,
   `
 import { expect, describe, it } from 'vitest';
-// import { } from './service';
+// import { main } from './service';
 //
 // describe('${toolName}', () => {
 //
