@@ -79,18 +79,21 @@ Stay tuned as we continue to expand and improve our collection!
 ## Self-host/Run
 
 ### Docker
+
 ```bash
 docker run -d --name omni-tools --restart unless-stopped -p 8080:80 iib0011/omni-tools:latest
 ```
+
 ### Docker Compose
+
 ```
 version: '3.3'
 
-services: 
-  omni-tools: 
-    image: iib0011/omni-tools:latest 
-    container_name: omni-tools 
-    restart: unless-stopped 
+services:
+  omni-tools:
+    image: iib0011/omni-tools:latest
+    container_name: omni-tools
+    restart: unless-stopped
     ports:
       - "8080:80"
 
@@ -98,7 +101,7 @@ services:
 
 ## Contribute
 
-This is a React Project with Typescript Material UI.
+This is a React Project with Typescript Material UI. We use icons from [Iconify](https://icon-sets.iconify.design)
 
 ### Project setup
 
