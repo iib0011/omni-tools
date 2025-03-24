@@ -8,6 +8,7 @@ import { listTools } from '../pages/tools/list';
 import { Entries } from 'type-fest';
 import { jsonTools } from '../pages/tools/json';
 import { csvTools } from '../pages/tools/csv';
+import { timeTools } from '../pages/tools/time';
 import { IconifyIcon } from '@iconify/react';
 
 export const tools: DefinedTool[] = [
@@ -17,7 +18,8 @@ export const tools: DefinedTool[] = [
   ...listTools,
   ...csvTools,
   ...videoTools,
-  ...numberTools
+  ...numberTools,
+  ...timeTools
 ];
 const categoriesConfig: {
   type: ToolCategory;
@@ -73,6 +75,12 @@ const categoriesConfig: {
     icon: 'lets-icons:video-light',
     value:
       'Tools for working with videos – extract frames from videos, create GIFs from videos, convert videos to different formats, and much more.'
+  },
+  {
+    type: 'time',
+    icon: 'fluent-mdl2:date-time',
+    value:
+      'Tools for working with time and date – draw clocks and calendars, generate time and date sequences, calculate average time, convert between time zones, and much more.'
   }
 ];
 export const filterTools = (
