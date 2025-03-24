@@ -95,10 +95,11 @@ export default function ConvertDaysToHours({
       inputComponent={<ToolTextInput value={input} onChange={setInput} />}
       resultComponent={<ToolTextResult value={result} />}
       initialValues={initialValues}
-      exampleCards={exampleCards}
       getGroups={getGroups}
+      setInput={setInput}
       compute={compute}
       toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      exampleCards={exampleCards}
     />
   );
 }

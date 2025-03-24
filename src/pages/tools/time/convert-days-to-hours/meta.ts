@@ -5,7 +5,8 @@ export const tool = defineTool('time', {
   path: 'convert-days-to-hours',
   name: 'Convert Days to Hours',
   icon: 'ri:24-hours-line',
-  description: 'A tool to convert days into hours.',
+  description:
+    'With this browser-based application, you can calculate how many hours there are in the given number of days. The application takes the input values (days), multiplies them by 24 and that converts them into hours. It supports both integer and decimal day values and it can convert multiple values at the same time.',
   shortDescription: 'Convert days to hours easily.',
   keywords: ['convert', 'days', 'hours'],
   longDescription:

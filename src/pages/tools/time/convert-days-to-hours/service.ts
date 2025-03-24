@@ -5,8 +5,8 @@ function compute(input: string) {
     return '';
   }
   const days = parseFloat(input);
-  const hours = days * 24;
-  return hours;
+  const hours = (days * 24).toFixed(6);
+  return parseFloat(hours);
 }
 
 export function convertDaysToHours(input: string, hoursFlag: boolean): string {
