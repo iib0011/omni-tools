@@ -21,7 +21,8 @@ export type ToolCategory =
   | 'video'
   | 'list'
   | 'json'
-  | 'csv';
+  | 'csv'
+  | 'time';
 
 export interface DefinedTool {
   type: ToolCategory;

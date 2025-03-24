@@ -5,7 +5,7 @@ export function capitalizeFirstLetter(string: string | undefined) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export function isNumber(number: any) {
+export function isNumber(number: any): boolean {
   return !isNaN(parseFloat(number)) && isFinite(number);
 }
 
@@ -36,4 +36,13 @@ export const replaceSpecialCharacters = (str: string) => {
 
 export function reverseString(input: string): string {
   return input.split('').reverse().join('');
+}
+
+/**
+ * Checks if the input string contains only digits.
+ * @param input - The string to validate.
+ * @returns True if the input contains only digits, false otherwise.
+ */
+export function containsOnlyDigits(input: string): boolean {
+  return /^\d+$/.test(input.trim());
 }
