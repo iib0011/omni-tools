@@ -8,8 +8,6 @@ describe('Convert Days to Hours', () => {
   });
 
   it('should handle invalid input', () => {
-    expect(() => {
-      convertDaysToHours('abc', false);
-    }).toThrow('The day on line 1 contains non-digits, so we skip it.');
+    expect(convertDaysToHours('2\nc\n1', false)).toBe('48\n\n24');
   });
 });
