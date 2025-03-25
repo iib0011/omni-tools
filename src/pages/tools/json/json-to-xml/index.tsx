@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { convertJsonToXml } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
-import { Box, Radio } from '@mui/material';
+import { Box } from '@mui/material';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
-import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
-import RadioWithTextField from '@components/options/RadioWithTextField';
 import SimpleRadio from '@components/options/SimpleRadio';
 
 type InitialValuesType = {
