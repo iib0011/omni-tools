@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-// import { convertJsonToXml } from './service';
+import { convertJsonToXml } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import { Box, Radio } from '@mui/material';
@@ -65,8 +65,8 @@ export default function JsonToXml({ title }: ToolComponentProps) {
   const compute = (values: InitialValuesType, input: string) => {
     if (input) {
       try {
-        //const xmlResult = convertJsonToXml(input, values);
-        //setResult(xmlResult);
+        const xmlResult = convertJsonToXml(input, values);
+        setResult(xmlResult);
       } catch (error) {
         setResult(
           `Error: ${
