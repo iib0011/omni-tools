@@ -5,46 +5,55 @@ import ToolTextResult from '@components/result/ToolTextResult';
 // import { convertJsonToXml } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
-import { Box } from '@mui/material';
+import { Box, Radio } from '@mui/material';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
+import RadioWithTextField from '@components/options/RadioWithTextField';
+import SimpleRadio from '@components/options/SimpleRadio';
 
 type InitialValuesType = {
-  delimiter: string;
-  quote: string;
-  comment: string;
-  useHeaders: boolean;
-  skipEmptyLines: boolean;
+  indentationType: 'space' | 'tab' | 'none';
+  addMetaTag: boolean;
 };
 
 const initialValues: InitialValuesType = {
-  delimiter: ',',
-  quote: '"',
-  comment: '#',
-  useHeaders: true,
-  skipEmptyLines: true
+  indentationType: 'space',
+  addMetaTag: false
 };
 
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
-    title: 'Basic CSV to XML',
-    description: 'Convert a simple CSV file into an XML format.',
-    sampleText: 'name,age,city\nJohn,30,New York\nAlice,25,London',
+    title: 'Basic JSON to XML',
+    description: 'Convert a simple JSON object into an XML format.',
+    sampleText: `
+{
+  "users": [
+    {
+      "name": "John",
+      "age": 30,
+      "city": "New York"
+    },
+    {
+      "name": "Alice",
+      "age": 25,
+      "city": "London"
+    }
+  ]
+}`,
     sampleResult: `<root>
-  <row>
-    <name>John</name>
-    <age>30</age>
-    <city>New York</city>
-  </row>
-  <row>
-    <name>Alice</name>
-    <age>25</age>
-    <city>London</city>
-  </row>
+\t<users>
+\t\t<name>John</name>
+\t\t<age>30</age>
+\t\t<city>New York</city>
+\t</users>
+\t<users>
+\t\t<name>Alice</name>
+\t\t<age>25</age>
+\t\t<city>London</city>
+\t</users>
 </root>`,
     sampleOptions: {
-      ...initialValues,
-      useHeaders: true
+      ...initialValues
     }
   }
 ];
@@ -82,42 +91,43 @@ export default function JsonToXml({ title }: ToolComponentProps) {
       resultComponent={<ToolTextResult title="Output XML" value={result} />}
       getGroups={({ values, updateField }) => [
         {
-          title: 'Input Json Format',
+          title: 'Output XML Indentation',
           component: (
             <Box>
-              <TextFieldWithDesc
-                description="Column Separator"
-                value={values.delimiter}
-                onOwnChange={(val) => updateField('delimiter', val)}
+              <SimpleRadio
+                checked={values.indentationType === 'space'}
+                title={'Use Spaces for indentation'}
+                description={
+                  'Use spaces to visualize the hierarchical structure of XML.'
+                }
+                onClick={() => updateField('indentationType', 'space')}
               />
-              <TextFieldWithDesc
-                description="Field Quote"
-                onOwnChange={(val) => updateField('quote', val)}
-                value={values.quote}
+              <SimpleRadio
+                checked={values.indentationType === 'tab'}
+                title={'Use Tabs for indentation'}
+                description={
+                  'Use tabs to visualize the hierarchical structure of XML.'
+                }
+                onClick={() => updateField('indentationType', 'tab')}
               />
-              <TextFieldWithDesc
-                description="Comment Symbol"
-                value={values.comment}
-                onOwnChange={(val) => updateField('comment', val)}
+              <SimpleRadio
+                checked={values.indentationType === 'none'}
+                title={'No indentation'}
+                description={'Output XML without any indentation.'}
+                onClick={() => updateField('indentationType', 'none')}
               />
             </Box>
           )
         },
         {
-          title: 'Conversion Options',
+          title: 'XML Meta Information',
           component: (
             <Box>
               <CheckboxWithDesc
-                checked={values.useHeaders}
-                onChange={(value) => updateField('useHeaders', value)}
-                title="Use Headers"
-                description="First row is treated as column headers"
-              />
-              <CheckboxWithDesc
-                checked={values.skipEmptyLines}
-                onChange={(value) => updateField('skipEmptyLines', value)}
-                title="Skip Empty Lines"
-                description="Don't process empty lines in the CSV"
+                checked={values.addMetaTag}
+                onChange={(value) => updateField('addMetaTag', value)}
+                title="Add an XML Meta Tag"
+                description="Add a meta tag at the beginning of the XML output."
               />
             </Box>
           )
