@@ -1,4 +1,4 @@
-import React, { ReactNode, useContext } from 'react';
+import React, { ReactNode, useContext, useEffect } from 'react';
 import { Box } from '@mui/material';
 import { Formik, FormikValues, useFormikContext } from 'formik';
 import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
@@ -13,10 +13,12 @@ import { CustomSnackBarContext } from '../contexts/CustomSnackBarContext';
 
 const FormikListenerComponent = <T,>({
   input,
-  compute
+  compute,
+  onValuesChange
 }: {
   input: any;
   compute: (optionsValues: T, input: any) => void;
+  onValuesChange?: (values: T) => void;
 }) => {
   const { values } = useFormikContext<T>();
   const { showSnackBar } = useContext(CustomSnackBarContext);
@@ -30,40 +32,31 @@ const FormikListenerComponent = <T,>({
     }
   }, [values, input, showSnackBar]);
 
+  useEffect(() => {
+    onValuesChange?.(values);
+  }, [onValuesChange, values]);
   return null; // This component doesn't render anything
 };
 
 interface ToolContentProps<T, I> extends ToolComponentProps {
-  // Input/Output components
   inputComponent?: ReactNode;
   resultComponent: ReactNode;
-
   renderCustomInput?: (
     values: T,
     setFieldValue: (fieldName: string, value: any) => void
   ) => ReactNode;
-
-  // Tool options
   initialValues: T;
   getGroups: GetGroupsType<T> | null;
-
-  // Computation function
   compute: (optionsValues: T, input: I) => void;
-
-  // Tool info (optional)
   toolInfo?: {
     title: string;
     description?: string;
   };
-
-  // Input value to pass to the compute function
   input?: I;
-
   exampleCards?: CardExampleType<T>[];
   setInput?: React.Dispatch<React.SetStateAction<I>>;
-
-  // Validation schema (optional)
   validationSchema?: any;
+  onValuesChange?: (values: T) => void;
 }
 
 export default function ToolContent<T extends FormikValues, I>({
@@ -78,7 +71,8 @@ export default function ToolContent<T extends FormikValues, I>({
   input,
   setInput,
   validationSchema,
-  renderCustomInput
+  renderCustomInput,
+  onValuesChange
 }: ToolContentProps<T, I>) {
   return (
     <Box>
@@ -98,7 +92,11 @@ export default function ToolContent<T extends FormikValues, I>({
                 }
                 result={resultComponent}
               />
-              <FormikListenerComponent<T> compute={compute} input={input} />
+              <FormikListenerComponent<T>
+                compute={compute}
+                input={input}
+                onValuesChange={onValuesChange}
+              />
               <ToolOptions getGroups={getGroups} />
 
               {toolInfo && toolInfo.title && toolInfo.description && (
