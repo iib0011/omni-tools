@@ -79,7 +79,9 @@ export default function CsvToXml({ title }: ToolComponentProps) {
       inputComponent={
         <ToolTextInput title="Input CSV" value={input} onChange={setInput} />
       }
-      resultComponent={<ToolTextResult title="Output XML" value={result} />}
+      resultComponent={
+        <ToolTextResult title="Output XML" value={result} extension={'xml'} />
+      }
       getGroups={({ values, updateField }) => [
         {
           title: 'Input CSV Format',

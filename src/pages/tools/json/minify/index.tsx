@@ -60,7 +60,13 @@ export default function MinifyJson({ title }: ToolComponentProps) {
       inputComponent={
         <ToolTextInput title="Input JSON" value={input} onChange={setInput} />
       }
-      resultComponent={<ToolTextResult title="Minified JSON" value={result} />}
+      resultComponent={
+        <ToolTextResult
+          title="Minified JSON"
+          value={result}
+          extension={'json'}
+        />
+      }
       initialValues={initialValues}
       getGroups={null}
       toolInfo={{

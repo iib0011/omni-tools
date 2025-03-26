@@ -109,7 +109,9 @@ export default function StringifyJson({ title }: ToolComponentProps) {
           onChange={setInput}
         />
       }
-      resultComponent={<ToolTextResult title="JSON String" value={result} />}
+      resultComponent={
+        <ToolTextResult title="JSON String" value={result} extension={'json'} />
+      }
       getGroups={({ values, updateField }) => [
         {
           title: 'Indentation',

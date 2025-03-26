@@ -130,7 +130,13 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
       inputComponent={
         <ToolTextInput title={'Input JSON'} value={input} onChange={setInput} />
       }
-      resultComponent={<ToolTextResult title={'Pretty JSON'} value={result} />}
+      resultComponent={
+        <ToolTextResult
+          title={'Pretty JSON'}
+          value={result}
+          extension={'json'}
+        />
+      }
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [
         {

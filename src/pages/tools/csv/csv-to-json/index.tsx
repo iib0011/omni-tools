@@ -150,7 +150,9 @@ export default function CsvToJson({ title }: ToolComponentProps) {
       inputComponent={
         <ToolTextInput title="Input CSV" value={input} onChange={setInput} />
       }
-      resultComponent={<ToolTextResult title="Output JSON" value={result} />}
+      resultComponent={
+        <ToolTextResult title="Output JSON" value={result} extension={'json'} />
+      }
       getGroups={({ values, updateField }) => [
         {
           title: 'Input CSV Format',

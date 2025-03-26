@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: typo">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: result file name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/json-to-xml/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/json-to-xml/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/minify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/minify/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/stringify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/stringify/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -366,15 +365,7 @@
       <workItem from="1741547560596" duration="1671000" />
       <workItem from="1741567442768" duration="14127000" />
       <workItem from="1741971589699" duration="371000" />
-      <workItem from="1743018497879" duration="2015000" />
-    </task>
-    <task id="LOCAL-00119" summary="docs: img">
-      <option name="closed" value="true" />
-      <created>1740503310227</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1740503310228</updated>
+      <workItem from="1743018497879" duration="2495000" />
     </task>
     <task id="LOCAL-00120" summary="fix: bg">
       <option name="closed" value="true" />
@@ -760,7 +751,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743019312699</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="chore: result file name">
+      <option name="closed" value="true" />
+      <created>1743020690384</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1743020690384</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -807,7 +806,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: remove duplicate lines" />
     <MESSAGE value="fix: tsc" />
     <MESSAGE value="style: optimizations" />
     <MESSAGE value="fix: replace text service" />
@@ -832,7 +830,8 @@
     <MESSAGE value="feat: background removal" />
     <MESSAGE value="feat: split pdf" />
     <MESSAGE value="fix: typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: typo" />
+    <MESSAGE value="chore: result file name" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: result file name" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
