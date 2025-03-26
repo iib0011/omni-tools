@@ -47,14 +47,7 @@ const convertObjectToXml = (
     if (Array.isArray(value)) {
       value.forEach((item) => {
         xml += `${getIndentation(options, depth)}<${keyString}>`;
-        xml +=
-          typeof item === 'object' && item !== null
-            ? `${newline}${convertObjectToXml(
-                item,
-                options,
-                depth + 1
-              )}${getIndentation(options, depth)}`
-            : `${escapeXml(String(item))}`;
+        xml += convertObjectToXml(item, options, depth + 1);
         xml += `</${keyString}>${newline}`;
       });
     } else if (value === null) {
@@ -66,6 +59,8 @@ const convertObjectToXml = (
       xml += `${getIndentation(options, depth)}<${keyString}>${newline}`;
       xml += convertObjectToXml(value, options, depth + 1);
       xml += `${getIndentation(options, depth)}</${keyString}>${newline}`;
+
+      // All other types are tre
     } else {
       xml += `${getIndentation(options, depth)}<${keyString}>${escapeXml(
         String(value)
