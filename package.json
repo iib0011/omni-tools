@@ -48,6 +48,7 @@
     "morsee": "^1.0.9",
     "notistack": "^3.0.1",
     "omggif": "^1.0.10",
+    "pdf-lib": "^1.17.1",
     "playwright": "^1.45.0",
     "rc-slider": "^11.1.8",
     "react": "^18.3.1",

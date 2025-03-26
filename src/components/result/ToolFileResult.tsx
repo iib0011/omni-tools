@@ -63,12 +63,14 @@ export default function ToolFileResult({
     }
   };
 
+  type SupportedFileType = 'image' | 'video' | 'audio' | 'pdf' | 'unknown';
   // Determine the file type based on MIME type
-  const getFileType = () => {
+  const getFileType = (): SupportedFileType => {
     if (!value) return 'unknown';
     if (value.type.startsWith('image/')) return 'image';
     if (value.type.startsWith('video/')) return 'video';
     if (value.type.startsWith('audio/')) return 'audio';
+    if (value.type.startsWith('application/pdf')) return 'pdf';
     return 'unknown';
   };
 
@@ -133,6 +135,14 @@ export default function ToolFileResult({
                   src={preview}
                   controls
                   style={{ width: '100%', maxWidth: '500px' }}
+                />
+              )}
+              {fileType === 'pdf' && (
+                <iframe
+                  src={preview}
+                  width="100%"
+                  height="100%"
+                  style={{ maxWidth: '500px' }}
                 />
               )}
               {fileType === 'unknown' && (
