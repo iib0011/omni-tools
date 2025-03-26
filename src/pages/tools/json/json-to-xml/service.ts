@@ -57,7 +57,12 @@ const convertObjectToXml = (
             : `${escapeXml(String(item))}`;
         xml += `</${keyString}>${newline}`;
       });
-    } else if (typeof value === 'object' && value !== null) {
+    } else if (value === null) {
+      xml += `${getIndentation(
+        options,
+        depth
+      )}<${keyString}></${keyString}>${newline}`;
+    } else if (typeof value === 'object') {
       xml += `${getIndentation(options, depth)}<${keyString}>${newline}`;
       xml += convertObjectToXml(value, options, depth + 1);
       xml += `${getIndentation(options, depth)}</${keyString}>${newline}`;
