@@ -41,8 +41,8 @@ export function reverseString(input: string): string {
 /**
  * Checks if the input string contains only digits.
  * @param input - The string to validate.
- * @returns True if the input contains only digits, false otherwise.
+ * @returns True if the input contains only digits including float, false otherwise.
  */
 export function containsOnlyDigits(input: string): boolean {
-  return /^-?\d+(\.\d+)?$/.test(input.trim());
+  return /^\d+(\.\d+)?$/.test(input.trim());
 }
