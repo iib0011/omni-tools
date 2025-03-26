@@ -69,30 +69,13 @@ export default function RemoveBackgroundFromPng({ title }: ToolComponentProps) {
         />
       }
       resultComponent={
-        <>
-          {isProcessing ? (
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: '200px'
-              }}
-            >
-              <CircularProgress />
-              <Typography variant="body2" sx={{ mt: 2 }}>
-                Removing background... This may take a moment.
-              </Typography>
-            </Box>
-          ) : (
-            <ToolFileResult
-              title={'Transparent PNG'}
-              value={result}
-              extension={'png'}
-            />
-          )}
-        </>
+        <ToolFileResult
+          title={'Transparent PNG'}
+          value={result}
+          extension={'png'}
+          loading={isProcessing}
+          loadingText={'Removing background'}
+        />
       }
       toolInfo={{
         title: 'Remove Background from PNG',
