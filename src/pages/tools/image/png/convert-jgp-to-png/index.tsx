@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import ToolFileInput from 'components/input/ToolFileInput';
+import ToolImageInput from 'components/input/ToolImageInput';
 import CheckboxWithDesc from 'components/options/CheckboxWithDesc';
 import ColorSelector from 'components/options/ColorSelector';
 import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
@@ -101,7 +101,7 @@ export default function ConvertJgpToPng({ title }: ToolComponentProps) {
       title={title}
       input={input}
       inputComponent={
-        <ToolFileInput
+        <ToolImageInput
           value={input}
           onChange={setInput}
           accept={['image/jpeg']}

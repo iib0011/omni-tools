@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: trim video">
+      <change afterPath="$PROJECT_DIR$/src/components/input/BaseFileInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/input/ToolImageInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/input/ToolVideoInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/input/file-input-utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/crop/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/crop/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +33,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="chesterkxng" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -131,7 +138,7 @@
     "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
-    "git-widget-placeholder": "#53 on fork/ARRY7686/csvToXml",
+    "git-widget-placeholder": "refactor-file-input",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/pages/tools/list/duplicate/index.tsx",
