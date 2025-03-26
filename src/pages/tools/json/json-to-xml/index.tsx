@@ -86,7 +86,9 @@ export default function JsonToXml({ title }: ToolComponentProps) {
       inputComponent={
         <ToolTextInput title="Input Json" value={input} onChange={setInput} />
       }
-      resultComponent={<ToolTextResult title="Output XML" value={result} />}
+      resultComponent={
+        <ToolTextResult title="Output XML" value={result} extension={'xml'} />
+      }
       getGroups={({ values, updateField }) => [
         {
           title: 'Output XML Indentation',

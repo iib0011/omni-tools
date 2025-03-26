@@ -1,16 +1,19 @@
 import { Box, TextField } from '@mui/material';
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import InputHeader from '../InputHeader';
 import ResultFooter from './ResultFooter';
-import { replaceSpecialCharacters } from '../../utils/string';
+import { replaceSpecialCharacters } from '@utils/string';
+import mime from 'mime';
 
 export default function ToolTextResult({
   title = 'Result',
-  value
+  value,
+  extension = 'txt'
 }: {
   title?: string;
   value: string;
+  extension?: string;
 }) {
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const handleCopy = () => {
@@ -22,9 +25,13 @@ export default function ToolTextResult({
       });
   };
   const handleDownload = () => {
-    const filename = 'output-omni-tools.txt';
+    const filename = `output-omni-tools.${extension}`;
 
-    const blob = new Blob([value], { type: 'text/plain' });
+    const mimeType = mime.getType(extension) || 'text/plain';
+
+    const blob = new Blob([value], {
+      type: mimeType
+    });
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;

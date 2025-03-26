@@ -49,7 +49,8 @@ export default function ToolFileResult({
 
   const handleDownload = () => {
     if (value) {
-      const filename = 'output-omni-tools.' + extension;
+      const hasExtension = value.name.includes('.');
+      const filename = hasExtension ? value.name : `${value.name}.${extension}`;
 
       const blob = new Blob([value], { type: value.type });
       const url = window.URL.createObjectURL(blob);

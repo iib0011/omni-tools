@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: split pdf">
-      <change afterPath="$PROJECT_DIR$/src/components/input/ToolPdfInput.tsx" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: typo">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/BaseFileInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/BaseFileInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/json-to-xml/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/json-to-xml/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,61 +28,78 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="chesterkxng" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;history&quot;: [
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
     {
-      &quot;assignee&quot;: &quot;iib0011&quot;
+      "assignee": "iib0011"
+    },
+    {
+      "state": "OPEN"
     }
   ],
-  &quot;lastFilter&quot;: {
-    &quot;assignee&quot;: &quot;iib0011&quot;
+  "lastFilter": {
+    "state": "OPEN"
   }
-}</component>
-  <component name="GitHubPullRequestState">{
-  &quot;prStates&quot;: [
+}]]></component>
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts51PkS9&quot;,
-        &quot;number&quot;: 22
+      "id": {
+        "id": "PR_kwDOMJIfts51PkS9",
+        "number": 22
       },
-      &quot;lastSeen&quot;: 1741207144695
+      "lastSeen": 1741207144695
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6NiNYl&quot;,
-        &quot;number&quot;: 32
+      "id": {
+        "id": "PR_kwDOMJIfts6NiNYl",
+        "number": 32
       },
-      &quot;lastSeen&quot;: 1741209723869
+      "lastSeen": 1741209723869
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Nheyd&quot;,
-        &quot;number&quot;: 31
+      "id": {
+        "id": "PR_kwDOMJIfts6Nheyd",
+        "number": 31
       },
-      &quot;lastSeen&quot;: 1741213371410
+      "lastSeen": 1741213371410
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6NmRBs&quot;,
-        &quot;number&quot;: 33
+      "id": {
+        "id": "PR_kwDOMJIfts6NmRBs",
+        "number": 33
       },
-      &quot;lastSeen&quot;: 1741282429036
+      "lastSeen": 1741282429036
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts5zyFTs&quot;,
-        &quot;number&quot;: 15
+      "id": {
+        "id": "PR_kwDOMJIfts5zyFTs",
+        "number": 15
       },
-      &quot;lastSeen&quot;: 1741535540953
+      "lastSeen": 1741535540953
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6QQB3c",
+        "number": 59
+      },
+      "lastSeen": 1743018960900
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6QMPEg",
+        "number": 58
+      },
+      "lastSeen": 1743019452983
     }
   ]
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
@@ -133,7 +151,7 @@
     "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
-    "git-widget-placeholder": "split-pdf",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/components/input",
@@ -184,7 +202,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
     </key>
   </component>
-  <component name="RunManager" selected="Vitest.parsePageRanges">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="Create transparent PNG.should make png color transparent" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <playwright-package value="$PROJECT_DIR$/node_modules/@playwright/test" />
@@ -260,9 +278,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Vitest.parsePageRanges" />
         <item itemvalue="npm.dev" />
         <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
+        <item itemvalue="Vitest.parsePageRanges" />
         <item itemvalue="Playwright.Create transparent PNG.should make png color transparent" />
         <item itemvalue="npm.test:e2e" />
       </list>
@@ -348,14 +366,7 @@
       <workItem from="1741547560596" duration="1671000" />
       <workItem from="1741567442768" duration="14127000" />
       <workItem from="1741971589699" duration="371000" />
-    </task>
-    <task id="LOCAL-00118" summary="style: background svg">
-      <option name="closed" value="true" />
-      <created>1740491737480</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1740491737480</updated>
+      <workItem from="1743018497879" duration="2015000" />
     </task>
     <task id="LOCAL-00119" summary="docs: img">
       <option name="closed" value="true" />
@@ -741,7 +752,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742967844908</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="fix: typo">
+      <option name="closed" value="true" />
+      <created>1743019312699</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1743019312699</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -788,7 +807,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="docs: readme" />
     <MESSAGE value="feat: remove duplicate lines" />
     <MESSAGE value="fix: tsc" />
     <MESSAGE value="style: optimizations" />
@@ -813,7 +831,8 @@
     <MESSAGE value="refactor: file inputs" />
     <MESSAGE value="feat: background removal" />
     <MESSAGE value="feat: split pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: split pdf" />
+    <MESSAGE value="fix: typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: typo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
