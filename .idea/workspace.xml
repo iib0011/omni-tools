@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: trim video">
-      <change afterPath="$PROJECT_DIR$/src/components/input/BaseFileInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/input/ToolImageInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/input/ToolVideoInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/input/file-input-utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/remove-background/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/png/remove-background/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/crop/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/crop/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +132,7 @@
     "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
-    "git-widget-placeholder": "refactor-file-input",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/pages/tools/list/duplicate/index.tsx",
@@ -350,14 +344,6 @@
       <workItem from="1741547560596" duration="1671000" />
       <workItem from="1741567442768" duration="14127000" />
       <workItem from="1741971589699" duration="371000" />
-    </task>
-    <task id="LOCAL-00115" summary="fix: broken links">
-      <option name="closed" value="true" />
-      <created>1740488522618</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1740488522618</updated>
     </task>
     <task id="LOCAL-00116" summary="chore: style buttons">
       <option name="closed" value="true" />
@@ -743,7 +729,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741580736359</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="refactor: file inputs">
+      <option name="closed" value="true" />
+      <created>1742960931740</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1742960931740</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -790,7 +784,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: prettify json in home" />
     <MESSAGE value="feat: jakarta font" />
     <MESSAGE value="chore: img" />
     <MESSAGE value="docs: readme" />
@@ -815,7 +808,8 @@
     <MESSAGE value="fix: tools by category scroll" />
     <MESSAGE value="fix: missing meta" />
     <MESSAGE value="feat: trim video" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: trim video" />
+    <MESSAGE value="refactor: file inputs" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: file inputs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
