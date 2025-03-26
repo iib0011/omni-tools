@@ -14,7 +14,7 @@ import greyPattern from '@assets/grey-pattern.png';
 
 interface BaseFileInputComponentProps extends BaseFileInputProps {
   children: (props: { preview: string | undefined }) => ReactNode;
-  type: 'image' | 'video' | 'audio';
+  type: 'image' | 'video' | 'audio' | 'pdf';
 }
 
 export default function BaseFileInput({

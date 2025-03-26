@@ -23,7 +23,15 @@ export function parsePageRanges(
     if (trimmedRange.includes('-')) {
       const [start, end] = trimmedRange.split('-').map(Number);
       if (!isNaN(start) && !isNaN(end)) {
-        for (let i = Math.max(1, start); i <= Math.min(totalPages, end); i++) {
+        // Handle both forward and reversed ranges
+        const normalizedStart = Math.min(start, end);
+        const normalizedEnd = Math.max(start, end);
+
+        for (
+          let i = Math.max(1, normalizedStart);
+          i <= Math.min(totalPages, normalizedEnd);
+          i++
+        ) {
           pageNumbers.add(i);
         }
       }

@@ -9,6 +9,7 @@ import { parsePageRanges, splitPdf } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { PDFDocument } from 'pdf-lib';
 import { FormikProps } from 'formik';
+import ToolPdfInput from '@components/input/ToolPdfInput';
 
 type InitialValuesType = {
   pageRanges: string;
@@ -115,7 +116,7 @@ export default function SplitPdf({ title }: ToolComponentProps) {
       compute={compute}
       exampleCards={exampleCards}
       inputComponent={
-        <ToolFileInput
+        <ToolPdfInput
           value={input}
           onChange={setInput}
           accept={['application/pdf']}
