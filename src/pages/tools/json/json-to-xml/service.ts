@@ -46,7 +46,7 @@ const convertObjectToXml = (
 
     if (Array.isArray(value)) {
       value.forEach((item) => {
-        xml += `${getIndentation(options, depth)}<${keyString}>`;
+        xml += `${getIndentation(options, depth)}<${keyString}>${newline}`;
         xml += convertObjectToXml(item, options, depth + 1);
         xml += `</${keyString}>${newline}`;
       });
