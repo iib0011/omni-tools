@@ -1,7 +1,6 @@
 import { Box } from '@mui/material';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import * as Yup from 'yup';
-import ToolFileInput from '@components/input/ToolFileInput';
 import ToolFileResult from '@components/result/ToolFileResult';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -11,6 +10,7 @@ import { updateNumberField } from '@utils/string';
 import { FFmpeg } from '@ffmpeg/ffmpeg';
 import { fetchFile } from '@ffmpeg/util';
 import { debounce } from 'lodash';
+import ToolVideoInput from '@components/input/ToolVideoInput';
 
 const ffmpeg = new FFmpeg();
 
@@ -35,14 +35,16 @@ export default function TrimVideo({ title }: ToolComponentProps) {
     optionsValues: typeof initialValues,
     input: File | null
   ) => {
-    console.log('compute', optionsValues, input);
     if (!input) return;
 
     const { trimStart, trimEnd } = optionsValues;
 
     try {
       if (!ffmpeg.loaded) {
-        await ffmpeg.load();
+        await ffmpeg.load({
+          wasmURL:
+            'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
+        });
       }
 
       const inputName = 'input.mp4';
@@ -111,12 +113,11 @@ export default function TrimVideo({ title }: ToolComponentProps) {
       input={input}
       renderCustomInput={({ trimStart, trimEnd }, setFieldValue) => {
         return (
-          <ToolFileInput
+          <ToolVideoInput
             value={input}
             onChange={setInput}
             accept={['video/mp4', 'video/webm', 'video/ogg']}
             title={'Input Video'}
-            type="video"
             showTrimControls={true}
             onTrimChange={(trimStart, trimEnd) => {
               setFieldValue('trimStart', trimStart);

@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import * as Yup from 'yup';
-import ToolFileInput from '@components/input/ToolFileInput';
+import ToolImageInput from '@components/input/ToolImageInput';
 import ToolFileResult from '@components/result/ToolFileResult';
 import ColorSelector from '@components/options/ColorSelector';
 import Color from 'color';
@@ -109,7 +109,7 @@ export default function CreateTransparent({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       inputComponent={
-        <ToolFileInput
+        <ToolImageInput
           value={input}
           onChange={setInput}
           accept={['image/png']}

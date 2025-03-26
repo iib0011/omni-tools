@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: trim video">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: split pdf">
+      <change afterPath="$PROJECT_DIR$/src/components/input/ToolPdfInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/BaseFileInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/BaseFileInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +27,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="chesterkxng" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -126,15 +127,16 @@
     "Vitest.mergeText.executor": "Run",
     "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
     "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
+    "Vitest.parsePageRanges.executor": "Run",
     "Vitest.removeDuplicateLines function.executor": "Run",
     "Vitest.removeDuplicateLines function.newlines option.executor": "Run",
     "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
-    "git-widget-placeholder": "#53 on fork/ARRY7686/csvToXml",
+    "git-widget-placeholder": "split-pdf",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/pages/tools/list/duplicate/index.tsx",
+    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/components/input",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -168,11 +170,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\components\input" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\.husky" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\.github" />
-      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
@@ -182,7 +184,7 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="Vitest.parsePageRanges">
     <configuration name="Create transparent PNG.should make png color transparent" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <playwright-package value="$PROJECT_DIR$/node_modules/@playwright/test" />
@@ -193,6 +195,19 @@
       <test-names>
         <test-name value="Create transparent PNG" />
         <test-name value="should make png color transparent" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="parsePageRanges" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/service.test.ts" />
+      <test-names>
+        <test-name value="parsePageRanges" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -226,16 +241,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="test:e2e" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -247,19 +252,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="npm.test" />
       <item itemvalue="npm.test:e2e" />
       <item itemvalue="npm.dev" />
       <item itemvalue="Playwright.Create transparent PNG.should make png color transparent" />
+      <item itemvalue="Vitest.parsePageRanges" />
       <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Vitest.parsePageRanges" />
         <item itemvalue="npm.dev" />
         <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
         <item itemvalue="Playwright.Create transparent PNG.should make png color transparent" />
         <item itemvalue="npm.test:e2e" />
-        <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
   </component>
@@ -343,30 +348,6 @@
       <workItem from="1741547560596" duration="1671000" />
       <workItem from="1741567442768" duration="14127000" />
       <workItem from="1741971589699" duration="371000" />
-    </task>
-    <task id="LOCAL-00115" summary="fix: broken links">
-      <option name="closed" value="true" />
-      <created>1740488522618</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1740488522618</updated>
-    </task>
-    <task id="LOCAL-00116" summary="chore: style buttons">
-      <option name="closed" value="true" />
-      <created>1740490919407</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1740490919407</updated>
-    </task>
-    <task id="LOCAL-00117" summary="chore: style">
-      <option name="closed" value="true" />
-      <created>1740491274739</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1740491274739</updated>
     </task>
     <task id="LOCAL-00118" summary="style: background svg">
       <option name="closed" value="true" />
@@ -736,7 +717,31 @@
       <option name="project" value="LOCAL" />
       <updated>1741580736359</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="refactor: file inputs">
+      <option name="closed" value="true" />
+      <created>1742960931740</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1742960931740</updated>
+    </task>
+    <task id="LOCAL-00165" summary="feat: background removal">
+      <option name="closed" value="true" />
+      <created>1742961898820</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1742961898820</updated>
+    </task>
+    <task id="LOCAL-00166" summary="feat: split pdf">
+      <option name="closed" value="true" />
+      <created>1742967844908</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1742967844908</updated>
+    </task>
+    <option name="localTasksCounter" value="167" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -783,9 +788,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: prettify json in home" />
-    <MESSAGE value="feat: jakarta font" />
-    <MESSAGE value="chore: img" />
     <MESSAGE value="docs: readme" />
     <MESSAGE value="feat: remove duplicate lines" />
     <MESSAGE value="fix: tsc" />
@@ -808,7 +810,10 @@
     <MESSAGE value="fix: tools by category scroll" />
     <MESSAGE value="fix: missing meta" />
     <MESSAGE value="feat: trim video" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: trim video" />
+    <MESSAGE value="refactor: file inputs" />
+    <MESSAGE value="feat: background removal" />
+    <MESSAGE value="feat: split pdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: split pdf" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

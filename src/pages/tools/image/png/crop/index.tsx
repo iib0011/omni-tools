@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import * as Yup from 'yup';
-import ToolFileInput from '@components/input/ToolFileInput';
+import ToolImageInput from '@components/input/ToolImageInput';
 import ToolFileResult from '@components/result/ToolFileResult';
 import { GetGroupsType, UpdateField } from '@components/options/ToolOptions';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
@@ -197,7 +197,7 @@ export default function CropPng({ title }: ToolComponentProps) {
     values: InitialValuesType,
     updateField: UpdateField<InitialValuesType>
   ) => (
-    <ToolFileInput
+    <ToolImageInput
       value={input}
       onChange={setInput}
       accept={['image/png']}

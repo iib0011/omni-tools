@@ -10,6 +10,7 @@ import { jsonTools } from '../pages/tools/json';
 import { csvTools } from '../pages/tools/csv';
 import { timeTools } from '../pages/tools/time';
 import { IconifyIcon } from '@iconify/react';
+import { pdfTools } from '../pages/tools/pdf';
 
 export const tools: DefinedTool[] = [
   ...imageTools,
@@ -19,7 +20,8 @@ export const tools: DefinedTool[] = [
   ...csvTools,
   ...videoTools,
   ...numberTools,
-  ...timeTools
+  ...timeTools,
+  ...pdfTools
 ];
 const categoriesConfig: {
   type: ToolCategory;
@@ -75,6 +77,12 @@ const categoriesConfig: {
     icon: 'lets-icons:video-light',
     value:
       'Tools for working with videos – extract frames from videos, create GIFs from videos, convert videos to different formats, and much more.'
+  },
+  {
+    type: 'pdf',
+    icon: 'tabler:pdf',
+    value:
+      'Tools for working with PDF files - extract text from PDFs, convert PDFs to other formats, manipulate PDFs, and much more.'
   },
   {
     type: 'time',

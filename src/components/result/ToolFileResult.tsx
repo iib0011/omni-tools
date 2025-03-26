@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, CircularProgress, Typography } from '@mui/material';
 import React, { useContext } from 'react';
 import InputHeader from '../InputHeader';
 import greyPattern from '@assets/grey-pattern.png';
@@ -9,11 +9,15 @@ import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 export default function ToolFileResult({
   title = 'Result',
   value,
-  extension
+  extension,
+  loading,
+  loadingText
 }: {
   title?: string;
   value: File | null;
   extension: string;
+  loading?: boolean;
+  loadingText?: string;
 }) {
   const [preview, setPreview] = React.useState<string | null>(null);
   const { showSnackBar } = useContext(CustomSnackBarContext);
@@ -59,12 +63,14 @@ export default function ToolFileResult({
     }
   };
 
+  type SupportedFileType = 'image' | 'video' | 'audio' | 'pdf' | 'unknown';
   // Determine the file type based on MIME type
-  const getFileType = () => {
+  const getFileType = (): SupportedFileType => {
     if (!value) return 'unknown';
     if (value.type.startsWith('image/')) return 'image';
     if (value.type.startsWith('video/')) return 'video';
     if (value.type.startsWith('audio/')) return 'audio';
+    if (value.type.startsWith('application/pdf')) return 'pdf';
     return 'unknown';
   };
 
@@ -83,44 +89,70 @@ export default function ToolFileResult({
           bgcolor: 'white'
         }}
       >
-        {preview && (
+        {loading ? (
           <Box
-            width={'100%'}
-            height={'100%'}
             sx={{
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              backgroundImage: `url(${greyPattern})`
+              height: '100%'
             }}
           >
-            {fileType === 'image' && (
-              <img
-                src={preview}
-                alt="Result"
-                style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
-              />
-            )}
-            {fileType === 'video' && (
-              <video
-                src={preview}
-                controls
-                style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
-              />
-            )}
-            {fileType === 'audio' && (
-              <audio
-                src={preview}
-                controls
-                style={{ width: '100%', maxWidth: '500px' }}
-              />
-            )}
-            {fileType === 'unknown' && (
-              <Box sx={{ padding: 2, textAlign: 'center' }}>
-                File processed successfully. Click download to save the result.
-              </Box>
-            )}
+            <CircularProgress />
+            <Typography variant="body2" sx={{ mt: 2 }}>
+              {loadingText}... This may take a moment.
+            </Typography>
           </Box>
+        ) : (
+          preview && (
+            <Box
+              width={'100%'}
+              height={'100%'}
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundImage: `url(${greyPattern})`
+              }}
+            >
+              {fileType === 'image' && (
+                <img
+                  src={preview}
+                  alt="Result"
+                  style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
+                />
+              )}
+              {fileType === 'video' && (
+                <video
+                  src={preview}
+                  controls
+                  style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
+                />
+              )}
+              {fileType === 'audio' && (
+                <audio
+                  src={preview}
+                  controls
+                  style={{ width: '100%', maxWidth: '500px' }}
+                />
+              )}
+              {fileType === 'pdf' && (
+                <iframe
+                  src={preview}
+                  width="100%"
+                  height="100%"
+                  style={{ maxWidth: '500px' }}
+                />
+              )}
+              {fileType === 'unknown' && (
+                <Box sx={{ padding: 2, textAlign: 'center' }}>
+                  File processed successfully. Click download to save the
+                  result.
+                </Box>
+              )}
+            </Box>
+          )
         )}
       </Box>
       <ResultFooter

@@ -22,7 +22,8 @@ export type ToolCategory =
   | 'list'
   | 'json'
   | 'csv'
-  | 'time';
+  | 'time'
+  | 'pdf';
 
 export interface DefinedTool {
   type: ToolCategory;
