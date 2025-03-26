@@ -60,7 +60,7 @@ const convertObjectToXml = (
       xml += convertObjectToXml(value, options, depth + 1);
       xml += `${getIndentation(options, depth)}</${keyString}>${newline}`;
 
-      // All other types are tre
+      // All other types are treated the same way
     } else {
       xml += `${getIndentation(options, depth)}<${keyString}>${escapeXml(
         String(value)
