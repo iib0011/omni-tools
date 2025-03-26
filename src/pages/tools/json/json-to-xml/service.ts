@@ -41,31 +41,49 @@ const convertObjectToXml = (
 
   for (const key in obj) {
     const value = obj[key];
-
     const keyString = isNaN(Number(key)) ? key : `row-${key}`;
 
-    if (Array.isArray(value)) {
-      value.forEach((item) => {
-        xml += `${getIndentation(options, depth)}<${keyString}>${newline}`;
-        xml += convertObjectToXml(item, options, depth + 1);
-        xml += `${getIndentation(options, depth)}</${keyString}>${newline}`;
-      });
-    } else if (value === null) {
+    // Handle null values
+    if (value === null) {
       xml += `${getIndentation(
         options,
         depth
       )}<${keyString}></${keyString}>${newline}`;
-    } else if (typeof value === 'object') {
+      continue;
+    }
+
+    // Handle arrays
+    if (Array.isArray(value)) {
+      value.forEach((item) => {
+        xml += `${getIndentation(options, depth)}<${keyString}>`;
+        if (item === null) {
+          xml += `</${keyString}>${newline}`;
+        } else if (typeof item === 'object') {
+          xml += `${newline}${convertObjectToXml(
+            item,
+            options,
+            depth + 1
+          )}${getIndentation(options, depth)}`;
+          xml += `</${keyString}>${newline}`;
+        } else {
+          xml += `${escapeXml(String(item))}</${keyString}>${newline}`;
+        }
+      });
+      continue;
+    }
+
+    // Handle objects
+    if (typeof value === 'object') {
       xml += `${getIndentation(options, depth)}<${keyString}>${newline}`;
       xml += convertObjectToXml(value, options, depth + 1);
       xml += `${getIndentation(options, depth)}</${keyString}>${newline}`;
-
-      // All other types are treated the same way
-    } else {
-      xml += `${getIndentation(options, depth)}<${keyString}>${escapeXml(
-        String(value)
-      )}</${keyString}>${newline}`;
+      continue;
     }
+
+    // Handle primitive values (string, number, boolean, etc.)
+    xml += `${getIndentation(options, depth)}<${keyString}>${escapeXml(
+      String(value)
+    )}</${keyString}>${newline}`;
   }
 
   return depth === 0 ? `${xml}</root>` : xml;
