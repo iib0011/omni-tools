@@ -1,16 +1,15 @@
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import * as Yup from 'yup';
-import ToolFileInput from '@components/input/ToolFileInput';
 import ToolFileResult from '@components/result/ToolFileResult';
-import ToolOptions, { GetGroupsType } from '@components/options/ToolOptions';
+import { GetGroupsType } from '@components/options/ToolOptions';
 import ColorSelector from '@components/options/ColorSelector';
 import Color from 'color';
 import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
-import ToolInputAndResult from '@components/ToolInputAndResult';
 import { areColorsSimilar } from 'utils/color';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
+import ToolImageInput from '@components/input/ToolImageInput';
 
 const initialValues = {
   fromColor: 'white',
@@ -125,7 +124,7 @@ export default function ChangeColorsInPng({ title }: ToolComponentProps) {
       input={input}
       validationSchema={validationSchema}
       inputComponent={
-        <ToolFileInput
+        <ToolImageInput
           value={input}
           onChange={setInput}
           accept={['image/png']}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ToolFileInput from '@components/input/ToolFileInput';
+import ToolImageInput from '@components/input/ToolImageInput';
 import ToolFileResult from '@components/result/ToolFileResult';
 import { changeOpacity } from './service';
 import ToolContent from '@components/ToolContent';
@@ -94,7 +94,7 @@ export default function ChangeOpacity({ title }: ToolComponentProps) {
       title={title}
       input={input}
       inputComponent={
-        <ToolFileInput
+        <ToolImageInput
           value={input}
           onChange={setInput}
           accept={['image/png']}
