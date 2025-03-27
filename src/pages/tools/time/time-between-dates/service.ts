@@ -119,35 +119,11 @@ export const formatTimeWithLargestUnit = (
   difference: TimeDifference,
   largestUnit: TimeUnit
 ): string => {
-  const conversionFactors: Record<TimeUnit, number> = {
-    years: 365.2425, // Leap years considered
-    months: 30.436875, // Average month length
-    days: 24, // Hours per day
-    hours: 60, // Minutes per hour
-    minutes: 60, // Seconds per minute
-    seconds: 1000, // Milliseconds per second
-    milliseconds: 1
-  };
-
   const largestUnitIndex = unitHierarchy.indexOf(largestUnit);
   const unitsToInclude = unitHierarchy.slice(largestUnitIndex);
 
-  // Deep copy to avoid mutating original object
-  const convertedDifference = { ...difference };
+  // Preserve only whole values, do not apply fractional conversions
+  const adjustedDifference: TimeDifference = { ...difference };
 
-  let carryOver = 0;
-  for (let i = 0; i < largestUnitIndex; i++) {
-    const unit = unitHierarchy[i];
-    const nextUnit = unitHierarchy[i + 1];
-
-    if (nextUnit) {
-      carryOver =
-        (convertedDifference[unit] || 0) * (conversionFactors[unit] || 1);
-      convertedDifference[nextUnit] =
-        (convertedDifference[nextUnit] || 0) + carryOver;
-      convertedDifference[unit] = 0;
-    }
-  }
-
-  return formatTimeDifference(convertedDifference, unitsToInclude);
+  return formatTimeDifference(adjustedDifference, unitsToInclude);
 };

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: zoom on hover">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: time between dates">
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/time-between-dates.service.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/time/time-between-dates.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,6 +154,7 @@
     "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
+    "Vitest.timeBetweenDates.executor": "Run",
     "git-widget-placeholder": "fork/TheLukasHenry/days-calculator-#51",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -206,17 +206,17 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
-    <configuration name="Create transparent PNG.should make png color transparent" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Vitest.calculateTimeBetweenDates">
+    <configuration name="calculateTimeBetweenDates" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
-      <playwright-package value="$PROJECT_DIR$/node_modules/@playwright/test" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/create-transparent.e2e.spec.ts" />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/time-between-dates.service.test.ts" />
       <test-names>
-        <test-name value="Create transparent PNG" />
-        <test-name value="should make png color transparent" />
+        <test-name value="calculateTimeBetweenDates" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -247,6 +247,19 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="timeBetweenDates" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/time-between-dates.service.test.ts" />
+      <test-names>
+        <test-name value="timeBetweenDates" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
         <settings />
@@ -263,30 +276,20 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:e2e" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:e2e" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="npm.test:e2e" />
       <item itemvalue="npm.dev" />
-      <item itemvalue="Playwright.Create transparent PNG.should make png color transparent" />
+      <item itemvalue="Vitest.calculateTimeBetweenDates" />
+      <item itemvalue="Vitest.timeBetweenDates" />
       <item itemvalue="Vitest.parsePageRanges" />
       <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Vitest.calculateTimeBetweenDates" />
+        <item itemvalue="Vitest.timeBetweenDates" />
         <item itemvalue="npm.dev" />
         <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
         <item itemvalue="Vitest.parsePageRanges" />
-        <item itemvalue="Playwright.Create transparent PNG.should make png color transparent" />
-        <item itemvalue="npm.test:e2e" />
       </list>
     </recent_temporary>
   </component>
@@ -372,15 +375,7 @@
       <workItem from="1741971589699" duration="371000" />
       <workItem from="1743018497879" duration="3895000" />
       <workItem from="1743047367993" duration="986000" />
-      <workItem from="1743103182313" duration="3430000" />
-    </task>
-    <task id="LOCAL-00123" summary="fix: bg">
-      <option name="closed" value="true" />
-      <created>1740505390205</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1740505390205</updated>
+      <workItem from="1743103182313" duration="4264000" />
     </task>
     <task id="LOCAL-00124" summary="docs: readme">
       <option name="closed" value="true" />
@@ -766,7 +761,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743052111988</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="refactor: time between dates">
+      <option name="closed" value="true" />
+      <created>1743106796406</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1743106796406</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -813,7 +816,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: smooth scroll for use this tool and examles" />
     <MESSAGE value="feat: minify json" />
     <MESSAGE value="feat: stringify json" />
     <MESSAGE value="feat: arithmetic sequence" />
@@ -838,7 +840,8 @@
     <MESSAGE value="chore: text result extensions" />
     <MESSAGE value="chore: show new tools in landing" />
     <MESSAGE value="chore: zoom on hover" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: zoom on hover" />
+    <MESSAGE value="refactor: time between dates" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: time between dates" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
