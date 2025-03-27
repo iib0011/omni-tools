@@ -19,9 +19,9 @@ const exampleTools: { label: string; url: string }[] = [
   { label: 'Sort a list', url: '/list/sort' },
   { label: 'Compress PNG', url: '/png/compress-png' },
   { label: 'Split a text', url: '/string/split' },
-  { label: 'Calculate number sum', url: '/number/sum' },
-  { label: 'Shuffle a list', url: '/list/shuffle' },
-  { label: 'Change colors in image', url: '/png/change-colors-in-png' }
+  { label: 'Split PDF', url: '/pdf/split-pdf' },
+  { label: 'Trim video', url: '/video/trim' },
+  { label: 'Calculate number sum', url: '/number/sum' }
 ];
 export default function Hero() {
   const [inputValue, setInputValue] = useState<string>('');

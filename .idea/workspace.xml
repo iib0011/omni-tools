@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: text result extensions">
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/meta.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/rotate-pdf.service.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/uiConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/uiConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

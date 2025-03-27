@@ -16,12 +16,12 @@ export const tools: DefinedTool[] = [
   ...imageTools,
   ...stringTools,
   ...jsonTools,
+  ...pdfTools,
   ...listTools,
   ...csvTools,
   ...videoTools,
   ...numberTools,
-  ...timeTools,
-  ...pdfTools
+  ...timeTools
 ];
 const categoriesConfig: {
   type: ToolCategory;
@@ -91,6 +91,11 @@ const categoriesConfig: {
       'Tools for working with time and date – draw clocks and calendars, generate time and date sequences, calculate average time, convert between time zones, and much more.'
   }
 ];
+// use for changelogs
+// console.log(
+//   'tools',
+//   tools.map(({ name, type }) => ({ type, name }))
+// );
 export const filterTools = (
   tools: DefinedTool[],
   query: string
