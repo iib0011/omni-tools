@@ -238,6 +238,7 @@ export default function TimeBetweenDates() {
 
   return (
     <ToolContent
+      title="Time Between Dates"
       inputComponent={null}
       resultComponent={
         result ? (
