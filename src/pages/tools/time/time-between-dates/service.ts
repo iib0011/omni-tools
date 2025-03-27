@@ -1,28 +1,20 @@
-type TimeUnit =
-  | 'milliseconds'
-  | 'seconds'
-  | 'minutes'
-  | 'hours'
-  | 'days'
-  | 'months'
-  | 'years';
+export const unitHierarchy = [
+  'years',
+  'months',
+  'days',
+  'hours',
+  'minutes',
+  'seconds',
+  'milliseconds'
+] as const;
 
-interface TimeDifference {
-  milliseconds: number;
-  seconds: number;
-  minutes: number;
-  hours: number;
-  days: number;
-  months: number;
-  years: number;
-}
+export type TimeUnit = (typeof unitHierarchy)[number];
+export type TimeDifference = Record<TimeUnit, number>;
 
 export const calculateTimeBetweenDates = (
   startDate: Date,
-  endDate: Date,
-  unit: TimeUnit = 'milliseconds'
-): TimeDifference | number => {
-  // Ensure endDate is after startDate
+  endDate: Date
+): TimeDifference => {
   if (endDate < startDate) {
     const temp = startDate;
     startDate = endDate;
@@ -44,12 +36,6 @@ export const calculateTimeBetweenDates = (
   const months = (endYear - startYear) * 12 + (endMonth - startMonth);
   const years = Math.floor(months / 12);
 
-  // If specific unit requested, return just that value
-  if (unit !== 'milliseconds') {
-    return { milliseconds, seconds, minutes, hours, days, months, years }[unit];
-  }
-
-  // Otherwise return the complete breakdown
   return {
     milliseconds,
     seconds,
@@ -63,64 +49,32 @@ export const calculateTimeBetweenDates = (
 
 export const formatTimeDifference = (
   difference: TimeDifference,
-  includeUnits: TimeUnit[] = [
-    'years',
-    'months',
-    'days',
-    'hours',
-    'minutes',
-    'seconds'
-  ]
+  includeUnits: TimeUnit[] = unitHierarchy.slice(0, -1)
 ): string => {
-  const parts: string[] = [];
+  const timeUnits: { key: TimeUnit; value: number; divisor?: number }[] = [
+    { key: 'years', value: difference.years },
+    { key: 'months', value: difference.months, divisor: 12 },
+    { key: 'days', value: difference.days, divisor: 30 },
+    { key: 'hours', value: difference.hours, divisor: 24 },
+    { key: 'minutes', value: difference.minutes, divisor: 60 },
+    { key: 'seconds', value: difference.seconds, divisor: 60 }
+  ];
 
-  if (includeUnits.includes('years') && difference.years > 0) {
-    parts.push(
-      `${difference.years} ${difference.years === 1 ? 'year' : 'years'}`
-    );
-  }
-
-  if (includeUnits.includes('months') && difference.months % 12 > 0) {
-    const remainingMonths = difference.months % 12;
-    parts.push(
-      `${remainingMonths} ${remainingMonths === 1 ? 'month' : 'months'}`
-    );
-  }
-
-  if (includeUnits.includes('days') && difference.days % 30 > 0) {
-    const remainingDays = difference.days % 30;
-    parts.push(`${remainingDays} ${remainingDays === 1 ? 'day' : 'days'}`);
-  }
-
-  if (includeUnits.includes('hours') && difference.hours % 24 > 0) {
-    const remainingHours = difference.hours % 24;
-    parts.push(`${remainingHours} ${remainingHours === 1 ? 'hour' : 'hours'}`);
-  }
-
-  if (includeUnits.includes('minutes') && difference.minutes % 60 > 0) {
-    const remainingMinutes = difference.minutes % 60;
-    parts.push(
-      `${remainingMinutes} ${remainingMinutes === 1 ? 'minute' : 'minutes'}`
-    );
-  }
-
-  if (includeUnits.includes('seconds') && difference.seconds % 60 > 0) {
-    const remainingSeconds = difference.seconds % 60;
-    parts.push(
-      `${remainingSeconds} ${remainingSeconds === 1 ? 'second' : 'seconds'}`
-    );
-  }
+  const parts = timeUnits
+    .filter(({ key }) => includeUnits.includes(key))
+    .map(({ key, value, divisor }) => {
+      const remaining = divisor ? value % divisor : value;
+      return remaining > 0 ? `${remaining} ${key}` : '';
+    })
+    .filter(Boolean);
 
   if (parts.length === 0) {
     if (includeUnits.includes('milliseconds')) {
-      parts.push(
-        `${difference.milliseconds} ${
-          difference.milliseconds === 1 ? 'millisecond' : 'milliseconds'
-        }`
-      );
-    } else {
-      parts.push('0 seconds');
+      return `${difference.milliseconds} millisecond${
+        difference.milliseconds === 1 ? '' : 's'
+      }`;
     }
+    return '0 seconds';
   }
 
   return parts.join(', ');
@@ -132,19 +86,68 @@ export const getTimeWithTimezone = (
   timezone: string
 ): Date => {
   // Combine date and time
-  const dateTimeString = `${dateString}T${timeString}`;
+  const dateTimeString = `${dateString}T${timeString}Z`; // Append 'Z' to enforce UTC parsing
+  const utcDate = new Date(dateTimeString);
 
-  // Create a date object in the local timezone
-  const dateObject = new Date(dateTimeString);
-
-  // If timezone is provided, adjust the date
-  if (timezone && timezone !== 'local') {
-    // Create date string with the timezone identifier
-    const dateWithTimezone = new Date(
-      dateTimeString + timezone.replace('GMT', '')
-    );
-    return dateWithTimezone;
+  if (isNaN(utcDate.getTime())) {
+    throw new Error('Invalid date or time format');
   }
 
-  return dateObject;
+  // If timezone is "local", return the local date
+  if (timezone === 'local') {
+    return utcDate;
+  }
+
+  // Extract offset from timezone (e.g., "GMT+5:30" or "GMT-4")
+  const match = timezone.match(/^GMT(?:([+-]\d{1,2})(?::(\d{2}))?)?$/);
+  if (!match) {
+    throw new Error('Invalid timezone format');
+  }
+
+  const offsetHours = match[1] ? parseInt(match[1], 10) : 0;
+  const offsetMinutes = match[2] ? parseInt(match[2], 10) : 0;
+
+  const totalOffsetMinutes =
+    offsetHours * 60 + (offsetHours < 0 ? -offsetMinutes : offsetMinutes);
+
+  // Adjust the UTC date by the timezone offset
+  return new Date(utcDate.getTime() - totalOffsetMinutes * 60 * 1000);
+};
+
+// Helper function to format time based on largest unit
+export const formatTimeWithLargestUnit = (
+  difference: TimeDifference,
+  largestUnit: TimeUnit
+): string => {
+  const conversionFactors: Record<TimeUnit, number> = {
+    years: 365.2425, // Leap years considered
+    months: 30.436875, // Average month length
+    days: 24, // Hours per day
+    hours: 60, // Minutes per hour
+    minutes: 60, // Seconds per minute
+    seconds: 1000, // Milliseconds per second
+    milliseconds: 1
+  };
+
+  const largestUnitIndex = unitHierarchy.indexOf(largestUnit);
+  const unitsToInclude = unitHierarchy.slice(largestUnitIndex);
+
+  // Deep copy to avoid mutating original object
+  const convertedDifference = { ...difference };
+
+  let carryOver = 0;
+  for (let i = 0; i < largestUnitIndex; i++) {
+    const unit = unitHierarchy[i];
+    const nextUnit = unitHierarchy[i + 1];
+
+    if (nextUnit) {
+      carryOver =
+        (convertedDifference[unit] || 0) * (conversionFactors[unit] || 1);
+      convertedDifference[nextUnit] =
+        (convertedDifference[nextUnit] || 0) + carryOver;
+      convertedDifference[unit] = 0;
+    }
+  }
+
+  return formatTimeDifference(convertedDifference, unitsToInclude);
 };

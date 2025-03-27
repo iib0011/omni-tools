@@ -1,12 +1,13 @@
-import { Box, Typography, Paper } from '@mui/material';
+import { Box, Paper, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import SelectWithDesc from '@components/options/SelectWithDesc';
 import {
   calculateTimeBetweenDates,
-  formatTimeDifference,
-  getTimeWithTimezone
+  formatTimeWithLargestUnit,
+  getTimeWithTimezone,
+  unitHierarchy
 } from './service';
 import * as Yup from 'yup';
 import { CardExampleType } from '@components/examples/ToolExamples';
@@ -29,135 +30,6 @@ type InitialValuesType = {
   endTimezone: string;
 };
 
-// Helper function to format time based on largest unit
-const formatTimeWithLargestUnit = (
-  difference: any,
-  largestUnit: TimeUnit
-): string => {
-  const unitHierarchy: TimeUnit[] = [
-    'years',
-    'months',
-    'days',
-    'hours',
-    'minutes',
-    'seconds',
-    'milliseconds'
-  ];
-
-  const largestUnitIndex = unitHierarchy.indexOf(largestUnit);
-  const unitsToInclude = unitHierarchy.slice(largestUnitIndex);
-
-  // Make a deep copy of the difference object to avoid modifying the original
-  const convertedDifference = { ...difference };
-
-  // Constants for time conversions - more precise values
-  const HOURS_PER_DAY = 24;
-  const DAYS_PER_MONTH = 30; // Approximation
-  const MONTHS_PER_YEAR = 12;
-  const DAYS_PER_YEAR = 365; // Approximation
-  const MINUTES_PER_HOUR = 60;
-  const SECONDS_PER_MINUTE = 60;
-  const MS_PER_SECOND = 1000;
-
-  // Apply conversions based on the selected largest unit
-  if (largestUnit === 'months') {
-    // Convert years to months
-    convertedDifference.months += convertedDifference.years * MONTHS_PER_YEAR;
-    convertedDifference.years = 0;
-  } else if (largestUnit === 'days') {
-    // Convert years and months to days
-    convertedDifference.days +=
-      convertedDifference.years * DAYS_PER_YEAR +
-      convertedDifference.months * DAYS_PER_MONTH;
-    convertedDifference.months = 0;
-    convertedDifference.years = 0;
-  } else if (largestUnit === 'hours') {
-    // Convert years, months, and days to hours
-    convertedDifference.hours +=
-      convertedDifference.years * DAYS_PER_YEAR * HOURS_PER_DAY +
-      convertedDifference.months * DAYS_PER_MONTH * HOURS_PER_DAY +
-      convertedDifference.days * HOURS_PER_DAY;
-    convertedDifference.days = 0;
-    convertedDifference.months = 0;
-    convertedDifference.years = 0;
-  } else if (largestUnit === 'minutes') {
-    // Convert years, months, days, and hours to minutes
-    convertedDifference.minutes +=
-      convertedDifference.years *
-        DAYS_PER_YEAR *
-        HOURS_PER_DAY *
-        MINUTES_PER_HOUR +
-      convertedDifference.months *
-        DAYS_PER_MONTH *
-        HOURS_PER_DAY *
-        MINUTES_PER_HOUR +
-      convertedDifference.days * HOURS_PER_DAY * MINUTES_PER_HOUR +
-      convertedDifference.hours * MINUTES_PER_HOUR;
-    convertedDifference.hours = 0;
-    convertedDifference.days = 0;
-    convertedDifference.months = 0;
-    convertedDifference.years = 0;
-  } else if (largestUnit === 'seconds') {
-    // Convert years, months, days, hours, and minutes to seconds
-    convertedDifference.seconds +=
-      convertedDifference.years *
-        DAYS_PER_YEAR *
-        HOURS_PER_DAY *
-        MINUTES_PER_HOUR *
-        SECONDS_PER_MINUTE +
-      convertedDifference.months *
-        DAYS_PER_MONTH *
-        HOURS_PER_DAY *
-        MINUTES_PER_HOUR *
-        SECONDS_PER_MINUTE +
-      convertedDifference.days *
-        HOURS_PER_DAY *
-        MINUTES_PER_HOUR *
-        SECONDS_PER_MINUTE +
-      convertedDifference.hours * MINUTES_PER_HOUR * SECONDS_PER_MINUTE +
-      convertedDifference.minutes * SECONDS_PER_MINUTE;
-    convertedDifference.minutes = 0;
-    convertedDifference.hours = 0;
-    convertedDifference.days = 0;
-    convertedDifference.months = 0;
-    convertedDifference.years = 0;
-  } else if (largestUnit === 'milliseconds') {
-    // Convert everything to milliseconds
-    convertedDifference.milliseconds +=
-      convertedDifference.years *
-        DAYS_PER_YEAR *
-        HOURS_PER_DAY *
-        MINUTES_PER_HOUR *
-        SECONDS_PER_MINUTE *
-        MS_PER_SECOND +
-      convertedDifference.months *
-        DAYS_PER_MONTH *
-        HOURS_PER_DAY *
-        MINUTES_PER_HOUR *
-        SECONDS_PER_MINUTE *
-        MS_PER_SECOND +
-      convertedDifference.days *
-        HOURS_PER_DAY *
-        MINUTES_PER_HOUR *
-        SECONDS_PER_MINUTE *
-        MS_PER_SECOND +
-      convertedDifference.hours *
-        MINUTES_PER_HOUR *
-        SECONDS_PER_MINUTE *
-        MS_PER_SECOND +
-      convertedDifference.minutes * SECONDS_PER_MINUTE * MS_PER_SECOND +
-      convertedDifference.seconds * MS_PER_SECOND;
-    convertedDifference.seconds = 0;
-    convertedDifference.minutes = 0;
-    convertedDifference.hours = 0;
-    convertedDifference.days = 0;
-    convertedDifference.months = 0;
-    convertedDifference.years = 0;
-  }
-
-  return formatTimeDifference(convertedDifference, unitsToInclude);
-};
-
 const initialValues: InitialValuesType = {
   startDate: new Date().toISOString().split('T')[0],
   startTime: '00:00',
@@ -178,17 +50,26 @@ const validationSchema = Yup.object({
 
 const timezoneOptions = [
   { value: 'local', label: 'Local Time' },
-  { value: 'GMT+0000', label: 'GMT+0000 (UTC)' },
-  { value: 'GMT-0500', label: 'GMT-0500 (Eastern Standard Time)' },
-  { value: 'GMT-0600', label: 'GMT-0600 (Central Standard Time)' },
-  { value: 'GMT-0700', label: 'GMT-0700 (Mountain Standard Time)' },
-  { value: 'GMT-0800', label: 'GMT-0800 (Pacific Standard Time)' },
-  { value: 'GMT+0100', label: 'GMT+0100 (Central European Time)' },
-  { value: 'GMT+0200', label: 'GMT+0200 (Eastern European Time)' },
-  { value: 'GMT+0530', label: 'GMT+0530 (Indian Standard Time)' },
-  { value: 'GMT+0800', label: 'GMT+0800 (China Standard Time)' },
-  { value: 'GMT+0900', label: 'GMT+0900 (Japan Standard Time)' },
-  { value: 'GMT+1000', label: 'GMT+1000 (Australian Eastern Standard Time)' }
+  ...Intl.supportedValuesOf('timeZone')
+    .map((tz) => {
+      const formatter = new Intl.DateTimeFormat('en', {
+        timeZone: tz,
+        timeZoneName: 'shortOffset'
+      });
+
+      const offset =
+        formatter
+          .formatToParts(new Date())
+          .find((part) => part.type === 'timeZoneName')?.value || '';
+
+      return {
+        value: offset.replace('UTC', 'GMT'),
+        label: `${offset.replace('UTC', 'GMT')} (${tz})`
+      };
+    })
+    .sort((a, b) =>
+      a.value.localeCompare(b.value, undefined, { numeric: true })
+    )
 ];
 
 const exampleCards: CardExampleType<InitialValuesType>[] = [
@@ -213,8 +94,8 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
       startTime: '12:00',
       endDate: '2023-01-01',
       endTime: '12:00',
-      startTimezone: 'GMT-0500',
-      endTimezone: 'GMT+0000'
+      startTimezone: 'GMT-5',
+      endTimezone: 'GMT'
     },
     sampleResult: '5 hours'
   },
@@ -325,7 +206,6 @@ export default function TimeBetweenDates() {
       ]}
       compute={(values) => {
         try {
-          // Create Date objects with timezone consideration
           const startDateTime = getTimeWithTimezone(
             values.startDate,
             values.startTime,
@@ -344,36 +224,17 @@ export default function TimeBetweenDates() {
             endDateTime
           );
 
-          // Format the result - use 'years' as the default largest unit
-          if (typeof difference === 'number') {
-            setResult(`${difference} milliseconds`);
-          } else {
-            // Auto-determine the best unit to display based on the time difference
-            let bestUnit: TimeUnit = 'years';
+          // Auto-determine the best unit to display based on the time difference
+          const bestUnit: TimeUnit =
+            unitHierarchy.find((unit) => difference[unit] > 0) ||
+            'milliseconds';
 
-            if (difference.years > 0) {
-              bestUnit = 'years';
-            } else if (difference.months > 0) {
-              bestUnit = 'months';
-            } else if (difference.days > 0) {
-              bestUnit = 'days';
-            } else if (difference.hours > 0) {
-              bestUnit = 'hours';
-            } else if (difference.minutes > 0) {
-              bestUnit = 'minutes';
-            } else if (difference.seconds > 0) {
-              bestUnit = 'seconds';
-            } else {
-              bestUnit = 'milliseconds';
-            }
+          const formattedDifference = formatTimeWithLargestUnit(
+            difference,
+            bestUnit
+          );
 
-            const formattedDifference = formatTimeWithLargestUnit(
-              difference,
-              bestUnit
-            );
-
-            setResult(formattedDifference);
-          }
+          setResult(formattedDifference);
         } catch (error) {
           setResult(
             `Error: ${
