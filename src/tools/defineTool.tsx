@@ -21,6 +21,7 @@ export type ToolCategory =
   | 'video'
   | 'list'
   | 'json'
+  | 'time'
   | 'csv'
   | 'time'
   | 'pdf';
