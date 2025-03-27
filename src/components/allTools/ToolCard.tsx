@@ -21,7 +21,11 @@ export default function ToolCard({
         borderColor: '#5581b5',
         color: '#fff',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #fff',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        height: '100%',
+        '&:hover': {
+          transform: 'scale(1.05)'
+        }
       }}
     >
       <CardContent>
