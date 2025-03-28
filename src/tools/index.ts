@@ -16,12 +16,12 @@ export const tools: DefinedTool[] = [
   ...imageTools,
   ...stringTools,
   ...jsonTools,
+  ...pdfTools,
   ...listTools,
   ...csvTools,
   ...videoTools,
   ...numberTools,
-  ...timeTools,
-  ...pdfTools
+  ...timeTools
 ];
 const categoriesConfig: {
   type: ToolCategory;
@@ -67,6 +67,12 @@ const categoriesConfig: {
       'Tools for working with JSON data structures – prettify and minify JSON objects, flatten JSON arrays, stringify JSON values, analyze data, and much more'
   },
   {
+    type: 'time',
+    icon: 'mdi:clock-time-five',
+    value:
+      'Tools for working with time and date – calculate time differences, convert between time zones, format dates, generate date sequences, and much more.'
+  },
+  {
     type: 'csv',
     icon: 'material-symbols-light:csv-outline',
     value:
@@ -91,6 +97,11 @@ const categoriesConfig: {
       'Tools for working with time and date – draw clocks and calendars, generate time and date sequences, calculate average time, convert between time zones, and much more.'
   }
 ];
+// use for changelogs
+// console.log(
+//   'tools',
+//   tools.map(({ name, type }) => ({ type, name }))
+// );
 export const filterTools = (
   tools: DefinedTool[],
   query: string

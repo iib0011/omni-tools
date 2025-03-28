@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: result file name">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/minify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/minify/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/stringify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/stringify/index.tsx" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: time between dates">
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/meta.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,78 +22,85 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="chesterkxng" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "assignee": "iib0011"
+      &quot;assignee&quot;: &quot;iib0011&quot;
     },
     {
-      "state": "OPEN"
+      &quot;state&quot;: &quot;OPEN&quot;
     }
   ],
-  "lastFilter": {
-    "state": "OPEN"
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOMJIfts51PkS9",
-        "number": 22
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts51PkS9&quot;,
+        &quot;number&quot;: 22
       },
-      "lastSeen": 1741207144695
+      &quot;lastSeen&quot;: 1741207144695
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NiNYl",
-        "number": 32
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NiNYl&quot;,
+        &quot;number&quot;: 32
       },
-      "lastSeen": 1741209723869
+      &quot;lastSeen&quot;: 1741209723869
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Nheyd",
-        "number": 31
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Nheyd&quot;,
+        &quot;number&quot;: 31
       },
-      "lastSeen": 1741213371410
+      &quot;lastSeen&quot;: 1741213371410
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NmRBs",
-        "number": 33
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NmRBs&quot;,
+        &quot;number&quot;: 33
       },
-      "lastSeen": 1741282429036
+      &quot;lastSeen&quot;: 1741282429036
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts5zyFTs",
-        "number": 15
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts5zyFTs&quot;,
+        &quot;number&quot;: 15
       },
-      "lastSeen": 1741535540953
+      &quot;lastSeen&quot;: 1741535540953
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QQB3c",
-        "number": 59
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QQB3c&quot;,
+        &quot;number&quot;: 59
       },
-      "lastSeen": 1743018960900
+      &quot;lastSeen&quot;: 1743018960900
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QMPEg",
-        "number": 58
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QMPEg&quot;,
+        &quot;number&quot;: 58
       },
-      "lastSeen": 1743019452983
+      &quot;lastSeen&quot;: 1743019452983
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QZvRI&quot;,
+        &quot;number&quot;: 61
+      },
+      &quot;lastSeen&quot;: 1743103196866
     }
   ]
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
@@ -150,6 +152,7 @@
     "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
+    "Vitest.timeBetweenDates.executor": "Run",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -201,17 +204,17 @@
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
-    <configuration name="Create transparent PNG.should make png color transparent" type="JavaScriptTestRunnerPlaywright" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Vitest.calculateTimeBetweenDates">
+    <configuration name="calculateTimeBetweenDates" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
-      <playwright-package value="$PROJECT_DIR$/node_modules/@playwright/test" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
       <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/create-transparent.e2e.spec.ts" />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/time-between-dates.service.test.ts" />
       <test-names>
-        <test-name value="Create transparent PNG" />
-        <test-name value="should make png color transparent" />
+        <test-name value="calculateTimeBetweenDates" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -242,6 +245,19 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="timeBetweenDates" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/time-between-dates.service.test.ts" />
+      <test-names>
+        <test-name value="timeBetweenDates" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
         <settings />
@@ -258,30 +274,20 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:e2e" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:e2e" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="npm.test:e2e" />
       <item itemvalue="npm.dev" />
-      <item itemvalue="Playwright.Create transparent PNG.should make png color transparent" />
+      <item itemvalue="Vitest.calculateTimeBetweenDates" />
+      <item itemvalue="Vitest.timeBetweenDates" />
       <item itemvalue="Vitest.parsePageRanges" />
       <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Vitest.calculateTimeBetweenDates" />
+        <item itemvalue="Vitest.timeBetweenDates" />
         <item itemvalue="npm.dev" />
         <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
         <item itemvalue="Vitest.parsePageRanges" />
-        <item itemvalue="Playwright.Create transparent PNG.should make png color transparent" />
-        <item itemvalue="npm.test:e2e" />
       </list>
     </recent_temporary>
   </component>
@@ -365,39 +371,9 @@
       <workItem from="1741547560596" duration="1671000" />
       <workItem from="1741567442768" duration="14127000" />
       <workItem from="1741971589699" duration="371000" />
-      <workItem from="1743018497879" duration="2495000" />
-    </task>
-    <task id="LOCAL-00120" summary="fix: bg">
-      <option name="closed" value="true" />
-      <created>1740503419102</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1740503419102</updated>
-    </task>
-    <task id="LOCAL-00121" summary="fix: bg">
-      <option name="closed" value="true" />
-      <created>1740504051051</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1740504051051</updated>
-    </task>
-    <task id="LOCAL-00122" summary="fix: bg">
-      <option name="closed" value="true" />
-      <created>1740504100676</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1740504100676</updated>
-    </task>
-    <task id="LOCAL-00123" summary="fix: bg">
-      <option name="closed" value="true" />
-      <created>1740505390205</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1740505390205</updated>
+      <workItem from="1743018497879" duration="3895000" />
+      <workItem from="1743047367993" duration="986000" />
+      <workItem from="1743103182313" duration="4264000" />
     </task>
     <task id="LOCAL-00124" summary="docs: readme">
       <option name="closed" value="true" />
@@ -759,7 +735,39 @@
       <option name="project" value="LOCAL" />
       <updated>1743020690384</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="chore: text result extensions">
+      <option name="closed" value="true" />
+      <created>1743022260639</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1743022260639</updated>
+    </task>
+    <task id="LOCAL-00170" summary="chore: show new tools in landing">
+      <option name="closed" value="true" />
+      <created>1743051792459</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1743051792459</updated>
+    </task>
+    <task id="LOCAL-00171" summary="chore: zoom on hover">
+      <option name="closed" value="true" />
+      <created>1743052111988</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1743052111988</updated>
+    </task>
+    <task id="LOCAL-00172" summary="refactor: time between dates">
+      <option name="closed" value="true" />
+      <created>1743106796406</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1743106796406</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -806,10 +814,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: tsc" />
-    <MESSAGE value="style: optimizations" />
-    <MESSAGE value="fix: replace text service" />
-    <MESSAGE value="chore: smooth scroll for use this tool and examles" />
     <MESSAGE value="feat: minify json" />
     <MESSAGE value="feat: stringify json" />
     <MESSAGE value="feat: arithmetic sequence" />
@@ -831,7 +835,11 @@
     <MESSAGE value="feat: split pdf" />
     <MESSAGE value="fix: typo" />
     <MESSAGE value="chore: result file name" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: result file name" />
+    <MESSAGE value="chore: text result extensions" />
+    <MESSAGE value="chore: show new tools in landing" />
+    <MESSAGE value="chore: zoom on hover" />
+    <MESSAGE value="refactor: time between dates" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: time between dates" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

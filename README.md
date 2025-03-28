@@ -2,7 +2,7 @@
         <img src="src/assets/logo.png" width="300" />
         <br /><br />
         <a href="https://github.com/iib0011/omni-tools/releases">
-          <img src="https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge" />
+          <img src="https://img.shields.io/badge/version-0.2.0-blue?style=for-the-badge" />
         </a>
         <a href="https://hub.docker.com/r/iib0011/omni-tools">
           <img src="https://img.shields.io/docker/pulls/iib0011/omni-tools?style=for-the-badge&logo=docker" />
