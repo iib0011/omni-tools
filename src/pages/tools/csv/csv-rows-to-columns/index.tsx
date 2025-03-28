@@ -111,13 +111,15 @@ export default function CsvRowsToColumns({
               'If the input CSV file is incomplete (missing values), then add empty fields or custom symbols to records to make a well-formed CSV?'
             }
           />
-          <TextFieldWithDesc
-            value={values.customFiller}
-            onOwnChange={(val) => updateField('customFiller', val)}
-            description={
-              'Use this custom value to fill in missing fields. (Works only with "Custom Values" mode above.)'
-            }
-          />
+          {!values.emptyValuesFilling && (
+            <TextFieldWithDesc
+              value={values.customFiller}
+              onOwnChange={(val) => updateField('customFiller', val)}
+              description={
+                'Use this custom value to fill in missing fields. (Works only with "Custom Values" mode above.)'
+              }
+            />
+          )}
         </Box>
       )
     },
