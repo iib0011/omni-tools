@@ -5,7 +5,6 @@ import { tool as convertSecondsToTime } from './convert-seconds-to-time/meta';
 import { tool as convertTimetoSeconds } from './convert-time-to-seconds/meta';
 import { tool as truncateClockTime } from './truncate-clock-time/meta';
 
-
 export const timeTools = [
   daysDoHours,
   hoursToDays,
