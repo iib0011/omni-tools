@@ -20,7 +20,9 @@ export function csvRowsToColumns(
   const rows = input
     .split('\n')
     .map((row) => row.split(','))
-    .filter((row) => !row[0].trim().startsWith(commentCharacter));
+    .filter(
+      (row) => row.length > 1 && !row[0].trim().startsWith(commentCharacter)
+    );
   const columnCount = Math.max(...rows.map((row) => row.length));
   for (let i = 0; i < rows.length; i++) {
     for (let j = 0; j < columnCount; j++) {
