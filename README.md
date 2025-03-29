@@ -86,9 +86,7 @@ docker run -d --name omni-tools --restart unless-stopped -p 8080:80 iib0011/omni
 
 ### Docker Compose
 
-```
-version: '3.3'
-
+```yaml
 services:
   omni-tools:
     image: iib0011/omni-tools:latest
