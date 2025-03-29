@@ -1,15 +1,15 @@
 import { Box } from '@mui/material';
-import { useCallback, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import * as Yup from 'yup';
 import ToolFileResult from '@components/result/ToolFileResult';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
-import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
-import { updateNumberField } from '@utils/string';
 import { debounce } from 'lodash';
 import ToolVideoInput from '@components/input/ToolVideoInput';
 import { rotateVideo } from './service';
+import { RotationAngle } from '../../pdf/rotate-pdf/types';
+import SimpleRadio from '@components/options/SimpleRadio';
 
 export const initialValues = {
   rotation: 90
@@ -21,34 +21,28 @@ export const validationSchema = Yup.object({
     .required('Rotation is required')
 });
 
+const angleOptions: { value: RotationAngle; label: string }[] = [
+  { value: 90, label: '90° Clockwise' },
+  { value: 180, label: '180° (Upside down)' },
+  { value: 270, label: '270° (90° Counter-clockwise)' }
+];
 export default function RotateVideo({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   const compute = async (
     optionsValues: typeof initialValues,
     input: File | null
   ) => {
     if (!input) return;
-
-    try {
-      await validationSchema.validate(optionsValues);
-    } catch (validationError) {
-      setError((validationError as Yup.ValidationError).message);
-      return;
-    }
-
     setLoading(true);
-    setError(null);
 
     try {
       const rotatedFile = await rotateVideo(input, optionsValues.rotation);
       setResult(rotatedFile);
     } catch (error) {
       console.error('Error rotating video:', error);
-      setError('Failed to rotate video. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -64,16 +58,16 @@ export default function RotateVideo({ title }: ToolComponentProps) {
       title: 'Rotation',
       component: (
         <Box>
-          <TextFieldWithDesc
-            onOwnChange={(value) =>
-              updateNumberField(value, 'rotation', updateField)
-            }
-            value={values.rotation}
-            label={'Rotation (degrees)'}
-            helperText={error || 'Valid values: 0, 90, 180, 270'}
-            error={!!error}
-            sx={{ mb: 2, backgroundColor: 'white' }}
-          />
+          {angleOptions.map((angleOption) => (
+            <SimpleRadio
+              key={angleOption.value}
+              title={angleOption.label}
+              checked={values.rotation === angleOption.value}
+              onClick={() => {
+                updateField('rotation', angleOption.value);
+              }}
+            />
+          ))}
         </Box>
       )
     }
@@ -83,14 +77,14 @@ export default function RotateVideo({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       input={input}
-      renderCustomInput={(_, setFieldValue) => (
+      inputComponent={
         <ToolVideoInput
           value={input}
           onChange={setInput}
           accept={['video/mp4', 'video/webm', 'video/ogg']}
           title={'Input Video'}
         />
-      )}
+      }
       resultComponent={
         loading ? (
           <ToolFileResult

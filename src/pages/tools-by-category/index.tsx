@@ -8,6 +8,10 @@ import { capitalizeFirstLetter } from '@utils/string';
 import { Icon } from '@iconify/react';
 import { categoriesColors } from 'config/uiConfig';
 import React, { useEffect } from 'react';
+import IconButton from '@mui/material/IconButton';
+import { ArrowBack } from '@mui/icons-material';
+import BackButton from '@components/BackButton';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -35,10 +39,15 @@ export default function Home() {
       </Box>
       <Divider sx={{ borderColor: theme.palette.primary.main }} />
       <Box ref={mainContentRef} mt={3} ml={{ xs: 1, md: 2, lg: 3 }} padding={3}>
-        <Typography
-          fontSize={22}
-          color={theme.palette.primary.main}
-        >{`All ${capitalizeFirstLetter(categoryName)} Tools`}</Typography>
+        <Stack direction={'row'} alignItems={'center'} spacing={1}>
+          <IconButton onClick={() => navigate('/')}>
+            <ArrowBackIcon color={'primary'} />
+          </IconButton>
+          <Typography
+            fontSize={22}
+            color={theme.palette.primary.main}
+          >{`All ${capitalizeFirstLetter(categoryName)} Tools`}</Typography>
+        </Stack>
         <Grid container spacing={2} mt={2}>
           {getToolsByCategory()
             .find(({ type }) => type === categoryName)
