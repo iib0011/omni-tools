@@ -17,6 +17,10 @@ export function csvRowsToColumns(
   customFiller: string,
   commentCharacter: string
 ): string {
+  if (!input) {
+    return '';
+  }
+
   const rows = input
     .split('\n')
     .map((row) => row.split(','))
