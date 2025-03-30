@@ -71,7 +71,7 @@ Phoenix	Mythology	Desert	Rebirth from ashes`,
     title: 'Convet Fitness Tracker Data from CSV to TSV',
     description:
       'In this example, we swap rows and columns in CSV data about team sports, the equipment used, and the number of players. The input has 5 rows and 3 columns and once rows and columns have been swapped, the output has 3 rows and 5 columns. Also notice that in the last data record, for the "Baseball" game, the number of players is missing. To create a fully-filled CSV, we use a custom message "NA", specified in the options, and fill the missing CSV field with this value.',
-    sampleText: `Sday,steps,distance,calories
+    sampleText: `day,steps,distance,calories
 
 Mon,7500,3.75,270
 Tue,12000,6.00,420
