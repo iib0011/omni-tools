@@ -13,11 +13,9 @@
         <a href="https://github.com/iib0011/omni-tools/blob/main/LICENSE">
           <img src="https://img.shields.io/github/license/iib0011/omni-tools?style=for-the-badge" />
         </a>
-     <!--
         <a href="https://discord.gg/SDbbn3hT4b">
           <img src="https://img.shields.io/discord/1342971141823664179?label=Discord&style=for-the-badge" />
         </a>
-     -->
         <br /><br />
 </p>
 

@@ -9,11 +9,13 @@ import mime from 'mime';
 export default function ToolTextResult({
   title = 'Result',
   value,
-  extension = 'txt'
+  extension = 'txt',
+  keepSpecialCharacters
 }: {
   title?: string;
   value: string;
   extension?: string;
+  keepSpecialCharacters?: boolean;
 }) {
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const handleCopy = () => {
@@ -45,7 +47,7 @@ export default function ToolTextResult({
     <Box>
       <InputHeader title={title} />
       <TextField
-        value={replaceSpecialCharacters(value)}
+        value={keepSpecialCharacters ? value : replaceSpecialCharacters(value)}
         fullWidth
         multiline
         sx={{
