@@ -2,7 +2,7 @@
         <img src="src/assets/logo.png" width="300" />
         <br /><br />
         <a href="https://github.com/iib0011/omni-tools/releases">
-          <img src="https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge" />
+          <img src="https://img.shields.io/badge/version-0.2.0-blue?style=for-the-badge" />
         </a>
         <a href="https://hub.docker.com/r/iib0011/omni-tools">
           <img src="https://img.shields.io/docker/pulls/iib0011/omni-tools?style=for-the-badge&logo=docker" />
@@ -13,18 +13,16 @@
         <a href="https://github.com/iib0011/omni-tools/blob/main/LICENSE">
           <img src="https://img.shields.io/github/license/iib0011/omni-tools?style=for-the-badge" />
         </a>
-     <!--
         <a href="https://discord.gg/SDbbn3hT4b">
           <img src="https://img.shields.io/discord/1342971141823664179?label=Discord&style=for-the-badge" />
         </a>
-     -->
         <br /><br />
 </p>
 
 Welcome to OmniTools, a self-hosted web app offering a variety of online tools to simplify everyday tasks.
 Whether you are coding, manipulating images or crunching numbers, OmniTools has you covered. Please don't forget to
 star the repo to support us.
-Here is the [demo](https://omnitools.netlify.app/) website.
+Here is the [demo](https://omnitools.app) website.
 
 ![img.png](img.png)
 
@@ -86,9 +84,7 @@ docker run -d --name omni-tools --restart unless-stopped -p 8080:80 iib0011/omni
 
 ### Docker Compose
 
-```
-version: '3.3'
-
+```yaml
 services:
   omni-tools:
     image: iib0011/omni-tools:latest

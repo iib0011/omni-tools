@@ -67,6 +67,12 @@ const categoriesConfig: {
       'Tools for working with JSON data structures – prettify and minify JSON objects, flatten JSON arrays, stringify JSON values, analyze data, and much more'
   },
   {
+    type: 'time',
+    icon: 'mdi:clock-time-five',
+    value:
+      'Tools for working with time and date – calculate time differences, convert between time zones, format dates, generate date sequences, and much more.'
+  },
+  {
     type: 'csv',
     icon: 'material-symbols-light:csv-outline',
     value:
