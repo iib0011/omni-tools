@@ -10,12 +10,12 @@ export default function ToolTextResult({
   title = 'Result',
   value,
   extension = 'txt',
-  removeSpecialCharacters = true
+  keepSpecialCharacters
 }: {
   title?: string;
   value: string;
   extension?: string;
-  removeSpecialCharacters?: boolean;
+  keepSpecialCharacters?: boolean;
 }) {
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const handleCopy = () => {
@@ -47,9 +47,7 @@ export default function ToolTextResult({
     <Box>
       <InputHeader title={title} />
       <TextField
-        value={
-          removeSpecialCharacters ? replaceSpecialCharacters(value) : value
-        }
+        value={keepSpecialCharacters ? value : replaceSpecialCharacters(value)}
         fullWidth
         multiline
         sx={{

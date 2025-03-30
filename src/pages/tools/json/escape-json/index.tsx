@@ -94,7 +94,8 @@ export default function EscapeJsonTool({
         <ToolTextResult
           title="Escaped JSON"
           value={result}
-          removeSpecialCharacters={false}
+          keepSpecialCharacters
+          extension={'json'}
         />
       }
       initialValues={initialValues}
