@@ -38,14 +38,16 @@ export default function ExampleCard<T>({
         changeInputResult(sampleText, sampleOptions);
       }}
       sx={{
-        bgcolor: theme.palette.background.default,
+        bgcolor: 'background.lightSecondary',
         height: '100%',
         overflow: 'hidden',
         borderRadius: 2,
         transition: 'background-color 0.3s ease',
         cursor: 'pointer',
         '&:hover': {
-          boxShadow: '12px 9px 11px 2px #b8b9be, -6px -6px 12px #fff'
+          boxShadow: `12px 9px 11px 2px ${
+            theme.palette.mode === 'dark' ? theme.palette.grey[900] : '#b8b9be'
+          }, -6px -6px 12px ${theme.palette.mode === 'dark' ? 'black' : '#fff'}`
         }
       }}
     >

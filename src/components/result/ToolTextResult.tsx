@@ -52,7 +52,7 @@ export default function ToolTextResult({
         multiline
         sx={{
           '&.MuiTextField-root': {
-            backgroundColor: 'white'
+            backgroundColor: 'background.paper'
           }
         }}
         rows={10}

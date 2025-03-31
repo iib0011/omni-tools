@@ -1,7 +1,6 @@
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import * as Yup from 'yup';
-import ToolFileInput from '@components/input/ToolFileInput';
 import ToolFileResult from '@components/result/ToolFileResult';
 import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
 import Typography from '@mui/material/Typography';
@@ -9,6 +8,8 @@ import { FrameOptions, GifReader, GifWriter } from 'omggif';
 import { gifBinaryToFile } from '@utils/gif';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
+import ToolVideoInput from '@components/input/ToolVideoInput';
+import ToolImageInput from '@components/input/ToolImageInput';
 
 const initialValues = {
   newSpeed: 200
@@ -108,7 +109,7 @@ export default function ChangeSpeed({ title }: ToolComponentProps) {
       title={title}
       input={input}
       inputComponent={
-        <ToolFileInput
+        <ToolImageInput
           value={input}
           onChange={setInput}
           accept={['image/gif']}

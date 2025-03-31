@@ -1,6 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import React, { useEffect, useRef, useState } from 'react';
-import ToolFileInput from '@components/input/ToolFileInput';
+import React, { useEffect, useState } from 'react';
 import ToolFileResult from '@components/result/ToolFileResult';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import ToolContent from '@components/ToolContent';
@@ -8,7 +7,6 @@ import { ToolComponentProps } from '@tools/defineTool';
 import { parsePageRanges, splitPdf } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { PDFDocument } from 'pdf-lib';
-import { FormikProps } from 'formik';
 import ToolPdfInput from '@components/input/ToolPdfInput';
 
 type InitialValuesType = {

@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
 
   return (
-    <Box sx={{ backgroundColor: '#F5F5FA' }}>
+    <Box sx={{ backgroundColor: 'background.default' }}>
       <Box
         padding={{ xs: 1, md: 3, lg: 5 }}
         display={'flex'}
@@ -55,12 +55,14 @@ export default function Home() {
               <Grid item xs={12} md={6} lg={4} key={tool.path}>
                 <Stack
                   sx={{
-                    backgroundColor: 'white',
-                    boxShadow: '5px 4px 2px #E9E9ED',
+                    backgroundColor: 'background.paper',
+                    boxShadow: `5px 4px 2px ${
+                      theme.palette.mode === 'dark' ? 'black' : '#E9E9ED'
+                    }`,
                     cursor: 'pointer',
                     height: '100%',
                     '&:hover': {
-                      backgroundColor: theme.palette.background.default // Change this to your desired hover color
+                      backgroundColor: theme.palette.background.hover
                     }
                   }}
                   onClick={() => navigate('/' + tool.path)}
@@ -77,7 +79,12 @@ export default function Home() {
                     color={categoriesColors[index % categoriesColors.length]}
                   />
                   <Box>
-                    <Link style={{ fontSize: 20 }} to={'/' + tool.path}>
+                    <Link
+                      style={{
+                        fontSize: 20
+                      }}
+                      to={'/' + tool.path}
+                    >
                       {tool.name}
                     </Link>
                     <Typography sx={{ mt: 2 }}>

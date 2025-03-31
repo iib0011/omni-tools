@@ -1,4 +1,4 @@
-import { Box, CircularProgress, Typography } from '@mui/material';
+import { Box, CircularProgress, Typography, useTheme } from '@mui/material';
 import React, { useContext } from 'react';
 import InputHeader from '../InputHeader';
 import greyPattern from '@assets/grey-pattern.png';
@@ -21,6 +21,7 @@ export default function ToolFileResult({
 }) {
   const [preview, setPreview] = React.useState<string | null>(null);
   const { showSnackBar } = useContext(CustomSnackBarContext);
+  const theme = useTheme();
 
   React.useEffect(() => {
     if (value) {
@@ -87,7 +88,7 @@ export default function ToolFileResult({
           border: preview ? 0 : 1,
           borderRadius: 2,
           boxShadow: '5',
-          bgcolor: 'white'
+          bgcolor: 'background.paper'
         }}
       >
         {loading ? (
@@ -114,7 +115,8 @@ export default function ToolFileResult({
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundImage: `url(${greyPattern})`
+                backgroundImage:
+                  theme.palette.mode === 'dark' ? null : `url(${greyPattern})`
               }}
             >
               {fileType === 'image' && (

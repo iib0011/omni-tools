@@ -1,4 +1,12 @@
-import { Box, Card, CardContent, Link, Stack, Typography } from '@mui/material';
+import {
+  Box,
+  Card,
+  CardContent,
+  Link,
+  Stack,
+  Typography,
+  useTheme
+} from '@mui/material';
 import { ToolCardProps } from './AllTools';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { useNavigate } from 'react-router-dom';
@@ -10,6 +18,7 @@ export default function ToolCard({
   link,
   icon
 }: ToolCardProps) {
+  const theme = useTheme();
   const navigate = useNavigate();
   return (
     <Card
@@ -17,10 +26,13 @@ export default function ToolCard({
       raised
       sx={{
         borderRadius: 2,
-        bgcolor: '#5581b5',
-        borderColor: '#5581b5',
+        bgcolor: 'background.darkSecondary',
+        borderColor: 'background.darkSecondary',
         color: '#fff',
-        boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #fff',
+        boxShadow:
+          theme.palette.mode === 'dark'
+            ? null
+            : '6px 6px 12px #b8b9be, -6px -6px 12px #fff',
         cursor: 'pointer',
         height: '100%',
         '&:hover': {

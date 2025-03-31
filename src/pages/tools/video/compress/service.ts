@@ -15,7 +15,6 @@ export async function compressVideo(
   input: File,
   options: CompressVideoOptions
 ): Promise<File> {
-  console.log('Compressing video...', options);
   if (!ffmpeg.loaded) {
     await ffmpeg.load({
       wasmURL:

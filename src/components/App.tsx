@@ -1,14 +1,14 @@
 import { BrowserRouter, useRoutes } from 'react-router-dom';
 import routesConfig from '../config/routesConfig';
 import Navbar from './Navbar';
-import { Suspense } from 'react';
+import { Suspense, useMemo, useState } from 'react';
 import Loading from './Loading';
-import { ThemeProvider } from '@mui/material';
-import theme from '../config/muiConfig';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import { CustomSnackBarProvider } from '../contexts/CustomSnackBarContext';
 import { SnackbarProvider } from 'notistack';
 import { tools } from '../tools';
 import './index.css';
+import { darkTheme, lightTheme } from '../config/muiConfig';
 
 const AppRoutes = () => {
   const updatedRoutesConfig = [...routesConfig];
@@ -19,21 +19,29 @@ const AppRoutes = () => {
 };
 
 function App() {
+  const [darkMode, setDarkMode] = useState<boolean>(() => {
+    return localStorage.getItem('theme') === 'dark';
+  });
+  const theme = useMemo(() => (darkMode ? darkTheme : lightTheme), [darkMode]);
+
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <SnackbarProvider
         maxSnack={5}
         anchorOrigin={{
           vertical: 'bottom',
           horizontal: 'right'
         }}
-        classes={{
-          containerRoot: 'bottom-0 right-0 mb-52 md:mb-68 mr-8 lg:mr-80 z-99'
-        }}
       >
         <CustomSnackBarProvider>
           <BrowserRouter>
-            <Navbar />
+            <Navbar
+              onSwitchTheme={() => {
+                setDarkMode((prevState) => !prevState);
+                localStorage.setItem('theme', darkMode ? 'light' : 'dark');
+              }}
+            />
             <Suspense fallback={<Loading />}>
               <AppRoutes />
             </Suspense>
