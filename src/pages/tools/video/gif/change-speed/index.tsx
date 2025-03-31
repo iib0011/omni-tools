@@ -25,7 +25,7 @@ export default function ChangeSpeed({ title }: ToolComponentProps) {
     const processImage = async (
       file: File,
       newSpeed: number
-    ): Promise<File> => {
+    ): Promise<void> => {
       if (!ffmpeg) {
         ffmpeg = new FFmpeg();
       }
