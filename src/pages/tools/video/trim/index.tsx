@@ -94,7 +94,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
             }
             value={values.trimStart}
             label={'Start Time'}
-            sx={{ mb: 2, backgroundColor: 'white' }}
+            sx={{ mb: 2, backgroundColor: 'background.paper' }}
           />
           <TextFieldWithDesc
             onOwnChange={(value) =>
