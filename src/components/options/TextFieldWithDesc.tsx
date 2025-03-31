@@ -19,7 +19,7 @@ const TextFieldWithDesc = ({
     <Box>
       <TextField
         placeholder={placeholder}
-        sx={{ backgroundColor: 'white' }}
+        sx={{ backgroundColor: 'background.paper' }}
         value={value}
         onChange={(event) => onOwnChange(event.target.value)}
         {...props}

@@ -17,8 +17,13 @@ import {
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { Icon } from '@iconify/react';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onSwitchTheme: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onSwitchTheme }) => {
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -30,7 +35,9 @@ const Navbar: React.FC = () => {
     // { label: 'Features', path: '/features' }
     // { label: 'About Us', path: '/about-us' }
   ];
+
   const buttons: ReactNode[] = [
+    <DarkModeIcon onClick={onSwitchTheme} style={{ cursor: 'pointer' }} />,
     <Icon
       onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
       style={{ cursor: 'pointer' }}
@@ -81,9 +88,10 @@ const Navbar: React.FC = () => {
   return (
     <AppBar
       position="static"
-      style={{
-        backgroundColor: '#F5F5FA',
-        color: 'black'
+      sx={{
+        background: 'transparent',
+        boxShadow: 'none',
+        color: 'text.primary'
       }}
     >
       <Toolbar

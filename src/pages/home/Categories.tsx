@@ -1,6 +1,6 @@
 import { getToolsByCategory } from '@tools/index';
 import Grid from '@mui/material/Grid';
-import { Box, Card, CardContent, Stack } from '@mui/material';
+import { Box, Card, CardContent, Stack, useTheme } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -19,6 +19,7 @@ const SingleCategory = function ({
   index: number;
 }) {
   const navigate = useNavigate();
+  const theme = useTheme();
   const [hovered, setHovered] = useState<boolean>(false);
   const toggleHover = () => setHovered((prevState) => !prevState);
   return (
@@ -32,7 +33,7 @@ const SingleCategory = function ({
       <Card
         sx={{
           height: '100%',
-          backgroundColor: hovered ? '#FAFAFD' : 'white'
+          backgroundColor: hovered ? 'background.hover' : 'background.paper'
         }}
       >
         <CardContent sx={{ height: '100%' }}>
@@ -52,7 +53,11 @@ const SingleCategory = function ({
                   color={categoriesColors[index % categoriesColors.length]}
                 />
                 <Link
-                  style={{ fontSize: 20, fontWeight: 700, color: 'black' }}
+                  style={{
+                    fontSize: 20,
+                    fontWeight: 700,
+                    color: theme.palette.mode === 'dark' ? 'white' : 'black'
+                  }}
                   to={'/categories/' + category.type}
                 >
                   {category.title}
@@ -70,7 +75,7 @@ const SingleCategory = function ({
               </Grid>
               <Grid item xs={12} md={6}>
                 <Button
-                  sx={{ backgroundColor: 'white' }}
+                  sx={{ backgroundColor: 'background.default' }}
                   fullWidth
                   onClick={() => navigate(category.example.path)}
                   variant={'outlined'}

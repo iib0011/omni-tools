@@ -31,7 +31,7 @@ function ToolLinks() {
     <Grid container spacing={2} mt={1}>
       <Grid item md={12} lg={6}>
         <StyledButton
-          sx={{ backgroundColor: 'white' }}
+          sx={{ backgroundColor: 'background.paper' }}
           fullWidth
           variant="outlined"
           onClick={() => scrollToElement('tool')}
@@ -43,6 +43,7 @@ function ToolLinks() {
         <StyledButton
           fullWidth
           variant="outlined"
+          sx={{ backgroundColor: 'background.paper' }}
           onClick={() => scrollToElement('examples')}
         >
           See Examples

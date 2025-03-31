@@ -38,7 +38,7 @@ export default function ToolLayout({
       display={'flex'}
       flexDirection={'column'}
       alignItems={'center'}
-      sx={{ backgroundColor: '#F5F5FA' }}
+      sx={{ backgroundColor: 'background.default' }}
     >
       <Helmet>
         <title>{`${title} - Omni Tools`}</title>
