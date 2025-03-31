@@ -30,7 +30,7 @@ const ColorSelector: React.FC<ColorSelectorProps & TextFieldProps> = ({
     <Box mb={1}>
       <Stack direction={'row'}>
         <TextField
-          sx={{ backgroundColor: 'white' }}
+          sx={{ backgroundColor: 'background.paper' }}
           value={color}
           onChange={handleColorChange}
           {...props}

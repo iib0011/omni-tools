@@ -52,7 +52,7 @@ export default function ToolTextInput({
         rows={10}
         sx={{
           '&.MuiTextField-root': {
-            backgroundColor: 'white'
+            backgroundColor: 'background.paper'
           }
         }}
         inputProps={{

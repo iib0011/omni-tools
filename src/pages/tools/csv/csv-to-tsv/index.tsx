@@ -22,7 +22,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Convert Game Data from the CSV Format to the TSV Format',
     description:
-      'This tool transforms Comma Separated Values (CSV) data to Tab Separated Values (TSV) data. Both CSV and TSV are popular file formats for storing tabular data but they use different delimiters to separate values – CSV uses commas (","), while TSV uses tabs ("\t"). If we compare CSV files to TSV files, then CSV files are much harder to parse than TSV files because the values themselves may contain commas, so it is not always obvious where one field starts and ends without complicated parsing rules. TSV, on the other hand, uses just a tab symbol, which does not usually appear in data, so separating fields in TSV is as simple as splitting the input by the tab character. To convert CSV to TSV, simply input the CSV data in the input of this tool. In rare cases when a CSV file has a delimiter other than a comma, you can specify the current delimiter in the options of the tool. You can also specify the current quote character and the comment start character. Additionally, empty CSV lines can be skipped by activating the "Ignore Lines with No Data" option. If this option is off, then empty lines in the CSV are converted to empty TSV lines. The "Preserve Headers" option allows you to choose whether to process column headers of a CSV file. If the option is selected, then the resulting TSV file will include the first row of the input CSV file, which contains the column names. Alternatively, if the headers option is not selected, the first row will be skipped during the data conversion process. For the reverse conversion from TSV to CSV, you can use our Convert TSV to CSV tool. Csv-abulous!',
+      'In this example, we transform a Comma Separated Values (CSV) file containing a leaderboard of gaming data into a Tab Separated Values (TSV) file. The input data shows the players\' names, scores, times, and goals. We preserve the CSV column headers by enabling the "Preserve Headers" option and convert all data rows into TSV format. The resulting data is easier to work with as it\'s organized in neat columns',
     sampleText: `player_name,score,time,goals
 ToniJackson,2500,30:00,15
 HenryDalton,1800,25:00,12
@@ -54,7 +54,7 @@ Vampire;Mythology;Castles;Immortality
 Phoenix;Mythology;Desert;Rebirth from ashes
 
 #Dragon;Mythology;Mountains;Fire breathing
-#Werewolf;Mythology;Forests;Shapeshifting`,
+#Werewolf;Mythology;Forests;Shape shifting`,
     sampleResult: `Unicorn	Mythology	Forest	Magic horn
 Mermaid	Mythology	Ocean	Hypnotic singing
 Vampire	Mythology	Castles	Immortality
@@ -68,7 +68,7 @@ Phoenix	Mythology	Desert	Rebirth from ashes`,
     }
   },
   {
-    title: 'Convet Fitness Tracker Data from CSV to TSV',
+    title: 'Convert Fitness Tracker Data from CSV to TSV',
     description:
       'In this example, we swap rows and columns in CSV data about team sports, the equipment used, and the number of players. The input has 5 rows and 3 columns and once rows and columns have been swapped, the output has 3 rows and 5 columns. Also notice that in the last data record, for the "Baseball" game, the number of players is missing. To create a fully-filled CSV, we use a custom message "NA", specified in the options, and fill the missing CSV field with this value.',
     sampleText: `day,steps,distance,calories

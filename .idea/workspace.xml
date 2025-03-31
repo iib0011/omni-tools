@@ -4,11 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: time between dates">
-      <change afterPath="$PROJECT_DIR$/src/components/BackButton.tsx" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: compress video icon">
+      <change afterPath="$PROJECT_DIR$/@types/theme.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/background-dark.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/allTools/ToolCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/allTools/ToolCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/BaseFileInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/BaseFileInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/ToolFileInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ColorSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ColorSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/TextFieldWithDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/TextFieldWithDesc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/muiConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/muiConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Categories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/rotate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/compress/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/compress/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +47,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fork/lfsjesus/feature/rotate-video" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -108,6 +130,20 @@
         "number": 73
       },
       "lastSeen": 1743265865001
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6Qp5nI",
+        "number": 72
+      },
+      "lastSeen": 1743338472110
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6QsjlS",
+        "number": 76
+      },
+      "lastSeen": 1743352150953
     }
   ]
 }]]></component>
@@ -139,56 +175,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Docker.Dockerfile build.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Playwright.Create transparent PNG.should make png color transparent.executor&quot;: &quot;Run&quot;,
-    &quot;Playwright.JoinText Component.executor&quot;: &quot;Run&quot;,
-    &quot;Playwright.JoinText Component.should merge text pieces with specified join character.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Vitest.compute function (1).executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.compute function.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.mergeText.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.parsePageRanges.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.removeDuplicateLines function.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.removeDuplicateLines function.newlines option.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.replaceText function.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.timeBetweenDates.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ibrahima/IdeaProjects/omni-tools/src/components/input&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
-    &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
-    &quot;npm.script:create:tool.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test:e2e.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test:e2e:run.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;refactai_advanced_settings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Docker.Dockerfile build.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Playwright.Create transparent PNG.should make png color transparent.executor": "Run",
+    "Playwright.JoinText Component.executor": "Run",
+    "Playwright.JoinText Component.should merge text pieces with specified join character.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Vitest.compute function (1).executor": "Run",
+    "Vitest.compute function.executor": "Run",
+    "Vitest.mergeText.executor": "Run",
+    "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
+    "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
+    "Vitest.parsePageRanges.executor": "Run",
+    "Vitest.removeDuplicateLines function.executor": "Run",
+    "Vitest.removeDuplicateLines function.newlines option.executor": "Run",
+    "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
+    "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
+    "Vitest.replaceText function.executor": "Run",
+    "Vitest.timeBetweenDates.executor": "Run",
+    "git-widget-placeholder": "dark-mode",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/@types",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.lint.executor": "Run",
+    "npm.prebuild.executor": "Run",
+    "npm.script:create:tool.executor": "Run",
+    "npm.test.executor": "Run",
+    "npm.test:e2e.executor": "Run",
+    "npm.test:e2e:run.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "refactai_advanced_settings",
+    "ts.external.directory.path": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -200,21 +236,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\@types" />
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\components\input" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\.husky" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\assets" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\.github" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\@types" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\tools" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\categories" />
       <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components" />
-      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components\options" />
     </key>
   </component>
-  <component name="RunManager" selected="Vitest.calculateTimeBetweenDates">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="calculateTimeBetweenDates" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -293,11 +329,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Vitest.calculateTimeBetweenDates" />
-        <item itemvalue="Vitest.timeBetweenDates" />
         <item itemvalue="npm.dev" />
         <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
         <item itemvalue="Vitest.parsePageRanges" />
+        <item itemvalue="Vitest.timeBetweenDates" />
+        <item itemvalue="Vitest.calculateTimeBetweenDates" />
       </list>
     </recent_temporary>
   </component>
@@ -384,30 +420,7 @@
       <workItem from="1743018497879" duration="3895000" />
       <workItem from="1743047367993" duration="986000" />
       <workItem from="1743103182313" duration="4264000" />
-    </task>
-    <task id="LOCAL-00124" summary="docs: readme">
-      <option name="closed" value="true" />
-      <created>1740614012237</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1740614012237</updated>
-    </task>
-    <task id="LOCAL-00125" summary="docs: readme">
-      <option name="closed" value="true" />
-      <created>1740614185980</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1740614185980</updated>
-    </task>
-    <task id="LOCAL-00126" summary="chore: handle enter press on search">
-      <option name="closed" value="true" />
-      <created>1740614957672</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1740614957672</updated>
+      <workItem from="1743348610793" duration="21855000" />
     </task>
     <task id="LOCAL-00127" summary="chore: show tooloptions in example">
       <option name="closed" value="true" />
@@ -777,7 +790,31 @@
       <option name="project" value="LOCAL" />
       <updated>1743106796406</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="fix: typos">
+      <option name="closed" value="true" />
+      <created>1743349732644</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1743349732644</updated>
+    </task>
+    <task id="LOCAL-00174" summary="feat: compress video">
+      <option name="closed" value="true" />
+      <created>1743355099396</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1743355099396</updated>
+    </task>
+    <task id="LOCAL-00175" summary="chore: compress video icon">
+      <option name="closed" value="true" />
+      <created>1743355166425</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1743355166426</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -824,9 +861,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: minify json" />
-    <MESSAGE value="feat: stringify json" />
-    <MESSAGE value="feat: arithmetic sequence" />
     <MESSAGE value="style: tools height" />
     <MESSAGE value="chore: update meta" />
     <MESSAGE value="feat: change pgn opacity" />
@@ -849,7 +883,10 @@
     <MESSAGE value="chore: show new tools in landing" />
     <MESSAGE value="chore: zoom on hover" />
     <MESSAGE value="refactor: time between dates" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: time between dates" />
+    <MESSAGE value="fix: typos" />
+    <MESSAGE value="feat: compress video" />
+    <MESSAGE value="chore: compress video icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: compress video icon" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -68,7 +68,7 @@ We strive to offer a variety of tools, including:
 ## **Miscellaneous Tools**
 
 - JSON Tools
-- XML Tools
+- PDF Tools
 - CSV Tools
 - And more...
 

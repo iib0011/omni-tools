@@ -1,21 +1,16 @@
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
-import * as Yup from 'yup';
-import ToolFileInput from '@components/input/ToolFileInput';
 import ToolFileResult from '@components/result/ToolFileResult';
 import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
-import Typography from '@mui/material/Typography';
-import { FrameOptions, GifReader, GifWriter } from 'omggif';
-import { gifBinaryToFile } from '@utils/gif';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
+import ToolImageInput from '@components/input/ToolImageInput';
+import { FFmpeg } from '@ffmpeg/ffmpeg';
+import { fetchFile } from '@ffmpeg/util';
 
 const initialValues = {
-  newSpeed: 200
+  newSpeed: 2
 };
-const validationSchema = Yup.object({
-  // splitSeparator: Yup.string().required('The separator is required')
-});
 export default function ChangeSpeed({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
@@ -23,82 +18,64 @@ export default function ChangeSpeed({ title }: ToolComponentProps) {
   const compute = (optionsValues: typeof initialValues, input: File | null) => {
     if (!input) return;
     const { newSpeed } = optionsValues;
+    // Initialize FFmpeg once in your component/app
+    let ffmpeg: FFmpeg | null = null;
+    let ffmpegLoaded = false;
 
-    const processImage = async (file: File, newSpeed: number) => {
-      const reader = new FileReader();
-      reader.readAsArrayBuffer(file);
+    const processImage = async (
+      file: File,
+      newSpeed: number
+    ): Promise<void> => {
+      if (!ffmpeg) {
+        ffmpeg = new FFmpeg();
+      }
 
-      reader.onload = async () => {
-        const arrayBuffer = reader.result;
+      if (!ffmpegLoaded) {
+        await ffmpeg.load({
+          wasmURL:
+            'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
+        });
+        ffmpegLoaded = true;
+      }
 
-        if (arrayBuffer instanceof ArrayBuffer) {
-          const intArray = new Uint8Array(arrayBuffer);
+      try {
+        await ffmpeg.writeFile('input.gif', await fetchFile(file));
 
-          const reader = new GifReader(intArray as Buffer);
-          const info = reader.frameInfo(0);
-          const imageDataArr: ImageData[] = new Array(reader.numFrames())
-            .fill(0)
-            .map((_, k) => {
-              const image = new ImageData(info.width, info.height);
+        // Use FFmpeg's setpts filter to change the speed
+        // PTS (Presentation Time Stamp) determines when each frame is shown
+        // 1/speed changes the PTS - lower value = faster playback
+        await ffmpeg.exec([
+          '-i',
+          'input.gif',
+          '-filter:v',
+          `setpts=${1 / newSpeed}*PTS`,
+          '-f',
+          'gif',
+          'output.gif'
+        ]);
 
-              reader.decodeAndBlitFrameRGBA(k, image.data);
+        // Read the result
+        const data = await ffmpeg.readFile('output.gif');
 
-              return image;
-            });
-          const gif = new GifWriter(
-            [],
-            imageDataArr[0].width,
-            imageDataArr[0].height,
-            { loop: 20 }
-          );
+        // Create a new file from the processed data
+        const blob = new Blob([data], { type: 'image/gif' });
+        const newFile = new File(
+          [blob],
+          file.name.replace('.gif', `-${newSpeed}x.gif`),
+          {
+            type: 'image/gif'
+          }
+        );
 
-          imageDataArr.forEach((imageData) => {
-            const palette = [];
-            const pixels = new Uint8Array(imageData.width * imageData.height);
+        // Clean up to free memory
+        await ffmpeg.deleteFile('input.gif');
+        await ffmpeg.deleteFile('output.gif');
 
-            const { data } = imageData;
-            for (let j = 0, k = 0, jl = data.length; j < jl; j += 4, k++) {
-              const r = Math.floor(data[j] * 0.1) * 10;
-              const g = Math.floor(data[j + 1] * 0.1) * 10;
-              const b = Math.floor(data[j + 2] * 0.1) * 10;
-              const color = (r << 16) | (g << 8) | (b << 0);
-
-              const index = palette.indexOf(color);
-
-              if (index === -1) {
-                pixels[k] = palette.length;
-                palette.push(color);
-              } else {
-                pixels[k] = index;
-              }
-            }
-
-            // Force palette to be power of 2
-
-            let powof2 = 1;
-            while (powof2 < palette.length) powof2 <<= 1;
-            palette.length = powof2;
-
-            const delay = newSpeed / 10; // Delay in hundredths of a sec (100 = 1s)
-            const options: FrameOptions = {
-              palette,
-              delay
-            };
-            gif.addFrame(
-              0,
-              0,
-              imageData.width,
-              imageData.height,
-              // @ts-ignore
-              pixels,
-              options
-            );
-          });
-          const newFile = gifBinaryToFile(gif.getOutputBuffer(), file.name);
-
-          setResult(newFile);
-        }
-      };
+        setResult(newFile);
+      } catch (error) {
+        console.error('Error processing GIF:', error);
+        throw error;
+      }
     };
 
     processImage(input, newSpeed);
@@ -108,7 +85,7 @@ export default function ChangeSpeed({ title }: ToolComponentProps) {
       title={title}
       input={input}
       inputComponent={
-        <ToolFileInput
+        <ToolImageInput
           value={input}
           onChange={setInput}
           accept={['image/gif']}
@@ -131,8 +108,7 @@ export default function ChangeSpeed({ title }: ToolComponentProps) {
               <TextFieldWithDesc
                 value={values.newSpeed}
                 onOwnChange={(val) => updateField('newSpeed', Number(val))}
-                description={'Default new GIF speed.'}
-                InputProps={{ endAdornment: <Typography>ms</Typography> }}
+                description={'Default multiplier: 2 means 2x faster'}
                 type={'number'}
               />
             </Box>

@@ -1,4 +1,4 @@
-import { Autocomplete, Box, Stack, TextField } from '@mui/material';
+import { Autocomplete, Box, Stack, TextField, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import SearchIcon from '@mui/icons-material/Search';
 import Grid from '@mui/material/Grid';
@@ -25,6 +25,7 @@ const exampleTools: { label: string; url: string }[] = [
 ];
 export default function Hero() {
   const [inputValue, setInputValue] = useState<string>('');
+  const theme = useTheme();
   const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(
     _.shuffle(tools)
   );
@@ -78,7 +79,7 @@ export default function Hero() {
               endAdornment: <SearchIcon />,
               sx: {
                 borderRadius: 4,
-                backgroundColor: 'white'
+                backgroundColor: 'background.paper'
               }
             }}
             onChange={(event) => handleInputChange(event, event.target.value)}
@@ -125,11 +126,13 @@ export default function Hero() {
                 borderWidth: 1,
                 padding: 1,
                 borderRadius: 3,
-                borderColor: 'grey',
+                borderColor: theme.palette.mode === 'dark' ? '#363b41' : 'grey',
                 borderStyle: 'solid',
-                backgroundColor: 'white',
+                backgroundColor: 'background.paper',
                 cursor: 'pointer',
-                '&:hover': { backgroundColor: '#FAFAFD' }
+                '&:hover': {
+                  backgroundColor: 'background.hover'
+                }
               }}
             >
               <Typography>{tool.label}</Typography>

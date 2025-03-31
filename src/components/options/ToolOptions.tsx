@@ -36,7 +36,7 @@ export default function ToolOptions<T extends FormikValues>({
         mb: 2,
         borderRadius: 2,
         padding: 2,
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: 'background.lightSecondary',
         boxShadow: '2'
       }}
       mt={2}

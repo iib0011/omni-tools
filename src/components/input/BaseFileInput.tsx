@@ -94,7 +94,7 @@ export default function BaseFileInput({
           border: preview ? 0 : 1,
           borderRadius: 2,
           boxShadow: '5',
-          bgcolor: 'white',
+          bgcolor: 'background.paper',
           position: 'relative'
         }}
       >
@@ -106,7 +106,8 @@ export default function BaseFileInput({
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              backgroundImage: `url(${greyPattern})`,
+              backgroundImage:
+                theme.palette.mode === 'dark' ? null : `url(${greyPattern})`,
               position: 'relative',
               overflow: 'hidden'
             }}
@@ -126,7 +127,13 @@ export default function BaseFileInput({
               cursor: 'pointer'
             }}
           >
-            <Typography color={theme.palette.grey['600']}>
+            <Typography
+              color={
+                theme.palette.mode === 'dark'
+                  ? theme.palette.grey['300']
+                  : theme.palette.grey['600']
+              }
+            >
               Click here to select a {type} from your device, press Ctrl+V to
               use a {type} from your clipboard, drag and drop a file from
               desktop
