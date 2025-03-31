@@ -22,7 +22,8 @@
 </div>
 
 Welcome to OmniTools, a self-hosted web app offering a variety of online tools to simplify everyday tasks.
-Whether you are coding, manipulating images or crunching numbers, OmniTools has you covered. Please don't forget to
+Whether you are coding, manipulating images/videos, PDFs or crunching numbers, OmniTools has you covered. Please don't
+forget to
 star the repo to support us.
 Here is the [demo](https://omnitools.app) website.
 
