@@ -1,21 +1,17 @@
 import { splitCsv } from '@utils/csv';
+import { InitialValuesType } from './types';
 
 function retrieveFromAndTo(
   headerRow: string[],
-  fromPositionStatus: boolean,
-  toPositionStatus: boolean,
-  fromPosition: string | '',
-  toPosition: string | '',
-  fromHeader: string | '',
-  toHeader: string | ''
+  options: InitialValuesType
 ): number[] {
-  const from = fromPositionStatus
-    ? Number(fromPosition)
-    : headerRow.findIndex((header) => header === fromHeader) + 1;
+  const from = options.fromPositionStatus
+    ? Number(options.fromPosition)
+    : headerRow.findIndex((header) => header === options.fromHeader) + 1;
 
-  const to = toPositionStatus
-    ? Number(toPosition)
-    : headerRow.findIndex((header) => header === toHeader) + 1;
+  const to = options.toPositionStatus
+    ? Number(options.toPosition)
+    : headerRow.findIndex((header) => header === options.toHeader) + 1;
 
   if (from <= 0 || to <= 0)
     throw new Error('Invalid column positions. Check headers or positions.');
@@ -37,44 +33,28 @@ function swap(lines: string[][], from: number, to: number): string[][] {
   });
 }
 
-export function csvColumnsSwap(
-  input: string,
-  fromPositionStatus: boolean,
-  fromPosition: string | '',
-  toPositionStatus: boolean,
-  toPosition: string | '',
-  fromHeader: string | '',
-  toHeader: string | '',
-  emptyValuesFilling: boolean,
-  customFiller: string | '',
-  deleteComment: boolean,
-  commentCharacter: string | '',
-  emptyLines: boolean
-) {
+export function csvColumnsSwap(input: string, options: InitialValuesType) {
   if (!input) {
     return '';
   }
   // split csv input and remove comments
-  const rows = splitCsv(input, deleteComment, commentCharacter, emptyLines);
+  const rows = splitCsv(
+    input,
+    options.deleteComment,
+    options.commentCharacter,
+    options.emptyLines
+  );
 
   const columnCount = Math.max(...rows.map((row) => row.length));
   for (let i = 0; i < rows.length; i++) {
     for (let j = 0; j < columnCount; j++) {
       if (!rows[i][j]) {
-        rows[i][j] = emptyValuesFilling ? '' : customFiller;
+        rows[i][j] = options.emptyValuesFilling ? '' : options.customFiller;
       }
     }
   }
 
-  const positions = retrieveFromAndTo(
-    rows[0],
-    fromPositionStatus,
-    toPositionStatus,
-    fromPosition,
-    toPosition,
-    fromHeader,
-    toHeader
-  );
+  const positions = retrieveFromAndTo(rows[0], options);
 
   const result = swap(rows, positions[0], positions[1]);
   return result.join('\n');

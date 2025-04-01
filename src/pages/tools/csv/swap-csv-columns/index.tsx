@@ -11,8 +11,10 @@ import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import SimpleRadio from '@components/options/SimpleRadio';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { csvColumnsSwap } from './service';
+import { getCsvHeaders } from '@utils/csv';
+import { InitialValuesType } from './types';
 
-const initialValues = {
+const initialValues: InitialValuesType = {
   fromPositionStatus: true,
   toPositionStatus: true,
   fromPosition: '1',
@@ -25,7 +27,7 @@ const initialValues = {
   commentCharacter: '#',
   emptyLines: true
 };
-type InitialValuesType = typeof initialValues;
+
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Move the Key Column to the First Position',
@@ -48,8 +50,8 @@ Utah,Zion Park`,
       toPositionStatus: true,
       fromPosition: '1',
       toPosition: '2',
-      fromHeader: '',
-      toHeader: '',
+      fromHeader: 'park_name',
+      toHeader: 'location',
       emptyValuesFilling: false,
       customFiller: '*',
       deleteComment: false,
@@ -120,7 +122,7 @@ Xiaomi,13 Ultra,Android,6.6″,$849`,
       fromPosition: '1',
       toPosition: '4',
       fromHeader: 'ScreenSize',
-      toHeader: 'Function',
+      toHeader: 'OS',
       emptyValuesFilling: true,
       customFiller: 'x',
       deleteComment: true,
@@ -137,24 +139,15 @@ export default function CsvToTsv({
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
-  const compute = (optionsValues: typeof initialValues, input: string) => {
-    setResult(
-      csvColumnsSwap(
-        input,
-        optionsValues.fromPositionStatus,
-        optionsValues.fromPosition,
-        optionsValues.toPositionStatus,
-        optionsValues.toPosition,
-        optionsValues.fromHeader,
-        optionsValues.toHeader,
-        optionsValues.emptyValuesFilling,
-        optionsValues.customFiller,
-        optionsValues.deleteComment,
-        optionsValues.commentCharacter,
-        optionsValues.emptyLines
-      )
-    );
+  const compute = (optionsValues: InitialValuesType, input: string) => {
+    setResult(csvColumnsSwap(input, optionsValues));
   };
+
+  const headers = getCsvHeaders(input);
+  const headerOptions = headers.map((item) => ({
+    label: `${item}`,
+    value: item
+  }));
 
   const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
@@ -175,18 +168,21 @@ export default function CsvToTsv({
               value={values.fromPosition}
               onOwnChange={(val) => updateField('fromPosition', val)}
               type="number"
+              inputProps={{ min: 1, max: headers.length }}
             />
           )}
+
           <SimpleRadio
             onClick={() => updateField('fromPositionStatus', false)}
             title="Set Column-From Header"
             checked={!values.fromPositionStatus}
           />
           {!values.fromPositionStatus && (
-            <TextFieldWithDesc
-              description={'Header of the first column you want to swap'}
-              value={values.fromHeader}
-              onOwnChange={(val) => updateField('fromHeader', val)}
+            <SelectWithDesc
+              selected={values.fromHeader}
+              options={headerOptions}
+              onChange={(value) => updateField('fromHeader', value)}
+              description={'Header of the first column you want to swap.'}
             />
           )}
         </Box>
@@ -207,6 +203,7 @@ export default function CsvToTsv({
               value={values.toPosition}
               onOwnChange={(val) => updateField('toPosition', val)}
               type="number"
+              inputProps={{ min: 1, max: headers.length }}
             />
           )}
           <SimpleRadio
@@ -215,10 +212,11 @@ export default function CsvToTsv({
             checked={!values.toPositionStatus}
           />
           {!values.toPositionStatus && (
-            <TextFieldWithDesc
-              description={'Header of the second column you want to swap'}
-              value={values.toHeader}
-              onOwnChange={(val) => updateField('toHeader', val)}
+            <SelectWithDesc
+              selected={values.toHeader}
+              options={headerOptions}
+              onChange={(value) => updateField('toHeader', value)}
+              description={'Header of the second column you want to swap..'}
             />
           )}
         </Box>
@@ -261,7 +259,7 @@ export default function CsvToTsv({
             title="Delete Comments"
             description="if checked, comments given by the following character will be deleted"
           />
-          {!values.emptyValuesFilling && (
+          {values.deleteComment && (
             <TextFieldWithDesc
               description={
                 'Specify the character used to start comments in the input CSV (and if needed remove them via checkbox above)'
