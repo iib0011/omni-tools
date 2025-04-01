@@ -48,7 +48,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSwitchTheme }) => {
       src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
       frameBorder="0"
       scrolling="0"
-      width="130"
+      width="150"
       height="30"
       title="GitHub"
     ></iframe>,
