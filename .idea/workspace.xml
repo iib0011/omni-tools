@@ -4,33 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: compress video icon">
-      <change afterPath="$PROJECT_DIR$/@types/theme.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/background-dark.png" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: stars button width for 1k+ 😊">
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/service.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/allTools/ToolCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/allTools/ToolCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/examples/ExampleCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/BaseFileInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/BaseFileInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/ToolFileInput.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolTextInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/ColorSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ColorSelector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/TextFieldWithDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/TextFieldWithDesc.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/muiConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/muiConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Categories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/compress/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/compress/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +31,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="chesterkxng" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -144,6 +128,13 @@
         "number": 76
       },
       "lastSeen": 1743352150953
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6Q0JBe",
+        "number": 82
+      },
+      "lastSeen": 1743470267269
     }
   ]
 }]]></component>
@@ -199,7 +190,7 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "dark-mode",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/@types",
@@ -421,54 +412,8 @@
       <workItem from="1743047367993" duration="986000" />
       <workItem from="1743103182313" duration="4264000" />
       <workItem from="1743348610793" duration="21855000" />
-    </task>
-    <task id="LOCAL-00127" summary="chore: show tooloptions in example">
-      <option name="closed" value="true" />
-      <created>1740619610168</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1740619610169</updated>
-    </task>
-    <task id="LOCAL-00128" summary="refact: examples">
-      <option name="closed" value="true" />
-      <created>1740620866551</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1740620866551</updated>
-    </task>
-    <task id="LOCAL-00129" summary="feat: json pretty">
-      <option name="closed" value="true" />
-      <created>1740661424202</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1740661424202</updated>
-    </task>
-    <task id="LOCAL-00130" summary="feat: json pretty">
-      <option name="closed" value="true" />
-      <created>1740661540908</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1740661540908</updated>
-    </task>
-    <task id="LOCAL-00131" summary="style: tool categories">
-      <option name="closed" value="true" />
-      <created>1740661744828</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1740661744828</updated>
-    </task>
-    <task id="LOCAL-00132" summary="chore: compute only if value">
-      <option name="closed" value="true" />
-      <created>1740661864615</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1740661864615</updated>
+      <workItem from="1743397561176" duration="25000" />
+      <workItem from="1743458576265" duration="13083000" />
     </task>
     <task id="LOCAL-00133" summary="chore: remove prettify test">
       <option name="closed" value="true" />
@@ -814,7 +759,55 @@
       <option name="project" value="LOCAL" />
       <updated>1743355166426</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="fix: gif speed">
+      <option name="closed" value="true" />
+      <created>1743385388051</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1743385388051</updated>
+    </task>
+    <task id="LOCAL-00177" summary="fix: tsc">
+      <option name="closed" value="true" />
+      <created>1743385467178</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1743385467178</updated>
+    </task>
+    <task id="LOCAL-00178" summary="fix: background color">
+      <option name="closed" value="true" />
+      <created>1743385898871</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1743385898871</updated>
+    </task>
+    <task id="LOCAL-00179" summary="docs: github trendings">
+      <option name="closed" value="true" />
+      <created>1743459110471</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1743459110471</updated>
+    </task>
+    <task id="LOCAL-00180" summary="docs: optimize">
+      <option name="closed" value="true" />
+      <created>1743459205311</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1743459205311</updated>
+    </task>
+    <task id="LOCAL-00181" summary="fix: stars button width for 1k+ 😊">
+      <option name="closed" value="true" />
+      <created>1743470832619</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1743470832619</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -861,12 +854,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="style: tools height" />
-    <MESSAGE value="chore: update meta" />
-    <MESSAGE value="feat: change pgn opacity" />
-    <MESSAGE value="feat: crop png" />
-    <MESSAGE value="chore: remove unnecessary files" />
-    <MESSAGE value="refactor: validateJson" />
     <MESSAGE value="feat: missing tools" />
     <MESSAGE value="refactor: use ToolContent" />
     <MESSAGE value="fix: prettify json" />
@@ -886,7 +873,13 @@
     <MESSAGE value="fix: typos" />
     <MESSAGE value="feat: compress video" />
     <MESSAGE value="chore: compress video icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: compress video icon" />
+    <MESSAGE value="fix: gif speed" />
+    <MESSAGE value="fix: tsc" />
+    <MESSAGE value="fix: background color" />
+    <MESSAGE value="docs: github trendings" />
+    <MESSAGE value="docs: optimize" />
+    <MESSAGE value="fix: stars button width for 1k+ " />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: stars button width for 1k+ " />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
