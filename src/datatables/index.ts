@@ -1,17 +1,18 @@
 import type { DataTable } from './types.ts';
-import { allDataTables } from './data/index';
 
 export async function getDataTable(name: string): Promise<DataTable> {
-  const x = await import(`./${name}`);
-  return x.default;
+  const allDataTables = (await import('./data/index')).default;
+  return allDataTables[name];
 }
 
-export async function listDataTables(): Promise<{ name: string }[]> {
-  const x: { name: string }[] = [];
-  for (const key in allDataTables) {
-    x.push({ name: key });
-  }
-  return x;
+/* Used in case later we want any kind of computed extra data */
+export function dataTableLookup(table: DataTable, key: string): any {
+  return table.data[key];
+}
+
+export async function listDataTables(): Promise<{ [name: string]: DataTable }> {
+  const allDataTables = (await import('./data/index')).default;
+  return allDataTables;
 }
 
 export { DataTable };

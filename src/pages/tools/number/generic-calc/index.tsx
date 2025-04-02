@@ -18,7 +18,7 @@ import { UpdateField } from '@components/options/ToolOptions';
 import { InitialValuesType } from './types';
 import type { GenericCalcType } from './data/types';
 import type { DataTable } from 'datatables';
-import { getDataTable } from 'datatables';
+import { getDataTable, dataTableLookup } from 'datatables';
 
 import nerdamer from 'nerdamer';
 import 'nerdamer/Algebra';
@@ -77,8 +77,6 @@ export default async function makeTool(
       currentValues: InitialValuesType,
       updateFieldFunc: UpdateField<InitialValuesType>
     ) => {
-      const newValsBoundToPreset = { ...valsBoundToPreset };
-
       const newPresets = { ...currentValues.presets };
       newPresets[selection] = preset;
       updateFieldFunc('presets', newPresets);
@@ -86,7 +84,7 @@ export default async function makeTool(
       // Clear old selection
       for (const key in valsBoundToPreset) {
         if (valsBoundToPreset[key] === selection) {
-          delete newValsBoundToPreset[key];
+          delete valsBoundToPreset[key];
         }
       }
 
@@ -94,13 +92,19 @@ export default async function makeTool(
         (sel) => sel.title === selection
       );
 
-      if (preset != '<custom>') {
+      if (preset && preset != '<custom>') {
         if (selectionData) {
           for (const key in selectionData.bind) {
-            newValsBoundToPreset[key] = selection;
+            valsBoundToPreset[key] = selection;
+
+            if (currentValues.outputVariable === key) {
+              handleSelectedTargetChange('', updateFieldFunc);
+            }
+
             updateVarField(
               key,
-              dataTables[selectionData.source].data[preset][
+
+              dataTableLookup(dataTables[selectionData.source], preset)[
                 selectionData.bind[key]
               ],
               currentValues,
@@ -108,14 +112,11 @@ export default async function makeTool(
             );
           }
         } else {
-          setValsBoundToPreset(newValsBoundToPreset);
           throw new Error(
             `Preset "${preset}" is not valid for selection "${selection}"`
           );
         }
       }
-
-      setValsBoundToPreset(newValsBoundToPreset);
     };
 
     calcData.variables.forEach((variable) => {
@@ -138,13 +139,16 @@ export default async function makeTool(
       if (selection.default == '<custom>') return;
       for (const key in selection.bind) {
         initialValues.vars[key] = {
-          value:
-            dataTables[selection.source].data[selection.default][
-              selection.bind[key]
-            ],
-          unit: dataTables[selection.source].cols[selection.bind[key]].unit
+          value: dataTableLookup(
+            dataTables[selection.source],
+            selection.default
+          )[selection.bind[key]],
+
+          unit:
+            dataTables[selection.source].columns[selection.bind[key]]?.unit ||
+            ''
         };
-        valsBoundToPreset[key] = selection.default;
+        valsBoundToPreset[key] = selection.title;
       }
     });
 
@@ -182,9 +186,12 @@ export default async function makeTool(
                             disablePortal
                             id="combo-box-demo"
                             value={values.presets[preset.title]}
-                            options={Object.keys(
-                              dataTables[preset.source].data
-                            ).sort()}
+                            options={[
+                              '<custom>',
+                              ...Object.keys(
+                                dataTables[preset.source].data
+                              ).sort()
+                            ]}
                             sx={{ width: 300 }}
                             onChange={(event, newValue) => {
                               handleSelectedPresetChange(
@@ -207,7 +214,7 @@ export default async function makeTool(
             )
           },
           {
-            title: 'Input Variables',
+            title: 'Variables',
             component: (
               <Table>
                 <TableHead>
@@ -221,7 +228,7 @@ export default async function makeTool(
                 <TableBody>
                   {calcData.variables.map((variable) => (
                     <TableRow key={variable.name}>
-                      <TableCell>{variable.name}</TableCell>
+                      <TableCell>{variable.title}</TableCell>
                       <TableCell>
                         <TextFieldWithDesc
                           title={variable.title}
@@ -253,6 +260,9 @@ export default async function makeTool(
                         <Radio
                           value={variable.name}
                           checked={values.outputVariable === variable.name}
+                          disabled={
+                            valsBoundToPreset[variable.name] !== undefined
+                          }
                           onClick={() =>
                             handleSelectedTargetChange(
                               variable.name,

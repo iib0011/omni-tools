@@ -18,7 +18,7 @@ allGenericCalcs.forEach((x) => {
   tools.push(
     defineTool('number', {
       name: x.title,
-      path: 'generic-calc/x.name',
+      path: 'generic-calc/' + x.name,
       icon: '',
       description: '',
       shortDescription: '',

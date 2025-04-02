@@ -10,11 +10,11 @@ export default {
     }
   ],
   data: {
-    copper: {
-      resistivity: 1.68e-8
+    Copper: {
+      resistivity_20c: 1.68e-8
     },
-    aluminum: {
-      resistivity: 2.82e-8
+    Aluminum: {
+      resistivity_20c: 2.82e-8
     }
   }
 };
