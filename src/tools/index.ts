@@ -130,6 +130,7 @@ export const filterTools = (
 
 export const getToolsByCategory = (): {
   title: string;
+  rawTitle: string;
   description: string;
   icon: IconifyIcon | string;
   type: string;
@@ -144,6 +145,7 @@ export const getToolsByCategory = (): {
         (config) => config.type === type
       );
       return {
+        rawTitle: categoryConfig?.title ?? capitalizeFirstLetter(type),
         title: `${categoryConfig?.title ?? capitalizeFirstLetter(type)} Tools`,
         description: categoryConfig?.value ?? '',
         type,

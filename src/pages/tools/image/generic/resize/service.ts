@@ -1,4 +1,6 @@
 import { InitialValuesType } from './types';
+import { FFmpeg } from '@ffmpeg/ffmpeg';
+import { fetchFile, toBlobURL } from '@ffmpeg/util';
 
 export const processImage = async (
   file: File,
@@ -96,6 +98,60 @@ export const processImage = async (
     } catch (error) {
       console.error('Error processing SVG:', error);
       // Fall back to canvas method if SVG processing fails
+    }
+  } else if (file.type === 'image/gif') {
+    try {
+      const ffmpeg = new FFmpeg();
+
+      await ffmpeg.load({
+        wasmURL:
+          'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
+      });
+
+      // Write the input file to memory
+      await ffmpeg.writeFile('input.gif', await fetchFile(file));
+
+      // Calculate new dimensions
+      let newWidth = 0;
+      let newHeight = 0;
+      let scaleFilter = '';
+
+      if (resizeMethod === 'pixels') {
+        if (dimensionType === 'width') {
+          newWidth = parseInt(width);
+          if (maintainAspectRatio) {
+            scaleFilter = `scale=${newWidth}:-1`;
+          } else {
+            newHeight = parseInt(height);
+            scaleFilter = `scale=${newWidth}:${newHeight}`;
+          }
+        } else {
+          // height
+          newHeight = parseInt(height);
+          if (maintainAspectRatio) {
+            scaleFilter = `scale=-1:${newHeight}`;
+          } else {
+            newWidth = parseInt(width);
+            scaleFilter = `scale=${newWidth}:${newHeight}`;
+          }
+        }
+      } else {
+        // percentage
+        const scale = parseInt(percentage) / 100;
+        scaleFilter = `scale=iw*${scale}:ih*${scale}`;
+      }
+
+      // Run FFmpeg command
+      await ffmpeg.exec(['-i', 'input.gif', '-vf', scaleFilter, 'output.gif']);
+
+      // Read the output file
+      const data = await ffmpeg.readFile('output.gif');
+
+      // Create a new File object
+      return new File([data], file.name, { type: 'image/gif' });
+    } catch (error) {
+      console.error('Error processing GIF with FFmpeg:', error);
+      // Fall back to canvas method if FFmpeg processing fails
     }
   }
   // Create canvas
