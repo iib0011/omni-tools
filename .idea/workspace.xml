@@ -4,15 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: remove labels">
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/change-colors/service.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: svg change colors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/change-colors-in-png.e2e.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/change-colors/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/change-colors/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-colors-in-png/test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/change-opacity/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/change-opacity/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/change-opacity/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/change-opacity/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/create-transparent.e2e.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/create-transparent/create-transparent.e2e.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/create-transparent/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/create-transparent/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/create-transparent/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/create-transparent/test.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/crop/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/crop/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/crop/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/crop/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/remove-background/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/remove-background/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/remove-background/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/remove-background/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -407,15 +415,7 @@
       <workItem from="1743569964813" duration="352000" />
       <workItem from="1743570403937" duration="109000" />
       <workItem from="1743607343305" duration="20000" />
-      <workItem from="1743619618671" duration="3827000" />
-    </task>
-    <task id="LOCAL-00135" summary="feat: jakarta font">
-      <option name="closed" value="true" />
-      <created>1740665609483</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1740665609483</updated>
+      <workItem from="1743619618671" duration="7027000" />
     </task>
     <task id="LOCAL-00136" summary="chore: img">
       <option name="closed" value="true" />
@@ -801,7 +801,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743621602590</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="feat: svg change colors">
+      <option name="closed" value="true" />
+      <created>1743623617781</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1743623617781</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -848,7 +856,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: prettify json" />
     <MESSAGE value="refactor: sum" />
     <MESSAGE value="fix: tools by category scroll" />
     <MESSAGE value="fix: missing meta" />
@@ -873,7 +880,8 @@
     <MESSAGE value="docs: readme" />
     <MESSAGE value="feat: compress image" />
     <MESSAGE value="chore: remove labels" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: remove labels" />
+    <MESSAGE value="feat: svg change colors" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: svg change colors" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

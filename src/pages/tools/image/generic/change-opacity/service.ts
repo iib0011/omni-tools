@@ -9,7 +9,10 @@ interface OpacityOptions {
   areaHeight: number;
 }
 
-export async function changeOpacity(file: File, options: OpacityOptions): Promise<File> {
+export async function changeOpacity(
+  file: File,
+  options: OpacityOptions
+): Promise<File> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = (event) => {
@@ -32,12 +35,12 @@ export async function changeOpacity(file: File, options: OpacityOptions): Promis
 
         canvas.toBlob((blob) => {
           if (blob) {
-            const newFile = new File([blob], file.name, { type: 'image/png' });
+            const newFile = new File([blob], file.name, { type: file.type });
             resolve(newFile);
           } else {
             reject(new Error('Failed to generate image blob'));
           }
-        }, 'image/png');
+        }, file.type);
       };
       img.onerror = () => reject(new Error('Failed to load image'));
       img.src = event.target?.result as string;
@@ -67,9 +70,10 @@ function applyGradientOpacity(
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
   ctx.drawImage(img, 0, 0);
 
-  const gradient = options.gradientType === 'linear'
-    ? createLinearGradient(ctx, options)
-    : createRadialGradient(ctx, options);
+  const gradient =
+    options.gradientType === 'linear'
+      ? createLinearGradient(ctx, options)
+      : createRadialGradient(ctx, options);
 
   ctx.fillStyle = gradient;
   ctx.fillRect(areaLeft, areaTop, areaWidth, areaHeight);

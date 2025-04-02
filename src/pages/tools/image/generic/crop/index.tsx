@@ -32,7 +32,7 @@ const validationSchema = Yup.object({
     .required('Height is required')
 });
 
-export default function CropPng({ title }: ToolComponentProps) {
+export default function CropImage({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
@@ -101,11 +101,11 @@ export default function CropPng({ title }: ToolComponentProps) {
       destCanvas.toBlob((blob) => {
         if (blob) {
           const newFile = new File([blob], file.name, {
-            type: 'image/png'
+            type: file.type
           });
           setResult(newFile);
         }
-      }, 'image/png');
+      }, file.type);
     };
 
     processImage(input, x, y, width, height, isCircular);
@@ -180,13 +180,13 @@ export default function CropPng({ title }: ToolComponentProps) {
           <SimpleRadio
             onClick={() => updateField('cropShape', 'rectangular')}
             checked={values.cropShape == 'rectangular'}
-            description={'Crop a rectangular fragment from a PNG.'}
+            description={'Crop a rectangular fragment from an image.'}
             title={'Rectangular Crop Shape'}
           />
           <SimpleRadio
             onClick={() => updateField('cropShape', 'circular')}
             checked={values.cropShape == 'circular'}
-            description={'Crop a circular fragment from a PNG.'}
+            description={'Crop a circular fragment from an image.'}
             title={'Circular Crop Shape'}
           />
         </Box>
@@ -200,8 +200,8 @@ export default function CropPng({ title }: ToolComponentProps) {
     <ToolImageInput
       value={input}
       onChange={setInput}
-      accept={['image/png']}
-      title={'Input PNG'}
+      accept={['image/*']}
+      title={'Input image'}
       showCropOverlay={!!input}
       cropShape={values.cropShape as 'rectangular' | 'circular'}
       cropPosition={{
@@ -225,16 +225,12 @@ export default function CropPng({ title }: ToolComponentProps) {
       validationSchema={validationSchema}
       renderCustomInput={renderCustomInput}
       resultComponent={
-        <ToolFileResult
-          title={'Cropped PNG'}
-          value={result}
-          extension={'png'}
-        />
+        <ToolFileResult title={'Cropped image'} value={result} />
       }
       toolInfo={{
-        title: 'Crop PNG Image',
+        title: 'Crop Image',
         description:
-          'This tool allows you to crop a PNG image by specifying the position, size, and shape of the crop area. You can choose between rectangular or circular cropping.'
+          'This tool allows you to crop an image by specifying the position, size, and shape of the crop area. You can choose between rectangular or circular cropping.'
       }}
     />
   );

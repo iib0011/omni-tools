@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ToolImageInput from '@components/input/ToolImageInput';
 import ToolFileResult from '@components/result/ToolFileResult';
 import { changeOpacity } from './service';
@@ -97,16 +97,12 @@ export default function ChangeOpacity({ title }: ToolComponentProps) {
         <ToolImageInput
           value={input}
           onChange={setInput}
-          accept={['image/png']}
-          title={'Input PNG'}
+          accept={['image/*']}
+          title={'Input image'}
         />
       }
       resultComponent={
-        <ToolFileResult
-          title={'Changed PNG'}
-          value={result}
-          extension={'png'}
-        />
+        <ToolFileResult title={'Changed image'} value={result} />
       }
       initialValues={initialValues}
       // exampleCards={exampleCards}

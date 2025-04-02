@@ -1,4 +1,3 @@
-import { Box, CircularProgress, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import * as Yup from 'yup';
 import ToolFileResult from '@components/result/ToolFileResult';
@@ -11,7 +10,9 @@ const initialValues = {};
 
 const validationSchema = Yup.object({});
 
-export default function RemoveBackgroundFromPng({ title }: ToolComponentProps) {
+export default function RemoveBackgroundFromImage({
+  title
+}: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
@@ -64,7 +65,7 @@ export default function RemoveBackgroundFromPng({ title }: ToolComponentProps) {
         <ToolImageInput
           value={input}
           onChange={setInput}
-          accept={['image/png', 'image/jpeg', 'image/jpg']}
+          accept={['image/*']}
           title={'Input Image'}
         />
       }
@@ -78,7 +79,7 @@ export default function RemoveBackgroundFromPng({ title }: ToolComponentProps) {
         />
       }
       toolInfo={{
-        title: 'Remove Background from PNG',
+        title: 'Remove Background from Image',
         description:
           'This tool uses AI to automatically remove the background from your images, creating a transparent PNG. Perfect for product photos, profile pictures, and design assets.'
       }}

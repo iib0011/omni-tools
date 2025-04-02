@@ -5,7 +5,7 @@ import Jimp from 'jimp';
 
 test.describe('Create transparent PNG', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/png/create-transparent');
+    await page.goto('/image-generic/create-transparent');
   });
 
   //TODO check why failing

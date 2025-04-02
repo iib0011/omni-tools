@@ -13,7 +13,7 @@ import { IconifyIcon } from '@iconify/react';
 import { pdfTools } from '../pages/tools/pdf';
 
 const toolCategoriesOrder: ToolCategory[] = [
-  'png',
+  'image-generic',
   'string',
   'json',
   'pdf',
@@ -21,9 +21,9 @@ const toolCategoriesOrder: ToolCategory[] = [
   'csv',
   'video',
   'number',
-  'gif',
+  'png',
   'time',
-  'image-generic'
+  'gif'
 ];
 export const tools: DefinedTool[] = [
   ...imageTools,
