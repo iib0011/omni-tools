@@ -1,3 +1,4 @@
 import { pngTools } from './png';
+import { imageGenericTools } from './generic';
 
-export const imageTools = [...pngTools];
+export const imageTools = [...imageGenericTools, ...pngTools];

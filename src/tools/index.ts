@@ -95,6 +95,13 @@ const categoriesConfig: {
     icon: 'fluent-mdl2:date-time',
     value:
       'Tools for working with time and date – draw clocks and calendars, generate time and date sequences, calculate average time, convert between time zones, and much more.'
+  },
+  {
+    type: 'image-generic',
+    title: 'Image',
+    icon: 'material-symbols-light:image-outline-rounded',
+    value:
+      'Tools for working with pictures – compress, resize, crop, convert to JPG, rotate, remove background and much more.'
   }
 ];
 // use for changelogs
