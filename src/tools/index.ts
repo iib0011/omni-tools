@@ -12,6 +12,19 @@ import { timeTools } from '../pages/tools/time';
 import { IconifyIcon } from '@iconify/react';
 import { pdfTools } from '../pages/tools/pdf';
 
+const toolCategoriesOrder: ToolCategory[] = [
+  'png',
+  'string',
+  'json',
+  'pdf',
+  'list',
+  'csv',
+  'video',
+  'number',
+  'gif',
+  'time',
+  'image-generic'
+];
 export const tools: DefinedTool[] = [
   ...imageTools,
   ...stringTools,
@@ -133,14 +146,14 @@ export const getToolsByCategory = (): {
   rawTitle: string;
   description: string;
   icon: IconifyIcon | string;
-  type: string;
+  type: ToolCategory;
   example: { title: string; path: string };
   tools: DefinedTool[];
 }[] => {
   const groupedByType: Partial<Record<ToolCategory, DefinedTool[]>> =
     Object.groupBy(tools, ({ type }) => type);
-  return (Object.entries(groupedByType) as Entries<typeof groupedByType>).map(
-    ([type, tools]) => {
+  return (Object.entries(groupedByType) as Entries<typeof groupedByType>)
+    .map(([type, tools]) => {
       const categoryConfig = categoriesConfig.find(
         (config) => config.type === type
       );
@@ -155,6 +168,10 @@ export const getToolsByCategory = (): {
           ? { title: tools[0].name, path: tools[0].path }
           : { title: '', path: '' }
       };
-    }
-  );
+    })
+    .sort(
+      (a, b) =>
+        toolCategoriesOrder.indexOf(a.type) -
+        toolCategoriesOrder.indexOf(b.type)
+    );
 };

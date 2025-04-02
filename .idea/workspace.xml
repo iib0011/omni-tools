@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: svg resize">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: gif resize">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -401,15 +397,7 @@
       <workItem from="1743047367993" duration="986000" />
       <workItem from="1743103182313" duration="4264000" />
       <workItem from="1743348610793" duration="21855000" />
-      <workItem from="1743556259185" duration="6368000" />
-    </task>
-    <task id="LOCAL-00130" summary="feat: json pretty">
-      <option name="closed" value="true" />
-      <created>1740661540908</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1740661540908</updated>
+      <workItem from="1743556259185" duration="7150000" />
     </task>
     <task id="LOCAL-00131" summary="style: tool categories">
       <option name="closed" value="true" />
@@ -795,7 +783,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743566704552</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="feat: gif resize">
+      <option name="closed" value="true" />
+      <created>1743567906528</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1743567906528</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -842,7 +838,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: crop png" />
     <MESSAGE value="chore: remove unnecessary files" />
     <MESSAGE value="refactor: validateJson" />
     <MESSAGE value="feat: missing tools" />
@@ -867,7 +862,8 @@
     <MESSAGE value="chore: tool description" />
     <MESSAGE value="feat: image resize init" />
     <MESSAGE value="feat: svg resize" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: svg resize" />
+    <MESSAGE value="feat: gif resize" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: gif resize" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
