@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="docs: readme">
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/compress/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/compress/meta.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/compress/service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/compress/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.coding-aider-plans/refactor_tools_toolcontent.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.coding-aider-plans/refactor_tools_toolcontent_checklist.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.coding-aider-plans/refactor_tools_toolcontent_context.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: compress image">
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/compress/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/compress/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -409,15 +400,7 @@
       <workItem from="1743569964813" duration="352000" />
       <workItem from="1743570403937" duration="109000" />
       <workItem from="1743607343305" duration="20000" />
-      <workItem from="1743619618671" duration="1756000" />
-    </task>
-    <task id="LOCAL-00133" summary="chore: remove prettify test">
-      <option name="closed" value="true" />
-      <created>1740662016902</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1740662016902</updated>
+      <workItem from="1743619618671" duration="1888000" />
     </task>
     <task id="LOCAL-00134" summary="chore: prettify json in home">
       <option name="closed" value="true" />
@@ -803,7 +786,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743569711302</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="feat: compress image">
+      <option name="closed" value="true" />
+      <created>1743621506634</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1743621506634</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -850,7 +841,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: missing tools" />
     <MESSAGE value="refactor: use ToolContent" />
     <MESSAGE value="fix: prettify json" />
     <MESSAGE value="refactor: sum" />
@@ -875,7 +865,8 @@
     <MESSAGE value="feat: gif resize" />
     <MESSAGE value="chore: add color" />
     <MESSAGE value="docs: readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: readme" />
+    <MESSAGE value="feat: compress image" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: compress image" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

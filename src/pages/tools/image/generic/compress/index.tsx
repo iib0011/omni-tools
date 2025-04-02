@@ -72,7 +72,6 @@ export default function CompressImage({ title }: ToolComponentProps) {
           component: (
             <Box>
               <TextFieldWithDesc
-                label="Max File Size (MB)"
                 name="maxFileSizeInMB"
                 type="number"
                 inputProps={{ min: 0.1, step: 0.1 }}
@@ -83,7 +82,6 @@ export default function CompressImage({ title }: ToolComponentProps) {
                 value={values.maxFileSizeInMB}
               />
               <TextFieldWithDesc
-                label="Quality (%)"
                 name="quality"
                 type="number"
                 inputProps={{ min: 10, max: 100, step: 1 }}
