@@ -6,5 +6,9 @@ export type InitialValuesType = {
     };
   };
 
+  // Track preset selections
+  presets: {
+    [key: string]: string;
+  };
   outputVariable: string;
 };

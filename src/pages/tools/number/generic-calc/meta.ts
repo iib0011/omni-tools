@@ -1,17 +1,32 @@
-import { defineTool } from '@tools/defineTool';
+import { DefinedTool, defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import type { GenericCalcType } from './data/types';
+import allGenericCalcs from './data/index';
 
-async function importComponent() {
+async function importComponent(data: GenericCalcType) {
   const x = await import('./index');
-  return { default: x.default() };
+  return { default: await x.default(data) };
 }
-export const tool = defineTool('number', {
-  name: 'Generic calc',
-  path: 'generic-calc',
-  icon: '',
-  description: '',
-  shortDescription: '',
-  keywords: ['generic', 'calc'],
-  longDescription: '',
-  component: lazy(importComponent)
+
+const tools: DefinedTool[] = [];
+
+allGenericCalcs.forEach((x) => {
+  async function importComponent2() {
+    return await importComponent(x);
+  }
+
+  tools.push(
+    defineTool('number', {
+      name: x.title,
+      path: 'generic-calc/x.name',
+      icon: '',
+      description: '',
+      shortDescription: '',
+      keywords: ['generic', 'calc'],
+      longDescription: '',
+      component: lazy(importComponent2)
+    })
+  );
 });
+
+export { tools };
