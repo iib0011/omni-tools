@@ -9,8 +9,10 @@ import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import SimpleRadio from '@components/options/SimpleRadio';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
+import { processImage } from './service';
+import { InitialValuesType } from './types';
 
-const initialValues = {
+const initialValues: InitialValuesType = {
   resizeMethod: 'pixels' as 'pixels' | 'percentage',
   dimensionType: 'width' as 'width' | 'height',
   width: '800',
@@ -18,8 +20,6 @@ const initialValues = {
   percentage: '50',
   maintainAspectRatio: true
 };
-
-type InitialValuesType = typeof initialValues;
 
 const validationSchema = Yup.object({
   width: Yup.number().when('resizeMethod', {
@@ -48,82 +48,9 @@ export default function ResizeImage({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
-  const compute = (optionsValues: InitialValuesType, input: any) => {
+  const compute = async (optionsValues: InitialValuesType, input: any) => {
     if (!input) return;
-
-    const {
-      resizeMethod,
-      dimensionType,
-      width,
-      height,
-      percentage,
-      maintainAspectRatio
-    } = optionsValues;
-
-    const processImage = async (file: File) => {
-      // Create canvas
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      if (ctx == null) return;
-
-      // Load image
-      const img = new Image();
-      img.src = URL.createObjectURL(file);
-      await img.decode();
-
-      // Calculate new dimensions
-      let newWidth = img.width;
-      let newHeight = img.height;
-
-      if (resizeMethod === 'pixels') {
-        if (dimensionType === 'width') {
-          newWidth = parseInt(width);
-          if (maintainAspectRatio) {
-            newHeight = Math.round((newWidth / img.width) * img.height);
-          } else {
-            newHeight = parseInt(height);
-          }
-        } else {
-          // height
-          newHeight = parseInt(height);
-          if (maintainAspectRatio) {
-            newWidth = Math.round((newHeight / img.height) * img.width);
-          } else {
-            newWidth = parseInt(width);
-          }
-        }
-      } else {
-        // percentage
-        const scale = parseInt(percentage) / 100;
-        newWidth = Math.round(img.width * scale);
-        newHeight = Math.round(img.height * scale);
-      }
-
-      // Set canvas dimensions
-      canvas.width = newWidth;
-      canvas.height = newHeight;
-
-      // Draw resized image
-      ctx.drawImage(img, 0, 0, newWidth, newHeight);
-
-      // Determine output type based on input file
-      let outputType = 'image/png';
-      if (file.type) {
-        outputType = file.type;
-      }
-
-      // Convert canvas to blob and create file
-      canvas.toBlob((blob) => {
-        if (blob) {
-          const newFile = new File([blob], file.name, {
-            type: outputType
-          });
-          setResult(newFile);
-        }
-      }, outputType);
-    };
-
-    processImage(input);
+    setResult(await processImage(input, optionsValues));
   };
 
   const getGroups: GetGroupsType<InitialValuesType> = ({
