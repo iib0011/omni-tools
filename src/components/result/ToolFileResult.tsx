@@ -15,7 +15,7 @@ export default function ToolFileResult({
 }: {
   title?: string;
   value: File | null;
-  extension: string;
+  extension?: string;
   loading?: boolean;
   loadingText?: string;
 }) {
@@ -50,9 +50,11 @@ export default function ToolFileResult({
 
   const handleDownload = () => {
     if (value) {
-      const hasExtension = value.name.includes('.');
-      const filename = hasExtension ? value.name : `${value.name}.${extension}`;
-
+      let filename: string = value.name;
+      if (extension) {
+        const hasExtension = filename.includes('.');
+        filename = hasExtension ? filename : `${filename}.${extension}`;
+      }
       const blob = new Blob([value], { type: value.type });
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
