@@ -23,8 +23,8 @@ export type ToolCategory =
   | 'json'
   | 'time'
   | 'csv'
-  | 'time'
-  | 'pdf';
+  | 'pdf'
+  | 'image-generic';
 
 export interface DefinedTool {
   type: ToolCategory;
