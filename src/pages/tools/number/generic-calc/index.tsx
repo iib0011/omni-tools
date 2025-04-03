@@ -14,6 +14,7 @@ import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolTextResult from '@components/result/ToolTextResult';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
+import NumericInputWithUnit from '@components/input/NumericInputWithUnit';
 import { UpdateField } from '@components/options/ToolOptions';
 import { InitialValuesType } from './types';
 import type { GenericCalcType } from './data/types';
@@ -42,7 +43,7 @@ export default async function makeTool(
 
   return function GenericCalc({ title }: ToolComponentProps) {
     const [result, setResult] = useState<string>('');
-    const [shortResult, setShortResult] = useState<string>('');
+    const [shortResult, setShortResult] = useState<number>('');
 
     // For UX purposes we need to track what vars are
     const [valsBoundToPreset, setValsBoundToPreset] = useState<{
@@ -56,6 +57,7 @@ export default async function makeTool(
     const updateVarField = (
       name: string,
       value: number,
+      unit: string,
       values: InitialValuesType,
       updateFieldFunc: UpdateField<InitialValuesType>
     ) => {
@@ -63,7 +65,7 @@ export default async function makeTool(
       const newVars = { ...values.vars };
       newVars[name] = {
         value,
-        unit: values.vars[name]?.unit || ''
+        unit: unit
       };
       updateFieldFunc('vars', newVars);
     };
@@ -111,6 +113,9 @@ export default async function makeTool(
               dataTableLookup(dataTables[selectionData.source], preset)[
                 selectionData.bind[key]
               ],
+
+              dataTables[selectionData.source].columns[selectionData.bind[key]]
+                ?.unit || '',
               currentValues,
               updateFieldFunc
             );
@@ -225,7 +230,6 @@ export default async function makeTool(
                   <TableRow>
                     <TableCell>Variable</TableCell>
                     <TableCell>Value</TableCell>
-                    <TableCell>Unit</TableCell>
                     <TableCell>Solve For</TableCell>
                   </TableRow>
                 </TableHead>
@@ -234,15 +238,17 @@ export default async function makeTool(
                     <TableRow key={variable.name}>
                       <TableCell>{variable.title}</TableCell>
                       <TableCell>
-                        <TextFieldWithDesc
+                        <NumericInputWithUnit
                           title={variable.title}
                           sx={{ width: '25ch' }}
                           description={valsBoundToPreset[variable.name] || ''}
-                          value={
-                            values.outputVariable === variable.name
-                              ? shortResult
-                              : values.vars[variable.name]?.value || NaN
-                          }
+                          value={{
+                            value:
+                              values.outputVariable === variable.name
+                                ? shortResult
+                                : values.vars[variable.name]?.value || NaN,
+                            unit: values.vars[variable.name]?.unit || ''
+                          }}
                           disabled={
                             values.outputVariable === variable.name ||
                             valsBoundToPreset[variable.name] !== undefined
@@ -250,7 +256,8 @@ export default async function makeTool(
                           onOwnChange={(val) =>
                             updateVarField(
                               variable.name,
-                              parseFloat(val),
+                              parseFloat(val.value),
+                              val.unit,
                               values,
                               updateField
                             )
@@ -258,7 +265,6 @@ export default async function makeTool(
                           type="number"
                         />
                       </TableCell>
-                      <TableCell>{variable.unit}</TableCell>
 
                       <TableCell>
                         <Radio
@@ -320,9 +326,9 @@ export default async function makeTool(
                 result.toDecimal()
               );
             }
-            setShortResult(result.toDecimal());
+            setShortResult(parseFloat(result.toDecimal()));
           } else {
-            setShortResult('');
+            setShortResult(NaN);
           }
 
           if (calcData.extraOutputs !== undefined) {
