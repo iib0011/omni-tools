@@ -219,12 +219,20 @@ export default function CompressPdf({
       ]}
       toolInfo={{
         title: 'How to Use the Compress PDF Tool',
-        description: `This tool allows you to compress PDF files to reduce their size while maintaining reasonable quality.
+        description: `This tool allows you to compress PDF files securely in your browser using Ghostscript, a powerful PDF processing engine. Your files never leave your device, ensuring complete privacy and security.
 
 Choose a compression level:
-- Low Compression: Slightly reduces file size with minimal quality loss
-- Medium Compression: Balances between file size and quality
-- High Compression: Maximum file size reduction with some quality loss
+- Low Compression: Slightly reduces file size with minimal quality loss (72 dpi images)
+- Medium Compression: Balances between file size and quality (150 dpi images) - Recommended for most cases
+- High Compression: Maximum file size reduction with some quality loss (300 dpi images)
+
+How it works:
+1. Upload your PDF file
+2. Select your desired compression level
+3. Click "Compress" and wait for processing
+4. Download your compressed PDF
+
+The tool uses WebAssembly to run Ghostscript directly in your browser, which is why the first compression might take a moment to load the necessary components (about 18MB).
 
 Note: The compression results may vary depending on the content of your PDF. Documents with many images will typically see greater size reduction than text-only documents.
 

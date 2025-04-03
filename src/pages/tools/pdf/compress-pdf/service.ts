@@ -1,6 +1,14 @@
-import { CompressionLevel, InitialValuesType } from './types';
-import { PDFDocument } from 'pdf-lib';
+import { InitialValuesType } from './types';
+import { _GSPS2PDF } from '../../../../lib/worker-init';
 
+/**
+ * Compresses a PDF file using either Ghostscript WASM (preferred)
+ * or falls back to pdf-lib if WASM fails
+ *
+ * @param pdfFile - The PDF file to compress
+ * @param options - Compression options including compression level
+ * @returns A Promise that resolves to a compressed PDF File
+ */
 export async function compressPdf(
   pdfFile: File,
   options: InitialValuesType
@@ -10,50 +18,24 @@ export async function compressPdf(
     throw new Error('The provided file is not a PDF');
   }
 
-  // Read the file as an ArrayBuffer
-  const arrayBuffer = await pdfFile.arrayBuffer();
-
-  // Load PDF document using pdf-lib
-  const pdfDoc = await PDFDocument.load(arrayBuffer);
-
-  // Apply compression based on the selected level
-  const compressionOptions = getCompressionOptions(options.compressionLevel);
-
-  // pdf-lib has different compression approach than mupdf
-  // Compression is applied during the save operation
-  const compressedPdfBytes = await pdfDoc.save({
-    useObjectStreams: true, // More efficient storage
-    ...compressionOptions
-  });
-
-  // Create a new File object with the compressed PDF
-  return new File([compressedPdfBytes], `compressed_${pdfFile.name}`, {
-    type: 'application/pdf'
-  });
+  const dataObject = { psDataURL: URL.createObjectURL(pdfFile) };
+  const compressedFileUrl: string = await _GSPS2PDF(dataObject);
+  return await loadPDFData(compressedFileUrl, pdfFile.name);
 }
 
-/**
- * Helper function to get compression options based on level
- * @param level - Compression level (low, medium, or high)
- * @returns Object with appropriate compression settings for pdf-lib
- */
-function getCompressionOptions(level: CompressionLevel) {
-  switch (level) {
-    case 'low':
-      return {
-        addDefaultPage: false,
-        compress: true
-      };
-    case 'medium':
-      return {
-        addDefaultPage: false,
-        compress: true
-      };
-    case 'high':
-      return {
-        addDefaultPage: false,
-        compress: true,
-        objectsPerTick: 100 // Process more objects at once for higher compression
-      };
-  }
+function loadPDFData(url: string, filename: string): Promise<File> {
+  return new Promise((resolve) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.responseType = 'arraybuffer';
+    xhr.onload = function () {
+      window.URL.revokeObjectURL(url);
+      const blob = new Blob([xhr.response], { type: 'application/pdf' });
+      const newFile = new File([blob], filename, {
+        type: 'application/pdf'
+      });
+      resolve(newFile);
+    };
+    xhr.send();
+  });
 }

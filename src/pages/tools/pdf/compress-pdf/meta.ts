@@ -5,8 +5,9 @@ export const tool = defineTool('pdf', {
   name: 'Compress PDF',
   path: 'compress-pdf',
   icon: 'material-symbols:compress',
-  description: 'Reduce PDF file size while maintaining quality',
-  shortDescription: 'Compress PDF files to reduce size',
+  description:
+    'Reduce PDF file size while maintaining quality using Ghostscript',
+  shortDescription: 'Compress PDF files securely in your browser',
   keywords: [
     'pdf',
     'compress',
@@ -14,9 +15,14 @@ export const tool = defineTool('pdf', {
     'size',
     'optimize',
     'shrink',
-    'file size'
+    'file size',
+    'ghostscript',
+    'secure',
+    'private',
+    'browser',
+    'webassembly'
   ],
   longDescription:
-    'Compress PDF files to reduce their size while maintaining reasonable quality. Useful for sharing documents via email, uploading to websites, or saving storage space.',
+    'Compress PDF files securely in your browser using Ghostscript. Your files never leave your device, ensuring complete privacy while reducing file sizes for email sharing, uploading to websites, or saving storage space. Powered by WebAssembly technology.',
   component: lazy(() => import('./index'))
 });
