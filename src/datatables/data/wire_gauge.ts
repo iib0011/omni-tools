@@ -69,7 +69,7 @@ const data: DataTable = {
 };
 
 for (const key in data.data) {
-  data.data[key].area = Math.PI * data.data[key].diameter ** 2;
+  data.data[key].area = Math.PI * (data.data[key].diameter / 2) ** 2;
 }
 
 export default data;

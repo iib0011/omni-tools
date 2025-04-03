@@ -2,6 +2,12 @@ export interface GenericCalcType {
   title: string;
   name: string;
   formula: string;
+
+  extraOutputs?: {
+    title: string;
+    formula: string;
+    unit: string;
+  }[];
   selections?: {
     title: string;
     source: string;

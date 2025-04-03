@@ -49,6 +49,10 @@ export default async function makeTool(
       [key: string]: string;
     }>({});
 
+    const [extraOutputs, setExtraOutputs] = useState<{
+      [key: string]: string;
+    }>({});
+
     const updateVarField = (
       name: string,
       value: number,
@@ -273,6 +277,15 @@ export default async function makeTool(
                       </TableCell>
                     </TableRow>
                   ))}
+
+                  {calcData.extraOutputs?.map((extraOutput) => (
+                    <TableRow key={extraOutput.title}>
+                      <TableCell>{extraOutput.title}</TableCell>
+                      <TableCell>{extraOutputs[extraOutput.title]}</TableCell>
+                      <TableCell>{extraOutput.unit}</TableCell>
+                      <TableCell></TableCell>
+                    </TableRow>
+                  ))}
                 </TableBody>
               </Table>
             )
@@ -310,6 +323,25 @@ export default async function makeTool(
             setShortResult(result.toDecimal());
           } else {
             setShortResult('');
+          }
+
+          if (calcData.extraOutputs !== undefined) {
+            for (let i = 0; i < calcData.extraOutputs.length; i++) {
+              const extraOutput = calcData.extraOutputs[i];
+
+              let expr = nerdamer(extraOutput.formula);
+
+              Object.keys(values.vars).forEach((key) => {
+                if (key === values.outputVariable) return;
+                expr = expr.sub(key, values.vars[key].value.toString());
+              });
+
+              const result: nerdamer.Expression = expr.evaluate();
+
+              if (result) {
+                extraOutputs[extraOutput.title] = result.toDecimal();
+              }
+            }
           }
         }}
       />

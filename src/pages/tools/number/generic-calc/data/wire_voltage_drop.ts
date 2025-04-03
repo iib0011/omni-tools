@@ -2,7 +2,7 @@ import type { GenericCalcType } from './types';
 const voltagedropinwire: GenericCalcType = {
   title: 'Round trip voltage drop in cable',
   name: 'cable-voltage-drop',
-  formula: 'x = (((p * L) / (A/10**6) ) *2) * I**2',
+  formula: 'x = (((p * L) / (A/10**6) ) *2) * I',
   selections: [
     {
       title: 'Material',
@@ -20,6 +20,19 @@ const voltagedropinwire: GenericCalcType = {
       bind: {
         A: 'area'
       }
+    }
+  ],
+
+  extraOutputs: [
+    {
+      title: 'Total Resistance',
+      formula: '((p * L) / (A/10**6))*2',
+      unit: 'Ω'
+    },
+    {
+      title: 'Total Power Dissipated',
+      formula: 'I**2 * (((p * L) / (A/10**6))*2)',
+      unit: 'W'
     }
   ],
   variables: [
