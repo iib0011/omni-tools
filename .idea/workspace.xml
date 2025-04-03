@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: vite worker format">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: uninstall @jspawn/ghostscript-wasm">
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ghostscript/background-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ghostscript/background-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ghostscript/worker-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ghostscript/worker-init.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,11 +320,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
         <item itemvalue="Vitest.parsePageRanges" />
         <item itemvalue="Vitest.timeBetweenDates" />
         <item itemvalue="Vitest.calculateTimeBetweenDates" />
-        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -406,22 +415,8 @@
       <workItem from="1743397561176" duration="25000" />
       <workItem from="1743458576265" duration="13083000" />
       <workItem from="1743690613245" duration="77000" />
-    </task>
-    <task id="LOCAL-00138" summary="feat: remove duplicate lines">
-      <option name="closed" value="true" />
-      <created>1740884332734</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1740884332735</updated>
-    </task>
-    <task id="LOCAL-00139" summary="fix: tsc">
-      <option name="closed" value="true" />
-      <created>1740884971377</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1740884971378</updated>
+      <workItem from="1743691250813" duration="1550000" />
+      <workItem from="1743699386059" duration="6244000" />
     </task>
     <task id="LOCAL-00140" summary="style: optimizations">
       <option name="closed" value="true" />
@@ -799,7 +794,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743647707334</updated>
     </task>
-    <option name="localTasksCounter" value="187" />
+    <task id="LOCAL-00187" summary="fix: tests">
+      <option name="closed" value="true" />
+      <created>1743691399769</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1743691399769</updated>
+    </task>
+    <task id="LOCAL-00188" summary="chore: uninstall @jspawn/ghostscript-wasm">
+      <option name="closed" value="true" />
+      <created>1743691471368</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1743691471368</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -846,8 +857,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: missing meta" />
-    <MESSAGE value="feat: trim video" />
     <MESSAGE value="refactor: file inputs" />
     <MESSAGE value="feat: background removal" />
     <MESSAGE value="feat: split pdf" />
@@ -871,7 +880,9 @@
     <MESSAGE value="refactor: lib" />
     <MESSAGE value="fix: path" />
     <MESSAGE value="fix: vite worker format" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: vite worker format" />
+    <MESSAGE value="fix: tests" />
+    <MESSAGE value="chore: uninstall @jspawn/ghostscript-wasm" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: uninstall @jspawn/ghostscript-wasm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

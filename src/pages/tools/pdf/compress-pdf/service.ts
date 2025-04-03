@@ -1,5 +1,6 @@
 import { InitialValuesType } from './types';
 import { compressWithGhostScript } from '../../../../lib/ghostscript/worker-init';
+import { loadPDFData } from '../utils';
 
 /**
  * Compresses a PDF file using either Ghostscript WASM (preferred)
@@ -24,21 +25,4 @@ export async function compressPdf(
   };
   const compressedFileUrl: string = await compressWithGhostScript(dataObject);
   return await loadPDFData(compressedFileUrl, pdfFile.name);
-}
-
-function loadPDFData(url: string, filename: string): Promise<File> {
-  return new Promise((resolve) => {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', url);
-    xhr.responseType = 'arraybuffer';
-    xhr.onload = function () {
-      window.URL.revokeObjectURL(url);
-      const blob = new Blob([xhr.response], { type: 'application/pdf' });
-      const newFile = new File([blob], filename, {
-        type: 'application/pdf'
-      });
-      resolve(newFile);
-    };
-    xhr.send();
-  });
 }
