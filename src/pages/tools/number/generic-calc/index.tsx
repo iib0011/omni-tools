@@ -252,6 +252,10 @@ export default async function makeTool(
                             values.outputVariable === variable.name ||
                             valsBoundToPreset[variable.name] !== undefined
                           }
+                          disableChangingUnit={
+                            values.outputVariable === variable.name ||
+                            valsBoundToPreset[variable.name] !== undefined
+                          }
                           onOwnChange={(val) =>
                             updateVarField(
                               variable.name,

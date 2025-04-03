@@ -45,7 +45,7 @@ const voltagedropinwire: GenericCalcType = {
     {
       name: 'A',
       title: 'Wire Area',
-      unit: 'mm',
+      unit: 'mm2',
       default: 1
     },
 

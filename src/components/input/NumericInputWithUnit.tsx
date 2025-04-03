@@ -19,6 +19,8 @@ const siPrefixes: { [key: string]: number } = {
 
 export default function NumericInputWithUnit(props: {
   value: { value: number; unit: string };
+  disabled?: boolean;
+  disableChangingUnit?: boolean;
   onOwnChange: (value: { value: number; unit: string }, ...baseProps) => void;
   defaultPrefix?: string;
 }) {
@@ -31,6 +33,10 @@ export default function NumericInputWithUnit(props: {
     try {
       const kind = Qty(props.value.unit).kind();
       const units = Qty.getUnits(kind);
+      if (!units.includes(props.value.unit)) {
+        units.push(props.value.unit);
+      }
+
       setUnitOptions(units);
     } catch (error) {
       console.error('Invalid unit kind', error);
@@ -102,9 +108,10 @@ export default function NumericInputWithUnit(props: {
       alignItems="center"
       style={{ minWidth: '20rem' }}
     >
-      <Grid item xs={6}>
+      <Grid item xs={4}>
         <TextFieldWithDesc
           {...props.baseProps}
+          disabled={props.disabled}
           type="number"
           fullWidth
           value={(inputValue / siPrefixes[prefix])
@@ -120,11 +127,12 @@ export default function NumericInputWithUnit(props: {
       <Grid item xs={3}>
         <Select
           fullWidth
+          disabled={props.disableChangingUnit}
           label="Prefix"
           title="Prefix"
           value={prefix}
           onChange={(event, newValue) => {
-            handlePrefixChange(newValue.props.value || '');
+            handlePrefixChange(newValue?.props?.value || '');
           }}
         >
           {Object.keys(siPrefixes).map((key) => (
@@ -135,17 +143,23 @@ export default function NumericInputWithUnit(props: {
         </Select>
       </Grid>
 
-      <Grid item xs={3}>
-        <Autocomplete
-          options={unitOptions}
+      <Grid item xs={5}>
+        <Select
+          fullWidth
+          disabled={props.disableChangingUnit}
+          label="Unit"
+          title="Unit"
           value={unit}
           onChange={(event, newValue) => {
-            handleUnitChange(newValue || '');
+            handleUnitChange(newValue?.props?.value || '');
           }}
-          renderInput={(params) => (
-            <TextField {...params} label="Unit" fullWidth />
-          )}
-        />
+        >
+          {unitOptions.map((key) => (
+            <MenuItem key={key} value={key}>
+              {key}
+            </MenuItem>
+          ))}
+        </Select>
       </Grid>
     </Grid>
   );

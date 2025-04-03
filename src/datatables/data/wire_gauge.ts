@@ -2,20 +2,18 @@ import type { DataTable } from '../types';
 
 const data: DataTable = {
   title: 'American Wire Gauge',
-  columns: [
-    {
-      diameter: {
-        title: 'Diameter',
-        type: 'number',
-        unit: 'mm'
-      },
-      area: {
-        title: 'Area',
-        type: 'number',
-        unit: 'mm^2'
-      }
+  columns: {
+    diameter: {
+      title: 'Diameter',
+      type: 'number',
+      unit: 'mm'
+    },
+    area: {
+      title: 'Area',
+      type: 'number',
+      unit: 'mm2'
     }
-  ],
+  },
   data: {
     '0000 AWG': { diameter: 11.684 },
     '000 AWG': { diameter: 10.405 },
