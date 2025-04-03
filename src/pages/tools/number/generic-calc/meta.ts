@@ -19,8 +19,8 @@ allGenericCalcs.forEach((x) => {
     defineTool('number', {
       name: x.title,
       path: 'generic-calc/' + x.name,
-      icon: '',
-      description: '',
+      icon: 'lsicon:number-filled',
+      description: x.description || '',
       shortDescription: '',
       keywords: ['generic', 'calc'],
       longDescription: '',

@@ -3,6 +3,7 @@ import type { GenericCalcType } from './types';
 const ohmsLawCalc: GenericCalcType = {
   title: "Ohm's Law",
   name: 'ohms-law',
+  description: 'Calculates voltage, current and resistance',
   formula: 'V = I * R',
   selections: [],
   variables: [
