@@ -20,7 +20,8 @@
       "@tools/*": ["./tools/*"],
       "@assets/*": ["./assets/*"],
       "@components/*": ["./components/*"],
-      "@utils/*": ["./utils/*"]
+      "@utils/*": ["./utils/*"],
+      "@lib/*": ["./lib/*"]
     }
   },
   "include": ["src", "./@types"],

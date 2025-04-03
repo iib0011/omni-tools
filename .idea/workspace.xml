@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: compress pdf">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: compress pdf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/worker-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/worker-init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/background-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ghostscript/background-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/gs-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ghostscript/gs-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/worker-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ghostscript/worker-init.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,11 +230,11 @@
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\.husky" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\lib\ghostscript" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\@types" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\tools" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\categories" />
-      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -407,14 +410,6 @@
       <workItem from="1743348610793" duration="21855000" />
       <workItem from="1743397561176" duration="25000" />
       <workItem from="1743458576265" duration="13083000" />
-    </task>
-    <task id="LOCAL-00134" summary="chore: prettify json in home">
-      <option name="closed" value="true" />
-      <created>1740662154978</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1740662154978</updated>
     </task>
     <task id="LOCAL-00135" summary="feat: jakarta font">
       <option name="closed" value="true" />
@@ -800,7 +795,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743644598841</updated>
     </task>
-    <option name="localTasksCounter" value="183" />
+    <task id="LOCAL-00183" summary="refactor: compress pdf">
+      <option name="closed" value="true" />
+      <created>1743644703041</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1743644703042</updated>
+    </task>
+    <option name="localTasksCounter" value="184" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -847,7 +850,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: use ToolContent" />
     <MESSAGE value="fix: prettify json" />
     <MESSAGE value="refactor: sum" />
     <MESSAGE value="fix: tools by category scroll" />
@@ -872,7 +874,8 @@
     <MESSAGE value="docs: optimize" />
     <MESSAGE value="fix: stars button width for 1k+ " />
     <MESSAGE value="feat: compress pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: compress pdf" />
+    <MESSAGE value="refactor: compress pdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: compress pdf" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
