@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: path">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: compression level">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ghostscript/background-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ghostscript/background-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -409,14 +407,6 @@
       <workItem from="1743397561176" duration="25000" />
       <workItem from="1743458576265" duration="13083000" />
     </task>
-    <task id="LOCAL-00137" summary="docs: readme">
-      <option name="closed" value="true" />
-      <created>1740788899030</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1740788899030</updated>
-    </task>
     <task id="LOCAL-00138" summary="feat: remove duplicate lines">
       <option name="closed" value="true" />
       <created>1740884332734</created>
@@ -801,7 +791,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743645074051</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="feat: compression level">
+      <option name="closed" value="true" />
+      <created>1743645741712</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1743645741712</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -848,7 +846,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: tools by category scroll" />
     <MESSAGE value="fix: missing meta" />
     <MESSAGE value="feat: trim video" />
     <MESSAGE value="refactor: file inputs" />
@@ -873,7 +870,8 @@
     <MESSAGE value="refactor: compress pdf" />
     <MESSAGE value="refactor: lib" />
     <MESSAGE value="fix: path" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: path" />
+    <MESSAGE value="feat: compression level" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: compression level" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
