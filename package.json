@@ -32,6 +32,7 @@
     "@ffmpeg/util": "^0.12.2",
     "@imgly/background-removal": "^1.6.0",
     "@jimp/types": "^1.6.0",
+    "@jspawn/ghostscript-wasm": "^0.0.2",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "@playwright/test": "^1.45.0",
