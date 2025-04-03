@@ -5,6 +5,23 @@ function loadScript() {
 var Module;
 
 function _GSPS2PDF(dataStruct, responseCallback) {
+  const compressionLevel = dataStruct.compressionLevel || 'medium';
+
+  // Set PDF settings based on compression level
+  let pdfSettings;
+  switch (compressionLevel) {
+    case 'low':
+      pdfSettings = '/printer'; // Higher quality, less compression
+      break;
+    case 'medium':
+      pdfSettings = '/ebook'; // Medium quality and compression
+      break;
+    case 'high':
+      pdfSettings = '/screen'; // Lower quality, higher compression
+      break;
+    default:
+      pdfSettings = '/ebook'; // Default to medium
+  }
   // first download the ps data
   var xhr = new XMLHttpRequest();
   xhr.open('GET', dataStruct.psDataURL);
@@ -33,7 +50,7 @@ function _GSPS2PDF(dataStruct, responseCallback) {
       arguments: [
         '-sDEVICE=pdfwrite',
         '-dCompatibilityLevel=1.4',
-        '-dPDFSETTINGS=/ebook',
+        `-dPDFSETTINGS=${pdfSettings}`,
         '-DNOPAUSE',
         '-dQUIET',
         '-dBATCH',

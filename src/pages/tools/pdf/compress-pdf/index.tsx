@@ -152,7 +152,6 @@ export default function CompressPdf({
       setInput={setInput}
       initialValues={initialValues}
       compute={compute}
-      exampleCards={exampleCards}
       inputComponent={
         <ToolPdfInput
           value={input}
@@ -175,22 +174,23 @@ export default function CompressPdf({
           title: 'Compression Settings',
           component: (
             <Box>
-              <Typography variant="subtitle2" sx={{ mb: 1 }}>
-                Compression Level
-              </Typography>
+              <Box>
+                <Typography variant="subtitle2" sx={{ mb: 1 }}>
+                  Compression Level
+                </Typography>
 
-              {compressionOptions.map((option) => (
-                <SimpleRadio
-                  key={option.value}
-                  title={option.label}
-                  description={option.description}
-                  checked={values.compressionLevel === option.value}
-                  onClick={() => {
-                    updateField('compressionLevel', option.value);
-                  }}
-                />
-              ))}
-
+                {compressionOptions.map((option) => (
+                  <SimpleRadio
+                    key={option.value}
+                    title={option.label}
+                    description={option.description}
+                    checked={values.compressionLevel === option.value}
+                    onClick={() => {
+                      updateField('compressionLevel', option.value);
+                    }}
+                  />
+                ))}
+              </Box>
               {fileInfo && (
                 <Box
                   sx={{
@@ -217,27 +217,6 @@ export default function CompressPdf({
           )
         }
       ]}
-      toolInfo={{
-        title: 'How to Use the Compress PDF Tool',
-        description: `This tool allows you to compress PDF files securely in your browser using Ghostscript, a powerful PDF processing engine. Your files never leave your device, ensuring complete privacy and security.
-
-Choose a compression level:
-- Low Compression: Slightly reduces file size with minimal quality loss (72 dpi images)
-- Medium Compression: Balances between file size and quality (150 dpi images) - Recommended for most cases
-- High Compression: Maximum file size reduction with some quality loss (300 dpi images)
-
-How it works:
-1. Upload your PDF file
-2. Select your desired compression level
-3. Click "Compress" and wait for processing
-4. Download your compressed PDF
-
-The tool uses WebAssembly to run Ghostscript directly in your browser, which is why the first compression might take a moment to load the necessary components (about 18MB).
-
-Note: The compression results may vary depending on the content of your PDF. Documents with many images will typically see greater size reduction than text-only documents.
-
-${longDescription}`
-      }}
     />
   );
 }

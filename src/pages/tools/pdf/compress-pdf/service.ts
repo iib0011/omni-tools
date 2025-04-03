@@ -18,7 +18,10 @@ export async function compressPdf(
     throw new Error('The provided file is not a PDF');
   }
 
-  const dataObject = { psDataURL: URL.createObjectURL(pdfFile) };
+  const dataObject = {
+    psDataURL: URL.createObjectURL(pdfFile),
+    compressionLevel: options.compressionLevel
+  };
   const compressedFileUrl: string = await compressWithGhostScript(dataObject);
   return await loadPDFData(compressedFileUrl, pdfFile.name);
 }

@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: compress pdf">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: path">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/background-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ghostscript/background-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/gs-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ghostscript/gs-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/worker-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ghostscript/worker-init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/ghostscript/background-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ghostscript/background-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -411,22 +409,6 @@
       <workItem from="1743397561176" duration="25000" />
       <workItem from="1743458576265" duration="13083000" />
     </task>
-    <task id="LOCAL-00135" summary="feat: jakarta font">
-      <option name="closed" value="true" />
-      <created>1740665609483</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1740665609483</updated>
-    </task>
-    <task id="LOCAL-00136" summary="chore: img">
-      <option name="closed" value="true" />
-      <created>1740680778110</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1740680778110</updated>
-    </task>
     <task id="LOCAL-00137" summary="docs: readme">
       <option name="closed" value="true" />
       <created>1740788899030</created>
@@ -803,7 +785,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743644703042</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="refactor: lib">
+      <option name="closed" value="true" />
+      <created>1743644942488</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1743644942488</updated>
+    </task>
+    <task id="LOCAL-00185" summary="fix: path">
+      <option name="closed" value="true" />
+      <created>1743645074051</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1743645074051</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -850,8 +848,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: prettify json" />
-    <MESSAGE value="refactor: sum" />
     <MESSAGE value="fix: tools by category scroll" />
     <MESSAGE value="fix: missing meta" />
     <MESSAGE value="feat: trim video" />
@@ -875,7 +871,9 @@
     <MESSAGE value="fix: stars button width for 1k+ " />
     <MESSAGE value="feat: compress pdf" />
     <MESSAGE value="refactor: compress pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: compress pdf" />
+    <MESSAGE value="refactor: lib" />
+    <MESSAGE value="fix: path" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: path" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
