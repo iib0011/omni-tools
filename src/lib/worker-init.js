@@ -1,9 +1,4 @@
-export async function _GSPS2PDF(
-  dataStruct,
-  responseCallback,
-  progressCallback,
-  statusUpdateCallback
-) {
+export async function compressWithGhostScript(dataStruct) {
   const worker = new Worker(
     new URL('./background-worker.js', import.meta.url),
     { type: 'module' }

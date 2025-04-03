@@ -1,5 +1,5 @@
 import { InitialValuesType } from './types';
-import { _GSPS2PDF } from '../../../../lib/worker-init';
+import { compressWithGhostScript } from '../../../../lib/worker-init';
 
 /**
  * Compresses a PDF file using either Ghostscript WASM (preferred)
@@ -19,7 +19,7 @@ export async function compressPdf(
   }
 
   const dataObject = { psDataURL: URL.createObjectURL(pdfFile) };
-  const compressedFileUrl: string = await _GSPS2PDF(dataObject);
+  const compressedFileUrl: string = await compressWithGhostScript(dataObject);
   return await loadPDFData(compressedFileUrl, pdfFile.name);
 }
 
