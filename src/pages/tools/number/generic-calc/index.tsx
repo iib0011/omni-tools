@@ -13,7 +13,6 @@ import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolTextResult from '@components/result/ToolTextResult';
-import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import NumericInputWithUnit from '@components/input/NumericInputWithUnit';
 import { UpdateField } from '@components/options/ToolOptions';
 import { InitialValuesType } from './types';
@@ -51,7 +50,7 @@ export default async function makeTool(
     }>({});
 
     const [extraOutputs, setExtraOutputs] = useState<{
-      [key: string]: string;
+      [key: string]: number;
     }>({});
 
     const updateVarField = (
@@ -240,8 +239,8 @@ export default async function makeTool(
                       <TableCell>
                         <NumericInputWithUnit
                           title={variable.title}
-                          sx={{ width: '25ch' }}
                           description={valsBoundToPreset[variable.name] || ''}
+                          defaultPrefix={variable.defaultPrefix}
                           value={{
                             value:
                               values.outputVariable === variable.name
@@ -287,7 +286,17 @@ export default async function makeTool(
                   {calcData.extraOutputs?.map((extraOutput) => (
                     <TableRow key={extraOutput.title}>
                       <TableCell>{extraOutput.title}</TableCell>
-                      <TableCell>{extraOutputs[extraOutput.title]}</TableCell>
+                      <TableCell>
+                        <NumericInputWithUnit
+                          title={extraOutput.title}
+                          disabled={true}
+                          defaultPrefix={extraOutput.defaultPrefix}
+                          value={{
+                            value: extraOutputs[extraOutput.title],
+                            unit: extraOutput.unit
+                          }}
+                        ></NumericInputWithUnit>
+                      </TableCell>
                       <TableCell>{extraOutput.unit}</TableCell>
                       <TableCell></TableCell>
                     </TableRow>
@@ -345,7 +354,9 @@ export default async function makeTool(
               const result: nerdamer.Expression = expr.evaluate();
 
               if (result) {
-                extraOutputs[extraOutput.title] = result.toDecimal();
+                extraOutputs[extraOutput.title] = parseFloat(
+                  result.toDecimal()
+                );
               }
             }
           }

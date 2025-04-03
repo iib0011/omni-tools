@@ -7,6 +7,8 @@ export interface GenericCalcType {
     title: string;
     formula: string;
     unit: string;
+    // Si prefix default
+    defaultPrefix?: string;
   }[];
   selections?: {
     title: string;
@@ -20,7 +22,7 @@ export interface GenericCalcType {
     name: string;
     title: string;
     unit: string;
-
+    defaultPrefix?: string;
     // If absence, assume it's the default target var
     default?: number;
   }[];

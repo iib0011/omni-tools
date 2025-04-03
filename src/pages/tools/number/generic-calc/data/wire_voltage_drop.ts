@@ -59,7 +59,8 @@ const voltagedropinwire: GenericCalcType = {
       name: 'p',
       title: 'Resistivity',
       unit: 'Ω/m3',
-      default: 1
+      default: 1,
+      defaultPrefix: 'n'
     },
     {
       name: 'x',
