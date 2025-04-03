@@ -29,6 +29,15 @@ export default function NumericInputWithUnit(props: {
   const [unit, setUnit] = useState(props.value.unit);
   const [unitOptions, setUnitOptions] = useState<string[]>([]);
 
+  const [disabled, setDisabled] = useState(props.disabled);
+  const [disableChangingUnit, setDisableChangingUnit] = useState(
+    props.disableChangingUnit
+  );
+
+  useEffect(() => {
+    setDisabled(props.disabled);
+    setDisableChangingUnit(props.disableChangingUnit);
+  }, [props.disabled, props.disableChangingUnit]);
   useEffect(() => {
     try {
       const kind = Qty(props.value.unit).kind();
@@ -111,7 +120,7 @@ export default function NumericInputWithUnit(props: {
       <Grid item xs={4}>
         <TextFieldWithDesc
           {...props.baseProps}
-          disabled={props.disabled}
+          disabled={disabled}
           type="number"
           fullWidth
           value={(inputValue / siPrefixes[prefix])
@@ -127,7 +136,7 @@ export default function NumericInputWithUnit(props: {
       <Grid item xs={3}>
         <Select
           fullWidth
-          disabled={props.disableChangingUnit}
+          disabled={disableChangingUnit}
           label="Prefix"
           title="Prefix"
           value={prefix}
@@ -146,7 +155,7 @@ export default function NumericInputWithUnit(props: {
       <Grid item xs={5}>
         <Select
           fullWidth
-          disabled={props.disableChangingUnit}
+          disabled={disableChangingUnit}
           label="Unit"
           title="Unit"
           value={unit}
