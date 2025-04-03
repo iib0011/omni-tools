@@ -1,5 +1,5 @@
 import { InitialValuesType } from './types';
-import { compressWithGhostScript } from '@lib/ghostscript/worker-init';
+import { compressWithGhostScript } from '../../../../lib/ghostscript/worker-init';
 
 /**
  * Compresses a PDF file using either Ghostscript WASM (preferred)
