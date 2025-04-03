@@ -15,7 +15,7 @@ export default function ToolFileResult({
 }: {
   title?: string;
   value: File | null;
-  extension: string;
+  extension?: string;
   loading?: boolean;
   loadingText?: string;
 }) {
@@ -50,9 +50,20 @@ export default function ToolFileResult({
 
   const handleDownload = () => {
     if (value) {
-      const hasExtension = value.name.includes('.');
-      const filename = hasExtension ? value.name : `${value.name}.${extension}`;
-
+      let filename: string = value.name;
+      if (extension) {
+        // Split at the last period to separate filename and extension
+        const parts = filename.split('.');
+        // If there's more than one part (meaning there was a period)
+        if (parts.length > 1) {
+          // Remove the last part (the extension) and add the new extension
+          parts.pop();
+          filename = `${parts.join('.')}.${extension}`;
+        } else {
+          // No extension exists, just add it
+          filename = `${filename}.${extension}`;
+        }
+      }
       const blob = new Blob([value], { type: value.type });
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');

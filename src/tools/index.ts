@@ -12,6 +12,19 @@ import { timeTools } from '../pages/tools/time';
 import { IconifyIcon } from '@iconify/react';
 import { pdfTools } from '../pages/tools/pdf';
 
+const toolCategoriesOrder: ToolCategory[] = [
+  'image-generic',
+  'string',
+  'json',
+  'pdf',
+  'list',
+  'csv',
+  'video',
+  'number',
+  'png',
+  'time',
+  'gif'
+];
 export const tools: DefinedTool[] = [
   ...imageTools,
   ...stringTools,
@@ -95,6 +108,13 @@ const categoriesConfig: {
     icon: 'fluent-mdl2:date-time',
     value:
       'Tools for working with time and date – draw clocks and calendars, generate time and date sequences, calculate average time, convert between time zones, and much more.'
+  },
+  {
+    type: 'image-generic',
+    title: 'Image',
+    icon: 'material-symbols-light:image-outline-rounded',
+    value:
+      'Tools for working with pictures – compress, resize, crop, convert to JPG, rotate, remove background and much more.'
   }
 ];
 // use for changelogs
@@ -123,20 +143,22 @@ export const filterTools = (
 
 export const getToolsByCategory = (): {
   title: string;
+  rawTitle: string;
   description: string;
   icon: IconifyIcon | string;
-  type: string;
+  type: ToolCategory;
   example: { title: string; path: string };
   tools: DefinedTool[];
 }[] => {
   const groupedByType: Partial<Record<ToolCategory, DefinedTool[]>> =
     Object.groupBy(tools, ({ type }) => type);
-  return (Object.entries(groupedByType) as Entries<typeof groupedByType>).map(
-    ([type, tools]) => {
+  return (Object.entries(groupedByType) as Entries<typeof groupedByType>)
+    .map(([type, tools]) => {
       const categoryConfig = categoriesConfig.find(
         (config) => config.type === type
       );
       return {
+        rawTitle: categoryConfig?.title ?? capitalizeFirstLetter(type),
         title: `${categoryConfig?.title ?? capitalizeFirstLetter(type)} Tools`,
         description: categoryConfig?.value ?? '',
         type,
@@ -146,6 +168,10 @@ export const getToolsByCategory = (): {
           ? { title: tools[0].name, path: tools[0].path }
           : { title: '', path: '' }
       };
-    }
-  );
+    })
+    .sort(
+      (a, b) =>
+        toolCategoriesOrder.indexOf(a.type) -
+        toolCategoriesOrder.indexOf(b.type)
+    );
 };

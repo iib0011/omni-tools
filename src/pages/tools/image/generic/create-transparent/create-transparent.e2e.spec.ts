@@ -2,22 +2,20 @@ import { expect, test } from '@playwright/test';
 import { Buffer } from 'buffer';
 import path from 'path';
 import Jimp from 'jimp';
-import { convertHexToRGBA } from '@utils/color';
 
-test.describe('Change colors in png', () => {
+test.describe('Create transparent PNG', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/png/change-colors-in-png');
+    await page.goto('/image-generic/create-transparent');
   });
 
-  // test('should change pixel color', async ({ page }) => {
+  //TODO check why failing
+  // test('should make png color transparent', async ({ page }) => {
   //   // Upload image
   //   const fileInput = page.locator('input[type="file"]');
   //   const imagePath = path.join(__dirname, 'test.png');
   //   await fileInput?.setInputFiles(imagePath);
   //
-  //   await page.getByTestId('from-color-input').fill('#FF0000');
-  //   const toColor = '#0000FF';
-  //   await page.getByTestId('to-color-input').fill(toColor);
+  //   await page.getByTestId('color-input').fill('#FF0000');
   //
   //   // Click on download
   //   const downloadPromise = page.waitForEvent('download');
@@ -38,6 +36,6 @@ test.describe('Change colors in png', () => {
   //   // Check that the first pixel is transparent
   //   const image = await Jimp.read(fileContent);
   //   const color = image.getPixelColor(0, 0);
-  //   expect(color).toBe(convertHexToRGBA(toColor));
+  //   expect(color).toBe(0);
   // });
 });

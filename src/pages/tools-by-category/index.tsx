@@ -43,10 +43,11 @@ export default function Home() {
           <IconButton onClick={() => navigate('/')}>
             <ArrowBackIcon color={'primary'} />
           </IconButton>
-          <Typography
-            fontSize={22}
-            color={theme.palette.primary.main}
-          >{`All ${capitalizeFirstLetter(categoryName)} Tools`}</Typography>
+          <Typography fontSize={22} color={theme.palette.primary.main}>{`All ${
+            getToolsByCategory().find(
+              (category) => category.type === categoryName
+            )!.rawTitle
+          } Tools`}</Typography>
         </Stack>
         <Grid container spacing={2} mt={2}>
           {getToolsByCategory()

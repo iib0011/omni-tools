@@ -112,8 +112,8 @@ export default function CreateTransparent({ title }: ToolComponentProps) {
         <ToolImageInput
           value={input}
           onChange={setInput}
-          accept={['image/png']}
-          title={'Input PNG'}
+          accept={['image/*']}
+          title={'Input image'}
         />
       }
       resultComponent={
@@ -131,7 +131,7 @@ export default function CreateTransparent({ title }: ToolComponentProps) {
       toolInfo={{
         title: 'Create Transparent PNG',
         description:
-          'This tool allows you to make specific colors in a PNG image transparent. You can select the color to replace and adjust the similarity threshold to include similar colors.'
+          'This tool allows you to make specific colors in an image transparent. You can select the color to replace and adjust the similarity threshold to include similar colors.'
       }}
     />
   );
