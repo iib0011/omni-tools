@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: uninstall @jspawn/ghostscript-wasm">
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/meta.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/utils.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: protect pdf">
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/image-to-text/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/image-to-text/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/image-to-text/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/image-to-text/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ghostscript/background-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ghostscript/background-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/ghostscript/worker-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/ghostscript/worker-init.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -416,15 +415,7 @@
       <workItem from="1743458576265" duration="13083000" />
       <workItem from="1743690613245" duration="77000" />
       <workItem from="1743691250813" duration="1550000" />
-      <workItem from="1743699386059" duration="6244000" />
-    </task>
-    <task id="LOCAL-00140" summary="style: optimizations">
-      <option name="closed" value="true" />
-      <created>1740936527951</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1740936527951</updated>
+      <workItem from="1743699386059" duration="8791000" />
     </task>
     <task id="LOCAL-00141" summary="feat: ToolContent.tsx">
       <option name="closed" value="true" />
@@ -810,7 +801,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743691471368</updated>
     </task>
-    <option name="localTasksCounter" value="189" />
+    <task id="LOCAL-00189" summary="feat: protect pdf">
+      <option name="closed" value="true" />
+      <created>1743705749057</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1743705749057</updated>
+    </task>
+    <option name="localTasksCounter" value="190" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -857,7 +856,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: file inputs" />
     <MESSAGE value="feat: background removal" />
     <MESSAGE value="feat: split pdf" />
     <MESSAGE value="fix: typo" />
@@ -882,7 +880,8 @@
     <MESSAGE value="fix: vite worker format" />
     <MESSAGE value="fix: tests" />
     <MESSAGE value="chore: uninstall @jspawn/ghostscript-wasm" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: uninstall @jspawn/ghostscript-wasm" />
+    <MESSAGE value="feat: protect pdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: protect pdf" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

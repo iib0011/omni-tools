@@ -57,6 +57,7 @@
     "react-helmet": "^6.1.0",
     "react-image-crop": "^11.0.7",
     "react-router-dom": "^6.23.1",
+    "tesseract.js": "^6.0.0",
     "type-fest": "^4.35.0",
     "use-deep-compare-effect": "^1.8.1",
     "yup": "^1.4.0"
