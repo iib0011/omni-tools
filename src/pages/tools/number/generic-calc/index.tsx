@@ -420,8 +420,8 @@ export default async function makeTool(
 
                   {calcData.extraOutputs?.map((extraOutput) => (
                     <TableRow key={extraOutput.title}>
-                      <TableCell>{extraOutput.title}</TableCell>
                       <TableCell>
+                        {extraOutput.title}
                         <NumericInputWithUnit
                           disabled={true}
                           defaultPrefix={extraOutput.defaultPrefix}
@@ -431,7 +431,6 @@ export default async function makeTool(
                           }}
                         ></NumericInputWithUnit>
                       </TableCell>
-                      <TableCell>{extraOutput.unit}</TableCell>
                       <TableCell></TableCell>
                     </TableRow>
                   ))}
