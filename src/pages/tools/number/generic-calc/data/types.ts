@@ -1,3 +1,9 @@
+export interface AlternativeVarInfo {
+  title: string;
+  unit: string;
+  defaultPrefix?: string;
+  formula: string;
+}
 export interface GenericCalcType {
   title: string;
   name: string;
@@ -26,5 +32,14 @@ export interface GenericCalcType {
     defaultPrefix?: string;
     // If absence, assume it's the default target var
     default?: number;
+
+    // If present and false,  don't allow user to select this as output
+    solvable?: boolean;
+
+    // Alternates are alternate ways of entering the exact same thing,
+    // like the diameter or radius.  The formula for an alternate
+    // can use only one variable, always called v, which is the main
+    // variable it's an alternate of
+    alternates?: AlternativeVarInfo[];
   }[];
 }

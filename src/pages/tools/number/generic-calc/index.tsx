@@ -16,14 +16,38 @@ import ToolTextResult from '@components/result/ToolTextResult';
 import NumericInputWithUnit from '@components/input/NumericInputWithUnit';
 import { UpdateField } from '@components/options/ToolOptions';
 import { InitialValuesType } from './types';
-import type { GenericCalcType } from './data/types';
+import type { AlternativeVarInfo, GenericCalcType } from './data/types';
 import type { DataTable } from 'datatables';
 import { getDataTable, dataTableLookup } from 'datatables';
 
-import nerdamer from 'nerdamer';
-import 'nerdamer/Algebra';
-import 'nerdamer/Solve';
-import 'nerdamer/Calculus';
+import nerdamer from 'nerdamer-prime';
+import 'nerdamer-prime/Algebra';
+import 'nerdamer-prime/Solve';
+import 'nerdamer-prime/Calculus';
+import Qty from 'js-quantities';
+
+function numericSolveEquationFor(
+  equation: string,
+  varName: string,
+  variables: { [key: string]: number }
+) {
+  let expr = nerdamer(equation);
+  for (const key in variables) {
+    expr = expr.sub(key, variables[key].toString());
+  }
+
+  let result: nerdamer.Expression | nerdamer.Expression[] =
+    expr.solveFor(varName);
+
+  // Sometimes the result is an array, check for it while keeping linter happy
+  if ((result as unknown as nerdamer.Expression).toDecimal === undefined) {
+    result = (result as unknown as nerdamer.Expression[])[0];
+  }
+
+  return parseFloat(
+    (result as unknown as nerdamer.Expression).evaluate().toDecimal()
+  );
+}
 
 export default async function makeTool(
   calcData: GenericCalcType
@@ -42,7 +66,15 @@ export default async function makeTool(
 
   return function GenericCalc({ title }: ToolComponentProps) {
     const [result, setResult] = useState<string>('');
-    const [shortResult, setShortResult] = useState<number>('');
+
+    const [alternatesByVariable, setAlternatesByVariable] = useState<{
+      [key: string]: {
+        value: {
+          value: number;
+          unit: string;
+        };
+      }[];
+    }>({});
 
     // For UX purposes we need to track what vars are
     const [valsBoundToPreset, setValsBoundToPreset] = useState<{
@@ -128,6 +160,9 @@ export default async function makeTool(
     };
 
     calcData.variables.forEach((variable) => {
+      if (variable.solvable === undefined) {
+        variable.solvable = true;
+      }
       if (variable.default === undefined) {
         initialValues.vars[variable.name] = {
           value: NaN,
@@ -160,18 +195,72 @@ export default async function makeTool(
       }
     });
 
+    function getAlternate(
+      alternateInfo: AlternativeVarInfo,
+      mainInfo: GenericCalcType['variables'][number],
+      mainValue: {
+        value: number;
+        unit: string;
+      }
+    ) {
+      if (isNaN(mainValue.value)) return NaN;
+      const canonicalValue = Qty(mainValue.value, mainValue.unit).to(
+        mainInfo.unit
+      ).scalar;
+
+      return numericSolveEquationFor(alternateInfo.formula, 'x', {
+        v: canonicalValue
+      });
+    }
+
+    function getMainFromAlternate(
+      alternateInfo: AlternativeVarInfo,
+      mainInfo: GenericCalcType['variables'][number],
+      alternateValue: {
+        value: number;
+        unit: string;
+      }
+    ) {
+      if (isNaN(alternateValue.value)) return NaN;
+      const canonicalValue = Qty(alternateValue.value, alternateValue.unit).to(
+        alternateInfo.unit
+      ).scalar;
+
+      return numericSolveEquationFor(alternateInfo.formula, 'v', {
+        x: canonicalValue
+      });
+    }
+
+    calcData.variables.forEach((variable) => {
+      if (variable.alternates) {
+        variable.alternates.forEach((alt) => {
+          const altValue = getAlternate(
+            alt,
+            variable,
+            initialValues.vars[variable.name]
+          );
+          if (alternatesByVariable[variable.name] === undefined) {
+            alternatesByVariable[variable.name] = [];
+          }
+
+          alternatesByVariable[variable.name].push({
+            value: { value: altValue, unit: variable.unit }
+          });
+        });
+      }
+    });
+
     return (
       <ToolContent
         title={title}
         inputComponent={null}
-        resultComponent={
-          <ToolTextResult title={calcData.title} value={result} />
-        }
         initialValues={initialValues}
         toolInfo={{
-          title: 'Common Equations',
+          title: calcData.title,
           description:
-            'Common mathematical equations that can be used in calculations.'
+            (calcData.description || '') +
+            ' Generated from formula: ' +
+            calcData.formula
         }}
         getGroups={({ values, updateField }) => [
           {
@@ -227,7 +316,6 @@ export default async function makeTool(
               <Table>
                 <TableHead>
                   <TableRow>
-                    <TableCell>Variable</TableCell>
                     <TableCell>Value</TableCell>
                     <TableCell>Solve For</TableCell>
                   </TableRow>
@@ -235,38 +323,80 @@ export default async function makeTool(
                 <TableBody>
                   {calcData.variables.map((variable) => (
                     <TableRow key={variable.name}>
-                      <TableCell>{variable.title}</TableCell>
                       <TableCell>
-                        <NumericInputWithUnit
-                          title={variable.title}
-                          description={valsBoundToPreset[variable.name] || ''}
-                          defaultPrefix={variable.defaultPrefix}
-                          value={{
-                            value:
-                              values.outputVariable === variable.name
-                                ? shortResult
-                                : values.vars[variable.name]?.value || NaN,
-                            unit: values.vars[variable.name]?.unit || ''
-                          }}
-                          disabled={
-                            values.outputVariable === variable.name ||
-                            valsBoundToPreset[variable.name] !== undefined
-                          }
-                          disableChangingUnit={
-                            values.outputVariable === variable.name ||
-                            valsBoundToPreset[variable.name] !== undefined
-                          }
-                          onOwnChange={(val) =>
-                            updateVarField(
-                              variable.name,
-                              parseFloat(val.value),
-                              val.unit,
-                              values,
-                              updateField
-                            )
-                          }
-                          type="number"
-                        />
+                        <Table>
+                          <TableRow>
+                            <TableCell>{variable.title}</TableCell>
+                            <TableCell>
+                              <NumericInputWithUnit
+                                description={
+                                  valsBoundToPreset[variable.name] || ''
+                                }
+                                defaultPrefix={variable.defaultPrefix}
+                                value={values.vars[variable.name]}
+                                disabled={
+                                  values.outputVariable === variable.name ||
+                                  valsBoundToPreset[variable.name] !== undefined
+                                }
+                                disableChangingUnit={
+                                  valsBoundToPreset[variable.name] !== undefined
+                                }
+                                onOwnChange={(val) =>
+                                  updateVarField(
+                                    variable.name,
+                                    val.value,
+                                    val.unit,
+                                    values,
+                                    updateField
+                                  )
+                                }
+                                type="number"
+                              />
+                            </TableCell>
+                          </TableRow>
+
+                          {variable.alternates?.map((alt) => (
+                            <TableRow key={alt.title}>
+                              <TableCell>{alt.title}</TableCell>
+                              <TableCell>
+                                <NumericInputWithUnit
+                                  key={alt.title}
+                                  description={
+                                    valsBoundToPreset[alt.title] || ''
+                                  }
+                                  defaultPrefix={alt.defaultPrefix || ''}
+                                  value={{
+                                    value:
+                                      getAlternate(
+                                        alt,
+                                        variable,
+                                        values.vars[variable.name]
+                                      ) || NaN,
+                                    unit: alt.unit || ''
+                                  }}
+                                  disabled={
+                                    values.outputVariable === variable.name ||
+                                    valsBoundToPreset[variable.name] !==
+                                      undefined
+                                  }
+                                  disableChangingUnit={
+                                    valsBoundToPreset[variable.name] !==
+                                    undefined
+                                  }
+                                  onOwnChange={(val) =>
+                                    updateVarField(
+                                      variable.name,
+                                      getMainFromAlternate(alt, variable, val),
+                                      variable.unit,
+                                      values,
+                                      updateField
+                                    )
+                                  }
+                                ></NumericInputWithUnit>
+                              </TableCell>
+                            </TableRow>
+                          ))}
+                        </Table>
                       </TableCell>
 
                       <TableCell>
@@ -274,7 +404,8 @@ export default async function makeTool(
                           value={variable.name}
                           checked={values.outputVariable === variable.name}
                           disabled={
-                            valsBoundToPreset[variable.name] !== undefined
+                            valsBoundToPreset[variable.name] !== undefined ||
+                            variable.solvable === false
                           }
                           onClick={() =>
                             handleSelectedTargetChange(
@@ -292,7 +423,6 @@ export default async function makeTool(
                       <TableCell>{extraOutput.title}</TableCell>
                       <TableCell>
                         <NumericInputWithUnit
-                          title={extraOutput.title}
                           disabled={true}
                           defaultPrefix={extraOutput.defaultPrefix}
                           value={{
@@ -322,12 +452,23 @@ export default async function makeTool(
             expr = expr.sub(key, values.vars[key].value.toString());
           });
 
-          let result: nerdamer.Expression = expr.solveFor(
-            values.outputVariable
-          );
+          let result: nerdamer.Expression | nerdamer.Expression[] =
+            expr.solveFor(values.outputVariable);
 
           // Sometimes the result is an array
-          if (result.toDecimal === undefined) {
+          if (
+            (result as unknown as nerdamer.Expression).toDecimal === undefined
+          ) {
+            if ((result as unknown as nerdamer.Expression[])?.length < 1) {
+              values.vars[values.outputVariable].value = NaN;
+              if (calcData.extraOutputs !== undefined) {
+                for (let i = 0; i < calcData.extraOutputs.length; i++) {
+                  const extraOutput = calcData.extraOutputs[i];
+                  extraOutputs[extraOutput.title] = NaN;
+                }
+              }
+              throw new Error('No solution found for this input');
+            }
             result = (result as unknown as nerdamer.Expression[])[0];
           }
 
@@ -336,12 +477,13 @@ export default async function makeTool(
           if (result) {
             if (values.vars[values.outputVariable] != undefined) {
               values.vars[values.outputVariable].value = parseFloat(
-                result.toDecimal()
+                (result as unknown as nerdamer.Expression)
+                  .evaluate()
+                  .toDecimal()
               );
             }
-            setShortResult(parseFloat(result.toDecimal()));
           } else {
-            setShortResult(NaN);
+            values.vars[values.outputVariable].value = NaN;
           }
 
           if (calcData.extraOutputs !== undefined) {
@@ -355,6 +497,7 @@ export default async function makeTool(
                 expr = expr.sub(key, values.vars[key].value.toString());
               });
 
+              // todo could this have multiple solutions too?
               const result: nerdamer.Expression = expr.evaluate();
 
               if (result) {
