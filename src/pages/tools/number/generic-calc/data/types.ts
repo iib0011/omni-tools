@@ -36,6 +36,10 @@ export interface GenericCalcType {
     // If present and false,  don't allow user to select this as output
     solvable?: boolean;
 
+    // Alternate rearrangement of the formula, to be used when calculating this.
+    // If missing, the main formula is used with auto derivation.
+    formula?: string;
+
     // Alternates are alternate ways of entering the exact same thing,
     // like the diameter or radius.  The formula for an alternate
     // can use only one variable, always called v, which is the main

@@ -15,6 +15,7 @@ export const areaSphere: GenericCalcType = {
     {
       name: 'r',
       title: 'Radius',
+      formula: 'r = sqrt(A/pi) / 2',
       unit: 'mm',
       default: 1
     }

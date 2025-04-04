@@ -25,6 +25,7 @@ import 'nerdamer-prime/Algebra';
 import 'nerdamer-prime/Solve';
 import 'nerdamer-prime/Calculus';
 import Qty from 'js-quantities';
+import { error } from 'console';
 
 function numericSolveEquationFor(
   equation: string,
@@ -444,10 +445,29 @@ export default async function makeTool(
             setResult('Please select a solve for variable');
             return;
           }
-          let expr = nerdamer(calcData.formula);
+          let expr: nerdamer.Expression | null = null;
+
+          for (const i of calcData.variables) {
+            if (i.name === values.outputVariable) {
+              if (i.formula !== undefined) {
+                expr = nerdamer(i.formula);
+              }
+            }
+          }
+
+          if (expr == null) {
+            expr = nerdamer(calcData.formula);
+          }
+          if (expr == null) {
+            throw new Error('No formula found');
+            return;
+          }
 
           Object.keys(values.vars).forEach((key) => {
             if (key === values.outputVariable) return;
+            if (expr === null) {
+              throw new Error('Math fail');
+            }
             expr = expr.sub(key, values.vars[key].value.toString());
           });
 
