@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, TextField, Select, MenuItem } from '@mui/material';
-import { NumberField } from '@base-ui-components/react/number-field';
+import { Grid, Select, MenuItem } from '@mui/material';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
-import Autocomplete from '@mui/material/Autocomplete';
 import Qty from 'js-quantities';
-import { isNull, set } from 'lodash';
 //
 
 const siPrefixes: { [key: string]: number } = {
