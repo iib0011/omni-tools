@@ -52,6 +52,15 @@ export default function NumericInputWithUnit(props: {
       if (!units.includes(props.value.unit)) {
         units.push(props.value.unit);
       }
+
+      // Workaround because the lib doesn't list them
+      if (kind == 'area') {
+        units.push('km^2');
+        units.push('mile^2');
+        units.push('inch^2');
+        units.push('m^2');
+        units.push('cm^2');
+      }
       setUnitOptions(units);
       setInputValue(props.value.value);
       setUnit(props.value.unit);
