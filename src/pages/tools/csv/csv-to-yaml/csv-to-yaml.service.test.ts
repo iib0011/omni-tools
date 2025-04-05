@@ -15,32 +15,34 @@ describe('main', () => {
 
   it('should return empty string for empty input', () => {
     const result = main('', defaultOptions);
-    expect(result).toBe('');
+    expect(result).toEqual('');
   });
 
   it('should return this if header is set to false', () => {
     const options = { ...defaultOptions, headerRow: false };
     const result = main('John,30\nEmma,50', options);
-    expect(result).toBe('  - John\n  - 30\n-\n  - Emma\n  - 50');
+    expect(result).toEqual('-\n  - John\n  - 30\n-\n  - Emma\n  - 50');
   });
 
   it('should return this header is set to true', () => {
     const options = { ...defaultOptions };
     const result = main('Name,Age\nJohn,30\nEmma,50', options);
-    expect(result).toBe('  Name: John\n  Age: 30\n-\n  Name: Emma\n  Age: 50');
+    expect(result).toEqual(
+      '-\n  Name: John\n  Age: 30\n-\n  Name: Emma\n  Age: 50'
+    );
   });
 
   it('should return this header is set to true and comment flag set', () => {
     const options = { ...defaultOptions, commentcharacter: '#' };
     const result = main('Name,Age\nJohn,30\n#Emma,50', options);
-    expect(result).toBe('  Name: John\n  Age: 30');
+    expect(result).toEqual('-\n  Name: John\n  Age: 30');
   });
 
   it('should return this header is set to true and spaces is set to 3', () => {
     const options = { ...defaultOptions, spaces: 3 };
     const result = main('Name,Age\nJohn,30\nEmma,50', options);
-    expect(result).toBe(
-      '   Name: John\n   Age: 30\n-\n   Name: Emma\n   Age: 50'
+    expect(result).toEqual(
+      '-\n   Name: John\n   Age: 30\n-\n   Name: Emma\n   Age: 50'
     );
   });
 });

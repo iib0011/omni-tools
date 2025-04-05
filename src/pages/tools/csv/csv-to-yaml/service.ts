@@ -19,18 +19,19 @@ function toYaml(
         const lines = Object.entries(obj)
           .map(([key, value]) => `${indent}${key}: ${value}`)
           .join('\n');
-        return `${lines}`;
+        return `-\n${lines}`;
       })
-      .join('\n-\n');
+      .join('\n');
   }
 
   // If input is string[][].
   if (Array.isArray(input) && Array.isArray(input[0])) {
     return (input as string[][])
       .map((row) => {
-        return row.map((cell) => `${indent}- ${cell}`).join('\n');
+        const inner = row.map((cell) => `${indent}- ${cell}`).join('\n');
+        return `-\n${inner}`;
       })
-      .join('\n-\n');
+      .join('\n');
   }
 
   return 'invalid input';
