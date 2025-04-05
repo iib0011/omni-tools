@@ -1,5 +1,6 @@
-import ohmslaw from './ohms_law';
-import voltagedropinwire from './wire_voltage_drop';
-import { areaSphere, volumeSphere } from './area_volume';
+import ohmslaw from './ohmsLaw';
+import voltageDropInWire from './voltageDropInWire';
+import sphereArea from './sphereArea';
+import sphereVolume from './sphereVolume';
 
-export default [ohmslaw, voltagedropinwire, areaSphere, volumeSphere];
+export default [ohmslaw, voltageDropInWire, sphereArea, sphereVolume];

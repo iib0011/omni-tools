@@ -1,9 +1,12 @@
+import { DataTable } from '../../../../../datatables';
+
 export interface AlternativeVarInfo {
   title: string;
   unit: string;
   defaultPrefix?: string;
   formula: string;
 }
+
 export interface GenericCalcType {
   title: string;
   name: string;
@@ -17,9 +20,9 @@ export interface GenericCalcType {
     // Si prefix default
     defaultPrefix?: string;
   }[];
-  selections?: {
+  presets?: {
     title: string;
-    source: string;
+    source: DataTable;
     default: string;
     bind: {
       [key: string]: string;

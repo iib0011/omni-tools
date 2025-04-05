@@ -1,31 +1,29 @@
 import {
-  Box,
   Autocomplete,
-  TextField,
+  Box,
   Radio,
   Table,
   TableBody,
   TableCell,
   TableHead,
-  TableRow
+  TableRow,
+  TextField
 } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
-import ToolTextResult from '@components/result/ToolTextResult';
 import NumericInputWithUnit from '@components/input/NumericInputWithUnit';
 import { UpdateField } from '@components/options/ToolOptions';
 import { InitialValuesType } from './types';
 import type { AlternativeVarInfo, GenericCalcType } from './data/types';
-import type { DataTable } from 'datatables';
-import { getDataTable, dataTableLookup } from 'datatables';
+import { dataTableLookup } from 'datatables';
 
 import nerdamer from 'nerdamer-prime';
 import 'nerdamer-prime/Algebra';
 import 'nerdamer-prime/Solve';
 import 'nerdamer-prime/Calculus';
 import Qty from 'js-quantities';
-import { error } from 'console';
+import { CustomSnackBarContext } from 'contexts/CustomSnackBarContext';
 
 function numericSolveEquationFor(
   equation: string,
@@ -59,15 +57,8 @@ export default async function makeTool(
     presets: {}
   };
 
-  const dataTables: { [key: string]: DataTable } = {};
-
-  for (const selection of calcData.selections || []) {
-    dataTables[selection.source] = await getDataTable(selection.source);
-  }
-
   return function GenericCalc({ title }: ToolComponentProps) {
-    const [result, setResult] = useState<string>('');
-
+    const { showSnackBar } = useContext(CustomSnackBarContext);
     const [alternatesByVariable, setAlternatesByVariable] = useState<{
       [key: string]: {
         value: {
@@ -126,7 +117,7 @@ export default async function makeTool(
         }
       }
 
-      const selectionData = calcData.selections?.find(
+      const selectionData = calcData.presets?.find(
         (sel) => sel.title === selection
       );
 
@@ -142,12 +133,11 @@ export default async function makeTool(
             updateVarField(
               key,
 
-              dataTableLookup(dataTables[selectionData.source], preset)[
+              dataTableLookup(selectionData.source, preset)[
                 selectionData.bind[key]
               ],
 
-              dataTables[selectionData.source].columns[selectionData.bind[key]]
-                ?.unit || '',
+              selectionData.source.columns[selectionData.bind[key]]?.unit || '',
               currentValues,
               updateFieldFunc
             );
@@ -178,19 +168,16 @@ export default async function makeTool(
       }
     });
 
-    calcData.selections?.forEach((selection) => {
+    calcData.presets?.forEach((selection) => {
       initialValues.presets[selection.title] = selection.default;
       if (selection.default == '<custom>') return;
       for (const key in selection.bind) {
         initialValues.vars[key] = {
-          value: dataTableLookup(
-            dataTables[selection.source],
-            selection.default
-          )[selection.bind[key]],
+          value: dataTableLookup(selection.source, selection.default)[
+            selection.bind[key]
+          ],
 
-          unit:
-            dataTables[selection.source].columns[selection.bind[key]]?.unit ||
-            ''
+          unit: selection.source.columns[selection.bind[key]]?.unit || ''
         };
         valsBoundToPreset[key] = selection.title;
       }
@@ -264,53 +251,55 @@ export default async function makeTool(
             calcData.formula
         }}
         getGroups={({ values, updateField }) => [
-          {
-            title: 'Presets',
-            component: (
-              <Box>
-                <Table>
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>Option</TableCell>
-                      <TableCell>Value</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {calcData.selections?.map((preset) => (
-                      <TableRow key={preset.title}>
-                        <TableCell>{preset.title}</TableCell>
-                        <TableCell>
-                          <Autocomplete
-                            disablePortal
-                            id="combo-box-demo"
-                            value={values.presets[preset.title]}
-                            options={[
-                              '<custom>',
-                              ...Object.keys(
-                                dataTables[preset.source].data
-                              ).sort()
-                            ]}
-                            sx={{ width: 300 }}
-                            onChange={(event, newValue) => {
-                              handleSelectedPresetChange(
-                                preset.title,
-                                newValue || '',
-                                values,
-                                updateField
-                              );
-                            }}
-                            renderInput={(params) => (
-                              <TextField {...params} label="Preset" />
-                            )}
-                          ></Autocomplete>
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </Box>
-            )
-          },
+          ...(calcData.presets?.length
+            ? [
+                {
+                  title: 'Presets',
+                  component: (
+                    <Box>
+                      <Table>
+                        <TableHead>
+                          <TableRow>
+                            <TableCell>Option</TableCell>
+                            <TableCell>Value</TableCell>
+                          </TableRow>
+                        </TableHead>
+                        <TableBody>
+                          {calcData.presets?.map((preset) => (
+                            <TableRow key={preset.title}>
+                              <TableCell>{preset.title}</TableCell>
+                              <TableCell>
+                                <Autocomplete
+                                  disablePortal
+                                  id="combo-box-demo"
+                                  value={values.presets[preset.title]}
+                                  options={[
+                                    '<custom>',
+                                    ...Object.keys(preset.source.data).sort()
+                                  ]}
+                                  sx={{ width: 300 }}
+                                  onChange={(event, newValue) => {
+                                    handleSelectedPresetChange(
+                                      preset.title,
+                                      newValue || '',
+                                      values,
+                                      updateField
+                                    );
+                                  }}
+                                  renderInput={(params) => (
+                                    <TextField {...params} label="Preset" />
+                                  )}
+                                ></Autocomplete>
+                              </TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    </Box>
+                  )
+                }
+              ]
+            : []),
           {
             title: 'Variables',
             component: (
@@ -330,9 +319,6 @@ export default async function makeTool(
                             <TableCell>{variable.title}</TableCell>
                             <TableCell>
                               <NumericInputWithUnit
-                                description={
-                                  valsBoundToPreset[variable.name] || ''
-                                }
                                 defaultPrefix={variable.defaultPrefix}
                                 value={values.vars[variable.name]}
                                 disabled={
@@ -351,7 +337,6 @@ export default async function makeTool(
                                     updateField
                                   )
                                 }
-                                type="number"
                               />
                             </TableCell>
                           </TableRow>
@@ -362,9 +347,6 @@ export default async function makeTool(
                               <TableCell>
                                 <NumericInputWithUnit
                                   key={alt.title}
-                                  description={
-                                    valsBoundToPreset[alt.title] || ''
-                                  }
                                   defaultPrefix={alt.defaultPrefix || ''}
                                   value={{
                                     value:
@@ -442,7 +424,7 @@ export default async function makeTool(
         ]}
         compute={(values) => {
           if (values.outputVariable === '') {
-            setResult('Please select a solve for variable');
+            showSnackBar('Please select a solve for variable', 'error');
             return;
           }
           let expr: nerdamer.Expression | null = null;
@@ -490,8 +472,6 @@ export default async function makeTool(
             }
             result = (result as unknown as nerdamer.Expression[])[0];
           }
-
-          setResult(result.toString());
 
           if (result) {
             if (values.vars[values.outputVariable] != undefined) {

@@ -5,7 +5,7 @@ const ohmsLawCalc: GenericCalcType = {
   name: 'ohms-law',
   description: 'Calculates voltage, current and resistance',
   formula: 'V = I * R',
-  selections: [],
+  presets: [],
   variables: [
     {
       name: 'V',

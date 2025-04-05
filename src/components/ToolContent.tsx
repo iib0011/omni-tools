@@ -40,7 +40,7 @@ const FormikListenerComponent = <T,>({
 
 interface ToolContentProps<T, I> extends ToolComponentProps {
   inputComponent?: ReactNode;
-  resultComponent: ReactNode;
+  resultComponent?: ReactNode;
   renderCustomInput?: (
     values: T,
     setFieldValue: (fieldName: string, value: any) => void

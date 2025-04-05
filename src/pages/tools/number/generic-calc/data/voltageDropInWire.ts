@@ -1,14 +1,17 @@
 import type { GenericCalcType } from './types';
-const voltagedropinwire: GenericCalcType = {
+import material_electrical_properties from '../../../../../datatables/data/material_electrical_properties';
+import wire_gauge from '../../../../../datatables/data/wire_gauge';
+
+const voltageDropInWire: GenericCalcType = {
   title: 'Round trip voltage drop in cable',
   name: 'cable-voltage-drop',
   formula: 'x = (((p * L) / (A/10**6) ) *2) * I',
   description:
     'Calculates round trip voltage and power loss in a 2 conductor cable',
-  selections: [
+  presets: [
     {
       title: 'Material',
-      source: 'material-electrical-properties',
+      source: material_electrical_properties,
       default: 'Copper',
       bind: {
         p: 'resistivity_20c'
@@ -17,7 +20,7 @@ const voltagedropinwire: GenericCalcType = {
 
     {
       title: 'Wire Gauge',
-      source: 'wire-gauge',
+      source: wire_gauge,
       default: '24 AWG',
       bind: {
         A: 'area'
@@ -72,4 +75,4 @@ const voltagedropinwire: GenericCalcType = {
   ]
 };
 
-export default voltagedropinwire;
+export default voltageDropInWire;

@@ -20,7 +20,7 @@ export default function NumericInputWithUnit(props: {
   value: { value: number; unit: string };
   disabled?: boolean;
   disableChangingUnit?: boolean;
-  onOwnChange: (value: { value: number; unit: string }) => void;
+  onOwnChange?: (value: { value: number; unit: string }) => void;
   defaultPrefix?: string;
 }) {
   const [inputValue, setInputValue] = useState(props.value.value);
