@@ -2,6 +2,7 @@ import {
   Autocomplete,
   Box,
   Radio,
+  Stack,
   Table,
   TableBody,
   TableCell,
@@ -24,6 +25,8 @@ import 'nerdamer-prime/Solve';
 import 'nerdamer-prime/Calculus';
 import Qty from 'js-quantities';
 import { CustomSnackBarContext } from 'contexts/CustomSnackBarContext';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 
 function numericSolveEquationFor(
   equation: string,
@@ -59,14 +62,6 @@ export default async function makeTool(
 
   return function GenericCalc({ title }: ToolComponentProps) {
     const { showSnackBar } = useContext(CustomSnackBarContext);
-    const [alternatesByVariable, setAlternatesByVariable] = useState<{
-      [key: string]: {
-        value: {
-          value: number;
-          unit: string;
-        };
-      }[];
-    }>({});
 
     // For UX purposes we need to track what vars are
     const [valsBoundToPreset, setValsBoundToPreset] = useState<{
@@ -110,12 +105,17 @@ export default async function makeTool(
       newPresets[selection] = preset;
       updateFieldFunc('presets', newPresets);
 
-      // Clear old selection
-      for (const key in valsBoundToPreset) {
-        if (valsBoundToPreset[key] === selection) {
-          delete valsBoundToPreset[key];
-        }
-      }
+      // Clear old selection using setState callback pattern
+      setValsBoundToPreset((prevState) => {
+        const newState = { ...prevState };
+        // Remove all keys bound to this selection
+        Object.keys(newState).forEach((key) => {
+          if (newState[key] === selection) {
+            delete newState[key];
+          }
+        });
+        return newState;
+      });
 
       const selectionData = calcData.presets?.find(
         (sel) => sel.title === selection
@@ -123,8 +123,12 @@ export default async function makeTool(
 
       if (preset && preset != '<custom>') {
         if (selectionData) {
+          // Create an object with the new bindings
+          const newBindings: { [key: string]: string } = {};
+
           for (const key in selectionData.bind) {
-            valsBoundToPreset[key] = selection;
+            // Add to newBindings for later state update
+            newBindings[key] = selection;
 
             if (currentValues.outputVariable === key) {
               handleSelectedTargetChange('', updateFieldFunc);
@@ -142,6 +146,12 @@ export default async function makeTool(
               updateFieldFunc
             );
           }
+
+          // Update state with new bindings
+          setValsBoundToPreset((prevState) => ({
+            ...prevState,
+            ...newBindings
+          }));
         } else {
           throw new Error(
             `Preset "${preset}" is not valid for selection "${selection}"`
@@ -179,7 +189,7 @@ export default async function makeTool(
 
           unit: selection.source.columns[selection.bind[key]]?.unit || ''
         };
-        valsBoundToPreset[key] = selection.title;
+        // We'll set this in useEffect instead of directly modifying state
       }
     });
 
@@ -219,25 +229,6 @@ export default async function makeTool(
       });
     }
 
-    calcData.variables.forEach((variable) => {
-      if (variable.alternates) {
-        variable.alternates.forEach((alt) => {
-          const altValue = getAlternate(
-            alt,
-            variable,
-            initialValues.vars[variable.name]
-          );
-          if (alternatesByVariable[variable.name] === undefined) {
-            alternatesByVariable[variable.name] = [];
-          }
-
-          alternatesByVariable[variable.name].push({
-            value: { value: altValue, unit: variable.unit }
-          });
-        });
-      }
-    });
-
     return (
       <ToolContent
         title={title}
@@ -250,52 +241,48 @@ export default async function makeTool(
             ' Generated from formula: ' +
             calcData.formula
         }}
+        verticalGroups
         getGroups={({ values, updateField }) => [
           ...(calcData.presets?.length
             ? [
                 {
                   title: 'Presets',
                   component: (
-                    <Box>
-                      <Table>
-                        <TableHead>
-                          <TableRow>
-                            <TableCell>Option</TableCell>
-                            <TableCell>Value</TableCell>
-                          </TableRow>
-                        </TableHead>
-                        <TableBody>
-                          {calcData.presets?.map((preset) => (
-                            <TableRow key={preset.title}>
-                              <TableCell>{preset.title}</TableCell>
-                              <TableCell>
-                                <Autocomplete
-                                  disablePortal
-                                  id="combo-box-demo"
-                                  value={values.presets[preset.title]}
-                                  options={[
-                                    '<custom>',
-                                    ...Object.keys(preset.source.data).sort()
-                                  ]}
-                                  sx={{ width: 300 }}
-                                  onChange={(event, newValue) => {
-                                    handleSelectedPresetChange(
-                                      preset.title,
-                                      newValue || '',
-                                      values,
-                                      updateField
-                                    );
-                                  }}
-                                  renderInput={(params) => (
-                                    <TextField {...params} label="Preset" />
-                                  )}
-                                ></Autocomplete>
-                              </TableCell>
-                            </TableRow>
-                          ))}
-                        </TableBody>
-                      </Table>
-                    </Box>
+                    <Grid container spacing={2} maxWidth={500}>
+                      {calcData.presets?.map((preset) => (
+                        <Grid item xs={12} key={preset.title}>
+                          <Stack
+                            direction={'row'}
+                            spacing={2}
+                            alignItems={'center'}
+                            justifyContent={'space-between'}
+                          >
+                            <Typography>{preset.title}</Typography>
+                            <Autocomplete
+                              disablePortal
+                              id="combo-box-demo"
+                              value={values.presets[preset.title]}
+                              options={[
+                                '<custom>',
+                                ...Object.keys(preset.source.data).sort()
+                              ]}
+                              sx={{ width: 300 }}
+                              onChange={(event, newValue) => {
+                                handleSelectedPresetChange(
+                                  preset.title,
+                                  newValue || '',
+                                  values,
+                                  updateField
+                                );
+                              }}
+                              renderInput={(params) => (
+                                <TextField {...params} label="Preset" />
+                              )}
+                            />
+                          </Stack>
+                        </Grid>
+                      ))}
+                    </Grid>
                   )
                 }
               ]
@@ -400,8 +387,15 @@ export default async function makeTool(
                       </TableCell>
                     </TableRow>
                   ))}
-
-                  {calcData.extraOutputs?.map((extraOutput) => (
+                </TableBody>
+              </Table>
+            )
+          },
+          ...(calcData.extraOutputs
+            ? [
+                {
+                  title: 'Extra outputs',
+                  component: calcData.extraOutputs?.map((extraOutput) => (
                     <TableRow key={extraOutput.title}>
                       <TableCell>
                         {extraOutput.title}
@@ -412,15 +406,14 @@ export default async function makeTool(
                             value: extraOutputs[extraOutput.title],
                             unit: extraOutput.unit
                           }}
-                        ></NumericInputWithUnit>
+                        />
                       </TableCell>
                       <TableCell></TableCell>
                     </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            )
-          }
+                  ))
+                }
+              ]
+            : [])
         ]}
         compute={(values) => {
           if (values.outputVariable === '') {
@@ -429,10 +422,10 @@ export default async function makeTool(
           }
           let expr: nerdamer.Expression | null = null;
 
-          for (const i of calcData.variables) {
-            if (i.name === values.outputVariable) {
-              if (i.formula !== undefined) {
-                expr = nerdamer(i.formula);
+          for (const variable of calcData.variables) {
+            if (variable.name === values.outputVariable) {
+              if (variable.formula !== undefined) {
+                expr = nerdamer(variable.formula);
               }
             }
           }
@@ -442,7 +435,6 @@ export default async function makeTool(
           }
           if (expr == null) {
             throw new Error('No formula found');
-            return;
           }
 
           Object.keys(values.vars).forEach((key) => {
@@ -463,10 +455,15 @@ export default async function makeTool(
             if ((result as unknown as nerdamer.Expression[])?.length < 1) {
               values.vars[values.outputVariable].value = NaN;
               if (calcData.extraOutputs !== undefined) {
-                for (let i = 0; i < calcData.extraOutputs.length; i++) {
-                  const extraOutput = calcData.extraOutputs[i];
-                  extraOutputs[extraOutput.title] = NaN;
-                }
+                // Update extraOutputs using setState
+                setExtraOutputs((prevState) => {
+                  const newState = { ...prevState };
+                  for (let i = 0; i < calcData.extraOutputs!.length; i++) {
+                    const extraOutput = calcData.extraOutputs![i];
+                    newState[extraOutput.title] = NaN;
+                  }
+                  return newState;
+                });
               }
               throw new Error('No solution found for this input');
             }
@@ -500,9 +497,11 @@ export default async function makeTool(
               const result: nerdamer.Expression = expr.evaluate();
 
               if (result) {
-                extraOutputs[extraOutput.title] = parseFloat(
-                  result.toDecimal()
-                );
+                // Update extraOutputs state properly
+                setExtraOutputs((prevState) => ({
+                  ...prevState,
+                  [extraOutput.title]: parseFloat(result.toDecimal())
+                }));
               }
             }
           }

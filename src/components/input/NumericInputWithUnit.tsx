@@ -143,8 +143,6 @@ export default function NumericInputWithUnit(props: {
         <Select
           fullWidth
           disabled={disableChangingUnit}
-          label="Prefix"
-          title="Prefix"
           value={prefix}
           onChange={(evt) => {
             handlePrefixChange(evt.target.value || '');

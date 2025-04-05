@@ -57,6 +57,7 @@ interface ToolContentProps<T, I> extends ToolComponentProps {
   setInput?: React.Dispatch<React.SetStateAction<I>>;
   validationSchema?: any;
   onValuesChange?: (values: T) => void;
+  verticalGroups?: boolean;
 }
 
 export default function ToolContent<T extends FormikValues, I>({
@@ -72,7 +73,8 @@ export default function ToolContent<T extends FormikValues, I>({
   setInput,
   validationSchema,
   renderCustomInput,
-  onValuesChange
+  onValuesChange,
+  verticalGroups
 }: ToolContentProps<T, I>) {
   return (
     <Box>
@@ -97,7 +99,7 @@ export default function ToolContent<T extends FormikValues, I>({
                 input={input}
                 onValuesChange={onValuesChange}
               />
-              <ToolOptions getGroups={getGroups} />
+              <ToolOptions getGroups={getGroups} vertical={verticalGroups} />
 
               {toolInfo && toolInfo.title && toolInfo.description && (
                 <ToolInfo

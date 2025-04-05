@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: compress video icon">
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/sphereArea.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/sphereVolume.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/daniel/Projects/omni-tools/src/pages/tools/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/daniel/Projects/omni-tools/src/pages/tools/number/calculators/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/daniel/Projects/omni-tools/src/pages/tools/number/index.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ToolContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolInputAndResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolInputAndResult.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/input/NumericInputWithUnit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/NumericInputWithUnit.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datatables/data/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datatables/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datatables/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datatables/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datatables/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/area_volume.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/ohms_law.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/ohms_law.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/wire_voltage_drop.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/wire_voltage_drop.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/service.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -415,14 +401,6 @@
       <workItem from="1743103182313" duration="4264000" />
       <workItem from="1743348610793" duration="21855000" />
     </task>
-    <task id="LOCAL-00127" summary="chore: show tooloptions in example">
-      <option name="closed" value="true" />
-      <created>1740619610168</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1740619610169</updated>
-    </task>
     <task id="LOCAL-00128" summary="refact: examples">
       <option name="closed" value="true" />
       <created>1740620866551</created>
@@ -807,7 +785,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743355166426</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="refactor: init">
+      <option name="closed" value="true" />
+      <created>1743827787241</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1743827787241</updated>
+    </task>
+    <option name="localTasksCounter" value="177" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -854,7 +840,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="style: tools height" />
     <MESSAGE value="chore: update meta" />
     <MESSAGE value="feat: change pgn opacity" />
     <MESSAGE value="feat: crop png" />
@@ -879,7 +864,8 @@
     <MESSAGE value="fix: typos" />
     <MESSAGE value="feat: compress video" />
     <MESSAGE value="chore: compress video icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: compress video icon" />
+    <MESSAGE value="refactor: init" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: init" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
