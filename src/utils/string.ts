@@ -46,3 +46,16 @@ export function reverseString(input: string): string {
 export function containsOnlyDigits(input: string): boolean {
   return /^\d+(\.\d+)?$/.test(input.trim());
 }
+
+/**
+ * unquote a string if properly quoted.
+ * @param value - The string to unquote.
+ * @param quoteCharacter - The character used for quoting (e.g., '"', "'").
+ * @returns The unquoted string if it was quoted, otherwise the original string.
+ */
+export function unquoteIfQuoted(value: string, quoteCharacter: string): string {
+  if (value.startsWith(quoteCharacter) && value.endsWith(quoteCharacter)) {
+    return value.slice(1, -1); // Remove first and last character
+  }
+  return value;
+}
