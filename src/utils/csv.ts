@@ -8,9 +8,10 @@ export function splitCsv(
   input: string,
   deleteComment: boolean,
   commentCharacter: string,
-  deleteEmptyLines: boolean
+  deleteEmptyLines: boolean,
+  delimiter: string = ','
 ): string[][] {
-  let rows = input.split('\n').map((row) => row.split(','));
+  let rows = input.split('\n').map((row) => row.split(delimiter));
 
   // Remove comments if deleteComment is true
   if (deleteComment && commentCharacter) {
@@ -28,9 +29,13 @@ export function splitCsv(
 /**
  * get the headers from  a CSV string .
  * @param {string} input - The CSV input string.
+ * @param {string} csvSeparator - The character used to separate values in the CSV.
  * @returns {string[]} - The CSV header as a 1D array.
  */
-export function getCsvHeaders(csvString: string): string[] {
-  const rows = csvString.split('\n').map((row) => row.split(','));
+export function getCsvHeaders(
+  csvString: string,
+  csvSeparator: string = ','
+): string[] {
+  const rows = csvString.split('\n').map((row) => row.split(csvSeparator));
   return rows.length > 0 ? rows[0].map((header) => header.trim()) : [];
 }
