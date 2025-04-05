@@ -5,7 +5,7 @@ import Qty from 'js-quantities';
 //
 
 const siPrefixes: { [key: string]: number } = {
-  '': 1,
+  'Default prefix': 1,
   k: 1000,
   M: 1000000,
   G: 1000000000,
@@ -24,7 +24,7 @@ export default function NumericInputWithUnit(props: {
   defaultPrefix?: string;
 }) {
   const [inputValue, setInputValue] = useState(props.value.value);
-  const [prefix, setPrefix] = useState(props.defaultPrefix || '');
+  const [prefix, setPrefix] = useState(props.defaultPrefix || 'Default prefix');
 
   // internal display unit
   const [unit, setUnit] = useState('');
@@ -121,13 +121,8 @@ export default function NumericInputWithUnit(props: {
   };
 
   return (
-    <Grid
-      container
-      spacing={2}
-      alignItems="center"
-      style={{ minWidth: '20rem' }}
-    >
-      <Grid item xs={4}>
+    <Grid container spacing={2} alignItems="center">
+      <Grid item xs={12} md={4}>
         <TextFieldWithDesc
           disabled={disabled}
           type="number"
@@ -139,7 +134,7 @@ export default function NumericInputWithUnit(props: {
         />
       </Grid>
 
-      <Grid item xs={3}>
+      <Grid item xs={12} md={3}>
         <Select
           fullWidth
           disabled={disableChangingUnit}
@@ -156,12 +151,11 @@ export default function NumericInputWithUnit(props: {
         </Select>
       </Grid>
 
-      <Grid item xs={5}>
+      <Grid item xs={12} md={5}>
         <Select
           fullWidth
           disabled={disableChangingUnit}
-          label="Unit"
-          title="Unit"
+          placeholder={'Unit'}
           value={unit}
           onChange={(event) => {
             setUserSelectedUnit(true);

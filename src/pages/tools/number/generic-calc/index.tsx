@@ -1,15 +1,4 @@
-import {
-  Autocomplete,
-  Box,
-  Radio,
-  Stack,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  TextField
-} from '@mui/material';
+import { Autocomplete, Box, Radio, Stack, TextField } from '@mui/material';
 import React, { useContext, useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -290,60 +279,41 @@ export default async function makeTool(
           {
             title: 'Variables',
             component: (
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell>Value</TableCell>
-                    <TableCell>Solve For</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {calcData.variables.map((variable) => (
-                    <TableRow key={variable.name}>
-                      <TableCell>
-                        <Table>
-                          <TableRow>
-                            <TableCell>{variable.title}</TableCell>
-                            <TableCell>
-                              <NumericInputWithUnit
-                                defaultPrefix={variable.defaultPrefix}
-                                value={values.vars[variable.name]}
-                                disabled={
-                                  values.outputVariable === variable.name ||
-                                  valsBoundToPreset[variable.name] !== undefined
-                                }
-                                disableChangingUnit={
-                                  valsBoundToPreset[variable.name] !== undefined
-                                }
-                                onOwnChange={(val) =>
-                                  updateVarField(
-                                    variable.name,
-                                    val.value,
-                                    val.unit,
-                                    values,
-                                    updateField
-                                  )
-                                }
-                              />
-                            </TableCell>
-                          </TableRow>
+              <Box>
+                <Grid container spacing={2} sx={{ mb: 2 }}>
+                  <Grid item xs={10}></Grid>
+                  <Grid item xs={2}>
+                    <Typography fontWeight="bold" align="center">
+                      Solve For
+                    </Typography>
+                  </Grid>
+                </Grid>
 
-                          {variable.alternates?.map((alt) => (
-                            <TableRow key={alt.title}>
-                              <TableCell>{alt.title}</TableCell>
-                              <TableCell>
+                {calcData.variables.map((variable) => (
+                  <Box
+                    key={variable.name}
+                    sx={{
+                      mb: 3,
+                      p: 1,
+                      borderRadius: 1
+                    }}
+                  >
+                    <Grid container spacing={2} alignItems="center">
+                      <Grid item xs={10}>
+                        <Box>
+                          <Stack spacing={2}>
+                            <Box>
+                              <Stack
+                                direction="row"
+                                spacing={2}
+                                alignItems="center"
+                              >
+                                <Typography sx={{ minWidth: '8%' }}>
+                                  {variable.title}
+                                </Typography>
                                 <NumericInputWithUnit
-                                  key={alt.title}
-                                  defaultPrefix={alt.defaultPrefix || ''}
-                                  value={{
-                                    value:
-                                      getAlternate(
-                                        alt,
-                                        variable,
-                                        values.vars[variable.name]
-                                      ) || NaN,
-                                    unit: alt.unit || ''
-                                  }}
+                                  defaultPrefix={variable.defaultPrefix}
+                                  value={values.vars[variable.name]}
                                   disabled={
                                     values.outputVariable === variable.name ||
                                     valsBoundToPreset[variable.name] !==
@@ -356,20 +326,76 @@ export default async function makeTool(
                                   onOwnChange={(val) =>
                                     updateVarField(
                                       variable.name,
-                                      getMainFromAlternate(alt, variable, val),
-                                      variable.unit,
+                                      val.value,
+                                      val.unit,
                                       values,
                                       updateField
                                     )
                                   }
-                                ></NumericInputWithUnit>
-                              </TableCell>
-                            </TableRow>
-                          ))}
-                        </Table>
-                      </TableCell>
+                                />
+                              </Stack>
+                            </Box>
 
-                      <TableCell>
+                            {variable.alternates?.map((alt) => (
+                              <Box key={alt.title}>
+                                <Stack
+                                  direction="row"
+                                  spacing={2}
+                                  alignItems="center"
+                                >
+                                  <Typography sx={{ minWidth: 120 }}>
+                                    {alt.title}
+                                  </Typography>
+                                  <Box sx={{ flexGrow: 1 }}>
+                                    <NumericInputWithUnit
+                                      key={alt.title}
+                                      defaultPrefix={alt.defaultPrefix || ''}
+                                      value={{
+                                        value:
+                                          getAlternate(
+                                            alt,
+                                            variable,
+                                            values.vars[variable.name]
+                                          ) || NaN,
+                                        unit: alt.unit || ''
+                                      }}
+                                      disabled={
+                                        values.outputVariable ===
+                                          variable.name ||
+                                        valsBoundToPreset[variable.name] !==
+                                          undefined
+                                      }
+                                      disableChangingUnit={
+                                        valsBoundToPreset[variable.name] !==
+                                        undefined
+                                      }
+                                      onOwnChange={(val) =>
+                                        updateVarField(
+                                          variable.name,
+                                          getMainFromAlternate(
+                                            alt,
+                                            variable,
+                                            val
+                                          ),
+                                          variable.unit,
+                                          values,
+                                          updateField
+                                        )
+                                      }
+                                    />
+                                  </Box>
+                                </Stack>
+                              </Box>
+                            ))}
+                          </Stack>
+                        </Box>
+                      </Grid>
+
+                      <Grid
+                        item
+                        xs={2}
+                        sx={{ display: 'flex', justifyContent: 'center' }}
+                      >
                         <Radio
                           value={variable.name}
                           checked={values.outputVariable === variable.name}
@@ -384,33 +410,36 @@ export default async function makeTool(
                             )
                           }
                         />
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                ))}
+              </Box>
             )
           },
           ...(calcData.extraOutputs
             ? [
                 {
                   title: 'Extra outputs',
-                  component: calcData.extraOutputs?.map((extraOutput) => (
-                    <TableRow key={extraOutput.title}>
-                      <TableCell>
-                        {extraOutput.title}
-                        <NumericInputWithUnit
-                          disabled={true}
-                          defaultPrefix={extraOutput.defaultPrefix}
-                          value={{
-                            value: extraOutputs[extraOutput.title],
-                            unit: extraOutput.unit
-                          }}
-                        />
-                      </TableCell>
-                      <TableCell></TableCell>
-                    </TableRow>
-                  ))
+                  component: (
+                    <Grid container spacing={2}>
+                      {calcData.extraOutputs?.map((extraOutput) => (
+                        <Grid item xs={12} key={extraOutput.title}>
+                          <Stack spacing={1} px={4}>
+                            <Typography>{extraOutput.title}</Typography>
+                            <NumericInputWithUnit
+                              disabled={true}
+                              defaultPrefix={extraOutput.defaultPrefix}
+                              value={{
+                                value: extraOutputs[extraOutput.title],
+                                unit: extraOutput.unit
+                              }}
+                            />
+                          </Stack>
+                        </Grid>
+                      ))}
+                    </Grid>
+                  )
                 }
               ]
             : [])
