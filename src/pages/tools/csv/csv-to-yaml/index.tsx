@@ -30,7 +30,8 @@ Queen,"Bohemian Rhapsody",Rock
 Nirvana,"Smells Like Teen Spirit",Grunge
 Michael Jackson,"Billie Jean",Pop
 Stevie Wonder,"Superstition",Funk`,
-    sampleResult: `  - The Beatles
+    sampleResult: `-
+  - The Beatles
   - Yesterday
   - Pop Rock
 - 
@@ -62,7 +63,8 @@ Stevie Wonder,"Superstition",Funk`,
 Venus,0.815,0
 Earth,1.000,1
 Mars,0.107,2`,
-    sampleResult: `  planet: Venus
+    sampleResult: `-
+  planet: Venus
   relative mass: 0.815
   satellites: '0'
 - 
@@ -88,17 +90,18 @@ milk;2;3.50
 bread;1;4.25
 #apples;4;1.99
 cheese;1;8.99`,
-    sampleResult: `    item: milk
-    quantity: 2
-    price: 3.50
+    sampleResult: `-
+  item: milk
+  quantity: 2
+  price: 3.50
 -
-    item: bread
-    quantity: 1
-    price: 4.25
+  item: bread
+  quantity: 1
+  price: 4.25
 -
-    item: cheese
-    quantity: 1
-    price: 8.99`,
+  item: cheese
+  quantity: 1
+  price: 8.99`,
     sampleOptions: {
       ...initialValues,
       csvSeparator: ';'
@@ -188,8 +191,10 @@ export default function CsvToYaml({
     <ToolContent
       title={title}
       input={input}
-      inputComponent={<ToolTextInput value={input} onChange={setInput} />}
-      resultComponent={<ToolTextResult value={result} />}
+      inputComponent={
+        <ToolTextInput title={'Input CSV'} value={input} onChange={setInput} />
+      }
+      resultComponent={<ToolTextResult title={'Output YAML'} value={result} />}
       initialValues={initialValues}
       exampleCards={exampleCards}
       getGroups={getGroups}
