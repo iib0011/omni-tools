@@ -57,6 +57,9 @@ export function main(input: string, options: InitialValuesType): string {
 
   if (options.headerRow) {
     const headerRow = getCsvHeaders(input, options.csvSeparator);
+    headerRow.forEach((header, headerIndex) => {
+      headerRow[headerIndex] = unquoteIfQuoted(header, options.quoteCharacter);
+    });
 
     const result: Record<string, string>[] = rows.slice(1).map((row) => {
       const entry: Record<string, string> = {};
