@@ -12,7 +12,7 @@ import { Icon } from '@iconify/react';
 const exampleTools: { label: string; url: string }[] = [
   {
     label: 'Create a transparent image',
-    url: '/png/create-transparent'
+    url: '/image-generic/create-transparent'
   },
   { label: 'Prettify JSON', url: '/json/prettify' },
   { label: 'Change GIF speed', url: '/gif/change-speed' },
@@ -35,7 +35,7 @@ export default function Hero() {
     newInputValue: string
   ) => {
     setInputValue(newInputValue);
-    setFilteredTools(_.shuffle(filterTools(tools, newInputValue)));
+    setFilteredTools(filterTools(tools, newInputValue));
   };
 
   return (

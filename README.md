@@ -1,7 +1,9 @@
-<p align="center">
+<div align="center">
         <img src="src/assets/logo.png" width="300" />
         <br /><br />
-        <a href="https://github.com/iib0011/omni-tools/releases">
+<a href="https://trendshift.io/repositories/13055" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13055" alt="iib0011%2Fomni-tools | Trendshift" style="width: 200px;" width="200"/></a>
+   <br /><br />
+<a href="https://github.com/iib0011/omni-tools/releases">
           <img src="https://img.shields.io/badge/version-0.2.0-blue?style=for-the-badge" />
         </a>
         <a href="https://hub.docker.com/r/iib0011/omni-tools">
@@ -17,10 +19,11 @@
           <img src="https://img.shields.io/discord/1342971141823664179?label=Discord&style=for-the-badge" />
         </a>
         <br /><br />
-</p>
+</div>
 
 Welcome to OmniTools, a self-hosted web app offering a variety of online tools to simplify everyday tasks.
-Whether you are coding, manipulating images or crunching numbers, OmniTools has you covered. Please don't forget to
+Whether you are coding, manipulating images/videos, PDFs or crunching numbers, OmniTools has you covered. Please don't
+forget to
 star the repo to support us.
 Here is the [demo](https://omnitools.app) website.
 
@@ -111,10 +114,16 @@ npm run dev
 ### Create a new tool
 
 ```bash
+npm run script:create:tool my-tool-name folder1 # npm run script:create:tool split pdf
+```
+
+For tools located under multiple nested directories, use:
+
+```bash
 npm run script:create:tool my-tool-name folder1/folder2 # npm run script:create:tool compress image/png
 ```
 
-Use `folder1\folder2` on Windows
+Use `folder1\folder2` on Windows.
 
 ### Run tests
 
