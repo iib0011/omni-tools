@@ -54,7 +54,11 @@ export function containsOnlyDigits(input: string): boolean {
  * @returns The unquoted string if it was quoted, otherwise the original string.
  */
 export function unquoteIfQuoted(value: string, quoteCharacter: string): string {
-  if (value.startsWith(quoteCharacter) && value.endsWith(quoteCharacter)) {
+  if (
+    quoteCharacter &&
+    value.startsWith(quoteCharacter) &&
+    value.endsWith(quoteCharacter)
+  ) {
     return value.slice(1, -1); // Remove first and last character
   }
   return value;
