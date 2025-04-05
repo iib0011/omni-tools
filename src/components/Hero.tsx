@@ -35,7 +35,7 @@ export default function Hero() {
     newInputValue: string
   ) => {
     setInputValue(newInputValue);
-    setFilteredTools(_.shuffle(filterTools(tools, newInputValue)));
+    setFilteredTools(filterTools(tools, newInputValue));
   };
 
   return (

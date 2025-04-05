@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: protect pdf">
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/image-to-text/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/image-to-text/meta.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/image-to-text/service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/image-to-text/types.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: readme img and fix broken link">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolTextResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -415,31 +409,9 @@
       <workItem from="1743458576265" duration="13083000" />
       <workItem from="1743690613245" duration="77000" />
       <workItem from="1743691250813" duration="1550000" />
-      <workItem from="1743699386059" duration="8791000" />
-    </task>
-    <task id="LOCAL-00141" summary="feat: ToolContent.tsx">
-      <option name="closed" value="true" />
-      <created>1741211604972</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1741211604972</updated>
-    </task>
-    <task id="LOCAL-00142" summary="chore: smooth scroll for use this tool and examles">
-      <option name="closed" value="true" />
-      <created>1741414797155</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1741414797155</updated>
-    </task>
-    <task id="LOCAL-00143" summary="feat: minify json">
-      <option name="closed" value="true" />
-      <created>1741416193639</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1741416193639</updated>
+      <workItem from="1743699386059" duration="11195000" />
+      <workItem from="1743782726563" duration="2444000" />
+      <workItem from="1743811558991" duration="1279000" />
     </task>
     <task id="LOCAL-00144" summary="feat: stringify json">
       <option name="closed" value="true" />
@@ -809,7 +781,31 @@
       <option name="project" value="LOCAL" />
       <updated>1743705749057</updated>
     </task>
-    <option name="localTasksCounter" value="190" />
+    <task id="LOCAL-00190" summary="feat: image to text">
+      <option name="closed" value="true" />
+      <created>1743710133267</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1743710133267</updated>
+    </task>
+    <task id="LOCAL-00191" summary="chore: hideCopy if video or audio">
+      <option name="closed" value="true" />
+      <created>1743710669869</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1743710669869</updated>
+    </task>
+    <task id="LOCAL-00192" summary="chore: readme img and fix broken link">
+      <option name="closed" value="true" />
+      <created>1743811980098</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1743811980098</updated>
+    </task>
+    <option name="localTasksCounter" value="193" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -856,9 +852,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: background removal" />
-    <MESSAGE value="feat: split pdf" />
-    <MESSAGE value="fix: typo" />
     <MESSAGE value="chore: result file name" />
     <MESSAGE value="chore: text result extensions" />
     <MESSAGE value="chore: show new tools in landing" />
@@ -881,7 +874,10 @@
     <MESSAGE value="fix: tests" />
     <MESSAGE value="chore: uninstall @jspawn/ghostscript-wasm" />
     <MESSAGE value="feat: protect pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: protect pdf" />
+    <MESSAGE value="feat: image to text" />
+    <MESSAGE value="chore: hideCopy if video or audio" />
+    <MESSAGE value="chore: readme img and fix broken link" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: readme img and fix broken link" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
