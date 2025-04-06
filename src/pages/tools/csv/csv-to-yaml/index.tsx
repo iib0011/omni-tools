@@ -178,7 +178,7 @@ export default function CsvToYaml({
             value={values.spaces}
             type="number"
             onOwnChange={(val) => updateField('spaces', Number(val))}
-            inputProps={{ min: 0 }}
+            inputProps={{ min: 1 }}
             description={
               'Set the number of spaces to use for YAML indentation.'
             }

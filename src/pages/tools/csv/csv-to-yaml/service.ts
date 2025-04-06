@@ -6,6 +6,9 @@ function toYaml(
   input: Record<string, string>[] | string[][],
   indentSpaces: number = 2
 ): string {
+  if (indentSpaces == 0) {
+    throw new Error('Indent spaces must be greater than zero');
+  }
   const indent = ' '.repeat(indentSpaces);
 
   if (
