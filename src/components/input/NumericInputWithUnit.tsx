@@ -101,9 +101,6 @@ export default function NumericInputWithUnit(props: {
   };
 
   const handlePrefixChange = (newPrefix: string) => {
-    const oldPrefixValue = siPrefixes[prefix];
-    const newPrefixValue = siPrefixes[newPrefix];
-
     setPrefix(newPrefix);
   };
 
@@ -112,7 +109,7 @@ export default function NumericInputWithUnit(props: {
     const oldInputValue = inputValue;
     const oldUnit = unit;
     setUnit(newUnit);
-    setPrefix('');
+    setPrefix('Default prefix');
 
     const convertedValue = Qty(oldInputValue * siPrefixes[prefix], oldUnit).to(
       newUnit

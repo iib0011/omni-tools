@@ -44,7 +44,7 @@ const voltageDropInWire: GenericCalcType = {
     {
       name: 'L',
       title: 'Length',
-      unit: 'm',
+      unit: 'meter',
       default: 1
     },
     {

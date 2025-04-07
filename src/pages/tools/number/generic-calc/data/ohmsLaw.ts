@@ -10,19 +10,19 @@ const ohmsLawCalc: GenericCalcType = {
     {
       name: 'V',
       title: 'Voltage',
-      unit: 'V',
+      unit: 'volt',
       default: 5
     },
     {
       name: 'I',
       title: 'Current',
-      unit: 'A',
+      unit: 'ampere',
       default: 1
     },
     {
       name: 'R',
       title: 'Resistance',
-      unit: 'Ω'
+      unit: 'ohm'
     }
   ]
 };
