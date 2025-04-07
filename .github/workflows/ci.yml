@@ -81,7 +81,6 @@ jobs:
           images: iib0011/omni-tools
           tags: |
             type=raw,value=latest
-            type=sha,format=short
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
