@@ -50,7 +50,8 @@ export function main(input: string, options: InitialValuesType): string {
     true,
     options.commentCharacter,
     options.emptyLines,
-    options.csvSeparator
+    options.csvSeparator,
+    options.quoteCharacter
   );
 
   rows.forEach((row) => {
@@ -60,7 +61,12 @@ export function main(input: string, options: InitialValuesType): string {
   });
 
   if (options.headerRow) {
-    const headerRow = getCsvHeaders(input, options.csvSeparator);
+    const headerRow = getCsvHeaders(
+      input,
+      options.csvSeparator,
+      options.quoteCharacter,
+      options.commentCharacter
+    );
     headerRow.forEach((header, headerIndex) => {
       headerRow[headerIndex] = unquoteIfQuoted(header, options.quoteCharacter);
     });
