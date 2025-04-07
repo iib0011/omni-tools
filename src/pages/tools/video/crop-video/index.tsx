@@ -1,10 +1,10 @@
-import { Box, Checkbox, FormControlLabel } from '@mui/material';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { Box } from '@mui/material';
+import React, { useCallback, useEffect, useState } from 'react';
 import * as Yup from 'yup';
 import ToolFileResult from '@components/result/ToolFileResult';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
-import { GetGroupsType } from '@components/options/ToolOptions';
+import { GetGroupsType, UpdateField } from '@components/options/ToolOptions';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { updateNumberField } from '@utils/string';
 import { FFmpeg } from '@ffmpeg/ffmpeg';
@@ -19,8 +19,7 @@ const initialValues: InitialValuesType = {
   width: 640,
   height: 360,
   x: 0,
-  y: 0,
-  maintainAspectRatio: true
+  y: 0
 };
 
 const validationSchema = Yup.object({
@@ -46,14 +45,12 @@ export default function CropVideo({ title }: ToolComponentProps) {
     width: number;
     height: number;
   } | null>(null);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   // Get video dimensions when a video is loaded
   useEffect(() => {
     if (input) {
       const video = document.createElement('video');
       video.onloadedmetadata = () => {
-        console.log('loadedmetadata', video.videoWidth, video.videoHeight);
         setVideoInfo({
           width: video.videoWidth,
           height: video.videoHeight
@@ -133,8 +130,7 @@ export default function CropVideo({ title }: ToolComponentProps) {
 
   const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
-    updateField,
-    setFieldValue
+    updateField
   }) => [
     {
       title: 'Crop Settings',
@@ -172,34 +168,48 @@ export default function CropVideo({ title }: ToolComponentProps) {
             label={'Y Position (pixels)'}
             sx={{ mb: 2, backgroundColor: 'background.paper' }}
           />
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={values.maintainAspectRatio}
-                onChange={(e) => {
-                  setFieldValue('maintainAspectRatio', e.target.checked);
-                }}
-              />
-            }
-            label="Maintain aspect ratio"
-          />
         </Box>
       )
     }
   ];
-
+  const handleCropChange =
+    (values: InitialValuesType, updateField: UpdateField<InitialValuesType>) =>
+    (
+      position: { x: number; y: number },
+      size: { width: number; height: number }
+    ) => {
+      console.log('Crop position:', position, size);
+      updateField('x', position.x);
+      updateField('y', position.y);
+      updateField('width', size.width);
+      updateField('height', size.height);
+    };
+  const renderCustomInput = (
+    values: InitialValuesType,
+    updateField: UpdateField<InitialValuesType>
+  ) => (
+    <ToolVideoInput
+      value={input}
+      onChange={setInput}
+      accept={['video/mp4', 'video/webm', 'video/ogg']}
+      title={'Input Video'}
+      showCropOverlay={!!input}
+      cropPosition={{
+        x: parseInt(values.x || '0'),
+        y: parseInt(values.y || '0')
+      }}
+      cropSize={{
+        width: parseInt(values.width || '100'),
+        height: parseInt(values.height || '100')
+      }}
+      onCropChange={handleCropChange(values, updateField)}
+    />
+  );
   return (
     <ToolContent
       title={title}
       input={input}
-      inputComponent={
-        <ToolVideoInput
-          value={input}
-          onChange={setInput}
-          accept={['video/mp4', 'video/webm', 'video/ogg']}
-          title={'Input Video'}
-        />
-      }
+      renderCustomInput={renderCustomInput}
       resultComponent={
         <ToolFileResult
           title={'Cropped Video'}

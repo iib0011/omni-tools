@@ -3,5 +3,4 @@ export type InitialValuesType = {
   height: number;
   x: number;
   y: number;
-  maintainAspectRatio: boolean;
 };
