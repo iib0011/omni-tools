@@ -1,3 +1,4 @@
+import { tool as ChangeCsvDelimiter } from './change-csv-separator/meta';
 import { tool as csvToYaml } from './csv-to-yaml/meta';
 import { tool as csvToJson } from './csv-to-json/meta';
 import { tool as csvToXml } from './csv-to-xml/meta';
@@ -11,5 +12,6 @@ export const csvTools = [
   csvToRowsColumns,
   csvToTsv,
   swapCsvColumns,
-  csvToYaml
+  csvToYaml,
+  ChangeCsvDelimiter
 ];
