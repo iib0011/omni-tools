@@ -1,9 +1,4 @@
-function unquoteIfQuoted(value: string, quoteCharacter: string): string {
-  if (value.startsWith(quoteCharacter) && value.endsWith(quoteCharacter)) {
-    return value.slice(1, -1); // Remove first and last character
-  }
-  return value;
-}
+import { unquoteIfQuoted } from '@utils/string';
 export function csvToTsv(
   input: string,
   delimiter: string,
