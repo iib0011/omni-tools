@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: gif resize">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: readme img and fix broken link">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +24,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="chesterkxng" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -120,6 +121,13 @@
         &quot;number&quot;: 76
       },
       &quot;lastSeen&quot;: 1743352150953
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Q0JBe&quot;,
+        &quot;number&quot;: 82
+      },
+      &quot;lastSeen&quot;: 1743470267269
     }
   ]
 }</component>
@@ -151,56 +159,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Docker.Dockerfile build.executor": "Run",
-    "Docker.Dockerfile.executor": "Run",
-    "Playwright.Create transparent PNG.should make png color transparent.executor": "Run",
-    "Playwright.JoinText Component.executor": "Run",
-    "Playwright.JoinText Component.should merge text pieces with specified join character.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.compute function (1).executor": "Run",
-    "Vitest.compute function.executor": "Run",
-    "Vitest.mergeText.executor": "Run",
-    "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
-    "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
-    "Vitest.parsePageRanges.executor": "Run",
-    "Vitest.removeDuplicateLines function.executor": "Run",
-    "Vitest.removeDuplicateLines function.newlines option.executor": "Run",
-    "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
-    "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
-    "Vitest.replaceText function.executor": "Run",
-    "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "image-resize",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/@types",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.lint.executor": "Run",
-    "npm.prebuild.executor": "Run",
-    "npm.script:create:tool.executor": "Run",
-    "npm.test.executor": "Run",
-    "npm.test:e2e.executor": "Run",
-    "npm.test:e2e:run.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "refactai_advanced_settings",
-    "ts.external.directory.path": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.Dockerfile build.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.Create transparent PNG.should make png color transparent.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.JoinText Component.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.JoinText Component.should merge text pieces with specified join character.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.compute function (1).executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.compute function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.parsePageRanges.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.newlines option.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.replaceText function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.timeBetweenDates.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ibrahima/IdeaProjects/omni-tools/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
+    &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
+    &quot;npm.script:create:tool.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e:run.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;refactai_advanced_settings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -212,18 +220,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\@types" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\components\input" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\.husky" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\lib\ghostscript" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\@types" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\tools" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\categories" />
-      <recent name="C:\Users\HP\IdeaProjects\omni-tools\src\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -397,111 +405,13 @@
       <workItem from="1743047367993" duration="986000" />
       <workItem from="1743103182313" duration="4264000" />
       <workItem from="1743348610793" duration="21855000" />
-      <workItem from="1743556259185" duration="7150000" />
-    </task>
-    <task id="LOCAL-00131" summary="style: tool categories">
-      <option name="closed" value="true" />
-      <created>1740661744828</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1740661744828</updated>
-    </task>
-    <task id="LOCAL-00132" summary="chore: compute only if value">
-      <option name="closed" value="true" />
-      <created>1740661864615</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1740661864615</updated>
-    </task>
-    <task id="LOCAL-00133" summary="chore: remove prettify test">
-      <option name="closed" value="true" />
-      <created>1740662016902</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1740662016902</updated>
-    </task>
-    <task id="LOCAL-00134" summary="chore: prettify json in home">
-      <option name="closed" value="true" />
-      <created>1740662154978</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1740662154978</updated>
-    </task>
-    <task id="LOCAL-00135" summary="feat: jakarta font">
-      <option name="closed" value="true" />
-      <created>1740665609483</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1740665609483</updated>
-    </task>
-    <task id="LOCAL-00136" summary="chore: img">
-      <option name="closed" value="true" />
-      <created>1740680778110</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1740680778110</updated>
-    </task>
-    <task id="LOCAL-00137" summary="docs: readme">
-      <option name="closed" value="true" />
-      <created>1740788899030</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1740788899030</updated>
-    </task>
-    <task id="LOCAL-00138" summary="feat: remove duplicate lines">
-      <option name="closed" value="true" />
-      <created>1740884332734</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1740884332735</updated>
-    </task>
-    <task id="LOCAL-00139" summary="fix: tsc">
-      <option name="closed" value="true" />
-      <created>1740884971377</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1740884971378</updated>
-    </task>
-    <task id="LOCAL-00140" summary="style: optimizations">
-      <option name="closed" value="true" />
-      <created>1740936527951</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1740936527951</updated>
-    </task>
-    <task id="LOCAL-00141" summary="feat: ToolContent.tsx">
-      <option name="closed" value="true" />
-      <created>1741211604972</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1741211604972</updated>
-    </task>
-    <task id="LOCAL-00142" summary="chore: smooth scroll for use this tool and examles">
-      <option name="closed" value="true" />
-      <created>1741414797155</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1741414797155</updated>
-    </task>
-    <task id="LOCAL-00143" summary="feat: minify json">
-      <option name="closed" value="true" />
-      <created>1741416193639</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1741416193639</updated>
+      <workItem from="1743397561176" duration="25000" />
+      <workItem from="1743458576265" duration="13083000" />
+      <workItem from="1743690613245" duration="77000" />
+      <workItem from="1743691250813" duration="1550000" />
+      <workItem from="1743699386059" duration="11195000" />
+      <workItem from="1743782726563" duration="2444000" />
+      <workItem from="1743811558991" duration="1279000" />
     </task>
     <task id="LOCAL-00144" summary="feat: stringify json">
       <option name="closed" value="true" />
@@ -759,39 +669,143 @@
       <option name="project" value="LOCAL" />
       <updated>1743355166426</updated>
     </task>
-    <task id="LOCAL-00176" summary="chore: tool description">
+    <task id="LOCAL-00176" summary="fix: gif speed">
       <option name="closed" value="true" />
-      <created>1743560690570</created>
+      <created>1743385388051</created>
       <option name="number" value="00176" />
       <option name="presentableId" value="LOCAL-00176" />
       <option name="project" value="LOCAL" />
-      <updated>1743560690571</updated>
+      <updated>1743385388051</updated>
     </task>
-    <task id="LOCAL-00177" summary="feat: image resize init">
+    <task id="LOCAL-00177" summary="fix: tsc">
       <option name="closed" value="true" />
-      <created>1743565606951</created>
+      <created>1743385467178</created>
       <option name="number" value="00177" />
       <option name="presentableId" value="LOCAL-00177" />
       <option name="project" value="LOCAL" />
-      <updated>1743565606951</updated>
+      <updated>1743385467178</updated>
     </task>
-    <task id="LOCAL-00178" summary="feat: svg resize">
+    <task id="LOCAL-00178" summary="fix: background color">
       <option name="closed" value="true" />
-      <created>1743566704552</created>
+      <created>1743385898871</created>
       <option name="number" value="00178" />
       <option name="presentableId" value="LOCAL-00178" />
       <option name="project" value="LOCAL" />
-      <updated>1743566704552</updated>
+      <updated>1743385898871</updated>
     </task>
-    <task id="LOCAL-00179" summary="feat: gif resize">
+    <task id="LOCAL-00179" summary="docs: github trendings">
       <option name="closed" value="true" />
-      <created>1743567906528</created>
+      <created>1743459110471</created>
       <option name="number" value="00179" />
       <option name="presentableId" value="LOCAL-00179" />
       <option name="project" value="LOCAL" />
-      <updated>1743567906528</updated>
+      <updated>1743459110471</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="docs: optimize">
+      <option name="closed" value="true" />
+      <created>1743459205311</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1743459205311</updated>
+    </task>
+    <task id="LOCAL-00181" summary="fix: stars button width for 1k+ 😊">
+      <option name="closed" value="true" />
+      <created>1743470832619</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1743470832619</updated>
+    </task>
+    <task id="LOCAL-00182" summary="feat: compress pdf">
+      <option name="closed" value="true" />
+      <created>1743644598841</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1743644598841</updated>
+    </task>
+    <task id="LOCAL-00183" summary="refactor: compress pdf">
+      <option name="closed" value="true" />
+      <created>1743644703041</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1743644703042</updated>
+    </task>
+    <task id="LOCAL-00184" summary="refactor: lib">
+      <option name="closed" value="true" />
+      <created>1743644942488</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1743644942488</updated>
+    </task>
+    <task id="LOCAL-00185" summary="fix: path">
+      <option name="closed" value="true" />
+      <created>1743645074051</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1743645074051</updated>
+    </task>
+    <task id="LOCAL-00186" summary="fix: vite worker format">
+      <option name="closed" value="true" />
+      <created>1743647707334</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1743647707334</updated>
+    </task>
+    <task id="LOCAL-00187" summary="fix: tests">
+      <option name="closed" value="true" />
+      <created>1743691399769</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1743691399769</updated>
+    </task>
+    <task id="LOCAL-00188" summary="chore: uninstall @jspawn/ghostscript-wasm">
+      <option name="closed" value="true" />
+      <created>1743691471368</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1743691471368</updated>
+    </task>
+    <task id="LOCAL-00189" summary="feat: protect pdf">
+      <option name="closed" value="true" />
+      <created>1743705749057</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1743705749057</updated>
+    </task>
+    <task id="LOCAL-00190" summary="feat: image to text">
+      <option name="closed" value="true" />
+      <created>1743710133267</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1743710133267</updated>
+    </task>
+    <task id="LOCAL-00191" summary="chore: hideCopy if video or audio">
+      <option name="closed" value="true" />
+      <created>1743710669869</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1743710669869</updated>
+    </task>
+    <task id="LOCAL-00192" summary="chore: readme img and fix broken link">
+      <option name="closed" value="true" />
+      <created>1743811980098</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1743811980098</updated>
+    </task>
+    <option name="localTasksCounter" value="193" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -838,19 +852,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: remove unnecessary files" />
-    <MESSAGE value="refactor: validateJson" />
-    <MESSAGE value="feat: missing tools" />
-    <MESSAGE value="refactor: use ToolContent" />
-    <MESSAGE value="fix: prettify json" />
-    <MESSAGE value="refactor: sum" />
-    <MESSAGE value="fix: tools by category scroll" />
-    <MESSAGE value="fix: missing meta" />
-    <MESSAGE value="feat: trim video" />
-    <MESSAGE value="refactor: file inputs" />
-    <MESSAGE value="feat: background removal" />
-    <MESSAGE value="feat: split pdf" />
-    <MESSAGE value="fix: typo" />
     <MESSAGE value="chore: result file name" />
     <MESSAGE value="chore: text result extensions" />
     <MESSAGE value="chore: show new tools in landing" />
@@ -859,11 +860,24 @@
     <MESSAGE value="fix: typos" />
     <MESSAGE value="feat: compress video" />
     <MESSAGE value="chore: compress video icon" />
-    <MESSAGE value="chore: tool description" />
-    <MESSAGE value="feat: image resize init" />
-    <MESSAGE value="feat: svg resize" />
-    <MESSAGE value="feat: gif resize" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: gif resize" />
+    <MESSAGE value="fix: gif speed" />
+    <MESSAGE value="fix: tsc" />
+    <MESSAGE value="fix: background color" />
+    <MESSAGE value="docs: github trendings" />
+    <MESSAGE value="docs: optimize" />
+    <MESSAGE value="fix: stars button width for 1k+ " />
+    <MESSAGE value="feat: compress pdf" />
+    <MESSAGE value="refactor: compress pdf" />
+    <MESSAGE value="refactor: lib" />
+    <MESSAGE value="fix: path" />
+    <MESSAGE value="fix: vite worker format" />
+    <MESSAGE value="fix: tests" />
+    <MESSAGE value="chore: uninstall @jspawn/ghostscript-wasm" />
+    <MESSAGE value="feat: protect pdf" />
+    <MESSAGE value="feat: image to text" />
+    <MESSAGE value="chore: hideCopy if video or audio" />
+    <MESSAGE value="chore: readme img and fix broken link" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: readme img and fix broken link" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

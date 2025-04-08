@@ -7,11 +7,13 @@ import React from 'react';
 export default function ResultFooter({
   handleDownload,
   handleCopy,
-  disabled
+  disabled,
+  hideCopy
 }: {
   handleDownload: () => void;
   handleCopy: () => void;
   disabled?: boolean;
+  hideCopy?: boolean;
 }) {
   return (
     <Stack mt={1} direction={'row'} spacing={2}>
@@ -22,13 +24,15 @@ export default function ResultFooter({
       >
         Save as
       </Button>
-      <Button
-        disabled={disabled}
-        onClick={handleCopy}
-        startIcon={<ContentPasteIcon />}
-      >
-        Copy to clipboard
-      </Button>
+      {!hideCopy && (
+        <Button
+          disabled={disabled}
+          onClick={handleCopy}
+          startIcon={<ContentPasteIcon />}
+        >
+          Copy to clipboard
+        </Button>
+      )}
     </Stack>
   );
 }
