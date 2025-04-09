@@ -48,7 +48,11 @@ export default function NumericInputWithUnit(props: {
     if (unitKind != Qty(props.value.unit).kind()) {
       // Update the options for what units similar to this one are available
       const kind = Qty(props.value.unit).kind();
-      const units = Qty.getUnits(kind);
+      let units: string[] = [];
+      if (kind) {
+        units = Qty.getUnits(kind);
+      }
+
       if (!units.includes(props.value.unit)) {
         units.push(props.value.unit);
       }
