@@ -241,7 +241,7 @@ export default async function makeTool(
                       {calcData.presets?.map((preset) => (
                         <Grid item xs={12} key={preset.title}>
                           <Stack
-                            direction={'row'}
+                            direction={{ xs: 'column', md: 'row' }}
                             spacing={2}
                             alignItems={'center'}
                             justifyContent={'space-between'}
@@ -255,7 +255,7 @@ export default async function makeTool(
                                 '<custom>',
                                 ...Object.keys(preset.source.data).sort()
                               ]}
-                              sx={{ width: 300 }}
+                              sx={{ width: '80%' }}
                               onChange={(event, newValue) => {
                                 handleSelectedPresetChange(
                                   preset.title,
@@ -343,7 +343,7 @@ export default async function makeTool(
                                   spacing={2}
                                   alignItems="center"
                                 >
-                                  <Typography sx={{ minWidth: 120 }}>
+                                  <Typography sx={{ minWidth: '8%' }}>
                                     {alt.title}
                                   </Typography>
                                   <Box sx={{ flexGrow: 1 }}>
