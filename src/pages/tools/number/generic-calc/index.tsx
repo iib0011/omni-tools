@@ -518,7 +518,6 @@ export default async function makeTool(
               let expr = nerdamer(extraOutput.formula);
 
               Object.keys(values.vars).forEach((key) => {
-                if (key === values.outputVariable) return;
                 expr = expr.sub(key, values.vars[key].value.toString());
               });
 
