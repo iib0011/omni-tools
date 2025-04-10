@@ -4,7 +4,7 @@ import { lazy } from 'react';
 export const tool = defineTool('csv', {
   name: 'Convert CSV Rows to Columns',
   path: 'csv-rows-to-columns',
-  icon: 'carbon:transpose',
+  icon: 'fluent:text-arrow-down-right-column-24-filled',
   description:
     'This tool converts rows of a CSV (Comma Separated Values) file into columns. It extracts the horizontal lines from the input CSV one by one, rotates them 90 degrees, and outputs them as vertical columns one after another, separated by commas.',
   longDescription:
