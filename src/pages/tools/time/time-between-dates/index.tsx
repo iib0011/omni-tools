@@ -50,26 +50,31 @@ const validationSchema = Yup.object({
 
 const timezoneOptions = [
   { value: 'local', label: 'Local Time' },
-  ...Intl.supportedValuesOf('timeZone')
-    .map((tz) => {
-      const formatter = new Intl.DateTimeFormat('en', {
-        timeZone: tz,
-        timeZoneName: 'shortOffset'
-      });
+  ...Array.from(
+    new Map(
+      Intl.supportedValuesOf('timeZone').map((tz) => {
+        const formatter = new Intl.DateTimeFormat('en', {
+          timeZone: tz,
+          timeZoneName: 'shortOffset'
+        });
 
-      const offset =
-        formatter
-          .formatToParts(new Date())
-          .find((part) => part.type === 'timeZoneName')?.value || '';
+        const offset =
+          formatter
+            .formatToParts(new Date())
+            .find((part) => part.type === 'timeZoneName')?.value || '';
 
-      return {
-        value: offset.replace('UTC', 'GMT'),
-        label: `${offset.replace('UTC', 'GMT')} (${tz})`
-      };
-    })
-    .sort((a, b) =>
-      a.value.localeCompare(b.value, undefined, { numeric: true })
-    )
+        const value = offset.replace('UTC', 'GMT');
+
+        return [
+          value, // key for Map to ensure uniqueness
+          {
+            value,
+            label: `${value} (${tz})`
+          }
+        ];
+      })
+    ).values()
+  ).sort((a, b) => a.value.localeCompare(b.value, undefined, { numeric: true }))
 ];
 
 const exampleCards: CardExampleType<InitialValuesType>[] = [
