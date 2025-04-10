@@ -2,7 +2,7 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('csv', {
-  name: 'Change csv separator',
+  name: 'Change CSV separator',
   path: 'change-csv-separator',
   icon: 'material-symbols:split-scene-rounded',
   description:
