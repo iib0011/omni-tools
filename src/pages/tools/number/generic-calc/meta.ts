@@ -17,13 +17,9 @@ allGenericCalcs.forEach((x) => {
 
   tools.push(
     defineTool('number', {
-      name: x.name,
+      ...x,
       path: 'generic-calc/' + x.path,
-      icon: x.icon || '',
-      description: x.description || '',
-      shortDescription: x.description || '',
       keywords: ['calculator', 'math', ...x.keywords],
-      longDescription: x.longDescription || '',
       component: lazy(importComponent2)
     })
   );

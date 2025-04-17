@@ -237,10 +237,7 @@ export default async function makeTool(
         initialValues={initialValues}
         toolInfo={{
           title: calcData.name,
-          description:
-            (calcData.description || '') +
-            ' Generated from formula: ' +
-            calcData.formula
+          description: calcData.longDescription
         }}
         verticalGroups
         getGroups={({ values, updateField }) => [
