@@ -1,8 +1,11 @@
 import type { GenericCalcType } from './types';
 
 const areaSphere: GenericCalcType = {
-  title: 'Area of a Sphere',
-  name: 'area-sphere',
+  icon: 'ph:sphere-duotone',
+  keywords: [],
+  shortDescription: '',
+  name: 'Area of a Sphere',
+  path: 'area-sphere',
   description: 'Area of a Sphere',
   formula: 'A = 4 * pi * r**2',
   presets: [],

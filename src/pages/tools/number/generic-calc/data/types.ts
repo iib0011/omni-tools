@@ -1,4 +1,5 @@
 import { DataTable } from '../../../../../datatables';
+import { ToolMeta } from '@tools/defineTool';
 
 export interface AlternativeVarInfo {
   title: string;
@@ -7,12 +8,8 @@ export interface AlternativeVarInfo {
   formula: string;
 }
 
-export interface GenericCalcType {
-  title: string;
-  name: string;
+export interface GenericCalcType extends Omit<ToolMeta, 'component'> {
   formula: string;
-  description?: string;
-
   extraOutputs?: {
     title: string;
     formula: string;

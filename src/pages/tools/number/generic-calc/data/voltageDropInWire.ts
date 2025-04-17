@@ -3,8 +3,11 @@ import material_electrical_properties from '../../../../../datatables/data/mater
 import wire_gauge from '../../../../../datatables/data/wire_gauge';
 
 const voltageDropInWire: GenericCalcType = {
-  title: 'Round trip voltage drop in cable',
-  name: 'cable-voltage-drop',
+  icon: 'simple-icons:wire',
+  keywords: [],
+  shortDescription: '',
+  name: 'Round trip voltage drop in cable',
+  path: 'cable-voltage-drop',
   formula: 'x = (((p * L) / (A/10**6) ) *2) * I',
   description:
     'Calculates round trip voltage and power loss in a 2 conductor cable',

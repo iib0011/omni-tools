@@ -17,13 +17,13 @@ allGenericCalcs.forEach((x) => {
 
   tools.push(
     defineTool('number', {
-      name: x.title,
-      path: 'generic-calc/' + x.name,
-      icon: 'lsicon:number-filled',
+      name: x.name,
+      path: 'generic-calc/' + x.path,
+      icon: x.icon || '',
       description: x.description || '',
-      shortDescription: '',
-      keywords: ['generic', 'calc'],
-      longDescription: '',
+      shortDescription: x.description || '',
+      keywords: ['calculator', 'math', ...x.keywords],
+      longDescription: x.longDescription || '',
       component: lazy(importComponent2)
     })
   );

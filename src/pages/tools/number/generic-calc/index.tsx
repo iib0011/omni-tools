@@ -236,7 +236,7 @@ export default async function makeTool(
         inputComponent={null}
         initialValues={initialValues}
         toolInfo={{
-          title: calcData.title,
+          title: calcData.name,
           description:
             (calcData.description || '') +
             ' Generated from formula: ' +
