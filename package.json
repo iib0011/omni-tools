@@ -42,6 +42,7 @@
     "@types/omggif": "^1.0.5",
     "browser-image-compression": "^2.0.2",
     "color": "^4.2.3",
+    "dayjs": "^1.11.13",
     "formik": "^2.4.6",
     "jimp": "^0.22.12",
     "js-quantities": "^1.8.0",
@@ -60,6 +61,7 @@
     "react-helmet": "^6.1.0",
     "react-image-crop": "^11.0.7",
     "react-router-dom": "^6.23.1",
+    "tesseract.js": "^6.0.0",
     "type-fest": "^4.35.0",
     "use-deep-compare-effect": "^1.8.1",
     "yup": "^1.4.0"

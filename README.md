@@ -114,10 +114,16 @@ npm run dev
 ### Create a new tool
 
 ```bash
+npm run script:create:tool my-tool-name folder1 # npm run script:create:tool split pdf
+```
+
+For tools located under multiple nested directories, use:
+
+```bash
 npm run script:create:tool my-tool-name folder1/folder2 # npm run script:create:tool compress image/png
 ```
 
-Use `folder1\folder2` on Windows
+Use `folder1\folder2` on Windows.
 
 ### Run tests
 
