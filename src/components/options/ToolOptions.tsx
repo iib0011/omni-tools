@@ -13,10 +13,12 @@ export type GetGroupsType<T> = (
 
 export default function ToolOptions<T extends FormikValues>({
   children,
-  getGroups
+  getGroups,
+  vertical
 }: {
   children?: ReactNode;
   getGroups: GetGroupsType<T> | null;
+  vertical?: boolean;
 }) {
   const theme = useTheme();
   const formikContext = useFormikContext<T>();
@@ -49,6 +51,7 @@ export default function ToolOptions<T extends FormikValues>({
         <Stack direction={'row'} spacing={2}>
           <ToolOptionGroups
             groups={getGroups({ ...formikContext, updateField }) ?? []}
+            vertical={vertical}
           />
           {children}
         </Stack>
