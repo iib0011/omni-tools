@@ -128,6 +128,7 @@ export default function NumericInputWithUnit(props: {
           disabled={disabled}
           type="number"
           fullWidth
+          sx={{ width: { xs: '75%', sm: '80%', md: '90%' } }}
           value={(inputValue / siPrefixes[prefix])
             .toFixed(9)
             .replace(/(\d*\.\d+?)0+$/, '$1')}
@@ -140,6 +141,7 @@ export default function NumericInputWithUnit(props: {
           fullWidth
           disabled={disableChangingUnit}
           value={prefix}
+          sx={{ width: { xs: '75%', sm: '80%', md: '90%' } }}
           onChange={(evt) => {
             handlePrefixChange(evt.target.value || '');
           }}
@@ -157,6 +159,7 @@ export default function NumericInputWithUnit(props: {
           fullWidth
           disabled={disableChangingUnit}
           placeholder={'Unit'}
+          sx={{ width: { xs: '75%', sm: '80%', md: '90%' } }}
           value={unit}
           onChange={(event) => {
             setUserSelectedUnit(true);
