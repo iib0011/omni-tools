@@ -6,7 +6,7 @@ export const tool = defineTool('csv', {
   path: 'csv-to-xml',
   icon: 'mdi-light:xml',
   description: 'Convert CSV files to XML format with customizable options.',
-  shortDescription: 'Convert CSV data to XML format',
+  shortDescription: 'Convert CSV data to XML format.',
   keywords: ['csv', 'xml', 'convert', 'transform', 'parse'],
   component: lazy(() => import('./index'))
 });
