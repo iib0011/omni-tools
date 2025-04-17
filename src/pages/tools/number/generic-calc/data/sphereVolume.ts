@@ -2,11 +2,24 @@ import type { GenericCalcType } from './types';
 
 const volumeSphere: GenericCalcType = {
   icon: 'gravity-ui:sphere',
-  keywords: [],
-  shortDescription: '',
+  keywords: [
+    'sphere',
+    'volume',
+    'geometry',
+    'mathematics',
+    'radius',
+    'diameter',
+    'calculation',
+    '3D',
+    'shape',
+    'capacity'
+  ],
+  shortDescription: 'Calculate the volume of a sphere using radius or diameter',
   name: 'Volume of a Sphere',
   path: 'volume-sphere',
   description: 'Volume of a Sphere',
+  longDescription:
+    'This calculator computes the volume of a sphere using the formula V = (4/3)πr³. You can input either the radius or diameter to find the volume, or enter the volume to determine the required radius. The tool is valuable for students, engineers, and professionals working with spherical objects in fields such as physics, engineering, and manufacturing.',
   formula: 'v = (4/3) * pi * r**3',
   presets: [],
   variables: [
