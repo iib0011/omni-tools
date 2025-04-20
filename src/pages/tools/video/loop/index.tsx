@@ -13,7 +13,7 @@ import { updateNumberField } from '@utils/string';
 import * as Yup from 'yup';
 
 const initialValues: InitialValuesType = {
-  loops: 1
+  loops: 2
 };
 
 const validationSchema = Yup.object({
