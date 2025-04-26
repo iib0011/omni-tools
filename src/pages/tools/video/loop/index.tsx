@@ -61,13 +61,7 @@ export default function Loop({ title, longDescription }: ToolComponentProps) {
     <ToolContent
       title={title}
       input={input}
-      inputComponent={
-        <ToolVideoInput
-          value={input}
-          onChange={setInput}
-          accept={['video/*']}
-        />
-      }
+      inputComponent={<ToolVideoInput value={input} onChange={setInput} />}
       resultComponent={
         loading ? (
           <ToolFileResult

@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: readme img and fix broken link">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="ci: on tag push, push docker images">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/ToolVideoInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolVideoInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/compress/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/compress/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/loop/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/loop/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/rotate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -412,6 +415,8 @@
       <workItem from="1743699386059" duration="11195000" />
       <workItem from="1743782726563" duration="2444000" />
       <workItem from="1743811558991" duration="1279000" />
+      <workItem from="1745523972292" duration="3000" />
+      <workItem from="1745687713234" duration="591000" />
     </task>
     <task id="LOCAL-00144" summary="feat: stringify json">
       <option name="closed" value="true" />

@@ -5,11 +5,12 @@ import 'rc-slider/assets/index.css';
 import BaseFileInput from './BaseFileInput';
 import { BaseFileInputProps, formatTime } from './file-input-utils';
 
-interface VideoFileInputProps extends BaseFileInputProps {
+interface VideoFileInputProps extends Omit<BaseFileInputProps, 'accept'> {
   showTrimControls?: boolean;
   onTrimChange?: (trimStart: number, trimEnd: number) => void;
   trimStart?: number;
   trimEnd?: number;
+  accept?: string[];
 }
 
 export default function ToolVideoInput({
@@ -17,6 +18,7 @@ export default function ToolVideoInput({
   onTrimChange,
   trimStart = 0,
   trimEnd = 100,
+  accept = ['video/*', '.mkv'],
   ...props
 }: VideoFileInputProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -38,7 +40,7 @@ export default function ToolVideoInput({
   };
 
   return (
-    <BaseFileInput {...props} type={'video'}>
+    <BaseFileInput {...props} type={'video'} accept={accept}>
       {({ preview }) => (
         <Box
           sx={{
