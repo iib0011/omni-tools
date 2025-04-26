@@ -1,3 +1,4 @@
+import { tool as transposeCsv } from './transpose-csv/meta';
 import { tool as findIncompleteCsvRecords } from './find-incomplete-csv-records/meta';
 import { tool as ChangeCsvDelimiter } from './change-csv-separator/meta';
 import { tool as csvToYaml } from './csv-to-yaml/meta';
@@ -15,5 +16,6 @@ export const csvTools = [
   swapCsvColumns,
   csvToYaml,
   ChangeCsvDelimiter,
-  findIncompleteCsvRecords
+  findIncompleteCsvRecords,
+  transposeCsv
 ];
