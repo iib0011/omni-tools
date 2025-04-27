@@ -130,6 +130,7 @@ export default function ${capitalizeFirstLetter(toolNameCamelCase)}({
       initialValues={initialValues}
       exampleCards={exampleCards}
       getGroups={getGroups}
+      setInput={setInput}
       compute={compute}
       toolInfo={{ title: \`What is a \${title}?\`, description: longDescription }}
     />

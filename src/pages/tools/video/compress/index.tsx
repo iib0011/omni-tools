@@ -160,7 +160,6 @@ export default function CompressVideo({ title }: ToolComponentProps) {
         <ToolVideoInput
           value={input}
           onChange={setInput}
-          accept={['video/mp4', 'video/webm', 'video/ogg']}
           title={'Input Video'}
         />
       }

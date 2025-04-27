@@ -1,21 +1,24 @@
-import { Box, TextField } from '@mui/material';
+import { Box, CircularProgress, TextField, Typography } from '@mui/material';
 import React, { useContext } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import InputHeader from '../InputHeader';
 import ResultFooter from './ResultFooter';
 import { replaceSpecialCharacters } from '@utils/string';
 import mime from 'mime';
+import { globalInputHeight } from '../../config/uiConfig';
 
 export default function ToolTextResult({
   title = 'Result',
   value,
   extension = 'txt',
-  keepSpecialCharacters
+  keepSpecialCharacters,
+  loading
 }: {
   title?: string;
   value: string;
   extension?: string;
   keepSpecialCharacters?: boolean;
+  loading?: boolean;
 }) {
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const handleCopy = () => {
@@ -46,18 +49,37 @@ export default function ToolTextResult({
   return (
     <Box>
       <InputHeader title={title} />
-      <TextField
-        value={keepSpecialCharacters ? value : replaceSpecialCharacters(value)}
-        fullWidth
-        multiline
-        sx={{
-          '&.MuiTextField-root': {
-            backgroundColor: 'background.paper'
+      {loading ? (
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: globalInputHeight
+          }}
+        >
+          <CircularProgress />
+          <Typography variant="body2" sx={{ mt: 2 }}>
+            Loading... This may take a moment.
+          </Typography>
+        </Box>
+      ) : (
+        <TextField
+          value={
+            keepSpecialCharacters ? value : replaceSpecialCharacters(value)
           }
-        }}
-        rows={10}
-        inputProps={{ 'data-testid': 'text-result' }}
-      />
+          fullWidth
+          multiline
+          sx={{
+            '&.MuiTextField-root': {
+              backgroundColor: 'background.paper'
+            }
+          }}
+          rows={10}
+          inputProps={{ 'data-testid': 'text-result' }}
+        />
+      )}
       <ResultFooter handleCopy={handleCopy} handleDownload={handleDownload} />
     </Box>
   );
