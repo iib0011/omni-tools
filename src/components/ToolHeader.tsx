@@ -5,6 +5,7 @@ import { capitalizeFirstLetter } from '../utils/string';
 import Grid from '@mui/material/Grid';
 import { Icon, IconifyIcon } from '@iconify/react';
 import { categoriesColors } from '../config/uiConfig';
+import { getToolsByCategory } from '@tools/index';
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: 'white',
@@ -70,7 +71,9 @@ export default function ToolHeader({
         items={[
           { title: 'All tools', link: '/' },
           {
-            title: capitalizeFirstLetter(type),
+            title: getToolsByCategory().find(
+              (category) => category.type === type
+            )!.rawTitle,
             link: '/categories/' + type
           },
           { title }

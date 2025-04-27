@@ -4,3 +4,13 @@ import { meta as mergePdf } from './merge-pdf/meta';
 import { DefinedTool } from '@tools/defineTool';
 
 export const pdfTools: DefinedTool[] = [splitPdfMeta, pdfRotatePdf, mergePdf];
+import { tool as compressPdfTool } from './compress-pdf/meta';
+import { tool as protectPdfTool } from './protect-pdf/meta';
+import { DefinedTool } from '@tools/defineTool';
+
+export const pdfTools: DefinedTool[] = [
+  splitPdfMeta,
+  pdfRotatePdf,
+  compressPdfTool,
+  protectPdfTool
+];

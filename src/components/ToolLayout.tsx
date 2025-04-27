@@ -53,7 +53,10 @@ export default function ToolLayout({
         {children}
         <Separator backgroundColor="#5581b5" margin="50px" />
         <AllTools
-          title={`All ${capitalizeFirstLetter(type)} tools`}
+          title={`All ${capitalizeFirstLetter(
+            getToolsByCategory().find((category) => category.type === type)!
+              .rawTitle
+          )} tools`}
           toolCards={otherCategoryTools}
         />
       </Box>
