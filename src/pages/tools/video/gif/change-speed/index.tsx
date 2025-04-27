@@ -41,14 +41,27 @@ export default function ChangeSpeed({ title }: ToolComponentProps) {
       try {
         await ffmpeg.writeFile('input.gif', await fetchFile(file));
 
-        // Use FFmpeg's setpts filter to change the speed
-        // PTS (Presentation Time Stamp) determines when each frame is shown
-        // 1/speed changes the PTS - lower value = faster playback
+        // Process the GIF to change playback speed while preserving quality
+        // The filter_complex does three main operations:
+        // 1. [0:v]setpts=${1/newSpeed}*PTS - Adjusts frame timing:
+        //    - PTS (Presentation Time Stamp) controls when each frame is displayed
+        //    - Dividing by speed factor (e.g., 2 for 2x speed) reduces display time
+        //    - Example: 1/2 = 0.5 → frames show for half their normal duration
+        // 2. split[a][b] - Creates two identical streams for parallel processing:
+        //    - [a] goes to palettegen to create an optimized color palette
+        //    - [b] contains the speed-adjusted frames
+        // 3. [b][p]paletteuse - Applies the generated palette to maintain:
+        //    - Color accuracy
+        //    - Transparency handling
+        //    - Reduced file size
+        // This approach prevents visual artifacts that occur with simple re-encoding
         await ffmpeg.exec([
           '-i',
           'input.gif',
-          '-filter:v',
-          `setpts=${1 / newSpeed}*PTS`,
+          '-filter_complex',
+          `[0:v]setpts=${
+            1 / newSpeed
+          }*PTS,split[a][b];[a]palettegen[p];[b][p]paletteuse`,
           '-f',
           'gif',
           'output.gif'
