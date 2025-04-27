@@ -10,6 +10,7 @@ import { InitialValuesType, RotationAngle } from './types';
 import { parsePageRanges, rotatePdf } from './service';
 import SimpleRadio from '@components/options/SimpleRadio';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
+import { isArray } from 'lodash';
 
 const initialValues: InitialValuesType = {
   rotationAngle: 90,
@@ -138,7 +139,9 @@ export default function RotatePdf({
       inputComponent={
         <ToolPdfInput
           value={input}
-          onChange={setInput}
+          onChange={(v) => {
+            setInput(isArray(v) ? v[0] : v);
+          }}
           accept={['application/pdf']}
           title={'Input PDF'}
         />
