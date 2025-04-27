@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ToolFileResult from '@components/result/ToolFileResult';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import ToolContent from '@components/ToolContent';
@@ -8,6 +8,7 @@ import { parsePageRanges, splitPdf } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { PDFDocument } from 'pdf-lib';
 import ToolPdfInput from '@components/input/ToolPdfInput';
+import { isArray } from 'lodash';
 
 type InitialValuesType = {
   pageRanges: string;
@@ -116,7 +117,10 @@ export default function SplitPdf({ title }: ToolComponentProps) {
       inputComponent={
         <ToolPdfInput
           value={input}
-          onChange={setInput}
+          onChange={(v) => {
+            setInput(isArray(v) ? v[0] : v);
+          }}
+          multiple={false}
           accept={['application/pdf']}
           title={'Input PDF'}
         />
