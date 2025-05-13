@@ -11,6 +11,7 @@ import {
 import { globalInputHeight } from '../../config/uiConfig';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import greyPattern from '@assets/grey-pattern.png';
+import { isArray } from 'lodash';
 
 interface BaseFileInputComponentProps extends BaseFileInputProps {
   children: (props: { preview: string | undefined }) => ReactNode;
@@ -32,13 +33,17 @@ export default function BaseFileInput({
   const { showSnackBar } = useContext(CustomSnackBarContext);
 
   useEffect(() => {
-    if (value) {
-      const objectUrl = createObjectURL(value);
-      setPreview(objectUrl);
+    try {
+      if (isArray(value)) {
+        const objectUrl = createObjectURL(value[0]);
+        setPreview(objectUrl);
 
-      return () => revokeObjectURL(objectUrl);
-    } else {
-      setPreview(null);
+        return () => revokeObjectURL(objectUrl);
+      } else {
+        setPreview(null);
+      }
+    } catch (error) {
+      console.error('Error previewing file:', error);
     }
   }, [value]);
 
@@ -52,9 +57,9 @@ export default function BaseFileInput({
   };
 
   const handleCopy = () => {
-    if (value) {
-      const blob = new Blob([value], { type: value.type });
-      const clipboardItem = new ClipboardItem({ [value.type]: blob });
+    if (isArray(value)) {
+      const blob = new Blob([value[0]], { type: value[0].type });
+      const clipboardItem = new ClipboardItem({ [value[0].type]: blob });
 
       navigator.clipboard
         .write([clipboardItem])
@@ -64,6 +69,11 @@ export default function BaseFileInput({
         });
     }
   };
+
+  function handleClear() {
+    // @ts-ignore
+    onChange(null);
+  }
 
   const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
@@ -206,13 +216,18 @@ export default function BaseFileInput({
           </Box>
         )}
       </Box>
-      <InputFooter handleCopy={handleCopy} handleImport={handleImportClick} />
+      <InputFooter
+        handleCopy={handleCopy}
+        handleImport={handleImportClick}
+        handleClear={handleClear}
+      />
       <input
         ref={fileInputRef}
         style={{ display: 'none' }}
         type="file"
         accept={accept.join(',')}
         onChange={handleFileChange}
+        multiple={false}
       />
     </Box>
   );

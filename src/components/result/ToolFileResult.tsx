@@ -173,7 +173,9 @@ export default function ToolFileResult({
         disabled={!value}
         handleCopy={handleCopy}
         handleDownload={handleDownload}
-        hideCopy={fileType === 'video' || fileType === 'audio'}
+        hideCopy={
+          fileType === 'video' || fileType === 'audio' || fileType === 'pdf'
+        }
       />
     </Box>
   );
