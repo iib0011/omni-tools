@@ -139,9 +139,7 @@ export default function RotatePdf({
       inputComponent={
         <ToolPdfInput
           value={input}
-          onChange={(v) => {
-            setInput(isArray(v) ? v[0] : v);
-          }}
+          onChange={setInput}
           accept={['application/pdf']}
           title={'Input PDF'}
         />

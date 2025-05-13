@@ -8,7 +8,6 @@ import { parsePageRanges, splitPdf } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { PDFDocument } from 'pdf-lib';
 import ToolPdfInput from '@components/input/ToolPdfInput';
-import { isArray } from 'lodash';
 
 type InitialValuesType = {
   pageRanges: string;
@@ -117,10 +116,7 @@ export default function SplitPdf({ title }: ToolComponentProps) {
       inputComponent={
         <ToolPdfInput
           value={input}
-          onChange={(v) => {
-            setInput(isArray(v) ? v[0] : v);
-          }}
-          multiple={false}
+          onChange={setInput}
           accept={['application/pdf']}
           title={'Input PDF'}
         />

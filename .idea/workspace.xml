@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: drag and drop">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: misc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/ToolMultiplePdfInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolMultiplePdfInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolFileResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -425,15 +422,7 @@
       <workItem from="1745687713234" duration="1747000" />
       <workItem from="1745775228478" duration="1221000" />
       <workItem from="1745835676024" duration="68000" />
-      <workItem from="1747171958176" duration="829000" />
-    </task>
-    <task id="LOCAL-00146" summary="style: tools height">
-      <option name="closed" value="true" />
-      <created>1741419188990</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1741419188990</updated>
+      <workItem from="1747171958176" duration="1105000" />
     </task>
     <task id="LOCAL-00147" summary="chore: update meta">
       <option name="closed" value="true" />
@@ -819,7 +808,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745688866294</updated>
     </task>
-    <option name="localTasksCounter" value="195" />
+    <task id="LOCAL-00195" summary="fix: misc">
+      <option name="closed" value="true" />
+      <created>1747172914927</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1747172914927</updated>
+    </task>
+    <option name="localTasksCounter" value="196" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -866,8 +863,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: show new tools in landing" />
-    <MESSAGE value="chore: zoom on hover" />
     <MESSAGE value="refactor: time between dates" />
     <MESSAGE value="fix: typos" />
     <MESSAGE value="feat: compress video" />
@@ -891,7 +886,9 @@
     <MESSAGE value="chore: readme img and fix broken link" />
     <MESSAGE value="fix: add mkv to supported videos" />
     <MESSAGE value="feat: drag and drop" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: drag and drop" />
+    <MESSAGE value="Merge branch 'feat/pdf-merge' of git-rohit:rohit267/omni-tools into feat/pdf-merge" />
+    <MESSAGE value="fix: misc" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: misc" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
