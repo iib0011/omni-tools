@@ -14,6 +14,7 @@ interface MultiPdfInputComponentProps {
   value: MultiPdfInput[];
   onChange: (file: MultiPdfInput[]) => void;
 }
+
 export interface MultiPdfInput {
   file: File;
   order: number;
@@ -41,20 +42,6 @@ export default function ToolMultiFileInput({
 
   const handleImportClick = () => {
     fileInputRef.current?.click();
-  };
-
-  const handleCopy = () => {
-    if (isArray(value)) {
-      const blob = new Blob([value[0].file], { type: value[0].file.type });
-      const clipboardItem = new ClipboardItem({ [value[0].file.type]: blob });
-
-      navigator.clipboard
-        .write([clipboardItem])
-        .then(() => showSnackBar('File copied', 'success'))
-        .catch((err) => {
-          showSnackBar('Failed to copy: ' + err, 'error');
-        });
-    }
   };
 
   function handleClear() {
@@ -175,11 +162,7 @@ export default function ToolMultiFileInput({
         </Box>
       </Box>
 
-      <InputFooter
-        handleCopy={handleCopy}
-        handleImport={handleImportClick}
-        handleClear={handleClear}
-      />
+      <InputFooter handleImport={handleImportClick} handleClear={handleClear} />
       <input
         ref={fileInputRef}
         style={{ display: 'none' }}

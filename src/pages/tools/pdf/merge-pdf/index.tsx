@@ -7,7 +7,7 @@ import ToolMultiPdfInput, {
   MultiPdfInput
 } from '@components/input/ToolMultiplePdfInput';
 
-export default function SplitPdf({ title }: ToolComponentProps) {
+export default function MergePdf({ title }: ToolComponentProps) {
   const [input, setInput] = useState<MultiPdfInput[]>([]);
   const [result, setResult] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
@@ -35,19 +35,18 @@ export default function SplitPdf({ title }: ToolComponentProps) {
       setInput={setInput}
       initialValues={input.map((i) => i.file)}
       compute={compute}
-      // exampleCards={exampleCards}
       inputComponent={
         <ToolMultiPdfInput
           value={input}
-          onChange={(v) => {
-            setInput(v);
+          onChange={(pdfInputs) => {
+            setInput(pdfInputs);
           }}
           accept={['application/pdf']}
           title={'Input PDF'}
           type="pdf"
         />
       }
-      getGroups={({ values, updateField }) => []}
+      getGroups={null}
       resultComponent={
         <ToolFileResult
           title={'Output merged PDF'}
