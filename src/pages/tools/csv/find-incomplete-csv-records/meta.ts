@@ -2,7 +2,7 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('csv', {
-  name: 'Find incomplete csv records',
+  name: 'Find incomplete CSV records',
   path: 'find-incomplete-csv-records',
   icon: 'tdesign:search-error',
   description:
