@@ -44,6 +44,7 @@
     "color": "^4.2.3",
     "dayjs": "^1.11.13",
     "formik": "^2.4.6",
+    "html-to-image": "^1.11.13",
     "jimp": "^0.22.12",
     "js-quantities": "^1.8.0",
     "lint-staged": "^15.4.3",
