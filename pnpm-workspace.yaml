@@ -1,0 +1,5 @@
+onlyBuiltDependencies:
+  - '@swc/core'
+  - esbuild
+  - protobufjs
+  - tesseract.js
