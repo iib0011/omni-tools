@@ -19,7 +19,7 @@ export default function QRGeneratorTool({
       title={title}
       initialValues={initialValues}
       getGroups={() => []}
-      compute={() => {}} // 실제 계산 X, 바로 반영
+      compute={() => {}}
       input={input}
       setInput={setInput}
       inputComponent={
