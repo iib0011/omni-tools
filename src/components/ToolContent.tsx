@@ -23,7 +23,7 @@ const FormikListenerComponent = <T,>({
   const { values } = useFormikContext<T>();
   const { showSnackBar } = useContext(CustomSnackBarContext);
 
-  React.useEffect(() => {
+  useEffect(() => {
     try {
       compute(values, input);
     } catch (exception: unknown) {
@@ -35,7 +35,8 @@ const FormikListenerComponent = <T,>({
   useEffect(() => {
     onValuesChange?.(values);
   }, [onValuesChange, values]);
-  return null; // This component doesn't render anything
+
+  return null;
 };
 
 interface ToolContentProps<T, I> extends ToolComponentProps {
@@ -99,7 +100,11 @@ export default function ToolContent<T extends FormikValues, I>({
                 input={input}
                 onValuesChange={onValuesChange}
               />
-              <ToolOptions getGroups={getGroups} vertical={verticalGroups} />
+
+              {/* meta 파일의 name 속성이 QR 코드 생성기일 때만 ToolOptions 숨기기 */}
+              {title !== 'QR 코드 생성기' && (
+                <ToolOptions getGroups={getGroups} vertical={verticalGroups} />
+              )}
 
               {toolInfo && toolInfo.title && toolInfo.description && (
                 <ToolInfo
