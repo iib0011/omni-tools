@@ -41,6 +41,7 @@ export default function QRGeneratorTool({
           title="QR 코드에 들어갈 텍스트"
           value={input}
           onChange={setInput}
+          hideFileImport
         />
       }
       resultComponent={
