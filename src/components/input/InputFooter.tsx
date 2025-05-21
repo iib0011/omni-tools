@@ -9,15 +9,18 @@ export default function InputFooter({
   handleCopy,
   handleClear
 }: {
-  handleImport: () => void;
+  handleImport?: () => void;
   handleCopy?: () => void;
   handleClear?: () => void;
 }) {
   return (
     <Stack mt={1} direction={'row'} spacing={2}>
-      <Button onClick={handleImport} startIcon={<PublishIcon />}>
-        Import from file
-      </Button>
+      {handleImport && (
+        <Button onClick={handleImport} startIcon={<PublishIcon />}>
+          Import from file
+        </Button>
+      )}
+
       {handleCopy && (
         <Button onClick={handleCopy} startIcon={<ContentPasteIcon />}>
           Copy to clipboard

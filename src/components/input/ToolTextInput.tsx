@@ -7,11 +7,13 @@ import InputFooter from './InputFooter';
 export default function ToolTextInput({
   value,
   onChange,
-  title = 'Input text'
+  title = 'Input text',
+  hideFileImport = false
 }: {
   title?: string;
   value: string;
   onChange: (value: string) => void;
+  hideFileImport?: boolean;
 }) {
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -24,6 +26,7 @@ export default function ToolTextInput({
         showSnackBar('Failed to copy: ' + err, 'error');
       });
   };
+
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
@@ -41,6 +44,7 @@ export default function ToolTextInput({
   const handleImportClick = () => {
     fileInputRef.current?.click();
   };
+
   return (
     <Box>
       <InputHeader title={title} />
@@ -59,7 +63,12 @@ export default function ToolTextInput({
           'data-testid': 'text-input'
         }}
       />
-      <InputFooter handleCopy={handleCopy} handleImport={handleImportClick} />
+
+      <InputFooter
+        handleCopy={handleCopy}
+        handleImport={hideFileImport ? undefined : handleImportClick}
+      />
+
       <input
         type="file"
         accept="*"
