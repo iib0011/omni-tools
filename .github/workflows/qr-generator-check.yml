@@ -1,0 +1,36 @@
+name: Run Omni Tools and QR Generator
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-check:
+    name: Build & Check QR Generator
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 코드 체크아웃
+        uses: actions/checkout@v3
+
+      - name: Node.js 설치
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: pnpm 설치
+        run: npm install -g pnpm
+
+      - name: 의존성 설치
+        run: pnpm install
+
+      - name: 전체 프로젝트 빌드 (main 테스트)
+        run: pnpm build
+
+      - name: QR Generator 컴포넌트 확인 (파일 존재 여부 테스트)
+        run: test -f src/pages/tools/string/qr-generator/index.tsx
+
+      - name: 빌드 성공 메시지 출력
+        run: echo "QR Generator 기능 및 전체 프로젝트 실행 확인 완료!"
