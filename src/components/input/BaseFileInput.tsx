@@ -33,17 +33,14 @@ export default function BaseFileInput({
   const { showSnackBar } = useContext(CustomSnackBarContext);
 
   useEffect(() => {
-    try {
-      if (isArray(value)) {
-        const objectUrl = createObjectURL(value[0]);
+    if (value) {
+      try {
+        const objectUrl = createObjectURL(value);
         setPreview(objectUrl);
-
         return () => revokeObjectURL(objectUrl);
-      } else {
-        setPreview(null);
+      } catch (error) {
+        console.error('Error previewing file:', error);
       }
-    } catch (error) {
-      console.error('Error previewing file:', error);
     }
   }, [value]);
 
