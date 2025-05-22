@@ -7,7 +7,7 @@ export const tool = defineTool('csv', {
   icon: 'lets-icons:json-light',
   description:
     'Convert CSV files to JSON format with customizable options for delimiters, quotes, and output formatting. Support for headers, comments, and dynamic type conversion.',
-  shortDescription: 'Convert CSV data to JSON format',
+  shortDescription: 'Convert CSV data to JSON format.',
   keywords: ['csv', 'json', 'convert', 'transform', 'parse'],
   component: lazy(() => import('./index'))
 });
