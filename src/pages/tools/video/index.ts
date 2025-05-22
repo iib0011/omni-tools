@@ -1,3 +1,4 @@
+import { tool as videoChangeSpeed } from './change-speed/meta';
 import { tool as videoFlip } from './flip/meta';
 import { rotate } from '../string/rotate/service';
 import { gifTools } from './gif';
