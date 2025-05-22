@@ -4,10 +4,10 @@ import { lazy } from 'react';
 export const tool = defineTool('video', {
   name: 'Change speed',
   path: 'change-speed',
-  icon: '',
-  description: '',
-  shortDescription: '',
+  icon: 'material-symbols-light:speed-outline',
+  description:
+    'This online utility lets you change the speed of a video. You can speed it up or slow it down.',
+  shortDescription: 'Quickly change VIDEO speed',
   keywords: ['change', 'speed'],
-  longDescription: '',
   component: lazy(() => import('./index'))
 });

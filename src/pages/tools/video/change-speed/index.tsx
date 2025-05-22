@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
@@ -8,51 +9,73 @@ import { GetGroupsType } from '@components/options/ToolOptions';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { main } from './service';
 import { InitialValuesType } from './types';
+import ToolVideoInput from '@components/input/ToolVideoInput';
+import ToolFileResult from '@components/result/ToolFileResult';
+import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 
 const initialValues: InitialValuesType = {
-  // splitSeparator: '\n'
+  newSpeed: 2
 };
 
-const exampleCards: CardExampleType<InitialValuesType>[] = [
-  {
-    title: 'Split a String',
-    description: 'This example shows how to split a string into multiple lines',
-    sampleText: 'Hello World,Hello World',
-    sampleResult: `Hello World
-Hello World`,
-    sampleOptions: {
-      //     splitSeparator: ','
-    }
-  }
-];
+// TODO - Add the ffmpeg logic
 export default function ChangeSpeed({
   title,
   longDescription
 }: ToolComponentProps) {
-  const [input, setInput] = useState<string>('');
-  const [result, setResult] = useState<string>('');
+  const [input, setInput] = useState<File | null>(null);
+  const [result, setResult] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
 
-  const compute = (values: InitialValuesType, input: string) => {
-    setResult(main(input, values));
+  const compute = (optionsValues: InitialValuesType, input: File | null) => {
+    if (!input) return;
+    const { newSpeed } = optionsValues;
+
+    // Here we set the output video
+    setResult(main(input, optionsValues));
   };
 
   const getGroups: GetGroupsType<InitialValuesType> | null = ({
     values,
     updateField
   }) => [
-    {
-      title: 'Example Settings',
-      component: <Box></Box>
-    }
-  ];
+      {
+        title: 'New Video Speed',
+        component: (
+          <Box>
+            <TextFieldWithDesc
+              value={values.newSpeed.toString()}
+              onOwnChange={(val) => updateField('newSpeed', Number(val))}
+              description="Default multiplier: 2 means 2x faster"
+              type="number"
+            />
+          </Box>
+        )
+      }
+    ];
   return (
     <ToolContent
       title={title}
       input={input}
-      inputComponent={<ToolTextInput value={input} onChange={setInput} />}
-      resultComponent={<ToolTextResult value={result} />}
+      inputComponent={
+        <ToolVideoInput
+          value={input}
+          onChange={setInput}
+          title={'Input Video'}
+        />
+      }
+      resultComponent={
+        loading ? (
+          <ToolFileResult
+            title="Setting Speed"
+            value={null}
+            loading={true}
+            extension={''}
+          />
+        ) : (
+          <ToolFileResult title="Edited Video" value={result} extension="mp4" />
+        )
+      }
       initialValues={initialValues}
-      exampleCards={exampleCards}
       getGroups={getGroups}
       setInput={setInput}
       compute={compute}

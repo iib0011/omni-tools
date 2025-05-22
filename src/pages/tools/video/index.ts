@@ -7,6 +7,7 @@ import { tool as rotateVideo } from './rotate/meta';
 import { tool as compressVideo } from './compress/meta';
 import { tool as loopVideo } from './loop/meta';
 import { tool as flipVideo } from './flip/meta';
+import { tool as changeSpeed } from './change-speed/meta';
 
 export const videoTools = [
   ...gifTools,
@@ -14,5 +15,6 @@ export const videoTools = [
   rotateVideo,
   compressVideo,
   loopVideo,
-  flipVideo
+  flipVideo,
+  changeSpeed
 ];
