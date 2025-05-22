@@ -54,7 +54,7 @@ function createFolderStructure(basePath, foldersToCreateIndexCount) {
   }
 
   // Start the recursive folder creation
-  recursiveCreate('/', 1);
+  recursiveCreate('.', 0);
 }
 
 const toolNameCamelCase = toolName.replace(/-./g, (x) => x[1].toUpperCase());
