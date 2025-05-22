@@ -1,14 +1,17 @@
+import { tool as videoFlip } from './flip/meta';
 import { rotate } from '../string/rotate/service';
 import { gifTools } from './gif';
 import { tool as trimVideo } from './trim/meta';
 import { tool as rotateVideo } from './rotate/meta';
 import { tool as compressVideo } from './compress/meta';
 import { tool as loopVideo } from './loop/meta';
+import { tool as flipVideo } from './flip/meta';
 
 export const videoTools = [
   ...gifTools,
   trimVideo,
   rotateVideo,
   compressVideo,
-  loopVideo
+  loopVideo,
+  flipVideo
 ];
