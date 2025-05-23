@@ -1,7 +1,7 @@
-import { readFile, writeFile } from "fs/promises";
-import fs from "fs";
-import { dirname, join, sep } from "path";
-import { fileURLToPath } from "url";
+import { readFile, writeFile } from 'fs/promises';
+import fs from 'fs';
+import { dirname, join, sep } from 'path';
+import { fileURLToPath } from 'url';
 
 const currentDirname = dirname(fileURLToPath(import.meta.url));
 
@@ -10,14 +10,14 @@ const folder = process.argv[3];
 
 const toolsDir = join(
   currentDirname,
-  "..",
-  "src",
-  "pages",
-  "tools",
-  folder ?? ""
+  '..',
+  'src',
+  'pages',
+  'tools',
+  folder ?? ''
 );
 if (!toolName) {
-  throw new Error("Please specify a toolname.");
+  throw new Error('Please specify a toolname.');
 }
 
 function capitalizeFirstLetter(string) {
@@ -35,7 +35,7 @@ function createFolderStructure(basePath, foldersToCreateIndexCount) {
     if (!fs.existsSync(currentPath)) {
       fs.mkdirSync(currentPath, { recursive: true });
     }
-    const indexPath = join(currentPath, "index.ts");
+    const indexPath = join(currentPath, 'index.ts');
     if (
       !fs.existsSync(indexPath) &&
       index < folderArray.length - 1 &&
@@ -54,15 +54,15 @@ function createFolderStructure(basePath, foldersToCreateIndexCount) {
   }
 
   // Start the recursive folder creation
-  recursiveCreate(toolsDir, 0);
+  recursiveCreate('.', 0);
 }
 
-const toolNameCamelCase = toolName.replace(/-./g, x => x[1].toUpperCase());
+const toolNameCamelCase = toolName.replace(/-./g, (x) => x[1].toUpperCase());
 const toolNameTitleCase =
-  toolName[0].toUpperCase() + toolName.slice(1).replace(/-/g, " ");
+  toolName[0].toUpperCase() + toolName.slice(1).replace(/-/g, ' ');
 const toolDir = join(toolsDir, toolName);
 const type = folder.split(sep)[folder.split(sep).length - 1];
-await createFolderStructure(toolName, folder.split(sep).length);
+await createFolderStructure(toolDir, folder.split(sep).length);
 console.log(`Directory created: ${toolDir}`);
 
 const createToolFile = async (name, content) => {
@@ -150,7 +150,7 @@ export const tool = defineTool('${type}', {
   icon: '',
   description: '',
   shortDescription: '',
-  keywords: ['${toolName.split("-").join("', '")}'],
+  keywords: ['${toolName.split('-').join("', '")}'],
   longDescription: '',
   component: lazy(() => import('./index'))
 });
@@ -209,9 +209,9 @@ import { expect, describe, it } from 'vitest';
 // `
 // )
 
-const toolsIndex = join(toolsDir, "index.ts");
-const indexContent = await readFile(toolsIndex, { encoding: "utf-8" }).then(r =>
-  r.split("\n")
+const toolsIndex = join(toolsDir, 'index.ts');
+const indexContent = await readFile(toolsIndex, { encoding: 'utf-8' }).then(
+  (r) => r.split('\n')
 );
 
 indexContent.splice(
@@ -221,5 +221,5 @@ indexContent.splice(
     toolNameCamelCase
   )} } from './${toolName}/meta';`
 );
-writeFile(toolsIndex, indexContent.join("\n"));
+writeFile(toolsIndex, indexContent.join('\n'));
 console.log(`Added import in: ${toolsIndex}`);
