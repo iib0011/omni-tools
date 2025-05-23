@@ -154,12 +154,7 @@ export default function ChangeSpeed({
       }
       resultComponent={
         loading ? (
-          <ToolFileResult
-            title="Setting Speed"
-            value={null}
-            loading={true}
-            extension={''}
-          />
+          <ToolFileResult title="Setting Speed" value={null} loading={true} />
         ) : (
           <ToolFileResult title="Edited Video" value={result} extension="mp4" />
         )
