@@ -41,7 +41,7 @@ export default function BaseFileInput({
       } catch (error) {
         console.error('Error previewing file:', error);
       }
-    }
+    } else setPreview(null);
   }, [value]);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -66,11 +66,6 @@ export default function BaseFileInput({
         });
     }
   };
-
-  function handleClear() {
-    // @ts-ignore
-    onChange(null);
-  }
 
   const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
@@ -213,11 +208,7 @@ export default function BaseFileInput({
           </Box>
         )}
       </Box>
-      <InputFooter
-        handleCopy={handleCopy}
-        handleImport={handleImportClick}
-        handleClear={handleClear}
-      />
+      <InputFooter handleCopy={handleCopy} handleImport={handleImportClick} />
       <input
         ref={fileInputRef}
         style={{ display: 'none' }}

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
@@ -23,14 +22,14 @@ export default function ChangeSpeed({
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
 
-  // FFmpeg only supports atempo between 0.5 and 2.0, so we chain filters
+  // FFmpeg only supports a tempo between 0.5 and 2.0, so we chain filters
   const computeAudioFilter = (speed: number): string => {
     if (speed <= 2 && speed >= 0.5) {
       return `atempo=${speed}`;
     }
 
     // Break into supported chunks
-    const filters = [];
+    const filters: string[] = [];
     let remainingSpeed = speed;
     while (remainingSpeed > 2.0) {
       filters.push('atempo=2.0');
@@ -55,6 +54,7 @@ export default function ChangeSpeed({
       file: File,
       newSpeed: number
     ): Promise<void> => {
+      if (newSpeed === 0) return;
       setLoading(true);
 
       if (!ffmpeg) {

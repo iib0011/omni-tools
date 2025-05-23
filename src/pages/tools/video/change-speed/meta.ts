@@ -7,7 +7,7 @@ export const tool = defineTool('video', {
   icon: 'material-symbols-light:speed-outline',
   description:
     'This online utility lets you change the speed of a video. You can speed it up or slow it down.',
-  shortDescription: 'Quickly change VIDEO speed',
+  shortDescription: 'Quickly change video speed',
   keywords: ['change', 'speed'],
   component: lazy(() => import('./index'))
 });
