@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
-import { main } from './service';
 import { InitialValuesType } from './types';
 import ToolVideoInput from '@components/input/ToolVideoInput';
 import ToolFileResult from '@components/result/ToolFileResult';
@@ -23,6 +22,28 @@ export default function ChangeSpeed({
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
+
+  // FFmpeg only supports atempo between 0.5 and 2.0, so we chain filters
+  const computeAudioFilter = (speed: number): string => {
+    if (speed <= 2 && speed >= 0.5) {
+      return `atempo=${speed}`;
+    }
+
+    // Break into supported chunks
+    const filters = [];
+    let remainingSpeed = speed;
+    while (remainingSpeed > 2.0) {
+      filters.push('atempo=2.0');
+      remainingSpeed /= 2.0;
+    }
+    while (remainingSpeed < 0.5) {
+      filters.push('atempo=0.5');
+      remainingSpeed /= 0.5;
+    }
+    filters.push(`atempo=${remainingSpeed.toFixed(2)}`);
+
+    return filters.join(',');
+  };
 
   const compute = (optionsValues: InitialValuesType, input: File | null) => {
     if (!input) return;
@@ -68,14 +89,10 @@ export default function ChangeSpeed({
           audioFilter,
           '-c:v',
           'libx264',
-          '-crf',
-          '18',
           '-preset',
-          'slow',
+          'ultrafast',
           '-c:a',
           'aac',
-          '-b:a',
-          '192k',
           outputName
         ]);
 
@@ -100,52 +117,30 @@ export default function ChangeSpeed({
       } finally {
         setLoading(false);
       }
-
-      // FFmpeg only supports atempo between 0.5 and 2.0, so we chain filters
-      function computeAudioFilter(speed: number): string {
-        if (speed <= 2 && speed >= 0.5) {
-          return `atempo=${speed}`;
-        }
-
-        // Break into supported chunks
-        const filters = [];
-        let remainingSpeed = speed;
-        while (remainingSpeed > 2.0) {
-          filters.push('atempo=2.0');
-          remainingSpeed /= 2.0;
-        }
-        while (remainingSpeed < 0.5) {
-          filters.push('atempo=0.5');
-          remainingSpeed /= 0.5;
-        }
-        filters.push(`atempo=${remainingSpeed.toFixed(2)}`);
-
-        return filters.join(',');
-      }
     };
 
     // Here we set the output video
-    processVideo(input, newSpeed)
+    processVideo(input, newSpeed);
   };
 
   const getGroups: GetGroupsType<InitialValuesType> | null = ({
     values,
     updateField
   }) => [
-      {
-        title: 'New Video Speed',
-        component: (
-          <Box>
-            <TextFieldWithDesc
-              value={values.newSpeed.toString()}
-              onOwnChange={(val) => updateField('newSpeed', Number(val))}
-              description="Default multiplier: 2 means 2x faster"
-              type="number"
-            />
-          </Box>
-        )
-      }
-    ];
+    {
+      title: 'New Video Speed',
+      component: (
+        <Box>
+          <TextFieldWithDesc
+            value={values.newSpeed.toString()}
+            onOwnChange={(val) => updateField('newSpeed', Number(val))}
+            description="Default multiplier: 2 means 2x faster"
+            type="number"
+          />
+        </Box>
+      )
+    }
+  ];
   return (
     <ToolContent
       title={title}
