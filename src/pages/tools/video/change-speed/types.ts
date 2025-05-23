@@ -1,3 +1,3 @@
 export type InitialValuesType = {
-  newSpeed: Number;
+  newSpeed: number;
 };

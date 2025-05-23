@@ -25,7 +25,6 @@ export default function ChangeSpeed({
   const [loading, setLoading] = useState(false);
 
   const compute = (optionsValues: InitialValuesType, input: File | null) => {
-    setLoading(true);
     if (!input) return;
     const { newSpeed } = optionsValues;
     let ffmpeg: FFmpeg | null = null;
@@ -35,6 +34,8 @@ export default function ChangeSpeed({
       file: File,
       newSpeed: number
     ): Promise<void> => {
+      setLoading(true);
+
       if (!ffmpeg) {
         ffmpeg = new FFmpeg();
       }
@@ -124,27 +125,27 @@ export default function ChangeSpeed({
     };
 
     // Here we set the output video
-    setResult(main(input, optionsValues));
+    processVideo(input, newSpeed)
   };
 
   const getGroups: GetGroupsType<InitialValuesType> | null = ({
     values,
     updateField
   }) => [
-    {
-      title: 'New Video Speed',
-      component: (
-        <Box>
-          <TextFieldWithDesc
-            value={values.newSpeed.toString()}
-            onOwnChange={(val) => updateField('newSpeed', Number(val))}
-            description="Default multiplier: 2 means 2x faster"
-            type="number"
-          />
-        </Box>
-      )
-    }
-  ];
+      {
+        title: 'New Video Speed',
+        component: (
+          <Box>
+            <TextFieldWithDesc
+              value={values.newSpeed.toString()}
+              onOwnChange={(val) => updateField('newSpeed', Number(val))}
+              description="Default multiplier: 2 means 2x faster"
+              type="number"
+            />
+          </Box>
+        )
+      }
+    ];
   return (
     <ToolContent
       title={title}
