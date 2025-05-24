@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import * as Yup from 'yup';
 import ToolFileResult from '@components/result/ToolFileResult';
 import ToolContent from '@components/ToolContent';
@@ -7,42 +7,45 @@ import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import { debounce } from 'lodash';
 import ToolVideoInput from '@components/input/ToolVideoInput';
-import { rotateVideo } from './service';
-import { RotationAngle } from '../../pdf/rotate-pdf/types';
+import { flipVideo } from './service';
+import { FlipOrientation, InitialValuesType } from './types';
 import SimpleRadio from '@components/options/SimpleRadio';
 
-export const initialValues = {
-  rotation: 90
+export const initialValues: InitialValuesType = {
+  orientation: 'horizontal'
 };
 
 export const validationSchema = Yup.object({
-  rotation: Yup.number()
-    .oneOf([0, 90, 180, 270], 'Rotation must be 0, 90, 180, or 270 degrees')
-    .required('Rotation is required')
+  orientation: Yup.string()
+    .oneOf(
+      ['horizontal', 'vertical'],
+      'Orientation must be horizontal or vertical'
+    )
+    .required('Orientation is required')
 });
 
-const angleOptions: { value: RotationAngle; label: string }[] = [
-  { value: 90, label: '90° Clockwise' },
-  { value: 180, label: '180° (Upside down)' },
-  { value: 270, label: '270° (90° Counter-clockwise)' }
+const orientationOptions: { value: FlipOrientation; label: string }[] = [
+  { value: 'horizontal', label: 'Horizontal (Mirror)' },
+  { value: 'vertical', label: 'Vertical (Upside Down)' }
 ];
-export default function RotateVideo({ title }: ToolComponentProps) {
+
+export default function FlipVideo({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
 
   const compute = async (
-    optionsValues: typeof initialValues,
+    optionsValues: InitialValuesType,
     input: File | null
   ) => {
     if (!input) return;
     setLoading(true);
 
     try {
-      const rotatedFile = await rotateVideo(input, optionsValues.rotation);
-      setResult(rotatedFile);
+      const flippedFile = await flipVideo(input, optionsValues.orientation);
+      setResult(flippedFile);
     } catch (error) {
-      console.error('Error rotating video:', error);
+      console.error('Error flipping video:', error);
     } finally {
       setLoading(false);
     }
@@ -50,21 +53,21 @@ export default function RotateVideo({ title }: ToolComponentProps) {
 
   const debouncedCompute = useCallback(debounce(compute, 1000), []);
 
-  const getGroups: GetGroupsType<typeof initialValues> = ({
+  const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
     updateField
   }) => [
     {
-      title: 'Rotation',
+      title: 'Orientation',
       component: (
         <Box>
-          {angleOptions.map((angleOption) => (
+          {orientationOptions.map((orientationOption) => (
             <SimpleRadio
-              key={angleOption.value}
-              title={angleOption.label}
-              checked={values.rotation === angleOption.value}
+              key={orientationOption.value}
+              title={orientationOption.label}
+              checked={values.orientation === orientationOption.value}
               onClick={() => {
-                updateField('rotation', angleOption.value);
+                updateField('orientation', orientationOption.value);
               }}
             />
           ))}
@@ -87,14 +90,14 @@ export default function RotateVideo({ title }: ToolComponentProps) {
       resultComponent={
         loading ? (
           <ToolFileResult
-            title={'Rotating Video'}
+            title={'Flipping Video'}
             value={null}
             loading={true}
             extension={''}
           />
         ) : (
           <ToolFileResult
-            title={'Rotated Video'}
+            title={'Flipped Video'}
             value={result}
             extension={'mp4'}
           />

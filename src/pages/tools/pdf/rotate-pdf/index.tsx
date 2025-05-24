@@ -10,6 +10,7 @@ import { InitialValuesType, RotationAngle } from './types';
 import { parsePageRanges, rotatePdf } from './service';
 import SimpleRadio from '@components/options/SimpleRadio';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
+import { isArray } from 'lodash';
 
 const initialValues: InitialValuesType = {
   rotationAngle: 90,

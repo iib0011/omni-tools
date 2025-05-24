@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ToolFileResult from '@components/result/ToolFileResult';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import ToolContent from '@components/ToolContent';

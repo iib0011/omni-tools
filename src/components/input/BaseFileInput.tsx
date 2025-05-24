@@ -1,4 +1,4 @@
-import React, { ReactNode, useContext, useEffect } from 'react';
+import React, { ReactNode, useContext, useEffect, useState } from 'react';
 import { Box, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import InputHeader from '../InputHeader';
@@ -11,6 +11,7 @@ import {
 import { globalInputHeight } from '../../config/uiConfig';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import greyPattern from '@assets/grey-pattern.png';
+import { isArray } from 'lodash';
 
 interface BaseFileInputComponentProps extends BaseFileInputProps {
   children: (props: { preview: string | undefined }) => ReactNode;
@@ -25,20 +26,22 @@ export default function BaseFileInput({
   children,
   type
 }: BaseFileInputComponentProps) {
-  const [preview, setPreview] = React.useState<string | null>(null);
+  const [preview, setPreview] = useState<string | null>(null);
+  const [isDragging, setIsDragging] = useState<boolean>(false);
   const theme = useTheme();
   const fileInputRef = React.useRef<HTMLInputElement>(null);
   const { showSnackBar } = useContext(CustomSnackBarContext);
 
   useEffect(() => {
     if (value) {
-      const objectUrl = createObjectURL(value);
-      setPreview(objectUrl);
-
-      return () => revokeObjectURL(objectUrl);
-    } else {
-      setPreview(null);
-    }
+      try {
+        const objectUrl = createObjectURL(value);
+        setPreview(objectUrl);
+        return () => revokeObjectURL(objectUrl);
+      } catch (error) {
+        console.error('Error previewing file:', error);
+      }
+    } else setPreview(null);
   }, [value]);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -49,10 +52,11 @@ export default function BaseFileInput({
   const handleImportClick = () => {
     fileInputRef.current?.click();
   };
+
   const handleCopy = () => {
-    if (value) {
-      const blob = new Blob([value], { type: value.type });
-      const clipboardItem = new ClipboardItem({ [value.type]: blob });
+    if (isArray(value)) {
+      const blob = new Blob([value[0]], { type: value[0].type });
+      const clipboardItem = new ClipboardItem({ [value[0].type]: blob });
 
       navigator.clipboard
         .write([clipboardItem])
@@ -61,6 +65,52 @@ export default function BaseFileInput({
           showSnackBar('Failed to copy: ' + err, 'error');
         });
     }
+  };
+
+  const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setIsDragging(false);
+
+    if (event.dataTransfer.files && event.dataTransfer.files.length > 0) {
+      const file = event.dataTransfer.files[0];
+
+      // Check if file type is acceptable
+      const isAcceptable = accept.some((acceptType) => {
+        // Handle wildcards like "image/*"
+        if (acceptType.endsWith('/*')) {
+          const category = acceptType.split('/')[0];
+          return file.type.startsWith(category);
+        }
+        return acceptType === file.type;
+      });
+
+      if (isAcceptable) {
+        onChange(file);
+      } else {
+        showSnackBar(
+          `Invalid file type. Please use ${accept.join(', ')}`,
+          'error'
+        );
+      }
+    }
+  };
+
+  const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+  };
+
+  const handleDragEnter = (event: React.DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (event: React.DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setIsDragging(false);
   };
 
   useEffect(() => {
@@ -95,8 +145,15 @@ export default function BaseFileInput({
           borderRadius: 2,
           boxShadow: '5',
           bgcolor: 'background.paper',
-          position: 'relative'
+          position: 'relative',
+          borderColor: isDragging ? theme.palette.primary.main : undefined,
+          borderWidth: isDragging ? 2 : 1,
+          borderStyle: isDragging ? 'dashed' : 'solid'
         }}
+        onDrop={handleDrop}
+        onDragOver={handleDragOver}
+        onDragEnter={handleDragEnter}
+        onDragLeave={handleDragLeave}
       >
         {preview ? (
           <Box
@@ -127,17 +184,27 @@ export default function BaseFileInput({
               cursor: 'pointer'
             }}
           >
-            <Typography
-              color={
-                theme.palette.mode === 'dark'
-                  ? theme.palette.grey['300']
-                  : theme.palette.grey['600']
-              }
-            >
-              Click here to select a {type} from your device, press Ctrl+V to
-              use a {type} from your clipboard, drag and drop a file from
-              desktop
-            </Typography>
+            {isDragging ? (
+              <Typography
+                color={theme.palette.primary.main}
+                variant="h6"
+                align="center"
+              >
+                Drop your {type} here
+              </Typography>
+            ) : (
+              <Typography
+                color={
+                  theme.palette.mode === 'dark'
+                    ? theme.palette.grey['300']
+                    : theme.palette.grey['600']
+                }
+              >
+                Click here to select a {type} from your device, press Ctrl+V to
+                use a {type} from your clipboard, or drag and drop a file from
+                desktop
+              </Typography>
+            )}
           </Box>
         )}
       </Box>
@@ -148,6 +215,7 @@ export default function BaseFileInput({
         type="file"
         accept={accept.join(',')}
         onChange={handleFileChange}
+        multiple={false}
       />
     </Box>
   );

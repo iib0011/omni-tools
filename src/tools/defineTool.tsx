@@ -2,7 +2,7 @@ import ToolLayout from '../components/ToolLayout';
 import React, { JSXElementConstructor, LazyExoticComponent } from 'react';
 import { IconifyIcon } from '@iconify/react';
 
-interface ToolOptions {
+export interface ToolMeta {
   path: string;
   component: LazyExoticComponent<JSXElementConstructor<ToolComponentProps>>;
   keywords: string[];
@@ -44,7 +44,7 @@ export interface ToolComponentProps {
 
 export const defineTool = (
   basePath: ToolCategory,
-  options: ToolOptions
+  options: ToolMeta
 ): DefinedTool => {
   const {
     icon,

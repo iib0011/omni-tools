@@ -37,7 +37,6 @@ export async function protectPdf(
     password: options.password
   };
   const protectedFileUrl: string = await protectWithGhostScript(dataObject);
-  console.log('protected', protectedFileUrl);
   return await loadPDFData(
     protectedFileUrl,
     pdfFile.name.replace('.pdf', '-protected.pdf')
