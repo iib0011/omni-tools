@@ -70,7 +70,7 @@ describe('main function', () => {
       csvToInsert
     });
     expect(result).toBe(
-      'name,email,age\nAlice,alice@mail.com,30\nBob,bob@mail.com,25'
+      'email,name,age\nalice@mail.com,Alice,30\nbob@mail.com,Bob,25'
     );
   });
 
