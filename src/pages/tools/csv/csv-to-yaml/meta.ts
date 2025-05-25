@@ -2,7 +2,7 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('csv', {
-  name: 'Csv to yaml',
+  name: 'Convert CSV to YAML',
   path: 'csv-to-yaml',
   icon: 'nonicons:yaml-16',
   description:
