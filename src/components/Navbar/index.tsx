@@ -100,12 +100,13 @@ const Navbar: React.FC<NavbarProps> = ({ onSwitchTheme }) => {
           alignItems: 'center'
         }}
       >
-        <img
-          onClick={() => navigate('/')}
-          style={{ cursor: 'pointer' }}
-          src={logo}
-          width={isMobile ? '80px' : '150px'}
-        />
+        <a href="/">
+          <img
+            src={logo}
+            width={isMobile ? '80px' : '150px'}
+            style={{ pointerEvents: 'none' }}
+          />
+        </a>
         {isMobile ? (
           <>
             <IconButton
