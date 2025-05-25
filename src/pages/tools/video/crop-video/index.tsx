@@ -24,20 +24,46 @@ export default function CropVideo({ title }: ToolComponentProps) {
     width: number;
     height: number;
   } | null>(null);
+  const [processingError, setProcessingError] = useState<string>('');
 
   useEffect(() => {
     if (input) {
       getVideoDimensions(input)
         .then((dimensions) => {
           setVideoDimensions(dimensions);
+          setProcessingError('');
         })
         .catch((error) => {
           console.error('Error getting video dimensions:', error);
+          setProcessingError('Failed to load video dimensions');
         });
     } else {
       setVideoDimensions(null);
+      setProcessingError('');
     }
   }, [input]);
+
+  const validateDimensions = (values: InitialValuesType): string => {
+    if (!videoDimensions) return '';
+
+    if (values.x < 0 || values.y < 0) {
+      return 'X and Y coordinates must be non-negative';
+    }
+
+    if (values.width <= 0 || values.height <= 0) {
+      return 'Width and height must be positive';
+    }
+
+    if (values.x + values.width > videoDimensions.width) {
+      return `Crop area extends beyond video width (${videoDimensions.width}px)`;
+    }
+
+    if (values.y + values.height > videoDimensions.height) {
+      return `Crop area extends beyond video height (${videoDimensions.height}px)`;
+    }
+
+    return '';
+  };
 
   const compute = async (
     optionsValues: InitialValuesType,
@@ -45,6 +71,13 @@ export default function CropVideo({ title }: ToolComponentProps) {
   ) => {
     if (!input) return;
 
+    const error = validateDimensions(optionsValues);
+    if (error) {
+      setProcessingError(error);
+      return;
+    }
+
+    setProcessingError('');
     setLoading(true);
 
     try {
@@ -52,12 +85,16 @@ export default function CropVideo({ title }: ToolComponentProps) {
       setResult(croppedFile);
     } catch (error) {
       console.error('Error cropping video:', error);
+      setProcessingError(
+        'Error cropping video. Please check parameters and video file.'
+      );
     } finally {
       setLoading(false);
     }
   };
 
-  const debouncedCompute = useCallback(debounce(compute, 1000), [
+  // 2 seconds to avoid starting job half way through
+  const debouncedCompute = useCallback(debounce(compute, 2000), [
     videoDimensions
   ]);
 
@@ -86,6 +123,11 @@ export default function CropVideo({ title }: ToolComponentProps) {
       title: 'Crop Coordinates',
       component: (
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+          {processingError && (
+            <Alert severity="error" sx={{ mb: 2 }}>
+              {processingError}
+            </Alert>
+          )}
           <Box sx={{ display: 'flex', gap: 2 }}>
             <TextField
               label="X (left)"

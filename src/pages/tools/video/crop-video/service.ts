@@ -45,6 +45,10 @@ export async function cropVideo(
 
   const args = [];
 
+  if (options.width <= 0 || options.height <= 0) {
+    throw new Error('Width and height must be positive');
+  }
+
   args.push('-i', inputName);
   args.push(
     '-vf',
