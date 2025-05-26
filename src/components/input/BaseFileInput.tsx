@@ -33,18 +33,15 @@ export default function BaseFileInput({
   const { showSnackBar } = useContext(CustomSnackBarContext);
 
   useEffect(() => {
-    try {
-      if (isArray(value)) {
-        const objectUrl = createObjectURL(value[0]);
+    if (value) {
+      try {
+        const objectUrl = createObjectURL(value);
         setPreview(objectUrl);
-
         return () => revokeObjectURL(objectUrl);
-      } else {
-        setPreview(null);
+      } catch (error) {
+        console.error('Error previewing file:', error);
       }
-    } catch (error) {
-      console.error('Error previewing file:', error);
-    }
+    } else setPreview(null);
   }, [value]);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -69,11 +66,6 @@ export default function BaseFileInput({
         });
     }
   };
-
-  function handleClear() {
-    // @ts-ignore
-    onChange(null);
-  }
 
   const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
@@ -216,11 +208,7 @@ export default function BaseFileInput({
           </Box>
         )}
       </Box>
-      <InputFooter
-        handleCopy={handleCopy}
-        handleImport={handleImportClick}
-        handleClear={handleClear}
-      />
+      <InputFooter handleCopy={handleCopy} handleImport={handleImportClick} />
       <input
         ref={fileInputRef}
         style={{ display: 'none' }}
