@@ -9,7 +9,7 @@ import ToolVideoInput from '@components/input/ToolVideoInput';
 import { cropVideo, getVideoDimensions } from './service';
 import { InitialValuesType } from './types';
 
-export const initialValues: InitialValuesType = {
+const initialValues: InitialValuesType = {
   x: 0,
   y: 0,
   width: 100,
@@ -25,23 +25,6 @@ export default function CropVideo({ title }: ToolComponentProps) {
     height: number;
   } | null>(null);
   const [processingError, setProcessingError] = useState<string>('');
-
-  useEffect(() => {
-    if (input) {
-      getVideoDimensions(input)
-        .then((dimensions) => {
-          setVideoDimensions(dimensions);
-          setProcessingError('');
-        })
-        .catch((error) => {
-          console.error('Error getting video dimensions:', error);
-          setProcessingError('Failed to load video dimensions');
-        });
-    } else {
-      setVideoDimensions(null);
-      setProcessingError('');
-    }
-  }, [input]);
 
   const validateDimensions = (values: InitialValuesType): string => {
     if (!videoDimensions) return '';
@@ -177,13 +160,40 @@ export default function CropVideo({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       input={input}
-      inputComponent={
+      renderCustomInput={(values, setFieldValue) => (
         <ToolVideoInput
           value={input}
-          onChange={setInput}
+          onChange={(video) => {
+            if (video) {
+              getVideoDimensions(video)
+                .then((dimensions) => {
+                  const newOptions: InitialValuesType = {
+                    x: dimensions.width / 4,
+                    y: dimensions.height / 4,
+                    width: dimensions.width / 2,
+                    height: dimensions.height / 2
+                  };
+                  setFieldValue('x', newOptions.x);
+                  setFieldValue('y', newOptions.y);
+                  setFieldValue('width', newOptions.width);
+                  setFieldValue('height', newOptions.height);
+
+                  setVideoDimensions(dimensions);
+                  setProcessingError('');
+                })
+                .catch((error) => {
+                  console.error('Error getting video dimensions:', error);
+                  setProcessingError('Failed to load video dimensions');
+                });
+            } else {
+              setVideoDimensions(null);
+              setProcessingError('');
+            }
+            setInput(video);
+          }}
           title={'Input Video'}
         />
-      }
+      )}
       resultComponent={
         loading ? (
           <ToolFileResult
