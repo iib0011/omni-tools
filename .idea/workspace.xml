@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: misc">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: remove unnecessary prop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/crop-video/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/crop-video/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/TextareaWithDesc.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +24,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fork/rohit267/feat/pdf-merge" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,108 +43,122 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GitHubPullRequestState">{
-  &quot;prStates&quot;: [
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts51PkS9&quot;,
-        &quot;number&quot;: 22
+      "id": {
+        "id": "PR_kwDOMJIfts51PkS9",
+        "number": 22
       },
-      &quot;lastSeen&quot;: 1741207144695
+      "lastSeen": 1741207144695
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6NiNYl&quot;,
-        &quot;number&quot;: 32
+      "id": {
+        "id": "PR_kwDOMJIfts6NiNYl",
+        "number": 32
       },
-      &quot;lastSeen&quot;: 1741209723869
+      "lastSeen": 1741209723869
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Nheyd&quot;,
-        &quot;number&quot;: 31
+      "id": {
+        "id": "PR_kwDOMJIfts6Nheyd",
+        "number": 31
       },
-      &quot;lastSeen&quot;: 1741213371410
+      "lastSeen": 1741213371410
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6NmRBs&quot;,
-        &quot;number&quot;: 33
+      "id": {
+        "id": "PR_kwDOMJIfts6NmRBs",
+        "number": 33
       },
-      &quot;lastSeen&quot;: 1741282429036
+      "lastSeen": 1741282429036
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts5zyFTs&quot;,
-        &quot;number&quot;: 15
+      "id": {
+        "id": "PR_kwDOMJIfts5zyFTs",
+        "number": 15
       },
-      &quot;lastSeen&quot;: 1741535540953
+      "lastSeen": 1741535540953
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QQB3c&quot;,
-        &quot;number&quot;: 59
+      "id": {
+        "id": "PR_kwDOMJIfts6QQB3c",
+        "number": 59
       },
-      &quot;lastSeen&quot;: 1743018960900
+      "lastSeen": 1743018960900
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QMPEg&quot;,
-        &quot;number&quot;: 58
+      "id": {
+        "id": "PR_kwDOMJIfts6QMPEg",
+        "number": 58
       },
-      &quot;lastSeen&quot;: 1743019452983
+      "lastSeen": 1743019452983
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QZvRI&quot;,
-        &quot;number&quot;: 61
+      "id": {
+        "id": "PR_kwDOMJIfts6QZvRI",
+        "number": 61
       },
-      &quot;lastSeen&quot;: 1743103196866
+      "lastSeen": 1743103196866
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QqPrQ&quot;,
-        &quot;number&quot;: 73
+      "id": {
+        "id": "PR_kwDOMJIfts6QqPrQ",
+        "number": 73
       },
-      &quot;lastSeen&quot;: 1743265865001
+      "lastSeen": 1743265865001
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Qp5nI&quot;,
-        &quot;number&quot;: 72
+      "id": {
+        "id": "PR_kwDOMJIfts6Qp5nI",
+        "number": 72
       },
-      &quot;lastSeen&quot;: 1743338472110
+      "lastSeen": 1743338472110
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QsjlS&quot;,
-        &quot;number&quot;: 76
+      "id": {
+        "id": "PR_kwDOMJIfts6QsjlS",
+        "number": 76
       },
-      &quot;lastSeen&quot;: 1743352150953
+      "lastSeen": 1743352150953
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Q0JBe&quot;,
-        &quot;number&quot;: 82
+      "id": {
+        "id": "PR_kwDOMJIfts6Q0JBe",
+        "number": 82
       },
-      &quot;lastSeen&quot;: 1743470267269
+      "lastSeen": 1743470267269
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6UE9-x&quot;,
-        &quot;number&quot;: 102
+      "id": {
+        "id": "PR_kwDOMJIfts6UE9-x",
+        "number": 102
       },
-      &quot;lastSeen&quot;: 1747171977348
+      "lastSeen": 1747171977348
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6XPua_&quot;,
-        &quot;number&quot;: 117
+      "id": {
+        "id": "PR_kwDOMJIfts6XPua_",
+        "number": 117
       },
-      &quot;lastSeen&quot;: 1747929835864
+      "lastSeen": 1747929835864
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6XY-mZ",
+        "number": 119
+      },
+      "lastSeen": 1748028108508
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6Xdz4n",
+        "number": 120
+      },
+      "lastSeen": 1748282672214
     }
   ]
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
@@ -196,7 +211,7 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "#122 on fork/nevolodia/crop-video",
+    "git-widget-placeholder": "#120 on chesterkxng",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src",
@@ -432,30 +447,8 @@
       <workItem from="1747171958176" duration="1105000" />
       <workItem from="1747217211469" duration="4000" />
       <workItem from="1747929815472" duration="843000" />
-    </task>
-    <task id="LOCAL-00147" summary="chore: update meta">
-      <option name="closed" value="true" />
-      <created>1741419527557</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1741419527557</updated>
-    </task>
-    <task id="LOCAL-00148" summary="feat: change pgn opacity">
-      <option name="closed" value="true" />
-      <created>1741423117739</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1741423117739</updated>
-    </task>
-    <task id="LOCAL-00149" summary="feat: change pgn opacity">
-      <option name="closed" value="true" />
-      <created>1741423587662</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1741423587662</updated>
+      <workItem from="1748026506667" duration="2536000" />
+      <workItem from="1748282636141" duration="478000" />
     </task>
     <task id="LOCAL-00150" summary="feat: crop png">
       <option name="closed" value="true" />
@@ -825,7 +818,31 @@
       <option name="project" value="LOCAL" />
       <updated>1747172914927</updated>
     </task>
-    <option name="localTasksCounter" value="196" />
+    <task id="LOCAL-00196" summary="chore: revert create-tool.mjs">
+      <option name="closed" value="true" />
+      <created>1748027090253</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1748027090253</updated>
+    </task>
+    <task id="LOCAL-00197" summary="fix: misc">
+      <option name="closed" value="true" />
+      <created>1748027889103</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1748027889103</updated>
+    </task>
+    <task id="LOCAL-00198" summary="chore: remove unnecessary prop">
+      <option name="closed" value="true" />
+      <created>1748028055669</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1748028055669</updated>
+    </task>
+    <option name="localTasksCounter" value="199" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -872,8 +889,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: time between dates" />
-    <MESSAGE value="fix: typos" />
     <MESSAGE value="feat: compress video" />
     <MESSAGE value="chore: compress video icon" />
     <MESSAGE value="fix: gif speed" />
@@ -896,8 +911,10 @@
     <MESSAGE value="fix: add mkv to supported videos" />
     <MESSAGE value="feat: drag and drop" />
     <MESSAGE value="Merge branch 'feat/pdf-merge' of git-rohit:rohit267/omni-tools into feat/pdf-merge" />
+    <MESSAGE value="chore: revert create-tool.mjs" />
     <MESSAGE value="fix: misc" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: misc" />
+    <MESSAGE value="chore: remove unnecessary prop" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: remove unnecessary prop" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
