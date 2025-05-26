@@ -10,7 +10,6 @@ import { main } from './service';
 import { getCsvHeaders } from '@utils/csv';
 import { InitialValuesType } from './types';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
-import TextareaWithDesc from '@components/options/TextareaWithDesc';
 import SelectWithDesc from '@components/options/SelectWithDesc';
 
 const initialValues: InitialValuesType = {
@@ -143,11 +142,13 @@ export default function InsertCsvColumns({
       title: 'CSV to insert',
       component: (
         <Box>
-          <TextareaWithDesc
+          <TextFieldWithDesc
+            multiline
+            rows={3}
             value={values.csvToInsert}
             onOwnChange={(val) => updateField('csvToInsert', val)}
             title="CSV separator"
-            description={`Enter one or more columns you want to insert into the CSV. 
+            description={`Enter one or more columns you want to insert into the CSV.
               the character used to delimit columns has to be the same with the one in the CSV input file.
               Ps: Blank lines will be ignored`}
           />

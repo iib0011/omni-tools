@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: misc">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: remove unnecessary prop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/BaseFileInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/BaseFileInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/TextareaWithDesc.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +24,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fork/rohit267/feat/pdf-merge" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -142,6 +142,20 @@
         "number": 117
       },
       "lastSeen": 1747929835864
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6XY-mZ",
+        "number": 119
+      },
+      "lastSeen": 1748028108508
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6Xdz4n",
+        "number": 120
+      },
+      "lastSeen": 1748282672214
     }
   ]
 }]]></component>
@@ -197,7 +211,7 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "#117 on fork/nevolodia/flip-video",
+    "git-widget-placeholder": "#120 on chesterkxng",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src",
@@ -433,30 +447,8 @@
       <workItem from="1747171958176" duration="1105000" />
       <workItem from="1747217211469" duration="4000" />
       <workItem from="1747929815472" duration="843000" />
-    </task>
-    <task id="LOCAL-00147" summary="chore: update meta">
-      <option name="closed" value="true" />
-      <created>1741419527557</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1741419527557</updated>
-    </task>
-    <task id="LOCAL-00148" summary="feat: change pgn opacity">
-      <option name="closed" value="true" />
-      <created>1741423117739</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1741423117739</updated>
-    </task>
-    <task id="LOCAL-00149" summary="feat: change pgn opacity">
-      <option name="closed" value="true" />
-      <created>1741423587662</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1741423587662</updated>
+      <workItem from="1748026506667" duration="2536000" />
+      <workItem from="1748282636141" duration="478000" />
     </task>
     <task id="LOCAL-00150" summary="feat: crop png">
       <option name="closed" value="true" />
@@ -826,7 +818,31 @@
       <option name="project" value="LOCAL" />
       <updated>1747172914927</updated>
     </task>
-    <option name="localTasksCounter" value="196" />
+    <task id="LOCAL-00196" summary="chore: revert create-tool.mjs">
+      <option name="closed" value="true" />
+      <created>1748027090253</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1748027090253</updated>
+    </task>
+    <task id="LOCAL-00197" summary="fix: misc">
+      <option name="closed" value="true" />
+      <created>1748027889103</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1748027889103</updated>
+    </task>
+    <task id="LOCAL-00198" summary="chore: remove unnecessary prop">
+      <option name="closed" value="true" />
+      <created>1748028055669</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1748028055669</updated>
+    </task>
+    <option name="localTasksCounter" value="199" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -873,8 +889,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: time between dates" />
-    <MESSAGE value="fix: typos" />
     <MESSAGE value="feat: compress video" />
     <MESSAGE value="chore: compress video icon" />
     <MESSAGE value="fix: gif speed" />
@@ -897,8 +911,10 @@
     <MESSAGE value="fix: add mkv to supported videos" />
     <MESSAGE value="feat: drag and drop" />
     <MESSAGE value="Merge branch 'feat/pdf-merge' of git-rohit:rohit267/omni-tools into feat/pdf-merge" />
+    <MESSAGE value="chore: revert create-tool.mjs" />
     <MESSAGE value="fix: misc" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: misc" />
+    <MESSAGE value="chore: remove unnecessary prop" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: remove unnecessary prop" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
