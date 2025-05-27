@@ -100,13 +100,13 @@ const Navbar: React.FC<NavbarProps> = ({ onSwitchTheme }) => {
           alignItems: 'center'
         }}
       >
-        <a href="/">
+        <Link to="/">
           <img
             src={logo}
             width={isMobile ? '80px' : '150px'}
             style={{ pointerEvents: 'none' }}
           />
-        </a>
+        </Link>
         {isMobile ? (
           <>
             <IconButton
