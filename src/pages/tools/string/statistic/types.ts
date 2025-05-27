@@ -1,6 +1,6 @@
 export type InitialValuesType = {
   emptyLines: boolean;
-  sentenceDelimiters?: string[];
+  sentenceDelimiters: string;
   wordDelimiters: string;
   characterCount: boolean;
   wordCount: boolean;
