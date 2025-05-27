@@ -14,12 +14,10 @@ function countCharacters(text: string): number {
 }
 
 function countSentences(text: string, options: InitialValuesType): number {
-  const sentenceDelimiters = options.sentenceDelimiters || [
-    '.',
-    '!',
-    '?',
-    '...'
-  ];
+  const sentenceDelimiters = options.sentenceDelimiters
+    ? options.sentenceDelimiters.split(',').map((s) => s.trim())
+    : ['.', '!', '?', '...'];
+
   const regex = new RegExp(`[${sentenceDelimiters.join('')}]`, 'g');
   const sentences = text
     .split(regex)
