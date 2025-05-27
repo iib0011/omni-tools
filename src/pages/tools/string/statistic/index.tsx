@@ -257,20 +257,20 @@ export default function Truncate({
           <CheckboxWithDesc
             checked={values.wordCount}
             onChange={(value) => updateField('wordCount', value)}
-            title="Words Frequency"
-            description="Add the word frequency statistics"
+            title="Word Frequency Analysis"
+            description="Count how often each word appears in the text"
           />
           <CheckboxWithDesc
             checked={values.characterCount}
             onChange={(value) => updateField('characterCount', value)}
-            title="Characters Frequency"
-            description="Add the character frequency statistics"
+            title="Character Frequency Analysis"
+            description="Count how often each character appears in the text"
           />
           <CheckboxWithDesc
             checked={values.emptyLines}
             onChange={(value) => updateField('emptyLines', value)}
-            title="Empty Lines"
-            description="Include empty lines in the count"
+            title="Include Empty Lines"
+            description="Include blank lines when counting lines"
           />
         </Box>
       )
