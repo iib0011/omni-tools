@@ -5,9 +5,6 @@ import JSZip from 'jszip';
 // Set worker source for PDF.js
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
-/**
- * Helper to convert raw text into clean paragraphs
- */
 function formatTextToParagraphs(raw: string): string {
   return raw
     .split(/\n{2,}|\r{2,}/g) // Split on double line breaks
@@ -20,12 +17,11 @@ function formatTextToParagraphs(raw: string): string {
 export async function convertPdfToEpub(pdfFile: File): Promise<File> {
   const arrayBuffer = await pdfFile.arrayBuffer();
 
-  // Load PDF document
   const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
   const pdfDoc = await loadingTask.promise;
   const numPages = pdfDoc.numPages;
 
-  // Extract text from all pages
+  // Extracting text
   const pages: string[] = [];
   for (let i = 1; i <= numPages; i++) {
     const page = await pdfDoc.getPage(i);
@@ -36,7 +32,6 @@ export async function convertPdfToEpub(pdfFile: File): Promise<File> {
     pages.push(pageText);
   }
 
-  // Create EPUB structure using JSZip
   const zip = new JSZip();
 
   zip.file('mimetype', 'application/epub+zip', { compression: 'STORE' });

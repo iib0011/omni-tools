@@ -15,18 +15,16 @@ export default function PdfToEpub({ title }: ToolComponentProps) {
 
     try {
       setIsProcessing(true);
-      setResult(null); // Clear previous result
+      setResult(null);
       const epub = await convertPdfToEpub(files[0]);
       setResult(epub);
     } catch (error) {
       console.error('Failed to convert PDF to EPUB:', error);
-      // Handle error appropriately - maybe set an error state
     } finally {
       setIsProcessing(false);
     }
   };
 
-  // Auto-trigger conversion when file is uploaded
   useEffect(() => {
     if (input) {
       compute([input]);
