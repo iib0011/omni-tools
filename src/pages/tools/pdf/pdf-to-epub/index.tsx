@@ -10,13 +10,12 @@ export default function PdfToEpub({ title }: ToolComponentProps) {
   const [result, setResult] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
 
-  const compute = async (files: File[]) => {
-    if (!files?.[0]) return;
-
+  const compute = async (options: {}, input: File | null) => {
+    if (!input) return;
     try {
       setIsProcessing(true);
       setResult(null);
-      const epub = await convertPdfToEpub(files[0]);
+      const epub = await convertPdfToEpub(input);
       setResult(epub);
     } catch (error) {
       console.error('Failed to convert PDF to EPUB:', error);
@@ -25,18 +24,12 @@ export default function PdfToEpub({ title }: ToolComponentProps) {
     }
   };
 
-  useEffect(() => {
-    if (input) {
-      compute([input]);
-    }
-  }, [input]);
-
   return (
     <ToolContent
       title={title}
       input={input}
       setInput={setInput}
-      initialValues={input ? [input] : []}
+      initialValues={{}}
       compute={compute}
       inputComponent={
         <ToolPdfInput

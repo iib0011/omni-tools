@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: remove unnecessary prop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/TextareaWithDesc.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolContent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-epub/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-epub/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +24,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="chesterkxng" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,122 +43,122 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOMJIfts51PkS9",
-        "number": 22
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts51PkS9&quot;,
+        &quot;number&quot;: 22
       },
-      "lastSeen": 1741207144695
+      &quot;lastSeen&quot;: 1741207144695
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NiNYl",
-        "number": 32
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NiNYl&quot;,
+        &quot;number&quot;: 32
       },
-      "lastSeen": 1741209723869
+      &quot;lastSeen&quot;: 1741209723869
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Nheyd",
-        "number": 31
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Nheyd&quot;,
+        &quot;number&quot;: 31
       },
-      "lastSeen": 1741213371410
+      &quot;lastSeen&quot;: 1741213371410
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NmRBs",
-        "number": 33
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NmRBs&quot;,
+        &quot;number&quot;: 33
       },
-      "lastSeen": 1741282429036
+      &quot;lastSeen&quot;: 1741282429036
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts5zyFTs",
-        "number": 15
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts5zyFTs&quot;,
+        &quot;number&quot;: 15
       },
-      "lastSeen": 1741535540953
+      &quot;lastSeen&quot;: 1741535540953
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QQB3c",
-        "number": 59
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QQB3c&quot;,
+        &quot;number&quot;: 59
       },
-      "lastSeen": 1743018960900
+      &quot;lastSeen&quot;: 1743018960900
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QMPEg",
-        "number": 58
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QMPEg&quot;,
+        &quot;number&quot;: 58
       },
-      "lastSeen": 1743019452983
+      &quot;lastSeen&quot;: 1743019452983
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QZvRI",
-        "number": 61
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QZvRI&quot;,
+        &quot;number&quot;: 61
       },
-      "lastSeen": 1743103196866
+      &quot;lastSeen&quot;: 1743103196866
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QqPrQ",
-        "number": 73
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QqPrQ&quot;,
+        &quot;number&quot;: 73
       },
-      "lastSeen": 1743265865001
+      &quot;lastSeen&quot;: 1743265865001
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Qp5nI",
-        "number": 72
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Qp5nI&quot;,
+        &quot;number&quot;: 72
       },
-      "lastSeen": 1743338472110
+      &quot;lastSeen&quot;: 1743338472110
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QsjlS",
-        "number": 76
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QsjlS&quot;,
+        &quot;number&quot;: 76
       },
-      "lastSeen": 1743352150953
+      &quot;lastSeen&quot;: 1743352150953
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Q0JBe",
-        "number": 82
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Q0JBe&quot;,
+        &quot;number&quot;: 82
       },
-      "lastSeen": 1743470267269
+      &quot;lastSeen&quot;: 1743470267269
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6UE9-x",
-        "number": 102
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6UE9-x&quot;,
+        &quot;number&quot;: 102
       },
-      "lastSeen": 1747171977348
+      &quot;lastSeen&quot;: 1747171977348
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6XPua_",
-        "number": 117
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6XPua_&quot;,
+        &quot;number&quot;: 117
       },
-      "lastSeen": 1747929835864
+      &quot;lastSeen&quot;: 1747929835864
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6XY-mZ",
-        "number": 119
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6XY-mZ&quot;,
+        &quot;number&quot;: 119
       },
-      "lastSeen": 1748028108508
+      &quot;lastSeen&quot;: 1748028108508
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Xdz4n",
-        "number": 120
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Xdz4n&quot;,
+        &quot;number&quot;: 120
       },
-      "lastSeen": 1748282672214
+      &quot;lastSeen&quot;: 1748282672214
     }
   ]
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
@@ -211,7 +211,7 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "#120 on chesterkxng",
+    "git-widget-placeholder": "#131 on fork/ARRY7686/main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src",
