@@ -8,10 +8,7 @@ import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import { Box } from '@mui/material';
 import SimpleRadio from '@components/options/SimpleRadio';
-
-interface InitialValuesType {
-  mode: 'encode' | 'decode';
-}
+import { InitialValuesType } from './types';
 
 const initialValues: InitialValuesType = {
   mode: 'encode'
