@@ -1,19 +1,8 @@
+import { itemCounter } from '@utils/string';
+
 export type SplitOperatorType = 'symbol' | 'regex';
 export type DisplayFormat = 'count' | 'percentage' | 'total';
 export type SortingMethod = 'count' | 'alphabetic';
-
-// Function that takes the array as arg  and returns a dict of element occurrences and handle the ignoreItemCase
-function dictMaker(
-  array: string[],
-  ignoreItemCase: boolean
-): { [key: string]: number } {
-  const dict: { [key: string]: number } = {};
-  for (const item of array) {
-    const key = ignoreItemCase ? item.toLowerCase() : item;
-    dict[key] = (dict[key] || 0) + 1;
-  }
-  return dict;
-}
 
 // Function that sorts the dict created with dictMaker based on the chosen sorting method
 function dictSorter(
@@ -74,21 +63,27 @@ export function TopItemsList(
   sortingMethod: SortingMethod,
   displayFormat: DisplayFormat,
   splitSeparator: string,
-  input: string,
+  input: string | string[],
   deleteEmptyItems: boolean,
   ignoreItemCase: boolean,
   trimItems: boolean
 ): string {
+  if (!input) return '';
+
   let array: string[];
-  switch (splitOperatorType) {
-    case 'symbol':
-      array = input.split(splitSeparator);
-      break;
-    case 'regex':
-      array = input
-        .split(new RegExp(splitSeparator))
-        .filter((item) => item !== '');
-      break;
+  if (typeof input === 'string') {
+    switch (splitOperatorType) {
+      case 'symbol':
+        array = input.split(splitSeparator);
+        break;
+      case 'regex':
+        array = input
+          .split(new RegExp(splitSeparator))
+          .filter((item) => item !== '');
+        break;
+    }
+  } else {
+    array = input;
   }
 
   // Trim items if required
@@ -102,7 +97,7 @@ export function TopItemsList(
   }
 
   // Transform the array into dict
-  const unsortedDict = dictMaker(array, ignoreItemCase);
+  const unsortedDict = itemCounter(array, ignoreItemCase);
 
   // Sort the list if required
   const sortedDict = dictSorter(unsortedDict, sortingMethod);
