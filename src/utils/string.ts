@@ -1,5 +1,24 @@
 import { UpdateField } from '@components/options/ToolOptions';
 
+// Here starting the shared values for string manipulation.
+
+/**
+ * This map is used to replace special characters with their visual representations.
+ * It is useful for displaying strings in a more readable format, especially in tools
+ **/
+
+export const specialCharMap: { [key: string]: string } = {
+  '': '␀',
+  ' ': '␣',
+  '\n': '↲',
+  '\t': '⇥',
+  '\r': '␍',
+  '\f': '␌',
+  '\v': '␋'
+};
+
+// Here starting the utility functions for string manipulation.
+
 export function capitalizeFirstLetter(string: string | undefined) {
   if (!string) return '';
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -62,4 +81,27 @@ export function unquoteIfQuoted(value: string, quoteCharacter: string): string {
     return value.slice(1, -1); // Remove first and last character
   }
   return value;
+}
+
+/**
+ * Count the occurence of items.
+ * @param array - array get from user with a custom delimiter.
+ * @param ignoreItemCase - boolean status to ignore the case i .
+ * @returns Dict of Items count {[Item]: occcurence}.
+ */
+export function itemCounter(
+  array: string[],
+  ignoreItemCase: boolean
+): { [key: string]: number } {
+  const dict: { [key: string]: number } = {};
+  for (const item of array) {
+    let key = ignoreItemCase ? item.toLowerCase() : item;
+
+    if (key in specialCharMap) {
+      key = specialCharMap[key];
+    }
+
+    dict[key] = (dict[key] || 0) + 1;
+  }
+  return dict;
 }
