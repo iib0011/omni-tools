@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: qr code generation init">
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/ColorSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ColorSelector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/qr-code/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/qr-code/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,10 +228,10 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "qr-code",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src",
+    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/pages/tools/json",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -264,11 +265,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\tools\json" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\@types" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\components\input" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\.husky" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\lib\ghostscript" />
