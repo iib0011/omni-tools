@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { Box, Button, MenuItem, TextField, Typography } from '@mui/material';
+import React, { useCallback, useState } from 'react';
+import { Box, MenuItem, TextField } from '@mui/material';
 import * as Yup from 'yup';
-import { QRCodeSVG } from 'qrcode.react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { InitialValuesType, QRCodeType, WifiEncryptionType } from './types';
 import ColorSelector from '@components/options/ColorSelector';
+import ToolFileResult from '@components/result/ToolFileResult';
+import * as QRCode from 'qrcode';
+import { debounce } from 'lodash';
 
 const initialValues: InitialValuesType = {
   qrCodeType: 'URL',
@@ -164,22 +166,11 @@ const validationSchema = Yup.object().shape({
 });
 
 export default function QRCodeGenerator({ title }: ToolComponentProps) {
-  const [qrValue, setQRValue] = useState<string>('');
-  const [currentValues, setCurrentValues] =
-    useState<InitialValuesType>(initialValues);
-
-  // Update QR code value when form values change
-  useEffect(() => {
-    setQRValue(formatQRCodeData(currentValues));
-  }, [currentValues]);
-
+  const [result, setResult] = useState<File | null>(null);
   const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
     updateField
   }) => {
-    // Update current values for QR code preview
-    setCurrentValues(values);
-
     return [
       {
         title: 'QR Code Type',
@@ -437,32 +428,29 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
     ];
   };
 
-  // Save QR code as image
-  const saveQRCode = () => {
-    const svg = document.getElementById('qr-code-svg');
-    if (!svg) return;
-
-    const svgData = new XMLSerializer().serializeToString(svg);
+  const compute = async (options: InitialValuesType) => {
+    const qrValue = formatQRCodeData(options);
+    if (!qrValue) return;
     const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    const img = new Image();
-
-    img.onload = () => {
-      canvas.width = img.width;
-      canvas.height = img.height;
-      ctx?.drawImage(img, 0, 0);
-      const pngFile = canvas.toDataURL('image/png');
-
-      const downloadLink = document.createElement('a');
-      downloadLink.download = 'qrcode.png';
-      downloadLink.href = pngFile;
-      downloadLink.click();
-    };
-
-    img.src =
-      'data:image/svg+xml;base64,' +
-      btoa(unescape(encodeURIComponent(svgData)));
+    QRCode.toDataURL(
+      canvas,
+      qrValue,
+      {
+        color: {
+          dark: options.fgColor,
+          light: options.bgColor
+        },
+        width: Number(options.size) || 200
+      },
+      async (error, url) => {
+        const res = await fetch(url);
+        const blob = await res.blob();
+        const file = new File([blob], 'Qr code.png', { type: 'image/png' });
+        setResult(file);
+      }
+    );
   };
+  const debouncedCompute = useCallback(debounce(compute, 1000), []);
 
   return (
     <ToolContent
@@ -470,42 +458,10 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
       initialValues={initialValues}
       getGroups={getGroups}
       validationSchema={validationSchema}
-      compute={() => {}}
-      inputComponent={
-        <Box
-          sx={{
-            p: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: 2
-          }}
-        >
-          <Typography variant="h6">QR Code Preview</Typography>
-          <Box sx={{ border: '1px solid #ddd', padding: 2, borderRadius: 1 }}>
-            {qrValue && (
-              <QRCodeSVG
-                id="qr-code-svg"
-                value={qrValue}
-                size={Number(currentValues.size) || 200}
-                bgColor={currentValues.bgColor}
-                fgColor={currentValues.fgColor}
-                level="H"
-                includeMargin
-              />
-            )}
-          </Box>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={saveQRCode}
-            disabled={!qrValue}
-          >
-            Download QR Code
-          </Button>
-        </Box>
+      compute={debouncedCompute}
+      resultComponent={
+        <ToolFileResult title={'Generated QR code'} value={result} />
       }
-      resultComponent={null}
       toolInfo={{
         title: 'QR Code Generator',
         description:

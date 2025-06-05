@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: compute flow">
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/qr-code/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/qr-code/meta.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/qr-code/types.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: qr code generation init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ColorSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ColorSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/qr-code/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/qr-code/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +26,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fork/m5lk3n/feature/base64" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -229,7 +227,7 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "qr-code",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src",
@@ -468,14 +466,6 @@
       <workItem from="1748026506667" duration="2536000" />
       <workItem from="1748282636141" duration="478000" />
       <workItem from="1749047510481" duration="879000" />
-    </task>
-    <task id="LOCAL-00151" summary="feat: crop png">
-      <option name="closed" value="true" />
-      <created>1741487735223</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1741487735223</updated>
     </task>
     <task id="LOCAL-00152" summary="feat: crop png">
       <option name="closed" value="true" />
@@ -861,7 +851,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748881153433</updated>
     </task>
-    <option name="localTasksCounter" value="200" />
+    <task id="LOCAL-00200" summary="feat: qr code generation init">
+      <option name="closed" value="true" />
+      <created>1749147227565</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1749147227565</updated>
+    </task>
+    <option name="localTasksCounter" value="201" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -908,7 +906,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: compress video icon" />
     <MESSAGE value="fix: gif speed" />
     <MESSAGE value="fix: tsc" />
     <MESSAGE value="fix: background color" />
@@ -933,7 +930,8 @@
     <MESSAGE value="fix: misc" />
     <MESSAGE value="chore: remove unnecessary prop" />
     <MESSAGE value="fix: compute flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: compute flow" />
+    <MESSAGE value="feat: qr code generation init" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: qr code generation init" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
