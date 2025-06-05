@@ -39,7 +39,7 @@ const ColorSelector: React.FC<ColorSelectorProps & TextFieldProps> = ({
           <PaletteIcon />
         </IconButton>
         <TextField
-          style={{ display: 'none' }}
+          style={{ visibility: 'hidden' }}
           inputRef={inputRef}
           type="color"
           value={color}
