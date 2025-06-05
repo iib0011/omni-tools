@@ -41,6 +41,7 @@
     "@types/morsee": "^1.0.2",
     "@types/omggif": "^1.0.5",
     "browser-image-compression": "^2.0.2",
+    "buffer": "^6.0.3",
     "color": "^4.2.3",
     "dayjs": "^1.11.13",
     "formik": "^2.4.6",
