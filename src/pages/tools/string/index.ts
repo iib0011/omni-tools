@@ -14,6 +14,7 @@ import { tool as stringJoin } from './join/meta';
 import { tool as stringReplace } from './text-replacer/meta';
 import { tool as stringRepeat } from './repeat/meta';
 import { tool as stringTruncate } from './truncate/meta';
+import { tool as stringBase64 } from './base64/meta';
 import { tool as stringStatistic } from './statistic/meta';
 
 export const stringTools = [
@@ -33,5 +34,6 @@ export const stringTools = [
   stringQuote,
   stringRotate,
   stringRot13,
+  stringBase64,
   stringStatistic
 ];
