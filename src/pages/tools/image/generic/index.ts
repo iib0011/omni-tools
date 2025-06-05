@@ -6,6 +6,7 @@ import { tool as cropImage } from './crop/meta';
 import { tool as changeOpacity } from './change-opacity/meta';
 import { tool as createTransparent } from './create-transparent/meta';
 import { tool as imageToText } from './image-to-text/meta';
+import { tool as qrCodeGenerator } from './qr-code/meta';
 
 export const imageGenericTools = [
   resizeImage,
@@ -15,5 +16,6 @@ export const imageGenericTools = [
   changeOpacity,
   changeColors,
   createTransparent,
-  imageToText
+  imageToText,
+  qrCodeGenerator
 ];
