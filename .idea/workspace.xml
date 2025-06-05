@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: compute flow">
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/qr-code/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/qr-code/meta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/qr-code/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +28,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="chesterkxng" />
+        <entry key="$PROJECT_DIR$" value="fork/m5lk3n/feature/base64" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -199,56 +205,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Docker.Dockerfile build.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Playwright.Create transparent PNG.should make png color transparent.executor&quot;: &quot;Run&quot;,
-    &quot;Playwright.JoinText Component.executor&quot;: &quot;Run&quot;,
-    &quot;Playwright.JoinText Component.should merge text pieces with specified join character.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Vitest.compute function (1).executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.compute function.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.mergeText.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.parsePageRanges.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.removeDuplicateLines function.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.removeDuplicateLines function.newlines option.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.replaceText function.executor&quot;: &quot;Run&quot;,
-    &quot;Vitest.timeBetweenDates.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#131 on fork/ARRY7686/main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ibrahima/IdeaProjects/omni-tools/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
-    &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
-    &quot;npm.script:create:tool.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test:e2e.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test:e2e:run.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;refactai_advanced_settings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Docker.Dockerfile build.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Playwright.Create transparent PNG.should make png color transparent.executor": "Run",
+    "Playwright.JoinText Component.executor": "Run",
+    "Playwright.JoinText Component.should merge text pieces with specified join character.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Vitest.compute function (1).executor": "Run",
+    "Vitest.compute function.executor": "Run",
+    "Vitest.mergeText.executor": "Run",
+    "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
+    "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
+    "Vitest.parsePageRanges.executor": "Run",
+    "Vitest.removeDuplicateLines function.executor": "Run",
+    "Vitest.removeDuplicateLines function.newlines option.executor": "Run",
+    "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
+    "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
+    "Vitest.replaceText function.executor": "Run",
+    "Vitest.timeBetweenDates.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.lint.executor": "Run",
+    "npm.prebuild.executor": "Run",
+    "npm.script:create:tool.executor": "Run",
+    "npm.test.executor": "Run",
+    "npm.test:e2e.executor": "Run",
+    "npm.test:e2e:run.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "refactai_advanced_settings",
+    "ts.external.directory.path": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
