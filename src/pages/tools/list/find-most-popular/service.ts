@@ -9,7 +9,20 @@ function dictMaker(
 ): { [key: string]: number } {
   const dict: { [key: string]: number } = {};
   for (const item of array) {
-    const key = ignoreItemCase ? item.toLowerCase() : item;
+    let key = ignoreItemCase ? item.toLowerCase() : item;
+
+    const specialCharMap: { [key: string]: string } = {
+      ' ': '␣',
+      '\n': '↲',
+      '\t': '⇥',
+      '\r': '␍',
+      '\f': '␌',
+      '\v': '␋'
+    };
+    if (key in specialCharMap) {
+      key = specialCharMap[key];
+    }
+
     dict[key] = (dict[key] || 0) + 1;
   }
   return dict;
@@ -74,21 +87,27 @@ export function TopItemsList(
   sortingMethod: SortingMethod,
   displayFormat: DisplayFormat,
   splitSeparator: string,
-  input: string,
+  input: string | string[],
   deleteEmptyItems: boolean,
   ignoreItemCase: boolean,
   trimItems: boolean
 ): string {
+  if (!input) return '';
+
   let array: string[];
-  switch (splitOperatorType) {
-    case 'symbol':
-      array = input.split(splitSeparator);
-      break;
-    case 'regex':
-      array = input
-        .split(new RegExp(splitSeparator))
-        .filter((item) => item !== '');
-      break;
+  if (typeof input === 'string') {
+    switch (splitOperatorType) {
+      case 'symbol':
+        array = input.split(splitSeparator);
+        break;
+      case 'regex':
+        array = input
+          .split(new RegExp(splitSeparator))
+          .filter((item) => item !== '');
+        break;
+    }
+  } else {
+    array = input;
   }
 
   // Trim items if required
