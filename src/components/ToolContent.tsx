@@ -38,25 +38,25 @@ const FormikListenerComponent = <T,>({
   return null; // This component doesn't render anything
 };
 
-interface ToolContentProps<T, I> extends ToolComponentProps {
+interface ToolContentProps<Options, Input> extends ToolComponentProps {
   inputComponent?: ReactNode;
   resultComponent?: ReactNode;
   renderCustomInput?: (
-    values: T,
+    values: Options,
     setFieldValue: (fieldName: string, value: any) => void
   ) => ReactNode;
-  initialValues: T;
-  getGroups: GetGroupsType<T> | null;
-  compute: (optionsValues: T, input: I) => void;
+  initialValues: Options;
+  getGroups: GetGroupsType<Options> | null;
+  compute: (optionsValues: Options, input: Input) => void;
   toolInfo?: {
     title: string;
     description?: string;
   };
-  input?: I;
-  exampleCards?: CardExampleType<T>[];
-  setInput?: React.Dispatch<React.SetStateAction<I>>;
+  input?: Input;
+  exampleCards?: CardExampleType<Options>[];
+  setInput?: React.Dispatch<React.SetStateAction<Input>>;
   validationSchema?: any;
-  onValuesChange?: (values: T) => void;
+  onValuesChange?: (values: Options) => void;
   verticalGroups?: boolean;
 }
 
