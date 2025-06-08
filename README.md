@@ -27,6 +27,9 @@ forget to
 star the repo to support us.
 Here is the [demo](https://omnitools.app) website.
 
+All files are processed entirely on the client side: nothing ever leaves your device.
+Plus, the Docker image is super lightweight at just 28MB, making it fast to deploy and easy to self-host.
+
 ![img.png](img.png)
 
 ## Table of Contents
