@@ -13,9 +13,7 @@ import { fetchFile } from '@ffmpeg/util';
 const initialValues: InitialValuesType = {
   quality: 'mid',
   fps: '10',
-  scale: '320:-1:flags=bicubic',
-  starting: '0',
-  duration: ''
+  scale: '320:-1:flags=bicubic'
 };
 
 export default function VideoToGif({
@@ -28,7 +26,7 @@ export default function VideoToGif({
 
   const compute = (values: InitialValuesType, input: File | null) => {
     if (!input) return;
-    const { fps, scale, starting, duration } = values;
+    const { fps, scale } = values;
     let ffmpeg: FFmpeg | null = null;
     let ffmpegLoaded = false;
 
