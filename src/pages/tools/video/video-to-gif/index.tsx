@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
-import { main } from './service';
 import { InitialValuesType } from './types';
 import ToolVideoInput from '@components/input/ToolVideoInput';
 import ToolFileResult from '@components/result/ToolFileResult';
@@ -16,7 +15,9 @@ import { fetchFile } from '@ffmpeg/util';
 const initialValues: InitialValuesType = {
   quality: 'mid',
   fps: '10',
-  scale: '320:-1:flags=bicubic'
+  scale: '320:-1:flags=bicubic',
+  starting: '0',
+  duration: ''
 };
 
 export default function VideoToGif({
@@ -29,7 +30,7 @@ export default function VideoToGif({
 
   const compute = (values: InitialValuesType, input: File | null) => {
     if (!input) return;
-    const { fps, scale } = values;
+    const { fps, scale, starting, duration } = values;
     let ffmpeg: FFmpeg | null = null;
     let ffmpegLoaded = false;
 
@@ -132,6 +133,15 @@ export default function VideoToGif({
               updateField('scale', '480:-1:flags=lanczos');
             }}
             checked={values.quality === 'high'}
+          />
+          <SimpleRadio
+            title="Ultra"
+            onClick={() => {
+              updateField('quality', 'ultra');
+              updateField('fps', '15');
+              updateField('scale', '640:-1:flags=lanczos');
+            }}
+            checked={values.quality === 'ultra'}
           />
         </Box>
       )
