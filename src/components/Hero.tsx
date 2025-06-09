@@ -40,29 +40,6 @@ export default function Hero() {
 
   return (
     <Box width={{ xs: '90%', md: '80%', lg: '60%' }}>
-      <Stack mb={1} direction={'row'} spacing={1} justifyContent={'center'}>
-        <Typography sx={{ textAlign: 'center' }} fontSize={{ xs: 25, md: 30 }}>
-          Get Things Done Quickly with{' '}
-          <Typography
-            fontSize={{ xs: 25, md: 30 }}
-            display={'inline'}
-            color={'primary'}
-          >
-            Omni Tools
-          </Typography>
-        </Typography>
-      </Stack>
-      <Typography
-        sx={{ textAlign: 'center' }}
-        fontSize={{ xs: 15, md: 20 }}
-        mb={2}
-      >
-        Boost your productivity with Omni Tools, the ultimate toolkit for
-        getting things done quickly! Access thousands of user-friendly utilities
-        for editing images, text, lists, and data, all directly from your
-        browser.
-      </Typography>
-
       <Autocomplete
         sx={{ mb: 2 }}
         autoHighlight

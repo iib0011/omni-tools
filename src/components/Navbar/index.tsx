@@ -37,37 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSwitchTheme }) => {
   ];
 
   const buttons: ReactNode[] = [
-    <DarkModeIcon onClick={onSwitchTheme} style={{ cursor: 'pointer' }} />,
-    <Icon
-      onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
-      style={{ cursor: 'pointer' }}
-      fontSize={30}
-      icon={'ic:baseline-discord'}
-    />,
-    <iframe
-      src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
-      frameBorder="0"
-      scrolling="0"
-      width="150"
-      height="30"
-      title="GitHub"
-    ></iframe>,
-    <Button
-      onClick={() => {
-        window.open('https://buymeacoffee.com/iib0011', '_blank');
-      }}
-      sx={{ borderRadius: '100px' }}
-      variant={'contained'}
-      startIcon={
-        <Icon
-          style={{ cursor: 'pointer' }}
-          fontSize={25}
-          icon={'mdi:heart-outline'}
-        />
-      }
-    >
-      Buy me a coffee
-    </Button>
+    <DarkModeIcon onClick={onSwitchTheme} style={{ cursor: 'pointer' }} />
   ];
   const drawerList = (
     <List>
