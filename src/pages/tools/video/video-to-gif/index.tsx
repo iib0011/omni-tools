@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable prettier/prettier */
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
