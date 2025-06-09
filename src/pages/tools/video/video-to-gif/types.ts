@@ -1,3 +1,5 @@
 export type InitialValuesType = {
-  // splitSeparator: string;
+  quality: string;
+  fps: string;
+  scale: string;
 };
