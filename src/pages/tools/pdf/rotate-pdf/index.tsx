@@ -218,26 +218,7 @@ export default function RotatePdf({
         }
       ]}
       onValuesChange={onValuesChange}
-      toolInfo={{
-        title: 'How to Use the Rotate PDF Tool',
-        description: `This tool allows you to rotate pages in a PDF document. You can rotate all pages or specify individual pages to rotate.
-
-Choose a rotation angle:
-- 90° Clockwise
-- 180° (Upside down)
-- 270° (90° Counter-clockwise)
-
-To rotate specific pages:
-1. Uncheck "Apply to all pages"
-2. Enter page numbers or ranges separated by commas (e.g., 1,3,5-7)
-
-Examples:
-- "1,5,9" rotates pages 1, 5, and 9
-- "1-5" rotates pages 1 through 5
-- "1,3-5,8-10" rotates pages 1, 3, 4, 5, 8, 9, and 10
-
-${longDescription}`
-      }}
+      toolInfo={{ title: title, description: longDescription }}
     />
   );
 }

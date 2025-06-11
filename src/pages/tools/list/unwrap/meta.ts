@@ -1,14 +1,16 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
+
 // import image from '@assets/text.png';
 
 export const tool = defineTool('list', {
-  name: 'Unwrap',
+  name: i18n.t('unwrap'),
   path: 'unwrap',
   icon: 'mdi:unwrap',
-  description:
-    'A tool to remove characters from the beginning and end of each item in a list. Perfect for cleaning up formatted data or removing unwanted wrappers.',
-  shortDescription: 'Remove characters around list items.',
+  description: i18n.t('unwrapDescription'),
+  shortDescription: i18n.t('unwrapShortDescription'),
+  longDescription: i18n.t('unwrapLongDescription'),
   keywords: ['unwrap'],
   component: lazy(() => import('./index'))
 });

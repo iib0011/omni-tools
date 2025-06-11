@@ -8,20 +8,21 @@ import { filterTools, tools } from '@tools/index';
 import { useNavigate } from 'react-router-dom';
 import _ from 'lodash';
 import { Icon } from '@iconify/react';
+import i18n from 'i18n/i18n';
 
 const exampleTools: { label: string; url: string }[] = [
   {
-    label: 'Create a transparent image',
+    label: i18n.t('createTransparentPng'),
     url: '/image-generic/create-transparent'
   },
-  { label: 'Prettify JSON', url: '/json/prettify' },
-  { label: 'Change GIF speed', url: '/gif/change-speed' },
-  { label: 'Sort a list', url: '/list/sort' },
-  { label: 'Compress PNG', url: '/png/compress-png' },
-  { label: 'Split a text', url: '/string/split' },
-  { label: 'Split PDF', url: '/pdf/split-pdf' },
-  { label: 'Trim video', url: '/video/trim' },
-  { label: 'Calculate number sum', url: '/number/sum' }
+  { label: i18n.t('prettifyJson'), url: '/json/prettify' },
+  { label: i18n.t('changeGifSpeed'), url: '/gif/change-speed' },
+  { label: i18n.t('sortList'), url: '/list/sort' },
+  { label: i18n.t('compressPng'), url: '/png/compress-png' },
+  { label: i18n.t('splitText'), url: '/string/split' },
+  { label: i18n.t('splitPdf'), url: '/pdf/split-pdf' },
+  { label: i18n.t('trimVideo'), url: '/video/trim' },
+  { label: i18n.t('numberSumCalculator'), url: '/number/sum' }
 ];
 export default function Hero() {
   const [inputValue, setInputValue] = useState<string>('');
@@ -42,7 +43,7 @@ export default function Hero() {
     <Box width={{ xs: '90%', md: '80%', lg: '60%' }}>
       <Stack mb={1} direction={'row'} spacing={1} justifyContent={'center'}>
         <Typography sx={{ textAlign: 'center' }} fontSize={{ xs: 25, md: 30 }}>
-          Get Things Done Quickly with{' '}
+          {i18n.t('titlePage')}{' '}
           <Typography
             fontSize={{ xs: 25, md: 30 }}
             display={'inline'}
@@ -57,10 +58,7 @@ export default function Hero() {
         fontSize={{ xs: 15, md: 20 }}
         mb={2}
       >
-        Boost your productivity with Omni Tools, the ultimate toolkit for
-        getting things done quickly! Access thousands of user-friendly utilities
-        for editing images, text, lists, and data, all directly from your
-        browser.
+        {i18n.t('titleDescription')}
       </Typography>
 
       <Autocomplete
@@ -73,7 +71,7 @@ export default function Hero() {
           <TextField
             {...params}
             fullWidth
-            placeholder={'Search all tools'}
+            placeholder={i18n.t('searchPlaceholder')}
             InputProps={{
               ...params.InputProps,
               endAdornment: <SearchIcon />,

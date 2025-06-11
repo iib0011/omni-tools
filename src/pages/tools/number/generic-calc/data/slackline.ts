@@ -1,4 +1,5 @@
 import type { GenericCalcType } from './types';
+import i18n from 'i18n/i18n';
 
 const slackline: GenericCalcType = {
   icon: 'mdi:bridge',
@@ -11,12 +12,11 @@ const slackline: GenericCalcType = {
     'tension',
     'clothesline'
   ],
-  shortDescription:
-    'Calculate the approximate tension of a slackline or clothesline. Do not rely on this for safety.',
-  name: 'Slackline Tension',
+  name: i18n.t('slacklineTension'),
   path: 'slackline-tension',
-  description: 'Calculates tension in a slackline',
-  longDescription: 'This calculator assumes a load in the center of the rope',
+  description: i18n.t('slacklineTensionDescription'),
+  shortDescription: i18n.t('slacklineTensionShortDescription'),
+  longDescription: i18n.t('slacklineTensionLongDescription'),
   formula: 'T = (W * sqrt((S**2) + ((L/2)**2)) )/ (2S)',
   presets: [],
   variables: [

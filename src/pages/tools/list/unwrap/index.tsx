@@ -93,7 +93,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function Unwrap({ title }: ToolComponentProps) {
+export default function Unwrap({ title, longDescription }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -198,11 +198,7 @@ export default function Unwrap({ title }: ToolComponentProps) {
       initialValues={initialValues}
       getGroups={getGroups}
       validationSchema={validationSchema}
-      toolInfo={{
-        title: 'List Unwrapping',
-        description:
-          "This tool allows you to remove wrapping characters from each item in a list. You can specify characters to remove from the left and right sides, handle multiple levels of wrapping, and control how the list is processed. It's useful for cleaning up data, removing quotes or brackets, and formatting lists."
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
       input={input}
       setInput={setInput}

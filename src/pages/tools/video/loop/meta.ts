@@ -1,13 +1,13 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('video', {
-  name: 'Loop Video',
+  name: i18n.t('loopVideo'),
   path: 'loop',
   icon: 'ic:baseline-loop',
-  description:
-    'This online utility lets you loop videos by specifying the number of repetitions. You can preview the looped video before processing. Supports common video formats like MP4, WebM, and OGG.',
-  shortDescription: 'Loop videos multiple times',
+  description: i18n.t('loopVideoDescription'),
+  shortDescription: i18n.t('loopVideoShortDescription'),
   keywords: ['loop', 'video', 'repeat', 'duplicate', 'sequence', 'playback'],
   component: lazy(() => import('./index'))
 });

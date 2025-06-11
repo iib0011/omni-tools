@@ -1,13 +1,13 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('png', {
-  name: 'Convert JPG to PNG',
+  name: i18n.t('convertJpgToPng'),
   path: 'convert-jgp-to-png',
   icon: 'ph:file-jpg-thin',
-  description:
-    'Quickly convert your JPG images to PNG. Just import your PNG image in the editor on the left',
-  shortDescription: 'Quickly convert your JPG images to PNG',
+  description: i18n.t('convertJpgToPngDescription'),
+  shortDescription: i18n.t('convertJpgToPngShortDescription'),
   keywords: ['convert', 'jgp', 'png'],
   component: lazy(() => import('./index'))
 });

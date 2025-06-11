@@ -7,7 +7,10 @@ import ToolMultiPdfInput, {
   MultiPdfInput
 } from '@components/input/ToolMultiplePdfInput';
 
-export default function MergePdf({ title }: ToolComponentProps) {
+export default function MergePdf({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<MultiPdfInput[]>([]);
   const [result, setResult] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
@@ -56,11 +59,7 @@ export default function MergePdf({ title }: ToolComponentProps) {
           loadingText={'Extracting pages'}
         />
       }
-      toolInfo={{
-        title: 'How to Use the Merge PDF Tool?',
-        description: `This tool allows you to merge multiple PDF files into a single document.
-        To use the tool, simply upload the PDF files you want to merge. The tool will then combine all pages from the input files into a single PDF document.`
-      }}
+      toolInfo={{ title: title, description: longDescription }}
     />
   );
 }

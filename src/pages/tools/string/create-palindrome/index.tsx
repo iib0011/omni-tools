@@ -103,10 +103,7 @@ export default function CreatePalindrome({
       resultComponent={
         <ToolTextResult title={'Palindrome text'} value={result} />
       }
-      toolInfo={{
-        title: 'What Is a String Palindrome Creator?',
-        description: longDescription
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
     />
   );

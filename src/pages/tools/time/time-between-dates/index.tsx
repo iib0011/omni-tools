@@ -11,6 +11,7 @@ import {
 } from './service';
 import * as Yup from 'yup';
 import { CardExampleType } from '@components/examples/ToolExamples';
+import { ToolComponentProps } from '@tools/defineTool';
 
 type TimeUnit =
   | 'milliseconds'
@@ -119,12 +120,15 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function TimeBetweenDates() {
+export default function TimeBetweenDates({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [result, setResult] = useState<string>('');
 
   return (
     <ToolContent
-      title="Time Between Dates"
+      title={title}
       inputComponent={null}
       resultComponent={
         result ? (
@@ -152,11 +156,7 @@ export default function TimeBetweenDates() {
       initialValues={initialValues}
       validationSchema={validationSchema}
       exampleCards={exampleCards}
-      toolInfo={{
-        title: 'Time Between Dates Calculator',
-        description:
-          'Calculate the exact time difference between two dates and times, with support for different timezones. This tool provides a detailed breakdown of the time difference in various units (years, months, days, hours, minutes, and seconds).'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       getGroups={({ values, updateField }) => [
         {
           title: 'Start Date & Time',

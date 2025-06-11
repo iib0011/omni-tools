@@ -1,13 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('image-generic', {
-  name: 'QR Code Generator',
+  name: i18n.t('qrCodeGenerator'),
   path: 'qr-code',
   icon: 'mdi:qrcode', // Iconify icon as a string
-  description:
-    'Generate QR codes for different data types: URL, Text, Email, Phone, SMS, WiFi, vCard, and more.',
-  shortDescription: 'Create customized QR codes for various data formats.',
+  description: i18n.t('qrCodeGeneratorDescription'),
+  shortDescription: i18n.t('qrCodeGeneratorShortDescription'),
+  longDescription: i18n.t('qrCodeGeneratorLongDescription'),
   keywords: [
     'qr code',
     'qrcode',

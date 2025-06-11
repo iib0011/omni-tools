@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import React, { ReactNode } from 'react';
 import { FormikProps, FormikValues, useFormikContext } from 'formik';
 import ToolOptionGroups, { ToolOptionGroup } from './ToolOptionGroups';
+import i18n from 'i18n/i18n';
 
 export type UpdateField<T> = <Y extends keyof T>(field: Y, value: T[Y]) => void;
 
@@ -45,7 +46,7 @@ export default function ToolOptions<T extends FormikValues>({
     >
       <Stack direction={'row'} spacing={1} alignItems={'center'}>
         <SettingsIcon />
-        <Typography fontSize={22}>Tool options</Typography>
+        <Typography fontSize={22}>{i18n.t('toolOptions')}</Typography>
       </Stack>
       <Box mt={2}>
         <Stack direction={'row'} spacing={2}>

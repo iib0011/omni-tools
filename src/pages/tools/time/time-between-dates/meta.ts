@@ -1,14 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('time', {
-  name: 'Time Between Dates',
+  name: i18n.t('timeBetweenDates'),
   path: 'time-between-dates',
   icon: 'tabler:clock-minus',
-  description:
-    'Calculate the exact time difference between two dates and times, with support for different timezones. This tool provides a detailed breakdown of the time difference in various units (years, months, days, hours, minutes, and seconds).',
-  shortDescription:
-    'Calculate the precise time duration between two dates with timezone support.',
+  description: i18n.t('timeBetweenDatesDescription'),
+  shortDescription: i18n.t('timeBetweenDatesShortDescription'),
+  longDescription: i18n.t('timeBetweenDatesLongDescription'),
   keywords: [
     'time',
     'dates',

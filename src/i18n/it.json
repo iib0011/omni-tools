@@ -1,0 +1,437 @@
+{
+  "titlePage": "Lavora in modo rapido con",
+  "titleDescription": "Migliora la tua produttività con Omni Tools, il toolkit definitivo per lavorare in modo rapido! Accedi a migliaia di strumenti facili da usare per modificare immagini, testo, liste e dati, tutto direttamente dal tuo browser.",
+  "searchPlaceholder": "Cerca tutti gli strumenti",
+  "search": "Cerca",
+  "allTools": "Tutti gli strumenti",
+  "seeAll": "Vedi tutti gli",
+  "try": "Prova",
+  "useThisTool": "Usa questo strumento",
+  "seeExamples": "Vedi esempi",
+  "toolOptions": "Opzioni Strumento",
+  "importFromFile": "Importa da file",
+  "copyToClipboard": "Copia negli appunti",
+  "clear": "Pulisci",
+  "saveAs": "Salva come",
+  "examples": "Esempi",
+  "clickToTry": "Clicca per provare!",
+
+  "imageTool": "Strumenti Immagine",
+  "imageToolDescription": "Strumenti per lavorare con le immagini - comprimi, ridimensiona, ritaglia, converti in JPG, ruota, rimuovi lo sfondo e molto altro.",
+  "textTool": "Strumenti Testo",
+  "textToolDescription": "Strumenti per lavorare con il testo - converti il testo in immagini, trova e sostituisci il testo, dividi il testo in frammenti, unisci le righe di testo, ripeti il testo e molto altro.",
+  "jsonTool": "Strumenti JSON",
+  "jsonToolDescription": "Strumenti per lavorare con i dati JSON - formatta, valida, minimizza, converte in CSV, estrae valori e molto altro.",
+  "pdfTool": "Strumenti PDF",
+  "pdfToolDescription": "Strumenti per lavorare con i file PDF - unisci, dividi, comprimi, converte in immagini, estrai il testo e molto altro.",
+  "videoTool": "Strumenti Video",
+  "videoToolDescription": "Strumenti per lavorare con i file video - comprimi, converti formati, estrai audio, ritaglia, unisci video e molto altro.",
+  "listTool": "Strumenti Lista",
+  "listToolDescription": "Strumenti per lavorare con le liste - ordina, filtra, unisci, dividi e manipola le liste in vari modi.",
+  "csvTool": "Strumenti CSV",
+  "csvToolDescription": "Strumenti per lavorare con i file CSV - formatta, valida, converte in JSON, estrae valori e molto altro.",
+  "numberTool": "Strumenti Numero",
+  "numberToolDescription": "Strumenti per lavorare con i numeri - calcola somme, medie, genera numeri casuali, converte tra sistemi numerici e molto altro.",
+  "timeTool": "Strumenti Tempo",
+  "timeToolDescription": "Strumenti per lavorare con il tempo e la data - calcola differenze di tempo, converte tra fusi orari, formatta date, genera sequenze di date e molto altro.",
+  "gifTool": "Strumenti GIF",
+  "gifToolDescription": "Strumenti per lavorare con le animazioni GIF - crea GIF trasparenti, estrae fotogrammi GIF, aggiungi testo alle GIF, ritaglia, ruota, inverte le GIF e molto altro.",
+  "pngTool": "Strumenti PNG",
+  "pngToolDescription": "Strumenti per lavorare con le immagini PNG - comprimi, ridimensiona, ritaglia, converti in JPG, ruota, rimuovi lo sfondo e molto altro.",
+
+  "resizeImage": "Ridimensiona Immagine",
+  "resizeImageDescription": "Ridimensiona immagini JPG, PNG, SVG o GIF in base ai pixel o alla percentuale mantenendo o meno il rapporto d'aspetto.",
+  "resizeImageShortDescription": "Ridimensiona facilmente le immagini.",
+  "resizeImageLongDescription": "Questo strumento consente di ridimensionare immagini JPG, PNG, SVG o GIF. È possibile ridimensionare specificando le dimensioni in pixel o in percentuale, con opzioni per mantenere il rapporto d'aspetto originale.",
+
+  "changeColorsInImage": "Cambia i colori in un'immagine",
+  "changeColorsInImageDescription": "Il più semplice strumento per cambiare il colore delle immagini online. Basta importare la tua immagine (JPG, PNG, SVG) nell'editor a sinistra, selezionare quali colori cambiare e otterrai istantaneamente una nuova immagine con i nuovi colori a destra. Gratuito, veloce e molto potente. Importa un'immagine - sostituisci i suoi colori.",
+  "changeColorsInImageShortDescription": "Cambia rapidamente i colori in un'immagine.",
+
+  "changeImageOpacity": "Cambia opacità immagine",
+  "changeImageOpacityDescription": "Regola facilmente la trasparenza delle tue immagini. Basta caricare la tua immagine, utilizzare il cursore per impostare il livello di opacità desiderato tra 0 (completamente trasparente) e 1 (completamente opaco) e scaricare l'immagine modificata.",
+  "changeImageOpacityShortDescription": "Regola la trasparenza delle immagini",
+
+  "compressImage": "Comprimi immagine",
+  "compressImageDescription": "Comprimi le immagini per ridurre le dimensioni del file mantenendo una qualità ragionevole.",
+  "compressImageShortDescription": "Comprimi le immagini per ridurre le dimensioni del file mantenendo una qualità ragionevole.",
+
+  "createTransparentPng": "Crea PNG trasparente",
+  "createTransparentPngDescription": "Il più semplice strumento online per la creazione di PNG trasparenti. Basta importare la tua immagine nell'editor a sinistra e otterrai istantaneamente un PNG trasparente a destra. Gratuito, veloce e molto potente. Importa un'immagine - ottieni un PNG trasparente.",
+  "createTransparentPngShortDescription": "Crea rapidamente un'immagine trasparente",
+
+  "cropImage": "Ritaglia Immagine",
+  "cropImageDescription": "Uno strumento per ritagliare le immagini con precisione e facilità.",
+  "cropImageShortDescription": "Ritaglia rapidamente le immagini.",
+  "cropImageLongDescription": "Questo strumento consente di ritagliare un'immagine specificando la posizione, le dimensioni e la forma dell'area di ritaglio. Puoi scegliere tra ritagli rettangolari o circolari.",
+
+  "imageToText": "Immagine in Testo (OCR)",
+  "imageToTextDescription": "Estrai testo da immagini (JPG, PNG) utilizzando il riconoscimento ottico dei caratteri (OCR).",
+  "imageToTextShortDescription": "Estrai testo da immagini utilizzando OCR.",
+  "imageToTextLongDescription": "Questo strumento estrae testo da immagini utilizzando il riconoscimento ottico dei caratteri (OCR). Carica un'immagine contenente testo, seleziona la lingua principale e ottieni il testo estratto. Per ottenere i migliori risultati, utilizza immagini chiare con un buon contrasto.",
+
+  "qrCodeGenerator": "Generatore di Codici QR",
+  "qrCodeGeneratorDescription": "Genera codici QR per diversi tipi di dati: URL, Testo, Email, Telefono, SMS, WiFi, vCard e altro.",
+  "qrCodeGeneratorShortDescription": "Crea codici QR personalizzati per vari formati di dati.",
+  "qrCodeGeneratorLongDescription": "Genera codici QR per diversi tipi di dati: URL, Testo, Email, Telefono, SMS, WiFi, vCard e altro. Personalizza le dimensioni e i colori per creare il codice QR perfetto per le tue esigenze.",
+
+  "removeBackground": "Rimuovi sfondo dall'immagine",
+  "removeBackgroundDescription": "Il più semplice strumento online per rimuovere gli sfondi dalle immagini. Basta caricare la tua immagine e il nostro strumento basato su AI rimuoverà automaticamente lo sfondo, fornendoti un PNG trasparente. Perfetto per foto di prodotti, foto profilo e risorse di design.",
+  "removeBackgroundShortDescription": "Rimuovi automaticamente gli sfondi dalle immagini",
+  "removeBackgroundLongDescription": "Questo strumento utilizza l'IA per rimuovere automaticamente lo sfondo dalle tue immagini, creando un PNG trasparente. Perfetto per foto di prodotti, foto profilo e risorse di design.",
+
+  "compressPng": "Comprimi PNG",
+  "compressPngDescription": "Questo è un programma che comprime le immagini PNG. Non appena incolli la tua immagine PNG nell'area di input, il programma la comprimerà e mostrerà il risultato nell'area di output. Nelle opzioni, puoi regolare il livello di compressione, oltre a trovare le dimensioni dei file immagine vecchi e nuovi.",
+  "compressPngShortDescription": "Comprimi rapidamente un PNG",
+
+  "convertJpgToPng": "Converti JPG in PNG",
+  "convertJpgToPngDescription": "Converti rapidamente le tue immagini JPG in PNG. Basta importare la tua immagine JPG nell'editor a sinistra",
+  "convertJpgToPngShortDescription": "Converti rapidamente le tue immagini JPG in PNG",
+
+  "changeGifSpeed": "Cambia velocità GIF",
+  "changeGifSpeedDescription": "Questo strumento online ti consente di cambiare la velocità di un'animazione GIF. Puoi accelerarla o rallentarla. Puoi impostare lo stesso ritardo costante tra tutti i fotogrammi o cambiare i ritardi dei singoli fotogrammi. Puoi anche riprodurre sia le GIF di input che di output contemporaneamente e confrontare le loro velocità.",
+  "changeGifSpeedShortDescription": "Cambia rapidamente la velocità delle GIF",
+
+  "convertDaysToHours": "Converti giorni in ore",
+  "convertDaysToHoursDescription": "Con questa applicazione basata sul browser, puoi calcolare quante ore ci sono nel numero di giorni fornito. L'applicazione prende i valori di input (giorni), li moltiplica per 24 e li converte in ore. Supporta sia valori interi che decimali e può convertire più valori contemporaneamente.",
+  "convertDaysToHoursShortDescription": "Converti giorni in ore facilmente.",
+  "convertDaysToHoursLongDescription": "Questa è un'utilità online rapida per convertire i giorni in ore. Un giorno è 24 ore e per convertire i giorni in ore, dobbiamo semplicemente eseguire l'operazione di moltiplicazione: ore = giorni x 24. Ad esempio, 2 giorni sono 2 x 24 = 48 ore e 5 giorni sono 5 x 24 = 120 ore. Puoi convertire non solo giorni interi in ore, ma anche valori frazionari. Ad esempio, 1,5 giorni sono 1,5 x 24 = 36 ore e 4,6 giorni sono 4,6 x 24 = 110,4 ore. Puoi inserire più giorni nel campo di input (un valore per riga). In questo caso, verranno tutti calcolati in parallelo e contemporaneamente. Il programma supporta anche il suffisso 'giorni' o 'd' per i valori di input e puoi aggiungere il suffisso 'ore' ai valori di output. Timeabulous!",
+
+  "convertHoursToDays": "Converti ore in giorni",
+  "convertHoursToDaysDescription": "Con questa applicazione basata sul browser, puoi calcolare quanti giorni ci sono nel numero di ore fornito. L'applicazione prende i valori di input (ore), li divide per 24 e li converte in giorni. Funziona con valori di ore arbitrariamente grandi e puoi anche personalizzare la precisione decimale dei giorni.",
+  "convertHoursToDaysShortDescription": "Converti ore in giorni facilmente.",
+  "convertHoursToDaysLongDescription": "Questa è un'utilità online rapida per convertire ore in giorni. Per determinare il numero di giorni nelle ore specificate, il programma le divide per 24. Ad esempio, se il valore delle ore di input è 48, allora facendo 48/24, scopre che ci sono 2 giorni, oppure se il valore delle ore è 120, allora è 120/24 = 5 giorni. Se il valore delle ore non è divisibile per 24, allora il numero di giorni viene visualizzato come un numero decimale. Ad esempio, 36 ore è 36/24 = 1,5 giorni e 100 ore è circa 4,167 giorni. Puoi specificare la precisione del calcolo della frazione decimale nelle opzioni. Puoi anche abilitare l'opzione che aggiunge il suffisso 'giorni' a tutti i valori di output. Timeabulous!",
+
+  "convertSecondsToTime": "Converti secondi in tempo",
+  "convertSecondsToTimeDescription": "Con questa applicazione basata sul browser, puoi convertire i secondi in tempo di orologio. Dato il valore di input dei secondi, li converte in ore (H), minuti (M) e secondi (S) e li stampa nel formato di orologio leggibile dall'uomo (H:M:S o HH:MM:SS) nel campo di output.",
+  "convertSecondsToTimeShortDescription": "Converti rapidamente i secondi in tempo di orologio nel formato H:M:S.",
+  "convertSecondsToTimeLongDescription": "Questa è un'utilità online rapida per convertire i secondi in formato di orologio H:M:S o HH:MM:SS. Calcola il numero di ore piene, minuti piene e secondi rimanenti dai secondi di input e restituisce l'ora regolare. Ad esempio, 100 secondi sono 1 minuto e 40 secondi, quindi otteniamo l'ora dell'orologio 00:01:40. Per convertire i secondi in tempo leggibile dall'uomo utilizziamo l'algoritmo di divisione euclidea, noto anche come divisione con resto. Se \"n\" è il valore di input dei secondi, allora le ore \"h\" sono calcolate dalla formula n = 3600xh + r, dove r è il resto della divisione di n per 3600. I minuti \"m\" sono calcolati dalla formula r = 60xm + s, e i secondi \"s\" sono il resto della divisione di r per 60. Ad esempio, se l'input n = 4000, allora 4000 = 3600x1 + 400. Da qui scopriamo che il valore delle ore piene è 1. Successivamente, i restanti 400 secondi sono uguali a 60x6 + 40. Da qui, ci sono 6 minuti piene e 40 secondi rimanenti. Così, scopriamo che 4000 secondi in tempo umano sono 1 ora, 6 minuti e 40 secondi. Per impostazione predefinita, il programma restituisce l'ora dell'orologio nel formato HH:MM:SS con padding (cioè 01:06:40), ma puoi anche disabilitare l'opzione di padding e ottenere solo H:M:S (cioè 1:6:40). Timeabulous!",
+
+  "convertTimeToSeconds": "Converti tempo in secondi",
+  "convertTimeToSecondsDescription": "Con questa applicazione basata sul browser, puoi convertire il tempo fornito in ore, minuti e secondi in soli secondi. Dato un tempo nel formato HH:MM:SS, calcola HH*3600 + MM*60 + SS e stampa questo valore nella casella di output. Supporta i formati di tempo AM/PM e anche i tempi di orologio oltre le 24 ore.",
+  "convertTimeToSecondsShortDescription": "Converti rapidamente il tempo di orologio nel formato H:M:S in secondi.",
+  "convertTimeToSecondsLongDescription": "Questa è un'utilità online rapida per calcolare quanti secondi ci sono nel tempo fornito. Quando inserisci un tempo di orologio completo nella casella di input (nel formato H:M:S), viene suddiviso in ore, minuti e secondi, e utilizzando la formula matematica orex60x60 più minutix60 più secondi, trova i secondi. Se i secondi sono mancanti (il formato è H:M), allora la formula diventa orex60x60 più minutix60. Se anche i minuti sono mancanti, allora la formula diventa orex60x60. Come funzionalità extra, ore, minuti e secondi non sono limitati a sole 24 ore, 60 minuti e 60 secondi. Puoi utilizzare qualsiasi valore di ore, qualsiasi valore di minuti e qualsiasi valore di secondi. Ad esempio, il tempo di input \"72:00:00\" troverà il numero di secondi in tre giorni (72 ore sono 3x24 ore) e il tempo di input \"0:1000:0\" troverà i secondi in 1000 minuti. Timeabulous!",
+
+  "truncateClockTime": "Tronca tempo di orologio",
+  "truncateClockTimeDescription": "Con questa applicazione basata sul browser, puoi troncare un'ora di orologio e rimuovere i componenti di minuti e/o secondi. Se rimuovi i secondi, ti rimarranno ore e minuti. Ad esempio, \"13:23:45\" sarà tronca a \"13:23\". Se rimuovi sia i minuti che i secondi, ti rimarranno solo le ore. Ad esempio, \"13:23:45\" sarà tronca a solo \"13\". Inoltre, nelle opzioni, puoi aggiungere o rimuovere il padding delle ore e dei minuti e anche stampare il componente di tempo rimosso come zero, se necessario.",
+  "truncateClockTimeShortDescription": "Tronca rapidamente il tempo di orologio nel formato H:M:S.",
+  "truncateClockTimeLongDescription": "Questa è un'utilità online rapida per troncare i tempi di orologio o i valori del timer forniti. Ti consente di eliminare i componenti di tempo meno significativi, come secondi e minuti. Ad esempio, se hai un'ora esatta di \"09:45:37\" e sei a posto a lavorare con un'ora meno precisa che ha solo ore e minuti, allora puoi eliminare i secondi e ottenere \"09:45\". Allo stesso modo, se hai bisogno solo delle ore nell'output, allora puoi troncare anche i minuti e ottenere \"09\". In generale, se hai un'ora di orologio \"hh:mm:ss\", allora rimuovendo i secondi rimarrà \"hh:mm\" e rimuovendo sia i minuti che i secondi rimarrà solo \"hh\". Il programma può troncare quanti più orari di orologio hai bisogno: basta inserirli uno per riga nell'input e il risultato del troncamento sarà stampato nell'output, dove puoi facilmente copiarlo. Per impostazione predefinita, le parti troncate del tempo non vengono visualizzate, ma se necessario, puoi stamparle come zeri. Ad esempio, se rimuovi i minuti e i secondi da \"09:45:37\" e abiliti la stampa dei componenti zero, allora l'output sarà \"09:00:00\". Infine, puoi controllare la larghezza dei numeri del display dell'orologio. Ad esempio, l'ora \"09:00:00\" ha un padding zero completo (la larghezza è di due cifre per ciascun componente temporale), ma se il padding viene rimosso, allora sarà mostrato come \"9:0:0\" (la larghezza ora è di una cifra). Timeabulous!",
+
+  "timeBetweenDates": "Calcola il tempo tra due date",
+  "timeBetweenDatesDescription": "Calcola la differenza di tempo esatta tra due date e orari, con supporto per diversi fusi orari. Questo strumento fornisce una ripartizione dettagliata della differenza di tempo in varie unità (anni, mesi, giorni, ore, minuti e secondi).",
+  "timeBetweenDatesShortDescription": "Calcola la durata precisa del tempo tra due date con supporto per i fusi orari.",
+  "timeBetweenDatesLongDescription": "Calcola la differenza di tempo esatta tra due date e orari, con supporto per diversi fusi orari. Questo strumento fornisce una ripartizione dettagliata della differenza di tempo in varie unità (anni, mesi, giorni, ore, minuti e secondi).",
+
+  "splitPdf": "Dividi PDF",
+  "splitPdfDescription": "Estrai pagine specifiche da un file PDF utilizzando numeri di pagina o intervalli (ad es., 1,5-8)",
+  "splitPdfShortDescription": "Estrai pagine specifiche da un file PDF",
+  "splitPdfLongDescription": "Questo strumento consente di estrarre pagine specifiche da un documento PDF. Puoi specificare numeri di pagina singoli (ad es., 1,3,5) o intervalli di pagina (ad es., 2-6) o una combinazione di entrambi (ad es., 1,3-5,8). Lascia vuoto il campo degli intervalli di pagina per includere tutte le pagine del PDF. Esempi: - \"1,5,9\" estrae le pagine 1, 5 e 9 - \"1-5\" estrae le pagine da 1 a 5 - \"1,3-5,8-10\" estrae le pagine 1, 3, 4, 5, 8, 9 e 10",
+
+  "rotatePdf": "Ruota PDF",
+  "rotatePdfDescription": "Ruota le pagine PDF di 90, 180 o 270 gradi",
+  "rotatePdfShortDescription": "Ruota le pagine in un documento PDF",
+  "rotatePdfLongDescription": "Questo strumento consente di ruotare le pagine in un documento PDF. Puoi ruotare tutte le pagine o specificare pagine singole da ruotare. Scegli un angolo di rotazione: - 90° in senso orario - 180° (capovolto) - 270° (90° in senso antiorario) Per ruotare pagine specifiche: 1. Deseleziona \"Applica a tutte le pagine\" 2. Inserisci numeri di pagina o intervalli separati da virgole (ad es., 1,3,5-7) Esempi: - \"1,5,9\" ruota le pagine 1, 5 e 9 - \"1-5\" ruota le pagine da 1 a 5 - \"1,3-5,8-10\" ruota le pagine 1, 3, 4, 5, 8, 9 e 10",
+
+  "compressPdf": "Comprimi PDF",
+  "compressPdfDescription": "Riduci le dimensioni del file PDF mantenendo la qualità utilizzando Ghostscript",
+  "compressPdfShortDescription": "Comprimi i file PDF in modo sicuro nel tuo browser",
+  "compressPdfLongDescription": "Comprimi i file PDF in modo sicuro nel tuo browser utilizzando Ghostscript. I tuoi file non lasciano mai il tuo dispositivo, garantendo la massima privacy mentre riduci le dimensioni dei file per la condivisione via email, il caricamento su siti web o il salvataggio di spazio di archiviazione. Alimentato dalla tecnologia WebAssembly.",
+
+  "protectPdf": "Proteggi PDF",
+  "protectPdfDescription": "Aggiungi protezione con password ai tuoi file PDF in modo sicuro nel tuo browser",
+  "protectPdfShortDescription": "Proteggi con password i file PDF in modo sicuro",
+  "protectPdfLongDescription": "Aggiungi protezione con password ai tuoi file PDF in modo sicuro nel tuo browser. I tuoi file non lasciano mai il tuo dispositivo, garantendo la massima privacy mentre proteggi i tuoi documenti con crittografia della password. Perfetto per proteggere informazioni sensibili, documenti riservati o dati personali.",
+
+  "mergePdf": "Unisci PDF",
+  "mergePdfDescription": "Combina più file PDF in un unico documento.",
+  "mergePdfShortDescription": "Unisci più file PDF in un unico documento",
+  "mergePdfLongDescription": "Questo strumento consente di unire più file PDF in un unico documento. Per utilizzare lo strumento, basta caricare i file PDF che si desidera unire. Lo strumento combinerà quindi tutte le pagine dei file di input in un unico documento PDF.",
+
+  "pdfToEpub": "Converti PDF in EPUB",
+  "pdfToEpubDescription": "Trasforma i documenti PDF in file EPUB per una migliore compatibilità con gli e-reader.",
+  "pdfToEpubShortDescription": "Converti file PDF in formato EPUB",
+  "pdfToEpubLongDescription": "Carica un file PDF e questo strumento lo convertirà in un formato EPUB, adatto per la maggior parte dei dispositivi e-reader.",
+
+  "validateJson": "Valida JSON",
+  "validateJsonDescription": "Valida i dati JSON e identifica problemi di formattazione come virgolette mancanti, virgole finali e parentesi quadre errate.",
+  "validateJsonShortDescription": "Valida rapidamente una struttura di dati JSON.",
+  "validateJsonLongDescription": "JSON (JavaScript Object Notation) è un formato di interscambio dati leggero. La validazione JSON garantisce che la struttura dei dati sia conforme allo standard JSON. Un oggetto JSON valido deve avere: - Nomi di proprietà racchiusi tra virgolette doppie. - Parentesi graffe {} bilanciate correttamente. - Nessuna virgola finale dopo l'ultima coppia chiave-valore. - Annidamento corretto di oggetti e array. Questo strumento controlla il JSON di input e fornisce feedback per aiutare a identificare e correggere errori comuni.",
+
+  "prettifyJson": "Ordina JSON",
+  "prettifyJsonDescription": "Carica il tuo JSON nel campo di input e verrà automaticamente formattato. Nelle opzioni dello strumento, puoi scegliere se utilizzare spazi o tabulazioni per l'indentazione e, se utilizzi spazi, puoi specificare il numero di spazi da aggiungere per livello di indentazione.",
+  "prettifyJsonShortDescription": "Abbellisci rapidamente una struttura di dati JSON.",
+  "prettifyJsonLongDescription": "Questo strumento aggiunge una formattazione coerente ai dati nel formato JavaScript Object Notation (JSON). Questa trasformazione rende il codice JSON più leggibile, facilitando la comprensione e la modifica. Il programma analizza la struttura dei dati JSON in token e quindi li riformatta aggiungendo indentazione e interruzioni di riga. Se i dati sono gerarchici, aggiunge indentazione all'inizio delle righe per mostrare visivamente la profondità del JSON e aggiunge nuove righe per suddividere lunghe matrici JSON su una sola riga in più righe più brevi e leggibili. Inoltre, questa utility può rimuovere spazi e tabulazioni non necessari dal codice JSON (specialmente spazi bianchi all'inizio e alla fine), rendendolo più compatto. Puoi scegliere il metodo di indentazione delle righe nelle opzioni: indentare con spazi o indentare con tabulazioni. Quando si utilizzano spazi, è anche possibile specificare quanti spazi utilizzare per ciascun livello di indentazione (di solito 2 o 4 spazi).",
+
+  "minifyJSON": "Minimizza JSON",
+  "minifyJSONDescription": "Minimizza il tuo JSON rimuovendo tutti gli spazi bianchi e la formattazione non necessari. Questo strumento comprime i dati JSON alla loro dimensione più piccola possibile mantenendo la struttura JSON valida.",
+  "minifyJSONShortDescription": "Comprimi rapidamente il file JSON.",
+  "minifyJSONLongDescription": "La minimizzazione JSON è il processo di rimozione di tutti i caratteri di spazio bianco non necessari dai dati JSON mantenendo la sua validità. Ciò include la rimozione di spazi, interruzioni di riga e rientranze che non sono richieste affinché il JSON venga analizzato correttamente. La minimizzazione riduce la dimensione dei dati JSON, rendendoli più efficienti per l'archiviazione e la trasmissione mantenendo esattamente la stessa struttura e gli stessi valori dei dati.",
+
+  "stringifyJson": "Stringify JSON",
+  "stringifyJsonDescription": "Converti oggetti e array JavaScript nella loro rappresentazione in stringa JSON. Le opzioni includono indentazione personalizzata e escape dei caratteri HTML per stringhe JSON sicure per il web.",
+  "stringifyJsonShortDescription": "Converti oggetti JavaScript in stringhe JSON.",
+  "stringifyJsonLongDescription": "JSON Stringify è uno strumento che converte oggetti e array JavaScript nella loro rappresentazione in stringa JSON. Formatta correttamente l'output con indentazione personalizzabile e offre l'opzione di eseguire l'escape dei caratteri speciali HTML, rendendolo sicuro per l'uso web. Questo strumento è particolarmente utile quando è necessario serializzare strutture dati per l'archiviazione o la trasmissione, o quando è necessario preparare dati JSON per l'incorporamento in HTML.",
+
+  "jsonToXml": "Converti JSON in XML",
+  "jsonToXmlDescription": "Converti file JSON in formato XML con opzioni personalizzabili.",
+  "jsonToXmlShortDescription": "Converti dati JSON in formato XML.",
+
+  "escapeJson": "Escape JSON",
+  "escapeJsonDescription": "Strumento online gratuito per l'escape JSON. Carica semplicemente il tuo JSON nel campo di input e verrà automaticamente eseguito l'escape. Nelle opzioni dello strumento, puoi abilitare facoltativamente l'inserimento del JSON eseguito l'escape tra virgolette doppie per ottenere una stringa JSON eseguita l'escape.",
+  "escapeJsonShortDescription": "Esegui rapidamente l'escape dei caratteri JSON speciali.",
+  "escapeJsonLongDescription": "Questo strumento converte i caratteri speciali nei file JSON e nelle strutture dati nelle loro versioni eseguite l'escape. Tali caratteri speciali sono, ad esempio, virgolette doppie, caratteri di nuova riga, barre rovesciate, tabulazioni e molti altri. Se questi caratteri non vengono eseguiti l'escape e appaiono in una stringa JSON grezza senza escape, possono causare errori nell'analisi dei dati. Il programma li trasforma in versioni sicure aggiungendo una barra rovesciata (\\) prima del carattere, cambiando la sua interpretazione. Inoltre, puoi abilitare la casella di controllo \"Wrap Output in Quotes\" nelle opzioni, che aggiunge virgolette doppie attorno ai dati JSON eseguiti l'escape risultanti. Questo è utile quando i dati JSON eseguiti l'escape devono essere utilizzati come stringa in altre strutture dati o nel linguaggio di programmazione JavaScript. Json-abulous!",
+
+  "tsvToJson": "Converti TSV in JSON",
+  "tsvToJsonDescription": "Converti file TSV in formato JSON con opzioni personalizzabili per delimitatori, virgolette e formattazione dell'output. Supporto per intestazioni, commenti e conversione dinamica dei tipi.",
+  "tsvToJsonShortDescription": "Converti dati TSV in formato JSON.",
+  "tsvToJsonLongDescription": "Questo strumento consente di convertire file TSV (Tab-Separated Values) in formato JSON. È possibile personalizzare il processo di conversione specificando delimitatori, caratteri di virgolette e se utilizzare intestazioni. Supporta anche la conversione dinamica dei tipi per i valori, la gestione dei commenti e il salto delle righe vuote. L'output può essere formattato con indentazione o minimizzato secondo necessità.",
+
+  "trimVideo": "Ritaglia Video",
+  "trimVideoDescription": "Questo strumento online ti consente di ritagliare video impostando i punti di inizio e fine. Puoi visualizzare in anteprima la sezione ritagliata prima dell'elaborazione. Supporta i formati video comuni come MP4, WebM e OGG.",
+  "trimVideoShortDescription": "Ritaglia video impostando i punti di inizio e fine.",
+
+  "rotateVideo": "Ruota Video",
+  "rotateVideoDescription": "Questo strumento online ti consente di ruotare video di 90, 180 o 270 gradi. Puoi visualizzare in anteprima il video ruotato prima dell'elaborazione. Supporta i formati video comuni come MP4, WebM e OGG.",
+  "rotateVideoShortDescription": "Ruota video di 90, 180 o 270 gradi.",
+
+  "compressVideo": "Comprimi Video",
+  "compressVideoDescription": "Comprimi video riducendo la loro risoluzione a 240p, 480p, 720p, ecc. Questo strumento aiuta a ridurre le dimensioni del file mantenendo una qualità accettabile. Supporta i formati video comuni come MP4, WebM e OGG.",
+  "compressVideoShortDescription": "Comprimi video riducendo la risoluzione",
+
+  "loopVideo": "Ripeti Video",
+  "loopVideoDescription": "Questo strumento online ti consente di ripetere video specificando il numero di ripetizioni. Puoi visualizzare in anteprima il video ripetuto prima dell'elaborazione. Supporta i formati video comuni come MP4, WebM e OGG.",
+  "loopVideoShortDescription": "Ripeti video più volte",
+
+  "flipVideo": "Capovolgi Video",
+  "flipVideoDescription": "Questo strumento online ti consente di capovolgere i video orizzontalmente o verticalmente. Puoi visualizzare in anteprima il video capovolto prima dell'elaborazione. Supporta i formati video comuni come MP4, WebM e OGG.",
+  "flipVideoShortDescription": "Capovolgi video orizzontalmente o verticalmente",
+  "flipVideoLongDescription": "Capovolgi facilmente i tuoi video orizzontalmente (specchio) o verticalmente (sottosopra) con questo semplice strumento online.",
+
+  "cropVideo": "Ritaglia Video",
+  "cropVideoDescription": "Ritaglia un video specificando coordinate e dimensioni",
+  "cropVideoShortDescription": "Ritaglia video a area specifica",
+  "cropVideoLongDescription": "Rimuovi parti indesiderate dai bordi del tuo video ritagliandolo in un'area rettangolare specifica. Definisci le coordinate di partenza (X, Y) e la larghezza e l'altezza dell'area che desideri mantenere.",
+
+  "changeSpeed": "Cambia velocità",
+  "changeSpeedDescription": "Questo strumento online ti consente di cambiare la velocità di un video. Puoi accelerarlo o rallentarlo.",
+  "changeSpeedShortDescription": "Cambia rapidamente la velocità del video.",
+
+  "convertCsvToJson": "Converti CSV in JSON",
+  "convertCsvToJsonDescription": "Converti i file CSV in formato JSON con opzioni personalizzabili per delimitatori, virgolette e formattazione dell'output. Supporto per intestazioni, commenti e conversione dinamica dei tipi.",
+  "convertCsvToJsonShortDescription": "Converti i dati CSV in formato JSON.",
+  "convertCsvToJsonLongDescription": "Questo strumento trasforma i file Comma Separated Values (CSV) in strutture dati JavaScript Object Notation (JSON). Supporta vari formati CSV con delimitatori, caratteri di virgolette e simboli di commento personalizzabili. Il convertitore può trattare la prima riga come intestazioni, saltare le righe vuote e rilevare automaticamente i tipi di dati come numeri e booleani. Il JSON risultante può essere utilizzato per la migrazione dei dati, il backup o come input per altre applicazioni.",
+
+  "convertCsvToXml": "Converti CSV in XML",
+  "convertCsvToXmlDescription": "Converti file CSV in formato XML con opzioni personalizzabili.",
+  "convertCsvToXmlShortDescription": "Converti dati CSV in formato XML.",
+
+  "convertCsvRowsToColumns": "Converti righe CSV in colonne",
+  "convertCsvRowsToColumnsDescription": "Questo strumento converte le righe di un file CSV (Comma Separated Values) in colonne. Estrae le righe orizzontali dal CSV di input una per una, le ruota di 90 gradi e le restituisce come colonne verticali una dopo l'altra, separate da virgole.",
+  "convertCsvRowsToColumnsShortDescription": "Converti righe CSV in colonne.",
+  "convertCsvRowsToColumnsLongDescription": "Questo strumento converte le righe di un file CSV (Comma Separated Values) in colonne. Ad esempio, se i dati CSV di input hanno 6 righe, l'output avrà 6 colonne e gli elementi delle righe saranno disposti dall'alto verso il basso. In un CSV ben formato, il numero di valori in ogni riga è lo stesso. Tuttavia, nei casi in cui mancano dei campi, il programma può correggerli e puoi scegliere tra le opzioni disponibili: riempire i dati mancanti con elementi vuoti o sostituirli con elementi personalizzati, come \"mancante\", \"?\" o \"x\". Durante la conversione, lo strumento pulisce anche il file CSV da informazioni non necessarie, come righe vuote (senza informazioni visibili) e commenti. Per aiutare lo strumento a identificare correttamente i commenti, nelle opzioni puoi specificare il simbolo che inizia una riga di commento, tipicamente un cancelletto \"#\" o doppio slash \"//\". Csv-abulous!.",
+
+  "convertCsvToTsv": "Converti CSV in TSV",
+  "convertCsvToTsvDescription": "Carica il tuo file CSV nel modulo sottostante e verrà automaticamente convertito in un file TSV. Nelle opzioni dello strumento, puoi personalizzare il formato CSV di input - specificare il delimitatore di campo, il carattere di virgolette e il simbolo di commento, oltre a saltare le righe CSV vuote e scegliere se mantenere le intestazioni delle colonne CSV.",
+  "convertCsvToTsvShortDescription": "Converti dati CSV in formato TSV.",
+  "convertCsvToTsvLongDescription": "Questo strumento trasforma i dati Comma Separated Values (CSV) in dati Tab Separated Values (TSV). Entrambi sono formati popolari per l'archiviazione di dati tabellari ma usano delimitatori diversi: CSV usa le virgole (\",\"), mentre TSV usa i tab (\"\t\"). I file CSV sono più difficili da analizzare rispetto ai TSV perché i valori possono contenere virgole, quindi non è sempre ovvio dove inizia e finisce un campo senza regole di parsing complesse. Il TSV, invece, usa il simbolo di tabulazione, che di solito non appare nei dati, quindi separare i campi è semplice come dividere l'input per il carattere di tabulazione. Per convertire CSV in TSV, inserisci semplicemente i dati CSV nell'input di questo strumento. In rari casi in cui un file CSV ha un delimitatore diverso dalla virgola, puoi specificarlo nelle opzioni. Puoi anche specificare il carattere di virgolette e il simbolo di inizio commento. Inoltre, le righe CSV vuote possono essere saltate attivando l'opzione \"Ignora righe senza dati\". Se questa opzione è disattivata, le righe vuote nel CSV vengono convertite in righe vuote nel TSV. L'opzione \"Mantieni intestazioni\" ti permette di scegliere se includere la prima riga del file CSV di input, che contiene i nomi delle colonne, nel file TSV risultante. In alternativa, se l'opzione intestazioni non è selezionata, la prima riga verrà saltata durante la conversione. Per la conversione inversa da TSV a CSV, puoi usare il nostro strumento Converti TSV in CSV. Csv-abulous!",
+
+  "swapCsvColumns": "Scambia colonne CSV",
+  "swapCsvColumnsDescription": "Carica semplicemente il tuo file CSV nel modulo sottostante, specifica le colonne da scambiare e lo strumento cambierà automaticamente la posizione delle colonne specificate nel file di output. Nelle opzioni dello strumento, puoi specificare le posizioni o i nomi delle colonne da scambiare, correggere dati incompleti e, facoltativamente, rimuovere record vuoti e record commentati.",
+  "swapCsvColumnsShortDescription": "Riordina le colonne CSV.",
+  "swapCsvColumnsLongDescription": "Questo strumento riorganizza i dati CSV scambiando la posizione delle colonne. Scambiare le colonne può migliorare la leggibilità di un file CSV mettendo insieme o davanti i dati più usati per facilitare il confronto e la modifica. Ad esempio, puoi scambiare la prima colonna con l'ultima o la seconda con la terza. Per scambiare colonne in base alla posizione, seleziona la modalità \"Imposta posizione colonna\" e inserisci i numeri delle colonne \"da\" e \"a\" da scambiare nei primi due blocchi di opzioni. Ad esempio, se hai un file CSV con quattro colonne \"1, 2, 3, 4\" e scambi le colonne in posizione \"2\" e \"4\", l'output avrà le colonne nell'ordine: \"1, 4, 3, 2\". In alternativa, puoi scambiare colonne specificando le intestazioni (nomi delle colonne nella prima riga). Se abiliti questa modalità nelle opzioni, puoi inserire i nomi delle colonne come \"luogo\" e \"città\" e il programma scambierà queste due colonne. Se una delle colonne specificate ha dati incompleti (alcuni campi mancanti), puoi scegliere di saltare tali dati o riempire i campi mancanti con valori vuoti o personalizzati (specificati nelle opzioni). Puoi anche specificare il simbolo usato per i commenti nei dati CSV, come \"#\" o \"//\". Se non hai bisogno delle righe commentate nell'output, puoi rimuoverle usando la casella \"Elimina commenti\". Puoi anche attivare la casella \"Elimina righe vuote\" per eliminare le righe senza informazioni visibili. Csv-abulous!",
+
+  "convertCsvToYaml": "Converti CSV in YAML",
+  "convertCsvToYamlDescription": "Carica semplicemente il tuo file CSV nel modulo sottostante e verrà automaticamente convertito in un file YAML. Nelle opzioni dello strumento, puoi specificare il carattere delimitatore di campo, il carattere di virgolette e il carattere di commento per adattare lo strumento a formati CSV personalizzati. Inoltre, puoi selezionare il formato YAML di output: uno che mantiene le intestazioni CSV o uno che le esclude.",
+  "convertCsvToYamlShortDescription": "Converti rapidamente un file CSV in un file YAML.",
+  "convertCsvToYamlLongDescription": "Questo strumento trasforma i dati CSV (Comma Separated Values) in dati YAML (Yet Another Markup Language). Il CSV è un formato tabellare semplice usato per rappresentare dati a matrice composti da righe e colonne. YAML, invece, è un formato più avanzato (in realtà un superset di JSON), che crea dati più leggibili per la serializzazione e supporta liste, dizionari e oggetti annidati. Questo programma supporta vari formati CSV di input: i dati possono essere separati da virgole (predefinito), punti e virgola, pipe o altri delimitatori. Puoi specificare il delimitatore esatto usato nei dati nelle opzioni. Allo stesso modo, puoi specificare il carattere di virgolette usato per racchiudere i campi CSV (di default il simbolo di doppia virgoletta). Puoi anche saltare le righe che iniziano con commenti specificando i simboli di commento nelle opzioni. Questo ti permette di mantenere i dati puliti saltando le righe non necessarie. Ci sono due modi per convertire CSV in YAML. Il primo metodo converte ogni riga CSV in una lista YAML. Il secondo metodo estrae le intestazioni dalla prima riga CSV e crea oggetti YAML con chiavi basate su queste intestazioni. Puoi anche personalizzare il formato YAML di output specificando il numero di spazi per l'indentazione delle strutture YAML. Se hai bisogno della conversione inversa, cioè trasformare YAML in CSV, puoi usare il nostro strumento Converti YAML in CSV. Csv-abulous!",
+
+  "changeCsvSeparator": "Cambia separatore CSV",
+  "changeCsvSeparatorDescription": "Carica semplicemente il tuo file CSV nel modulo sottostante e verrà automaticamente applicato un nuovo carattere delimitatore di colonna. Nelle opzioni dello strumento, puoi specificare quali caratteri delimitatore e di virgolette sono usati nel file CSV di origine e personalizzare i caratteri desiderati per il CSV di output. Puoi anche filtrare il CSV di input prima della conversione e saltare righe vuote e righe di commento.",
+  "changeCsvSeparatorShortDescription": "Cambia rapidamente il delimitatore di colonna CSV con un nuovo simbolo.",
+  "changeCsvSeparatorLongDescription": "Questo strumento cambia il separatore di campo nei file CSV (Comma Separated Values). È utile perché diversi programmi possono usare separatori diversi. Sebbene la virgola sia il separatore più comune nei file CSV, alcuni programmi richiedono file separati da tabulazione (TSV), punto e virgola (SSV), pipe (PSV) o altri simboli. La virgola di default può non essere conveniente come delimitatore nei file CSV perché le virgole sono spesso presenti nei campi, rendendo difficile distinguere tra virgole come delimitatori e virgole come punteggiatura. Sostituendo la virgola con un altro delimitatore, puoi convertire il file in un formato più leggibile e facilmente analizzabile. Nella sezione opzioni di questo strumento, puoi configurare sia il formato del file CSV di input che quello di output. Per il CSV di input, puoi specificare il delimitatore attuale (di default è la virgola) e anche indicare il carattere di virgolette usato per racchiudere i campi. Per il CSV di output, puoi impostare un nuovo delimitatore, scegliere un nuovo carattere di virgolette e, facoltativamente, racchiudere tutti i campi tra virgolette. Inoltre, hai la possibilità di rimuovere le righe vuote dal CSV di input ed eliminare le righe di commento che iniziano con un carattere specificato (di solito un cancelletto \"#\" o doppio slash \"//\"). Csv-abulous!",
+
+  "findIncompleteCsvRecords": "Trova record CSV incompleti",
+  "findIncompleteCsvRecordsDescription": "Carica semplicemente il tuo file CSV nel modulo sottostante e questo strumento controllerà automaticamente che nessuna riga o colonna abbia valori mancanti. Nelle opzioni dello strumento, puoi regolare il formato del file di input (specificare il delimitatore, il carattere di virgolette e il carattere di commento). Inoltre, puoi abilitare il controllo dei valori vuoti, saltare le righe vuote e impostare un limite al numero di messaggi di errore nell'output.",
+  "findIncompleteCsvRecordsShortDescription": "Trova rapidamente righe e colonne in CSV con valori mancanti.",
+  "findIncompleteCsvRecordsLongDescription": "Questo strumento controlla la completezza dei file CSV (Comma Separated Values) e identifica i record incompleti nei dati. Trova righe e colonne in cui mancano uno o più valori e mostra le loro posizioni nell'output così puoi trovare e correggere rapidamente il tuo file CSV. Un file CSV valido ha lo stesso numero di valori (campi) in tutte le righe e colonne. Se il CSV che carichi in questo strumento è completo, il programma ti avviserà con un badge verde. Se manca almeno un valore in una qualsiasi riga o colonna, il programma mostrerà un badge rosso e indicherà la posizione esatta del valore mancante. Se il file CSV ha un campo senza caratteri, tale campo è chiamato campo vuoto. Non è un campo mancante, solo vuoto perché non contiene nulla. Puoi attivare la casella \"Trova valori vuoti\" nelle opzioni per identificare tutti questi campi nel CSV. Se il file contiene righe vuote, puoi ignorarle con l'opzione \"Salta righe vuote\" o controllarle per completezza insieme alle altre righe. Puoi anche configurare il delimitatore, il carattere di virgolette e il carattere di commento nelle opzioni. Questo ti permette di adattarti ad altri formati oltre al CSV, come TSV (Tab Separated Values), SSV (Semicolon Separated Values) o PSV (Pipe Separated Values). Se il file ha troppi record incompleti o vuoti, puoi impostare un limite ai messaggi di output da visualizzare, ad esempio 5, 10 o 20 messaggi. Se vuoi riempire rapidamente i dati mancanti con valori predefiniti, puoi usare il nostro strumento Riempimento record CSV incompleti. Csv-abulous!",
+
+  "transposeCsv": "Trasponi CSV",
+  "transposeCsvDescription": "Carica semplicemente il tuo file CSV nel modulo sottostante e questo strumento trasporrà automaticamente il tuo CSV. Nelle opzioni dello strumento, puoi specificare il carattere che inizia le righe di commento nel CSV per rimuoverle. Inoltre, se il CSV è incompleto (valori mancanti), puoi sostituire i valori mancanti con il carattere vuoto o un carattere personalizzato.",
+  "transposeCsvShortDescription": "Trasponi rapidamente un file CSV.",
+  "transposeCsvLongDescription": "Questo strumento trasforma i dati Comma Separated Values (CSV) trasponendoli. Considera il CSV come una matrice di dati e ne ribalta tutti gli elementi lungo la diagonale principale. L'output contiene gli stessi dati CSV dell'input, ma ora tutte le righe sono diventate colonne e tutte le colonne sono diventate righe. Dopo la trasposizione, il file CSV avrà dimensioni opposte. Ad esempio, se il file di input ha 4 colonne e 3 righe, il file di output avrà 3 colonne e 4 righe. Durante la conversione, il programma pulisce anche i dati da righe non necessarie e corregge i dati incompleti. In particolare, lo strumento elimina automaticamente tutti i record vuoti e i commenti che iniziano con un carattere specifico, che puoi impostare nell'opzione. Inoltre, nei casi in cui i dati CSV sono corrotti o mancanti, l'utilità completa il file con campi vuoti o personalizzati che puoi specificare nelle opzioni. Csv-abulous!",
+
+  "insertCsvColumns": "Inserisci colonne CSV",
+  "insertCsvColumnsDescription": "Carica semplicemente il tuo file CSV nel modulo sottostante, incolla la nuova colonna nelle opzioni e verrà automaticamente inserita nel tuo CSV. Nelle opzioni dello strumento, puoi anche specificare più di una colonna da inserire, impostare la posizione di inserimento e, facoltativamente, saltare le righe vuote e di commento.",
+  "insertCsvColumnsShortDescription": "Inserisci rapidamente una o più nuove colonne ovunque in un file CSV.",
+
+  "generateArithmeticSequence": "Genera sequenza aritmetica",
+  "generateArithmeticSequenceDescription": "Genera una sequenza aritmetica specificando il primo termine (a₁), la differenza comune (d) e il numero di termini (n). Lo strumento crea una sequenza in cui ogni numero differisce dal precedente di una differenza costante.",
+  "generateArithmeticSequenceShortDescription": "Genera una sequenza in cui ogni termine differisce di un valore costante.",
+  "generateArithmeticSequenceLongDescription": "Una sequenza aritmetica è una sequenza di numeri in cui la differenza tra ciascun termine consecutivo è costante. Questa differenza costante è chiamata ragione. Dato il primo termine (a₁) e la ragione (d), ogni termine può essere trovato aggiungendo la ragione al termine precedente.",
+
+  "generateNumbers": "Genera numeri",
+  "generateNumbersDescription": "Calcola rapidamente una lista di numeri interi nel tuo browser. Per ottenere la tua lista, specifica semplicemente il primo intero, il valore di incremento e il conteggio totale nelle opzioni qui sotto, e questa utility genererà tanti numeri interi.",
+  "generateNumbersShortDescription": "Calcola rapidamente una lista di numeri interi nel browser",
+
+  "ohmLaw": "Legge di Ohm",
+  "ohmLawDescription": "Calcola tensione, corrente e resistenza",
+  "ohmLawShortDescription": "Calcola tensione, corrente o resistenza nei circuiti elettrici usando la legge di Ohm",
+  "ohmLawLongDescription": "Questo calcolatore applica la legge di Ohm (V = I x R) per determinare uno dei tre parametri elettrici quando sono noti gli altri due. La legge di Ohm è un principio fondamentale dell'ingegneria elettrica che descrive la relazione tra tensione (V), corrente (I) e resistenza (R). Questo strumento è essenziale per hobbisti, ingegneri elettrici e studenti che lavorano con circuiti per risolvere rapidamente valori sconosciuti nei loro progetti elettrici.",
+
+  "slacklineTension": "Tensione Slackline",
+  "slacklineTensionDescription": "Calcola la tensione in una slackline",
+  "slacklineTensionShortDescription": "Calcola la tensione approssimativa di una slackline o di uno stendibiancheria. Non fare affidamento su questo per la sicurezza.",
+  "slacklineTensionLongDescription": "Questo calcolatore presume un carico al centro della corda",
+
+  "sphereArea": "Area di una sfera",
+  "sphereAreaDescription": "Area di una sfera",
+  "sphereAreaShortDescription": "Calcola l'area superficiale di una sfera in base al suo raggio",
+  "sphereAreaLongDescription": "Questo calcolatore determina l'area superficiale di una sfera usando la formula A = 4πr². Puoi inserire il raggio per trovare l'area superficiale o inserire l'area per calcolare il raggio richiesto. Utile per studenti di geometria, ingegneri e chiunque abbia bisogno di calcoli sulle superfici sferiche.",
+
+  "sphereVolume": "Volume di una sfera",
+  "sphereVolumeDescription": "Volume di una sfera",
+  "sphereVolumeShortDescription": "Calcola il volume di una sfera usando raggio o diametro",
+  "sphereVolumeLongDescription": "Questo calcolatore calcola il volume di una sfera usando la formula V = (4/3)πr³. Puoi inserire il raggio o il diametro per trovare il volume, oppure inserire il volume per determinare il raggio richiesto. Utile per studenti, ingegneri e professionisti che lavorano con oggetti sferici in fisica, ingegneria e produzione.",
+
+  "voltageDropInWire": "Caduta di tensione nel cavo (andata e ritorno)",
+  "voltageDropInWireDescription": "Calcola la caduta di tensione e la perdita di potenza in un cavo a 2 conduttori",
+  "voltageDropInWireShortDescription": "Calcola la caduta di tensione e la perdita di potenza nei cavi elettrici in base a lunghezza, materiale e corrente",
+  "voltageDropInWireLongDescription": "Questo calcolatore aiuta a determinare la caduta di tensione e la perdita di potenza in un cavo elettrico a due conduttori. Tiene conto della lunghezza del cavo, della sezione del filo, della resistività del materiale e della corrente. Calcola la caduta di tensione totale (andata e ritorno), la resistenza totale del cavo e la potenza dissipata come calore. Utile per ingegneri elettrici, elettricisti e hobbisti per progettare sistemi elettrici e garantire livelli di tensione adeguati al carico.",
+
+  "numberSumCalculator": "Calcolatore somma numeri",
+  "numberSumCalculatorDescription": "Calcola rapidamente la somma di numeri nel browser. Per ottenere la somma, inserisci la lista di numeri nel campo di input, regola il separatore tra i numeri nelle opzioni qui sotto e questa utility sommerà tutti i numeri.",
+  "numberSumCalculatorShortDescription": "Somma rapidamente numeri",
+  "numberSumCalculatorLongDescription": "Questa è un'utilità online per calcolare la somma di una serie di numeri. Puoi inserire i numeri separati da virgola, spazio o qualsiasi altro carattere, incluso il ritorno a capo. Puoi anche incollare un frammento di testo che contiene valori numerici e l'utility li estrarrà e ne calcolerà la somma.",
+
+  "duplicate": "Duplica",
+  "duplicateDescription": "Uno strumento per duplicare ogni elemento di una lista un numero specificato di volte. Perfetto per creare pattern ripetuti, dati di test o espandere dataset.",
+  "duplicateShortDescription": "Ripeti gli elementi di una lista più volte.",
+  "duplicateLongDescription": "Questo strumento consente di duplicare gli elementi di una lista. Puoi specificare il numero di copie (anche valori frazionari), controllare se gli elementi sono concatenati o intrecciati e persino invertire gli elementi duplicati. Utile per creare pattern ripetuti, generare dati di test o espandere liste con contenuti prevedibili.",
+
+  "findMostPopular": "Trova più popolari",
+  "findMostPopularDescription": "Uno strumento per identificare e contare gli elementi che si ripetono più frequentemente in una lista. Utile per analisi dati, trovare tendenze o identificare elementi comuni.",
+  "findMostPopularShortDescription": "Trova gli elementi più comuni in una lista.",
+
+  "findUnique": "Trova unici",
+  "findUniqueDescription": "Il più semplice strumento online per trovare elementi unici in una lista. Inserisci la tua lista con qualsiasi separatore e identificherà automaticamente gli elementi unici. Perfetto per rimuovere duplicati, trovare valori distinti o analizzare l'unicità dei dati. Puoi personalizzare i separatori di input/output e scegliere se preservare l'ordine originale.",
+  "findUniqueShortDescription": "Trova elementi unici in una lista",
+
+  "group": "Raggruppa",
+  "groupDescription": "Il più semplice strumento online per raggruppare elementi di una lista. Inserisci la tua lista e specifica i criteri di raggruppamento per organizzare gli elementi in gruppi logici. Perfetto per categorizzare dati, organizzare informazioni o creare liste strutturate. Supporta separatori personalizzati e varie opzioni di raggruppamento.",
+  "groupShortDescription": "Raggruppa elementi della lista per proprietà comuni",
+
+  "reverse": "Inverti",
+  "reverseDescription": "Questa è una semplicissima applicazione online che stampa tutti gli elementi di una lista in ordine inverso. Gli elementi possono essere separati da qualsiasi simbolo e puoi anche cambiare il separatore della lista invertita.",
+  "reverseShortDescription": "Inverti rapidamente una lista",
+  "reverseLongDescription": "Con questa utility puoi invertire l'ordine degli elementi in una lista. L'utility divide prima la lista in singoli elementi e poi li itera dall'ultimo al primo, stampando ciascun elemento nell'output durante l'iterazione. La lista può contenere qualsiasi dato testuale: numeri, stringhe, parole, frasi, ecc. Il separatore degli elementi può anche essere una espressione regolare. Ad esempio, la regex /[;,]/ permette di usare elementi separati da virgola o punto e virgola. I separatori di input e output possono essere personalizzati nelle opzioni. Di default, entrambi sono la virgola. Listabulous!",
+
+  "rotate": "Ruota",
+  "rotateDescription": "Uno strumento per ruotare gli elementi di una lista di un numero specificato di posizioni. Sposta gli elementi a sinistra o a destra mantenendo il loro ordine relativo.",
+  "rotateShortDescription": "Sposta gli elementi della lista di posizione.",
+
+  "shuffle": "Mescola",
+  "shuffleDescription": "Uno strumento per riordinare casualmente gli elementi di una lista. Perfetto per randomizzare dati, creare selezioni casuali o generare sequenze casuali.",
+  "shuffleShortDescription": "Riordina casualmente gli elementi della lista.",
+
+  "sortList": "Ordina lista",
+  "sortListDescription": "Questa è una semplicissima applicazione online che ordina gli elementi di una lista in ordine crescente o decrescente. Puoi ordinare alfabeticamente, numericamente o per lunghezza. Puoi anche rimuovere duplicati e elementi vuoti, oltre a rifinire gli elementi con spazi. Puoi usare qualsiasi carattere come separatore o una espressione regolare. Inoltre, puoi creare un nuovo delimitatore per la lista ordinata.",
+  "sortListShortDescription": "Ordina rapidamente una lista",
+
+  "truncate": "Tronca",
+  "truncateDescription": "Il più semplice strumento online per troncare liste. Limita rapidamente il numero di elementi specificando una lunghezza massima. Perfetto per campionare dati, creare anteprime o gestire liste grandi. Supporta separatori personalizzati e varie opzioni di troncamento.",
+  "truncateShortDescription": "Limita il numero di elementi in una lista",
+  "truncateLongDescription": "Questo strumento consente di troncare una lista a un numero specifico di elementi. Puoi scegliere se mantenere gli elementi dall'inizio o dalla fine della lista e specificare separatori personalizzati per la divisione e l'unione. Utile per limitare la dimensione delle liste, creare anteprime o estrarre porzioni specifiche di dati.",
+
+  "unwrap": "Rimuovi involucro",
+  "unwrapDescription": "Uno strumento per rimuovere caratteri dall'inizio e dalla fine di ogni elemento in una lista. Perfetto per ripulire dati formattati o rimuovere caratteri indesiderati.",
+  "unwrapShortDescription": "Rimuovi caratteri attorno agli elementi della lista.",
+  "unwrapLongDescription": "Questo strumento consente di rimuovere caratteri di involucro da ogni elemento di una lista. Puoi specificare i caratteri da rimuovere a sinistra e a destra, gestire più livelli di involucro e controllare come viene processata la lista. Utile per ripulire dati, rimuovere virgolette o parentesi e formattare liste.",
+
+  "wrap": "Avvolgi",
+  "wrapDescription": "Uno strumento per avvolgere ogni elemento di una lista con caratteri di prefisso e suffisso personalizzati. Utile per formattare liste per codice, linguaggi di markup o presentazione.",
+  "wrapShortDescription": "Aggiungi caratteri attorno agli elementi della lista.",
+  "wrapLongDescription": "Questo strumento consente di aggiungere testo prima e dopo ogni elemento di una lista. Puoi specificare testo diverso per sinistra e destra e controllare come viene processata la lista. Utile per aggiungere virgolette, parentesi o altra formattazione agli elementi, preparare dati per diversi formati o creare testo strutturato.",
+
+  "base64": "Base64",
+  "base64Description": "Un semplice strumento per codificare o decodificare dati usando Base64, comunemente usato nelle applicazioni web.",
+  "base64ShortDescription": "Codifica o decodifica dati usando Base64.",
+  "base64LongDescription": "Base64 è uno schema di codifica che rappresenta i dati in formato stringa ASCII traducendoli in una rappresentazione in base 64. Può essere usato per codificare stringhe, ma viene comunemente usato per codificare dati binari per la trasmissione su media progettati per gestire dati testuali.",
+
+  "createPalindrome": "Crea palindromo",
+  "createPalindromeDescription": "Il più semplice strumento online per creare palindromi da qualsiasi testo. Inserisci il testo e trasformalo istantaneamente in un palindromo che si legge uguale in avanti e indietro. Perfetto per giochi di parole, creare pattern simmetrici o esplorare curiosità linguistiche.",
+  "createPalindromeShortDescription": "Crea testo che si legge uguale in avanti e indietro",
+  "createPalindromeLongDescription": "Questo strumento crea un palindromo dalla stringa fornita. Genera una copia della stringa, la inverte e la aggiunge alla fine della stringa originale. Questo metodo crea un palindromo con l'ultimo carattere duplicato due volte. Esiste anche un altro modo che elimina la prima lettera della copia invertita. In questo caso, quando la stringa e la copia vengono unite, si ottiene comunque un palindromo ma senza il carattere finale ripetuto. Puoi confrontare i due tipi di palindromi passando da uno all'altro nelle opzioni. Puoi anche abilitare la modalità multi-linea che crea palindromi per ogni riga. Stringabulous!",
+
+  "extractSubstring": "Estrai sottostringa",
+  "extractSubstringDescription": "Il più semplice strumento online per estrarre sottostringhe dal testo. Estrai facilmente porzioni specifiche di testo specificando la posizione iniziale e la lunghezza. Perfetto per analizzare dati, isolare parti di testo o estrarre dati. Supporta l'elaborazione di testo multi-linea e precisione a livello di carattere.",
+  "extractSubstringShortDescription": "Estrai porzioni specifiche di testo per posizione e lunghezza",
+
+  "textJoiner": "Unisci testo",
+  "textJoinerDescription": "Il più semplice strumento online per unire testo. Carica il tuo testo nel modulo di input a sinistra e otterrai automaticamente il testo unito a destra. Potente, gratuito e veloce. Carica testo - ottieni linee unite",
+  "textJoinerShortDescription": "Unisci rapidamente testi",
+  "textJoinerLongDescription": "Con questo strumento puoi unire parti di testo. Prende una lista di valori di testo, separati da nuove righe, e li unisce insieme. Puoi impostare il carattere che verrà inserito tra le parti del testo combinato. Puoi anche ignorare tutte le righe vuote e rimuovere spazi e tabulazioni alla fine di tutte le righe. Textabulous!",
+
+  "palindrome": "Palindromo",
+  "palindromeDescription": "Il più semplice strumento online per verificare se un testo è un palindromo. Verifica istantaneamente se il tuo testo si legge uguale in avanti e indietro. Perfetto per enigmi di parole, analisi linguistiche o validare pattern di testo simmetrici. Supporta vari delimitatori e rilevamento di palindromi multi-parola.",
+  "palindromeShortDescription": "Verifica se il testo si legge uguale in avanti e indietro",
+
+  "quote": "Virgolette",
+  "quoteDescription": "Uno strumento per aggiungere virgolette o caratteri personalizzati attorno al testo. Perfetto per formattare stringhe per codice, citazioni o scopi stilistici.",
+  "quoteShortDescription": "Aggiungi facilmente virgolette attorno al testo.",
+  "quoteLongDescription": "Questo strumento ti permette di aggiungere virgolette attorno al testo. Puoi scegliere diversi caratteri di virgolette, gestire testo multi-linea e controllare come vengono processate le righe vuote. Utile per preparare testo per la programmazione, formattare dati o creare testo stilizzato.",
+
+  "randomizeCase": "Randomizza maiuscole/minuscole",
+  "randomizeCaseDescription": "Il più semplice strumento online per randomizzare maiuscole e minuscole nel testo. Incolla il tuo testo e ottieni istantaneamente lettere maiuscole e minuscole casuali. Perfetto per creare stili di testo giocosi, meme o simulare scrittura caotica.",
+  "randomizeCaseShortDescription": "Converti testo in lettere maiuscole e minuscole casuali",
+
+  "removeDuplicateLines": "Rimuovi righe duplicate",
+  "removeDuplicateLinesDescription": "Carica il tuo testo nel modulo di input a sinistra e otterrai istantaneamente il testo senza righe duplicate nell'area di output. Potente, gratuito e veloce. Carica righe di testo - ottieni righe uniche",
+  "removeDuplicateLinesShortDescription": "Elimina rapidamente tutte le righe ripetute dal testo",
+
+  "repeatText": "Ripeti testo",
+  "repeatTextDescription": "Questo strumento ti permette di ripetere un testo dato più volte con un separatore opzionale.",
+  "repeatTextShortDescription": "Ripeti testo più volte",
+  "repeatTextLongDescription": "Questo strumento ti permette di ripetere un testo dato più volte con un separatore opzionale.",
+
+  "reverseText": "Inverti",
+  "reverseTextDescription": "Il più semplice strumento online per invertire il testo. Inserisci qualsiasi testo e ottieni istantaneamente il testo invertito, carattere per carattere. Perfetto per creare testo speculare, analizzare palindromi o giocare con pattern di testo. Mantiene spazi e caratteri speciali durante l'inversione.",
+  "reverseTextShortDescription": "Inverti qualsiasi testo carattere per carattere",
+
+  "rot13": "Rot13",
+  "rot13Description": "Un semplice strumento per codificare o decodificare testo usando il cifrario ROT13, che sostituisce ogni lettera con quella 13 posizioni dopo nell'alfabeto.",
+  "rot13ShortDescription": "Codifica o decodifica testo usando il cifrario ROT13.",
+  "rot13LongDescription": "ROT13 (ruota di 13 posizioni) è un semplice cifrario di sostituzione che sostituisce una lettera con quella che si trova 13 posizioni dopo nell'alfabeto. ROT13 è un caso particolare del cifrario di Cesare sviluppato nell'antica Roma. Poiché l'alfabeto inglese ha 26 lettere, ROT13 è il proprio inverso; cioè, per annullare ROT13 si applica lo stesso algoritmo, quindi la stessa azione può essere usata sia per codificare che per decodificare.",
+
+  "rotateText": "Ruota",
+  "rotateTextDescription": "Uno strumento per ruotare i caratteri in una stringa di un numero specificato di posizioni. Sposta i caratteri a sinistra o a destra mantenendo il loro ordine relativo.",
+  "rotateTextShortDescription": "Sposta i caratteri nel testo di posizione.",
+  "rotateTextLongDescription": "Questo strumento ti permette di ruotare i caratteri in una stringa di un numero specificato di posizioni. Puoi ruotare a sinistra o a destra e processare testo multi-linea ruotando ogni riga separatamente. La rotazione delle stringhe è utile per semplici trasformazioni di testo, creare pattern o implementare tecniche di cifratura di base.",
+
+  "splitText": "Dividi testo",
+  "splitTextDescription": "Il più semplice strumento online per dividere testo. Carica il tuo testo nel modulo di input a sinistra e otterrai automaticamente i pezzi di questo testo a destra. Potente, gratuito e veloce. Carica testo - ottieni frammenti.",
+  "splitTextShortDescription": "Dividi rapidamente un testo",
+  "splitTextLongDescription": "Dividi rapidamente un testo",
+
+  "textStatistic": "Statistiche testo",
+  "textStatisticDescription": "Carica il tuo testo nel modulo di input a sinistra e otterrai automaticamente le statistiche sul tuo testo a destra.",
+  "textStatisticShortDescription": "Ottieni statistiche sul tuo testo",
+  "textStatisticLongDescription": "Questo strumento fornisce varie statistiche sul testo inserito, inclusi il numero di righe, parole e caratteri. Puoi anche scegliere di includere le righe vuote nel conteggio. Può contare parole e caratteri in base a delimitatori personalizzati, consentendo un'analisi flessibile del testo. Inoltre, può fornire statistiche di frequenza per parole e caratteri, aiutandoti a comprendere la distribuzione dei termini nel testo.",
+
+  "textReplacer": "Sostituisci testo",
+  "textReplacerDescription": "Sostituisci facilmente testo specifico nei tuoi contenuti con questo semplice strumento online. Inserisci il testo, imposta il testo da sostituire e il valore di sostituzione, e ottieni istantaneamente la versione aggiornata.",
+  "textReplacerShortDescription": "Sostituisci rapidamente testo nei tuoi contenuti",
+  "textReplacerLongDescription": "Sostituisci facilmente testo specifico nei tuoi contenuti con questo semplice strumento online. Inserisci il testo, imposta il testo da sostituire e il valore di sostituzione, e ottieni istantaneamente la versione aggiornata.",
+
+  "stringToMorse": "Testo in Morse",
+  "stringToMorseDescription": "Il più semplice strumento online per convertire testo in codice Morse. Carica il tuo testo nel modulo di input a sinistra e otterrai istantaneamente il codice Morse nell'area di output. Potente, gratuito e veloce. Carica testo - ottieni codice Morse.",
+  "stringToMorseShortDescription": "Codifica rapidamente testo in Morse",
+
+  "truncateText": "Tronca testo",
+  "truncateTextDescription": "Carica il tuo testo nel modulo di input a sinistra e otterrai automaticamente il testo troncato a destra.",
+  "truncateTextLongDescription": "Tronca facilmente il tuo testo",
+  "truncateTextShortDescription": "Carica il tuo testo nel modulo di input a sinistra e otterrai automaticamente il testo troncato a destra.",
+
+  "uppercase": "Maiuscolo",
+  "uppercaseDescription": "Il più semplice strumento online per convertire testo in maiuscolo. Inserisci il tuo testo e verrà automaticamente convertito in lettere maiuscole. Perfetto per creare titoli, enfatizzare testo o standardizzare il formato. Supporta vari formati di testo e mantiene i caratteri speciali.",
+  "uppercaseShortDescription": "Converti testo in lettere maiuscole"
+}

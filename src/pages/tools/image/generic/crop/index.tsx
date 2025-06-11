@@ -32,7 +32,10 @@ const validationSchema = Yup.object({
     .required('Height is required')
 });
 
-export default function CropImage({ title }: ToolComponentProps) {
+export default function CropImage({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
@@ -227,11 +230,7 @@ export default function CropImage({ title }: ToolComponentProps) {
       resultComponent={
         <ToolFileResult title={'Cropped image'} value={result} />
       }
-      toolInfo={{
-        title: 'Crop Image',
-        description:
-          'This tool allows you to crop an image by specifying the position, size, and shape of the crop area. You can choose between rectangular or circular cropping.'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
     />
   );
 }

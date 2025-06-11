@@ -1,13 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('pdf', {
-  name: 'Compress PDF',
+  name: i18n.t('compressPdf'),
   path: 'compress-pdf',
   icon: 'material-symbols:compress',
-  description:
-    'Reduce PDF file size while maintaining quality using Ghostscript',
-  shortDescription: 'Compress PDF files securely in your browser',
+  description: i18n.t('compressPdfLongDescription'),
+  shortDescription: i18n.t('compressPdfShortDescription'),
+  longDescription: i18n.t('compressPdfLongDescription'),
   keywords: [
     'pdf',
     'compress',
@@ -22,7 +23,5 @@ export const tool = defineTool('pdf', {
     'browser',
     'webassembly'
   ],
-  longDescription:
-    'Compress PDF files securely in your browser using Ghostscript. Your files never leave your device, ensuring complete privacy while reducing file sizes for email sharing, uploading to websites, or saving storage space. Powered by WebAssembly technology.',
   component: lazy(() => import('./index'))
 });

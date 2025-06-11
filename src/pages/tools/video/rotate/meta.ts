@@ -1,13 +1,13 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('video', {
-  name: 'Rotate Video',
+  name: i18n.t('rotateVideo'),
   path: 'rotate',
   icon: 'mdi:rotate-right',
-  description:
-    'This online utility lets you rotate videos by 90, 180, or 270 degrees. You can preview the rotated video before processing. Supports common video formats like MP4, WebM, and OGG.',
-  shortDescription: 'Rotate videos by 90, 180, or 270 degrees',
+  description: i18n.t('rotateVideoDescription'),
+  shortDescription: i18n.t('rotateVideoShortDescription'),
   keywords: ['rotate', 'video', 'flip', 'edit', 'adjust'],
   component: lazy(() => import('./index'))
 });

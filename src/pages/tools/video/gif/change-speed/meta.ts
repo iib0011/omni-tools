@@ -1,14 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('gif', {
-  name: 'Change speed',
+  name: i18n.t('changeGifSpeed'),
   path: 'change-speed',
   icon: 'material-symbols-light:speed-outline',
-  description:
-    'This online utility lets you change the speed of a GIF animation. You can speed it up or slow it down. You can set the same constant delay between all frames or change the delays of individual frames. You can also play both the input and output GIFs at the same time and compare their speeds',
-  shortDescription: 'Quickly change GIF speed',
+  description: i18n.t('changeGifSpeedDescription'),
+  shortDescription: i18n.t('changeGifSpeedShortDescription'),
   keywords: ['change', 'speed'],
   component: lazy(() => import('./index'))
 });

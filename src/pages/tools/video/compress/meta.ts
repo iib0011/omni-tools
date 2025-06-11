@@ -1,13 +1,13 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('video', {
-  name: 'Compress Video',
+  name: i18n.t('compressVideo'),
   path: 'compress',
   icon: 'icon-park-outline:compression',
-  description:
-    'Compress videos by scaling them to different resolutions like 240p, 480p, 720p, etc. This tool helps reduce file size while maintaining acceptable quality. Supports common video formats like MP4, WebM, and OGG.',
-  shortDescription: 'Compress videos by scaling to different resolutions',
+  description: i18n.t('compressVideoDescription'),
+  shortDescription: i18n.t('compressVideoShortDescription'),
   keywords: [
     'compress',
     'video',

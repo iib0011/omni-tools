@@ -1,0 +1,437 @@
+{
+  "titlePage": "Get Things Done Quickly with",
+  "titleDescription": "Boost your productivity with Omni Tools, the ultimate toolkit for getting things done quickly! Access thousands of user-friendly utilities for editing images, text, lists, and data, all directly from your browser.",
+  "searchPlaceholder": "Search all tools",
+  "search": "Search",
+  "allTools": "All tools",
+  "seeAll": "See all",
+  "try": "Try",
+  "useThisTool": "Use this tool",
+  "seeExamples": "See examples",
+  "toolOptions": "Tool Options",
+  "importFromFile": "Import from file",
+  "copyToClipboard": "Copy to clipboard",
+  "clear": "Clear",
+  "saveAs": "Save as",
+  "examples": "Examples",
+  "clickToTry": "Click to try!",
+
+  "imageTool": "Image Tools",
+  "imageToolDescription": "Tools for working with pictures - compress, resize, crop, convert to JPG, rotate, remove background and much more.",
+  "textTool": "Text Tools",
+  "textToolDescription": "Tools for working with text - convert text to images, find and replace text, split text into fragments, join text lines, repeat text, and much more.",
+  "jsonTool": "JSON Tools",
+  "jsonToolDescription": "Tools for working with JSON data - format, validate, minify, convert to CSV, extract values, and much more.",
+  "pdfTool": "PDF Tools",
+  "pdfToolDescription": "Tools for working with PDF files - merge, split, compress, convert to images, extract text, and much more.",
+  "videoTool": "Video Tools",
+  "videoToolDescription": "Tools for working with video files - compress, convert formats, extract audio, trim, merge videos, and much more.",
+  "listTool": "List Tools",
+  "listToolDescription": "Tools for working with lists - sort, filter, merge, split, and manipulate lists in various ways.",
+  "csvTool": "CSV Tools",
+  "csvToolDescription": "Tools for working with CSV files - format, validate, convert to JSON, extract values, and much more.",
+  "numberTool": "Number Tools",
+  "numberToolDescription": "Tools for working with numbers - calculate sums, averages, generate random numbers, convert between number systems, and much more.",
+  "timeTool": "Time Tools",
+  "timeToolDescription": "Tools for working with time and date - calculate time differences, convert between time zones, format dates, generate date sequences, and much more.",
+  "gifTool": "GIF Tools",
+  "gifToolDescription": "Tools for working with GIF animations - create transparent GIFs, extract GIF frames, add text to GIF, crop, rotate, reverse GIFs, and much more.",
+  "pngTool": "PNG Tools",
+  "pngToolDescription": "Tools for working with PNG images - compress, resize, crop, convert to JPG, rotate, remove background and much more.",
+
+  "resizeImage": "Resize Image",
+  "resizeImageDescription": "Resize JPG, PNG, SVG or GIF images by pixels or percentage while maintaining aspect ratio or not.",
+  "resizeImageShortDescription": "Resize images easily.",
+  "resizeImageLongDescription": "This tool allows you to resize JPG, PNG, SVG, or GIF images. You can resize by specifying dimensions in pixels or by percentage, with options to maintain the original aspect ratio.",
+
+  "changeColorsInImage": "Change Colors in Image",
+  "changeColorsInImageDescription": "World's simplest online Image color changer. Just import your image (JPG, PNG, SVG) in the editor on the left, select which colors to change, and you'll instantly get a new image with the new colors on the right. Free, quick, and very powerful. Import an image - replace its colors.",
+  "changeColorsInImageShortDescription": "Quickly swap colors in a image.",
+
+  "changeImageOpacity": "Change Image Opacity",
+  "changeImageOpacityDescription": "Easily adjust the transparency of your images. Simply upload your image, use the slider to set the desired opacity level between 0 (fully transparent) and 1 (fully opaque), and download the modified image.",
+  "changeImageOpacityShortDescription": "Adjust transparency of images",
+
+  "compressImage": "Compress Image",
+  "compressImageDescription": "Compress images to reduce file size while maintaining reasonable quality.",
+  "compressImageShortDescription": "Compress images to reduce file size while maintaining reasonable quality.",
+
+  "createTransparentPng": "Create Transparent PNG",
+  "createTransparentPngDescription": "World's simplest online Portable Network Graphics transparency maker. Just import your image in the editor on the left and you will instantly get a transparent PNG on the right. Free, quick, and very powerful. Import an image - get a transparent PNG.",
+  "createTransparentPngShortDescription": "Quickly make an image transparent",
+
+  "cropImage": "Crop Image",
+  "cropImageDescription": "A tool to crop images with precision and ease.",
+  "cropImageShortDescription": "Crop images quickly.",
+  "cropImageLongDescription": "This tool allows you to crop an image by specifying the position, size, and shape of the crop area. You can choose between rectangular or circular cropping.",
+
+  "imageToText": "Image to Text (OCR)",
+  "imageToTextDescription": "Extract text from images (JPG, PNG) using optical character recognition (OCR).",
+  "imageToTextShortDescription": "Extract text from images using OCR.",
+  "imageToTextLongDescription": "This tool extracts text from images using Optical Character Recognition (OCR). Upload an image containing text, select the primary language, and get the extracted text. For best results, use clear images with good contrast.",
+
+  "qrCodeGenerator": "QR Code Generator",
+  "qrCodeGeneratorDescription": "Generate QR codes for different data types: URL, Text, Email, Phone, SMS, WiFi, vCard, and more.",
+  "qrCodeGeneratorShortDescription": "Create customized QR codes for various data formats.",
+  "qrCodeGeneratorLongDescription": "Generate QR codes for different data types: URL, Text, Email, Phone, SMS, WiFi, vCard, and more. Customize the size and colors to create the perfect QR code for your needs.",
+
+  "removeBackground": "Remove Background from Image",
+  "removeBackgroundDescription": "World's simplest online tool to remove backgrounds from images. Just upload your image and our AI-powered tool will automatically remove the background, giving you a transparent PNG. Perfect for product photos, profile pictures, and design assets.",
+  "removeBackgroundShortDescription": "Automatically remove backgrounds from images",
+  "removeBackgroundLongDescription": "This tool uses AI to automatically remove the background from your images, creating a transparent PNG. Perfect for product photos, profile pictures, and design assets.",
+
+  "compressPng": "Compress PNG",
+  "compressPngDescription": "This is a program that compresses PNG pictures. As soon as you paste your PNG picture in the input area, the program will compress it and show the result in the output area. In the options, you can adjust the compression level, as well as find the old and new picture file sizes.",
+  "compressPngShortDescription": "Quickly compress a PNG",
+
+  "convertJpgToPng": "Convert JPG to PNG",
+  "convertJpgToPngDescription": "Quickly convert your JPG images to PNG. Just import your JPG image in the editor on the left",
+  "convertJpgToPngShortDescription": "Quickly convert your JPG images to PNG",
+
+  "changeGifSpeed": "Change GIF Speed",
+  "changeGifSpeedDescription": "This online utility lets you change the speed of a GIF animation. You can speed it up or slow it down. You can set the same constant delay between all frames or change the delays of individual frames. You can also play both the input and output GIFs at the same time and compare their speeds",
+  "changeGifSpeedShortDescription": "Quickly change GIF speed",
+
+  "convertDaysToHours": "Convert Days to Hours",
+  "convertDaysToHoursDescription": "With this browser-based application, you can calculate how many hours there are in the given number of days. The application takes the input values (days), multiplies them by 24 and that converts them into hours. It supports both integer and decimal day values and it can convert multiple values at the same time.",
+  "convertDaysToHoursShortDescription": "Convert days to hours easily.",
+  "convertDaysToHoursLongDescription": "This is a quick online utility for converting days to hours. One day is 24 hours and to convert days to hours, we simply do the multiplication operation: hours = days x 24. For example, 2 days is 2 x 24 = 48 hours and 5 days is 5 x 24 = 120 hours. You can convert not only full days to hours but also fractional day values. For example, 1.5 days is 1.5 x 24 = 36 hours and 4.6 days is 4.6 x 24 = 110.4 hours. You can enter multiple days in the input field (one value per line). In this case, they will all be computed in parallel and at once. The program also supports the postfix 'days' or 'd' for the input values and you can add the postfix 'hours' to the output values. Timeabulous!",
+
+  "convertHoursToDays": "Convert Hours to Days",
+  "convertHoursToDaysDescription": "With this browser-based application, you can calculate how many days there are in the given number of hours. Given one or more hour values in the input, it converts them into days via the simple math formula: days = hours/24. It works with arbitrary large hour values and you can also customize the decimal day precision.",
+  "convertHoursToDaysShortDescription": "Convert hours to days easily.",
+  "convertHoursToDaysLongDescription": "This is a quick online utility for converting hours to days. To figure out the number of days in the specified hours, the program divides them by 24. For example, if the input hours value is 48, then by doing 48/24, it finds that there are 2 days, or if the hours value is 120, then it's 120/24 = 5 days. If the hours value is not divisible by 24, then the number of days is displayed as a decimal number. For example, 36 hours is 36/24 = 1.5 days and 100 hours is approximately 4.167 days. You can specify the precision of the decimal fraction calculation in the options. You can also enable the option that adds the postfix 'days' to all the output values. Timeabulous!",
+
+  "convertSecondsToTime": "Convert Seconds to Time",
+  "convertSecondsToTimeDescription": "With this browser-based application, you can convert seconds to clock time. Given the seconds input value, it converts them into full hours (H), minutes (M), and seconds (S) and prints them in human-readable clock format (H:M:S or HH:MM:SS) in the output field.",
+  "convertSecondsToTimeShortDescription": "Quicky convert seconds to clock time in H:M:S format.",
+  "convertSecondsToTimeLongDescription": "This is a quick online utility for converting seconds to H:M:S or HH:MM:SS digital clock time format. It calculates the number of full hours, full minutes, and remaining seconds from the input seconds and outputs regular clock time. For example, 100 seconds is 1 minute and 40 seconds so we get the clock time 00:01:40. To convert seconds to human-readable time we use the Euclidean division algorithm, also known as a division with remainder. If \"n\" is the input seconds value, then the hours \"h\" are calculated from the formula n = 3600xh + r, where r is the remainder of dividing n by 3600. Minutes \"m\" are calculated from the formula r = 60xm + s, and seconds \"s\" is the remainder of dividing r by 60. For example, if the input n = 4000, then 4000 = 3600x1 + 400. From here we find that the full hours value is 1. Next, the remaining 400 seconds are equal to 60x6 + 40. From here, there are 6 full minutes and 40 more remaining seconds. Thus, we find that 4000 seconds in human time 1 hour, 6 minutes, and 40 seconds. By default, the program outputs the clock time in a padded HH:MM:SS format (i.e. 01:06:40) but you can also disable the padding option and get just H:M:S (i.e. 1:6:40). Timeabulous!",
+
+  "convertTimeToSeconds": "Convert Time to Seconds",
+  "convertTimeToSecondsDescription": "With this browser-based application, you can convert clock time provided in hours, minutes, and seconds into just seconds. Given a time in HH:MM:SS format, it calculates HH*3600 + MM*60 + SS and prints this value in the output box. It supports AM/PM time formats as well as clock times beyond 24 hours.",
+  "convertTimeToSecondsShortDescription": "Quickly convert clock time in H:M:S format to seconds.",
+  "convertTimeToSecondsLongDescription": "This is a quick online utility for calculating how many seconds there are in the given time. When you input a full clock time in the input box (in format H:M:S), it gets split into hours, minutes, and seconds, and using the math formula hoursx60x60 plus minutesx60 plus seconds, it finds the seconds. If seconds are missing (format is H:M), then the formula becomes hoursx60x60 plus minutesx60. If minutes are also missing, then the formula becomes hoursx60x60. As an extra feature, hours, minutes, and seconds are not limited to just 24 hours, 60 minutes, and 60 seconds. You can use any hours value, any minutes value, and any seconds value. For example, the input time \"72:00:00\" will find the number of seconds in three days (72 hours is 3x24 hours) and the input time \"0:1000:0\" will find seconds in 1000 minutes. Timeabulous!",
+
+  "truncateClockTime": "Truncate Clock Time",
+  "truncateClockTimeDescription": "With this browser-based application, you can truncate a clock time and drop the minutes and/or seconds components from it. If you drop the seconds, you will be left with hours and minutes. For example, \"13:23:45\" will be truncated to \"13:23\". If you drop both minutes and seconds, you will be left with just hours. For example, \"13:23:45\" will be truncated to just \"13\". Additionally, in the options, you can add or remove the hours and minutes padding and also print the dropped time component as a zero if needed.",
+  "truncateClockTimeShortDescription": "Quickly convert clock time in H:M:S format to seconds.",
+  "truncateClockTimeLongDescription": "This is a quick online utility for truncating the given clock times or timer values. It allows you to get rid of the least significant time components such as seconds and minutes. For example, if you have an exact time of \"09:45:37\" and you are ok working with a less precise time that has just hours and minutes, then you can discard the seconds and get \"09:45\". Similarly, if you only need the hours in the output, then you can truncate the minutes as well and get \"09\". In general, if you have a clock time \"hh:mm:ss\", then removing the seconds will leave \"hh:mm\" and removing both minutes and seconds will leave just \"hh\". The program can truncate as many clock times as you need - just enter them one per line in the input and the truncation result will be printed in the output where you can easily copy it from. By default, the truncated parts of the time are not displayed, but if necessary, you can print them as zeros. For example, if you drop minutes and seconds from \"09:45:37\" and you enable zero component printing, then the output will be \"09:00:00\". Finally, you can control the digit width of the clock display. For example, the time \"09:00:00\" has full zero-padding (the width is two digits for each time component) but if the padding is removed, then it will be shown as \"9:0:0\" (the width now is one digit). Timeabulous!",
+
+  "timeBetweenDates": "Time Between Dates",
+  "timeBetweenDatesDescription": "Calculate the exact time difference between two dates and times, with support for different timezones. This tool provides a detailed breakdown of the time difference in various units (years, months, days, hours, minutes, and seconds).",
+  "timeBetweenDatesShortDescription": "Calculate the precise time duration between two dates with timezone support.",
+  "timeBetweenDatesLongDescription": "Calculate the exact time difference between two dates and times, with support for different timezones. This tool provides a detailed breakdown of the time difference in various units (years, months, days, hours, minutes, and seconds).",
+
+  "splitPdf": "Split PDF",
+  "splitPdfDescription": "Extract specific pages from a PDF file using page numbers or ranges (e.g., 1,5-8)",
+  "splitPdfShortDescription": "Extract specific pages from a PDF file",
+  "splitPdfLongDescription": "This tool allows you to extract specific pages from a PDF document. You can specify individual page numbers (e.g., 1,3,5) or page ranges (e.g., 2-6) or a combination of both (e.g., 1,3-5,8). Leave the page ranges field empty to include all pages from the PDF. Examples: - \"1,5,9\" extracts pages 1, 5, and 9 - \"1-5\" extracts pages 1 through 5 - \"1,3-5,8-10\" extracts pages 1, 3, 4, 5, 8, 9, and 10",
+
+  "rotatePdf": "Rotate PDF",
+  "rotatePdfDescription": "Rotate PDF pages by 90, 180, or 270 degrees",
+  "rotatePdfShortDescription": "Rotate pages in a PDF document",
+  "rotatePdfLongDescription": "This tool allows you to rotate pages in a PDF document. You can rotate all pages or specify individual pages to rotate. Choose a rotation angle: - 90° Clockwise - 180° (Upside down) - 270° (90° Counter-clockwise) To rotate specific pages: 1. Uncheck \"Apply to all pages\" 2. Enter page numbers or ranges separated by commas (e.g., 1,3,5-7) Examples: - \"1,5,9\" rotates pages 1, 5, and 9 - \"1-5\" rotates pages 1 through 5 - \"1,3-5,8-10\" rotates pages 1, 3, 4, 5, 8, 9, and 10",
+
+  "compressPdf": "Compress PDF",
+  "compressPdfDescription": "Reduce PDF file size while maintaining quality using Ghostscript",
+  "compressPdfShortDescription": "Compress PDF files securely in your browser",
+  "compressPdfLongDescription": "Compress PDF files securely in your browser using Ghostscript. Your files never leave your device, ensuring complete privacy while reducing file sizes for email sharing, uploading to websites, or saving storage space. Powered by WebAssembly technology.",
+
+  "protectPdf": "Protect PDF",
+  "protectPdfDescription": "Add password protection to your PDF files securely in your browser",
+  "protectPdfShortDescription": "Password protect PDF files securely",
+  "protectPdfLongDescription": "Add password protection to your PDF files securely in your browser. Your files never leave your device, ensuring complete privacy while securing your documents with password encryption. Perfect for protecting sensitive information, confidential documents, or personal data.",
+
+  "mergePdf": "Merge PDF",
+  "mergePdfDescription": "Combine multiple PDF files into a single document.",
+  "mergePdfShortDescription": "Merge multiple PDF files into a single document",
+  "mergePdfLongDescription": "This tool allows you to merge multiple PDF files into a single document. To use the tool, simply upload the PDF files you want to merge. The tool will then combine all pages from the input files into a single PDF document.",
+
+  "pdfToEpub": "PDF to EPUB",
+  "pdfToEpubDescription": "Transform PDF documents into EPUB files for better e-reader compatibility.",
+  "pdfToEpubShortDescription": "Convert PDF files to EPUB format",
+  "pdfToEpubLongDescription": "Upload a PDF file and this tool will convert it into an EPUB format, suitable for most e-reader devices.",
+
+  "validateJson": "Validate JSON",
+  "validateJsonDescription": "Validate JSON data and identify formatting issues such as missing quotes, trailing commas, and incorrect brackets.",
+  "validateJsonShortDescription": "Quickly validate a JSON data structure.",
+  "validateJsonLongDescription": "JSON (JavaScript Object Notation) is a lightweight data-interchange format. JSON validation ensures that the structure of the data conforms to the JSON standard. A valid JSON object must have: - Property names enclosed in double quotes. - Properly balanced curly braces {}. - No trailing commas after the last key-value pair. - Proper nesting of objects and arrays. This tool checks the input JSON and provides feedback to help identify and fix common errors.",
+
+  "prettifyJson": "Prettify JSON",
+  "prettifyJsonDescription": "Just load your JSON in the input field and it will automatically get prettified. In the tool options, you can choose whether to use spaces or tabs for indentation and if you're using spaces, you can specify the number of spaces to add per indentation level.",
+  "prettifyJsonShortDescription": "Quickly beautify a JSON data structure.",
+  "prettifyJsonLongDescription": "This tool adds consistent formatting to the data in JavaScript Object Notation (JSON) format. This transformation makes the JSON code more readable, making it easier to understand and edit. The program parses the JSON data structure into tokens and then reformats them by adding indentation and line breaks. If the data is hierarchial, then it adds indentation at the beginning of lines to visually show the depth of the JSON and adds newlines to break long single-line JSON arrays into multiple shorter, more readable ones. Additionally, this utility can remove unnecessary spaces and tabs from your JSON code (especially leading and trailing whitespaces), making it more compact. You can choose the line indentation method in the options: indent with spaces or indent with tabs. When using spaces, you can also specify how many spaces to use for each indentation level (usually 2 or 4 spaces).",
+
+  "minifyJSON": "Minify JSON",
+  "minifyJSONDescription": "Minify your JSON by removing all unnecessary whitespace and formatting. This tool compresses JSON data to its smallest possible size while maintaining valid JSON structure.",
+  "minifyJSONShortDescription": "Quickly compress JSON file.",
+  "minifyJSONLongDescription": "JSON minification is the process of removing all unnecessary whitespace characters from JSON data while maintaining its validity. This includes removing spaces, newlines, and indentation that aren't required for the JSON to be parsed correctly. Minification reduces the size of JSON data, making it more efficient for storage and transmission while keeping the exact same data structure and values.",
+
+  "stringifyJson": "Stringify JSON",
+  "stringifyJsonDescription": "Convert JavaScript objects and arrays into their JSON string representation. Options include custom indentation and HTML character escaping for web-safe JSON strings.",
+  "stringifyJsonShortDescription": "Convert JavaScript objects to JSON strings.",
+  "stringifyJsonLongDescription": "JSON Stringify is a tool that converts JavaScript objects and arrays into their JSON string representation. It properly formats the output with customizable indentation and offers the option to escape HTML special characters, making it safe for web usage. This tool is particularly useful when you need to serialize data structures for storage or transmission, or when you need to prepare JSON data for HTML embedding.",
+
+  "jsonToXml": "Convert JSON to XML",
+  "jsonToXmlDescription": "Convert JSON files to XML format with customizable options.",
+  "jsonToXmlShortDescription": "Convert JSON data to XML format.",
+
+  "escapeJson": "Escape JSON",
+  "escapeJsonDescription": "Free online JSON escaper. Just load your JSON in the input field and it will automatically get escaped. In the tool options, you can optionally enable wrapping the escaped JSON in double quotes to get an escaped JSON string.",
+  "escapeJsonShortDescription": "Quickly escape special JSON characters.",
+  "escapeJsonLongDescription": "This tool converts special characters in JSON files and data structures into their escaped versions. Such special characters are, for example, double quotes, newline characters, backslashes, tabs, and many others. If these characters aren't escaped and appear in a raw JSON string without escaping, they can lead to errors in data parsing. The program turns them into safe versions by adding a backslash (\\) before the character, changing its interpretation. Additionally, you can enable the \"Wrap Output in Quotes\" checkbox in the options, which adds double quotes around the resulting escaped JSON data. This is useful when the escaped JSON data needs to be used as a string in other data structures or the JavaScript programming language. Json-abulous!",
+
+  "tsvToJson": "Convert TSV to JSON",
+  "tsvToJsonDescription": "Convert TSV files to JSON format with customizable options for delimiters, quotes, and output formatting. Support for headers, comments, and dynamic type conversion.",
+  "tsvToJsonShortDescription": "Convert TSV data to JSON format.",
+  "tsvToJsonLongDescription": "This tool allows you to convert TSV (Tab-Separated Values) files into JSON format. You can customize the conversion process by specifying delimiters, quote characters, and whether to use headers. It also supports dynamic type conversion for values, handling comments, and skipping empty lines. The output can be formatted with indentation or minified as needed.",
+
+  "trimVideo": "Trim Video",
+  "trimVideoDescription": "This online utility lets you trim videos by setting start and end points. You can preview the trimmed section before processing. Supports common video formats like MP4, WebM, and OGG.",
+  "trimVideoShortDescription": "Trim videos by setting start and end points",
+
+  "rotateVideo": "Rotate Video",
+  "rotateVideoDescription": "This online utility lets you rotate videos by 90, 180, or 270 degrees. You can preview the rotated video before processing. Supports common video formats like MP4, WebM, and OGG.",
+  "rotateVideoShortDescription": "Rotate videos by 90, 180, or 270 degrees",
+
+  "compressVideo": "Compress Video",
+  "compressVideoDescription": "Compress videos by scaling them to different resolutions like 240p, 480p, 720p, etc. This tool helps reduce file size while maintaining acceptable quality. Supports common video formats like MP4, WebM, and OGG.",
+  "compressVideoShortDescription": "Compress videos by scaling to different resolutions",
+
+  "loopVideo": "Loop Video",
+  "loopVideoDescription": "This online utility lets you loop videos by specifying the number of repetitions. You can preview the looped video before processing. Supports common video formats like MP4, WebM, and OGG.",
+  "loopVideoShortDescription": "Loop videos multiple times",
+
+  "flipVideo": "Flip Video",
+  "flipVideoDescription": "This online utility allows you to flip videos horizontally or vertically. You can preview the flipped video before processing. Supports common video formats like MP4, WebM, and OGG.",
+  "flipVideoShortDescription": "Flip videos horizontally or vertically",
+  "flipVideoLongDescription": "Easily flip your videos horizontally (mirror) or vertically (upside down) with this simple online tool.",
+
+  "cropVideo": "Crop Video",
+  "cropVideoDescription": "Crop a video by specifying coordinates and dimensions",
+  "cropVideoShortDescription": "Crop video to specific area",
+  "cropVideoLongDescription": "Remove unwanted parts from the edges of your video by cropping it to a specific rectangular area. Define the starting coordinates (X, Y) and the width and height of the area you want to keep.",
+
+  "changeSpeed": "Change Speed",
+  "changeSpeedDescription": "This online utility lets you change the speed of a video. You can speed it up or slow it down.",
+  "changeSpeedShortDescription": "Quickly change video speed",
+
+  "convertCsvToJson": "Convert CSV to JSON",
+  "convertCsvToJsonDescription": "Convert CSV files to JSON format with customizable options for delimiters, quotes, and output formatting. Support for headers, comments, and dynamic type conversion.",
+  "convertCsvToJsonShortDescription": "Convert CSV data to JSON format.",
+  "convertCsvToJsonLongDescription": "This tool transforms Comma Separated Values (CSV) files to JavaScript Object Notation (JSON) data structures. It supports various CSV formats with customizable delimiters, quote characters, and comment symbols. The converter can treat the first row as headers, skip empty lines, and automatically detect data types like numbers and booleans. The resulting JSON can be used for data migration, backups, or as input for other applications.",
+
+  "convertCsvToXml": "Convert CSV to XML",
+  "convertCsvToXmlDescription": "Convert CSV files to XML format with customizable options.",
+  "convertCsvToXmlShortDescription": "Convert CSV data to XML format.",
+
+  "convertCsvRowsToColumns": "Convert CSV Rows to Columns",
+  "convertCsvRowsToColumnsDescription": "This tool converts rows of a CSV (Comma Separated Values) file into columns. It extracts the horizontal lines from the input CSV one by one, rotates them 90 degrees, and outputs them as vertical columns one after another, separated by commas.",
+  "convertCsvRowsToColumnsShortDescription": "Convert CSV rows to columns.",
+  "convertCsvRowsToColumnsLongDescription": "This tool converts rows of a CSV (Comma Separated Values) file into columns. For example, if the input CSV data has 6 rows, then the output will have 6 columns and the elements of the rows will be arranged from the top to bottom. In a well-formed CSV, the number of values in each row is the same. However, in cases when rows are missing fields, the program can fix them and you can choose from the available options: fill missing data with empty elements or replace missing data with custom elements, such as \"missing\", \"?\", or \"x\". During the conversion process, the tool also cleans the CSV file from unnecessary information, such as empty lines (these are lines without visible information) and comments. To help the tool correctly identify comments, in the options, you can specify the symbol at the beginning of a line that starts a comment. This symbol is typically a hash \"#\" or double slash \"//\". Csv-abulous!.",
+
+  "convertCsvToTsv": "Convert CSV to TSV",
+  "convertCsvToTsvDescription": "Upload your CSV file in the form below and it will automatically get converted to a TSV file. In the tool options, you can customize the input CSV format - specify the field delimiter, quotation character, and comment symbol, as well as skip empty CSV lines, and choose whether to preserve CSV column headers.",
+  "convertCsvToTsvShortDescription": "Convert CSV data to TSV format.",
+  "convertCsvToTsvLongDescription": "This tool transforms Comma Separated Values (CSV) data to Tab Separated Values (TSV) data. Both CSV and TSV are popular file formats for storing tabular data but they use different delimiters to separate values - CSV uses commas (\",\"), while TSV uses tabs (\"\t\"). If we compare CSV files to TSV files, then CSV files are much harder to parse than TSV files because the values themselves may contain commas, so it is not always obvious where one field starts and ends without complicated parsing rules. TSV, on the other hand, uses just a tab symbol, which does not usually appear in data, so separating fields in TSV is as simple as splitting the input by the tab character. To convert CSV to TSV, simply input the CSV data in the input of this tool. In rare cases when a CSV file has a delimiter other than a comma, you can specify the current delimiter in the options of the tool. You can also specify the current quote character and the comment start character. Additionally, empty CSV lines can be skipped by activating the \"Ignore Lines with No Data\" option. If this option is off, then empty lines in the CSV are converted to empty TSV lines. The \"Preserve Headers\" option allows you to choose whether to process column headers of a CSV file. If the option is selected, then the resulting TSV file will include the first row of the input CSV file, which contains the column names. Alternatively, if the headers option is not selected, the first row will be skipped during the data conversion process. For the reverse conversion from TSV to CSV, you can use our Convert TSV to CSV tool. Csv-abulous!",
+
+  "swapCsvColumns": "Swap CSV Columns",
+  "swapCsvColumnsDescription": "Just upload your CSV file in the form below, specify the columns to swap, and the tool will automatically change the positions of the specified columns in the output file. In the tool options, you can specify the column positions or names that you want to swap, as well as fix incomplete data and optionally remove empty records and records that have been commented out.",
+  "swapCsvColumnsShortDescription": "Reorder CSV columns.",
+  "swapCsvColumnsLongDescription": "This tool reorganizes CSV data by swapping the positions of its columns. Swapping columns can enhance the readability of a CSV file by placing frequently used data together or in the front for easier data comparison and editing. For example, you can swap the first column with the last or swap the second column with the third. To swap columns based on their positions, select the \"Set Column Position\" mode and enter the numbers of the \"from\" and \"to\" columns to be swapped in the first and second blocks of options. For example, if you have a CSV file with four columns \"1, 2, 3, 4\" and swap columns with positions \"2\" and \"4\", the output CSV will have columns in the order: \"1, 4, 3, 2\".As an alternative to positions, you can swap columns by specifying their headers (column names on the first row of data). If you enable this mode in the options, then you can enter the column names like \"location\" and \"city\", and the program will swap these two columns. If any of the specified columns have incomplete data (some fields are missing), you can choose to skip such data or fill the missing fields with empty values or custom values (specified in the options). Additionally, you can specify the symbol used for comments in the CSV data, such as \"#\" or \"//\". If you do not need the commented lines in the output, you can remove them by using the \"Delete Comments\" checkbox. You can also activate the checkbox \"Delete Empty Lines\" to get rid of empty lines that contain no visible information. Csv-abulous!",
+
+  "convertCsvToYaml": "Convert CSV to YAML",
+  "convertCsvToYamlDescription": "Just upload your CSV file in the form below and it will automatically get converted to a YAML file. In the tool options, you can specify the field delimiter character, field quote character, and comment character to adapt the tool to custom CSV formats. Additionally, you can select the output YAML format: one that preserves CSV headers or one that excludes CSV headers.",
+  "convertCsvToYamlShortDescription": "Quickly convert a CSV file to a YAML file.",
+  "convertCsvToYamlLongDescription": "This tool transforms CSV (Comma Separated Values) data into the YAML (Yet Another Markup Language) data. CSV is a simple, tabular format that is used to represent matrix-like data types consisting of rows and columns. YAML, on the other hand, is a more advanced format (actually a superset of JSON), which creates more human-readable data for serialization, and it supports lists, dictionaries, and nested objects. This program supports various input CSV formats - the input data can be comma-separated (default), semicolon-separated, pipe-separated, or use another completely different delimiter. You can specify the exact delimiter your data uses in the options. Similarly, in the options, you can specify the quote character that is used to wrap CSV fields (by default a double-quote symbol). You can also skip lines that start with comments by specifying the comment symbols in the options. This allows you to keep your data clean by skipping unnecessary lines. There are two ways to convert CSV to YAML. The first method converts each CSV row into a YAML list. The second method extracts headers from the first CSV row and creates YAML objects with keys based on these headers. You can also customize the output YAML format by specifying the number of spaces for indenting YAML structures. If you need to perform the reverse conversion, that is, transform YAML into CSV, you can use our Convert YAML to CSV tool. Csv-abulous!",
+
+  "changeCsvSeparator": "Change CSV separator",
+  "changeCsvSeparatorDescription": "Just upload your CSV file in the form below and it will automatically get a new column delimiter character. In the tool options, you can specify which delimiter and quote characters are used in the source CSV file and customize the desired delimiter and quote characters for the output CSV. You can also filter the input CSV before the conversion process and skip blank lines and comment lines.",
+  "changeCsvSeparatorShortDescription": "Quickly change the CSV column delimiter to a new symbol.",
+  "changeCsvSeparatorLongDescription": "This tool changes the field separator in CSV (Comma Separated Values) files. This is useful because different programs may use different default separators. While a comma is the most common separator in CSV files, some programs require files to be tab-separated (TSV), semicolon-separated (SSV), pipe-separated (PSV), or have another separation symbol. The default comma may not be so convenient as a delimiter in CSV files because commas are frequently present within fields. In such cases, it can be difficult and confusing to distinguish between commas as delimiters and commas as punctuation symbols. By replacing the comma with another delimiter, you can convert the file into a more easily readable and parsable format. In the options section of this tool, you can configure both the input and output CSV file formats. For the input CSV, you can specify its current delimiter (by default, it is a comma) and also indicate the quotation mark character used to wrap fields. For the output CSV, you can set a new delimiter, choose a new quotation mark character, and optionally enclose all the fields in quotes. Additionally, you have the option to remove empty lines from the input CSV and eliminate comment lines that start with a specified character (usually a hash \"#\" or double slashes \"//\"). Csv-abulous!",
+
+  "findIncompleteCsvRecords": "Find incomplete CSV records",
+  "findIncompleteCsvRecordsDescription": "Just upload your CSV file in the form below and this tool will automatically check if none of the rows or columns are missing values. In the tool options, you can adjust the input file format (specify the delimiter, quote character, and comment character). Additionally, you can enable checking for empty values, skip empty lines, and set a limit on the number of error messages in the output.",
+  "findIncompleteCsvRecordsShortDescription": "Quickly find rows and columns in CSV that are missing values.",
+  "findIncompleteCsvRecordsLongDescription": "This tool checks the completeness of CSV (Comma Separated Values) files and identifies incomplete records within the data. It finds rows and columns where one or more values are missing and displays their positions in the output so that you can quickly find and fix your CSV file. A valid CSV file has the same number of values (fields) in all rows and the same number of values (fields) in all columns. If the CSV you load in this tool is complete, the program will notify you with a green badge. If at least one value is missing in any row or column, the program will show a red badge and indicate the exact location of the missing value. If the CSV file has a field with no characters in it, then such a field is called an empty field. It is not a missing field, just empty as it contains nothing. You can activate the \"Find Empty Values\" checkbox in the options to identify all such fields in the CSV. If the file contains empty lines, you can ignore them with the \"Skip Empty Lines\" option or check them for completeness along with other lines. You can also configure the delimiter, quote, and comment characters in the options. This allows you to adapt to other file formats besides CSV, such as TSV (Tab Separated Values), SSV (Semicolon Separated Values), or PSV (Pipe Separated Values). If the file has too many incomplete or empty records, you can set a limit on the output messages to display, for example, 5, 10, or 20 messages. If you want to quickly fill in the missing data with default values, you can use our Fill Incomplete CSV Records tool. Csv-abulous!",
+
+  "transposeCsv": "Transpose CSV",
+  "transposeCsvDescription": "Just upload your CSV file in the form below, and this tool will automatically transpose your CSV. In the tool options, you can specify the character that starts the comment lines in the CSV to remove them. Additionally, if the CSV is incomplete (missing values), you can replace missing values with the empty character or a custom character.",
+  "transposeCsvShortDescription": "Quickly transpose a CSV file.",
+  "transposeCsvLongDescription": "This tool transposes Comma Separated Values (CSV). It treats the CSV as a matrix of data and flips all elements across the main diagonal. The output contains the same CSV data as the input, but now all the rows have become columns, and all the columns have become rows. After transposition, the CSV file will have opposite dimensions. For example, if the input file has 4 columns and 3 rows, the output file will have 3 columns and 4 rows. During conversion, the program also cleans the data from unnecessary lines and corrects incomplete data. Specifically, the tool automatically deletes all empty records and comments that begin with a specific character, which you can set in the option. Additionally, in cases where the CSV data is corrupted or lost, the utility completes the file with empty fields or custom fields that can be specified in the options. Csv-abulous!",
+
+  "insertCsvColumns": "Insert CSV columns",
+  "insertCsvColumnsDescription": "Just upload your CSV file in the form below, paste the new column in the options, and it will automatically get inserted in your CSV. In the tool options, you can also specify more than one column to insert, set the insertion position, and optionally skip the empty and comment lines.",
+  "insertCsvColumnsShortDescription": "Quickly insert one or more new columns anywhere in a CSV file.",
+
+  "generateArithmeticSequence": "Generate Arithmetic Sequence",
+  "generateArithmeticSequenceDescription": "Generate an arithmetic sequence by specifying the first term (a₁), common difference (d), and number of terms (n). The tool creates a sequence where each number differs from the previous by a constant difference.",
+  "generateArithmeticSequenceShortDescription": "Generate a sequence where each term differs by a constant value.",
+  "generateArithmeticSequenceLongDescription": "An arithmetic sequence is a sequence of numbers where the difference between each consecutive term is constant. This constant difference is called the common difference. Given the first term (a₁) and the common difference (d), each term can be found by adding the common difference to the previous term.",
+
+  "generateNumbers": "Generate numbers",
+  "generateNumbersDescription": "Quickly calculate a list of integers in your browser. To get your list, just specify the first integer, change value and total count in the options below, and this utility will generate that many integers",
+  "generateNumbersShortDescription": "Quickly calculate a list of integers in your browser",
+
+  "ohmLaw": "Ohm's Law",
+  "ohmLawDescription": "Calculates voltage, current and resistance",
+  "ohmLawShortDescription": "Calculate voltage, current, or resistance in electrical circuits using Ohm's Law",
+  "ohmLawLongDescription": "This calculator applies Ohm's Law (V = I x R) to determine any of the three electrical parameters when the other two are known. Ohm's Law is a fundamental principle in electrical engineering that describes the relationship between voltage (V), current (I), and resistance (R). This tool is essential for electronics hobbyists, electrical engineers, and students working with circuits to quickly solve for unknown values in their electrical designs.",
+
+  "slacklineTension": "Slackline Tension",
+  "slacklineTensionDescription": "Calculates tension in a slackline",
+  "slacklineTensionShortDescription": "Calculate the approximate tension of a slackline or clothesline. Do not rely on this for safety.",
+  "slacklineTensionLongDescription": "This calculator assumes a load in the center of the rope",
+
+  "sphereArea": "Area of a Sphere",
+  "sphereAreaDescription": "Area of a Sphere",
+  "sphereAreaShortDescription": "Calculate the surface area of a sphere based on its radius",
+  "sphereAreaLongDescription": "This calculator determines the surface area of a sphere using the formula A = 4πr². You can either input the radius to find the surface area or enter the surface area to calculate the required radius. This tool is useful for students studying geometry, engineers working with spherical objects, and anyone needing to perform calculations involving spherical surfaces.",
+
+  "sphereVolume": "Volume of a Sphere",
+  "sphereVolumeDescription": "Volume of a Sphere",
+  "sphereVolumeShortDescription": "Calculate the volume of a sphere using radius or diameter",
+  "sphereVolumeLongDescription": "This calculator computes the volume of a sphere using the formula V = (4/3)πr³. You can input either the radius or diameter to find the volume, or enter the volume to determine the required radius. The tool is valuable for students, engineers, and professionals working with spherical objects in fields such as physics, engineering, and manufacturing.",
+
+  "voltageDropInWire": "Round trip voltage drop in cable",
+  "voltageDropInWireDescription": "Calculates round trip voltage and power loss in a 2 conductor cable",
+  "voltageDropInWireShortDescription": "Calculate voltage drop and power loss in electrical cables based on length, material, and current",
+  "voltageDropInWireLongDescription": "This calculator helps determine the voltage drop and power loss in a two-conductor electrical cable. It takes into account the cable length, wire gauge (cross-sectional area), material resistivity, and current flow. The tool calculates the round-trip voltage drop, total resistance of the cable, and the power dissipated as heat. This is particularly useful for electrical engineers, electricians, and hobbyists when designing electrical systems to ensure voltage levels remain within acceptable limits at the load.",
+
+  "numberSumCalculator": "Number Sum Calculator",
+  "numberSumCalculatorDescription": "Quickly calculate the sum of numbers in your browser. To get your sum, just enter your list of numbers in the input field, adjust the separator between the numbers in the options below, and this utility will add up all these numbers.",
+  "numberSumCalculatorShortDescription": "Quickly sum numbers",
+  "numberSumCalculatorLongDescription": "This is an online browser-based utility for calculating the sum of a bunch of numbers. You can enter the numbers separated by a comma, space, or any other character, including the line break. You can also simply paste a fragment of textual data that contains numerical values that you want to sum up and the utility will extract them and find their sum.",
+
+  "duplicate": "Duplicate",
+  "duplicateDescription": "A tool to duplicate each item in a list a specified number of times. Perfect for creating repeated patterns, test data, or expanding datasets.",
+  "duplicateShortDescription": "Repeat items in a list multiple times.",
+  "duplicateLongDescription": "This tool allows you to duplicate items in a list. You can specify the number of copies (including fractional values), control whether items are concatenated or interweaved, and even reverse the duplicated items. It's useful for creating repeated patterns, generating test data, or expanding lists with predictable content.",
+
+  "findMostPopular": "Find most popular",
+  "findMostPopularDescription": "A tool to identify and count the most frequently occurring items in a list. Useful for data analysis, finding trends, or identifying common elements.",
+  "findMostPopularShortDescription": "Find most common items in a list.",
+
+  "findUnique": "Find unique",
+  "findUniqueDescription": "World's simplest browser-based utility for finding unique items in a list. Just input your list with any separator, and it will automatically identify and extract unique items. Perfect for removing duplicates, finding distinct values, or analyzing data uniqueness. You can customize the input/output separators and choose whether to preserve the original order.",
+  "findUniqueShortDescription": "Find unique items in a list",
+
+  "group": "Group",
+  "groupDescription": "World's simplest browser-based utility for grouping list items. Input your list and specify grouping criteria to organize items into logical groups. Perfect for categorizing data, organizing information, or creating structured lists. Supports custom separators and various grouping options.",
+  "groupShortDescription": "Group list items by common properties",
+
+  "reverse": "Reverse",
+  "reverseDescription": "This is a super simple browser-based application prints all list items in reverse. The input items can be separated by any symbol and you can also change the separator of the reversed list items.",
+  "reverseShortDescription": "Quickly reverse a list",
+  "reverseLongDescription": "With this utility, you can reverse the order of items in a list. The utility first splits the input list into individual items and then iterates through them from the last item to the first item, printing each item to the output during the iteration. The input list may contain anything that can be represented as textual data, which includes digits, numbers, strings, words, sentences, etc. The input item separator can also be a regular expression. For example, the regex /[;,]/ will allow you to use items that are either comma- or semicolon-separated. The input and output list items delimiters can be customized in the options. By default, both input and output lists are comma-separated. Listabulous!",
+
+  "rotate": "Rotate",
+  "rotateDescription": "A tool to rotate items in a list by a specified number of positions. Shift elements left or right while maintaining their relative order.",
+  "rotateShortDescription": "Shift list items by position.",
+
+  "shuffle": "Shuffle",
+  "shuffleDescription": "A tool to randomly reorder items in a list. Perfect for randomizing data, creating random selections, or generating random sequences.",
+  "shuffleShortDescription": "Randomly reorder list items.",
+
+  "sortList": "Sort a list",
+  "sortListDescription": "This is a super simple browser-based application that sorts items in a list and arranges them in increasing or decreasing order. You can sort the items alphabetically, numerically, or by their length. You can also remove duplicate and empty items, as well as trim individual items that have whitespace around them. You can use any separator character to separate the input list items or alternatively use a regular expression to separate them. Additionally, you can create a new delimiter for the sorted output list.",
+  "sortListShortDescription": "Quickly sort a list",
+
+  "truncate": "Truncate",
+  "truncateDescription": "World's simplest browser-based utility for truncating lists. Quickly limit the number of items in your list by specifying a maximum length. Perfect for sampling data, creating previews, or managing large lists. Supports custom separators and various truncation options.",
+  "truncateShortDescription": "Limit the number of items in a list",
+  "truncateLongDescription": "This tool allows you to truncate a list to a specific number of items. You can choose to keep items from the beginning or the end of the list, and specify custom separators for splitting and joining. It's useful for limiting the size of lists, creating previews, or extracting specific portions of data.",
+
+  "unwrap": "Unwrap",
+  "unwrapDescription": "A tool to remove characters from the beginning and end of each item in a list. Perfect for cleaning up formatted data or removing unwanted wrappers.",
+  "unwrapShortDescription": "Remove characters around list items.",
+  "unwrapLongDescription": "This tool allows you to remove wrapping characters from each item in a list. You can specify characters to remove from the left and right sides, handle multiple levels of wrapping, and control how the list is processed. It's useful for cleaning up data, removing quotes or brackets, and formatting lists.",
+
+  "wrap": "Wrap",
+  "wrapDescription": "A tool to wrap each item in a list with custom prefix and suffix characters. Useful for formatting lists for code, markup languages, or presentation.",
+  "wrapShortDescription": "Add characters around list items.",
+  "wrapLongDescription": "This tool allows you to add text before and after each item in a list. You can specify different text for the left and right sides, and control how the list is processed. It's useful for adding quotes, brackets, or other formatting to list items, preparing data for different formats, or creating structured text.",
+
+  "base64": "Base64",
+  "base64Description": "A simple tool to encode or decode data using Base64, which is commonly used in web applications.",
+  "base64ShortDescription": "Encode or decode data using Base64.",
+  "base64LongDescription": "Base64 is an encoding scheme that represents data in an ASCII string format by translating it into a radix-64 representation. Although it can be used to encode strings, it is commonly used to encode binary data for transmission over media that are designed to deal with textual data.",
+
+  "createPalindrome": "Create palindrome",
+  "createPalindromeDescription": "World's simplest browser-based utility for creating palindromes from any text. Input text and instantly transform it into a palindrome that reads the same forward and backward. Perfect for word games, creating symmetrical text patterns, or exploring linguistic curiosities.",
+  "createPalindromeShortDescription": "Create text that reads the same forward and backward",
+  "createPalindromeLongDescription": "This tool creates a palindrome from the given string. It does it by generating a copy of the string, reversing it, and appending it at the end of the original string. This method creates a palindrome with the last character duplicated twice. There is also another way to do it, which deletes the first letter of the reversed copy. In this case, when the string and the copy are joined together, you also get a palindrome but without the repeating last character. You can compare the two types of palindromes by switching between them in the options. You can also enable the multi-line mode that will create palindromes of every string on every line. Stringabulous!",
+
+  "extractSubstring": "Extract substring",
+  "extractSubstringDescription": "World's simplest browser-based utility for extracting substrings from text. Easily extract specific portions of text by specifying start position and length. Perfect for parsing data, isolating specific parts of text, or data extraction tasks. Supports multi-line text processing and character-level precision.",
+  "extractSubstringShortDescription": "Extract specific portions of text by position and length",
+
+  "textJoiner": "Text Joiner",
+  "textJoinerDescription": "World's Simplest Text Tool World's simplest browser-based utility for joining text. Load your text in the input form on the left and you'll automatically get merged text on the right. Powerful, free, and fast. Load text - get joined lines",
+  "textJoinerShortDescription": "Quickly merge texts",
+  "textJoinerLongDescription": "With this tool you can join parts of the text together. It takes a list of text values, separated by newlines, and merges them together. You can set the character that will be placed between the parts of the combined text. Also, you can ignore all empty lines and remove spaces and tabs at the end of all lines. Textabulous!",
+
+  "palindrome": "Palindrome",
+  "palindromeDescription": "World's simplest browser-based utility for checking if text is a palindrome. Instantly verify if your text reads the same forward and backward. Perfect for word puzzles, linguistic analysis, or validating symmetrical text patterns. Supports various delimiters and multi-word palindrome detection.",
+  "palindromeShortDescription": "Check if text reads the same forward and backward",
+
+  "quote": "Quote",
+  "quoteDescription": "A tool to add quotation marks or custom characters around text. Perfect for formatting strings for code, citations, or stylistic purposes.",
+  "quoteShortDescription": "Add quotes around text easily.",
+  "quoteLongDescription": "This tool allows you to add quotes around text. You can choose different quote characters, handle multi-line text, and control how empty lines are processed. It's useful for preparing text for programming, formatting data, or creating stylized text.",
+
+  "randomizeCase": "Randomize case",
+  "randomizeCaseDescription": "World's simplest browser-based utility for randomizing the case of text. Just paste your text and get it instantly transformed with random uppercase and lowercase letters. Perfect for creating playful text styles, meme text, or simulating chaotic writing.",
+  "randomizeCaseShortDescription": "Convert text to random uppercase and lowercase letters",
+
+  "removeDuplicateLines": "Remove duplicate lines",
+  "removeDuplicateLinesDescription": "Load your text in the input form on the left and you'll instantly get text with no duplicate lines in the output area. Powerful, free, and fast. Load text lines - get unique text lines",
+  "removeDuplicateLinesShortDescription": "Quickly delete all repeated lines from text",
+
+  "repeatText": "Repeat text",
+  "repeatTextDescription": "This tool allows you to repeat a given text multiple times with an optional separator.",
+  "repeatTextShortDescription": "Repeat text multiple times",
+  "repeatTextLongDescription": "This tool allows you to repeat a given text multiple times with an optional separator.",
+
+  "reverseText": "Reverse",
+  "reverseTextDescription": "World's simplest browser-based utility for reversing text. Input any text and get it instantly reversed, character by character. Perfect for creating mirror text, analyzing palindromes, or playing with text patterns. Preserves spaces and special characters while reversing.",
+  "reverseTextShortDescription": "Reverse any text character by character",
+
+  "rot13": "Rot13",
+  "rot13Description": "A simple tool to encode or decode text using the ROT13 cipher, which replaces each letter with the letter 13 positions after it in the alphabet.",
+  "rot13ShortDescription": "Encode or decode text using ROT13 cipher.",
+  "rot13LongDescription": "ROT13 (rotate by 13 places) is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the alphabet. ROT13 is a special case of the Caesar cipher which was developed in ancient Rome. Because there are 26 letters in the English alphabet, ROT13 is its own inverse; that is, to undo ROT13, the same algorithm is applied, so the same action can be used for encoding and decoding.",
+
+  "rotateText": "Rotate",
+  "rotateTextDescription": "A tool to rotate characters in a string by a specified number of positions. Shift characters left or right while maintaining their relative order.",
+  "rotateTextShortDescription": "Shift characters in text by position.",
+  "rotateTextLongDescription": "This tool allows you to rotate characters in a string by a specified number of positions. You can rotate to the left or right, and process multi-line text by rotating each line separately. String rotation is useful for simple text transformations, creating patterns, or implementing basic encryption techniques.",
+
+  "splitText": "Text splitter",
+  "splitTextDescription": "World's simplest browser-based utility for splitting text. Load your text in the input form on the left and you'll automatically get pieces of this text on the right. Powerful, free, and fast. Load text - get chunks.",
+  "splitTextShortDescription": "Quickly split a text",
+  "splitTextLongDescription": "Quickly split a text",
+
+  "textStatistic": "Text Statistics",
+  "textStatisticDescription": "Load your text in the input form on the left and you will automatically get statistics about your text on the right.",
+  "textStatisticShortDescription": "Get statistics about your text",
+  "textStatisticLongDescription": "This tool provides various statistics about the text you input, including the number of lines, words, and characters. You can also choose to include empty lines in the count. it can count words and characters based on custom delimiters, allowing for flexible text analysis. Additionally, it can provide frequency statistics for words and characters, helping you understand the distribution of terms in your text.",
+
+  "textReplacer": "Text Replacer",
+  "textReplacerDescription": "Easily replace specific text in your content with this simple, browser-based tool. Just input your text, set the text you want to replace and the replacement value, and instantly get the updated version.",
+  "textReplacerShortDescription": "Quickly replace text in your content",
+  "textReplacerLongDescription": "Easily replace specific text in your content with this simple, browser-based tool. Just input your text, set the text you want to replace and the replacement value, and instantly get the updated version.",
+
+  "stringToMorse": "String To morse",
+  "stringToMorseDescription": "World's simplest browser-based utility for converting text to Morse code. Load your text in the input form on the left and you'll instantly get Morse code in the output area. Powerful, free, and fast. Load text - get Morse code.",
+  "stringToMorseShortDescription": "Quickly encode text to morse",
+
+  "truncateText": "Truncate text",
+  "truncateTextDescription": "Load your text in the input form on the left and you will automatically get truncated text on the right.",
+  "truncateTextLongDescription": "Truncate your text easily",
+  "truncateTextShortDescription": "Load your text in the input form on the left and you will automatically get truncated text on the right.",
+
+  "uppercase": "Uppercase",
+  "uppercaseDescription": "World's simplest browser-based utility for converting text to uppercase. Just input your text and it will be automatically converted to all capital letters. Perfect for creating headlines, emphasizing text, or standardizing text format. Supports various text formats and preserves special characters.",
+  "uppercaseShortDescription": "Convert text to uppercase letters"
+}

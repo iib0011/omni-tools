@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import { useState } from 'react';
 import { categoriesColors } from 'config/uiConfig';
 import { Icon } from '@iconify/react';
+import i18n from 'i18n/i18n';
 
 type ArrayElement<ArrayType extends readonly unknown[]> =
   ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
@@ -71,7 +72,9 @@ const SingleCategory = function ({
                   fullWidth
                   onClick={() => navigate('/categories/' + category.type)}
                   variant={'contained'}
-                >{`See all ${category.title}`}</Button>
+                >
+                  {i18n.t('seeAll') + ` ${category.title}`}
+                </Button>
               </Grid>
               <Grid item xs={12} md={6}>
                 <Button
@@ -79,7 +82,9 @@ const SingleCategory = function ({
                   fullWidth
                   onClick={() => navigate(category.example.path)}
                   variant={'outlined'}
-                >{`Try ${category.example.title}`}</Button>
+                >
+                  {i18n.t('try') + ` ${category.example.title}`}
+                </Button>
               </Grid>
             </Grid>
           </Stack>

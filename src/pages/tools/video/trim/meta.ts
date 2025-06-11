@@ -1,13 +1,13 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('video', {
-  name: 'Trim Video',
+  name: i18n.t('trimVideo'),
   path: 'trim',
   icon: 'mdi:scissors',
-  description:
-    'This online utility lets you trim videos by setting start and end points. You can preview the trimmed section before processing. Supports common video formats like MP4, WebM, and OGG.',
-  shortDescription: 'Trim videos by setting start and end points',
+  description: i18n.t('trimVideoDescription'),
+  shortDescription: i18n.t('trimVideoShortDescription'),
   keywords: ['trim', 'cut', 'video', 'clip', 'edit'],
   component: lazy(() => import('./index'))
 });

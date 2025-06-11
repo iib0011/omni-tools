@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import DownloadIcon from '@mui/icons-material/Download';
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import React from 'react';
+import i18n from 'i18n/i18n';
 
 export default function ResultFooter({
   handleDownload,
@@ -22,7 +23,7 @@ export default function ResultFooter({
         onClick={handleDownload}
         startIcon={<DownloadIcon />}
       >
-        Save as
+        {i18n.t('saveAs')}
       </Button>
       {!hideCopy && (
         <Button
@@ -30,7 +31,7 @@ export default function ResultFooter({
           onClick={handleCopy}
           startIcon={<ContentPasteIcon />}
         >
-          Copy to clipboard
+          {i18n.t('copyToClipboard')}
         </Button>
       )}
     </Stack>

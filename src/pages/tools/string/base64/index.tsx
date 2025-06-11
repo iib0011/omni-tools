@@ -32,7 +32,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function Base64({ title }: ToolComponentProps) {
+export default function Base64({ title, longDescription }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -72,11 +72,7 @@ export default function Base64({ title }: ToolComponentProps) {
       resultComponent={<ToolTextResult title="Result" value={result} />}
       initialValues={initialValues}
       getGroups={getGroups}
-      toolInfo={{
-        title: 'What is Base64?',
-        description:
-          'Base64 is an encoding scheme that represents data in an ASCII string format by translating it into a radix-64 representation. Although it can be used to encode strings, it is commonly used to encode binary data for transmission over media that are designed to deal with textual data.'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
       input={input}
       setInput={setInput}

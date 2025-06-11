@@ -1,13 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('pdf', {
-  name: 'Protect PDF',
+  name: i18n.t('protectPdf'),
   path: 'protect-pdf',
   icon: 'material-symbols:lock',
-  description:
-    'Add password protection to your PDF files securely in your browser',
-  shortDescription: 'Password protect PDF files securely',
+  description: i18n.t('protectPdfLongDescription'),
+  shortDescription: i18n.t('protectPdfShortDescription'),
+  longDescription: i18n.t('protectPdfLongDescription'),
   keywords: [
     'pdf',
     'protect',
@@ -21,7 +22,5 @@ export const tool = defineTool('pdf', {
     'browser',
     'encryption'
   ],
-  longDescription:
-    'Add password protection to your PDF files securely in your browser. Your files never leave your device, ensuring complete privacy while securing your documents with password encryption. Perfect for protecting sensitive information, confidential documents, or personal data.',
   component: lazy(() => import('./index'))
 });

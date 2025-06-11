@@ -1,14 +1,13 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('csv', {
-  name: 'Insert CSV columns',
+  name: i18n.t('insertCsvColumns'),
   path: 'insert-csv-columns',
   icon: 'hugeicons:column-insert',
-  description:
-    'Just upload your CSV file in the form below, paste the new column in the options, and it will automatically get inserted in your CSV. In the tool options, you can also specify more than one column to insert, set the insertion position, and optionally skip the empty and comment lines.',
-  shortDescription:
-    'Quickly insert one or more new columns anywhere in a CSV file.',
+  description: i18n.t('insertCsvColumnsDescription'),
+  shortDescription: i18n.t('insertCsvColumnsShortDescription'),
   keywords: ['insert', 'csv', 'columns', 'append', 'prepend'],
   longDescription: '',
   component: lazy(() => import('./index'))

@@ -1,13 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('image-generic', {
-  name: 'Image to Text (OCR)',
+  name: i18n.t('imageToText'),
   path: 'image-to-text',
   icon: 'mdi:text-recognition', // Iconify icon as a string
-  description:
-    'Extract text from images (JPG, PNG) using optical character recognition (OCR).',
-  shortDescription: 'Extract text from images using OCR.',
+  description: i18n.t('imageToTextDescription'),
+  shortDescription: i18n.t('imageToTextShortDescription'),
+  longDescription: i18n.t('imageToTextLongDescription'),
   keywords: [
     'ocr',
     'optical character recognition',

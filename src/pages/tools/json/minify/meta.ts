@@ -1,13 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('json', {
-  name: 'Minify JSON',
+  name: i18n.t('minifyJSON'),
   path: 'minify',
   icon: 'lets-icons:json-light',
-  description:
-    'Minify your JSON by removing all unnecessary whitespace and formatting. This tool compresses JSON data to its smallest possible size while maintaining valid JSON structure.',
-  shortDescription: 'Quickly compress JSON file.',
+  description: i18n.t('minifyJSONDescription'),
+  shortDescription: i18n.t('minifyJSONShortDescription'),
+  longDescription: i18n.t('minifyJSONLongDescription'),
   keywords: ['minify', 'compress', 'minimize', 'json', 'compact'],
   component: lazy(() => import('./index'))
 });

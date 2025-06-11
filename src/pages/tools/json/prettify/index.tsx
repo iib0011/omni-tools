@@ -114,7 +114,10 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function PrettifyJson({ title }: ToolComponentProps) {
+export default function PrettifyJson({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -167,11 +170,7 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
       compute={compute}
       setInput={setInput}
       exampleCards={exampleCards}
-      toolInfo={{
-        title: 'What Is a JSON Prettifier?',
-        description:
-          'This tool adds consistent formatting to the data in JavaScript Object Notation (JSON) format. This transformation makes the JSON code more readable, making it easier to understand and edit. The program parses the JSON data structure into tokens and then reformats them by adding indentation and line breaks. If the data is hierarchial, then it adds indentation at the beginning of lines to visually show the depth of the JSON and adds newlines to break long single-line JSON arrays into multiple shorter, more readable ones. Additionally, this utility can remove unnecessary spaces and tabs from your JSON code (especially leading and trailing whitespaces), making it more compact. You can choose the line indentation method in the options: indent with spaces or indent with tabs. When using spaces, you can also specify how many spaces to use for each indentation level (usually 2 or 4 spaces). '
-      }}
+      toolInfo={{ title: title, description: longDescription }}
     />
   );
 }

@@ -81,7 +81,10 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function Truncate({ title }: ToolComponentProps) {
+export default function Truncate({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -175,11 +178,7 @@ export default function Truncate({ title }: ToolComponentProps) {
       initialValues={initialValues}
       getGroups={getGroups}
       validationSchema={validationSchema}
-      toolInfo={{
-        title: 'List Truncation',
-        description:
-          "This tool allows you to truncate a list to a specific number of items. You can choose to keep items from the beginning or the end of the list, and specify custom separators for splitting and joining. It's useful for limiting the size of lists, creating previews, or extracting specific portions of data."
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
       input={input}
       setInput={setInput}

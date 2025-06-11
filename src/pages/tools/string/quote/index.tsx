@@ -69,7 +69,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function Quote({ title }: ToolComponentProps) {
+export default function Quote({ title, longDescription }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -135,11 +135,7 @@ export default function Quote({ title }: ToolComponentProps) {
       resultComponent={<ToolTextResult title="Quoted Text" value={result} />}
       initialValues={initialValues}
       getGroups={getGroups}
-      toolInfo={{
-        title: 'Text Quoter',
-        description:
-          "This tool allows you to add quotes around text. You can choose different quote characters, handle multi-line text, and control how empty lines are processed. It's useful for preparing text for programming, formatting data, or creating stylized text."
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
       input={input}
       setInput={setInput}

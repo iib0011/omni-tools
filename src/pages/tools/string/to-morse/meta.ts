@@ -1,14 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('string', {
-  name: 'String To morse',
+  name: i18n.t('stringToMorse'),
   path: 'to-morse',
   icon: 'arcticons:morse',
-  description:
-    "World's simplest browser-based utility for converting text to Morse code. Load your text in the input form on the left and you'll instantly get Morse code in the output area. Powerful, free, and fast. Load text – get Morse code.",
-  shortDescription: 'Quickly encode text to morse',
+  description: i18n.t('stringToMorseDescription'),
+  shortDescription: i18n.t('stringToMorseShortDescription'),
   keywords: ['to', 'morse'],
   component: lazy(() => import('./index'))
 });

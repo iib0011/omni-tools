@@ -1,13 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('string', {
-  name: 'Text Replacer',
+  name: i18n.t('textReplacer'),
   path: 'replacer',
-  shortDescription: 'Quickly replace text in your content',
   icon: 'material-symbols-light:find-replace',
-  description:
-    'Easily replace specific text in your content with this simple, browser-based tool. Just input your text, set the text you want to replace and the replacement value, and instantly get the updated version.',
+  description: i18n.t('textReplacerDescription'),
+  shortDescription: i18n.t('textReplacerShortDescription'),
+  longDescription: i18n.t('textReplacerLongDescription'),
   keywords: ['text', 'replace'],
   component: lazy(() => import('./index'))
 });

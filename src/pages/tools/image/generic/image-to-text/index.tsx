@@ -22,7 +22,10 @@ const validationSchema = Yup.object({
   language: Yup.string().required('Language is required')
 });
 
-export default function ImageToText({ title }: ToolComponentProps) {
+export default function ImageToText({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
@@ -98,11 +101,7 @@ export default function ImageToText({ title }: ToolComponentProps) {
           loading={isProcessing}
         />
       }
-      toolInfo={{
-        title: 'Image to Text (OCR)',
-        description:
-          'This tool extracts text from images using Optical Character Recognition (OCR). Upload an image containing text, select the primary language, and get the extracted text. For best results, use clear images with good contrast.'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
     />
   );
 }

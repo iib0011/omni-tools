@@ -1,13 +1,13 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('string', {
-  name: 'Reverse',
+  name: i18n.t('reverse'),
   path: 'reverse',
   icon: 'material-symbols-light:swap-horiz',
-  description:
-    "World's simplest browser-based utility for reversing text. Input any text and get it instantly reversed, character by character. Perfect for creating mirror text, analyzing palindromes, or playing with text patterns. Preserves spaces and special characters while reversing.",
-  shortDescription: 'Reverse any text character by character',
+  description: i18n.t('reverseDescription'),
+  shortDescription: i18n.t('reverseShortDescription'),
   keywords: ['reverse'],
   component: lazy(() => import('./index'))
 });

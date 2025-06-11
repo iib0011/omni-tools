@@ -1,12 +1,13 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('list', {
-  name: 'Find unique',
+  name: i18n.t('findUnique'),
   path: 'find-unique',
   icon: 'mynaui:one',
-  description: "World's simplest browser-based utility for finding unique items in a list. Just input your list with any separator, and it will automatically identify and extract unique items. Perfect for removing duplicates, finding distinct values, or analyzing data uniqueness. You can customize the input/output separators and choose whether to preserve the original order.",
-  shortDescription: 'Find unique items in a list',
+  description: i18n.t('findUniqueDescription'),
+  shortDescription: i18n.t('findUniqueShortDescription'),
   keywords: ['find', 'unique'],
   component: lazy(() => import('./index'))
 });

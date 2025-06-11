@@ -106,7 +106,10 @@ s
   }
 ];
 
-export default function JoinText({ title }: ToolComponentProps) {
+export default function JoinText({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const compute = (optionsValues: InitialValuesType, input: any) => {
@@ -158,11 +161,7 @@ export default function JoinText({ title }: ToolComponentProps) {
       }
       resultComponent={<ToolTextResult title={'Joined Text'} value={result} />}
       getGroups={getGroups}
-      toolInfo={{
-        title: 'What Is a Text Joiner?',
-        description:
-          'With this tool you can join parts of the text together. It takes a list of text values, separated by newlines, and merges them together. You can set the character that will be placed between the parts of the combined text. Also, you can ignore all empty lines and remove spaces and tabs at the end of all lines. Textabulous!'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
     />
   );

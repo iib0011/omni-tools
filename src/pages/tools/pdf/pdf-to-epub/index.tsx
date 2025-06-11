@@ -5,7 +5,10 @@ import { ToolComponentProps } from '@tools/defineTool';
 import ToolPdfInput from '@components/input/ToolPdfInput';
 import { convertPdfToEpub } from './service';
 
-export default function PdfToEpub({ title }: ToolComponentProps) {
+export default function PdfToEpub({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
@@ -49,10 +52,7 @@ export default function PdfToEpub({ title }: ToolComponentProps) {
           loadingText={'Converting PDF to EPUB...'}
         />
       }
-      toolInfo={{
-        title: 'How to Use PDF to EPUB?',
-        description: `Upload a PDF file and this tool will convert it into an EPUB format, suitable for most e-reader devices.`
-      }}
+      toolInfo={{ title: title, description: longDescription }}
     />
   );
 }

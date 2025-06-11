@@ -62,7 +62,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function Rotate({ title }: ToolComponentProps) {
+export default function Rotate({ title, longDescription }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -117,11 +117,7 @@ export default function Rotate({ title }: ToolComponentProps) {
       resultComponent={<ToolTextResult title="Rotated Text" value={result} />}
       initialValues={initialValues}
       getGroups={getGroups}
-      toolInfo={{
-        title: 'String Rotation',
-        description:
-          'This tool allows you to rotate characters in a string by a specified number of positions. You can rotate to the left or right, and process multi-line text by rotating each line separately. String rotation is useful for simple text transformations, creating patterns, or implementing basic encryption techniques.'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
       input={input}
       setInput={setInput}
