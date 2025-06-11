@@ -1,13 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('list', {
-  name: 'Truncate',
+  name: i18n.t('truncate'),
   path: 'truncate',
   icon: 'mdi:format-horizontal-align-right',
-  description:
-    "World's simplest browser-based utility for truncating lists. Quickly limit the number of items in your list by specifying a maximum length. Perfect for sampling data, creating previews, or managing large lists. Supports custom separators and various truncation options.",
-  shortDescription: 'Limit the number of items in a list',
+  description: i18n.t('truncateDescription'),
+  shortDescription: i18n.t('truncateShortDescription'),
+  longDescription: i18n.t('truncateLongDescription'),
   keywords: ['truncate'],
   component: lazy(() => import('./index'))
 });

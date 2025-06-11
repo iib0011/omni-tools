@@ -1,14 +1,15 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('number', {
-  name: 'Number Sum Calculator',
+  name: i18n.t('numberSumCalculator'),
   path: 'sum',
   icon: 'fluent:autosum-20-regular',
-  description:
-    'Quickly calculate the sum of numbers in your browser. To get your sum, just enter your list of numbers in the input field, adjust the separator between the numbers in the options below, and this utility will add up all these numbers.',
-  shortDescription: 'Quickly sum numbers',
+  description: i18n.t('numberSumCalculatorDescription'),
+  shortDescription: i18n.t('numberSumCalculatorShortDescription'),
+  longDescription: i18n.t('numberSumCalculatorLongDescription'),
   keywords: ['sum'],
   component: lazy(() => import('./index'))
 });

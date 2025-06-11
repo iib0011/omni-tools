@@ -59,7 +59,10 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function Replacer({ title }: ToolComponentProps) {
+export default function Replacer({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -136,11 +139,7 @@ export default function Replacer({ title }: ToolComponentProps) {
       resultComponent={
         <ToolTextResult title={'Text with replacements'} value={result} />
       }
-      toolInfo={{
-        title: 'Text Replacer',
-        description:
-          'Easily replace specific text in your content with this simple, browser-based tool. Just input your text, set the text you want to replace and the replacement value, and instantly get the updated version.'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
     />
   );

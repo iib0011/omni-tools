@@ -291,7 +291,7 @@ export default function Truncate({
       resultComponent={
         <ToolTextResult title={'Text Statistics'} value={result} />
       }
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
     />
   );

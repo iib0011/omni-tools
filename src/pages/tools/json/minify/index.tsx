@@ -46,7 +46,10 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function MinifyJson({ title }: ToolComponentProps) {
+export default function MinifyJson({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -69,11 +72,7 @@ export default function MinifyJson({ title }: ToolComponentProps) {
       }
       initialValues={initialValues}
       getGroups={null}
-      toolInfo={{
-        title: 'What Is JSON Minification?',
-        description:
-          "JSON minification is the process of removing all unnecessary whitespace characters from JSON data while maintaining its validity. This includes removing spaces, newlines, and indentation that aren't required for the JSON to be parsed correctly. Minification reduces the size of JSON data, making it more efficient for storage and transmission while keeping the exact same data structure and values."
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
       input={input}
       setInput={setInput}

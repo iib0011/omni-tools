@@ -1,14 +1,16 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
+
 // import image from '@assets/text.png';
 
 export const tool = defineTool('list', {
-  name: 'Duplicate',
+  name: i18n.t('duplicate'),
   path: 'duplicate',
   icon: 'mdi:content-duplicate',
-  description:
-    'A tool to duplicate each item in a list a specified number of times. Perfect for creating repeated patterns, test data, or expanding datasets.',
-  shortDescription: 'Repeat items in a list multiple times.',
+  description: i18n.t('duplicateDescription'),
+  shortDescription: i18n.t('duplicateShortDescription'),
+  longDescription: i18n.t('duplicateLongDescription'),
   keywords: ['duplicate'],
   component: lazy(() => import('./index'))
 });

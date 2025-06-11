@@ -100,7 +100,10 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function Duplicate({ title }: ToolComponentProps) {
+export default function Duplicate({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -201,11 +204,7 @@ export default function Duplicate({ title }: ToolComponentProps) {
       initialValues={initialValues}
       getGroups={getGroups}
       validationSchema={validationSchema}
-      toolInfo={{
-        title: 'List Duplication',
-        description:
-          "This tool allows you to duplicate items in a list. You can specify the number of copies (including fractional values), control whether items are concatenated or interweaved, and even reverse the duplicated items. It's useful for creating repeated patterns, generating test data, or expanding lists with predictable content."
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
       input={input}
       setInput={setInput}

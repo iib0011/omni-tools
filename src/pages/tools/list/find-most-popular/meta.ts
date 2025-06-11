@@ -1,14 +1,15 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
+
 // import image from '@assets/text.png';
 
 export const tool = defineTool('list', {
-  name: 'Find most popular',
+  name: i18n.t('findMostPopular'),
   path: 'find-most-popular',
   icon: 'material-symbols-light:query-stats',
-  description:
-    'A tool to identify and count the most frequently occurring items in a list. Useful for data analysis, finding trends, or identifying common elements.',
-  shortDescription: 'Find most common items in a list.',
+  description: i18n.t('findMostPopularDescription'),
+  shortDescription: i18n.t('findMostPopularShortDescription'),
   keywords: ['find', 'most', 'popular'],
   component: lazy(() => import('./index'))
 });

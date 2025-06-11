@@ -117,7 +117,10 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function SumNumbers({ title }: ToolComponentProps) {
+export default function SumNumbers({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -180,11 +183,7 @@ export default function SumNumbers({ title }: ToolComponentProps) {
         setResult(compute(input, extractionType, printRunningSum, separator));
       }}
       setInput={setInput}
-      toolInfo={{
-        title: 'What Is a Number Sum Calculator?',
-        description:
-          'This is an online browser-based utility for calculating the sum of a bunch of numbers. You can enter the numbers separated by a comma, space, or any other character, including the line break. You can also simply paste a fragment of textual data that contains numerical values that you want to sum up and the utility will extract them and find their sum.'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
     />
   );

@@ -1,13 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('json', {
-  name: 'Prettify JSON',
+  name: i18n.t('prettifyJson'),
   path: 'prettify',
   icon: 'lets-icons:json-light',
-  description:
-    "Just load your JSON in the input field and it will automatically get prettified. In the tool options, you can choose whether to use spaces or tabs for indentation and if you're using spaces, you can specify the number of spaces to add per indentation level.",
-  shortDescription: 'Quickly beautify a JSON data structure.',
+  description: i18n.t('prettifyJsonDescription'),
+  shortDescription: i18n.t('prettifyJsonShortDescription'),
+  longDescription: i18n.t('prettifyJsonLongDescription'),
   keywords: ['prettify'],
   component: lazy(() => import('./index'))
 });

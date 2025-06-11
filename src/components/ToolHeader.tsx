@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 import { Icon, IconifyIcon } from '@iconify/react';
 import { categoriesColors } from '../config/uiConfig';
 import { getToolsByCategory } from '@tools/index';
+import i18n from 'i18n/i18n';
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: 'white',
@@ -37,7 +38,7 @@ function ToolLinks() {
           variant="outlined"
           onClick={() => scrollToElement('tool')}
         >
-          Use This Tool
+          {i18n.t('useThisTool')}
         </StyledButton>
       </Grid>
       <Grid item md={12} lg={6}>
@@ -47,7 +48,7 @@ function ToolLinks() {
           sx={{ backgroundColor: 'background.paper' }}
           onClick={() => scrollToElement('examples')}
         >
-          See Examples
+          {i18n.t('seeExamples')}
         </StyledButton>
       </Grid>
       {/*<Grid item md={12} lg={4}>*/}
@@ -69,7 +70,7 @@ export default function ToolHeader({
     <Box my={4}>
       <ToolBreadcrumb
         items={[
-          { title: 'All tools', link: '/' },
+          { title: i18n.t('allTools'), link: '/' },
           {
             title: getToolsByCategory().find(
               (category) => category.type === type

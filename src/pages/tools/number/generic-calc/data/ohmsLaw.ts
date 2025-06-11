@@ -1,4 +1,5 @@
 import type { GenericCalcType } from './types';
+import i18n from 'i18n/i18n';
 
 const ohmsLawCalc: GenericCalcType = {
   icon: 'mdi:ohm',
@@ -13,13 +14,11 @@ const ohmsLawCalc: GenericCalcType = {
     'power',
     'V=IR'
   ],
-  shortDescription:
-    "Calculate voltage, current, or resistance in electrical circuits using Ohm's Law",
-  name: "Ohm's Law",
+  name: i18n.t('ohmLaw'),
   path: 'ohms-law',
-  description: 'Calculates voltage, current and resistance',
-  longDescription:
-    "This calculator applies Ohm's Law (V = I × R) to determine any of the three electrical parameters when the other two are known. Ohm's Law is a fundamental principle in electrical engineering that describes the relationship between voltage (V), current (I), and resistance (R). This tool is essential for electronics hobbyists, electrical engineers, and students working with circuits to quickly solve for unknown values in their electrical designs.",
+  description: i18n.t('ohmLawDescription'),
+  shortDescription: i18n.t('ohmLawShortDescription'),
+  longDescription: i18n.t('ohmLawLongDescription'),
   formula: 'V = I * R',
   presets: [],
   variables: [

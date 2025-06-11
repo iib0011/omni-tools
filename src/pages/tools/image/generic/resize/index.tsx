@@ -44,7 +44,10 @@ const validationSchema = Yup.object({
   })
 });
 
-export default function ResizeImage({ title }: ToolComponentProps) {
+export default function ResizeImage({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
@@ -193,11 +196,7 @@ export default function ResizeImage({ title }: ToolComponentProps) {
           extension={input?.name.split('.').pop() || 'png'}
         />
       }
-      toolInfo={{
-        title: 'Resize Image',
-        description:
-          'This tool allows you to resize JPG, PNG, SVG, or GIF images. You can resize by specifying dimensions in pixels or by percentage, with options to maintain the original aspect ratio.'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
     />
   );
 }

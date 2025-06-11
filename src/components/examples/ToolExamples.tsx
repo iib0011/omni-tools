@@ -3,6 +3,7 @@ import ExampleCard, { ExampleCardProps } from './ExampleCard';
 import React from 'react';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import { useFormikContext } from 'formik';
+import i18n from 'i18n/i18n';
 
 export type CardExampleType<T> = Omit<
   ExampleCardProps<T>,
@@ -39,10 +40,10 @@ export default function ToolExamples<T>({
     <Box id={'examples'} mt={4}>
       <Box mt={4} display="flex" gap={1} alignItems="center">
         <Typography mb={2} fontSize={30} color={'primary'}>
-          {`${title} Examples`}
+          {title + ' ' + i18n.t('examples')}
         </Typography>
         <Typography mb={2} fontSize={30} color={'secondary'}>
-          {subtitle ?? 'Click to try!'}
+          {subtitle ?? i18n.t('clickToTry')}
         </Typography>
       </Box>
 

@@ -129,7 +129,7 @@ export default function ConvertDaysToHours({
       getGroups={getGroups}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
     />
   );

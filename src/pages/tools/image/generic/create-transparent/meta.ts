@@ -1,13 +1,13 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('image-generic', {
-  name: 'Create transparent PNG',
+  name: i18n.t('createTransparentPng'),
   path: 'create-transparent',
   icon: 'mdi:circle-transparent',
-  shortDescription: 'Quickly make an image transparent',
-  description:
-    "World's simplest online Portable Network Graphics transparency maker. Just import your image in the editor on the left and you will instantly get a transparent PNG on the right. Free, quick, and very powerful. Import an image – get a transparent PNG.",
+  shortDescription: i18n.t('createTransparentPngShortDescription'),
+  description: i18n.t('createTransparentPngDescription'),
   keywords: ['create', 'transparent'],
   component: lazy(() => import('./index'))
 });

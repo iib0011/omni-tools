@@ -1,4 +1,5 @@
 import type { GenericCalcType } from './types';
+import i18n from 'i18n/i18n';
 
 const areaSphere: GenericCalcType = {
   icon: 'ph:sphere-duotone',
@@ -13,13 +14,11 @@ const areaSphere: GenericCalcType = {
     '3D',
     'shape'
   ],
-  shortDescription:
-    'Calculate the surface area of a sphere based on its radius',
-  name: 'Area of a Sphere',
+  name: i18n.t('sphereArea'),
   path: 'area-sphere',
-  description: 'Area of a Sphere',
-  longDescription:
-    'This calculator determines the surface area of a sphere using the formula A = 4πr². You can either input the radius to find the surface area or enter the surface area to calculate the required radius. This tool is useful for students studying geometry, engineers working with spherical objects, and anyone needing to perform calculations involving spherical surfaces.',
+  description: i18n.t('sphereAreaDescription'),
+  shortDescription: i18n.t('sphereAreaShortDescription'),
+  longDescription: i18n.t('sphereAreaLongDescription'),
   formula: 'A = 4 * pi * r**2',
   presets: [],
   variables: [

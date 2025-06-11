@@ -18,6 +18,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { Icon } from '@iconify/react';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import i18n from 'i18n/i18n';
 
 interface NavbarProps {
   onSwitchTheme: () => void;
@@ -38,6 +39,24 @@ const Navbar: React.FC<NavbarProps> = ({ onSwitchTheme }) => {
 
   const buttons: ReactNode[] = [
     <DarkModeIcon onClick={onSwitchTheme} style={{ cursor: 'pointer' }} />,
+    <select
+      style={{
+        marginLeft: '10px',
+        border: 'none',
+        backgroundColor: 'transparent',
+        color: 'inherit',
+        fontSize: '16px'
+      }}
+      value={i18n.language.split('-')[0]}
+      onChange={(e) => {
+        i18n.changeLanguage(e.target.value);
+        window.location.reload();
+      }}
+    >
+      <option value="en">English</option>
+      <option value="it">Italiano</option>
+    </select>,
+
     <Icon
       onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
       style={{ cursor: 'pointer' }}
@@ -46,8 +65,6 @@ const Navbar: React.FC<NavbarProps> = ({ onSwitchTheme }) => {
     />,
     <iframe
       src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
-      frameBorder="0"
-      scrolling="0"
       width="150"
       height="30"
       title="GitHub"

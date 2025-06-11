@@ -29,7 +29,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function Rot13({ title }: ToolComponentProps) {
+export default function Rot13({ title, longDescription }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -46,11 +46,7 @@ export default function Rot13({ title }: ToolComponentProps) {
       resultComponent={<ToolTextResult title="ROT13 Result" value={result} />}
       initialValues={initialValues}
       getGroups={null}
-      toolInfo={{
-        title: 'What Is ROT13?',
-        description:
-          'ROT13 (rotate by 13 places) is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the alphabet. ROT13 is a special case of the Caesar cipher which was developed in ancient Rome. Because there are 26 letters in the English alphabet, ROT13 is its own inverse; that is, to undo ROT13, the same algorithm is applied, so the same action can be used for encoding and decoding.'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
       input={input}
       setInput={setInput}

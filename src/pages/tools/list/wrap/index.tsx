@@ -84,7 +84,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function Wrap({ title }: ToolComponentProps) {
+export default function Wrap({ title, longDescription }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -177,11 +177,7 @@ export default function Wrap({ title }: ToolComponentProps) {
       initialValues={initialValues}
       getGroups={getGroups}
       validationSchema={validationSchema}
-      toolInfo={{
-        title: 'List Wrapping',
-        description:
-          "This tool allows you to add text before and after each item in a list. You can specify different text for the left and right sides, and control how the list is processed. It's useful for adding quotes, brackets, or other formatting to list items, preparing data for different formats, or creating structured text."
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
       input={input}
       setInput={setInput}

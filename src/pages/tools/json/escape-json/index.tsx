@@ -100,10 +100,7 @@ export default function EscapeJsonTool({
       }
       initialValues={initialValues}
       getGroups={getGroups}
-      toolInfo={{
-        title: 'What is a JSON Escaper?',
-        description: longDescription
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
       input={input}
       setInput={setInput}

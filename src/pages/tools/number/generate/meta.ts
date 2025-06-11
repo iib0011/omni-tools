@@ -1,14 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('number', {
-  name: 'Generate numbers',
+  name: i18n.t('generateNumbers'),
   path: 'generate',
-  shortDescription: 'Quickly calculate a list of integers in your browser',
+  description: i18n.t('generateNumbersDescription'),
+  shortDescription: i18n.t('generateNumbersShortDescription'),
   icon: 'lsicon:number-filled',
-  description:
-    'Quickly calculate a list of integers in your browser. To get your list, just specify the first integer, change value and total count in the options below, and this utility will generate that many integers',
   keywords: ['generate'],
   component: lazy(() => import('./index'))
 });

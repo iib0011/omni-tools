@@ -13,6 +13,7 @@ import { ArrowBack } from '@mui/icons-material';
 import BackButton from '@components/BackButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SearchIcon from '@mui/icons-material/Search';
+import i18n from 'i18n/i18n';
 
 export default function ToolsByCategory() {
   const navigate = useNavigate();
@@ -46,17 +47,14 @@ export default function ToolsByCategory() {
             <IconButton onClick={() => navigate('/')}>
               <ArrowBackIcon color={'primary'} />
             </IconButton>
-            <Typography
-              fontSize={22}
-              color={theme.palette.primary.main}
-            >{`All ${
+            <Typography fontSize={22} color={theme.palette.primary.main}>{`${
               getToolsByCategory().find(
                 (category) => category.type === categoryName
               )!.rawTitle
-            } Tools`}</Typography>
+            } `}</Typography>
           </Stack>
           <TextField
-            placeholder={'Search'}
+            placeholder={i18n.t('search')}
             InputProps={{
               endAdornment: <SearchIcon />,
               sx: {

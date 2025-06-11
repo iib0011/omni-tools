@@ -1,13 +1,13 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('video', {
-  name: 'Change speed',
+  name: i18n.t('changeSpeed'),
   path: 'change-speed',
   icon: 'material-symbols-light:speed-outline',
-  description:
-    'This online utility lets you change the speed of a video. You can speed it up or slow it down.',
-  shortDescription: 'Quickly change video speed',
+  description: i18n.t('changeSpeedDescription'),
+  shortDescription: i18n.t('changeSpeedShortDescription'),
   keywords: ['change', 'speed'],
   component: lazy(() => import('./index'))
 });

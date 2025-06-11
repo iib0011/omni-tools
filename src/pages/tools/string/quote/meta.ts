@@ -1,14 +1,16 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
+
 // import image from '@assets/text.png';
 
 export const tool = defineTool('string', {
-  name: 'Quote',
+  name: i18n.t('quote'),
   path: 'quote',
   icon: 'proicons:quote',
-  description:
-    'A tool to add quotation marks or custom characters around text. Perfect for formatting strings for code, citations, or stylistic purposes.',
-  shortDescription: 'Add quotes around text easily.',
+  description: i18n.t('quoteDescription'),
+  shortDescription: i18n.t('quoteShortDescription'),
+  longDescription: i18n.t('quoteLongDescription'),
   keywords: ['quote'],
   component: lazy(() => import('./index'))
 });

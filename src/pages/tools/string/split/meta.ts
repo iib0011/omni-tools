@@ -1,14 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('string', {
   path: 'split',
-  name: 'Text splitter',
+  name: i18n.t('splitText'),
   icon: 'material-symbols-light:arrow-split',
-  description:
-    "World's simplest browser-based utility for splitting text. Load your text in the input form on the left and you'll automatically get pieces of this text on the right. Powerful, free, and fast. Load text – get chunks.",
-  shortDescription: 'Quickly split a text',
-  longDescription: 'Quickly split a text',
+  description: i18n.t('splitTextDescription'),
+  shortDescription: i18n.t('splitTextShortDescription'),
+  longDescription: i18n.t('splitTextLongDescription'),
   keywords: ['text', 'split'],
   component: lazy(() => import('./index'))
 });

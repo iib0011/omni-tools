@@ -1,13 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('json', {
-  name: 'Stringify JSON',
+  name: i18n.t('stringifyJson'),
   path: 'stringify',
   icon: 'ant-design:field-string-outlined',
-  description:
-    'Convert JavaScript objects and arrays into their JSON string representation. Options include custom indentation and HTML character escaping for web-safe JSON strings.',
-  shortDescription: 'Convert JavaScript objects to JSON strings',
+  description: i18n.t('stringifyJsonDescription'),
+  shortDescription: i18n.t('stringifyJsonShortDescription'),
+  longDescription: i18n.t('stringifyJsonLongDescription'),
   keywords: [
     'stringify',
     'serialize',

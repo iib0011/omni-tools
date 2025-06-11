@@ -47,7 +47,10 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function SplitPdf({ title }: ToolComponentProps) {
+export default function SplitPdf({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
@@ -163,17 +166,7 @@ export default function SplitPdf({ title }: ToolComponentProps) {
         }
       ]}
       onValuesChange={onValuesChange}
-      toolInfo={{
-        title: 'How to Use the Split PDF Tool',
-        description: `This tool allows you to extract specific pages from a PDF document. You can specify individual page numbers (e.g., 1,3,5) or page ranges (e.g., 2-6) or a combination of both (e.g., 1,3-5,8).
-
-Leave the page ranges field empty to include all pages from the PDF.
-
-Examples:
-- "1,5,9" extracts pages 1, 5, and 9
-- "1-5" extracts pages 1 through 5
-- "1,3-5,8-10" extracts pages 1, 3, 4, 5, 8, 9, and 10`
-      }}
+      toolInfo={{ title: title, description: longDescription }}
     />
   );
 }

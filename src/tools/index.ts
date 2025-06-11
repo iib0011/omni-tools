@@ -11,6 +11,7 @@ import { csvTools } from '../pages/tools/csv';
 import { timeTools } from '../pages/tools/time';
 import { IconifyIcon } from '@iconify/react';
 import { pdfTools } from '../pages/tools/pdf';
+import i18n from 'i18n/i18n';
 
 const toolCategoriesOrder: ToolCategory[] = [
   'image-generic',
@@ -44,77 +45,69 @@ const categoriesConfig: {
 }[] = [
   {
     type: 'string',
-    title: 'Text',
+    title: i18n.t('textTool'),
     icon: 'solar:text-bold-duotone',
-    value:
-      'Tools for working with text – convert text to images, find and replace text, split text into fragments, join text lines, repeat text, and much more.'
+    value: i18n.t('textToolDescription')
   },
   {
     type: 'png',
+    title: i18n.t('pngTool'),
     icon: 'ph:file-png-thin',
-    value:
-      'Tools for working with PNG images – convert PNGs to JPGs, create transparent PNGs, change PNG colors, crop, rotate, resize PNGs, and much more.'
+    value: i18n.t('pngToolDescription')
   },
   {
     type: 'number',
+    title: i18n.t('numberTool'),
     icon: 'lsicon:number-filled',
-    value:
-      'Tools for working with numbers – generate number sequences, convert numbers to words and words to numbers, sort, round, factor numbers, and much more.'
+    value: i18n.t('numberToolDescription')
   },
   {
     type: 'gif',
+    title: i18n.t('gifTool'),
     icon: 'material-symbols-light:gif-rounded',
-    value:
-      'Tools for working with GIF animations – create transparent GIFs, extract GIF frames, add text to GIF, crop, rotate, reverse GIFs, and much more.'
+    value: i18n.t('gifToolDescription')
   },
   {
     type: 'list',
+    title: i18n.t('listTool'),
     icon: 'solar:list-bold-duotone',
-    value:
-      'Tools for working with lists – sort, reverse, randomize lists, find unique and duplicate list items, change list item separators, and much more.'
+    value: i18n.t('listToolDescription')
   },
   {
     type: 'json',
+    title: i18n.t('jsonTool'),
     icon: 'lets-icons:json-light',
-    value:
-      'Tools for working with JSON data structures – prettify and minify JSON objects, flatten JSON arrays, stringify JSON values, analyze data, and much more'
+    value: i18n.t('jsonToolDescription')
   },
   {
     type: 'time',
+    title: i18n.t('timeTool'),
     icon: 'mdi:clock-time-five',
-    value:
-      'Tools for working with time and date – calculate time differences, convert between time zones, format dates, generate date sequences, and much more.'
+    value: i18n.t('timeToolDescription')
   },
   {
     type: 'csv',
+    title: i18n.t('csvTool'),
     icon: 'material-symbols-light:csv-outline',
-    value:
-      'Tools for working with CSV files - convert CSV to different formats, manipulate CSV data, validate CSV structure, and process CSV files efficiently.'
+    value: i18n.t('csvToolDescription')
   },
   {
     type: 'video',
+    title: i18n.t('videoTool'),
     icon: 'lets-icons:video-light',
-    value:
-      'Tools for working with videos – extract frames from videos, create GIFs from videos, convert videos to different formats, and much more.'
+    value: i18n.t('videoToolDescription')
   },
   {
     type: 'pdf',
+    title: i18n.t('pdfTool'),
     icon: 'tabler:pdf',
-    value:
-      'Tools for working with PDF files - extract text from PDFs, convert PDFs to other formats, manipulate PDFs, and much more.'
-  },
-  {
-    type: 'time',
-    icon: 'fluent-mdl2:date-time',
-    value:
-      'Tools for working with time and date – draw clocks and calendars, generate time and date sequences, calculate average time, convert between time zones, and much more.'
+    value: i18n.t('pdfToolDescription')
   },
   {
     type: 'image-generic',
-    title: 'Image',
+    title: i18n.t('imageTool'),
     icon: 'material-symbols-light:image-outline-rounded',
-    value:
-      'Tools for working with pictures – compress, resize, crop, convert to JPG, rotate, remove background and much more.'
+    value: i18n.t('imageToolDescription')
   }
 ];
 // use for changelogs
@@ -159,7 +152,7 @@ export const getToolsByCategory = (): {
       );
       return {
         rawTitle: categoryConfig?.title ?? capitalizeFirstLetter(type),
-        title: `${categoryConfig?.title ?? capitalizeFirstLetter(type)} Tools`,
+        title: categoryConfig?.title ?? capitalizeFirstLetter(type),
         description: categoryConfig?.value ?? '',
         type,
         icon: categoryConfig!.icon,

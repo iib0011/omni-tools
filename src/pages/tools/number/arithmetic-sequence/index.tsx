@@ -69,7 +69,10 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function ArithmeticSequence({ title }: ToolComponentProps) {
+export default function ArithmeticSequence({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [result, setResult] = useState<string>('');
 
   return (
@@ -82,11 +85,7 @@ export default function ArithmeticSequence({ title }: ToolComponentProps) {
       initialValues={initialValues}
       validationSchema={validationSchema}
       exampleCards={exampleCards}
-      toolInfo={{
-        title: 'What is an Arithmetic Sequence?',
-        description:
-          'An arithmetic sequence is a sequence of numbers where the difference between each consecutive term is constant. This constant difference is called the common difference. Given the first term (a₁) and the common difference (d), each term can be found by adding the common difference to the previous term.'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       getGroups={({ values, updateField }) => [
         {
           title: 'Sequence Parameters',

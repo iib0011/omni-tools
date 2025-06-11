@@ -11,7 +11,8 @@ const initialValues = {};
 const validationSchema = Yup.object({});
 
 export default function RemoveBackgroundFromImage({
-  title
+  title,
+  longDescription
 }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
@@ -78,11 +79,7 @@ export default function RemoveBackgroundFromImage({
           loadingText={'Removing background'}
         />
       }
-      toolInfo={{
-        title: 'Remove Background from Image',
-        description:
-          'This tool uses AI to automatically remove the background from your images, creating a transparent PNG. Perfect for product photos, profile pictures, and design assets.'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
     />
   );
 }

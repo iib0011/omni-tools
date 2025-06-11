@@ -1,13 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('string', {
   path: 'join',
-  name: 'Text Joiner',
+  name: i18n.t('textJoiner'),
   icon: 'tabler:arrows-join',
-  description:
-    "World's Simplest Text Tool World's simplest browser-based utility for joining text. Load your text in the input form on the left and you'll automatically get merged text on the right. Powerful, free, and fast. Load text – get joined lines",
-  shortDescription: 'Quickly merge texts',
+  description: i18n.t('textJoinerDescription'),
+  shortDescription: i18n.t('textJoinerShortDescription'),
+  longDescription: i18n.t('textJoinerLongDescription'),
   keywords: ['text', 'join'],
   component: lazy(() => import('./index'))
 });

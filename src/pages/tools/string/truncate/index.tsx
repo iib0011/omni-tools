@@ -66,7 +66,10 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
   }
 ];
 
-export default function Truncate({ title }: ToolComponentProps) {
+export default function Truncate({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -155,11 +158,7 @@ export default function Truncate({ title }: ToolComponentProps) {
       resultComponent={
         <ToolTextResult title={'Truncated text'} value={result} />
       }
-      toolInfo={{
-        title: 'Truncate text',
-        description:
-          'Load your text in the input form on the left and you will automatically get truncated text on the right.'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
     />
   );

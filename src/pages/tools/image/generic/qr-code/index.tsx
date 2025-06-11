@@ -165,7 +165,10 @@ const validationSchema = Yup.object().shape({
   })
 });
 
-export default function QRCodeGenerator({ title }: ToolComponentProps) {
+export default function QRCodeGenerator({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [result, setResult] = useState<File | null>(null);
   const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
@@ -462,11 +465,7 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
       resultComponent={
         <ToolFileResult title={'Generated QR code'} value={result} />
       }
-      toolInfo={{
-        title: 'QR Code Generator',
-        description:
-          'Generate QR codes for different data types: URL, Text, Email, Phone, SMS, WiFi, vCard, and more. Customize the size and colors to create the perfect QR code for your needs.'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
     />
   );
 }

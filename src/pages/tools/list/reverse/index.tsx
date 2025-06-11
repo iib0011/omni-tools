@@ -110,7 +110,10 @@ argument`,
   }
 ];
 
-export default function Reverse({ title }: ToolComponentProps) {
+export default function Reverse({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -181,11 +184,7 @@ export default function Reverse({ title }: ToolComponentProps) {
       resultComponent={
         <ToolTextResult title={'Reversed list'} value={result} />
       }
-      toolInfo={{
-        title: 'What Is a List Reverser?',
-        description:
-          'With this utility, you can reverse the order of items in a list. The utility first splits the input list into individual items and then iterates through them from the last item to the first item, printing each item to the output during the iteration. The input list may contain anything that can be represented as textual data, which includes digits, numbers, strings, words, sentences, etc. The input item separator can also be a regular expression. For example, the regex /[;,]/ will allow you to use items that are either comma- or semicolon-separated. The input and output list items delimiters can be customized in the options. By default, both input and output lists are comma-separated. Listabulous!'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
     />
   );

@@ -1,14 +1,14 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('number', {
-  name: 'Generate Arithmetic Sequence',
+  name: i18n.t('generateArithmeticSequence'),
   path: 'arithmetic-sequence',
   icon: 'ic:sharp-plus',
-  description:
-    'Generate an arithmetic sequence by specifying the first term (a₁), common difference (d), and number of terms (n). The tool creates a sequence where each number differs from the previous by a constant difference.',
-  shortDescription:
-    'Generate a sequence where each term differs by a constant value.',
+  description: i18n.t('generateArithmeticSequenceDescription'),
+  shortDescription: i18n.t('generateArithmeticSequenceShortDescription'),
+  longDescription: i18n.t('generateArithmeticSequenceLongDescription'),
   keywords: [
     'arithmetic',
     'sequence',

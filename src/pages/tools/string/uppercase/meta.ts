@@ -1,13 +1,13 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('string', {
-  name: 'Uppercase',
+  name: i18n.t('uppercase'),
   path: 'uppercase',
   icon: 'material-symbols-light:text-fields',
-  description:
-    "World's simplest browser-based utility for converting text to uppercase. Just input your text and it will be automatically converted to all capital letters. Perfect for creating headlines, emphasizing text, or standardizing text format. Supports various text formats and preserves special characters.",
-  shortDescription: 'Convert text to uppercase letters',
+  description: i18n.t('uppercaseDescription'),
+  shortDescription: i18n.t('uppercaseShortDescription'),
   keywords: ['uppercase'],
   component: lazy(() => import('./index'))
 });

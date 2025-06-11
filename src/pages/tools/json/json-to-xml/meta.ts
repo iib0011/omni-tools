@@ -1,12 +1,13 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
+import i18n from 'i18n/i18n';
 
 export const tool = defineTool('json', {
-  name: 'Convert JSON to XML',
+  name: i18n.t('jsonToXml'),
   path: 'json-to-xml',
   icon: 'mdi-light:xml',
-  description: 'Convert JSON files to XML format with customizable options.',
-  shortDescription: 'Convert JSON data to XML format',
+  description: i18n.t('jsonToXmlDescription'),
+  shortDescription: i18n.t('jsonToXmlShortDescription'),
   keywords: ['json', 'xml', 'convert', 'transform', 'parse'],
   component: lazy(() => import('./index'))
 });

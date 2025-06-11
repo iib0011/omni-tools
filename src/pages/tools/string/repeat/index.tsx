@@ -47,7 +47,10 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function Replacer({ title }: ToolComponentProps) {
+export default function Replacer({
+  title,
+  longDescription
+}: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -103,11 +106,7 @@ export default function Replacer({ title }: ToolComponentProps) {
       resultComponent={
         <ToolTextResult title={'Repeated text'} value={result} />
       }
-      toolInfo={{
-        title: 'Repeat text',
-        description:
-          'This tool allows you to repeat a given text multiple times with an optional separator.'
-      }}
+      toolInfo={{ title: title, description: longDescription }}
       exampleCards={exampleCards}
     />
   );
