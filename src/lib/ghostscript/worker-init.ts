@@ -1,5 +1,6 @@
 export const COMPRESS_ACTION = 'compress-pdf';
 export const PROTECT_ACTION = 'protect-pdf';
+export const UNLOCK_ACTION = 'unlock-pdf';
 
 export async function compressWithGhostScript(dataStruct: {
   psDataURL: string;
@@ -14,10 +15,23 @@ export async function compressWithGhostScript(dataStruct: {
 
 export async function protectWithGhostScript(dataStruct: {
   psDataURL: string;
+  password: string;
 }): Promise<string> {
   const worker = getWorker();
   worker.postMessage({
     data: { ...dataStruct, type: PROTECT_ACTION },
+    target: 'wasm'
+  });
+  return getListener(worker);
+}
+
+export async function unlockWithGhostScript(dataStruct: {
+  psDataURL: string;
+  speed: 'slow' | 'normal' | 'fast';
+}): Promise<string> {
+  const worker = getWorker();
+  worker.postMessage({
+    data: { ...dataStruct, type: UNLOCK_ACTION },
     target: 'wasm'
   });
   return getListener(worker);

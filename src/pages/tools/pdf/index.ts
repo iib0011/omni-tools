@@ -5,6 +5,7 @@ import { DefinedTool } from '@tools/defineTool';
 import { tool as compressPdfTool } from './compress-pdf/meta';
 import { tool as protectPdfTool } from './protect-pdf/meta';
 import { meta as pdfToEpub } from './pdf-to-epub/meta';
+import { meta as unlockPdfTool } from './unlock-pdf/meta';
 
 export const pdfTools: DefinedTool[] = [
   splitPdfMeta,
@@ -12,5 +13,6 @@ export const pdfTools: DefinedTool[] = [
   compressPdfTool,
   protectPdfTool,
   mergePdf,
-  pdfToEpub
+  pdfToEpub,
+  unlockPdfTool
 ];
