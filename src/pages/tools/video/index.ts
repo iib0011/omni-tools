@@ -9,6 +9,7 @@ import { tool as loopVideo } from './loop/meta';
 import { tool as flipVideo } from './flip/meta';
 import { tool as cropVideo } from './crop-video/meta';
 import { tool as changeSpeed } from './change-speed/meta';
+import { tool as convertToGif } from './convert-to-gif/meta';
 
 export const videoTools = [
   ...gifTools,
@@ -18,5 +19,6 @@ export const videoTools = [
   loopVideo,
   flipVideo,
   cropVideo,
-  changeSpeed
+  changeSpeed,
+  convertToGif
 ];

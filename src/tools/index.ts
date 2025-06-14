@@ -11,6 +11,7 @@ import { csvTools } from '../pages/tools/csv';
 import { timeTools } from '../pages/tools/time';
 import { IconifyIcon } from '@iconify/react';
 import { pdfTools } from '../pages/tools/pdf';
+import { tool as videoConvertToGif } from '../pages/tools/video/convert-to-gif/meta';
 
 const toolCategoriesOrder: ToolCategory[] = [
   'image-generic',
