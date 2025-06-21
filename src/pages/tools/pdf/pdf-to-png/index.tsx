@@ -1,62 +1,70 @@
-import { Box } from '@mui/material';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ToolContent from '@components/ToolContent';
+import ToolPdfInput from '@components/input/ToolPdfInput';
 import { ToolComponentProps } from '@tools/defineTool';
-import ToolTextInput from '@components/input/ToolTextInput';
-import ToolTextResult from '@components/result/ToolTextResult';
-import { GetGroupsType } from '@components/options/ToolOptions';
-import { CardExampleType } from '@components/examples/ToolExamples';
-import { main } from './service';
-import { InitialValuesType } from './types';
+import { convertPdfToPngImages } from './service';
+import ToolMultiFileResult from '@components/result/ToolMultiFileResult';
 
-const initialValues: InitialValuesType = {
-  // splitSeparator: '\n'
+type ImagePreview = {
+  blob: Blob;
+  url: string;
+  filename: string;
 };
 
-const exampleCards: CardExampleType<InitialValuesType>[] = [
-  {
-    title: 'Split a String',
-    description: 'This example shows how to split a string into multiple lines',
-    sampleText: 'Hello World,Hello World',
-    sampleResult: `Hello World
-Hello World`,
-    sampleOptions: {
-      //     splitSeparator: ','
-    }
-  }
-];
-export default function PdfToPng({
-  title,
-  longDescription
-}: ToolComponentProps) {
-  const [input, setInput] = useState<string>('');
-  const [result, setResult] = useState<string>('');
+export default function PdfToPng({ title }: ToolComponentProps) {
+  const [input, setInput] = useState<File | null>(null);
+  const [images, setImages] = useState<ImagePreview[]>([]);
+  const [zipBlob, setZipBlob] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
 
-  const compute = (values: InitialValuesType, input: string) => {
-    setResult(main(input, values));
+  const compute = async (_: {}, file: File | null) => {
+    if (!file) return;
+    setLoading(true);
+    setImages([]);
+    setZipBlob(null);
+    try {
+      const { images, zipFile } = await convertPdfToPngImages(file);
+      setImages(images);
+      setZipBlob(zipFile);
+    } catch (err) {
+      console.error('Conversion failed:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const getGroups: GetGroupsType<InitialValuesType> | null = ({
-    values,
-    updateField
-  }) => [
-    {
-      title: 'Example Settings',
-      component: <Box></Box>
-    }
-  ];
   return (
     <ToolContent
       title={title}
       input={input}
-      inputComponent={<ToolTextInput value={input} onChange={setInput} />}
-      resultComponent={<ToolTextResult value={result} />}
-      initialValues={initialValues}
-      exampleCards={exampleCards}
-      getGroups={getGroups}
       setInput={setInput}
+      initialValues={{}}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      inputComponent={
+        <ToolPdfInput
+          value={input}
+          onChange={setInput}
+          accept={['application/pdf']}
+          title="Upload a PDF"
+        />
+      }
+      resultComponent={
+        <ToolMultiFileResult
+          title="Converted PNG Pages"
+          value={images.map((img) => {
+            return new File([img.blob], img.filename, { type: 'image/png' });
+          })}
+          zipFile={zipBlob}
+          loading={loading}
+          loadingText="Converting PDF pages"
+        />
+      }
+      getGroups={null}
+      toolInfo={{
+        title: 'Convert PDF pages into PNG images',
+        description:
+          'Upload your PDF and get each page rendered as a high-quality PNG. You can preview, download individually, or get all images in a ZIP.'
+      }}
     />
   );
 }
