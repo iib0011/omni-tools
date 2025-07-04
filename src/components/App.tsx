@@ -9,6 +9,7 @@ import { SnackbarProvider } from 'notistack';
 import { tools } from '../tools';
 import './index.css';
 import { darkTheme, lightTheme } from '../config/muiConfig';
+import ScrollToTopButton from './ScrollToTopButton';
 
 const AppRoutes = () => {
   const updatedRoutesConfig = [...routesConfig];
@@ -48,6 +49,7 @@ function App() {
           </BrowserRouter>
         </CustomSnackBarProvider>
       </SnackbarProvider>
+      <ScrollToTopButton />
     </ThemeProvider>
   );
 }
