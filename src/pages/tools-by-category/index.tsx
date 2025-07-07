@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { filterTools, getToolsByCategory } from '../../tools';
 import Hero from 'components/Hero';
-import { capitalizeFirstLetter } from '@utils/string';
+import { capitalizeFirstLetter, getToolCategoryTitle } from '@utils/string';
 import { Icon } from '@iconify/react';
 import { categoriesColors } from 'config/uiConfig';
 import React, { useEffect } from 'react';
@@ -21,9 +21,7 @@ export default function ToolsByCategory() {
   const mainContentRef = React.useRef<HTMLDivElement>(null);
   const { categoryName } = useParams();
   const [searchTerm, setSearchTerm] = React.useState<string>('');
-  const rawTitle = getToolsByCategory().find(
-    (category) => category.type === categoryName
-  )!.rawTitle;
+  const rawTitle = getToolCategoryTitle(categoryName as string);
 
   useEffect(() => {
     if (mainContentRef.current) {

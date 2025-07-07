@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: tsc">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: add array key">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ResultFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ResultFooter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolMultiFileResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolMultiFileResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/string.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/string.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +22,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fork/C043/main" />
+        <entry key="$PROJECT_DIR$" value="fork/y1hao/dark" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -197,6 +196,20 @@
         "number": 150
       },
       "lastSeen": 1751850367300
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6dv21R",
+        "number": 162
+      },
+      "lastSeen": 1751893739514
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6dwQJi",
+        "number": 163
+      },
+      "lastSeen": 1751893861615
     }
   ]
 }]]></component>
@@ -255,7 +268,7 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "#150 on fork/omenmn/pdftopng",
+    "git-widget-placeholder": "#163 on fork/y1hao/grouping",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/pages/tools/json",
@@ -495,22 +508,8 @@
       <workItem from="1748282636141" duration="478000" />
       <workItem from="1749047510481" duration="879000" />
       <workItem from="1751846528195" duration="4358000" />
-    </task>
-    <task id="LOCAL-00157" summary="refactor: use ToolContent">
-      <option name="closed" value="true" />
-      <created>1741543593426</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1741543593427</updated>
-    </task>
-    <task id="LOCAL-00158" summary="fix: prettify json">
-      <option name="closed" value="true" />
-      <created>1741543732607</created>
-      <option name="number" value="00158" />
-      <option name="presentableId" value="LOCAL-00158" />
-      <option name="project" value="LOCAL" />
-      <updated>1741543732607</updated>
+      <workItem from="1751852868038" duration="680000" />
+      <workItem from="1751893034799" duration="1192000" />
     </task>
     <task id="LOCAL-00159" summary="refactor: sum">
       <option name="closed" value="true" />
@@ -888,7 +887,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751850152784</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="chore: remove .codebuddy">
+      <option name="closed" value="true" />
+      <created>1751852942341</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1751852942341</updated>
+    </task>
+    <task id="LOCAL-00207" summary="chore: add array key">
+      <option name="closed" value="true" />
+      <created>1751893722720</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1751893722720</updated>
+    </task>
+    <option name="localTasksCounter" value="208" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -935,8 +950,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: stars button width for 1k+ " />
-    <MESSAGE value="feat: compress pdf" />
     <MESSAGE value="refactor: compress pdf" />
     <MESSAGE value="refactor: lib" />
     <MESSAGE value="fix: path" />
@@ -960,7 +973,9 @@
     <MESSAGE value="chore: use scrollY" />
     <MESSAGE value="chore: remove flip x and y" />
     <MESSAGE value="fix: tsc" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: tsc" />
+    <MESSAGE value="chore: remove .codebuddy" />
+    <MESSAGE value="chore: add array key" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add array key" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
