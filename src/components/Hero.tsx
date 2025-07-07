@@ -26,9 +26,7 @@ const exampleTools: { label: string; url: string }[] = [
 export default function Hero() {
   const [inputValue, setInputValue] = useState<string>('');
   const theme = useTheme();
-  const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(
-    _.shuffle(tools)
-  );
+  const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
   const navigate = useNavigate();
   const handleInputChange = (
     event: React.ChangeEvent<{}>,
@@ -66,6 +64,7 @@ export default function Hero() {
         sx={{ mb: 2 }}
         autoHighlight
         options={filteredTools}
+        groupBy={(option) => option.type}
         inputValue={inputValue}
         getOptionLabel={(option) => option.name}
         renderInput={(params) => (
