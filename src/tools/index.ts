@@ -4,6 +4,7 @@ import { DefinedTool, ToolCategory } from './defineTool';
 import { capitalizeFirstLetter } from '../utils/string';
 import { numberTools } from '../pages/tools/number';
 import { videoTools } from '../pages/tools/video';
+import { audioTools } from 'pages/tools/audio';
 import { listTools } from '../pages/tools/list';
 import { Entries } from 'type-fest';
 import { jsonTools } from '../pages/tools/json';
@@ -23,7 +24,8 @@ const toolCategoriesOrder: ToolCategory[] = [
   'number',
   'png',
   'time',
-  'gif'
+  'gif',
+  'audio'
 ];
 export const tools: DefinedTool[] = [
   ...imageTools,
@@ -34,7 +36,8 @@ export const tools: DefinedTool[] = [
   ...csvTools,
   ...videoTools,
   ...numberTools,
-  ...timeTools
+  ...timeTools,
+  ...audioTools
 ];
 const categoriesConfig: {
   type: ToolCategory;
@@ -115,6 +118,12 @@ const categoriesConfig: {
     icon: 'material-symbols-light:image-outline-rounded',
     value:
       'Tools for working with pictures – compress, resize, crop, convert to JPG, rotate, remove background and much more.'
+  },
+  {
+    type: 'audio',
+    icon: 'rivet-icons:audio',
+    value:
+      'Tools for working with audio – extract audio from video, adjusting audio speed, merging multiple audio files and much more.'
   }
 ];
 // use for changelogs
