@@ -49,11 +49,10 @@ export default function ToolFileResult({
   return (
     <Box>
       <InputHeader title={title} />
-
       <Box
         sx={{
           width: '100%',
-          maxHeight: globalInputHeight,
+          height: globalInputHeight,
           overflowY: 'auto',
           display: 'flex',
           flexDirection: 'column',
@@ -62,6 +61,7 @@ export default function ToolFileResult({
           borderRadius: 2,
           boxShadow: '5',
           bgcolor: 'background.paper',
+          alignItems: 'center',
           p: 2
         }}
       >
@@ -80,7 +80,8 @@ export default function ToolFileResult({
               {loadingText}... This may take a moment.
             </Typography>
           </Box>
-        ) : value.length > 0 ? (
+        ) : (
+          value.length > 0 &&
           value.map((file, idx) => {
             const preview = URL.createObjectURL(file);
             const fileType = getFileType(file);
@@ -95,7 +96,10 @@ export default function ToolFileResult({
                       : 'none',
                   p: 1,
                   border: '1px solid #ddd',
-                  borderRadius: 2
+                  borderRadius: 2,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center'
                 }}
               >
                 {fileType === 'image' && (
@@ -121,31 +125,20 @@ export default function ToolFileResult({
                   onClick={() => handleDownload(file)}
                   size="small"
                   sx={{ mt: 1 }}
-                  variant="outlined"
+                  variant="contained"
                 >
                   Download {file.name}
                 </Button>
               </Box>
             );
           })
-        ) : (
-          <Typography>No output available yet.</Typography>
         )}
       </Box>
-
-      {zipFile && (
-        <Box sx={{ mt: 2, textAlign: 'center' }}>
-          <Button variant="contained" onClick={() => handleDownload(zipFile)}>
-            Download All as ZIP
-          </Button>
-        </Box>
-      )}
-
       <ResultFooter
-        disabled
+        downloadLabel={'Download All as ZIP'}
         hideCopy
-        handleCopy={() => {}}
-        handleDownload={() => {}}
+        disabled={!zipFile}
+        handleDownload={() => zipFile && handleDownload(zipFile)}
       />
     </Box>
   );
