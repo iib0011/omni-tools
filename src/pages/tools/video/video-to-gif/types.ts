@@ -1,5 +1,5 @@
 export type InitialValuesType = {
-  quality: string;
+  quality: 'mid' | 'high' | 'low' | 'ultra';
   fps: string;
   scale: string;
 };
