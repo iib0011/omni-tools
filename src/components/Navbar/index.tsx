@@ -42,6 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
   const buttons: ReactNode[] = [
     <Icon
+      key={mode}
       onClick={onChangeMode}
       style={{ cursor: 'pointer' }}
       fontSize={30}
