@@ -8,12 +8,14 @@ export default function ResultFooter({
   handleDownload,
   handleCopy,
   disabled,
-  hideCopy
+  hideCopy,
+  downloadLabel = 'Download'
 }: {
   handleDownload: () => void;
-  handleCopy: () => void;
+  handleCopy?: () => void;
   disabled?: boolean;
   hideCopy?: boolean;
+  downloadLabel?: string;
 }) {
   return (
     <Stack mt={1} direction={'row'} spacing={2}>
@@ -22,7 +24,7 @@ export default function ResultFooter({
         onClick={handleDownload}
         startIcon={<DownloadIcon />}
       >
-        Save as
+        {downloadLabel}
       </Button>
       {!hideCopy && (
         <Button
