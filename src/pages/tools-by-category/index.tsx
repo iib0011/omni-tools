@@ -13,6 +13,7 @@ import { ArrowBack } from '@mui/icons-material';
 import BackButton from '@components/BackButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SearchIcon from '@mui/icons-material/Search';
+import { Helmet } from 'react-helmet';
 
 export default function ToolsByCategory() {
   const navigate = useNavigate();
@@ -20,6 +21,9 @@ export default function ToolsByCategory() {
   const mainContentRef = React.useRef<HTMLDivElement>(null);
   const { categoryName } = useParams();
   const [searchTerm, setSearchTerm] = React.useState<string>('');
+  const rawTitle = getToolsByCategory().find(
+    (category) => category.type === categoryName
+  )!.rawTitle;
 
   useEffect(() => {
     if (mainContentRef.current) {
@@ -29,6 +33,9 @@ export default function ToolsByCategory() {
 
   return (
     <Box sx={{ backgroundColor: 'background.default' }}>
+      <Helmet>
+        <title>{`${rawTitle} Tools`}</title>
+      </Helmet>
       <Box
         padding={{ xs: 1, md: 3, lg: 5 }}
         display={'flex'}
@@ -49,11 +56,7 @@ export default function ToolsByCategory() {
             <Typography
               fontSize={22}
               color={theme.palette.primary.main}
-            >{`All ${
-              getToolsByCategory().find(
-                (category) => category.type === categoryName
-              )!.rawTitle
-            } Tools`}</Typography>
+            >{`All ${rawTitle} Tools`}</Typography>
           </Stack>
           <TextField
             placeholder={'Search'}
