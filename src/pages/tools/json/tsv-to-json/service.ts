@@ -1,95 +1,98 @@
-import { InitialValuesType } from './types';
-import { beautifyJson } from '../prettify/service';
-import { minifyJson } from '../minify/service';
+import { ParsedTSV, TSVParseOptions } from './types';
 
-export function convertTsvToJson(
-  input: string,
-  options: InitialValuesType
-): string {
-  if (!input) return '';
-  const lines = input.split('\n');
-  const result: any[] = [];
-  let headers: string[] = [];
-
-  // Filter out comments and empty lines
-  const validLines = lines.filter((line) => {
-    const trimmedLine = line.trim();
-    return (
-      trimmedLine &&
-      (!options.skipEmptyLines ||
-        !containsOnlyCustomCharAndSpaces(trimmedLine, options.delimiter)) &&
-      !trimmedLine.startsWith(options.comment)
-    );
-  });
-
-  if (validLines.length === 0) {
-    return '[]';
+/**
+ * Validates and escapes a delimiter character for safe regex use
+ * @param char - The delimiter character to validate and escape
+ * @returns The escaped delimiter character
+ * @throws Error if the delimiter is invalid
+ */
+function validateAndEscapeDelimiter(char: string): string {
+  // Validate input - only allow single characters
+  if (!char || char.length !== 1) {
+    throw new Error('Delimiter must be a single character');
   }
-
-  // Parse headers if enabled
-  if (options.useHeaders) {
-    headers = parseCsvLine(validLines[0], options);
-    validLines.shift();
-  }
-
-  // Parse data lines
-  for (const line of validLines) {
-    const values = parseCsvLine(line, options);
-
-    if (options.useHeaders) {
-      const obj: Record<string, any> = {};
-      headers.forEach((header, i) => {
-        obj[header] = parseValue(values[i], options.dynamicTypes);
-      });
-      result.push(obj);
-    } else {
-      result.push(values.map((v) => parseValue(v, options.dynamicTypes)));
-    }
-  }
-
-  return options.indentationType === 'none'
-    ? minifyJson(JSON.stringify(result))
-    : beautifyJson(
-        JSON.stringify(result),
-        options.indentationType,
-        options.spacesCount
-      );
+  
+  // Escape special regex characters to prevent ReDoS
+  return char.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-const parseCsvLine = (line: string, options: InitialValuesType): string[] => {
-  const values: string[] = [];
-  let currentValue = '';
-  let inQuotes = false;
+export function parseTSV
+  const { 
+    delimiter = '\t', 
+    hasHeader = true, 
+    skipEmptyLines = true 
+  } = options;
 
-  for (let i = 0; i < line.length; i++) {
-    const char = line[i];
-
-    if (char === options.quote) {
-      inQuotes = !inQuotes;
-    } else if (char === options.delimiter && !inQuotes) {
-      values.push(currentValue.trim());
-      currentValue = '';
-    } else {
-      currentValue += char;
-    }
+  if (!content || content.trim().length === 0) {
+    return {
+      headers: [],
+      rows: [],
+      totalRows: 0
+    };
   }
 
-  values.push(currentValue.trim());
-  return values;
-};
+  try {
+    // Validate and escape the delimiter to prevent ReDoS attacks
+    const escapedDelimiter = validateAndEscapeDelimiter(delimiter);
+    const delimiterRegex = new RegExp(escapedDelimiter, 'g');
 
-const parseValue = (value: string, dynamicTypes: boolean): any => {
-  if (!dynamicTypes) return value;
+    const lines = content.split(/\r?\n/);
+    const filteredLines = skipEmptyLines 
+      ? lines.filter(line => line.trim().length > 0)
+      : lines;
 
-  if (value.toLowerCase() === 'true') return true;
-  if (value.toLowerCase() === 'false') return false;
-  if (value === 'null') return null;
-  if (!isNaN(Number(value))) return Number(value);
+    if (filteredLines.length === 0) {
+      return {
+        headers: [],
+        rows: [],
+        totalRows: 0
+      };
+    }
 
-  return value;
-};
+    let headers: string[] = [];
+    let dataLines = filteredLines;
 
-function containsOnlyCustomCharAndSpaces(str: string, customChar: string) {
-  const regex = new RegExp(`^[${customChar}\\s]*$`);
-  return regex.test(str);
+    if (hasHeader && filteredLines.length > 0) {
+      headers = filteredLines[0].split(delimiterRegex);
+      dataLines = filteredLines.slice(1);
+    }
+
+    const rows = dataLines.map((line, index) => {
+      const values = line.split(delimiterRegex);
+      
+      if (hasHeader && headers.length > 0) {
+        const rowObject: Record<string, string> = {};
+        headers.forEach((header, i) => {
+          rowObject[header.trim()] = values[i]?.trim() || '';
+        });
+        return rowObject;
+      } else {
+        return values.map(value => value.trim());
+      }
+    });
+
+    return {
+      headers: headers.map(h => h.trim()),
+      rows,
+      totalRows: rows.length
+    };
+
+  } catch (error) {
+    throw new Error(`Failed to parse TSV: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  }
+}
+
+/**
+ * Converts TSV content to JSON format
+ * @param content - The TSV content to convert
+ * @param options - Conversion options
+ * @returns JSON string representation of the TSV data
+ */
+export function convertTSVToJSON(content: string, options: TSVParseOptions = {}): string {
+  try {
+    const parsed = parseTSV(content, options);
+    return JSON.stringify(parsed.rows, null, 2);
+  } catch (error) {
+    throw new Error(`Failed to convert TSV to JSON: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  }
 }
