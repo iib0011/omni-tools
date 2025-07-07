@@ -14,7 +14,7 @@ import ToolFileResult from '@components/result/ToolFileResult';
 import { processImage } from './service';
 
 const initialValues: InitialValuesType = {
-  rotateAngle: '0',
+  rotateAngle: '90',
   rotateMethod: 'Preset'
 };
 
@@ -73,9 +73,7 @@ export default function RotateImage({ title }: ToolComponentProps) {
                   options={[
                     { label: '90 degrees', value: '90' },
                     { label: '180 degrees', value: '180' },
-                    { label: '270 degrees', value: '270' },
-                    { label: 'Flip horizontally', value: 'flip-x' },
-                    { label: 'Flip vertically', value: 'flip-y' }
+                    { label: '270 degrees', value: '270' }
                   ]}
                 />
               </Box>
@@ -118,7 +116,7 @@ export default function RotateImage({ title }: ToolComponentProps) {
           value={input}
           onChange={setInput}
           title={'Input Image'}
-          accept={['image/jpeg', 'image/png', 'image/svg+xml', 'image/gif']}
+          accept={['image/*']}
         />
       }
       resultComponent={

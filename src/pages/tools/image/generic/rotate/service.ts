@@ -18,19 +18,7 @@ export const processImage = async (
       // Get current transform attribute or create new one
       let currentTransform = svgElement.getAttribute('transform') || '';
 
-      // Calculate rotation angle
-      let angle = 0;
-      if (rotateMethod === 'Preset') {
-        if (rotateAngle === 'flip-x') {
-          currentTransform += ' scale(-1,1)';
-        } else if (rotateAngle === 'flip-y') {
-          currentTransform += ' scale(1,-1)';
-        } else {
-          angle = parseInt(rotateAngle);
-        }
-      } else {
-        angle = parseInt(rotateAngle);
-      }
+      const angle = parseInt(rotateAngle);
 
       // Add rotation if needed
       if (angle !== 0) {
@@ -65,18 +53,7 @@ export const processImage = async (
     await ffmpeg.writeFile('input', await fetchFile(file));
 
     // Determine rotation command
-    let rotateCmd = '';
-    if (rotateMethod === 'Preset') {
-      if (rotateAngle === 'flip-x') {
-        rotateCmd = 'hflip';
-      } else if (rotateAngle === 'flip-y') {
-        rotateCmd = 'vflip';
-      } else {
-        rotateCmd = `rotate=${rotateAngle}*PI/180`;
-      }
-    } else {
-      rotateCmd = `rotate=${rotateAngle}*PI/180`;
-    }
+    const rotateCmd = `rotate=${rotateAngle}*PI/180`;
 
     // Execute FFmpeg command
     await ffmpeg.exec([
