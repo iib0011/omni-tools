@@ -7,11 +7,13 @@ import InputFooter from './InputFooter';
 export default function ToolTextInput({
   value,
   onChange,
-  title = 'Input text'
+  title = 'Input text',
+  placeholder
 }: {
   title?: string;
   value: string;
   onChange: (value: string) => void;
+  placeholder?: string;
 }) {
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -48,6 +50,7 @@ export default function ToolTextInput({
         value={value}
         onChange={(event) => onChange(event.target.value)}
         fullWidth
+        placeholder={placeholder}
         multiline
         rows={10}
         sx={{

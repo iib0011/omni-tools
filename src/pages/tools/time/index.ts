@@ -1,3 +1,4 @@
+import { tool as timeEpochConverter } from './epoch-converter/meta';
 import { tool as timeBetweenDates } from './time-between-dates/meta';
 import { tool as daysDoHours } from './convert-days-to-hours/meta';
 import { tool as hoursToDays } from './convert-hours-to-days/meta';
@@ -11,5 +12,6 @@ export const timeTools = [
   convertSecondsToTime,
   convertTimetoSeconds,
   truncateClockTime,
-  timeBetweenDates
+  timeBetweenDates,
+  timeEpochConverter
 ];
