@@ -1,4 +1,3 @@
-import { InitialValuesType } from './types';
 import cronstrue from 'cronstrue';
 import { isValidCron } from 'cron-validator';
 
@@ -14,7 +13,7 @@ export function validateCrontab(expr: string): boolean {
   return isValidCron(expr, { seconds: false, allowBlankDay: true });
 }
 
-export function main(input: string, options: InitialValuesType): string {
+export function main(input: string, _options: any): string {
   if (!input.trim()) return '';
   if (!validateCrontab(input)) {
     return 'Invalid crontab expression.';

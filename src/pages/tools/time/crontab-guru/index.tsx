@@ -7,9 +7,10 @@ import ToolTextResult from '@components/result/ToolTextResult';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { main, validateCrontab, explainCrontab } from './service';
-import { InitialValuesType } from './types';
 
-const initialValues: InitialValuesType = {};
+const initialValues = {};
+
+type InitialValuesType = typeof initialValues;
 
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
