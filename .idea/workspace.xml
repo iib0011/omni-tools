@@ -21,7 +21,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fork/y1hao/dark" />
+        <entry key="$PROJECT_DIR$" value="fork/y1hao/grouping" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -508,15 +508,8 @@
       <workItem from="1749047510481" duration="879000" />
       <workItem from="1751846528195" duration="4358000" />
       <workItem from="1751852868038" duration="680000" />
-      <workItem from="1751893034799" duration="1192000" />
-    </task>
-    <task id="LOCAL-00159" summary="refactor: sum">
-      <option name="closed" value="true" />
-      <created>1741544086061</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1741544086061</updated>
+      <workItem from="1751893034799" duration="1868000" />
+      <workItem from="1751991143661" duration="1750000" />
     </task>
     <task id="LOCAL-00160" summary="fix: tools by category scroll">
       <option name="closed" value="true" />
@@ -902,7 +895,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751893722720</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <task id="LOCAL-00208" summary="feat: groupBy tools autocomplete">
+      <option name="closed" value="true" />
+      <created>1751894332017</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1751894332017</updated>
+    </task>
+    <option name="localTasksCounter" value="209" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -949,7 +950,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: compress pdf" />
     <MESSAGE value="refactor: lib" />
     <MESSAGE value="fix: path" />
     <MESSAGE value="fix: vite worker format" />
@@ -974,7 +974,8 @@
     <MESSAGE value="fix: tsc" />
     <MESSAGE value="chore: remove .codebuddy" />
     <MESSAGE value="chore: add array key" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add array key" />
+    <MESSAGE value="feat: groupBy tools autocomplete" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: groupBy tools autocomplete" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
