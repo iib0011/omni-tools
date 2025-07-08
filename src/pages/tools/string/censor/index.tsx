@@ -89,7 +89,7 @@ export default function CensorText({
             value={values.wordsToCensor}
             onOwnChange={(val) => updateField('wordsToCensor', val)}
             description={`Specify all unwanted words that
-                 you want to hide in text`}
+                 you want to hide in text (separated by a new line)`}
           />
         </Box>
       )
