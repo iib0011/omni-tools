@@ -25,7 +25,8 @@ export type ToolCategory =
   | 'csv'
   | 'pdf'
   | 'image-generic'
-  | 'audio';
+  | 'audio'
+  | 'xml';
 
 export interface DefinedTool {
   type: ToolCategory;

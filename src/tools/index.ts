@@ -12,6 +12,7 @@ import { csvTools } from '../pages/tools/csv';
 import { timeTools } from '../pages/tools/time';
 import { IconifyIcon } from '@iconify/react';
 import { pdfTools } from '../pages/tools/pdf';
+import { xmlTools } from '../pages/tools/xml';
 
 const toolCategoriesOrder: ToolCategory[] = [
   'image-generic',
@@ -25,6 +26,8 @@ const toolCategoriesOrder: ToolCategory[] = [
   'csv',
   'number',
   'png',
+  'time',
+  'xml',
   'gif'
 ];
 export const tools: DefinedTool[] = [
@@ -37,7 +40,8 @@ export const tools: DefinedTool[] = [
   ...videoTools,
   ...numberTools,
   ...timeTools,
-  ...audioTools
+  ...audioTools,
+  ...xmlTools
 ];
 const categoriesConfig: {
   type: ToolCategory;
@@ -124,6 +128,12 @@ const categoriesConfig: {
     icon: 'ic:twotone-audiotrack',
     value:
       'Tools for working with audio – extract audio from video, adjusting audio speed, merging multiple audio files and much more.'
+  },
+  {
+    type: 'xml',
+    icon: 'mdi-light:xml',
+    value:
+      'Tools for working with XML data structures - viewer, beautifier, validator and much more'
   }
 ];
 // use for changelogs
