@@ -49,16 +49,25 @@ export default function CrontabGuru({
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const [isValid, setIsValid] = useState<boolean | null>(null);
+  const [hasInteracted, setHasInteracted] = useState<boolean>(false);
 
   const compute = (values: InitialValuesType, input: string) => {
-    setIsValid(validateCrontab(input));
+    if (hasInteracted) {
+      setIsValid(validateCrontab(input));
+    }
     setResult(main(input, values));
   };
 
   const handleExample = (expr: string) => {
     setInput(expr);
+    setHasInteracted(true);
     setIsValid(validateCrontab(expr));
     setResult(main(expr, initialValues));
+  };
+
+  const handleInputChange = (val: string) => {
+    if (!hasInteracted) setHasInteracted(true);
+    setInput(val);
   };
 
   const getGroups: GetGroupsType<InitialValuesType> | null = () => [];
@@ -71,7 +80,7 @@ export default function CrontabGuru({
         <>
           <ToolTextInput
             value={input}
-            onChange={setInput}
+            onChange={handleInputChange}
             placeholder="e.g. 35 16 * * 0-5"
           />
           <Stack direction="row" spacing={1} mt={1}>
@@ -90,12 +99,47 @@ export default function CrontabGuru({
         </>
       }
       resultComponent={
-        <>
-          {isValid === false && (
-            <Alert severity="error">Invalid crontab expression.</Alert>
+        <div style={{ position: 'relative', minHeight: 80 }}>
+          {hasInteracted && isValid === false && (
+            <div
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                zIndex: 2,
+                pointerEvents: 'auto',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: 'transparent'
+              }}
+            >
+              <Alert
+                severity="error"
+                style={{
+                  width: '80%',
+                  opacity: 0.85,
+                  textAlign: 'center',
+                  pointerEvents: 'none'
+                }}
+              >
+                Invalid crontab expression.
+              </Alert>
+            </div>
           )}
-          <ToolTextResult value={result} />
-        </>
+          <div
+            style={{
+              filter: hasInteracted && isValid === false ? 'blur(1px)' : 'none',
+              transition: 'filter 0.2s'
+            }}
+          >
+            <ToolTextResult
+              value={hasInteracted && isValid === false ? '' : result}
+            />
+          </div>
+        </div>
       }
       initialValues={initialValues}
       exampleCards={exampleCards}
