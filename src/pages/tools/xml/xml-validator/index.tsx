@@ -10,8 +10,6 @@ import { InitialValuesType } from './types';
 
 const initialValues: InitialValuesType = {};
 
-const getGroups = () => [];
-
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Validate XML',
@@ -54,7 +52,7 @@ export default function XmlValidator({
       resultComponent={<ToolTextResult value={result} extension="txt" />}
       initialValues={initialValues}
       exampleCards={exampleCards}
-      getGroups={getGroups}
+      getGroups={null}
       setInput={setInput}
       compute={compute}
       toolInfo={{ title: `What is a ${title}?`, description: longDescription }}

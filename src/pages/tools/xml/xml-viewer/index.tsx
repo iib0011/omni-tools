@@ -20,8 +20,6 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-const getGroups = () => [];
-
 export default function XmlViewer({
   title,
   longDescription
@@ -47,7 +45,7 @@ export default function XmlViewer({
       resultComponent={<ToolTextResult value={result} extension="xml" />}
       initialValues={initialValues}
       exampleCards={exampleCards}
-      getGroups={getGroups}
+      getGroups={null}
       setInput={setInput}
       compute={compute}
       toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
