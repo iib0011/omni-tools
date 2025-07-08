@@ -7,6 +7,7 @@ import ToolTextResult from '@components/result/ToolTextResult';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { main } from './service';
 import { InitialValuesType } from './types';
+import ValidatedToolResult from '@components/result/ValidatedToolResult';
 
 const initialValues: InitialValuesType = {};
 
@@ -67,48 +68,13 @@ export default function EpochConverter({
         />
       }
       resultComponent={
-        <div style={{ position: 'relative', minHeight: 80 }}>
-          {hasInteracted && isValid === false && (
-            <div
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                zIndex: 2,
-                pointerEvents: 'auto',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                background: 'transparent'
-              }}
-            >
-              <Alert
-                severity="error"
-                style={{
-                  width: '80%',
-                  opacity: 0.85,
-                  textAlign: 'center',
-                  pointerEvents: 'none'
-                }}
-              >
-                Invalid input. Please enter a valid epoch timestamp or date
-                string.
-              </Alert>
-            </div>
-          )}
-          <div
-            style={{
-              filter: hasInteracted && isValid === false ? 'blur(1px)' : 'none',
-              transition: 'filter 0.2s'
-            }}
-          >
-            <ToolTextResult
-              value={hasInteracted && isValid === false ? '' : result}
-            />
-          </div>
-        </div>
+        <ValidatedToolResult
+          isValid={isValid}
+          hasInteracted={hasInteracted}
+          errorMessage="Invalid input. Please enter a valid epoch timestamp or date string."
+        >
+          <ToolTextResult value={result} />
+        </ValidatedToolResult>
       }
       initialValues={initialValues}
       exampleCards={exampleCards}
