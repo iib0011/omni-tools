@@ -11,6 +11,7 @@ import { csvTools } from '../pages/tools/csv';
 import { timeTools } from '../pages/tools/time';
 import { IconifyIcon } from '@iconify/react';
 import { pdfTools } from '../pages/tools/pdf';
+import { xmlTools } from 'pages/tools/xml';
 
 const toolCategoriesOrder: ToolCategory[] = [
   'image-generic',
@@ -23,7 +24,8 @@ const toolCategoriesOrder: ToolCategory[] = [
   'number',
   'png',
   'time',
-  'gif'
+  'gif',
+  'xml'
 ];
 export const tools: DefinedTool[] = [
   ...imageTools,
@@ -34,7 +36,8 @@ export const tools: DefinedTool[] = [
   ...csvTools,
   ...videoTools,
   ...numberTools,
-  ...timeTools
+  ...timeTools,
+  ...xmlTools
 ];
 const categoriesConfig: {
   type: ToolCategory;
@@ -115,6 +118,12 @@ const categoriesConfig: {
     icon: 'material-symbols-light:image-outline-rounded',
     value:
       'Tools for working with pictures – compress, resize, crop, convert to JPG, rotate, remove background and much more.'
+  },
+  {
+    type: 'xml',
+    icon: 'mdi-light:xml',
+    value:
+      'Tools for working with XML data structures - viewer, beautifier, validator and much more'
   }
 ];
 // use for changelogs

@@ -24,7 +24,8 @@ export type ToolCategory =
   | 'time'
   | 'csv'
   | 'pdf'
-  | 'image-generic';
+  | 'image-generic'
+  | 'xml';
 
 export interface DefinedTool {
   type: ToolCategory;
