@@ -53,6 +53,7 @@ export default function ToolTextInput({
         placeholder={placeholder}
         multiline
         rows={10}
+        placeholder={placeholder}
         sx={{
           '&.MuiTextField-root': {
             backgroundColor: 'background.paper'
