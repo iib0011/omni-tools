@@ -1,12 +1,11 @@
-import { Box, Stack, Button, Alert } from '@mui/material';
+import { Alert, Button, Stack } from '@mui/material';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import { GetGroupsType } from '@components/options/ToolOptions';
 import { CardExampleType } from '@components/examples/ToolExamples';
-import { main, epochToDate, dateToEpoch } from './service';
+import { main } from './service';
 import { InitialValuesType } from './types';
 
 const initialValues: InitialValuesType = {};
@@ -45,16 +44,10 @@ export default function EpochConverter({
   const [isValid, setIsValid] = useState<boolean | null>(null);
 
   const compute = (_values: InitialValuesType, input: string) => {
-    let output = main(input, {});
+    const output = main(input, {});
     const invalid = output.startsWith('Invalid');
     setIsValid(!invalid);
     setResult(output);
-  };
-
-  const handleExample = (expr: string) => {
-    setInput(expr);
-    setHasInteracted(true);
-    compute({}, expr);
   };
 
   const handleInputChange = (val: string) => {
@@ -67,26 +60,11 @@ export default function EpochConverter({
       title={title}
       input={input}
       inputComponent={
-        <>
-          <ToolTextInput
-            value={input}
-            onChange={handleInputChange}
-            placeholder="Enter epoch timestamp or date string (e.g. 1609459200 or 2021-01-01T00:00:00Z)"
-          />
-          <Stack direction="row" spacing={1} mt={1}>
-            {exampleCards.map((ex, i) => (
-              <Button
-                key={i}
-                size="small"
-                variant="outlined"
-                onClick={() => ex.sampleText && handleExample(ex.sampleText)}
-                disabled={!ex.sampleText}
-              >
-                {ex.title}
-              </Button>
-            ))}
-          </Stack>
-        </>
+        <ToolTextInput
+          value={input}
+          onChange={handleInputChange}
+          placeholder="Enter epoch timestamp or date string (e.g. 1609459200 or 2021-01-01T00:00:00Z)"
+        />
       }
       resultComponent={
         <div style={{ position: 'relative', minHeight: 80 }}>
