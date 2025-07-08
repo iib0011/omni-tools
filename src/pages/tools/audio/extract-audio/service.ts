@@ -20,7 +20,7 @@ export async function extractAudioFromVideo(
 
   const configuredOutputAudioFormat = options.outputFormat;
   const outputName = `output.${configuredOutputAudioFormat}`;
-  let args: string[] = ['-i', inputName, '-vn'];
+  const args: string[] = ['-i', inputName, '-vn'];
 
   if (configuredOutputAudioFormat === 'mp3') {
     args.push(

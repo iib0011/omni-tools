@@ -1,12 +1,5 @@
-import {
-  Box,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  SelectChangeEvent
-} from '@mui/material';
-import React, { useState, useEffect, useRef } from 'react';
+import { Box } from '@mui/material';
+import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import { extractAudioFromVideo } from './service';
@@ -28,7 +21,6 @@ export default function ExtractAudio({
   const [audioFile, setAudioFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
 
-  // Tool Options section for output format
   const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
     updateField
@@ -58,13 +50,12 @@ export default function ExtractAudio({
     ];
   };
 
-  // Compute function for ToolContent (no-op, extraction is handled by effect)
   const compute = async (values: InitialValuesType, input: File | null) => {
     if (!input) return;
     try {
       setLoading(true);
       const audioFileObj = await extractAudioFromVideo(input, values);
-      await setAudioFile(audioFileObj);
+      setAudioFile(audioFileObj);
     } catch (err) {
       console.error(err);
     } finally {
@@ -84,15 +75,10 @@ export default function ExtractAudio({
           <ToolFileResult
             title={'Extracting Audio'}
             value={null}
-            extension={''}
             loading={true}
           />
         ) : (
-          <ToolFileResult
-            title={'Extracted Audio'}
-            value={audioFile}
-            extension={initialValues.outputFormat}
-          />
+          <ToolFileResult title={'Extracted Audio'} value={audioFile} />
         )
       }
       initialValues={initialValues}

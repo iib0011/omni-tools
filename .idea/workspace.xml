@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: add array key">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: groupBy tools autocomplete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/string.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/string.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/ToolMultipleAudioInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolMultipleAudioInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +26,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fork/y1hao/dark" />
+        <entry key="$PROJECT_DIR$" value="fork/y1hao/grouping" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -209,7 +213,21 @@
         "id": "PR_kwDOMJIfts6dwQJi",
         "number": 163
       },
-      "lastSeen": 1751893861615
+      "lastSeen": 1751894349626
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6drHMN",
+        "number": 160
+      },
+      "lastSeen": 1751991164761
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6d1nEd",
+        "number": 165
+      },
+      "lastSeen": 1751992541880
     }
   ]
 }]]></component>
@@ -268,7 +286,7 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "#163 on fork/y1hao/grouping",
+    "git-widget-placeholder": "#165 on fork/AshAnand34/audio-feature-addition",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/pages/tools/json",
@@ -509,15 +527,8 @@
       <workItem from="1749047510481" duration="879000" />
       <workItem from="1751846528195" duration="4358000" />
       <workItem from="1751852868038" duration="680000" />
-      <workItem from="1751893034799" duration="1192000" />
-    </task>
-    <task id="LOCAL-00159" summary="refactor: sum">
-      <option name="closed" value="true" />
-      <created>1741544086061</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1741544086061</updated>
+      <workItem from="1751893034799" duration="1868000" />
+      <workItem from="1751991143661" duration="1750000" />
     </task>
     <task id="LOCAL-00160" summary="fix: tools by category scroll">
       <option name="closed" value="true" />
@@ -903,7 +914,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751893722720</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <task id="LOCAL-00208" summary="feat: groupBy tools autocomplete">
+      <option name="closed" value="true" />
+      <created>1751894332017</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1751894332017</updated>
+    </task>
+    <option name="localTasksCounter" value="209" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -950,7 +969,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: compress pdf" />
     <MESSAGE value="refactor: lib" />
     <MESSAGE value="fix: path" />
     <MESSAGE value="fix: vite worker format" />
@@ -975,7 +993,8 @@
     <MESSAGE value="fix: tsc" />
     <MESSAGE value="chore: remove .codebuddy" />
     <MESSAGE value="chore: add array key" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add array key" />
+    <MESSAGE value="feat: groupBy tools autocomplete" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: groupBy tools autocomplete" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

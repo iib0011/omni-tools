@@ -27,9 +27,7 @@ export default function ToolMultipleAudioInput({
   title,
   type
 }: MultiAudioInputComponentProps) {
-  const theme = useTheme();
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const { showSnackBar } = useContext(CustomSnackBarContext);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;

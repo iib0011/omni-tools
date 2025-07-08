@@ -4,7 +4,7 @@ import { lazy } from 'react';
 export const tool = defineTool('audio', {
   name: 'Merge Audio',
   path: 'merge-audio',
-  icon: 'mdi:music-note-multiple',
+  icon: 'fluent:merge-20-regular',
   description:
     'Combine multiple audio files into a single audio file by concatenating them in sequence.',
   shortDescription: 'Merge multiple audio files into one (MP3, AAC, WAV).',

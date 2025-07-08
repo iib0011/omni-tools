@@ -1,7 +1,7 @@
 import { stringTools } from '../pages/tools/string';
 import { imageTools } from '../pages/tools/image';
 import { DefinedTool, ToolCategory } from './defineTool';
-import { capitalizeFirstLetter } from '../utils/string';
+import { capitalizeFirstLetter } from '@utils/string';
 import { numberTools } from '../pages/tools/number';
 import { videoTools } from '../pages/tools/video';
 import { audioTools } from 'pages/tools/audio';
@@ -15,17 +15,17 @@ import { pdfTools } from '../pages/tools/pdf';
 
 const toolCategoriesOrder: ToolCategory[] = [
   'image-generic',
-  'string',
-  'json',
   'pdf',
+  'string',
   'video',
+  'time',
+  'audio',
+  'json',
   'list',
   'csv',
   'number',
   'png',
-  'time',
-  'gif',
-  'audio'
+  'gif'
 ];
 export const tools: DefinedTool[] = [
   ...imageTools,
@@ -121,7 +121,7 @@ const categoriesConfig: {
   },
   {
     type: 'audio',
-    icon: 'rivet-icons:audio',
+    icon: 'ic:twotone-audiotrack',
     value:
       'Tools for working with audio – extract audio from video, adjusting audio speed, merging multiple audio files and much more.'
   }

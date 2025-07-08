@@ -106,7 +106,7 @@ export default function MergeAudio({
       getGroups={getGroups}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{ title: `What is ${title}?`, description: longDescription }}
     />
   );
 }

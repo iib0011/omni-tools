@@ -36,7 +36,7 @@ export async function mergeAudioFiles(
   await ffmpeg.writeFile(fileListName, fileListContent);
 
   // Build FFmpeg arguments for merging
-  let args: string[] = ['-f', 'concat', '-safe', '0', '-i', fileListName];
+  const args: string[] = ['-f', 'concat', '-safe', '0', '-i', fileListName];
 
   // Add format-specific arguments
   if (outputFormat === 'mp3') {
