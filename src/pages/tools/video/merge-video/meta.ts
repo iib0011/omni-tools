@@ -4,7 +4,7 @@ import { lazy } from 'react';
 export const tool = defineTool('video', {
   name: 'Merge Videos',
   path: 'merge-video',
-  icon: 'merge_type', // Material icon for merging
+  icon: 'carbon:video-add',
   description: 'Combine multiple video files into one continuous video.',
   shortDescription: 'Append and merge videos easily.',
   keywords: ['merge', 'video', 'append', 'combine'],
