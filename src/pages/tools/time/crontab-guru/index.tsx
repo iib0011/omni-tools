@@ -1,12 +1,11 @@
-import { Box, Typography, Alert, Button, Stack } from '@mui/material';
+import { Alert } from '@mui/material';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import { GetGroupsType } from '@components/options/ToolOptions';
 import { CardExampleType } from '@components/examples/ToolExamples';
-import { main, validateCrontab, explainCrontab } from './service';
+import { main, validateCrontab } from './service';
 
 const initialValues = {};
 
@@ -59,45 +58,21 @@ export default function CrontabGuru({
     setResult(main(input, values));
   };
 
-  const handleExample = (expr: string) => {
-    setInput(expr);
-    setHasInteracted(true);
-    setIsValid(validateCrontab(expr));
-    setResult(main(expr, initialValues));
-  };
-
   const handleInputChange = (val: string) => {
     if (!hasInteracted) setHasInteracted(true);
     setInput(val);
   };
-
-  const getGroups: GetGroupsType<InitialValuesType> | null = () => [];
 
   return (
     <ToolContent
       title={title}
       input={input}
       inputComponent={
-        <>
-          <ToolTextInput
-            value={input}
-            onChange={handleInputChange}
-            placeholder="e.g. 35 16 * * 0-5"
-          />
-          <Stack direction="row" spacing={1} mt={1}>
-            {exampleCards.map((ex, i) => (
-              <Button
-                key={i}
-                size="small"
-                variant="outlined"
-                onClick={() => ex.sampleText && handleExample(ex.sampleText)}
-                disabled={!ex.sampleText}
-              >
-                {ex.title}
-              </Button>
-            ))}
-          </Stack>
-        </>
+        <ToolTextInput
+          value={input}
+          onChange={handleInputChange}
+          placeholder="e.g. 35 16 * * 0-5"
+        />
       }
       resultComponent={
         <div style={{ position: 'relative', minHeight: 80 }}>
@@ -144,7 +119,7 @@ export default function CrontabGuru({
       }
       initialValues={initialValues}
       exampleCards={exampleCards}
-      getGroups={getGroups}
+      getGroups={null}
       setInput={setInput}
       compute={compute}
       toolInfo={{ title: `What is a ${title}?`, description: longDescription }}

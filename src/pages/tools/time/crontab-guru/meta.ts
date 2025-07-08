@@ -2,7 +2,7 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('time', {
-  name: 'Crontab Guru',
+  name: 'Crontab explainer',
   path: 'crontab-guru',
   icon: 'mdi:calendar-clock',
   description:
