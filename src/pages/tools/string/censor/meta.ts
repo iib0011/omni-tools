@@ -6,7 +6,7 @@ export const tool = defineTool('string', {
   path: 'censor',
   shortDescription:
     'Quickly mask bad words or replace them with alternative words.',
-  icon: 'mingcute:hashtag-fill',
+  icon: 'hugeicons:text-footnote',
   description:
     "utility for censoring words in text. Load your text in the input form on the left, specify all the bad words in the options, and you'll instantly get censored text in the output area.",
   longDescription:
