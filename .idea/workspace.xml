@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: white logo">
-      <change afterPath="$PROJECT_DIR$/public/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.svg" beforeDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: png icon">
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-viewer/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-viewer/meta.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-viewer/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-viewer/types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-viewer/xml-viewer.service.test.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -495,14 +498,6 @@
       <workItem from="1749047510481" duration="879000" />
       <workItem from="1751846528195" duration="4358000" />
     </task>
-    <task id="LOCAL-00159" summary="refactor: sum">
-      <option name="closed" value="true" />
-      <created>1741544086061</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1741544086061</updated>
-    </task>
     <task id="LOCAL-00160" summary="fix: tools by category scroll">
       <option name="closed" value="true" />
       <created>1741548044897</created>
@@ -887,7 +882,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752022731608</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <task id="LOCAL-00208" summary="chore: png icon">
+      <option name="closed" value="true" />
+      <created>1752023182341</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1752023182341</updated>
+    </task>
+    <option name="localTasksCounter" value="209" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -934,7 +937,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: compress pdf" />
     <MESSAGE value="refactor: lib" />
     <MESSAGE value="fix: path" />
     <MESSAGE value="fix: vite worker format" />
@@ -959,7 +961,8 @@
     <MESSAGE value="fix: tsc" />
     <MESSAGE value="chore: new logo and font" />
     <MESSAGE value="chore: white logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: white logo" />
+    <MESSAGE value="chore: png icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: png icon" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
