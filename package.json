@@ -35,6 +35,7 @@
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "@playwright/test": "^1.45.0",
+    "@simplepdf/react-embed-pdf": "^1.9.0",
     "@types/ffmpeg": "^1.0.7",
     "@types/js-quantities": "^1.6.6",
     "@types/lodash": "^4.17.5",
