@@ -28,10 +28,8 @@ export default function ImageEditor({ title }: ToolComponentProps) {
   }, []);
 
   const onCloseEditor = (reason: string) => {
-    if (reason === 'close-button-clicked') {
-      setIsEditorOpen(false);
-      setImageUrl(null);
-    }
+    setIsEditorOpen(false);
+    setImageUrl(null);
   };
 
   // Handle save from image editor
@@ -39,8 +37,6 @@ export default function ImageEditor({ title }: ToolComponentProps) {
     editedImageObject,
     designState
   ) => {
-    console.log('Image saved:', editedImageObject, designState);
-
     if (editedImageObject && editedImageObject.imageBase64) {
       // Convert base64 to blob
       const base64Data = editedImageObject.imageBase64.split(',')[1];
