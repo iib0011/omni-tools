@@ -9,12 +9,12 @@ import { meta as pdfToEpub } from './pdf-to-epub/meta';
 import { tool as pdfEditor } from './editor/meta';
 
 export const pdfTools: DefinedTool[] = [
+  pdfEditor,
   splitPdfMeta,
   pdfRotatePdf,
   compressPdfTool,
   protectPdfTool,
   mergePdf,
   pdfToEpub,
-  pdfPdfToPng,
-  pdfEditor
+  pdfPdfToPng
 ];
