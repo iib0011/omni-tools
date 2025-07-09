@@ -12,7 +12,7 @@ export default function ToolInputAndResult({
     return (
       <Grid id="tool" container spacing={2}>
         {input && (
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={result ? 6 : 12}>
             {input}
           </Grid>
         )}

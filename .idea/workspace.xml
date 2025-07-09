@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: png icon">
-      <change beforePath="$PROJECT_DIR$/src/assets/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-viewer/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-viewer/meta.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-viewer/service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-viewer/types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-viewer/xml-viewer.service.test.ts" beforeDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: convert to jpg">
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/editor/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/editor/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolInputAndResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolInputAndResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,19 +309,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
-    <configuration name="calculateTimeBetweenDates" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/time-between-dates.service.test.ts" />
-      <test-names>
-        <test-name value="calculateTimeBetweenDates" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="parsePageRanges" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -378,9 +365,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test:e2e" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:e2e" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="npm.test:e2e" />
       <item itemvalue="npm.dev" />
-      <item itemvalue="Vitest.calculateTimeBetweenDates" />
       <item itemvalue="Vitest.timeBetweenDates" />
       <item itemvalue="Vitest.parsePageRanges" />
       <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
@@ -388,10 +385,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.test:e2e" />
         <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
         <item itemvalue="Vitest.parsePageRanges" />
         <item itemvalue="Vitest.timeBetweenDates" />
-        <item itemvalue="Vitest.calculateTimeBetweenDates" />
       </list>
     </recent_temporary>
   </component>
@@ -497,22 +494,6 @@
       <workItem from="1748282636141" duration="478000" />
       <workItem from="1749047510481" duration="879000" />
       <workItem from="1751846528195" duration="4358000" />
-    </task>
-    <task id="LOCAL-00160" summary="fix: tools by category scroll">
-      <option name="closed" value="true" />
-      <created>1741548044897</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1741548044897</updated>
-    </task>
-    <task id="LOCAL-00161" summary="fix: missing meta">
-      <option name="closed" value="true" />
-      <created>1741568170877</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1741568170877</updated>
     </task>
     <task id="LOCAL-00162" summary="feat: trim video">
       <option name="closed" value="true" />
@@ -890,7 +871,23 @@
       <option name="project" value="LOCAL" />
       <updated>1752023182341</updated>
     </task>
-    <option name="localTasksCounter" value="209" />
+    <task id="LOCAL-00209" summary="fix: remove xml viewer">
+      <option name="closed" value="true" />
+      <created>1752023796004</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1752023796004</updated>
+    </task>
+    <task id="LOCAL-00210" summary="feat: convert to jpg">
+      <option name="closed" value="true" />
+      <created>1752026153328</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1752026153328</updated>
+    </task>
+    <option name="localTasksCounter" value="211" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -937,8 +934,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: lib" />
-    <MESSAGE value="fix: path" />
     <MESSAGE value="fix: vite worker format" />
     <MESSAGE value="fix: tests" />
     <MESSAGE value="chore: uninstall @jspawn/ghostscript-wasm" />
@@ -962,7 +957,9 @@
     <MESSAGE value="chore: new logo and font" />
     <MESSAGE value="chore: white logo" />
     <MESSAGE value="chore: png icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: png icon" />
+    <MESSAGE value="fix: remove xml viewer" />
+    <MESSAGE value="feat: convert to jpg" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: convert to jpg" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
