@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: tsc">
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/quicksand/Quicksand-VariableFont_wght.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/fonts/quicksand/quicksand-italic.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ResultFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ResultFooter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/result/ToolMultiFileResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/result/ToolMultiFileResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/plus-jakarta/PlusJakartaSans-Italic-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/plus-jakarta/PlusJakartaSans-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/plus-jakarta/plus-jakarta.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/quicksand/quick-sand.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,164 +48,164 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOMJIfts51PkS9",
-        "number": 22
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts51PkS9&quot;,
+        &quot;number&quot;: 22
       },
-      "lastSeen": 1741207144695
+      &quot;lastSeen&quot;: 1741207144695
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NiNYl",
-        "number": 32
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NiNYl&quot;,
+        &quot;number&quot;: 32
       },
-      "lastSeen": 1741209723869
+      &quot;lastSeen&quot;: 1741209723869
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Nheyd",
-        "number": 31
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Nheyd&quot;,
+        &quot;number&quot;: 31
       },
-      "lastSeen": 1741213371410
+      &quot;lastSeen&quot;: 1741213371410
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NmRBs",
-        "number": 33
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NmRBs&quot;,
+        &quot;number&quot;: 33
       },
-      "lastSeen": 1741282429036
+      &quot;lastSeen&quot;: 1741282429036
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts5zyFTs",
-        "number": 15
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts5zyFTs&quot;,
+        &quot;number&quot;: 15
       },
-      "lastSeen": 1741535540953
+      &quot;lastSeen&quot;: 1741535540953
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QQB3c",
-        "number": 59
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QQB3c&quot;,
+        &quot;number&quot;: 59
       },
-      "lastSeen": 1743018960900
+      &quot;lastSeen&quot;: 1743018960900
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QMPEg",
-        "number": 58
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QMPEg&quot;,
+        &quot;number&quot;: 58
       },
-      "lastSeen": 1743019452983
+      &quot;lastSeen&quot;: 1743019452983
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QZvRI",
-        "number": 61
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QZvRI&quot;,
+        &quot;number&quot;: 61
       },
-      "lastSeen": 1743103196866
+      &quot;lastSeen&quot;: 1743103196866
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QqPrQ",
-        "number": 73
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QqPrQ&quot;,
+        &quot;number&quot;: 73
       },
-      "lastSeen": 1743265865001
+      &quot;lastSeen&quot;: 1743265865001
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Qp5nI",
-        "number": 72
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Qp5nI&quot;,
+        &quot;number&quot;: 72
       },
-      "lastSeen": 1743338472110
+      &quot;lastSeen&quot;: 1743338472110
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QsjlS",
-        "number": 76
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QsjlS&quot;,
+        &quot;number&quot;: 76
       },
-      "lastSeen": 1743352150953
+      &quot;lastSeen&quot;: 1743352150953
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Q0JBe",
-        "number": 82
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Q0JBe&quot;,
+        &quot;number&quot;: 82
       },
-      "lastSeen": 1743470267269
+      &quot;lastSeen&quot;: 1743470267269
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6UE9-x",
-        "number": 102
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6UE9-x&quot;,
+        &quot;number&quot;: 102
       },
-      "lastSeen": 1747171977348
+      &quot;lastSeen&quot;: 1747171977348
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6XPua_",
-        "number": 117
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6XPua_&quot;,
+        &quot;number&quot;: 117
       },
-      "lastSeen": 1747929835864
+      &quot;lastSeen&quot;: 1747929835864
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6XY-mZ",
-        "number": 119
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6XY-mZ&quot;,
+        &quot;number&quot;: 119
       },
-      "lastSeen": 1748028108508
+      &quot;lastSeen&quot;: 1748028108508
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Xdz4n",
-        "number": 120
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Xdz4n&quot;,
+        &quot;number&quot;: 120
       },
-      "lastSeen": 1748282672214
+      &quot;lastSeen&quot;: 1748282672214
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6X_zxl",
-        "number": 131
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6X_zxl&quot;,
+        &quot;number&quot;: 131
       },
-      "lastSeen": 1748881279494
+      &quot;lastSeen&quot;: 1748881279494
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6bhieT",
-        "number": 152
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6bhieT&quot;,
+        &quot;number&quot;: 152
       },
-      "lastSeen": 1751848489082
+      &quot;lastSeen&quot;: 1751848489082
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6dOyRk",
-        "number": 154
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6dOyRk&quot;,
+        &quot;number&quot;: 154
       },
-      "lastSeen": 1751849436454
+      &quot;lastSeen&quot;: 1751849436454
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6cHjNi",
-        "number": 153
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6cHjNi&quot;,
+        &quot;number&quot;: 153
       },
-      "lastSeen": 1751849501498
+      &quot;lastSeen&quot;: 1751849501498
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Zs1FN",
-        "number": 145
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Zs1FN&quot;,
+        &quot;number&quot;: 145
       },
-      "lastSeen": 1751849770308
+      &quot;lastSeen&quot;: 1751849770308
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6bgKi9",
-        "number": 150
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6bgKi9&quot;,
+        &quot;number&quot;: 150
       },
-      "lastSeen": 1751850367300
+      &quot;lastSeen&quot;: 1751850367300
     }
   ]
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
@@ -255,10 +261,10 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "#150 on fork/omenmn/pdftopng",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/pages/tools/json",
+    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/public/assets/fonts/quicksand",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -292,11 +298,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets\fonts\quicksand" />
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets\fonts" />
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\tools\json" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\@types" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\components\input" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\lib\ghostscript" />

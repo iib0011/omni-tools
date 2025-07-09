@@ -91,17 +91,19 @@ const Navbar: React.FC<NavbarProps> = ({ onSwitchTheme }) => {
       sx={{
         background: 'transparent',
         boxShadow: 'none',
-        color: 'text.primary'
+        color: 'text.primary',
+        pt: 2
       }}
     >
       <Toolbar
         sx={{
           justifyContent: 'space-between',
-          alignItems: 'center'
+          alignItems: 'center',
+          mx: { md: '50px', lg: '150px' }
         }}
       >
         <Link to="/">
-          <img src={logo} width={isMobile ? '80px' : '150px'} />
+          <img src={logo} width={isMobile ? '120px' : '200px'} />
         </Link>
         {isMobile ? (
           <>
