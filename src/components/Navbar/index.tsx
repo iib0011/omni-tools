@@ -17,13 +17,17 @@ import {
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { Icon } from '@iconify/react';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
+import { Mode } from 'components/App';
 
 interface NavbarProps {
-  onSwitchTheme: () => void;
+  mode: Mode;
+  onChangeMode: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ onSwitchTheme }) => {
+const Navbar: React.FC<NavbarProps> = ({
+  mode,
+  onChangeMode: onChangeMode
+}) => {
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -37,7 +41,19 @@ const Navbar: React.FC<NavbarProps> = ({ onSwitchTheme }) => {
   ];
 
   const buttons: ReactNode[] = [
-    <DarkModeIcon onClick={onSwitchTheme} style={{ cursor: 'pointer' }} />,
+    <Icon
+      key={mode}
+      onClick={onChangeMode}
+      style={{ cursor: 'pointer' }}
+      fontSize={30}
+      icon={
+        mode === 'dark'
+          ? 'ic:round-dark-mode'
+          : mode === 'light'
+            ? 'ic:round-light-mode'
+            : 'ic:round-contrast'
+      }
+    />,
     <Icon
       onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
       style={{ cursor: 'pointer' }}

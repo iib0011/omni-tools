@@ -1,4 +1,13 @@
-import { Autocomplete, Box, Stack, TextField, useTheme } from '@mui/material';
+import {
+  Autocomplete,
+  Box,
+  darken,
+  lighten,
+  Stack,
+  styled,
+  TextField,
+  useTheme
+} from '@mui/material';
 import Typography from '@mui/material/Typography';
 import SearchIcon from '@mui/icons-material/Search';
 import Grid from '@mui/material/Grid';
@@ -8,7 +17,22 @@ import { filterTools, tools } from '@tools/index';
 import { useNavigate } from 'react-router-dom';
 import _ from 'lodash';
 import { Icon } from '@iconify/react';
+import { getToolCategoryTitle } from '@utils/string';
 
+const GroupHeader = styled('div')(({ theme }) => ({
+  position: 'sticky',
+  top: '-8px',
+  padding: '4px 10px',
+  color: theme.palette.primary.main,
+  backgroundColor: lighten(theme.palette.primary.light, 0.85),
+  ...theme.applyStyles('dark', {
+    backgroundColor: darken(theme.palette.primary.main, 0.8)
+  })
+}));
+
+const GroupItems = styled('ul')({
+  padding: 0
+});
 const exampleTools: { label: string; url: string }[] = [
   {
     label: 'Create a transparent image',
@@ -26,9 +50,7 @@ const exampleTools: { label: string; url: string }[] = [
 export default function Hero() {
   const [inputValue, setInputValue] = useState<string>('');
   const theme = useTheme();
-  const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(
-    _.shuffle(tools)
-  );
+  const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
   const navigate = useNavigate();
   const handleInputChange = (
     event: React.ChangeEvent<{}>,
@@ -66,6 +88,15 @@ export default function Hero() {
         sx={{ mb: 2 }}
         autoHighlight
         options={filteredTools}
+        groupBy={(option) => option.type}
+        renderGroup={(params) => {
+          return (
+            <li key={params.key}>
+              <GroupHeader>{getToolCategoryTitle(params.group)}</GroupHeader>
+              <GroupItems>{params.children}</GroupItems>
+            </li>
+          );
+        }}
         inputValue={inputValue}
         getOptionLabel={(option) => option.name}
         renderInput={(params) => (

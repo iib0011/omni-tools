@@ -1,4 +1,5 @@
 import { UpdateField } from '@components/options/ToolOptions';
+import { getToolsByCategory } from '@tools/index';
 
 // Here starting the shared values for string manipulation.
 
@@ -105,3 +106,7 @@ export function itemCounter(
   }
   return dict;
 }
+
+export const getToolCategoryTitle = (categoryName: string): string =>
+  getToolsByCategory().find((category) => category.type === categoryName)!
+    .rawTitle;

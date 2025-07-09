@@ -1,15 +1,17 @@
 import { BrowserRouter, useRoutes } from 'react-router-dom';
 import routesConfig from '../config/routesConfig';
 import Navbar from './Navbar';
-import { Suspense, useMemo, useState } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import Loading from './Loading';
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import { CssBaseline, Theme, ThemeProvider } from '@mui/material';
 import { CustomSnackBarProvider } from '../contexts/CustomSnackBarContext';
 import { SnackbarProvider } from 'notistack';
 import { tools } from '../tools';
 import './index.css';
 import { darkTheme, lightTheme } from '../config/muiConfig';
 import ScrollToTopButton from './ScrollToTopButton';
+
+export type Mode = 'dark' | 'light' | 'system';
 
 const AppRoutes = () => {
   const updatedRoutesConfig = [...routesConfig];
@@ -20,10 +22,26 @@ const AppRoutes = () => {
 };
 
 function App() {
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
-    return localStorage.getItem('theme') === 'dark';
-  });
-  const theme = useMemo(() => (darkMode ? darkTheme : lightTheme), [darkMode]);
+  const [mode, setMode] = useState<Mode>(
+    () => (localStorage.getItem('theme') || 'system') as Mode
+  );
+  const [theme, setTheme] = useState<Theme>(() => getTheme(mode));
+  useEffect(() => setTheme(getTheme(mode)), [mode]);
+
+  // Make sure to update the theme when the mode changes
+  useEffect(() => {
+    const systemDarkModeQuery = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    );
+    const handleThemeChange = (e: MediaQueryListEvent) => {
+      setTheme(e.matches ? darkTheme : lightTheme);
+    };
+    systemDarkModeQuery.addEventListener('change', handleThemeChange);
+
+    return () => {
+      systemDarkModeQuery.removeEventListener('change', handleThemeChange);
+    };
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
@@ -38,9 +56,10 @@ function App() {
         <CustomSnackBarProvider>
           <BrowserRouter>
             <Navbar
-              onSwitchTheme={() => {
-                setDarkMode((prevState) => !prevState);
-                localStorage.setItem('theme', darkMode ? 'light' : 'dark');
+              mode={mode}
+              onChangeMode={() => {
+                setMode((prev) => nextMode(prev));
+                localStorage.setItem('theme', nextMode(mode));
               }}
             />
             <Suspense fallback={<Loading />}>
@@ -52,6 +71,23 @@ function App() {
       <ScrollToTopButton />
     </ThemeProvider>
   );
+}
+
+function getTheme(mode: Mode): Theme {
+  switch (mode) {
+    case 'dark':
+      return darkTheme;
+    case 'light':
+      return lightTheme;
+    default:
+      return window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? darkTheme
+        : lightTheme;
+  }
+}
+
+function nextMode(mode: Mode): Mode {
+  return mode === 'light' ? 'dark' : mode === 'dark' ? 'system' : 'light';
 }
 
 export default App;
