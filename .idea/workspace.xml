@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: examples button visibility">
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/editor/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/tools/pdf/editor/meta.ts" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: pdf editor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -493,15 +491,7 @@
       <workItem from="1751846528195" duration="4358000" />
       <workItem from="1752070315115" duration="19000" />
       <workItem from="1752071020011" duration="1599000" />
-      <workItem from="1752077170501" duration="2619000" />
-    </task>
-    <task id="LOCAL-00165" summary="feat: background removal">
-      <option name="closed" value="true" />
-      <created>1742961898820</created>
-      <option name="number" value="00165" />
-      <option name="presentableId" value="LOCAL-00165" />
-      <option name="project" value="LOCAL" />
-      <updated>1742961898820</updated>
+      <workItem from="1752077170501" duration="3057000" />
     </task>
     <task id="LOCAL-00166" summary="feat: split pdf">
       <option name="closed" value="true" />
@@ -887,7 +877,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752079671580</updated>
     </task>
-    <option name="localTasksCounter" value="214" />
+    <task id="LOCAL-00214" summary="feat: pdf editor">
+      <option name="closed" value="true" />
+      <created>1752079879005</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1752079879005</updated>
+    </task>
+    <option name="localTasksCounter" value="215" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -934,7 +932,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: protect pdf" />
     <MESSAGE value="feat: image to text" />
     <MESSAGE value="chore: hideCopy if video or audio" />
     <MESSAGE value="chore: readme img and fix broken link" />
@@ -959,7 +956,8 @@
     <MESSAGE value="feat: edit image" />
     <MESSAGE value="fix: favicons" />
     <MESSAGE value="chore: examples button visibility" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: examples button visibility" />
+    <MESSAGE value="feat: pdf editor" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: pdf editor" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
