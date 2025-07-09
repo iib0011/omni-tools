@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from 'assets/logo.png';
+import logoWhite from 'assets/logo-white.png';
 import {
   Drawer,
   List,
@@ -119,7 +120,10 @@ const Navbar: React.FC<NavbarProps> = ({
         }}
       >
         <Link to="/">
-          <img src={logo} width={isMobile ? '120px' : '200px'} />
+          <img
+            src={theme.palette.mode === 'light' ? logo : logoWhite}
+            width={isMobile ? '120px' : '200px'}
+          />
         </Link>
         {isMobile ? (
           <>

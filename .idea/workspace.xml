@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: tsc">
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/quicksand/Quicksand-VariableFont_wght.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/fonts/quicksand/quicksand-italic.ttf" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: new logo and font">
+      <change afterPath="$PROJECT_DIR$/src/assets/logo-white.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/plus-jakarta/PlusJakartaSans-Italic-VariableFont_wght.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/plus-jakarta/PlusJakartaSans-VariableFont_wght.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/fonts/plus-jakarta/plus-jakarta.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/quicksand/quick-sand.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +257,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/public/assets/fonts/quicksand",
+    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -298,9 +291,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets\fonts\quicksand" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets\fonts" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\tools\json" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src" />
     </key>
@@ -501,14 +494,6 @@
       <workItem from="1748282636141" duration="478000" />
       <workItem from="1749047510481" duration="879000" />
       <workItem from="1751846528195" duration="4358000" />
-    </task>
-    <task id="LOCAL-00157" summary="refactor: use ToolContent">
-      <option name="closed" value="true" />
-      <created>1741543593426</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1741543593427</updated>
     </task>
     <task id="LOCAL-00158" summary="fix: prettify json">
       <option name="closed" value="true" />
@@ -894,7 +879,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751850152784</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="chore: new logo and font">
+      <option name="closed" value="true" />
+      <created>1752022118195</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1752022118199</updated>
+    </task>
+    <option name="localTasksCounter" value="207" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -941,7 +934,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: stars button width for 1k+ " />
     <MESSAGE value="feat: compress pdf" />
     <MESSAGE value="refactor: compress pdf" />
     <MESSAGE value="refactor: lib" />
@@ -966,7 +958,8 @@
     <MESSAGE value="chore: use scrollY" />
     <MESSAGE value="chore: remove flip x and y" />
     <MESSAGE value="fix: tsc" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: tsc" />
+    <MESSAGE value="chore: new logo and font" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: new logo and font" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
