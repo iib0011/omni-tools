@@ -63,7 +63,7 @@ export default function ConvertDaysToHours({
     setResult(checkLeapYear(input));
   };
 
-  const getGroups: GetGroupsType<InitialValuesType> | null = () => [];
+  const getGroups: GetGroupsType<InitialValuesType> | null = null;
 
   return (
     <ToolContent
