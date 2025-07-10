@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 import { Icon, IconifyIcon } from '@iconify/react';
 import { categoriesColors } from '../config/uiConfig';
 import { getToolsByCategory } from '@tools/index';
+import { useEffect, useState } from 'react';
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: 'white',
@@ -23,11 +24,25 @@ interface ToolHeaderProps {
 }
 
 function ToolLinks() {
-  const theme = useTheme();
+  const [examplesVisible, setExamplesVisible] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      const element = document.getElementById('examples');
+      if (element && isVisible(element)) {
+        setExamplesVisible(true);
+      }
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   const scrollToElement = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
+  function isVisible(elm: HTMLElement | null) {
+    return !!elm;
+  }
   return (
     <Grid container spacing={2} mt={1}>
       <Grid item md={12} lg={6}>
@@ -40,16 +55,18 @@ function ToolLinks() {
           Use This Tool
         </StyledButton>
       </Grid>
-      <Grid item md={12} lg={6}>
-        <StyledButton
-          fullWidth
-          variant="outlined"
-          sx={{ backgroundColor: 'background.paper' }}
-          onClick={() => scrollToElement('examples')}
-        >
-          See Examples
-        </StyledButton>
-      </Grid>
+      {examplesVisible && (
+        <Grid item md={12} lg={6}>
+          <StyledButton
+            fullWidth
+            variant="outlined"
+            sx={{ backgroundColor: 'background.paper' }}
+            onClick={() => scrollToElement('examples')}
+          >
+            See Examples
+          </StyledButton>
+        </Grid>
+      )}
       {/*<Grid item md={12} lg={4}>*/}
       {/*  <StyledButton fullWidth variant="outlined" href="#tour">*/}
       {/*    Learn How to Use*/}

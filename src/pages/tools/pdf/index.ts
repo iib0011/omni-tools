@@ -6,8 +6,10 @@ import { DefinedTool } from '@tools/defineTool';
 import { tool as compressPdfTool } from './compress-pdf/meta';
 import { tool as protectPdfTool } from './protect-pdf/meta';
 import { meta as pdfToEpub } from './pdf-to-epub/meta';
+import { tool as pdfEditor } from './editor/meta';
 
 export const pdfTools: DefinedTool[] = [
+  pdfEditor,
   splitPdfMeta,
   pdfRotatePdf,
   compressPdfTool,

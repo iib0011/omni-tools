@@ -1,5 +1,5 @@
 <div align="center">
-        <img src="src/assets/logo.png" width="300" />
+        <img src="src/assets/logo.png" width="220" />
         <br /><br />
 <a href="https://trendshift.io/repositories/13055" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13055" alt="iib0011%2Fomni-tools | Trendshift" style="width: 200px;" width="200"/></a>
    <br /><br />
