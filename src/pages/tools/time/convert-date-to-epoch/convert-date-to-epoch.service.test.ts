@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { convertDateToEpoch } from './service';
+import { convertDateToEpoch, convertEpochToDate } from './service';
 
 describe('convertDateToEpoch', () => {
   it('should convert ISO 8601 date strings to epoch', () => {
@@ -105,5 +105,89 @@ describe('convertDateToEpoch', () => {
     const result = convertDateToEpoch(input);
 
     expect(result).toBe('1672531200');
+  });
+});
+
+describe('convertEpochToDate', () => {
+  it('should convert epoch timestamps to human-readable dates', () => {
+    const input = '1672531200\n1704067199';
+    const result = convertEpochToDate(input);
+    const lines = result.split('\n');
+
+    expect(lines[0]).toBe('2023-01-01 00:00:00 UTC');
+    expect(lines[1]).toBe('2023-12-31 23:59:59 UTC');
+  });
+
+  it('should convert single epoch timestamp', () => {
+    const input = '1672531200';
+    const result = convertEpochToDate(input);
+
+    expect(result).toBe('2023-01-01 00:00:00 UTC');
+  });
+
+  it('should handle epoch timestamp 0', () => {
+    const input = '0';
+    const result = convertEpochToDate(input);
+
+    expect(result).toBe('1970-01-01 00:00:00 UTC');
+  });
+
+  it('should handle empty lines', () => {
+    const input = '1672531200\n\n1704067199';
+    const result = convertEpochToDate(input);
+    const lines = result.split('\n');
+
+    expect(lines[0]).toBe('2023-01-01 00:00:00 UTC');
+    expect(lines[1]).toBe('');
+    expect(lines[2]).toBe('2023-12-31 23:59:59 UTC');
+  });
+
+  it('should handle empty input', () => {
+    const input = '';
+    const result = convertEpochToDate(input);
+
+    expect(result).toBe('');
+  });
+
+  it('should throw error for invalid epoch timestamp', () => {
+    const input = 'invalid-epoch';
+
+    expect(() => convertEpochToDate(input)).toThrow(
+      'Invalid epoch timestamp on line 1: "invalid-epoch"'
+    );
+  });
+
+  it('should throw error for negative epoch timestamp', () => {
+    const input = '-1672531200';
+
+    expect(() => convertEpochToDate(input)).toThrow(
+      'Invalid epoch timestamp on line 1: "-1672531200"'
+    );
+  });
+
+  it('should throw error for epoch timestamp too far in the future', () => {
+    const input = '9999999999';
+
+    expect(() => convertEpochToDate(input)).toThrow(
+      'Invalid epoch timestamp on line 1: "9999999999"'
+    );
+  });
+
+  it('should handle multiple epoch timestamps', () => {
+    const input = '0\n946684800\n1577836800';
+    const result = convertEpochToDate(input);
+    const lines = result.split('\n');
+
+    expect(lines[0]).toBe('1970-01-01 00:00:00 UTC');
+    expect(lines[1]).toBe('2000-01-01 00:00:00 UTC');
+    expect(lines[2]).toBe('2020-01-01 00:00:00 UTC');
+  });
+
+  it('should throw error for invalid epoch on specific line', () => {
+    const input = '1672531200\ninvalid-epoch\n1704067199';
+
+    expect(() => convertEpochToDate(input)).toThrow(
+      'Invalid epoch timestamp on line 2: "invalid-epoch"'
+    );
   });
 });

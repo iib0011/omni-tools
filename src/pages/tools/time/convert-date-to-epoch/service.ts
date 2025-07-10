@@ -76,6 +76,36 @@ function convertSingleDateToEpoch(
   return parsedDate.utc().unix().toString();
 }
 
+function convertSingleEpochToDate(
+  epochString: string,
+  lineNumber: number
+): string {
+  if (epochString.trim() === '') {
+    return '';
+  }
+
+  const trimmedInput = epochString.trim();
+
+  // Check if it's a valid epoch timestamp (all digits)
+  if (!/^\d+$/.test(trimmedInput)) {
+    throw new Error(
+      `Invalid epoch timestamp on line ${lineNumber}: "${epochString}"`
+    );
+  }
+
+  const timestamp = parseInt(trimmedInput, 10);
+
+  // Check if it's a reasonable timestamp (not negative and not too far in the future)
+  if (timestamp < 0 || timestamp > 4102444800) {
+    throw new Error(
+      `Invalid epoch timestamp on line ${lineNumber}: "${epochString}"`
+    );
+  }
+
+  // Convert epoch to human-readable date in ISO format
+  return dayjs.unix(timestamp).utc().format('YYYY-MM-DD HH:mm:ss UTC');
+}
+
 export function convertDateToEpoch(input: string): string {
   const result: string[] = [];
   const lines = input.split('\n');
@@ -83,6 +113,18 @@ export function convertDateToEpoch(input: string): string {
   lines.forEach((line, index) => {
     const epoch = convertSingleDateToEpoch(line, index + 1);
     result.push(epoch);
+  });
+
+  return result.join('\n');
+}
+
+export function convertEpochToDate(input: string): string {
+  const result: string[] = [];
+  const lines = input.split('\n');
+
+  lines.forEach((line, index) => {
+    const date = convertSingleEpochToDate(line, index + 1);
+    result.push(date);
   });
 
   return result.join('\n');
