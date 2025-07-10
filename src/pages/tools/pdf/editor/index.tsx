@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Box } from '@mui/material';
-import ToolPdfInput from '@components/input/ToolPdfInput';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import { EmbedPDF } from '@simplepdf/react-embed-pdf';
