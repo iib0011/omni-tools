@@ -11,14 +11,16 @@ export default function Home() {
         md: 3,
         lg: 5
       }}
-      sx={{
-        background: `url(/assets/${
-          theme.palette.mode === 'dark'
-            ? 'background-dark.png'
-            : 'background.svg'
-        })`,
-        backgroundColor: 'background.default'
-      }}
+      sx={
+        {
+          // background: `url(/assets/${
+          //   theme.palette.mode === 'dark'
+          //     ? 'background-dark.png'
+          //     : 'background.svg'
+          // })`,
+          // backgroundColor: 'background.default'
+        }
+      }
       display={'flex'}
       flexDirection={'column'}
       alignItems={'center'}

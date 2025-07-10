@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="docs: edit pdf meta">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="refactor: getGroups">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -503,15 +503,7 @@
       <workItem from="1752071020011" duration="1599000" />
       <workItem from="1752077170501" duration="4261000" />
       <workItem from="1752127185450" duration="1168000" />
-      <workItem from="1752157409587" duration="2415000" />
-    </task>
-    <task id="LOCAL-00169" summary="chore: text result extensions">
-      <option name="closed" value="true" />
-      <created>1743022260639</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1743022260639</updated>
+      <workItem from="1752157409587" duration="4662000" />
     </task>
     <task id="LOCAL-00170" summary="chore: show new tools in landing">
       <option name="closed" value="true" />
@@ -897,7 +889,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752158119802</updated>
     </task>
-    <option name="localTasksCounter" value="218" />
+    <task id="LOCAL-00218" summary="refactor: getGroups">
+      <option name="closed" value="true" />
+      <created>1752159900432</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1752159900432</updated>
+    </task>
+    <option name="localTasksCounter" value="219" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -944,7 +944,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: add mkv to supported videos" />
     <MESSAGE value="feat: drag and drop" />
     <MESSAGE value="Merge branch 'feat/pdf-merge' of git-rohit:rohit267/omni-tools into feat/pdf-merge" />
     <MESSAGE value="chore: revert create-tool.mjs" />
@@ -969,7 +968,8 @@
     <MESSAGE value="chore: style link" />
     <MESSAGE value="refactor: PDF editor" />
     <MESSAGE value="docs: edit pdf meta" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: edit pdf meta" />
+    <MESSAGE value="refactor: getGroups" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: getGroups" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

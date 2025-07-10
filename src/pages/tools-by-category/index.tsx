@@ -42,7 +42,7 @@ export default function ToolsByCategory() {
   }, []);
 
   return (
-    <Box sx={{ backgroundColor: 'background.default' }}>
+    <Box>
       <Helmet>
         <title>{`${rawTitle} Tools`}</title>
       </Helmet>

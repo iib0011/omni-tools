@@ -3,7 +3,7 @@ import routesConfig from '../config/routesConfig';
 import Navbar from './Navbar';
 import { Suspense, useState, useEffect } from 'react';
 import Loading from './Loading';
-import { CssBaseline, Theme, ThemeProvider } from '@mui/material';
+import { Box, CssBaseline, Theme, ThemeProvider } from '@mui/material';
 import { CustomSnackBarProvider } from '../contexts/CustomSnackBarContext';
 import { SnackbarProvider } from 'notistack';
 import { tools } from '../tools';
@@ -55,16 +55,52 @@ function App() {
       >
         <CustomSnackBarProvider>
           <BrowserRouter>
-            <Navbar
-              mode={mode}
-              onChangeMode={() => {
-                setMode((prev) => nextMode(prev));
-                localStorage.setItem('theme', nextMode(mode));
+            <Box
+              sx={{
+                height: '100vh',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                zIndex: 1000,
+                backgroundColor:
+                  theme.palette.mode === 'dark' ? 'black' : '#f8fafc'
               }}
-            />
-            <Suspense fallback={<Loading />}>
-              <AppRoutes />
-            </Suspense>
+            >
+              <Box
+                sx={
+                  theme.palette.mode === 'dark'
+                    ? {
+                        background: '#000000',
+                        backgroundImage: `
+        linear-gradient(to right, rgba(75, 85, 99, 0.4) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(75, 85, 99, 0.4) 1px, transparent 1px)
+      `,
+                        backgroundSize: '40px 40px'
+                      }
+                    : {
+                        backgroundImage: `
+        linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
+        radial-gradient(circle 500px at 20% 80%, rgba(139,92,246,0.3), transparent),
+        radial-gradient(circle 500px at 80% 20%, rgba(59,130,246,0.3), transparent)
+      `,
+                        backgroundSize:
+                          '48px 48px, 48px 48px, 100% 100%, 100% 100%'
+                      }
+                }
+              >
+                <Navbar
+                  mode={mode}
+                  onChangeMode={() => {
+                    setMode((prev) => nextMode(prev));
+                    localStorage.setItem('theme', nextMode(mode));
+                  }}
+                />
+                <Suspense fallback={<Loading />}>
+                  <AppRoutes />
+                </Suspense>
+              </Box>
+            </Box>
           </BrowserRouter>
         </CustomSnackBarProvider>
       </SnackbarProvider>
