@@ -1,3 +1,4 @@
+import { tool as videoMergeVideo } from './merge-video/meta';
 import { tool as videoToGif } from './video-to-gif/meta';
 import { tool as changeSpeed } from './change-speed/meta';
 import { tool as flipVideo } from './flip/meta';
@@ -17,5 +18,6 @@ export const videoTools = [
   flipVideo,
   cropVideo,
   changeSpeed,
-  videoToGif
+  videoToGif,
+  videoMergeVideo
 ];
