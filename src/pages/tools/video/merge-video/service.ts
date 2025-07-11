@@ -4,7 +4,7 @@ import { fetchFile } from '@ffmpeg/util';
 
 // This function will use ffmpeg.wasm to merge multiple video files in the browser.
 // Returns a Promise that resolves to a Blob of the merged video.
-export async function main(
+export async function mergeVideos(
   input: MergeVideoInput,
   options: InitialValuesType
 ): Promise<MergeVideoOutput> {

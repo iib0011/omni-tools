@@ -6,7 +6,7 @@ import ToolFileResult from '@components/result/ToolFileResult';
 import ToolMultipleVideoInput, {
   MultiVideoInput
 } from '@components/input/ToolMultipleVideoInput';
-import { main } from './service';
+import { mergeVideos } from './service';
 import { InitialValuesType } from './types';
 
 const initialValues: InitialValuesType = {};
@@ -37,7 +37,7 @@ export default function MergeVideo({
         'Files to merge:',
         files.map((f) => f.name)
       );
-      const mergedBlob = await main(files, initialValues);
+      const mergedBlob = await mergeVideos(files, initialValues);
       const mergedFile = new File([mergedBlob], 'merged-video.mp4', {
         type: 'video/mp4'
       });
