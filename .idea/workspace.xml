@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: add array key">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="docs: edit pdf meta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/string.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/string.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolContent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +23,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fork/y1hao/dark" />
+        <entry key="$PROJECT_DIR$" value="chesterking" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -199,17 +200,10 @@
     },
     {
       "id": {
-        "id": "PR_kwDOMJIfts6dv21R",
-        "number": 162
+        "id": "PR_kwDOMJIfts6eUKC-",
+        "number": 176
       },
-      "lastSeen": 1751893739514
-    },
-    {
-      "id": {
-        "id": "PR_kwDOMJIfts6dwQJi",
-        "number": 163
-      },
-      "lastSeen": 1751893861615
+      "lastSeen": 1752158748013
     }
   ]
 }]]></component>
@@ -268,10 +262,10 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "#163 on fork/y1hao/grouping",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src/pages/tools/json",
+    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -305,11 +299,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public" />
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\assets" />
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets\fonts\quicksand" />
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets\fonts" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\tools\json" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\@types" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\components\input" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\lib\ghostscript" />
@@ -320,19 +314,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
-    <configuration name="calculateTimeBetweenDates" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/time-between-dates.service.test.ts" />
-      <test-names>
-        <test-name value="calculateTimeBetweenDates" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="parsePageRanges" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -389,9 +370,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test:e2e" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:e2e" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="npm.test:e2e" />
       <item itemvalue="npm.dev" />
-      <item itemvalue="Vitest.calculateTimeBetweenDates" />
       <item itemvalue="Vitest.timeBetweenDates" />
       <item itemvalue="Vitest.parsePageRanges" />
       <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
@@ -402,7 +393,7 @@
         <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
         <item itemvalue="Vitest.parsePageRanges" />
         <item itemvalue="Vitest.timeBetweenDates" />
-        <item itemvalue="Vitest.calculateTimeBetweenDates" />
+        <item itemvalue="npm.test:e2e" />
       </list>
     </recent_temporary>
   </component>
@@ -508,88 +499,11 @@
       <workItem from="1748282636141" duration="478000" />
       <workItem from="1749047510481" duration="879000" />
       <workItem from="1751846528195" duration="4358000" />
-      <workItem from="1751852868038" duration="680000" />
-      <workItem from="1751893034799" duration="1192000" />
-    </task>
-    <task id="LOCAL-00159" summary="refactor: sum">
-      <option name="closed" value="true" />
-      <created>1741544086061</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1741544086061</updated>
-    </task>
-    <task id="LOCAL-00160" summary="fix: tools by category scroll">
-      <option name="closed" value="true" />
-      <created>1741548044897</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1741548044897</updated>
-    </task>
-    <task id="LOCAL-00161" summary="fix: missing meta">
-      <option name="closed" value="true" />
-      <created>1741568170877</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1741568170877</updated>
-    </task>
-    <task id="LOCAL-00162" summary="feat: trim video">
-      <option name="closed" value="true" />
-      <created>1741580004784</created>
-      <option name="number" value="00162" />
-      <option name="presentableId" value="LOCAL-00162" />
-      <option name="project" value="LOCAL" />
-      <updated>1741580004784</updated>
-    </task>
-    <task id="LOCAL-00163" summary="feat: trim video">
-      <option name="closed" value="true" />
-      <created>1741580736359</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1741580736359</updated>
-    </task>
-    <task id="LOCAL-00164" summary="refactor: file inputs">
-      <option name="closed" value="true" />
-      <created>1742960931740</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1742960931740</updated>
-    </task>
-    <task id="LOCAL-00165" summary="feat: background removal">
-      <option name="closed" value="true" />
-      <created>1742961898820</created>
-      <option name="number" value="00165" />
-      <option name="presentableId" value="LOCAL-00165" />
-      <option name="project" value="LOCAL" />
-      <updated>1742961898820</updated>
-    </task>
-    <task id="LOCAL-00166" summary="feat: split pdf">
-      <option name="closed" value="true" />
-      <created>1742967844908</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1742967844908</updated>
-    </task>
-    <task id="LOCAL-00167" summary="fix: typo">
-      <option name="closed" value="true" />
-      <created>1743019312699</created>
-      <option name="number" value="00167" />
-      <option name="presentableId" value="LOCAL-00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1743019312699</updated>
-    </task>
-    <task id="LOCAL-00168" summary="chore: result file name">
-      <option name="closed" value="true" />
-      <created>1743020690384</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1743020690384</updated>
+      <workItem from="1752070315115" duration="19000" />
+      <workItem from="1752071020011" duration="1599000" />
+      <workItem from="1752077170501" duration="4261000" />
+      <workItem from="1752127185450" duration="1168000" />
+      <workItem from="1752157409587" duration="2415000" />
     </task>
     <task id="LOCAL-00169" summary="chore: text result extensions">
       <option name="closed" value="true" />
@@ -887,23 +801,103 @@
       <option name="project" value="LOCAL" />
       <updated>1751850152784</updated>
     </task>
-    <task id="LOCAL-00206" summary="chore: remove .codebuddy">
+    <task id="LOCAL-00206" summary="chore: new logo and font">
       <option name="closed" value="true" />
-      <created>1751852942341</created>
+      <created>1752022118195</created>
       <option name="number" value="00206" />
       <option name="presentableId" value="LOCAL-00206" />
       <option name="project" value="LOCAL" />
-      <updated>1751852942341</updated>
+      <updated>1752022118199</updated>
     </task>
-    <task id="LOCAL-00207" summary="chore: add array key">
+    <task id="LOCAL-00207" summary="chore: white logo">
       <option name="closed" value="true" />
-      <created>1751893722720</created>
+      <created>1752022731608</created>
       <option name="number" value="00207" />
       <option name="presentableId" value="LOCAL-00207" />
       <option name="project" value="LOCAL" />
-      <updated>1751893722720</updated>
+      <updated>1752022731608</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <task id="LOCAL-00208" summary="chore: png icon">
+      <option name="closed" value="true" />
+      <created>1752023182341</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1752023182341</updated>
+    </task>
+    <task id="LOCAL-00209" summary="fix: remove xml viewer">
+      <option name="closed" value="true" />
+      <created>1752023796004</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1752023796004</updated>
+    </task>
+    <task id="LOCAL-00210" summary="feat: convert to jpg">
+      <option name="closed" value="true" />
+      <created>1752026153328</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1752026153328</updated>
+    </task>
+    <task id="LOCAL-00211" summary="feat: edit image">
+      <option name="closed" value="true" />
+      <created>1752032092273</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1752032092274</updated>
+    </task>
+    <task id="LOCAL-00212" summary="fix: favicons">
+      <option name="closed" value="true" />
+      <created>1752071147050</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1752071147050</updated>
+    </task>
+    <task id="LOCAL-00213" summary="chore: examples button visibility">
+      <option name="closed" value="true" />
+      <created>1752079671580</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1752079671580</updated>
+    </task>
+    <task id="LOCAL-00214" summary="feat: pdf editor">
+      <option name="closed" value="true" />
+      <created>1752079879005</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1752079879005</updated>
+    </task>
+    <task id="LOCAL-00215" summary="chore: style link">
+      <option name="closed" value="true" />
+      <created>1752080307348</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1752080307349</updated>
+    </task>
+    <task id="LOCAL-00216" summary="refactor: PDF editor">
+      <option name="closed" value="true" />
+      <created>1752157851370</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1752157851371</updated>
+    </task>
+    <task id="LOCAL-00217" summary="docs: edit pdf meta">
+      <option name="closed" value="true" />
+      <created>1752158119802</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1752158119802</updated>
+    </task>
+    <option name="localTasksCounter" value="218" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -950,16 +944,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: compress pdf" />
-    <MESSAGE value="refactor: lib" />
-    <MESSAGE value="fix: path" />
-    <MESSAGE value="fix: vite worker format" />
-    <MESSAGE value="fix: tests" />
-    <MESSAGE value="chore: uninstall @jspawn/ghostscript-wasm" />
-    <MESSAGE value="feat: protect pdf" />
-    <MESSAGE value="feat: image to text" />
-    <MESSAGE value="chore: hideCopy if video or audio" />
-    <MESSAGE value="chore: readme img and fix broken link" />
     <MESSAGE value="fix: add mkv to supported videos" />
     <MESSAGE value="feat: drag and drop" />
     <MESSAGE value="Merge branch 'feat/pdf-merge' of git-rohit:rohit267/omni-tools into feat/pdf-merge" />
@@ -973,9 +957,19 @@
     <MESSAGE value="chore: use scrollY" />
     <MESSAGE value="chore: remove flip x and y" />
     <MESSAGE value="fix: tsc" />
-    <MESSAGE value="chore: remove .codebuddy" />
-    <MESSAGE value="chore: add array key" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add array key" />
+    <MESSAGE value="chore: new logo and font" />
+    <MESSAGE value="chore: white logo" />
+    <MESSAGE value="chore: png icon" />
+    <MESSAGE value="fix: remove xml viewer" />
+    <MESSAGE value="feat: convert to jpg" />
+    <MESSAGE value="feat: edit image" />
+    <MESSAGE value="fix: favicons" />
+    <MESSAGE value="chore: examples button visibility" />
+    <MESSAGE value="feat: pdf editor" />
+    <MESSAGE value="chore: style link" />
+    <MESSAGE value="refactor: PDF editor" />
+    <MESSAGE value="docs: edit pdf meta" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: edit pdf meta" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

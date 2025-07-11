@@ -240,6 +240,7 @@ export default async function makeTool(
           description: calcData.longDescription
         }}
         verticalGroups
+        // @ts-ignore
         getGroups={({ values, updateField }) => [
           ...(calcData.presets?.length
             ? [

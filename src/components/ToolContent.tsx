@@ -46,6 +46,9 @@ interface ToolContentProps<Options, Input> extends ToolComponentProps {
     setFieldValue: (fieldName: string, value: any) => void
   ) => ReactNode;
   initialValues: Options;
+  /**
+   * should return non-empty array or null
+   */
   getGroups: GetGroupsType<Options> | null;
   compute: (optionsValues: Options, input: Input) => void;
   toolInfo?: {

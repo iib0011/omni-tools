@@ -6,10 +6,10 @@ import { FormikProps, FormikValues, useFormikContext } from 'formik';
 import ToolOptionGroups, { ToolOptionGroup } from './ToolOptionGroups';
 
 export type UpdateField<T> = <Y extends keyof T>(field: Y, value: T[Y]) => void;
-
+type NonEmptyArray<T> = [T, ...T[]];
 export type GetGroupsType<T> = (
   formikProps: FormikProps<T> & { updateField: UpdateField<T> }
-) => ToolOptionGroup[];
+) => NonEmptyArray<ToolOptionGroup>;
 
 export default function ToolOptions<T extends FormikValues>({
   children,
@@ -50,7 +50,7 @@ export default function ToolOptions<T extends FormikValues>({
       <Box mt={2}>
         <Stack direction={'row'} spacing={2}>
           <ToolOptionGroups
-            groups={getGroups({ ...formikContext, updateField }) ?? []}
+            groups={getGroups({ ...formikContext, updateField }) ?? null}
             vertical={vertical}
           />
           {children}

@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from 'assets/logo.png';
+import logoWhite from 'assets/logo-white.png';
 import {
   Drawer,
   List,
@@ -107,17 +108,22 @@ const Navbar: React.FC<NavbarProps> = ({
       sx={{
         background: 'transparent',
         boxShadow: 'none',
-        color: 'text.primary'
+        color: 'text.primary',
+        pt: 2
       }}
     >
       <Toolbar
         sx={{
           justifyContent: 'space-between',
-          alignItems: 'center'
+          alignItems: 'center',
+          mx: { md: '50px', lg: '150px' }
         }}
       >
         <Link to="/">
-          <img src={logo} width={isMobile ? '80px' : '150px'} />
+          <img
+            src={theme.palette.mode === 'light' ? logo : logoWhite}
+            width={isMobile ? '120px' : '200px'}
+          />
         </Link>
         {isMobile ? (
           <>
