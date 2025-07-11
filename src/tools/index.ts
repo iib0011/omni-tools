@@ -1,9 +1,10 @@
 import { stringTools } from '../pages/tools/string';
 import { imageTools } from '../pages/tools/image';
 import { DefinedTool, ToolCategory } from './defineTool';
-import { capitalizeFirstLetter } from '../utils/string';
+import { capitalizeFirstLetter } from '@utils/string';
 import { numberTools } from '../pages/tools/number';
 import { videoTools } from '../pages/tools/video';
+import { audioTools } from 'pages/tools/audio';
 import { listTools } from '../pages/tools/list';
 import { Entries } from 'type-fest';
 import { jsonTools } from '../pages/tools/json';
@@ -11,18 +12,22 @@ import { csvTools } from '../pages/tools/csv';
 import { timeTools } from '../pages/tools/time';
 import { IconifyIcon } from '@iconify/react';
 import { pdfTools } from '../pages/tools/pdf';
+import { xmlTools } from '../pages/tools/xml';
 
 const toolCategoriesOrder: ToolCategory[] = [
   'image-generic',
-  'string',
-  'json',
   'pdf',
+  'string',
   'video',
+  'time',
+  'audio',
+  'json',
   'list',
   'csv',
   'number',
   'png',
   'time',
+  'xml',
   'gif'
 ];
 export const tools: DefinedTool[] = [
@@ -34,7 +39,9 @@ export const tools: DefinedTool[] = [
   ...csvTools,
   ...videoTools,
   ...numberTools,
-  ...timeTools
+  ...timeTools,
+  ...audioTools,
+  ...xmlTools
 ];
 const categoriesConfig: {
   type: ToolCategory;
@@ -115,6 +122,18 @@ const categoriesConfig: {
     icon: 'material-symbols-light:image-outline-rounded',
     value:
       'Tools for working with pictures – compress, resize, crop, convert to JPG, rotate, remove background and much more.'
+  },
+  {
+    type: 'audio',
+    icon: 'ic:twotone-audiotrack',
+    value:
+      'Tools for working with audio – extract audio from video, adjusting audio speed, merging multiple audio files and much more.'
+  },
+  {
+    type: 'xml',
+    icon: 'mdi-light:xml',
+    value:
+      'Tools for working with XML data structures - viewer, beautifier, validator and much more'
   }
 ];
 // use for changelogs

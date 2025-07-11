@@ -1,4 +1,11 @@
-import { Box, Divider, Stack, TextField, useTheme } from '@mui/material';
+import {
+  Box,
+  Divider,
+  Stack,
+  TextField,
+  styled,
+  useTheme
+} from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Link, useNavigate, useParams } from 'react-router-dom';
@@ -15,6 +22,11 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SearchIcon from '@mui/icons-material/Search';
 import { Helmet } from 'react-helmet';
 
+const StyledLink = styled(Link)(({ theme }) => ({
+  '&:hover': {
+    color: theme.palette.mode === 'dark' ? 'white' : theme.palette.primary.light
+  }
+}));
 export default function ToolsByCategory() {
   const navigate = useNavigate();
   const theme = useTheme();
@@ -102,14 +114,14 @@ export default function ToolsByCategory() {
                   color={categoriesColors[index % categoriesColors.length]}
                 />
                 <Box>
-                  <Link
+                  <StyledLink
                     style={{
                       fontSize: 20
                     }}
                     to={'/' + tool.path}
                   >
                     {tool.name}
-                  </Link>
+                  </StyledLink>
                   <Typography sx={{ mt: 2 }}>
                     {tool.shortDescription}
                   </Typography>

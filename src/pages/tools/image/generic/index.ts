@@ -8,7 +8,10 @@ import { tool as createTransparent } from './create-transparent/meta';
 import { tool as imageToText } from './image-to-text/meta';
 import { tool as qrCodeGenerator } from './qr-code/meta';
 import { tool as rotateImage } from './rotate/meta';
+import { tool as convertToJpg } from './convert-to-jpg/meta';
+import { tool as imageEditor } from './editor/meta';
 export const imageGenericTools = [
+  imageEditor,
   resizeImage,
   compressImage,
   removeBackground,
@@ -18,5 +21,6 @@ export const imageGenericTools = [
   createTransparent,
   imageToText,
   qrCodeGenerator,
-  rotateImage
+  rotateImage,
+  convertToJpg
 ];
