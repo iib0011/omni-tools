@@ -18,6 +18,7 @@ import { useNavigate } from 'react-router-dom';
 import _ from 'lodash';
 import { Icon } from '@iconify/react';
 import { getToolCategoryTitle } from '@utils/string';
+import UserTypeFilter, { useUserTypeFilter } from './UserTypeFilter';
 
 const GroupHeader = styled('div')(({ theme }) => ({
   position: 'sticky',
@@ -47,17 +48,25 @@ const exampleTools: { label: string; url: string }[] = [
   { label: 'Trim video', url: '/video/trim' },
   { label: 'Calculate number sum', url: '/number/sum' }
 ];
+
 export default function Hero() {
   const [inputValue, setInputValue] = useState<string>('');
   const theme = useTheme();
+  const { selectedUserTypes, setSelectedUserTypes } = useUserTypeFilter();
   const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
   const navigate = useNavigate();
+
   const handleInputChange = (
     event: React.ChangeEvent<{}>,
     newInputValue: string
   ) => {
     setInputValue(newInputValue);
-    setFilteredTools(filterTools(tools, newInputValue));
+    setFilteredTools(filterTools(tools, newInputValue, selectedUserTypes));
+  };
+
+  const handleUserTypesChange = (userTypes: string[]) => {
+    setSelectedUserTypes(userTypes as any);
+    setFilteredTools(filterTools(tools, inputValue, userTypes as any));
   };
 
   return (
@@ -84,59 +93,69 @@ export default function Hero() {
         editing images, text, lists, and data, all directly from your browser.
       </Typography>
 
-      <Autocomplete
-        sx={{ mb: 2 }}
-        autoHighlight
-        options={filteredTools}
-        groupBy={(option) => option.type}
-        renderGroup={(params) => {
-          return (
-            <li key={params.key}>
-              <GroupHeader>{getToolCategoryTitle(params.group)}</GroupHeader>
-              <GroupItems>{params.children}</GroupItems>
-            </li>
-          );
-        }}
-        inputValue={inputValue}
-        getOptionLabel={(option) => option.name}
-        renderInput={(params) => (
-          <TextField
-            {...params}
-            fullWidth
-            placeholder={'Search all tools'}
-            InputProps={{
-              ...params.InputProps,
-              endAdornment: <SearchIcon />,
-              sx: {
-                borderRadius: 4,
-                backgroundColor: 'background.paper'
-              }
-            }}
-            onChange={(event) => handleInputChange(event, event.target.value)}
-          />
-        )}
-        renderOption={(props, option) => (
-          <Box
-            component="li"
-            {...props}
-            onClick={() => navigate('/' + option.path)}
-          >
-            <Stack direction={'row'} spacing={2} alignItems={'center'}>
-              <Icon fontSize={20} icon={option.icon} />
-              <Box>
-                <Typography fontWeight={'bold'}>{option.name}</Typography>
-                <Typography fontSize={12}>{option.shortDescription}</Typography>
-              </Box>
-            </Stack>
-          </Box>
-        )}
-        onChange={(event, newValue) => {
-          if (newValue) {
-            navigate('/' + newValue.path);
-          }
-        }}
-      />
-      <Grid container spacing={2} mt={2}>
+      <Stack direction={{ xs: 'column', md: 'row' }} spacing={2} mb={2}>
+        <Autocomplete
+          sx={{ flex: 1 }}
+          autoHighlight
+          options={filteredTools}
+          groupBy={(option) => option.type}
+          renderGroup={(params) => {
+            return (
+              <li key={params.key}>
+                <GroupHeader>{getToolCategoryTitle(params.group)}</GroupHeader>
+                <GroupItems>{params.children}</GroupItems>
+              </li>
+            );
+          }}
+          inputValue={inputValue}
+          getOptionLabel={(option) => option.name}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              fullWidth
+              placeholder={'Search all tools'}
+              InputProps={{
+                ...params.InputProps,
+                endAdornment: <SearchIcon />,
+                sx: {
+                  borderRadius: 4,
+                  backgroundColor: 'background.paper'
+                }
+              }}
+              onChange={(event) => handleInputChange(event, event.target.value)}
+            />
+          )}
+          renderOption={(props, option) => (
+            <Box
+              component="li"
+              {...props}
+              onClick={() => navigate('/' + option.path)}
+            >
+              <Stack direction={'row'} spacing={2} alignItems={'center'}>
+                <Icon fontSize={20} icon={option.icon} />
+                <Box>
+                  <Typography fontWeight={'bold'}>{option.name}</Typography>
+                  <Typography fontSize={12}>
+                    {option.shortDescription}
+                  </Typography>
+                </Box>
+              </Stack>
+            </Box>
+          )}
+          onChange={(event, newValue) => {
+            if (newValue) {
+              navigate('/' + newValue.path);
+            }
+          }}
+        />
+        <UserTypeFilter
+          selectedUserTypes={selectedUserTypes}
+          onUserTypesChange={handleUserTypesChange}
+          label="User Type"
+        />
+      </Stack>
+
+      <Grid container spacing={2}>
         {exampleTools.map((tool) => (
           <Grid
             onClick={() =>

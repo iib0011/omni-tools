@@ -2,6 +2,13 @@ import ToolLayout from '../components/ToolLayout';
 import React, { JSXElementConstructor, LazyExoticComponent } from 'react';
 import { IconifyIcon } from '@iconify/react';
 
+export type UserType =
+  | 'General Users'
+  | 'Developers'
+  | 'Designers'
+  | 'Students'
+  | 'CyberSec';
+
 export interface ToolMeta {
   path: string;
   component: LazyExoticComponent<JSXElementConstructor<ToolComponentProps>>;
@@ -11,20 +18,21 @@ export interface ToolMeta {
   description: string;
   shortDescription: string;
   longDescription?: string;
+  userTypes?: UserType[];
 }
 
 export type ToolCategory =
   | 'string'
+  | 'image-generic'
   | 'png'
   | 'number'
   | 'gif'
-  | 'video'
   | 'list'
   | 'json'
   | 'time'
   | 'csv'
+  | 'video'
   | 'pdf'
-  | 'image-generic'
   | 'audio'
   | 'xml';
 
@@ -37,6 +45,7 @@ export interface DefinedTool {
   icon: IconifyIcon | string;
   keywords: string[];
   component: () => JSX.Element;
+  userTypes?: UserType[];
 }
 
 export interface ToolComponentProps {
@@ -56,7 +65,8 @@ export const defineTool = (
     keywords,
     component,
     shortDescription,
-    longDescription
+    longDescription,
+    userTypes
   } = options;
   const Component = component;
   return {
@@ -67,6 +77,7 @@ export const defineTool = (
     description,
     shortDescription,
     keywords,
+    userTypes,
     component: () => {
       return (
         <ToolLayout

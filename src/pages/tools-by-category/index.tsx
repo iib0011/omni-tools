@@ -21,18 +21,21 @@ import BackButton from '@components/BackButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SearchIcon from '@mui/icons-material/Search';
 import { Helmet } from 'react-helmet';
+import UserTypeFilter, { useUserTypeFilter } from '@components/UserTypeFilter';
 
 const StyledLink = styled(Link)(({ theme }) => ({
   '&:hover': {
     color: theme.palette.mode === 'dark' ? 'white' : theme.palette.primary.light
   }
 }));
+
 export default function ToolsByCategory() {
   const navigate = useNavigate();
   const theme = useTheme();
   const mainContentRef = React.useRef<HTMLDivElement>(null);
   const { categoryName } = useParams();
   const [searchTerm, setSearchTerm] = React.useState<string>('');
+  const { selectedUserTypes, setSelectedUserTypes } = useUserTypeFilter();
   const rawTitle = getToolCategoryTitle(categoryName as string);
 
   useEffect(() => {
@@ -40,6 +43,21 @@ export default function ToolsByCategory() {
       mainContentRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, []);
+
+  const handleUserTypesChange = (userTypes: string[]) => {
+    setSelectedUserTypes(userTypes as any);
+  };
+
+  const categoryTools =
+    getToolsByCategory(selectedUserTypes).find(
+      ({ type }) => type === categoryName
+    )?.tools ?? [];
+
+  const filteredTools = filterTools(
+    categoryTools,
+    searchTerm,
+    selectedUserTypes
+  );
 
   return (
     <Box sx={{ backgroundColor: 'background.default' }}>
@@ -68,25 +86,28 @@ export default function ToolsByCategory() {
               color={theme.palette.primary.main}
             >{`All ${rawTitle} Tools`}</Typography>
           </Stack>
-          <TextField
-            placeholder={'Search'}
-            InputProps={{
-              endAdornment: <SearchIcon />,
-              sx: {
-                borderRadius: 4,
-                backgroundColor: 'background.paper',
-                maxWidth: 400
-              }
-            }}
-            onChange={(event) => setSearchTerm(event.target.value)}
-          />
+          <Stack direction={'row'} spacing={2} sx={{ minWidth: 0 }}>
+            <TextField
+              placeholder={'Search'}
+              InputProps={{
+                endAdornment: <SearchIcon />,
+                sx: {
+                  borderRadius: 4,
+                  backgroundColor: 'background.paper',
+                  maxWidth: 400
+                }
+              }}
+              onChange={(event) => setSearchTerm(event.target.value)}
+            />
+            <UserTypeFilter
+              selectedUserTypes={selectedUserTypes}
+              onUserTypesChange={handleUserTypesChange}
+              label="User Type"
+            />
+          </Stack>
         </Stack>
         <Grid container spacing={2} mt={2}>
-          {filterTools(
-            getToolsByCategory().find(({ type }) => type === categoryName)
-              ?.tools ?? [],
-            searchTerm
-          ).map((tool, index) => (
+          {filteredTools.map((tool, index) => (
             <Grid item xs={12} md={6} lg={4} key={tool.path}>
               <Stack
                 sx={{

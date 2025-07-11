@@ -12,5 +12,6 @@ export const tool = defineTool('string', {
   longDescription:
     'With this online tool, you can censor certain words in any text. You can specify a list of unwanted words (such as swear words or secret words) and the program will replace them with alternative words and create a safe-to-read text. The words can be specified in a multi-line text field in the options by entering one word per line.',
   keywords: ['text', 'censor', 'words', 'characters'],
+  userTypes: ['General Users', 'Students'],
   component: lazy(() => import('./index'))
 });

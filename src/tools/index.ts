@@ -1,6 +1,6 @@
 import { stringTools } from '../pages/tools/string';
 import { imageTools } from '../pages/tools/image';
-import { DefinedTool, ToolCategory } from './defineTool';
+import { DefinedTool, ToolCategory, UserType } from './defineTool';
 import { capitalizeFirstLetter } from '@utils/string';
 import { numberTools } from '../pages/tools/number';
 import { videoTools } from '../pages/tools/video';
@@ -136,6 +136,23 @@ const categoriesConfig: {
       'Tools for working with XML data structures - viewer, beautifier, validator and much more'
   }
 ];
+
+// Filter tools by user types
+export const filterToolsByUserTypes = (
+  tools: DefinedTool[],
+  userTypes: UserType[]
+): DefinedTool[] => {
+  if (userTypes.length === 0) return tools;
+
+  return tools.filter((tool) => {
+    // If tool has no userTypes defined, show it to all users
+    if (!tool.userTypes || tool.userTypes.length === 0) return true;
+
+    // Check if tool has any of the selected user types
+    return tool.userTypes.some((userType) => userTypes.includes(userType));
+  });
+};
+
 // use for changelogs
 // console.log(
 //   'tools',
@@ -143,13 +160,22 @@ const categoriesConfig: {
 // );
 export const filterTools = (
   tools: DefinedTool[],
-  query: string
+  query: string,
+  userTypes: UserType[] = []
 ): DefinedTool[] => {
-  if (!query) return tools;
+  let filteredTools = tools;
+
+  // First filter by user types
+  if (userTypes.length > 0) {
+    filteredTools = filterToolsByUserTypes(tools, userTypes);
+  }
+
+  // Then filter by search query
+  if (!query) return filteredTools;
 
   const lowerCaseQuery = query.toLowerCase();
 
-  return tools.filter(
+  return filteredTools.filter(
     (tool) =>
       tool.name.toLowerCase().includes(lowerCaseQuery) ||
       tool.description.toLowerCase().includes(lowerCaseQuery) ||
@@ -160,7 +186,9 @@ export const filterTools = (
   );
 };
 
-export const getToolsByCategory = (): {
+export const getToolsByCategory = (
+  userTypes: UserType[] = []
+): {
   title: string;
   rawTitle: string;
   description: string;
@@ -171,23 +199,33 @@ export const getToolsByCategory = (): {
 }[] => {
   const groupedByType: Partial<Record<ToolCategory, DefinedTool[]>> =
     Object.groupBy(tools, ({ type }) => type);
+
   return (Object.entries(groupedByType) as Entries<typeof groupedByType>)
     .map(([type, tools]) => {
       const categoryConfig = categoriesConfig.find(
         (config) => config.type === type
       );
+
+      // Filter tools by user types if specified
+      const filteredTools =
+        userTypes.length > 0
+          ? filterToolsByUserTypes(tools ?? [], userTypes)
+          : tools ?? [];
+
       return {
         rawTitle: categoryConfig?.title ?? capitalizeFirstLetter(type),
         title: `${categoryConfig?.title ?? capitalizeFirstLetter(type)} Tools`,
         description: categoryConfig?.value ?? '',
         type,
         icon: categoryConfig!.icon,
-        tools: tools ?? [],
-        example: tools
-          ? { title: tools[0].name, path: tools[0].path }
-          : { title: '', path: '' }
+        tools: filteredTools,
+        example:
+          filteredTools.length > 0
+            ? { title: filteredTools[0].name, path: filteredTools[0].path }
+            : { title: '', path: '' }
       };
     })
+    .filter((category) => category.tools.length > 0) // Only show categories with tools
     .sort(
       (a, b) =>
         toolCategoriesOrder.indexOf(a.type) -

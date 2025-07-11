@@ -11,5 +11,6 @@ export const tool = defineTool('string', {
   longDescription:
     'This tool provides various statistics about the text you input, including the number of lines, words, and characters. You can also choose to include empty lines in the count. it can count words and characters based on custom delimiters, allowing for flexible text analysis. Additionally, it can provide frequency statistics for words and characters, helping you understand the distribution of terms in your text.',
   keywords: ['text', 'statistics', 'count', 'lines', 'words', 'characters'],
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

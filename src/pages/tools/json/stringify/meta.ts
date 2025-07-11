@@ -17,5 +17,6 @@ export const tool = defineTool('json', {
     'json',
     'string'
   ],
+  userTypes: ['Developers'],
   component: lazy(() => import('./index'))
 });

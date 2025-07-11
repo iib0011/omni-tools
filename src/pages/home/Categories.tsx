@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import { useState } from 'react';
 import { categoriesColors } from 'config/uiConfig';
 import { Icon } from '@iconify/react';
+import { useUserTypeFilter } from '@components/UserTypeFilter';
 
 type ArrayElement<ArrayType extends readonly unknown[]> =
   ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
@@ -65,7 +66,7 @@ const SingleCategory = function ({
               </Stack>
               <Typography sx={{ mt: 2 }}>{category.description}</Typography>
             </Box>
-            <Grid mt={1} container spacing={2}>
+            <Grid container spacing={2} mt={2}>
               <Grid item xs={12} md={6}>
                 <Button
                   fullWidth
@@ -88,10 +89,14 @@ const SingleCategory = function ({
     </Grid>
   );
 };
+
 export default function Categories() {
+  const { selectedUserTypes } = useUserTypeFilter();
+  const categories = getToolsByCategory(selectedUserTypes);
+
   return (
     <Grid width={'80%'} container mt={2} spacing={2}>
-      {getToolsByCategory().map((category, index) => (
+      {categories.map((category, index) => (
         <SingleCategory key={category.type} category={category} index={index} />
       ))}
     </Grid>
