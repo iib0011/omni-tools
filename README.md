@@ -44,15 +44,23 @@ Plus, the Docker image is super lightweight at just 28MB, making it fast to depl
 
 We strive to offer a variety of tools, including:
 
-## **Image/Video/Binary Tools**
+## **Image/Video/Audio Tools**
 
 - Image Resizer
 - Image Converter
+- Image Editor
 - Video Trimmer
 - Video Reverser
 - And more...
 
-## **String/List Tools**
+## **PDF Tools**
+
+- PDF Splitter
+- PDF Merger
+- PDF Editor
+- And more...
+
+## **Text/List Tools**
 
 - Case Converters
 - List Shuffler
@@ -68,14 +76,14 @@ We strive to offer a variety of tools, including:
 ## **Math Tools**
 
 - Generate Prime Numbers
-- Generate Perfect Numbers
+- Calculate voltage, current, or resistance
 - And more...
 
-## **Miscellaneous Tools**
+## **Data Tools**
 
 - JSON Tools
-- PDF Tools
 - CSV Tools
+- XML Tools
 - And more...
 
 Stay tuned as we continue to expand and improve our collection!
@@ -147,7 +155,7 @@ npm run test:e2e
 We welcome contributions! You can help by:
 
 - ✅ Reporting bugs
-- ✅ Suggesting new features in Github issues or [here](https://tally.so/r/nrkkx2)
+- ✅ Suggesting new features in GitHub issues or [here](https://tally.so/r/nrkkx2)
 - ✅ Improving documentation
 - ✅ Submitting pull requests
 
