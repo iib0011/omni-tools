@@ -10,5 +10,6 @@ export const tool = defineTool('pdf', {
   keywords: ['pdf', 'png', 'convert', 'image', 'extract', 'pages'],
   longDescription:
     'Upload a PDF and convert each page into a high-quality PNG image directly in your browser. This tool is ideal for extracting visual content or sharing individual pages. No data is uploaded — everything runs locally.',
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

@@ -2,12 +2,13 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('list', {
-  name: 'Truncate',
+  name: 'Truncate list',
   path: 'truncate',
-  icon: 'mdi:format-horizontal-align-right',
+  shortDescription: 'Truncate a list to a specified number of items',
+  icon: 'material-symbols-light:short-text',
   description:
-    "World's simplest browser-based utility for truncating lists. Quickly limit the number of items in your list by specifying a maximum length. Perfect for sampling data, creating previews, or managing large lists. Supports custom separators and various truncation options.",
-  shortDescription: 'Limit the number of items in a list',
-  keywords: ['truncate'],
+    'Truncate a list to keep only the first N items or remove items beyond a certain limit.',
+  keywords: ['truncate', 'list', 'limit', 'cut'],
+  userTypes: ['General Users', 'Students'],
   component: lazy(() => import('./index'))
 });

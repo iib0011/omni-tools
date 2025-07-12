@@ -9,5 +9,6 @@ export const tool = defineTool('xml', {
     'Beautify and reformat XML for improved readability and structure.',
   shortDescription: 'Beautify XML for readability.',
   keywords: ['xml', 'beautify', 'format', 'pretty', 'indent'],
+  userTypes: ['Developers'],
   component: lazy(() => import('./index'))
 });

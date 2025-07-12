@@ -9,5 +9,6 @@ export const tool = defineTool('string', {
   description:
     'Load your text in the input form on the left and you will automatically get truncated text on the right.',
   keywords: ['text', 'truncate'],
+  userTypes: ['General Users', 'Students'],
   component: lazy(() => import('./index'))
 });

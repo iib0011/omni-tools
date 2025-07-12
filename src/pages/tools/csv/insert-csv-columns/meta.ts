@@ -10,6 +10,6 @@ export const tool = defineTool('csv', {
   shortDescription:
     'Quickly insert one or more new columns anywhere in a CSV file.',
   keywords: ['insert', 'csv', 'columns', 'append', 'prepend'],
-  longDescription: '',
+  userTypes: ['Developers'],
   component: lazy(() => import('./index'))
 });

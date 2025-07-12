@@ -9,5 +9,6 @@ export const tool = defineTool('xml', {
     'Validate XML files or strings to ensure they are well-formed and error-free.',
   shortDescription: 'Validate XML for errors.',
   keywords: ['xml', 'validate', 'check', 'syntax', 'error'],
+  userTypes: ['Developers'],
   component: lazy(() => import('./index'))
 });

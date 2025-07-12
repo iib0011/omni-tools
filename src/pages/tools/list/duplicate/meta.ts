@@ -10,5 +10,6 @@ export const tool = defineTool('list', {
     'A tool to duplicate each item in a list a specified number of times. Perfect for creating repeated patterns, test data, or expanding datasets.',
   shortDescription: 'Repeat items in a list multiple times.',
   keywords: ['duplicate'],
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

@@ -10,5 +10,6 @@ export const tool = defineTool('number', {
     'Quickly calculate the sum of numbers in your browser. To get your sum, just enter your list of numbers in the input field, adjust the separator between the numbers in the options below, and this utility will add up all these numbers.',
   shortDescription: 'Quickly sum numbers',
   keywords: ['sum'],
+  userTypes: ['General Users', 'Students'],
   component: lazy(() => import('./index'))
 });

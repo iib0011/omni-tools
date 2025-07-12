@@ -11,5 +11,6 @@ export const tool = defineTool('json', {
   longDescription:
     'This tool allows you to convert TSV (Tab-Separated Values) files into JSON format. You can customize the conversion process by specifying delimiters, quote characters, and whether to use headers. It also supports dynamic type conversion for values, handling comments, and skipping empty lines. The output can be formatted with indentation or minified as needed.',
   keywords: ['tsv', 'json', 'convert', 'transform', 'parse'],
+  userTypes: ['Developers'],
   component: lazy(() => import('./index'))
 });

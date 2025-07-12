@@ -9,5 +9,6 @@ export const meta = defineTool('pdf', {
   icon: 'material-symbols:import-contacts',
   component: lazy(() => import('./index')),
   keywords: ['pdf', 'epub', 'convert', 'ebook'],
-  path: 'pdf-to-epub'
+  path: 'pdf-to-epub',
+  userTypes: ['General Users', 'Students', 'Developers']
 });

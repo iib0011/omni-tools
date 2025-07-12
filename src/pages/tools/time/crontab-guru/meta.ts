@@ -20,5 +20,6 @@ export const tool = defineTool('time', {
   ],
   longDescription:
     'Enter a crontab expression (like "35 16 * * 0-5") to get a human-readable explanation and validation. Useful for understanding and debugging cron schedules. Inspired by crontab.guru.',
+  userTypes: ['Developers'],
   component: lazy(() => import('./index'))
 });

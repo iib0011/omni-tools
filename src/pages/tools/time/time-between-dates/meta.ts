@@ -6,17 +6,10 @@ export const tool = defineTool('time', {
   path: 'time-between-dates',
   icon: 'tabler:clock-minus',
   description:
-    'Calculate the exact time difference between two dates and times, with support for different timezones. This tool provides a detailed breakdown of the time difference in various units (years, months, days, hours, minutes, and seconds).',
+    'Calculate the time difference between two dates with timezone support. Get days, hours, minutes, and seconds between dates.',
   shortDescription:
-    'Calculate the precise time duration between two dates with timezone support.',
-  keywords: [
-    'time',
-    'dates',
-    'difference',
-    'duration',
-    'calculator',
-    'timezones',
-    'interval'
-  ],
+    'Calculate time difference between two dates with timezone support',
+  keywords: ['time', 'dates', 'difference', 'calculate', 'between'],
+  userTypes: ['General Users', 'Students'],
   component: lazy(() => import('./index'))
 });

@@ -2,14 +2,27 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('video', {
-  name: 'Flip Video',
+  name: 'Flip video',
   path: 'flip',
-  icon: 'mdi:flip-horizontal',
+  icon: 'material-symbols:flip',
   description:
-    'This online utility allows you to flip videos horizontally or vertically. You can preview the flipped video before processing. Supports common video formats like MP4, WebM, and OGG.',
-  shortDescription: 'Flip videos horizontally or vertically',
-  keywords: ['flip', 'video', 'mirror', 'edit', 'horizontal', 'vertical'],
+    'Flip video files horizontally or vertically. Mirror videos or create flipped content for creative purposes.',
+  shortDescription:
+    'Flip video files horizontally or vertically (MP4, MOV, AVI).',
+  keywords: [
+    'flip',
+    'video',
+    'mirror',
+    'horizontal',
+    'vertical',
+    'mp4',
+    'mov',
+    'avi',
+    'video editing',
+    'transform'
+  ],
   longDescription:
-    'Easily flip your videos horizontally (mirror) or vertically (upside down) with this simple online tool.',
+    'This tool allows you to flip video files horizontally or vertically. Useful for creating mirror effects, correcting incorrectly oriented videos, or creating creative content. Supports various video formats including MP4, MOV, and AVI.',
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

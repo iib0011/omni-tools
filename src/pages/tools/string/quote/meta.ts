@@ -10,5 +10,6 @@ export const tool = defineTool('string', {
     'A tool to add quotation marks or custom characters around text. Perfect for formatting strings for code, citations, or stylistic purposes.',
   shortDescription: 'Add quotes around text easily.',
   keywords: ['quote'],
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

@@ -4,11 +4,24 @@ import { lazy } from 'react';
 export const tool = defineTool('video', {
   name: 'Crop video',
   path: 'crop-video',
-  icon: 'mdi:crop',
-  description: 'Crop a video by specifying coordinates and dimensions',
-  shortDescription: 'Crop video to specific area',
-  keywords: ['crop', 'video', 'trim', 'cut', 'resize'],
+  icon: 'material-symbols:crop',
+  description:
+    'Crop video files to remove unwanted areas or focus on specific parts. Adjust aspect ratios and remove black bars.',
+  shortDescription:
+    'Crop video files to remove unwanted areas (MP4, MOV, AVI).',
+  keywords: [
+    'crop',
+    'video',
+    'trim',
+    'aspect ratio',
+    'mp4',
+    'mov',
+    'avi',
+    'video editing',
+    'resize'
+  ],
   longDescription:
-    'Remove unwanted parts from the edges of your video by cropping it to a specific rectangular area. Define the starting coordinates (X, Y) and the width and height of the area you want to keep.',
+    'This tool allows you to crop video files to remove unwanted areas or focus on specific parts of the video. Useful for removing black bars, adjusting aspect ratios, or focusing on important content. Supports various video formats including MP4, MOV, and AVI.',
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

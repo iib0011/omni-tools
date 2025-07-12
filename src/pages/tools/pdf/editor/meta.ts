@@ -24,5 +24,6 @@ export const tool = defineTool('pdf', {
     'annotation',
     'markup'
   ],
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

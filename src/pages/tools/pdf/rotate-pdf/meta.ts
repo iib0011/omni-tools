@@ -10,5 +10,6 @@ export const tool = defineTool('pdf', {
   keywords: ['pdf', 'rotate', 'rotation', 'document', 'pages', 'orientation'],
   longDescription:
     'Change the orientation of PDF pages by rotating them 90, 180, or 270 degrees. Useful for fixing incorrectly scanned documents or preparing PDFs for printing.',
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

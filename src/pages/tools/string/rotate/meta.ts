@@ -10,5 +10,6 @@ export const tool = defineTool('string', {
     'A tool to rotate characters in a string by a specified number of positions. Shift characters left or right while maintaining their relative order.',
   shortDescription: 'Shift characters in text by position.',
   keywords: ['rotate'],
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

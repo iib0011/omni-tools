@@ -9,5 +9,6 @@ export const tool = defineTool('string', {
   description:
     'Easily replace specific text in your content with this simple, browser-based tool. Just input your text, set the text you want to replace and the replacement value, and instantly get the updated version.',
   keywords: ['text', 'replace'],
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

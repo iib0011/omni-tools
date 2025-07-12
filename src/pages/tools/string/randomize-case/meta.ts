@@ -10,5 +10,6 @@ export const tool = defineTool('string', {
     "World's simplest browser-based utility for randomizing the case of text. Just paste your text and get it instantly transformed with random uppercase and lowercase letters. Perfect for creating playful text styles, meme text, or simulating chaotic writing.",
   shortDescription: 'Convert text to random uppercase and lowercase letters',
   keywords: ['randomize', 'case'],
+  userTypes: ['General Users', 'Students'],
   component: lazy(() => import('./index'))
 });

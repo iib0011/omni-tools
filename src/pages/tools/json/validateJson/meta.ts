@@ -6,8 +6,9 @@ export const tool = defineTool('json', {
   path: 'validateJson',
   icon: 'lets-icons:json-light',
   description:
-    'Validate JSON data and identify formatting issues such as missing quotes, trailing commas, and incorrect brackets.',
-  shortDescription: 'Quickly validate a JSON data structure.',
-  keywords: ['validate', 'json', 'syntax'],
+    'Validate JSON data for syntax errors and structural correctness. This tool helps ensure your JSON is properly formatted and valid.',
+  shortDescription: 'Validate JSON syntax and structure',
+  keywords: ['validate', 'json', 'syntax', 'check', 'verify'],
+  userTypes: ['Developers'],
   component: lazy(() => import('./index'))
 });

@@ -3,12 +3,13 @@ import { lazy } from 'react';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('list', {
-  name: 'Wrap',
+  name: 'Wrap items',
   path: 'wrap',
-  icon: 'mdi:wrap',
+  shortDescription: 'Wrap items in a list with custom text',
+  icon: 'material-symbols-light:format-quote',
   description:
-    'A tool to wrap each item in a list with custom prefix and suffix characters. Useful for formatting lists for code, markup languages, or presentation.',
-  shortDescription: 'Add characters around list items.',
-  keywords: ['wrap'],
+    'Wrap each item in a list with custom text, such as quotes, brackets, or any other prefix and suffix.',
+  keywords: ['wrap', 'list', 'format', 'text'],
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

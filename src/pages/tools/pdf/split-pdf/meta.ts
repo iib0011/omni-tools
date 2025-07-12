@@ -9,5 +9,6 @@ export const meta = defineTool('pdf', {
   icon: 'material-symbols-light:call-split-rounded',
   component: lazy(() => import('./index')),
   keywords: ['pdf', 'split', 'extract', 'pages', 'range', 'document'],
-  path: 'split-pdf'
+  path: 'split-pdf',
+  userTypes: ['General Users', 'Students', 'Developers']
 });

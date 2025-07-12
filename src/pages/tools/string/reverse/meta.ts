@@ -9,5 +9,6 @@ export const tool = defineTool('string', {
     "World's simplest browser-based utility for reversing text. Input any text and get it instantly reversed, character by character. Perfect for creating mirror text, analyzing palindromes, or playing with text patterns. Preserves spaces and special characters while reversing.",
   shortDescription: 'Reverse any text character by character',
   keywords: ['reverse'],
+  userTypes: ['General Users', 'Students'],
   component: lazy(() => import('./index'))
 });

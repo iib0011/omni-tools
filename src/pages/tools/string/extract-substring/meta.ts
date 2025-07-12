@@ -10,5 +10,6 @@ export const tool = defineTool('string', {
     "World's simplest browser-based utility for extracting substrings from text. Easily extract specific portions of text by specifying start position and length. Perfect for parsing data, isolating specific parts of text, or data extraction tasks. Supports multi-line text processing and character-level precision.",
   shortDescription: 'Extract specific portions of text by position and length',
   keywords: ['extract', 'substring'],
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

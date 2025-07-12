@@ -9,5 +9,6 @@ export const tool = defineTool('string', {
     "Load your text in the input form on the left and you'll instantly get text with no duplicate lines in the output area. Powerful, free, and fast. Load text lines – get unique text lines",
   shortDescription: 'Quickly delete all repeated lines from text',
   keywords: ['remove', 'duplicate', 'lines'],
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

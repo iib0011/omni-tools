@@ -10,5 +10,6 @@ export const tool = defineTool('list', {
     'A tool to identify and count the most frequently occurring items in a list. Useful for data analysis, finding trends, or identifying common elements.',
   shortDescription: 'Find most common items in a list.',
   keywords: ['find', 'most', 'popular'],
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

@@ -10,5 +10,6 @@ export const tool = defineTool('string', {
   shortDescription: 'Quickly split a text',
   longDescription: 'Quickly split a text',
   keywords: ['text', 'split'],
+  userTypes: ['General Users', 'Students'],
   component: lazy(() => import('./index'))
 });

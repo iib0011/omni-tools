@@ -23,5 +23,6 @@ export const tool = defineTool('audio', {
   ],
   longDescription:
     'This tool allows you to trim audio files by specifying start and end times. You can extract specific segments from longer audio files, remove unwanted parts, or create shorter clips. Supports various audio formats including MP3, AAC, and WAV. Perfect for podcast editing, music production, or any audio editing needs.',
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

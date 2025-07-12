@@ -24,5 +24,6 @@ export const tool = defineTool('pdf', {
   ],
   longDescription:
     'Compress PDF files securely in your browser using Ghostscript. Your files never leave your device, ensuring complete privacy while reducing file sizes for email sharing, uploading to websites, or saving storage space. Powered by WebAssembly technology.',
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

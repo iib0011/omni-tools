@@ -21,6 +21,7 @@ export const tool = defineTool('audio', {
     'multiple files'
   ],
   longDescription:
-    'This tool allows you to merge multiple audio files into a single file by concatenating them in the order you upload them. Perfect for combining podcast segments, music tracks, or any audio files that need to be joined together. Supports various audio formats including MP3, AAC, and WAV.',
+    'This tool allows you to merge multiple audio files into a single audio file. You can combine audio files end-to-end (concatenation) or overlay them (mixing). Supports various audio formats including MP3, AAC, and WAV. Perfect for creating playlists, combining podcast segments, or mixing audio tracks.',
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

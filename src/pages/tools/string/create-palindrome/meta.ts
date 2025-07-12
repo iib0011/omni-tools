@@ -12,5 +12,6 @@ export const tool = defineTool('string', {
   longDescription:
     'This tool creates a palindrome from the given string. It does it by generating a copy of the string, reversing it, and appending it at the end of the original string. This method creates a palindrome with the last character duplicated twice. There is also another way to do it, which deletes the first letter of the reversed copy. In this case, when the string and the copy are joined together, you also get a palindrome but without the repeating last character. You can compare the two types of palindromes by switching between them in the options. You can also enable the multi-line mode that will create palindromes of every string on every line. Stringabulous!',
   keywords: ['create', 'palindrome'],
+  userTypes: ['General Users', 'Students'],
   component: lazy(() => import('./index'))
 });

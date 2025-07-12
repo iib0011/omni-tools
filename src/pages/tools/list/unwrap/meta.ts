@@ -3,12 +3,13 @@ import { lazy } from 'react';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('list', {
-  name: 'Unwrap',
+  name: 'Unwrap items',
   path: 'unwrap',
-  icon: 'mdi:unwrap',
+  shortDescription: 'Remove wrapping text from items in a list',
+  icon: 'material-symbols-light:format-clear',
   description:
-    'A tool to remove characters from the beginning and end of each item in a list. Perfect for cleaning up formatted data or removing unwanted wrappers.',
-  shortDescription: 'Remove characters around list items.',
-  keywords: ['unwrap'],
+    'Remove custom wrapping text from items in a list, such as quotes, brackets, or any other prefix and suffix.',
+  keywords: ['unwrap', 'list', 'remove', 'format'],
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

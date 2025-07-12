@@ -2,12 +2,26 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('video', {
-  name: 'Loop Video',
+  name: 'Loop video',
   path: 'loop',
-  icon: 'ic:baseline-loop',
+  icon: 'material-symbols:loop',
   description:
-    'This online utility lets you loop videos by specifying the number of repetitions. You can preview the looped video before processing. Supports common video formats like MP4, WebM, and OGG.',
-  shortDescription: 'Loop videos multiple times',
-  keywords: ['loop', 'video', 'repeat', 'duplicate', 'sequence', 'playback'],
+    'Create looping videos by repeating the video content. Set the number of loops or create infinite loops.',
+  shortDescription:
+    'Create looping videos by repeating content (MP4, MOV, AVI).',
+  keywords: [
+    'loop',
+    'video',
+    'repeat',
+    'cycle',
+    'mp4',
+    'mov',
+    'avi',
+    'video editing',
+    'playback'
+  ],
+  longDescription:
+    'This tool allows you to create looping videos by repeating the video content multiple times. You can set the number of loops or create infinite loops. Useful for creating background videos, animated content, or repeating sequences. Supports various video formats including MP4, MOV, and AVI.',
+  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

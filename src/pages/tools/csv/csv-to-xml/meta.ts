@@ -8,5 +8,6 @@ export const tool = defineTool('csv', {
   description: 'Convert CSV files to XML format with customizable options.',
   shortDescription: 'Convert CSV data to XML format.',
   keywords: ['csv', 'xml', 'convert', 'transform', 'parse'],
+  userTypes: ['Developers'],
   component: lazy(() => import('./index'))
 });
