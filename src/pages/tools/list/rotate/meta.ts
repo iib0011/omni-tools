@@ -12,8 +12,8 @@ export const tool = defineTool('list', {
   keywords: ['rotate'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'list.rotate.name',
-    description: 'list.rotate.description',
-    shortDescription: 'list.rotate.shortDescription'
+    name: 'list:rotate.title',
+    description: 'list:rotate.description',
+    shortDescription: 'list:rotate.shortDescription'
   }
 });

@@ -11,8 +11,8 @@ export const tool = defineTool('list', {
   keywords: ['find', 'unique'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'list.findUnique.name',
-    description: 'list.findUnique.description',
-    shortDescription: 'list.findUnique.shortDescription'
+    name: 'list:findUnique.title',
+    description: 'list:findUnique.description',
+    shortDescription: 'list:findUnique.shortDescription'
   }
 });

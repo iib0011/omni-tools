@@ -95,33 +95,33 @@ export default function Quote({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('string.quote.quoteOptions'),
+      title: t('string:quote.quoteOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.leftQuote}
             onOwnChange={(val) => updateField('leftQuote', val)}
-            description={t('string.quote.leftQuoteDescription')}
+            description={t('string:quote.leftQuoteDescription')}
           />
           <TextFieldWithDesc
             value={values.rightQuote}
             onOwnChange={(val) => updateField('rightQuote', val)}
-            description={t('string.quote.rightQuoteDescription')}
+            description={t('string:quote.rightQuoteDescription')}
           />
           <CheckboxWithDesc
             checked={values.doubleQuotation}
             onChange={(checked) => updateField('doubleQuotation', checked)}
-            title={t('string.quote.allowDoubleQuotation')}
+            title={t('string:quote.allowDoubleQuotation')}
           />
           <CheckboxWithDesc
             checked={values.emptyQuoting}
             onChange={(checked) => updateField('emptyQuoting', checked)}
-            title={t('string.quote.quoteEmptyLines')}
+            title={t('string:quote.quoteEmptyLines')}
           />
           <CheckboxWithDesc
             checked={values.multiLine}
             onChange={(checked) => updateField('multiLine', checked)}
-            title={t('string.quote.processAsMultiLine')}
+            title={t('string:quote.processAsMultiLine')}
           />
         </Box>
       )
@@ -133,19 +133,19 @@ export default function Quote({ title }: ToolComponentProps) {
       title={title}
       inputComponent={
         <ToolTextInput
-          title={t('string.quote.inputTitle')}
+          title={t('string:quote.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={t('string.quote.resultTitle')} value={result} />
+        <ToolTextResult title={t('string:quote.resultTitle')} value={result} />
       }
       initialValues={initialValues}
       getGroups={getGroups}
       toolInfo={{
-        title: t('string.quote.toolInfo.title'),
-        description: t('string.quote.toolInfo.description')
+        title: t('string:quote.toolInfo.title'),
+        description: t('string:quote.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

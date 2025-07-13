@@ -12,8 +12,8 @@ export const tool = defineTool('string', {
   keywords: ['to', 'morse'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'string.toMorse.name',
-    description: 'string.toMorse.description',
-    shortDescription: 'string.toMorse.shortDescription'
+    name: 'string:toMorse.title',
+    description: 'string:toMorse.description',
+    shortDescription: 'string:toMorse.shortDescription'
   }
 });

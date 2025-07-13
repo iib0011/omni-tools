@@ -4,12 +4,128 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="docs: edit pdf meta">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="docs: readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/options/ToolOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/change-csv-separator/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/change-csv-separator/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/i18n/hi.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/i18n/hi.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/escape-json/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/escape-json/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/json-to-xml/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/json-to-xml/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/minify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/minify/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/minify/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/minify/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/prettify/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/prettify/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/stringify/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/stringify/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/validateJson/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/validateJson/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/validateJson/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/validateJson/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/duplicate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/duplicate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-unique/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-unique/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-unique/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-unique/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/group/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/group/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/group/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/group/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/reverse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/rotate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/rotate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/shuffle/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/shuffle/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/sort/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/sort/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/sort/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/sort/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/truncate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/truncate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/unwrap/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/unwrap/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/wrap/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/wrap/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/wrap/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/wrap/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/sum/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/sum/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-epub/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-epub/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/base64/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/base64/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/base64/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/base64/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/censor/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/censor/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/join/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/join/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/palindrome/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/quote/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/quote/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/quote/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/quote/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/repeat/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/repeat/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/repeat/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/repeat/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/rot13/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/rot13/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/rotate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/split/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/split/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/split/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/split/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/statistic/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/statistic/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/statistic/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/statistic/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/to-morse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/truncate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/truncate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/truncate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/truncate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/uppercase/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/uppercase/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/uppercase/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/uppercase/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-hours-to-days/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-hours-to-days/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/crontab-guru/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/crontab-guru/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/change-speed/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/change-speed/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/change-speed/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/compress/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/compress/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/compress/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/compress/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/crop-video/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/crop-video/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/crop-video/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/crop-video/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/flip/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/flip/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/flip/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/flip/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/loop/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/loop/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/loop/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/loop/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/rotate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/rotate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/rotate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/trim/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/meta.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,171 +158,171 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOMJIfts51PkS9",
-        "number": 22
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts51PkS9&quot;,
+        &quot;number&quot;: 22
       },
-      "lastSeen": 1741207144695
+      &quot;lastSeen&quot;: 1741207144695
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NiNYl",
-        "number": 32
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NiNYl&quot;,
+        &quot;number&quot;: 32
       },
-      "lastSeen": 1741209723869
+      &quot;lastSeen&quot;: 1741209723869
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Nheyd",
-        "number": 31
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Nheyd&quot;,
+        &quot;number&quot;: 31
       },
-      "lastSeen": 1741213371410
+      &quot;lastSeen&quot;: 1741213371410
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NmRBs",
-        "number": 33
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NmRBs&quot;,
+        &quot;number&quot;: 33
       },
-      "lastSeen": 1741282429036
+      &quot;lastSeen&quot;: 1741282429036
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts5zyFTs",
-        "number": 15
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts5zyFTs&quot;,
+        &quot;number&quot;: 15
       },
-      "lastSeen": 1741535540953
+      &quot;lastSeen&quot;: 1741535540953
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QQB3c",
-        "number": 59
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QQB3c&quot;,
+        &quot;number&quot;: 59
       },
-      "lastSeen": 1743018960900
+      &quot;lastSeen&quot;: 1743018960900
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QMPEg",
-        "number": 58
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QMPEg&quot;,
+        &quot;number&quot;: 58
       },
-      "lastSeen": 1743019452983
+      &quot;lastSeen&quot;: 1743019452983
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QZvRI",
-        "number": 61
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QZvRI&quot;,
+        &quot;number&quot;: 61
       },
-      "lastSeen": 1743103196866
+      &quot;lastSeen&quot;: 1743103196866
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QqPrQ",
-        "number": 73
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QqPrQ&quot;,
+        &quot;number&quot;: 73
       },
-      "lastSeen": 1743265865001
+      &quot;lastSeen&quot;: 1743265865001
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Qp5nI",
-        "number": 72
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Qp5nI&quot;,
+        &quot;number&quot;: 72
       },
-      "lastSeen": 1743338472110
+      &quot;lastSeen&quot;: 1743338472110
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QsjlS",
-        "number": 76
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QsjlS&quot;,
+        &quot;number&quot;: 76
       },
-      "lastSeen": 1743352150953
+      &quot;lastSeen&quot;: 1743352150953
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Q0JBe",
-        "number": 82
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Q0JBe&quot;,
+        &quot;number&quot;: 82
       },
-      "lastSeen": 1743470267269
+      &quot;lastSeen&quot;: 1743470267269
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6UE9-x",
-        "number": 102
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6UE9-x&quot;,
+        &quot;number&quot;: 102
       },
-      "lastSeen": 1747171977348
+      &quot;lastSeen&quot;: 1747171977348
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6XPua_",
-        "number": 117
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6XPua_&quot;,
+        &quot;number&quot;: 117
       },
-      "lastSeen": 1747929835864
+      &quot;lastSeen&quot;: 1747929835864
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6XY-mZ",
-        "number": 119
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6XY-mZ&quot;,
+        &quot;number&quot;: 119
       },
-      "lastSeen": 1748028108508
+      &quot;lastSeen&quot;: 1748028108508
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Xdz4n",
-        "number": 120
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Xdz4n&quot;,
+        &quot;number&quot;: 120
       },
-      "lastSeen": 1748282672214
+      &quot;lastSeen&quot;: 1748282672214
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6X_zxl",
-        "number": 131
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6X_zxl&quot;,
+        &quot;number&quot;: 131
       },
-      "lastSeen": 1748881279494
+      &quot;lastSeen&quot;: 1748881279494
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6bhieT",
-        "number": 152
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6bhieT&quot;,
+        &quot;number&quot;: 152
       },
-      "lastSeen": 1751848489082
+      &quot;lastSeen&quot;: 1751848489082
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6dOyRk",
-        "number": 154
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6dOyRk&quot;,
+        &quot;number&quot;: 154
       },
-      "lastSeen": 1751849436454
+      &quot;lastSeen&quot;: 1751849436454
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6cHjNi",
-        "number": 153
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6cHjNi&quot;,
+        &quot;number&quot;: 153
       },
-      "lastSeen": 1751849501498
+      &quot;lastSeen&quot;: 1751849501498
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Zs1FN",
-        "number": 145
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Zs1FN&quot;,
+        &quot;number&quot;: 145
       },
-      "lastSeen": 1751849770308
+      &quot;lastSeen&quot;: 1751849770308
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6bgKi9",
-        "number": 150
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6bgKi9&quot;,
+        &quot;number&quot;: 150
       },
-      "lastSeen": 1751850367300
+      &quot;lastSeen&quot;: 1751850367300
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6eUKC-",
-        "number": 176
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6eUKC-&quot;,
+        &quot;number&quot;: 176
       },
-      "lastSeen": 1752158748013
+      &quot;lastSeen&quot;: 1752158748013
     }
   ]
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
@@ -262,7 +378,7 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "#190 on fork/AshAnand34/en-hi-translation",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/public",

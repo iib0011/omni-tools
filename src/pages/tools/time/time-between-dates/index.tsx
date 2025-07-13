@@ -126,7 +126,7 @@ export default function TimeBetweenDates() {
 
   return (
     <ToolContent
-      title={t('time.timeBetweenDates.title')}
+      title={t('time:timeBetweenDates.title')}
       inputComponent={null}
       resultComponent={
         result ? (
@@ -155,28 +155,28 @@ export default function TimeBetweenDates() {
       validationSchema={validationSchema}
       exampleCards={exampleCards}
       toolInfo={{
-        title: t('time.timeBetweenDates.toolInfo.title'),
-        description: t('time.timeBetweenDates.toolInfo.description')
+        title: t('time:timeBetweenDates.toolInfo.title'),
+        description: t('time:timeBetweenDates.toolInfo.description')
       }}
       getGroups={({ values, updateField }) => [
         {
-          title: t('time.timeBetweenDates.startDateTime'),
+          title: t('time:timeBetweenDates.startDateTime'),
           component: (
             <Box>
               <TextFieldWithDesc
-                description={t('time.timeBetweenDates.startDate')}
+                description={t('time:timeBetweenDates.startDate')}
                 value={values.startDate}
                 onOwnChange={(val) => updateField('startDate', val)}
                 type="date"
               />
               <TextFieldWithDesc
-                description={t('time.timeBetweenDates.startTime')}
+                description={t('time:timeBetweenDates.startTime')}
                 value={values.startTime}
                 onOwnChange={(val) => updateField('startTime', val)}
                 type="time"
               />
               <SelectWithDesc
-                description={t('time.timeBetweenDates.startTimezone')}
+                description={t('time:timeBetweenDates.startTimezone')}
                 selected={values.startTimezone}
                 onChange={(val: string) => updateField('startTimezone', val)}
                 options={timezoneOptions}
@@ -185,23 +185,23 @@ export default function TimeBetweenDates() {
           )
         },
         {
-          title: t('time.timeBetweenDates.endDateTime'),
+          title: t('time:timeBetweenDates.endDateTime'),
           component: (
             <Box>
               <TextFieldWithDesc
-                description={t('time.timeBetweenDates.endDate')}
+                description={t('time:timeBetweenDates.endDate')}
                 value={values.endDate}
                 onOwnChange={(val) => updateField('endDate', val)}
                 type="date"
               />
               <TextFieldWithDesc
-                description={t('time.timeBetweenDates.endTime')}
+                description={t('time:timeBetweenDates.endTime')}
                 value={values.endTime}
                 onOwnChange={(val) => updateField('endTime', val)}
                 type="time"
               />
               <SelectWithDesc
-                description={t('time.timeBetweenDates.endTimezone')}
+                description={t('time:timeBetweenDates.endTimezone')}
                 selected={values.endTimezone}
                 onChange={(val: string) => updateField('endTimezone', val)}
                 options={timezoneOptions}

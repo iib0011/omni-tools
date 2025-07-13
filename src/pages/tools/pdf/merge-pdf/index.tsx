@@ -44,23 +44,23 @@ export default function MergePdf({ title }: ToolComponentProps) {
             setInput(pdfInputs);
           }}
           accept={['application/pdf']}
-          title={t('pdf.merge.inputTitle')}
+          title={t('pdf:merge.inputTitle')}
           type="pdf"
         />
       }
       getGroups={null}
       resultComponent={
         <ToolFileResult
-          title={t('pdf.merge.resultTitle')}
+          title={t('pdf:merge.resultTitle')}
           value={result}
           extension={'pdf'}
           loading={isProcessing}
-          loadingText={t('pdf.merge.loadingText')}
+          loadingText={t('pdf:merge.loadingText')}
         />
       }
       toolInfo={{
-        title: t('pdf.merge.toolInfo.title'),
-        description: t('pdf.merge.toolInfo.description')
+        title: t('pdf:merge.toolInfo.title'),
+        description: t('pdf:merge.toolInfo.description')
       }}
     />
   );

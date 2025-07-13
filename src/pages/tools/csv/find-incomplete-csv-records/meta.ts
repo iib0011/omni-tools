@@ -14,8 +14,8 @@ export const tool = defineTool('csv', {
     'This tool allows you to find incomplete or missing records in CSV data. It can detect missing columns, empty values, and other data quality issues in your CSV files. You can customize the CSV parsing options and set limits on error reporting.',
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'csv.findIncompleteCsvRecords.name',
-    description: 'csv.findIncompleteCsvRecords.description',
-    shortDescription: 'csv.findIncompleteCsvRecords.shortDescription'
+    name: 'csv:findIncompleteCsvRecords.title',
+    description: 'csv:findIncompleteCsvRecords.description',
+    shortDescription: 'csv:findIncompleteCsvRecords.shortDescription'
   }
 });

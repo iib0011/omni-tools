@@ -76,27 +76,27 @@ export default function Reverse({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('string.reverse.reversalOptions'),
+      title: t('string:reverse.reversalOptions'),
       component: [
         <CheckboxWithDesc
           key="multiLine"
           checked={values.multiLine}
-          title={t('string.reverse.processMultiLine')}
-          description={t('string.reverse.processMultiLineDescription')}
+          title={t('string:reverse.processMultiLine')}
+          description={t('string:reverse.processMultiLineDescription')}
           onChange={(val) => updateField('multiLine', val)}
         />,
         <CheckboxWithDesc
           key="emptyItems"
           checked={values.emptyItems}
-          title={t('string.reverse.skipEmptyLines')}
-          description={t('string.reverse.skipEmptyLinesDescription')}
+          title={t('string:reverse.skipEmptyLines')}
+          description={t('string:reverse.skipEmptyLinesDescription')}
           onChange={(val) => updateField('emptyItems', val)}
         />,
         <CheckboxWithDesc
           key="trim"
           checked={values.trim}
-          title={t('string.reverse.trimWhitespace')}
-          description={t('string.reverse.trimWhitespaceDescription')}
+          title={t('string:reverse.trimWhitespace')}
+          description={t('string:reverse.trimWhitespaceDescription')}
           onChange={(val) => updateField('trim', val)}
         />
       ]
@@ -113,14 +113,14 @@ export default function Reverse({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('string.reverse.inputTitle')}
+          title={t('string:reverse.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={t('string.reverse.resultTitle')}
+          title={t('string:reverse.resultTitle')}
           value={result}
         />
       }

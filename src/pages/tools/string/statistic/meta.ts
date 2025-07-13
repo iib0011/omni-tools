@@ -13,9 +13,9 @@ export const tool = defineTool('string', {
   keywords: ['text', 'statistics', 'count', 'lines', 'words', 'characters'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'string.statistic.name',
-    description: 'string.statistic.description',
-    shortDescription: 'string.statistic.shortDescription',
-    longDescription: 'string.statistic.longDescription'
+    name: 'string:statistic.title',
+    description: 'string:statistic.description',
+    shortDescription: 'string:statistic.shortDescription',
+    longDescription: 'string:statistic.longDescription'
   }
 });

@@ -12,8 +12,8 @@ export const tool = defineTool('number', {
   keywords: ['sum', 'add', 'calculate', 'total'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'number.sum.name',
-    description: 'number.sum.description',
-    shortDescription: 'number.sum.shortDescription'
+    name: 'number:sum.title',
+    description: 'number:sum.description',
+    shortDescription: 'number:sum.shortDescription'
   }
 });

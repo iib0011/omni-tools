@@ -12,8 +12,8 @@ export const tool = defineTool('list', {
   keywords: ['reverse'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'list.reverse.name',
-    description: 'list.reverse.description',
-    shortDescription: 'list.reverse.shortDescription'
+    name: 'list:reverse.title',
+    description: 'list:reverse.description',
+    shortDescription: 'list:reverse.shortDescription'
   }
 });

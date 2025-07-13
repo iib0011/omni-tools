@@ -55,9 +55,9 @@ export default function ValidateJson({ title }: ToolComponentProps) {
     const { valid, error } = validateJson(input);
 
     if (valid) {
-      setResult(t('json.validateJson.validJson'));
+      setResult(t('json:validateJson.validJson'));
     } else {
-      setResult(t('json.validateJson.invalidJson', { error }));
+      setResult(t('json:validateJson.invalidJson', { error }));
     }
   };
 
@@ -66,22 +66,22 @@ export default function ValidateJson({ title }: ToolComponentProps) {
       title={title}
       inputComponent={
         <ToolTextInput
-          title={t('json.validateJson.inputTitle')}
+          title={t('json:validateJson.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={t('json.validateJson.resultTitle')}
+          title={t('json:validateJson.resultTitle')}
           value={result}
         />
       }
       initialValues={{}}
       getGroups={null}
       toolInfo={{
-        title: t('json.validateJson.toolInfo.title'),
-        description: t('json.validateJson.toolInfo.description')
+        title: t('json:validateJson.toolInfo.title'),
+        description: t('json:validateJson.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

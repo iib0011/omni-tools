@@ -57,14 +57,14 @@ export default function Uppercase({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('string.uppercase.inputTitle')}
+          title={t('string:uppercase.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={t('string.uppercase.resultTitle')}
+          title={t('string:uppercase.resultTitle')}
           value={result}
         />
       }

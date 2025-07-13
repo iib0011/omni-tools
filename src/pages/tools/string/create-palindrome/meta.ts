@@ -14,8 +14,8 @@ export const tool = defineTool('string', {
   keywords: ['create', 'palindrome'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'string.createPalindrome.name',
-    description: 'string.createPalindrome.description',
-    shortDescription: 'string.createPalindrome.shortDescription'
+    name: 'string:createPalindrome.title',
+    description: 'string:createPalindrome.description',
+    shortDescription: 'string:createPalindrome.shortDescription'
   }
 });

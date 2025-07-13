@@ -19,7 +19,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
     title: 'Full Days to Hours',
     description:
       'This example calculates how many hours there are in 1 day, in one week (7 days), in one month (30 days), and in even longer time periods. To see all the results at once, we enter each individual day value on a new line. We also use the "days" suffix in the input and add the "hours" suffix to the output.',
-    sampleText: `1 day 
+    sampleText: `1 day
 7 days
 30 days
 90 days
@@ -76,14 +76,14 @@ export default function ConvertDaysToHours({
     updateField
   }) => [
     {
-      title: t('time.convertDaysToHours.hoursName'),
+      title: t('time:convertDaysToHours.hoursName'),
       component: (
         <Box>
           <CheckboxWithDesc
             onChange={(val) => updateField('hoursFlag', val)}
             checked={values.hoursFlag}
-            title={t('time.convertDaysToHours.addHoursName')}
-            description={t('time.convertDaysToHours.addHoursNameDescription')}
+            title={t('time:convertDaysToHours.addHoursName')}
+            description={t('time:convertDaysToHours.addHoursNameDescription')}
           />
         </Box>
       )
@@ -101,8 +101,8 @@ export default function ConvertDaysToHours({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('time.convertDaysToHours.toolInfo.title'),
-        description: t('time.convertDaysToHours.toolInfo.description')
+        title: t('time:convertDaysToHours.toolInfo.title'),
+        description: t('time:convertDaysToHours.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

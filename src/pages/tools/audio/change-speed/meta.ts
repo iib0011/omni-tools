@@ -22,8 +22,8 @@ export const tool = defineTool('audio', {
     'This tool allows you to change the playback speed of audio files. You can speed up or slow down audio while maintaining the original pitch. Useful for podcasts, music, or any audio content where you want to adjust the playback speed.',
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'audio.changeSpeed.name',
-    description: 'audio.changeSpeed.description',
-    shortDescription: 'audio.changeSpeed.shortDescription'
+    name: 'audio:changeSpeed.title',
+    description: 'audio:changeSpeed.description',
+    shortDescription: 'audio:changeSpeed.shortDescription'
   }
 });

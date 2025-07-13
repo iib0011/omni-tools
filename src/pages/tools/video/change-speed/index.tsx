@@ -130,13 +130,13 @@ export default function ChangeSpeed({
     updateField
   }) => [
     {
-      title: t('video.changeSpeed.newVideoSpeed'),
+      title: t('video:changeSpeed.newVideoSpeed'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.newSpeed.toString()}
             onOwnChange={(val) => updateField('newSpeed', Number(val))}
-            description={t('video.changeSpeed.defaultMultiplier')}
+            description={t('video:changeSpeed.defaultMultiplier')}
             type="number"
           />
         </Box>
@@ -151,19 +151,19 @@ export default function ChangeSpeed({
         <ToolVideoInput
           value={input}
           onChange={setInput}
-          title={t('video.changeSpeed.inputTitle')}
+          title={t('video:changeSpeed.inputTitle')}
         />
       }
       resultComponent={
         loading ? (
           <ToolFileResult
-            title={t('video.changeSpeed.settingSpeed')}
+            title={t('video:changeSpeed.settingSpeed')}
             value={null}
             loading={true}
           />
         ) : (
           <ToolFileResult
-            title={t('video.changeSpeed.resultTitle')}
+            title={t('video:changeSpeed.resultTitle')}
             value={result}
             extension="mp4"
           />
@@ -174,7 +174,7 @@ export default function ChangeSpeed({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('video.changeSpeed.toolInfo.title', { title }),
+        title: t('video:changeSpeed.toolInfo.title', { title }),
         description: longDescription
       }}
     />

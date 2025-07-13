@@ -11,8 +11,8 @@ export const tool = defineTool('time', {
   keywords: ['dates', 'time', 'difference', 'duration', 'calculate'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'time.timeBetweenDates.name',
-    description: 'time.timeBetweenDates.description',
-    shortDescription: 'time.timeBetweenDates.shortDescription'
+    name: 'time:timeBetweenDates.title',
+    description: 'time:timeBetweenDates.description',
+    shortDescription: 'time:timeBetweenDates.shortDescription'
   }
 });

@@ -51,20 +51,20 @@ export default function ChangeSpeed({
     updateField
   }) => [
     {
-      title: t('audio.changeSpeed.newAudioSpeed'),
+      title: t('audio:changeSpeed.newAudioSpeed'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.newSpeed.toString()}
             onOwnChange={(val) => updateField('newSpeed', Number(val))}
-            description={t('audio.changeSpeed.speedDescription')}
+            description={t('audio:changeSpeed.speedDescription')}
             type="number"
           />
         </Box>
       )
     },
     {
-      title: t('audio.changeSpeed.outputFormat'),
+      title: t('audio:changeSpeed.outputFormat'),
       component: (
         <Box mt={2}>
           <RadioGroup
@@ -98,19 +98,19 @@ export default function ChangeSpeed({
         <ToolAudioInput
           value={input}
           onChange={setInput}
-          title={t('audio.changeSpeed.inputTitle')}
+          title={t('audio:changeSpeed.inputTitle')}
         />
       }
       resultComponent={
         loading ? (
           <ToolFileResult
-            title={t('audio.changeSpeed.settingSpeed')}
+            title={t('audio:changeSpeed.settingSpeed')}
             value={null}
             loading={true}
           />
         ) : (
           <ToolFileResult
-            title={t('audio.changeSpeed.resultTitle')}
+            title={t('audio:changeSpeed.resultTitle')}
             value={result}
             extension={result ? result.name.split('.').pop() : undefined}
           />
@@ -121,7 +121,7 @@ export default function ChangeSpeed({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('audio.changeSpeed.toolInfo.title', { title }),
+        title: t('audio:changeSpeed.toolInfo.title', { title }),
         description: longDescription
       }}
     />

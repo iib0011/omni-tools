@@ -11,8 +11,8 @@ export const tool = defineTool('video', {
   keywords: ['video', 'gif', 'convert', 'animated', 'image'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'video.videoToGif.name',
-    description: 'video.videoToGif.description',
-    shortDescription: 'video.videoToGif.shortDescription'
+    name: 'video:videoToGif.title',
+    description: 'video:videoToGif.description',
+    shortDescription: 'video:videoToGif.shortDescription'
   }
 });

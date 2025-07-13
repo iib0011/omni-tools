@@ -11,8 +11,8 @@ export const tool = defineTool('string', {
   keywords: ['base64'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'string.base64.name',
-    description: 'string.base64.description',
-    shortDescription: 'string.base64.shortDescription'
+    name: 'string:base64.title',
+    description: 'string:base64.description',
+    shortDescription: 'string:base64.shortDescription'
   }
 });

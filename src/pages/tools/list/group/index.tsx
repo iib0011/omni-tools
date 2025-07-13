@@ -81,18 +81,18 @@ export default function FindUnique({ title }: ToolComponentProps) {
       input={input}
       inputComponent={
         <ToolTextInput
-          title={t('list.group.inputTitle')}
+          title={t('list:group.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={t('list.group.resultTitle')} value={result} />
+        <ToolTextResult title={t('list:group.resultTitle')} value={result} />
       }
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [
         {
-          title: t('list.group.inputItemSeparator'),
+          title: t('list:group.inputItemSeparator'),
           component: (
             <Box>
               {splitOperators.map(({ title, description, type }) => (
@@ -107,7 +107,7 @@ export default function FindUnique({ title }: ToolComponentProps) {
                 />
               ))}
               <TextFieldWithDesc
-                description={t('list.group.splitSeparatorDescription')}
+                description={t('list:group.splitSeparatorDescription')}
                 value={values.splitSeparator}
                 onOwnChange={(val) => updateField('splitSeparator', val)}
               />
@@ -115,12 +115,12 @@ export default function FindUnique({ title }: ToolComponentProps) {
           )
         },
         {
-          title: t('list.group.groupSizeAndSeparators'),
+          title: t('list:group.groupSizeAndSeparators'),
           component: (
             <Box>
               <TextFieldWithDesc
                 value={values.groupNumber}
-                description={t('list.group.groupNumberDescription')}
+                description={t('list:group.groupNumberDescription')}
                 type={'number'}
                 onOwnChange={(value) =>
                   updateField('groupNumber', formatNumber(value, 1))
@@ -128,46 +128,46 @@ export default function FindUnique({ title }: ToolComponentProps) {
               />
               <TextFieldWithDesc
                 value={values.itemSeparator}
-                description={t('list.group.itemSeparatorDescription')}
+                description={t('list:group.itemSeparatorDescription')}
                 onOwnChange={(value) => updateField('itemSeparator', value)}
               />
               <TextFieldWithDesc
                 value={values.groupSeparator}
-                description={t('list.group.groupSeparatorDescription')}
+                description={t('list:group.groupSeparatorDescription')}
                 onOwnChange={(value) => updateField('groupSeparator', value)}
               />
               <TextFieldWithDesc
                 value={values.leftWrap}
-                description={t('list.group.leftWrapDescription')}
+                description={t('list:group.leftWrapDescription')}
                 onOwnChange={(value) => updateField('leftWrap', value)}
               />
               <TextFieldWithDesc
                 value={values.rightWrap}
-                description={t('list.group.rightWrapDescription')}
+                description={t('list:group.rightWrapDescription')}
                 onOwnChange={(value) => updateField('rightWrap', value)}
               />
             </Box>
           )
         },
         {
-          title: t('list.group.emptyItemsAndPadding'),
+          title: t('list:group.emptyItemsAndPadding'),
           component: (
             <Box>
               <CheckboxWithDesc
-                title={t('list.group.deleteEmptyItems')}
-                description={t('list.group.deleteEmptyItemsDescription')}
+                title={t('list:group.deleteEmptyItems')}
+                description={t('list:group.deleteEmptyItemsDescription')}
                 checked={values.deleteEmptyItems}
                 onChange={(value) => updateField('deleteEmptyItems', value)}
               />
               <CheckboxWithDesc
-                title={t('list.group.padNonFullGroups')}
-                description={t('list.group.padNonFullGroupsDescription')}
+                title={t('list:group.padNonFullGroups')}
+                description={t('list:group.padNonFullGroupsDescription')}
                 checked={values.padNonFullGroup}
                 onChange={(value) => updateField('padNonFullGroup', value)}
               />
               <TextFieldWithDesc
                 value={values.paddingChar}
-                description={t('list.group.paddingCharDescription')}
+                description={t('list:group.paddingCharDescription')}
                 onOwnChange={(value) => updateField('paddingChar', value)}
               />
             </Box>

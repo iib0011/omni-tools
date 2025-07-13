@@ -60,7 +60,7 @@ export default function FlipVideo({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('video.flip.orientation'),
+      title: t('video:flip.orientation'),
       component: (
         <Box>
           {orientationOptions.map((orientationOption) => (
@@ -86,20 +86,20 @@ export default function FlipVideo({ title }: ToolComponentProps) {
         <ToolVideoInput
           value={input}
           onChange={setInput}
-          title={t('video.flip.inputTitle')}
+          title={t('video:flip.inputTitle')}
         />
       }
       resultComponent={
         loading ? (
           <ToolFileResult
-            title={t('video.flip.flippingVideo')}
+            title={t('video:flip.flippingVideo')}
             value={null}
             loading={true}
             extension={''}
           />
         ) : (
           <ToolFileResult
-            title={t('video.flip.resultTitle')}
+            title={t('video:flip.resultTitle')}
             value={result}
             extension={'mp4'}
           />

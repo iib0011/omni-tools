@@ -12,8 +12,8 @@ export const tool = defineTool('string', {
   keywords: ['randomize', 'case'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'string.randomizeCase.name',
-    description: 'string.randomizeCase.description',
-    shortDescription: 'string.randomizeCase.shortDescription'
+    name: 'string:randomizeCase.title',
+    description: 'string:randomizeCase.description',
+    shortDescription: 'string:randomizeCase.shortDescription'
   }
 });

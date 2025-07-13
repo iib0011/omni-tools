@@ -11,8 +11,8 @@ export const tool = defineTool('list', {
   keywords: ['group'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'list.group.name',
-    description: 'list.group.description',
-    shortDescription: 'list.group.shortDescription'
+    name: 'list:group.title',
+    description: 'list:group.description',
+    shortDescription: 'list:group.shortDescription'
   }
 });

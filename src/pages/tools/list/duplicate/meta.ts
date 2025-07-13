@@ -12,8 +12,8 @@ export const tool = defineTool('list', {
   keywords: ['duplicate'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'list.duplicate.name',
-    description: 'list.duplicate.description',
-    shortDescription: 'list.duplicate.shortDescription'
+    name: 'list:duplicate.title',
+    description: 'list:duplicate.description',
+    shortDescription: 'list:duplicate.shortDescription'
   }
 });

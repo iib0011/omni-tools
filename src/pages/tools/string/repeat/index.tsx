@@ -62,12 +62,12 @@ export default function Replacer({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('string.repeat.textRepetitions'),
+      title: t('string:repeat.textRepetitions'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={t('string.repeat.repeatAmountDescription')}
-            placeholder={t('string.repeat.numberPlaceholder')}
+            description={t('string:repeat.repeatAmountDescription')}
+            placeholder={t('string:repeat.numberPlaceholder')}
             value={values.repeatAmount}
             onOwnChange={(val) => updateField('repeatAmount', val)}
             type={'number'}
@@ -76,12 +76,12 @@ export default function Replacer({ title }: ToolComponentProps) {
       )
     },
     {
-      title: t('string.repeat.repetitionsDelimiter'),
+      title: t('string:repeat.repetitionsDelimiter'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={t('string.repeat.delimiterDescription')}
-            placeholder={t('string.repeat.delimiterPlaceholder')}
+            description={t('string:repeat.delimiterDescription')}
+            placeholder={t('string:repeat.delimiterPlaceholder')}
             value={values.delimiter}
             onOwnChange={(val) => updateField('delimiter', val)}
             type={'text'}
@@ -101,17 +101,17 @@ export default function Replacer({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('string.repeat.inputTitle')}
+          title={t('string:repeat.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={t('string.repeat.resultTitle')} value={result} />
+        <ToolTextResult title={t('string:repeat.resultTitle')} value={result} />
       }
       toolInfo={{
-        title: t('string.repeat.toolInfo.title'),
-        description: t('string.repeat.toolInfo.description')
+        title: t('string:repeat.toolInfo.title'),
+        description: t('string:repeat.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

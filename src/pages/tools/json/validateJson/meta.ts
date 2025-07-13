@@ -11,8 +11,8 @@ export const tool = defineTool('json', {
   keywords: ['json', 'validate', 'check', 'syntax', 'errors'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'json.validateJson.name',
-    description: 'json.validateJson.description',
-    shortDescription: 'json.validateJson.shortDescription'
+    name: 'json:validateJson.title',
+    description: 'json:validateJson.description',
+    shortDescription: 'json:validateJson.shortDescription'
   }
 });

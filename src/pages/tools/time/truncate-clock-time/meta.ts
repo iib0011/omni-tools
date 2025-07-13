@@ -11,8 +11,8 @@ export const tool = defineTool('time', {
   keywords: ['time', 'truncate', 'clock', 'round', 'precision'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'time.truncateClockTime.name',
-    description: 'time.truncateClockTime.description',
-    shortDescription: 'time.truncateClockTime.shortDescription'
+    name: 'time:truncateClockTime.title',
+    description: 'time:truncateClockTime.description',
+    shortDescription: 'time:truncateClockTime.shortDescription'
   }
 });

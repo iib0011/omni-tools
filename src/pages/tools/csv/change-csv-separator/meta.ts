@@ -11,8 +11,8 @@ export const tool = defineTool('csv', {
   keywords: ['csv', 'separator', 'delimiter', 'change'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'csv.changeCsvSeparator.name',
-    description: 'csv.changeCsvSeparator.description',
-    shortDescription: 'csv.changeCsvSeparator.shortDescription'
+    name: 'csv:changeCsvSeparator.title',
+    description: 'csv:changeCsvSeparator.description',
+    shortDescription: 'csv:changeCsvSeparator.shortDescription'
   }
 });

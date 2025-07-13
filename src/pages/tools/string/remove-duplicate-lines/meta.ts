@@ -11,8 +11,8 @@ export const tool = defineTool('string', {
   keywords: ['remove', 'duplicate', 'lines'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'string.removeDuplicateLines.name',
-    description: 'string.removeDuplicateLines.description',
-    shortDescription: 'string.removeDuplicateLines.shortDescription'
+    name: 'string:removeDuplicateLines.title',
+    description: 'string:removeDuplicateLines.description',
+    shortDescription: 'string:removeDuplicateLines.shortDescription'
   }
 });

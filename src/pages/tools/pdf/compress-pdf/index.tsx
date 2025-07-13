@@ -80,7 +80,7 @@ export default function CompressPdf({
       } catch (error) {
         console.error('Error getting PDF info:', error);
         setFileInfo(null);
-        showSnackBar(t('pdf.compressPdf.errorReadingPdf'), 'error');
+        showSnackBar(t('pdf:compressPdf.errorReadingPdf'), 'error');
       }
     };
 
@@ -112,7 +112,7 @@ export default function CompressPdf({
     } catch (error) {
       console.error('Error compressing PDF:', error);
       showSnackBar(
-        t('pdf.compressPdf.errorCompressingPdf', {
+        t('pdf:compressPdf.errorCompressingPdf', {
           error: error instanceof Error ? error.message : String(error)
         }),
         'error'
@@ -130,18 +130,18 @@ export default function CompressPdf({
   }[] = [
     {
       value: 'low',
-      label: t('pdf.compressPdf.lowCompression'),
-      description: t('pdf.compressPdf.lowCompressionDescription')
+      label: t('pdf:compressPdf.lowCompression'),
+      description: t('pdf:compressPdf.lowCompressionDescription')
     },
     {
       value: 'medium',
-      label: t('pdf.compressPdf.mediumCompression'),
-      description: t('pdf.compressPdf.mediumCompressionDescription')
+      label: t('pdf:compressPdf.mediumCompression'),
+      description: t('pdf:compressPdf.mediumCompressionDescription')
     },
     {
       value: 'high',
-      label: t('pdf.compressPdf.highCompression'),
-      description: t('pdf.compressPdf.highCompressionDescription')
+      label: t('pdf:compressPdf.highCompression'),
+      description: t('pdf:compressPdf.highCompressionDescription')
     }
   ];
 
@@ -157,26 +157,26 @@ export default function CompressPdf({
           value={input}
           onChange={setInput}
           accept={['application/pdf']}
-          title={t('pdf.compressPdf.inputTitle')}
+          title={t('pdf:compressPdf.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
-          title={t('pdf.compressPdf.resultTitle')}
+          title={t('pdf:compressPdf.resultTitle')}
           value={result}
           extension={'pdf'}
           loading={isProcessing}
-          loadingText={t('pdf.compressPdf.compressingPdf')}
+          loadingText={t('pdf:compressPdf.compressingPdf')}
         />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: t('pdf.compressPdf.compressionSettings'),
+          title: t('pdf:compressPdf.compressionSettings'),
           component: (
             <Box>
               <Box>
                 <Typography variant="subtitle2" sx={{ mb: 1 }}>
-                  {t('pdf.compressPdf.compressionLevel')}
+                  {t('pdf:compressPdf.compressionLevel')}
                 </Typography>
 
                 {compressionOptions.map((option) => (
@@ -201,16 +201,16 @@ export default function CompressPdf({
                   }}
                 >
                   <Typography variant="body2">
-                    {t('pdf.compressPdf.fileSize')}:{' '}
+                    {t('pdf:compressPdf.fileSize')}:{' '}
                     <strong>{fileInfo.size}</strong>
                   </Typography>
                   <Typography variant="body2">
-                    {t('pdf.compressPdf.pages')}:{' '}
+                    {t('pdf:compressPdf.pages')}:{' '}
                     <strong>{fileInfo.pages}</strong>
                   </Typography>
                   {resultSize && (
                     <Typography variant="body2">
-                      {t('pdf.compressPdf.compressedFileSize')}:{' '}
+                      {t('pdf:compressPdf.compressedFileSize')}:{' '}
                       <strong>{resultSize}</strong>
                     </Typography>
                   )}

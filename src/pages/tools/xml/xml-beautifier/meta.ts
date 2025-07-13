@@ -11,8 +11,8 @@ export const tool = defineTool('xml', {
   keywords: ['xml', 'beautify', 'format', 'code', 'indent'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'xml.xmlBeautifier.name',
-    description: 'xml.xmlBeautifier.description',
-    shortDescription: 'xml.xmlBeautifier.shortDescription'
+    name: 'xml:xmlBeautifier.title',
+    description: 'xml:xmlBeautifier.description',
+    shortDescription: 'xml:xmlBeautifier.shortDescription'
   }
 });

@@ -72,18 +72,18 @@ export default function SplitText({ title }: ToolComponentProps) {
       input={input}
       inputComponent={
         <ToolTextInput
-          title={t('list.sort.inputTitle')}
+          title={t('list:sort.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={t('list.sort.resultTitle')} value={result} />
+        <ToolTextResult title={t('list:sort.resultTitle')} value={result} />
       }
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [
         {
-          title: t('list.sort.inputItemSeparator'),
+          title: t('list:sort.inputItemSeparator'),
           component: (
             <Box>
               {splitOperators.map(({ title, description, type }) => (
@@ -98,7 +98,7 @@ export default function SplitText({ title }: ToolComponentProps) {
                 />
               ))}
               <TextFieldWithDesc
-                description={t('list.sort.splitSeparatorDescription')}
+                description={t('list:sort.splitSeparatorDescription')}
                 value={values.splitSeparator}
                 onOwnChange={(val) => updateField('splitSeparator', val)}
               />
@@ -106,45 +106,45 @@ export default function SplitText({ title }: ToolComponentProps) {
           )
         },
         {
-          title: t('list.sort.sortMethod'),
+          title: t('list:sort.sortMethod'),
           component: (
             <Box>
               <SelectWithDesc
                 selected={values.sortingMethod}
                 options={[
                   {
-                    label: t('list.sort.sortOptions.alphabetic'),
+                    label: t('list:sort.sortOptions.alphabetic'),
                     value: 'alphabetic'
                   },
                   {
-                    label: t('list.sort.sortOptions.numeric'),
+                    label: t('list:sort.sortOptions.numeric'),
                     value: 'numeric'
                   },
-                  { label: t('list.sort.sortOptions.length'), value: 'length' }
+                  { label: t('list:sort.sortOptions.length'), value: 'length' }
                 ]}
                 onChange={(value) => updateField('sortingMethod', value)}
-                description={t('list.sort.sortMethodDescription')}
+                description={t('list:sort.sortMethodDescription')}
               />
               <SelectWithDesc
                 selected={values.increasing}
                 options={[
                   {
-                    label: t('list.sort.orderOptions.increasing'),
+                    label: t('list:sort.orderOptions.increasing'),
                     value: true
                   },
                   {
-                    label: t('list.sort.orderOptions.decreasing'),
+                    label: t('list:sort.orderOptions.decreasing'),
                     value: false
                   }
                 ]}
                 onChange={(value) => {
                   updateField('increasing', value);
                 }}
-                description={t('list.sort.orderDescription')}
+                description={t('list:sort.orderDescription')}
               />
               <CheckboxWithDesc
-                title={t('list.sort.caseSensitive')}
-                description={t('list.sort.caseSensitiveDescription')}
+                title={t('list:sort.caseSensitive')}
+                description={t('list:sort.caseSensitiveDescription')}
                 checked={values.caseSensitive}
                 onChange={(val) => updateField('caseSensitive', val)}
               />
@@ -152,17 +152,17 @@ export default function SplitText({ title }: ToolComponentProps) {
           )
         },
         {
-          title: t('list.sort.sortedItemProperties'),
+          title: t('list:sort.sortedItemProperties'),
           component: (
             <Box>
               <TextFieldWithDesc
-                description={t('list.sort.joinSeparatorDescription')}
+                description={t('list:sort.joinSeparatorDescription')}
                 value={values.joinSeparator}
                 onOwnChange={(val) => updateField('joinSeparator', val)}
               />
               <CheckboxWithDesc
-                title={t('list.sort.removeDuplicates')}
-                description={t('list.sort.removeDuplicatesDescription')}
+                title={t('list:sort.removeDuplicates')}
+                description={t('list:sort.removeDuplicatesDescription')}
                 checked={values.removeDuplicated}
                 onChange={(val) => updateField('removeDuplicated', val)}
               />

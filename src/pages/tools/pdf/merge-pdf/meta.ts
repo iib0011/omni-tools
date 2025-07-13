@@ -10,8 +10,8 @@ export const meta = defineTool('pdf', {
   keywords: ['pdf', 'merge', 'extract', 'pages', 'combine', 'document'],
   path: 'merge-pdf',
   i18n: {
-    name: 'pdf.mergePdf.name',
-    description: 'pdf.mergePdf.description',
-    shortDescription: 'pdf.mergePdf.shortDescription'
+    name: 'pdf:mergePdf.title',
+    description: 'pdf:mergePdf.description',
+    shortDescription: 'pdf:mergePdf.shortDescription'
   }
 });

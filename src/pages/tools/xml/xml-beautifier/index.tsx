@@ -39,15 +39,15 @@ export default function XmlBeautifier({
       input={input}
       inputComponent={
         <ToolTextInput
-          title={t('xml.beautifier.inputTitle')}
+          title={t('xml:beautifier.inputTitle')}
           value={input}
           onChange={setInput}
-          placeholder={t('xml.beautifier.placeholder')}
+          placeholder={t('xml:beautifier.placeholder')}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={t('xml.beautifier.resultTitle')}
+          title={t('xml:beautifier.resultTitle')}
           value={result}
           extension="xml"
         />
@@ -58,7 +58,7 @@ export default function XmlBeautifier({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('xml.beautifier.toolInfo.title', { title }),
+        title: t('xml:beautifier.toolInfo.title', { title }),
         description: longDescription
       }}
     />

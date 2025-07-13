@@ -11,8 +11,8 @@ export const tool = defineTool('video', {
   keywords: ['video', 'loop', 'repeat', 'continuous'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'video.loop.name',
-    description: 'video.loop.description',
-    shortDescription: 'video.loop.shortDescription'
+    name: 'video:loop.title',
+    description: 'video:loop.description',
+    shortDescription: 'video:loop.shortDescription'
   }
 });

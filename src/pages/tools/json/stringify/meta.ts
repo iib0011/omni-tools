@@ -11,8 +11,8 @@ export const tool = defineTool('json', {
   keywords: ['json', 'stringify', 'serialize', 'convert'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'json.stringify.name',
-    description: 'json.stringify.description',
-    shortDescription: 'json.stringify.shortDescription'
+    name: 'json:stringify.title',
+    description: 'json:stringify.description',
+    shortDescription: 'json:stringify.shortDescription'
   }
 });

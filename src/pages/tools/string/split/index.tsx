@@ -173,12 +173,12 @@ export default function SplitText({ title }: ToolComponentProps) {
       input={input}
       inputComponent={<ToolTextInput value={input} onChange={setInput} />}
       resultComponent={
-        <ToolTextResult title={t('string.split.resultTitle')} value={result} />
+        <ToolTextResult title={t('string:split.resultTitle')} value={result} />
       }
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [
         {
-          title: t('string.split.splitSeparatorOptions'),
+          title: t('string:split.splitSeparatorOptions'),
           component: splitOperators.map(({ title, description, type }) => (
             <RadioWithTextField
               key={type}
@@ -193,7 +193,7 @@ export default function SplitText({ title }: ToolComponentProps) {
           ))
         },
         {
-          title: t('string.split.outputSeparatorOptions'),
+          title: t('string:split.outputSeparatorOptions'),
           component: outputOptions.map((option) => (
             <TextFieldWithDesc
               key={option.accessor}

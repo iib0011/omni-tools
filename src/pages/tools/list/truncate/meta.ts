@@ -11,8 +11,8 @@ export const tool = defineTool('list', {
   keywords: ['truncate'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'list.truncate.name',
-    description: 'list.truncate.description',
-    shortDescription: 'list.truncate.shortDescription'
+    name: 'list:truncate.title',
+    description: 'list:truncate.description',
+    shortDescription: 'list:truncate.shortDescription'
   }
 });

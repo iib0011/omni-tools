@@ -11,8 +11,8 @@ export const tool = defineTool('video', {
   keywords: ['video', 'rotate', 'orientation', 'degrees'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'video.rotate.name',
-    description: 'video.rotate.description',
-    shortDescription: 'video.rotate.shortDescription'
+    name: 'video:rotate.title',
+    description: 'video:rotate.description',
+    shortDescription: 'video:rotate.shortDescription'
   }
 });

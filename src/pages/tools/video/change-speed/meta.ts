@@ -11,8 +11,8 @@ export const tool = defineTool('video', {
   keywords: ['video', 'speed', 'playback', 'fast', 'slow'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'video.changeSpeed.name',
-    description: 'video.changeSpeed.description',
-    shortDescription: 'video.changeSpeed.shortDescription'
+    name: 'video:changeSpeed.title',
+    description: 'video:changeSpeed.description',
+    shortDescription: 'video:changeSpeed.shortDescription'
   }
 });

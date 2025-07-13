@@ -12,8 +12,8 @@ export const tool = defineTool('list', {
   keywords: ['find', 'most', 'popular'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'list.findMostPopular.name',
-    description: 'list.findMostPopular.description',
-    shortDescription: 'list.findMostPopular.shortDescription'
+    name: 'list:findMostPopular.title',
+    description: 'list:findMostPopular.description',
+    shortDescription: 'list:findMostPopular.shortDescription'
   }
 });

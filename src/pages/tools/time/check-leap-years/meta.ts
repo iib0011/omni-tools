@@ -11,8 +11,8 @@ export const tool = defineTool('time', {
   keywords: ['leap', 'year', 'calendar', 'date'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'time.checkLeapYears.name',
-    description: 'time.checkLeapYears.description',
-    shortDescription: 'time.checkLeapYears.shortDescription'
+    name: 'time:checkLeapYears.title',
+    description: 'time:checkLeapYears.description',
+    shortDescription: 'time:checkLeapYears.shortDescription'
   }
 });

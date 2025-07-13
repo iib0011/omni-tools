@@ -12,8 +12,8 @@ export const tool = defineTool('string', {
   keywords: ['extract', 'substring'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'string.extractSubstring.name',
-    description: 'string.extractSubstring.description',
-    shortDescription: 'string.extractSubstring.shortDescription'
+    name: 'string:extractSubstring.title',
+    description: 'string:extractSubstring.description',
+    shortDescription: 'string:extractSubstring.shortDescription'
   }
 });

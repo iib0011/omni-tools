@@ -12,8 +12,8 @@ export const tool = defineTool('list', {
   keywords: ['wrap'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'list.wrap.name',
-    description: 'list.wrap.description',
-    shortDescription: 'list.wrap.shortDescription'
+    name: 'list:wrap.title',
+    description: 'list:wrap.description',
+    shortDescription: 'list:wrap.shortDescription'
   }
 });

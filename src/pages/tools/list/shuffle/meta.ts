@@ -12,8 +12,8 @@ export const tool = defineTool('list', {
   keywords: ['shuffle'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'list.shuffle.name',
-    description: 'list.shuffle.description',
-    shortDescription: 'list.shuffle.shortDescription'
+    name: 'list:shuffle.title',
+    description: 'list:shuffle.description',
+    shortDescription: 'list:shuffle.shortDescription'
   }
 });

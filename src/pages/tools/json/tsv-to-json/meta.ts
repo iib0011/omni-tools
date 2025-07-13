@@ -11,8 +11,8 @@ export const tool = defineTool('json', {
   keywords: ['tsv', 'json', 'convert', 'tabular'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'json.tsvToJson.name',
-    description: 'json.tsvToJson.description',
-    shortDescription: 'json.tsvToJson.shortDescription'
+    name: 'json:tsvToJson.title',
+    description: 'json:tsvToJson.description',
+    shortDescription: 'json:tsvToJson.shortDescription'
   }
 });

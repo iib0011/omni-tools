@@ -11,8 +11,8 @@ export const tool = defineTool('xml', {
   keywords: ['xml', 'validate', 'check', 'syntax', 'errors'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'xml.xmlValidator.name',
-    description: 'xml.xmlValidator.description',
-    shortDescription: 'xml.xmlValidator.shortDescription'
+    name: 'xml:xmlValidator.title',
+    description: 'xml:xmlValidator.description',
+    shortDescription: 'xml:xmlValidator.shortDescription'
   }
 });

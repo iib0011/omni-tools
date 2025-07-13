@@ -57,7 +57,7 @@ export default function RotateVideo({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('video.rotate.rotation'),
+      title: t('video:rotate.rotation'),
       component: (
         <Box>
           {angleOptions.map((angleOption) => (
@@ -83,20 +83,20 @@ export default function RotateVideo({ title }: ToolComponentProps) {
         <ToolVideoInput
           value={input}
           onChange={setInput}
-          title={t('video.rotate.inputTitle')}
+          title={t('video:rotate.inputTitle')}
         />
       }
       resultComponent={
         loading ? (
           <ToolFileResult
-            title={t('video.rotate.rotatingVideo')}
+            title={t('video:rotate.rotatingVideo')}
             value={null}
             loading={true}
             extension={''}
           />
         ) : (
           <ToolFileResult
-            title={t('video.rotate.resultTitle')}
+            title={t('video:rotate.resultTitle')}
             value={result}
             extension={'mp4'}
           />

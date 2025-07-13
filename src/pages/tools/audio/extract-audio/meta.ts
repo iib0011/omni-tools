@@ -24,8 +24,8 @@ export const tool = defineTool('audio', {
     'This tool allows you to extract the audio track from a video file (such as MP4, MOV, AVI, etc.) and save it as a standalone audio file in your preferred format (AAC, MP3, or WAV). Useful for podcasts, music, or any scenario where you need just the audio from a video.',
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'audio.extractAudio.name',
-    description: 'audio.extractAudio.description',
-    shortDescription: 'audio.extractAudio.shortDescription'
+    name: 'audio:extractAudio.title',
+    description: 'audio:extractAudio.description',
+    shortDescription: 'audio:extractAudio.shortDescription'
   }
 });

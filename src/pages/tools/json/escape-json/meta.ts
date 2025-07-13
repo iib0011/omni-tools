@@ -11,8 +11,8 @@ export const tool = defineTool('json', {
   keywords: ['json', 'escape', 'characters', 'format'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'json.escapeJson.name',
-    description: 'json.escapeJson.description',
-    shortDescription: 'json.escapeJson.shortDescription'
+    name: 'json:escapeJson.title',
+    description: 'json:escapeJson.description',
+    shortDescription: 'json:escapeJson.shortDescription'
   }
 });

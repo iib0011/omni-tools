@@ -11,8 +11,8 @@ export const tool = defineTool('string', {
   keywords: ['join'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'string.join.name',
-    description: 'string.join.description',
-    shortDescription: 'string.join.shortDescription'
+    name: 'string:join.title',
+    description: 'string:join.description',
+    shortDescription: 'string:join.shortDescription'
   }
 });

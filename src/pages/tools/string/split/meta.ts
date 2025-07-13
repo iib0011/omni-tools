@@ -11,8 +11,8 @@ export const tool = defineTool('string', {
   keywords: ['split'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'string.split.name',
-    description: 'string.split.description',
-    shortDescription: 'string.split.shortDescription'
+    name: 'string:split.title',
+    description: 'string:split.description',
+    shortDescription: 'string:split.shortDescription'
   }
 });

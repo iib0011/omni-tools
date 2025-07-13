@@ -11,8 +11,8 @@ export const meta = defineTool('pdf', {
   keywords: ['pdf', 'split', 'extract', 'pages', 'range', 'document'],
   path: 'split-pdf',
   i18n: {
-    name: 'pdf.splitPdf.name',
-    description: 'pdf.splitPdf.description',
-    shortDescription: 'pdf.splitPdf.shortDescription'
+    name: 'pdf:splitPdf.title',
+    description: 'pdf:splitPdf.description',
+    shortDescription: 'pdf:splitPdf.shortDescription'
   }
 });

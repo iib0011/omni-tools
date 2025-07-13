@@ -11,8 +11,8 @@ export const tool = defineTool('video', {
   keywords: ['video', 'flip', 'mirror', 'horizontal', 'vertical'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'video.flip.name',
-    description: 'video.flip.description',
-    shortDescription: 'video.flip.shortDescription'
+    name: 'video:flip.title',
+    description: 'video:flip.description',
+    shortDescription: 'video:flip.shortDescription'
   }
 });

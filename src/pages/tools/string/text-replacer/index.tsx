@@ -74,16 +74,16 @@ export default function Replacer({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('string.textReplacer.searchText'),
+      title: t('string:textReplacer.searchText'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('mode', 'text')}
             checked={values.mode === 'text'}
-            title={t('string.textReplacer.findPatternInText')}
+            title={t('string:textReplacer.findPatternInText')}
           />
           <TextFieldWithDesc
-            description={t('string.textReplacer.searchPatternDescription')}
+            description={t('string:textReplacer.searchPatternDescription')}
             value={values.searchValue}
             onOwnChange={(val) => updateField('searchValue', val)}
             type={'text'}
@@ -91,10 +91,10 @@ export default function Replacer({ title }: ToolComponentProps) {
           <SimpleRadio
             onClick={() => updateField('mode', 'regexp')}
             checked={values.mode === 'regexp'}
-            title={t('string.textReplacer.findPatternUsingRegexp')}
+            title={t('string:textReplacer.findPatternUsingRegexp')}
           />
           <TextFieldWithDesc
-            description={t('string.textReplacer.regexpDescription')}
+            description={t('string:textReplacer.regexpDescription')}
             value={values.searchRegexp}
             onOwnChange={(val) => updateField('searchRegexp', val)}
             type={'text'}
@@ -103,12 +103,12 @@ export default function Replacer({ title }: ToolComponentProps) {
       )
     },
     {
-      title: t('string.textReplacer.replaceText'),
+      title: t('string:textReplacer.replaceText'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={t('string.textReplacer.replacePatternDescription')}
-            placeholder={t('string.textReplacer.newTextPlaceholder')}
+            description={t('string:textReplacer.replacePatternDescription')}
+            placeholder={t('string:textReplacer.newTextPlaceholder')}
             value={values.replaceValue}
             onOwnChange={(val) => updateField('replaceValue', val)}
             type={'text'}
@@ -128,20 +128,20 @@ export default function Replacer({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('string.textReplacer.inputTitle')}
+          title={t('string:textReplacer.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={t('string.textReplacer.resultTitle')}
+          title={t('string:textReplacer.resultTitle')}
           value={result}
         />
       }
       toolInfo={{
-        title: t('string.textReplacer.toolInfo.title'),
-        description: t('string.textReplacer.toolInfo.description')
+        title: t('string:textReplacer.toolInfo.title'),
+        description: t('string:textReplacer.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

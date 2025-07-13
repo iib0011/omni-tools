@@ -53,24 +53,24 @@ export default function Shuffle() {
 
   return (
     <ToolContent
-      title={t('list.shuffle.title')}
+      title={t('list:shuffle.title')}
       initialValues={initialValues}
       compute={compute}
       input={input}
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('list.shuffle.inputTitle')}
+          title={t('list:shuffle.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={t('list.shuffle.resultTitle')} value={result} />
+        <ToolTextResult title={t('list:shuffle.resultTitle')} value={result} />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: t('list.shuffle.inputListSeparator'),
+          title: t('list:shuffle.inputListSeparator'),
           component: (
             <Box>
               {splitOperators.map(({ title, description, type }) => (
@@ -83,7 +83,7 @@ export default function Shuffle() {
                 />
               ))}
               <TextFieldWithDesc
-                description={t('list.shuffle.delimiterDescription')}
+                description={t('list:shuffle.delimiterDescription')}
                 value={values.splitSeparator}
                 onOwnChange={(val) => updateField('splitSeparator', val)}
               />
@@ -91,11 +91,11 @@ export default function Shuffle() {
           )
         },
         {
-          title: t('list.shuffle.shuffledListLength'),
+          title: t('list:shuffle.shuffledListLength'),
           component: (
             <Box>
               <TextFieldWithDesc
-                description={t('list.shuffle.outputLengthDescription')}
+                description={t('list:shuffle.outputLengthDescription')}
                 value={values.length}
                 onOwnChange={(val) => updateField('length', val)}
               />
@@ -103,13 +103,13 @@ export default function Shuffle() {
           )
         },
         {
-          title: t('list.shuffle.shuffledListSeparator'),
+          title: t('list:shuffle.shuffledListSeparator'),
           component: (
             <Box>
               <TextFieldWithDesc
                 value={values.joinSeparator}
                 onOwnChange={(value) => updateField('joinSeparator', value)}
-                description={t('list.shuffle.joinSeparatorDescription')}
+                description={t('list:shuffle.joinSeparatorDescription')}
               />
             </Box>
           )

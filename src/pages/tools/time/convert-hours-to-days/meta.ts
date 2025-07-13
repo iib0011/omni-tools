@@ -11,8 +11,8 @@ export const tool = defineTool('time', {
   keywords: ['hours', 'days', 'convert', 'time'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'time.convertHoursToDays.name',
-    description: 'time.convertHoursToDays.description',
-    shortDescription: 'time.convertHoursToDays.shortDescription'
+    name: 'time:convertHoursToDays.title',
+    description: 'time:convertHoursToDays.description',
+    shortDescription: 'time:convertHoursToDays.shortDescription'
   }
 });

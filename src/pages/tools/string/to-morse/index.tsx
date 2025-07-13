@@ -22,7 +22,7 @@ export default function ToMorse() {
 
   return (
     <ToolContent
-      title={t('string.toMorse.title')}
+      title={t('string:toMorse.title')}
       initialValues={initialValues}
       compute={computeOptions}
       input={input}
@@ -30,26 +30,26 @@ export default function ToMorse() {
       inputComponent={<ToolTextInput value={input} onChange={setInput} />}
       resultComponent={
         <ToolTextResult
-          title={t('string.toMorse.resultTitle')}
+          title={t('string:toMorse.resultTitle')}
           value={result}
         />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: t('string.toMorse.shortSignal'),
+          title: t('string:toMorse.shortSignal'),
           component: (
             <TextFieldWithDesc
-              description={t('string.toMorse.dotSymbolDescription')}
+              description={t('string:toMorse.dotSymbolDescription')}
               value={values.dotSymbol}
               onOwnChange={(val) => updateField('dotSymbol', val)}
             />
           )
         },
         {
-          title: t('string.toMorse.longSignal'),
+          title: t('string:toMorse.longSignal'),
           component: (
             <TextFieldWithDesc
-              description={t('string.toMorse.dashSymbolDescription')}
+              description={t('string:toMorse.dashSymbolDescription')}
               value={values.dashSymbol}
               onOwnChange={(val) => updateField('dashSymbol', val)}
             />

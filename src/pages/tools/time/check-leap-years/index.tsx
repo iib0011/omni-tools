@@ -78,7 +78,7 @@ export default function ConvertDaysToHours({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('time.checkLeapYears.toolInfo.title', { title }),
+        title: t('time:checkLeapYears.toolInfo.title', { title }),
         description: longDescription
       }}
       exampleCards={exampleCards}

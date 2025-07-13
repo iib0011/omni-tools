@@ -36,23 +36,23 @@ export default function GenerateNumbers({ title }: ToolComponentProps) {
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [
         {
-          title: t('number.generate.arithmeticSequenceOption'),
+          title: t('number:generate.arithmeticSequenceOption'),
           component: (
             <Box>
               <TextFieldWithDesc
-                description={t('number.generate.startSequenceDescription')}
+                description={t('number:generate.startSequenceDescription')}
                 value={values.firstValue}
                 onOwnChange={(val) => updateField('firstValue', val)}
                 type={'number'}
               />
               <TextFieldWithDesc
-                description={t('number.generate.stepDescription')}
+                description={t('number:generate.stepDescription')}
                 value={values.step}
                 onOwnChange={(val) => updateField('step', val)}
                 type={'number'}
               />
               <TextFieldWithDesc
-                description={t('number.generate.numberOfElementsDescription')}
+                description={t('number:generate.numberOfElementsDescription')}
                 value={values.numberOfNumbers}
                 onOwnChange={(val) => updateField('numberOfNumbers', val)}
                 type={'number'}
@@ -61,10 +61,10 @@ export default function GenerateNumbers({ title }: ToolComponentProps) {
           )
         },
         {
-          title: t('number.generate.separator'),
+          title: t('number:generate.separator'),
           component: (
             <TextFieldWithDesc
-              description={t('number.generate.separatorDescription')}
+              description={t('number:generate.separatorDescription')}
               value={values.separator}
               onOwnChange={(val) => updateField('separator', val)}
             />
@@ -74,7 +74,7 @@ export default function GenerateNumbers({ title }: ToolComponentProps) {
       compute={compute}
       resultComponent={
         <ToolTextResult
-          title={t('number.generate.resultTitle')}
+          title={t('number:generate.resultTitle')}
           value={result}
         />
       }

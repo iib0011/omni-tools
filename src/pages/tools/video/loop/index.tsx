@@ -45,7 +45,7 @@ export default function Loop({ title, longDescription }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('video.loop.loops'),
+      title: t('video:loop.loops'),
       component: (
         <Box>
           <TextFieldWithDesc
@@ -53,7 +53,7 @@ export default function Loop({ title, longDescription }: ToolComponentProps) {
               updateNumberField(value, 'loops', updateField)
             }
             value={values.loops}
-            label={t('video.loop.numberOfLoops')}
+            label={t('video:loop.numberOfLoops')}
           />
         </Box>
       )
@@ -68,14 +68,14 @@ export default function Loop({ title, longDescription }: ToolComponentProps) {
         loading ? (
           <ToolFileResult
             value={null}
-            title={t('video.loop.loopingVideo')}
+            title={t('video:loop.loopingVideo')}
             loading={true}
             extension={''}
           />
         ) : (
           <ToolFileResult
             value={result}
-            title={t('video.loop.resultTitle')}
+            title={t('video:loop.resultTitle')}
             extension={'mp4'}
           />
         )
@@ -86,7 +86,7 @@ export default function Loop({ title, longDescription }: ToolComponentProps) {
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('video.loop.toolInfo.title', { title }),
+        title: t('video:loop.toolInfo.title', { title }),
         description: longDescription
       }}
     />

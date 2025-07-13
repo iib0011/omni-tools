@@ -11,8 +11,8 @@ export const tool = defineTool('video', {
   keywords: ['video', 'trim', 'cut', 'edit', 'time'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'video.trim.name',
-    description: 'video.trim.description',
-    shortDescription: 'video.trim.shortDescription'
+    name: 'video:trim.title',
+    description: 'video:trim.description',
+    shortDescription: 'video:trim.shortDescription'
   }
 });

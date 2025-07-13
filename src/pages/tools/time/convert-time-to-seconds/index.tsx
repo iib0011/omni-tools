@@ -95,7 +95,7 @@ export default function TimeToSeconds({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('time.convertTimeToSeconds.toolInfo.title', { title }),
+        title: t('time:convertTimeToSeconds.toolInfo.title', { title }),
         description: longDescription
       }}
       exampleCards={exampleCards}

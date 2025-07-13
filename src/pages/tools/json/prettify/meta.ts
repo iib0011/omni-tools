@@ -11,8 +11,8 @@ export const tool = defineTool('json', {
   keywords: ['json', 'prettify', 'format', 'beautify'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'json.prettify.name',
-    description: 'json.prettify.description',
-    shortDescription: 'json.prettify.shortDescription'
+    name: 'json:prettify.title',
+    description: 'json:prettify.description',
+    shortDescription: 'json:prettify.shortDescription'
   }
 });

@@ -12,8 +12,8 @@ export const tool = defineTool('string', {
   keywords: ['quote'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'string.quote.name',
-    description: 'string.quote.description',
-    shortDescription: 'string.quote.shortDescription'
+    name: 'string:quote.title',
+    description: 'string:quote.description',
+    shortDescription: 'string:quote.shortDescription'
   }
 });

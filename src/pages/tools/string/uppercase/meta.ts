@@ -11,8 +11,8 @@ export const tool = defineTool('string', {
   keywords: ['uppercase'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'string.uppercase.name',
-    description: 'string.uppercase.description',
-    shortDescription: 'string.uppercase.shortDescription'
+    name: 'string:uppercase.title',
+    description: 'string:uppercase.description',
+    shortDescription: 'string:uppercase.shortDescription'
   }
 });

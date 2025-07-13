@@ -32,21 +32,21 @@ export default function CropVideo({ title }: ToolComponentProps) {
     if (!videoDimensions) return '';
 
     if (values.x < 0 || values.y < 0) {
-      return t('video.cropVideo.errorNonNegativeCoordinates');
+      return t('video:cropVideo.errorNonNegativeCoordinates');
     }
 
     if (values.width <= 0 || values.height <= 0) {
-      return t('video.cropVideo.errorPositiveDimensions');
+      return t('video:cropVideo.errorPositiveDimensions');
     }
 
     if (values.x + values.width > videoDimensions.width) {
-      return t('video.cropVideo.errorBeyondWidth', {
+      return t('video:cropVideo.errorBeyondWidth', {
         width: videoDimensions.width
       });
     }
 
     if (values.y + values.height > videoDimensions.height) {
-      return t('video.cropVideo.errorBeyondHeight', {
+      return t('video:cropVideo.errorBeyondHeight', {
         height: videoDimensions.height
       });
     }
@@ -74,7 +74,7 @@ export default function CropVideo({ title }: ToolComponentProps) {
       setResult(croppedFile);
     } catch (error) {
       console.error('Error cropping video:', error);
-      setProcessingError(t('video.cropVideo.errorCroppingVideo'));
+      setProcessingError(t('video:cropVideo.errorCroppingVideo'));
     } finally {
       setLoading(false);
     }
@@ -90,26 +90,26 @@ export default function CropVideo({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('video.cropVideo.videoInformation'),
+      title: t('video:cropVideo.videoInformation'),
       component: (
         <Box>
           {videoDimensions ? (
             <Typography variant="body2" sx={{ mb: 2 }}>
-              {t('video.cropVideo.videoDimensions', {
+              {t('video:cropVideo.videoDimensions', {
                 width: videoDimensions.width,
                 height: videoDimensions.height
               })}
             </Typography>
           ) : (
             <Typography variant="body2" sx={{ mb: 2 }}>
-              {t('video.cropVideo.loadVideoForDimensions')}
+              {t('video:cropVideo.loadVideoForDimensions')}
             </Typography>
           )}
         </Box>
       )
     },
     {
-      title: t('video.cropVideo.cropCoordinates'),
+      title: t('video:cropVideo.cropCoordinates'),
       component: (
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           {processingError && (
@@ -119,7 +119,7 @@ export default function CropVideo({ title }: ToolComponentProps) {
           )}
           <Box sx={{ display: 'flex', gap: 2 }}>
             <TextField
-              label={t('video.cropVideo.xCoordinate')}
+              label={t('video:cropVideo.xCoordinate')}
               type="number"
               value={values.x}
               onChange={(e) => updateField('x', parseInt(e.target.value) || 0)}
@@ -127,7 +127,7 @@ export default function CropVideo({ title }: ToolComponentProps) {
               inputProps={{ min: 0 }}
             />
             <TextField
-              label={t('video.cropVideo.yCoordinate')}
+              label={t('video:cropVideo.yCoordinate')}
               type="number"
               value={values.y}
               onChange={(e) => updateField('y', parseInt(e.target.value) || 0)}
@@ -137,7 +137,7 @@ export default function CropVideo({ title }: ToolComponentProps) {
           </Box>
           <Box sx={{ display: 'flex', gap: 2 }}>
             <TextField
-              label={t('video.cropVideo.width')}
+              label={t('video:cropVideo.width')}
               type="number"
               value={values.width}
               onChange={(e) =>
@@ -147,7 +147,7 @@ export default function CropVideo({ title }: ToolComponentProps) {
               inputProps={{ min: 1 }}
             />
             <TextField
-              label={t('video.cropVideo.height')}
+              label={t('video:cropVideo.height')}
               type="number"
               value={values.height}
               onChange={(e) =>
@@ -190,7 +190,7 @@ export default function CropVideo({ title }: ToolComponentProps) {
                 .catch((error) => {
                   console.error('Error getting video dimensions:', error);
                   setProcessingError(
-                    t('video.cropVideo.errorLoadingDimensions')
+                    t('video:cropVideo.errorLoadingDimensions')
                   );
                 });
             } else {
@@ -199,20 +199,20 @@ export default function CropVideo({ title }: ToolComponentProps) {
             }
             setInput(video);
           }}
-          title={t('video.cropVideo.inputTitle')}
+          title={t('video:cropVideo.inputTitle')}
         />
       )}
       resultComponent={
         loading ? (
           <ToolFileResult
-            title={t('video.cropVideo.croppingVideo')}
+            title={t('video:cropVideo.croppingVideo')}
             value={null}
             loading={true}
             extension={''}
           />
         ) : (
           <ToolFileResult
-            title={t('video.cropVideo.resultTitle')}
+            title={t('video:cropVideo.resultTitle')}
             value={result}
             extension={'mp4'}
           />

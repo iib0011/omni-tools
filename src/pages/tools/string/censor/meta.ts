@@ -14,9 +14,9 @@ export const tool = defineTool('string', {
   keywords: ['text', 'censor', 'words', 'characters'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'string.censor.name',
-    description: 'string.censor.description',
-    shortDescription: 'string.censor.shortDescription',
-    longDescription: 'string.censor.longDescription'
+    name: 'string:censor.title',
+    description: 'string:censor.description',
+    shortDescription: 'string:censor.shortDescription',
+    longDescription: 'string:censor.longDescription'
   }
 });

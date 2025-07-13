@@ -11,8 +11,8 @@ export const meta = defineTool('pdf', {
   keywords: ['pdf', 'epub', 'convert', 'ebook'],
   path: 'pdf-to-epub',
   i18n: {
-    name: 'pdf.pdfToEpub.name',
-    description: 'pdf.pdfToEpub.description',
-    shortDescription: 'pdf.pdfToEpub.shortDescription'
+    name: 'pdf:pdfToEpub.title',
+    description: 'pdf:pdfToEpub.description',
+    shortDescription: 'pdf:pdfToEpub.shortDescription'
   }
 });

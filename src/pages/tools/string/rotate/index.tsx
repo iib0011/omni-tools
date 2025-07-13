@@ -81,29 +81,29 @@ export default function Rotate({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('string.rotate.rotationOptions'),
+      title: t('string:rotate.rotationOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.step}
             onOwnChange={(val) => updateField('step', val)}
-            description={t('string.rotate.stepDescription')}
+            description={t('string:rotate.stepDescription')}
             type="number"
           />
           <SimpleRadio
             onClick={() => updateField('direction', 'right')}
             checked={values.direction === 'right'}
-            title={t('string.rotate.rotateRight')}
+            title={t('string:rotate.rotateRight')}
           />
           <SimpleRadio
             onClick={() => updateField('direction', 'left')}
             checked={values.direction === 'left'}
-            title={t('string.rotate.rotateLeft')}
+            title={t('string:rotate.rotateLeft')}
           />
           <CheckboxWithDesc
             checked={values.multiLine}
             onChange={(checked) => updateField('multiLine', checked)}
-            title={t('string.rotate.processAsMultiLine')}
+            title={t('string:rotate.processAsMultiLine')}
           />
         </Box>
       )
@@ -115,19 +115,19 @@ export default function Rotate({ title }: ToolComponentProps) {
       title={title}
       inputComponent={
         <ToolTextInput
-          title={t('string.rotate.inputTitle')}
+          title={t('string:rotate.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={t('string.rotate.resultTitle')} value={result} />
+        <ToolTextResult title={t('string:rotate.resultTitle')} value={result} />
       }
       initialValues={initialValues}
       getGroups={getGroups}
       toolInfo={{
-        title: t('string.rotate.toolInfo.title'),
-        description: t('string.rotate.toolInfo.description')
+        title: t('string:rotate.toolInfo.title'),
+        description: t('string:rotate.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

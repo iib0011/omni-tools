@@ -12,8 +12,8 @@ export const tool = defineTool('list', {
   keywords: ['unwrap'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'list.unwrap.name',
-    description: 'list.unwrap.description',
-    shortDescription: 'list.unwrap.shortDescription'
+    name: 'list:unwrap.title',
+    description: 'list:unwrap.description',
+    shortDescription: 'list:unwrap.shortDescription'
   }
 });

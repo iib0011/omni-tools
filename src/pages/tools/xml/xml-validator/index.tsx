@@ -48,7 +48,7 @@ export default function XmlValidator({
         <ToolTextInput
           value={input}
           onChange={setInput}
-          placeholder={t('xml.xmlValidator.placeholder')}
+          placeholder={t('xml:xmlValidator.placeholder')}
         />
       }
       resultComponent={<ToolTextResult value={result} extension="txt" />}
@@ -58,8 +58,8 @@ export default function XmlValidator({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('xml.xmlValidator.toolInfo.title'),
-        description: t('xml.xmlValidator.toolInfo.description')
+        title: t('xml:xmlValidator.toolInfo.title'),
+        description: t('xml:xmlValidator.toolInfo.description')
       }}
     />
   );

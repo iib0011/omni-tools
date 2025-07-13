@@ -11,8 +11,8 @@ export const tool = defineTool('time', {
   keywords: ['cron', 'schedule', 'automation', 'expression'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'time.crontabGuru.name',
-    description: 'time.crontabGuru.description',
-    shortDescription: 'time.crontabGuru.shortDescription'
+    name: 'time:crontabGuru.title',
+    description: 'time:crontabGuru.description',
+    shortDescription: 'time:crontabGuru.shortDescription'
   }
 });

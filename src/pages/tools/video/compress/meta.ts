@@ -18,8 +18,8 @@ export const tool = defineTool('video', {
   ],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'video.compress.name',
-    description: 'video.compress.description',
-    shortDescription: 'video.compress.shortDescription'
+    name: 'video:compress.title',
+    description: 'video:compress.description',
+    shortDescription: 'video:compress.shortDescription'
   }
 });

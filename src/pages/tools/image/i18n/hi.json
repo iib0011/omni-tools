@@ -148,25 +148,5 @@
     "typeSaturation": "संतृप्ति",
     "filterIntensity": "फ़िल्टर तीव्रता",
     "intensityPlaceholder": "मान (0-100)"
-  },
-  "resize": {
-    "title": "छवि आकार बदलें",
-    "description": "छवि का आकार बदलें।",
-    "inputTitle": "इनपुट छवि",
-    "resultTitle": "आकार बदली गई छवि",
-    "resizeOptions": "आकार बदलने के विकल्प",
-    "resizeMethod": "आकार बदलने की विधि",
-    "methodPercentage": "प्रतिशत",
-    "methodPixels": "पिक्सेल",
-    "methodAspectRatio": "आकार अनुपात",
-    "width": "चौड़ाई",
-    "widthPlaceholder": "मान",
-    "height": "ऊंचाई",
-    "heightPlaceholder": "मान",
-    "maintainAspectRatio": "आकार अनुपात बनाए रखें",
-    "interpolationMethod": "इंटरपोलेशन विधि",
-    "methodNearest": "निकटतम",
-    "methodBilinear": "द्विरेखीय",
-    "methodBicubic": "द्विघन"
   }
 }

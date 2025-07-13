@@ -81,31 +81,31 @@ export default function Truncate({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('string.truncate.truncationSide'),
+      title: t('string:truncate.truncationSide'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('truncationSide', 'right')}
             checked={values.truncationSide === 'right'}
-            title={t('string.truncate.rightSideTruncation')}
-            description={t('string.truncate.rightSideDescription')}
+            title={t('string:truncate.rightSideTruncation')}
+            description={t('string:truncate.rightSideDescription')}
           />
           <SimpleRadio
             onClick={() => updateField('truncationSide', 'left')}
             checked={values.truncationSide === 'left'}
-            title={t('string.truncate.leftSideTruncation')}
-            description={t('string.truncate.leftSideDescription')}
+            title={t('string:truncate.leftSideTruncation')}
+            description={t('string:truncate.leftSideDescription')}
           />
         </Box>
       )
     },
     {
-      title: t('string.truncate.lengthAndLines'),
+      title: t('string:truncate.lengthAndLines'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={t('string.truncate.maxLengthDescription')}
-            placeholder={t('string.truncate.numberPlaceholder')}
+            description={t('string:truncate.maxLengthDescription')}
+            placeholder={t('string:truncate.numberPlaceholder')}
             value={values.maxLength}
             onOwnChange={(val) => updateField('maxLength', val)}
             type={'number'}
@@ -113,25 +113,25 @@ export default function Truncate({ title }: ToolComponentProps) {
           <CheckboxWithDesc
             onChange={(val) => updateField('lineByLine', val)}
             checked={values.lineByLine}
-            title={t('string.truncate.lineByLineTruncating')}
-            description={t('string.truncate.lineByLineDescription')}
+            title={t('string:truncate.lineByLineTruncating')}
+            description={t('string:truncate.lineByLineDescription')}
           />
         </Box>
       )
     },
     {
-      title: t('string.truncate.suffixAndAffix'),
+      title: t('string:truncate.suffixAndAffix'),
       component: (
         <Box>
           <CheckboxWithDesc
             onChange={(val) => updateField('addIndicator', val)}
             checked={values.addIndicator}
-            title={t('string.truncate.addTruncationIndicator')}
+            title={t('string:truncate.addTruncationIndicator')}
             description={''}
           />
           <TextFieldWithDesc
-            description={t('string.truncate.indicatorDescription')}
-            placeholder={t('string.truncate.charactersPlaceholder')}
+            description={t('string:truncate.indicatorDescription')}
+            placeholder={t('string:truncate.charactersPlaceholder')}
             value={values.indicator}
             onOwnChange={(val) => updateField('indicator', val)}
             type={'text'}
@@ -151,20 +151,20 @@ export default function Truncate({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('string.truncate.inputTitle')}
+          title={t('string:truncate.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={t('string.truncate.resultTitle')}
+          title={t('string:truncate.resultTitle')}
           value={result}
         />
       }
       toolInfo={{
-        title: t('string.truncate.toolInfo.title'),
-        description: t('string.truncate.toolInfo.description')
+        title: t('string:truncate.toolInfo.title'),
+        description: t('string:truncate.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

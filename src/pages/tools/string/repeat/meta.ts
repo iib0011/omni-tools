@@ -11,8 +11,8 @@ export const tool = defineTool('string', {
   keywords: ['text', 'repeat'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'string.repeat.name',
-    description: 'string.repeat.description',
-    shortDescription: 'string.repeat.shortDescription'
+    name: 'string:repeat.title',
+    description: 'string:repeat.description',
+    shortDescription: 'string:repeat.shortDescription'
   }
 });

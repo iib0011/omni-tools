@@ -12,8 +12,8 @@ export const tool = defineTool('list', {
   keywords: ['sort'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'list.sort.name',
-    description: 'list.sort.description',
-    shortDescription: 'list.sort.shortDescription'
+    name: 'list:sort.title',
+    description: 'list:sort.description',
+    shortDescription: 'list:sort.shortDescription'
   }
 });

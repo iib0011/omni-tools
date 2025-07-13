@@ -117,59 +117,59 @@ export default function FindIncompleteCsvRecords({
     updateField
   }) => [
     {
-      title: t('csv.findIncompleteCsvRecords.csvInputOptions'),
+      title: t('csv:findIncompleteCsvRecords.csvInputOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.csvSeparator}
             onOwnChange={(val) => updateField('csvSeparator', val)}
             description={t(
-              'csv.findIncompleteCsvRecords.csvSeparatorDescription'
+              'csv:findIncompleteCsvRecords.csvSeparatorDescription'
             )}
           />
           <TextFieldWithDesc
             value={values.quoteCharacter}
             onOwnChange={(val) => updateField('quoteCharacter', val)}
             description={t(
-              'csv.findIncompleteCsvRecords.quoteCharacterDescription'
+              'csv:findIncompleteCsvRecords.quoteCharacterDescription'
             )}
           />
           <TextFieldWithDesc
             value={values.commentCharacter}
             onOwnChange={(val) => updateField('commentCharacter', val)}
             description={t(
-              'csv.findIncompleteCsvRecords.commentCharacterDescription'
+              'csv:findIncompleteCsvRecords.commentCharacterDescription'
             )}
           />
         </Box>
       )
     },
     {
-      title: t('csv.findIncompleteCsvRecords.checkingOptions'),
+      title: t('csv:findIncompleteCsvRecords.checkingOptions'),
       component: (
         <Box>
           <CheckboxWithDesc
             checked={values.emptyLines}
             onChange={(value) => updateField('emptyLines', value)}
-            title={t('csv.findIncompleteCsvRecords.deleteLinesWithNoData')}
+            title={t('csv:findIncompleteCsvRecords.deleteLinesWithNoData')}
             description={t(
-              'csv.findIncompleteCsvRecords.deleteLinesWithNoDataDescription'
+              'csv:findIncompleteCsvRecords.deleteLinesWithNoDataDescription'
             )}
           />
 
           <CheckboxWithDesc
             checked={values.emptyValues}
             onChange={(value) => updateField('emptyValues', value)}
-            title={t('csv.findIncompleteCsvRecords.findEmptyValues')}
+            title={t('csv:findIncompleteCsvRecords.findEmptyValues')}
             description={t(
-              'csv.findIncompleteCsvRecords.findEmptyValuesDescription'
+              'csv:findIncompleteCsvRecords.findEmptyValuesDescription'
             )}
           />
 
           <CheckboxWithDesc
             checked={values.messageLimit}
             onChange={(value) => updateField('messageLimit', value)}
-            title={t('csv.findIncompleteCsvRecords.limitNumberOfMessages')}
+            title={t('csv:findIncompleteCsvRecords.limitNumberOfMessages')}
           />
 
           {values.messageLimit && (
@@ -179,7 +179,7 @@ export default function FindIncompleteCsvRecords({
               type="number"
               inputProps={{ min: 1 }}
               description={t(
-                'csv.findIncompleteCsvRecords.messageLimitDescription'
+                'csv:findIncompleteCsvRecords.messageLimitDescription'
               )}
             />
           )}
@@ -193,14 +193,14 @@ export default function FindIncompleteCsvRecords({
       input={input}
       inputComponent={
         <ToolTextInput
-          title={t('csv.findIncompleteCsvRecords.inputTitle')}
+          title={t('csv:findIncompleteCsvRecords.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={t('csv.findIncompleteCsvRecords.resultTitle')}
+          title={t('csv:findIncompleteCsvRecords.resultTitle')}
           value={result}
         />
       }
@@ -210,7 +210,7 @@ export default function FindIncompleteCsvRecords({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('csv.findIncompleteCsvRecords.toolInfo.title', { title }),
+        title: t('csv:findIncompleteCsvRecords.toolInfo.title', { title }),
         description: longDescription
       }}
     />

@@ -11,8 +11,8 @@ export const tool = defineTool('time', {
   keywords: ['time', 'seconds', 'convert', 'format'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'time.convertTimeToSeconds.name',
-    description: 'time.convertTimeToSeconds.description',
-    shortDescription: 'time.convertTimeToSeconds.shortDescription'
+    name: 'time:convertTimeToSeconds.title',
+    description: 'time:convertTimeToSeconds.description',
+    shortDescription: 'time:convertTimeToSeconds.shortDescription'
   }
 });

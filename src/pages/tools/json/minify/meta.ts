@@ -11,8 +11,8 @@ export const tool = defineTool('json', {
   keywords: ['json', 'minify', 'compress', 'whitespace'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'json.minify.name',
-    description: 'json.minify.description',
-    shortDescription: 'json.minify.shortDescription'
+    name: 'json:minify.title',
+    description: 'json:minify.description',
+    shortDescription: 'json:minify.shortDescription'
   }
 });

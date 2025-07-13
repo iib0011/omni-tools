@@ -11,8 +11,8 @@ export const tool = defineTool('number', {
   keywords: ['arithmetic', 'sequence', 'math', 'progression'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'number.arithmeticSequence.name',
-    description: 'number.arithmeticSequence.description',
-    shortDescription: 'number.arithmeticSequence.shortDescription'
+    name: 'number:arithmeticSequence.title',
+    description: 'number:arithmeticSequence.description',
+    shortDescription: 'number:arithmeticSequence.shortDescription'
   }
 });

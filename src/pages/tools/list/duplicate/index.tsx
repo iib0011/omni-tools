@@ -136,53 +136,53 @@ export default function Duplicate({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('list.duplicate.splitOptions'),
+      title: t('list:duplicate.splitOptions'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('splitOperatorType', 'symbol')}
             checked={values.splitOperatorType === 'symbol'}
-            title={t('list.duplicate.splitBySymbol')}
+            title={t('list:duplicate.splitBySymbol')}
           />
           <SimpleRadio
             onClick={() => updateField('splitOperatorType', 'regex')}
             checked={values.splitOperatorType === 'regex'}
-            title={t('list.duplicate.splitByRegex')}
+            title={t('list:duplicate.splitByRegex')}
           />
           <TextFieldWithDesc
             value={values.splitSeparator}
             onOwnChange={(val) => updateField('splitSeparator', val)}
-            description={t('list.duplicate.splitSeparatorDescription')}
+            description={t('list:duplicate.splitSeparatorDescription')}
           />
           <TextFieldWithDesc
             value={values.joinSeparator}
             onOwnChange={(val) => updateField('joinSeparator', val)}
-            description={t('list.duplicate.joinSeparatorDescription')}
+            description={t('list:duplicate.joinSeparatorDescription')}
           />
         </Box>
       )
     },
     {
-      title: t('list.duplicate.duplicationOptions'),
+      title: t('list:duplicate.duplicationOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.copy}
             onOwnChange={(val) => updateField('copy', val)}
-            description={t('list.duplicate.copyDescription')}
+            description={t('list:duplicate.copyDescription')}
             type="number"
           />
           <CheckboxWithDesc
-            title={t('list.duplicate.concatenate')}
+            title={t('list:duplicate.concatenate')}
             checked={values.concatenate}
             onChange={(checked) => updateField('concatenate', checked)}
-            description={t('list.duplicate.concatenateDescription')}
+            description={t('list:duplicate.concatenateDescription')}
           />
           <CheckboxWithDesc
-            title={t('list.duplicate.reverse')}
+            title={t('list:duplicate.reverse')}
             checked={values.reverse}
             onChange={(checked) => updateField('reverse', checked)}
-            description={t('list.duplicate.reverseDescription')}
+            description={t('list:duplicate.reverseDescription')}
           />
         </Box>
       )
@@ -194,14 +194,14 @@ export default function Duplicate({ title }: ToolComponentProps) {
       title={title}
       inputComponent={
         <ToolTextInput
-          title={t('list.duplicate.inputTitle')}
+          title={t('list:duplicate.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={t('list.duplicate.resultTitle')}
+          title={t('list:duplicate.resultTitle')}
           value={result}
         />
       }
@@ -209,8 +209,8 @@ export default function Duplicate({ title }: ToolComponentProps) {
       getGroups={getGroups}
       validationSchema={validationSchema}
       toolInfo={{
-        title: t('list.duplicate.toolInfo.title'),
-        description: t('list.duplicate.toolInfo.description')
+        title: t('list:duplicate.toolInfo.title'),
+        description: t('list:duplicate.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

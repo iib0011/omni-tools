@@ -11,8 +11,8 @@ export const tool = defineTool('json', {
   keywords: ['json', 'xml', 'convert', 'transform'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'json.jsonToXml.name',
-    description: 'json.jsonToXml.description',
-    shortDescription: 'json.jsonToXml.shortDescription'
+    name: 'json:jsonToXml.title',
+    description: 'json:jsonToXml.description',
+    shortDescription: 'json:jsonToXml.shortDescription'
   }
 });
