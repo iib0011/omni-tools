@@ -28,17 +28,17 @@
     "toolInfo": {
       "title": "Insert CSV Columns",
       "description": "This tool allows you to insert new columns into CSV data at specified positions. You can prepend, append, or insert columns at custom positions based on header names or column numbers."
-    }
+    },
+    "title": "Insert CSV columns",
+    "shortDescription": "Quickly insert one or more new columns anywhere in a CSV file."
   },
   "csvToJson": {
     "inputTitle": "Input CSV",
     "resultTitle": "Output JSON",
-
     "inputCsvFormat": "Input CSV Format",
     "columnSeparator": "Column Separator (e.g., , ; \\t)",
     "fieldQuote": "Field Quote (e.g., \")",
     "commentSymbol": "Comment Symbol (e.g., #)",
-
     "conversionOptions": "Conversion Options",
     "useHeaders": "Use Headers",
     "useHeadersDescription": "Treat the first row as column headers",
@@ -46,8 +46,10 @@
     "skipEmptyLinesDescription": "Ignore empty lines in the input CSV",
     "dynamicTypes": "Dynamic Types",
     "dynamicTypesDescription": "Automatically convert numbers and booleans",
-
-    "errorParsing": "Error parsing CSV: {{error}}"
+    "errorParsing": "Error parsing CSV: {{error}}",
+    "title": "Convert CSV to JSON",
+    "description": "Convert CSV files to JSON format with customizable options for delimiters, quotes, and output formatting. Support for headers, comments, and dynamic type conversion.",
+    "shortDescription": "Convert CSV data to JSON format."
   },
   "findIncompleteCsvRecords": {
     "title": "Find Incomplete CSV Records",
@@ -66,6 +68,44 @@
     "findEmptyValues": "Find Empty Values",
     "findEmptyValuesDescription": "Display a message about CSV fields that are empty (These are not missing fields but fields that contain nothing).",
     "limitNumberOfMessages": "Limit number of messages",
-    "messageLimitDescription": "Set the limit of number of messages in the output."
+    "messageLimitDescription": "Set the limit of number of messages in the output.",
+    "title": "Find incomplete CSV records",
+    "description": "Just upload your CSV file in the form below and this tool will automatically check if none of the rows or columns are missing values. In the tool options, you can adjust the input file format (specify the delimiter, quote character, and comment character). Additionally, you can enable checking for empty values, skip empty lines, and set a limit on the number of error messages in the output.",
+    "shortDescription": "Quickly find rows and columns in CSV that are missing values."
+  },
+  "changeCsvSeparator": {
+    "title": "Change CSV Separator",
+    "description": "Change the delimiter/separator in CSV files. Convert between different CSV formats like comma, semicolon, tab, or custom separators.",
+    "shortDescription": "Change CSV file delimiter"
+  },
+  "csvRowsToColumns": {
+    "title": "Convert CSV Rows to Columns",
+    "description": "This tool converts rows of a CSV (Comma Separated Values) file into columns. It extracts the horizontal lines from the input CSV one by one, rotates them 90 degrees, and outputs them as vertical columns one after another, separated by commas.', longDescription: 'This tool converts rows of a CSV (Comma Separated Values) file into columns. For example, if the input CSV data has 6 rows, then the output will have 6 columns and the elements of the rows will be arranged from the top to bottom. In a well-formed CSV, the number of values in each row is the same. However, in cases when rows are missing fields, the program can fix them and you can choose from the available options: fill missing data with empty elements or replace missing data with custom elements, such as \"missing\", \"?\", or \"x\". During the conversion process, the tool also cleans the CSV file from unnecessary information, such as empty lines (these are lines without visible information) and comments. To help the tool correctly identify comments, in the options, you can specify the symbol at the beginning of a line that starts a comment. This symbol is typically a hash \"#\" or double slash \"//\". Csv-abulous!.",
+    "shortDescription": "Convert CSV rows to columns."
+  },
+  "csvToTsv": {
+    "title": "Convert CSV to TSV",
+    "description": "Upload your CSV file in the form below and it will automatically get converted to a TSV file. In the tool options, you can customize the input CSV format – specify the field delimiter, quotation character, and comment symbol, as well as skip empty CSV lines, and choose whether to preserve CSV column headers.",
+    "shortDescription": "Convert CSV data to TSV format."
+  },
+  "csvToXml": {
+    "title": "Convert CSV to XML",
+    "description": "Convert CSV files to XML format with customizable options.",
+    "shortDescription": "Convert CSV data to XML format."
+  },
+  "csvToYaml": {
+    "title": "Convert CSV to YAML",
+    "description": "Just upload your CSV file in the form below and it will automatically get converted to a YAML file. In the tool options, you can specify the field delimiter character, field quote character, and comment character to adapt the tool to custom CSV formats. Additionally, you can select the output YAML format: one that preserves CSV headers or one that excludes CSV headers.",
+    "shortDescription": "Quickly convert a CSV file to a YAML file."
+  },
+  "swapCsvColumns": {
+    "title": "Swap CSV Columns",
+    "description": "Just upload your CSV file in the form below, specify the columns to swap, and the tool will automatically change the positions of the specified columns in the output file. In the tool options, you can specify the column positions or names that you want to swap, as well as fix incomplete data and optionally remove empty records and records that have been commented out.",
+    "shortDescription": "Reorder CSV columns."
+  },
+  "transposeCsv": {
+    "title": "Transpose CSV",
+    "description": "Just upload your CSV file in the form below, and this tool will automatically transpose your CSV. In the tool options, you can specify the character that starts the comment lines in the CSV to remove them. Additionally, if the CSV is incomplete (missing values), you can replace missing values with the empty character or a custom character.",
+    "shortDescription": "Quickly transpose a CSV file."
   }
 }

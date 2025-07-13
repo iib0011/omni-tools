@@ -10,7 +10,9 @@
     "toolInfo": {
       "title": "What is a {{title}}?",
       "description": "This tool allows you to create a looping video by repeating the original video multiple times. You can specify how many times the video should loop."
-    }
+    },
+    "title": "Loop Video",
+    "shortDescription": "Create looping video files"
   },
   "cropVideo": {
     "title": "Crop Video",
@@ -35,14 +37,19 @@
     "toolInfo": {
       "title": "Crop Video",
       "description": "This tool allows you to crop video files to remove unwanted areas. You can specify the crop area by setting the X, Y coordinates and width, height dimensions."
-    }
+    },
+    "title": "Crop Video",
+    "shortDescription": "Crop video to remove unwanted areas"
   },
   "trim": {
     "timestamps": "Timestamps",
     "startTime": "Start Time",
     "endTime": "End Time",
     "inputTitle": "Input Video",
-    "resultTitle": "Trimmed Video"
+    "resultTitle": "Trimmed Video",
+    "title": "Trim Video",
+    "description": "Trim video files by specifying start and end times. Remove unwanted sections from the beginning or end of videos.",
+    "shortDescription": "Trim video by removing unwanted sections"
   },
   "changeSpeed": {
     "newVideoSpeed": "New Video Speed",
@@ -52,7 +59,10 @@
     "resultTitle": "Edited Video",
     "toolInfo": {
       "title": "What is a {{title}}?"
-    }
+    },
+    "title": "Change Video Speed",
+    "description": "Change the playback speed of video files. Speed up or slow down videos while maintaining audio synchronization. Supports various speed multipliers and common video formats.",
+    "shortDescription": "Change video playback speed"
   },
   "compress": {
     "resolution": "Resolution",
@@ -62,7 +72,10 @@
     "worst": "Worst",
     "inputTitle": "Input Video",
     "resultTitle": "Compressed Video",
-    "loadingText": "Compressing video..."
+    "loadingText": "Compressing video...",
+    "title": "Compress Video",
+    "description": "Compress videos by scaling them to different resolutions like 240p, 480p, 720p, etc. This tool helps reduce file size while maintaining acceptable quality. Supports common video formats like MP4, WebM, and OGG.",
+    "shortDescription": "Compress videos by scaling to different resolutions"
   },
   "flip": {
     "orientation": "Orientation",
@@ -70,7 +83,10 @@
     "verticalLabel": "Vertical (Upside Down)",
     "inputTitle": "Input Video",
     "flippingVideo": "Flipping Video",
-    "resultTitle": "Flipped Video"
+    "resultTitle": "Flipped Video",
+    "title": "Flip Video",
+    "description": "Flip video files horizontally or vertically. Mirror videos for special effects or correct orientation issues.",
+    "shortDescription": "Flip video horizontally or vertically"
   },
   "rotate": {
     "rotation": "Rotation",
@@ -79,6 +95,21 @@
     "270Degrees": "270° (90° Counter-clockwise)",
     "inputTitle": "Input Video",
     "rotatingVideo": "Rotating Video",
-    "resultTitle": "Rotated Video"
+    "resultTitle": "Rotated Video",
+    "title": "Rotate Video",
+    "description": "Rotate video files by 90, 180, or 270 degrees. Correct video orientation or create special effects with precise rotation control.",
+    "shortDescription": "Rotate video by specified degrees"
+  },
+  "videoToGif": {
+    "title": "Video to GIF",
+    "description": "Convert video files to animated GIF format. Extract specific time ranges and create shareable animated images.",
+    "shortDescription": "Convert video to animated GIF"
+  },
+  "gif": {
+    "changeSpeed": {
+      "title": "Change GIF Speed",
+      "description": "Change the playback speed of GIF animations. Speed up or slow down GIFs while maintaining smooth animation.",
+      "shortDescription": "Change GIF animation speed"
+    }
   }
 }

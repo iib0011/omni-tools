@@ -12,8 +12,8 @@ export const tool = defineTool('gif', {
   keywords: ['gif', 'speed', 'animation', 'fast', 'slow'],
   component: lazy(() => import('./index')),
   i18n: {
-    name: 'gif.changeSpeed.title',
-    description: 'gif.changeSpeed.description',
-    shortDescription: 'gif.changeSpeed.shortDescription'
+    name: 'video:gif.changeSpeed.title',
+    description: 'video:gif.changeSpeed.description',
+    shortDescription: 'video:gif.changeSpeed.shortDescription'
   }
 });

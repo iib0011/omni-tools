@@ -10,7 +10,9 @@
     "toolInfo": {
       "title": "What is {{title}}?",
       "description": "This tool allows you to extract the audio track from video files. You can choose from different audio formats including AAC, MP3, and WAV."
-    }
+    },
+    "title": "Extract audio",
+    "shortDescription": "Extract audio from video files (MP4, MOV, etc.) to AAC, MP3, or WAV."
   },
   "changeSpeed": {
     "title": "Change audio speed",
@@ -25,6 +27,17 @@
     "toolInfo": {
       "title": "What is {{title}}?",
       "description": ""
-    }
+    },
+    "title": "Change audio speed"
+  },
+  "mergeAudio": {
+    "title": "Merge Audio",
+    "description": "Combine multiple audio files into a single audio file by concatenating them in sequence.",
+    "shortDescription": "Merge multiple audio files into one (MP3, AAC, WAV)."
+  },
+  "trim": {
+    "title": "Trim Audio",
+    "description": "Cut and trim audio files to extract specific segments by specifying start and end times.",
+    "shortDescription": "Trim audio files to extract specific time segments (MP3, AAC, WAV)."
   }
 }

@@ -7,7 +7,9 @@
     "toolInfo": {
       "title": "What is a Leap Year?",
       "description": "A leap year is a year containing one additional day (February 29) to keep the calendar year synchronized with the astronomical year. Leap years occur every 4 years, except for years that are divisible by 100 but not by 400."
-    }
+    },
+    "title": "Check Leap Years",
+    "shortDescription": "Check if a year is a leap year"
   },
   "convertDaysToHours": {
     "title": "Convert Days to Hours",
@@ -18,7 +20,9 @@
     "toolInfo": {
       "title": "Convert Days to Hours",
       "description": "This tool allows you to convert days to hours. You can input days as numbers or with units, and the tool will convert them to hours. You can also choose to append the 'hours' suffix to the output values."
-    }
+    },
+    "title": "Convert Days to Hours",
+    "shortDescription": "Convert days to hours"
   },
   "convertHoursToDays": {
     "title": "Convert Hours to Days",
@@ -29,7 +33,9 @@
     "toolInfo": {
       "title": "Convert Hours to Days",
       "description": "This tool allows you to convert hours to days. You can input hours as numbers or with units, and the tool will convert them to days. You can also choose to append the 'days' suffix to the output values."
-    }
+    },
+    "title": "Convert Hours to Days",
+    "shortDescription": "Convert hours to days"
   },
   "convertTimeToSeconds": {
     "title": "Convert Time to Seconds",
@@ -39,26 +45,28 @@
     "toolInfo": {
       "title": "Convert Time to Seconds",
       "description": "This tool allows you to convert formatted time strings (HH:MM:SS) to seconds. It's useful for calculating durations and time intervals."
-    }
+    },
+    "title": "Convert Time to Seconds",
+    "shortDescription": "Convert time format to seconds"
   },
   "truncateClockTime": {
     "toolInfo": {
       "title": "What is a {{title}}?"
     },
-
     "truncationSide": "Truncation Side",
     "truncateOnlySeconds": "Truncate Only Seconds",
     "truncateOnlySecondsDescription": "Drop the seconds component from each clock time.",
     "truncateMinutesAndSeconds": "Truncate Minutes and Seconds",
     "truncateMinutesAndSecondsDescription": "Drop both – the minutes and seconds components from each clock time.",
-
     "printDroppedComponents": "Print Dropped Components",
     "zeroPrintTruncatedParts": "Zero-print Truncated Parts",
     "zeroPrintDescription": "Display the dropped parts as zero values \"00\".",
-
     "timePadding": "Time Padding",
     "useZeroPadding": "Use Zero Padding",
-    "zeroPaddingDescription": "Make all time components always be two digits wide."
+    "zeroPaddingDescription": "Make all time components always be two digits wide.",
+    "title": "Truncate Clock Time",
+    "description": "Truncate clock time to remove seconds or minutes. Round time to the nearest hour, minute, or custom interval.",
+    "shortDescription": "Truncate clock time to specified precision"
   },
   "timeBetweenDates": {
     "title": "Time Between Dates",
@@ -73,7 +81,10 @@
     "endDateTime": "End Date & Time",
     "endDate": "End Date",
     "endTime": "End Time",
-    "endTimezone": "End Timezone"
+    "endTimezone": "End Timezone",
+    "title": "Time Between Dates",
+    "description": "Calculate the time difference between two dates. Get the exact duration in days, hours, minutes, and seconds.",
+    "shortDescription": "Calculate time between two dates"
   },
   "convertSecondsToTime": {
     "timePadding": "Time Padding",
@@ -82,6 +93,14 @@
     "toolInfo": {
       "title": "What is a {{title}}?",
       "description": ""
-    }
+    },
+    "title": "Convert Seconds to Time",
+    "description": "Convert seconds to a readable time format (hours:minutes:seconds). Enter the number of seconds to get the formatted time.",
+    "shortDescription": "Convert seconds to time format"
+  },
+  "crontabGuru": {
+    "title": "Crontab Guru",
+    "description": "Generate and understand cron expressions. Create cron schedules for automated tasks and system jobs.",
+    "shortDescription": "Generate and understand cron expressions"
   }
 }

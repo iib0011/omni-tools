@@ -16,7 +16,6 @@ export const tool = defineTool('string', {
   i18n: {
     name: 'string:censor.title',
     description: 'string:censor.description',
-    shortDescription: 'string:censor.shortDescription',
-    longDescription: 'string:censor.longDescription'
+    shortDescription: 'string:censor.shortDescription'
   }
 });

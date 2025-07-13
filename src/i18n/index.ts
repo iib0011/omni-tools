@@ -65,7 +65,9 @@ export const resources = {
 } as const;
 
 export type I18nNamespaces = keyof (typeof resources)['en'];
-export type FullI18nKey = `${string}:${ParseKeys<I18nNamespaces>}`;
+export type FullI18nKey = {
+  [K in I18nNamespaces]: `${K}:${ParseKeys<K>}`;
+}[I18nNamespaces];
 
 i18n.use(Backend).use(initReactI18next).init({
   resources,

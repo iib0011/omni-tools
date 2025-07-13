@@ -15,7 +15,6 @@ export const tool = defineTool('string', {
   i18n: {
     name: 'string:statistic.title',
     description: 'string:statistic.description',
-    shortDescription: 'string:statistic.shortDescription',
-    longDescription: 'string:statistic.longDescription'
+    shortDescription: 'string:statistic.shortDescription'
   }
 });

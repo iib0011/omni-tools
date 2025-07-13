@@ -12,7 +12,9 @@
     "toolInfo": {
       "title": "Generate numbers",
       "description": "This tool allows you to generate a sequence of numbers with customizable parameters. You can specify the starting value, step size, and number of elements."
-    }
+    },
+    "title": "Generate",
+    "shortDescription": "Generate random numbers in specified ranges"
   },
   "arithmeticSequence": {
     "title": "Arithmetic Sequence",
@@ -27,7 +29,9 @@
     "toolInfo": {
       "title": "What is an Arithmetic Sequence?",
       "description": "An arithmetic sequence is a sequence of numbers where the difference between each consecutive term is constant. This constant difference is called the common difference. Given the first term (a₁) and the common difference (d), each term can be found by adding the common difference to the previous term."
-    }
+    },
+    "title": "Arithmetic Sequence",
+    "shortDescription": "Generate arithmetic sequences"
   },
   "sum": {
     "toolInfo": {
@@ -49,6 +53,9 @@
         "title": "Number Delimiter",
         "description": "Customize the number separator here. (By default a line break.)"
       }
-    }
+    },
+    "title": "Sum",
+    "description": "Calculate the sum of a list of numbers. Enter numbers separated by commas or newlines to get their total sum.",
+    "shortDescription": "Calculate sum of numbers"
   }
 }

@@ -13,7 +13,9 @@
     "toolInfo": {
       "title": "Merge PDF Files",
       "description": "This tool allows you to combine multiple PDF files into a single document. You can choose how to sort the PDFs and the tool will merge them in the specified order."
-    }
+    },
+    "title": "Merge PDF",
+    "shortDescription": "Merge multiple PDF files into a single document"
   },
   "splitPdf": {
     "title": "Split PDF",
@@ -29,7 +31,9 @@
     "toolInfo": {
       "title": "Split PDF",
       "description": "This tool allows you to extract specific pages from a PDF document. You can specify individual pages or ranges of pages to extract."
-    }
+    },
+    "title": "Split PDF",
+    "shortDescription": "Extract specific pages from a PDF file"
   },
   "rotatePdf": {
     "title": "Rotate PDF",
@@ -53,31 +57,30 @@
     "toolInfo": {
       "title": "How to Use the Rotate PDF Tool",
       "description": "This tool allows you to rotate pages in a PDF document. You can rotate all pages or specify individual pages to rotate. Choose a rotation angle: 90° Clockwise, 180° (Upside down), or 270° (90° Counter-clockwise). To rotate specific pages, uncheck \"Apply to all pages\" and enter page numbers or ranges separated by commas (e.g., 1,3,5-7)."
-    }
+    },
+    "title": "Rotate PDF",
+    "shortDescription": "Rotate pages in a PDF document"
   },
   "compressPdf": {
     "inputTitle": "Input PDF",
     "resultTitle": "Compressed PDF",
     "compressingPdf": "Compressing PDF...",
-
     "compressionSettings": "Compression Settings",
     "compressionLevel": "Compression Level",
-
     "lowCompression": "Low Compression",
     "lowCompressionDescription": "Slightly reduce file size with minimal quality loss",
-
     "mediumCompression": "Medium Compression",
     "mediumCompressionDescription": "Balance between file size and quality",
-
     "highCompression": "High Compression",
     "highCompressionDescription": "Maximum file size reduction with some quality loss",
-
     "fileSize": "Original File Size",
     "compressedFileSize": "Compressed File Size",
     "pages": "Number of Pages",
-
     "errorReadingPdf": "Failed to read PDF file. Please make sure it is a valid PDF.",
-    "errorCompressingPdf": "Failed to compress PDF: {{error}}"
+    "errorCompressingPdf": "Failed to compress PDF: {{error}}",
+    "title": "Compress PDF",
+    "description": "Reduce PDF file size while maintaining quality using Ghostscript",
+    "shortDescription": "Compress PDF files securely in your browser"
   },
   "merge": {
     "inputTitle": "Input PDF",
@@ -87,5 +90,25 @@
       "title": "How to Use the Merge PDF Tool?",
       "description": "This tool allows you to merge multiple PDF files into a single document. To use the tool, simply upload the PDF files you want to merge. The tool will then combine all pages from the input files into a single PDF document."
     }
+  },
+  "editor": {
+    "title": "PDF Editor",
+    "description": "Advanced PDF editor with annotation, form-fill, highlight, and export capabilities. Edit your PDFs directly in the browser with professional-grade tools including text insertion, drawing, highlighting, signing and form filling.",
+    "shortDescription": "Edit PDFs with advanced annotation, signing and editing tools"
+  },
+  "pdfToEpub": {
+    "title": "PDF to EPUB",
+    "description": "Transform PDF documents into EPUB files for better e-reader compatibility.', icon: 'material-symbols:import-contacts', component: lazy(() => import('./index')), keywords: ['pdf', 'epub', 'convert', 'ebook'], path: 'pdf-to-epub', i18n: { name: 'pdf:pdfToEpub.title', description: 'pdf:pdfToEpub.description",
+    "shortDescription": "Convert PDF files to EPUB format"
+  },
+  "pdfToPng": {
+    "title": "PDF to PNG",
+    "description": "Transform PDF documents into PNG panels.",
+    "shortDescription": "Convert PDF into PNG images"
+  },
+  "protectPdf": {
+    "title": "Protect PDF",
+    "description": "Add password protection to your PDF files securely in your browser",
+    "shortDescription": "Password protect PDF files securely"
   }
 }
