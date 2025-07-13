@@ -46,7 +46,7 @@ const validationSchema = Yup.object({
 });
 
 export default function ResizeImage({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('image');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
@@ -60,20 +60,20 @@ export default function ResizeImage({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('image:resize.resizeMethod'),
+      title: t('resize.resizeMethod'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('resizeMethod', 'pixels')}
             checked={values.resizeMethod === 'pixels'}
-            description={t('image:resize.resizeByPixelsDescription')}
-            title={t('image:resize.resizeByPixels')}
+            description={t('resize.resizeByPixelsDescription')}
+            title={t('resize.resizeByPixels')}
           />
           <SimpleRadio
             onClick={() => updateField('resizeMethod', 'percentage')}
             checked={values.resizeMethod === 'percentage'}
-            description={t('image:resize.resizeByPercentageDescription')}
-            title={t('image:resize.resizeByPercentage')}
+            description={t('resize.resizeByPercentageDescription')}
+            title={t('resize.resizeByPercentage')}
           />
         </Box>
       )
@@ -81,7 +81,7 @@ export default function ResizeImage({ title }: ToolComponentProps) {
     ...(values.resizeMethod === 'pixels'
       ? [
           {
-            title: t('image:resize.dimensionType'),
+            title: t('resize.dimensionType'),
             component: (
               <Box>
                 <CheckboxWithDesc
@@ -89,29 +89,29 @@ export default function ResizeImage({ title }: ToolComponentProps) {
                   onChange={(value) =>
                     updateField('maintainAspectRatio', value)
                   }
-                  description={t('image:resize.maintainAspectRatioDescription')}
-                  title={t('image:resize.maintainAspectRatio')}
+                  description={t('resize.maintainAspectRatioDescription')}
+                  title={t('resize.maintainAspectRatio')}
                 />
                 {values.maintainAspectRatio && (
                   <Box>
                     <SimpleRadio
                       onClick={() => updateField('dimensionType', 'width')}
                       checked={values.dimensionType === 'width'}
-                      description={t('image:resize.setWidthDescription')}
-                      title={t('image:resize.setWidth')}
+                      description={t('resize.setWidthDescription')}
+                      title={t('resize.setWidth')}
                     />
                     <SimpleRadio
                       onClick={() => updateField('dimensionType', 'height')}
                       checked={values.dimensionType === 'height'}
-                      description={t('image:resize.setHeightDescription')}
-                      title={t('image:resize.setHeight')}
+                      description={t('resize.setHeightDescription')}
+                      title={t('resize.setHeight')}
                     />
                   </Box>
                 )}
                 <TextFieldWithDesc
                   value={values.width}
                   onOwnChange={(val) => updateField('width', val)}
-                  description={t('image:resize.widthDescription')}
+                  description={t('resize.widthDescription')}
                   disabled={
                     values.maintainAspectRatio &&
                     values.dimensionType === 'height'
@@ -125,7 +125,7 @@ export default function ResizeImage({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.height}
                   onOwnChange={(val) => updateField('height', val)}
-                  description={t('image:resize.heightDescription')}
+                  description={t('resize.heightDescription')}
                   disabled={
                     values.maintainAspectRatio &&
                     values.dimensionType === 'width'
@@ -142,13 +142,13 @@ export default function ResizeImage({ title }: ToolComponentProps) {
         ]
       : [
           {
-            title: t('image:resize.percentage'),
+            title: t('resize.percentage'),
             component: (
               <Box>
                 <TextFieldWithDesc
                   value={values.percentage}
                   onOwnChange={(val) => updateField('percentage', val)}
-                  description={t('image:resize.percentageDescription')}
+                  description={t('resize.percentageDescription')}
                   inputProps={{
                     'data-testid': 'percentage-input',
                     type: 'number',
@@ -175,19 +175,19 @@ export default function ResizeImage({ title }: ToolComponentProps) {
           value={input}
           onChange={setInput}
           accept={['image/jpeg', 'image/png', 'image/svg+xml', 'image/gif']}
-          title={t('image:resize.inputTitle')}
+          title={t('resize.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
-          title={t('image:resize.resultTitle')}
+          title={t('resize.resultTitle')}
           value={result}
           extension={input?.name.split('.').pop() || 'png'}
         />
       }
       toolInfo={{
-        title: t('image:resize.toolInfo.title'),
-        description: t('image:resize.toolInfo.description')
+        title: t('resize.toolInfo.title'),
+        description: t('resize.toolInfo.description')
       }}
     />
   );

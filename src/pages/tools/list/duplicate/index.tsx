@@ -102,7 +102,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function Duplicate({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('list');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -136,53 +136,53 @@ export default function Duplicate({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('list:duplicate.splitOptions'),
+      title: t('duplicate.splitOptions'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('splitOperatorType', 'symbol')}
             checked={values.splitOperatorType === 'symbol'}
-            title={t('list:duplicate.splitBySymbol')}
+            title={t('duplicate.splitBySymbol')}
           />
           <SimpleRadio
             onClick={() => updateField('splitOperatorType', 'regex')}
             checked={values.splitOperatorType === 'regex'}
-            title={t('list:duplicate.splitByRegex')}
+            title={t('duplicate.splitByRegex')}
           />
           <TextFieldWithDesc
             value={values.splitSeparator}
             onOwnChange={(val) => updateField('splitSeparator', val)}
-            description={t('list:duplicate.splitSeparatorDescription')}
+            description={t('duplicate.splitSeparatorDescription')}
           />
           <TextFieldWithDesc
             value={values.joinSeparator}
             onOwnChange={(val) => updateField('joinSeparator', val)}
-            description={t('list:duplicate.joinSeparatorDescription')}
+            description={t('duplicate.joinSeparatorDescription')}
           />
         </Box>
       )
     },
     {
-      title: t('list:duplicate.duplicationOptions'),
+      title: t('duplicate.duplicationOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.copy}
             onOwnChange={(val) => updateField('copy', val)}
-            description={t('list:duplicate.copyDescription')}
+            description={t('duplicate.copyDescription')}
             type="number"
           />
           <CheckboxWithDesc
-            title={t('list:duplicate.concatenate')}
+            title={t('duplicate.concatenate')}
             checked={values.concatenate}
             onChange={(checked) => updateField('concatenate', checked)}
-            description={t('list:duplicate.concatenateDescription')}
+            description={t('duplicate.concatenateDescription')}
           />
           <CheckboxWithDesc
-            title={t('list:duplicate.reverse')}
+            title={t('duplicate.reverse')}
             checked={values.reverse}
             onChange={(checked) => updateField('reverse', checked)}
-            description={t('list:duplicate.reverseDescription')}
+            description={t('duplicate.reverseDescription')}
           />
         </Box>
       )
@@ -194,23 +194,20 @@ export default function Duplicate({ title }: ToolComponentProps) {
       title={title}
       inputComponent={
         <ToolTextInput
-          title={t('list:duplicate.inputTitle')}
+          title={t('duplicate.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult
-          title={t('list:duplicate.resultTitle')}
-          value={result}
-        />
+        <ToolTextResult title={t('duplicate.resultTitle')} value={result} />
       }
       initialValues={initialValues}
       getGroups={getGroups}
       validationSchema={validationSchema}
       toolInfo={{
-        title: t('list:duplicate.toolInfo.title'),
-        description: t('list:duplicate.toolInfo.description')
+        title: t('duplicate.toolInfo.title'),
+        description: t('duplicate.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

@@ -57,7 +57,7 @@ export default function ConvertDaysToHours({
   title,
   longDescription
 }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('time');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -78,7 +78,7 @@ export default function ConvertDaysToHours({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('time:checkLeapYears.toolInfo.title', { title }),
+        title: t('checkLeapYears.toolInfo.title', { title }),
         description: longDescription
       }}
       exampleCards={exampleCards}

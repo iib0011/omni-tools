@@ -4,128 +4,67 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="docs: readme">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: misc">
+      <change afterPath="$PROJECT_DIR$/@types/i18n.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/i18n/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/change-csv-separator/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/change-csv-separator/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/i18n/hi.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/i18n/hi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/escape-json/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/escape-json/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/json-to-xml/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/json-to-xml/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/json/minify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/minify/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/minify/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/minify/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/prettify/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/prettify/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/stringify/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/stringify/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/json/validateJson/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/validateJson/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/validateJson/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/validateJson/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/list/duplicate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/duplicate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-unique/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-unique/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-unique/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-unique/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/list/group/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/group/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/group/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/group/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/list/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/reverse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/rotate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/rotate/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/list/shuffle/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/shuffle/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/list/sort/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/sort/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/sort/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/sort/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/truncate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/truncate/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/unwrap/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/unwrap/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/list/wrap/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/wrap/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/wrap/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/wrap/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generate/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/number/sum/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/sum/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-epub/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-epub/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/base64/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/base64/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/base64/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/base64/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/censor/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/censor/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/join/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/join/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/palindrome/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/quote/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/quote/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/quote/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/quote/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/repeat/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/repeat/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/repeat/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/repeat/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/rot13/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/rot13/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/rotate/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/split/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/split/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/split/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/split/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/statistic/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/statistic/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/statistic/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/statistic/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/to-morse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/truncate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/truncate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/truncate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/truncate/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/uppercase/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/uppercase/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/uppercase/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/uppercase/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-hours-to-days/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-hours-to-days/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/crontab-guru/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/crontab-guru/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/video/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/change-speed/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/change-speed/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/change-speed/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/video/compress/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/compress/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/compress/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/compress/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/video/crop-video/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/crop-video/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/crop-video/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/crop-video/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/video/flip/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/flip/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/flip/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/flip/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/video/loop/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/loop/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/loop/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/loop/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/video/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/rotate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/rotate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/rotate/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/trim/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/meta.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,171 +97,178 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GitHubPullRequestState">{
-  &quot;prStates&quot;: [
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts51PkS9&quot;,
-        &quot;number&quot;: 22
+      "id": {
+        "id": "PR_kwDOMJIfts51PkS9",
+        "number": 22
       },
-      &quot;lastSeen&quot;: 1741207144695
+      "lastSeen": 1741207144695
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6NiNYl&quot;,
-        &quot;number&quot;: 32
+      "id": {
+        "id": "PR_kwDOMJIfts6NiNYl",
+        "number": 32
       },
-      &quot;lastSeen&quot;: 1741209723869
+      "lastSeen": 1741209723869
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Nheyd&quot;,
-        &quot;number&quot;: 31
+      "id": {
+        "id": "PR_kwDOMJIfts6Nheyd",
+        "number": 31
       },
-      &quot;lastSeen&quot;: 1741213371410
+      "lastSeen": 1741213371410
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6NmRBs&quot;,
-        &quot;number&quot;: 33
+      "id": {
+        "id": "PR_kwDOMJIfts6NmRBs",
+        "number": 33
       },
-      &quot;lastSeen&quot;: 1741282429036
+      "lastSeen": 1741282429036
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts5zyFTs&quot;,
-        &quot;number&quot;: 15
+      "id": {
+        "id": "PR_kwDOMJIfts5zyFTs",
+        "number": 15
       },
-      &quot;lastSeen&quot;: 1741535540953
+      "lastSeen": 1741535540953
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QQB3c&quot;,
-        &quot;number&quot;: 59
+      "id": {
+        "id": "PR_kwDOMJIfts6QQB3c",
+        "number": 59
       },
-      &quot;lastSeen&quot;: 1743018960900
+      "lastSeen": 1743018960900
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QMPEg&quot;,
-        &quot;number&quot;: 58
+      "id": {
+        "id": "PR_kwDOMJIfts6QMPEg",
+        "number": 58
       },
-      &quot;lastSeen&quot;: 1743019452983
+      "lastSeen": 1743019452983
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QZvRI&quot;,
-        &quot;number&quot;: 61
+      "id": {
+        "id": "PR_kwDOMJIfts6QZvRI",
+        "number": 61
       },
-      &quot;lastSeen&quot;: 1743103196866
+      "lastSeen": 1743103196866
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QqPrQ&quot;,
-        &quot;number&quot;: 73
+      "id": {
+        "id": "PR_kwDOMJIfts6QqPrQ",
+        "number": 73
       },
-      &quot;lastSeen&quot;: 1743265865001
+      "lastSeen": 1743265865001
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Qp5nI&quot;,
-        &quot;number&quot;: 72
+      "id": {
+        "id": "PR_kwDOMJIfts6Qp5nI",
+        "number": 72
       },
-      &quot;lastSeen&quot;: 1743338472110
+      "lastSeen": 1743338472110
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QsjlS&quot;,
-        &quot;number&quot;: 76
+      "id": {
+        "id": "PR_kwDOMJIfts6QsjlS",
+        "number": 76
       },
-      &quot;lastSeen&quot;: 1743352150953
+      "lastSeen": 1743352150953
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Q0JBe&quot;,
-        &quot;number&quot;: 82
+      "id": {
+        "id": "PR_kwDOMJIfts6Q0JBe",
+        "number": 82
       },
-      &quot;lastSeen&quot;: 1743470267269
+      "lastSeen": 1743470267269
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6UE9-x&quot;,
-        &quot;number&quot;: 102
+      "id": {
+        "id": "PR_kwDOMJIfts6UE9-x",
+        "number": 102
       },
-      &quot;lastSeen&quot;: 1747171977348
+      "lastSeen": 1747171977348
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6XPua_&quot;,
-        &quot;number&quot;: 117
+      "id": {
+        "id": "PR_kwDOMJIfts6XPua_",
+        "number": 117
       },
-      &quot;lastSeen&quot;: 1747929835864
+      "lastSeen": 1747929835864
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6XY-mZ&quot;,
-        &quot;number&quot;: 119
+      "id": {
+        "id": "PR_kwDOMJIfts6XY-mZ",
+        "number": 119
       },
-      &quot;lastSeen&quot;: 1748028108508
+      "lastSeen": 1748028108508
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Xdz4n&quot;,
-        &quot;number&quot;: 120
+      "id": {
+        "id": "PR_kwDOMJIfts6Xdz4n",
+        "number": 120
       },
-      &quot;lastSeen&quot;: 1748282672214
+      "lastSeen": 1748282672214
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6X_zxl&quot;,
-        &quot;number&quot;: 131
+      "id": {
+        "id": "PR_kwDOMJIfts6X_zxl",
+        "number": 131
       },
-      &quot;lastSeen&quot;: 1748881279494
+      "lastSeen": 1748881279494
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6bhieT&quot;,
-        &quot;number&quot;: 152
+      "id": {
+        "id": "PR_kwDOMJIfts6bhieT",
+        "number": 152
       },
-      &quot;lastSeen&quot;: 1751848489082
+      "lastSeen": 1751848489082
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6dOyRk&quot;,
-        &quot;number&quot;: 154
+      "id": {
+        "id": "PR_kwDOMJIfts6dOyRk",
+        "number": 154
       },
-      &quot;lastSeen&quot;: 1751849436454
+      "lastSeen": 1751849436454
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6cHjNi&quot;,
-        &quot;number&quot;: 153
+      "id": {
+        "id": "PR_kwDOMJIfts6cHjNi",
+        "number": 153
       },
-      &quot;lastSeen&quot;: 1751849501498
+      "lastSeen": 1751849501498
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Zs1FN&quot;,
-        &quot;number&quot;: 145
+      "id": {
+        "id": "PR_kwDOMJIfts6Zs1FN",
+        "number": 145
       },
-      &quot;lastSeen&quot;: 1751849770308
+      "lastSeen": 1751849770308
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6bgKi9&quot;,
-        &quot;number&quot;: 150
+      "id": {
+        "id": "PR_kwDOMJIfts6bgKi9",
+        "number": 150
       },
-      &quot;lastSeen&quot;: 1751850367300
+      "lastSeen": 1751850367300
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6eUKC-&quot;,
-        &quot;number&quot;: 176
+      "id": {
+        "id": "PR_kwDOMJIfts6eUKC-",
+        "number": 176
       },
-      &quot;lastSeen&quot;: 1752158748013
+      "lastSeen": 1752158748013
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6eqzP7",
+        "number": 190
+      },
+      "lastSeen": 1752404173008
     }
   ]
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
@@ -354,56 +300,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Docker.Dockerfile build.executor": "Run",
-    "Docker.Dockerfile.executor": "Run",
-    "Playwright.Create transparent PNG.should make png color transparent.executor": "Run",
-    "Playwright.JoinText Component.executor": "Run",
-    "Playwright.JoinText Component.should merge text pieces with specified join character.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.compute function (1).executor": "Run",
-    "Vitest.compute function.executor": "Run",
-    "Vitest.mergeText.executor": "Run",
-    "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
-    "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
-    "Vitest.parsePageRanges.executor": "Run",
-    "Vitest.removeDuplicateLines function.executor": "Run",
-    "Vitest.removeDuplicateLines function.newlines option.executor": "Run",
-    "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
-    "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
-    "Vitest.replaceText function.executor": "Run",
-    "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "#190 on fork/AshAnand34/en-hi-translation",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.lint.executor": "Run",
-    "npm.prebuild.executor": "Run",
-    "npm.script:create:tool.executor": "Run",
-    "npm.test.executor": "Run",
-    "npm.test:e2e.executor": "Run",
-    "npm.test:e2e:run.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "refactai_advanced_settings",
-    "ts.external.directory.path": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.Dockerfile build.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.Create transparent PNG.should make png color transparent.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.JoinText Component.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.JoinText Component.should merge text pieces with specified join character.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.compute function (1).executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.compute function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.parsePageRanges.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.newlines option.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.replaceText function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.timeBetweenDates.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#190 on fork/AshAnand34/en-hi-translation&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ibrahima/IdeaProjects/omni-tools/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
+    &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
+    &quot;npm.script:create:tool.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e:run.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;refactai_advanced_settings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -415,15 +361,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets\fonts\quicksand" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets\fonts" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\tools\json" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\lib\ghostscript" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\@types" />
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\lib\ghostscript" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\tools" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\categories" />
@@ -620,14 +566,7 @@
       <workItem from="1752077170501" duration="4261000" />
       <workItem from="1752127185450" duration="1168000" />
       <workItem from="1752157409587" duration="2415000" />
-    </task>
-    <task id="LOCAL-00169" summary="chore: text result extensions">
-      <option name="closed" value="true" />
-      <created>1743022260639</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1743022260639</updated>
+      <workItem from="1752403829295" duration="4023000" />
     </task>
     <task id="LOCAL-00170" summary="chore: show new tools in landing">
       <option name="closed" value="true" />
@@ -1013,11 +952,481 @@
       <option name="project" value="LOCAL" />
       <updated>1752158119802</updated>
     </task>
-    <option name="localTasksCounter" value="218" />
+    <task id="LOCAL-00218" summary="fix: misc">
+      <option name="closed" value="true" />
+      <created>1752402313190</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1752402313191</updated>
+    </task>
+    <option name="localTasksCounter" value="219" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/i18n/index.js" />
+        <option value="$PROJECT_DIR$/src/hooks/index.js" />
+        <option value="$PROJECT_DIR$/src/hooks/useTimeout.js" />
+        <option value="$PROJECT_DIR$/src/hooks/usePrevious.js" />
+        <option value="$PROJECT_DIR$/src/hooks/useDebounce.js" />
+        <option value="$PROJECT_DIR$/src/hooks/useUpdateEffect.js" />
+        <option value="$PROJECT_DIR$/src/tools/index.js" />
+        <option value="$PROJECT_DIR$/src/tools/defineTool.js" />
+        <option value="$PROJECT_DIR$/src/utils/gif.js" />
+        <option value="$PROJECT_DIR$/src/utils/csv.js" />
+        <option value="$PROJECT_DIR$/src/utils/color.js" />
+        <option value="$PROJECT_DIR$/src/utils/index.js" />
+        <option value="$PROJECT_DIR$/src/utils/string.js" />
+        <option value="$PROJECT_DIR$/src/utils/array.js" />
+        <option value="$PROJECT_DIR$/src/utils/number.js" />
+        <option value="$PROJECT_DIR$/src/lib/ghostscript/worker-init.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/change-csv-separator/change-csv-separator.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/change-csv-separator/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/change-csv-separator/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/change-csv-separator/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/change-csv-separator/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/xml-beautifier.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/wrap/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/wrap/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/wrap/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/wrap/wrap.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/reverse/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/reverse/reverse.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/reverse/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/reverse/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/rotate-pdf.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/convert-time-to-seconds.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/arithmetic-sequence.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/flip/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/flip/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/flip/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/flip/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/split/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/split/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/split/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/split/string-split.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/repeat/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/repeat/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/repeat/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/repeat/repeatText.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/repeat/initialValues.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/randomize-case/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/randomize-case/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/randomize-case/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/randomize-case/randomize-case.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/remove-duplicate-lines.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/resize/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/resize/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/resize/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/resize/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/image-to-text/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/image-to-text/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/image-to-text/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/image-to-text/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/convert-jgp-to-png.e2e.spec.js" />
+        <option value="$PROJECT_DIR$/src/datatables/index.js" />
+        <option value="$PROJECT_DIR$/src/datatables/types.js" />
+        <option value="$PROJECT_DIR$/src/datatables/data/material_electrical_properties.js" />
+        <option value="$PROJECT_DIR$/src/datatables/data/wire_gauge.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Navbar/index.js" />
+        <option value="$PROJECT_DIR$/src/components/options/SimpleRadio.js" />
+        <option value="$PROJECT_DIR$/src/components/options/TextFieldWithDesc.js" />
+        <option value="$PROJECT_DIR$/src/components/options/ToolOptions.js" />
+        <option value="$PROJECT_DIR$/src/components/options/CheckboxWithDesc.js" />
+        <option value="$PROJECT_DIR$/src/components/options/ToolOptionGroups.js" />
+        <option value="$PROJECT_DIR$/src/components/options/SelectWithDesc.js" />
+        <option value="$PROJECT_DIR$/src/components/options/ColorSelector.js" />
+        <option value="$PROJECT_DIR$/src/components/options/RadioWithTextField.js" />
+        <option value="$PROJECT_DIR$/src/components/examples/ToolExamples.js" />
+        <option value="$PROJECT_DIR$/src/components/examples/ExampleCard.js" />
+        <option value="$PROJECT_DIR$/src/components/examples/ExampleOptions.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/transpose-csv/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/transpose-csv/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/transpose-csv/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/transpose-csv/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/transpose-csv/transpose-csv.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/xml-validator.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/truncate/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/truncate/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/truncate/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/truncate/truncate.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/find-most-popular.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-epub/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-epub/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-epub/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/truncate-clock-time.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/prettify/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/prettify/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/prettify/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/png/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/change-speed/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/change-speed/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/change-speed/change-speed.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/change-speed/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/change-speed/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/rotate/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/rotate/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/rotate/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/rotate/rotate.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/palindrome/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/palindrome/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/palindrome/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/palindrome/palindrome.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/create-palindrome.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/change-colors/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/change-colors/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/change-colors/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/service.js" />
+        <option value="$PROJECT_DIR$/src/components/ToolInfo.js" />
+        <option value="$PROJECT_DIR$/src/components/InputHeader.js" />
+        <option value="$PROJECT_DIR$/src/components/Hero.js" />
+        <option value="$PROJECT_DIR$/src/components/ToolHeader.js" />
+        <option value="$PROJECT_DIR$/src/components/ToolInputAndResult.js" />
+        <option value="$PROJECT_DIR$/src/components/ToolLayout.js" />
+        <option value="$PROJECT_DIR$/src/components/ToolContent.js" />
+        <option value="$PROJECT_DIR$/src/components/App.js" />
+        <option value="$PROJECT_DIR$/src/components/BackButton.js" />
+        <option value="$PROJECT_DIR$/src/components/ToolBreadcrumb.js" />
+        <option value="$PROJECT_DIR$/src/components/ScrollToTopButton.js" />
+        <option value="$PROJECT_DIR$/src/components/Separator.js" />
+        <option value="$PROJECT_DIR$/src/components/Loading.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/utils.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/index.js" />
+        <option value="$PROJECT_DIR$/src/components/input/InputFooter.js" />
+        <option value="$PROJECT_DIR$/src/components/input/ToolVideoInput.js" />
+        <option value="$PROJECT_DIR$/src/components/input/ToolAudioInput.js" />
+        <option value="$PROJECT_DIR$/src/components/input/NumericInputWithUnit.js" />
+        <option value="$PROJECT_DIR$/src/components/input/ToolMultipleAudioInput.js" />
+        <option value="$PROJECT_DIR$/src/components/input/BaseFileInput.js" />
+        <option value="$PROJECT_DIR$/src/components/input/ToolMultiplePdfInput.js" />
+        <option value="$PROJECT_DIR$/src/components/input/ToolPdfInput.js" />
+        <option value="$PROJECT_DIR$/src/components/input/file-input-utils.js" />
+        <option value="$PROJECT_DIR$/src/components/input/ToolImageInput.js" />
+        <option value="$PROJECT_DIR$/src/components/input/ToolTextInput.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-tsv/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-tsv/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-tsv/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-tsv/csv-to-tsv.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-rows-to-columns/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-rows-to-columns/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-rows-to-columns/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-rows-to-columns/csv-rows-to-columns.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/sort/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/sort/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/sort/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/sort/sort.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/shuffle/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/shuffle/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/shuffle/shuffle.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/shuffle/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/crontab-guru/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/crontab-guru/crontab-guru.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/crontab-guru/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/crontab-guru/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-hours-to-days/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-hours-to-days/convert-hours-to-days.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-hours-to-days/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-hours-to-days/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/minify/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/minify/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/minify/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/json-to-xml/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/json-to-xml/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/json-to-xml/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generic-calc/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generic-calc/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generic-calc/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/extract-audio.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/rot13/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/rot13/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/rot13/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/rot13/rot13.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/uppercase/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/uppercase/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/uppercase/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/uppercase/uppercase.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/change-opacity/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/change-opacity/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/change-opacity/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/meta.js" />
+        <option value="$PROJECT_DIR$/src/contexts/CustomSnackBarContext.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools-by-category/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/insert-csv-columns.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/unwrap/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/unwrap/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/unwrap/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/unwrap/unwrap.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/editor/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/editor/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/convert-seconds-to-time.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/escape-json/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/escape-json/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/escape-json/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generate/generate.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generate/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generate/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generate/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/gif/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/trim/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/trim/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/compress/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/compress/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/compress/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/base64/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/base64/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/base64/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/base64/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/base64/base64.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/reverse/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/reverse/reverse.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/reverse/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/statistic/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/statistic/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/statistic/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/statistic/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/extract-substring/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/extract-substring/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/extract-substring/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/extract-substring/extract-substring.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/rotate/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/rotate/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/rotate/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/rotate/type.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/create-transparent/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/create-transparent/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/create-transparent/create-transparent.e2e.spec.js" />
+        <option value="$PROJECT_DIR$/src/pages/home/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/home/Categories.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-yaml/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-yaml/csv-to-yaml.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-yaml/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-yaml/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/csv-to-yaml/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/group/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/group/group.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/group/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/group/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/rotate/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/rotate/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/rotate/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/rotate/rotate.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/duplicate/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/duplicate/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/duplicate/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/duplicate/duplicate.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-png/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-png/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-png/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/time-between-dates.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/validateJson/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/validateJson/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/validateJson/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/merge-audio.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/rotate/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/rotate/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/rotate/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/crop-video/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/crop-video/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/crop-video/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/crop-video/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/quote/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/quote/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/quote/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/quote/quote.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/censor/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/censor/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/censor/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/censor/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/to-morse/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/to-morse/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/to-morse/to-morse.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/text-replacer/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/text-replacer/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/text-replacer/replaceText.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/text-replacer/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/text-replacer/initialValues.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/editor/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/editor/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/compress/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/compress/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/compress/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/compress/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/remove-background/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/remove-background/meta.js" />
+        <option value="$PROJECT_DIR$/src/config/uiConfig.js" />
+        <option value="$PROJECT_DIR$/src/config/muiConfig.js" />
+        <option value="$PROJECT_DIR$/src/config/routesConfig.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/xml/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/index.js" />
+        <option value="$PROJECT_DIR$/src/components/result/ResultFooter.js" />
+        <option value="$PROJECT_DIR$/src/components/result/ToolFileResult.js" />
+        <option value="$PROJECT_DIR$/src/components/result/ToolMultiFileResult.js" />
+        <option value="$PROJECT_DIR$/src/components/result/ToolTextResult.js" />
+        <option value="$PROJECT_DIR$/src/components/allTools/ToolCard.js" />
+        <option value="$PROJECT_DIR$/src/components/allTools/AllTools.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/swap-csv-columns/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/swap-csv-columns/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/swap-csv-columns/swap-csv-columns.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/swap-csv-columns/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/swap-csv-columns/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/find-unique/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/find-unique/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/find-unique/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/list/find-unique/find-unique.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/convert-days-to-hours.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/stringify/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/stringify/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/json/stringify/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/sum/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/sum/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/sum/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/sum/sum.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/trim/trim.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/trim/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/trim/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/trim/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/audio/trim/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/loop/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/loop/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/loop/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/loop/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/change-speed/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/change-speed/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/change-speed/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/video/change-speed/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/join/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/join/string-join.e2e.spec.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/join/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/join/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/join/string-join.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/truncate/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/truncate/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/truncate/service.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/truncate/truncateText.service.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/string/truncate/initialValues.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/crop/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/crop/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/qr-code/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/qr-code/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/qr-code/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/convert-to-jpg/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/image/generic/convert-to-jpg/meta.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/sphereVolume.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/voltageDropInWire.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/types.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/slackline.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/ohmsLaw.js" />
+        <option value="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/sphereArea.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ID_ORDER">
@@ -1064,7 +1473,6 @@
     <MESSAGE value="feat: drag and drop" />
     <MESSAGE value="Merge branch 'feat/pdf-merge' of git-rohit:rohit267/omni-tools into feat/pdf-merge" />
     <MESSAGE value="chore: revert create-tool.mjs" />
-    <MESSAGE value="fix: misc" />
     <MESSAGE value="chore: remove unnecessary prop" />
     <MESSAGE value="fix: compute flow" />
     <MESSAGE value="feat: qr code generation init" />
@@ -1085,7 +1493,8 @@
     <MESSAGE value="chore: style link" />
     <MESSAGE value="refactor: PDF editor" />
     <MESSAGE value="docs: edit pdf meta" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: edit pdf meta" />
+    <MESSAGE value="fix: misc" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: misc" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

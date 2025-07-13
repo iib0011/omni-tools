@@ -112,7 +112,7 @@ argument`,
 ];
 
 export default function Reverse({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('list');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -121,7 +121,7 @@ export default function Reverse({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('list:reverse.splitterMode'),
+      title: t('reverse.splitterMode'),
       component: (
         <Box>
           {splitOperators.map(({ title, description, type }) => (
@@ -137,11 +137,11 @@ export default function Reverse({ title }: ToolComponentProps) {
       )
     },
     {
-      title: t('list:reverse.itemSeparator'),
+      title: t('reverse.itemSeparator'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={t('list:reverse.itemSeparatorDescription')}
+            description={t('reverse.itemSeparatorDescription')}
             value={values.splitSeparator}
             onOwnChange={(val) => updateField('splitSeparator', val)}
           />
@@ -149,11 +149,11 @@ export default function Reverse({ title }: ToolComponentProps) {
       )
     },
     {
-      title: t('list:reverse.outputListOptions'),
+      title: t('reverse.outputListOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={t('list:reverse.outputSeparatorDescription')}
+            description={t('reverse.outputSeparatorDescription')}
             value={values.joinSeparator}
             onOwnChange={(val) => updateField('joinSeparator', val)}
           />
@@ -179,17 +179,17 @@ export default function Reverse({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('list:reverse.inputTitle')}
+          title={t('reverse.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={t('list:reverse.resultTitle')} value={result} />
+        <ToolTextResult title={t('reverse.resultTitle')} value={result} />
       }
       toolInfo={{
-        title: t('list:reverse.toolInfo.title'),
-        description: t('list:reverse.toolInfo.description')
+        title: t('reverse.toolInfo.title'),
+        description: t('reverse.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

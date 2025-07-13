@@ -49,7 +49,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function SplitPdf({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('pdf');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
@@ -85,7 +85,7 @@ export default function SplitPdf({ title }: ToolComponentProps) {
     }
     try {
       const count = parsePageRanges(pageRanges, totalPages).length;
-      setPageRangePreview(t('pdf:splitPdf.pageExtractionPreview', { count }));
+      setPageRangePreview(t('splitPdf.pageExtractionPreview', { count }));
     } catch (error) {
       setPageRangePreview('');
     }
@@ -118,26 +118,26 @@ export default function SplitPdf({ title }: ToolComponentProps) {
           value={input}
           onChange={setInput}
           accept={['application/pdf']}
-          title={t('pdf:splitPdf.inputTitle')}
+          title={t('splitPdf.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
-          title={t('pdf:splitPdf.resultTitle')}
+          title={t('splitPdf.resultTitle')}
           value={result}
           extension={'pdf'}
           loading={isProcessing}
-          loadingText={t('pdf:splitPdf.extractingPages')}
+          loadingText={t('splitPdf.extractingPages')}
         />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: t('pdf:splitPdf.pageSelection'),
+          title: t('splitPdf.pageSelection'),
           component: (
             <Box>
               {totalPages > 0 && (
                 <Typography variant="body2" sx={{ mb: 1 }}>
-                  {t('pdf:splitPdf.pdfPageCount', { count: totalPages })}
+                  {t('splitPdf.pdfPageCount', { count: totalPages })}
                 </Typography>
               )}
               <TextFieldWithDesc
@@ -145,8 +145,8 @@ export default function SplitPdf({ title }: ToolComponentProps) {
                 onOwnChange={(val) => {
                   updateField('pageRanges', val);
                 }}
-                description={t('pdf:splitPdf.pageRangesDescription')}
-                placeholder={t('pdf:splitPdf.pageRangesPlaceholder')}
+                description={t('splitPdf.pageRangesDescription')}
+                placeholder={t('splitPdf.pageRangesPlaceholder')}
               />
               {pageRangePreview && (
                 <Typography
@@ -162,8 +162,8 @@ export default function SplitPdf({ title }: ToolComponentProps) {
       ]}
       onValuesChange={onValuesChange}
       toolInfo={{
-        title: t('pdf:splitPdf.toolInfo.title'),
-        description: t('pdf:splitPdf.toolInfo.description')
+        title: t('splitPdf.toolInfo.title'),
+        description: t('splitPdf.toolInfo.description')
       }}
     />
   );

@@ -104,7 +104,7 @@ export default function FindIncompleteCsvRecords({
   title,
   longDescription
 }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('csv');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -117,7 +117,7 @@ export default function FindIncompleteCsvRecords({
     updateField
   }) => [
     {
-      title: t('csv:findIncompleteCsvRecords.csvInputOptions'),
+      title: t('findIncompleteCsvRecords.csvInputOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
@@ -145,13 +145,13 @@ export default function FindIncompleteCsvRecords({
       )
     },
     {
-      title: t('csv:findIncompleteCsvRecords.checkingOptions'),
+      title: t('findIncompleteCsvRecords.checkingOptions'),
       component: (
         <Box>
           <CheckboxWithDesc
             checked={values.emptyLines}
             onChange={(value) => updateField('emptyLines', value)}
-            title={t('csv:findIncompleteCsvRecords.deleteLinesWithNoData')}
+            title={t('findIncompleteCsvRecords.deleteLinesWithNoData')}
             description={t(
               'csv:findIncompleteCsvRecords.deleteLinesWithNoDataDescription'
             )}
@@ -160,7 +160,7 @@ export default function FindIncompleteCsvRecords({
           <CheckboxWithDesc
             checked={values.emptyValues}
             onChange={(value) => updateField('emptyValues', value)}
-            title={t('csv:findIncompleteCsvRecords.findEmptyValues')}
+            title={t('findIncompleteCsvRecords.findEmptyValues')}
             description={t(
               'csv:findIncompleteCsvRecords.findEmptyValuesDescription'
             )}
@@ -169,7 +169,7 @@ export default function FindIncompleteCsvRecords({
           <CheckboxWithDesc
             checked={values.messageLimit}
             onChange={(value) => updateField('messageLimit', value)}
-            title={t('csv:findIncompleteCsvRecords.limitNumberOfMessages')}
+            title={t('findIncompleteCsvRecords.limitNumberOfMessages')}
           />
 
           {values.messageLimit && (
@@ -193,14 +193,14 @@ export default function FindIncompleteCsvRecords({
       input={input}
       inputComponent={
         <ToolTextInput
-          title={t('csv:findIncompleteCsvRecords.inputTitle')}
+          title={t('findIncompleteCsvRecords.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={t('csv:findIncompleteCsvRecords.resultTitle')}
+          title={t('findIncompleteCsvRecords.resultTitle')}
           value={result}
         />
       }
@@ -210,7 +210,7 @@ export default function FindIncompleteCsvRecords({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('csv:findIncompleteCsvRecords.toolInfo.title', { title }),
+        title: t('findIncompleteCsvRecords.toolInfo.title', { title }),
         description: longDescription
       }}
     />

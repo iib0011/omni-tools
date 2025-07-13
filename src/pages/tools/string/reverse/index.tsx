@@ -59,7 +59,7 @@ const exampleCards: CardExampleType<typeof initialValues>[] = [
 ];
 
 export default function Reverse({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -76,27 +76,27 @@ export default function Reverse({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('string:reverse.reversalOptions'),
+      title: t('reverse.reversalOptions'),
       component: [
         <CheckboxWithDesc
           key="multiLine"
           checked={values.multiLine}
-          title={t('string:reverse.processMultiLine')}
-          description={t('string:reverse.processMultiLineDescription')}
+          title={t('reverse.processMultiLine')}
+          description={t('reverse.processMultiLineDescription')}
           onChange={(val) => updateField('multiLine', val)}
         />,
         <CheckboxWithDesc
           key="emptyItems"
           checked={values.emptyItems}
-          title={t('string:reverse.skipEmptyLines')}
-          description={t('string:reverse.skipEmptyLinesDescription')}
+          title={t('reverse.skipEmptyLines')}
+          description={t('reverse.skipEmptyLinesDescription')}
           onChange={(val) => updateField('emptyItems', val)}
         />,
         <CheckboxWithDesc
           key="trim"
           checked={values.trim}
-          title={t('string:reverse.trimWhitespace')}
-          description={t('string:reverse.trimWhitespaceDescription')}
+          title={t('reverse.trimWhitespace')}
+          description={t('reverse.trimWhitespaceDescription')}
           onChange={(val) => updateField('trim', val)}
         />
       ]
@@ -113,16 +113,13 @@ export default function Reverse({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('string:reverse.inputTitle')}
+          title={t('reverse.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult
-          title={t('string:reverse.resultTitle')}
-          value={result}
-        />
+        <ToolTextResult title={t('reverse.resultTitle')} value={result} />
       }
       exampleCards={exampleCards}
     />

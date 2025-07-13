@@ -71,7 +71,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function ArithmeticSequence({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('number');
   const [result, setResult] = useState<string>('');
 
   return (
@@ -80,7 +80,7 @@ export default function ArithmeticSequence({ title }: ToolComponentProps) {
       inputComponent={null}
       resultComponent={
         <ToolTextResult
-          title={t('number:arithmeticSequence.resultTitle')}
+          title={t('arithmeticSequence.resultTitle')}
           value={result}
         />
       }
@@ -88,12 +88,12 @@ export default function ArithmeticSequence({ title }: ToolComponentProps) {
       validationSchema={validationSchema}
       exampleCards={exampleCards}
       toolInfo={{
-        title: t('number:arithmeticSequence.toolInfo.title'),
-        description: t('number:arithmeticSequence.toolInfo.description')
+        title: t('arithmeticSequence.toolInfo.title'),
+        description: t('arithmeticSequence.toolInfo.description')
       }}
       getGroups={({ values, updateField }) => [
         {
-          title: t('number:arithmeticSequence.sequenceParameters'),
+          title: t('arithmeticSequence.sequenceParameters'),
           component: (
             <Box>
               <TextFieldWithDesc
@@ -124,10 +124,10 @@ export default function ArithmeticSequence({ title }: ToolComponentProps) {
           )
         },
         {
-          title: t('number:arithmeticSequence.outputFormat'),
+          title: t('arithmeticSequence.outputFormat'),
           component: (
             <TextFieldWithDesc
-              description={t('number:arithmeticSequence.separatorDescription')}
+              description={t('arithmeticSequence.separatorDescription')}
               value={values.separator}
               onOwnChange={(val) => updateField('separator', val)}
             />

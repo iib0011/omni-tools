@@ -28,7 +28,7 @@ const angleOptions: { value: RotationAngle; label: string }[] = [
   { value: 270, label: '270° (90° Counter-clockwise)' }
 ];
 export default function RotateVideo({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('video');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -57,7 +57,7 @@ export default function RotateVideo({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('video:rotate.rotation'),
+      title: t('rotate.rotation'),
       component: (
         <Box>
           {angleOptions.map((angleOption) => (
@@ -83,20 +83,20 @@ export default function RotateVideo({ title }: ToolComponentProps) {
         <ToolVideoInput
           value={input}
           onChange={setInput}
-          title={t('video:rotate.inputTitle')}
+          title={t('rotate.inputTitle')}
         />
       }
       resultComponent={
         loading ? (
           <ToolFileResult
-            title={t('video:rotate.rotatingVideo')}
+            title={t('rotate.rotatingVideo')}
             value={null}
             loading={true}
             extension={''}
           />
         ) : (
           <ToolFileResult
-            title={t('video:rotate.resultTitle')}
+            title={t('rotate.resultTitle')}
             value={result}
             extension={'mp4'}
           />

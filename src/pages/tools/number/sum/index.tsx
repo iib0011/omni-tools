@@ -119,7 +119,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function SumNumbers({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('number');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -128,7 +128,7 @@ export default function SumNumbers({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('number:sum.numberExtraction'),
+      title: t('sum.numberExtraction'),
       component: extractionTypes.map(
         ({ title, description, type, withTextField, textValueAccessor }) =>
           withTextField ? (
@@ -158,11 +158,11 @@ export default function SumNumbers({ title }: ToolComponentProps) {
       )
     },
     {
-      title: t('number:sum.runningSum'),
+      title: t('sum.runningSum'),
       component: (
         <CheckboxWithDesc
-          title={t('number:sum.printRunningSum')}
-          description={t('number:sum.printRunningSumDescription')}
+          title={t('sum.printRunningSum')}
+          description={t('sum.printRunningSumDescription')}
           checked={values.printRunningSum}
           onChange={(value) => updateField('printRunningSum', value)}
         />
@@ -175,13 +175,13 @@ export default function SumNumbers({ title }: ToolComponentProps) {
       input={input}
       inputComponent={
         <ToolTextInput
-          title={t('number:sum.inputTitle')}
+          title={t('sum.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={t('number:sum.resultTitle')} value={result} />
+        <ToolTextResult title={t('sum.resultTitle')} value={result} />
       }
       initialValues={initialValues}
       getGroups={getGroups}
@@ -191,8 +191,8 @@ export default function SumNumbers({ title }: ToolComponentProps) {
       }}
       setInput={setInput}
       toolInfo={{
-        title: t('number:sum.toolInfo.title'),
-        description: t('number:sum.toolInfo.description')
+        title: t('sum.toolInfo.title'),
+        description: t('sum.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

@@ -31,7 +31,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function Rot13({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -44,19 +44,19 @@ export default function Rot13({ title }: ToolComponentProps) {
       title={title}
       inputComponent={
         <ToolTextInput
-          title={t('string:rot13.inputTitle')}
+          title={t('rot13.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={t('string:rot13.resultTitle')} value={result} />
+        <ToolTextResult title={t('rot13.resultTitle')} value={result} />
       }
       initialValues={initialValues}
       getGroups={null}
       toolInfo={{
-        title: t('string:rot13.toolInfo.title'),
-        description: t('string:rot13.toolInfo.description')
+        title: t('rot13.toolInfo.title'),
+        description: t('rot13.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

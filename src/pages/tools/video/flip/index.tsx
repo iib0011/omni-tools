@@ -31,7 +31,7 @@ const orientationOptions: { value: FlipOrientation; label: string }[] = [
 ];
 
 export default function FlipVideo({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('video');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -60,7 +60,7 @@ export default function FlipVideo({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('video:flip.orientation'),
+      title: t('flip.orientation'),
       component: (
         <Box>
           {orientationOptions.map((orientationOption) => (
@@ -86,20 +86,20 @@ export default function FlipVideo({ title }: ToolComponentProps) {
         <ToolVideoInput
           value={input}
           onChange={setInput}
-          title={t('video:flip.inputTitle')}
+          title={t('flip.inputTitle')}
         />
       }
       resultComponent={
         loading ? (
           <ToolFileResult
-            title={t('video:flip.flippingVideo')}
+            title={t('flip.flippingVideo')}
             value={null}
             loading={true}
             extension={''}
           />
         ) : (
           <ToolFileResult
-            title={t('video:flip.resultTitle')}
+            title={t('flip.resultTitle')}
             value={result}
             extension={'mp4'}
           />

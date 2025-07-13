@@ -10,7 +10,7 @@ import ToolFileResult from '@components/result/ToolFileResult';
 import SimpleRadio from '@components/options/SimpleRadio';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { PDFDocument } from 'pdf-lib';
-import { CustomSnackBarContext } from '@contexts/CustomSnackBarContext';
+import { CustomSnackBarContext } from '../../../../contexts/CustomSnackBarContext';
 import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
@@ -51,7 +51,7 @@ export default function CompressPdf({
   title,
   longDescription
 }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('pdf');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [resultSize, setResultSize] = useState<string>('');
@@ -80,7 +80,7 @@ export default function CompressPdf({
       } catch (error) {
         console.error('Error getting PDF info:', error);
         setFileInfo(null);
-        showSnackBar(t('pdf:compressPdf.errorReadingPdf'), 'error');
+        showSnackBar(t('compressPdf.errorReadingPdf'), 'error');
       }
     };
 
@@ -112,7 +112,7 @@ export default function CompressPdf({
     } catch (error) {
       console.error('Error compressing PDF:', error);
       showSnackBar(
-        t('pdf:compressPdf.errorCompressingPdf', {
+        t('compressPdf.errorCompressingPdf', {
           error: error instanceof Error ? error.message : String(error)
         }),
         'error'
@@ -130,18 +130,18 @@ export default function CompressPdf({
   }[] = [
     {
       value: 'low',
-      label: t('pdf:compressPdf.lowCompression'),
-      description: t('pdf:compressPdf.lowCompressionDescription')
+      label: t('compressPdf.lowCompression'),
+      description: t('compressPdf.lowCompressionDescription')
     },
     {
       value: 'medium',
-      label: t('pdf:compressPdf.mediumCompression'),
-      description: t('pdf:compressPdf.mediumCompressionDescription')
+      label: t('compressPdf.mediumCompression'),
+      description: t('compressPdf.mediumCompressionDescription')
     },
     {
       value: 'high',
-      label: t('pdf:compressPdf.highCompression'),
-      description: t('pdf:compressPdf.highCompressionDescription')
+      label: t('compressPdf.highCompression'),
+      description: t('compressPdf.highCompressionDescription')
     }
   ];
 
@@ -157,26 +157,26 @@ export default function CompressPdf({
           value={input}
           onChange={setInput}
           accept={['application/pdf']}
-          title={t('pdf:compressPdf.inputTitle')}
+          title={t('compressPdf.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
-          title={t('pdf:compressPdf.resultTitle')}
+          title={t('compressPdf.resultTitle')}
           value={result}
           extension={'pdf'}
           loading={isProcessing}
-          loadingText={t('pdf:compressPdf.compressingPdf')}
+          loadingText={t('compressPdf.compressingPdf')}
         />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: t('pdf:compressPdf.compressionSettings'),
+          title: t('compressPdf.compressionSettings'),
           component: (
             <Box>
               <Box>
                 <Typography variant="subtitle2" sx={{ mb: 1 }}>
-                  {t('pdf:compressPdf.compressionLevel')}
+                  {t('compressPdf.compressionLevel')}
                 </Typography>
 
                 {compressionOptions.map((option) => (
@@ -201,16 +201,15 @@ export default function CompressPdf({
                   }}
                 >
                   <Typography variant="body2">
-                    {t('pdf:compressPdf.fileSize')}:{' '}
+                    {t('compressPdf.fileSize')}:{' '}
                     <strong>{fileInfo.size}</strong>
                   </Typography>
                   <Typography variant="body2">
-                    {t('pdf:compressPdf.pages')}:{' '}
-                    <strong>{fileInfo.pages}</strong>
+                    {t('compressPdf.pages')}: <strong>{fileInfo.pages}</strong>
                   </Typography>
                   {resultSize && (
                     <Typography variant="body2">
-                      {t('pdf:compressPdf.compressedFileSize')}:{' '}
+                      {t('compressPdf.compressedFileSize')}:{' '}
                       <strong>{resultSize}</strong>
                     </Typography>
                   )}

@@ -48,7 +48,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function MinifyJson({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('json');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -61,14 +61,14 @@ export default function MinifyJson({ title }: ToolComponentProps) {
       title={title}
       inputComponent={
         <ToolTextInput
-          title={t('json:minify.inputTitle')}
+          title={t('minify.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={t('json:minify.resultTitle')}
+          title={t('minify.resultTitle')}
           value={result}
           extension={'json'}
         />
@@ -76,8 +76,8 @@ export default function MinifyJson({ title }: ToolComponentProps) {
       initialValues={initialValues}
       getGroups={null}
       toolInfo={{
-        title: t('json:minify.toolInfo.title'),
-        description: t('json:minify.toolInfo.description')
+        title: t('minify.toolInfo.title'),
+        description: t('minify.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

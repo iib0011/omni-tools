@@ -68,7 +68,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 ];
 
 export default function Truncate({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -81,31 +81,31 @@ export default function Truncate({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('string:truncate.truncationSide'),
+      title: t('truncate.truncationSide'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('truncationSide', 'right')}
             checked={values.truncationSide === 'right'}
-            title={t('string:truncate.rightSideTruncation')}
-            description={t('string:truncate.rightSideDescription')}
+            title={t('truncate.rightSideTruncation')}
+            description={t('truncate.rightSideDescription')}
           />
           <SimpleRadio
             onClick={() => updateField('truncationSide', 'left')}
             checked={values.truncationSide === 'left'}
-            title={t('string:truncate.leftSideTruncation')}
-            description={t('string:truncate.leftSideDescription')}
+            title={t('truncate.leftSideTruncation')}
+            description={t('truncate.leftSideDescription')}
           />
         </Box>
       )
     },
     {
-      title: t('string:truncate.lengthAndLines'),
+      title: t('truncate.lengthAndLines'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={t('string:truncate.maxLengthDescription')}
-            placeholder={t('string:truncate.numberPlaceholder')}
+            description={t('truncate.maxLengthDescription')}
+            placeholder={t('truncate.numberPlaceholder')}
             value={values.maxLength}
             onOwnChange={(val) => updateField('maxLength', val)}
             type={'number'}
@@ -113,25 +113,25 @@ export default function Truncate({ title }: ToolComponentProps) {
           <CheckboxWithDesc
             onChange={(val) => updateField('lineByLine', val)}
             checked={values.lineByLine}
-            title={t('string:truncate.lineByLineTruncating')}
-            description={t('string:truncate.lineByLineDescription')}
+            title={t('truncate.lineByLineTruncating')}
+            description={t('truncate.lineByLineDescription')}
           />
         </Box>
       )
     },
     {
-      title: t('string:truncate.suffixAndAffix'),
+      title: t('truncate.suffixAndAffix'),
       component: (
         <Box>
           <CheckboxWithDesc
             onChange={(val) => updateField('addIndicator', val)}
             checked={values.addIndicator}
-            title={t('string:truncate.addTruncationIndicator')}
+            title={t('truncate.addTruncationIndicator')}
             description={''}
           />
           <TextFieldWithDesc
-            description={t('string:truncate.indicatorDescription')}
-            placeholder={t('string:truncate.charactersPlaceholder')}
+            description={t('truncate.indicatorDescription')}
+            placeholder={t('truncate.charactersPlaceholder')}
             value={values.indicator}
             onOwnChange={(val) => updateField('indicator', val)}
             type={'text'}
@@ -151,20 +151,17 @@ export default function Truncate({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('string:truncate.inputTitle')}
+          title={t('truncate.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult
-          title={t('string:truncate.resultTitle')}
-          value={result}
-        />
+        <ToolTextResult title={t('truncate.resultTitle')} value={result} />
       }
       toolInfo={{
-        title: t('string:truncate.toolInfo.title'),
-        description: t('string:truncate.toolInfo.description')
+        title: t('truncate.toolInfo.title'),
+        description: t('truncate.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

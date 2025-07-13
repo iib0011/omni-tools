@@ -63,7 +63,7 @@ export default function ConvertDaysToHours({
   title,
   longDescription
 }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('time');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -76,14 +76,14 @@ export default function ConvertDaysToHours({
     updateField
   }) => [
     {
-      title: t('time:convertDaysToHours.hoursName'),
+      title: t('convertDaysToHours.hoursName'),
       component: (
         <Box>
           <CheckboxWithDesc
             onChange={(val) => updateField('hoursFlag', val)}
             checked={values.hoursFlag}
-            title={t('time:convertDaysToHours.addHoursName')}
-            description={t('time:convertDaysToHours.addHoursNameDescription')}
+            title={t('convertDaysToHours.addHoursName')}
+            description={t('convertDaysToHours.addHoursNameDescription')}
           />
         </Box>
       )
@@ -101,8 +101,8 @@ export default function ConvertDaysToHours({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('time:convertDaysToHours.toolInfo.title'),
-        description: t('time:convertDaysToHours.toolInfo.description')
+        title: t('convertDaysToHours.toolInfo.title'),
+        description: t('convertDaysToHours.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

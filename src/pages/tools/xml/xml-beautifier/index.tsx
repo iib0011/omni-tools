@@ -1,4 +1,3 @@
-import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -25,7 +24,7 @@ export default function XmlBeautifier({
   title,
   longDescription
 }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('xml');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -39,15 +38,14 @@ export default function XmlBeautifier({
       input={input}
       inputComponent={
         <ToolTextInput
-          title={t('xml:beautifier.inputTitle')}
+          title={t('xmlBeautifier.inputTitle')}
           value={input}
           onChange={setInput}
-          placeholder={t('xml:beautifier.placeholder')}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={t('xml:beautifier.resultTitle')}
+          title={t('xmlBeautifier.resultTitle')}
           value={result}
           extension="xml"
         />
@@ -58,7 +56,7 @@ export default function XmlBeautifier({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('xml:beautifier.toolInfo.title', { title }),
+        title: t('xmlBeautifier.toolInfo.title', { title }),
         description: longDescription
       }}
     />

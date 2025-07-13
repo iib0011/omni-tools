@@ -49,7 +49,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function Replacer({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -62,12 +62,12 @@ export default function Replacer({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('string:repeat.textRepetitions'),
+      title: t('repeat.textRepetitions'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={t('string:repeat.repeatAmountDescription')}
-            placeholder={t('string:repeat.numberPlaceholder')}
+            description={t('repeat.repeatAmountDescription')}
+            placeholder={t('repeat.numberPlaceholder')}
             value={values.repeatAmount}
             onOwnChange={(val) => updateField('repeatAmount', val)}
             type={'number'}
@@ -76,12 +76,12 @@ export default function Replacer({ title }: ToolComponentProps) {
       )
     },
     {
-      title: t('string:repeat.repetitionsDelimiter'),
+      title: t('repeat.repetitionsDelimiter'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={t('string:repeat.delimiterDescription')}
-            placeholder={t('string:repeat.delimiterPlaceholder')}
+            description={t('repeat.delimiterDescription')}
+            placeholder={t('repeat.delimiterPlaceholder')}
             value={values.delimiter}
             onOwnChange={(val) => updateField('delimiter', val)}
             type={'text'}
@@ -101,17 +101,17 @@ export default function Replacer({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('string:repeat.inputTitle')}
+          title={t('repeat.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={t('string:repeat.resultTitle')} value={result} />
+        <ToolTextResult title={t('repeat.resultTitle')} value={result} />
       }
       toolInfo={{
-        title: t('string:repeat.toolInfo.title'),
-        description: t('string:repeat.toolInfo.description')
+        title: t('repeat.toolInfo.title'),
+        description: t('repeat.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

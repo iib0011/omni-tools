@@ -10,6 +10,8 @@ import { tools } from '../tools';
 import './index.css';
 import { darkTheme, lightTheme } from '../config/muiConfig';
 import ScrollToTopButton from './ScrollToTopButton';
+import { I18nextProvider } from 'react-i18next';
+import i18n from '../i18n';
 
 export type Mode = 'dark' | 'light' | 'system';
 
@@ -44,32 +46,34 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <SnackbarProvider
-        maxSnack={5}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'right'
-        }}
-      >
-        <CustomSnackBarProvider>
-          <BrowserRouter>
-            <Navbar
-              mode={mode}
-              onChangeMode={() => {
-                setMode((prev) => nextMode(prev));
-                localStorage.setItem('theme', nextMode(mode));
-              }}
-            />
-            <Suspense fallback={<Loading />}>
-              <AppRoutes />
-            </Suspense>
-          </BrowserRouter>
-        </CustomSnackBarProvider>
-      </SnackbarProvider>
-      <ScrollToTopButton />
-    </ThemeProvider>
+    <I18nextProvider i18n={i18n}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <SnackbarProvider
+          maxSnack={5}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'right'
+          }}
+        >
+          <CustomSnackBarProvider>
+            <BrowserRouter>
+              <Navbar
+                mode={mode}
+                onChangeMode={() => {
+                  setMode((prev) => nextMode(prev));
+                  localStorage.setItem('theme', nextMode(mode));
+                }}
+              />
+              <Suspense fallback={<Loading />}>
+                <AppRoutes />
+              </Suspense>
+            </BrowserRouter>
+          </CustomSnackBarProvider>
+        </SnackbarProvider>
+        <ScrollToTopButton />
+      </ThemeProvider>
+    </I18nextProvider>
   );
 }
 

@@ -36,7 +36,7 @@ const exampleCards: CardExampleType<typeof initialValues>[] = [
 ];
 
 export default function Uppercase({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -57,16 +57,13 @@ export default function Uppercase({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('string:uppercase.inputTitle')}
+          title={t('uppercase.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult
-          title={t('string:uppercase.resultTitle')}
-          value={result}
-        />
+        <ToolTextResult title={t('uppercase.resultTitle')} value={result} />
       }
       exampleCards={exampleCards}
     />

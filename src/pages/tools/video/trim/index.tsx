@@ -29,7 +29,7 @@ const validationSchema = Yup.object({
 });
 
 export default function TrimVideo({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('video');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
@@ -87,7 +87,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('video:trim.timestamps'),
+      title: t('trim.timestamps'),
       component: (
         <Box>
           <TextFieldWithDesc
@@ -95,7 +95,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
               updateNumberField(value, 'trimStart', updateField)
             }
             value={values.trimStart}
-            label={t('video:trim.startTime')}
+            label={t('trim.startTime')}
             sx={{ mb: 2, backgroundColor: 'background.paper' }}
           />
           <TextFieldWithDesc
@@ -103,7 +103,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
               updateNumberField(value, 'trimEnd', updateField)
             }
             value={values.trimEnd}
-            label={t('video:trim.endTime')}
+            label={t('trim.endTime')}
           />
         </Box>
       )
@@ -118,7 +118,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
           <ToolVideoInput
             value={input}
             onChange={setInput}
-            title={t('video:trim.inputTitle')}
+            title={t('trim.inputTitle')}
             showTrimControls={true}
             onTrimChange={(trimStart, trimEnd) => {
               setFieldValue('trimStart', trimStart);
@@ -131,7 +131,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
       }}
       resultComponent={
         <ToolFileResult
-          title={t('video:trim.resultTitle')}
+          title={t('trim.resultTitle')}
           value={result}
           extension={'mp4'}
         />

@@ -217,7 +217,7 @@ export default function Truncate({
   title,
   longDescription
 }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -230,38 +230,38 @@ export default function Truncate({
     updateField
   }) => [
     {
-      title: t('string:statistic.delimitersOptions'),
+      title: t('statistic.delimitersOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.sentenceDelimiters}
             onOwnChange={(val) => updateField('sentenceDelimiters', val)}
-            placeholder={t('string:statistic.sentenceDelimitersPlaceholder')}
-            description={t('string:statistic.sentenceDelimitersDescription')}
+            placeholder={t('statistic.sentenceDelimitersPlaceholder')}
+            description={t('statistic.sentenceDelimitersDescription')}
           />
           <TextFieldWithDesc
             value={values.wordDelimiters}
             onOwnChange={(val) => updateField('wordDelimiters', val)}
-            placeholder={t('string:statistic.wordDelimitersPlaceholder')}
-            description={t('string:statistic.wordDelimitersDescription')}
+            placeholder={t('statistic.wordDelimitersPlaceholder')}
+            description={t('statistic.wordDelimitersDescription')}
           />
         </Box>
       )
     },
     {
-      title: t('string:statistic.statisticsOptions'),
+      title: t('statistic.statisticsOptions'),
       component: (
         <Box>
           <CheckboxWithDesc
             checked={values.wordCount}
             onChange={(value) => updateField('wordCount', value)}
-            title={t('string:statistic.wordFrequencyAnalysis')}
-            description={t('string:statistic.wordFrequencyAnalysisDescription')}
+            title={t('statistic.wordFrequencyAnalysis')}
+            description={t('statistic.wordFrequencyAnalysisDescription')}
           />
           <CheckboxWithDesc
             checked={values.characterCount}
             onChange={(value) => updateField('characterCount', value)}
-            title={t('string:statistic.characterFrequencyAnalysis')}
+            title={t('statistic.characterFrequencyAnalysis')}
             description={t(
               'string:statistic.characterFrequencyAnalysisDescription'
             )}
@@ -269,8 +269,8 @@ export default function Truncate({
           <CheckboxWithDesc
             checked={values.emptyLines}
             onChange={(value) => updateField('emptyLines', value)}
-            title={t('string:statistic.includeEmptyLines')}
-            description={t('string:statistic.includeEmptyLinesDescription')}
+            title={t('statistic.includeEmptyLines')}
+            description={t('statistic.includeEmptyLinesDescription')}
           />
         </Box>
       )
@@ -287,19 +287,16 @@ export default function Truncate({
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('string:statistic.inputTitle')}
+          title={t('statistic.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult
-          title={t('string:statistic.resultTitle')}
-          value={result}
-        />
+        <ToolTextResult title={t('statistic.resultTitle')} value={result} />
       }
       toolInfo={{
-        title: t('string:statistic.toolInfo.title', { title }),
+        title: t('statistic.toolInfo.title', { title }),
         description: longDescription
       }}
       exampleCards={exampleCards}

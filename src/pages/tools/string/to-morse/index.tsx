@@ -12,7 +12,7 @@ const initialValues = {
 };
 
 export default function ToMorse() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const computeOptions = (optionsValues: typeof initialValues, input: any) => {
@@ -22,34 +22,31 @@ export default function ToMorse() {
 
   return (
     <ToolContent
-      title={t('string:toMorse.title')}
+      title={t('toMorse.title')}
       initialValues={initialValues}
       compute={computeOptions}
       input={input}
       setInput={setInput}
       inputComponent={<ToolTextInput value={input} onChange={setInput} />}
       resultComponent={
-        <ToolTextResult
-          title={t('string:toMorse.resultTitle')}
-          value={result}
-        />
+        <ToolTextResult title={t('toMorse.resultTitle')} value={result} />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: t('string:toMorse.shortSignal'),
+          title: t('toMorse.shortSignal'),
           component: (
             <TextFieldWithDesc
-              description={t('string:toMorse.dotSymbolDescription')}
+              description={t('toMorse.dotSymbolDescription')}
               value={values.dotSymbol}
               onOwnChange={(val) => updateField('dotSymbol', val)}
             />
           )
         },
         {
-          title: t('string:toMorse.longSignal'),
+          title: t('toMorse.longSignal'),
           component: (
             <TextFieldWithDesc
-              description={t('string:toMorse.dashSymbolDescription')}
+              description={t('toMorse.dashSymbolDescription')}
               value={values.dashSymbol}
               onOwnChange={(val) => updateField('dashSymbol', val)}
             />

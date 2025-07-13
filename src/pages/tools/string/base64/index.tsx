@@ -34,7 +34,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function Base64({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -47,18 +47,18 @@ export default function Base64({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('string:base64.optionsTitle'),
+      title: t('base64.optionsTitle'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('mode', 'encode')}
             checked={values.mode === 'encode'}
-            title={t('string:base64.encode')}
+            title={t('base64.encode')}
           />
           <SimpleRadio
             onClick={() => updateField('mode', 'decode')}
             checked={values.mode === 'decode'}
-            title={t('string:base64.decode')}
+            title={t('base64.decode')}
           />
         </Box>
       )
@@ -70,19 +70,19 @@ export default function Base64({ title }: ToolComponentProps) {
       title={title}
       inputComponent={
         <ToolTextInput
-          title={t('string:base64.inputTitle')}
+          title={t('base64.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={t('string:base64.resultTitle')} value={result} />
+        <ToolTextResult title={t('base64.resultTitle')} value={result} />
       }
       initialValues={initialValues}
       getGroups={getGroups}
       toolInfo={{
-        title: t('string:base64.toolInfo.title'),
-        description: t('string:base64.toolInfo.description')
+        title: t('base64.toolInfo.title'),
+        description: t('base64.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

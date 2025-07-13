@@ -36,7 +36,7 @@ const splitOperators: {
 ];
 
 export default function FindUnique() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('list');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const compute = (optionsValues: typeof initialValues, input: any) => {
@@ -66,27 +66,24 @@ export default function FindUnique() {
 
   return (
     <ToolContent
-      title={t('list:findUnique.title')}
+      title={t('findUnique.title')}
       initialValues={initialValues}
       compute={compute}
       input={input}
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('list:findUnique.inputTitle')}
+          title={t('findUnique.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult
-          title={t('list:findUnique.resultTitle')}
-          value={result}
-        />
+        <ToolTextResult title={t('findUnique.resultTitle')} value={result} />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: t('list:findUnique.inputListDelimiter'),
+          title: t('findUnique.inputListDelimiter'),
           component: (
             <Box>
               {splitOperators.map(({ title, description, type }) => (
@@ -99,7 +96,7 @@ export default function FindUnique() {
                 />
               ))}
               <TextFieldWithDesc
-                description={t('list:findUnique.delimiterDescription')}
+                description={t('findUnique.delimiterDescription')}
                 value={values.splitSeparator}
                 onOwnChange={(val) => updateField('splitSeparator', val)}
               />
@@ -107,7 +104,7 @@ export default function FindUnique() {
           )
         },
         {
-          title: t('list:findUnique.outputListDelimiter'),
+          title: t('findUnique.outputListDelimiter'),
           component: (
             <Box>
               <TextFieldWithDesc
@@ -115,14 +112,14 @@ export default function FindUnique() {
                 onOwnChange={(value) => updateField('joinSeparator', value)}
               />
               <CheckboxWithDesc
-                title={t('list:findUnique.trimItems')}
-                description={t('list:findUnique.trimItemsDescription')}
+                title={t('findUnique.trimItems')}
+                description={t('findUnique.trimItemsDescription')}
                 checked={values.trimItems}
                 onChange={(value) => updateField('trimItems', value)}
               />
               <CheckboxWithDesc
-                title={t('list:findUnique.skipEmptyItems')}
-                description={t('list:findUnique.skipEmptyItemsDescription')}
+                title={t('findUnique.skipEmptyItems')}
+                description={t('findUnique.skipEmptyItemsDescription')}
                 checked={values.deleteEmptyItems}
                 onChange={(value) => updateField('deleteEmptyItems', value)}
               />
@@ -130,20 +127,20 @@ export default function FindUnique() {
           )
         },
         {
-          title: t('list:findUnique.uniqueItemOptions'),
+          title: t('findUnique.uniqueItemOptions'),
           component: (
             <Box>
               <CheckboxWithDesc
-                title={t('list:findUnique.findAbsolutelyUniqueItems')}
+                title={t('findUnique.findAbsolutelyUniqueItems')}
                 description={t(
-                  'list:findUnique.findAbsolutelyUniqueItemsDescription'
+                  'findUnique.findAbsolutelyUniqueItemsDescription'
                 )}
                 checked={values.absolutelyUnique}
                 onChange={(value) => updateField('absolutelyUnique', value)}
               />
               <CheckboxWithDesc
-                title={t('list:findUnique.caseSensitiveItems')}
-                description={t('list:findUnique.caseSensitiveItemsDescription')}
+                title={t('findUnique.caseSensitiveItems')}
+                description={t('findUnique.caseSensitiveItemsDescription')}
                 checked={values.caseSensitive}
                 onChange={(value) => updateField('caseSensitive', value)}
               />

@@ -32,7 +32,7 @@ export default function XmlValidator({
   title,
   longDescription
 }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('xml');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -48,7 +48,7 @@ export default function XmlValidator({
         <ToolTextInput
           value={input}
           onChange={setInput}
-          placeholder={t('xml:xmlValidator.placeholder')}
+          placeholder={t('xmlValidator.placeholder')}
         />
       }
       resultComponent={<ToolTextResult value={result} extension="txt" />}
@@ -58,8 +58,8 @@ export default function XmlValidator({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('xml:xmlValidator.toolInfo.title'),
-        description: t('xml:xmlValidator.toolInfo.description')
+        title: t('xmlValidator.toolInfo.title'),
+        description: t('xmlValidator.toolInfo.description')
       }}
     />
   );

@@ -116,7 +116,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function PrettifyJson({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('json');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -131,14 +131,14 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
       input={input}
       inputComponent={
         <ToolTextInput
-          title={t('json:prettify.inputTitle')}
+          title={t('prettify.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={t('json:prettify.resultTitle')}
+          title={t('prettify.resultTitle')}
           value={result}
           extension={'json'}
         />
@@ -146,14 +146,14 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [
         {
-          title: t('json:prettify.indentation'),
+          title: t('prettify.indentation'),
           component: (
             <Box>
               <RadioWithTextField
                 checked={values.indentationType === 'space'}
-                title={t('json:prettify.useSpaces')}
+                title={t('prettify.useSpaces')}
                 fieldName={'indentationType'}
-                description={t('json:prettify.useSpacesDescription')}
+                description={t('prettify.useSpacesDescription')}
                 value={values.spacesCount.toString()}
                 onRadioClick={() => updateField('indentationType', 'space')}
                 onTextChange={(val) =>
@@ -163,8 +163,8 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
               <SimpleRadio
                 onClick={() => updateField('indentationType', 'tab')}
                 checked={values.indentationType === 'tab'}
-                description={t('json:prettify.useTabsDescription')}
-                title={t('json:prettify.useTabs')}
+                description={t('prettify.useTabsDescription')}
+                title={t('prettify.useTabs')}
               />
             </Box>
           )
@@ -174,8 +174,8 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
       setInput={setInput}
       exampleCards={exampleCards}
       toolInfo={{
-        title: t('json:prettify.toolInfo.title'),
-        description: t('json:prettify.toolInfo.description')
+        title: t('prettify.toolInfo.title'),
+        description: t('prettify.toolInfo.description')
       }}
     />
   );

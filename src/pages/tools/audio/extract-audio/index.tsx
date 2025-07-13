@@ -18,7 +18,7 @@ export default function ExtractAudio({
   title,
   longDescription
 }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('audio');
   const [file, setFile] = useState<File | null>(null);
   const [audioFile, setAudioFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -29,7 +29,7 @@ export default function ExtractAudio({
   }) => {
     return [
       {
-        title: t('audio:extractAudio.outputFormat'),
+        title: t('extractAudio.outputFormat'),
         component: (
           <Box>
             <SelectWithDesc
@@ -42,7 +42,7 @@ export default function ExtractAudio({
                 { label: 'MP3', value: 'mp3' },
                 { label: 'WAV', value: 'wav' }
               ]}
-              description={t('audio:extractAudio.outputFormatDescription')}
+              description={t('extractAudio.outputFormatDescription')}
             />
           </Box>
         )
@@ -71,19 +71,19 @@ export default function ExtractAudio({
         <ToolVideoInput
           value={file}
           onChange={setFile}
-          title={t('audio:extractAudio.inputTitle')}
+          title={t('extractAudio.inputTitle')}
         />
       }
       resultComponent={
         loading ? (
           <ToolFileResult
-            title={t('audio:extractAudio.extractingAudio')}
+            title={t('extractAudio.extractingAudio')}
             value={null}
             loading={true}
           />
         ) : (
           <ToolFileResult
-            title={t('audio:extractAudio.resultTitle')}
+            title={t('extractAudio.resultTitle')}
             value={audioFile}
           />
         )
@@ -92,7 +92,7 @@ export default function ExtractAudio({
       getGroups={getGroups}
       compute={compute}
       toolInfo={{
-        title: t('audio:extractAudio.toolInfo.title', { title }),
+        title: t('extractAudio.toolInfo.title', { title }),
         description: longDescription
       }}
       setInput={setFile}

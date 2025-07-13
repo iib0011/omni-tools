@@ -69,7 +69,7 @@ export default function SecondsToTime({
   title,
   longDescription
 }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('time');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -82,14 +82,14 @@ export default function SecondsToTime({
     updateField
   }) => [
     {
-      title: t('time:convertSecondsToTime.timePadding'),
+      title: t('convertSecondsToTime.timePadding'),
       component: (
         <Box>
           <CheckboxWithDesc
             onChange={(val) => updateField('paddingFlag', val)}
             checked={values.paddingFlag}
-            title={t('time:convertSecondsToTime.addPadding')}
-            description={t('time:convertSecondsToTime.addPaddingDescription')}
+            title={t('convertSecondsToTime.addPadding')}
+            description={t('convertSecondsToTime.addPaddingDescription')}
           />
         </Box>
       )
@@ -107,7 +107,7 @@ export default function SecondsToTime({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('time:convertSecondsToTime.toolInfo.title', { title }),
+        title: t('convertSecondsToTime.toolInfo.title', { title }),
         description: longDescription
       }}
       exampleCards={exampleCards}

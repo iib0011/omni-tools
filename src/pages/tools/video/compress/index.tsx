@@ -69,7 +69,7 @@ const presetOptions = [
 ];
 
 export default function CompressVideo({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('video');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -102,7 +102,7 @@ export default function CompressVideo({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('video:compress.resolution'),
+      title: t('compress.resolution'),
       component: (
         <Box>
           {resolutionOptions.map((option) => (
@@ -119,7 +119,7 @@ export default function CompressVideo({ title }: ToolComponentProps) {
       )
     },
     {
-      title: t('video:compress.quality'),
+      title: t('compress.quality'),
       component: (
         <Box sx={{ mb: 2 }}>
           <Slider
@@ -131,9 +131,9 @@ export default function CompressVideo({ title }: ToolComponentProps) {
               updateField('crf', typeof value === 'number' ? value : value[0]);
             }}
             marks={{
-              0: t('video:compress.lossless'),
-              23: t('video:compress.default'),
-              51: t('video:compress.worst')
+              0: t('compress.lossless'),
+              23: t('compress.default'),
+              51: t('compress.worst')
             }}
           />
         </Box>
@@ -162,16 +162,16 @@ export default function CompressVideo({ title }: ToolComponentProps) {
         <ToolVideoInput
           value={input}
           onChange={setInput}
-          title={t('video:compress.inputTitle')}
+          title={t('compress.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
-          title={t('video:compress.resultTitle')}
+          title={t('compress.resultTitle')}
           value={result}
           extension={'mp4'}
           loading={loading}
-          loadingText={t('video:compress.loadingText')}
+          loadingText={t('compress.loadingText')}
         />
       }
       initialValues={initialValues}

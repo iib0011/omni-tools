@@ -75,5 +75,12 @@
       "title": "Crop Video",
       "description": "This tool allows you to crop video files to remove unwanted areas. You can specify the crop area by setting the X, Y coordinates and width, height dimensions."
     }
+  },
+  "trim": {
+    "timestamps": "Timestamps",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "inputTitle": "Input Video",
+    "resultTitle": "Trimmed Video"
   }
 }

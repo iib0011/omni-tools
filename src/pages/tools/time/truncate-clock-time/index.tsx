@@ -68,7 +68,7 @@ export default function TruncateClockTime({
   title,
   longDescription
 }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('time');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -88,13 +88,13 @@ export default function TruncateClockTime({
     updateField
   }) => [
     {
-      title: t('time:truncateClockTime.truncationSide'),
+      title: t('truncateClockTime.truncationSide'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('onlySecond', true)}
             checked={values.onlySecond}
-            title={t('time:truncateClockTime.truncateOnlySeconds')}
+            title={t('truncateClockTime.truncateOnlySeconds')}
             description={t(
               'time:truncateClockTime.truncateOnlySecondsDescription'
             )}
@@ -102,7 +102,7 @@ export default function TruncateClockTime({
           <SimpleRadio
             onClick={() => updateField('onlySecond', false)}
             checked={!values.onlySecond}
-            title={t('time:truncateClockTime.truncateMinutesAndSeconds')}
+            title={t('truncateClockTime.truncateMinutesAndSeconds')}
             description={t(
               'time:truncateClockTime.truncateMinutesAndSecondsDescription'
             )}
@@ -111,27 +111,27 @@ export default function TruncateClockTime({
       )
     },
     {
-      title: t('time:truncateClockTime.printDroppedComponents'),
+      title: t('truncateClockTime.printDroppedComponents'),
       component: (
         <Box>
           <CheckboxWithDesc
             onChange={(val) => updateField('zeroPrint', val)}
             checked={values.zeroPrint}
-            title={t('time:truncateClockTime.zeroPrintTruncatedParts')}
-            description={t('time:truncateClockTime.zeroPrintDescription')}
+            title={t('truncateClockTime.zeroPrintTruncatedParts')}
+            description={t('truncateClockTime.zeroPrintDescription')}
           />
         </Box>
       )
     },
     {
-      title: t('time:truncateClockTime.timePadding'),
+      title: t('truncateClockTime.timePadding'),
       component: (
         <Box>
           <CheckboxWithDesc
             onChange={(val) => updateField('zeroPadding', val)}
             checked={values.zeroPadding}
-            title={t('time:truncateClockTime.useZeroPadding')}
-            description={t('time:truncateClockTime.zeroPaddingDescription')}
+            title={t('truncateClockTime.useZeroPadding')}
+            description={t('truncateClockTime.zeroPaddingDescription')}
           />
         </Box>
       )
@@ -149,7 +149,7 @@ export default function TruncateClockTime({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('time:truncateClockTime.toolInfo.title', { title }),
+        title: t('truncateClockTime.toolInfo.title', { title }),
         description: longDescription
       }}
       exampleCards={exampleCards}

@@ -86,7 +86,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function Wrap({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('list');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -119,50 +119,50 @@ export default function Wrap({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('list:wrap.splitOptions'),
+      title: t('wrap.splitOptions'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('splitOperatorType', 'symbol')}
             checked={values.splitOperatorType === 'symbol'}
-            title={t('list:wrap.splitBySymbol')}
+            title={t('wrap.splitBySymbol')}
           />
           <SimpleRadio
             onClick={() => updateField('splitOperatorType', 'regex')}
             checked={values.splitOperatorType === 'regex'}
-            title={t('list:wrap.splitByRegex')}
+            title={t('wrap.splitByRegex')}
           />
           <TextFieldWithDesc
             value={values.splitSeparator}
             onOwnChange={(val) => updateField('splitSeparator', val)}
-            description={t('list:wrap.splitSeparatorDescription')}
+            description={t('wrap.splitSeparatorDescription')}
           />
           <TextFieldWithDesc
             value={values.joinSeparator}
             onOwnChange={(val) => updateField('joinSeparator', val)}
-            description={t('list:wrap.joinSeparatorDescription')}
+            description={t('wrap.joinSeparatorDescription')}
           />
           <CheckboxWithDesc
             checked={values.deleteEmptyItems}
             onChange={(checked) => updateField('deleteEmptyItems', checked)}
-            title={t('list:wrap.removeEmptyItems')}
+            title={t('wrap.removeEmptyItems')}
           />
         </Box>
       )
     },
     {
-      title: t('list:wrap.wrapOptions'),
+      title: t('wrap.wrapOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.left}
             onOwnChange={(val) => updateField('left', val)}
-            description={t('list:wrap.leftTextDescription')}
+            description={t('wrap.leftTextDescription')}
           />
           <TextFieldWithDesc
             value={values.right}
             onOwnChange={(val) => updateField('right', val)}
-            description={t('list:wrap.rightTextDescription')}
+            description={t('wrap.rightTextDescription')}
           />
         </Box>
       )
@@ -174,20 +174,20 @@ export default function Wrap({ title }: ToolComponentProps) {
       title={title}
       inputComponent={
         <ToolTextInput
-          title={t('list:wrap.inputTitle')}
+          title={t('wrap.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={t('list:wrap.resultTitle')} value={result} />
+        <ToolTextResult title={t('wrap.resultTitle')} value={result} />
       }
       initialValues={initialValues}
       getGroups={getGroups}
       validationSchema={validationSchema}
       toolInfo={{
-        title: t('list:wrap.toolInfo.title'),
-        description: t('list:wrap.toolInfo.description')
+        title: t('wrap.toolInfo.title'),
+        description: t('wrap.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

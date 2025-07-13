@@ -58,7 +58,7 @@ export default function RotatePdf({
   title,
   longDescription
 }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('pdf');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
@@ -92,7 +92,7 @@ export default function RotatePdf({
     if (applyToAllPages) {
       setPageRangePreview(
         totalPages > 0
-          ? t('pdf:rotatePdf.allPagesWillBeRotated', { count: totalPages })
+          ? t('rotatePdf.allPagesWillBeRotated', { count: totalPages })
           : ''
       );
       return;
@@ -105,7 +105,7 @@ export default function RotatePdf({
 
     try {
       const count = parsePageRanges(pageRanges, totalPages).length;
-      setPageRangePreview(t('pdf:rotatePdf.pagesWillBeRotated', { count }));
+      setPageRangePreview(t('rotatePdf.pagesWillBeRotated', { count }));
     } catch (error) {
       setPageRangePreview('');
     }
@@ -125,9 +125,9 @@ export default function RotatePdf({
     }
   };
   const angleOptions: { value: RotationAngle; label: string }[] = [
-    { value: 90, label: t('pdf:rotatePdf.angleOptions.clockwise90') },
-    { value: 180, label: t('pdf:rotatePdf.angleOptions.upsideDown180') },
-    { value: 270, label: t('pdf:rotatePdf.angleOptions.counterClockwise270') }
+    { value: 90, label: t('rotatePdf.angleOptions.clockwise90') },
+    { value: 180, label: t('rotatePdf.angleOptions.upsideDown180') },
+    { value: 270, label: t('rotatePdf.angleOptions.counterClockwise270') }
   ];
   return (
     <ToolContent
@@ -142,25 +142,25 @@ export default function RotatePdf({
           value={input}
           onChange={setInput}
           accept={['application/pdf']}
-          title={t('pdf:rotatePdf.inputTitle')}
+          title={t('rotatePdf.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
-          title={t('pdf:rotatePdf.resultTitle')}
+          title={t('rotatePdf.resultTitle')}
           value={result}
           extension={'pdf'}
           loading={isProcessing}
-          loadingText={t('pdf:rotatePdf.rotatingPages')}
+          loadingText={t('rotatePdf.rotatingPages')}
         />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: t('pdf:rotatePdf.rotationSettings'),
+          title: t('rotatePdf.rotationSettings'),
           component: (
             <Box>
               <Typography variant="subtitle2" sx={{ mb: 1 }}>
-                {t('pdf:rotatePdf.rotationAngle')}
+                {t('rotatePdf.rotationAngle')}
               </Typography>
               {angleOptions.map((angleOption) => (
                 <SimpleRadio
@@ -183,7 +183,7 @@ export default function RotatePdf({
                       }}
                     />
                   }
-                  label={t('pdf:rotatePdf.applyToAllPages')}
+                  label={t('rotatePdf.applyToAllPages')}
                 />
               </Box>
 
@@ -191,7 +191,7 @@ export default function RotatePdf({
                 <Box sx={{ mt: 2 }}>
                   {totalPages > 0 && (
                     <Typography variant="body2" sx={{ mb: 1 }}>
-                      {t('pdf:rotatePdf.pdfPageCount', { count: totalPages })}
+                      {t('rotatePdf.pdfPageCount', { count: totalPages })}
                     </Typography>
                   )}
                   <TextFieldWithDesc
@@ -199,8 +199,8 @@ export default function RotatePdf({
                     onOwnChange={(val) => {
                       updateField('pageRanges', val);
                     }}
-                    description={t('pdf:rotatePdf.pageRangesDescription')}
-                    placeholder={t('pdf:rotatePdf.pageRangesPlaceholder')}
+                    description={t('rotatePdf.pageRangesDescription')}
+                    placeholder={t('rotatePdf.pageRangesPlaceholder')}
                   />
                   {pageRangePreview && (
                     <Typography
@@ -218,8 +218,8 @@ export default function RotatePdf({
       ]}
       onValuesChange={onValuesChange}
       toolInfo={{
-        title: t('pdf:rotatePdf.toolInfo.title'),
-        description: t('pdf:rotatePdf.toolInfo.description')
+        title: t('rotatePdf.toolInfo.title'),
+        description: t('rotatePdf.toolInfo.description')
       }}
     />
   );

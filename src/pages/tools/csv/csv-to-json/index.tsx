@@ -113,7 +113,7 @@ id,name,active
 ];
 
 export default function CsvToJson({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('csv');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -149,35 +149,35 @@ export default function CsvToJson({ title }: ToolComponentProps) {
       exampleCards={exampleCards}
       inputComponent={
         <ToolTextInput
-          title={t('csv:csvToJson.inputTitle')}
+          title={t('csvToJson.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={t('csv:csvToJson.resultTitle')}
+          title={t('csvToJson.resultTitle')}
           value={result}
           extension={'json'}
         />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: t('csv:csvToJson.inputCsvFormat'),
+          title: t('csvToJson.inputCsvFormat'),
           component: (
             <Box>
               <TextFieldWithDesc
-                description={t('csv:csvToJson.columnSeparator')}
+                description={t('csvToJson.columnSeparator')}
                 value={values.delimiter}
                 onOwnChange={(val) => updateField('delimiter', val)}
               />
               <TextFieldWithDesc
-                description={t('csv:csvToJson.fieldQuote')}
+                description={t('csvToJson.fieldQuote')}
                 onOwnChange={(val) => updateField('quote', val)}
                 value={values.quote}
               />
               <TextFieldWithDesc
-                description={t('csv:csvToJson.commentSymbol')}
+                description={t('csvToJson.commentSymbol')}
                 value={values.comment}
                 onOwnChange={(val) => updateField('comment', val)}
               />
@@ -185,26 +185,26 @@ export default function CsvToJson({ title }: ToolComponentProps) {
           )
         },
         {
-          title: t('csv:csvToJson.conversionOptions'),
+          title: t('csvToJson.conversionOptions'),
           component: (
             <Box>
               <CheckboxWithDesc
                 checked={values.useHeaders}
                 onChange={(value) => updateField('useHeaders', value)}
-                title={t('csv:csvToJson.useHeaders')}
-                description={t('csv:csvToJson.useHeadersDescription')}
+                title={t('csvToJson.useHeaders')}
+                description={t('csvToJson.useHeadersDescription')}
               />
               <CheckboxWithDesc
                 checked={values.skipEmptyLines}
                 onChange={(value) => updateField('skipEmptyLines', value)}
-                title={t('csv:csvToJson.skipEmptyLines')}
-                description={t('csv:csvToJson.skipEmptyLinesDescription')}
+                title={t('csvToJson.skipEmptyLines')}
+                description={t('csvToJson.skipEmptyLinesDescription')}
               />
               <CheckboxWithDesc
                 checked={values.dynamicTypes}
                 onChange={(value) => updateField('dynamicTypes', value)}
-                title={t('csv:csvToJson.dynamicTypes')}
-                description={t('csv:csvToJson.dynamicTypesDescription')}
+                title={t('csvToJson.dynamicTypes')}
+                description={t('csvToJson.dynamicTypesDescription')}
               />
             </Box>
           )

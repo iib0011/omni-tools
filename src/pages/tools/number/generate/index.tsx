@@ -15,7 +15,7 @@ const initialValues = {
 };
 
 export default function GenerateNumbers({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('number');
   const [result, setResult] = useState<string>('');
 
   const compute = (optionsValues: typeof initialValues) => {
@@ -36,23 +36,23 @@ export default function GenerateNumbers({ title }: ToolComponentProps) {
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [
         {
-          title: t('number:generate.arithmeticSequenceOption'),
+          title: t('generate.arithmeticSequenceOption'),
           component: (
             <Box>
               <TextFieldWithDesc
-                description={t('number:generate.startSequenceDescription')}
+                description={t('generate.startSequenceDescription')}
                 value={values.firstValue}
                 onOwnChange={(val) => updateField('firstValue', val)}
                 type={'number'}
               />
               <TextFieldWithDesc
-                description={t('number:generate.stepDescription')}
+                description={t('generate.stepDescription')}
                 value={values.step}
                 onOwnChange={(val) => updateField('step', val)}
                 type={'number'}
               />
               <TextFieldWithDesc
-                description={t('number:generate.numberOfElementsDescription')}
+                description={t('generate.numberOfElementsDescription')}
                 value={values.numberOfNumbers}
                 onOwnChange={(val) => updateField('numberOfNumbers', val)}
                 type={'number'}
@@ -61,10 +61,10 @@ export default function GenerateNumbers({ title }: ToolComponentProps) {
           )
         },
         {
-          title: t('number:generate.separator'),
+          title: t('generate.separator'),
           component: (
             <TextFieldWithDesc
-              description={t('number:generate.separatorDescription')}
+              description={t('generate.separatorDescription')}
               value={values.separator}
               onOwnChange={(val) => updateField('separator', val)}
             />
@@ -73,10 +73,7 @@ export default function GenerateNumbers({ title }: ToolComponentProps) {
       ]}
       compute={compute}
       resultComponent={
-        <ToolTextResult
-          title={t('number:generate.resultTitle')}
-          value={result}
-        />
+        <ToolTextResult title={t('generate.resultTitle')} value={result} />
       }
     />
   );

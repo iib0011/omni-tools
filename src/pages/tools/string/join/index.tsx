@@ -108,7 +108,7 @@ s
 ];
 
 export default function JoinText({ title }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const compute = (optionsValues: InitialValuesType, input: any) => {
@@ -121,18 +121,18 @@ export default function JoinText({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('string:join.textMergedOptions'),
+      title: t('join.textMergedOptions'),
       component: (
         <TextFieldWithDesc
-          placeholder={t('string:join.joinCharacterPlaceholder')}
+          placeholder={t('join.joinCharacterPlaceholder')}
           value={values['joinCharacter']}
           onOwnChange={(value) => updateField(mergeOptions.accessor, value)}
-          description={t('string:join.joinCharacterDescription')}
+          description={t('join.joinCharacterDescription')}
         />
       )
     },
     {
-      title: t('string:join.blankLinesAndTrailingSpaces'),
+      title: t('join.blankLinesAndTrailingSpaces'),
       component: blankTrailingOptions.map((option) => (
         <CheckboxWithDesc
           key={option.accessor}
@@ -153,18 +153,18 @@ export default function JoinText({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={t('string:join.inputTitle')}
+          title={t('join.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={t('string:join.resultTitle')} value={result} />
+        <ToolTextResult title={t('join.resultTitle')} value={result} />
       }
       getGroups={getGroups}
       toolInfo={{
-        title: t('string:join.toolInfo.title'),
-        description: t('string:join.toolInfo.description')
+        title: t('join.toolInfo.title'),
+        description: t('join.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />
