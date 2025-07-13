@@ -34,26 +34,63 @@ const GroupHeader = styled('div')(({ theme }) => ({
 const GroupItems = styled('ul')({
   padding: 0
 });
-const exampleTools: { label: string; url: string }[] = [
-  {
-    label: 'Create a transparent image',
-    url: '/image-generic/create-transparent'
-  },
-  { label: 'Prettify JSON', url: '/json/prettify' },
-  { label: 'Change GIF speed', url: '/gif/change-speed' },
-  { label: 'Sort a list', url: '/list/sort' },
-  { label: 'Compress PNG', url: '/png/compress-png' },
-  { label: 'Split a text', url: '/string/split' },
-  { label: 'Split PDF', url: '/pdf/split-pdf' },
-  { label: 'Trim video', url: '/video/trim' },
-  { label: 'Calculate number sum', url: '/number/sum' }
-];
+
 export default function Hero() {
   const { t } = useTranslation();
   const [inputValue, setInputValue] = useState<string>('');
   const theme = useTheme();
   const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
   const navigate = useNavigate();
+
+  const exampleTools: { label: string; url: string; translationKey: string }[] =
+    [
+      {
+        label: t('hero.examples.createTransparentImage'),
+        url: '/image-generic/create-transparent',
+        translationKey: 'hero.examples.createTransparentImage'
+      },
+      {
+        label: t('hero.examples.prettifyJson'),
+        url: '/json/prettify',
+        translationKey: 'hero.examples.prettifyJson'
+      },
+      {
+        label: t('hero.examples.changeGifSpeed'),
+        url: '/gif/change-speed',
+        translationKey: 'hero.examples.changeGifSpeed'
+      },
+      {
+        label: t('hero.examples.sortList'),
+        url: '/list/sort',
+        translationKey: 'hero.examples.sortList'
+      },
+      {
+        label: t('hero.examples.compressPng'),
+        url: '/png/compress-png',
+        translationKey: 'hero.examples.compressPng'
+      },
+      {
+        label: t('hero.examples.splitText'),
+        url: '/string/split',
+        translationKey: 'hero.examples.splitText'
+      },
+      {
+        label: t('hero.examples.splitPdf'),
+        url: '/pdf/split-pdf',
+        translationKey: 'hero.examples.splitPdf'
+      },
+      {
+        label: t('hero.examples.trimVideo'),
+        url: '/video/trim',
+        translationKey: 'hero.examples.trimVideo'
+      },
+      {
+        label: t('hero.examples.calculateNumberSum'),
+        url: '/number/sum',
+        translationKey: 'hero.examples.calculateNumberSum'
+      }
+    ];
+
   const handleInputChange = (
     event: React.ChangeEvent<{}>,
     newInputValue: string
@@ -146,7 +183,7 @@ export default function Hero() {
             xs={12}
             md={6}
             lg={4}
-            key={tool.label}
+            key={tool.translationKey}
           >
             <Box
               sx={{

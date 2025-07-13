@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import { useState } from 'react';
 import { categoriesColors } from 'config/uiConfig';
 import { Icon } from '@iconify/react';
+import { useTranslation } from 'react-i18next';
 
 type ArrayElement<ArrayType extends readonly unknown[]> =
   ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
@@ -18,10 +19,25 @@ const SingleCategory = function ({
   category: ArrayElement<ReturnType<typeof getToolsByCategory>>;
   index: number;
 }) {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const theme = useTheme();
   const [hovered, setHovered] = useState<boolean>(false);
   const toggleHover = () => setHovered((prevState) => !prevState);
+
+  // Get translated category title and description
+  const categoryTitle = t(`categories.${category.type}.title`, category.title);
+  const categoryDescription = t(
+    `categories.${category.type}.description`,
+    category.description
+  );
+  const seeAllText = t('categories.seeAll', 'See all {{title}}', {
+    title: categoryTitle
+  });
+  const tryText = t('categories.try', 'Try {{title}}', {
+    title: category.example.title
+  });
+
   return (
     <Grid
       item
@@ -60,10 +76,10 @@ const SingleCategory = function ({
                   }}
                   to={'/categories/' + category.type}
                 >
-                  {category.title}
+                  {categoryTitle}
                 </Link>
               </Stack>
-              <Typography sx={{ mt: 2 }}>{category.description}</Typography>
+              <Typography sx={{ mt: 2 }}>{categoryDescription}</Typography>
             </Box>
             <Grid mt={1} container spacing={2}>
               <Grid item xs={12} md={6}>
@@ -71,7 +87,9 @@ const SingleCategory = function ({
                   fullWidth
                   onClick={() => navigate('/categories/' + category.type)}
                   variant={'contained'}
-                >{`See all ${category.title}`}</Button>
+                >
+                  {seeAllText}
+                </Button>
               </Grid>
               <Grid item xs={12} md={6}>
                 <Button
@@ -79,7 +97,9 @@ const SingleCategory = function ({
                   fullWidth
                   onClick={() => navigate(category.example.path)}
                   variant={'outlined'}
-                >{`Try ${category.example.title}`}</Button>
+                >
+                  {tryText}
+                </Button>
               </Grid>
             </Grid>
           </Stack>
