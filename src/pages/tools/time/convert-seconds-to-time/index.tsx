@@ -8,6 +8,7 @@ import { GetGroupsType } from '@components/options/ToolOptions';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import { convertSecondsToTime } from './service';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   paddingFlag: false
@@ -68,6 +69,7 @@ export default function SecondsToTime({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -80,14 +82,14 @@ export default function SecondsToTime({
     updateField
   }) => [
     {
-      title: 'Time Padding',
+      title: t('time.convertSecondsToTime.timePadding'),
       component: (
         <Box>
           <CheckboxWithDesc
             onChange={(val) => updateField('paddingFlag', val)}
             checked={values.paddingFlag}
-            title={'Add Padding'}
-            description={'Add zero padding to hours, minutes, and seconds.'}
+            title={t('time.convertSecondsToTime.addPadding')}
+            description={t('time.convertSecondsToTime.addPaddingDescription')}
           />
         </Box>
       )
@@ -104,7 +106,10 @@ export default function SecondsToTime({
       getGroups={getGroups}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('time.convertSecondsToTime.toolInfo.title', { title }),
+        description: longDescription
+      }}
       exampleCards={exampleCards}
     />
   );

@@ -1,0 +1,74 @@
+{
+  "checkLeapYears": {
+    "title": "Check Leap Years",
+    "description": "Check if a year is a leap year and get leap year information.",
+    "inputTitle": "Input year",
+    "resultTitle": "Leap year result",
+    "toolInfo": {
+      "title": "What is a Leap Year?",
+      "description": "A leap year is a year containing one additional day (February 29) to keep the calendar year synchronized with the astronomical year. Leap years occur every 4 years, except for years that are divisible by 100 but not by 400."
+    }
+  },
+  "convertDaysToHours": {
+    "title": "Convert Days to Hours",
+    "description": "Convert days to hours with customizable options.",
+    "hoursName": "Hours Name",
+    "addHoursName": "Add Hours Name",
+    "addHoursNameDescription": "Append the string hours to output values",
+    "toolInfo": {
+      "title": "Convert Days to Hours",
+      "description": "This tool allows you to convert days to hours. You can input days as numbers or with units, and the tool will convert them to hours. You can also choose to append the 'hours' suffix to the output values."
+    }
+  },
+  "convertHoursToDays": {
+    "title": "Convert Hours to Days",
+    "description": "Convert hours to days with customizable options.",
+    "daysName": "Days Name",
+    "addDaysName": "Add Days Name",
+    "addDaysNameDescription": "Append the string days to output values",
+    "toolInfo": {
+      "title": "Convert Hours to Days",
+      "description": "This tool allows you to convert hours to days. You can input hours as numbers or with units, and the tool will convert them to days. You can also choose to append the 'days' suffix to the output values."
+    }
+  },
+  "convertSecondsToTime": {
+    "title": "Convert Seconds to Time",
+    "description": "Convert seconds to formatted time (HH:MM:SS).",
+    "inputTitle": "Input seconds",
+    "resultTitle": "Time format",
+    "toolInfo": {
+      "title": "Convert Seconds to Time",
+      "description": "This tool allows you to convert seconds to a formatted time string in HH:MM:SS format. It's useful for displaying durations and time intervals."
+    }
+  },
+  "convertTimeToSeconds": {
+    "title": "Convert Time to Seconds",
+    "description": "Convert formatted time (HH:MM:SS) to seconds.",
+    "inputTitle": "Input time",
+    "resultTitle": "Seconds",
+    "toolInfo": {
+      "title": "Convert Time to Seconds",
+      "description": "This tool allows you to convert formatted time strings (HH:MM:SS) to seconds. It's useful for calculating durations and time intervals."
+    }
+  },
+  "timeBetweenDates": {
+    "title": "Time Between Dates",
+    "description": "Calculate the time difference between two dates.",
+    "inputTitle": "Input dates",
+    "resultTitle": "Time difference",
+    "toolInfo": {
+      "title": "Time Between Dates",
+      "description": "This tool allows you to calculate the time difference between two dates. You can specify the format and get the result in various units."
+    }
+  },
+  "truncateClockTime": {
+    "title": "Truncate Clock Time",
+    "description": "Remove seconds from time format (HH:MM:SS to HH:MM).",
+    "inputTitle": "Input time",
+    "resultTitle": "Truncated time",
+    "toolInfo": {
+      "title": "Truncate Clock Time",
+      "description": "This tool allows you to remove seconds from time format, converting HH:MM:SS to HH:MM. It's useful for simplifying time displays."
+    }
+  }
+}

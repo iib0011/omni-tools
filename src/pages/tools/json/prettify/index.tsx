@@ -14,6 +14,7 @@ import RadioWithTextField from '@components/options/RadioWithTextField';
 import SimpleRadio from '@components/options/SimpleRadio';
 import { isNumber, updateNumberField } from '../../../../utils/string';
 import ToolContent from '@components/ToolContent';
+import { useTranslation } from 'react-i18next';
 
 type InitialValuesType = {
   indentationType: 'tab' | 'space';
@@ -115,6 +116,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function PrettifyJson({ title }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -128,11 +130,15 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
       title={title}
       input={input}
       inputComponent={
-        <ToolTextInput title={'Input JSON'} value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('json.prettify.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
       resultComponent={
         <ToolTextResult
-          title={'Pretty JSON'}
+          title={t('json.prettify.resultTitle')}
           value={result}
           extension={'json'}
         />
@@ -140,14 +146,14 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [
         {
-          title: 'Indentation',
+          title: t('json.prettify.indentation'),
           component: (
             <Box>
               <RadioWithTextField
                 checked={values.indentationType === 'space'}
-                title={'Use Spaces'}
+                title={t('json.prettify.useSpaces')}
                 fieldName={'indentationType'}
-                description={'Indent output with spaces'}
+                description={t('json.prettify.useSpacesDescription')}
                 value={values.spacesCount.toString()}
                 onRadioClick={() => updateField('indentationType', 'space')}
                 onTextChange={(val) =>
@@ -157,8 +163,8 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
               <SimpleRadio
                 onClick={() => updateField('indentationType', 'tab')}
                 checked={values.indentationType === 'tab'}
-                description={'Indent output with tabs.'}
-                title={'Use Tabs'}
+                description={t('json.prettify.useTabsDescription')}
+                title={t('json.prettify.useTabs')}
               />
             </Box>
           )
@@ -168,9 +174,8 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
       setInput={setInput}
       exampleCards={exampleCards}
       toolInfo={{
-        title: 'What Is a JSON Prettifier?',
-        description:
-          'This tool adds consistent formatting to the data in JavaScript Object Notation (JSON) format. This transformation makes the JSON code more readable, making it easier to understand and edit. The program parses the JSON data structure into tokens and then reformats them by adding indentation and line breaks. If the data is hierarchial, then it adds indentation at the beginning of lines to visually show the depth of the JSON and adds newlines to break long single-line JSON arrays into multiple shorter, more readable ones. Additionally, this utility can remove unnecessary spaces and tabs from your JSON code (especially leading and trailing whitespaces), making it more compact. You can choose the line indentation method in the options: indent with spaces or indent with tabs. When using spaces, you can also specify how many spaces to use for each indentation level (usually 2 or 4 spaces). '
+        title: t('json.prettify.toolInfo.title'),
+        description: t('json.prettify.toolInfo.description')
       }}
     />
   );

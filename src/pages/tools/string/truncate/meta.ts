@@ -2,12 +2,17 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('string', {
-  name: 'Truncate text',
+  name: 'Truncate',
   path: 'truncate',
-  shortDescription: 'Truncate your text easily',
-  icon: 'material-symbols-light:short-text',
+  icon: 'material-symbols-light:content-cut',
   description:
-    'Load your text in the input form on the left and you will automatically get truncated text on the right.',
-  keywords: ['text', 'truncate'],
-  component: lazy(() => import('./index'))
+    "World's simplest browser-based utility for truncating text. Input your text and specify the maximum length to cut it down. Perfect for data processing, text formatting, or limiting content length.",
+  shortDescription: 'Truncate text to a specified length',
+  keywords: ['truncate'],
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'string.truncate.name',
+    description: 'string.truncate.description',
+    shortDescription: 'string.truncate.shortDescription'
+  }
 });

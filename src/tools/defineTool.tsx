@@ -11,6 +11,11 @@ export interface ToolMeta {
   description: string;
   shortDescription: string;
   longDescription?: string;
+  i18n?: {
+    name: string;
+    description: string;
+    shortDescription: string;
+  };
 }
 
 export type ToolCategory =
@@ -56,7 +61,8 @@ export const defineTool = (
     keywords,
     component,
     shortDescription,
-    longDescription
+    longDescription,
+    i18n
   } = options;
   const Component = component;
   return {
@@ -74,6 +80,7 @@ export const defineTool = (
           description={description}
           icon={icon}
           type={basePath}
+          i18n={i18n}
         >
           <Component title={name} longDescription={longDescription} />
         </ToolLayout>

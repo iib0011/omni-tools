@@ -18,6 +18,7 @@ import { useNavigate } from 'react-router-dom';
 import _ from 'lodash';
 import { Icon } from '@iconify/react';
 import { getToolCategoryTitle } from '@utils/string';
+import { useTranslation } from 'react-i18next';
 
 const GroupHeader = styled('div')(({ theme }) => ({
   position: 'sticky',
@@ -48,6 +49,7 @@ const exampleTools: { label: string; url: string }[] = [
   { label: 'Calculate number sum', url: '/number/sum' }
 ];
 export default function Hero() {
+  const { t } = useTranslation();
   const [inputValue, setInputValue] = useState<string>('');
   const theme = useTheme();
   const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
@@ -64,13 +66,13 @@ export default function Hero() {
     <Box width={{ xs: '90%', md: '80%', lg: '60%' }}>
       <Stack mb={1} direction={'row'} spacing={1} justifyContent={'center'}>
         <Typography sx={{ textAlign: 'center' }} fontSize={{ xs: 25, md: 30 }}>
-          Get Things Done Quickly with{' '}
+          {t('hero.title')}{' '}
           <Typography
             fontSize={{ xs: 25, md: 30 }}
             display={'inline'}
             color={'primary'}
           >
-            OmniTools
+            {t('hero.brand')}
           </Typography>
         </Typography>
       </Stack>
@@ -79,9 +81,7 @@ export default function Hero() {
         fontSize={{ xs: 15, md: 20 }}
         mb={2}
       >
-        Boost your productivity with OmniTools, the ultimate toolkit for getting
-        things done quickly! Access thousands of user-friendly utilities for
-        editing images, text, lists, and data, all directly from your browser.
+        {t('hero.description')}
       </Typography>
 
       <Autocomplete
@@ -103,7 +103,7 @@ export default function Hero() {
           <TextField
             {...params}
             fullWidth
-            placeholder={'Search all tools'}
+            placeholder={t('hero.searchPlaceholder')}
             InputProps={{
               ...params.InputProps,
               endAdornment: <SearchIcon />,

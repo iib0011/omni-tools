@@ -2,12 +2,17 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('video', {
-  name: 'Change speed',
+  name: 'Change Video Speed',
   path: 'change-speed',
-  icon: 'material-symbols-light:speed-outline',
+  icon: 'material-symbols:speed',
   description:
-    'This online utility lets you change the speed of a video. You can speed it up or slow it down.',
-  shortDescription: 'Quickly change video speed',
-  keywords: ['change', 'speed'],
-  component: lazy(() => import('./index'))
+    'Change the playback speed of video files. Speed up or slow down videos while maintaining audio synchronization. Supports various speed multipliers and common video formats.',
+  shortDescription: 'Change video playback speed',
+  keywords: ['video', 'speed', 'playback', 'fast', 'slow'],
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'video.changeSpeed.name',
+    description: 'video.changeSpeed.description',
+    shortDescription: 'video.changeSpeed.shortDescription'
+  }
 });

@@ -5,10 +5,15 @@ import { lazy } from 'react';
 export const tool = defineTool('string', {
   name: 'Randomize case',
   path: 'randomize-case',
-  icon: 'material-symbols-light:format-textdirection-l-to-r',
+  icon: 'material-symbols-light:shuffle',
   description:
-    "World's simplest browser-based utility for randomizing the case of text. Just paste your text and get it instantly transformed with random uppercase and lowercase letters. Perfect for creating playful text styles, meme text, or simulating chaotic writing.",
-  shortDescription: 'Convert text to random uppercase and lowercase letters',
+    "World's simplest browser-based utility for randomizing text case. Input your text and instantly transform it with random upper and lower case letters. Perfect for creating unique text effects, testing case sensitivity, or generating varied text patterns.",
+  shortDescription: 'Randomize the case of letters in text',
   keywords: ['randomize', 'case'],
-  component: lazy(() => import('./index'))
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'string.randomizeCase.name',
+    description: 'string.randomizeCase.description',
+    shortDescription: 'string.randomizeCase.shortDescription'
+  }
 });

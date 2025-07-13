@@ -1,0 +1,63 @@
+{
+  "csvToJson": {
+    "title": "CSV to JSON",
+    "description": "Convert CSV data to JSON format.",
+    "inputTitle": "Input CSV",
+    "resultTitle": "JSON Output",
+    "csvOptions": "CSV Options",
+    "separatorDescription": "Character used to separate columns",
+    "quoteCharDescription": "Character used to quote fields",
+    "commentCharDescription": "Character that indicates comment lines",
+    "jsonOptions": "JSON Options",
+    "prettyPrintDescription": "Format JSON with indentation",
+    "toolInfo": {
+      "title": "CSV to JSON Converter",
+      "description": "This tool allows you to convert CSV (Comma-Separated Values) data to JSON format. You can customize the CSV parsing options and JSON output format."
+    }
+  },
+  "findIncompleteCsvRecords": {
+    "title": "Find Incomplete CSV Records",
+    "description": "Identify CSV records with missing or incomplete data.",
+    "inputTitle": "Input CSV",
+    "resultTitle": "Incomplete Records",
+    "csvOptions": "CSV Options",
+    "separatorDescription": "Character used to separate columns",
+    "quoteCharDescription": "Character used to quote fields",
+    "commentCharDescription": "Character that indicates comment lines",
+    "toolInfo": {
+      "title": "Find Incomplete CSV Records",
+      "description": "This tool helps you identify CSV records that have missing or incomplete data. It's useful for data validation and cleaning."
+    }
+  },
+  "insertCsvColumns": {
+    "title": "Insert CSV Columns",
+    "description": "Add new columns to CSV data at specified positions.",
+    "inputTitle": "Input CSV",
+    "resultTitle": "Output CSV",
+    "csvToInsert": "CSV to insert",
+    "csvSeparator": "CSV separator",
+    "csvToInsertDescription": "Enter one or more columns you want to insert into the CSV. the character used to delimit columns has to be the same with the one in the CSV input file. Ps: Blank lines will be ignored",
+    "csvOptions": "CSV Options",
+    "separatorDescription": "Enter the character used to delimit columns in the CSV input file.",
+    "quoteCharDescription": "Enter the quote character used to quote the CSV input fields.",
+    "commentCharacterDescription": "Enter the character indicating the start of a comment line. Lines starting with this symbol will be skipped.",
+    "fillWithEmptyValues": "Fill With Empty Values",
+    "fillWithCustomValues": "Fill With Customs Values",
+    "customFillDescription": "If the input CSV file is incomplete (missing values), then add empty fields or custom symbols to records to make a well-formed CSV?",
+    "customFillValueDescription": "Use this custom value to fill in missing fields. (Works only with \"Custom Values\" mode above.)",
+    "positionOptions": "Position Options",
+    "prependColumns": "Prepend columns",
+    "appendColumns": "Append columns",
+    "customPosition": "Custom position",
+    "insertingPositionDescription": "Specify where to insert the columns in the CSV file.",
+    "headerName": "Header name",
+    "position": "Position",
+    "customPositionOptionsDescription": "Select the method to insert the columns in the CSV file.",
+    "headerNameDescription": "Header of the column you want to insert columns after.",
+    "rowNumberDescription": "Number of the column you want to insert columns after.",
+    "toolInfo": {
+      "title": "Insert CSV Columns",
+      "description": "This tool allows you to insert new columns into CSV data at specified positions. You can prepend, append, or insert columns at custom positions based on header names or column numbers."
+    }
+  }
+}

@@ -8,6 +8,7 @@ import { GetGroupsType } from '@components/options/ToolOptions';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import { convertDaysToHours } from './service';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   hoursFlag: false
@@ -62,6 +63,7 @@ export default function ConvertDaysToHours({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -74,14 +76,14 @@ export default function ConvertDaysToHours({
     updateField
   }) => [
     {
-      title: 'Hours Name',
+      title: t('time.convertDaysToHours.hoursName'),
       component: (
         <Box>
           <CheckboxWithDesc
             onChange={(val) => updateField('hoursFlag', val)}
             checked={values.hoursFlag}
-            title={'Add Hours Name'}
-            description={'Append the string hours to output values'}
+            title={t('time.convertDaysToHours.addHoursName')}
+            description={t('time.convertDaysToHours.addHoursNameDescription')}
           />
         </Box>
       )
@@ -98,7 +100,10 @@ export default function ConvertDaysToHours({
       getGroups={getGroups}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('time.convertDaysToHours.toolInfo.title'),
+        description: t('time.convertDaysToHours.toolInfo.description')
+      }}
       exampleCards={exampleCards}
     />
   );

@@ -8,6 +8,7 @@ import ToolVideoInput from '@components/input/ToolVideoInput';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import ToolFileResult from '@components/result/ToolFileResult';
 import SelectWithDesc from '@components/options/SelectWithDesc';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   outputFormat: 'aac'
@@ -17,6 +18,7 @@ export default function ExtractAudio({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [file, setFile] = useState<File | null>(null);
   const [audioFile, setAudioFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -27,7 +29,7 @@ export default function ExtractAudio({
   }) => {
     return [
       {
-        title: 'Output Format',
+        title: t('audio.extractAudio.outputFormat'),
         component: (
           <Box>
             <SelectWithDesc
@@ -40,9 +42,7 @@ export default function ExtractAudio({
                 { label: 'MP3', value: 'mp3' },
                 { label: 'WAV', value: 'wav' }
               ]}
-              description={
-                'Select the format for the audio to be extracted as.'
-              }
+              description={t('audio.extractAudio.outputFormatDescription')}
             />
           </Box>
         )
@@ -68,23 +68,33 @@ export default function ExtractAudio({
       title={title}
       input={file}
       inputComponent={
-        <ToolVideoInput value={file} onChange={setFile} title={'Input Video'} />
+        <ToolVideoInput
+          value={file}
+          onChange={setFile}
+          title={t('audio.extractAudio.inputTitle')}
+        />
       }
       resultComponent={
         loading ? (
           <ToolFileResult
-            title={'Extracting Audio'}
+            title={t('audio.extractAudio.extractingAudio')}
             value={null}
             loading={true}
           />
         ) : (
-          <ToolFileResult title={'Extracted Audio'} value={audioFile} />
+          <ToolFileResult
+            title={t('audio.extractAudio.resultTitle')}
+            value={audioFile}
+          />
         )
       }
       initialValues={initialValues}
       getGroups={getGroups}
       compute={compute}
-      toolInfo={{ title: `What is ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('audio.extractAudio.toolInfo.title', { title }),
+        description: longDescription
+      }}
       setInput={setFile}
     />
   );

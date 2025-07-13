@@ -9,6 +9,7 @@ import ToolFileResult from '@components/result/ToolFileResult';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { FFmpeg } from '@ffmpeg/ffmpeg';
 import { fetchFile } from '@ffmpeg/util';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   newSpeed: 2
@@ -18,6 +19,7 @@ export default function ChangeSpeed({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -128,13 +130,13 @@ export default function ChangeSpeed({
     updateField
   }) => [
     {
-      title: 'New Video Speed',
+      title: t('video.changeSpeed.newVideoSpeed'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.newSpeed.toString()}
             onOwnChange={(val) => updateField('newSpeed', Number(val))}
-            description="Default multiplier: 2 means 2x faster"
+            description={t('video.changeSpeed.defaultMultiplier')}
             type="number"
           />
         </Box>
@@ -149,21 +151,32 @@ export default function ChangeSpeed({
         <ToolVideoInput
           value={input}
           onChange={setInput}
-          title={'Input Video'}
+          title={t('video.changeSpeed.inputTitle')}
         />
       }
       resultComponent={
         loading ? (
-          <ToolFileResult title="Setting Speed" value={null} loading={true} />
+          <ToolFileResult
+            title={t('video.changeSpeed.settingSpeed')}
+            value={null}
+            loading={true}
+          />
         ) : (
-          <ToolFileResult title="Edited Video" value={result} extension="mp4" />
+          <ToolFileResult
+            title={t('video.changeSpeed.resultTitle')}
+            value={result}
+            extension="mp4"
+          />
         )
       }
       initialValues={initialValues}
       getGroups={getGroups}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('video.changeSpeed.toolInfo.title', { title }),
+        description: longDescription
+      }}
     />
   );
 }

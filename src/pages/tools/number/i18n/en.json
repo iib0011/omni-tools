@@ -1,0 +1,45 @@
+{
+  "sum": {
+    "title": "Sum Numbers",
+    "description": "Calculate the sum of a list of numbers.",
+    "inputTitle": "Input numbers",
+    "resultTitle": "Sum",
+    "sumOptions": "Sum Options",
+    "ignoreNonNumeric": "Ignore non-numeric values",
+    "ignoreNonNumericDescription": "Skip values that are not numbers",
+    "toolInfo": {
+      "title": "Sum numbers",
+      "description": "This tool allows you to calculate the sum of a list of numbers. You can input numbers separated by various delimiters and get their total sum."
+    }
+  },
+  "generate": {
+    "title": "Generate Numbers",
+    "description": "Generate a sequence of numbers with customizable parameters.",
+    "resultTitle": "Generated numbers",
+    "arithmeticSequenceOption": "Arithmetic sequence option",
+    "startSequenceDescription": "Start sequence from this number.",
+    "stepDescription": "Increase each element by this amount",
+    "numberOfElementsDescription": "Number of elements in sequence.",
+    "separator": "Separator",
+    "separatorDescription": "Separate elements in the arithmetic sequence by this character.",
+    "toolInfo": {
+      "title": "Generate numbers",
+      "description": "This tool allows you to generate a sequence of numbers with customizable parameters. You can specify the starting value, step size, and number of elements."
+    }
+  },
+  "arithmeticSequence": {
+    "title": "Arithmetic Sequence",
+    "description": "Generate arithmetic sequences with customizable parameters.",
+    "resultTitle": "Generated Sequence",
+    "sequenceParameters": "Sequence Parameters",
+    "firstTermDescription": "First term of the sequence (a₁)",
+    "commonDifferenceDescription": "Common difference between terms (d)",
+    "numberOfTermsDescription": "Number of terms to generate (n)",
+    "outputFormat": "Output Format",
+    "separatorDescription": "Separator between terms",
+    "toolInfo": {
+      "title": "What is an Arithmetic Sequence?",
+      "description": "An arithmetic sequence is a sequence of numbers where the difference between each consecutive term is constant. This constant difference is called the common difference. Given the first term (a₁) and the common difference (d), each term can be found by adding the common difference to the previous term."
+    }
+  }
+}

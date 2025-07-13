@@ -5,10 +5,15 @@ import { lazy } from 'react';
 export const tool = defineTool('string', {
   name: 'Quote',
   path: 'quote',
-  icon: 'proicons:quote',
+  icon: 'material-symbols-light:format-quote',
   description:
-    'A tool to add quotation marks or custom characters around text. Perfect for formatting strings for code, citations, or stylistic purposes.',
-  shortDescription: 'Add quotes around text easily.',
+    "World's simplest browser-based utility for adding quotes to text. Input your text and instantly add various quote styles around it. Perfect for formatting text, creating citations, or adding emphasis to specific content.",
+  shortDescription: 'Add quotes around text with various styles',
   keywords: ['quote'],
-  component: lazy(() => import('./index'))
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'string.quote.name',
+    description: 'string.quote.description',
+    shortDescription: 'string.quote.shortDescription'
+  }
 });

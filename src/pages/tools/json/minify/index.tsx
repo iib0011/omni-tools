@@ -5,6 +5,7 @@ import ToolTextResult from '@components/result/ToolTextResult';
 import { minifyJson } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
+import { useTranslation } from 'react-i18next';
 
 type InitialValuesType = Record<string, never>;
 
@@ -47,6 +48,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function MinifyJson({ title }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -58,11 +60,15 @@ export default function MinifyJson({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       inputComponent={
-        <ToolTextInput title="Input JSON" value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('json.minify.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
       resultComponent={
         <ToolTextResult
-          title="Minified JSON"
+          title={t('json.minify.resultTitle')}
           value={result}
           extension={'json'}
         />
@@ -70,9 +76,8 @@ export default function MinifyJson({ title }: ToolComponentProps) {
       initialValues={initialValues}
       getGroups={null}
       toolInfo={{
-        title: 'What Is JSON Minification?',
-        description:
-          "JSON minification is the process of removing all unnecessary whitespace characters from JSON data while maintaining its validity. This includes removing spaces, newlines, and indentation that aren't required for the JSON to be parsed correctly. Minification reduces the size of JSON data, making it more efficient for storage and transmission while keeping the exact same data structure and values."
+        title: t('json.minify.toolInfo.title'),
+        description: t('json.minify.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

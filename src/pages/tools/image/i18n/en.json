@@ -1,0 +1,40 @@
+{
+  "resize": {
+    "title": "Resize Image",
+    "description": "Resize images to different dimensions.",
+    "inputTitle": "Input Image",
+    "resultTitle": "Resized Image",
+    "resizeMethod": "Resize Method",
+    "resizeByPixels": "Resize by Pixels",
+    "resizeByPixelsDescription": "Resize by specifying dimensions in pixels.",
+    "resizeByPercentage": "Resize by Percentage",
+    "resizeByPercentageDescription": "Resize by specifying a percentage of the original size.",
+    "dimensionType": "Dimension Type",
+    "maintainAspectRatio": "Maintain Aspect Ratio",
+    "maintainAspectRatioDescription": "Maintain the original aspect ratio of the image.",
+    "setWidth": "Set Width",
+    "setWidthDescription": "Specify the width in pixels and calculate height based on aspect ratio.",
+    "setHeight": "Set Height",
+    "setHeightDescription": "Specify the height in pixels and calculate width based on aspect ratio.",
+    "widthDescription": "Width (in pixels)",
+    "heightDescription": "Height (in pixels)",
+    "percentage": "Percentage",
+    "percentageDescription": "Percentage of original size (e.g., 50 for half size, 200 for double size)",
+    "toolInfo": {
+      "title": "Resize Image",
+      "description": "This tool allows you to resize JPG, PNG, SVG, or GIF images. You can resize by specifying dimensions in pixels or by percentage, with options to maintain the original aspect ratio."
+    }
+  },
+  "compress": {
+    "title": "Compress Image",
+    "description": "Reduce image file size while maintaining quality.",
+    "inputTitle": "Input image",
+    "resultTitle": "Compressed image"
+  },
+  "crop": {
+    "title": "Crop Image",
+    "description": "Crop images to remove unwanted areas.",
+    "inputTitle": "Input image",
+    "resultTitle": "Cropped image"
+  }
+}

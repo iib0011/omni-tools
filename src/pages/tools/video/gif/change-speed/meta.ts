@@ -3,12 +3,17 @@ import { lazy } from 'react';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('gif', {
-  name: 'Change speed',
+  name: 'Change GIF Speed',
   path: 'change-speed',
-  icon: 'material-symbols-light:speed-outline',
+  icon: 'material-symbols:speed',
   description:
-    'This online utility lets you change the speed of a GIF animation. You can speed it up or slow it down. You can set the same constant delay between all frames or change the delays of individual frames. You can also play both the input and output GIFs at the same time and compare their speeds',
-  shortDescription: 'Quickly change GIF speed',
-  keywords: ['change', 'speed'],
-  component: lazy(() => import('./index'))
+    'Change the playback speed of GIF animations. Speed up or slow down GIFs while maintaining smooth animation.',
+  shortDescription: 'Change GIF animation speed',
+  keywords: ['gif', 'speed', 'animation', 'fast', 'slow'],
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'gif.changeSpeed.name',
+    description: 'gif.changeSpeed.description',
+    shortDescription: 'gif.changeSpeed.shortDescription'
+  }
 });

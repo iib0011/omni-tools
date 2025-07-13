@@ -1,0 +1,187 @@
+{
+  "app": {
+    "title": "Omni Tools",
+    "language": "Language"
+  },
+  "navbar": {
+    "home": "Home",
+    "tools": "Tools",
+    "buyMeACoffee": "Buy me a coffee"
+  },
+  "resultFooter": {
+    "download": "Download",
+    "copy": "Copy to clipboard"
+  },
+  "toolTextResult": {
+    "result": "Result",
+    "loading": "Loading... This may take a moment.",
+    "copied": "Text copied",
+    "copyFailed": "Failed to copy: {{error}}"
+  },
+  "toolFileResult": {
+    "result": "Result",
+    "loading": "Loading... This may take a moment.",
+    "copied": "File copied",
+    "copyFailed": "Failed to copy: {{error}}"
+  },
+  "toolMultiFileResult": {
+    "result": "Result",
+    "loading": "Loading... This may take a moment.",
+    "copied": "File copied",
+    "copyFailed": "Failed to copy: {{error}}"
+  },
+  "toolTextInput": {
+    "input": "Input text",
+    "placeholder": "Enter your text here...",
+    "copied": "Text copied",
+    "copyFailed": "Failed to copy: {{error}}"
+  },
+  "toolOptions": {
+    "title": "Tool options"
+  },
+  "hero": {
+    "title": "Get Things Done Quickly with",
+    "brand": "OmniTools",
+    "description": "Boost your productivity with OmniTools, the ultimate toolkit for getting things done quickly! Access thousands of user-friendly utilities for editing images, text, lists, and data, all directly from your browser.",
+    "searchPlaceholder": "Search all tools"
+  },
+  "toolHeader": {
+    "seeExamples": "See Examples"
+  },
+  "toolExamples": {
+    "title": "{{title}} Examples",
+    "subtitle": "Click to try!"
+  },
+  "inputFooter": {
+    "importFromFile": "Import from file",
+    "copyToClipboard": "Copy to clipboard",
+    "clear": "Clear"
+  },
+  "baseFileInput": {
+    "fileCopied": "File copied",
+    "copyFailed": "Failed to copy: {{error}}",
+    "dropFileHere": "Drop your {{type}} here",
+    "selectFileDescription": "Click here to select a {{type}} from your device, press Ctrl+V to use a {{type}} from your clipboard, or drag and drop a file from desktop"
+  },
+  "toolMultiplePdfInput": {
+    "noFilesSelected": "No files selected",
+    "inputTitle": "Input {{type}}"
+  },
+  "toolMultipleAudioInput": {
+    "noFilesSelected": "No files selected",
+    "inputTitle": "Input {{type}}"
+  },
+  "numericInputWithUnit": {
+    "unit": "Unit"
+  },
+  "toolLayout": {
+    "allToolsTitle": "All {{type}} Tools"
+  },
+  "list": {
+    "group": {
+      "name": "Group",
+      "description": "World's simplest browser-based utility for grouping list items. Input your list and specify grouping criteria to organize items into logical groups. Perfect for categorizing data, organizing information, or creating structured lists. Supports custom separators and various grouping options.",
+      "shortDescription": "Group list items by common properties"
+    },
+    "reverse": {
+      "name": "Reverse",
+      "description": "This is a super simple browser-based application prints all list items in reverse. The input items can be separated by any symbol and you can also change the separator of the reversed list items.",
+      "shortDescription": "Quickly reverse a list"
+    },
+    "sort": {
+      "name": "Sort",
+      "description": "This is a super simple browser-based application that sorts items in a list and arranges them in increasing or decreasing order. You can sort the items alphabetically, numerically, or by their length. You can also remove duplicate and empty items, as well as trim individual items that have whitespace around them. You can use any separator character to separate the input list items or alternatively use a regular expression to separate them. Additionally, you can create a new delimiter for the sorted output list.",
+      "shortDescription": "Quickly sort a list"
+    }
+  },
+  "string": {
+    "uppercase": {
+      "name": "Uppercase",
+      "description": "World's simplest browser-based utility for converting text to uppercase. Just input your text and it will be automatically converted to all capital letters. Perfect for creating headlines, emphasizing text, or standardizing text format. Supports various text formats and preserves special characters.",
+      "shortDescription": "Convert text to uppercase letters"
+    },
+    "reverse": {
+      "name": "Reverse",
+      "description": "World's simplest browser-based utility for reversing text. Input any text and get it instantly reversed, character by character. Perfect for creating mirror text, analyzing palindromes, or playing with text patterns. Preserves spaces and special characters while reversing.",
+      "shortDescription": "Reverse any text character by character"
+    },
+    "repeat": {
+      "name": "Repeat text",
+      "description": "This tool allows you to repeat a given text multiple times with an optional separator.",
+      "shortDescription": "Repeat text multiple times"
+    },
+    "createPalindrome": {
+      "name": "Create palindrome",
+      "description": "World's simplest browser-based utility for creating palindromes from any text. Input text and instantly transform it into a palindrome that reads the same forward and backward. Perfect for word games, creating symmetrical text patterns, or exploring linguistic curiosities.",
+      "shortDescription": "Create text that reads the same forward and backward"
+    },
+    "palindrome": {
+      "name": "Palindrome",
+      "description": "World's simplest browser-based utility for checking if text is a palindrome. Instantly verify if your text reads the same forward and backward. Perfect for word puzzles, linguistic analysis, or validating symmetrical text patterns. Supports various delimiters and multi-word palindrome detection.",
+      "shortDescription": "Check if text reads the same forward and backward"
+    },
+    "toMorse": {
+      "name": "String To morse",
+      "description": "World's simplest browser-based utility for converting text to Morse code. Load your text in the input form on the left and you'll instantly get Morse code in the output area. Powerful, free, and fast. Load text – get Morse code.",
+      "shortDescription": "Quickly encode text to morse"
+    }
+  },
+  "pdf": {
+    "mergePdf": {
+      "name": "Merge PDF",
+      "description": "Combine multiple PDF files into a single document.",
+      "shortDescription": "Merge multiple PDF files into a single document"
+    },
+    "pdfToEpub": {
+      "name": "PDF to EPUB",
+      "description": "Transform PDF documents into EPUB files for better e-reader compatibility.",
+      "shortDescription": "Convert PDF files to EPUB format"
+    },
+    "protectPdf": {
+      "name": "Protect PDF",
+      "description": "Add password protection to your PDF files securely in your browser",
+      "shortDescription": "Password protect PDF files securely"
+    },
+    "splitPdf": {
+      "name": "Split PDF",
+      "description": "Extract specific pages from a PDF file using page numbers or ranges (e.g., 1,5-8)",
+      "shortDescription": "Extract specific pages from a PDF file"
+    },
+    "compressPdf": {
+      "name": "Compress PDF",
+      "description": "Reduce PDF file size while maintaining quality using Ghostscript",
+      "shortDescription": "Compress PDF files securely in your browser"
+    }
+  },
+  "number": {
+    "generate": {
+      "name": "Generate numbers",
+      "description": "Quickly calculate a list of integers in your browser. To get your list, just specify the first integer, change value and total count in the options below, and this utility will generate that many integers",
+      "shortDescription": "Quickly calculate a list of integers in your browser"
+    },
+    "sum": {
+      "name": "Sum numbers",
+      "description": "This is a super simple browser-based application that sums numbers. The input numbers can be separated by any symbol and you can also change the separator of the summed numbers.",
+      "shortDescription": "Quickly sum a list of numbers"
+    }
+  },
+  "audio": {
+    "extractAudio": {
+      "name": "Extract audio",
+      "description": "Extract the audio track from a video file and save it as a separate audio file in your chosen format (AAC, MP3, WAV).",
+      "shortDescription": "Extract audio from video files (MP4, MOV, etc.) to AAC, MP3, or WAV."
+    },
+    "changeSpeed": {
+      "name": "Change audio speed",
+      "description": "Change the playback speed of audio files. Speed up or slow down audio while maintaining pitch.",
+      "shortDescription": "Change the speed of audio files"
+    }
+  },
+  "csv": {
+    "findIncompleteCsvRecords": {
+      "name": "Find incomplete CSV records",
+      "description": "Just upload your CSV file in the form below and this tool will automatically check if none of the rows or columns are missing values. In the tool options, you can adjust the input file format (specify the delimiter, quote character, and comment character). Additionally, you can enable checking for empty values, skip empty lines, and set a limit on the number of error messages in the output.",
+      "shortDescription": "Quickly find rows and columns in CSV that are missing values."
+    }
+  }
+}

@@ -5,6 +5,7 @@ import { CardExampleType } from '@components/examples/ToolExamples';
 import { validateJson } from './service';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolContent from '@components/ToolContent';
+import { useTranslation } from 'react-i18next';
 
 const exampleCards: CardExampleType<{}>[] = [
   {
@@ -46,6 +47,7 @@ const exampleCards: CardExampleType<{}>[] = [
 ];
 
 export default function ValidateJson({ title }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -53,9 +55,9 @@ export default function ValidateJson({ title }: ToolComponentProps) {
     const { valid, error } = validateJson(input);
 
     if (valid) {
-      setResult('✅ Valid JSON');
+      setResult(t('json.validateJson.validJson'));
     } else {
-      setResult(`❌ ${error}`);
+      setResult(t('json.validateJson.invalidJson', { error }));
     }
   };
 
@@ -63,25 +65,23 @@ export default function ValidateJson({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       inputComponent={
-        <ToolTextInput title="Input JSON" value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('json.validateJson.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
       resultComponent={
-        <ToolTextResult title="Validation Result" value={result} />
+        <ToolTextResult
+          title={t('json.validateJson.resultTitle')}
+          value={result}
+        />
       }
       initialValues={{}}
       getGroups={null}
       toolInfo={{
-        title: 'What is JSON Validation?',
-        description: `
-          JSON (JavaScript Object Notation) is a lightweight data-interchange format.
-          JSON validation ensures that the structure of the data conforms to the JSON standard.
-          A valid JSON object must have:
-          - Property names enclosed in double quotes.
-          - Properly balanced curly braces {}.
-          - No trailing commas after the last key-value pair.
-          - Proper nesting of objects and arrays.
-          This tool checks the input JSON and provides feedback to help identify and fix common errors.
-          `
+        title: t('json.validateJson.toolInfo.title'),
+        description: t('json.validateJson.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

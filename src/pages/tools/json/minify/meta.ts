@@ -4,10 +4,15 @@ import { lazy } from 'react';
 export const tool = defineTool('json', {
   name: 'Minify JSON',
   path: 'minify',
-  icon: 'lets-icons:json-light',
+  icon: 'material-symbols:code',
   description:
-    'Minify your JSON by removing all unnecessary whitespace and formatting. This tool compresses JSON data to its smallest possible size while maintaining valid JSON structure.',
-  shortDescription: 'Quickly compress JSON file.',
-  keywords: ['minify', 'compress', 'minimize', 'json', 'compact'],
-  component: lazy(() => import('./index'))
+    'Minify JSON data by removing unnecessary whitespace and formatting. Reduce file size while maintaining data integrity.',
+  shortDescription: 'Minify JSON by removing whitespace',
+  keywords: ['json', 'minify', 'compress', 'whitespace'],
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'json.minify.name',
+    description: 'json.minify.description',
+    shortDescription: 'json.minify.shortDescription'
+  }
 });

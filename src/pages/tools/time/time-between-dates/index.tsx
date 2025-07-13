@@ -11,6 +11,7 @@ import {
 } from './service';
 import * as Yup from 'yup';
 import { CardExampleType } from '@components/examples/ToolExamples';
+import { useTranslation } from 'react-i18next';
 
 type TimeUnit =
   | 'milliseconds'
@@ -120,11 +121,12 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function TimeBetweenDates() {
+  const { t } = useTranslation();
   const [result, setResult] = useState<string>('');
 
   return (
     <ToolContent
-      title="Time Between Dates"
+      title={t('time.timeBetweenDates.title')}
       inputComponent={null}
       resultComponent={
         result ? (
@@ -153,29 +155,28 @@ export default function TimeBetweenDates() {
       validationSchema={validationSchema}
       exampleCards={exampleCards}
       toolInfo={{
-        title: 'Time Between Dates Calculator',
-        description:
-          'Calculate the exact time difference between two dates and times, with support for different timezones. This tool provides a detailed breakdown of the time difference in various units (years, months, days, hours, minutes, and seconds).'
+        title: t('time.timeBetweenDates.toolInfo.title'),
+        description: t('time.timeBetweenDates.toolInfo.description')
       }}
       getGroups={({ values, updateField }) => [
         {
-          title: 'Start Date & Time',
+          title: t('time.timeBetweenDates.startDateTime'),
           component: (
             <Box>
               <TextFieldWithDesc
-                description="Start Date"
+                description={t('time.timeBetweenDates.startDate')}
                 value={values.startDate}
                 onOwnChange={(val) => updateField('startDate', val)}
                 type="date"
               />
               <TextFieldWithDesc
-                description="Start Time"
+                description={t('time.timeBetweenDates.startTime')}
                 value={values.startTime}
                 onOwnChange={(val) => updateField('startTime', val)}
                 type="time"
               />
               <SelectWithDesc
-                description="Start Timezone"
+                description={t('time.timeBetweenDates.startTimezone')}
                 selected={values.startTimezone}
                 onChange={(val: string) => updateField('startTimezone', val)}
                 options={timezoneOptions}
@@ -184,23 +185,23 @@ export default function TimeBetweenDates() {
           )
         },
         {
-          title: 'End Date & Time',
+          title: t('time.timeBetweenDates.endDateTime'),
           component: (
             <Box>
               <TextFieldWithDesc
-                description="End Date"
+                description={t('time.timeBetweenDates.endDate')}
                 value={values.endDate}
                 onOwnChange={(val) => updateField('endDate', val)}
                 type="date"
               />
               <TextFieldWithDesc
-                description="End Time"
+                description={t('time.timeBetweenDates.endTime')}
                 value={values.endTime}
                 onOwnChange={(val) => updateField('endTime', val)}
                 type="time"
               />
               <SelectWithDesc
-                description="End Timezone"
+                description={t('time.timeBetweenDates.endTimezone')}
                 selected={values.endTimezone}
                 onChange={(val: string) => updateField('endTimezone', val)}
                 options={timezoneOptions}

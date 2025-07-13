@@ -1,16 +1,17 @@
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
-import { ToolComponentProps } from '@tools/defineTool';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import { GetGroupsType } from '@components/options/ToolOptions';
-import { CardExampleType } from '@components/examples/ToolExamples';
 import { main } from './service';
-import { getCsvHeaders } from '@utils/csv';
 import { InitialValuesType } from './types';
+import { GetGroupsType } from '@components/options/ToolOptions';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import SelectWithDesc from '@components/options/SelectWithDesc';
+import { CardExampleType } from '@components/examples/ToolExamples';
+import { ToolComponentProps } from '@tools/defineTool';
+import { getCsvHeaders } from '@utils/csv';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   csvToInsert: '',
@@ -27,15 +28,19 @@ const initialValues: InitialValuesType = {
 
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
-    title: 'Add One Column to a CSV File',
+    title: 'Insert a single column by position',
     description:
-      'In this example, we insert a column with the title "city" into a CSV file that already contains two other columns with titles "name" and "age". The new column consists of three values: "city", "dallas", and "houston", corresponding to the height of the input CSV data. The value "city" is the header value (appearing on the first row) and values "dallas" and "houston" are data values (appearing on rows two and three). We specify the position of the new column by an ordinal number and set it to 1 in the options. This value indicates that the new "city" column should be placed after the first column.',
-    sampleText: `name,age
-john,25
-emma,22`,
-    sampleResult: `name,city,age
-john,dallas,25
-emma,houston,22`,
+      'In this example, we insert a single column "city" at position 1 in the CSV data. The input CSV has data about cars, including the "Brand" and "Model" of the car. We now add a "city" column at position 1. To do this, we enter the city data in the comma-separated format in the "New Column" option, and to quickly add the new column at position 1, then we specify the position number.',
+    sampleText: `Brand,Model
+Toyota,Camry
+Ford,Mustang
+Honda,Accord
+Chevrolet,Malibu`,
+    sampleResult: `city,Brand,Model
+dallas,Toyota,Camry
+houston,Ford,Mustang
+dallas,Honda,Accord
+houston,Chevrolet,Malibu`,
     sampleOptions: {
       csvToInsert: `city
 dallas
@@ -118,6 +123,7 @@ export default function InsertCsvColumns({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -139,7 +145,7 @@ export default function InsertCsvColumns({
     updateField
   }) => [
     {
-      title: 'CSV to insert',
+      title: t('csv.insertCsvColumns.csvToInsert'),
       component: (
         <Box>
           <TextFieldWithDesc
@@ -147,44 +153,42 @@ export default function InsertCsvColumns({
             rows={3}
             value={values.csvToInsert}
             onOwnChange={(val) => updateField('csvToInsert', val)}
-            title="CSV separator"
-            description={`Enter one or more columns you want to insert into the CSV.
-              the character used to delimit columns has to be the same with the one in the CSV input file.
-              Ps: Blank lines will be ignored`}
+            title={t('csv.insertCsvColumns.csvSeparator')}
+            description={t('csv.insertCsvColumns.csvToInsertDescription')}
           />
         </Box>
       )
     },
     {
-      title: 'CSV Options',
+      title: t('csv.insertCsvColumns.csvOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.separator}
             onOwnChange={(val) => updateField('separator', val)}
-            description={
-              'Enter the character used to delimit columns in the CSV input file.'
-            }
+            description={t('csv.insertCsvColumns.separatorDescription')}
           />
           <TextFieldWithDesc
             value={values.quoteChar}
             onOwnChange={(val) => updateField('quoteChar', val)}
-            description={
-              'Enter the quote character used to quote the CSV input fields.'
-            }
+            description={t('csv.insertCsvColumns.quoteCharDescription')}
           />
           <TextFieldWithDesc
             value={values.commentCharacter}
             onOwnChange={(val) => updateField('commentCharacter', val)}
-            description={
-              'Enter the character indicating the start of a comment line. Lines starting with this symbol will be skipped.'
-            }
+            description={t('csv.insertCsvColumns.commentCharacterDescription')}
           />
           <SelectWithDesc
             selected={values.customFill}
             options={[
-              { label: 'Fill With Empty Values', value: false },
-              { label: 'Fill With Customs Values', value: true }
+              {
+                label: t('csv.insertCsvColumns.fillWithEmptyValues'),
+                value: false
+              },
+              {
+                label: t('csv.insertCsvColumns.fillWithCustomValues'),
+                value: true
+              }
             ]}
             onChange={(value) => {
               updateField('customFill', value);
@@ -192,48 +196,59 @@ export default function InsertCsvColumns({
                 updateField('customFillValue', ''); // Reset custom fill value
               }
             }}
-            description={
-              'If the input CSV file is incomplete (missing values), then add empty fields or custom symbols to records to make a well-formed CSV?'
-            }
+            description={t('csv.insertCsvColumns.customFillDescription')}
           />
           {values.customFill && (
             <TextFieldWithDesc
               value={values.customFillValue}
               onOwnChange={(val) => updateField('customFillValue', val)}
-              description={
-                'Use this custom value to fill in missing fields. (Works only with "Custom Values" mode above.)'
-              }
+              description={t('csv.insertCsvColumns.customFillValueDescription')}
             />
           )}
         </Box>
       )
     },
     {
-      title: 'Position Options',
+      title: t('csv.insertCsvColumns.positionOptions'),
       component: (
         <Box>
           <SelectWithDesc
             selected={values.insertingPosition}
             options={[
-              { label: 'Prepend columns', value: 'prepend' },
-              { label: 'Append columns', value: 'append' },
-              { label: 'Custom position', value: 'custom' }
+              {
+                label: t('csv.insertCsvColumns.prependColumns'),
+                value: 'prepend'
+              },
+              {
+                label: t('csv.insertCsvColumns.appendColumns'),
+                value: 'append'
+              },
+              {
+                label: t('csv.insertCsvColumns.customPosition'),
+                value: 'custom'
+              }
             ]}
             onChange={(value) => updateField('insertingPosition', value)}
-            description={'Specify where to insert the columns in the CSV file.'}
+            description={t('csv.insertCsvColumns.insertingPositionDescription')}
           />
 
           {values.insertingPosition === 'custom' && (
             <SelectWithDesc
               selected={values.customPostionOptions}
               options={[
-                { label: 'Header name', value: 'headerName' },
-                { label: 'Position ', value: 'rowNumber' }
+                {
+                  label: t('csv.insertCsvColumns.headerName'),
+                  value: 'headerName'
+                },
+                {
+                  label: t('csv.insertCsvColumns.position'),
+                  value: 'rowNumber'
+                }
               ]}
               onChange={(value) => updateField('customPostionOptions', value)}
-              description={
-                'Select the method to insert the columns in the CSV file.'
-              }
+              description={t(
+                'csv.insertCsvColumns.customPositionOptionsDescription'
+              )}
             />
           )}
 
@@ -243,42 +258,53 @@ export default function InsertCsvColumns({
                 selected={values.headerName}
                 options={headerOptions}
                 onChange={(value) => updateField('headerName', value)}
-                description={
-                  'Header of the column you want to insert columns after.'
-                }
+                description={t('csv.insertCsvColumns.headerNameDescription')}
               />
             )}
 
           {values.insertingPosition === 'custom' &&
             values.customPostionOptions === 'rowNumber' && (
               <TextFieldWithDesc
-                value={values.rowNumber}
-                onOwnChange={(val) => updateField('rowNumber', Number(val))}
-                inputProps={{ min: 1, max: headers.length }}
-                type="number"
-                description={
-                  'Number of the column you want to insert columns after.'
+                value={values.rowNumber.toString()}
+                onOwnChange={(val) =>
+                  updateField('rowNumber', parseInt(val) || 0)
                 }
+                description={t('csv.insertCsvColumns.rowNumberDescription')}
+                type="number"
               />
             )}
         </Box>
       )
     }
   ];
+
   return (
     <ToolContent
       title={title}
-      input={input}
       inputComponent={
-        <ToolTextInput value={input} title="Input CSV" onChange={setInput} />
+        <ToolTextInput
+          title={t('csv.insertCsvColumns.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
-      resultComponent={<ToolTextResult title="Output CSV" value={result} />}
+      resultComponent={
+        <ToolTextResult
+          title={t('csv.insertCsvColumns.resultTitle')}
+          value={result}
+          extension={'csv'}
+        />
+      }
       initialValues={initialValues}
-      exampleCards={exampleCards}
       getGroups={getGroups}
-      setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      input={input}
+      setInput={setInput}
+      toolInfo={{
+        title: t('csv.insertCsvColumns.toolInfo.title'),
+        description: t('csv.insertCsvColumns.toolInfo.description')
+      }}
+      exampleCards={exampleCards}
     />
   );
 }

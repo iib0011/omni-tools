@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import PublishIcon from '@mui/icons-material/Publish';
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import ClearIcon from '@mui/icons-material/Clear';
+import { useTranslation } from 'react-i18next';
 
 export default function InputFooter({
   handleImport,
@@ -13,19 +14,21 @@ export default function InputFooter({
   handleCopy?: () => void;
   handleClear?: () => void;
 }) {
+  const { t } = useTranslation();
+
   return (
     <Stack mt={1} direction={'row'} spacing={2}>
       <Button onClick={handleImport} startIcon={<PublishIcon />}>
-        Import from file
+        {t('inputFooter.importFromFile')}
       </Button>
       {handleCopy && (
         <Button onClick={handleCopy} startIcon={<ContentPasteIcon />}>
-          Copy to clipboard
+          {t('inputFooter.copyToClipboard')}
         </Button>
       )}
       {handleClear && (
         <Button onClick={handleClear} startIcon={<ClearIcon />}>
-          Clear
+          {t('inputFooter.clear')}
         </Button>
       )}
     </Stack>

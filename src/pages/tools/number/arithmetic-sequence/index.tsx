@@ -7,6 +7,7 @@ import { generateArithmeticSequence } from './service';
 import * as Yup from 'yup';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
+import { useTranslation } from 'react-i18next';
 
 type InitialValuesType = {
   firstTerm: string;
@@ -70,6 +71,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function ArithmeticSequence({ title }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [result, setResult] = useState<string>('');
 
   return (
@@ -77,35 +79,43 @@ export default function ArithmeticSequence({ title }: ToolComponentProps) {
       title={title}
       inputComponent={null}
       resultComponent={
-        <ToolTextResult title="Generated Sequence" value={result} />
+        <ToolTextResult
+          title={t('number.arithmeticSequence.resultTitle')}
+          value={result}
+        />
       }
       initialValues={initialValues}
       validationSchema={validationSchema}
       exampleCards={exampleCards}
       toolInfo={{
-        title: 'What is an Arithmetic Sequence?',
-        description:
-          'An arithmetic sequence is a sequence of numbers where the difference between each consecutive term is constant. This constant difference is called the common difference. Given the first term (a₁) and the common difference (d), each term can be found by adding the common difference to the previous term.'
+        title: t('number.arithmeticSequence.toolInfo.title'),
+        description: t('number.arithmeticSequence.toolInfo.description')
       }}
       getGroups={({ values, updateField }) => [
         {
-          title: 'Sequence Parameters',
+          title: t('number.arithmeticSequence.sequenceParameters'),
           component: (
             <Box>
               <TextFieldWithDesc
-                description="First term of the sequence (a₁)"
+                description={t(
+                  'number.arithmeticSequence.firstTermDescription'
+                )}
                 value={values.firstTerm}
                 onOwnChange={(val) => updateField('firstTerm', val)}
                 type="number"
               />
               <TextFieldWithDesc
-                description="Common difference between terms (d)"
+                description={t(
+                  'number.arithmeticSequence.commonDifferenceDescription'
+                )}
                 value={values.commonDifference}
                 onOwnChange={(val) => updateField('commonDifference', val)}
                 type="number"
               />
               <TextFieldWithDesc
-                description="Number of terms to generate (n)"
+                description={t(
+                  'number.arithmeticSequence.numberOfTermsDescription'
+                )}
                 value={values.numberOfTerms}
                 onOwnChange={(val) => updateField('numberOfTerms', val)}
                 type="number"
@@ -114,10 +124,10 @@ export default function ArithmeticSequence({ title }: ToolComponentProps) {
           )
         },
         {
-          title: 'Output Format',
+          title: t('number.arithmeticSequence.outputFormat'),
           component: (
             <TextFieldWithDesc
-              description="Separator between terms"
+              description={t('number.arithmeticSequence.separatorDescription')}
               value={values.separator}
               onOwnChange={(val) => updateField('separator', val)}
             />

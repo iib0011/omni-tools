@@ -8,5 +8,10 @@ export const meta = defineTool('pdf', {
   icon: 'material-symbols-light:merge',
   component: lazy(() => import('./index')),
   keywords: ['pdf', 'merge', 'extract', 'pages', 'combine', 'document'],
-  path: 'merge-pdf'
+  path: 'merge-pdf',
+  i18n: {
+    name: 'pdf.mergePdf.name',
+    description: 'pdf.mergePdf.description',
+    shortDescription: 'pdf.mergePdf.shortDescription'
+  }
 });

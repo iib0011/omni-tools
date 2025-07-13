@@ -3,12 +3,17 @@ import { lazy } from 'react';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('number', {
-  name: 'Number Sum Calculator',
+  name: 'Sum',
   path: 'sum',
-  icon: 'fluent:autosum-20-regular',
+  icon: 'material-symbols:add',
   description:
-    'Quickly calculate the sum of numbers in your browser. To get your sum, just enter your list of numbers in the input field, adjust the separator between the numbers in the options below, and this utility will add up all these numbers.',
-  shortDescription: 'Quickly sum numbers',
-  keywords: ['sum'],
-  component: lazy(() => import('./index'))
+    'Calculate the sum of a list of numbers. Enter numbers separated by commas or newlines to get their total sum.',
+  shortDescription: 'Calculate sum of numbers',
+  keywords: ['sum', 'add', 'calculate', 'total'],
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'number.sum.name',
+    description: 'number.sum.description',
+    shortDescription: 'number.sum.shortDescription'
+  }
 });

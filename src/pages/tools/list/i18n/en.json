@@ -1,0 +1,115 @@
+{
+  "group": {
+    "title": "Group List",
+    "description": "Group list items by common properties.",
+    "inputTitle": "Input list",
+    "resultTitle": "Grouped list",
+    "groupingOptions": "Grouping Options",
+    "groupByDescription": "Choose how to group the list items",
+    "groupByValue": "Group by Value",
+    "groupByValueDescription": "Group items that have the same value",
+    "groupByLength": "Group by Length",
+    "groupByLengthDescription": "Group items by their character length",
+    "groupByFirstChar": "Group by First Character",
+    "groupByFirstCharDescription": "Group items by their first character",
+    "groupByLastChar": "Group by Last Character",
+    "groupByLastCharDescription": "Group items by their last character",
+    "toolInfo": {
+      "title": "Group List",
+      "description": "This tool allows you to group list items by various criteria such as value, length, or character position. It's useful for organizing and categorizing data."
+    }
+  },
+  "reverse": {
+    "title": "Reverse List",
+    "description": "Reverse the order of items in a list.",
+    "inputTitle": "Input list",
+    "resultTitle": "Reversed list",
+    "reverseOptions": "Reverse Options",
+    "reverseEachLine": "Reverse Each Line",
+    "reverseEachLineDescription": "Reverse each line separately instead of the entire list",
+    "toolInfo": {
+      "title": "Reverse List",
+      "description": "This tool allows you to reverse the order of items in a list. You can reverse the entire list or each line separately."
+    }
+  },
+  "sort": {
+    "title": "Sort List",
+    "description": "Sort list items in ascending or descending order.",
+    "inputTitle": "Input list",
+    "resultTitle": "Sorted list",
+    "sortOptions": "Sort Options",
+    "sortOrder": "Sort Order",
+    "ascending": "Ascending",
+    "descending": "Descending",
+    "sortType": "Sort Type",
+    "alphabetical": "Alphabetical",
+    "numerical": "Numerical",
+    "natural": "Natural",
+    "toolInfo": {
+      "title": "Sort List",
+      "description": "This tool allows you to sort list items in various orders and types. You can sort alphabetically, numerically, or using natural sorting."
+    }
+  },
+  "duplicate": {
+    "title": "Find Duplicates",
+    "description": "Find and remove duplicate items from a list.",
+    "inputTitle": "Input list",
+    "resultTitle": "Unique list",
+    "duplicateOptions": "Duplicate Options",
+    "removeDuplicates": "Remove Duplicates",
+    "removeDuplicatesDescription": "Remove duplicate items from the list",
+    "showDuplicates": "Show Duplicates",
+    "showDuplicatesDescription": "Show only the duplicate items",
+    "toolInfo": {
+      "title": "Find Duplicates",
+      "description": "This tool allows you to find and handle duplicate items in a list. You can remove duplicates or show only the duplicate items."
+    }
+  },
+  "findUnique": {
+    "title": "Find Unique",
+    "description": "Find unique items in a list.",
+    "inputTitle": "Input list",
+    "resultTitle": "Unique items",
+    "uniqueOptions": "Unique Options",
+    "showUnique": "Show Unique",
+    "showUniqueDescription": "Show only unique items",
+    "showDuplicates": "Show Duplicates",
+    "showDuplicatesDescription": "Show only duplicate items",
+    "toolInfo": {
+      "title": "Find Unique",
+      "description": "This tool allows you to find unique items in a list. You can show unique items or duplicate items."
+    }
+  },
+  "shuffle": {
+    "title": "Shuffle List",
+    "description": "Randomly shuffle the order of list items.",
+    "inputTitle": "Input list",
+    "resultTitle": "Shuffled list",
+    "shuffleOptions": "Shuffle Options",
+    "shuffleEachLine": "Shuffle Each Line",
+    "shuffleEachLineDescription": "Shuffle each line separately instead of the entire list",
+    "toolInfo": {
+      "title": "Shuffle List",
+      "description": "This tool allows you to randomly shuffle the order of items in a list. You can shuffle the entire list or each line separately."
+    }
+  },
+  "wrap": {
+    "title": "Wrap List",
+    "description": "Add text before and after each list item.",
+    "inputTitle": "Input List",
+    "resultTitle": "Wrapped List",
+    "splitOptions": "Split Options",
+    "splitBySymbol": "Split by Symbol",
+    "splitByRegex": "Split by Regular Expression",
+    "splitSeparatorDescription": "Separator to split the list",
+    "joinSeparatorDescription": "Separator to join the wrapped list",
+    "removeEmptyItems": "Remove empty items",
+    "wrapOptions": "Wrap Options",
+    "leftTextDescription": "Text to add before each item",
+    "rightTextDescription": "Text to add after each item",
+    "toolInfo": {
+      "title": "List Wrapping",
+      "description": "This tool allows you to add text before and after each item in a list. You can specify different text for the left and right sides, and control how the list is processed. It's useful for adding quotes, brackets, or other formatting to list items, preparing data for different formats, or creating structured text."
+    }
+  }
+}

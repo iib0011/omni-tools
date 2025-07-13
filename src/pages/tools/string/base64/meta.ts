@@ -9,5 +9,10 @@ export const tool = defineTool('string', {
     'A simple tool to encode or decode data using Base64, which is commonly used in web applications.',
   shortDescription: 'Encode or decode data using Base64.',
   keywords: ['base64'],
-  component: lazy(() => import('./index'))
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'string.base64.name',
+    description: 'string.base64.description',
+    shortDescription: 'string.base64.shortDescription'
+  }
 });

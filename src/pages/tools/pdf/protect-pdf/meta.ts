@@ -23,5 +23,10 @@ export const tool = defineTool('pdf', {
   ],
   longDescription:
     'Add password protection to your PDF files securely in your browser. Your files never leave your device, ensuring complete privacy while securing your documents with password encryption. Perfect for protecting sensitive information, confidential documents, or personal data.',
-  component: lazy(() => import('./index'))
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'pdf.protectPdf.name',
+    description: 'pdf.protectPdf.description',
+    shortDescription: 'pdf.protectPdf.shortDescription'
+  }
 });

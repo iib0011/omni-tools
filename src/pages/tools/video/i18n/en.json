@@ -1,0 +1,79 @@
+{
+  "compress": {
+    "title": "Compress Video",
+    "description": "Reduce video file size while maintaining quality.",
+    "inputTitle": "Input Video",
+    "resultTitle": "Compressed Video",
+    "compressionOptions": "Compression Options",
+    "qualityDescription": "Video quality (1-100)",
+    "qualityPlaceholder": "Quality",
+    "toolInfo": {
+      "title": "Video Compression",
+      "description": "This tool allows you to compress video files to reduce their size while maintaining acceptable quality. You can adjust the compression level to balance between file size and video quality."
+    }
+  },
+  "rotate": {
+    "title": "Rotate Video",
+    "description": "Rotate video by specified degrees.",
+    "inputTitle": "Input Video",
+    "resultTitle": "Rotated Video",
+    "rotationOptions": "Rotation Options",
+    "rotationAngleDescription": "Rotation angle in degrees",
+    "anglePlaceholder": "Angle",
+    "toolInfo": {
+      "title": "Video Rotation",
+      "description": "This tool allows you to rotate video files by a specified angle. You can rotate videos by 90, 180, or 270 degrees, or any custom angle."
+    }
+  },
+  "flip": {
+    "title": "Flip Video",
+    "description": "Flip video horizontally or vertically.",
+    "inputTitle": "Input Video",
+    "resultTitle": "Flipped Video",
+    "flipOptions": "Flip Options",
+    "horizontalFlip": "Horizontal Flip",
+    "verticalFlip": "Vertical Flip",
+    "toolInfo": {
+      "title": "Video Flip",
+      "description": "This tool allows you to flip video files horizontally or vertically. Horizontal flip creates a mirror effect, while vertical flip turns the video upside down."
+    }
+  },
+  "loop": {
+    "title": "Loop Video",
+    "description": "Create a looping video by repeating the original video multiple times.",
+    "inputTitle": "Input Video",
+    "resultTitle": "Looped Video",
+    "loops": "Loops",
+    "numberOfLoops": "Number of Loops",
+    "loopingVideo": "Looping Video",
+    "toolInfo": {
+      "title": "What is a {{title}}?",
+      "description": "This tool allows you to create a looping video by repeating the original video multiple times. You can specify how many times the video should loop."
+    }
+  },
+  "cropVideo": {
+    "title": "Crop Video",
+    "description": "Crop video to remove unwanted areas.",
+    "inputTitle": "Input Video",
+    "resultTitle": "Cropped Video",
+    "croppingVideo": "Cropping Video",
+    "videoInformation": "Video Information",
+    "videoDimensions": "Video dimensions: {{width}} × {{height}} pixels",
+    "loadVideoForDimensions": "Load a video to see dimensions",
+    "cropCoordinates": "Crop Coordinates",
+    "xCoordinate": "X (left)",
+    "yCoordinate": "Y (top)",
+    "width": "Width",
+    "height": "Height",
+    "errorNonNegativeCoordinates": "X and Y coordinates must be non-negative",
+    "errorPositiveDimensions": "Width and height must be positive",
+    "errorBeyondWidth": "Crop area extends beyond video width ({{width}}px)",
+    "errorBeyondHeight": "Crop area extends beyond video height ({{height}}px)",
+    "errorCroppingVideo": "Error cropping video. Please check parameters and video file.",
+    "errorLoadingDimensions": "Failed to load video dimensions",
+    "toolInfo": {
+      "title": "Crop Video",
+      "description": "This tool allows you to crop video files to remove unwanted areas. You can specify the crop area by setting the X, Y coordinates and width, height dimensions."
+    }
+  }
+}

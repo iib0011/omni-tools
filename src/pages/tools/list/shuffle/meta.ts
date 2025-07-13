@@ -7,8 +7,13 @@ export const tool = defineTool('list', {
   path: 'shuffle',
   icon: 'material-symbols-light:shuffle',
   description:
-    'A tool to randomly reorder items in a list. Perfect for randomizing data, creating random selections, or generating random sequences.',
-  shortDescription: 'Randomly reorder list items.',
+    "World's simplest browser-based utility for shuffling list items. Input your list and instantly get a randomized version with items in random order. Perfect for creating variety, testing randomness, or mixing up ordered data.",
+  shortDescription: 'Randomize the order of list items',
   keywords: ['shuffle'],
-  component: lazy(() => import('./index'))
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'list.shuffle.name',
+    description: 'list.shuffle.description',
+    shortDescription: 'list.shuffle.shortDescription'
+  }
 });

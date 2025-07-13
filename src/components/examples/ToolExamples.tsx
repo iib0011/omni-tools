@@ -3,6 +3,7 @@ import ExampleCard, { ExampleCardProps } from './ExampleCard';
 import React from 'react';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import { useFormikContext } from 'formik';
+import { useTranslation } from 'react-i18next';
 
 export type CardExampleType<T> = Omit<
   ExampleCardProps<T>,
@@ -24,6 +25,7 @@ export default function ToolExamples<T>({
   getGroups,
   setInput
 }: ExampleProps<T>) {
+  const { t } = useTranslation();
   const { setValues } = useFormikContext<T>();
 
   function changeInputResult(newInput: string | undefined, newOptions: T) {
@@ -39,10 +41,10 @@ export default function ToolExamples<T>({
     <Box id={'examples'} mt={4}>
       <Box mt={4} display="flex" gap={1} alignItems="center">
         <Typography mb={2} fontSize={30} color={'primary'}>
-          {`${title} Examples`}
+          {t('toolExamples.title', { title })}
         </Typography>
         <Typography mb={2} fontSize={30} color={'secondary'}>
-          {subtitle ?? 'Click to try!'}
+          {subtitle ?? t('toolExamples.subtitle')}
         </Typography>
       </Box>
 

@@ -19,6 +19,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { Icon } from '@iconify/react';
 import { Mode } from 'components/App';
+import { useTranslation } from 'react-i18next';
 
 interface NavbarProps {
   mode: Mode;
@@ -29,6 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({
   mode,
   onChangeMode: onChangeMode
 }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -83,7 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({
         />
       }
     >
-      Buy me a coffee
+      {t('navbar.buyMeACoffee')}
     </Button>
   ];
   const drawerList = (

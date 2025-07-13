@@ -1,0 +1,72 @@
+{
+  "mergePdf": {
+    "title": "Merge PDF",
+    "description": "Combine multiple PDF files into a single document.",
+    "inputTitle": "Input PDFs",
+    "resultTitle": "Merged PDF",
+    "mergingPdfs": "Merging PDFs",
+    "pdfOptions": "PDF Options",
+    "sortByFileName": "Sort by file name",
+    "sortByFileNameDescription": "Sort PDFs alphabetically by file name",
+    "sortByUploadOrder": "Sort by upload order",
+    "sortByUploadOrderDescription": "Keep PDFs in the order they were uploaded",
+    "toolInfo": {
+      "title": "Merge PDF Files",
+      "description": "This tool allows you to combine multiple PDF files into a single document. You can choose how to sort the PDFs and the tool will merge them in the specified order."
+    }
+  },
+  "compressPdf": {
+    "title": "Compress PDF",
+    "description": "Reduce PDF file size while maintaining quality.",
+    "inputTitle": "Input PDF",
+    "resultTitle": "Compressed PDF",
+    "compressingPdf": "Compressing PDF",
+    "compressionOptions": "Compression Options",
+    "qualityDescription": "Compression quality (1-100)",
+    "qualityPlaceholder": "Quality",
+    "toolInfo": {
+      "title": "Compress PDF",
+      "description": "This tool allows you to compress PDF files to reduce their size while maintaining acceptable quality. You can adjust the compression level to balance between file size and quality."
+    }
+  },
+  "splitPdf": {
+    "title": "Split PDF",
+    "description": "Extract specific pages from a PDF document.",
+    "inputTitle": "Input PDF",
+    "resultTitle": "Extracted PDF",
+    "extractingPages": "Extracting pages",
+    "pageSelection": "Page Selection",
+    "pdfPageCount": "PDF has {{count}} page{{count !== 1 ? 's' : ''}}",
+    "pageRangesDescription": "Enter page numbers or ranges separated by commas (e.g., 1,3,5-7)",
+    "pageRangesPlaceholder": "e.g., 1,5-8",
+    "pageExtractionPreview": "{{count}} page{{count !== 1 ? 's' : ''}} will be extracted",
+    "toolInfo": {
+      "title": "Split PDF",
+      "description": "This tool allows you to extract specific pages from a PDF document. You can specify individual pages or ranges of pages to extract."
+    }
+  },
+  "rotatePdf": {
+    "title": "Rotate PDF",
+    "description": "Rotate pages in a PDF document.",
+    "inputTitle": "Input PDF",
+    "resultTitle": "Rotated PDF",
+    "rotatingPages": "Rotating pages",
+    "rotationSettings": "Rotation Settings",
+    "rotationAngle": "Rotation Angle",
+    "angleOptions": {
+      "clockwise90": "90° Clockwise",
+      "upsideDown180": "180° (Upside down)",
+      "counterClockwise270": "270° (90° Counter-clockwise)"
+    },
+    "applyToAllPages": "Apply to all pages",
+    "pdfPageCount": "PDF has {{count}} page{{count !== 1 ? 's' : ''}}",
+    "pageRangesDescription": "Enter page numbers or ranges separated by commas (e.g., 1,3,5-7)",
+    "pageRangesPlaceholder": "e.g., 1,5-8",
+    "allPagesWillBeRotated": "All {{count}} pages will be rotated",
+    "pagesWillBeRotated": "{{count}} page{{count !== 1 ? 's' : ''}} will be rotated",
+    "toolInfo": {
+      "title": "How to Use the Rotate PDF Tool",
+      "description": "This tool allows you to rotate pages in a PDF document. You can rotate all pages or specify individual pages to rotate. Choose a rotation angle: 90° Clockwise, 180° (Upside down), or 270° (90° Counter-clockwise). To rotate specific pages, uncheck \"Apply to all pages\" and enter page numbers or ranges separated by commas (e.g., 1,3,5-7)."
+    }
+  }
+}

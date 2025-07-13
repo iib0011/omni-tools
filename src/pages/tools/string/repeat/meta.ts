@@ -9,5 +9,10 @@ export const tool = defineTool('string', {
   description:
     'This tool allows you to repeat a given text multiple times with an optional separator.',
   keywords: ['text', 'repeat'],
-  component: lazy(() => import('./index'))
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'string.repeat.name',
+    description: 'string.repeat.description',
+    shortDescription: 'string.repeat.shortDescription'
+  }
 });

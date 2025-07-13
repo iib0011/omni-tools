@@ -10,6 +10,7 @@ import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   emptyLines: false,
@@ -216,6 +217,7 @@ export default function Truncate({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -228,49 +230,47 @@ export default function Truncate({
     updateField
   }) => [
     {
-      title: 'Delimiters Options',
+      title: t('string.statistic.delimitersOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.sentenceDelimiters}
             onOwnChange={(val) => updateField('sentenceDelimiters', val)}
-            placeholder="e.g. ., !, ?, ..."
-            description={
-              'Enter custom characters used to delimit sentences in your language (separated by comma) or leave it blank for default.'
-            }
+            placeholder={t('string.statistic.sentenceDelimitersPlaceholder')}
+            description={t('string.statistic.sentenceDelimitersDescription')}
           />
           <TextFieldWithDesc
             value={values.wordDelimiters}
             onOwnChange={(val) => updateField('wordDelimiters', val)}
-            placeholder="eg. \\s.,;:!?\”«»()…"
-            description={
-              'Enter custom Regex to count Words or leave it blank for default.'
-            }
+            placeholder={t('string.statistic.wordDelimitersPlaceholder')}
+            description={t('string.statistic.wordDelimitersDescription')}
           />
         </Box>
       )
     },
     {
-      title: 'Statistics Options',
+      title: t('string.statistic.statisticsOptions'),
       component: (
         <Box>
           <CheckboxWithDesc
             checked={values.wordCount}
             onChange={(value) => updateField('wordCount', value)}
-            title="Word Frequency Analysis"
-            description="Count how often each word appears in the text"
+            title={t('string.statistic.wordFrequencyAnalysis')}
+            description={t('string.statistic.wordFrequencyAnalysisDescription')}
           />
           <CheckboxWithDesc
             checked={values.characterCount}
             onChange={(value) => updateField('characterCount', value)}
-            title="Character Frequency Analysis"
-            description="Count how often each character appears in the text"
+            title={t('string.statistic.characterFrequencyAnalysis')}
+            description={t(
+              'string.statistic.characterFrequencyAnalysisDescription'
+            )}
           />
           <CheckboxWithDesc
             checked={values.emptyLines}
             onChange={(value) => updateField('emptyLines', value)}
-            title="Include Empty Lines"
-            description="Include blank lines when counting lines"
+            title={t('string.statistic.includeEmptyLines')}
+            description={t('string.statistic.includeEmptyLinesDescription')}
           />
         </Box>
       )
@@ -286,12 +286,22 @@ export default function Truncate({
       input={input}
       setInput={setInput}
       inputComponent={
-        <ToolTextInput title={'Input text'} value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('string.statistic.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
       resultComponent={
-        <ToolTextResult title={'Text Statistics'} value={result} />
+        <ToolTextResult
+          title={t('string.statistic.resultTitle')}
+          value={result}
+        />
       }
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('string.statistic.toolInfo.title', { title }),
+        description: longDescription
+      }}
       exampleCards={exampleCards}
     />
   );

@@ -2,12 +2,17 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('string', {
+  name: 'Join',
   path: 'join',
-  name: 'Text Joiner',
-  icon: 'tabler:arrows-join',
+  icon: 'material-symbols-light:join',
   description:
-    "World's Simplest Text Tool World's simplest browser-based utility for joining text. Load your text in the input form on the left and you'll automatically get merged text on the right. Powerful, free, and fast. Load text – get joined lines",
-  shortDescription: 'Quickly merge texts',
-  keywords: ['text', 'join'],
-  component: lazy(() => import('./index'))
+    "World's simplest browser-based utility for joining text elements. Input your text elements and specify a separator to combine them into a single string. Perfect for data processing, text manipulation, or creating formatted output from lists.",
+  shortDescription: 'Join text elements with a specified separator',
+  keywords: ['join'],
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'string.join.name',
+    description: 'string.join.description',
+    shortDescription: 'string.join.shortDescription'
+  }
 });

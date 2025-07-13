@@ -5,10 +5,15 @@ import { lazy } from 'react';
 export const tool = defineTool('list', {
   name: 'Duplicate',
   path: 'duplicate',
-  icon: 'mdi:content-duplicate',
+  icon: 'material-symbols-light:content-copy',
   description:
-    'A tool to duplicate each item in a list a specified number of times. Perfect for creating repeated patterns, test data, or expanding datasets.',
-  shortDescription: 'Repeat items in a list multiple times.',
+    "World's simplest browser-based utility for duplicating list items. Input your list and specify duplication criteria to create copies of items. Perfect for data expansion, testing, or creating repeated patterns.",
+  shortDescription: 'Duplicate list items with specified criteria',
   keywords: ['duplicate'],
-  component: lazy(() => import('./index'))
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'list.duplicate.name',
+    description: 'list.duplicate.description',
+    shortDescription: 'list.duplicate.shortDescription'
+  }
 });

@@ -1,16 +1,16 @@
-import { Box, FormControlLabel, Switch, Typography } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import { Box, Typography, FormControlLabel, Switch } from '@mui/material';
+import { useEffect, useState } from 'react';
+import ToolFileResult from '@components/result/ToolFileResult';
+import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
-import ToolPdfInput from '@components/input/ToolPdfInput';
-import ToolFileResult from '@components/result/ToolFileResult';
+import { parsePageRanges, rotatePdf } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { PDFDocument } from 'pdf-lib';
-import { InitialValuesType, RotationAngle } from './types';
-import { parsePageRanges, rotatePdf } from './service';
+import ToolPdfInput from '@components/input/ToolPdfInput';
 import SimpleRadio from '@components/options/SimpleRadio';
-import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
-import { isArray } from 'lodash';
+import { InitialValuesType, RotationAngle } from './types';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   rotationAngle: 90,
@@ -21,7 +21,7 @@ const initialValues: InitialValuesType = {
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Rotate All Pages 90°',
-    description: 'Rotate all pages in the document 90 degrees clockwise',
+    description: 'Rotate all pages in the PDF by 90 degrees clockwise',
     sampleText: '',
     sampleResult: '',
     sampleOptions: {
@@ -32,7 +32,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   },
   {
     title: 'Rotate Specific Pages 180°',
-    description: 'Rotate only pages 1 and 3 by 180 degrees',
+    description: 'Rotate pages 1 and 3 by 180 degrees',
     sampleText: '',
     sampleResult: '',
     sampleOptions: {
@@ -58,6 +58,7 @@ export default function RotatePdf({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
@@ -90,7 +91,9 @@ export default function RotatePdf({
 
     if (applyToAllPages) {
       setPageRangePreview(
-        totalPages > 0 ? `All ${totalPages} pages will be rotated` : ''
+        totalPages > 0
+          ? t('pdf.rotatePdf.allPagesWillBeRotated', { count: totalPages })
+          : ''
       );
       return;
     }
@@ -102,9 +105,7 @@ export default function RotatePdf({
 
     try {
       const count = parsePageRanges(pageRanges, totalPages).length;
-      setPageRangePreview(
-        `${count} page${count !== 1 ? 's' : ''} will be rotated`
-      );
+      setPageRangePreview(t('pdf.rotatePdf.pagesWillBeRotated', { count }));
     } catch (error) {
       setPageRangePreview('');
     }
@@ -124,9 +125,9 @@ export default function RotatePdf({
     }
   };
   const angleOptions: { value: RotationAngle; label: string }[] = [
-    { value: 90, label: '90° Clockwise' },
-    { value: 180, label: '180° (Upside down)' },
-    { value: 270, label: '270° (90° Counter-clockwise)' }
+    { value: 90, label: t('pdf.rotatePdf.angleOptions.clockwise90') },
+    { value: 180, label: t('pdf.rotatePdf.angleOptions.upsideDown180') },
+    { value: 270, label: t('pdf.rotatePdf.angleOptions.counterClockwise270') }
   ];
   return (
     <ToolContent
@@ -141,25 +142,25 @@ export default function RotatePdf({
           value={input}
           onChange={setInput}
           accept={['application/pdf']}
-          title={'Input PDF'}
+          title={t('pdf.rotatePdf.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
-          title={'Rotated PDF'}
+          title={t('pdf.rotatePdf.resultTitle')}
           value={result}
           extension={'pdf'}
           loading={isProcessing}
-          loadingText={'Rotating pages'}
+          loadingText={t('pdf.rotatePdf.rotatingPages')}
         />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: 'Rotation Settings',
+          title: t('pdf.rotatePdf.rotationSettings'),
           component: (
             <Box>
               <Typography variant="subtitle2" sx={{ mb: 1 }}>
-                Rotation Angle
+                {t('pdf.rotatePdf.rotationAngle')}
               </Typography>
               {angleOptions.map((angleOption) => (
                 <SimpleRadio
@@ -182,7 +183,7 @@ export default function RotatePdf({
                       }}
                     />
                   }
-                  label="Apply to all pages"
+                  label={t('pdf.rotatePdf.applyToAllPages')}
                 />
               </Box>
 
@@ -190,7 +191,7 @@ export default function RotatePdf({
                 <Box sx={{ mt: 2 }}>
                   {totalPages > 0 && (
                     <Typography variant="body2" sx={{ mb: 1 }}>
-                      PDF has {totalPages} page{totalPages !== 1 ? 's' : ''}
+                      {t('pdf.rotatePdf.pdfPageCount', { count: totalPages })}
                     </Typography>
                   )}
                   <TextFieldWithDesc
@@ -198,10 +199,8 @@ export default function RotatePdf({
                     onOwnChange={(val) => {
                       updateField('pageRanges', val);
                     }}
-                    description={
-                      'Enter page numbers or ranges separated by commas (e.g., 1,3,5-7)'
-                    }
-                    placeholder={'e.g., 1,5-8'}
+                    description={t('pdf.rotatePdf.pageRangesDescription')}
+                    placeholder={t('pdf.rotatePdf.pageRangesPlaceholder')}
                   />
                   {pageRangePreview && (
                     <Typography
@@ -219,24 +218,8 @@ export default function RotatePdf({
       ]}
       onValuesChange={onValuesChange}
       toolInfo={{
-        title: 'How to Use the Rotate PDF Tool',
-        description: `This tool allows you to rotate pages in a PDF document. You can rotate all pages or specify individual pages to rotate.
-
-Choose a rotation angle:
-- 90° Clockwise
-- 180° (Upside down)
-- 270° (90° Counter-clockwise)
-
-To rotate specific pages:
-1. Uncheck "Apply to all pages"
-2. Enter page numbers or ranges separated by commas (e.g., 1,3,5-7)
-
-Examples:
-- "1,5,9" rotates pages 1, 5, and 9
-- "1-5" rotates pages 1 through 5
-- "1,3-5,8-10" rotates pages 1, 3, 4, 5, 8, 9, and 10
-
-${longDescription}`
+        title: t('pdf.rotatePdf.toolInfo.title'),
+        description: t('pdf.rotatePdf.toolInfo.description')
       }}
     />
   );

@@ -10,6 +10,7 @@ import ToolVideoInput from '@components/input/ToolVideoInput';
 import { flipVideo } from './service';
 import { FlipOrientation, InitialValuesType } from './types';
 import SimpleRadio from '@components/options/SimpleRadio';
+import { useTranslation } from 'react-i18next';
 
 export const initialValues: InitialValuesType = {
   orientation: 'horizontal'
@@ -30,6 +31,7 @@ const orientationOptions: { value: FlipOrientation; label: string }[] = [
 ];
 
 export default function FlipVideo({ title }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -58,13 +60,13 @@ export default function FlipVideo({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Orientation',
+      title: t('video.flip.orientation'),
       component: (
         <Box>
           {orientationOptions.map((orientationOption) => (
             <SimpleRadio
               key={orientationOption.value}
-              title={orientationOption.label}
+              title={t(`video.flip.${orientationOption.value}Label`)}
               checked={values.orientation === orientationOption.value}
               onClick={() => {
                 updateField('orientation', orientationOption.value);
@@ -84,20 +86,20 @@ export default function FlipVideo({ title }: ToolComponentProps) {
         <ToolVideoInput
           value={input}
           onChange={setInput}
-          title={'Input Video'}
+          title={t('video.flip.inputTitle')}
         />
       }
       resultComponent={
         loading ? (
           <ToolFileResult
-            title={'Flipping Video'}
+            title={t('video.flip.flippingVideo')}
             value={null}
             loading={true}
             extension={''}
           />
         ) : (
           <ToolFileResult
-            title={'Flipped Video'}
+            title={t('video.flip.resultTitle')}
             value={result}
             extension={'mp4'}
           />

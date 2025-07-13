@@ -3,12 +3,17 @@ import { lazy } from 'react';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('number', {
-  name: 'Generate numbers',
+  name: 'Generate',
   path: 'generate',
-  shortDescription: 'Quickly calculate a list of integers in your browser',
-  icon: 'lsicon:number-filled',
+  icon: 'material-symbols:add-circle',
   description:
-    'Quickly calculate a list of integers in your browser. To get your list, just specify the first integer, change value and total count in the options below, and this utility will generate that many integers',
-  keywords: ['generate'],
-  component: lazy(() => import('./index'))
+    'Generate random numbers within specified ranges. Create sequences of numbers for testing, simulations, or random data generation.',
+  shortDescription: 'Generate random numbers in specified ranges',
+  keywords: ['generate', 'random', 'numbers'],
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'number.generate.name',
+    description: 'number.generate.description',
+    shortDescription: 'number.generate.shortDescription'
+  }
 });

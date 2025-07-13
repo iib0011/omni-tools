@@ -3,11 +3,16 @@ import { lazy } from 'react';
 
 export const tool = defineTool('json', {
   name: 'Validate JSON',
-  path: 'validateJson',
-  icon: 'lets-icons:json-light',
+  path: 'validate-json',
+  icon: 'material-symbols:check-circle',
   description:
-    'Validate JSON data and identify formatting issues such as missing quotes, trailing commas, and incorrect brackets.',
-  shortDescription: 'Quickly validate a JSON data structure.',
-  keywords: ['validate', 'json', 'syntax'],
-  component: lazy(() => import('./index'))
+    'Validate JSON code for syntax errors and proper structure. Check if JSON documents follow correct formatting rules.',
+  shortDescription: 'Validate JSON code for errors',
+  keywords: ['json', 'validate', 'check', 'syntax', 'errors'],
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'json.validateJson.name',
+    description: 'json.validateJson.description',
+    shortDescription: 'json.validateJson.shortDescription'
+  }
 });

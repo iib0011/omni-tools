@@ -11,6 +11,7 @@ import ToolExamples, {
 import { ToolComponentProps } from '@tools/defineTool';
 import { FormikProps } from 'formik';
 import ToolContent from '@components/ToolContent';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   splitSeparatorType: 'symbol' as SplitOperatorType,
@@ -132,6 +133,7 @@ easy`,
 ];
 
 export default function SplitText({ title }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -170,18 +172,20 @@ export default function SplitText({ title }: ToolComponentProps) {
       title={title}
       input={input}
       inputComponent={<ToolTextInput value={input} onChange={setInput} />}
-      resultComponent={<ToolTextResult title={'Text pieces'} value={result} />}
+      resultComponent={
+        <ToolTextResult title={t('string.split.resultTitle')} value={result} />
+      }
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [
         {
-          title: 'Split separator options',
+          title: t('string.split.splitSeparatorOptions'),
           component: splitOperators.map(({ title, description, type }) => (
             <RadioWithTextField
               key={type}
               checked={type === values.splitSeparatorType}
-              title={title}
+              title={t(`string.split.${type}Title`)}
               fieldName={'splitSeparatorType'}
-              description={description}
+              description={t(`string.split.${type}Description`)}
               value={values[`${type}Value`]}
               onRadioClick={() => updateField('splitSeparatorType', type)}
               onTextChange={(val) => updateField(`${type}Value`, val)}
@@ -189,13 +193,13 @@ export default function SplitText({ title }: ToolComponentProps) {
           ))
         },
         {
-          title: 'Output separator options',
+          title: t('string.split.outputSeparatorOptions'),
           component: outputOptions.map((option) => (
             <TextFieldWithDesc
               key={option.accessor}
               value={values[option.accessor]}
               onOwnChange={(value) => updateField(option.accessor, value)}
-              description={option.description}
+              description={t(`string.split.${option.accessor}Description`)}
             />
           ))
         }

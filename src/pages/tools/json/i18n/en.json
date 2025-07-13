@@ -1,0 +1,39 @@
+{
+  "prettify": {
+    "title": "Prettify JSON",
+    "description": "Format JSON with proper indentation and spacing.",
+    "inputTitle": "Input JSON",
+    "resultTitle": "Prettified JSON",
+    "indentation": "Indentation",
+    "useSpaces": "Use Spaces",
+    "useSpacesDescription": "Indent output with spaces",
+    "useTabs": "Use Tabs",
+    "useTabsDescription": "Indent output with tabs.",
+    "toolInfo": {
+      "title": "Prettify JSON",
+      "description": "This tool allows you to format JSON data with proper indentation and spacing, making it more readable and easier to work with."
+    }
+  },
+  "minify": {
+    "title": "Minify JSON",
+    "description": "Remove all unnecessary whitespace from JSON.",
+    "inputTitle": "Input JSON",
+    "resultTitle": "Minified JSON",
+    "toolInfo": {
+      "title": "What Is JSON Minification?",
+      "description": "JSON minification is the process of removing all unnecessary whitespace characters from JSON data while maintaining its validity. This includes removing spaces, newlines, and indentation that aren't required for the JSON to be parsed correctly. Minification reduces the size of JSON data, making it more efficient for storage and transmission while keeping the exact same data structure and values."
+    }
+  },
+  "validateJson": {
+    "title": "Validate JSON",
+    "description": "Check if JSON is valid and well-formed.",
+    "inputTitle": "Input JSON",
+    "resultTitle": "Validation Result",
+    "validJson": "✅ Valid JSON",
+    "invalidJson": "❌ {{error}}",
+    "toolInfo": {
+      "title": "What is JSON Validation?",
+      "description": "JSON (JavaScript Object Notation) is a lightweight data-interchange format. JSON validation ensures that the structure of the data conforms to the JSON standard. A valid JSON object must have: - Property names enclosed in double quotes. - Properly balanced curly braces {}. - No trailing commas after the last key-value pair. - Proper nesting of objects and arrays. This tool checks the input JSON and provides feedback to help identify and fix common errors."
+    }
+  }
+}

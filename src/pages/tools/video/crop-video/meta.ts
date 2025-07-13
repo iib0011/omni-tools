@@ -2,13 +2,17 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('video', {
-  name: 'Crop video',
+  name: 'Crop Video',
   path: 'crop-video',
-  icon: 'mdi:crop',
-  description: 'Crop a video by specifying coordinates and dimensions',
-  shortDescription: 'Crop video to specific area',
-  keywords: ['crop', 'video', 'trim', 'cut', 'resize'],
-  longDescription:
-    'Remove unwanted parts from the edges of your video by cropping it to a specific rectangular area. Define the starting coordinates (X, Y) and the width and height of the area you want to keep.',
-  component: lazy(() => import('./index'))
+  icon: 'material-symbols:crop',
+  description:
+    'Crop video files to remove unwanted areas or focus on specific content. Specify crop dimensions and position to create custom video compositions.',
+  shortDescription: 'Crop video to remove unwanted areas',
+  keywords: ['video', 'crop', 'trim', 'edit', 'resize'],
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'video.cropVideo.name',
+    description: 'video.cropVideo.description',
+    shortDescription: 'video.cropVideo.shortDescription'
+  }
 });

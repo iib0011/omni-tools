@@ -5,10 +5,15 @@ import { lazy } from 'react';
 export const tool = defineTool('list', {
   name: 'Wrap',
   path: 'wrap',
-  icon: 'mdi:wrap',
+  icon: 'material-symbols-light:wrap-text',
   description:
-    'A tool to wrap each item in a list with custom prefix and suffix characters. Useful for formatting lists for code, markup languages, or presentation.',
-  shortDescription: 'Add characters around list items.',
+    "World's simplest browser-based utility for wrapping list items. Input your list and specify wrapping criteria to organize items into logical groups. Perfect for categorizing data, organizing information, or creating structured lists.",
+  shortDescription: 'Wrap list items with specified criteria',
   keywords: ['wrap'],
-  component: lazy(() => import('./index'))
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'list.wrap.name',
+    description: 'list.wrap.description',
+    shortDescription: 'list.wrap.shortDescription'
+  }
 });

@@ -4,6 +4,7 @@ import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { compute } from './service';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   dotSymbol: '.',
@@ -11,6 +12,7 @@ const initialValues = {
 };
 
 export default function ToMorse() {
+  const { t } = useTranslation();
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const computeOptions = (optionsValues: typeof initialValues, input: any) => {
@@ -20,33 +22,34 @@ export default function ToMorse() {
 
   return (
     <ToolContent
-      title="To Morse"
+      title={t('string.toMorse.title')}
       initialValues={initialValues}
       compute={computeOptions}
       input={input}
       setInput={setInput}
       inputComponent={<ToolTextInput value={input} onChange={setInput} />}
-      resultComponent={<ToolTextResult title={'Morse code'} value={result} />}
+      resultComponent={
+        <ToolTextResult
+          title={t('string.toMorse.resultTitle')}
+          value={result}
+        />
+      }
       getGroups={({ values, updateField }) => [
         {
-          title: 'Short Signal',
+          title: t('string.toMorse.shortSignal'),
           component: (
             <TextFieldWithDesc
-              description={
-                'Symbol that will correspond to the dot in Morse code.'
-              }
+              description={t('string.toMorse.dotSymbolDescription')}
               value={values.dotSymbol}
               onOwnChange={(val) => updateField('dotSymbol', val)}
             />
           )
         },
         {
-          title: 'Long Signal',
+          title: t('string.toMorse.longSignal'),
           component: (
             <TextFieldWithDesc
-              description={
-                'Symbol that will correspond to the dash in Morse code.'
-              }
+              description={t('string.toMorse.dashSymbolDescription')}
               value={values.dashSymbol}
               onOwnChange={(val) => updateField('dashSymbol', val)}
             />

@@ -9,6 +9,7 @@ import { GetGroupsType } from '@components/options/ToolOptions';
 import { Box } from '@mui/material';
 import SimpleRadio from '@components/options/SimpleRadio';
 import { InitialValuesType } from './types';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   mode: 'encode'
@@ -33,6 +34,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function Base64({ title }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -45,18 +47,18 @@ export default function Base64({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Base64 Options',
+      title: t('string.base64.optionsTitle'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('mode', 'encode')}
             checked={values.mode === 'encode'}
-            title={'Base64 Encode'}
+            title={t('string.base64.encode')}
           />
           <SimpleRadio
             onClick={() => updateField('mode', 'decode')}
             checked={values.mode === 'decode'}
-            title={'Base64 Decode'}
+            title={t('string.base64.decode')}
           />
         </Box>
       )
@@ -67,15 +69,20 @@ export default function Base64({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       inputComponent={
-        <ToolTextInput title="Input Data" value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('string.base64.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
-      resultComponent={<ToolTextResult title="Result" value={result} />}
+      resultComponent={
+        <ToolTextResult title={t('string.base64.resultTitle')} value={result} />
+      }
       initialValues={initialValues}
       getGroups={getGroups}
       toolInfo={{
-        title: 'What is Base64?',
-        description:
-          'Base64 is an encoding scheme that represents data in an ASCII string format by translating it into a radix-64 representation. Although it can be used to encode strings, it is commonly used to encode binary data for transmission over media that are designed to deal with textual data.'
+        title: t('string.base64.toolInfo.title'),
+        description: t('string.base64.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

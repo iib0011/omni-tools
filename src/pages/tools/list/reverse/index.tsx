@@ -9,6 +9,7 @@ import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolContent from '@components/ToolContent';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   splitOperatorType: 'symbol' as SplitOperatorType,
@@ -111,6 +112,7 @@ argument`,
 ];
 
 export default function Reverse({ title }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -119,15 +121,15 @@ export default function Reverse({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Splitter Mode',
+      title: t('list.reverse.splitterMode'),
       component: (
         <Box>
           {splitOperators.map(({ title, description, type }) => (
             <SimpleRadio
               key={type}
               onClick={() => updateField('splitOperatorType', type)}
-              title={title}
-              description={description}
+              title={t(`list.reverse.splitOperators.${type}.title`)}
+              description={t(`list.reverse.splitOperators.${type}.description`)}
               checked={values.splitOperatorType === type}
             />
           ))}
@@ -135,11 +137,11 @@ export default function Reverse({ title }: ToolComponentProps) {
       )
     },
     {
-      title: 'Item Separator',
+      title: t('list.reverse.itemSeparator'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={'Set a delimiting symbol or regular expression.'}
+            description={t('list.reverse.itemSeparatorDescription')}
             value={values.splitSeparator}
             onOwnChange={(val) => updateField('splitSeparator', val)}
           />
@@ -147,11 +149,11 @@ export default function Reverse({ title }: ToolComponentProps) {
       )
     },
     {
-      title: 'Output List Options',
+      title: t('list.reverse.outputListOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={'Output list item separator.'}
+            description={t('list.reverse.outputSeparatorDescription')}
             value={values.joinSeparator}
             onOwnChange={(val) => updateField('joinSeparator', val)}
           />
@@ -176,15 +178,18 @@ export default function Reverse({ title }: ToolComponentProps) {
       input={input}
       setInput={setInput}
       inputComponent={
-        <ToolTextInput title={'Input list'} value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('list.reverse.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
       resultComponent={
-        <ToolTextResult title={'Reversed list'} value={result} />
+        <ToolTextResult title={t('list.reverse.resultTitle')} value={result} />
       }
       toolInfo={{
-        title: 'What Is a List Reverser?',
-        description:
-          'With this utility, you can reverse the order of items in a list. The utility first splits the input list into individual items and then iterates through them from the last item to the first item, printing each item to the output during the iteration. The input list may contain anything that can be represented as textual data, which includes digits, numbers, strings, words, sentences, etc. The input item separator can also be a regular expression. For example, the regex /[;,]/ will allow you to use items that are either comma- or semicolon-separated. The input and output list items delimiters can be customized in the options. By default, both input and output lists are comma-separated. Listabulous!'
+        title: t('list.reverse.toolInfo.title'),
+        description: t('list.reverse.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

@@ -11,6 +11,7 @@ import { compressVideo, VideoResolution } from './service';
 import SimpleRadio from '@components/options/SimpleRadio';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import { useTranslation } from 'react-i18next';
 
 export const initialValues = {
   width: 480 as VideoResolution,
@@ -68,6 +69,7 @@ const presetOptions = [
 ];
 
 export default function CompressVideo({ title }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -100,7 +102,7 @@ export default function CompressVideo({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Resolution',
+      title: t('video.compress.resolution'),
       component: (
         <Box>
           {resolutionOptions.map((option) => (
@@ -117,7 +119,7 @@ export default function CompressVideo({ title }: ToolComponentProps) {
       )
     },
     {
-      title: 'Quality (CRF)',
+      title: t('video.compress.quality'),
       component: (
         <Box sx={{ mb: 2 }}>
           <Slider
@@ -129,9 +131,9 @@ export default function CompressVideo({ title }: ToolComponentProps) {
               updateField('crf', typeof value === 'number' ? value : value[0]);
             }}
             marks={{
-              0: 'Lossless',
-              23: 'Default',
-              51: 'Worst'
+              0: t('video.compress.lossless'),
+              23: t('video.compress.default'),
+              51: t('video.compress.worst')
             }}
           />
         </Box>
@@ -160,16 +162,16 @@ export default function CompressVideo({ title }: ToolComponentProps) {
         <ToolVideoInput
           value={input}
           onChange={setInput}
-          title={'Input Video'}
+          title={t('video.compress.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
-          title={'Compressed Video'}
+          title={t('video.compress.resultTitle')}
           value={result}
           extension={'mp4'}
           loading={loading}
-          loadingText={'Compressing video...'}
+          loadingText={t('video.compress.loadingText')}
         />
       }
       initialValues={initialValues}

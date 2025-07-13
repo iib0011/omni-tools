@@ -5,10 +5,15 @@ import { lazy } from 'react';
 export const tool = defineTool('list', {
   name: 'Find most popular',
   path: 'find-most-popular',
-  icon: 'material-symbols-light:query-stats',
+  icon: 'material-symbols-light:trending-up',
   description:
-    'A tool to identify and count the most frequently occurring items in a list. Useful for data analysis, finding trends, or identifying common elements.',
-  shortDescription: 'Find most common items in a list.',
+    "World's simplest browser-based utility for finding the most popular items in a list. Input your list and instantly get the items that appear most frequently. Perfect for data analysis, trend identification, or finding common elements.",
+  shortDescription: 'Find most frequently occurring items',
   keywords: ['find', 'most', 'popular'],
-  component: lazy(() => import('./index'))
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'list.findMostPopular.name',
+    description: 'list.findMostPopular.description',
+    shortDescription: 'list.findMostPopular.shortDescription'
+  }
 });

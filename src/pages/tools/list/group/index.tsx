@@ -9,6 +9,7 @@ import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import { formatNumber } from '../../../../utils/number';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   splitOperatorType: 'symbol' as SplitOperatorType,
@@ -40,6 +41,7 @@ const splitOperators: {
 ];
 
 export default function FindUnique({ title }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const compute = (optionsValues: typeof initialValues, input: any) => {
@@ -78,28 +80,34 @@ export default function FindUnique({ title }: ToolComponentProps) {
       title={title}
       input={input}
       inputComponent={
-        <ToolTextInput title={'Input list'} value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('list.group.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
       resultComponent={
-        <ToolTextResult title={'Grouped items'} value={result} />
+        <ToolTextResult title={t('list.group.resultTitle')} value={result} />
       }
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [
         {
-          title: 'Input Item Separator',
+          title: t('list.group.inputItemSeparator'),
           component: (
             <Box>
               {splitOperators.map(({ title, description, type }) => (
                 <SimpleRadio
                   key={type}
                   onClick={() => updateField('splitOperatorType', type)}
-                  title={title}
-                  description={description}
+                  title={t(`list.group.splitOperators.${type}.title`)}
+                  description={t(
+                    `list.group.splitOperators.${type}.description`
+                  )}
                   checked={values.splitOperatorType === type}
                 />
               ))}
               <TextFieldWithDesc
-                description={'Set a delimiting symbol or regular expression.'}
+                description={t('list.group.splitSeparatorDescription')}
                 value={values.splitSeparator}
                 onOwnChange={(val) => updateField('splitSeparator', val)}
               />
@@ -107,12 +115,12 @@ export default function FindUnique({ title }: ToolComponentProps) {
           )
         },
         {
-          title: 'Group Size and Separators',
+          title: t('list.group.groupSizeAndSeparators'),
           component: (
             <Box>
               <TextFieldWithDesc
                 value={values.groupNumber}
-                description={'Number of items in a group'}
+                description={t('list.group.groupNumberDescription')}
                 type={'number'}
                 onOwnChange={(value) =>
                   updateField('groupNumber', formatNumber(value, 1))
@@ -120,52 +128,46 @@ export default function FindUnique({ title }: ToolComponentProps) {
               />
               <TextFieldWithDesc
                 value={values.itemSeparator}
-                description={'Item separator character'}
+                description={t('list.group.itemSeparatorDescription')}
                 onOwnChange={(value) => updateField('itemSeparator', value)}
               />
               <TextFieldWithDesc
                 value={values.groupSeparator}
-                description={'Group separator character'}
+                description={t('list.group.groupSeparatorDescription')}
                 onOwnChange={(value) => updateField('groupSeparator', value)}
               />
               <TextFieldWithDesc
                 value={values.leftWrap}
-                description={"Group's left wrap symbol."}
+                description={t('list.group.leftWrapDescription')}
                 onOwnChange={(value) => updateField('leftWrap', value)}
               />
               <TextFieldWithDesc
                 value={values.rightWrap}
-                description={"Group's right wrap symbol."}
+                description={t('list.group.rightWrapDescription')}
                 onOwnChange={(value) => updateField('rightWrap', value)}
               />
             </Box>
           )
         },
         {
-          title: 'Empty Items and Padding',
+          title: t('list.group.emptyItemsAndPadding'),
           component: (
             <Box>
               <CheckboxWithDesc
-                title={'Delete Empty Items'}
-                description={
-                  "Ignore empty items and don't include them in the groups."
-                }
+                title={t('list.group.deleteEmptyItems')}
+                description={t('list.group.deleteEmptyItemsDescription')}
                 checked={values.deleteEmptyItems}
                 onChange={(value) => updateField('deleteEmptyItems', value)}
               />
               <CheckboxWithDesc
-                title={'Pad Non-full Groups'}
-                description={
-                  'Fill non-full groups with a custom item (enter below).'
-                }
+                title={t('list.group.padNonFullGroups')}
+                description={t('list.group.padNonFullGroupsDescription')}
                 checked={values.padNonFullGroup}
                 onChange={(value) => updateField('padNonFullGroup', value)}
               />
               <TextFieldWithDesc
                 value={values.paddingChar}
-                description={
-                  'Use this character or item to pad non-full groups.'
-                }
+                description={t('list.group.paddingCharDescription')}
                 onOwnChange={(value) => updateField('paddingChar', value)}
               />
             </Box>

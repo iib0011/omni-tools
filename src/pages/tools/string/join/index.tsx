@@ -9,6 +9,7 @@ import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   joinCharacter: '',
@@ -107,6 +108,7 @@ s
 ];
 
 export default function JoinText({ title }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const compute = (optionsValues: InitialValuesType, input: any) => {
@@ -119,25 +121,25 @@ export default function JoinText({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Text Merged Options',
+      title: t('string.join.textMergedOptions'),
       component: (
         <TextFieldWithDesc
-          placeholder={mergeOptions.placeholder}
+          placeholder={t('string.join.joinCharacterPlaceholder')}
           value={values['joinCharacter']}
           onOwnChange={(value) => updateField(mergeOptions.accessor, value)}
-          description={mergeOptions.description}
+          description={t('string.join.joinCharacterDescription')}
         />
       )
     },
     {
-      title: 'Blank Lines and Trailing Spaces',
+      title: t('string.join.blankLinesAndTrailingSpaces'),
       component: blankTrailingOptions.map((option) => (
         <CheckboxWithDesc
           key={option.accessor}
-          title={option.title}
+          title={t(`string.join.${option.accessor}Title`)}
           checked={!!values[option.accessor]}
           onChange={(value) => updateField(option.accessor, value)}
-          description={option.description}
+          description={t(`string.join.${option.accessor}Description`)}
         />
       ))
     }
@@ -151,17 +153,18 @@ export default function JoinText({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title={'Text Pieces'}
+          title={t('string.join.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
-      resultComponent={<ToolTextResult title={'Joined Text'} value={result} />}
+      resultComponent={
+        <ToolTextResult title={t('string.join.resultTitle')} value={result} />
+      }
       getGroups={getGroups}
       toolInfo={{
-        title: 'What Is a Text Joiner?',
-        description:
-          'With this tool you can join parts of the text together. It takes a list of text values, separated by newlines, and merges them together. You can set the character that will be placed between the parts of the combined text. Also, you can ignore all empty lines and remove spaces and tabs at the end of all lines. Textabulous!'
+        title: t('string.join.toolInfo.title'),
+        description: t('string.join.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

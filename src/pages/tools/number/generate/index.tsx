@@ -5,6 +5,7 @@ import { listOfIntegers } from './service';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   firstValue: '1',
@@ -14,6 +15,7 @@ const initialValues = {
 };
 
 export default function GenerateNumbers({ title }: ToolComponentProps) {
+  const { t } = useTranslation();
   const [result, setResult] = useState<string>('');
 
   const compute = (optionsValues: typeof initialValues) => {
@@ -34,23 +36,23 @@ export default function GenerateNumbers({ title }: ToolComponentProps) {
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [
         {
-          title: 'Arithmetic sequence option',
+          title: t('number.generate.arithmeticSequenceOption'),
           component: (
             <Box>
               <TextFieldWithDesc
-                description={'Start sequence from this number.'}
+                description={t('number.generate.startSequenceDescription')}
                 value={values.firstValue}
                 onOwnChange={(val) => updateField('firstValue', val)}
                 type={'number'}
               />
               <TextFieldWithDesc
-                description={'Increase each element by this amount'}
+                description={t('number.generate.stepDescription')}
                 value={values.step}
                 onOwnChange={(val) => updateField('step', val)}
                 type={'number'}
               />
               <TextFieldWithDesc
-                description={'Number of elements in sequence.'}
+                description={t('number.generate.numberOfElementsDescription')}
                 value={values.numberOfNumbers}
                 onOwnChange={(val) => updateField('numberOfNumbers', val)}
                 type={'number'}
@@ -59,12 +61,10 @@ export default function GenerateNumbers({ title }: ToolComponentProps) {
           )
         },
         {
-          title: 'Separator',
+          title: t('number.generate.separator'),
           component: (
             <TextFieldWithDesc
-              description={
-                'Separate elements in the arithmetic sequence by this character.'
-              }
+              description={t('number.generate.separatorDescription')}
               value={values.separator}
               onOwnChange={(val) => updateField('separator', val)}
             />
@@ -73,7 +73,10 @@ export default function GenerateNumbers({ title }: ToolComponentProps) {
       ]}
       compute={compute}
       resultComponent={
-        <ToolTextResult title={'Generated numbers'} value={result} />
+        <ToolTextResult
+          title={t('number.generate.resultTitle')}
+          value={result}
+        />
       }
     />
   );

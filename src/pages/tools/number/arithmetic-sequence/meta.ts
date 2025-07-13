@@ -2,20 +2,17 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('number', {
-  name: 'Generate Arithmetic Sequence',
+  name: 'Arithmetic Sequence',
   path: 'arithmetic-sequence',
-  icon: 'ic:sharp-plus',
+  icon: 'material-symbols:functions',
   description:
-    'Generate an arithmetic sequence by specifying the first term (a₁), common difference (d), and number of terms (n). The tool creates a sequence where each number differs from the previous by a constant difference.',
-  shortDescription:
-    'Generate a sequence where each term differs by a constant value.',
-  keywords: [
-    'arithmetic',
-    'sequence',
-    'progression',
-    'numbers',
-    'series',
-    'generate'
-  ],
-  component: lazy(() => import('./index'))
+    'Generate arithmetic sequences with specified start value, common difference, and number of terms. Create mathematical progressions for calculations or analysis.',
+  shortDescription: 'Generate arithmetic sequences',
+  keywords: ['arithmetic', 'sequence', 'math', 'progression'],
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'number.arithmeticSequence.name',
+    description: 'number.arithmeticSequence.description',
+    shortDescription: 'number.arithmeticSequence.shortDescription'
+  }
 });

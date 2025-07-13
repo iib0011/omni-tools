@@ -4,10 +4,15 @@ import { lazy } from 'react';
 export const tool = defineTool('json', {
   name: 'Prettify JSON',
   path: 'prettify',
-  icon: 'lets-icons:json-light',
+  icon: 'material-symbols:code',
   description:
-    "Just load your JSON in the input field and it will automatically get prettified. In the tool options, you can choose whether to use spaces or tabs for indentation and if you're using spaces, you can specify the number of spaces to add per indentation level.",
-  shortDescription: 'Quickly beautify a JSON data structure.',
-  keywords: ['prettify'],
-  component: lazy(() => import('./index'))
+    'Format and beautify JSON data with proper indentation and spacing. Make JSON files more readable and organized.',
+  shortDescription: 'Format and beautify JSON code',
+  keywords: ['json', 'prettify', 'format', 'beautify'],
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'json.prettify.name',
+    description: 'json.prettify.description',
+    shortDescription: 'json.prettify.shortDescription'
+  }
 });
