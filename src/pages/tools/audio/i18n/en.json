@@ -13,6 +13,9 @@
     }
   },
   "changeSpeed": {
+    "title": "Change audio speed",
+    "description": "Change the playback speed of audio files. Speed up or slow down audio while maintaining pitch.",
+    "shortDescription": "Change the speed of audio files",
     "newAudioSpeed": "New Audio Speed",
     "speedDescription": "Default multiplier: 2 means 2x faster",
     "outputFormat": "Output Format",

@@ -8,6 +8,8 @@ import { getToolsByCategory } from '@tools/index';
 import { capitalizeFirstLetter } from '../utils/string';
 import { IconifyIcon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
+import { ToolCategory } from '@tools/defineTool';
+import { FullI18nKey } from '../i18n';
 
 export default function ToolLayout({
   children,
@@ -20,12 +22,12 @@ export default function ToolLayout({
   title: string;
   description: string;
   icon?: IconifyIcon | string;
-  type: string;
+  type: ToolCategory;
   children: ReactNode;
   i18n?: {
-    name: string;
-    description: string;
-    shortDescription: string;
+    name: FullI18nKey;
+    description: FullI18nKey;
+    shortDescription: FullI18nKey;
   };
 }) {
   const { t } = useTranslation();

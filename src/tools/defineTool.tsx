@@ -1,6 +1,7 @@
 import ToolLayout from '../components/ToolLayout';
 import React, { JSXElementConstructor, LazyExoticComponent } from 'react';
 import { IconifyIcon } from '@iconify/react';
+import { FullI18nKey } from '../i18n';
 
 export interface ToolMeta {
   path: string;
@@ -12,10 +13,10 @@ export interface ToolMeta {
   shortDescription: string;
   longDescription?: string;
   i18n?: {
-    name: string;
-    description: string;
-    shortDescription: string;
-    longDescription?: string;
+    name: FullI18nKey;
+    description: FullI18nKey;
+    shortDescription: FullI18nKey;
+    longDescription?: FullI18nKey;
   };
 }
 

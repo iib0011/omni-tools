@@ -1,4 +1,4 @@
-import i18n from 'i18next';
+import i18n, { ParseKeys } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import enGlobal from './en.json';
 import hiGlobal from './hi.json';
@@ -33,7 +33,7 @@ const locizeOptions = {
   version: 'latest'
 };
 // Merge translations for demonstration; in a real app, use namespaces
-const resources = {
+export const resources = {
   en: {
     translation: enGlobal,
     list: enList,
@@ -62,21 +62,18 @@ const resources = {
     time: hiTime,
     xml: hiXml
   }
-};
+} as const;
 
-i18n
-  // .use(Backend)
-  .use(initReactI18next)
-  .init({
-    resources,
-    lng: 'en',
-    fallbackLng: 'en',
-    interpolation: {
-      escapeValue: false
-    },
-    backend: locizeOptions,
-    saveMissing: true, // Send missing keys to Locize
-    updateMissing: true // Update keys in Locize
-  });
+export type I18nNamespaces = keyof (typeof resources)['en'];
+export type FullI18nKey = `${string}:${ParseKeys<I18nNamespaces>}`;
+
+i18n.use(Backend).use(initReactI18next).init({
+  resources,
+  lng: 'en',
+  fallbackLng: 'en',
+  backend: locizeOptions,
+  saveMissing: true, // Send missing keys to Locize
+  updateMissing: true // Update keys in Locize
+});
 
 export default i18n;

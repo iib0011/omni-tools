@@ -6,27 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: i18n tsc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/@types/i18n.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/@types/i18n.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/group/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/group/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/sum/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/split/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/split/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/statistic/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/statistic/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/flip/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/flip/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/rotate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -528,15 +512,7 @@
       <workItem from="1752077170501" duration="4261000" />
       <workItem from="1752127185450" duration="1168000" />
       <workItem from="1752157409587" duration="2415000" />
-      <workItem from="1752403829295" duration="8019000" />
-    </task>
-    <task id="LOCAL-00171" summary="chore: zoom on hover">
-      <option name="closed" value="true" />
-      <created>1743052111988</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1743052111988</updated>
+      <workItem from="1752403829295" duration="13253000" />
     </task>
     <task id="LOCAL-00172" summary="refactor: time between dates">
       <option name="closed" value="true" />
@@ -922,7 +898,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752408068771</updated>
     </task>
-    <option name="localTasksCounter" value="220" />
+    <task id="LOCAL-00220" summary="fix: i18n tsc">
+      <option name="closed" value="true" />
+      <created>1752412149075</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1752412149075</updated>
+    </task>
+    <option name="localTasksCounter" value="221" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
