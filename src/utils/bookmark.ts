@@ -3,7 +3,12 @@ import { DefinedTool } from '@tools/defineTool';
 const bookmarkedToolsKey = 'bookmarkedTools';
 
 export function getBookmarkedToolPaths(): string[] {
-  return localStorage.getItem(bookmarkedToolsKey)?.split(',') ?? [];
+  return (
+    localStorage
+      .getItem(bookmarkedToolsKey)
+      ?.split(',')
+      ?.filter((path) => path) ?? []
+  );
 }
 
 export function isBookmarked(tool: DefinedTool): boolean {
@@ -21,12 +26,15 @@ export function toggleBookmarked(tool: DefinedTool) {
 function bookmark(tool: DefinedTool) {
   localStorage.setItem(
     bookmarkedToolsKey,
-    tool.path + ',' + (localStorage.getItem(bookmarkedToolsKey) ?? '')
+    [tool.path, ...getBookmarkedToolPaths()].join(',')
   );
 }
 
 function unbookmark(tool: DefinedTool) {
-  const bookmarked = localStorage.getItem(bookmarkedToolsKey)?.split(',') ?? [];
-  const unbookmarked = bookmarked.filter((path) => path != tool.path);
-  localStorage.setItem(bookmarkedToolsKey, unbookmarked.join(','));
+  localStorage.setItem(
+    bookmarkedToolsKey,
+    getBookmarkedToolPaths()
+      .filter((path) => path !== tool.path)
+      .join(',')
+  );
 }

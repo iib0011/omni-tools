@@ -148,12 +148,21 @@ export default function Hero() {
             {...props}
             onClick={() => navigate('/' + option.path)}
           >
-            <Stack direction={'row'} spacing={2} alignItems={'center'}>
-              <Icon fontSize={20} icon={option.icon} />
-              <Box>
-                <Typography fontWeight={'bold'}>{option.name}</Typography>
-                <Typography fontSize={12}>{option.shortDescription}</Typography>
-              </Box>
+            <Stack
+              direction={'row'}
+              alignItems={'center'}
+              justifyContent={'stretch'}
+              width={'100%'}
+            >
+              <Stack direction={'row'} spacing={2} alignItems={'center'}>
+                <Icon fontSize={20} icon={option.icon} />
+                <Box>
+                  <Typography fontWeight={'bold'}>{option.name}</Typography>
+                  <Typography fontSize={12}>
+                    {option.shortDescription}
+                  </Typography>
+                </Box>
+              </Stack>
               <Icon
                 fontSize={20}
                 onClick={(e) => {
