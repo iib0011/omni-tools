@@ -15,6 +15,7 @@ export interface ToolMeta {
     name: string;
     description: string;
     shortDescription: string;
+    longDescription?: string;
   };
 }
 
