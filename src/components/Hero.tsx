@@ -18,6 +18,11 @@ import { useNavigate } from 'react-router-dom';
 import _ from 'lodash';
 import { Icon } from '@iconify/react';
 import { getToolCategoryTitle } from '@utils/string';
+import {
+  getBookmarkedToolPaths,
+  isBookmarked,
+  toggleBookmarked
+} from '@utils/bookmark';
 
 const GroupHeader = styled('div')(({ theme }) => ({
   position: 'sticky',
@@ -33,7 +38,12 @@ const GroupHeader = styled('div')(({ theme }) => ({
 const GroupItems = styled('ul')({
   padding: 0
 });
-const exampleTools: { label: string; url: string }[] = [
+
+type ToolInfo = {
+  label: string;
+  url: string;
+};
+const exampleTools: ToolInfo[] = [
   {
     label: 'Create a transparent image',
     url: '/image-generic/create-transparent'
@@ -51,6 +61,9 @@ export default function Hero() {
   const [inputValue, setInputValue] = useState<string>('');
   const theme = useTheme();
   const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
+  const [bookmarkedToolPaths, setBookmarkedToolPaths] = useState<string[]>(
+    getBookmarkedToolPaths()
+  );
   const navigate = useNavigate();
   const handleInputChange = (
     event: React.ChangeEvent<{}>,
@@ -59,6 +72,20 @@ export default function Hero() {
     setInputValue(newInputValue);
     setFilteredTools(filterTools(tools, newInputValue));
   };
+  const toolsMap = new Map<string, ToolInfo>();
+  for (const tool of filteredTools) {
+    toolsMap.set(tool.path, {
+      label: tool.name,
+      url: '/' + tool.path
+    });
+  }
+
+  const displayedTools =
+    bookmarkedToolPaths.length > 0
+      ? bookmarkedToolPaths
+          .map((path) => toolsMap.get(path))
+          .filter((tools) => tools != undefined)
+      : exampleTools;
 
   return (
     <Box width={{ xs: '90%', md: '80%', lg: '60%' }}>
@@ -127,6 +154,19 @@ export default function Hero() {
                 <Typography fontWeight={'bold'}>{option.name}</Typography>
                 <Typography fontSize={12}>{option.shortDescription}</Typography>
               </Box>
+              <Icon
+                fontSize={20}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleBookmarked(option);
+                  setBookmarkedToolPaths(getBookmarkedToolPaths());
+                }}
+                icon={
+                  isBookmarked(option)
+                    ? 'mdi:bookmark'
+                    : 'mdi:bookmark-plus-outline'
+                }
+              />
             </Stack>
           </Box>
         )}
@@ -137,7 +177,7 @@ export default function Hero() {
         }}
       />
       <Grid container spacing={2} mt={2}>
-        {exampleTools.map((tool) => (
+        {displayedTools.map((tool) => (
           <Grid
             onClick={() =>
               navigate(tool.url.startsWith('/') ? tool.url : `/${tool.url}`)
