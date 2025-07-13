@@ -31,16 +31,6 @@
       "description": "This tool allows you to convert hours to days. You can input hours as numbers or with units, and the tool will convert them to days. You can also choose to append the 'days' suffix to the output values."
     }
   },
-  "convertSecondsToTime": {
-    "title": "Convert Seconds to Time",
-    "description": "Convert seconds to formatted time (HH:MM:SS).",
-    "inputTitle": "Input seconds",
-    "resultTitle": "Time format",
-    "toolInfo": {
-      "title": "Convert Seconds to Time",
-      "description": "This tool allows you to convert seconds to a formatted time string in HH:MM:SS format. It's useful for displaying durations and time intervals."
-    }
-  },
   "convertTimeToSeconds": {
     "title": "Convert Time to Seconds",
     "description": "Convert formatted time (HH:MM:SS) to seconds.",
@@ -51,24 +41,47 @@
       "description": "This tool allows you to convert formatted time strings (HH:MM:SS) to seconds. It's useful for calculating durations and time intervals."
     }
   },
+  "truncateClockTime": {
+    "toolInfo": {
+      "title": "What is a {{title}}?"
+    },
+
+    "truncationSide": "Truncation Side",
+    "truncateOnlySeconds": "Truncate Only Seconds",
+    "truncateOnlySecondsDescription": "Drop the seconds component from each clock time.",
+    "truncateMinutesAndSeconds": "Truncate Minutes and Seconds",
+    "truncateMinutesAndSecondsDescription": "Drop both – the minutes and seconds components from each clock time.",
+
+    "printDroppedComponents": "Print Dropped Components",
+    "zeroPrintTruncatedParts": "Zero-print Truncated Parts",
+    "zeroPrintDescription": "Display the dropped parts as zero values \"00\".",
+
+    "timePadding": "Time Padding",
+    "useZeroPadding": "Use Zero Padding",
+    "zeroPaddingDescription": "Make all time components always be two digits wide."
+  },
   "timeBetweenDates": {
     "title": "Time Between Dates",
-    "description": "Calculate the time difference between two dates.",
-    "inputTitle": "Input dates",
-    "resultTitle": "Time difference",
     "toolInfo": {
-      "title": "Time Between Dates",
-      "description": "This tool allows you to calculate the time difference between two dates. You can specify the format and get the result in various units."
-    }
+      "title": "Time Between Dates Calculator",
+      "description": "Calculate the exact time difference between two dates and times, with support for different timezones. This tool provides a detailed breakdown of the time difference in various units (years, months, days, hours, minutes, and seconds)."
+    },
+    "startDateTime": "Start Date & Time",
+    "startDate": "Start Date",
+    "startTime": "Start Time",
+    "startTimezone": "Start Timezone",
+    "endDateTime": "End Date & Time",
+    "endDate": "End Date",
+    "endTime": "End Time",
+    "endTimezone": "End Timezone"
   },
-  "truncateClockTime": {
-    "title": "Truncate Clock Time",
-    "description": "Remove seconds from time format (HH:MM:SS to HH:MM).",
-    "inputTitle": "Input time",
-    "resultTitle": "Truncated time",
+  "convertSecondsToTime": {
+    "timePadding": "Time Padding",
+    "addPadding": "Add Padding",
+    "addPaddingDescription": "Add zero padding to hours, minutes, and seconds.",
     "toolInfo": {
-      "title": "Truncate Clock Time",
-      "description": "This tool allows you to remove seconds from time format, converting HH:MM:SS to HH:MM. It's useful for simplifying time displays."
+      "title": "What is a {{title}}?",
+      "description": ""
     }
   }
 }

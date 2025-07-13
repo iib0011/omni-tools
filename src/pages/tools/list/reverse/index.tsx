@@ -128,8 +128,8 @@ export default function Reverse({ title }: ToolComponentProps) {
             <SimpleRadio
               key={type}
               onClick={() => updateField('splitOperatorType', type)}
-              title={t(`list.reverse.splitOperators.${type}.title`)}
-              description={t(`list.reverse.splitOperators.${type}.description`)}
+              title={t(`reverse.splitOperators.${type}.title`)}
+              description={t(`reverse.splitOperators.${type}.description`)}
               checked={values.splitOperatorType === type}
             />
           ))}

@@ -1,34 +1,4 @@
 {
-  "csvToJson": {
-    "title": "CSV to JSON",
-    "description": "Convert CSV data to JSON format.",
-    "inputTitle": "Input CSV",
-    "resultTitle": "JSON Output",
-    "csvOptions": "CSV Options",
-    "separatorDescription": "Character used to separate columns",
-    "quoteCharDescription": "Character used to quote fields",
-    "commentCharDescription": "Character that indicates comment lines",
-    "jsonOptions": "JSON Options",
-    "prettyPrintDescription": "Format JSON with indentation",
-    "toolInfo": {
-      "title": "CSV to JSON Converter",
-      "description": "This tool allows you to convert CSV (Comma-Separated Values) data to JSON format. You can customize the CSV parsing options and JSON output format."
-    }
-  },
-  "findIncompleteCsvRecords": {
-    "title": "Find Incomplete CSV Records",
-    "description": "Identify CSV records with missing or incomplete data.",
-    "inputTitle": "Input CSV",
-    "resultTitle": "Incomplete Records",
-    "csvOptions": "CSV Options",
-    "separatorDescription": "Character used to separate columns",
-    "quoteCharDescription": "Character used to quote fields",
-    "commentCharDescription": "Character that indicates comment lines",
-    "toolInfo": {
-      "title": "Find Incomplete CSV Records",
-      "description": "This tool helps you identify CSV records that have missing or incomplete data. It's useful for data validation and cleaning."
-    }
-  },
   "insertCsvColumns": {
     "title": "Insert CSV Columns",
     "description": "Add new columns to CSV data at specified positions.",
@@ -59,5 +29,43 @@
       "title": "Insert CSV Columns",
       "description": "This tool allows you to insert new columns into CSV data at specified positions. You can prepend, append, or insert columns at custom positions based on header names or column numbers."
     }
+  },
+  "csvToJson": {
+    "inputTitle": "Input CSV",
+    "resultTitle": "Output JSON",
+
+    "inputCsvFormat": "Input CSV Format",
+    "columnSeparator": "Column Separator (e.g., , ; \\t)",
+    "fieldQuote": "Field Quote (e.g., \")",
+    "commentSymbol": "Comment Symbol (e.g., #)",
+
+    "conversionOptions": "Conversion Options",
+    "useHeaders": "Use Headers",
+    "useHeadersDescription": "Treat the first row as column headers",
+    "skipEmptyLines": "Skip Empty Lines",
+    "skipEmptyLinesDescription": "Ignore empty lines in the input CSV",
+    "dynamicTypes": "Dynamic Types",
+    "dynamicTypesDescription": "Automatically convert numbers and booleans",
+
+    "errorParsing": "Error parsing CSV: {{error}}"
+  },
+  "findIncompleteCsvRecords": {
+    "title": "Find Incomplete CSV Records",
+    "inputTitle": "Input CSV",
+    "resultTitle": "CSV Status",
+    "toolInfo": {
+      "title": "What is a {{title}}?"
+    },
+    "csvInputOptions": "CSV Input Options",
+    "csvSeparatorDescription": "Enter the character used to delimit columns in the CSV input file.",
+    "quoteCharacterDescription": "Enter the quote character used to quote the CSV input fields.",
+    "commentCharacterDescription": "Enter the character indicating the start of a comment line. Lines starting with this symbol will be skipped.",
+    "checkingOptions": "Checking Options",
+    "deleteLinesWithNoData": "Delete Lines with No Data",
+    "deleteLinesWithNoDataDescription": "Remove empty lines from CSV input file.",
+    "findEmptyValues": "Find Empty Values",
+    "findEmptyValuesDescription": "Display a message about CSV fields that are empty (These are not missing fields but fields that contain nothing).",
+    "limitNumberOfMessages": "Limit number of messages",
+    "messageLimitDescription": "Set the limit of number of messages in the output."
   }
 }

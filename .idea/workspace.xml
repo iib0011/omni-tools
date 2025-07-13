@@ -4,67 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: misc">
-      <change afterPath="$PROJECT_DIR$/@types/i18n.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: i18n tsc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/i18n/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/minify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/minify/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/prettify/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/validateJson/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/validateJson/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/duplicate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-unique/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-unique/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/list/group/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/group/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/list/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/list/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/shuffle/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/sort/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/sort/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/wrap/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/wrap/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/number/sum/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/base64/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/base64/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/join/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/quote/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/quote/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/repeat/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/repeat/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/reverse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/rot13/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/rot13/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/rotate/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/split/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/split/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/statistic/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/statistic/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/truncate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/truncate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/uppercase/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/uppercase/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/change-speed/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/compress/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/compress/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/crop-video/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/crop-video/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/video/flip/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/flip/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/video/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/loop/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/loop/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/video/rotate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/rotate/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -566,15 +528,7 @@
       <workItem from="1752077170501" duration="4261000" />
       <workItem from="1752127185450" duration="1168000" />
       <workItem from="1752157409587" duration="2415000" />
-      <workItem from="1752403829295" duration="4023000" />
-    </task>
-    <task id="LOCAL-00170" summary="chore: show new tools in landing">
-      <option name="closed" value="true" />
-      <created>1743051792459</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1743051792459</updated>
+      <workItem from="1752403829295" duration="8019000" />
     </task>
     <task id="LOCAL-00171" summary="chore: zoom on hover">
       <option name="closed" value="true" />
@@ -960,7 +914,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752402313191</updated>
     </task>
-    <option name="localTasksCounter" value="219" />
+    <task id="LOCAL-00219" summary="fix: i18n tsc">
+      <option name="closed" value="true" />
+      <created>1752408068771</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1752408068771</updated>
+    </task>
+    <option name="localTasksCounter" value="220" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1469,7 +1431,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: add mkv to supported videos" />
     <MESSAGE value="feat: drag and drop" />
     <MESSAGE value="Merge branch 'feat/pdf-merge' of git-rohit:rohit267/omni-tools into feat/pdf-merge" />
     <MESSAGE value="chore: revert create-tool.mjs" />
@@ -1494,7 +1455,8 @@
     <MESSAGE value="refactor: PDF editor" />
     <MESSAGE value="docs: edit pdf meta" />
     <MESSAGE value="fix: misc" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: misc" />
+    <MESSAGE value="fix: i18n tsc" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: i18n tsc" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

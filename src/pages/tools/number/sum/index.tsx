@@ -135,9 +135,9 @@ export default function SumNumbers({ title }: ToolComponentProps) {
             <RadioWithTextField
               key={type}
               checked={type === values.extractionType}
-              title={t(`number.sum.extractionTypes.${type}.title`)}
+              title={t(`sum.extractionTypes.${type}.title`)}
               fieldName={'extractionType'}
-              description={t(`number.sum.extractionTypes.${type}.description`)}
+              description={t(`sum.extractionTypes.${type}.description`)}
               value={
                 textValueAccessor ? values[textValueAccessor].toString() : ''
               }
@@ -151,8 +151,8 @@ export default function SumNumbers({ title }: ToolComponentProps) {
               key={title}
               onClick={() => updateField('extractionType', type)}
               checked={values.extractionType === type}
-              description={t(`number.sum.extractionTypes.${type}.description`)}
-              title={t(`number.sum.extractionTypes.${type}.title`)}
+              description={t(`sum.extractionTypes.${type}.description`)}
+              title={t(`sum.extractionTypes.${type}.title`)}
             />
           )
       )

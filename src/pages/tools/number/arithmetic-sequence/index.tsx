@@ -97,25 +97,21 @@ export default function ArithmeticSequence({ title }: ToolComponentProps) {
           component: (
             <Box>
               <TextFieldWithDesc
-                description={t(
-                  'number:arithmeticSequence.firstTermDescription'
-                )}
+                description={t('arithmeticSequence.firstTermDescription')}
                 value={values.firstTerm}
                 onOwnChange={(val) => updateField('firstTerm', val)}
                 type="number"
               />
               <TextFieldWithDesc
                 description={t(
-                  'number:arithmeticSequence.commonDifferenceDescription'
+                  'arithmeticSequence.commonDifferenceDescription'
                 )}
                 value={values.commonDifference}
                 onOwnChange={(val) => updateField('commonDifference', val)}
                 type="number"
               />
               <TextFieldWithDesc
-                description={t(
-                  'number:arithmeticSequence.numberOfTermsDescription'
-                )}
+                description={t('arithmeticSequence.numberOfTermsDescription')}
                 value={values.numberOfTerms}
                 onOwnChange={(val) => updateField('numberOfTerms', val)}
                 type="number"

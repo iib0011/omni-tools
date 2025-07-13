@@ -33,7 +33,7 @@ const mergeOptions = {
 const blankTrailingOptions: {
   title: string;
   description: string;
-  accessor: keyof InitialValuesType;
+  accessor: keyof Omit<InitialValuesType, 'joinCharacter'>;
 }[] = [
   {
     title: 'Delete Blank Lines',
@@ -136,10 +136,10 @@ export default function JoinText({ title }: ToolComponentProps) {
       component: blankTrailingOptions.map((option) => (
         <CheckboxWithDesc
           key={option.accessor}
-          title={t(`string.join.${option.accessor}Title`)}
+          title={t(`join.${option.accessor}Title`)}
           checked={!!values[option.accessor]}
           onChange={(value) => updateField(option.accessor, value)}
-          description={t(`string.join.${option.accessor}Description`)}
+          description={t(`join.${option.accessor}Description`)}
         />
       ))
     }

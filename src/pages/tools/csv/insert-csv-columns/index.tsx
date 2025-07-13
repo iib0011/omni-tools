@@ -247,7 +247,7 @@ export default function InsertCsvColumns({
               ]}
               onChange={(value) => updateField('customPostionOptions', value)}
               description={t(
-                'csv:insertCsvColumns.customPositionOptionsDescription'
+                'insertCsvColumns.customPositionOptionsDescription'
               )}
             />
           )}

@@ -99,10 +99,8 @@ export default function FindUnique({ title }: ToolComponentProps) {
                 <SimpleRadio
                   key={type}
                   onClick={() => updateField('splitOperatorType', type)}
-                  title={t(`list.group.splitOperators.${type}.title`)}
-                  description={t(
-                    `list.group.splitOperators.${type}.description`
-                  )}
+                  title={t(`group.splitOperators.${type}.title`)}
+                  description={t(`group.splitOperators.${type}.description`)}
                   checked={values.splitOperatorType === type}
                 />
               ))}

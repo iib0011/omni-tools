@@ -1,17 +1,4 @@
 {
-  "sum": {
-    "title": "Sum Numbers",
-    "description": "Calculate the sum of a list of numbers.",
-    "inputTitle": "Input numbers",
-    "resultTitle": "Sum",
-    "sumOptions": "Sum Options",
-    "ignoreNonNumeric": "Ignore non-numeric values",
-    "ignoreNonNumericDescription": "Skip values that are not numbers",
-    "toolInfo": {
-      "title": "Sum numbers",
-      "description": "This tool allows you to calculate the sum of a list of numbers. You can input numbers separated by various delimiters and get their total sum."
-    }
-  },
   "generate": {
     "title": "Generate Numbers",
     "description": "Generate a sequence of numbers with customizable parameters.",
@@ -40,6 +27,28 @@
     "toolInfo": {
       "title": "What is an Arithmetic Sequence?",
       "description": "An arithmetic sequence is a sequence of numbers where the difference between each consecutive term is constant. This constant difference is called the common difference. Given the first term (a₁) and the common difference (d), each term can be found by adding the common difference to the previous term."
+    }
+  },
+  "sum": {
+    "toolInfo": {
+      "title": "What Is a Number Sum Calculator?",
+      "description": "This is an online browser-based utility for calculating the sum of a bunch of numbers. You can enter the numbers separated by a comma, space, or any other character, including the line break. You can also simply paste a fragment of textual data that contains numerical values that you want to sum up and the utility will extract them and find their sum."
+    },
+    "inputTitle": "Input",
+    "resultTitle": "Total",
+    "numberExtraction": "Number Extraction",
+    "runningSum": "Running Sum",
+    "printRunningSum": "Print Running Sum",
+    "printRunningSumDescription": "Display the sum as it's calculated step by step.",
+    "extractionTypes": {
+      "smart": {
+        "title": "Smart Sum",
+        "description": "Auto detect numbers in the input."
+      },
+      "delimiter": {
+        "title": "Number Delimiter",
+        "description": "Customize the number separator here. (By default a line break.)"
+      }
     }
   }
 }

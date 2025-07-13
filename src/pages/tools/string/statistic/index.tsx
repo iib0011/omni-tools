@@ -262,9 +262,7 @@ export default function Truncate({
             checked={values.characterCount}
             onChange={(value) => updateField('characterCount', value)}
             title={t('statistic.characterFrequencyAnalysis')}
-            description={t(
-              'string:statistic.characterFrequencyAnalysisDescription'
-            )}
+            description={t('statistic.characterFrequencyAnalysisDescription')}
           />
           <CheckboxWithDesc
             checked={values.emptyLines}

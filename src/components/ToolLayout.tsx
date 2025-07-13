@@ -31,8 +31,10 @@ export default function ToolLayout({
   const { t } = useTranslation();
 
   // Use i18n keys if available, otherwise fall back to provided strings
-  const toolTitle = i18n ? t(i18n.name) : title;
-  const toolDescription = i18n ? t(i18n.description) : description;
+  //@ts-ignore
+  const toolTitle: string = i18n ? t(i18n.name) : title;
+  //@ts-ignore
+  const toolDescription: string = i18n ? t(i18n.description) : description;
 
   const otherCategoryTools =
     getToolsByCategory()

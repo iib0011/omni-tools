@@ -1,43 +1,4 @@
 {
-  "compress": {
-    "title": "Compress Video",
-    "description": "Reduce video file size while maintaining quality.",
-    "inputTitle": "Input Video",
-    "resultTitle": "Compressed Video",
-    "compressionOptions": "Compression Options",
-    "qualityDescription": "Video quality (1-100)",
-    "qualityPlaceholder": "Quality",
-    "toolInfo": {
-      "title": "Video Compression",
-      "description": "This tool allows you to compress video files to reduce their size while maintaining acceptable quality. You can adjust the compression level to balance between file size and video quality."
-    }
-  },
-  "rotate": {
-    "title": "Rotate Video",
-    "description": "Rotate video by specified degrees.",
-    "inputTitle": "Input Video",
-    "resultTitle": "Rotated Video",
-    "rotationOptions": "Rotation Options",
-    "rotationAngleDescription": "Rotation angle in degrees",
-    "anglePlaceholder": "Angle",
-    "toolInfo": {
-      "title": "Video Rotation",
-      "description": "This tool allows you to rotate video files by a specified angle. You can rotate videos by 90, 180, or 270 degrees, or any custom angle."
-    }
-  },
-  "flip": {
-    "title": "Flip Video",
-    "description": "Flip video horizontally or vertically.",
-    "inputTitle": "Input Video",
-    "resultTitle": "Flipped Video",
-    "flipOptions": "Flip Options",
-    "horizontalFlip": "Horizontal Flip",
-    "verticalFlip": "Vertical Flip",
-    "toolInfo": {
-      "title": "Video Flip",
-      "description": "This tool allows you to flip video files horizontally or vertically. Horizontal flip creates a mirror effect, while vertical flip turns the video upside down."
-    }
-  },
   "loop": {
     "title": "Loop Video",
     "description": "Create a looping video by repeating the original video multiple times.",
@@ -82,5 +43,42 @@
     "endTime": "End Time",
     "inputTitle": "Input Video",
     "resultTitle": "Trimmed Video"
+  },
+  "changeSpeed": {
+    "newVideoSpeed": "New Video Speed",
+    "defaultMultiplier": "Default multiplier: 2 means 2x faster",
+    "inputTitle": "Input Video",
+    "settingSpeed": "Setting Speed",
+    "resultTitle": "Edited Video",
+    "toolInfo": {
+      "title": "What is a {{title}}?"
+    }
+  },
+  "compress": {
+    "resolution": "Resolution",
+    "quality": "Quality (CRF)",
+    "lossless": "Lossless",
+    "default": "Default",
+    "worst": "Worst",
+    "inputTitle": "Input Video",
+    "resultTitle": "Compressed Video",
+    "loadingText": "Compressing video..."
+  },
+  "flip": {
+    "orientation": "Orientation",
+    "horizontalLabel": "Horizontal (Mirror)",
+    "verticalLabel": "Vertical (Upside Down)",
+    "inputTitle": "Input Video",
+    "flippingVideo": "Flipping Video",
+    "resultTitle": "Flipped Video"
+  },
+  "rotate": {
+    "rotation": "Rotation",
+    "90Degrees": "90° Clockwise",
+    "180Degrees": "180° (Upside down)",
+    "270Degrees": "270° (90° Counter-clockwise)",
+    "inputTitle": "Input Video",
+    "rotatingVideo": "Rotating Video",
+    "resultTitle": "Rotated Video"
   }
 }

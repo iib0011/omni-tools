@@ -183,9 +183,9 @@ export default function SplitText({ title }: ToolComponentProps) {
             <RadioWithTextField
               key={type}
               checked={type === values.splitSeparatorType}
-              title={t(`string.split.${type}Title`)}
+              title={t(`split.${type}Title`)}
               fieldName={'splitSeparatorType'}
-              description={t(`string.split.${type}Description`)}
+              description={t(`split.${type}Description`)}
               value={values[`${type}Value`]}
               onRadioClick={() => updateField('splitSeparatorType', type)}
               onTextChange={(val) => updateField(`${type}Value`, val)}
@@ -199,7 +199,8 @@ export default function SplitText({ title }: ToolComponentProps) {
               key={option.accessor}
               value={values[option.accessor]}
               onOwnChange={(value) => updateField(option.accessor, value)}
-              description={t(`string.split.${option.accessor}Description`)}
+              //@ts-ignore
+              description={t(`split.${option.accessor}Description`)}
             />
           ))
         }

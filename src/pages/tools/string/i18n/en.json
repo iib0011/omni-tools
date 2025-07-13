@@ -5,15 +5,6 @@
     "inputTitle": "Input text",
     "resultTitle": "Uppercase text"
   },
-  "reverse": {
-    "title": "Reverse Text",
-    "description": "Reverse the order of characters in text.",
-    "inputTitle": "Input text",
-    "resultTitle": "Reversed text",
-    "processMultiLine": "Process as multi-line text (reverse each line separately)",
-    "skipEmptyLines": "Skip empty lines",
-    "trimWhitespace": "Trim whitespace from lines"
-  },
   "base64": {
     "title": "Base64 Encoder/Decoder",
     "description": "Encode or decode text using Base64 encoding.",
@@ -66,24 +57,6 @@
       "title": "Text Quoter",
       "description": "This tool allows you to add quotes around text. You can choose different quote characters, handle multi-line text, and control how empty lines are processed. It's useful for preparing text for programming, formatting data, or creating stylized text."
     }
-  },
-  "split": {
-    "title": "Split Text",
-    "description": "Split text into parts based on various criteria.",
-    "resultTitle": "Text pieces",
-    "splitSeparatorOptions": "Split separator options",
-    "symbolTitle": "Use a Symbol for Splitting",
-    "symbolDescription": "Character that will be used to break text into parts. (Space by default.)",
-    "regexTitle": "Use a Regex for Splitting",
-    "regexDescription": "Regular expression that will be used to break text into parts. (Multiple spaces by default.)",
-    "lengthTitle": "Use Length for Splitting",
-    "lengthDescription": "Number of symbols that will be put in each output chunk.",
-    "chunksTitle": "Use a Number of Chunks",
-    "chunksDescription": "Number of chunks of equal length in the output.",
-    "outputSeparatorOptions": "Output separator options",
-    "outputSeparatorDescription": "Character that will be put between the split chunks. (It's newline \"\\n\" by default.)",
-    "charBeforeChunkDescription": "Character before each chunk",
-    "charAfterChunkDescription": "Character after each chunk"
   },
   "join": {
     "title": "Join Text",
@@ -192,5 +165,32 @@
       "title": "Text Replacer",
       "description": "Easily replace specific text in your content with this simple, browser-based tool. Just input your text, set the text you want to replace and the replacement value, and instantly get the updated version."
     }
+  },
+  "reverse": {
+    "reversalOptions": "Reversal options",
+    "processMultiLine": "Process multi-line text",
+    "processMultiLineDescription": "Each line will be reversed independently",
+    "skipEmptyLines": "Skip empty lines",
+    "skipEmptyLinesDescription": "Empty lines will be removed from the output",
+    "trimWhitespace": "Trim whitespace",
+    "trimWhitespaceDescription": "Remove leading and trailing whitespace from each line",
+    "inputTitle": "Text to reverse",
+    "resultTitle": "Reversed text"
+  },
+  "split": {
+    "resultTitle": "Text pieces",
+    "splitSeparatorOptions": "Split separator options",
+    "symbolTitle": "Use a Symbol for Splitting",
+    "symbolDescription": "Character that will be used to break text into parts.\n(Space by default.)",
+    "regexTitle": "Use a Regex for Splitting",
+    "regexDescription": "Regular expression that will be used to break text into parts.\n(Multiple spaces by default.)",
+    "lengthTitle": "Use Length for Splitting",
+    "lengthDescription": "Number of symbols that will be put in each output chunk.",
+    "chunksTitle": "Use a Number of Chunks",
+    "chunksDescription": "Number of chunks of equal\nlength in the output.",
+    "outputSeparatorOptions": "Output separator options",
+    "outputSeparatorDescription": "Character that will be put between the split chunks.\n(It's newline \"\\n\" by default.)",
+    "charBeforeChunkDescription": "Character before each chunk",
+    "charAfterChunkDescription": "Character after each chunk"
   }
 }

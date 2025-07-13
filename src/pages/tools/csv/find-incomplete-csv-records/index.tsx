@@ -123,22 +123,20 @@ export default function FindIncompleteCsvRecords({
           <TextFieldWithDesc
             value={values.csvSeparator}
             onOwnChange={(val) => updateField('csvSeparator', val)}
-            description={t(
-              'csv:findIncompleteCsvRecords.csvSeparatorDescription'
-            )}
+            description={t('findIncompleteCsvRecords.csvSeparatorDescription')}
           />
           <TextFieldWithDesc
             value={values.quoteCharacter}
             onOwnChange={(val) => updateField('quoteCharacter', val)}
             description={t(
-              'csv:findIncompleteCsvRecords.quoteCharacterDescription'
+              'findIncompleteCsvRecords.quoteCharacterDescription'
             )}
           />
           <TextFieldWithDesc
             value={values.commentCharacter}
             onOwnChange={(val) => updateField('commentCharacter', val)}
             description={t(
-              'csv:findIncompleteCsvRecords.commentCharacterDescription'
+              'findIncompleteCsvRecords.commentCharacterDescription'
             )}
           />
         </Box>
@@ -153,7 +151,7 @@ export default function FindIncompleteCsvRecords({
             onChange={(value) => updateField('emptyLines', value)}
             title={t('findIncompleteCsvRecords.deleteLinesWithNoData')}
             description={t(
-              'csv:findIncompleteCsvRecords.deleteLinesWithNoDataDescription'
+              'findIncompleteCsvRecords.deleteLinesWithNoDataDescription'
             )}
           />
 
@@ -162,7 +160,7 @@ export default function FindIncompleteCsvRecords({
             onChange={(value) => updateField('emptyValues', value)}
             title={t('findIncompleteCsvRecords.findEmptyValues')}
             description={t(
-              'csv:findIncompleteCsvRecords.findEmptyValuesDescription'
+              'findIncompleteCsvRecords.findEmptyValuesDescription'
             )}
           />
 
@@ -179,7 +177,7 @@ export default function FindIncompleteCsvRecords({
               type="number"
               inputProps={{ min: 1 }}
               description={t(
-                'csv:findIncompleteCsvRecords.messageLimitDescription'
+                'findIncompleteCsvRecords.messageLimitDescription'
               )}
             />
           )}

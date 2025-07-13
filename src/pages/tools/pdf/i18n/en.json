@@ -78,5 +78,14 @@
 
     "errorReadingPdf": "Failed to read PDF file. Please make sure it is a valid PDF.",
     "errorCompressingPdf": "Failed to compress PDF: {{error}}"
+  },
+  "merge": {
+    "inputTitle": "Input PDF",
+    "resultTitle": "Output merged PDF",
+    "loadingText": "Extracting pages",
+    "toolInfo": {
+      "title": "How to Use the Merge PDF Tool?",
+      "description": "This tool allows you to merge multiple PDF files into a single document. To use the tool, simply upload the PDF files you want to merge. The tool will then combine all pages from the input files into a single PDF document."
+    }
   }
 }

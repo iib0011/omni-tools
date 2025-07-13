@@ -66,7 +66,7 @@ export default function FlipVideo({ title }: ToolComponentProps) {
           {orientationOptions.map((orientationOption) => (
             <SimpleRadio
               key={orientationOption.value}
-              title={t(`video.flip.${orientationOption.value}Label`)}
+              title={t(`flip.${orientationOption.value}Label`)}
               checked={values.orientation === orientationOption.value}
               onClick={() => {
                 updateField('orientation', orientationOption.value);

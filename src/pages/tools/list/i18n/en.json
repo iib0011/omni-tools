@@ -1,17 +1,4 @@
 {
-  "reverse": {
-    "title": "Reverse List",
-    "description": "Reverse the order of items in a list.",
-    "inputTitle": "Input list",
-    "resultTitle": "Reversed list",
-    "reverseOptions": "Reverse Options",
-    "reverseEachLine": "Reverse Each Line",
-    "reverseEachLineDescription": "Reverse each line separately instead of the entire list",
-    "toolInfo": {
-      "title": "Reverse List",
-      "description": "This tool allows you to reverse the order of items in a list. You can reverse the entire list or each line separately."
-    }
-  },
   "findUnique": {
     "title": "Find Unique",
     "inputTitle": "Input List",
@@ -28,19 +15,6 @@
     "findAbsolutelyUniqueItemsDescription": "Display only those items of the list that exist in a single copy.",
     "caseSensitiveItems": "Case Sensitive Items",
     "caseSensitiveItemsDescription": "Output items with different case as unique elements in the list."
-  },
-  "shuffle": {
-    "title": "Shuffle List",
-    "description": "Randomly shuffle the order of list items.",
-    "inputTitle": "Input list",
-    "resultTitle": "Shuffled list",
-    "shuffleOptions": "Shuffle Options",
-    "shuffleEachLine": "Shuffle Each Line",
-    "shuffleEachLineDescription": "Shuffle each line separately instead of the entire list",
-    "toolInfo": {
-      "title": "Shuffle List",
-      "description": "This tool allows you to randomly shuffle the order of items in a list. You can shuffle the entire list or each line separately."
-    }
   },
   "wrap": {
     "title": "Wrap List",
@@ -159,5 +133,39 @@
         "description": "This example shows how to duplicate a list with a fractional number of copies."
       }
     }
+  },
+  "reverse": {
+    "toolInfo": {
+      "title": "What Is a List Reverser?",
+      "description": "With this utility, you can reverse the order of items in a list. The utility first splits the input list into individual items and then iterates through them from the last item to the first item, printing each item to the output during the iteration. The input list may contain anything that can be represented as textual data, which includes digits, numbers, strings, words, sentences, etc. The input item separator can also be a regular expression. For example, the regex /[;,]/ will allow you to use items that are either comma- or semicolon-separated. The input and output list items delimiters can be customized in the options. By default, both input and output lists are comma-separated. Listabulous!"
+    },
+    "splitterMode": "Splitter Mode",
+    "itemSeparator": "Item Separator",
+    "itemSeparatorDescription": "Set a delimiting symbol or regular expression.",
+    "outputListOptions": "Output List Options",
+    "outputSeparatorDescription": "Output list item separator.",
+    "inputTitle": "Input list",
+    "resultTitle": "Reversed list",
+    "splitOperators": {
+      "symbol": {
+        "title": "Use a Symbol for Splitting",
+        "description": "Delimit input list items with a character."
+      },
+      "regex": {
+        "title": "Use a Regex for Splitting",
+        "description": "Delimit input list items with a regular expression."
+      }
+    }
+  },
+  "shuffle": {
+    "title": "Shuffle",
+    "inputTitle": "Input list",
+    "resultTitle": "Shuffled list",
+    "inputListSeparator": "Input list separator",
+    "delimiterDescription": "Set a delimiting symbol or regular expression.",
+    "shuffledListLength": "Shuffled List Length",
+    "outputLengthDescription": "Output this many random items",
+    "shuffledListSeparator": "Shuffled List Separator",
+    "joinSeparatorDescription": "Use this separator in the randomized list."
   }
 }

@@ -95,16 +95,14 @@ export default function TruncateClockTime({
             onClick={() => updateField('onlySecond', true)}
             checked={values.onlySecond}
             title={t('truncateClockTime.truncateOnlySeconds')}
-            description={t(
-              'time:truncateClockTime.truncateOnlySecondsDescription'
-            )}
+            description={t('truncateClockTime.truncateOnlySecondsDescription')}
           />
           <SimpleRadio
             onClick={() => updateField('onlySecond', false)}
             checked={!values.onlySecond}
             title={t('truncateClockTime.truncateMinutesAndSeconds')}
             description={t(
-              'time:truncateClockTime.truncateMinutesAndSecondsDescription'
+              'truncateClockTime.truncateMinutesAndSecondsDescription'
             )}
           />
         </Box>

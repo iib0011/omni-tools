@@ -63,7 +63,7 @@ export default function RotateVideo({ title }: ToolComponentProps) {
           {angleOptions.map((angleOption) => (
             <SimpleRadio
               key={angleOption.value}
-              title={t(`video.rotate.${angleOption.value}Degrees`)}
+              title={t(`rotate.${angleOption.value}Degrees`)}
               checked={values.rotation === angleOption.value}
               onClick={() => {
                 updateField('rotation', angleOption.value);

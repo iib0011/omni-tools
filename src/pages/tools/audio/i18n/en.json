@@ -1,17 +1,4 @@
 {
-  "changeSpeed": {
-    "title": "Change Audio Speed",
-    "description": "Change the playback speed of audio files.",
-    "inputTitle": "Input Audio",
-    "resultTitle": "Modified Audio",
-    "speedOptions": "Speed Options",
-    "speedDescription": "Speed multiplier (0.5 = half speed, 2.0 = double speed)",
-    "speedPlaceholder": "Speed",
-    "toolInfo": {
-      "title": "Change audio speed",
-      "description": "This tool allows you to change the playback speed of audio files. You can slow down or speed up audio while maintaining pitch quality."
-    }
-  },
   "extractAudio": {
     "title": "Extract Audio from Video",
     "description": "Extract audio track from video files.",
@@ -23,6 +10,18 @@
     "toolInfo": {
       "title": "What is {{title}}?",
       "description": "This tool allows you to extract the audio track from video files. You can choose from different audio formats including AAC, MP3, and WAV."
+    }
+  },
+  "changeSpeed": {
+    "newAudioSpeed": "New Audio Speed",
+    "speedDescription": "Default multiplier: 2 means 2x faster",
+    "outputFormat": "Output Format",
+    "inputTitle": "Input Audio",
+    "settingSpeed": "Setting Speed",
+    "resultTitle": "Edited Audio",
+    "toolInfo": {
+      "title": "What is {{title}}?",
+      "description": ""
     }
   }
 }
