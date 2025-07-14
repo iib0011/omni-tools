@@ -12,6 +12,7 @@ import ToolExamples, {
 import { ToolComponentProps } from '@tools/defineTool';
 import { FormikProps } from 'formik';
 import ToolContent from '@components/ToolContent';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   multiLine: true,
@@ -58,6 +59,7 @@ const exampleCards: CardExampleType<typeof initialValues>[] = [
 ];
 
 export default function Reverse({ title }: ToolComponentProps) {
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -74,27 +76,27 @@ export default function Reverse({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Reversal options',
+      title: t('reverse.reversalOptions'),
       component: [
         <CheckboxWithDesc
           key="multiLine"
           checked={values.multiLine}
-          title="Process multi-line text"
-          description="Each line will be reversed independently"
+          title={t('reverse.processMultiLine')}
+          description={t('reverse.processMultiLineDescription')}
           onChange={(val) => updateField('multiLine', val)}
         />,
         <CheckboxWithDesc
           key="emptyItems"
           checked={values.emptyItems}
-          title="Skip empty lines"
-          description="Empty lines will be removed from the output"
+          title={t('reverse.skipEmptyLines')}
+          description={t('reverse.skipEmptyLinesDescription')}
           onChange={(val) => updateField('emptyItems', val)}
         />,
         <CheckboxWithDesc
           key="trim"
           checked={values.trim}
-          title="Trim whitespace"
-          description="Remove leading and trailing whitespace from each line"
+          title={t('reverse.trimWhitespace')}
+          description={t('reverse.trimWhitespaceDescription')}
           onChange={(val) => updateField('trim', val)}
         />
       ]
@@ -109,9 +111,15 @@ export default function Reverse({ title }: ToolComponentProps) {
       compute={computeExternal}
       input={input}
       setInput={setInput}
-      inputComponent={<ToolTextInput value={input} onChange={setInput} />}
+      inputComponent={
+        <ToolTextInput
+          title={t('reverse.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
+      }
       resultComponent={
-        <ToolTextResult title={'Reversed text'} value={result} />
+        <ToolTextResult title={t('reverse.resultTitle')} value={result} />
       }
       exampleCards={exampleCards}
     />

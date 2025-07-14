@@ -3,12 +3,14 @@ import { lazy } from 'react';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('list', {
-  name: 'Unwrap',
   path: 'unwrap',
-  icon: 'mdi:unwrap',
-  description:
-    'A tool to remove characters from the beginning and end of each item in a list. Perfect for cleaning up formatted data or removing unwanted wrappers.',
-  shortDescription: 'Remove characters around list items.',
+  icon: 'material-symbols-light:unfold-more',
+
   keywords: ['unwrap'],
-  component: lazy(() => import('./index'))
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'list:unwrap.title',
+    description: 'list:unwrap.description',
+    shortDescription: 'list:unwrap.shortDescription'
+  }
 });

@@ -7,6 +7,7 @@ import ToolTextResult from '@components/result/ToolTextResult';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { validateXml } from './service';
 import { InitialValuesType } from './types';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {};
 
@@ -31,6 +32,7 @@ export default function XmlValidator({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation('xml');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -46,7 +48,7 @@ export default function XmlValidator({
         <ToolTextInput
           value={input}
           onChange={setInput}
-          placeholder="Paste or import XML here..."
+          placeholder={t('xmlValidator.placeholder')}
         />
       }
       resultComponent={<ToolTextResult value={result} extension="txt" />}
@@ -55,7 +57,10 @@ export default function XmlValidator({
       getGroups={null}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('xmlValidator.toolInfo.title'),
+        description: t('xmlValidator.toolInfo.description')
+      }}
     />
   );
 }

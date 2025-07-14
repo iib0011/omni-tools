@@ -148,16 +148,21 @@ npm run test
 npm run test:e2e
 ```
 
+### i18n (Translations)
+The translation files are [here](public/locales). Only edit these if you are a developer. For non developers, use [Locize](https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK).
+
 <img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date"/>
 
 ## 🤝 Looking to contribute?
 
 We welcome contributions! You can help by:
 
-- ✅ Reporting bugs
-- ✅ Suggesting new features in GitHub issues or [here](https://tally.so/r/nrkkx2)
-- ✅ Improving documentation
-- ✅ Submitting pull requests
+- Reporting bugs
+- Suggesting new features in GitHub issues or [here](https://tally.so/r/nrkkx2)
+- Translating in [Locize project](https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK).
+- Improving documentation
+- Submitting pull requests
+
 
 You can also join our [Discord server](https://discord.gg/SDbbn3hT4b)
 

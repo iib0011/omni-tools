@@ -2,12 +2,15 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('image-generic', {
-  name: 'Remove Background from Image',
+  i18n: {
+    name: 'image:removeBackground.title',
+    description: 'image:removeBackground.description',
+    shortDescription: 'image:removeBackground.shortDescription'
+  },
+
   path: 'remove-background',
   icon: 'mdi:image-remove',
-  description:
-    "World's simplest online tool to remove backgrounds from images. Just upload your image and our AI-powered tool will automatically remove the background, giving you a transparent PNG. Perfect for product photos, profile pictures, and design assets.",
-  shortDescription: 'Automatically remove backgrounds from images',
+
   keywords: [
     'remove',
     'background',

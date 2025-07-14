@@ -9,6 +9,7 @@ import ToolFileResult from '@components/result/ToolFileResult';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import RadioWithTextField from '@components/options/RadioWithTextField';
 import { changeAudioSpeed } from './service';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   newSpeed: 2,
@@ -25,6 +26,7 @@ export default function ChangeSpeed({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation('audio');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -49,20 +51,20 @@ export default function ChangeSpeed({
     updateField
   }) => [
     {
-      title: 'New Audio Speed',
+      title: t('changeSpeed.newAudioSpeed'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.newSpeed.toString()}
             onOwnChange={(val) => updateField('newSpeed', Number(val))}
-            description="Default multiplier: 2 means 2x faster"
+            description={t('changeSpeed.speedDescription')}
             type="number"
           />
         </Box>
       )
     },
     {
-      title: 'Output Format',
+      title: t('changeSpeed.outputFormat'),
       component: (
         <Box mt={2}>
           <RadioGroup
@@ -96,15 +98,19 @@ export default function ChangeSpeed({
         <ToolAudioInput
           value={input}
           onChange={setInput}
-          title={'Input Audio'}
+          title={t('changeSpeed.inputTitle')}
         />
       }
       resultComponent={
         loading ? (
-          <ToolFileResult title="Setting Speed" value={null} loading={true} />
+          <ToolFileResult
+            title={t('changeSpeed.settingSpeed')}
+            value={null}
+            loading={true}
+          />
         ) : (
           <ToolFileResult
-            title="Edited Audio"
+            title={t('changeSpeed.resultTitle')}
             value={result}
             extension={result ? result.name.split('.').pop() : undefined}
           />
@@ -114,7 +120,10 @@ export default function ChangeSpeed({
       getGroups={getGroups}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('changeSpeed.toolInfo.title', { title }),
+        description: longDescription
+      }}
     />
   );
 }

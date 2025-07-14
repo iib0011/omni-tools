@@ -3,12 +3,14 @@ import { lazy } from 'react';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('list', {
-  name: 'Find most popular',
   path: 'find-most-popular',
-  icon: 'material-symbols-light:query-stats',
-  description:
-    'A tool to identify and count the most frequently occurring items in a list. Useful for data analysis, finding trends, or identifying common elements.',
-  shortDescription: 'Find most common items in a list.',
+  icon: 'material-symbols-light:trending-up',
+
   keywords: ['find', 'most', 'popular'],
-  component: lazy(() => import('./index'))
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'list:findMostPopular.title',
+    description: 'list:findMostPopular.description',
+    shortDescription: 'list:findMostPopular.shortDescription'
+  }
 });

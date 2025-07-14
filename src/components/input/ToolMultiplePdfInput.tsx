@@ -6,6 +6,7 @@ import InputFooter from './InputFooter';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import { isArray } from 'lodash';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import { useTranslation } from 'react-i18next';
 
 interface MultiPdfInputComponentProps {
   accept: string[];
@@ -27,6 +28,7 @@ export default function ToolMultiFileInput({
   title,
   type
 }: MultiPdfInputComponentProps) {
+  const { t } = useTranslation();
   const theme = useTheme();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { showSnackBar } = useContext(CustomSnackBarContext);
@@ -96,7 +98,12 @@ export default function ToolMultiFileInput({
   return (
     <Box>
       <InputHeader
-        title={title || 'Input ' + type.charAt(0).toUpperCase() + type.slice(1)}
+        title={
+          title ||
+          t('toolMultiplePdfInput.inputTitle', {
+            type: type.charAt(0).toUpperCase() + type.slice(1)
+          })
+        }
       />
       <Box
         sx={{
@@ -156,7 +163,7 @@ export default function ToolMultiFileInput({
             ))
           ) : (
             <Typography variant="body2" color="text.secondary">
-              No files selected
+              {t('toolMultiplePdfInput.noFilesSelected')}
             </Typography>
           )}
         </Box>

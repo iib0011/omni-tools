@@ -1,0 +1,82 @@
+{
+  "compressPdf": {
+    "compressionLevel": "संपीड़न स्तर",
+    "compressionOptions": "संपीड़न विकल्प",
+    "description": "PDF फ़ाइल आकार कम करें।",
+    "high": "उच्च",
+    "imageQuality": "छवि गुणवत्ता",
+    "inputTitle": "इनपुट PDF",
+    "low": "कम",
+    "medium": "मध्यम",
+    "qualityPlaceholder": "गुणवत्ता (1-100)",
+    "removeMetadata": "मेटाडेटा हटाएं",
+    "resultTitle": "संपीड़ित PDF",
+    "title": "PDF संपीड़ित करें"
+  },
+  "mergePdf": {
+    "customOrder": "कस्टम क्रम",
+    "description": "कई PDF फ़ाइलों को एक दस्तावेज़ में जोड़ें।",
+    "includeBookmarks": "बुकमार्क शामिल करें",
+    "inputTitle": "इनपुट PDF फ़ाइलें",
+    "mergeOptions": "मर्ज विकल्प",
+    "mergeOrder": "मर्ज क्रम",
+    "orderByFilename": "फ़ाइल नाम के अनुसार क्रम",
+    "orderByUpload": "अपलोड क्रम के अनुसार",
+    "resultTitle": "मर्ज किया गया PDF",
+    "title": "PDF मर्ज करें"
+  },
+  "pdfToEpub": {
+    "conversionOptions": "रूपांतरण विकल्प",
+    "description": "PDF दस्तावेज़ों को EPUB फ़ाइलों में बदलें।",
+    "extractImages": "छवियां निकालें",
+    "generateToc": "सामग्री तालिका उत्पन्न करें",
+    "inputTitle": "इनपुट PDF",
+    "preserveFormatting": "फॉर्मेटिंग संरक्षित करें",
+    "resultTitle": "EPUB फ़ाइल",
+    "title": "PDF से EPUB"
+  },
+  "protectPdf": {
+    "allowCopying": "कॉपी करने की अनुमति दें",
+    "allowModification": "संशोधन की अनुमति दें",
+    "allowPrinting": "प्रिंटिंग की अनुमति दें",
+    "description": "PDF फ़ाइलों में पासवर्ड सुरक्षा जोड़ें।",
+    "inputTitle": "इनपुट PDF",
+    "ownerPassword": "मालिक पासवर्ड",
+    "ownerPasswordPlaceholder": "पासवर्ड",
+    "permissions": "अनुमतियां",
+    "protectionOptions": "सुरक्षा विकल्प",
+    "resultTitle": "सुरक्षित PDF",
+    "title": "PDF सुरक्षित करें",
+    "userPassword": "उपयोगकर्ता पासवर्ड",
+    "userPasswordPlaceholder": "पासवर्ड"
+  },
+  "rotatePdf": {
+    "angle180": "180 डिग्री",
+    "angle270": "270 डिग्री",
+    "angle90": "90 डिग्री",
+    "applyToAll": "सभी पेजों पर लागू करें",
+    "applyToSelected": "चयनित पेजों पर लागू करें",
+    "description": "PDF पेजों को घुमाएं।",
+    "inputTitle": "इनपुट PDF",
+    "pagesPlaceholder": "जैसे 1,3-5,7",
+    "resultTitle": "घुमाया गया PDF",
+    "rotationAngle": "घुमाने का कोण",
+    "rotationOptions": "घुमाने के विकल्प",
+    "selectedPages": "चयनित पेज",
+    "title": "PDF घुमाएं"
+  },
+  "splitPdf": {
+    "description": "PDF फ़ाइल से विशिष्ट पेज निकालें।",
+    "includeBookmarks": "बुकमार्क शामिल करें",
+    "inputTitle": "इनपुट PDF",
+    "pageRanges": "पेज श्रेणियां",
+    "rangesPlaceholder": "जैसे 1,3-5,7",
+    "resultTitle": "विभाजित PDF फ़ाइलें",
+    "splitByBookmarks": "बुकमार्क द्वारा विभाजित करें",
+    "splitByPages": "पेज द्वारा विभाजित करें",
+    "splitByRanges": "श्रेणियों द्वारा विभाजित करें",
+    "splitMethod": "विभाजन विधि",
+    "splitOptions": "विभाजन विकल्प",
+    "title": "PDF विभाजित करें"
+  }
+}

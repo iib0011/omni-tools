@@ -7,6 +7,7 @@ import { findUniqueCompute, SplitOperatorType } from './service';
 import SimpleRadio from '@components/options/SimpleRadio';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   splitOperatorType: 'symbol' as SplitOperatorType,
@@ -35,6 +36,7 @@ const splitOperators: {
 ];
 
 export default function FindUnique() {
+  const { t } = useTranslation('list');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const compute = (optionsValues: typeof initialValues, input: any) => {
@@ -64,18 +66,24 @@ export default function FindUnique() {
 
   return (
     <ToolContent
-      title="Find Unique"
+      title={t('findUnique.title')}
       initialValues={initialValues}
       compute={compute}
       input={input}
       setInput={setInput}
       inputComponent={
-        <ToolTextInput title={'Input list'} value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('findUnique.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
-      resultComponent={<ToolTextResult title={'Unique items'} value={result} />}
+      resultComponent={
+        <ToolTextResult title={t('findUnique.resultTitle')} value={result} />
+      }
       getGroups={({ values, updateField }) => [
         {
-          title: 'Input List Delimiter',
+          title: t('findUnique.inputListDelimiter'),
           component: (
             <Box>
               {splitOperators.map(({ title, description, type }) => (
@@ -88,7 +96,7 @@ export default function FindUnique() {
                 />
               ))}
               <TextFieldWithDesc
-                description={'Set a delimiting symbol or regular expression.'}
+                description={t('findUnique.delimiterDescription')}
                 value={values.splitSeparator}
                 onOwnChange={(val) => updateField('splitSeparator', val)}
               />
@@ -96,7 +104,7 @@ export default function FindUnique() {
           )
         },
         {
-          title: 'Output List Delimiter',
+          title: t('findUnique.outputListDelimiter'),
           component: (
             <Box>
               <TextFieldWithDesc
@@ -104,18 +112,14 @@ export default function FindUnique() {
                 onOwnChange={(value) => updateField('joinSeparator', value)}
               />
               <CheckboxWithDesc
-                title={'Trim top list items'}
-                description={
-                  'Remove leading and trailing spaces before comparing items'
-                }
+                title={t('findUnique.trimItems')}
+                description={t('findUnique.trimItemsDescription')}
                 checked={values.trimItems}
                 onChange={(value) => updateField('trimItems', value)}
               />
               <CheckboxWithDesc
-                title={'Skip empty items'}
-                description={
-                  "Don't include the empty list items in the output."
-                }
+                title={t('findUnique.skipEmptyItems')}
+                description={t('findUnique.skipEmptyItemsDescription')}
                 checked={values.deleteEmptyItems}
                 onChange={(value) => updateField('deleteEmptyItems', value)}
               />
@@ -123,22 +127,20 @@ export default function FindUnique() {
           )
         },
         {
-          title: 'Unique Item Options',
+          title: t('findUnique.uniqueItemOptions'),
           component: (
             <Box>
               <CheckboxWithDesc
-                title={'Find Absolutely Unique Items'}
-                description={
-                  'Display only those items of the list that exist in a single copy.'
-                }
+                title={t('findUnique.findAbsolutelyUniqueItems')}
+                description={t(
+                  'findUnique.findAbsolutelyUniqueItemsDescription'
+                )}
                 checked={values.absolutelyUnique}
                 onChange={(value) => updateField('absolutelyUnique', value)}
               />
               <CheckboxWithDesc
-                title={'Case Sensitive Items'}
-                description={
-                  'Output items with different case as unique elements in the list.'
-                }
+                title={t('findUnique.caseSensitiveItems')}
+                description={t('findUnique.caseSensitiveItemsDescription')}
                 checked={values.caseSensitive}
                 onChange={(value) => updateField('caseSensitive', value)}
               />

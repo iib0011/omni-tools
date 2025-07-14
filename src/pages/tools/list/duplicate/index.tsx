@@ -11,6 +11,7 @@ import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import SimpleRadio from '@components/options/SimpleRadio';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import * as Yup from 'yup';
+import { useTranslation } from 'react-i18next';
 
 interface InitialValuesType {
   splitOperatorType: SplitOperatorType;
@@ -101,6 +102,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function Duplicate({ title }: ToolComponentProps) {
+  const { t } = useTranslation('list');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -134,55 +136,53 @@ export default function Duplicate({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Split Options',
+      title: t('duplicate.splitOptions'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('splitOperatorType', 'symbol')}
             checked={values.splitOperatorType === 'symbol'}
-            title={'Split by Symbol'}
+            title={t('duplicate.splitBySymbol')}
           />
           <SimpleRadio
             onClick={() => updateField('splitOperatorType', 'regex')}
             checked={values.splitOperatorType === 'regex'}
-            title={'Split by Regular Expression'}
+            title={t('duplicate.splitByRegex')}
           />
           <TextFieldWithDesc
             value={values.splitSeparator}
             onOwnChange={(val) => updateField('splitSeparator', val)}
-            description={'Separator to split the list'}
+            description={t('duplicate.splitSeparatorDescription')}
           />
           <TextFieldWithDesc
             value={values.joinSeparator}
             onOwnChange={(val) => updateField('joinSeparator', val)}
-            description={'Separator to join the duplicated list'}
+            description={t('duplicate.joinSeparatorDescription')}
           />
         </Box>
       )
     },
     {
-      title: 'Duplication Options',
+      title: t('duplicate.duplicationOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.copy}
             onOwnChange={(val) => updateField('copy', val)}
-            description={'Number of copies (can be fractional)'}
+            description={t('duplicate.copyDescription')}
             type="number"
           />
           <CheckboxWithDesc
-            title={'Concatenate'}
+            title={t('duplicate.concatenate')}
             checked={values.concatenate}
             onChange={(checked) => updateField('concatenate', checked)}
-            description={
-              'Concatenate copies (if unchecked, items will be interweaved)'
-            }
+            description={t('duplicate.concatenateDescription')}
           />
           <CheckboxWithDesc
-            title={'Reverse'}
+            title={t('duplicate.reverse')}
             checked={values.reverse}
             onChange={(checked) => updateField('reverse', checked)}
-            description={'Reverse the duplicated items'}
+            description={t('duplicate.reverseDescription')}
           />
         </Box>
       )
@@ -193,18 +193,21 @@ export default function Duplicate({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       inputComponent={
-        <ToolTextInput title="Input List" value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('duplicate.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
       resultComponent={
-        <ToolTextResult title="Duplicated List" value={result} />
+        <ToolTextResult title={t('duplicate.resultTitle')} value={result} />
       }
       initialValues={initialValues}
       getGroups={getGroups}
       validationSchema={validationSchema}
       toolInfo={{
-        title: 'List Duplication',
-        description:
-          "This tool allows you to duplicate items in a list. You can specify the number of copies (including fractional values), control whether items are concatenated or interweaved, and even reverse the duplicated items. It's useful for creating repeated patterns, generating test data, or expanding lists with predictable content."
+        title: t('duplicate.toolInfo.title'),
+        description: t('duplicate.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

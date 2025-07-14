@@ -10,6 +10,7 @@ import { initialValues, InitialValuesType } from './initialValues';
 import ToolContent from '@components/ToolContent';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
+import { useTranslation } from 'react-i18next';
 
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
@@ -60,6 +61,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function Replacer({ title }: ToolComponentProps) {
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -72,16 +74,16 @@ export default function Replacer({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Search text',
+      title: t('textReplacer.searchText'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('mode', 'text')}
             checked={values.mode === 'text'}
-            title={'Find This Pattern in Text'}
+            title={t('textReplacer.findPatternInText')}
           />
           <TextFieldWithDesc
-            description={'Enter the text pattern that you want to replace.'}
+            description={t('textReplacer.searchPatternDescription')}
             value={values.searchValue}
             onOwnChange={(val) => updateField('searchValue', val)}
             type={'text'}
@@ -89,12 +91,10 @@ export default function Replacer({ title }: ToolComponentProps) {
           <SimpleRadio
             onClick={() => updateField('mode', 'regexp')}
             checked={values.mode === 'regexp'}
-            title={'Find a Pattern Using a RegExp'}
+            title={t('textReplacer.findPatternUsingRegexp')}
           />
           <TextFieldWithDesc
-            description={
-              'Enter the regular expression that you want to replace.'
-            }
+            description={t('textReplacer.regexpDescription')}
             value={values.searchRegexp}
             onOwnChange={(val) => updateField('searchRegexp', val)}
             type={'text'}
@@ -103,12 +103,12 @@ export default function Replacer({ title }: ToolComponentProps) {
       )
     },
     {
-      title: 'Replace Text',
+      title: t('textReplacer.replaceText'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={'Enter the pattern to use for replacement.'}
-            placeholder={'New text'}
+            description={t('textReplacer.replacePatternDescription')}
+            placeholder={t('textReplacer.newTextPlaceholder')}
             value={values.replaceValue}
             onOwnChange={(val) => updateField('replaceValue', val)}
             type={'text'}
@@ -128,18 +128,17 @@ export default function Replacer({ title }: ToolComponentProps) {
       setInput={setInput}
       inputComponent={
         <ToolTextInput
-          title="Text to replace"
+          title={t('textReplacer.inputTitle')}
           value={input}
           onChange={setInput}
         />
       }
       resultComponent={
-        <ToolTextResult title={'Text with replacements'} value={result} />
+        <ToolTextResult title={t('textReplacer.resultTitle')} value={result} />
       }
       toolInfo={{
-        title: 'Text Replacer',
-        description:
-          'Easily replace specific text in your content with this simple, browser-based tool. Just input your text, set the text you want to replace and the replacement value, and instantly get the updated version.'
+        title: t('textReplacer.toolInfo.title'),
+        description: t('textReplacer.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

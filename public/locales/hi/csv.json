@@ -1,0 +1,123 @@
+{
+  "changeSeparator": {
+    "comma": "कॉमा",
+    "commonSeparators": "सामान्य विभाजक",
+    "description": "CSV फ़ाइल में विभाजक वर्ण बदलें।",
+    "inputSeparator": "इनपुट विभाजक",
+    "inputSeparatorPlaceholder": "विभाजक",
+    "inputTitle": "इनपुट CSV",
+    "outputSeparator": "आउटपुट विभाजक",
+    "outputSeparatorPlaceholder": "विभाजक",
+    "pipe": "पाइप",
+    "resultTitle": "परिवर्तित CSV",
+    "semicolon": "सेमीकोलन",
+    "separatorOptions": "विभाजक विकल्प",
+    "tab": "टैब",
+    "title": "CSV विभाजक बदलें"
+  },
+  "csvToJson": {
+    "arrayFormat": "सरणी प्रारूप",
+    "conversionOptions": "रूपांतरण विकल्प",
+    "description": "CSV डेटा को JSON प्रारूप में बदलें।",
+    "firstRowAsHeaders": "पहली पंक्ति शीर्षक के रूप में",
+    "includeHeaders": "शीर्षक शामिल करें",
+    "inputTitle": "इनपुट CSV",
+    "objectFormat": "ऑब्जेक्ट प्रारूप",
+    "outputFormat": "आउटपुट प्रारूप",
+    "resultTitle": "JSON परिणाम",
+    "separatorPlaceholder": "विभाजक",
+    "title": "CSV से JSON"
+  },
+  "csvToTsv": {
+    "conversionOptions": "रूपांतरण विकल्प",
+    "description": "CSV फ़ाइल को TSV प्रारूप में बदलें।",
+    "inputSeparator": "इनपुट विभाजक",
+    "inputSeparatorPlaceholder": "विभाजक",
+    "inputTitle": "इनपुट CSV",
+    "preserveHeaders": "शीर्षक संरक्षित करें",
+    "resultTitle": "TSV परिणाम",
+    "title": "CSV से TSV"
+  },
+  "csvToXml": {
+    "conversionOptions": "रूपांतरण विकल्प",
+    "description": "CSV डेटा को XML प्रारूप में बदलें।",
+    "firstRowAsHeaders": "पहली पंक्ति शीर्षक के रूप में",
+    "inputTitle": "इनपुट CSV",
+    "resultTitle": "XML परिणाम",
+    "rootElement": "मूल तत्व",
+    "rootPlaceholder": "तत्व नाम",
+    "rowElement": "पंक्ति तत्व",
+    "rowPlaceholder": "तत्व नाम",
+    "separatorPlaceholder": "विभाजक",
+    "title": "CSV से XML"
+  },
+  "csvToYaml": {
+    "conversionOptions": "रूपांतरण विकल्प",
+    "description": "CSV डेटा को YAML प्रारूप में बदलें।",
+    "firstRowAsHeaders": "पहली पंक्ति शीर्षक के रूप में",
+    "includeHeaders": "शीर्षक शामिल करें",
+    "indentSize": "इंडेंट आकार",
+    "inputTitle": "इनपुट CSV",
+    "resultTitle": "YAML परिणाम",
+    "separatorPlaceholder": "विभाजक",
+    "sizePlaceholder": "आकार",
+    "title": "CSV से YAML"
+  },
+  "findIncompleteRecords": {
+    "checkEmptyValues": "खाली मूल्य जांचें",
+    "description": "CSV फ़ाइल में अधूरे रिकॉर्ड खोजें।",
+    "errorLimit": "त्रुटि सीमा",
+    "inputTitle": "इनपुट CSV",
+    "limitPlaceholder": "सीमा",
+    "resultTitle": "अधूरे रिकॉर्ड",
+    "searchOptions": "खोज विकल्प",
+    "separatorPlaceholder": "विभाजक",
+    "skipEmptyLines": "खाली पंक्तियां छोड़ें",
+    "title": "अधूरे CSV रिकॉर्ड खोजें"
+  },
+  "insertColumns": {
+    "columnNames": "स्तंभ नाम",
+    "defaultValues": "डिफ़ॉल्ट मूल्य",
+    "description": "CSV फ़ाइल में नए स्तंभ डालें।",
+    "inputTitle": "इनपुट CSV",
+    "insertPosition": "डालने की स्थिति",
+    "insertionOptions": "डालने के विकल्प",
+    "namesPlaceholder": "नाम (कॉमा से अलग)",
+    "positionPlaceholder": "स्थिति",
+    "resultTitle": "संशोधित CSV",
+    "separatorPlaceholder": "विभाजक",
+    "title": "CSV स्तंभ डालें",
+    "valuesPlaceholder": "मूल्य (कॉमा से अलग)"
+  },
+  "rowsToColumns": {
+    "description": "CSV डेटा को पंक्तियों से स्तंभों में बदलें।",
+    "includeHeaders": "शीर्षक शामिल करें",
+    "inputTitle": "इनपुट CSV",
+    "resultTitle": "परिवर्तित CSV",
+    "separatorPlaceholder": "विभाजक",
+    "title": "CSV पंक्तियां से स्तंभ",
+    "transformationOptions": "परिवर्तन विकल्प",
+    "transposeData": "डेटा ट्रांसपोज़ करें"
+  },
+  "swapColumns": {
+    "description": "CSV फ़ाइल में स्तंभों की स्थिति बदलें।",
+    "firstColumn": "पहला स्तंभ",
+    "firstColumnPlaceholder": "स्तंभ संख्या",
+    "inputTitle": "इनपुट CSV",
+    "resultTitle": "संशोधित CSV",
+    "secondColumn": "दूसरा स्तंभ",
+    "secondColumnPlaceholder": "स्तंभ संख्या",
+    "separatorPlaceholder": "विभाजक",
+    "swapOptions": "बदलने के विकल्प",
+    "title": "CSV स्तंभ बदलें"
+  },
+  "transposeCsv": {
+    "description": "CSV डेटा को ट्रांसपोज़ करें (पंक्तियों को स्तंभों में बदलें)।",
+    "includeHeaders": "शीर्षक शामिल करें",
+    "inputTitle": "इनपुट CSV",
+    "resultTitle": "ट्रांसपोज़ किया गया CSV",
+    "separatorPlaceholder": "विभाजक",
+    "title": "CSV ट्रांसपोज़ करें",
+    "transposeOptions": "ट्रांसपोज़ विकल्प"
+  }
+}

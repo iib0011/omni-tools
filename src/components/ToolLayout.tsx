@@ -5,26 +5,45 @@ import ToolHeader from './ToolHeader';
 import Separator from './Separator';
 import AllTools from './allTools/AllTools';
 import { getToolsByCategory } from '@tools/index';
-import { capitalizeFirstLetter } from '../utils/string';
+import {
+  capitalizeFirstLetter,
+  getI18nNamespaceFromToolCategory
+} from '../utils/string';
 import { IconifyIcon } from '@iconify/react';
+import { useTranslation } from 'react-i18next';
+import { ToolCategory } from '@tools/defineTool';
+import { FullI18nKey } from '../i18n';
 
 export default function ToolLayout({
   children,
-  title,
-  description,
   icon,
-  type
+  type,
+  i18n
 }: {
-  title: string;
-  description: string;
   icon?: IconifyIcon | string;
-  type: string;
+  type: ToolCategory;
   children: ReactNode;
+  i18n?: {
+    name: FullI18nKey;
+    description: FullI18nKey;
+    shortDescription: FullI18nKey;
+  };
 }) {
+  const { t } = useTranslation([
+    'translation',
+    getI18nNamespaceFromToolCategory(type)
+  ]);
+
+  // Use i18n keys if available, otherwise fall back to provided strings
+  //@ts-ignore
+  const toolTitle: string = t(i18n.name);
+  //@ts-ignore
+  const toolDescription: string = t(i18n.description);
+
   const otherCategoryTools =
     getToolsByCategory()
       .find((category) => category.type === type)
-      ?.tools.filter((tool) => tool.name !== title)
+      ?.tools.filter((tool) => t(tool.name) !== toolTitle)
       .map((tool) => ({
         title: tool.name,
         description: tool.shortDescription,
@@ -41,22 +60,24 @@ export default function ToolLayout({
       sx={{ backgroundColor: 'background.default' }}
     >
       <Helmet>
-        <title>{`${title} - OmniTools`}</title>
+        <title>{`${toolTitle} - OmniTools`}</title>
       </Helmet>
       <Box width={'85%'}>
         <ToolHeader
-          title={title}
-          description={description}
+          title={toolTitle}
+          description={toolDescription}
           icon={icon}
           type={type}
         />
         {children}
         <Separator backgroundColor="#5581b5" margin="50px" />
         <AllTools
-          title={`All ${capitalizeFirstLetter(
-            getToolsByCategory().find((category) => category.type === type)!
-              .rawTitle
-          )} tools`}
+          title={t('toolLayout.allToolsTitle', {
+            type: capitalizeFirstLetter(
+              getToolsByCategory().find((category) => category.type === type)!
+                .rawTitle
+            )
+          })}
           toolCards={otherCategoryTools}
         />
       </Box>

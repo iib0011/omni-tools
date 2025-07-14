@@ -7,6 +7,7 @@ import { Icon, IconifyIcon } from '@iconify/react';
 import { categoriesColors } from '../config/uiConfig';
 import { getToolsByCategory } from '@tools/index';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: 'white',
@@ -24,6 +25,7 @@ interface ToolHeaderProps {
 }
 
 function ToolLinks() {
+  const { t } = useTranslation();
   const [examplesVisible, setExamplesVisible] = useState(false);
 
   useEffect(() => {
@@ -63,7 +65,7 @@ function ToolLinks() {
             sx={{ backgroundColor: 'background.paper' }}
             onClick={() => scrollToElement('examples')}
           >
-            See Examples
+            {t('toolHeader.seeExamples')}
           </StyledButton>
         </Grid>
       )}

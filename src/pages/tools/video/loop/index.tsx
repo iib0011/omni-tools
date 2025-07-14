@@ -11,6 +11,7 @@ import ToolFileResult from '@components/result/ToolFileResult';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { updateNumberField } from '@utils/string';
 import * as Yup from 'yup';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   loops: 2
@@ -21,6 +22,7 @@ const validationSchema = Yup.object({
 });
 
 export default function Loop({ title, longDescription }: ToolComponentProps) {
+  const { t } = useTranslation('video');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -43,7 +45,7 @@ export default function Loop({ title, longDescription }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Loops',
+      title: t('loop.loops'),
       component: (
         <Box>
           <TextFieldWithDesc
@@ -51,7 +53,7 @@ export default function Loop({ title, longDescription }: ToolComponentProps) {
               updateNumberField(value, 'loops', updateField)
             }
             value={values.loops}
-            label={'Number of Loops'}
+            label={t('loop.numberOfLoops')}
           />
         </Box>
       )
@@ -66,14 +68,14 @@ export default function Loop({ title, longDescription }: ToolComponentProps) {
         loading ? (
           <ToolFileResult
             value={null}
-            title={'Looping Video'}
+            title={t('loop.loopingVideo')}
             loading={true}
             extension={''}
           />
         ) : (
           <ToolFileResult
             value={result}
-            title={'Looped Video'}
+            title={t('loop.resultTitle')}
             extension={'mp4'}
           />
         )
@@ -83,7 +85,10 @@ export default function Loop({ title, longDescription }: ToolComponentProps) {
       getGroups={getGroups}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('loop.toolInfo.title', { title }),
+        description: longDescription
+      }}
     />
   );
 }

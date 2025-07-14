@@ -1,0 +1,5 @@
+{
+  "changeSpeed": {
+    "description": "Modifier la vitesse de lecture des fichiers audio. Accélérer ou ralentir le son tout en conservant la hauteur."
+  }
+}

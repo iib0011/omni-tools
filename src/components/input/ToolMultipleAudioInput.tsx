@@ -6,6 +6,7 @@ import InputFooter from './InputFooter';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import { isArray } from 'lodash';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import { useTranslation } from 'react-i18next';
 
 interface MultiAudioInputComponentProps {
   accept: string[];
@@ -27,7 +28,10 @@ export default function ToolMultipleAudioInput({
   title,
   type
 }: MultiAudioInputComponentProps) {
+  const { t } = useTranslation();
+  const theme = useTheme();
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const { showSnackBar } = useContext(CustomSnackBarContext);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -93,7 +97,12 @@ export default function ToolMultipleAudioInput({
   return (
     <Box>
       <InputHeader
-        title={title || 'Input ' + type.charAt(0).toUpperCase() + type.slice(1)}
+        title={
+          title ||
+          t('toolMultipleAudioInput.inputTitle', {
+            type: type.charAt(0).toUpperCase() + type.slice(1)
+          })
+        }
       />
       <Box
         sx={{
@@ -152,7 +161,7 @@ export default function ToolMultipleAudioInput({
             ))
           ) : (
             <Typography variant="body2" color="text.secondary">
-              No files selected
+              {t('toolMultipleAudioInput.noFilesSelected')}
             </Typography>
           )}
         </Box>

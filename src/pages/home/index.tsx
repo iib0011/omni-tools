@@ -1,6 +1,7 @@
 import { Box, useTheme } from '@mui/material';
 import Hero from 'components/Hero';
 import Categories from './Categories';
+import { Helmet } from 'react-helmet';
 
 export default function Home() {
   const theme = useTheme();
@@ -25,6 +26,7 @@ export default function Home() {
       justifyContent={'center'}
       width={'100%'}
     >
+      <Helmet title={'OmniTools'} />
       <Hero />
       <Categories />
     </Box>

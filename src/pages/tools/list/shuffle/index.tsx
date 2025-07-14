@@ -7,6 +7,7 @@ import { shuffleList, SplitOperatorType } from './service';
 import SimpleRadio from '@components/options/SimpleRadio';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { isNumber } from '@utils/string';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   splitOperatorType: 'symbol' as SplitOperatorType,
@@ -32,6 +33,7 @@ const splitOperators: {
 ];
 
 export default function Shuffle() {
+  const { t } = useTranslation('list');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const compute = (optionsValues: typeof initialValues, input: any) => {
@@ -51,20 +53,24 @@ export default function Shuffle() {
 
   return (
     <ToolContent
-      title="Shuffle"
+      title={t('shuffle.title')}
       initialValues={initialValues}
       compute={compute}
       input={input}
       setInput={setInput}
       inputComponent={
-        <ToolTextInput title={'Input list'} value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('shuffle.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
       resultComponent={
-        <ToolTextResult title={'Shuffled list'} value={result} />
+        <ToolTextResult title={t('shuffle.resultTitle')} value={result} />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: 'Input list separator',
+          title: t('shuffle.inputListSeparator'),
           component: (
             <Box>
               {splitOperators.map(({ title, description, type }) => (
@@ -77,7 +83,7 @@ export default function Shuffle() {
                 />
               ))}
               <TextFieldWithDesc
-                description={'Set a delimiting symbol or regular expression.'}
+                description={t('shuffle.delimiterDescription')}
                 value={values.splitSeparator}
                 onOwnChange={(val) => updateField('splitSeparator', val)}
               />
@@ -85,11 +91,11 @@ export default function Shuffle() {
           )
         },
         {
-          title: 'Shuffled List Length',
+          title: t('shuffle.shuffledListLength'),
           component: (
             <Box>
               <TextFieldWithDesc
-                description={'Output this many random items'}
+                description={t('shuffle.outputLengthDescription')}
                 value={values.length}
                 onOwnChange={(val) => updateField('length', val)}
               />
@@ -97,13 +103,13 @@ export default function Shuffle() {
           )
         },
         {
-          title: 'Shuffled List Separator',
+          title: t('shuffle.shuffledListSeparator'),
           component: (
             <Box>
               <TextFieldWithDesc
                 value={values.joinSeparator}
                 onOwnChange={(value) => updateField('joinSeparator', value)}
-                description={'Use this separator in the randomized list.'}
+                description={t('shuffle.joinSeparatorDescription')}
               />
             </Box>
           )

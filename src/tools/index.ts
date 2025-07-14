@@ -13,6 +13,8 @@ import { timeTools } from '../pages/tools/time';
 import { IconifyIcon } from '@iconify/react';
 import { pdfTools } from '../pages/tools/pdf';
 import { xmlTools } from '../pages/tools/xml';
+import { TFunction } from 'i18next';
+import { I18nNamespaces } from '../i18n';
 
 const toolCategoriesOrder: ToolCategory[] = [
   'image-generic',
@@ -143,17 +145,17 @@ const categoriesConfig: {
 // );
 export const filterTools = (
   tools: DefinedTool[],
-  query: string
+  query: string,
+  t: TFunction<I18nNamespaces>
 ): DefinedTool[] => {
   if (!query) return tools;
 
   const lowerCaseQuery = query.toLowerCase();
-
   return tools.filter(
     (tool) =>
-      tool.name.toLowerCase().includes(lowerCaseQuery) ||
-      tool.description.toLowerCase().includes(lowerCaseQuery) ||
-      tool.shortDescription.toLowerCase().includes(lowerCaseQuery) ||
+      t(tool.name).toLowerCase().includes(lowerCaseQuery) ||
+      t(tool.description).toLowerCase().includes(lowerCaseQuery) ||
+      t(tool.shortDescription).toLowerCase().includes(lowerCaseQuery) ||
       tool.keywords.some((keyword) =>
         keyword.toLowerCase().includes(lowerCaseQuery)
       )

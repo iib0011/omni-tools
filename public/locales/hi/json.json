@@ -1,0 +1,80 @@
+{
+  "escape": {
+    "description": "JSON स्ट्रिंग में विशेष वर्णों को एस्केप करें।",
+    "escapeBackslashes": "बैकस्लैश एस्केप करें",
+    "escapeNewlines": "नई पंक्तियां एस्केप करें",
+    "escapeOptions": "एस्केप विकल्प",
+    "escapeQuotes": "उद्धरण एस्केप करें",
+    "escapeTabs": "टैब एस्केप करें",
+    "inputTitle": "इनपुट JSON",
+    "resultTitle": "एस्केप किया गया JSON",
+    "title": "JSON एस्केप करें"
+  },
+  "jsonToXml": {
+    "conversionOptions": "रूपांतरण विकल्प",
+    "description": "JSON डेटा को XML प्रारूप में बदलें।",
+    "includeAttributes": "विशेषताएं शामिल करें",
+    "indentSize": "इंडेंट आकार",
+    "inputTitle": "इनपुट JSON",
+    "resultTitle": "XML परिणाम",
+    "rootElement": "मूल तत्व",
+    "rootPlaceholder": "तत्व नाम",
+    "sizePlaceholder": "आकार",
+    "title": "JSON से XML"
+  },
+  "minify": {
+    "compactArrays": "सरणियां संक्षिप्त करें",
+    "description": "JSON को संक्षिप्त प्रारूप में बदलें।",
+    "inputTitle": "इनपुट JSON",
+    "minifyOptions": "संक्षिप्त करने के विकल्प",
+    "removeComments": "टिप्पणियां हटाएं",
+    "removeWhitespace": "सफेद स्थान हटाएं",
+    "resultTitle": "संक्षिप्त JSON",
+    "title": "JSON संक्षिप्त करें"
+  },
+  "prettify": {
+    "description": "JSON को सुंदर प्रारूप में बदलें।",
+    "formattingOptions": "फॉर्मेटिंग विकल्प",
+    "indentCharacter": "इंडेंट वर्ण",
+    "indentSize": "इंडेंट आकार",
+    "inputTitle": "इनपुट JSON",
+    "resultTitle": "सुंदर JSON",
+    "sizePlaceholder": "आकार",
+    "sortKeys": "कुंजियां क्रमबद्ध करें",
+    "space": "स्पेस",
+    "tab": "टैब",
+    "title": "JSON सुंदर बनाएं"
+  },
+  "stringify": {
+    "description": "JavaScript ऑब्जेक्ट को JSON स्ट्रिंग में बदलें।",
+    "includeFunctions": "फ़ंक्शन शामिल करें",
+    "includeUndefined": "अपरिभाषित शामिल करें",
+    "inputTitle": "इनपुट ऑब्जेक्ट",
+    "prettyPrint": "सुंदर प्रिंट",
+    "resultTitle": "JSON स्ट्रिंग",
+    "stringifyOptions": "स्ट्रिंगिफाई विकल्प",
+    "title": "JSON स्ट्रिंगिफाई"
+  },
+  "tsvToJson": {
+    "arrayFormat": "सरणी प्रारूप",
+    "conversionOptions": "रूपांतरण विकल्प",
+    "description": "TSV डेटा को JSON प्रारूप में बदलें।",
+    "firstRowAsHeaders": "पहली पंक्ति शीर्षक के रूप में",
+    "includeHeaders": "शीर्षक शामिल करें",
+    "inputTitle": "इनपुट TSV",
+    "objectFormat": "ऑब्जेक्ट प्रारूप",
+    "outputFormat": "आउटपुट प्रारूप",
+    "resultTitle": "JSON परिणाम",
+    "title": "TSV से JSON"
+  },
+  "validateJson": {
+    "allowComments": "टिप्पणियां अनुमति दें",
+    "allowTrailingCommas": "अनुगामी कॉमा अनुमति दें",
+    "description": "JSON स्ट्रिंग की वैधता जांचें।",
+    "inputTitle": "इनपुट JSON",
+    "resultTitle": "मान्यता परिणाम",
+    "strictMode": "सख्त मोड",
+    "title": "JSON मान्य करें",
+    "validationOptions": "मान्यता विकल्प"
+  }
+}
