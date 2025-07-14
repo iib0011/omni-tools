@@ -42,11 +42,14 @@ export type FullI18nKey = {
 i18n.use(initReactI18next).init({
   lng: 'en',
   fallbackLng: 'en',
+  debug: useLocize,
   backend: useLocize
     ? locizeOptions
     : {
         loadPath: '/locales/{{lng}}/{{ns}}.json'
-      }
+      },
+  saveMissing: useLocize,
+  updateMissing: useLocize
 });
 
 export default i18n;
