@@ -110,7 +110,7 @@ describe('generatePassword', () => {
       includeSymbols: true
     };
     const result = generatePassword(options);
-    expect(result).toMatch(/^[!@#$%^&*()_+~`|}{[\]:;?><,./-=]+$/);
+    expect(result).toMatch(/^[!@#$%^&*()_+~`|}{[\]:;?><,./\-=]+$/);
     expect(result).toHaveLength(30);
   });
 
