@@ -24,7 +24,7 @@
     "lint": "eslint src --max-warnings=0 --fix",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "prepare": "husky install",
-    "i18n:pull": "locize download --project-id e7156a3e-66fb-4035-a0f0-cebf1c63a3ba --api-key $LOCIZE_API_KEY --path ./public/locales",
+    "i18n:pull": "locize download --project-id e7156a3e-66fb-4035-a0f0-cebf1c63a3ba --path ./public/locales",
     "i18n:sync": "locize sync --project-id e7156a3e-66fb-4035-a0f0-cebf1c63a3ba --path ./public/locales --update-values true"
   },
   "dependencies": {

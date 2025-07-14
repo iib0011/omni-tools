@@ -154,14 +154,13 @@ We use **[Locize](https://locize.com)** for managing translations.
 
 ### 🔁 Workflow
 
-1. **Join the Locize project** via the [invitation link](https://www.locize.app/register?invitation=Uk9mvOCKkB7sjuUqI5jDBjZROveZIvdBQqzrpmB4oQtT1LNB4BnzzT0S0o1gx79N).
-
-2. **Pull latest translations** before editing:
+1. Join the Locize project** via the [invitation link](https://www.locize.app/register?invitation=Uk9mvOCKkB7sjuUqI5jDBjZROveZIvdBQqzrpmB4oQtT1LNB4BnzzT0S0o1gx79N).
+2. Make sure `LOCIZE_API_KEY` is available in your environment (e.g., in `.env`). You can get it from API, CDN, NOTIFICATIONS
+3. Pull latest translations** before editing:
    ```bash
    npm run i18n:pull
    ```
-3. **Edit translation files** in `public/locales/{lang}/{namespace}.json`.
-4. Make sure `LOCIZE_API_KEY` is available in your environment (e.g., in `.env`).
+4. **Edit translation files** in `public/locales/{lang}/{namespace}.json`.
 5. **Push your changes** after editing:
    ```bash
    npm run i18n:sync

@@ -28,6 +28,18 @@ interface NavbarProps {
   mode: Mode;
   onChangeMode: () => void;
 }
+const languages = [
+  { code: 'en', label: 'English' },
+  { code: 'de', label: 'Deutsch' },
+  { code: 'es', label: 'Español' },
+  { code: 'fr', label: 'Français' },
+  { code: 'pt', label: 'Português' },
+  { code: 'ja', label: '日本語' },
+  { code: 'hi', label: 'हिंदी' },
+  { code: 'nl', label: 'Nederlands' },
+  { code: 'ru', label: 'Русский' },
+  { code: 'zh', label: '中文' }
+];
 
 const Navbar: React.FC<NavbarProps> = ({
   mode,
@@ -75,8 +87,11 @@ const Navbar: React.FC<NavbarProps> = ({
           }
         }}
       >
-        <MenuItem value="en">English</MenuItem>
-        <MenuItem value="hi">हिंदी</MenuItem>
+        {languages.map((lang) => (
+          <MenuItem key={lang.code} value={lang.code}>
+            {lang.label}
+          </MenuItem>
+        ))}
       </Select>
     </FormControl>
   );
