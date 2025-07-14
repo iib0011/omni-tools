@@ -16,12 +16,11 @@ if (useLocize) {
 }
 
 const locizeOptions = {
-  projectId: 'e7156a3e-66fb-4035-a0f0-cebf1c63a3ba', // Replace with your Locize project ID
-  apiKey: import.meta.env.LOCIZE_API_KEY, // Replace with your Locize API key
+  projectId: 'e7156a3e-66fb-4035-a0f0-cebf1c63a3ba',
+  apiKey: import.meta.env.LOCIZE_API_KEY,
   referenceLng: 'en',
   version: 'latest'
 };
-// Merge translations for demonstration; in a real app, use namespaces
 
 export type I18nNamespaces =
   | 'translation'
@@ -46,7 +45,6 @@ i18n.use(initReactI18next).init({
   backend: useLocize
     ? locizeOptions
     : {
-        // Static files backend for production
         loadPath: '/locales/{{lng}}/{{ns}}.json'
       }
 });
