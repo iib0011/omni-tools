@@ -1,5 +1,3 @@
-import { DefinedTool } from '@tools/defineTool';
-
 const bookmarkedToolsKey = 'bookmarkedTools';
 
 export function getBookmarkedToolPaths(): string[] {
