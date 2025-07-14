@@ -175,7 +175,7 @@ We welcome contributions! You can help by:
 
 - Reporting bugs
 - Suggesting new features in GitHub issues or [here](https://tally.so/r/nrkkx2)
-- Translating in [Locize project](https://www.locize.app/register?invitation=Uk9mvOCKkB7sjuUqI5jDBjZROveZIvdBQqzrpmB4oQtT1LNB4BnzzT0S0o1gx79N).
+- Translating in [Locize project](https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK).
 - Improving documentation
 - Submitting pull requests
 
