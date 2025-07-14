@@ -11,7 +11,10 @@ import Typography from '@mui/material/Typography';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { filterTools, getToolsByCategory } from '../../tools';
 import Hero from 'components/Hero';
-import { getToolCategoryTitle } from '@utils/string';
+import {
+  getI18nNamespaceFromToolCategory,
+  getToolCategoryTitle
+} from '@utils/string';
 import { Icon } from '@iconify/react';
 import { categoriesColors } from 'config/uiConfig';
 import React, { useEffect } from 'react';
@@ -40,7 +43,7 @@ export default function ToolsByCategory() {
   );
   const { t } = useTranslation(
     categoryTools.length
-      ? (categoryTools[0].name.split(':')[0] as I18nNamespaces)
+      ? getI18nNamespaceFromToolCategory(categoryTools[0].type)
       : 'translation'
   );
   useEffect(() => {
@@ -124,9 +127,11 @@ export default function ToolsByCategory() {
                     }}
                     to={'/' + tool.path}
                   >
+                    {/*@ts-ignore*/}
                     {t(tool.name)}
                   </StyledLink>
                   <Typography sx={{ mt: 2 }}>
+                    {/*@ts-ignore*/}
                     {t(tool.shortDescription)}
                   </Typography>
                 </Box>

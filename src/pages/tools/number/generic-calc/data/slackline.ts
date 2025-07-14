@@ -19,6 +19,12 @@ const slackline: GenericCalcType = {
   longDescription: 'This calculator assumes a load in the center of the rope',
   formula: 'T = (W * sqrt((S**2) + ((L/2)**2)) )/ (2S)',
   presets: [],
+  i18n: {
+    name: 'number:slackline.title',
+    description: 'number:slackline.description',
+    shortDescription: 'number:slackline.shortDescription',
+    longDescription: 'number:slackline.longDescription'
+  },
   variables: [
     {
       name: 'L',

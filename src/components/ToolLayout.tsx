@@ -5,7 +5,10 @@ import ToolHeader from './ToolHeader';
 import Separator from './Separator';
 import AllTools from './allTools/AllTools';
 import { getToolsByCategory } from '@tools/index';
-import { capitalizeFirstLetter } from '../utils/string';
+import {
+  capitalizeFirstLetter,
+  getI18nNamespaceFromToolCategory
+} from '../utils/string';
 import { IconifyIcon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
 import { ToolCategory } from '@tools/defineTool';
@@ -30,7 +33,10 @@ export default function ToolLayout({
     shortDescription: FullI18nKey;
   };
 }) {
-  const { t } = useTranslation();
+  const { t } = useTranslation([
+    'translation',
+    getI18nNamespaceFromToolCategory(type)
+  ]);
 
   // Use i18n keys if available, otherwise fall back to provided strings
   //@ts-ignore

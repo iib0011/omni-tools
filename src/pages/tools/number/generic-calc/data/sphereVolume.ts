@@ -16,6 +16,12 @@ const volumeSphere: GenericCalcType = {
   ],
   shortDescription: 'Calculate the volume of a sphere using radius or diameter',
   name: 'Volume of a Sphere',
+  i18n: {
+    name: 'number:sphereVolume.title',
+    description: 'number:sphereVolume.description',
+    shortDescription: 'number:sphereVolume.shortDescription',
+    longDescription: 'number:sphereVolume.longDescription'
+  },
   path: 'volume-sphere',
   description: 'Volume of a Sphere',
   longDescription:

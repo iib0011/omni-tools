@@ -21,6 +21,12 @@ const voltageDropInWire: GenericCalcType = {
   name: 'Round trip voltage drop in cable',
   path: 'cable-voltage-drop',
   formula: 'x = (((p * L) / (A/10**6) ) *2) * I',
+  i18n: {
+    name: 'number:voltageDropInWire.title',
+    description: 'number:voltageDropInWire.description',
+    shortDescription: 'number:voltageDropInWire.shortDescription',
+    longDescription: 'number:voltageDropInWire.longDescription'
+  },
   description:
     'Calculates round trip voltage and power loss in a 2 conductor cable',
   longDescription:

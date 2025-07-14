@@ -22,6 +22,12 @@ const areaSphere: GenericCalcType = {
     'This calculator determines the surface area of a sphere using the formula A = 4πr². You can either input the radius to find the surface area or enter the surface area to calculate the required radius. This tool is useful for students studying geometry, engineers working with spherical objects, and anyone needing to perform calculations involving spherical surfaces.',
   formula: 'A = 4 * pi * r**2',
   presets: [],
+  i18n: {
+    name: 'number:sphereArea.title',
+    description: 'number:sphereArea.description',
+    shortDescription: 'number:sphereArea.shortDescription',
+    longDescription: 'number:sphereArea.longDescription'
+  },
   variables: [
     {
       name: 'A',

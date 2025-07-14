@@ -57,5 +57,35 @@
     "title": "Sum",
     "description": "Calculate the sum of a list of numbers. Enter numbers separated by commas or newlines to get their total sum.",
     "shortDescription": "Calculate sum of numbers"
+  },
+  "ohmsLaw": {
+    "title": "Ohm's Law",
+    "description": "Calculates voltage, current and resistance",
+    "shortDescription": "Calculate voltage, current, or resistance in electrical circuits using Ohm's Law",
+    "longDescription": "This calculator applies Ohm's Law (V = I × R) to determine any of the three electrical parameters when the other two are known. Ohm's Law is a fundamental principle in electrical engineering that describes the relationship between voltage (V), current (I), and resistance (R). This tool is essential for electronics hobbyists, electrical engineers, and students working with circuits to quickly solve for unknown values in their electrical designs."
+  },
+  "slackline": {
+    "title": "Slackline Tension",
+    "description": "Calculates tension in a slackline",
+    "shortDescription": "Calculate the approximate tension of a slackline or clothesline. Do not rely on this for safety.",
+    "longDescription": "This calculator assumes a load in the center of the rope"
+  },
+  "sphereArea": {
+    "title": "Area of a Sphere",
+    "description": "Area of a Sphere",
+    "shortDescription": "Calculate the surface area of a sphere based on its radius",
+    "longDescription": "This calculator determines the surface area of a sphere using the formula A = 4πr². You can either input the radius to find the surface area or enter the surface area to calculate the required radius. This tool is useful for students studying geometry, engineers working with spherical objects, and anyone needing to perform calculations involving spherical surfaces."
+  },
+  "sphereVolume": {
+    "title": "Volume of a Sphere",
+    "description": "Volume of a Sphere",
+    "shortDescription": "Calculate the volume of a sphere using radius or diameter",
+    "longDescription": "This calculator computes the volume of a sphere using the formula V = (4/3)πr³. You can input either the radius or diameter to find the volume, or enter the volume to determine the required radius. The tool is valuable for students, engineers, and professionals working with spherical objects in fields such as physics, engineering, and manufacturing."
+  },
+  "voltageDropInWire": {
+    "title": "Round trip voltage drop in cable",
+    "description": "Calculates round trip voltage and power loss in a 2 conductor cable",
+    "shortDescription": "Calculate voltage drop and power loss in electrical cables based on length, material, and current",
+    "longDescription": "This calculator helps determine the voltage drop and power loss in a two-conductor electrical cable. It takes into account the cable length, wire gauge (cross-sectional area), material resistivity, and current flow. The tool calculates the round-trip voltage drop, total resistance of the cable, and the power dissipated as heat. This is particularly useful for electrical engineers, electricians, and hobbyists when designing electrical systems to ensure voltage levels remain within acceptable limits at the load."
   }
 }

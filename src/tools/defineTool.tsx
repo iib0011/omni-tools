@@ -2,6 +2,7 @@ import ToolLayout from '../components/ToolLayout';
 import React, { JSXElementConstructor, LazyExoticComponent } from 'react';
 import { IconifyIcon } from '@iconify/react';
 import { FullI18nKey } from '../i18n';
+import { ParseKeys } from 'i18next';
 
 export interface ToolMeta {
   path: string;
@@ -38,9 +39,9 @@ export type ToolCategory =
 export interface DefinedTool {
   type: ToolCategory;
   path: string;
-  name: string;
-  description: string;
-  shortDescription: string;
+  name: FullI18nKey;
+  description: FullI18nKey;
+  shortDescription: FullI18nKey;
   icon: IconifyIcon | string;
   keywords: string[];
   component: () => JSX.Element;
