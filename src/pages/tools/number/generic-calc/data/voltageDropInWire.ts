@@ -16,9 +16,6 @@ const voltageDropInWire: GenericCalcType = {
     'AWG',
     'gauge'
   ],
-  shortDescription:
-    'Calculate voltage drop and power loss in electrical cables based on length, material, and current',
-  name: 'Round trip voltage drop in cable',
   path: 'cable-voltage-drop',
   formula: 'x = (((p * L) / (A/10**6) ) *2) * I',
   i18n: {
@@ -27,10 +24,6 @@ const voltageDropInWire: GenericCalcType = {
     shortDescription: 'number:voltageDropInWire.shortDescription',
     longDescription: 'number:voltageDropInWire.longDescription'
   },
-  description:
-    'Calculates round trip voltage and power loss in a 2 conductor cable',
-  longDescription:
-    'This calculator helps determine the voltage drop and power loss in a two-conductor electrical cable. It takes into account the cable length, wire gauge (cross-sectional area), material resistivity, and current flow. The tool calculates the round-trip voltage drop, total resistance of the cable, and the power dissipated as heat. This is particularly useful for electrical engineers, electricians, and hobbyists when designing electrical systems to ensure voltage levels remain within acceptable limits at the load.',
   presets: [
     {
       title: 'Material',

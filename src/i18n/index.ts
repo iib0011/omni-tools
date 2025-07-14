@@ -22,19 +22,21 @@ const locizeOptions = {
   version: 'latest'
 };
 
-export type I18nNamespaces =
-  | 'translation'
-  | 'list'
-  | 'string'
-  | 'csv'
-  | 'json'
-  | 'pdf'
-  | 'image'
-  | 'audio'
-  | 'video'
-  | 'number'
-  | 'time'
-  | 'xml';
+export const validNamespaces: string[] = [
+  'string',
+  'number',
+  'video',
+  'list',
+  'json',
+  'time',
+  'csv',
+  'pdf',
+  'audio',
+  'xml',
+  'translation',
+  'image'
+];
+export type I18nNamespaces = (typeof validNamespaces)[number];
 export type FullI18nKey = {
   [K in I18nNamespaces]: `${K}:${ParseKeys<K>}`;
 }[I18nNamespaces];
@@ -42,7 +44,7 @@ export type FullI18nKey = {
 i18n.use(initReactI18next).init({
   lng: 'en',
   fallbackLng: 'en',
-  debug: useLocize,
+  debug: false,
   backend: useLocize
     ? locizeOptions
     : {

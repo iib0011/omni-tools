@@ -7,12 +7,10 @@ export const tool = defineTool('image-generic', {
     description: 'image:convertToJpg.description',
     shortDescription: 'image:convertToJpg.shortDescription'
   },
-  name: 'Convert Images to JPG',
+
   path: 'convert-to-jpg',
   icon: 'ph:file-jpg-thin',
-  description:
-    'Convert various image formats (PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW) to JPG with customizable quality and background color settings.',
-  shortDescription: 'Convert images to JPG with quality control',
+
   keywords: [
     'convert',
     'jpg',

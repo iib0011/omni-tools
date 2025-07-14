@@ -1,7 +1,7 @@
 import { UpdateField } from '@components/options/ToolOptions';
 import { getToolsByCategory } from '@tools/index';
 import { ToolCategory } from '@tools/defineTool';
-import { I18nNamespaces } from '../i18n';
+import { I18nNamespaces, validNamespaces } from '../i18n';
 
 // Here starting the shared values for string manipulation.
 
@@ -115,20 +115,6 @@ export const getToolCategoryTitle = (categoryName: string): string =>
 
 // Type guard to check if a value is a valid I18nNamespaces
 const isValidI18nNamespace = (value: string): value is I18nNamespaces => {
-  const validNamespaces: I18nNamespaces[] = [
-    'string',
-    'number',
-    'video',
-    'list',
-    'json',
-    'time',
-    'csv',
-    'pdf',
-    'audio',
-    'xml',
-    'translation',
-    'image'
-  ];
   return validNamespaces.includes(value as I18nNamespaces);
 };
 

@@ -37,15 +37,18 @@ export default function ToolsByCategory() {
   const { categoryName } = useParams();
   const [searchTerm, setSearchTerm] = React.useState<string>('');
   const rawTitle = getToolCategoryTitle(categoryName as string);
-  const categoryTools = filterTools(
-    getToolsByCategory().find(({ type }) => type === categoryName)?.tools ?? [],
-    searchTerm
-  );
-  const { t } = useTranslation(
-    categoryTools.length
-      ? getI18nNamespaceFromToolCategory(categoryTools[0].type)
-      : 'translation'
-  );
+  // First get tools by category without filtering
+  const toolsByCategory =
+    getToolsByCategory().find(({ type }) => type === categoryName)?.tools ?? [];
+
+  const namespace =
+    toolsByCategory.length > 0
+      ? getI18nNamespaceFromToolCategory(toolsByCategory[0].type)
+      : 'translation';
+  const { t } = useTranslation(namespace);
+
+  const categoryTools = filterTools(toolsByCategory, searchTerm, t);
+
   useEffect(() => {
     if (mainContentRef.current) {
       mainContentRef.current.scrollIntoView({ behavior: 'smooth' });

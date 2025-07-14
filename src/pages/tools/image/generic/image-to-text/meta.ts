@@ -7,12 +7,10 @@ export const tool = defineTool('image-generic', {
     description: 'image:imageToText.description',
     shortDescription: 'image:imageToText.shortDescription'
   },
-  name: 'Image to Text (OCR)',
+
   path: 'image-to-text',
   icon: 'mdi:text-recognition', // Iconify icon as a string
-  description:
-    'Extract text from images (JPG, PNG) using optical character recognition (OCR).',
-  shortDescription: 'Extract text from images using OCR.',
+
   keywords: [
     'ocr',
     'optical character recognition',

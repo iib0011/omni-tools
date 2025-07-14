@@ -11,12 +11,7 @@ const slackline: GenericCalcType = {
     'tension',
     'clothesline'
   ],
-  shortDescription:
-    'Calculate the approximate tension of a slackline or clothesline. Do not rely on this for safety.',
-  name: 'Slackline Tension',
   path: 'slackline-tension',
-  description: 'Calculates tension in a slackline',
-  longDescription: 'This calculator assumes a load in the center of the rope',
   formula: 'T = (W * sqrt((S**2) + ((L/2)**2)) )/ (2S)',
   presets: [],
   i18n: {

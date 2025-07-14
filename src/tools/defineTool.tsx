@@ -9,10 +9,6 @@ export interface ToolMeta {
   component: LazyExoticComponent<JSXElementConstructor<ToolComponentProps>>;
   keywords: string[];
   icon: IconifyIcon | string;
-  name: string;
-  description: string;
-  shortDescription: string;
-  longDescription?: string;
   i18n: {
     name: FullI18nKey;
     description: FullI18nKey;
@@ -56,36 +52,20 @@ export const defineTool = (
   basePath: ToolCategory,
   options: ToolMeta
 ): DefinedTool => {
-  const {
-    icon,
-    path,
-    name,
-    description,
-    keywords,
-    component,
-    shortDescription,
-    longDescription,
-    i18n
-  } = options;
+  const { icon, path, keywords, component, i18n } = options;
   const Component = component;
   return {
     type: basePath,
     path: `${basePath}/${path}`,
-    name: i18n?.name || name,
+    name: i18n.name,
     icon,
-    description: i18n?.description || description,
-    shortDescription: i18n?.shortDescription || shortDescription,
+    description: i18n.description,
+    shortDescription: i18n.shortDescription,
     keywords,
     component: () => {
       return (
-        <ToolLayout
-          title={name}
-          description={description}
-          icon={icon}
-          type={basePath}
-          i18n={i18n}
-        >
-          <Component title={name} longDescription={longDescription} />
+        <ToolLayout icon={icon} type={basePath} i18n={i18n}>
+          <Component title={i18n.name} longDescription={i18n.longDescription} />
         </ToolLayout>
       );
     }

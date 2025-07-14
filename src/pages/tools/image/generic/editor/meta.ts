@@ -7,12 +7,10 @@ export const tool = defineTool('image-generic', {
     description: 'image:editor.description',
     shortDescription: 'image:editor.shortDescription'
   },
-  name: 'Image Editor',
+
   path: 'editor',
   icon: 'mdi:image-edit',
-  description:
-    'Advanced image editor with tools for cropping, rotating, annotating, adjusting colors, and adding watermarks. Edit your images with professional-grade tools directly in your browser.',
-  shortDescription: 'Edit images with advanced tools and features',
+
   keywords: [
     'image',
     'editor',

@@ -4,19 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: i18n in meta">
-      <change afterPath="$PROJECT_DIR$/scripts/add-i18n-to-meta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/update-i18n-from-meta.js" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: saveMissing">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/i18n/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/trim/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/trim/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/change-csv-separator/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/change-csv-separator/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-rows-to-columns/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-rows-to-columns/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-json/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-tsv/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-tsv/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-xml/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-yaml/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/csv-to-yaml/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/i18n/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/find-incomplete-csv-records/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/insert-csv-columns/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/swap-csv-columns/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/swap-csv-columns/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/csv/transpose-csv/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/csv/transpose-csv/meta.ts" afterDir="false" />
@@ -32,18 +39,84 @@
       <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/remove-background/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/remove-background/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/rotate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/rotate/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/i18n/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/compress-png/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/png/convert-jgp-to-png/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/escape-json/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/escape-json/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/json-to-xml/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/json-to-xml/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/minify/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/minify/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/prettify/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/prettify/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/stringify/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/stringify/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/tsv-to-json/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/validateJson/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/validateJson/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/duplicate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/duplicate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-most-popular/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/find-unique/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/find-unique/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/group/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/group/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/reverse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/reverse/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/rotate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/rotate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/shuffle/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/shuffle/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/sort/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/sort/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/truncate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/truncate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/unwrap/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/unwrap/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/list/wrap/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/list/wrap/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/arithmetic-sequence/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/ohmsLaw.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/ohmsLaw.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/slackline.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/slackline.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/sphereArea.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/sphereArea.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/sphereVolume.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/sphereVolume.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/voltageDropInWire.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/voltageDropInWire.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/sum/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/sum/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/compress-pdf/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/editor/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/editor/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/i18n/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-epub/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-epub/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-png/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-png/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/protect-pdf/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/meta.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/i18n/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/base64/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/base64/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/censor/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/censor/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/create-palindrome/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/extract-substring/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/join/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/join/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/palindrome/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/palindrome/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/quote/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/quote/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/randomize-case/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/remove-duplicate-lines/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/repeat/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/repeat/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/reverse/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/rot13/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/rot13/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/rotate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/rotate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/split/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/split/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/statistic/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/statistic/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/text-replacer/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/to-morse/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/to-morse/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/truncate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/truncate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/uppercase/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/uppercase/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/check-leap-years/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-days-to-hours/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-hours-to-days/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-hours-to-days/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-seconds-to-time/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/convert-time-to-seconds/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/crontab-guru/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/crontab-guru/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/time-between-dates/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/time/truncate-clock-time/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/change-speed/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/change-speed/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/compress/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/compress/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/crop-video/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/crop-video/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/flip/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/flip/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/loop/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/loop/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/rotate/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/rotate/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/trim/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/xml-beautifier/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/xml/xml-validator/meta.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/string.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/string.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +382,7 @@
     "git-widget-placeholder": "#190 on fork/AshAnand34/en-hi-translation",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools/src",
+    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -317,6 +390,9 @@
     "nodejs_package_manager_path": "npm",
     "npm.build.executor": "Run",
     "npm.dev.executor": "Run",
+    "npm.i18n:pull.executor": "Run",
+    "npm.i18n:push.executor": "Run",
+    "npm.i18n:sync.executor": "Run",
     "npm.lint.executor": "Run",
     "npm.prebuild.executor": "Run",
     "npm.script:create:tool.executor": "Run",
@@ -343,11 +419,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\assets" />
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets\fonts\quicksand" />
-      <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\public\assets\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\@types" />
@@ -357,28 +433,11 @@
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\categories" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.add-i18n-to-meta.js">
-    <configuration name="replaceText function (regexp mode).should return the original text when passed an invalid regexp" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/pages/tools/string/text-replacer/replaceText.service.test.ts" />
-      <test-names>
-        <test-name value="replaceText function (regexp mode)" />
-        <test-name value="should return the original text when passed an invalid regexp" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="add-i18n-to-meta.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/add-i18n-to-meta.js" working-dir="$PROJECT_DIR$/scripts">
-      <method v="2" />
-    </configuration>
-    <configuration name="locize-upload.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/locize-upload.js" working-dir="$PROJECT_DIR$/scripts">
-      <method v="2" />
-    </configuration>
-    <configuration name="update-i18n-from-meta.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/update-i18n-from-meta.js" working-dir="$PROJECT_DIR$/scripts">
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="locize-upload.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="locize-upload.js" working-dir="$PROJECT_DIR$/scripts">
+      <envs>
+        <env name="LOCIZE_API_KEY" value="a2ac4dc2-d10e-4d35-bcf7-92db87381711" />
+      </envs>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
@@ -396,23 +455,56 @@
       <node-interpreter value="project" />
       <envs>
         <env name="LOCIZE_API_KEY" value="a2ac4dc2-d10e-4d35-bcf7-92db87381711" />
+        <env name="VITE_CONTRIBUTOR_MODE" value="true" />
+      </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="i18n:pull" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="i18n:pull" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="i18n:push" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="i18n:push" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="i18n:sync" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="i18n:sync" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs>
+        <env name="LOCIZE_API_KEY" value="a2ac4dc2-d10le-4d35-bcf7-92db87381711" />
       </envs>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Node.js.add-i18n-to-meta.js" />
       <item itemvalue="Node.js.locize-upload.js" />
-      <item itemvalue="Node.js.update-i18n-from-meta.js" />
+      <item itemvalue="npm.i18n:pull" />
+      <item itemvalue="npm.i18n:push" />
+      <item itemvalue="npm.i18n:sync" />
       <item itemvalue="npm.dev" />
-      <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.add-i18n-to-meta.js" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.i18n:sync" />
+        <item itemvalue="npm.i18n:pull" />
+        <item itemvalue="npm.i18n:push" />
         <item itemvalue="Node.js.locize-upload.js" />
-        <item itemvalue="Node.js.update-i18n-from-meta.js" />
-        <item itemvalue="Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp" />
       </list>
     </recent_temporary>
   </component>
@@ -524,55 +616,8 @@
       <workItem from="1752127185450" duration="1168000" />
       <workItem from="1752157409587" duration="2415000" />
       <workItem from="1752403829295" duration="13253000" />
-      <workItem from="1752493585622" duration="3929000" />
-    </task>
-    <task id="LOCAL-00175" summary="chore: compress video icon">
-      <option name="closed" value="true" />
-      <created>1743355166425</created>
-      <option name="number" value="00175" />
-      <option name="presentableId" value="LOCAL-00175" />
-      <option name="project" value="LOCAL" />
-      <updated>1743355166426</updated>
-    </task>
-    <task id="LOCAL-00176" summary="fix: gif speed">
-      <option name="closed" value="true" />
-      <created>1743385388051</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1743385388051</updated>
-    </task>
-    <task id="LOCAL-00177" summary="fix: tsc">
-      <option name="closed" value="true" />
-      <created>1743385467178</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1743385467178</updated>
-    </task>
-    <task id="LOCAL-00178" summary="fix: background color">
-      <option name="closed" value="true" />
-      <created>1743385898871</created>
-      <option name="number" value="00178" />
-      <option name="presentableId" value="LOCAL-00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1743385898871</updated>
-    </task>
-    <task id="LOCAL-00179" summary="docs: github trendings">
-      <option name="closed" value="true" />
-      <created>1743459110471</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1743459110471</updated>
-    </task>
-    <task id="LOCAL-00180" summary="docs: optimize">
-      <option name="closed" value="true" />
-      <created>1743459205311</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1743459205311</updated>
+      <workItem from="1752493585622" duration="11629000" />
+      <workItem from="1752507105323" duration="4936000" />
     </task>
     <task id="LOCAL-00181" summary="fix: stars button width for 1k+ 😊">
       <option name="closed" value="true" />
@@ -918,7 +963,55 @@
       <option name="project" value="LOCAL" />
       <updated>1752493634215</updated>
     </task>
-    <option name="localTasksCounter" value="224" />
+    <task id="LOCAL-00224" summary="chore: add i18n to meta script">
+      <option name="closed" value="true" />
+      <created>1752497705915</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1752497705915</updated>
+    </task>
+    <task id="LOCAL-00225" summary="fix: tsc">
+      <option name="closed" value="true" />
+      <created>1752501110885</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1752501110885</updated>
+    </task>
+    <task id="LOCAL-00226" summary="chore: bundle translations at build time">
+      <option name="closed" value="true" />
+      <created>1752503206380</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1752503206380</updated>
+    </task>
+    <task id="LOCAL-00227" summary="fix: tsc">
+      <option name="closed" value="true" />
+      <created>1752503720380</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1752503720380</updated>
+    </task>
+    <task id="LOCAL-00228" summary="chore: remove unnecessary">
+      <option name="closed" value="true" />
+      <created>1752503770543</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1752503770543</updated>
+    </task>
+    <task id="LOCAL-00229" summary="chore: saveMissing">
+      <option name="closed" value="true" />
+      <created>1752505593881</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1752505593881</updated>
+    </task>
+    <option name="localTasksCounter" value="230" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -965,10 +1058,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: revert create-tool.mjs" />
-    <MESSAGE value="chore: remove unnecessary prop" />
-    <MESSAGE value="fix: compute flow" />
-    <MESSAGE value="feat: qr code generation init" />
     <MESSAGE value="chore: rename from Omni Tools to OmniTools" />
     <MESSAGE value="fix: tools by category page title" />
     <MESSAGE value="chore: use scrollY" />
@@ -987,10 +1076,14 @@
     <MESSAGE value="docs: edit pdf meta" />
     <MESSAGE value="fix: misc" />
     <MESSAGE value="fix: i18n tsc" />
-    <MESSAGE value="fix: tsc" />
     <MESSAGE value="chore: locize upload" />
     <MESSAGE value="chore: i18n in meta" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: i18n in meta" />
+    <MESSAGE value="chore: add i18n to meta script" />
+    <MESSAGE value="chore: bundle translations at build time" />
+    <MESSAGE value="fix: tsc" />
+    <MESSAGE value="chore: remove unnecessary" />
+    <MESSAGE value="chore: saveMissing" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: saveMissing" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

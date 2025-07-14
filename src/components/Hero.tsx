@@ -19,6 +19,7 @@ import _ from 'lodash';
 import { Icon } from '@iconify/react';
 import { getToolCategoryTitle } from '@utils/string';
 import { useTranslation } from 'react-i18next';
+import { validNamespaces } from '../i18n';
 
 const GroupHeader = styled('div')(({ theme }) => ({
   position: 'sticky',
@@ -36,7 +37,7 @@ const GroupItems = styled('ul')({
 });
 
 export default function Hero() {
-  const { t } = useTranslation();
+  const { t } = useTranslation(validNamespaces);
   const [inputValue, setInputValue] = useState<string>('');
   const theme = useTheme();
   const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
@@ -45,49 +46,49 @@ export default function Hero() {
   const exampleTools: { label: string; url: string; translationKey: string }[] =
     [
       {
-        label: t('hero.examples.createTransparentImage'),
+        label: t('translation:hero.examples.createTransparentImage'),
         url: '/image-generic/create-transparent',
-        translationKey: 'hero.examples.createTransparentImage'
+        translationKey: 'translation:hero.examples.createTransparentImage'
       },
       {
-        label: t('hero.examples.prettifyJson'),
+        label: t('translation:hero.examples.prettifyJson'),
         url: '/json/prettify',
-        translationKey: 'hero.examples.prettifyJson'
+        translationKey: 'translation:hero.examples.prettifyJson'
       },
       {
-        label: t('hero.examples.changeGifSpeed'),
+        label: t('translation:hero.examples.changeGifSpeed'),
         url: '/gif/change-speed',
-        translationKey: 'hero.examples.changeGifSpeed'
+        translationKey: 'translation:hero.examples.changeGifSpeed'
       },
       {
-        label: t('hero.examples.sortList'),
+        label: t('translation:hero.examples.sortList'),
         url: '/list/sort',
-        translationKey: 'hero.examples.sortList'
+        translationKey: 'translation:hero.examples.sortList'
       },
       {
-        label: t('hero.examples.compressPng'),
+        label: t('translation:hero.examples.compressPng'),
         url: '/png/compress-png',
-        translationKey: 'hero.examples.compressPng'
+        translationKey: 'translation:hero.examples.compressPng'
       },
       {
-        label: t('hero.examples.splitText'),
+        label: t('translation:hero.examples.splitText'),
         url: '/string/split',
-        translationKey: 'hero.examples.splitText'
+        translationKey: 'translation:hero.examples.splitText'
       },
       {
-        label: t('hero.examples.splitPdf'),
+        label: t('translation:hero.examples.splitPdf'),
         url: '/pdf/split-pdf',
-        translationKey: 'hero.examples.splitPdf'
+        translationKey: 'translation:hero.examples.splitPdf'
       },
       {
-        label: t('hero.examples.trimVideo'),
+        label: t('translation:hero.examples.trimVideo'),
         url: '/video/trim',
-        translationKey: 'hero.examples.trimVideo'
+        translationKey: 'translation:hero.examples.trimVideo'
       },
       {
-        label: t('hero.examples.calculateNumberSum'),
+        label: t('translation:hero.examples.calculateNumberSum'),
         url: '/number/sum',
-        translationKey: 'hero.examples.calculateNumberSum'
+        translationKey: 'translation:hero.examples.calculateNumberSum'
       }
     ];
 
@@ -96,20 +97,20 @@ export default function Hero() {
     newInputValue: string
   ) => {
     setInputValue(newInputValue);
-    setFilteredTools(filterTools(tools, newInputValue));
+    setFilteredTools(filterTools(tools, newInputValue, t));
   };
 
   return (
     <Box width={{ xs: '90%', md: '80%', lg: '60%' }}>
       <Stack mb={1} direction={'row'} spacing={1} justifyContent={'center'}>
         <Typography sx={{ textAlign: 'center' }} fontSize={{ xs: 25, md: 30 }}>
-          {t('hero.title')}{' '}
+          {t('translation:hero.title')}{' '}
           <Typography
             fontSize={{ xs: 25, md: 30 }}
             display={'inline'}
             color={'primary'}
           >
-            {t('hero.brand')}
+            {t('translation:hero.brand')}
           </Typography>
         </Typography>
       </Stack>
@@ -118,7 +119,7 @@ export default function Hero() {
         fontSize={{ xs: 15, md: 20 }}
         mb={2}
       >
-        {t('hero.description')}
+        {t('translation:hero.description')}
       </Typography>
 
       <Autocomplete
@@ -135,12 +136,12 @@ export default function Hero() {
           );
         }}
         inputValue={inputValue}
-        getOptionLabel={(option) => option.name}
+        getOptionLabel={(option) => t(option.name)}
         renderInput={(params) => (
           <TextField
             {...params}
             fullWidth
-            placeholder={t('hero.searchPlaceholder')}
+            placeholder={t('translation:hero.searchPlaceholder')}
             InputProps={{
               ...params.InputProps,
               endAdornment: <SearchIcon />,
@@ -161,8 +162,10 @@ export default function Hero() {
             <Stack direction={'row'} spacing={2} alignItems={'center'}>
               <Icon fontSize={20} icon={option.icon} />
               <Box>
-                <Typography fontWeight={'bold'}>{option.name}</Typography>
-                <Typography fontSize={12}>{option.shortDescription}</Typography>
+                <Typography fontWeight={'bold'}>{t(option.name)}</Typography>
+                <Typography fontSize={12}>
+                  {t(option.shortDescription)}
+                </Typography>
               </Box>
             </Stack>
           </Box>

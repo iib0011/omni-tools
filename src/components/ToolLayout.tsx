@@ -16,14 +16,10 @@ import { FullI18nKey } from '../i18n';
 
 export default function ToolLayout({
   children,
-  title,
-  description,
   icon,
   type,
   i18n
 }: {
-  title: string;
-  description: string;
   icon?: IconifyIcon | string;
   type: ToolCategory;
   children: ReactNode;
@@ -40,14 +36,14 @@ export default function ToolLayout({
 
   // Use i18n keys if available, otherwise fall back to provided strings
   //@ts-ignore
-  const toolTitle: string = i18n ? t(i18n.name) : title;
+  const toolTitle: string = t(i18n.name);
   //@ts-ignore
-  const toolDescription: string = i18n ? t(i18n.description) : description;
+  const toolDescription: string = t(i18n.description);
 
   const otherCategoryTools =
     getToolsByCategory()
       .find((category) => category.type === type)
-      ?.tools.filter((tool) => tool.name !== title)
+      ?.tools.filter((tool) => t(tool.name) !== toolTitle)
       .map((tool) => ({
         title: tool.name,
         description: tool.shortDescription,

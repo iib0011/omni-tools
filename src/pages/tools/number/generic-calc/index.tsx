@@ -26,6 +26,7 @@ import { CustomSnackBarContext } from 'contexts/CustomSnackBarContext';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTranslation } from 'react-i18next';
 
 function numericSolveEquationFor(
   equation: string,
@@ -61,6 +62,7 @@ export default async function makeTool(
 
   return function GenericCalc({ title }: ToolComponentProps) {
     const { showSnackBar } = useContext(CustomSnackBarContext);
+    const { t } = useTranslation();
     const theme = useTheme();
     const lessThanSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -236,8 +238,8 @@ export default async function makeTool(
         inputComponent={null}
         initialValues={initialValues}
         toolInfo={{
-          title: calcData.name,
-          description: calcData.longDescription
+          title: t(calcData.i18n.name),
+          description: t(calcData.i18n.longDescription)
         }}
         verticalGroups
         // @ts-ignore
