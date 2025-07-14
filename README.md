@@ -44,7 +44,7 @@ Plus, the Docker image is super lightweight at just 28MB, making it fast to depl
 
 We strive to offer a variety of tools, including:
 
-## **Image/Video/Audio Tools**
+### **Image/Video/Audio Tools**
 
 - Image Resizer
 - Image Converter
@@ -53,33 +53,33 @@ We strive to offer a variety of tools, including:
 - Video Reverser
 - And more...
 
-## **PDF Tools**
+### **PDF Tools**
 
 - PDF Splitter
 - PDF Merger
 - PDF Editor
 - And more...
 
-## **Text/List Tools**
+### **Text/List Tools**
 
 - Case Converters
 - List Shuffler
 - Text Formatters
 - And more...
 
-## **Date and Time Tools**
+### **Date and Time Tools**
 
 - Date Calculators
 - Time Zone Converters
 - And more...
 
-## **Math Tools**
+### **Math Tools**
 
 - Generate Prime Numbers
 - Calculate voltage, current, or resistance
 - And more...
 
-## **Data Tools**
+### **Data Tools**
 
 - JSON Tools
 - CSV Tools
@@ -165,7 +165,7 @@ We welcome contributions! You can help by:
 
 
 You can also join our [Discord server](https://discord.gg/SDbbn3hT4b)
-### 🧡 Sponsors
+## 🧡 Sponsors
 <div align="center">
   <a href="https://www.locize.com/" target="_blank">
     <img src="docs-images/locizeSponsor.svg" alt="Locize" width="200"/>
@@ -175,7 +175,7 @@ You can also join our [Discord server](https://discord.gg/SDbbn3hT4b)
 Thanks to [Locize](https://www.locize.com) for sponsoring OmniTools and supporting localization efforts.
 They make translation management simple and developer-friendly.
 
-### Contributors
+## Contributors
 
 <a href="https://github.com/iib0011/omni-tools/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=iib0011/omni-tools" />
