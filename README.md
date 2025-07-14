@@ -37,8 +37,8 @@ Plus, the Docker image is super lightweight at just 28MB, making it fast to depl
 - [Features](#features)
 - [Self-host](#self-hostrun)
 - [Contribute](#contribute)
-- [License](#license)
 - [Contact](#contact)
+- [License](#license)
 
 ## Features
 
@@ -165,6 +165,15 @@ We welcome contributions! You can help by:
 
 
 You can also join our [Discord server](https://discord.gg/SDbbn3hT4b)
+### 🧡 Sponsors
+<div align="center">
+  <a href="https://www.locize.com/" target="_blank">
+    <img src="docs-images/locizeSponsor.svg" alt="Locize" width="200"/>
+  </a>
+</div>
+
+Thanks to [Locize](https://www.locize.com) for sponsoring OmniTools and supporting localization efforts.
+They make translation management simple and developer-friendly.
 
 ### Contributors
 
