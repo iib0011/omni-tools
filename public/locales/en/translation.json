@@ -1,0 +1,254 @@
+{
+  "app": {
+    "language": "Language",
+    "title": "Omni Tools"
+  },
+  "audio": {
+    "changeSpeed": {
+      "description": "Change the playback speed of audio files. Speed up or slow down audio while maintaining pitch.",
+      "name": "Change audio speed",
+      "shortDescription": "Change the speed of audio files"
+    },
+    "extractAudio": {
+      "description": "Extract the audio track from a video file and save it as a separate audio file in your chosen format (AAC, MP3, WAV).",
+      "name": "Extract audio",
+      "shortDescription": "Extract audio from video files (MP4, MOV, etc.) to AAC, MP3, or WAV."
+    }
+  },
+  "baseFileInput": {
+    "copyFailed": "Failed to copy: {{error}}",
+    "dropFileHere": "Drop your {{type}} here",
+    "fileCopied": "File copied",
+    "selectFileDescription": "Click here to select a {{type}} from your device, press Ctrl+V to use a {{type}} from your clipboard, or drag and drop a file from desktop"
+  },
+  "categories": {
+    "audio": {
+      "description": "Tools for working with audio – extract audio from video, adjusting audio speed, merging multiple audio files and much more.",
+      "title": "Audio Tools"
+    },
+    "csv": {
+      "description": "Tools for working with CSV files - convert CSV to different formats, manipulate CSV data, validate CSV structure, and process CSV files efficiently.",
+      "title": "CSV Tools"
+    },
+    "gif": {
+      "description": "Tools for working with GIF animations – create transparent GIFs, extract GIF frames, add text to GIF, crop, rotate, reverse GIFs, and much more.",
+      "title": "GIF Tools"
+    },
+    "image-generic": {
+      "description": "Tools for working with pictures – compress, resize, crop, convert to JPG, rotate, remove background and much more.",
+      "title": "Image Tools"
+    },
+    "json": {
+      "description": "Tools for working with JSON data structures – prettify and minify JSON objects, flatten JSON arrays, stringify JSON values, analyze data, and much more",
+      "title": "JSON Tools"
+    },
+    "list": {
+      "description": "Tools for working with lists – sort, reverse, randomize lists, find unique and duplicate list items, change list item separators, and much more.",
+      "title": "List Tools"
+    },
+    "number": {
+      "description": "Tools for working with numbers – generate number sequences, convert numbers to words and words to numbers, sort, round, factor numbers, and much more.",
+      "title": "Number Tools"
+    },
+    "pdf": {
+      "description": "Tools for working with PDF files - extract text from PDFs, convert PDFs to other formats, manipulate PDFs, and much more.",
+      "title": "PDF Tools"
+    },
+    "png": {
+      "description": "Tools for working with PNG images – convert PNGs to JPGs, create transparent PNGs, change PNG colors, crop, rotate, resize PNGs, and much more.",
+      "title": "PNG Tools"
+    },
+    "seeAll": "See all {{title}}",
+    "string": {
+      "description": "Tools for working with text – convert text to images, find and replace text, split text into fragments, join text lines, repeat text, and much more.",
+      "title": "Text Tools"
+    },
+    "time": {
+      "description": "Tools for working with time and date – calculate time differences, convert between time zones, format dates, generate date sequences, and much more.",
+      "title": "Time Tools"
+    },
+    "try": "Try {{title}}",
+    "video": {
+      "description": "Tools for working with videos – extract frames from videos, create GIFs from videos, convert videos to different formats, and much more.",
+      "title": "Video Tools"
+    },
+    "xml": {
+      "description": "Tools for working with XML data structures - viewer, beautifier, validator and much more",
+      "title": "XML Tools"
+    }
+  },
+  "csv": {
+    "findIncompleteCsvRecords": {
+      "description": "Just upload your CSV file in the form below and this tool will automatically check if none of the rows or columns are missing values. In the tool options, you can adjust the input file format (specify the delimiter, quote character, and comment character). Additionally, you can enable checking for empty values, skip empty lines, and set a limit on the number of error messages in the output.",
+      "name": "Find incomplete CSV records",
+      "shortDescription": "Quickly find rows and columns in CSV that are missing values."
+    }
+  },
+  "hero": {
+    "brand": "OmniTools",
+    "description": "Boost your productivity with OmniTools, the ultimate toolkit for getting things done quickly! Access thousands of user-friendly utilities for editing images, text, lists, and data, all directly from your browser.",
+    "examples": {
+      "calculateNumberSum": "Calculate number sum",
+      "changeGifSpeed": "Change GIF speed",
+      "compressPng": "Compress PNG",
+      "createTransparentImage": "Create a transparent image",
+      "prettifyJson": "Prettify JSON",
+      "sortList": "Sort a list",
+      "splitPdf": "Split PDF",
+      "splitText": "Split a text",
+      "trimVideo": "Trim video"
+    },
+    "searchPlaceholder": "Search all tools",
+    "title": "Get Things Done Quickly with"
+  },
+  "inputFooter": {
+    "clear": "Clear",
+    "copyToClipboard": "Copy to clipboard",
+    "importFromFile": "Import from file"
+  },
+  "list": {
+    "group": {
+      "description": "World's simplest browser-based utility for grouping list items. Input your list and specify grouping criteria to organize items into logical groups. Perfect for categorizing data, organizing information, or creating structured lists. Supports custom separators and various grouping options.",
+      "name": "Group",
+      "shortDescription": "Group list items by common properties"
+    },
+    "reverse": {
+      "description": "This is a super simple browser-based application prints all list items in reverse. The input items can be separated by any symbol and you can also change the separator of the reversed list items.",
+      "name": "Reverse",
+      "shortDescription": "Quickly reverse a list"
+    },
+    "sort": {
+      "description": "This is a super simple browser-based application that sorts items in a list and arranges them in increasing or decreasing order. You can sort the items alphabetically, numerically, or by their length. You can also remove duplicate and empty items, as well as trim individual items that have whitespace around them. You can use any separator character to separate the input list items or alternatively use a regular expression to separate them. Additionally, you can create a new delimiter for the sorted output list.",
+      "name": "Sort",
+      "shortDescription": "Quickly sort a list"
+    }
+  },
+  "navbar": {
+    "buyMeACoffee": "Buy me a coffee",
+    "home": "Home",
+    "tools": "Tools"
+  },
+  "number": {
+    "generate": {
+      "description": "Quickly calculate a list of integers in your browser. To get your list, just specify the first integer, change value and total count in the options below, and this utility will generate that many integers",
+      "name": "Generate numbers",
+      "shortDescription": "Quickly calculate a list of integers in your browser"
+    },
+    "sum": {
+      "description": "This is a super simple browser-based application that sums numbers. The input numbers can be separated by any symbol and you can also change the separator of the summed numbers.",
+      "name": "Sum numbers",
+      "shortDescription": "Quickly sum a list of numbers"
+    }
+  },
+  "numericInputWithUnit": {
+    "unit": "Unit"
+  },
+  "pdf": {
+    "compressPdf": {
+      "description": "Reduce PDF file size while maintaining quality using Ghostscript",
+      "name": "Compress PDF",
+      "shortDescription": "Compress PDF files securely in your browser"
+    },
+    "mergePdf": {
+      "description": "Combine multiple PDF files into a single document.",
+      "name": "Merge PDF",
+      "shortDescription": "Merge multiple PDF files into a single document"
+    },
+    "pdfToEpub": {
+      "description": "Transform PDF documents into EPUB files for better e-reader compatibility.",
+      "name": "PDF to EPUB",
+      "shortDescription": "Convert PDF files to EPUB format"
+    },
+    "protectPdf": {
+      "description": "Add password protection to your PDF files securely in your browser",
+      "name": "Protect PDF",
+      "shortDescription": "Password protect PDF files securely"
+    },
+    "splitPdf": {
+      "description": "Extract specific pages from a PDF file using page numbers or ranges (e.g., 1,5-8)",
+      "name": "Split PDF",
+      "shortDescription": "Extract specific pages from a PDF file"
+    }
+  },
+  "resultFooter": {
+    "copy": "Copy to clipboard",
+    "download": "Download"
+  },
+  "string": {
+    "createPalindrome": {
+      "description": "World's simplest browser-based utility for creating palindromes from any text. Input text and instantly transform it into a palindrome that reads the same forward and backward. Perfect for word games, creating symmetrical text patterns, or exploring linguistic curiosities.",
+      "name": "Create palindrome",
+      "shortDescription": "Create text that reads the same forward and backward"
+    },
+    "palindrome": {
+      "description": "World's simplest browser-based utility for checking if text is a palindrome. Instantly verify if your text reads the same forward and backward. Perfect for word puzzles, linguistic analysis, or validating symmetrical text patterns. Supports various delimiters and multi-word palindrome detection.",
+      "name": "Palindrome",
+      "shortDescription": "Check if text reads the same forward and backward"
+    },
+    "repeat": {
+      "description": "This tool allows you to repeat a given text multiple times with an optional separator.",
+      "name": "Repeat text",
+      "shortDescription": "Repeat text multiple times"
+    },
+    "reverse": {
+      "description": "World's simplest browser-based utility for reversing text. Input any text and get it instantly reversed, character by character. Perfect for creating mirror text, analyzing palindromes, or playing with text patterns. Preserves spaces and special characters while reversing.",
+      "name": "Reverse",
+      "shortDescription": "Reverse any text character by character"
+    },
+    "toMorse": {
+      "description": "World's simplest browser-based utility for converting text to Morse code. Load your text in the input form on the left and you'll instantly get Morse code in the output area. Powerful, free, and fast. Load text – get Morse code.",
+      "name": "String To morse",
+      "shortDescription": "Quickly encode text to morse"
+    },
+    "uppercase": {
+      "description": "World's simplest browser-based utility for converting text to uppercase. Just input your text and it will be automatically converted to all capital letters. Perfect for creating headlines, emphasizing text, or standardizing text format. Supports various text formats and preserves special characters.",
+      "name": "Uppercase",
+      "shortDescription": "Convert text to uppercase letters"
+    }
+  },
+  "toolExamples": {
+    "subtitle": "Click to try!",
+    "title": "{{title}} Examples"
+  },
+  "toolFileResult": {
+    "copied": "File copied",
+    "copyFailed": "Failed to copy: {{error}}",
+    "loading": "Loading... This may take a moment.",
+    "result": "Result"
+  },
+  "toolHeader": {
+    "seeExamples": "See Examples"
+  },
+  "toolLayout": {
+    "allToolsTitle": "All {{type}} Tools"
+  },
+  "toolMultiFileResult": {
+    "copied": "File copied",
+    "copyFailed": "Failed to copy: {{error}}",
+    "loading": "Loading... This may take a moment.",
+    "result": "Result"
+  },
+  "toolMultipleAudioInput": {
+    "inputTitle": "Input {{type}}",
+    "noFilesSelected": "No files selected"
+  },
+  "toolMultiplePdfInput": {
+    "inputTitle": "Input {{type}}",
+    "noFilesSelected": "No files selected"
+  },
+  "toolOptions": {
+    "title": "Tool options"
+  },
+  "toolTextInput": {
+    "copied": "Text copied",
+    "copyFailed": "Failed to copy: {{error}}",
+    "input": "Input text",
+    "placeholder": "Enter your text here..."
+  },
+  "toolTextResult": {
+    "copied": "Text copied",
+    "copyFailed": "Failed to copy: {{error}}",
+    "loading": "Loading... This may take a moment.",
+    "result": "Result"
+  }
+}
