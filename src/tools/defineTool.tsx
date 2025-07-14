@@ -2,7 +2,7 @@ import ToolLayout from '../components/ToolLayout';
 import React, { JSXElementConstructor, LazyExoticComponent } from 'react';
 import { IconifyIcon } from '@iconify/react';
 import { FullI18nKey } from '../i18n';
-import { ParseKeys } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 export interface ToolMeta {
   path: string;
@@ -62,10 +62,16 @@ export const defineTool = (
     description: i18n.description,
     shortDescription: i18n.shortDescription,
     keywords,
-    component: () => {
+    component: function ToolComponent() {
+      const { t } = useTranslation();
       return (
         <ToolLayout icon={icon} type={basePath} i18n={i18n}>
-          <Component title={i18n.name} longDescription={i18n.longDescription} />
+          <Component
+            title={t(i18n.name)}
+            longDescription={
+              i18n.longDescription ? t(i18n.longDescription) : undefined
+            }
+          />
         </ToolLayout>
       );
     }
