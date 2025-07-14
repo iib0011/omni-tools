@@ -151,7 +151,7 @@ export default function Hero() {
             <Stack
               direction={'row'}
               alignItems={'center'}
-              justifyContent={'stretch'}
+              justifyContent={'space-between'}
               width={'100%'}
             >
               <Stack direction={'row'} spacing={2} alignItems={'center'}>
@@ -170,6 +170,11 @@ export default function Hero() {
                   toggleBookmarked(option);
                   setBookmarkedToolPaths(getBookmarkedToolPaths());
                 }}
+                color={
+                  isBookmarked(option)
+                    ? theme.palette.primary.main
+                    : theme.palette.grey[500]
+                }
                 icon={
                   isBookmarked(option)
                     ? 'mdi:bookmark'
@@ -185,6 +190,9 @@ export default function Hero() {
           }
         }}
       />
+      {bookmarkedToolPaths.length > 0 && (
+        <Typography fontSize={{ xs: 20, md: 25 }}>Bookmarked tools:</Typography>
+      )}
       <Grid container spacing={2} mt={2}>
         {displayedTools.map((tool) => (
           <Grid
