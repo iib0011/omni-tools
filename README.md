@@ -148,16 +148,38 @@ npm run test
 npm run test:e2e
 ```
 
+### 🌐 i18n (Translations)
+
+We use **[Locize](https://locize.com)** for managing translations.
+
+### 🔁 Workflow
+
+1. **Join the Locize project** via the [invitation link](https://www.locize.app/register?invitation=Uk9mvOCKkB7sjuUqI5jDBjZROveZIvdBQqzrpmB4oQtT1LNB4BnzzT0S0o1gx79N).
+
+2. **Pull latest translations** before editing:
+   ```bash
+   npm run i18n:pull
+   ```
+3. **Edit translation files** in `public/locales/{lang}/{namespace}.json`.
+4. Make sure `LOCIZE_API_KEY` is available in your environment (e.g., in `.env`).
+5. **Push your changes** after editing:
+   ```bash
+   npm run i18n:sync
+   ```
+
+
 <img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date"/>
 
 ## 🤝 Looking to contribute?
 
 We welcome contributions! You can help by:
 
-- ✅ Reporting bugs
-- ✅ Suggesting new features in GitHub issues or [here](https://tally.so/r/nrkkx2)
-- ✅ Improving documentation
-- ✅ Submitting pull requests
+- Reporting bugs
+- Suggesting new features in GitHub issues or [here](https://tally.so/r/nrkkx2)
+- Translating in [Locize project](https://www.locize.app/register?invitation=Uk9mvOCKkB7sjuUqI5jDBjZROveZIvdBQqzrpmB4oQtT1LNB4BnzzT0S0o1gx79N).
+- Improving documentation
+- Submitting pull requests
+
 
 You can also join our [Discord server](https://discord.gg/SDbbn3hT4b)
 

@@ -43,7 +43,9 @@ const Navbar: React.FC<NavbarProps> = ({
   };
 
   const handleLanguageChange = (event: any) => {
-    i18n.changeLanguage(event.target.value);
+    const newLanguage = event.target.value;
+    i18n.changeLanguage(newLanguage);
+    localStorage.setItem('lang', newLanguage);
   };
 
   const navItems: { label: string; path: string }[] = [

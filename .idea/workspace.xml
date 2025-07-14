@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: translation related behaviors">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: password generator to test translation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/i18n/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/i18n/hi.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/i18n/hi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/string/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/string/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/defineTool.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/defineTool.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,6 +261,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "Vitest.compute function (1).executor": "Run",
     "Vitest.compute function.executor": "Run",
+    "Vitest.generatePassword.executor": "Run",
     "Vitest.mergeText.executor": "Run",
     "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
     "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
@@ -326,11 +326,18 @@
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\categories" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
-    <configuration name="locize-upload.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="locize-upload.js" working-dir="$PROJECT_DIR$/scripts">
-      <envs>
-        <env name="LOCIZE_API_KEY" value="a2ac4dc2-d10e-4d35-bcf7-92db87381711" />
-      </envs>
+  <component name="RunManager" selected="Vitest.generatePassword">
+    <configuration name="generatePassword" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/pages/tools/string/password-generator/password-generator.service.test.ts" />
+      <test-names>
+        <test-name value="generatePassword" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
@@ -385,19 +392,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Node.js.locize-upload.js" />
       <item itemvalue="npm.i18n:pull" />
       <item itemvalue="npm.i18n:push" />
       <item itemvalue="npm.i18n:sync" />
       <item itemvalue="npm.dev" />
+      <item itemvalue="Vitest.generatePassword" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Vitest.generatePassword" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.i18n:sync" />
         <item itemvalue="npm.i18n:pull" />
         <item itemvalue="npm.i18n:push" />
-        <item itemvalue="Node.js.locize-upload.js" />
       </list>
     </recent_temporary>
   </component>
@@ -510,15 +517,7 @@
       <workItem from="1752157409587" duration="2415000" />
       <workItem from="1752403829295" duration="13253000" />
       <workItem from="1752493585622" duration="11629000" />
-      <workItem from="1752507105323" duration="6496000" />
-    </task>
-    <task id="LOCAL-00182" summary="feat: compress pdf">
-      <option name="closed" value="true" />
-      <created>1743644598841</created>
-      <option name="number" value="00182" />
-      <option name="presentableId" value="LOCAL-00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1743644598841</updated>
+      <workItem from="1752507105323" duration="7873000" />
     </task>
     <task id="LOCAL-00183" summary="refactor: compress pdf">
       <option name="closed" value="true" />
@@ -904,7 +903,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752512678963</updated>
     </task>
-    <option name="localTasksCounter" value="231" />
+    <task id="LOCAL-00231" summary="feat: password generator to test translation">
+      <option name="closed" value="true" />
+      <created>1752514466233</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1752514466233</updated>
+    </task>
+    <option name="localTasksCounter" value="232" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -951,7 +958,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: use scrollY" />
     <MESSAGE value="chore: remove flip x and y" />
     <MESSAGE value="chore: new logo and font" />
     <MESSAGE value="chore: white logo" />
@@ -976,7 +982,8 @@
     <MESSAGE value="chore: saveMissing" />
     <MESSAGE value="fix: translations" />
     <MESSAGE value="fix: translation related behaviors" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: translation related behaviors" />
+    <MESSAGE value="feat: password generator to test translation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: password generator to test translation" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
