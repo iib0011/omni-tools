@@ -70,10 +70,10 @@ export const defineTool = (
   return {
     type: basePath,
     path: `${basePath}/${path}`,
-    name,
+    name: i18n?.name || name,
     icon,
-    description,
-    shortDescription,
+    description: i18n?.description || description,
+    shortDescription: i18n?.shortDescription || shortDescription,
     keywords,
     component: () => {
       return (

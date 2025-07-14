@@ -4,7 +4,6 @@
     "description": "Convert text to uppercase letters.",
     "inputTitle": "Input text",
     "resultTitle": "Uppercase text",
-    "title": "Uppercase",
     "shortDescription": "Convert text to uppercase"
   },
   "base64": {
@@ -19,7 +18,6 @@
       "title": "What is Base64?",
       "description": "Base64 is an encoding scheme that represents data in an ASCII string format by translating it into a radix-64 representation. Although it can be used to encode strings, it is commonly used to encode binary data for transmission over media that are designed to deal with textual data."
     },
-    "title": "Base64",
     "shortDescription": "Encode or decode data using Base64."
   },
   "truncate": {
@@ -45,7 +43,6 @@
       "title": "Truncate text",
       "description": "Load your text in the input form on the left and you will automatically get truncated text on the right."
     },
-    "title": "Truncate",
     "shortDescription": "Truncate text to a specified length"
   },
   "quote": {
@@ -63,7 +60,6 @@
       "title": "Text Quoter",
       "description": "This tool allows you to add quotes around text. You can choose different quote characters, handle multi-line text, and control how empty lines are processed. It's useful for preparing text for programming, formatting data, or creating stylized text."
     },
-    "title": "Quote",
     "shortDescription": "Add quotes around text with various styles"
   },
   "join": {
@@ -83,7 +79,6 @@
       "title": "What Is a Text Joiner?",
       "description": "With this tool you can join parts of the text together. It takes a list of text values, separated by newlines, and merges them together. You can set the character that will be placed between the parts of the combined text. Also, you can ignore all empty lines and remove spaces and tabs at the end of all lines. Textabulous!"
     },
-    "title": "Join",
     "shortDescription": "Join text elements with a specified separator"
   },
   "rotate": {
@@ -100,7 +95,6 @@
       "title": "String Rotation",
       "description": "This tool allows you to rotate characters in a string by a specified number of positions. You can rotate to the left or right, and process multi-line text by rotating each line separately. String rotation is useful for simple text transformations, creating patterns, or implementing basic encryption techniques."
     },
-    "title": "Rotate",
     "shortDescription": "Shift characters in text by position."
   },
   "repeat": {
@@ -118,7 +112,6 @@
       "title": "Repeat text",
       "description": "This tool allows you to repeat a given text multiple times with an optional separator."
     },
-    "title": "Repeat text",
     "shortDescription": "Repeat text multiple times"
   },
   "rot13": {
@@ -130,11 +123,9 @@
       "title": "What Is ROT13?",
       "description": "ROT13 (rotate by 13 places) is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the alphabet. ROT13 is a special case of the Caesar cipher which was developed in ancient Rome. Because there are 26 letters in the English alphabet, ROT13 is its own inverse; that is, to undo ROT13, the same algorithm is applied, so the same action can be used for encoding and decoding."
     },
-    "title": "Rot13",
     "shortDescription": "Encode or decode text using ROT13 cipher."
   },
   "toMorse": {
-    "title": "To Morse",
     "description": "Convert text to Morse code.",
     "resultTitle": "Morse code",
     "shortSignal": "Short Signal",
@@ -165,7 +156,6 @@
       "title": "What is a {{title}}?",
       "description": "This tool allows you to analyze text and generate comprehensive statistics including character count, word count, line count, and frequency analysis of characters and words."
     },
-    "title": "Text Statistics",
     "shortDescription": "Get statistics about your text"
   },
   "textReplacer": {

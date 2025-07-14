@@ -70,12 +70,9 @@ export type FullI18nKey = {
 }[I18nNamespaces];
 
 i18n.use(Backend).use(initReactI18next).init({
-  resources,
   lng: 'en',
   fallbackLng: 'en',
-  backend: locizeOptions,
-  saveMissing: true, // Send missing keys to Locize
-  updateMissing: true // Update keys in Locize
+  backend: locizeOptions
 });
 
 export default i18n;
