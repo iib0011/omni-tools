@@ -222,7 +222,22 @@ export default function Hero() {
                 }
               }}
             >
-              <Typography>{tool.label}</Typography>
+              <Stack direction={'row'} spacing={2} alignItems={'center'}>
+                <Typography>{tool.label}</Typography>
+                {bookmarkedToolPaths.length > 0 && (
+                  <Icon
+                    icon={'mdi:close'}
+                    color={theme.palette.grey[500]}
+                    fontSize={20}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const path = tool.url.substring(1);
+                      toggleBookmarked(path);
+                      setBookmarkedToolPaths(getBookmarkedToolPaths());
+                    }}
+                  />
+                )}
+              </Stack>
             </Box>
           </Grid>
         ))}
