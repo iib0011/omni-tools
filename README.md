@@ -148,24 +148,8 @@ npm run test
 npm run test:e2e
 ```
 
-### 🌐 i18n (Translations)
-
-We use **[Locize](https://locize.com)** for managing translations.
-
-### 🔁 Workflow
-
-1. Join the Locize project** via the [invitation link](https://www.locize.app/register?invitation=Uk9mvOCKkB7sjuUqI5jDBjZROveZIvdBQqzrpmB4oQtT1LNB4BnzzT0S0o1gx79N).
-2. Make sure `LOCIZE_API_KEY` is available in your environment (e.g., in `.env`). You can get it from API, CDN, NOTIFICATIONS
-3. Pull latest translations** before editing:
-   ```bash
-   npm run i18n:pull
-   ```
-4. **Edit translation files** in `public/locales/{lang}/{namespace}.json`.
-5. **Push your changes** after editing:
-   ```bash
-   npm run i18n:sync
-   ```
-
+### i18n (Translations)
+The translation files are [here](public/locales). Only edit these if you are a developer. For non developers, use [Locize](https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK).
 
 <img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date"/>
 
