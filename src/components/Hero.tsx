@@ -82,9 +82,13 @@ export default function Hero() {
 
   const displayedTools =
     bookmarkedToolPaths.length > 0
-      ? bookmarkedToolPaths
-          .map((path) => toolsMap.get(path))
-          .filter((tools) => tools != undefined)
+      ? bookmarkedToolPaths.flatMap((path) => {
+          const tool = toolsMap.get(path);
+          if (tool === undefined) {
+            return [];
+          }
+          return [tool];
+        })
       : exampleTools;
 
   return (
