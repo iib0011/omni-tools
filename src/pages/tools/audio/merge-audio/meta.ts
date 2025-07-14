@@ -2,6 +2,12 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('audio', {
+  i18n: {
+    name: 'audio:mergeAudio.title',
+    description: 'audio:mergeAudio.description',
+    shortDescription: 'audio:mergeAudio.shortDescription',
+    longDescription: 'audio:mergeAudio.longDescription'
+  },
   name: 'Merge Audio',
   path: 'merge-audio',
   icon: 'fluent:merge-20-regular',

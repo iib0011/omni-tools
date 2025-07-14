@@ -2,6 +2,11 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('image-generic', {
+  i18n: {
+    name: 'image:convertToJpg.title',
+    description: 'image:convertToJpg.description',
+    shortDescription: 'image:convertToJpg.shortDescription'
+  },
   name: 'Convert Images to JPG',
   path: 'convert-to-jpg',
   icon: 'ph:file-jpg-thin',

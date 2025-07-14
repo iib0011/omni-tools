@@ -12,7 +12,7 @@ export interface ToolMeta {
   description: string;
   shortDescription: string;
   longDescription?: string;
-  i18n?: {
+  i18n: {
     name: FullI18nKey;
     description: FullI18nKey;
     shortDescription: FullI18nKey;

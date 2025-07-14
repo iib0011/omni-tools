@@ -3,6 +3,11 @@ import { lazy } from 'react';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('string', {
+  i18n: {
+    name: 'string:rot13.title',
+    description: 'string:rot13.description',
+    shortDescription: 'string:rot13.shortDescription'
+  },
   name: 'Rot13',
   path: 'rot13',
   icon: 'hugeicons:encrypt',

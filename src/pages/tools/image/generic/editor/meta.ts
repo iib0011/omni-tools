@@ -2,6 +2,11 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('image-generic', {
+  i18n: {
+    name: 'image:editor.title',
+    description: 'image:editor.description',
+    shortDescription: 'image:editor.shortDescription'
+  },
   name: 'Image Editor',
   path: 'editor',
   icon: 'mdi:image-edit',

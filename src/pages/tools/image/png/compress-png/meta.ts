@@ -3,6 +3,11 @@ import { lazy } from 'react';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('png', {
+  i18n: {
+    name: 'image:compressPng.title',
+    description: 'image:compressPng.description',
+    shortDescription: 'image:compressPng.shortDescription'
+  },
   name: 'Compress png',
   path: 'compress-png',
   icon: 'material-symbols-light:compress',

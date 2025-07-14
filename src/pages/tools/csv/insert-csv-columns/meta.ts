@@ -2,6 +2,11 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('csv', {
+  i18n: {
+    name: 'csv:insertCsvColumns.title',
+    description: 'csv:insertCsvColumns.description',
+    shortDescription: 'csv:insertCsvColumns.shortDescription'
+  },
   name: 'Insert CSV columns',
   path: 'insert-csv-columns',
   icon: 'hugeicons:column-insert',

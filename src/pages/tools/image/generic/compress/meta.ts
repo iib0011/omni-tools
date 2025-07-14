@@ -2,6 +2,11 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('image-generic', {
+  i18n: {
+    name: 'image:compress.title',
+    description: 'image:compress.description',
+    shortDescription: 'image:compress.shortDescription'
+  },
   name: 'Compress Image',
   path: 'compress',
   component: lazy(() => import('./index')),

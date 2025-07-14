@@ -2,6 +2,12 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('audio', {
+  i18n: {
+    name: 'audio:trim.title',
+    description: 'audio:trim.description',
+    shortDescription: 'audio:trim.shortDescription',
+    longDescription: 'audio:trim.longDescription'
+  },
   name: 'Trim Audio',
   path: 'trim',
   icon: 'mdi:scissors-cutting',

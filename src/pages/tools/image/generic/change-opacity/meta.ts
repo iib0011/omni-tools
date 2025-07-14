@@ -2,6 +2,11 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('image-generic', {
+  i18n: {
+    name: 'image:changeOpacity.title',
+    description: 'image:changeOpacity.description',
+    shortDescription: 'image:changeOpacity.shortDescription'
+  },
   name: 'Change image Opacity',
   path: 'change-opacity',
   icon: 'material-symbols:opacity',

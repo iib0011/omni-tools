@@ -2,6 +2,11 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('image-generic', {
+  i18n: {
+    name: 'image:resize.title',
+    description: 'image:resize.description',
+    shortDescription: 'image:resize.shortDescription'
+  },
   name: 'Resize Image',
   path: 'resize',
   icon: 'mdi:resize', // Iconify icon as a string

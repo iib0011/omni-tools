@@ -2,6 +2,11 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('image-generic', {
+  i18n: {
+    name: 'image:removeBackground.title',
+    description: 'image:removeBackground.description',
+    shortDescription: 'image:removeBackground.shortDescription'
+  },
   name: 'Remove Background from Image',
   path: 'remove-background',
   icon: 'mdi:image-remove',

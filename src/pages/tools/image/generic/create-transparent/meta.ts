@@ -2,6 +2,11 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('image-generic', {
+  i18n: {
+    name: 'image:createTransparent.title',
+    description: 'image:createTransparent.description',
+    shortDescription: 'image:createTransparent.shortDescription'
+  },
   name: 'Create transparent PNG',
   path: 'create-transparent',
   icon: 'mdi:circle-transparent',

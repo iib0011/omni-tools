@@ -31,11 +31,13 @@
   "mergeAudio": {
     "title": "Merge Audio",
     "description": "Combine multiple audio files into a single audio file by concatenating them in sequence.",
-    "shortDescription": "Merge multiple audio files into one (MP3, AAC, WAV)."
+    "shortDescription": "Merge multiple audio files into one (MP3, AAC, WAV).",
+    "longDescription": "This tool allows you to merge multiple audio files into a single file by concatenating them in the order you upload them. Perfect for combining podcast segments, music tracks, or any audio files that need to be joined together. Supports various audio formats including MP3, AAC, and WAV."
   },
   "trim": {
     "title": "Trim Audio",
     "description": "Cut and trim audio files to extract specific segments by specifying start and end times.",
-    "shortDescription": "Trim audio files to extract specific time segments (MP3, AAC, WAV)."
+    "shortDescription": "Trim audio files to extract specific time segments (MP3, AAC, WAV).",
+    "longDescription": "This tool allows you to trim audio files by specifying start and end times. You can extract specific segments from longer audio files, remove unwanted parts, or create shorter clips. Supports various audio formats including MP3, AAC, and WAV. Perfect for podcast editing, music production, or any audio editing needs."
   }
 }
