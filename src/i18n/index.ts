@@ -24,7 +24,21 @@ import enTime from '../pages/tools/time/i18n/en.json';
 import hiTime from '../pages/tools/time/i18n/hi.json';
 import enXml from '../pages/tools/xml/i18n/en.json';
 import hiXml from '../pages/tools/xml/i18n/hi.json';
-import Backend from 'i18next-locize-backend';
+import Backend from 'i18next-http-backend';
+
+const isDevelopment = !import.meta.env.PROD;
+const isContributor = import.meta.env.VITE_CONTRIBUTOR_MODE === 'true';
+
+const useLocize = isDevelopment && isContributor;
+
+if (useLocize) {
+  const { default: LocizeBackend } = await import('i18next-locize-backend');
+  i18n.use(LocizeBackend);
+  console.log('Using Locize backend in development/contributor mode');
+} else {
+  // Use static files in production
+  i18n.use(Backend);
+}
 
 const locizeOptions = {
   projectId: 'e7156a3e-66fb-4035-a0f0-cebf1c63a3ba', // Replace with your Locize project ID
@@ -69,10 +83,15 @@ export type FullI18nKey = {
   [K in I18nNamespaces]: `${K}:${ParseKeys<K>}`;
 }[I18nNamespaces];
 
-i18n.use(Backend).use(initReactI18next).init({
+i18n.use(initReactI18next).init({
   lng: 'en',
   fallbackLng: 'en',
-  backend: locizeOptions
+  backend: useLocize
+    ? locizeOptions
+    : {
+        // Static files backend for production
+        loadPath: '/locales/{{lng}}/{{ns}}.json'
+      }
 });
 
 export default i18n;

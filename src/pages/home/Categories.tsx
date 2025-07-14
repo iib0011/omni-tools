@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { categoriesColors } from 'config/uiConfig';
 import { Icon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
+import { getI18nNamespaceFromToolCategory } from '@utils/string';
 
 type ArrayElement<ArrayType extends readonly unknown[]> =
   ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
@@ -19,7 +20,7 @@ const SingleCategory = function ({
   category: ArrayElement<ReturnType<typeof getToolsByCategory>>;
   index: number;
 }) {
-  const { t } = useTranslation();
+  const { t } = useTranslation(getI18nNamespaceFromToolCategory(category.type));
   const navigate = useNavigate();
   const theme = useTheme();
   const [hovered, setHovered] = useState<boolean>(false);
@@ -35,7 +36,8 @@ const SingleCategory = function ({
     title: categoryTitle
   });
   const tryText = t('categories.try', 'Try {{title}}', {
-    title: category.example.title
+    //@ts-ignore
+    title: t(category.example.title)
   });
 
   return (
