@@ -167,16 +167,16 @@ export default function Hero() {
                 fontSize={20}
                 onClick={(e) => {
                   e.stopPropagation();
-                  toggleBookmarked(option);
+                  toggleBookmarked(option.path);
                   setBookmarkedToolPaths(getBookmarkedToolPaths());
                 }}
                 color={
-                  isBookmarked(option)
+                  isBookmarked(option.path)
                     ? theme.palette.primary.main
                     : theme.palette.grey[500]
                 }
                 icon={
-                  isBookmarked(option)
+                  isBookmarked(option.path)
                     ? 'mdi:bookmark'
                     : 'mdi:bookmark-plus-outline'
                 }

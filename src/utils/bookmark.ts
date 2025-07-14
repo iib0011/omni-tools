@@ -11,30 +11,30 @@ export function getBookmarkedToolPaths(): string[] {
   );
 }
 
-export function isBookmarked(tool: DefinedTool): boolean {
-  return getBookmarkedToolPaths().some((path) => path === tool.path);
+export function isBookmarked(toolPath: string): boolean {
+  return getBookmarkedToolPaths().some((path) => path === toolPath);
 }
 
-export function toggleBookmarked(tool: DefinedTool) {
-  if (isBookmarked(tool)) {
-    unbookmark(tool);
+export function toggleBookmarked(toolPath: string) {
+  if (isBookmarked(toolPath)) {
+    unbookmark(toolPath);
   } else {
-    bookmark(tool);
+    bookmark(toolPath);
   }
 }
 
-function bookmark(tool: DefinedTool) {
+function bookmark(toolPath: string) {
   localStorage.setItem(
     bookmarkedToolsKey,
-    [tool.path, ...getBookmarkedToolPaths()].join(',')
+    [toolPath, ...getBookmarkedToolPaths()].join(',')
   );
 }
 
-function unbookmark(tool: DefinedTool) {
+function unbookmark(toolPath: string) {
   localStorage.setItem(
     bookmarkedToolsKey,
     getBookmarkedToolPaths()
-      .filter((path) => path !== tool.path)
+      .filter((path) => path !== toolPath)
       .join(',')
   );
 }
