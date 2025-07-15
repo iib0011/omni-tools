@@ -14,7 +14,6 @@
   },
   "scripts": {
     "dev": "vite",
-    "prebuild": "npm run i18n:pull",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "test": "vitest",
