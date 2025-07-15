@@ -76,5 +76,10 @@
     "strictMode": "सख्त मोड",
     "title": "JSON मान्य करें",
     "validationOptions": "मान्यता विकल्प"
+  },
+  "comparison": {
+    "title": "JSON तुलना करें",
+    "description": "दो JSON वस्तुओं की संरचना और मूल्यों में अंतर की पहचान करें।",
+    "shortDescription": "दो JSON वस्तुओं के बीच अंतर ढूंढें"
   }
 }
