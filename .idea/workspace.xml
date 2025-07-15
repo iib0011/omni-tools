@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: translations">
-      <change afterPath="$PROJECT_DIR$/scripts/delete-i18n.js" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: create-tool.mjs to use i18n object">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolHeader.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -531,22 +531,6 @@
       <workItem from="1752493585622" duration="11629000" />
       <workItem from="1752507105323" duration="9008000" />
     </task>
-    <task id="LOCAL-00185" summary="fix: path">
-      <option name="closed" value="true" />
-      <created>1743645074051</created>
-      <option name="number" value="00185" />
-      <option name="presentableId" value="LOCAL-00185" />
-      <option name="project" value="LOCAL" />
-      <updated>1743645074051</updated>
-    </task>
-    <task id="LOCAL-00186" summary="fix: vite worker format">
-      <option name="closed" value="true" />
-      <created>1743647707334</created>
-      <option name="number" value="00186" />
-      <option name="presentableId" value="LOCAL-00186" />
-      <option name="project" value="LOCAL" />
-      <updated>1743647707334</updated>
-    </task>
     <task id="LOCAL-00187" summary="fix: tests">
       <option name="closed" value="true" />
       <created>1743691399769</created>
@@ -923,7 +907,23 @@
       <option name="project" value="LOCAL" />
       <updated>1752585351036</updated>
     </task>
-    <option name="localTasksCounter" value="234" />
+    <task id="LOCAL-00234" summary="chore: delete unused i18n json files">
+      <option name="closed" value="true" />
+      <created>1752585829343</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1752585829343</updated>
+    </task>
+    <task id="LOCAL-00235" summary="fix: create-tool.mjs to use i18n object">
+      <option name="closed" value="true" />
+      <created>1752586932190</created>
+      <option name="number" value="00235" />
+      <option name="presentableId" value="LOCAL-00235" />
+      <option name="project" value="LOCAL" />
+      <updated>1752586932190</updated>
+    </task>
+    <option name="localTasksCounter" value="236" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -970,8 +970,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: new logo and font" />
-    <MESSAGE value="chore: white logo" />
     <MESSAGE value="chore: png icon" />
     <MESSAGE value="fix: remove xml viewer" />
     <MESSAGE value="feat: convert to jpg" />
@@ -995,7 +993,9 @@
     <MESSAGE value="feat: password generator to test translation" />
     <MESSAGE value="docs: translation docs" />
     <MESSAGE value="fix: translations" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: translations" />
+    <MESSAGE value="chore: delete unused i18n json files" />
+    <MESSAGE value="fix: create-tool.mjs to use i18n object" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: create-tool.mjs to use i18n object" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

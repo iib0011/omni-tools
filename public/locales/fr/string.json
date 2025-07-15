@@ -1,1 +1,261 @@
-{}
+{
+  "base64": {
+    "decode": "Décodage Base64",
+    "description": "Encodez ou décodez du texte à l'aide de l'encodage Base64.",
+    "encode": "Encodage Base64",
+    "inputTitle": "Données d'entrée",
+    "optionsTitle": "Options Base64",
+    "resultTitle": "Résultat",
+    "shortDescription": "Encoder ou décoder des données à l'aide de Base64.",
+    "title": "Encodeur/décodeur Base64",
+    "toolInfo": {
+      "description": "Base64 est un schéma de codage qui représente les données au format chaîne ASCII en les convertissant en une représentation radix-64. Bien qu'il puisse être utilisé pour encoder des chaînes, il est couramment utilisé pour encoder des données binaires destinées à être transmises sur des supports conçus pour traiter des données textuelles.",
+      "title": "Qu'est-ce que Base64 ?"
+    }
+  },
+  "censor": {
+    "description": "Utilitaire de censure de mots dans un texte. Chargez votre texte dans le formulaire de saisie à gauche, spécifiez tous les mots interdits dans les options et vous obtiendrez instantanément le texte censuré dans la zone de sortie. », longDescription: « Avec cet outil en ligne, vous pouvez censurer certains mots dans n'importe quel texte. Vous pouvez spécifier une liste de mots indésirables (tels que des jurons ou des mots secrets) et le programme les remplacera par d'autres mots pour créer un texte lisible. Les mots peuvent être spécifiés dans un champ de texte multiligne dans les options, en saisissant un mot par ligne. », keywords: ['text', 'censor', 'words', 'characters'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
+    "shortDescription": "Masquez rapidement les gros mots ou remplacez-les par des mots alternatifs.",
+    "title": "Censure de texte"
+  },
+  "createPalindrome": {
+    "description": "L'utilitaire de navigateur le plus simple au monde pour créer des palindromes à partir de n'importe quel texte. Saisissez du texte et transformez-le instantanément en un palindrome qui se lit de la même manière à l'endroit comme à l'envers. Idéal pour les jeux de mots, la création de motifs de texte symétriques ou l'exploration de curiosités linguistiques.",
+    "shortDescription": "Créez un texte qui se lit de la même manière à l'avant et à l'arrière",
+    "title": "Créer un palindrome"
+  },
+  "extractSubstring": {
+    "description": "L'utilitaire le plus simple au monde, basé sur un navigateur, pour extraire des sous-chaînes de texte. Saisissez votre texte et spécifiez les positions de début et de fin pour extraire la portion souhaitée. Idéal pour le traitement de données, l'analyse de texte ou l'extraction de contenu spécifique à partir de blocs de texte volumineux.",
+    "shortDescription": "Extraire une partie de texte entre des positions spécifiées",
+    "title": "Extraire la sous-chaîne"
+  },
+  "join": {
+    "blankLinesAndTrailingSpaces": "Lignes vides et espaces de fin",
+    "deleteBlankDescription": "Supprimez les lignes qui n’ont pas de symboles de texte.",
+    "deleteBlankTitle": "Supprimer les lignes vides",
+    "deleteTrailingDescription": "Supprimez les espaces et les tabulations à la fin des lignes.",
+    "deleteTrailingTitle": "Supprimer les espaces de fin",
+    "description": "Joignez des morceaux de texte avec des séparateurs personnalisables.",
+    "inputTitle": "Textes",
+    "joinCharacterDescription": "Symbole reliant les fragments de texte. (Espace par défaut.)",
+    "joinCharacterPlaceholder": "Rejoindre le personnage",
+    "resultTitle": "Texte joint",
+    "shortDescription": "Joindre des éléments de texte avec un séparateur spécifié",
+    "textMergedOptions": "Options de fusion de texte",
+    "title": "Joindre le texte",
+    "toolInfo": {
+      "description": "Cet outil vous permet de fusionner des parties de texte. Il prend une liste de valeurs de texte, séparées par des sauts de ligne, et les fusionne. Vous pouvez définir le caractère qui sera placé entre les parties du texte combiné. Vous pouvez également ignorer les lignes vides et supprimer les espaces et les tabulations à la fin de chaque ligne. Textabulous !",
+      "title": "Qu'est-ce qu'un outil de jointure de texte ?"
+    }
+  },
+  "palindrome": {
+    "description": "L'utilitaire le plus simple au monde, basé sur un navigateur, permet de vérifier si un texte est un palindrome. Vérifiez instantanément si votre texte se lit de la même manière à l'endroit comme à l'envers. Idéal pour les jeux de mots, l'analyse linguistique ou la validation de structures de texte symétriques. Prend en charge divers délimiteurs et la détection de palindromes multi-mots.",
+    "shortDescription": "Vérifiez si le texte se lit de la même manière à l'avant et à l'arrière",
+    "title": "Palindrome"
+  },
+  "passwordGenerator": {
+    "avoidAmbiguous": "Évitez les caractères ambigus (i, I, l, 0, O)",
+    "description": "Générez des mots de passe aléatoires sécurisés avec une longueur et des types de caractères personnalisables. Choisissez entre minuscules, majuscules, chiffres et caractères spéciaux. Option permettant d'éviter les caractères ambigus pour une meilleure lisibilité.",
+    "includeLowercase": "Inclure des lettres minuscules (a-z)",
+    "includeNumbers": "Inclure des chiffres (0-9)",
+    "includeSymbols": "Inclure des caractères spéciaux",
+    "includeUppercase": "Inclure des lettres majuscules (A-Z)",
+    "lengthDesc": "Longueur du mot de passe",
+    "lengthPlaceholder": "par exemple 12",
+    "optionsTitle": "Options de mot de passe",
+    "resultTitle": "Mot de passe généré",
+    "shortDescription": "Générez des mots de passe aléatoires sécurisés avec des options personnalisées",
+    "title": "Générateur de mot de passe",
+    "toolInfo": {
+      "description": "Cet outil génère des mots de passe aléatoires sécurisés selon vos critères. Vous pouvez personnaliser la longueur, inclure ou exclure différents types de caractères et éviter les caractères ambigus pour une meilleure lisibilité. Idéal pour créer des mots de passe forts pour vos comptes, applications ou tout autre besoin de sécurité.",
+      "title": "À propos du générateur de mots de passe"
+    }
+  },
+  "quote": {
+    "allowDoubleQuotation": "Autoriser les guillemets doubles",
+    "description": "Ajoutez des guillemets autour du texte avec des options personnalisables.",
+    "inputTitle": "Texte d'entrée",
+    "leftQuoteDescription": "Caractère(s) de citation gauche",
+    "processAsMultiLine": "Traiter comme un texte multiligne",
+    "quoteEmptyLines": "Citer les lignes vides",
+    "quoteOptions": "Options de devis",
+    "resultTitle": "Texte cité",
+    "rightQuoteDescription": "Caractère(s) de citation à droite",
+    "shortDescription": "Ajoutez des guillemets autour du texte avec différents styles",
+    "title": "Citation de texte",
+    "toolInfo": {
+      "description": "Cet outil vous permet d'insérer des guillemets autour du texte. Vous pouvez choisir différents caractères de guillemets, gérer du texte multiligne et contrôler le traitement des lignes vides. Il est utile pour préparer du texte pour la programmation, formater des données ou créer du texte stylisé.",
+      "title": "Citation de texte"
+    }
+  },
+  "randomizeCase": {
+    "description": "L'utilitaire de sélection aléatoire de casse de texte le plus simple au monde, basé sur un navigateur. Saisissez votre texte et transformez-le instantanément en ajoutant des majuscules et des minuscules aléatoires. Idéal pour créer des effets de texte uniques, tester la sensibilité à la casse ou générer des modèles de texte variés.",
+    "shortDescription": "Randomiser la casse des lettres dans le texte",
+    "title": "Cas randomisé"
+  },
+  "removeDuplicateLines": {
+    "description": "Chargez votre texte dans le formulaire de saisie à gauche et obtenez instantanément du texte sans doublons dans la zone de sortie. Puissant, gratuit et rapide. Chargez des lignes de texte : obtenez des lignes de texte uniques.",
+    "shortDescription": "Supprimez rapidement toutes les lignes répétées du texte",
+    "title": "Supprimer les lignes en double"
+  },
+  "repeat": {
+    "delimiterDescription": "Délimiteur pour les copies de sortie.",
+    "delimiterPlaceholder": "Délimiteur",
+    "description": "Répétez le texte plusieurs fois avec des séparateurs personnalisables.",
+    "inputTitle": "Texte d'entrée",
+    "numberPlaceholder": "Nombre",
+    "repeatAmountDescription": "Nombre de répétitions.",
+    "repetitionsDelimiter": "Délimiteur de répétitions",
+    "resultTitle": "Texte répété",
+    "shortDescription": "Répéter le texte plusieurs fois",
+    "textRepetitions": "Répétitions de texte",
+    "title": "Répéter le texte",
+    "toolInfo": {
+      "description": "Cet outil vous permet de répéter un texte donné plusieurs fois avec un séparateur optionnel.",
+      "title": "Répéter le texte"
+    }
+  },
+  "reverse": {
+    "description": "L'utilitaire d'inversion de texte le plus simple au monde, basé sur un navigateur. Saisissez n'importe quel texte et inversez-le instantanément, caractère par caractère. Idéal pour créer du texte miroir, analyser des palindromes ou jouer avec les motifs de texte. Préserve les espaces et les caractères spéciaux lors de l'inversion.",
+    "inputTitle": "Texte à inverser",
+    "processMultiLine": "Traiter un texte multiligne",
+    "processMultiLineDescription": "Chaque ligne sera inversée indépendamment",
+    "resultTitle": "Texte inversé",
+    "reversalOptions": "Options d'inversion",
+    "shortDescription": "Inverser n'importe quel texte caractère par caractère",
+    "skipEmptyLines": "Sauter les lignes vides",
+    "skipEmptyLinesDescription": "Les lignes vides seront supprimées de la sortie",
+    "title": "Inverse",
+    "trimWhitespace": "Couper les espaces blancs",
+    "trimWhitespaceDescription": "Supprimer les espaces de début et de fin de chaque ligne"
+  },
+  "rot13": {
+    "description": "Coder ou décoder du texte à l'aide du chiffrement ROT13.",
+    "inputTitle": "Texte d'entrée",
+    "resultTitle": "Résultat ROT13",
+    "shortDescription": "Coder ou décoder du texte à l'aide du chiffrement ROT13.",
+    "title": "Encodeur/décodeur ROT13",
+    "toolInfo": {
+      "description": "ROT13 (rotation de 13 positions) est un chiffrement par substitution de lettres simple qui remplace une lettre par la 13e lettre suivante dans l'alphabet. ROT13 est un cas particulier du chiffrement de César, développé dans la Rome antique. L'alphabet anglais comportant 26 lettres, ROT13 est son propre inverse ; pour annuler ROT13, le même algorithme est appliqué, permettant ainsi la même opération de codage et de décodage.",
+      "title": "Qu'est-ce que ROT13 ?"
+    }
+  },
+  "rotate": {
+    "description": "Faire pivoter les caractères du texte selon des positions spécifiées.",
+    "inputTitle": "Texte d'entrée",
+    "processAsMultiLine": "Traiter comme un texte multiligne (faire pivoter chaque ligne séparément)",
+    "resultTitle": "Texte pivoté",
+    "rotateLeft": "Tourner à gauche",
+    "rotateRight": "Tourner à droite",
+    "rotationOptions": "Options de rotation",
+    "shortDescription": "Décaler les caractères dans le texte par position.",
+    "stepDescription": "Nombre de positions à faire tourner",
+    "title": "Faire pivoter le texte",
+    "toolInfo": {
+      "description": "Cet outil vous permet de faire pivoter les caractères d'une chaîne d'un nombre spécifié de positions. Vous pouvez effectuer une rotation vers la gauche ou la droite, et traiter du texte multiligne en faisant pivoter chaque ligne séparément. La rotation de chaîne est utile pour les transformations de texte simples, la création de motifs ou la mise en œuvre de techniques de chiffrement de base.",
+      "title": "Rotation des cordes"
+    }
+  },
+  "split": {
+    "charAfterChunkDescription": "Caractère après chaque morceau",
+    "charBeforeChunkDescription": "Caractère avant chaque morceau",
+    "chunksDescription": "Nombre de morceaux de longueur égale dans la sortie.",
+    "chunksTitle": "Utiliser un certain nombre de morceaux",
+    "description": "L'utilitaire de découpage de texte basé sur navigateur le plus simple au monde. Saisissez votre texte et spécifiez un séparateur pour le diviser en plusieurs parties. Idéal pour le traitement de données, la manipulation de texte ou l'extraction de contenu spécifique à partir de blocs de texte volumineux.",
+    "lengthDescription": "Nombre de symboles qui seront placés dans chaque bloc de sortie.",
+    "lengthTitle": "Utiliser la longueur pour le fractionnement",
+    "outputSeparatorDescription": "Caractère à insérer entre les segments séparés. (Par défaut, il s'agit du saut de ligne « \\n ».)",
+    "outputSeparatorOptions": "Options de séparateur de sortie",
+    "regexDescription": "Expression régulière permettant de diviser le texte en plusieurs parties.\n(Plusieurs espaces par défaut.)",
+    "regexTitle": "Utiliser une expression régulière pour le fractionnement",
+    "resultTitle": "Textes",
+    "shortDescription": "Diviser le texte en plusieurs parties à l'aide d'un séparateur",
+    "splitSeparatorOptions": "Options de séparateur fractionné",
+    "symbolDescription": "Caractère permettant de diviser le texte en plusieurs parties.\n(Espace par défaut.)",
+    "symbolTitle": "Utiliser un symbole pour le fractionnement",
+    "title": "Diviser"
+  },
+  "statistic": {
+    "characterFrequencyAnalysis": "Analyse de la fréquence des caractères",
+    "characterFrequencyAnalysisDescription": "Comptez la fréquence à laquelle chaque caractère apparaît dans le texte",
+    "delimitersOptions": "Options de délimiteurs",
+    "description": "Analysez le texte et générez des statistiques complètes.",
+    "includeEmptyLines": "Inclure les lignes vides",
+    "includeEmptyLinesDescription": "Inclure les lignes vides lors du comptage des lignes",
+    "inputTitle": "Texte d'entrée",
+    "resultTitle": "Statistiques textuelles",
+    "sentenceDelimitersDescription": "Saisissez les caractères personnalisés utilisés pour délimiter les phrases dans votre langue (séparés par une virgule) ou laissez-le vide par défaut.",
+    "sentenceDelimitersPlaceholder": "par exemple ., !, ?, ...",
+    "shortDescription": "Obtenez des statistiques sur votre texte",
+    "statisticsOptions": "Options de statistiques",
+    "title": "Statistiques textuelles",
+    "toolInfo": {
+      "description": "Cet outil vous permet d'analyser du texte et de générer des statistiques complètes, notamment le nombre de caractères, le nombre de mots, le nombre de lignes et l'analyse de fréquence des caractères et des mots.",
+      "title": "Qu'est-ce qu'un {{title}}?"
+    },
+    "wordDelimitersDescription": "Saisissez une expression régulière personnalisée pour compter les mots ou laissez-la vide par défaut.",
+    "wordDelimitersPlaceholder": "par exemple \\s.,;:!?\"«»()…",
+    "wordFrequencyAnalysis": "Analyse de fréquence des mots",
+    "wordFrequencyAnalysisDescription": "Comptez la fréquence à laquelle chaque mot apparaît dans le texte"
+  },
+  "textReplacer": {
+    "description": "Remplacez les modèles de texte par un nouveau contenu.",
+    "findPatternInText": "Trouver ce modèle dans le texte",
+    "findPatternUsingRegexp": "Trouver un modèle à l'aide d'une expression régulière",
+    "inputTitle": "Texte à remplacer",
+    "newTextPlaceholder": "Nouveau texte",
+    "regexpDescription": "Saisissez l’expression régulière que vous souhaitez remplacer.",
+    "replacePatternDescription": "Saisissez le modèle à utiliser pour le remplacement.",
+    "replaceText": "Remplacer le texte",
+    "resultTitle": "Texte avec remplacements",
+    "searchPatternDescription": "Saisissez le modèle de texte que vous souhaitez remplacer.",
+    "searchText": "Texte de recherche",
+    "shortDescription": "Remplacez rapidement du texte dans votre contenu",
+    "title": "Remplaceur de texte",
+    "toolInfo": {
+      "description": "Remplacez facilement du texte spécifique dans votre contenu grâce à cet outil simple et accessible depuis un navigateur. Saisissez simplement votre texte, définissez le texte à remplacer et la valeur de remplacement, et obtenez instantanément la version mise à jour.",
+      "title": "Remplaceur de texte"
+    }
+  },
+  "toMorse": {
+    "dashSymbolDescription": "Symbole qui correspondra au tiret dans le code Morse.",
+    "description": "Convertir du texte en code Morse.",
+    "dotSymbolDescription": "Symbole qui correspondra au point dans le code Morse.",
+    "longSignal": "Signal long",
+    "resultTitle": "code Morse",
+    "shortDescription": "Encoder rapidement du texte en morse",
+    "shortSignal": "Signal court",
+    "title": "Chaîne en morse"
+  },
+  "truncate": {
+    "addTruncationIndicator": "Ajouter un indicateur de troncature",
+    "charactersPlaceholder": "Personnages",
+    "description": "Raccourcir le texte à une longueur spécifiée.",
+    "indicatorDescription": "Caractères à ajouter à la fin (ou au début) du texte. Remarque : ils sont pris en compte dans la longueur.",
+    "inputTitle": "Texte d'entrée",
+    "leftSideDescription": "Supprimer des caractères du début du texte.",
+    "leftSideTruncation": "Troncature du côté gauche",
+    "lengthAndLines": "Longueur et lignes",
+    "lineByLineDescription": "Tronquez chaque ligne séparément.",
+    "lineByLineTruncating": "Tronquer ligne par ligne",
+    "maxLengthDescription": "Nombre de caractères à laisser dans le texte.",
+    "numberPlaceholder": "Nombre",
+    "resultTitle": "Texte tronqué",
+    "rightSideDescription": "Supprimer les caractères de la fin du texte.",
+    "rightSideTruncation": "Troncature du côté droit",
+    "shortDescription": "Tronquer le texte à une longueur spécifiée",
+    "suffixAndAffix": "Suffixe et affixe",
+    "title": "Tronquer le texte",
+    "toolInfo": {
+      "description": "Chargez votre texte dans le formulaire de saisie à gauche et vous obtiendrez automatiquement du texte tronqué à droite.",
+      "title": "Tronquer le texte"
+    },
+    "truncationSide": "Côté troncature"
+  },
+  "uppercase": {
+    "description": "Convertir le texte en lettres majuscules.",
+    "inputTitle": "Texte d'entrée",
+    "resultTitle": "Texte en majuscules",
+    "shortDescription": "Convertir le texte en majuscules",
+    "title": "Convertir en majuscules"
+  }
+}

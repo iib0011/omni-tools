@@ -1,1 +1,98 @@
-{}
+{
+  "changeColors": {
+    "description": "Monde",
+    "shortDescription": "Échanger rapidement les couleurs d'une image",
+    "title": "Changer une couleur dans une image"
+  },
+  "changeOpacity": {
+    "description": "Ajustez facilement la transparence de vos images. Téléchargez simplement votre image, utilisez le curseur pour définir le niveau d'opacité souhaité entre 0 (transparent) et 1 (opaque), puis téléchargez l'image modifiée.",
+    "shortDescription": "Ajuster la transparence des images",
+    "title": "Modifier l'opacité de l'image"
+  },
+  "compress": {
+    "description": "Réduisez la taille du fichier image tout en conservant la qualité.",
+    "inputTitle": "Image d'entrée",
+    "resultTitle": "Image compressée",
+    "shortDescription": "Compresser des images en maintenant une qualité raisonnable.",
+    "title": "Compresser une image"
+  },
+  "compressPng": {
+    "description": "C'est un programme pour compresser des images PNG. Dès que vous collez votre image PNG dans la zone d'entrée, le programme va la compresser et afficher le résultat dans la zone de sortie. Dans les options, vous pouvez ajuster le niveau de compression et comparer la taille des 2 fichiers.",
+    "shortDescription": "Compresser rapidement un PNG",
+    "title": "Compresser un PNG"
+  },
+  "convertJgpToPng": {
+    "description": "Convertissez rapidement vos images JPG en PNG. Importez simplement votre image PNG dans l'éditeur à gauche.",
+    "shortDescription": "Convertir rapidement vos images JPG en PNG",
+    "title": "Convertir un JPG en PNG"
+  },
+  "convertToJpg": {
+    "description": "Convertissez différents formats d'image (PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW) en JPG avec des paramètres de qualité et de couleur d'arrière-plan personnalisables.",
+    "shortDescription": "Convertir des images en JPG avec contrôle qualité",
+    "title": "Convertir des images en JPG"
+  },
+  "createTransparent": {
+    "description": "Monde",
+    "shortDescription": "Rendre rapidement une image transparente",
+    "title": "Créer un PNG transparent"
+  },
+  "crop": {
+    "description": "Recadrez les images pour supprimer les zones indésirables.",
+    "inputTitle": "Image d'entrée",
+    "resultTitle": "Image rognée",
+    "shortDescription": "Rogner des images rapidement.",
+    "title": "Rogner une image"
+  },
+  "editor": {
+    "description": "Éditeur d'images avancé avec des outils de recadrage, de rotation, d'annotation, d'ajustement des couleurs et d'ajout de filigranes. Retouchez vos images avec des outils professionnels directement dans votre navigateur.",
+    "shortDescription": "Modifiez des images avec des outils et des fonctionnalités avancés",
+    "title": "Éditeur d'images"
+  },
+  "imageToText": {
+    "description": "Extraire du texte à partir d'images (JPG, PNG) à l'aide de la reconnaissance optique de caractères (OCR).",
+    "shortDescription": "Extraire du texte à partir d'images à l'aide de l'OCR.",
+    "title": "Conversion d'image en texte (OCR)"
+  },
+  "qrCode": {
+    "description": "Générez des codes QR pour différents types de données : URL, texte, e-mail, téléphone, SMS, WiFi, vCard, etc.",
+    "shortDescription": "Créez des codes QR personnalisés pour différents formats de données.",
+    "title": "Générateur de code QR"
+  },
+  "removeBackground": {
+    "description": "Monde",
+    "shortDescription": "Supprimer automatiquement les arrière-plans des images",
+    "title": "Supprimer l'arrière-plan de l'image"
+  },
+  "resize": {
+    "description": "Redimensionner les images à différentes dimensions.",
+    "dimensionType": "Type de dimension",
+    "heightDescription": "Hauteur (en pixels)",
+    "inputTitle": "Image d'entrée",
+    "maintainAspectRatio": "Maintenir le rapport hauteur/largeur",
+    "maintainAspectRatioDescription": "Conserver le rapport hauteur/largeur d'origine de l'image.",
+    "percentage": "Pourcentage",
+    "percentageDescription": "Pourcentage de la taille d'origine (par exemple, 50 pour la demi-taille, 200 pour la double taille)",
+    "resizeByPercentage": "Redimensionner par pourcentage",
+    "resizeByPercentageDescription": "Redimensionner en spécifiant un pourcentage de la taille d'origine.",
+    "resizeByPixels": "Redimensionner par pixels",
+    "resizeByPixelsDescription": "Redimensionner en spécifiant les dimensions en pixels.",
+    "resizeMethod": "Méthode de redimensionnement",
+    "resultTitle": "Image redimensionnée",
+    "setHeight": "Définir la hauteur",
+    "setHeightDescription": "Spécifiez la hauteur en pixels et calculez la largeur en fonction du rapport hauteur/largeur.",
+    "setWidth": "Définir la largeur",
+    "setWidthDescription": "Spécifiez la largeur en pixels et calculez la hauteur en fonction du rapport hauteur/largeur.",
+    "shortDescription": "Redimensionnez facilement les images.",
+    "title": "Redimensionner l'image",
+    "toolInfo": {
+      "description": "Cet outil vous permet de redimensionner des images JPG, PNG, SVG ou GIF. Vous pouvez redimensionner en spécifiant les dimensions en pixels ou en pourcentage, avec des options permettant de conserver le rapport hauteur/largeur d'origine.",
+      "title": "Redimensionner l'image"
+    },
+    "widthDescription": "Largeur (en pixels)"
+  },
+  "rotate": {
+    "description": "Faire pivoter une image selon un angle spécifié.",
+    "shortDescription": "Faites pivoter une image facilement.",
+    "title": "Faire pivoter l'image"
+  }
+}
