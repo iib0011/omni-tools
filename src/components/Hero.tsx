@@ -23,6 +23,7 @@ import {
   isBookmarked,
   toggleBookmarked
 } from '@utils/bookmark';
+import IconButton from '@mui/material/IconButton';
 
 const GroupHeader = styled('div')(({ theme }) => ({
   position: 'sticky',
@@ -167,24 +168,27 @@ export default function Hero() {
                   </Typography>
                 </Box>
               </Stack>
-              <Icon
-                fontSize={20}
+              <IconButton
                 onClick={(e) => {
                   e.stopPropagation();
                   toggleBookmarked(option.path);
                   setBookmarkedToolPaths(getBookmarkedToolPaths());
                 }}
-                color={
-                  isBookmarked(option.path)
-                    ? theme.palette.primary.main
-                    : theme.palette.grey[500]
-                }
-                icon={
-                  isBookmarked(option.path)
-                    ? 'mdi:bookmark'
-                    : 'mdi:bookmark-plus-outline'
-                }
-              />
+              >
+                <Icon
+                  fontSize={20}
+                  color={
+                    isBookmarked(option.path)
+                      ? theme.palette.primary.main
+                      : theme.palette.grey[500]
+                  }
+                  icon={
+                    isBookmarked(option.path)
+                      ? 'mdi:bookmark'
+                      : 'mdi:bookmark-plus-outline'
+                  }
+                />
+              </IconButton>
             </Stack>
           </Box>
         )}
@@ -194,9 +198,6 @@ export default function Hero() {
           }
         }}
       />
-      {bookmarkedToolPaths.length > 0 && (
-        <Typography fontSize={{ xs: 20, md: 25 }}>Bookmarked tools:</Typography>
-      )}
       <Grid container spacing={2} mt={2}>
         {displayedTools.map((tool) => (
           <Grid
@@ -223,23 +224,28 @@ export default function Hero() {
                 cursor: 'pointer',
                 '&:hover': {
                   backgroundColor: 'background.hover'
-                }
+                },
+                height: '100%'
               }}
             >
-              <Stack direction={'row'} spacing={2} alignItems={'center'}>
-                <Typography>{tool.label}</Typography>
+              <Stack direction={'row'} spacing={1} alignItems={'center'}>
+                <Typography textAlign={'center'}>{tool.label}</Typography>
                 {bookmarkedToolPaths.length > 0 && (
-                  <Icon
-                    icon={'mdi:close'}
-                    color={theme.palette.grey[500]}
-                    fontSize={20}
+                  <IconButton
                     onClick={(e) => {
                       e.stopPropagation();
                       const path = tool.url.substring(1);
                       toggleBookmarked(path);
                       setBookmarkedToolPaths(getBookmarkedToolPaths());
                     }}
-                  />
+                    size={'small'}
+                  >
+                    <Icon
+                      icon={'mdi:close'}
+                      color={theme.palette.grey[500]}
+                      fontSize={15}
+                    />
+                  </IconButton>
                 )}
               </Stack>
             </Box>

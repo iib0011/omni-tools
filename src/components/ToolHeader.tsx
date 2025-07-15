@@ -8,6 +8,7 @@ import { categoriesColors } from '../config/uiConfig';
 import { getToolsByCategory } from '@tools/index';
 import { useEffect, useState } from 'react';
 import { isBookmarked, toggleBookmarked } from '@utils/bookmark';
+import IconButton from '@mui/material/IconButton';
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: 'white',
@@ -107,19 +108,22 @@ export default function ToolHeader({
             <Typography mb={2} fontSize={30} color={'primary'}>
               {title}
             </Typography>
-            <Icon
-              fontSize={30}
-              color={
-                bookmarked
-                  ? theme.palette.primary.main
-                  : theme.palette.grey[500]
-              }
+            <IconButton
               onClick={(e) => {
                 toggleBookmarked(path);
                 setBookmarked(!bookmarked);
               }}
-              icon={bookmarked ? 'mdi:bookmark' : 'mdi:bookmark-plus-outline'}
-            />
+            >
+              <Icon
+                fontSize={30}
+                color={
+                  bookmarked
+                    ? theme.palette.primary.main
+                    : theme.palette.grey[500]
+                }
+                icon={bookmarked ? 'mdi:bookmark' : 'mdi:bookmark-plus-outline'}
+              />
+            </IconButton>
           </Stack>
           <Typography fontSize={20}>{description}</Typography>
           <ToolLinks />

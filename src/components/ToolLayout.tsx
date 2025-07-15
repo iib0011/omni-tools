@@ -14,13 +14,13 @@ export default function ToolLayout({
   description,
   icon,
   type,
-  path
+  fullPath
 }: {
   title: string;
   description: string;
   icon?: IconifyIcon | string;
   type: string;
-  path: string;
+  fullPath: string;
   children: ReactNode;
 }) {
   const otherCategoryTools =
@@ -51,7 +51,7 @@ export default function ToolLayout({
           description={description}
           icon={icon}
           type={type}
-          path={path}
+          path={fullPath}
         />
         {children}
         <Separator backgroundColor="#5581b5" margin="50px" />

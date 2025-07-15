@@ -74,7 +74,7 @@ export const defineTool = (
           description={description}
           icon={icon}
           type={basePath}
-          path={`${basePath}/${path}`}
+          fullPath={`${basePath}/${path}`}
         >
           <Component title={name} longDescription={longDescription} />
         </ToolLayout>
