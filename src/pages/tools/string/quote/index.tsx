@@ -9,6 +9,7 @@ import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
+import { useTranslation } from 'react-i18next';
 
 interface InitialValuesType {
   leftQuote: string;
@@ -70,6 +71,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function Quote({ title }: ToolComponentProps) {
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -93,33 +95,33 @@ export default function Quote({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Quote Options',
+      title: t('quote.quoteOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.leftQuote}
             onOwnChange={(val) => updateField('leftQuote', val)}
-            description={'Left quote character(s)'}
+            description={t('quote.leftQuoteDescription')}
           />
           <TextFieldWithDesc
             value={values.rightQuote}
             onOwnChange={(val) => updateField('rightQuote', val)}
-            description={'Right quote character(s)'}
+            description={t('quote.rightQuoteDescription')}
           />
           <CheckboxWithDesc
             checked={values.doubleQuotation}
             onChange={(checked) => updateField('doubleQuotation', checked)}
-            title={'Allow double quotation'}
+            title={t('quote.allowDoubleQuotation')}
           />
           <CheckboxWithDesc
             checked={values.emptyQuoting}
             onChange={(checked) => updateField('emptyQuoting', checked)}
-            title={'Quote empty lines'}
+            title={t('quote.quoteEmptyLines')}
           />
           <CheckboxWithDesc
             checked={values.multiLine}
             onChange={(checked) => updateField('multiLine', checked)}
-            title={'Process as multi-line text'}
+            title={t('quote.processAsMultiLine')}
           />
         </Box>
       )
@@ -130,15 +132,20 @@ export default function Quote({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       inputComponent={
-        <ToolTextInput title="Input Text" value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('quote.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
-      resultComponent={<ToolTextResult title="Quoted Text" value={result} />}
+      resultComponent={
+        <ToolTextResult title={t('quote.resultTitle')} value={result} />
+      }
       initialValues={initialValues}
       getGroups={getGroups}
       toolInfo={{
-        title: 'Text Quoter',
-        description:
-          "This tool allows you to add quotes around text. You can choose different quote characters, handle multi-line text, and control how empty lines are processed. It's useful for preparing text for programming, formatting data, or creating stylized text."
+        title: t('quote.toolInfo.title'),
+        description: t('quote.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

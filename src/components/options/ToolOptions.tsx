@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import React, { ReactNode } from 'react';
 import { FormikProps, FormikValues, useFormikContext } from 'formik';
 import ToolOptionGroups, { ToolOptionGroup } from './ToolOptionGroups';
+import { useTranslation } from 'react-i18next';
 
 export type UpdateField<T> = <Y extends keyof T>(field: Y, value: T[Y]) => void;
 type NonEmptyArray<T> = [T, ...T[]];
@@ -20,6 +21,7 @@ export default function ToolOptions<T extends FormikValues>({
   getGroups: GetGroupsType<T> | null;
   vertical?: boolean;
 }) {
+  const { t } = useTranslation();
   const theme = useTheme();
   const formikContext = useFormikContext<T>();
 
@@ -45,7 +47,7 @@ export default function ToolOptions<T extends FormikValues>({
     >
       <Stack direction={'row'} spacing={1} alignItems={'center'}>
         <SettingsIcon />
-        <Typography fontSize={22}>Tool options</Typography>
+        <Typography fontSize={22}>{t('toolOptions.title')}</Typography>
       </Stack>
       <Box mt={2}>
         <Stack direction={'row'} spacing={2}>

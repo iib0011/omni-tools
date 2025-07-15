@@ -1,4 +1,3 @@
-import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -7,6 +6,7 @@ import ToolTextResult from '@components/result/ToolTextResult';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { beautifyXml } from './service';
 import { InitialValuesType } from './types';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {};
 
@@ -24,6 +24,7 @@ export default function XmlBeautifier({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation('xml');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -37,18 +38,27 @@ export default function XmlBeautifier({
       input={input}
       inputComponent={
         <ToolTextInput
+          title={t('xmlBeautifier.inputTitle')}
           value={input}
           onChange={setInput}
-          placeholder="Paste or import XML here..."
         />
       }
-      resultComponent={<ToolTextResult value={result} extension="xml" />}
+      resultComponent={
+        <ToolTextResult
+          title={t('xmlBeautifier.resultTitle')}
+          value={result}
+          extension="xml"
+        />
+      }
       initialValues={initialValues}
       exampleCards={exampleCards}
       getGroups={null}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('xmlBeautifier.toolInfo.title', { title }),
+        description: longDescription
+      }}
     />
   );
 }

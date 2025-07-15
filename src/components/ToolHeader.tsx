@@ -9,6 +9,7 @@ import { getToolsByCategory } from '@tools/index';
 import { useEffect, useState } from 'react';
 import { isBookmarked, toggleBookmarked } from '@utils/bookmark';
 import IconButton from '@mui/material/IconButton';
+import { useTranslation } from 'react-i18next';
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: 'white',
@@ -27,6 +28,7 @@ interface ToolHeaderProps {
 }
 
 function ToolLinks() {
+  const { t } = useTranslation();
   const [examplesVisible, setExamplesVisible] = useState(false);
 
   useEffect(() => {
@@ -66,7 +68,7 @@ function ToolLinks() {
             sx={{ backgroundColor: 'background.paper' }}
             onClick={() => scrollToElement('examples')}
           >
-            See Examples
+            {t('toolHeader.seeExamples')}
           </StyledButton>
         </Grid>
       )}

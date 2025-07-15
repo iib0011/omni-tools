@@ -5,6 +5,7 @@ import ToolTextResult from '@components/result/ToolTextResult';
 import { rot13 } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
+import { useTranslation } from 'react-i18next';
 
 type InitialValuesType = Record<string, never>;
 
@@ -30,6 +31,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function Rot13({ title }: ToolComponentProps) {
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -41,15 +43,20 @@ export default function Rot13({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       inputComponent={
-        <ToolTextInput title="Input Text" value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('rot13.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
-      resultComponent={<ToolTextResult title="ROT13 Result" value={result} />}
+      resultComponent={
+        <ToolTextResult title={t('rot13.resultTitle')} value={result} />
+      }
       initialValues={initialValues}
       getGroups={null}
       toolInfo={{
-        title: 'What Is ROT13?',
-        description:
-          'ROT13 (rotate by 13 places) is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the alphabet. ROT13 is a special case of the Caesar cipher which was developed in ancient Rome. Because there are 26 letters in the English alphabet, ROT13 is its own inverse; that is, to undo ROT13, the same algorithm is applied, so the same action can be used for encoding and decoding.'
+        title: t('rot13.toolInfo.title'),
+        description: t('rot13.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

@@ -11,6 +11,7 @@ import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import SimpleRadio from '@components/options/SimpleRadio';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
+import { useTranslation } from 'react-i18next';
 
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
@@ -67,6 +68,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 ];
 
 export default function Truncate({ title }: ToolComponentProps) {
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -79,31 +81,31 @@ export default function Truncate({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Truncation Side',
+      title: t('truncate.truncationSide'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('truncationSide', 'right')}
             checked={values.truncationSide === 'right'}
-            title={'Right-side Truncation'}
-            description={'Remove characters from the end of the text.'}
+            title={t('truncate.rightSideTruncation')}
+            description={t('truncate.rightSideDescription')}
           />
           <SimpleRadio
             onClick={() => updateField('truncationSide', 'left')}
             checked={values.truncationSide === 'left'}
-            title={'Left-side Truncation'}
-            description={'Remove characters from the start of the text.'}
+            title={t('truncate.leftSideTruncation')}
+            description={t('truncate.leftSideDescription')}
           />
         </Box>
       )
     },
     {
-      title: 'Length and Lines',
+      title: t('truncate.lengthAndLines'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={'Number of characters to leave in the text.'}
-            placeholder="Number"
+            description={t('truncate.maxLengthDescription')}
+            placeholder={t('truncate.numberPlaceholder')}
             value={values.maxLength}
             onOwnChange={(val) => updateField('maxLength', val)}
             type={'number'}
@@ -111,27 +113,25 @@ export default function Truncate({ title }: ToolComponentProps) {
           <CheckboxWithDesc
             onChange={(val) => updateField('lineByLine', val)}
             checked={values.lineByLine}
-            title={'Line-by-line Truncating'}
-            description={'Truncate each line separately.'}
+            title={t('truncate.lineByLineTruncating')}
+            description={t('truncate.lineByLineDescription')}
           />
         </Box>
       )
     },
     {
-      title: 'Suffix and Affix',
+      title: t('truncate.suffixAndAffix'),
       component: (
         <Box>
           <CheckboxWithDesc
             onChange={(val) => updateField('addIndicator', val)}
             checked={values.addIndicator}
-            title={'Add Truncation Indicator'}
+            title={t('truncate.addTruncationIndicator')}
             description={''}
           />
           <TextFieldWithDesc
-            description={
-              'Characters to add at the end (or start) of the text. Note: They count towards the length.'
-            }
-            placeholder="Characters"
+            description={t('truncate.indicatorDescription')}
+            placeholder={t('truncate.charactersPlaceholder')}
             value={values.indicator}
             onOwnChange={(val) => updateField('indicator', val)}
             type={'text'}
@@ -150,15 +150,18 @@ export default function Truncate({ title }: ToolComponentProps) {
       input={input}
       setInput={setInput}
       inputComponent={
-        <ToolTextInput title={'Input text'} value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('truncate.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
       resultComponent={
-        <ToolTextResult title={'Truncated text'} value={result} />
+        <ToolTextResult title={t('truncate.resultTitle')} value={result} />
       }
       toolInfo={{
-        title: 'Truncate text',
-        description:
-          'Load your text in the input form on the left and you will automatically get truncated text on the right.'
+        title: t('truncate.toolInfo.title'),
+        description: t('truncate.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

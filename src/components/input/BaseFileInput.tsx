@@ -12,6 +12,7 @@ import { globalInputHeight } from '../../config/uiConfig';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import greyPattern from '@assets/grey-pattern.png';
 import { isArray } from 'lodash';
+import { useTranslation } from 'react-i18next';
 
 interface BaseFileInputComponentProps extends BaseFileInputProps {
   children: (props: { preview: string | undefined }) => ReactNode;
@@ -26,6 +27,7 @@ export default function BaseFileInput({
   children,
   type
 }: BaseFileInputComponentProps) {
+  const { t } = useTranslation();
   const [preview, setPreview] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const theme = useTheme();
@@ -60,9 +62,9 @@ export default function BaseFileInput({
 
       navigator.clipboard
         .write([clipboardItem])
-        .then(() => showSnackBar('File copied', 'success'))
+        .then(() => showSnackBar(t('baseFileInput.fileCopied'), 'success'))
         .catch((err) => {
-          showSnackBar('Failed to copy: ' + err, 'error');
+          showSnackBar(t('baseFileInput.copyFailed', { error: err }), 'error');
         });
     }
   };
@@ -190,7 +192,7 @@ export default function BaseFileInput({
                 variant="h6"
                 align="center"
               >
-                Drop your {type} here
+                {t('baseFileInput.dropFileHere', { type })}
               </Typography>
             ) : (
               <Typography
@@ -200,9 +202,7 @@ export default function BaseFileInput({
                     : theme.palette.grey['600']
                 }
               >
-                Click here to select a {type} from your device, press Ctrl+V to
-                use a {type} from your clipboard, or drag and drop a file from
-                desktop
+                {t('baseFileInput.selectFileDescription', { type })}
               </Typography>
             )}
           </Box>

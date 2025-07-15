@@ -2,12 +2,14 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('string', {
-  name: 'Truncate text',
   path: 'truncate',
-  shortDescription: 'Truncate your text easily',
-  icon: 'material-symbols-light:short-text',
-  description:
-    'Load your text in the input form on the left and you will automatically get truncated text on the right.',
-  keywords: ['text', 'truncate'],
-  component: lazy(() => import('./index'))
+  icon: 'material-symbols-light:content-cut',
+
+  keywords: ['truncate'],
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'string:truncate.title',
+    description: 'string:truncate.description',
+    shortDescription: 'string:truncate.shortDescription'
+  }
 });

@@ -9,6 +9,7 @@ import { initialValues, InitialValuesType } from './initialValues';
 import ToolContent from '@components/ToolContent';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
+import { useTranslation } from 'react-i18next';
 
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
@@ -48,6 +49,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function Replacer({ title }: ToolComponentProps) {
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -60,12 +62,12 @@ export default function Replacer({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Text Repetitions',
+      title: t('repeat.textRepetitions'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={'Number of repetitions.'}
-            placeholder="Number"
+            description={t('repeat.repeatAmountDescription')}
+            placeholder={t('repeat.numberPlaceholder')}
             value={values.repeatAmount}
             onOwnChange={(val) => updateField('repeatAmount', val)}
             type={'number'}
@@ -74,12 +76,12 @@ export default function Replacer({ title }: ToolComponentProps) {
       )
     },
     {
-      title: 'Repetitions Delimiter',
+      title: t('repeat.repetitionsDelimiter'),
       component: (
         <Box>
           <TextFieldWithDesc
-            description={'Delimiter for output copies.'}
-            placeholder="Delimiter"
+            description={t('repeat.delimiterDescription')}
+            placeholder={t('repeat.delimiterPlaceholder')}
             value={values.delimiter}
             onOwnChange={(val) => updateField('delimiter', val)}
             type={'text'}
@@ -98,15 +100,18 @@ export default function Replacer({ title }: ToolComponentProps) {
       input={input}
       setInput={setInput}
       inputComponent={
-        <ToolTextInput title={'Input text'} value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('repeat.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
       resultComponent={
-        <ToolTextResult title={'Repeated text'} value={result} />
+        <ToolTextResult title={t('repeat.resultTitle')} value={result} />
       }
       toolInfo={{
-        title: 'Repeat text',
-        description:
-          'This tool allows you to repeat a given text multiple times with an optional separator.'
+        title: t('repeat.toolInfo.title'),
+        description: t('repeat.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

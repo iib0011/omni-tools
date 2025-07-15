@@ -3,12 +3,14 @@ import { lazy } from 'react';
 // import image from '@assets/text.png';
 
 export const tool = defineTool('list', {
-  name: 'Duplicate',
   path: 'duplicate',
-  icon: 'mdi:content-duplicate',
-  description:
-    'A tool to duplicate each item in a list a specified number of times. Perfect for creating repeated patterns, test data, or expanding datasets.',
-  shortDescription: 'Repeat items in a list multiple times.',
+  icon: 'material-symbols-light:content-copy',
+
   keywords: ['duplicate'],
-  component: lazy(() => import('./index'))
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'list:duplicate.title',
+    description: 'list:duplicate.description',
+    shortDescription: 'list:duplicate.shortDescription'
+  }
 });

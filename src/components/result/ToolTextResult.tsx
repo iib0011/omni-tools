@@ -6,6 +6,7 @@ import ResultFooter from './ResultFooter';
 import { replaceSpecialCharacters } from '@utils/string';
 import mime from 'mime';
 import { globalInputHeight } from '../../config/uiConfig';
+import { useTranslation } from 'react-i18next';
 
 export default function ToolTextResult({
   title = 'Result',
@@ -20,13 +21,14 @@ export default function ToolTextResult({
   keepSpecialCharacters?: boolean;
   loading?: boolean;
 }) {
+  const { t } = useTranslation();
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const handleCopy = () => {
     navigator.clipboard
       .writeText(value)
-      .then(() => showSnackBar('Text copied', 'success'))
+      .then(() => showSnackBar(t('toolTextResult.copied'), 'success'))
       .catch((err) => {
-        showSnackBar('Failed to copy: ' + err, 'error');
+        showSnackBar(t('toolTextResult.copyFailed', { error: err }), 'error');
       });
   };
   const handleDownload = () => {
@@ -48,7 +50,7 @@ export default function ToolTextResult({
   };
   return (
     <Box>
-      <InputHeader title={title} />
+      <InputHeader title={title || t('toolTextResult.result')} />
       {loading ? (
         <Box
           sx={{
@@ -61,7 +63,7 @@ export default function ToolTextResult({
         >
           <CircularProgress />
           <Typography variant="body2" sx={{ mt: 2 }}>
-            Loading... This may take a moment.
+            {t('toolTextResult.loading')}
           </Typography>
         </Box>
       ) : (

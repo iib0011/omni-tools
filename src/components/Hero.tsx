@@ -15,9 +15,10 @@ import { useState } from 'react';
 import { DefinedTool } from '@tools/defineTool';
 import { filterTools, tools } from '@tools/index';
 import { useNavigate } from 'react-router-dom';
-import _ from 'lodash';
 import { Icon } from '@iconify/react';
 import { getToolCategoryTitle } from '@utils/string';
+import { useTranslation } from 'react-i18next';
+import { validNamespaces } from '../i18n';
 import {
   getBookmarkedToolPaths,
   isBookmarked,
@@ -44,21 +45,9 @@ type ToolInfo = {
   label: string;
   url: string;
 };
-const exampleTools: ToolInfo[] = [
-  {
-    label: 'Create a transparent image',
-    url: '/image-generic/create-transparent'
-  },
-  { label: 'Prettify JSON', url: '/json/prettify' },
-  { label: 'Change GIF speed', url: '/gif/change-speed' },
-  { label: 'Sort a list', url: '/list/sort' },
-  { label: 'Compress PNG', url: '/png/compress-png' },
-  { label: 'Split a text', url: '/string/split' },
-  { label: 'Split PDF', url: '/pdf/split-pdf' },
-  { label: 'Trim video', url: '/video/trim' },
-  { label: 'Calculate number sum', url: '/number/sum' }
-];
+
 export default function Hero() {
+  const { t } = useTranslation(validNamespaces);
   const [inputValue, setInputValue] = useState<string>('');
   const theme = useTheme();
   const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
@@ -66,12 +55,52 @@ export default function Hero() {
     getBookmarkedToolPaths()
   );
   const navigate = useNavigate();
+
+  const exampleTools: ToolInfo[] = [
+    {
+      label: t('translation:hero.examples.createTransparentImage'),
+      url: '/image-generic/create-transparent'
+    },
+    {
+      label: t('translation:hero.examples.prettifyJson'),
+      url: '/json/prettify'
+    },
+    {
+      label: t('translation:hero.examples.changeGifSpeed'),
+      url: '/gif/change-speed'
+    },
+    {
+      label: t('translation:hero.examples.sortList'),
+      url: '/list/sort'
+    },
+    {
+      label: t('translation:hero.examples.compressPng'),
+      url: '/png/compress-png'
+    },
+    {
+      label: t('translation:hero.examples.splitText'),
+      url: '/string/split'
+    },
+    {
+      label: t('translation:hero.examples.splitPdf'),
+      url: '/pdf/split-pdf'
+    },
+    {
+      label: t('translation:hero.examples.trimVideo'),
+      url: '/video/trim'
+    },
+    {
+      label: t('translation:hero.examples.calculateNumberSum'),
+      url: '/number/sum'
+    }
+  ];
+
   const handleInputChange = (
     event: React.ChangeEvent<{}>,
     newInputValue: string
   ) => {
     setInputValue(newInputValue);
-    setFilteredTools(filterTools(tools, newInputValue));
+    setFilteredTools(filterTools(tools, newInputValue, t));
   };
   const toolsMap = new Map<string, ToolInfo>();
   for (const tool of filteredTools) {
@@ -96,13 +125,13 @@ export default function Hero() {
     <Box width={{ xs: '90%', md: '80%', lg: '60%' }}>
       <Stack mb={1} direction={'row'} spacing={1} justifyContent={'center'}>
         <Typography sx={{ textAlign: 'center' }} fontSize={{ xs: 25, md: 30 }}>
-          Get Things Done Quickly with{' '}
+          {t('translation:hero.title')}{' '}
           <Typography
             fontSize={{ xs: 25, md: 30 }}
             display={'inline'}
             color={'primary'}
           >
-            OmniTools
+            {t('translation:hero.brand')}
           </Typography>
         </Typography>
       </Stack>
@@ -111,9 +140,7 @@ export default function Hero() {
         fontSize={{ xs: 15, md: 20 }}
         mb={2}
       >
-        Boost your productivity with OmniTools, the ultimate toolkit for getting
-        things done quickly! Access thousands of user-friendly utilities for
-        editing images, text, lists, and data, all directly from your browser.
+        {t('translation:hero.description')}
       </Typography>
 
       <Autocomplete
@@ -130,12 +157,12 @@ export default function Hero() {
           );
         }}
         inputValue={inputValue}
-        getOptionLabel={(option) => option.name}
+        getOptionLabel={(option) => t(option.name)}
         renderInput={(params) => (
           <TextField
             {...params}
             fullWidth
-            placeholder={'Search all tools'}
+            placeholder={t('translation:hero.searchPlaceholder')}
             InputProps={{
               ...params.InputProps,
               endAdornment: <SearchIcon />,

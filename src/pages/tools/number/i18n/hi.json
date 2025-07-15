@@ -1,0 +1,45 @@
+{
+  "generate": {
+    "title": "संख्याएं उत्पन्न करें",
+    "description": "निर्दिष्ट मापदंडों के अनुसार संख्याओं की सूची उत्पन्न करें।",
+    "inputTitle": "उत्पन्न की गई संख्याएं",
+    "resultTitle": "संख्याओं की सूची",
+    "generationOptions": "उत्पन्न करने के विकल्प",
+    "startNumber": "शुरुआती संख्या",
+    "startPlaceholder": "संख्या",
+    "stepValue": "चरण मान",
+    "stepPlaceholder": "मान",
+    "countNumbers": "संख्याओं की संख्या",
+    "countPlaceholder": "संख्या",
+    "outputFormat": "आउटपुट प्रारूप",
+    "separatorPlaceholder": "विभाजक"
+  },
+  "sum": {
+    "title": "संख्याएं जोड़ें",
+    "description": "संख्याओं की सूची का योग करें।",
+    "inputTitle": "इनपुट संख्याएं",
+    "resultTitle": "योग",
+    "sumOptions": "जोड़ने के विकल्प",
+    "ignoreNonNumbers": "गैर-संख्यात्मक मान अनदेखा करें",
+    "separatorPlaceholder": "विभाजक",
+    "resultFormat": "परिणाम प्रारूप",
+    "showSum": "योग दिखाएं",
+    "showCount": "गणना दिखाएं",
+    "showAverage": "औसत दिखाएं"
+  },
+  "arithmeticSequence": {
+    "title": "अंकगणितीय अनुक्रम",
+    "description": "अंकगणितीय अनुक्रम उत्पन्न करें।",
+    "inputTitle": "अनुक्रम",
+    "resultTitle": "अंकगणितीय अनुक्रम",
+    "sequenceOptions": "अनुक्रम विकल्प",
+    "firstTerm": "पहला पद",
+    "firstTermPlaceholder": "पद",
+    "commonDifference": "सामान्य अंतर",
+    "differencePlaceholder": "अंतर",
+    "numberOfTerms": "पदों की संख्या",
+    "termsPlaceholder": "संख्या",
+    "outputFormat": "आउटपुट प्रारूप",
+    "separatorPlaceholder": "विभाजक"
+  }
+}

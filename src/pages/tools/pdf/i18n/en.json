@@ -1,0 +1,113 @@
+{
+  "mergePdf": {
+    "title": "Merge PDF",
+    "description": "Combine multiple PDF files into a single document.",
+    "inputTitle": "Input PDFs",
+    "resultTitle": "Merged PDF",
+    "mergingPdfs": "Merging PDFs",
+    "pdfOptions": "PDF Options",
+    "sortByFileName": "Sort by file name",
+    "sortByFileNameDescription": "Sort PDFs alphabetically by file name",
+    "sortByUploadOrder": "Sort by upload order",
+    "sortByUploadOrderDescription": "Keep PDFs in the order they were uploaded",
+    "toolInfo": {
+      "title": "Merge PDF Files",
+      "description": "This tool allows you to combine multiple PDF files into a single document. You can choose how to sort the PDFs and the tool will merge them in the specified order."
+    },
+    "shortDescription": "Merge multiple PDF files into a single document"
+  },
+  "splitPdf": {
+    "title": "Split PDF",
+    "description": "Extract specific pages from a PDF document.",
+    "inputTitle": "Input PDF",
+    "resultTitle": "Extracted PDF",
+    "extractingPages": "Extracting pages",
+    "pageSelection": "Page Selection",
+    "pdfPageCount": "PDF has {{count}} page{{count !== 1 ? 's' : ''}}",
+    "pageRangesDescription": "Enter page numbers or ranges separated by commas (e.g., 1,3,5-7)",
+    "pageRangesPlaceholder": "e.g., 1,5-8",
+    "pageExtractionPreview": "{{count}} page{{count !== 1 ? 's' : ''}} will be extracted",
+    "toolInfo": {
+      "title": "Split PDF",
+      "description": "This tool allows you to extract specific pages from a PDF document. You can specify individual pages or ranges of pages to extract."
+    },
+    "shortDescription": "Extract specific pages from a PDF file"
+  },
+  "rotatePdf": {
+    "title": "Rotate PDF",
+    "description": "Rotate pages in a PDF document.",
+    "inputTitle": "Input PDF",
+    "resultTitle": "Rotated PDF",
+    "rotatingPages": "Rotating pages",
+    "rotationSettings": "Rotation Settings",
+    "rotationAngle": "Rotation Angle",
+    "angleOptions": {
+      "clockwise90": "90° Clockwise",
+      "upsideDown180": "180° (Upside down)",
+      "counterClockwise270": "270° (90° Counter-clockwise)"
+    },
+    "applyToAllPages": "Apply to all pages",
+    "pdfPageCount": "PDF has {{count}} page{{count !== 1 ? 's' : ''}}",
+    "pageRangesDescription": "Enter page numbers or ranges separated by commas (e.g., 1,3,5-7)",
+    "pageRangesPlaceholder": "e.g., 1,5-8",
+    "allPagesWillBeRotated": "All {{count}} pages will be rotated",
+    "pagesWillBeRotated": "{{count}} page{{count !== 1 ? 's' : ''}} will be rotated",
+    "toolInfo": {
+      "title": "How to Use the Rotate PDF Tool",
+      "description": "This tool allows you to rotate pages in a PDF document. You can rotate all pages or specify individual pages to rotate. Choose a rotation angle: 90° Clockwise, 180° (Upside down), or 270° (90° Counter-clockwise). To rotate specific pages, uncheck \"Apply to all pages\" and enter page numbers or ranges separated by commas (e.g., 1,3,5-7)."
+    },
+    "shortDescription": "Rotate pages in a PDF document",
+    "longDescription": "Change the orientation of PDF pages by rotating them 90, 180, or 270 degrees. Useful for fixing incorrectly scanned documents or preparing PDFs for printing."
+  },
+  "compressPdf": {
+    "inputTitle": "Input PDF",
+    "resultTitle": "Compressed PDF",
+    "compressingPdf": "Compressing PDF...",
+    "compressionSettings": "Compression Settings",
+    "compressionLevel": "Compression Level",
+    "lowCompression": "Low Compression",
+    "lowCompressionDescription": "Slightly reduce file size with minimal quality loss",
+    "mediumCompression": "Medium Compression",
+    "mediumCompressionDescription": "Balance between file size and quality",
+    "highCompression": "High Compression",
+    "highCompressionDescription": "Maximum file size reduction with some quality loss",
+    "fileSize": "Original File Size",
+    "compressedFileSize": "Compressed File Size",
+    "pages": "Number of Pages",
+    "errorReadingPdf": "Failed to read PDF file. Please make sure it is a valid PDF.",
+    "errorCompressingPdf": "Failed to compress PDF: {{error}}",
+    "title": "Compress PDF",
+    "description": "Reduce PDF file size while maintaining quality using Ghostscript",
+    "shortDescription": "Compress PDF files securely in your browser"
+  },
+  "merge": {
+    "inputTitle": "Input PDF",
+    "resultTitle": "Output merged PDF",
+    "loadingText": "Extracting pages",
+    "toolInfo": {
+      "title": "How to Use the Merge PDF Tool?",
+      "description": "This tool allows you to merge multiple PDF files into a single document. To use the tool, simply upload the PDF files you want to merge. The tool will then combine all pages from the input files into a single PDF document."
+    }
+  },
+  "editor": {
+    "title": "PDF Editor",
+    "description": "Advanced PDF editor with annotation, form-fill, highlight, and export capabilities. Edit your PDFs directly in the browser with professional-grade tools including text insertion, drawing, highlighting, signing and form filling.",
+    "shortDescription": "Edit PDFs with advanced annotation, signing and editing tools"
+  },
+  "pdfToEpub": {
+    "title": "PDF to EPUB",
+    "description": "Transform PDF documents into EPUB files for better e-reader compatibility.', icon: 'material-symbols:import-contacts', component: lazy(() => import('./index')), keywords: ['pdf', 'epub', 'convert', 'ebook'], path: 'pdf-to-epub', i18n: { name: 'pdf:pdfToEpub.title', description: 'pdf:pdfToEpub.description",
+    "shortDescription": "Convert PDF files to EPUB format"
+  },
+  "pdfToPng": {
+    "title": "PDF to PNG",
+    "description": "Transform PDF documents into PNG panels.",
+    "shortDescription": "Convert PDF into PNG images",
+    "longDescription": "Upload a PDF and convert each page into a high-quality PNG image directly in your browser. This tool is ideal for extracting visual content or sharing individual pages. No data is uploaded — everything runs locally."
+  },
+  "protectPdf": {
+    "title": "Protect PDF",
+    "description": "Add password protection to your PDF files securely in your browser",
+    "shortDescription": "Password protect PDF files securely"
+  }
+}

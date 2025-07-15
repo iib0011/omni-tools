@@ -10,6 +10,7 @@ import { GetGroupsType } from '@components/options/ToolOptions';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import SimpleRadio from '@components/options/SimpleRadio';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
+import { useTranslation } from 'react-i18next';
 
 interface InitialValuesType {
   step: string;
@@ -63,6 +64,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function Rotate({ title }: ToolComponentProps) {
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -79,29 +81,29 @@ export default function Rotate({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Rotation Options',
+      title: t('rotate.rotationOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.step}
             onOwnChange={(val) => updateField('step', val)}
-            description={'Number of positions to rotate'}
+            description={t('rotate.stepDescription')}
             type="number"
           />
           <SimpleRadio
             onClick={() => updateField('direction', 'right')}
             checked={values.direction === 'right'}
-            title={'Rotate Right'}
+            title={t('rotate.rotateRight')}
           />
           <SimpleRadio
             onClick={() => updateField('direction', 'left')}
             checked={values.direction === 'left'}
-            title={'Rotate Left'}
+            title={t('rotate.rotateLeft')}
           />
           <CheckboxWithDesc
             checked={values.multiLine}
             onChange={(checked) => updateField('multiLine', checked)}
-            title={'Process as multi-line text (rotate each line separately)'}
+            title={t('rotate.processAsMultiLine')}
           />
         </Box>
       )
@@ -112,15 +114,20 @@ export default function Rotate({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       inputComponent={
-        <ToolTextInput title="Input Text" value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('rotate.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
-      resultComponent={<ToolTextResult title="Rotated Text" value={result} />}
+      resultComponent={
+        <ToolTextResult title={t('rotate.resultTitle')} value={result} />
+      }
       initialValues={initialValues}
       getGroups={getGroups}
       toolInfo={{
-        title: 'String Rotation',
-        description:
-          'This tool allows you to rotate characters in a string by a specified number of positions. You can rotate to the left or right, and process multi-line text by rotating each line separately. String rotation is useful for simple text transformations, creating patterns, or implementing basic encryption techniques.'
+        title: t('rotate.toolInfo.title'),
+        description: t('rotate.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

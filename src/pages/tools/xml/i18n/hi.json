@@ -1,0 +1,42 @@
+{
+  "xmlBeautifier": {
+    "title": "XML सुंदर बनाएं",
+    "description": "XML को सुंदर प्रारूप में बदलें।",
+    "inputTitle": "इनपुट XML",
+    "resultTitle": "सुंदर XML",
+    "formattingOptions": "फॉर्मेटिंग विकल्प",
+    "indentSize": "इंडेंट आकार",
+    "sizePlaceholder": "आकार",
+    "indentCharacter": "इंडेंट वर्ण",
+    "space": "स्पेस",
+    "tab": "टैब",
+    "sortAttributes": "विशेषताएं क्रमबद्ध करें",
+    "removeComments": "टिप्पणियां हटाएं",
+    "preserveWhitespace": "सफेद स्थान संरक्षित करें"
+  },
+  "xmlValidator": {
+    "title": "XML मान्य करें",
+    "description": "XML स्ट्रिंग की वैधता जांचें।",
+    "inputTitle": "इनपुट XML",
+    "resultTitle": "मान्यता परिणाम",
+    "validationOptions": "मान्यता विकल्प",
+    "strictMode": "सख्त मोड",
+    "allowComments": "टिप्पणियां अनुमति दें",
+    "allowCDATA": "CDATA अनुमति दें",
+    "showLineNumbers": "पंक्ति संख्याएं दिखाएं",
+    "showErrorDetails": "त्रुटि विवरण दिखाएं"
+  },
+  "xmlViewer": {
+    "title": "XML व्यूअर",
+    "description": "XML को पेड़ संरचना में देखें।",
+    "inputTitle": "इनपुट XML",
+    "resultTitle": "XML पेड़",
+    "viewerOptions": "व्यूअर विकल्प",
+    "expandAll": "सभी विस्तारित करें",
+    "collapseAll": "सभी संक्षिप्त करें",
+    "showAttributes": "विशेषताएं दिखाएं",
+    "showTextNodes": "टेक्स्ट नोड दिखाएं",
+    "highlightSyntax": "सिंटैक्स हाइलाइट करें",
+    "lineNumbers": "पंक्ति संख्याएं"
+  }
+}
