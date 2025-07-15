@@ -138,6 +138,40 @@ export default function ${capitalizeFirstLetter(toolNameCamelCase)}({
 }
 `
 );
+const validNamespaces = [
+  'string',
+  'number',
+  'video',
+  'list',
+  'json',
+  'time',
+  'csv',
+  'pdf',
+  'audio',
+  'xml',
+  'translation',
+  'image'
+];
+const isValidI18nNamespace = (value) => {
+  return validNamespaces.includes(value);
+};
+
+const getI18nNamespaceFromToolCategory = (category) => {
+  // Map image-related categories to 'image'
+  if (['png', 'image-generic'].includes(category)) {
+    return 'image';
+  } else if (['gif'].includes(category)) {
+    return 'video';
+  }
+  // Use type guard to check if category is a valid I18nNamespaces
+  if (isValidI18nNamespace(category)) {
+    return category;
+  }
+
+  return 'translation';
+};
+
+const i18nNamespace = getI18nNamespaceFromToolCategory(type);
 createToolFile(
   `meta.ts`,
   `
@@ -145,13 +179,15 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('${type}', {
-  name: '${toolNameTitleCase}',
+  i18n: {
+    name: '${i18nNamespace}:${toolNameCamelCase}.title',
+    description: '${i18nNamespace}:${toolNameCamelCase}.description',
+    shortDescription: '${i18nNamespace}:${toolNameCamelCase}.shortDescription',
+    longDescription: '${i18nNamespace}:${toolNameCamelCase}.longDescription'
+  },
   path: '${toolName}',
   icon: '',
-  description: '',
-  shortDescription: '',
   keywords: ['${toolName.split('-').join("', '")}'],
-  longDescription: '',
   component: lazy(() => import('./index'))
 });
 `
