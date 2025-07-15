@@ -216,7 +216,7 @@
     "seeExamples": "उदाहरण देखें"
   },
   "toolLayout": {
-    "allToolsTitle": "सभी {{type}}"
+    "allToolsTitle": "सभी {{type}} टूल्स"
   },
   "toolMultiFileResult": {
     "copied": "फ़ाइल कॉपी की गई",
