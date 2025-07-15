@@ -1,1 +1,261 @@
-{}
+{
+  "base64": {
+    "decode": "Base64-decodering",
+    "description": "Codeer of decodeer tekst met Base64-codering.",
+    "encode": "Base64-codering",
+    "inputTitle": "Invoergegevens",
+    "optionsTitle": "Base64-opties",
+    "resultTitle": "Resultaat",
+    "shortDescription": "Codeer of decodeer gegevens met Base64.",
+    "title": "Base64-encoder/-decoder",
+    "toolInfo": {
+      "description": "Base64 is een coderingsmethode die gegevens in een ASCII-stringformaat weergeeft door ze te vertalen naar een radix-64-representatie. Hoewel het gebruikt kan worden om strings te coderen, wordt het vaak gebruikt om binaire gegevens te coderen voor transmissie via media die ontworpen zijn voor tekstuele gegevens.",
+      "title": "Wat is Base64?"
+    }
+  },
+  "censor": {
+    "description": "Hulpprogramma voor het censureren van woorden in tekst. Laad uw tekst in het invoerformulier aan de linkerkant, specificeer alle ongewenste woorden in de opties en u krijgt direct gecensureerde tekst in het uitvoergebied.\", longDescription: 'Met deze online tool kunt u bepaalde woorden in elke tekst censureren. U kunt een lijst met ongewenste woorden (zoals scheldwoorden of geheime woorden) opgeven en het programma vervangt deze door alternatieve woorden en creëert een veilig leesbare tekst. De woorden kunnen worden opgegeven in een tekstveld van meerdere regels in de opties door één woord per regel in te voeren.', keywords: ['tekst', 'censureren', 'woorden', 'tekens'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
+    "shortDescription": "Maskeer snel slechte woorden of vervang ze door alternatieve woorden.",
+    "title": "Tekstcensor"
+  },
+  "createPalindrome": {
+    "description": "'s Werelds eenvoudigste browsergebaseerde tool voor het maken van palindromen van elke tekst. Voer tekst in en transformeer deze direct in een palindroom die zowel van voor naar achter als van achter naar voren hetzelfde leest. Perfect voor woordspelletjes, het creëren van symmetrische tekstpatronen of het verkennen van taalkundige curiosa.",
+    "shortDescription": "Maak een tekst die van voor naar achter en van achter naar voren hetzelfde leest",
+    "title": "Palindroom maken"
+  },
+  "extractSubstring": {
+    "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het extraheren van substrings uit tekst. Voer uw tekst in en specificeer de begin- en eindposities om het gewenste deel te extraheren. Perfect voor gegevensverwerking, tekstanalyse of het extraheren van specifieke inhoud uit grotere tekstblokken.",
+    "shortDescription": "Een tekstgedeelte tussen opgegeven posities extraheren",
+    "title": "Substring extraheren"
+  },
+  "join": {
+    "blankLinesAndTrailingSpaces": "Lege regels en spaties aan het einde",
+    "deleteBlankDescription": "Verwijder regels die geen tekstsymbolen bevatten.",
+    "deleteBlankTitle": "Lege regels verwijderen",
+    "deleteTrailingDescription": "Verwijder spaties en tabs aan het einde van de regels.",
+    "deleteTrailingTitle": "Verwijder afsluitende spaties",
+    "description": "Voeg tekststukken samen met aanpasbare scheidingstekens.",
+    "inputTitle": "Tekststukken",
+    "joinCharacterDescription": "Symbool dat gebroken tekststukken met elkaar verbindt. (Standaard spatie.)",
+    "joinCharacterPlaceholder": "Sluit je aan bij het personage",
+    "resultTitle": "Gekoppelde tekst",
+    "shortDescription": "Tekstelementen samenvoegen met een opgegeven scheidingsteken",
+    "textMergedOptions": "Opties voor samengevoegde tekst",
+    "title": "Tekst toevoegen",
+    "toolInfo": {
+      "description": "Met deze tool kun je tekstdelen samenvoegen. Het neemt een lijst met tekstwaarden, gescheiden door nieuwe regels, en voegt deze samen. Je kunt het teken instellen dat tussen de delen van de samengevoegde tekst wordt geplaatst. Je kunt ook alle lege regels negeren en spaties en tabs aan het einde van alle regels verwijderen. Tekstabulous!",
+      "title": "Wat is een tekstsamenvoeger?"
+    }
+  },
+  "palindrome": {
+    "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma om te controleren of tekst een palindroom is. Controleer direct of uw tekst van voor naar achter hetzelfde leest. Perfect voor woordpuzzels, taalkundige analyses of het valideren van symmetrische tekstpatronen. Ondersteunt diverse scheidingstekens en palindroomdetectie van meerdere woorden.",
+    "shortDescription": "Controleren of de tekst van voor naar achter hetzelfde leest",
+    "title": "Palindroom"
+  },
+  "passwordGenerator": {
+    "avoidAmbiguous": "Vermijd dubbelzinnige tekens (i, I, l, 0, O)",
+    "description": "Genereer veilige, willekeurige wachtwoorden met aanpasbare lengte en tekentypes. Kies uit kleine letters, hoofdletters, cijfers en speciale tekens. Optie om dubbelzinnige tekens te vermijden voor een betere leesbaarheid.",
+    "includeLowercase": "Gebruik kleine letters (a-z)",
+    "includeNumbers": "Inclusief cijfers (0-9)",
+    "includeSymbols": "Speciale tekens toevoegen",
+    "includeUppercase": "Inclusief hoofdletters (A-Z)",
+    "lengthDesc": "Lengte van het wachtwoord",
+    "lengthPlaceholder": "bijv. 12",
+    "optionsTitle": "Wachtwoordopties",
+    "resultTitle": "gegenereerd wachtwoord",
+    "shortDescription": "Genereer veilige willekeurige wachtwoorden met aangepaste opties",
+    "title": "Wachtwoordgenerator",
+    "toolInfo": {
+      "description": "Deze tool genereert veilige, willekeurige wachtwoorden op basis van de door u geselecteerde criteria. U kunt de lengte aanpassen, verschillende tekentypen toevoegen of uitsluiten en dubbelzinnige tekens vermijden voor een betere leesbaarheid. Perfect voor het maken van sterke wachtwoorden voor accounts, applicaties of andere beveiligingsbehoeften.",
+      "title": "Over wachtwoordgenerator"
+    }
+  },
+  "quote": {
+    "allowDoubleQuotation": "Dubbele aanhalingstekens toestaan",
+    "description": "Voeg aanhalingstekens toe rondom de tekst met aanpasbare opties.",
+    "inputTitle": "Invoertekst",
+    "leftQuoteDescription": "Linker aanhalingsteken(s)",
+    "processAsMultiLine": "Verwerken als meerregelige tekst",
+    "quoteEmptyLines": "Lege regels citeren",
+    "quoteOptions": "Offerte-opties",
+    "resultTitle": "Geciteerde tekst",
+    "rightQuoteDescription": "Rechter aanhalingsteken(s)",
+    "shortDescription": "Voeg aanhalingstekens toe rond tekst met verschillende stijlen",
+    "title": "Tekstcitaat",
+    "toolInfo": {
+      "description": "Met deze tool kun je aanhalingstekens rond tekst plaatsen. Je kunt verschillende aanhalingstekens kiezen, tekst van meerdere regels verwerken en bepalen hoe lege regels worden verwerkt. Het is handig om tekst voor te bereiden voor programmering, gegevens op te maken of gestileerde tekst te maken.",
+      "title": "Tekstcitaat"
+    }
+  },
+  "randomizeCase": {
+    "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het willekeurig maken van teksthoofdletters en kleine letters. Voer je tekst in en transformeer deze direct met willekeurige hoofdletters en kleine letters. Perfect voor het creëren van unieke teksteffecten, het testen van hoofdlettergevoeligheid of het genereren van gevarieerde tekstpatronen.",
+    "shortDescription": "Willekeurige hoofdlettergebruik in tekst",
+    "title": "Randomiseer het geval"
+  },
+  "removeDuplicateLines": {
+    "description": "Laad je tekst in het invoerformulier aan de linkerkant en je krijgt direct tekst zonder dubbele regels in het uitvoergebied. Krachtig, gratis en snel. Laad tekstregels – krijg unieke tekstregels.",
+    "shortDescription": "Verwijder snel alle herhaalde regels uit de tekst",
+    "title": "Dubbele regels verwijderen"
+  },
+  "repeat": {
+    "delimiterDescription": "Scheidingsteken voor uitvoerkopieën.",
+    "delimiterPlaceholder": "scheidingsteken",
+    "description": "Herhaal tekst meerdere keren met aanpasbare scheidingstekens.",
+    "inputTitle": "Invoertekst",
+    "numberPlaceholder": "Nummer",
+    "repeatAmountDescription": "Aantal herhalingen.",
+    "repetitionsDelimiter": "Herhalingen scheidingsteken",
+    "resultTitle": "Herhaalde tekst",
+    "shortDescription": "Herhaal de tekst meerdere keren",
+    "textRepetitions": "Tekstherhalingen",
+    "title": "Herhaal tekst",
+    "toolInfo": {
+      "description": "Met deze tool kunt u een bepaalde tekst meerdere keren herhalen met een optionele scheidingsteken.",
+      "title": "Herhaal tekst"
+    }
+  },
+  "reverse": {
+    "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het omkeren van tekst. Voer tekst in en laat deze direct omkeren, teken voor teken. Perfect voor het maken van spiegeltekst, het analyseren van palindromen of het experimenteren met tekstpatronen. Spaties en speciale tekens blijven behouden tijdens het omkeren.",
+    "inputTitle": "Omgekeerde tekst",
+    "processMultiLine": "Verwerk meerregelige tekst",
+    "processMultiLineDescription": "Elke regel wordt onafhankelijk omgedraaid",
+    "resultTitle": "Omgekeerde tekst",
+    "reversalOptions": "Omkeeropties",
+    "shortDescription": "Elke tekst teken voor teken omdraaien",
+    "skipEmptyLines": "Lege regels overslaan",
+    "skipEmptyLinesDescription": "Lege regels worden uit de uitvoer verwijderd",
+    "title": "Achteruit",
+    "trimWhitespace": "Witruimte bijsnijden",
+    "trimWhitespaceDescription": "Verwijder voorloop- en volgspaties van elke regel"
+  },
+  "rot13": {
+    "description": "Codeer of decodeer tekst met behulp van de ROT13-codering.",
+    "inputTitle": "Invoertekst",
+    "resultTitle": "ROT13-resultaat",
+    "shortDescription": "Codeer of decodeer tekst met behulp van de ROT13-codering.",
+    "title": "ROT13 Encoder/Decoder",
+    "toolInfo": {
+      "description": "ROT13 (rotate by 13 places) is een eenvoudige lettervervangingscode die een letter vervangt door de 13e letter erna in het alfabet. ROT13 is een speciaal geval van de Caesarcode, die in het oude Rome werd ontwikkeld. Omdat het Engelse alfabet 26 letters telt, is ROT13 zijn eigen inverse; dat wil zeggen, om ROT13 ongedaan te maken, wordt hetzelfde algoritme toegepast, zodat dezelfde actie kan worden gebruikt voor zowel coderen als decoderen.",
+      "title": "Wat is ROT13?"
+    }
+  },
+  "rotate": {
+    "description": "Draai tekens in tekst over opgegeven posities.",
+    "inputTitle": "Invoertekst",
+    "processAsMultiLine": "Verwerken als meerregelige tekst (elke regel afzonderlijk roteren)",
+    "resultTitle": "Gedraaide tekst",
+    "rotateLeft": "Linksom draaien",
+    "rotateRight": "Rechts draaien",
+    "rotationOptions": "Rotatieopties",
+    "shortDescription": "Verplaats tekens in tekst per positie.",
+    "stepDescription": "Aantal te roteren posities",
+    "title": "Tekst roteren",
+    "toolInfo": {
+      "description": "Met deze tool kunt u tekens in een tekenreeks met een bepaald aantal posities roteren. U kunt naar links of rechts roteren en tekst van meerdere regels verwerken door elke regel afzonderlijk te roteren. Tekenreeksrotatie is handig voor eenvoudige teksttransformaties, het maken van patronen of het implementeren van basisversleutelingstechnieken.",
+      "title": "Snaarrotatie"
+    }
+  },
+  "split": {
+    "charAfterChunkDescription": "Karakter na elk stukje",
+    "charBeforeChunkDescription": "Karakter voor elk stukje",
+    "chunksDescription": "Aantal gelijke\nlengtes in de uitvoer.",
+    "chunksTitle": "Gebruik een aantal stukken",
+    "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het splitsen van tekst. Voer uw tekst in en geef een scheidingsteken op om deze in meerdere delen te splitsen. Perfect voor gegevensverwerking, tekstmanipulatie of het extraheren van specifieke inhoud uit grotere tekstblokken.",
+    "lengthDescription": "Aantal symbolen dat in elk uitvoerblok wordt geplaatst.",
+    "lengthTitle": "Gebruik lengte voor splitsen",
+    "outputSeparatorDescription": "Teken dat tussen de gesplitste delen wordt geplaatst.\n(Standaard is dit een nieuwe regel \"\\n\".)",
+    "outputSeparatorOptions": "Opties voor uitvoerscheidingstekens",
+    "regexDescription": "Reguliere expressie die wordt gebruikt om tekst in stukken te splitsen.\n(Standaard meerdere spaties.)",
+    "regexTitle": "Gebruik een Regex voor het splitsen",
+    "resultTitle": "Tekststukken",
+    "shortDescription": "Tekst in meerdere delen splitsen met behulp van een scheidingsteken",
+    "splitSeparatorOptions": "Opties voor scheidingslijnen",
+    "symbolDescription": "Teken dat wordt gebruikt om tekst in stukken te splitsen.\n(Standaard spatie.)",
+    "symbolTitle": "Gebruik een symbool voor splitsen",
+    "title": "Split"
+  },
+  "statistic": {
+    "characterFrequencyAnalysis": "Karakterfrequentieanalyse",
+    "characterFrequencyAnalysisDescription": "Tel hoe vaak elk teken in de tekst voorkomt",
+    "delimitersOptions": "Opties voor scheidingstekens",
+    "description": "Analyseer tekst en genereer uitgebreide statistieken.",
+    "includeEmptyLines": "Lege regels toevoegen",
+    "includeEmptyLinesDescription": "Voeg lege regels toe bij het tellen van regels",
+    "inputTitle": "Invoertekst",
+    "resultTitle": "Tekststatistieken",
+    "sentenceDelimitersDescription": "Voer aangepaste tekens in die u wilt gebruiken om zinnen in uw taal af te bakenen (gescheiden door komma's) of laat dit veld leeg voor de standaardinstelling.",
+    "sentenceDelimitersPlaceholder": "bijv. ., !, ?, ...",
+    "shortDescription": "Ontvang statistieken over uw tekst",
+    "statisticsOptions": "Statistiekenopties",
+    "title": "Tekststatistieken",
+    "toolInfo": {
+      "description": "Met deze tool kunt u tekst analyseren en uitgebreide statistieken genereren, waaronder het aantal tekens, woorden, regels en de frequentieanalyse van tekens en woorden.",
+      "title": "Wat is een {{title}}?"
+    },
+    "wordDelimitersDescription": "Voer een aangepaste Regex in om het aantal woorden te tellen of laat dit leeg voor de standaardwaarde.",
+    "wordDelimitersPlaceholder": "bijv. \\s.,;:!?\"«»()…",
+    "wordFrequencyAnalysis": "Woordfrequentieanalyse",
+    "wordFrequencyAnalysisDescription": "Tel hoe vaak elk woord in de tekst voorkomt"
+  },
+  "textReplacer": {
+    "description": "Vervang tekstpatronen door nieuwe inhoud.",
+    "findPatternInText": "Vind dit patroon in de tekst",
+    "findPatternUsingRegexp": "Vind een patroon met behulp van een RegExp",
+    "inputTitle": "Te vervangen tekst",
+    "newTextPlaceholder": "Nieuwe tekst",
+    "regexpDescription": "Voer de reguliere expressie in die u wilt vervangen.",
+    "replacePatternDescription": "Voer het patroon in dat u voor de vervanging wilt gebruiken.",
+    "replaceText": "Tekst vervangen",
+    "resultTitle": "Tekst met vervangingen",
+    "searchPatternDescription": "Voer het tekstpatroon in dat u wilt vervangen.",
+    "searchText": "Zoektekst",
+    "shortDescription": "Vervang snel tekst in uw inhoud",
+    "title": "Tekstvervanger",
+    "toolInfo": {
+      "description": "Vervang eenvoudig specifieke tekst in je content met deze eenvoudige, browsergebaseerde tool. Voer je tekst in, stel de tekst die je wilt vervangen en de vervangingswaarde in, en ontvang direct de bijgewerkte versie.",
+      "title": "Tekstvervanger"
+    }
+  },
+  "toMorse": {
+    "dashSymbolDescription": "Symbool dat overeenkomt met het streepje in Morsecode.",
+    "description": "Converteer tekst naar morsecode.",
+    "dotSymbolDescription": "Symbool dat overeenkomt met het punt in Morsecode.",
+    "longSignal": "Lang signaal",
+    "resultTitle": "Morsecode",
+    "shortDescription": "Snel tekst naar morse coderen",
+    "shortSignal": "Kort signaal",
+    "title": "String naar morse"
+  },
+  "truncate": {
+    "addTruncationIndicator": "Voeg afkappingsindicator toe",
+    "charactersPlaceholder": "Personages",
+    "description": "Kort de tekst in tot een bepaalde lengte.",
+    "indicatorDescription": "Tekens die aan het einde (of begin) van de tekst moeten worden toegevoegd. Let op: deze tellen mee voor de lengte.",
+    "inputTitle": "Invoertekst",
+    "leftSideDescription": "Verwijder tekens aan het begin van de tekst.",
+    "leftSideTruncation": "Linkerkant afkapping",
+    "lengthAndLines": "Lengte en lijnen",
+    "lineByLineDescription": "Knip elke regel afzonderlijk af.",
+    "lineByLineTruncating": "Regel-voor-regel afkappen",
+    "maxLengthDescription": "Aantal tekens dat in de tekst moet worden overgelaten.",
+    "numberPlaceholder": "Nummer",
+    "resultTitle": "Afgekorte tekst",
+    "rightSideDescription": "Verwijder tekens aan het einde van de tekst.",
+    "rightSideTruncation": "Afkapping aan de rechterkant",
+    "shortDescription": "Tekst afkappen tot een bepaalde lengte",
+    "suffixAndAffix": "Achtervoegsel en affix",
+    "title": "Tekst afbreken",
+    "toolInfo": {
+      "description": "Vul uw tekst in het invoerformulier aan de linkerkant in, dan krijgt u rechts automatisch afgekapte tekst te zien.",
+      "title": "Tekst afkappen"
+    },
+    "truncationSide": "Afkappingszijde"
+  },
+  "uppercase": {
+    "description": "Converteer tekst naar hoofdletters.",
+    "inputTitle": "Invoertekst",
+    "resultTitle": "Hoofdlettertekst",
+    "shortDescription": "Tekst naar hoofdletters converteren",
+    "title": "Omzetten naar hoofdletters"
+  }
+}

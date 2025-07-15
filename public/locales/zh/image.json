@@ -1,1 +1,98 @@
-{}
+{
+  "changeColors": {
+    "description": "世界",
+    "shortDescription": "快速交换图像中的颜色",
+    "title": "改变图像的颜色"
+  },
+  "changeOpacity": {
+    "description": "轻松调整图片透明度。只需上传图片，使用滑块在 0（完全透明）和 1（完全不透明）之间设置所需的不透明度，然后下载修改后的图片即可。",
+    "shortDescription": "调整图像的透明度",
+    "title": "更改图像不透明度"
+  },
+  "compress": {
+    "description": "在保持质量的同时减小图像文件大小。",
+    "inputTitle": "输入图像",
+    "resultTitle": "压缩图像",
+    "shortDescription": "压缩图像以减小文件大小，同时保持合理的质量。",
+    "title": "压缩图像"
+  },
+  "compressPng": {
+    "description": "这是一个压缩 PNG 图片的程序。只要您将 PNG 图片粘贴到输入区域，程序就会对其进行压缩，并在输出区域显示结果。在选项中，您可以调整压缩级别，以及查看新旧图片文件的大小。",
+    "shortDescription": "快速压缩 PNG",
+    "title": "压缩 png"
+  },
+  "convertJgpToPng": {
+    "description": "快速将您的 JPG 图像转换为 PNG。只需在左侧的编辑器中导入您的 PNG 图像即可",
+    "shortDescription": "快速将您的 JPG 图像转换为 PNG",
+    "title": "JPG 转换为 PNG"
+  },
+  "convertToJpg": {
+    "description": "将各种图像格式（PNG、GIF、TIF、PSD、SVG、WEBP、HEIC、RAW）转换为 JPG，并可自定义质量和背景颜色设置。",
+    "shortDescription": "将图像转换为 JPG 格式并进行质量控制",
+    "title": "将图像转换为 JPG"
+  },
+  "createTransparent": {
+    "description": "世界",
+    "shortDescription": "快速使图像透明",
+    "title": "创建透明 PNG"
+  },
+  "crop": {
+    "description": "裁剪图像以删除不需要的区域。",
+    "inputTitle": "输入图像",
+    "resultTitle": "裁剪图像",
+    "shortDescription": "快速裁剪图像。",
+    "title": "裁剪图片"
+  },
+  "editor": {
+    "description": "高级图像编辑器，包含裁剪、旋转、注释、调整颜色和添加水印等工具。直接在浏览器中使用专业级工具编辑图像。",
+    "shortDescription": "使用高级工具和功能编辑图像",
+    "title": "图像编辑器"
+  },
+  "imageToText": {
+    "description": "使用光学字符识别 (OCR) 从图像 (JPG、PNG) 中提取文本。",
+    "shortDescription": "使用 OCR 从图像中提取文本。",
+    "title": "图像转文本 (OCR)"
+  },
+  "qrCode": {
+    "description": "为不同数据类型生成二维码：URL、文本、电子邮件、电话、短信、WiFi、vCard 等。",
+    "shortDescription": "为各种数据格式创建定制的二维码。",
+    "title": "二维码生成器"
+  },
+  "removeBackground": {
+    "description": "世界",
+    "shortDescription": "自动删除图像的背景",
+    "title": "从图像中删除背景"
+  },
+  "resize": {
+    "description": "将图像调整为不同的尺寸。",
+    "dimensionType": "尺寸类型",
+    "heightDescription": "高度（像素）",
+    "inputTitle": "输入图像",
+    "maintainAspectRatio": "保持纵横比",
+    "maintainAspectRatioDescription": "保持图像的原始纵横比。",
+    "percentage": "百分比",
+    "percentageDescription": "原始大小的百分比（例如，50 表示一半大小，200 表示两倍大小）",
+    "resizeByPercentage": "按百分比调整大小",
+    "resizeByPercentageDescription": "通过指定原始大小的百分比来调整大小。",
+    "resizeByPixels": "按像素调整大小",
+    "resizeByPixelsDescription": "通过指定像素尺寸来调整大小。",
+    "resizeMethod": "调整大小方法",
+    "resultTitle": "调整大小的图像",
+    "setHeight": "设置高度",
+    "setHeightDescription": "以像素为单位指定高度并根据纵横比计算宽度。",
+    "setWidth": "设置宽度",
+    "setWidthDescription": "以像素为单位指定宽度并根据纵横比计算高度。",
+    "shortDescription": "轻松调整图像大小。",
+    "title": "调整图像大小",
+    "toolInfo": {
+      "description": "此工具允许您调整 JPG、PNG、SVG 或 GIF 图像的大小。您可以指定像素或百分比来调整大小，并可选择保持原始宽高比。",
+      "title": "调整图像大小"
+    },
+    "widthDescription": "宽度（像素）"
+  },
+  "rotate": {
+    "description": "按指定角度旋转图像。",
+    "shortDescription": "轻松旋转图像。",
+    "title": "旋转图像"
+  }
+}

@@ -1,1 +1,89 @@
-{}
+{
+  "arithmeticSequence": {
+    "commonDifferenceDescription": "Diferença comum entre os termos (d)",
+    "description": "Gere sequências aritméticas com parâmetros personalizáveis.",
+    "firstTermDescription": "Primeiro termo da sequência (a₁)",
+    "numberOfTermsDescription": "Número de termos a gerar (n)",
+    "outputFormat": "Formato de saída",
+    "resultTitle": "Sequência Gerada",
+    "separatorDescription": "Separador entre termos",
+    "sequenceParameters": "Parâmetros de sequência",
+    "shortDescription": "Gerar sequências aritméticas",
+    "title": "Sequência Aritmética",
+    "toolInfo": {
+      "description": "Uma progressão aritmética é uma sequência de números em que a diferença entre cada termo consecutivo é constante. Essa diferença constante é chamada de diferença comum. Dado o primeiro termo (a₁) e a diferença comum (d), cada termo pode ser encontrado somando a diferença comum ao termo anterior.",
+      "title": "O que é uma sequência aritmética?"
+    }
+  },
+  "generate": {
+    "arithmeticSequenceOption": "Opção de sequência aritmética",
+    "description": "Gere uma sequência de números com parâmetros personalizáveis.",
+    "numberOfElementsDescription": "Número de elementos em sequência.",
+    "resultTitle": "Números gerados",
+    "separator": "Separador",
+    "separatorDescription": "Separe os elementos na sequência aritmética por este caractere.",
+    "shortDescription": "Gerar números aleatórios em intervalos especificados",
+    "startSequenceDescription": "Inicie a sequência a partir deste número.",
+    "stepDescription": "Aumente cada elemento por esta quantidade",
+    "title": "Gerar",
+    "toolInfo": {
+      "description": "Esta ferramenta permite gerar uma sequência de números com parâmetros personalizáveis. Você pode especificar o valor inicial, o tamanho do passo e o número de elementos.",
+      "title": "Gerar números"
+    }
+  },
+  "ohmsLaw": {
+    "description": "Calcula tensão, corrente e resistência",
+    "longDescription": "Esta calculadora aplica a Lei de Ohm (V = I × R) para determinar qualquer um dos três parâmetros elétricos quando os outros dois são conhecidos. A Lei de Ohm é um princípio fundamental em engenharia elétrica que descreve a relação entre tensão (V), corrente (I) e resistência (R). Esta ferramenta é essencial para entusiastas de eletrônica, engenheiros elétricos e estudantes que trabalham com circuitos, para que possam resolver rapidamente valores desconhecidos em seus projetos elétricos.",
+    "shortDescription": "Calcular tensão, corrente ou resistência em circuitos elétricos usando a Lei de Ohm",
+    "title": "Lei de Ohm"
+  },
+  "slackline": {
+    "description": "Calcula a tensão em uma slackline",
+    "longDescription": "Esta calculadora assume uma carga no centro da corda",
+    "shortDescription": "Calcule a tensão aproximada de um slackline ou varal. Não confie apenas nisso para sua segurança.",
+    "title": "Tensão da Slackline"
+  },
+  "sphereArea": {
+    "description": "Área de uma esfera",
+    "longDescription": "Esta calculadora determina a área da superfície de uma esfera usando a fórmula A = 4πr². Você pode inserir o raio para encontrar a área da superfície ou inseri-la para calcular o raio necessário. Esta ferramenta é útil para estudantes de geometria, engenheiros que trabalham com objetos esféricos e qualquer pessoa que precise realizar cálculos envolvendo superfícies esféricas.",
+    "shortDescription": "Calcular a área da superfície de uma esfera com base em seu raio",
+    "title": "Área de uma esfera"
+  },
+  "sphereVolume": {
+    "description": "Volume de uma esfera",
+    "longDescription": "Esta calculadora calcula o volume de uma esfera usando a fórmula V = (4/3)πr³. Você pode inserir o raio ou o diâmetro para encontrar o volume ou inserir o volume para determinar o raio necessário. A ferramenta é valiosa para estudantes, engenheiros e profissionais que trabalham com objetos esféricos em áreas como física, engenharia e manufatura.",
+    "shortDescription": "Calcular o volume de uma esfera usando raio ou diâmetro",
+    "title": "Volume de uma esfera"
+  },
+  "sum": {
+    "description": "Calcule a soma de uma lista de números. Insira os números separados por vírgulas ou quebras de linha para obter a soma total.",
+    "extractionTypes": {
+      "delimiter": {
+        "description": "Personalize o separador de números aqui. (Por padrão, uma quebra de linha.)",
+        "title": "Delimitador de Número"
+      },
+      "smart": {
+        "description": "Detectar automaticamente números na entrada.",
+        "title": "Soma Inteligente"
+      }
+    },
+    "inputTitle": "Entrada",
+    "numberExtraction": "Extração de Números",
+    "printRunningSum": "Imprimir soma corrente",
+    "printRunningSumDescription": "Exiba a soma conforme ela é calculada passo a passo.",
+    "resultTitle": "Total",
+    "runningSum": "Soma Corrente",
+    "shortDescription": "Calcular soma de números",
+    "title": "Soma",
+    "toolInfo": {
+      "description": "Este é um utilitário online baseado em navegador para calcular a soma de vários números. Você pode inserir os números separados por vírgula, espaço ou qualquer outro caractere, incluindo a quebra de linha. Você também pode simplesmente colar um fragmento de dados textuais que contenha valores numéricos que você deseja somar, e o utilitário os extrairá e calculará a soma.",
+      "title": "O que é uma calculadora de soma numérica?"
+    }
+  },
+  "voltageDropInWire": {
+    "description": "Calcula a tensão de ida e volta e a perda de potência em um cabo de 2 condutores",
+    "longDescription": "Esta calculadora ajuda a determinar a queda de tensão e a perda de potência em um cabo elétrico de dois condutores. Ela leva em consideração o comprimento do cabo, a bitola do fio (área da seção transversal), a resistividade do material e o fluxo de corrente. A ferramenta calcula a queda de tensão de ida e volta, a resistência total do cabo e a potência dissipada na forma de calor. Isso é particularmente útil para engenheiros elétricos, eletricistas e amadores ao projetar sistemas elétricos para garantir que os níveis de tensão permaneçam dentro dos limites aceitáveis na carga.",
+    "shortDescription": "Calcular queda de tensão e perda de potência em cabos elétricos com base no comprimento, material e corrente",
+    "title": "Queda de tensão de ida e volta no cabo"
+  }
+}

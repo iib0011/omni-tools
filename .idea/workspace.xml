@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: i18n tsc">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: i18n pull dutch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/i18n/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -536,14 +531,6 @@
       <workItem from="1752493585622" duration="11629000" />
       <workItem from="1752507105323" duration="9008000" />
     </task>
-    <task id="LOCAL-00194" summary="feat: drag and drop">
-      <option name="closed" value="true" />
-      <created>1745688866294</created>
-      <option name="number" value="00194" />
-      <option name="presentableId" value="LOCAL-00194" />
-      <option name="project" value="LOCAL" />
-      <updated>1745688866294</updated>
-    </task>
     <task id="LOCAL-00195" summary="fix: misc">
       <option name="closed" value="true" />
       <created>1747172914927</created>
@@ -928,7 +915,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752604958929</updated>
     </task>
-    <option name="localTasksCounter" value="243" />
+    <task id="LOCAL-00243" summary="chore: i18n pull dutch">
+      <option name="closed" value="true" />
+      <created>1752605940802</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
+      <option name="project" value="LOCAL" />
+      <updated>1752605940802</updated>
+    </task>
+    <option name="localTasksCounter" value="244" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -975,7 +970,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: examples button visibility" />
     <MESSAGE value="feat: pdf editor" />
     <MESSAGE value="chore: style link" />
     <MESSAGE value="refactor: PDF editor" />
@@ -1000,7 +994,8 @@
     <MESSAGE value="chore: remove prebuild" />
     <MESSAGE value="fix: broken translations" />
     <MESSAGE value="fix: i18n tsc" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: i18n tsc" />
+    <MESSAGE value="chore: i18n pull dutch" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: i18n pull dutch" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

@@ -1,25 +1,36 @@
 {
   "changeSpeed": {
+    "defaultMultiplier": "डिफ़ॉल्ट गुणक: 2 का अर्थ है 2x तेज़",
     "description": "वीडियो फ़ाइलों की प्लेबैक गति बदलें।",
     "factorPlaceholder": "कारक (जैसे 0.5, 1.5, 2.0)",
     "formatAvi": "AVI",
     "formatMov": "MOV",
     "formatMp4": "MP4",
     "inputTitle": "इनपुट वीडियो",
+    "newVideoSpeed": "नई वीडियो स्पीड",
     "outputFormat": "आउटपुट प्रारूप",
     "preserveAudio": "ऑडियो संरक्षित करें",
     "resultTitle": "गति बदली गई वीडियो",
+    "settingSpeed": "गति सेट करना",
+    "shortDescription": "वीडियो प्लेबैक गति बदलें",
     "speedFactor": "गति कारक",
     "speedOptions": "गति विकल्प",
-    "title": "वीडियो गति बदलें"
+    "title": "वीडियो गति बदलें",
+    "toolInfo": {
+      "title": "{{title}} क्या है?"
+    }
   },
   "compress": {
     "compressionOptions": "संपीड़न विकल्प",
+    "default": "गलती करना",
     "description": "वीडियो फ़ाइल आकार कम करें।",
     "formatAvi": "AVI",
     "formatMp4": "MP4",
     "inputTitle": "इनपुट वीडियो",
+    "loadingText": "वीडियो संपीड़ित किया जा रहा है...",
+    "lossless": "दोषरहित",
     "outputFormat": "आउटपुट प्रारूप",
+    "quality": "गुणवत्ता (सीआरएफ)",
     "qualityHigh": "उच्च",
     "qualityLow": "कम",
     "qualityMedium": "मध्यम",
@@ -29,29 +40,49 @@
     "resolution720p": "720p",
     "resolutionOriginal": "मूल",
     "resultTitle": "संपीड़ित वीडियो",
+    "shortDescription": "विभिन्न रिज़ॉल्यूशन पर स्केल करके वीडियो संपीड़ित करें",
     "title": "वीडियो संपीड़ित करें",
-    "videoQuality": "वीडियो गुणवत्ता"
+    "videoQuality": "वीडियो गुणवत्ता",
+    "worst": "बहुत बुरा"
   },
   "cropVideo": {
     "aspectRatio": "आकार अनुपात",
     "cropArea": "क्रॉप क्षेत्र",
+    "cropCoordinates": "फसल निर्देशांक",
     "cropMethod": "क्रॉप विधि",
     "cropOptions": "क्रॉप विकल्प",
+    "croppingVideo": "वीडियो क्रॉप करना",
     "description": "वीडियो से अनावश्यक भाग हटाएं।",
+    "errorBeyondHeight": "फसल क्षेत्र वीडियो की ऊंचाई से आगे तक फैला हुआ है ({{height}}पिक्सल)",
+    "errorBeyondWidth": "फसल क्षेत्र वीडियो की चौड़ाई से आगे तक फैला हुआ है ({{width}}पिक्सल)",
+    "errorCroppingVideo": "वीडियो क्रॉप करने में त्रुटि हुई। कृपया पैरामीटर और वीडियो फ़ाइल जाँचें।",
+    "errorLoadingDimensions": "वीडियो आयाम लोड करने में विफल",
+    "errorNonNegativeCoordinates": "X और Y निर्देशांक गैर-ऋणात्मक होने चाहिए",
+    "errorPositiveDimensions": "चौड़ाई और ऊंचाई धनात्मक होनी चाहिए",
     "height": "ऊंचाई",
     "heightPlaceholder": "पिक्सेल",
     "inputTitle": "इनपुट वीडियो",
+    "loadVideoForDimensions": "आयाम देखने के लिए वीडियो लोड करें",
     "methodAspectRatio": "आकार अनुपात",
     "methodManual": "मैनुअल",
     "ratio16x9": "16:9",
     "ratio1x1": "1:1",
     "ratio4x3": "4:3",
     "resultTitle": "क्रॉप किया गया वीडियो",
+    "shortDescription": "अवांछित क्षेत्रों को हटाने के लिए वीडियो को क्रॉप करें",
     "title": "वीडियो क्रॉप करें",
+    "toolInfo": {
+      "description": "यह टूल आपको वीडियो फ़ाइलों को क्रॉप करके अवांछित क्षेत्रों को हटाने की सुविधा देता है। आप X, Y निर्देशांक और चौड़ाई, ऊँचाई के आयाम निर्धारित करके क्रॉप क्षेत्र निर्दिष्ट कर सकते हैं।",
+      "title": "वीडियो क्रॉप करें"
+    },
+    "videoDimensions": "वीडियो आयाम: {{width}} × {{height}} पिक्सेल",
+    "videoInformation": "वीडियो जानकारी",
     "width": "चौड़ाई",
     "widthPlaceholder": "पिक्सेल",
+    "xCoordinate": "X (बाएं)",
     "xPlaceholder": "पिक्सेल",
     "xPosition": "X स्थिति",
+    "yCoordinate": "Y (ऊपर)",
     "yPlaceholder": "पिक्सेल",
     "yPosition": "Y स्थिति"
   },
@@ -62,10 +93,15 @@
     "directionVertical": "लंबवत",
     "flipDirection": "फ्लिप दिशा",
     "flipOptions": "फ्लिप विकल्प",
+    "flippingVideo": "फ़्लिपिंग वीडियो",
+    "horizontalLabel": "क्षैतिज (दर्पण)",
     "inputTitle": "इनपुट वीडियो",
+    "orientation": "अभिविन्यास",
     "preserveAudio": "ऑडियो संरक्षित करें",
     "resultTitle": "फ्लिप किया गया वीडियो",
-    "title": "वीडियो फ्लिप करें"
+    "shortDescription": "वीडियो को क्षैतिज या लंबवत रूप से फ़्लिप करें",
+    "title": "वीडियो फ्लिप करें",
+    "verticalLabel": "ऊर्ध्वाधर (उल्टा)"
   },
   "gif": {
     "changeSpeed": {
@@ -75,6 +111,7 @@
       "frameDelay": "फ्रेम विलंब",
       "inputTitle": "इनपुट GIF",
       "resultTitle": "गति बदली गई GIF",
+      "shortDescription": "GIF एनीमेशन की गति बदलें",
       "speedFactor": "गति कारक",
       "speedOptions": "गति विकल्प",
       "title": "GIF गति बदलें"
@@ -90,10 +127,21 @@
     "loopCount": "लूप की संख्या",
     "loopInfinitely": "अनंत लूप",
     "loopOptions": "लूप विकल्प",
+    "loopingVideo": "पाशन वीडियो",
+    "loops": "छोरों",
+    "numberOfLoops": "लूपों की संख्या",
     "resultTitle": "लूप वीडियो",
-    "title": "वीडियो लूप करें"
+    "shortDescription": "लूपिंग वीडियो फ़ाइलें बनाएँ",
+    "title": "वीडियो लूप करें",
+    "toolInfo": {
+      "description": "यह टूल आपको मूल वीडियो को कई बार दोहराकर एक लूपिंग वीडियो बनाने की सुविधा देता है। आप यह भी निर्दिष्ट कर सकते हैं कि वीडियो को कितनी बार लूप किया जाना चाहिए।",
+      "title": "{{title}} क्या है?"
+    }
   },
   "rotate": {
+    "180Degrees": "180° (उल्टा)",
+    "270Degrees": "270° (90° वामावर्त)",
+    "90Degrees": "90° दक्षिणावर्त",
     "angle180": "180 डिग्री",
     "angle270": "270 डिग्री",
     "angle90": "90 डिग्री",
@@ -103,8 +151,11 @@
     "inputTitle": "इनपुट वीडियो",
     "preserveAudio": "ऑडियो संरक्षित करें",
     "resultTitle": "घुमाया गया वीडियो",
+    "rotatingVideo": "घूमता हुआ वीडियो",
+    "rotation": "ROTATION",
     "rotationAngle": "घुमाने का कोण",
     "rotationOptions": "घुमाने के विकल्प",
+    "shortDescription": "वीडियो को निर्दिष्ट डिग्री तक घुमाएँ",
     "title": "वीडियो घुमाएं"
   },
   "trim": {
@@ -114,8 +165,10 @@
     "inputTitle": "इनपुट वीडियो",
     "preserveAudio": "ऑडियो संरक्षित करें",
     "resultTitle": "ट्रिम किया गया वीडियो",
+    "shortDescription": "अवांछित अनुभागों को हटाकर वीडियो ट्रिम करें",
     "startPlaceholder": "सेकंड",
     "startTime": "शुरुआती समय",
+    "timestamps": "मुहर",
     "title": "वीडियो ट्रिम करें",
     "trimOptions": "ट्रिम विकल्प"
   },
@@ -133,6 +186,7 @@
     "qualityMedium": "मध्यम",
     "resize": "आकार बदलें",
     "resultTitle": "GIF फ़ाइल",
+    "shortDescription": "वीडियो को एनिमेटेड GIF में बदलें",
     "title": "वीडियो से GIF",
     "width": "चौड़ाई",
     "widthPlaceholder": "पिक्सेल"

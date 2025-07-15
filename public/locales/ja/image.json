@@ -1,1 +1,98 @@
-{}
+{
+  "changeColors": {
+    "description": "世界",
+    "shortDescription": "画像内の色を素早く入れ替える",
+    "title": "画像の色を変更する"
+  },
+  "changeOpacity": {
+    "description": "画像の透明度を簡単に調整できます。画像をアップロードし、スライダーを使って0（完全に透明）から1（完全に不透明）の間で希望の不透明度を設定し、変更した画像をダウンロードするだけです。",
+    "shortDescription": "画像の透明度を調整する",
+    "title": "画像の不透明度を変更する"
+  },
+  "compress": {
+    "description": "品質を維持しながら画像ファイルのサイズを縮小します。",
+    "inputTitle": "入力画像",
+    "resultTitle": "圧縮画像",
+    "shortDescription": "適切な品質を維持しながら画像を圧縮してファイル サイズを縮小します。",
+    "title": "画像を圧縮"
+  },
+  "compressPng": {
+    "description": "これはPNG画像を圧縮するプログラムです。PNG画像を入力エリアに貼り付けると、プログラムがすぐに圧縮し、出力エリアに結果を表示します。オプションでは、圧縮レベルを調整したり、圧縮前の画像ファイルサイズと新しい画像ファイルサイズを確認したりできます。",
+    "shortDescription": "PNGを素早く圧縮する",
+    "title": "PNGを圧縮する"
+  },
+  "convertJgpToPng": {
+    "description": "JPG画像をPNGに素早く変換できます。左側のエディタにPNG画像をインポートするだけです。",
+    "shortDescription": "JPG画像をPNGに素早く変換",
+    "title": "JPGをPNGに変換する"
+  },
+  "convertToJpg": {
+    "description": "さまざまな画像形式 (PNG、GIF、TIF、PSD、SVG、WEBP、HEIC、RAW) を、カスタマイズ可能な品質と背景色の設定で JPG に変換します。",
+    "shortDescription": "品質管理しながら画像をJPGに変換する",
+    "title": "画像をJPGに変換する"
+  },
+  "createTransparent": {
+    "description": "世界",
+    "shortDescription": "画像を素早く透明にする",
+    "title": "透明なPNGを作成する"
+  },
+  "crop": {
+    "description": "画像をトリミングして不要な部分を削除します。",
+    "inputTitle": "入力画像",
+    "resultTitle": "切り抜かれた画像",
+    "shortDescription": "画像を素早く切り取ります。",
+    "title": "画像をトリミング"
+  },
+  "editor": {
+    "description": "切り抜き、回転、注釈、色調整、透かしの追加など、高度な画像編集ツールを備えた高度な画像エディター。プロ仕様のツールを使って、ブラウザ上で直接画像を編集できます。",
+    "shortDescription": "高度なツールと機能で画像を編集する",
+    "title": "画像エディタ"
+  },
+  "imageToText": {
+    "description": "光学文字認識 (OCR) を使用して画像 (JPG、PNG) からテキストを抽出します。",
+    "shortDescription": "OCR を使用して画像からテキストを抽出します。",
+    "title": "画像からテキストへ（OCR）"
+  },
+  "qrCode": {
+    "description": "URL、テキスト、電子メール、電話、SMS、WiFi、vCard など、さまざまなデータ タイプの QR コードを生成します。",
+    "shortDescription": "さまざまなデータ形式に合わせてカスタマイズされた QR コードを作成します。",
+    "title": "QRコードジェネレーター"
+  },
+  "removeBackground": {
+    "description": "世界",
+    "shortDescription": "画像から背景を自動的に削除する",
+    "title": "画像から背景を削除する"
+  },
+  "resize": {
+    "description": "画像をさまざまな寸法に合わせてサイズ変更します。",
+    "dimensionType": "ディメンションタイプ",
+    "heightDescription": "高さ（ピクセル単位）",
+    "inputTitle": "入力画像",
+    "maintainAspectRatio": "アスペクト比を維持",
+    "maintainAspectRatioDescription": "画像の元のアスペクト比を維持します。",
+    "percentage": "パーセンテージ",
+    "percentageDescription": "元のサイズの割合（例：半分のサイズの場合は 50、2 倍のサイズの場合は 200）",
+    "resizeByPercentage": "パーセンテージでサイズを変更する",
+    "resizeByPercentageDescription": "元のサイズのパーセンテージを指定してサイズを変更します。",
+    "resizeByPixels": "ピクセル単位でサイズ変更",
+    "resizeByPixelsDescription": "ピクセル単位で寸法を指定してサイズを変更します。",
+    "resizeMethod": "サイズ変更方法",
+    "resultTitle": "サイズ変更された画像",
+    "setHeight": "高さの設定",
+    "setHeightDescription": "高さをピクセル単位で指定し、アスペクト比に基づいて幅を計算します。",
+    "setWidth": "幅を設定する",
+    "setWidthDescription": "幅をピクセル単位で指定し、アスペクト比に基づいて高さを計算します。",
+    "shortDescription": "画像のサイズを簡単に変更できます。",
+    "title": "画像のサイズ変更",
+    "toolInfo": {
+      "description": "このツールを使えば、JPG、PNG、SVG、GIF画像のサイズを変更できます。ピクセル単位またはパーセンテージでサイズを指定し、元のアスペクト比を維持するオプションも用意されています。",
+      "title": "画像のサイズ変更"
+    },
+    "widthDescription": "幅（ピクセル単位）"
+  },
+  "rotate": {
+    "description": "指定された角度で画像を回転します。",
+    "shortDescription": "画像を簡単に回転します。",
+    "title": "画像を回転する"
+  }
+}

@@ -1,1 +1,100 @@
-{}
+{
+  "checkLeapYears": {
+    "description": "检查某一年份是否为闰年并获取闰年信息。",
+    "inputTitle": "输入年份",
+    "resultTitle": "闰年结果",
+    "shortDescription": "检查年份是否为闰年",
+    "title": "检查闰年",
+    "toolInfo": {
+      "description": "闰年是指在每年的2月29日增加一天，以使日历年与天文年保持一致。闰年每4年一次，但能被100整除但不能被400整除的年份除外。",
+      "title": "什么是闰年？"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "添加营业时间名称",
+    "addHoursNameDescription": "将字符串 hours 附加到输出值",
+    "description": "使用可自定义的选项将天数转换为小时数。",
+    "hoursName": "营业时间名称",
+    "shortDescription": "将天数转换为小时数",
+    "title": "将天数转换为小时数",
+    "toolInfo": {
+      "description": "此工具可让您将天数转换为小时数。您可以输入数字或单位形式的天数，该工具会将其转换为小时数。您还可以选择在输出值后附加“小时”后缀。",
+      "title": "将天数转换为小时数"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "添加日期名称",
+    "addDaysNameDescription": "将字符串 days 附加到输出值",
+    "daysName": "日期名称",
+    "description": "使用可自定义的选项将小时转换为天。",
+    "shortDescription": "将小时转换为天",
+    "title": "将小时转换为天",
+    "toolInfo": {
+      "description": "此工具可让您将小时转换为天。您可以输入数字或单位形式的小时，该工具会将其转换为天。您还可以选择在输出值后附加“天”后缀。",
+      "title": "将小时转换为天"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "添加填充",
+    "addPaddingDescription": "在小时、分钟和秒后添加零填充。",
+    "description": "将秒转换为可读的时间格式（小时:分钟:秒）。输入秒数即可获取格式化的时间。",
+    "shortDescription": "将秒数转换为时间格式",
+    "timePadding": "时间填充",
+    "title": "将秒转换为时间",
+    "toolInfo": {
+      "title": "什么是 {{title}}？"
+    }
+  },
+  "convertTimeToSeconds": {
+    "description": "将格式化的时间（HH：MM：SS）转换为秒。",
+    "inputTitle": "输入时间",
+    "resultTitle": "秒",
+    "shortDescription": "将时间格式转换为秒",
+    "title": "将时间转换为秒",
+    "toolInfo": {
+      "description": "此工具可让您将格式化的时间字符串 (HH:MM:SS) 转换为秒。它对于计算持续时间和时间间隔非常有用。",
+      "title": "将时间转换为秒"
+    }
+  },
+  "crontabGuru": {
+    "description": "生成并理解 cron 表达式。为自动化任务和系统作业创建 cron 计划。",
+    "shortDescription": "生成并理解 cron 表达式",
+    "title": "Crontab 大师"
+  },
+  "timeBetweenDates": {
+    "description": "计算两个日期之间的时差。获取精确的天、小时、分钟和秒数。",
+    "endDate": "结束日期",
+    "endDateTime": "结束日期和时间",
+    "endTime": "结束时间",
+    "endTimezone": "结束时区",
+    "shortDescription": "计算两个日期之间的时间",
+    "startDate": "开始日期",
+    "startDateTime": "开始日期和时间",
+    "startTime": "开始时间",
+    "startTimezone": "开始时区",
+    "title": "日期间隔时间",
+    "toolInfo": {
+      "description": "计算两个日期和时间之间的精确时差，支持不同时区。此工具提供按不同单位（年、月、日、时、分、秒）计算的详细时差细分。",
+      "title": "日期间隔时间计算器"
+    }
+  },
+  "truncateClockTime": {
+    "description": "截断时钟时间以删除秒数或分钟数。将时间四舍五入到最接近的小时数、分钟数或自定义间隔。",
+    "printDroppedComponents": "打印掉落的组件",
+    "shortDescription": "将时钟时间截断为指定的精度",
+    "timePadding": "时间填充",
+    "title": "截断时钟时间",
+    "toolInfo": {
+      "title": "什么是 {{title}}？"
+    },
+    "truncateMinutesAndSeconds": "截断分钟和秒",
+    "truncateMinutesAndSecondsDescription": "删除每个时钟时间中的分钟和秒部分。",
+    "truncateOnlySeconds": "仅截断秒数",
+    "truncateOnlySecondsDescription": "从每个时钟时间中删除秒数部分。",
+    "truncationSide": "截断侧",
+    "useZeroPadding": "使用零填充",
+    "zeroPaddingDescription": "使所有时间部分始终为两位数宽度。",
+    "zeroPrintDescription": "将删除的部分显示为零值“00”。",
+    "zeroPrintTruncatedParts": "零打印截断部件"
+  }
+}

@@ -28,7 +28,7 @@
   },
   "convertToJpg": {
     "description": "Convertissez différents formats d'image (PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW) en JPG avec des paramètres de qualité et de couleur d'arrière-plan personnalisables.",
-    "shortDescription": "Convertir des images en JPG avec contrôle qualité",
+    "shortDescription": "Convertir des images en JPG avec contrôle de la qualité",
     "title": "Convertir des images en JPG"
   },
   "createTransparent": {

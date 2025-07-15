@@ -1,1 +1,113 @@
-{}
+{
+  "compressPdf": {
+    "compressedFileSize": "圧縮ファイルサイズ",
+    "compressingPdf": "PDF を圧縮しています...",
+    "compressionLevel": "圧縮レベル",
+    "compressionSettings": "圧縮設定",
+    "description": "Ghostscriptを使用して品質を維持しながらPDFファイルのサイズを縮小する",
+    "errorCompressingPdf": "PDF の圧縮に失敗しました: {{error}}",
+    "errorReadingPdf": "PDFファイルの読み取りに失敗しました。有効なPDFであることを確認してください。",
+    "fileSize": "元のファイルサイズ",
+    "highCompression": "高圧縮",
+    "highCompressionDescription": "多少の品質低下を伴いファイルサイズを最大限に削減",
+    "inputTitle": "入力PDF",
+    "lowCompression": "低圧縮",
+    "lowCompressionDescription": "品質の低下を最小限に抑えながらファイルサイズをわずかに削減",
+    "mediumCompression": "中圧縮",
+    "mediumCompressionDescription": "ファイルサイズと品質のバランス",
+    "pages": "ページ数",
+    "resultTitle": "圧縮PDF",
+    "shortDescription": "ブラウザでPDFファイルを安全に圧縮",
+    "title": "PDFを圧縮"
+  },
+  "editor": {
+    "description": "注釈、フォーム入力、ハイライト、エクスポート機能を備えた高度なPDFエディター。テキスト挿入、描画、ハイライト、署名、フォーム入力などのプロ仕様のツールを使って、ブラウザ内で直接PDFを編集できます。",
+    "shortDescription": "高度な注釈、署名、編集ツールでPDFを編集",
+    "title": "PDFエディター"
+  },
+  "merge": {
+    "inputTitle": "入力PDF",
+    "loadingText": "ページの抽出",
+    "resultTitle": "結合したPDFを出力する",
+    "toolInfo": {
+      "description": "このツールを使えば、複数のPDFファイルを1つの文書に結合することができます。結合したいPDFファイルをアップロードするだけで、入力ファイルのすべてのページが1つのPDF文書に結合されます。",
+      "title": "Merge PDF ツールの使い方"
+    }
+  },
+  "mergePdf": {
+    "description": "複数の PDF ファイルを 1 つのドキュメントに結合します。",
+    "inputTitle": "入力PDF",
+    "mergingPdfs": "PDFの結合",
+    "pdfOptions": "PDFオプション",
+    "resultTitle": "結合されたPDF",
+    "shortDescription": "複数のPDFファイルを1つの文書に結合する",
+    "sortByFileName": "ファイル名で並べ替え",
+    "sortByFileNameDescription": "PDFをファイル名のアルファベット順に並べ替える",
+    "sortByUploadOrder": "アップロード順に並べ替え",
+    "sortByUploadOrderDescription": "PDFをアップロードされた順序で保存する",
+    "title": "PDFを結合",
+    "toolInfo": {
+      "description": "このツールを使えば、複数のPDFファイルを1つの文書に結合できます。PDFファイルの並び順を指定すると、ツールが指定した順序で結合します。",
+      "title": "PDFファイルの結合"
+    }
+  },
+  "pdfToEpub": {
+    "description": "PDF文書をEPUBファイルに変換して、電子書籍リーダーとの互換性を高めます。', icon: 'material-symbols:import-contacts', components: lazy(() => import('./index')), keywords: ['pdf', 'epub', 'convert', 'ebook'], path: 'pdf-to-epub', i18n: { name: 'pdf:pdfToEpub.title', description: 'pdf:pdfToEpub.description",
+    "shortDescription": "PDFファイルをEPUB形式に変換する",
+    "title": "PDFからEPUBへ"
+  },
+  "pdfToPng": {
+    "description": "PDF ドキュメントを PNG パネルに変換します。",
+    "longDescription": "PDFをアップロードすると、ブラウザ内で各ページを高画質のPNG画像に変換できます。このツールは、ビジュアルコンテンツの抽出や個々のページの共有に最適です。データはアップロードされず、すべてローカルで実行されます。",
+    "shortDescription": "PDFをPNG画像に変換する",
+    "title": "PDFからPNGへ"
+  },
+  "protectPdf": {
+    "description": "ブラウザで安全にPDFファイルにパスワード保護を追加します",
+    "shortDescription": "PDFファイルをパスワードで安全に保護する",
+    "title": "PDFを保護する"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "全て {{count}} ページが回転します",
+    "angleOptions": {
+      "clockwise90": "90°時計回り",
+      "counterClockwise270": "270°（反時計回り90°）",
+      "upsideDown180": "180°（上下逆さま）"
+    },
+    "applyToAllPages": "すべてのページに適用",
+    "description": "PDF ドキュメント内のページを回転します。",
+    "inputTitle": "入力PDF",
+    "longDescription": "PDFページの向きを90度、180度、または270度回転して変更できます。スキャンミスを修正したり、印刷用のPDFを準備したりする際に便利です。",
+    "pageRangesDescription": "ページ番号または範囲をコンマで区切って入力してください（例：1,3,5-7）",
+    "pageRangesPlaceholder": "例：1.5-8",
+    "pagesWillBeRotated": "{{count}} ページ{{count !== 1 ? 's' : ''}} 回転します",
+    "pdfPageCount": "PDFには {{count}} ページ{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "回転したPDF",
+    "rotatingPages": "ページの回転",
+    "rotationAngle": "回転角度",
+    "rotationSettings": "回転設定",
+    "shortDescription": "PDF文書のページを回転する",
+    "title": "PDFを回転",
+    "toolInfo": {
+      "description": "このツールを使うと、PDF文書内のページを回転できます。すべてのページを回転することも、特定のページを指定して回転させることもできます。回転角度は、時計回り90度、180度（上下反転）、または反時計回り90度（270度）から選択できます。特定のページを回転させるには、「すべてのページに適用」のチェックを外し、ページ番号またはページ範囲をカンマで区切って入力します（例：1,3,5-7）。",
+      "title": "PDF回転ツールの使い方"
+    }
+  },
+  "splitPdf": {
+    "description": "PDF ドキュメントから特定のページを抽出します。",
+    "extractingPages": "ページの抽出",
+    "inputTitle": "入力PDF",
+    "pageExtractionPreview": "{{count}} ページ{{count !== 1 ? 's' : ''}} 抽出されます",
+    "pageRangesDescription": "ページ番号または範囲をコンマで区切って入力してください（例：1,3,5-7）",
+    "pageRangesPlaceholder": "例：1.5-8",
+    "pageSelection": "ページ選択",
+    "pdfPageCount": "PDFには {{count}} ページ{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "抽出されたPDF",
+    "shortDescription": "PDFファイルから特定のページを抽出する",
+    "title": "PDFを分割",
+    "toolInfo": {
+      "description": "このツールを使うと、PDF文書から特定のページを抽出できます。抽出するページは、個々のページまたはページ範囲で指定できます。",
+      "title": "PDFを分割"
+    }
+  }
+}

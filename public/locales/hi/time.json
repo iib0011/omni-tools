@@ -7,41 +7,69 @@
     "endYear": "अंतिम वर्ष",
     "inputTitle": "इनपुट वर्ष",
     "resultTitle": "लीप वर्ष परिणाम",
+    "shortDescription": "जांचें कि कोई वर्ष लीप वर्ष है या नहीं",
     "startPlaceholder": "वर्ष",
     "startYear": "शुरुआती वर्ष",
     "title": "लीप वर्ष जांचें",
+    "toolInfo": {
+      "description": "लीप वर्ष वह वर्ष होता है जिसमें कैलेंडर वर्ष को खगोलीय वर्ष के साथ समकालिक बनाए रखने के लिए एक अतिरिक्त दिन (29 फ़रवरी) होता है। लीप वर्ष हर 4 वर्ष में आते हैं, सिवाय उन वर्षों के जो 100 से विभाज्य होते हैं लेकिन 400 से नहीं।",
+      "title": "लीप वर्ष क्या है?"
+    },
     "yearRange": "वर्ष श्रेणी"
   },
   "convertDaysToHours": {
+    "addHoursName": "घंटे का नाम जोड़ें",
+    "addHoursNameDescription": "आउटपुट मानों में स्ट्रिंग घंटे जोड़ें",
     "conversionOptions": "रूपांतरण विकल्प",
     "decimalPlaces": "दशमलव स्थान",
     "description": "दिनों की संख्या को घंटों में बदलें।",
+    "hoursName": "घंटों का नाम",
     "inputTitle": "इनपुट दिन",
     "placesPlaceholder": "स्थान",
     "resultTitle": "घंटे",
+    "shortDescription": "दिनों को घंटों में बदलें",
     "showBreakdown": "विस्तृत विवरण दिखाएं",
-    "title": "दिनों को घंटों में बदलें"
+    "title": "दिनों को घंटों में बदलें",
+    "toolInfo": {
+      "description": "यह टूल आपको दिनों को घंटों में बदलने की सुविधा देता है। आप दिनों को संख्याओं या इकाइयों के रूप में इनपुट कर सकते हैं, और यह टूल उन्हें घंटों में बदल देगा। आप आउटपुट मानों में 'घंटे' प्रत्यय भी जोड़ सकते हैं।",
+      "title": "दिनों को घंटों में बदलें"
+    }
   },
   "convertHoursToDays": {
+    "addDaysName": "दिन का नाम जोड़ें",
+    "addDaysNameDescription": "आउटपुट मानों में स्ट्रिंग days जोड़ें",
     "conversionOptions": "रूपांतरण विकल्प",
+    "daysName": "दिन का नाम",
     "decimalPlaces": "दशमलव स्थान",
     "description": "घंटों की संख्या को दिनों में बदलें।",
     "inputTitle": "इनपुट घंटे",
     "placesPlaceholder": "स्थान",
     "resultTitle": "दिन",
+    "shortDescription": "घंटों को दिनों में बदलें",
     "showBreakdown": "विस्तृत विवरण दिखाएं",
-    "title": "घंटों को दिनों में बदलें"
+    "title": "घंटों को दिनों में बदलें",
+    "toolInfo": {
+      "description": "यह टूल आपको घंटों को दिनों में बदलने की सुविधा देता है। आप घंटों को संख्याओं या इकाइयों के रूप में इनपुट कर सकते हैं, और यह टूल उन्हें दिनों में बदल देगा। आप आउटपुट मानों में 'दिन' प्रत्यय भी जोड़ सकते हैं।",
+      "title": "घंटों को दिनों में बदलें"
+    }
   },
   "convertSecondsToTime": {
+    "addPadding": "पैडिंग जोड़ें",
+    "addPaddingDescription": "घंटे, मिनट और सेकंड में शून्य पैडिंग जोड़ें।",
     "conversionOptions": "रूपांतरण विकल्प",
     "description": "सेकंड की संख्या को पठनीय समय प्रारूप में बदलें।",
     "formatDHMS": "दिन:घंटे:मिनट:सेकंड",
     "formatHMS": "घंटे:मिनट:सेकंड",
     "inputTitle": "इनपुट सेकंड",
     "resultTitle": "समय",
+    "shortDescription": "सेकंड को समय प्रारूप में परिवर्तित करें",
     "showZeroValues": "शून्य मान दिखाएं",
     "timeFormat": "समय प्रारूप",
-    "title": "सेकंड को समय में बदलें"
+    "timePadding": "समय पैडिंग",
+    "title": "सेकंड को समय में बदलें",
+    "toolInfo": {
+      "title": "{{title}} क्या है?"
+    }
   },
   "convertTimeToSeconds": {
     "conversionOptions": "रूपांतरण विकल्प",
@@ -51,8 +79,13 @@
     "inputPlaceholder": "जैसे 1:30:45 या 1d 2h 30m 45s",
     "inputTitle": "इनपुट समय",
     "resultTitle": "सेकंड",
+    "shortDescription": "समय प्रारूप को सेकंड में परिवर्तित करें",
     "timeFormat": "समय प्रारूप",
-    "title": "समय को सेकंड में बदलें"
+    "title": "समय को सेकंड में बदलें",
+    "toolInfo": {
+      "description": "यह टूल आपको फ़ॉर्मेट किए गए समय स्ट्रिंग (HH:MM:SS) को सेकंड में बदलने की सुविधा देता है। यह अवधि और समय अंतराल की गणना के लिए उपयोगी है।",
+      "title": "समय को सेकंड में बदलें"
+    }
   },
   "crontabGuru": {
     "countPlaceholder": "संख्या",
@@ -62,6 +95,7 @@
     "inputTitle": "इनपुट Cron एक्सप्रेशन",
     "resultTitle": "मानव-पठनीय विवरण",
     "runCount": "रन की संख्या",
+    "shortDescription": "क्रॉन एक्सप्रेशन उत्पन्न करें और समझें",
     "showNextRuns": "अगले रन दिखाएं",
     "title": "Crontab गुरु"
   },
@@ -70,8 +104,10 @@
     "description": "दो तिथियों के बीच का समय अंतराल ज्ञात करें।",
     "endDate": "अंतिम तिथि",
     "endDatePlaceholder": "YYYY-MM-DD",
+    "endDateTime": "समाप्ति तिथि और समय",
     "endTime": "अंतिम समय",
     "endTimePlaceholder": "HH:MM:SS",
+    "endTimezone": "समाप्ति समय क्षेत्र",
     "formatDays": "दिन",
     "formatHours": "घंटे",
     "formatMinutes": "मिनट",
@@ -80,26 +116,48 @@
     "inputTitle": "तिथि जोड़े",
     "outputFormat": "आउटपुट प्रारूप",
     "resultTitle": "समय अंतराल",
+    "shortDescription": "दो तिथियों के बीच का समय गणना करें",
     "startDate": "शुरुआती तिथि",
     "startDatePlaceholder": "YYYY-MM-DD",
+    "startDateTime": "प्रारंभ तिथि और समय",
     "startTime": "शुरुआती समय",
     "startTimePlaceholder": "HH:MM:SS",
-    "title": "तिथियों के बीच समय"
+    "startTimezone": "प्रारंभ समय क्षेत्र",
+    "title": "तिथियों के बीच समय",
+    "toolInfo": {
+      "description": "विभिन्न समय क्षेत्रों के समर्थन के साथ, दो तिथियों और समयों के बीच सटीक समय अंतर की गणना करें। यह टूल विभिन्न इकाइयों (वर्ष, महीने, दिन, घंटे, मिनट और सेकंड) में समय अंतर का विस्तृत विवरण प्रदान करता है।",
+      "title": "तिथियों के बीच का समय कैलकुलेटर"
+    }
   },
   "truncateClockTime": {
     "description": "समय को निर्दिष्ट स्तर तक काटें।",
     "format12Hour": "12 घंटे प्रारूप",
     "format24Hour": "24 घंटे प्रारूप",
     "inputTitle": "इनपुट समय",
+    "printDroppedComponents": "गिरे हुए घटकों को प्रिंट करें",
     "resultTitle": "काटा गया समय",
     "roundDown": "नीचे गोल करें",
     "roundUp": "ऊपर गोल करें",
+    "shortDescription": "घड़ी के समय को निर्दिष्ट परिशुद्धता तक छोटा करें",
     "timeFormat": "समय प्रारूप",
+    "timePadding": "समय पैडिंग",
     "title": "घड़ी का समय काटें",
+    "toolInfo": {
+      "title": "{{title}} क्या है?"
+    },
+    "truncateMinutesAndSeconds": "मिनट और सेकंड को छोटा करें",
+    "truncateMinutesAndSecondsDescription": "प्रत्येक घड़ी के समय से मिनट और सेकंड दोनों घटकों को हटा दें।",
+    "truncateOnlySeconds": "केवल सेकंड काटें",
+    "truncateOnlySecondsDescription": "प्रत्येक घड़ी के समय से सेकंड घटक हटा दें।",
     "truncateTo": "काटने का स्तर",
     "truncateToHours": "घंटे",
     "truncateToMinutes": "मिनट",
     "truncateToSeconds": "सेकंड",
-    "truncationOptions": "काटने के विकल्प"
+    "truncationOptions": "काटने के विकल्प",
+    "truncationSide": "काटने की तरफ",
+    "useZeroPadding": "शून्य पैडिंग का उपयोग करें",
+    "zeroPaddingDescription": "सभी समय घटकों को हमेशा दो अंक चौड़ा रखें।",
+    "zeroPrintDescription": "गिराए गए भागों को शून्य मान \"00\" के रूप में प्रदर्शित करें।",
+    "zeroPrintTruncatedParts": "शून्य-मुद्रित काटे गए भाग"
   }
 }

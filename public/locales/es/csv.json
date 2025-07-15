@@ -1,1 +1,114 @@
-{}
+{
+  "changeCsvSeparator": {
+    "description": "Cambie el delimitador/separador en archivos CSV. Convierta entre diferentes formatos CSV, como coma, punto y coma, tabulación o separadores personalizados.",
+    "shortDescription": "Cambiar el delimitador del archivo CSV",
+    "title": "Cambiar el separador CSV"
+  },
+  "csvRowsToColumns": {
+    "description": "Esta herramienta convierte las filas de un archivo CSV (Valores Separados por Comas) en columnas. Extrae las líneas horizontales del CSV de entrada una por una, las gira 90 grados y las genera como columnas verticales, una tras otra, separadas por comas.', longDescription: 'Esta herramienta convierte las filas de un archivo CSV (Valores Separados por Comas) en columnas. Por ejemplo, si los datos CSV de entrada tienen 6 filas, la salida tendrá 6 columnas y los elementos de las filas se ordenarán de arriba a abajo. En un CSV bien formado, el número de valores en cada fila es el mismo. Sin embargo, si faltan campos en las filas, el programa puede corregirlos y usted puede elegir entre las opciones disponibles: rellenar los datos faltantes con elementos vacíos o reemplazarlos con elementos personalizados, como \"missing\", \"?\" o \"x\". Durante el proceso de conversión, la herramienta también limpia el archivo CSV de información innecesaria, como líneas vacías (líneas sin información visible) y comentarios. Para que la herramienta identifique correctamente los comentarios, en las opciones, puede especificar el símbolo al principio de la línea que inicia un comentario. Este símbolo suele ser una almohadilla \"#\" o una doble barra \"//\". ¡Csv-abuloso!",
+    "longDescription": "Esta herramienta convierte las filas de un archivo CSV (valores separados por comas) en columnas. Por ejemplo, si los datos CSV de entrada tienen 6 filas, la salida tendrá 6 columnas y los elementos de las filas se ordenarán de arriba a abajo. En un CSV bien formado, el número de valores en cada fila es el mismo. Sin embargo, si faltan campos en las filas, el programa puede corregirlos y usted puede elegir entre las opciones disponibles: rellenar los datos faltantes con elementos vacíos o reemplazarlos con elementos personalizados, como",
+    "shortDescription": "Convertir filas CSV en columnas.",
+    "title": "Convertir filas CSV en columnas"
+  },
+  "csvToJson": {
+    "columnSeparator": "Separador de columnas (p. ej., , ; \\t)",
+    "commentSymbol": "Símbolo de comentario (p. ej., #)",
+    "conversionOptions": "Opciones de conversión",
+    "description": "Convierte archivos CSV a formato JSON con opciones personalizables para delimitadores, comillas y formato de salida. Admite encabezados, comentarios y conversión dinámica de tipos.",
+    "dynamicTypes": "Tipos dinámicos",
+    "dynamicTypesDescription": "Convierte automáticamente números y valores booleanos",
+    "errorParsing": "Error al analizar CSV: {{error}}",
+    "fieldQuote": "Cita de campo (por ejemplo, \")",
+    "inputCsvFormat": "Formato CSV de entrada",
+    "inputTitle": "CSV de entrada",
+    "resultTitle": "Salida JSON",
+    "shortDescription": "Convierte datos CSV al formato JSON.",
+    "skipEmptyLines": "Saltar líneas vacías",
+    "skipEmptyLinesDescription": "Ignorar líneas vacías en el CSV de entrada",
+    "title": "Convertir CSV a JSON",
+    "useHeaders": "Usar encabezados",
+    "useHeadersDescription": "Tratar la primera fila como encabezados de columna"
+  },
+  "csvToTsv": {
+    "description": "Sube tu archivo CSV en el formulario a continuación y se convertirá automáticamente a un archivo TSV. En las opciones de la herramienta, puedes personalizar el formato CSV de entrada: especifica el delimitador de campo, las comillas y el símbolo de comentario, omite las líneas vacías del CSV y elige si deseas conservar los encabezados de columna del CSV.",
+    "longDescription": "Esta herramienta transforma datos de valores separados por comas (CSV) en datos de valores separados por tabulaciones (TSV). Tanto CSV como TSV son formatos de archivo populares para almacenar datos tabulares, pero utilizan diferentes delimitadores para separar los valores: CSV usa comas (",
+    "shortDescription": "Convierte datos CSV al formato TSV.",
+    "title": "Convertir CSV a TSV"
+  },
+  "csvToXml": {
+    "description": "Convierte archivos CSV al formato XML con opciones personalizables.",
+    "shortDescription": "Convertir datos CSV al formato XML.",
+    "title": "Convertir CSV a XML"
+  },
+  "csvToYaml": {
+    "description": "Simplemente cargue su archivo CSV en el formulario a continuación y se convertirá automáticamente a un archivo YAML. En las opciones de la herramienta, puede especificar el carácter delimitador de campo, la comilla de campo y el carácter de comentario para adaptar la herramienta a formatos CSV personalizados. Además, puede seleccionar el formato YAML de salida: uno que conserve o excluya los encabezados CSV.",
+    "longDescription": "Esta herramienta transforma datos CSV (valores separados por comas) en datos YAML (un lenguaje de marcado más). CSV es un formato tabular simple que se utiliza para representar tipos de datos matriciales compuestos por filas y columnas. YAML, por otro lado, es un formato más avanzado (en realidad, un superconjunto de JSON), que crea datos más legibles para la serialización y admite listas, diccionarios y objetos anidados. Este programa admite varios formatos CSV de entrada: los datos de entrada pueden estar separados por comas (predeterminado), punto y coma, barras verticales o usar un delimitador completamente diferente. Puede especificar el delimitador exacto que usan sus datos en las opciones. De igual forma, en las opciones, puede especificar el carácter de comillas que se utiliza para encapsular los campos CSV (por defecto, un símbolo de comillas dobles). También puede omitir líneas que comiencen con comentarios especificando los símbolos de comentario en las opciones. Esto le permite mantener sus datos limpios al omitir líneas innecesarias. Hay dos maneras de convertir CSV a YAML. El primer método convierte cada fila del CSV en una lista YAML. El segundo método extrae los encabezados de la primera fila del CSV y crea objetos YAML con claves basadas en estos encabezados. También puedes personalizar el formato YAML de salida especificando el número de espacios para la sangría de las estructuras YAML. Si necesitas realizar la conversión inversa, es decir, transformar YAML a CSV, puedes usar nuestra herramienta Convertir YAML a CSV. ¡Csv-abroso!",
+    "shortDescription": "Convierte rápidamente un archivo CSV en un archivo YAML.",
+    "title": "Convertir CSV a YAML"
+  },
+  "findIncompleteCsvRecords": {
+    "checkingOptions": "Opciones de comprobación",
+    "commentCharacterDescription": "Introduzca el carácter que indica el inicio de una línea de comentario. Las líneas que comiencen con este símbolo se omitirán.",
+    "csvInputOptions": "Opciones de entrada CSV",
+    "csvSeparatorDescription": "Introduzca el carácter utilizado para delimitar columnas en el archivo de entrada CSV.",
+    "deleteLinesWithNoData": "Eliminar líneas sin datos",
+    "deleteLinesWithNoDataDescription": "Eliminar líneas vacías del archivo de entrada CSV.",
+    "description": "Simplemente cargue su archivo CSV en el formulario a continuación y esta herramienta comprobará automáticamente si ninguna fila o columna tiene valores faltantes. En las opciones de la herramienta, puede ajustar el formato del archivo de entrada (especifique el delimitador, las comillas y el carácter de comentario). Además, puede activar la comprobación de valores vacíos, omitir líneas vacías y limitar el número de mensajes de error en la salida.",
+    "findEmptyValues": "Encontrar valores vacíos",
+    "findEmptyValuesDescription": "Mostrar un mensaje sobre los campos CSV que están vacíos (no son campos faltantes, sino campos que no contienen nada).",
+    "inputTitle": "CSV de entrada",
+    "limitNumberOfMessages": "Limitar el número de mensajes",
+    "messageLimitDescription": "Establezca el límite del número de mensajes en la salida.",
+    "quoteCharacterDescription": "Introduzca el carácter de comillas utilizado para citar los campos de entrada CSV.",
+    "resultTitle": "Estado CSV",
+    "shortDescription": "Encuentre rápidamente filas y columnas en CSV que tengan valores faltantes.",
+    "title": "Encontrar registros CSV incompletos",
+    "toolInfo": {
+      "title": "¿Qué es un? {{title}}?"
+    }
+  },
+  "insertCsvColumns": {
+    "appendColumns": "Añadir columnas",
+    "commentCharacterDescription": "Introduzca el carácter que indica el inicio de una línea de comentario. Las líneas que comiencen con este símbolo se omitirán.",
+    "csvOptions": "Opciones CSV",
+    "csvSeparator": "Separador CSV",
+    "csvToInsert": "CSV para insertar",
+    "csvToInsertDescription": "Introduzca una o más columnas que desee insertar en el CSV. El carácter utilizado para delimitar las columnas debe ser el mismo que el del archivo CSV de entrada. Nota: Se ignorarán las líneas en blanco.",
+    "customFillDescription": "Si el archivo CSV de entrada está incompleto (valores faltantes), ¿cómo agregar campos vacíos o símbolos personalizados a los registros para crear un CSV bien formado?",
+    "customFillValueDescription": "Utilice este valor personalizado para completar los campos que faltan. (Solo funciona con el modo \"Valores personalizados\" mencionado anteriormente).",
+    "customPosition": "Posición personalizada",
+    "customPositionOptionsDescription": "Seleccione el método para insertar las columnas en el archivo CSV.",
+    "description": "Agregar nuevas columnas a los datos CSV en posiciones específicas.",
+    "fillWithCustomValues": "Rellenar con valores aduaneros",
+    "fillWithEmptyValues": "Rellenar con valores vacíos",
+    "headerName": "Nombre del encabezado",
+    "headerNameDescription": "Encabezado de la columna después de la cual desea insertar columnas.",
+    "inputTitle": "CSV de entrada",
+    "insertingPositionDescription": "Especifique dónde insertar las columnas en el archivo CSV.",
+    "position": "Posición",
+    "positionOptions": "Opciones de posición",
+    "prependColumns": "Anteponer columnas",
+    "quoteCharDescription": "Introduzca el carácter de comillas utilizado para citar los campos de entrada CSV.",
+    "resultTitle": "CSV de salida",
+    "rowNumberDescription": "Número de la columna después de la cual desea insertar columnas.",
+    "separatorDescription": "Introduzca el carácter utilizado para delimitar columnas en el archivo de entrada CSV.",
+    "shortDescription": "Inserte rápidamente una o más columnas nuevas en cualquier lugar de un archivo CSV.",
+    "title": "Insertar columnas CSV",
+    "toolInfo": {
+      "description": "Esta herramienta permite insertar nuevas columnas en datos CSV en posiciones específicas. Puede anteponer, anexar o insertar columnas en posiciones personalizadas según los nombres de encabezado o los números de columna.",
+      "title": "Insertar columnas CSV"
+    }
+  },
+  "swapCsvColumns": {
+    "description": "Simplemente cargue su archivo CSV en el formulario a continuación, especifique las columnas que desea intercambiar y la herramienta cambiará automáticamente la posición de dichas columnas en el archivo de salida. En las opciones de la herramienta, puede especificar las posiciones o los nombres de las columnas que desea intercambiar, así como corregir datos incompletos y, opcionalmente, eliminar registros vacíos y comentados.",
+    "longDescription": "Esta herramienta reorganiza los datos CSV intercambiando la posición de sus columnas. Intercambiar columnas mejora la legibilidad de un archivo CSV al colocar los datos de uso frecuente juntos o al frente para facilitar la comparación y edición. Por ejemplo, puede intercambiar la primera columna con la última o la segunda con la tercera. Para intercambiar columnas según su posición, seleccione",
+    "shortDescription": "Reordenar columnas CSV.",
+    "title": "Intercambiar columnas CSV"
+  },
+  "transposeCsv": {
+    "description": "Simplemente cargue su archivo CSV en el formulario a continuación y esta herramienta lo transpondrá automáticamente. En las opciones de la herramienta, puede especificar el carácter que inicia las líneas de comentario en el CSV para eliminarlas. Además, si el CSV está incompleto (valores faltantes), puede reemplazarlos con el carácter vacío o un carácter personalizado.",
+    "longDescription": "Esta herramienta transpone valores separados por comas (CSV). Trata el CSV como una matriz de datos e invierte todos los elementos a lo largo de la diagonal principal. El resultado contiene los mismos datos CSV que la entrada, pero ahora todas las filas se han convertido en columnas y todas las columnas en filas. Tras la transposición, el archivo CSV tendrá dimensiones opuestas. Por ejemplo, si el archivo de entrada tiene 4 columnas y 3 filas, el archivo de salida tendrá 3 columnas y 4 filas. Durante la conversión, el programa también elimina las líneas innecesarias y corrige los datos incompletos. En concreto, la herramienta elimina automáticamente todos los registros vacíos y los comentarios que empiezan por un carácter específico, que se puede configurar en la opción. Además, si los datos CSV se corrompen o se pierden, la utilidad completa el archivo con campos vacíos o campos personalizados que se pueden especificar en las opciones. ¡Csv-abuloso!",
+    "shortDescription": "Transponer rápidamente un archivo CSV.",
+    "title": "Transponer CSV"
+  }
+}

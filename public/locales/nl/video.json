@@ -1,1 +1,113 @@
-{}
+{
+  "changeSpeed": {
+    "defaultMultiplier": "Standaardvermenigvuldiger: 2 betekent 2x sneller",
+    "description": "Wijzig de afspeelsnelheid van videobestanden. Versnel of vertraag video's met behoud van audiosynchronisatie. Ondersteunt diverse snelheidsvermenigvuldigers en gangbare videoformaten.",
+    "inputTitle": "Invoervideo",
+    "newVideoSpeed": "Nieuwe videosnelheid",
+    "resultTitle": "Bewerkte video",
+    "settingSpeed": "Snelheid instellen",
+    "shortDescription": "Wijzig de afspeelsnelheid van video",
+    "title": "Videosnelheid wijzigen",
+    "toolInfo": {
+      "title": "Wat is een {{title}}?"
+    }
+  },
+  "compress": {
+    "default": "Standaard",
+    "description": "Comprimeer video's door ze te schalen naar verschillende resoluties, zoals 240p, 480p, 720p, enz. Deze tool helpt de bestandsgrootte te verkleinen met behoud van een acceptabele kwaliteit. Ondersteunt gangbare videoformaten zoals MP4, WebM en OGG.",
+    "inputTitle": "Invoervideo",
+    "loadingText": "Video comprimeren...",
+    "lossless": "Verliesloos",
+    "quality": "Kwaliteit (CRF)",
+    "resolution": "Oplossing",
+    "resultTitle": "Gecomprimeerde video",
+    "shortDescription": "Comprimeer video's door te schalen naar verschillende resoluties",
+    "title": "Video comprimeren",
+    "worst": "Slechtst"
+  },
+  "cropVideo": {
+    "cropCoordinates": "Gewascoördinaten",
+    "croppingVideo": "Video bijsnijden",
+    "description": "Snijd de video bij om ongewenste delen te verwijderen.",
+    "errorBeyondHeight": "Het gewasgebied strekt zich uit voorbij de videohoogte ({{height}}px)",
+    "errorBeyondWidth": "Het bijsnijdgebied is groter dan de videobreedte ({{width}}px)",
+    "errorCroppingVideo": "Fout bij het bijsnijden van de video. Controleer de parameters en het videobestand.",
+    "errorLoadingDimensions": "Het laden van de video-afmetingen is mislukt",
+    "errorNonNegativeCoordinates": "X- en Y-coördinaten moeten niet-negatief zijn",
+    "errorPositiveDimensions": "Breedte en hoogte moeten positief zijn",
+    "height": "Hoogte",
+    "inputTitle": "Invoervideo",
+    "loadVideoForDimensions": "Laad een video om de afmetingen te zien",
+    "resultTitle": "Bijgesneden video",
+    "shortDescription": "Video bijsnijden om ongewenste gebieden te verwijderen",
+    "title": "Bijsnijden Video",
+    "toolInfo": {
+      "description": "Met deze tool kunt u videobestanden bijsnijden om ongewenste delen te verwijderen. U kunt het bijsnijdgebied specificeren door de X- en Y-coördinaten en de breedte- en hoogte-afmetingen in te stellen.",
+      "title": "Bijsnijden Video"
+    },
+    "videoDimensions": "Video-afmetingen: {{width}} × {{height}} pixels",
+    "videoInformation": "Video-informatie",
+    "width": "Breedte",
+    "xCoordinate": "X (links)",
+    "yCoordinate": "Y (boven)"
+  },
+  "flip": {
+    "description": "Draai videobestanden horizontaal of verticaal. Spiegel video's voor speciale effecten of om problemen met de oriëntatie te corrigeren.",
+    "flippingVideo": "Flipping Video",
+    "horizontalLabel": "Horizontaal (Spiegel)",
+    "inputTitle": "Invoervideo",
+    "orientation": "Oriëntatie",
+    "resultTitle": "Omgedraaide video",
+    "shortDescription": "Video horizontaal of verticaal spiegelen",
+    "title": "Flip Video",
+    "verticalLabel": "Verticaal (op zijn kop)"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "Wijzig de afspeelsnelheid van GIF-animaties. Versnel of vertraag GIF's met behoud van vloeiende animaties.",
+      "shortDescription": "Verander de GIF-animatiesnelheid",
+      "title": "GIF-snelheid wijzigen"
+    }
+  },
+  "loop": {
+    "description": "Maak een herhalende video door de originele video meerdere keren te herhalen.",
+    "inputTitle": "Invoervideo",
+    "loopingVideo": "Video herhalen",
+    "loops": "Lussen",
+    "numberOfLoops": "Aantal lussen",
+    "resultTitle": "Geloopte video",
+    "shortDescription": "Maak herhalende videobestanden",
+    "title": "Loop-video",
+    "toolInfo": {
+      "description": "Met deze tool kun je een herhalende video maken door de originele video meerdere keren te herhalen. Je kunt zelf aangeven hoe vaak de video moet worden herhaald.",
+      "title": "Wat is een {{title}}?"
+    }
+  },
+  "rotate": {
+    "180Degrees": "180° (op zijn kop)",
+    "270Degrees": "270° (90° tegen de klok in)",
+    "90Degrees": "90° met de klok mee",
+    "description": "Roteer videobestanden 90, 180 of 270 graden. Corrigeer de video-oriëntatie of creëer speciale effecten met nauwkeurige rotatiecontrole.",
+    "inputTitle": "Invoervideo",
+    "resultTitle": "Gedraaide video",
+    "rotatingVideo": "Roterende video",
+    "rotation": "Rotatie",
+    "shortDescription": "Video met opgegeven graden roteren",
+    "title": "Video roteren"
+  },
+  "trim": {
+    "description": "Trim videobestanden door begin- en eindtijden op te geven. Verwijder ongewenste delen aan het begin of einde van video's.",
+    "endTime": "Eindtijd",
+    "inputTitle": "Invoervideo",
+    "resultTitle": "Bijgesneden video",
+    "shortDescription": "Video bijsnijden door ongewenste delen te verwijderen",
+    "startTime": "Starttijd",
+    "timestamps": "Tijdstempels",
+    "title": "Video bijsnijden"
+  },
+  "videoToGif": {
+    "description": "Converteer videobestanden naar geanimeerde GIF-indeling. Extraheer specifieke tijdsperioden en maak deelbare geanimeerde afbeeldingen.",
+    "shortDescription": "Converteer video naar geanimeerde GIF",
+    "title": "Video naar GIF"
+  }
+}

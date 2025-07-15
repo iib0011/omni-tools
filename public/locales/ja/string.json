@@ -1,1 +1,261 @@
-{}
+{
+  "base64": {
+    "decode": "Base64デコード",
+    "description": "Base64 エンコーディングを使用してテキストをエンコードまたはデコードします。",
+    "encode": "Base64エンコード",
+    "inputTitle": "入力データ",
+    "optionsTitle": "Base64オプション",
+    "resultTitle": "結果",
+    "shortDescription": "Base64 を使用してデータをエンコードまたはデコードします。",
+    "title": "Base64 エンコーダ/デコーダ",
+    "toolInfo": {
+      "description": "Base64は、ASCII文字列形式のデータを基数64の表現に変換して表現するエンコード方式です。文字列のエンコードにも使用できますが、テキストデータを扱うように設計されたメディアで伝送するバイナリデータのエンコードによく使用されます。",
+      "title": "Base64 とは何ですか?"
+    }
+  },
+  "censor": {
+    "description": "テキスト内の単語を検閲するためのユーティリティです。左側の入力フォームにテキストを入力し、オプションで不適切な単語をすべて指定すると、出力領域に検閲されたテキストが即座に表示されます。\", longDescription: 'このオンラインツールを使えば、あらゆるテキスト内の特定の単語を検閲できます。不要な単語（罵り言葉や秘密の言葉など）のリストを指定すると、プログラムがそれらを代替単語に置き換え、安全に読めるテキストを作成します。単語は、オプションの複数行テキストフィールドに1行につき1単語ずつ入力することで指定できます。', キーワード: ['text', 'censor', 'words', 'characters'], コンポーネント: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
+    "shortDescription": "不適切な単語をすぐにマスクするか、別の単語に置き換えます。",
+    "title": "テキスト検閲"
+  },
+  "createPalindrome": {
+    "description": "あらゆるテキストから回文を作成できる、世界で最もシンプルなブラウザベースのユーティリティです。テキストを入力すると、前後どちらから読んでも同じ回文に瞬時に変換されます。言葉遊び、対称的なテキストパターンの作成、言語的好奇心の探求などに最適です。",
+    "shortDescription": "前後どちらから読んでも同じテキストを作成する",
+    "title": "回文を作成する"
+  },
+  "extractSubstring": {
+    "description": "テキストから部分文字列を抽出できる、世界で最もシンプルなブラウザベースのユーティリティです。テキストを入力し、開始位置と終了位置を指定するだけで、必要な部分を抽出できます。データ処理、テキスト分析、あるいは大きなテキストブロックから特定のコンテンツを抽出するのに最適です。",
+    "shortDescription": "指定した位置の間のテキストの一部を抽出する",
+    "title": "部分文字列の抽出"
+  },
+  "join": {
+    "blankLinesAndTrailingSpaces": "空白行と末尾のスペース",
+    "deleteBlankDescription": "テキスト シンボルのない行を削除します。",
+    "deleteBlankTitle": "空白行を削除する",
+    "deleteTrailingDescription": "行末のスペースとタブを削除します。",
+    "deleteTrailingTitle": "末尾のスペースを削除",
+    "description": "カスタマイズ可能なセパレーターを使用してテキスト部分を結合します。",
+    "inputTitle": "テキストピース",
+    "joinCharacterDescription": "テキストの断片を連結する記号。(デフォルトではスペース)",
+    "joinCharacterPlaceholder": "キャラクターを参加させる",
+    "resultTitle": "結合テキスト",
+    "shortDescription": "指定した区切り文字でテキスト要素を結合する",
+    "textMergedOptions": "テキスト結合オプション",
+    "title": "テキストを結合",
+    "toolInfo": {
+      "description": "このツールを使えば、テキストの一部を結合できます。改行で区切られたテキスト値のリストを受け取り、それらを結合します。結合後のテキストの各部分の間に挿入する文字を設定できます。また、すべての空行を無視し、すべての行末のスペースとタブを削除することもできます。Textabulous！",
+      "title": "テキストジョイナーとは何ですか?"
+    }
+  },
+  "palindrome": {
+    "description": "テキストが回文であるかどうかをチェックする、世界で最もシンプルなブラウザベースのユーティリティです。テキストが前後どちらから読んでも同じかどうかを瞬時に検証します。単語パズル、言語分析、対称的なテキストパターンの検証に最適です。様々な区切り文字と複数単語の回文検出に対応しています。",
+    "shortDescription": "テキストが前後で同じ読み方をしているか確認する",
+    "title": "回文"
+  },
+  "passwordGenerator": {
+    "avoidAmbiguous": "あいまいな文字（i、I、l、0、O）は避けてください",
+    "description": "長さと文字種をカスタマイズ可能な、安全なランダムパスワードを生成します。小文字、大文字、数字、特殊文字から選択できます。読みやすさを向上させるため、あいまいな文字を避けるオプションも用意されています。",
+    "includeLowercase": "小文字（a～z）を含める",
+    "includeNumbers": "数字を含める（0～9）",
+    "includeSymbols": "特殊文字を含める",
+    "includeUppercase": "大文字（A～Z）を含める",
+    "lengthDesc": "パスワードの長さ",
+    "lengthPlaceholder": "例：12",
+    "optionsTitle": "パスワードオプション",
+    "resultTitle": "生成されたパスワード",
+    "shortDescription": "カスタムオプションで安全なランダムパスワードを生成する",
+    "title": "パスワードジェネレーター",
+    "toolInfo": {
+      "description": "このツールは、選択した条件に基づいて安全なランダムパスワードを生成します。長さをカスタマイズしたり、様々な文字種を含めるか除外したり、読みやすさを向上させるために曖昧な文字を避けたりすることができます。アカウント、アプリケーション、その他あらゆるセキュリティニーズに対応する強力なパスワードの作成に最適です。",
+      "title": "パスワードジェネレータについて"
+    }
+  },
+  "quote": {
+    "allowDoubleQuotation": "二重引用符を許可する",
+    "description": "カスタマイズ可能なオプションを使用してテキストを引用符で囲みます。",
+    "inputTitle": "入力テキスト",
+    "leftQuoteDescription": "左引用文字",
+    "processAsMultiLine": "複数行テキストとして処理",
+    "quoteEmptyLines": "空行を引用する",
+    "quoteOptions": "引用オプション",
+    "resultTitle": "引用テキスト",
+    "rightQuoteDescription": "右引用符文字",
+    "shortDescription": "さまざまなスタイルでテキストを引用符で囲む",
+    "title": "テキスト引用",
+    "toolInfo": {
+      "description": "このツールを使うと、テキストを引用符で囲むことができます。様々な引用符文字を選択したり、複数行テキストを扱ったり、空行の処理方法を制御したりできます。プログラミング用のテキストの作成、データの書式設定、スタイリッシュなテキストの作成に役立ちます。",
+      "title": "テキスト引用"
+    }
+  },
+  "randomizeCase": {
+    "description": "テキストの大文字と小文字をランダム化する、世界で最もシンプルなブラウザベースのユーティリティです。テキストを入力すると、大文字と小文字がランダムにランダムに変換されます。ユニークなテキストエフェクトの作成、大文字と小文字の区別のテスト、多様なテキストパターンの生成に最適です。",
+    "shortDescription": "テキスト内の大文字と小文字をランダムにする",
+    "title": "ケースをランダム化"
+  },
+  "removeDuplicateLines": {
+    "description": "左側の入力フォームにテキストを読み込むと、出力エリアに重複行のないテキストが瞬時に表示されます。強力、無料、そして高速。テキスト行の読み込み – 重複行のないテキスト行を取得",
+    "shortDescription": "テキストから重複行をすべて素早く削除します",
+    "title": "重複行を削除する"
+  },
+  "repeat": {
+    "delimiterDescription": "出力コピーの区切り文字。",
+    "delimiterPlaceholder": "デリミタ",
+    "description": "カスタマイズ可能なセパレーターを使用してテキストを複数回繰り返します。",
+    "inputTitle": "入力テキスト",
+    "numberPlaceholder": "番号",
+    "repeatAmountDescription": "繰り返し回数。",
+    "repetitionsDelimiter": "繰り返し区切り文字",
+    "resultTitle": "繰り返しテキスト",
+    "shortDescription": "テキストを複数回繰り返す",
+    "textRepetitions": "テキストの繰り返し",
+    "title": "テキストの繰り返し",
+    "toolInfo": {
+      "description": "このツールを使用すると、オプションの区切り文字を使用して、特定のテキストを複数回繰り返すことができます。",
+      "title": "テキストの繰り返し"
+    }
+  },
+  "reverse": {
+    "description": "世界で最もシンプルなブラウザベースのテキスト反転ユーティリティ。任意のテキストを入力すると、文字ごとに瞬時に反転します。鏡文字の作成、回文の解析、テキストパターンの操作に最適です。反転時にスペースと特殊文字は保持されます。",
+    "inputTitle": "反転するテキスト",
+    "processMultiLine": "複数行テキストを処理する",
+    "processMultiLineDescription": "各行は独立して反転されます",
+    "resultTitle": "反転テキスト",
+    "reversalOptions": "反転オプション",
+    "shortDescription": "テキストを文字ごとに反転します",
+    "skipEmptyLines": "空行をスキップする",
+    "skipEmptyLinesDescription": "出力から空行は削除されます",
+    "title": "逆行する",
+    "trimWhitespace": "空白をトリムする",
+    "trimWhitespaceDescription": "各行の先頭と末尾の空白を削除します"
+  },
+  "rot13": {
+    "description": "ROT13 暗号を使用してテキストをエンコードまたはデコードします。",
+    "inputTitle": "入力テキスト",
+    "resultTitle": "ROT13の結果",
+    "shortDescription": "ROT13 暗号を使用してテキストをエンコードまたはデコードします。",
+    "title": "ROT13 エンコーダ/デコーダ",
+    "toolInfo": {
+      "description": "ROT13（13桁回転）は、文字をアルファベットの13番目の文字に置き換えるシンプルな文字置換暗号です。ROT13は、古代ローマで開発されたシーザー暗号の特殊なケースです。英語のアルファベットは26文字であるため、ROT13はシーザー暗号の逆であり、つまりROT13を元に戻すには同じアルゴリズムが適用され、エンコードとデコードに同じ操作を使用することができます。",
+      "title": "ROT13とは何ですか?"
+    }
+  },
+  "rotate": {
+    "description": "テキスト内の文字を指定された位置だけ回転します。",
+    "inputTitle": "入力テキスト",
+    "processAsMultiLine": "複数行テキストとして処理する（各行を個別に回転する）",
+    "resultTitle": "回転したテキスト",
+    "rotateLeft": "左に回転",
+    "rotateRight": "右に回転",
+    "rotationOptions": "回転オプション",
+    "shortDescription": "テキスト内の文字を位置によってシフトします。",
+    "stepDescription": "ローテーションするポジションの数",
+    "title": "テキストを回転する",
+    "toolInfo": {
+      "description": "このツールを使用すると、文字列内の文字を指定した数だけ回転させることができます。左または右に回転したり、複数行のテキストを各行ごとに回転させて処理したりできます。文字列の回転は、単純なテキスト変換、パターンの作成、基本的な暗号化技術の実装に役立ちます。",
+      "title": "弦の回転"
+    }
+  },
+  "split": {
+    "charAfterChunkDescription": "各チャンクの後の文字",
+    "charBeforeChunkDescription": "各チャンクの前の文字",
+    "chunksDescription": "出力内の同じ長さのチャンクの数。",
+    "chunksTitle": "チャンクの数を使用する",
+    "description": "世界で最もシンプルなブラウザベースのテキスト分割ユーティリティです。テキストを入力し、区切り文字を指定するだけで複数の部分に分割できます。データ処理、テキスト操作、または大きなテキストブロックから特定のコンテンツを抽出するのに最適です。",
+    "lengthDescription": "各出力チャンクに配置されるシンボルの数。",
+    "lengthTitle": "長さを使って分割する",
+    "outputSeparatorDescription": "分割されたチャンクの間に挿入される文字。(デフォルトでは改行文字 \"\\n\" です。)",
+    "outputSeparatorOptions": "出力セパレーターオプション",
+    "regexDescription": "テキストを複数の部分に分割するために使用される正規表現。\n(デフォルトでは複数のスペース)",
+    "regexTitle": "正規表現を使用して分割する",
+    "resultTitle": "テキスト部分",
+    "shortDescription": "セパレータを使用してテキストを複数の部分に分割する",
+    "splitSeparatorOptions": "分割区切りオプション",
+    "symbolDescription": "テキストを分割するために使用される文字。\n(デフォルトはスペース)",
+    "symbolTitle": "分割にシンボルを使用する",
+    "title": "スプリット"
+  },
+  "statistic": {
+    "characterFrequencyAnalysis": "文字頻度分析",
+    "characterFrequencyAnalysisDescription": "各文字がテキストに何回出現するかを数える",
+    "delimitersOptions": "区切り文字オプション",
+    "description": "テキストを分析し、包括的な統計を生成します。",
+    "includeEmptyLines": "空行を含める",
+    "includeEmptyLinesDescription": "行数を数えるときに空白行を含める",
+    "inputTitle": "入力テキスト",
+    "resultTitle": "テキスト統計",
+    "sentenceDelimitersDescription": "あなたの言語で文を区切るために使用するカスタム文字（コンマで区切る）を入力するか、デフォルトの場合は空白のままにします。",
+    "sentenceDelimitersPlaceholder": "例: .、!、?、...",
+    "shortDescription": "テキストに関する統計情報を取得する",
+    "statisticsOptions": "統計オプション",
+    "title": "テキスト統計",
+    "toolInfo": {
+      "description": "このツールを使用すると、テキストを分析し、文字数、単語数、行数、文字と単語の頻度分析などの包括的な統計を生成できます。",
+      "title": "何ですか {{title}}？"
+    },
+    "wordDelimitersDescription": "単語数をカウントするためのカスタム正規表現を入力するか、デフォルトの場合は空白のままにします。",
+    "wordDelimitersPlaceholder": "例: \\s.,;:!?\"«»()…",
+    "wordFrequencyAnalysis": "単語頻度分析",
+    "wordFrequencyAnalysisDescription": "各単語がテキストに何回出現するかを数える"
+  },
+  "textReplacer": {
+    "description": "テキスト パターンを新しいコンテンツに置き換えます。",
+    "findPatternInText": "テキスト内のこのパターンを見つける",
+    "findPatternUsingRegexp": "正規表現を使ってパターンを見つける",
+    "inputTitle": "置換するテキスト",
+    "newTextPlaceholder": "新しいテキスト",
+    "regexpDescription": "置換する正規表現を入力します。",
+    "replacePatternDescription": "置換に使用するパターンを入力します。",
+    "replaceText": "テキストの置換",
+    "resultTitle": "置換テキスト",
+    "searchPatternDescription": "置換するテキスト パターンを入力します。",
+    "searchText": "検索テキスト",
+    "shortDescription": "コンテンツ内のテキストを素早く置き換える",
+    "title": "テキスト置換",
+    "toolInfo": {
+      "description": "このシンプルなブラウザベースのツールを使えば、コンテンツ内の特定のテキストを簡単に置き換えることができます。テキストを入力し、置き換えたいテキストと置換値を設定するだけで、すぐに更新されたバージョンを取得できます。",
+      "title": "テキスト置換"
+    }
+  },
+  "toMorse": {
+    "dashSymbolDescription": "モールス信号のダッシュに対応する記号。",
+    "description": "テキストをモールス信号に変換します。",
+    "dotSymbolDescription": "モールス信号のドットに対応する記号。",
+    "longSignal": "ロングシグナル",
+    "resultTitle": "モールス信号",
+    "shortDescription": "テキストをモールス信号に素早くエンコード",
+    "shortSignal": "ショートシグナル",
+    "title": "モールス信号への文字列"
+  },
+  "truncate": {
+    "addTruncationIndicator": "切り捨てインジケーターを追加",
+    "charactersPlaceholder": "キャラクター",
+    "description": "テキストを指定された長さに短縮します。",
+    "indicatorDescription": "テキストの末尾（または先頭）に追加する文字。注: 長さにカウントされます。",
+    "inputTitle": "入力テキスト",
+    "leftSideDescription": "テキストの先頭から文字を削除します。",
+    "leftSideTruncation": "左側切り捨て",
+    "lengthAndLines": "長さと線",
+    "lineByLineDescription": "各行を個別に切り捨てます。",
+    "lineByLineTruncating": "行ごとの切り捨て",
+    "maxLengthDescription": "テキストに残す文字数。",
+    "numberPlaceholder": "番号",
+    "resultTitle": "切り捨てられたテキスト",
+    "rightSideDescription": "テキストの末尾から文字を削除します。",
+    "rightSideTruncation": "右側切り捨て",
+    "shortDescription": "指定された長さにテキストを切り捨てる",
+    "suffixAndAffix": "接尾辞と接辞",
+    "title": "テキストを切り捨てる",
+    "toolInfo": {
+      "description": "左側の入力フォームにテキストを読み込むと、右側に切り捨てられたテキストが自動的に表示されます。",
+      "title": "テキストを切り捨てる"
+    },
+    "truncationSide": "切り捨て側"
+  },
+  "uppercase": {
+    "description": "テキストを大文字に変換します。",
+    "inputTitle": "入力テキスト",
+    "resultTitle": "大文字のテキスト",
+    "shortDescription": "テキストを大文字に変換する",
+    "title": "大文字に変換"
+  }
+}

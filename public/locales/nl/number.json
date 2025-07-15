@@ -1,1 +1,89 @@
-{}
+{
+  "arithmeticSequence": {
+    "commonDifferenceDescription": "Veelvoorkomend verschil tussen termen (d)",
+    "description": "Genereer rekenkundige reeksen met aanpasbare parameters.",
+    "firstTermDescription": "Eerste term van de reeks (a₁)",
+    "numberOfTermsDescription": "Aantal te genereren termen (n)",
+    "outputFormat": "Uitvoerformaat",
+    "resultTitle": "Gegenereerde sequentie",
+    "separatorDescription": "Scheidingsteken tussen termen",
+    "sequenceParameters": "Sequentieparameters",
+    "shortDescription": "Genereer rekenkundige reeksen",
+    "title": "Rekenkundige reeks",
+    "toolInfo": {
+      "description": "Een rekenkundige rij is een reeks getallen waarbij het verschil tussen elke opeenvolgende term constant is. Dit constante verschil wordt de gemeenschappelijke afwijking genoemd. Gegeven de eerste term (a₁) en de gemeenschappelijke afwijking (d), kan elke term worden gevonden door de gemeenschappelijke afwijking op te tellen bij de vorige term.",
+      "title": "Wat is een rekenkundige rij?"
+    }
+  },
+  "generate": {
+    "arithmeticSequenceOption": "Optie voor rekenkundige reeks",
+    "description": "Genereer een getallenreeks met aanpasbare parameters.",
+    "numberOfElementsDescription": "Aantal elementen in volgorde.",
+    "resultTitle": "Gegenereerde nummers",
+    "separator": "Scheidingsteken",
+    "separatorDescription": "Scheid elementen in de rekenkundige reeks met dit teken.",
+    "shortDescription": "Genereer willekeurige getallen in opgegeven bereiken",
+    "startSequenceDescription": "Start de reeks vanaf dit nummer.",
+    "stepDescription": "Verhoog elk element met dit bedrag",
+    "title": "Genereren",
+    "toolInfo": {
+      "description": "Met deze tool kunt u een getallenreeks genereren met aanpasbare parameters. U kunt de startwaarde, stapgrootte en het aantal elementen specificeren.",
+      "title": "Genereer getallen"
+    }
+  },
+  "ohmsLaw": {
+    "description": "Bereken spanning, stroom en weerstand",
+    "longDescription": "Deze rekenmachine past de wet van Ohm (V = I × R) toe om een van de drie elektrische parameters te bepalen wanneer de andere twee bekend zijn. De wet van Ohm is een fundamenteel principe in de elektrotechniek dat de relatie beschrijft tussen spanning (V), stroomsterkte (I) en weerstand (R). Deze tool is essentieel voor elektronicahobbyisten, elektrotechnici en studenten die met schakelingen werken om snel onbekende waarden in hun elektrische ontwerpen op te lossen.",
+    "shortDescription": "Bereken spanning, stroom of weerstand in elektrische circuits met behulp van de wet van Ohm",
+    "title": "Wet van Ohm"
+  },
+  "slackline": {
+    "description": "Bereken de spanning in een slackline",
+    "longDescription": "Deze rekenmachine gaat uit van een last in het midden van het touw",
+    "shortDescription": "Bereken de geschatte spanning van een slackline of waslijn. Vertrouw hier niet op voor je veiligheid.",
+    "title": "Slackline-spanning"
+  },
+  "sphereArea": {
+    "description": "Oppervlakte van een bol",
+    "longDescription": "Deze rekenmachine bepaalt de oppervlakte van een bol met behulp van de formule A = 4πr². U kunt de straal invoeren om de oppervlakte te berekenen, of de oppervlakte invoeren om de gewenste straal te berekenen. Deze tool is handig voor studenten meetkunde, ingenieurs die met bolvormige objecten werken en iedereen die berekeningen met bolvormige oppervlakken moet uitvoeren.",
+    "shortDescription": "Bereken het oppervlak van een bol op basis van de straal",
+    "title": "Oppervlakte van een bol"
+  },
+  "sphereVolume": {
+    "description": "Volume van een bol",
+    "longDescription": "Deze rekenmachine berekent het volume van een bol met de formule V = (4/3)πr³. U kunt de straal of diameter invoeren om het volume te berekenen, of het volume invoeren om de gewenste straal te bepalen. Deze tool is nuttig voor studenten, ingenieurs en professionals die met bolvormige objecten werken in vakgebieden zoals natuurkunde, techniek en productie.",
+    "shortDescription": "Bereken het volume van een bol met behulp van de straal of diameter",
+    "title": "Volume van een bol"
+  },
+  "sum": {
+    "description": "Bereken de som van een lijst met getallen. Voer getallen gescheiden door komma's of nieuwe regels in om de som te berekenen.",
+    "extractionTypes": {
+      "delimiter": {
+        "description": "Pas hier het scheidingsteken voor getallen aan. (Standaard een regelafbreking.)",
+        "title": "Nummerscheidingsteken"
+      },
+      "smart": {
+        "description": "Automatische detectie van getallen in de invoer.",
+        "title": "Slimme Som"
+      }
+    },
+    "inputTitle": "Invoer",
+    "numberExtraction": "Nummer extractie",
+    "printRunningSum": "Afdrukken Lopende Som",
+    "printRunningSumDescription": "Geef de som weer terwijl deze stap voor stap wordt berekend.",
+    "resultTitle": "Totaal",
+    "runningSum": "Lopende som",
+    "shortDescription": "Bereken de som van getallen",
+    "title": "Som",
+    "toolInfo": {
+      "description": "Dit is een online browserprogramma waarmee je de som van een aantal getallen kunt berekenen. Je kunt de getallen invoeren, gescheiden door een komma, spatie of een ander teken, inclusief de regelafbreking. Je kunt ook gewoon een fragment tekstuele gegevens plakken met numerieke waarden die je wilt optellen. Het programma zal deze waarden dan extraheren en de som bepalen.",
+      "title": "Wat is een getallensomcalculator?"
+    }
+  },
+  "voltageDropInWire": {
+    "description": "Bereken de retourspanning en het vermogensverlies in een 2-aderige kabel",
+    "longDescription": "Deze calculator helpt bij het bepalen van de spanningsval en het vermogensverlies in een tweeaderige elektrische kabel. Hierbij wordt rekening gehouden met de kabellengte, de draaddikte (dwarsdoorsnede), de materiaalweerstand en de stroomsterkte. De tool berekent de spanningsval heen en terug, de totale weerstand van de kabel en het vermogen dat als warmte wordt afgegeven. Dit is met name handig voor elektrotechnici, elektriciens en hobbyisten bij het ontwerpen van elektrische systemen om ervoor te zorgen dat de spanningsniveaus bij de belasting binnen acceptabele grenzen blijven.",
+    "shortDescription": "Bereken spanningsval en vermogensverlies in elektrische kabels op basis van lengte, materiaal en stroom",
+    "title": "Spanningsval in de kabel bij retour"
+  }
+}

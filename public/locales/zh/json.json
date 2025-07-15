@@ -1,1 +1,62 @@
-{}
+{
+  "escapeJson": {
+    "description": "转义 JSON 字符串中的特殊字符。将 JSON 数据转换为正确的转义格式，以便安全传输或存储。",
+    "shortDescription": "转义 JSON 中的特殊字符",
+    "title": "转义 JSON"
+  },
+  "jsonToXml": {
+    "description": "将 JSON 数据转换为 XML 格式。将结构化的 JSON 对象转换为格式良好的 XML 文档。",
+    "shortDescription": "将 JSON 转换为 XML 格式",
+    "title": "JSON 到 XML"
+  },
+  "minify": {
+    "description": "从 JSON 中删除所有不必要的空格。",
+    "inputTitle": "输入 JSON",
+    "resultTitle": "最小化 JSON",
+    "shortDescription": "通过删除空格来缩小 JSON",
+    "title": "最小化 JSON",
+    "toolInfo": {
+      "description": "JSON 压缩是指在保持 JSON 数据有效性的同时，从中移除所有不必要的空格字符的过程。这包括移除 JSON 正确解析所需的空格、换行符和缩进。压缩可以减小 JSON 数据的大小，使其在保持完全相同的数据结构和值的同时，更高效地存储和传输。",
+      "title": "什么是 JSON 最小化？"
+    }
+  },
+  "prettify": {
+    "description": "使用适当的缩进和间距来格式化 JSON。",
+    "indentation": "缩进",
+    "inputTitle": "输入 JSON",
+    "resultTitle": "美化 JSON",
+    "shortDescription": "格式化并美化 JSON 代码",
+    "title": "美化 JSON",
+    "toolInfo": {
+      "description": "此工具允许您使用适当的缩进和间距格式化 JSON 数据，使其更具可读性且更易于使用。",
+      "title": "美化 JSON"
+    },
+    "useSpaces": "使用空格",
+    "useSpacesDescription": "使用空格缩进输出",
+    "useTabs": "使用标签",
+    "useTabsDescription": "使用制表符缩进输出。"
+  },
+  "stringify": {
+    "description": "将 JavaScript 对象转换为 JSON 字符串格式。将数据结构序列化为 JSON 字符串以便存储或传输。",
+    "shortDescription": "将对象转换为 JSON 字符串",
+    "title": "字符串化 JSON"
+  },
+  "tsvToJson": {
+    "description": "将 TSV（制表符分隔值）数据转换为 JSON 格式。将表格数据转换为结构化的 JSON 对象。",
+    "shortDescription": "将 TSV 转换为 JSON 格式",
+    "title": "TSV 到 JSON"
+  },
+  "validateJson": {
+    "description": "检查 JSON 是否有效且格式正确。",
+    "inputTitle": "输入 JSON",
+    "invalidJson": "❌ {{error}}",
+    "resultTitle": "验证结果",
+    "shortDescription": "验证 JSON 代码是否存在错误",
+    "title": "验证 JSON",
+    "toolInfo": {
+      "description": "JSON（JavaScript 对象表示法）是一种轻量级数据交换格式。JSON 验证可确保数据结构符合 JSON 标准。有效的 JSON 对象必须具备以下特征：- 属性名称用双引号括起来。- 正确匹配的花括号 {}。- 最后一个键值对后没有尾随逗号。- 对象和数组的嵌套正确。此工具会检查输入的 JSON 并提供反馈，以帮助识别和修复常见错误。",
+      "title": "什么是 JSON 验证？"
+    },
+    "validJson": "✅ 有效的 JSON"
+  }
+}

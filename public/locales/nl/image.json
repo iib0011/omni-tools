@@ -1,1 +1,98 @@
-{}
+{
+  "changeColors": {
+    "description": "Wereld",
+    "shortDescription": "Snel kleuren in een afbeelding verwisselen",
+    "title": "Kleuren in afbeelding wijzigen"
+  },
+  "changeOpacity": {
+    "description": "Pas de transparantie van je afbeeldingen eenvoudig aan. Upload je afbeelding, gebruik de schuifbalk om de gewenste dekking in te stellen tussen 0 (volledig transparant) en 1 (volledig ondoorzichtig) en download de aangepaste afbeelding.",
+    "shortDescription": "Pas de transparantie van afbeeldingen aan",
+    "title": "Afbeeldingsdekking wijzigen"
+  },
+  "compress": {
+    "description": "Verklein de bestandsgrootte van een afbeelding, maar behoud de kwaliteit.",
+    "inputTitle": "Invoerafbeelding",
+    "resultTitle": "Gecomprimeerde afbeelding",
+    "shortDescription": "Comprimeer afbeeldingen om de bestandsgrootte te verkleinen, maar zorg er wel voor dat de kwaliteit redelijk blijft.",
+    "title": "Afbeelding comprimeren"
+  },
+  "compressPng": {
+    "description": "Dit is een programma dat PNG-afbeeldingen comprimeert. Zodra u uw PNG-afbeelding in het invoerveld plakt, comprimeert het programma deze en toont het resultaat in het uitvoerveld. In de opties kunt u het compressieniveau aanpassen en de oude en nieuwe bestandsgroottes van de afbeeldingen vinden.",
+    "shortDescription": "Snel een PNG comprimeren",
+    "title": "PNG comprimeren"
+  },
+  "convertJgpToPng": {
+    "description": "Converteer je JPG-afbeeldingen snel naar PNG. Importeer je PNG-afbeelding in de editor aan de linkerkant.",
+    "shortDescription": "Converteer uw JPG-afbeeldingen snel naar PNG",
+    "title": "JPG naar PNG converteren"
+  },
+  "convertToJpg": {
+    "description": "Converteer verschillende afbeeldingsformaten (PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW) naar JPG met aanpasbare instellingen voor de kwaliteit en achtergrondkleur.",
+    "shortDescription": "Converteer afbeeldingen naar JPG met kwaliteitscontrole",
+    "title": "Afbeeldingen naar JPG converteren"
+  },
+  "createTransparent": {
+    "description": "Wereld",
+    "shortDescription": "Snel een afbeelding transparant maken",
+    "title": "Transparante PNG maken"
+  },
+  "crop": {
+    "description": "Snijd afbeeldingen bij om ongewenste delen te verwijderen.",
+    "inputTitle": "Invoerafbeelding",
+    "resultTitle": "Bijgesneden afbeelding",
+    "shortDescription": "Snel afbeeldingen bijsnijden.",
+    "title": "Afbeelding bijsnijden"
+  },
+  "editor": {
+    "description": "Geavanceerde beeldbewerker met tools voor bijsnijden, roteren, annoteren, kleuren aanpassen en watermerken toevoegen. Bewerk je afbeeldingen met professionele tools rechtstreeks in je browser.",
+    "shortDescription": "Bewerk afbeeldingen met geavanceerde tools en functies",
+    "title": "Afbeeldingseditor"
+  },
+  "imageToText": {
+    "description": "Extraheer tekst uit afbeeldingen (JPG, PNG) met behulp van optische tekenherkenning (OCR).",
+    "shortDescription": "Tekst uit afbeeldingen extraheren met OCR.",
+    "title": "Afbeelding naar tekst (OCR)"
+  },
+  "qrCode": {
+    "description": "Genereer QR-codes voor verschillende gegevenstypen: URL, tekst, e-mail, telefoon, sms, wifi, vCard en meer.",
+    "shortDescription": "Maak aangepaste QR-codes voor verschillende gegevensformaten.",
+    "title": "QR-codegenerator"
+  },
+  "removeBackground": {
+    "description": "Wereld",
+    "shortDescription": "Achtergronden automatisch uit afbeeldingen verwijderen",
+    "title": "Achtergrond uit afbeelding verwijderen"
+  },
+  "resize": {
+    "description": "Afbeeldingen aanpassen naar verschillende afmetingen.",
+    "dimensionType": "Dimensietype",
+    "heightDescription": "Hoogte (in pixels)",
+    "inputTitle": "Invoerafbeelding",
+    "maintainAspectRatio": "Beeldverhouding behouden",
+    "maintainAspectRatioDescription": "Behoud de originele beeldverhouding van de afbeelding.",
+    "percentage": "Percentage",
+    "percentageDescription": "Percentage van de oorspronkelijke grootte (bijv. 50 voor halve grootte, 200 voor dubbele grootte)",
+    "resizeByPercentage": "Formaat wijzigen met percentage",
+    "resizeByPercentageDescription": "U kunt de grootte wijzigen door een percentage van de oorspronkelijke grootte op te geven.",
+    "resizeByPixels": "Formaat wijzigen met pixels",
+    "resizeByPixelsDescription": "U kunt het formaat wijzigen door de afmetingen in pixels op te geven.",
+    "resizeMethod": "Methode voor het wijzigen van de grootte",
+    "resultTitle": "Afbeelding met gewijzigd formaat",
+    "setHeight": "Hoogte instellen",
+    "setHeightDescription": "Geef de hoogte op in pixels en bereken de breedte op basis van de beeldverhouding.",
+    "setWidth": "Breedte instellen",
+    "setWidthDescription": "Geef de breedte op in pixels en bereken de hoogte op basis van de beeldverhouding.",
+    "shortDescription": "U kunt de grootte van afbeeldingen eenvoudig aanpassen.",
+    "title": "Afbeelding formaat wijzigen",
+    "toolInfo": {
+      "description": "Met deze tool kun je de grootte van JPG-, PNG-, SVG- of GIF-afbeeldingen aanpassen. Je kunt de grootte aanpassen door de afmetingen in pixels of percentages op te geven, met opties om de oorspronkelijke beeldverhouding te behouden.",
+      "title": "Afbeelding formaat wijzigen"
+    },
+    "widthDescription": "Breedte (in pixels)"
+  },
+  "rotate": {
+    "description": "Draai een afbeelding met een bepaalde hoek.",
+    "shortDescription": "Draai een afbeelding eenvoudig.",
+    "title": "Afbeelding roteren"
+  }
+}
