@@ -144,7 +144,7 @@ const categoriesConfig: {
 export const filterTools = (
   tools: DefinedTool[],
   query: string,
-  t: TFunction<I18nNamespaces>
+  t: TFunction<I18nNamespaces[]>
 ): DefinedTool[] => {
   if (!query) return tools;
 

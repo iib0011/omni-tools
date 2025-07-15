@@ -1,7 +1,7 @@
 import ToolLayout from '../components/ToolLayout';
 import React, { JSXElementConstructor, LazyExoticComponent } from 'react';
 import { IconifyIcon } from '@iconify/react';
-import { FullI18nKey } from '../i18n';
+import { FullI18nKey, validNamespaces } from '../i18n';
 import { useTranslation } from 'react-i18next';
 
 export interface ToolMeta {
@@ -63,7 +63,7 @@ export const defineTool = (
     shortDescription: i18n.shortDescription,
     keywords,
     component: function ToolComponent() {
-      const { t } = useTranslation();
+      const { t } = useTranslation(validNamespaces);
       return (
         <ToolLayout
           icon={icon}

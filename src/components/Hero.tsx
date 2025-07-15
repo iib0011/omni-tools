@@ -18,7 +18,7 @@ import { useNavigate } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import { getToolCategoryTitle } from '@utils/string';
 import { useTranslation } from 'react-i18next';
-import { validNamespaces } from '../i18n';
+import { FullI18nKey, validNamespaces } from '../i18n';
 import {
   getBookmarkedToolPaths,
   isBookmarked,
@@ -42,7 +42,7 @@ const GroupItems = styled('ul')({
 });
 
 type ToolInfo = {
-  label: string;
+  label: FullI18nKey;
   url: string;
 };
 
@@ -58,39 +58,39 @@ export default function Hero() {
 
   const exampleTools: ToolInfo[] = [
     {
-      label: t('translation:hero.examples.createTransparentImage'),
+      label: 'translation:hero.examples.createTransparentImage',
       url: '/image-generic/create-transparent'
     },
     {
-      label: t('translation:hero.examples.prettifyJson'),
+      label: 'translation:hero.examples.prettifyJson',
       url: '/json/prettify'
     },
     {
-      label: t('translation:hero.examples.changeGifSpeed'),
+      label: 'translation:hero.examples.changeGifSpeed',
       url: '/gif/change-speed'
     },
     {
-      label: t('translation:hero.examples.sortList'),
+      label: 'translation:hero.examples.sortList',
       url: '/list/sort'
     },
     {
-      label: t('translation:hero.examples.compressPng'),
+      label: 'translation:hero.examples.compressPng',
       url: '/png/compress-png'
     },
     {
-      label: t('translation:hero.examples.splitText'),
+      label: 'translation:hero.examples.splitText',
       url: '/string/split'
     },
     {
-      label: t('translation:hero.examples.splitPdf'),
+      label: 'translation:hero.examples.splitPdf',
       url: '/pdf/split-pdf'
     },
     {
-      label: t('translation:hero.examples.trimVideo'),
+      label: 'translation:hero.examples.trimVideo',
       url: '/video/trim'
     },
     {
-      label: t('translation:hero.examples.calculateNumberSum'),
+      label: 'translation:hero.examples.calculateNumberSum',
       url: '/number/sum'
     }
   ];
@@ -117,7 +117,7 @@ export default function Hero() {
           if (tool === undefined) {
             return [];
           }
-          return [{ ...tool, label: t(tool.label) }];
+          return [tool];
         })
       : exampleTools;
 
@@ -256,7 +256,7 @@ export default function Hero() {
               }}
             >
               <Stack direction={'row'} spacing={1} alignItems={'center'}>
-                <Typography textAlign={'center'}>{tool.label}</Typography>
+                <Typography textAlign={'center'}>{t(tool.label)}</Typography>
                 {bookmarkedToolPaths.length > 0 && (
                   <IconButton
                     onClick={(e) => {
