@@ -2,7 +2,7 @@ import i18n, { ParseKeys } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-http-backend';
 
-export const validNamespaces: string[] = [
+export const validNamespaces: (string | 'translation')[] = [
   'string',
   'number',
   'video',

@@ -151,7 +151,7 @@ export default function Hero() {
         renderGroup={(params) => {
           return (
             <li key={params.key}>
-              <GroupHeader>{getToolCategoryTitle(params.group)}</GroupHeader>
+              <GroupHeader>{getToolCategoryTitle(params.group, t)}</GroupHeader>
               <GroupItems>{params.children}</GroupItems>
             </li>
           );

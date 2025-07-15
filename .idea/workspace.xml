@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: create-tool.mjs to use i18n object">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: sync locales">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/fr/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/fr/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/hi/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/hi/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ToolHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToolLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToolLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/i18n/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Categories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools-by-category/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/string.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/string.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +348,7 @@
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\categories" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.i18n:pull">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="generatePassword" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -412,9 +422,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Vitest.generatePassword" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.i18n:sync" />
+        <item itemvalue="Vitest.generatePassword" />
         <item itemvalue="npm.i18n:push" />
         <item itemvalue="npm.i18n:pull" />
       </list>
@@ -530,22 +540,6 @@
       <workItem from="1752403829295" duration="13253000" />
       <workItem from="1752493585622" duration="11629000" />
       <workItem from="1752507105323" duration="9008000" />
-    </task>
-    <task id="LOCAL-00187" summary="fix: tests">
-      <option name="closed" value="true" />
-      <created>1743691399769</created>
-      <option name="number" value="00187" />
-      <option name="presentableId" value="LOCAL-00187" />
-      <option name="project" value="LOCAL" />
-      <updated>1743691399769</updated>
-    </task>
-    <task id="LOCAL-00188" summary="chore: uninstall @jspawn/ghostscript-wasm">
-      <option name="closed" value="true" />
-      <created>1743691471368</created>
-      <option name="number" value="00188" />
-      <option name="presentableId" value="LOCAL-00188" />
-      <option name="project" value="LOCAL" />
-      <updated>1743691471368</updated>
     </task>
     <task id="LOCAL-00189" summary="feat: protect pdf">
       <option name="closed" value="true" />
@@ -923,7 +917,23 @@
       <option name="project" value="LOCAL" />
       <updated>1752586932190</updated>
     </task>
-    <option name="localTasksCounter" value="236" />
+    <task id="LOCAL-00236" summary="fix: show Use this tool only if medium breakpoint">
+      <option name="closed" value="true" />
+      <created>1752591387066</created>
+      <option name="number" value="00236" />
+      <option name="presentableId" value="LOCAL-00236" />
+      <option name="project" value="LOCAL" />
+      <updated>1752591387066</updated>
+    </task>
+    <task id="LOCAL-00237" summary="chore: sync locales">
+      <option name="closed" value="true" />
+      <created>1752596436284</created>
+      <option name="number" value="00237" />
+      <option name="presentableId" value="LOCAL-00237" />
+      <option name="project" value="LOCAL" />
+      <updated>1752596436284</updated>
+    </task>
+    <option name="localTasksCounter" value="238" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -970,8 +980,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: png icon" />
-    <MESSAGE value="fix: remove xml viewer" />
     <MESSAGE value="feat: convert to jpg" />
     <MESSAGE value="feat: edit image" />
     <MESSAGE value="fix: favicons" />
@@ -995,7 +1003,9 @@
     <MESSAGE value="fix: translations" />
     <MESSAGE value="chore: delete unused i18n json files" />
     <MESSAGE value="fix: create-tool.mjs to use i18n object" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: create-tool.mjs to use i18n object" />
+    <MESSAGE value="fix: show Use this tool only if medium breakpoint" />
+    <MESSAGE value="chore: sync locales" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: sync locales" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

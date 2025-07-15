@@ -43,7 +43,7 @@ export default function ToolLayout({
   const toolDescription: string = t(i18n.description);
 
   const otherCategoryTools =
-    getToolsByCategory()
+    getToolsByCategory(t)
       .find((category) => category.type === type)
       ?.tools.filter((tool) => t(tool.name) !== toolTitle)
       .map((tool) => ({
@@ -75,10 +75,10 @@ export default function ToolLayout({
         {children}
         <Separator backgroundColor="#5581b5" margin="50px" />
         <AllTools
-          title={t('toolLayout.allToolsTitle', {
+          title={t('translation:toolLayout.allToolsTitle', {
             type: capitalizeFirstLetter(
-              getToolsByCategory().find((category) => category.type === type)!
-                .rawTitle
+              getToolsByCategory(t).find((category) => category.type === type)!
+                .title
             )
           })}
           toolCards={otherCategoryTools}

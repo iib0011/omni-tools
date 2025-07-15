@@ -11,6 +11,7 @@ import { isBookmarked, toggleBookmarked } from '@utils/bookmark';
 import IconButton from '@mui/material/IconButton';
 import { useTranslation } from 'react-i18next';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { validNamespaces } from '../i18n';
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: 'white',
@@ -94,6 +95,7 @@ export default function ToolHeader({
   path
 }: ToolHeaderProps) {
   const theme = useTheme();
+  const { t } = useTranslation();
   const [bookmarked, setBookmarked] = useState<boolean>(isBookmarked(path));
   return (
     <Box my={4}>
@@ -101,7 +103,7 @@ export default function ToolHeader({
         items={[
           { title: 'All tools', link: '/' },
           {
-            title: getToolsByCategory().find(
+            title: getToolsByCategory(t).find(
               (category) => category.type === type
             )!.rawTitle,
             link: '/categories/' + type

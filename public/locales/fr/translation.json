@@ -58,7 +58,7 @@
       "description": "Outils pour travailler avec des images PNG : convertissez des PNG en JPG, créez des PNG transparents, modifiez les couleurs PNG, recadrez, faites pivoter, redimensionnez des PNG et bien plus encore.",
       "title": "Outils PNG"
     },
-    "seeAll": "Tout voir {{title}}",
+    "seeAll": "Voir les {{title}}",
     "string": {
       "description": "Outils pour travailler avec du texte : convertissez du texte en images, recherchez et remplacez du texte, divisez du texte en fragments, joignez des lignes de texte, répétez du texte et bien plus encore.",
       "title": "Outils de texte"
@@ -220,7 +220,7 @@
     "seeExamples": "Voir des exemples"
   },
   "toolLayout": {
-    "allToolsTitle": "Tous {{type}} Outils"
+    "allToolsTitle": "Tous les {{type}}"
   },
   "toolMultiFileResult": {
     "copied": "Fichier copié",

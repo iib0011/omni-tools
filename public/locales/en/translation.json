@@ -220,7 +220,7 @@
     "seeExamples": "See Examples"
   },
   "toolLayout": {
-    "allToolsTitle": "All {{type}} Tools"
+    "allToolsTitle": "All {{type}}"
   },
   "toolMultiFileResult": {
     "copied": "File copied",
