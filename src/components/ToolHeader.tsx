@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import { isBookmarked, toggleBookmarked } from '@utils/bookmark';
 import IconButton from '@mui/material/IconButton';
 import { useTranslation } from 'react-i18next';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: 'white',
@@ -30,6 +31,8 @@ interface ToolHeaderProps {
 function ToolLinks() {
   const { t } = useTranslation();
   const [examplesVisible, setExamplesVisible] = useState(false);
+  const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.down('md'));
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -50,16 +53,18 @@ function ToolLinks() {
   }
   return (
     <Grid container spacing={2} mt={1}>
-      <Grid item md={12} lg={6}>
-        <StyledButton
-          sx={{ backgroundColor: 'background.paper' }}
-          fullWidth
-          variant="outlined"
-          onClick={() => scrollToElement('tool')}
-        >
-          Use This Tool
-        </StyledButton>
-      </Grid>
+      {isMd && (
+        <Grid item md={12} lg={6}>
+          <StyledButton
+            sx={{ backgroundColor: 'background.paper' }}
+            fullWidth
+            variant="outlined"
+            onClick={() => scrollToElement('tool')}
+          >
+            Use This Tool
+          </StyledButton>
+        </Grid>
+      )}
       {examplesVisible && (
         <Grid item md={12} lg={6}>
           <StyledButton
