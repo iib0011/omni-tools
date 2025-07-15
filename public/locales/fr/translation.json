@@ -1,8 +1,4 @@
 {
-  "app": {
-    "language": "Langue",
-    "title": "OmniTools"
-  },
   "audio": {
     "changeSpeed": {
       "description": "Modifier la vitesse de lecture des fichiers audio. Accélérer ou ralentir le son tout en conservant la hauteur.",
@@ -58,7 +54,7 @@
       "description": "Outils pour travailler avec des images PNG : convertissez des PNG en JPG, créez des PNG transparents, modifiez les couleurs PNG, recadrez, faites pivoter, redimensionnez des PNG et bien plus encore.",
       "title": "Outils PNG"
     },
-    "seeAll": "Voir les {{title}}",
+    "seeAll": "Tout voir {{title}}",
     "string": {
       "description": "Outils pour travailler avec du texte : convertissez du texte en images, recherchez et remplacez du texte, divisez du texte en fragments, joignez des lignes de texte, répétez du texte et bien plus encore.",
       "title": "Outils de texte"
@@ -220,7 +216,7 @@
     "seeExamples": "Voir des exemples"
   },
   "toolLayout": {
-    "allToolsTitle": "Tous les {{type}}"
+    "allToolsTitle": "Tous {{type}} Outils"
   },
   "toolMultiFileResult": {
     "copied": "Fichier copié",

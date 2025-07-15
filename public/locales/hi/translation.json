@@ -1,8 +1,4 @@
 {
-  "app": {
-    "language": "भाषा",
-    "title": "ओमनी टूल्स"
-  },
   "audio": {
     "changeSpeed": {
       "description": "ऑडियो फ़ाइलों की प्लेबैक गति बदलें। पिच बनाए रखते हुए ऑडियो को तेज़ या धीमा करें।",
@@ -220,7 +216,7 @@
     "seeExamples": "उदाहरण देखें"
   },
   "toolLayout": {
-    "allToolsTitle": "सभी {{type}}"
+    "allToolsTitle": "सभी {{type}} टूल्स"
   },
   "toolMultiFileResult": {
     "copied": "फ़ाइल कॉपी की गई",
