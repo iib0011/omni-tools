@@ -117,7 +117,7 @@ export default function Hero() {
           if (tool === undefined) {
             return [];
           }
-          return [tool];
+          return [{ ...tool, label: t(tool.label) }];
         })
       : exampleTools;
 
@@ -189,9 +189,9 @@ export default function Hero() {
               <Stack direction={'row'} spacing={2} alignItems={'center'}>
                 <Icon fontSize={20} icon={option.icon} />
                 <Box>
-                  <Typography fontWeight={'bold'}>{option.name}</Typography>
+                  <Typography fontWeight={'bold'}>{t(option.name)}</Typography>
                   <Typography fontSize={12}>
-                    {option.shortDescription}
+                    {t(option.shortDescription)}
                   </Typography>
                 </Box>
               </Stack>
