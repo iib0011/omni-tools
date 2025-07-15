@@ -17,11 +17,13 @@ import { FullI18nKey } from '../i18n';
 export default function ToolLayout({
   children,
   icon,
+  i18n,
   type,
-  i18n
+  fullPath
 }: {
   icon?: IconifyIcon | string;
   type: ToolCategory;
+  fullPath: string;
   children: ReactNode;
   i18n?: {
     name: FullI18nKey;
@@ -68,6 +70,7 @@ export default function ToolLayout({
           description={toolDescription}
           icon={icon}
           type={type}
+          path={fullPath}
         />
         {children}
         <Separator backgroundColor="#5581b5" margin="50px" />

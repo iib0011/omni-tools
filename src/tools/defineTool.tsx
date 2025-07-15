@@ -65,7 +65,12 @@ export const defineTool = (
     component: function ToolComponent() {
       const { t } = useTranslation();
       return (
-        <ToolLayout icon={icon} type={basePath} i18n={i18n}>
+        <ToolLayout
+          icon={icon}
+          type={basePath}
+          i18n={i18n}
+          fullPath={`${basePath}/${path}`}
+        >
           <Component
             title={t(i18n.name)}
             longDescription={
