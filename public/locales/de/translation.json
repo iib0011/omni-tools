@@ -1,1 +1,250 @@
-{}
+{
+  "audio": {
+    "changeSpeed": {
+      "description": "Ändern Sie die Wiedergabegeschwindigkeit von Audiodateien. Beschleunigen oder verlangsamen Sie die Wiedergabe, ohne die Tonhöhe zu verändern.",
+      "name": "Audiogeschwindigkeit ändern",
+      "shortDescription": "Ändern Sie die Geschwindigkeit von Audiodateien"
+    },
+    "extractAudio": {
+      "description": "Extrahieren Sie die Audiospur aus einer Videodatei und speichern Sie sie als separate Audiodatei im gewünschten Format (AAC, MP3, WAV).",
+      "name": "Audio extrahieren",
+      "shortDescription": "Extrahieren Sie Audio aus Videodateien (MP4, MOV usw.) in AAC, MP3 oder WAV."
+    }
+  },
+  "baseFileInput": {
+    "copyFailed": "Kopieren fehlgeschlagen: {{error}}",
+    "dropFileHere": "Lassen Sie Ihre {{type}} Hier",
+    "fileCopied": "Datei kopiert",
+    "selectFileDescription": "Klicken Sie hier, um eine {{type}} Drücken Sie auf Ihrem Gerät Strg+V, um eine {{type}} aus der Zwischenablage oder ziehen Sie eine Datei per Drag & Drop vom Desktop"
+  },
+  "categories": {
+    "audio": {
+      "description": "Tools für die Arbeit mit Audio – Audio aus Video extrahieren, Audiogeschwindigkeit anpassen, mehrere Audiodateien zusammenführen und vieles mehr.",
+      "title": "Audio-Tools"
+    },
+    "csv": {
+      "description": "Tools zum Arbeiten mit CSV-Dateien – konvertieren Sie CSV in verschiedene Formate, bearbeiten Sie CSV-Daten, validieren Sie die CSV-Struktur und verarbeiten Sie CSV-Dateien effizient.",
+      "title": "CSV-Tools"
+    },
+    "gif": {
+      "description": "Tools zum Arbeiten mit GIF-Animationen – transparente GIFs erstellen, GIF-Frames extrahieren, Text zu GIFs hinzufügen, zuschneiden, drehen, GIFs umkehren und vieles mehr.",
+      "title": "GIF-Tools"
+    },
+    "image-generic": {
+      "description": "Tools zum Arbeiten mit Bildern – komprimieren, Größe ändern, zuschneiden, in JPG konvertieren, drehen, Hintergrund entfernen und vieles mehr.",
+      "title": "Bildwerkzeuge"
+    },
+    "json": {
+      "description": "Tools für die Arbeit mit JSON-Datenstrukturen – Verschönern und Minimieren von JSON-Objekten, Verflachen von JSON-Arrays, Stringifizieren von JSON-Werten, Analysieren von Daten und vieles mehr",
+      "title": "JSON-Tools"
+    },
+    "list": {
+      "description": "Tools zum Arbeiten mit Listen – Sortieren, Umkehren, Zufallssortieren von Listen, Suchen eindeutiger und doppelter Listenelemente, Ändern der Trennzeichen von Listenelementen und vieles mehr.",
+      "title": "Tools auflisten"
+    },
+    "number": {
+      "description": "Tools für die Arbeit mit Zahlen – Zahlenfolgen generieren, Zahlen in Wörter und Wörter in Zahlen umwandeln, sortieren, runden, Zahlen faktorisieren und vieles mehr.",
+      "title": "Zahlenwerkzeuge"
+    },
+    "pdf": {
+      "description": "Tools zum Arbeiten mit PDF-Dateien – Text aus PDFs extrahieren, PDFs in andere Formate konvertieren, PDFs bearbeiten und vieles mehr.",
+      "title": "PDF-Tools"
+    },
+    "png": {
+      "description": "Tools zum Arbeiten mit PNG-Bildern – konvertieren Sie PNGs in JPGs, erstellen Sie transparente PNGs, ändern Sie PNG-Farben, beschneiden Sie, drehen Sie, ändern Sie die Größe von PNGs und vieles mehr.",
+      "title": "PNG-Tools"
+    },
+    "seeAll": "Alles sehen {{title}}",
+    "string": {
+      "description": "Tools zum Arbeiten mit Text – Text in Bilder umwandeln, Text suchen und ersetzen, Text in Fragmente aufteilen, Textzeilen verbinden, Text wiederholen und vieles mehr.",
+      "title": "Textwerkzeuge"
+    },
+    "time": {
+      "description": "Tools zum Arbeiten mit Zeit und Datum – Zeitunterschiede berechnen, zwischen Zeitzonen umrechnen, Datumsangaben formatieren, Datumssequenzen generieren und vieles mehr.",
+      "title": "Zeitwerkzeuge"
+    },
+    "try": "Versuchen {{title}}",
+    "video": {
+      "description": "Tools zum Arbeiten mit Videos – Extrahieren Sie Frames aus Videos, erstellen Sie GIFs aus Videos, konvertieren Sie Videos in verschiedene Formate und vieles mehr.",
+      "title": "Video-Tools"
+    },
+    "xml": {
+      "description": "Tools zum Arbeiten mit XML-Datenstrukturen – Viewer, Beautifier, Validator und vieles mehr",
+      "title": "XML-Tools"
+    }
+  },
+  "csv": {
+    "findIncompleteCsvRecords": {
+      "description": "Laden Sie einfach Ihre CSV-Datei im untenstehenden Formular hoch. Das Tool prüft automatisch, ob in Zeilen und Spalten Werte fehlen. In den Tool-Optionen können Sie das Eingabedateiformat anpassen (Trennzeichen, Anführungszeichen und Kommentarzeichen festlegen). Zusätzlich können Sie die Prüfung auf leere Werte aktivieren, leere Zeilen überspringen und die Anzahl der Fehlermeldungen in der Ausgabe begrenzen.",
+      "name": "Unvollständige CSV-Datensätze finden",
+      "shortDescription": "Finden Sie schnell Zeilen und Spalten in CSV, in denen Werte fehlen."
+    }
+  },
+  "hero": {
+    "brand": "OmniTools",
+    "description": "Steigern Sie Ihre Produktivität mit OmniTools, dem ultimativen Toolkit für schnelles Arbeiten! Greifen Sie direkt von Ihrem Browser aus auf Tausende benutzerfreundliche Dienstprogramme zum Bearbeiten von Bildern, Texten, Listen und Daten zu.",
+    "examples": {
+      "calculateNumberSum": "Zahlensumme berechnen",
+      "changeGifSpeed": "GIF-Geschwindigkeit ändern",
+      "compressPng": "PNG komprimieren",
+      "createTransparentImage": "Erstellen Sie ein transparentes Bild",
+      "prettifyJson": "JSON verschönern",
+      "sortList": "Sortieren einer Liste",
+      "splitPdf": "PDF teilen",
+      "splitText": "Einen Text teilen",
+      "trimVideo": "Video zuschneiden"
+    },
+    "searchPlaceholder": "Alle Tools durchsuchen",
+    "title": "Erledigen Sie Dinge schnell mit"
+  },
+  "inputFooter": {
+    "clear": "Klar",
+    "copyToClipboard": "In die Zwischenablage kopieren",
+    "importFromFile": "Aus Datei importieren"
+  },
+  "list": {
+    "group": {
+      "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Gruppieren von Listenelementen. Geben Sie Ihre Liste ein und legen Sie Gruppierungskriterien fest, um Elemente in logische Gruppen zu ordnen. Ideal zum Kategorisieren von Daten, Organisieren von Informationen oder Erstellen strukturierter Listen. Unterstützt benutzerdefinierte Trennzeichen und verschiedene Gruppierungsoptionen.",
+      "name": "Gruppe",
+      "shortDescription": "Gruppieren Sie Listenelemente nach gemeinsamen Eigenschaften"
+    },
+    "reverse": {
+      "description": "Diese einfache browserbasierte Anwendung druckt alle Listenelemente rückwärts. Die Eingabeelemente können durch ein beliebiges Symbol getrennt werden. Sie können auch das Trennzeichen der umgekehrten Listenelemente ändern.",
+      "name": "Umkehren",
+      "shortDescription": "Schnelles Umkehren einer Liste"
+    },
+    "sort": {
+      "description": "Dies ist eine sehr einfache browserbasierte Anwendung, die Elemente in einer Liste sortiert und in auf- oder absteigender Reihenfolge anordnet. Sie können die Elemente alphabetisch, numerisch oder nach Länge sortieren. Sie können auch doppelte und leere Elemente entfernen sowie einzelne Elemente mit Leerzeichen kürzen. Sie können die Elemente der Eingabeliste durch ein beliebiges Trennzeichen oder alternativ durch einen regulären Ausdruck trennen. Zusätzlich können Sie ein neues Trennzeichen für die sortierte Ausgabeliste erstellen.",
+      "name": "Sortieren",
+      "shortDescription": "Schnelles Sortieren einer Liste"
+    }
+  },
+  "navbar": {
+    "buyMeACoffee": "Kauf mir einen Kaffee",
+    "home": "Heim",
+    "tools": "Werkzeuge"
+  },
+  "number": {
+    "generate": {
+      "description": "Berechnen Sie schnell eine Liste von Ganzzahlen in Ihrem Browser. Geben Sie dazu einfach die erste Ganzzahl an, ändern Sie den Wert und die Gesamtzahl in den Optionen unten. Das Dienstprogramm generiert dann die entsprechende Anzahl Ganzzahlen.",
+      "name": "Zahlen generieren",
+      "shortDescription": "Berechnen Sie schnell eine Liste von Ganzzahlen in Ihrem Browser"
+    },
+    "sum": {
+      "description": "Dies ist eine sehr einfache browserbasierte Anwendung zum Summieren von Zahlen. Die eingegebenen Zahlen können durch ein beliebiges Symbol getrennt werden. Sie können auch das Trennzeichen der summierten Zahlen ändern.",
+      "name": "Summenzahlen",
+      "shortDescription": "Schnelles Summieren einer Zahlenliste"
+    }
+  },
+  "numericInputWithUnit": {
+    "unit": "Einheit"
+  },
+  "pdf": {
+    "compressPdf": {
+      "description": "Reduzieren Sie die PDF-Dateigröße bei gleichbleibender Qualität mit Ghostscript",
+      "name": "PDF komprimieren",
+      "shortDescription": "Komprimieren Sie PDF-Dateien sicher in Ihrem Browser"
+    },
+    "mergePdf": {
+      "description": "Kombinieren Sie mehrere PDF-Dateien zu einem einzigen Dokument.",
+      "name": "PDF zusammenführen",
+      "shortDescription": "Mehrere PDF-Dateien zu einem einzigen Dokument zusammenführen"
+    },
+    "pdfToEpub": {
+      "description": "Wandeln Sie PDF-Dokumente in EPUB-Dateien um, um eine bessere E-Reader-Kompatibilität zu erzielen.",
+      "name": "PDF zu EPUB",
+      "shortDescription": "Konvertieren Sie PDF-Dateien in das EPUB-Format"
+    },
+    "protectPdf": {
+      "description": "Fügen Sie Ihren PDF-Dateien sicher in Ihrem Browser einen Passwortschutz hinzu",
+      "name": "PDF schützen",
+      "shortDescription": "PDF-Dateien sicher mit einem Passwort schützen"
+    },
+    "splitPdf": {
+      "description": "Extrahieren Sie bestimmte Seiten aus einer PDF-Datei mithilfe von Seitenzahlen oder Bereichen (z. B. 1,5-8).",
+      "name": "PDF teilen",
+      "shortDescription": "Extrahieren Sie bestimmte Seiten aus einer PDF-Datei"
+    }
+  },
+  "resultFooter": {
+    "copy": "In die Zwischenablage kopieren",
+    "download": "Herunterladen"
+  },
+  "string": {
+    "createPalindrome": {
+      "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Erstellen von Palindromen aus beliebigem Text. Geben Sie Text ein und verwandeln Sie ihn sofort in ein Palindrom, das vorwärts und rückwärts gleich gelesen wird. Ideal für Wortspiele, das Erstellen symmetrischer Textmuster oder das Erkunden sprachlicher Kuriositäten.",
+      "name": "Palindrom erstellen",
+      "shortDescription": "Erstellen Sie Text, der vorwärts und rückwärts gleich gelesen wird"
+    },
+    "palindrome": {
+      "description": "Das weltweit einfachste browserbasierte Tool zur Überprüfung von Palindromen. Überprüfen Sie sofort, ob sich Ihr Text vorwärts und rückwärts gleich liest. Ideal für Worträtsel, linguistische Analysen oder die Validierung symmetrischer Textmuster. Unterstützt verschiedene Trennzeichen und die Erkennung mehrteiliger Palindrome.",
+      "name": "Palindrom",
+      "shortDescription": "Überprüfen Sie, ob der Text vorwärts und rückwärts gleich gelesen wird"
+    },
+    "repeat": {
+      "description": "Mit diesem Tool können Sie einen bestimmten Text mit einem optionalen Trennzeichen mehrmals wiederholen.",
+      "name": "Text wiederholen",
+      "shortDescription": "Text mehrmals wiederholen"
+    },
+    "reverse": {
+      "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Umkehren von Text. Geben Sie beliebigen Text ein und lassen Sie ihn sofort Zeichen für Zeichen umkehren. Ideal zum Erstellen von Spiegeltext, Analysieren von Palindromen oder zum Experimentieren mit Textmustern. Leerzeichen und Sonderzeichen bleiben beim Umkehren erhalten.",
+      "name": "Umkehren",
+      "shortDescription": "Kehren Sie jeden Text Zeichen für Zeichen um"
+    },
+    "toMorse": {
+      "description": "Das weltweit einfachste browserbasierte Dienstprogramm zur Konvertierung von Text in Morsecode. Laden Sie Ihren Text in das Eingabeformular links und Sie erhalten sofort Morsecode im Ausgabebereich. Leistungsstark, kostenlos und schnell. Text laden – Morsecode erhalten.",
+      "name": "Zeichenfolge zu Morse",
+      "shortDescription": "Text schnell in Morse kodieren"
+    },
+    "uppercase": {
+      "description": "Das weltweit einfachste browserbasierte Dienstprogramm zur Konvertierung von Text in Großbuchstaben. Geben Sie einfach Ihren Text ein, und er wird automatisch in Großbuchstaben umgewandelt. Ideal für Überschriften, Hervorhebungen oder die Standardisierung des Textformats. Unterstützt verschiedene Textformate und behält Sonderzeichen bei.",
+      "name": "Großbuchstaben",
+      "shortDescription": "Text in Großbuchstaben umwandeln"
+    }
+  },
+  "toolExamples": {
+    "subtitle": "Klicken Sie hier, um es auszuprobieren!",
+    "title": "{{title}} Beispiele"
+  },
+  "toolFileResult": {
+    "copied": "Datei kopiert",
+    "copyFailed": "Kopieren fehlgeschlagen: {{error}}",
+    "loading": "Wird geladen... Dies kann einen Moment dauern.",
+    "result": "Ergebnis"
+  },
+  "toolHeader": {
+    "seeExamples": "Beispiele ansehen"
+  },
+  "toolLayout": {
+    "allToolsTitle": "Alle {{type}}"
+  },
+  "toolMultiFileResult": {
+    "copied": "Datei kopiert",
+    "copyFailed": "Kopieren fehlgeschlagen: {{error}}",
+    "loading": "Wird geladen... Dies kann einen Moment dauern.",
+    "result": "Ergebnis"
+  },
+  "toolMultipleAudioInput": {
+    "inputTitle": "Eingang {{type}}",
+    "noFilesSelected": "Keine Dateien ausgewählt"
+  },
+  "toolMultiplePdfInput": {
+    "inputTitle": "Eingang {{type}}",
+    "noFilesSelected": "Keine Dateien ausgewählt"
+  },
+  "toolOptions": {
+    "title": "Werkzeugoptionen"
+  },
+  "toolTextInput": {
+    "copied": "Text kopiert",
+    "copyFailed": "Kopieren fehlgeschlagen: {{error}}",
+    "input": "Eingabetext",
+    "placeholder": "Geben Sie hier Ihren Text ein..."
+  },
+  "toolTextResult": {
+    "copied": "Text kopiert",
+    "copyFailed": "Kopieren fehlgeschlagen: {{error}}",
+    "loading": "Wird geladen... Dies kann einen Moment dauern.",
+    "result": "Ergebnis"
+  }
+}

@@ -28,6 +28,9 @@ i18n
   .init({
     lng: localStorage.getItem('lang') || 'en',
     fallbackLng: 'en',
+    interpolation: {
+      escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+    },
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json'
     }

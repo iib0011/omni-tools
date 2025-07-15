@@ -75,7 +75,7 @@ export default function ToolLayout({
         {children}
         <Separator backgroundColor="#5581b5" margin="50px" />
         <AllTools
-          title={t('translation:toolLayout.allToolsTitle', {
+          title={t('translation:toolLayout.allToolsTitle', '', {
             type: capitalizeFirstLetter(
               getToolsByCategory(t).find((category) => category.type === type)!
                 .title

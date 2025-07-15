@@ -1,1 +1,100 @@
-{}
+{
+  "checkLeapYears": {
+    "description": "Prüfen Sie, ob ein Jahr ein Schaltjahr ist, und erhalten Sie Informationen zum Schaltjahr.",
+    "inputTitle": "Jahr eingeben",
+    "resultTitle": "Schaltjahrergebnis",
+    "shortDescription": "Prüfen, ob ein Jahr ein Schaltjahr ist",
+    "title": "Schaltjahre prüfen",
+    "toolInfo": {
+      "description": "Ein Schaltjahr ist ein Jahr mit einem zusätzlichen Tag (29. Februar), um das Kalenderjahr mit dem astronomischen Jahr zu synchronisieren. Schaltjahre gibt es alle vier Jahre, mit Ausnahme der Jahre, die durch 100, aber nicht durch 400 teilbar sind.",
+      "title": "Was ist ein Schaltjahr?"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "Stundennamen hinzufügen",
+    "addHoursNameDescription": "Hängen Sie die Zeichenfolge „Stunden“ an die Ausgabewerte an",
+    "description": "Wandeln Sie Tage mit anpassbaren Optionen in Stunden um.",
+    "hoursName": "Stunden Name",
+    "shortDescription": "Tage in Stunden umrechnen",
+    "title": "Tage in Stunden umrechnen",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie Tage in Stunden umrechnen. Sie können Tage als Zahlen oder mit Einheiten eingeben, und das Tool rechnet sie in Stunden um. Sie können den Ausgabewerten auch das Suffix „Stunden“ anhängen.",
+      "title": "Tage in Stunden umrechnen"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "Tagesnamen hinzufügen",
+    "addDaysNameDescription": "Hängen Sie die Zeichenfolge „Tage“ an die Ausgabewerte an",
+    "daysName": "Tage Name",
+    "description": "Wandeln Sie Stunden mit anpassbaren Optionen in Tage um.",
+    "shortDescription": "Stunden in Tage umrechnen",
+    "title": "Stunden in Tage umrechnen",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie Stunden in Tage umrechnen. Sie können Stunden als Zahlen oder mit Einheiten eingeben, und das Tool rechnet sie in Tage um. Sie können den Ausgabewerten auch das Suffix „Tage“ anhängen.",
+      "title": "Stunden in Tage umrechnen"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "Polsterung hinzufügen",
+    "addPaddingDescription": "Fügen Sie Stunden, Minuten und Sekunden mit Nullen aufgefüllt hinzu.",
+    "description": "Konvertiert Sekunden in ein lesbares Zeitformat (Stunden:Minuten:Sekunden). Geben Sie die Anzahl der Sekunden ein, um die formatierte Zeit zu erhalten.",
+    "shortDescription": "Sekunden in das Zeitformat konvertieren",
+    "timePadding": "Zeitauffüllung",
+    "title": "Sekunden in Zeit umrechnen",
+    "toolInfo": {
+      "title": "Was ist ein {{title}}?"
+    }
+  },
+  "convertTimeToSeconds": {
+    "description": "Konvertieren Sie die formatierte Zeit (HH:MM:SS) in Sekunden.",
+    "inputTitle": "Eingabezeit",
+    "resultTitle": "Sekunden",
+    "shortDescription": "Konvertieren Sie das Zeitformat in Sekunden",
+    "title": "Zeit in Sekunden umrechnen",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie formatierte Zeitzeichenfolgen (HH:MM:SS) in Sekunden umwandeln. Es ist nützlich für die Berechnung von Dauern und Zeitintervallen.",
+      "title": "Zeit in Sekunden umrechnen"
+    }
+  },
+  "crontabGuru": {
+    "description": "Generieren und verstehen Sie Cron-Ausdrücke. Erstellen Sie Cron-Zeitpläne für automatisierte Aufgaben und Systemjobs.",
+    "shortDescription": "Cron-Ausdrücke generieren und verstehen",
+    "title": "Crontab Guru"
+  },
+  "timeBetweenDates": {
+    "description": "Berechnen Sie die Zeitdifferenz zwischen zwei Daten. Ermitteln Sie die genaue Dauer in Tagen, Stunden, Minuten und Sekunden.",
+    "endDate": "Enddatum",
+    "endDateTime": "Enddatum und -zeit",
+    "endTime": "Endzeit",
+    "endTimezone": "Endzeitzone",
+    "shortDescription": "Berechnen Sie die Zeit zwischen zwei Daten",
+    "startDate": "Startdatum",
+    "startDateTime": "Startdatum und -zeit",
+    "startTime": "Startzeit",
+    "startTimezone": "Startzeitzone",
+    "title": "Zeit zwischen den Terminen",
+    "toolInfo": {
+      "description": "Berechnen Sie die genaue Zeitdifferenz zwischen zwei Datums- und Uhrzeitangaben, mit Unterstützung für verschiedene Zeitzonen. Dieses Tool bietet eine detaillierte Aufschlüsselung der Zeitdifferenz in verschiedenen Einheiten (Jahre, Monate, Tage, Stunden, Minuten und Sekunden).",
+      "title": "Zeit zwischen Daten-Rechner"
+    }
+  },
+  "truncateClockTime": {
+    "description": "Kürzen Sie die Uhrzeit, um Sekunden oder Minuten zu entfernen. Runden Sie die Zeit auf die nächste Stunde, Minute oder ein benutzerdefiniertes Intervall.",
+    "printDroppedComponents": "Drucken gelöschter Komponenten",
+    "shortDescription": "Kürzen Sie die Uhrzeit auf die angegebene Genauigkeit",
+    "timePadding": "Zeitauffüllung",
+    "title": "Uhrzeit kürzen",
+    "toolInfo": {
+      "title": "Was ist ein {{title}}?"
+    },
+    "truncateMinutesAndSeconds": "Minuten und Sekunden kürzen",
+    "truncateMinutesAndSecondsDescription": "Lassen Sie beides weg – die Minuten- und Sekundenkomponenten jeder Uhrzeit.",
+    "truncateOnlySeconds": "Nur Sekunden abschneiden",
+    "truncateOnlySecondsDescription": "Entfernen Sie die Sekundenkomponente aus jeder Uhrzeit.",
+    "truncationSide": "Abschneideseite",
+    "useZeroPadding": "Null-Padding verwenden",
+    "zeroPaddingDescription": "Sorgen Sie dafür, dass alle Zeitkomponenten immer zweistellig sind.",
+    "zeroPrintDescription": "Die weggelassenen Teile werden als Nullwerte „00“ angezeigt.",
+    "zeroPrintTruncatedParts": "Abgeschnittene Teile ohne Druck"
+  }
+}
