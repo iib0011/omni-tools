@@ -18,12 +18,20 @@ const tryParseJSON = (
     const data = JSON.parse(fixedJson);
     return { valid: true, data };
   } catch (error) {
+    const errorMessage =
+      error instanceof SyntaxError ? error.message : 'Invalid JSON format';
+    // Extract line and column info from the error message if available
+    const match = errorMessage.match(/at line (\d+) column (\d+)/);
+    if (match) {
+      const [, line, column] = match;
+      return {
+        valid: false,
+        error: `${errorMessage}\nLocation: Line ${line}, Column ${column}`
+      };
+    }
     return {
       valid: false,
-      error:
-        error instanceof SyntaxError
-          ? `Invalid JSON: ${error.message}`
-          : 'Invalid JSON format'
+      error: errorMessage
     };
   }
 };
@@ -42,14 +50,14 @@ export const compareJson = (
 
   // Handle parsing errors
   if (!parsed1.valid || !parsed2.valid) {
-    throw new Error(
-      [
-        parsed1.valid ? null : parsed1.error,
-        parsed2.valid ? null : parsed2.error
-      ]
-        .filter(Boolean)
-        .join('\n')
-    );
+    const errors = [];
+    if (!parsed1.valid) {
+      errors.push(`First JSON: ${parsed1.error}`);
+    }
+    if (!parsed2.valid) {
+      errors.push(`Second JSON: ${parsed2.error}`);
+    }
+    throw new Error(errors.join('\n\n'));
   }
 
   // Compare the valid JSON objects

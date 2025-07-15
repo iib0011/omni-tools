@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import ToolContent from '@components/ToolContent';
-import ToolTextInput from '@components/input/ToolTextInput';
+import LineNumberInput from '@components/input/LineNumberInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { compareJson } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
@@ -122,7 +122,7 @@ export default function JsonComparison({ title }: ToolComponentProps) {
           <StyledGrid container spacing={2}>
             <Grid item xs={4}>
               <StyledInputWrapper>
-                <ToolTextInput
+                <LineNumberInput
                   title="First JSON"
                   value={input1}
                   onChange={handleInput1Change}
@@ -132,7 +132,7 @@ export default function JsonComparison({ title }: ToolComponentProps) {
             </Grid>
             <Grid item xs={4}>
               <StyledInputWrapper>
-                <ToolTextInput
+                <LineNumberInput
                   title="Second JSON"
                   value={input2}
                   onChange={handleInput2Change}
