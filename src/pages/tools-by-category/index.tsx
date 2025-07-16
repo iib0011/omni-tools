@@ -54,7 +54,7 @@ export default function ToolsByCategory() {
   return (
     <Box sx={{ backgroundColor: 'background.default' }}>
       <Helmet>
-        <title>{`${rawTitle} Tools`}</title>
+        <title>{rawTitle}</title>
       </Helmet>
       <Box
         padding={{ xs: 1, md: 3, lg: 5 }}
