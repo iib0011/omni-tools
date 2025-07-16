@@ -131,8 +131,10 @@ export default function CsvToJson({ title }: ToolComponentProps) {
         setResult(jsonResult);
       } catch (error) {
         setResult(
-          `Error: ${
-            error instanceof Error ? error.message : 'Invalid CSV format'
+          `${t('csvToJson.error')}: ${
+            error instanceof Error
+              ? error.message
+              : t('csvToJson.invalidCsvFormat')
           }`
         );
       }
@@ -211,9 +213,8 @@ export default function CsvToJson({ title }: ToolComponentProps) {
         }
       ]}
       toolInfo={{
-        title: 'What Is a CSV to JSON Converter?',
-        description:
-          'This tool transforms Comma Separated Values (CSV) files to JavaScript Object Notation (JSON) data structures. It supports various CSV formats with customizable delimiters, quote characters, and comment symbols. The converter can treat the first row as headers, skip empty lines, and automatically detect data types like numbers and booleans. The resulting JSON can be used for data migration, backups, or as input for other applications.'
+        title: t('csvToJson.toolInfo.title'),
+        description: t('csvToJson.toolInfo.description')
       }}
     />
   );

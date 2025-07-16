@@ -123,9 +123,9 @@ export default function Duplicate({ title }: ToolComponentProps) {
         );
       } catch (error) {
         if (error instanceof Error) {
-          setResult(`Error: ${error.message}`);
+          setResult(`${t('duplicate.error')}: ${error.message}`);
         } else {
-          setResult('An unknown error occurred');
+          setResult(t('duplicate.unknownError'));
         }
       }
     }
