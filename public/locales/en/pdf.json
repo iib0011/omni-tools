@@ -52,7 +52,7 @@
     }
   },
   "pdfToEpub": {
-    "description": "Transform PDF documents into EPUB files for better e-reader compatibility.', icon: 'material-symbols:import-contacts', component: lazy(() => import('./index')), keywords: ['pdf', 'epub', 'convert', 'ebook'], path: 'pdf-to-epub', i18n: { name: 'pdf:pdfToEpub.title', description: 'pdf:pdfToEpub.description",
+    "description": "Transform PDF documents into EPUB files for better e-reader compatibility.",
     "shortDescription": "Convert PDF files to EPUB format",
     "title": "PDF to EPUB"
   },
@@ -109,5 +109,10 @@
       "description": "This tool allows you to extract specific pages from a PDF document. You can specify individual pages or ranges of pages to extract.",
       "title": "Split PDF"
     }
+  },
+  "pdfToWord": {
+    "name": "PDF to Word",
+    "description": "Convert PDF documents to editable Word files (.docx)",
+    "shortDescription": "Convert PDF to Word"
   }
 }
