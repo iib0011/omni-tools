@@ -105,6 +105,11 @@ jobs:
       - name: Create archives
         run: |
           tar -cvzf release.tar.gz -C dist $(ls dist)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release.tar.gz
+          path: release.tar.gz
+          retention-days: 30
       - name: Upload Binaries to Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: svenstaro/upload-release-action@v2
