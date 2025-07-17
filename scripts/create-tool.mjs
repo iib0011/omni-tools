@@ -258,4 +258,30 @@ indexContent.splice(
   )} } from './${toolName}/meta';`
 );
 writeFile(toolsIndex, indexContent.join('\n'));
+
+// Update locale JSON file
+const localeFilePath = join(
+  currentDirname,
+  '..',
+  'public',
+  'locales',
+  'en',
+  `${i18nNamespace}.json`
+);
+
+let localeData = {};
+if (fs.existsSync(localeFilePath)) {
+  const localeContent = await readFile(localeFilePath, { encoding: 'utf-8' });
+  localeData = JSON.parse(localeContent);
+}
+
+localeData[toolNameCamelCase] = {
+  title: toolNameTitleCase,
+  description: '',
+  shortDescription: '',
+  longDescription: ''
+};
+
+// Write updated locale file
+await writeFile(localeFilePath, JSON.stringify(localeData, null, 2));
 console.log(`Added import in: ${toolsIndex}`);
