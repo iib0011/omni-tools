@@ -58,5 +58,10 @@
       "title": "What is JSON Validation?"
     },
     "validJson": "✅ Valid JSON"
+  },
+  "comparison": {
+    "title": "Compare JSON",
+    "description": "Compare two JSON objects to identify differences in structure and values.",
+    "shortDescription": "Find differences between two JSON objects"
   }
 }
