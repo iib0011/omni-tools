@@ -109,5 +109,11 @@
       "description": "Mit diesem Tool können Sie bestimmte Seiten aus einem PDF-Dokument extrahieren. Sie können einzelne Seiten oder Seitenbereiche zum Extrahieren angeben.",
       "title": "PDF teilen"
     }
+  },
+  "pdfToWord": {
+    "name": "PDF zu Word",
+    "description": "Konvertieren Sie PDF-Dateien in Word-Dokumente zur einfachen Bearbeitung und Formatierung mit höherer Genauigkeit.",
+    "shortDescription": "PDF-Dateien in Word-Dokumente konvertieren",
+    "longDescription": "Konvertieren Sie PDF-Dokumente in bearbeitbare Word-Dateien (.docx) unter Beibehaltung von Formatierung, Bildern und Layout. Die gesamte Verarbeitung erfolgt sicher in Ihrem Browser, um die Privatsphäre zu gewährleisten."
   }
 }
