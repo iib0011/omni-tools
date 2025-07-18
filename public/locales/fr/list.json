@@ -1,1 +1,208 @@
-{}
+{
+  "duplicate": {
+    "concatenate": "Concatener",
+    "concatenateDescription": "Concaténer les copies (si cette option n'est pas cochée, les éléments seront entrelacés)",
+    "copyDescription": "Nombre de copies (fractionnable)",
+    "description": "L'utilitaire de duplication d'éléments de liste le plus simple au monde, accessible depuis un navigateur. Saisissez votre liste et spécifiez des critères de duplication pour créer des copies d'éléments. Idéal pour l'expansion de données, les tests ou la création de modèles répétitifs.",
+    "duplicationOptions": "Options de Duplication",
+    "examples": {
+      "fractional": {
+        "description": "Cet exemple montre comment dupliquer une liste avec un nombre fractionnaire de copies.",
+        "title": "duplication fractionnaire"
+      },
+      "interweave": {
+        "description": "Cet exemple montre comment entrelacer des éléments au lieu de les concaténer.",
+        "title": "Éléments entrelacés"
+      },
+      "reverse": {
+        "description": "Cet exemple montre comment dupliquer une liste dans l’ordre inverse.",
+        "title": "Duplication inversée"
+      },
+      "simple": {
+        "description": "Cet exemple montre comment dupliquer une liste de mots.",
+        "title": "Duplication simple"
+      }
+    },
+    "inputTitle": "Liste d'entrées",
+    "joinSeparatorDescription": "Séparateur pour joindre la liste dupliquée",
+    "resultTitle": "Liste dupliquée",
+    "reverse": "Inverse",
+    "reverseDescription": "Inverser les éléments dupliqués",
+    "shortDescription": "Dupliquer les éléments de la liste avec des critères spécifiés",
+    "splitByRegex": "Diviser par expression régulière",
+    "splitBySymbol": "Diviser par symbole",
+    "splitOptions": "Options de fractionnement",
+    "splitSeparatorDescription": "Séparateur pour diviser la liste",
+    "title": "Double",
+    "toolInfo": {
+      "description": "Cet outil vous permet de dupliquer des éléments d'une liste. Vous pouvez spécifier le nombre de copies (y compris les valeurs fractionnaires), contrôler si les éléments sont concaténés ou entrelacés, et même inverser les éléments dupliqués. Il est utile pour créer des motifs répétés, générer des données de test ou étendre des listes au contenu prévisible.",
+      "title": "Duplication de liste"
+    }
+  },
+  "findMostPopular": {
+    "description": "L'utilitaire de recherche par navigateur le plus simple au monde pour trouver les éléments les plus populaires d'une liste. Saisissez votre liste et obtenez instantanément les éléments qui apparaissent le plus fréquemment. Idéal pour l'analyse de données, l'identification de tendances ou la recherche d'éléments communs.",
+    "shortDescription": "Trouver les éléments les plus fréquemment utilisés",
+    "title": "Trouver les plus populaires"
+  },
+  "findUnique": {
+    "caseSensitiveItems": "Éléments sensibles à la casse",
+    "caseSensitiveItemsDescription": "Affichez les éléments avec une casse différente comme éléments uniques dans la liste.",
+    "delimiterDescription": "Définissez un symbole de délimitation ou une expression régulière.",
+    "description": "L'utilitaire de recherche d'éléments uniques dans une liste, le plus simple au monde, est disponible sur navigateur. Saisissez votre liste et obtenez instantanément toutes les valeurs uniques, sans doublons. Idéal pour le nettoyage des données, la déduplication ou la recherche d'éléments distincts.",
+    "findAbsolutelyUniqueItems": "Trouvez des articles absolument uniques",
+    "findAbsolutelyUniqueItemsDescription": "Afficher uniquement les éléments de la liste qui existent en un seul exemplaire.",
+    "inputListDelimiter": "Délimiteur de liste d'entrée",
+    "inputTitle": "Liste d'entrées",
+    "outputListDelimiter": "Délimiteur de liste de sortie",
+    "resultTitle": "Articles uniques",
+    "shortDescription": "Trouver des éléments uniques dans une liste",
+    "skipEmptyItems": "Ignorer les éléments vides",
+    "skipEmptyItemsDescription": "N'incluez pas les éléments de liste vides dans la sortie.",
+    "title": "Trouvez l'unique",
+    "trimItems": "Éléments de la liste de finition",
+    "trimItemsDescription": "Supprimez les espaces de début et de fin avant de comparer les éléments.",
+    "uniqueItemOptions": "Options d'articles uniques"
+  },
+  "group": {
+    "deleteEmptyItems": "Supprimer les éléments vides",
+    "deleteEmptyItemsDescription": "Ignorez les éléments vides et ne les incluez pas dans les groupes.",
+    "description": "L'utilitaire de regroupement d'éléments de liste le plus simple au monde, accessible depuis un navigateur. Saisissez votre liste et spécifiez des critères de regroupement pour organiser les éléments en groupes logiques. Idéal pour catégoriser des données, organiser des informations ou créer des listes structurées. Prend en charge les séparateurs personnalisés et diverses options de regroupement.",
+    "emptyItemsAndPadding": "Éléments vides et remplissage",
+    "groupNumberDescription": "Nombre d'éléments dans un groupe",
+    "groupSeparatorDescription": "Caractère séparateur de groupe",
+    "groupSizeAndSeparators": "Taille du groupe et séparateurs",
+    "inputItemSeparator": "Séparateur d'éléments d'entrée",
+    "inputTitle": "Liste d'entrée",
+    "itemSeparatorDescription": "Caractère séparateur d'éléments",
+    "leftWrapDescription": "Symbole d'enroulement gauche du groupe.",
+    "padNonFullGroups": "Groupes non complets de Pad",
+    "padNonFullGroupsDescription": "Remplissez les groupes non complets avec un élément personnalisé (saisissez ci-dessous).",
+    "paddingCharDescription": "Utilisez ce caractère ou cet objet pour compléter les groupes non complets.",
+    "resultTitle": "Articles groupés",
+    "rightWrapDescription": "Symbole d'enveloppement droit du groupe.",
+    "shortDescription": "Regrouper les éléments de la liste par propriétés communes",
+    "splitOperators": {
+      "regex": {
+        "description": "Délimitez les éléments de la liste d’entrée avec une expression régulière.",
+        "title": "Utiliser une expression régulière pour le fractionnement"
+      },
+      "symbol": {
+        "description": "Délimitez les éléments de la liste d'entrée avec un caractère.",
+        "title": "Utiliser un symbole pour le fractionnement"
+      }
+    },
+    "splitSeparatorDescription": "Définissez un symbole de délimitation ou une expression régulière.",
+    "title": "Groupe"
+  },
+  "reverse": {
+    "description": "Cette application très simple, basée sur un navigateur, imprime tous les éléments d'une liste à l'envers. Les éléments saisis peuvent être séparés par n'importe quel symbole et vous pouvez également modifier le séparateur des éléments inversés.",
+    "inputTitle": "Liste d'entrée",
+    "itemSeparator": "Séparateur d'éléments",
+    "itemSeparatorDescription": "Définissez un symbole de délimitation ou une expression régulière.",
+    "outputListOptions": "Options de la liste de sortie",
+    "outputSeparatorDescription": "Séparateur d'éléments de liste de sortie.",
+    "resultTitle": "Liste inversée",
+    "shortDescription": "Inverser rapidement une liste",
+    "splitOperators": {
+      "regex": {
+        "description": "Délimitez les éléments de la liste d’entrée avec une expression régulière.",
+        "title": "Utiliser une expression régulière pour le fractionnement"
+      },
+      "symbol": {
+        "description": "Délimitez les éléments de la liste d'entrée avec un caractère.",
+        "title": "Utiliser un symbole pour le fractionnement"
+      }
+    },
+    "splitterMode": "Mode séparateur",
+    "title": "Inverse",
+    "toolInfo": {
+      "description": "Cet utilitaire permet d'inverser l'ordre des éléments d'une liste. Il divise d'abord la liste d'entrée en éléments individuels, puis les parcourt du dernier au premier, en affichant chaque élément dans la sortie au cours de l'itération. La liste d'entrée peut contenir tout ce qui peut être représenté sous forme de données textuelles, notamment des chiffres, des nombres, des chaînes de caractères, des mots, des phrases, etc. Le séparateur d'éléments d'entrée peut également être une expression régulière. Par exemple, l'expression régulière /[;,]/ permet d'utiliser des éléments séparés par des virgules ou des points-virgules. Les délimiteurs des éléments d'entrée et de sortie sont personnalisables dans les options. Par défaut, les listes d'entrée et de sortie sont séparées par des virgules. Incroyable !",
+      "title": "Qu'est-ce qu'un inverseur de liste ?"
+    }
+  },
+  "rotate": {
+    "description": "L'utilitaire de rotation des éléments de liste le plus simple au monde, basé sur un navigateur. Saisissez votre liste et spécifiez le degré de rotation pour décaler les éléments d'un nombre de positions spécifié. Idéal pour la manipulation de données, les décalages circulaires ou la réorganisation des listes.",
+    "shortDescription": "Faire pivoter les éléments de la liste selon des positions spécifiées",
+    "title": "Tourner"
+  },
+  "shuffle": {
+    "delimiterDescription": "Définissez un symbole de délimitation ou une expression régulière.",
+    "description": "L'utilitaire de navigation le plus simple au monde pour mélanger les éléments d'une liste. Saisissez votre liste et obtenez instantanément une version aléatoire avec les éléments dans un ordre aléatoire. Idéal pour varier, tester le caractère aléatoire ou mélanger des données ordonnées.",
+    "inputListSeparator": "Séparateur de liste d'entrée",
+    "inputTitle": "Liste d'entrée",
+    "joinSeparatorDescription": "Utilisez ce séparateur dans la liste aléatoire.",
+    "outputLengthDescription": "Afficher autant d'éléments aléatoires",
+    "resultTitle": "Liste mélangée",
+    "shortDescription": "Randomiser l'ordre des éléments de la liste",
+    "shuffledListLength": "Longueur de la liste mélangée",
+    "shuffledListSeparator": "Séparateur de liste mélangée",
+    "title": "Mélanger"
+  },
+  "sort": {
+    "caseSensitive": "Tri sensible à la casse",
+    "caseSensitiveDescription": "Trier les majuscules et les minuscules séparément. Les majuscules précèdent les minuscules dans une liste ascendante. (Fonctionne uniquement en mode de tri alphabétique.)",
+    "description": "L'utilitaire de tri de listes le plus simple au monde, basé sur un navigateur. Saisissez votre liste et spécifiez des critères de tri pour organiser les éléments par ordre croissant ou décroissant. Idéal pour l'organisation de données, le traitement de texte ou la création de listes ordonnées.",
+    "inputItemSeparator": "Séparateur d'éléments d'entrée",
+    "inputTitle": "Liste d'entrée",
+    "joinSeparatorDescription": "Utilisez ce symbole comme jointure entre les éléments d'une liste triée.",
+    "orderDescription": "Sélectionnez un ordre de tri.",
+    "orderOptions": {
+      "decreasing": "Ordre décroissant",
+      "increasing": "Ordre croissant"
+    },
+    "removeDuplicates": "Supprimer les doublons",
+    "removeDuplicatesDescription": "Supprimer les éléments de liste en double.",
+    "resultTitle": "Liste triée",
+    "shortDescription": "Trier les éléments de la liste dans l'ordre spécifié",
+    "sortMethod": "Méthode de tri",
+    "sortMethodDescription": "Sélectionnez une méthode de tri.",
+    "sortOptions": {
+      "alphabetic": "Trier par ordre alphabétique",
+      "length": "Trier par longueur",
+      "numeric": "Trier numériquement"
+    },
+    "sortedItemProperties": "Propriétés des éléments triés",
+    "splitOperators": {
+      "regex": {
+        "description": "Délimitez les éléments de la liste d’entrée avec une expression régulière.",
+        "title": "Utiliser une expression régulière pour le fractionnement"
+      },
+      "symbol": {
+        "description": "Délimitez les éléments de la liste d'entrée avec un caractère.",
+        "title": "Utiliser un symbole pour le fractionnement"
+      }
+    },
+    "splitSeparatorDescription": "Définissez un symbole de délimitation ou une expression régulière.",
+    "title": "Trier"
+  },
+  "truncate": {
+    "description": "L'utilitaire de tronquage de listes le plus simple au monde, accessible depuis un navigateur. Saisissez votre liste et spécifiez le nombre maximal d'éléments à conserver. Idéal pour le traitement de données, la gestion de listes ou la limitation de la longueur du contenu.",
+    "shortDescription": "Tronquer la liste au nombre spécifié d'éléments",
+    "title": "Tronquer"
+  },
+  "unwrap": {
+    "description": "L'utilitaire de dépliage de listes le plus simple au monde, basé sur un navigateur. Saisissez votre liste dépliée et spécifiez des critères de dépliage pour aplatir les éléments organisés. Idéal pour le traitement de données, la manipulation de texte ou l'extraction de contenu de listes structurées.",
+    "shortDescription": "Décompresser les éléments de la liste à partir du format structuré",
+    "title": "Déballer"
+  },
+  "wrap": {
+    "description": "Ajoutez du texte avant et après chaque élément de la liste.",
+    "inputTitle": "Liste d'entrées",
+    "joinSeparatorDescription": "Séparateur pour joindre la liste enveloppée",
+    "leftTextDescription": "Texte à ajouter avant chaque élément",
+    "removeEmptyItems": "Supprimer les éléments vides",
+    "resultTitle": "Liste enveloppée",
+    "rightTextDescription": "Texte à ajouter après chaque élément",
+    "shortDescription": "Envelopper les éléments de la liste avec des critères spécifiés",
+    "splitByRegex": "Diviser par expression régulière",
+    "splitBySymbol": "Diviser par symbole",
+    "splitOptions": "Options de fractionnement",
+    "splitSeparatorDescription": "Séparateur pour diviser la liste",
+    "title": "Envelopper",
+    "toolInfo": {
+      "description": "Cet outil vous permet d'ajouter du texte avant et après chaque élément d'une liste. Vous pouvez spécifier un texte différent pour les côtés gauche et droit, et contrôler le traitement de la liste. Il est utile pour ajouter des guillemets, des crochets ou d'autres éléments de mise en forme aux éléments d'une liste, préparer des données pour différents formats ou créer du texte structuré.",
+      "title": "Enveloppement de liste"
+    },
+    "wrapOptions": "Options d'enveloppement"
+  }
+}

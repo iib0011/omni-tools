@@ -1,1 +1,261 @@
-{}
+{
+  "base64": {
+    "decode": "Base64-Dekodierung",
+    "description": "Kodieren oder dekodieren Sie Text mit der Base64-Kodierung.",
+    "encode": "Base64-Kodierung",
+    "inputTitle": "Eingabedaten",
+    "optionsTitle": "Base64-Optionen",
+    "resultTitle": "Ergebnis",
+    "shortDescription": "Kodieren oder dekodieren Sie Daten mit Base64.",
+    "title": "Base64-Encoder/Decoder",
+    "toolInfo": {
+      "description": "Base64 ist ein Kodierungsschema, das Daten im ASCII-String-Format darstellt, indem es sie in eine Radix-64-Darstellung übersetzt. Obwohl es zur Kodierung von Strings verwendet werden kann, wird es üblicherweise zur Kodierung binärer Daten für die Übertragung über Medien verwendet, die für die Verarbeitung von Textdaten ausgelegt sind.",
+      "title": "Was ist Base64?"
+    }
+  },
+  "censor": {
+    "description": "Dienstprogramm zum Zensieren von Wörtern in Texten. Laden Sie Ihren Text in das Eingabeformular links, geben Sie alle Schimpfwörter in den Optionen an, und Sie erhalten sofort zensierten Text im Ausgabebereich., longDescription: 'Mit diesem Online-Tool können Sie bestimmte Wörter in jedem Text zensieren. Sie können eine Liste unerwünschter Wörter (z. B. Schimpfwörter oder Geheimwörter) angeben, die das Programm durch alternative Wörter ersetzt und einen lesbaren Text erstellt. Die Wörter können in einem mehrzeiligen Textfeld in den Optionen angegeben werden, indem Sie pro Zeile ein Wort eingeben.', keywords: ['text', 'zensieren', 'wörter', 'zeichen'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
+    "shortDescription": "Maskieren Sie Schimpfwörter schnell oder ersetzen Sie sie durch alternative Wörter.",
+    "title": "Textzensur"
+  },
+  "createPalindrome": {
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Erstellen von Palindromen aus beliebigem Text. Geben Sie Text ein und verwandeln Sie ihn sofort in ein Palindrom, das vorwärts und rückwärts gleich gelesen wird. Ideal für Wortspiele, das Erstellen symmetrischer Textmuster oder das Erkunden sprachlicher Kuriositäten.",
+    "shortDescription": "Erstellen Sie Text, der vorwärts und rückwärts gleich gelesen wird",
+    "title": "Palindrom erstellen"
+  },
+  "extractSubstring": {
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Extrahieren von Teilzeichenfolgen aus Text. Geben Sie Ihren Text ein und legen Sie Start- und Endposition fest, um den gewünschten Teil zu extrahieren. Ideal für die Datenverarbeitung, Textanalyse oder das Extrahieren spezifischer Inhalte aus größeren Textblöcken.",
+    "shortDescription": "Extrahieren Sie einen Textabschnitt zwischen angegebenen Positionen",
+    "title": "Teilzeichenfolge extrahieren"
+  },
+  "join": {
+    "blankLinesAndTrailingSpaces": "Leere Zeilen und Leerzeichen am Ende",
+    "deleteBlankDescription": "Löschen Sie Zeilen, die keine Textsymbole enthalten.",
+    "deleteBlankTitle": "Leere Zeilen löschen",
+    "deleteTrailingDescription": "Entfernen Sie Leerzeichen und Tabulatoren am Zeilenende.",
+    "deleteTrailingTitle": "Löschen Sie abschließende Leerzeichen",
+    "description": "Fügen Sie Textteile mit anpassbaren Trennzeichen zusammen.",
+    "inputTitle": "Textstücke",
+    "joinCharacterDescription": "Symbol, das unterbrochene Textteile verbindet. (Standardmäßig Leerzeichen.)",
+    "joinCharacterPlaceholder": "Charakter beitreten",
+    "resultTitle": "Verbundener Text",
+    "shortDescription": "Verbinden Sie Textelemente mit einem festgelegten Trennzeichen",
+    "textMergedOptions": "Optionen für zusammengeführten Text",
+    "title": "Text verbinden",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie Textteile zusammenfügen. Es nimmt eine Liste von Textwerten, getrennt durch Zeilenumbrüche, und fügt sie zusammen. Sie können das Zeichen festlegen, das zwischen den Teilen des zusammengefügten Textes platziert wird. Außerdem können Sie alle Leerzeilen ignorieren und Leerzeichen und Tabulatoren am Zeilenende entfernen. Textabulous!",
+      "title": "Was ist ein Textverbinder?"
+    }
+  },
+  "palindrome": {
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zur Überprüfung von Palindromen. Überprüfen Sie sofort, ob sich Ihr Text vorwärts und rückwärts gleich liest. Ideal für Worträtsel, linguistische Analysen oder die Validierung symmetrischer Textmuster. Unterstützt verschiedene Trennzeichen und die Erkennung mehrteiliger Palindrome.",
+    "shortDescription": "Überprüfen Sie, ob der Text vorwärts und rückwärts gleich gelesen wird",
+    "title": "Palindrom"
+  },
+  "passwordGenerator": {
+    "avoidAmbiguous": "Vermeiden Sie mehrdeutige Zeichen (i, I, l, 0, O).",
+    "description": "Generieren Sie sichere, zufällige Passwörter mit anpassbarer Länge und Zeichenart. Wählen Sie zwischen Kleinbuchstaben, Großbuchstaben, Zahlen und Sonderzeichen. Optional können Sie mehrdeutige Zeichen vermeiden, um die Lesbarkeit zu verbessern.",
+    "includeLowercase": "Kleinbuchstaben einschließen (a-z)",
+    "includeNumbers": "Zahlen einschließen (0-9)",
+    "includeSymbols": "Sonderzeichen einschließen",
+    "includeUppercase": "Großbuchstaben einschließen (A-Z)",
+    "lengthDesc": "Länge des Passwortes",
+    "lengthPlaceholder": "z.B. 12",
+    "optionsTitle": "Passwortoptionen",
+    "resultTitle": "Generiertes Passwort",
+    "shortDescription": "Generieren Sie sichere, zufällige Passwörter mit benutzerdefinierten Optionen",
+    "title": "Passwortgenerator",
+    "toolInfo": {
+      "description": "Dieses Tool generiert sichere, zufällige Passwörter basierend auf Ihren ausgewählten Kriterien. Sie können die Länge anpassen, verschiedene Zeichentypen ein- oder ausschließen und mehrdeutige Zeichen für eine bessere Lesbarkeit vermeiden. Ideal für die Erstellung sicherer Passwörter für Konten, Anwendungen oder andere Sicherheitsanforderungen.",
+      "title": "Über den Passwortgenerator"
+    }
+  },
+  "quote": {
+    "allowDoubleQuotation": "Doppelte Anführungszeichen zulassen",
+    "description": "Fügen Sie mit anpassbaren Optionen Anführungszeichen um den Text hinzu.",
+    "inputTitle": "Eingabetext",
+    "leftQuoteDescription": "Anführungszeichen links",
+    "processAsMultiLine": "Als mehrzeiligen Text verarbeiten",
+    "quoteEmptyLines": "Leere Zeilen in Zitieren setzen",
+    "quoteOptions": "Angebotsoptionen",
+    "resultTitle": "Zitierter Text",
+    "rightQuoteDescription": "Anführungszeichen rechts",
+    "shortDescription": "Fügen Sie Anführungszeichen um Text mit verschiedenen Stilen hinzu",
+    "title": "Textzitierer",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie Text in Anführungszeichen setzen. Sie können verschiedene Anführungszeichen wählen, mehrzeiligen Text bearbeiten und die Verarbeitung leerer Zeilen steuern. Es ist nützlich, um Text für die Programmierung vorzubereiten, Daten zu formatieren oder stilisierten Text zu erstellen.",
+      "title": "Textzitierer"
+    }
+  },
+  "randomizeCase": {
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zur zufälligen Groß- und Kleinschreibung. Geben Sie Ihren Text ein und transformieren Sie ihn sofort mit zufälligen Groß- und Kleinbuchstaben. Perfekt für einzigartige Texteffekte, zum Testen der Groß- und Kleinschreibung oder zum Generieren abwechslungsreicher Textmuster.",
+    "shortDescription": "Groß- und Kleinschreibung von Buchstaben im Text zufällig anordnen",
+    "title": "Groß-/Kleinschreibung randomisieren"
+  },
+  "removeDuplicateLines": {
+    "description": "Laden Sie Ihren Text in das Eingabeformular links und Sie erhalten sofort Text ohne doppelte Zeilen im Ausgabebereich. Leistungsstark, kostenlos und schnell. Textzeilen laden – einzigartige Textzeilen erhalten",
+    "shortDescription": "Löschen Sie schnell alle wiederholten Zeilen aus dem Text",
+    "title": "Entfernen Sie doppelte Zeilen"
+  },
+  "repeat": {
+    "delimiterDescription": "Trennzeichen für Ausgabekopien.",
+    "delimiterPlaceholder": "Trennzeichen",
+    "description": "Wiederholen Sie Text mehrmals mit anpassbaren Trennzeichen.",
+    "inputTitle": "Eingabetext",
+    "numberPlaceholder": "Nummer",
+    "repeatAmountDescription": "Anzahl der Wiederholungen.",
+    "repetitionsDelimiter": "Wiederholungsbegrenzer",
+    "resultTitle": "Wiederholter Text",
+    "shortDescription": "Text mehrmals wiederholen",
+    "textRepetitions": "Textwiederholungen",
+    "title": "Text wiederholen",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie einen bestimmten Text mit einem optionalen Trennzeichen mehrmals wiederholen.",
+      "title": "Text wiederholen"
+    }
+  },
+  "reverse": {
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Umkehren von Text. Geben Sie beliebigen Text ein und lassen Sie ihn sofort Zeichen für Zeichen umkehren. Ideal zum Erstellen von Spiegeltext, Analysieren von Palindromen oder zum Experimentieren mit Textmustern. Leerzeichen und Sonderzeichen bleiben beim Umkehren erhalten.",
+    "inputTitle": "Umzukehrender Text",
+    "processMultiLine": "Mehrzeiligen Text verarbeiten",
+    "processMultiLineDescription": "Jede Zeile wird unabhängig umgekehrt",
+    "resultTitle": "Umgekehrter Text",
+    "reversalOptions": "Umkehroptionen",
+    "shortDescription": "Kehren Sie jeden Text Zeichen für Zeichen um",
+    "skipEmptyLines": "Leere Zeilen überspringen",
+    "skipEmptyLinesDescription": "Leere Zeilen werden aus der Ausgabe entfernt",
+    "title": "Umkehren",
+    "trimWhitespace": "Leerzeichen entfernen",
+    "trimWhitespaceDescription": "Entfernen Sie führende und nachfolgende Leerzeichen aus jeder Zeile"
+  },
+  "rot13": {
+    "description": "Kodieren oder dekodieren Sie Text mit der ROT13-Chiffre.",
+    "inputTitle": "Eingabetext",
+    "resultTitle": "ROT13-Ergebnis",
+    "shortDescription": "Kodieren oder dekodieren Sie Text mit der ROT13-Chiffre.",
+    "title": "ROT13 Encoder/Decoder",
+    "toolInfo": {
+      "description": "ROT13 (Rotate by 13 places) ist eine einfache Buchstabenersetzungs-Chiffre, die einen Buchstaben durch den 13. Buchstaben im Alphabet ersetzt. ROT13 ist ein Sonderfall der Caesar-Chiffre, die im antiken Rom entwickelt wurde. Da das englische Alphabet 26 Buchstaben umfasst, ist ROT13 seine eigene Umkehrung. Das heißt, um ROT13 rückgängig zu machen, wird derselbe Algorithmus angewendet, sodass dieselbe Aktion zum Verschlüsseln und Entschlüsseln verwendet werden kann.",
+      "title": "Was ist ROT13?"
+    }
+  },
+  "rotate": {
+    "description": "Drehen Sie Zeichen im Text um angegebene Positionen.",
+    "inputTitle": "Eingabetext",
+    "processAsMultiLine": "Als mehrzeiligen Text verarbeiten (jede Zeile einzeln drehen)",
+    "resultTitle": "Gedrehter Text",
+    "rotateLeft": "Nach links drehen",
+    "rotateRight": "Nach rechts drehen",
+    "rotationOptions": "Rotationsoptionen",
+    "shortDescription": "Verschieben Sie Zeichen im Text um die Position.",
+    "stepDescription": "Anzahl der zu drehenden Positionen",
+    "title": "Text drehen",
+    "toolInfo": {
+      "description": "Mit diesem Werkzeug können Sie Zeichen in einer Zeichenfolge um eine bestimmte Anzahl von Positionen drehen. Sie können nach links oder rechts drehen und mehrzeiligen Text verarbeiten, indem Sie jede Zeile einzeln drehen. Die Zeichenfolgenrotation ist nützlich für einfache Texttransformationen, die Erstellung von Mustern oder die Implementierung grundlegender Verschlüsselungstechniken.",
+      "title": "Saitenrotation"
+    }
+  },
+  "split": {
+    "charAfterChunkDescription": "Zeichen nach jedem Block",
+    "charBeforeChunkDescription": "Zeichen vor jedem Block",
+    "chunksDescription": "Anzahl der gleich langen Chunks in der Ausgabe.",
+    "chunksTitle": "Verwenden Sie eine Anzahl von Chunks",
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Teilen von Text. Geben Sie Ihren Text ein und wählen Sie ein Trennzeichen, um ihn in mehrere Teile aufzuteilen. Ideal für die Datenverarbeitung, Textbearbeitung oder das Extrahieren bestimmter Inhalte aus größeren Textblöcken.",
+    "lengthDescription": "Anzahl der Symbole, die in jeden Ausgabeblock eingefügt werden.",
+    "lengthTitle": "Länge zum Teilen verwenden",
+    "outputSeparatorDescription": "Zeichen, das zwischen die geteilten Blöcke eingefügt wird.\n(Standardmäßig ist es das Zeilenumbruchzeichen „\\n“.)",
+    "outputSeparatorOptions": "Ausgabetrennzeichenoptionen",
+    "regexDescription": "Regulärer Ausdruck, der zum Aufteilen von Text verwendet wird.\n(Standardmäßig mehrere Leerzeichen.)",
+    "regexTitle": "Verwenden Sie einen regulären Ausdruck zum Aufteilen",
+    "resultTitle": "Textstücke",
+    "shortDescription": "Text mithilfe eines Trennzeichens in mehrere Teile aufteilen",
+    "splitSeparatorOptions": "Optionen für geteilte Trennzeichen",
+    "symbolDescription": "Zeichen, das zum Aufteilen des Textes verwendet wird.\n(Standardmäßig Leerzeichen.)",
+    "symbolTitle": "Verwenden Sie ein Symbol zum Teilen",
+    "title": "Teilt"
+  },
+  "statistic": {
+    "characterFrequencyAnalysis": "Zeichenhäufigkeitsanalyse",
+    "characterFrequencyAnalysisDescription": "Zählen Sie, wie oft jedes Zeichen im Text vorkommt",
+    "delimitersOptions": "Trennzeichenoptionen",
+    "description": "Analysieren Sie Texte und erstellen Sie umfassende Statistiken.",
+    "includeEmptyLines": "Leere Zeilen einschließen",
+    "includeEmptyLinesDescription": "Berücksichtigen Sie beim Zählen von Zeilen auch Leerzeilen",
+    "inputTitle": "Eingabetext",
+    "resultTitle": "Textstatistik",
+    "sentenceDelimitersDescription": "Geben Sie benutzerdefinierte Zeichen ein, die zur Abgrenzung von Sätzen in Ihrer Sprache verwendet werden (durch Komma getrennt), oder lassen Sie das Feld als Standard leer.",
+    "sentenceDelimitersPlaceholder": "z. B. ., !, ?, ...",
+    "shortDescription": "Erhalten Sie Statistiken zu Ihrem Text",
+    "statisticsOptions": "Statistikoptionen",
+    "title": "Textstatistik",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie Text analysieren und umfassende Statistiken erstellen, darunter Zeichenanzahl, Wortanzahl, Zeilenanzahl und Häufigkeitsanalyse von Zeichen und Wörtern.",
+      "title": "Was ist ein {{title}}?"
+    },
+    "wordDelimitersDescription": "Geben Sie einen benutzerdefinierten regulären Ausdruck ein, um Wörter zu zählen, oder lassen Sie das Feld für die Standardeinstellung leer.",
+    "wordDelimitersPlaceholder": "zB. \\s.,;:!?\"«»()…",
+    "wordFrequencyAnalysis": "Worthäufigkeitsanalyse",
+    "wordFrequencyAnalysisDescription": "Zählen Sie, wie oft jedes Wort im Text vorkommt"
+  },
+  "textReplacer": {
+    "description": "Ersetzen Sie Textmuster durch neue Inhalte.",
+    "findPatternInText": "Dieses Muster im Text finden",
+    "findPatternUsingRegexp": "Suchen eines Musters mithilfe eines regulären Ausdrucks",
+    "inputTitle": "Zu ersetzender Text",
+    "newTextPlaceholder": "Neuer Text",
+    "regexpDescription": "Geben Sie den regulären Ausdruck ein, den Sie ersetzen möchten.",
+    "replacePatternDescription": "Geben Sie das Muster ein, das zum Ersetzen verwendet werden soll.",
+    "replaceText": "Text ersetzen",
+    "resultTitle": "Text mit Ersetzungen",
+    "searchPatternDescription": "Geben Sie das Textmuster ein, das Sie ersetzen möchten.",
+    "searchText": "Suchtext",
+    "shortDescription": "Ersetzen Sie schnell Text in Ihrem Inhalt",
+    "title": "Textersetzung",
+    "toolInfo": {
+      "description": "Ersetzen Sie mit diesem einfachen, browserbasierten Tool ganz einfach Text in Ihren Inhalten. Geben Sie einfach Ihren Text ein, legen Sie den zu ersetzenden Text und den Ersetzungswert fest und erhalten Sie sofort die aktualisierte Version.",
+      "title": "Textersetzung"
+    }
+  },
+  "toMorse": {
+    "dashSymbolDescription": "Symbol, das dem Bindestrich im Morsecode entspricht.",
+    "description": "Konvertieren Sie Text in Morsecode.",
+    "dotSymbolDescription": "Symbol, das dem Punkt im Morsecode entspricht.",
+    "longSignal": "Langes Signal",
+    "resultTitle": "Morsezeichen",
+    "shortDescription": "Text schnell in Morse kodieren",
+    "shortSignal": "Kurzes Signal",
+    "title": "Zeichenfolge zu Morse"
+  },
+  "truncate": {
+    "addTruncationIndicator": "Trunkierungsindikator hinzufügen",
+    "charactersPlaceholder": "Charaktere",
+    "description": "Kürzen Sie den Text auf eine bestimmte Länge.",
+    "indicatorDescription": "Zeichen, die am Ende (oder Anfang) des Textes hinzugefügt werden sollen. Hinweis: Sie werden zur Länge gezählt.",
+    "inputTitle": "Eingabetext",
+    "leftSideDescription": "Entfernen Sie Zeichen vom Anfang des Textes.",
+    "leftSideTruncation": "Linksseitige Kürzung",
+    "lengthAndLines": "Länge und Linien",
+    "lineByLineDescription": "Kürzen Sie jede Zeile einzeln.",
+    "lineByLineTruncating": "Zeilenweises Abschneiden",
+    "maxLengthDescription": "Anzahl der Zeichen, die im Text verbleiben sollen.",
+    "numberPlaceholder": "Nummer",
+    "resultTitle": "Abgeschnittener Text",
+    "rightSideDescription": "Entfernen Sie Zeichen vom Ende des Textes.",
+    "rightSideTruncation": "Rechtsseitige Kürzung",
+    "shortDescription": "Text auf eine bestimmte Länge kürzen",
+    "suffixAndAffix": "Suffix und Affix",
+    "title": "Text abschneiden",
+    "toolInfo": {
+      "description": "Laden Sie Ihren Text in das Eingabeformular links und Sie erhalten rechts automatisch gekürzten Text.",
+      "title": "Text kürzen"
+    },
+    "truncationSide": "Abschneideseite"
+  },
+  "uppercase": {
+    "description": "Wandeln Sie Text in Großbuchstaben um.",
+    "inputTitle": "Eingabetext",
+    "resultTitle": "Großbuchstaben",
+    "shortDescription": "Text in Großbuchstaben umwandeln",
+    "title": "In Großbuchstaben umwandeln"
+  }
+}

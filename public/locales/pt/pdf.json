@@ -1,1 +1,113 @@
-{}
+{
+  "compressPdf": {
+    "compressedFileSize": "Tamanho do arquivo compactado",
+    "compressingPdf": "Compactando PDF...",
+    "compressionLevel": "Nível de compressão",
+    "compressionSettings": "Configurações de compressão",
+    "description": "Reduza o tamanho do arquivo PDF mantendo a qualidade usando Ghostscript",
+    "errorCompressingPdf": "Falha ao compactar PDF: {{error}}",
+    "errorReadingPdf": "Falha ao ler o arquivo PDF. Certifique-se de que é um PDF válido.",
+    "fileSize": "Tamanho original do arquivo",
+    "highCompression": "Alta compressão",
+    "highCompressionDescription": "Redução máxima do tamanho do arquivo com alguma perda de qualidade",
+    "inputTitle": "PDF de entrada",
+    "lowCompression": "Baixa compressão",
+    "lowCompressionDescription": "Reduza ligeiramente o tamanho do arquivo com perda mínima de qualidade",
+    "mediumCompression": "Compressão média",
+    "mediumCompressionDescription": "Equilíbrio entre tamanho e qualidade do arquivo",
+    "pages": "Número de páginas",
+    "resultTitle": "PDF compactado",
+    "shortDescription": "Compacte arquivos PDF com segurança no seu navegador",
+    "title": "Comprimir PDF"
+  },
+  "editor": {
+    "description": "Editor de PDF avançado com recursos de anotação, preenchimento de formulários, destaque e exportação. Edite seus PDFs diretamente no navegador com ferramentas de nível profissional, incluindo inserção de texto, desenho, destaque, assinatura e preenchimento de formulários.",
+    "shortDescription": "Edite PDFs com ferramentas avançadas de anotação, assinatura e edição",
+    "title": "Editor de PDF"
+  },
+  "merge": {
+    "inputTitle": "PDF de entrada",
+    "loadingText": "Extraindo páginas",
+    "resultTitle": "Saída PDF mesclada",
+    "toolInfo": {
+      "description": "Esta ferramenta permite mesclar vários arquivos PDF em um único documento. Para usá-la, basta carregar os arquivos PDF que deseja mesclar. A ferramenta então combinará todas as páginas dos arquivos de entrada em um único documento PDF.",
+      "title": "Como usar a ferramenta Mesclar PDF?"
+    }
+  },
+  "mergePdf": {
+    "description": "Combine vários arquivos PDF em um único documento.",
+    "inputTitle": "PDFs de entrada",
+    "mergingPdfs": "Mesclando PDFs",
+    "pdfOptions": "Opções de PDF",
+    "resultTitle": "PDF mesclado",
+    "shortDescription": "Mesclar vários arquivos PDF em um único documento",
+    "sortByFileName": "Classificar por nome de arquivo",
+    "sortByFileNameDescription": "Classificar PDFs em ordem alfabética por nome de arquivo",
+    "sortByUploadOrder": "Classificar por ordem de upload",
+    "sortByUploadOrderDescription": "Mantenha os PDFs na ordem em que foram enviados",
+    "title": "Mesclar PDF",
+    "toolInfo": {
+      "description": "Esta ferramenta permite combinar vários arquivos PDF em um único documento. Você pode escolher como classificar os PDFs e a ferramenta os mesclará na ordem especificada.",
+      "title": "Mesclar arquivos PDF"
+    }
+  },
+  "pdfToEpub": {
+    "description": "Transforme documentos PDF em arquivos EPUB para melhor compatibilidade com leitores eletrônicos.', ícone: 'material-symbols:import-contacts', componente: lazy(() => import('./index')), palavras-chave: ['pdf', 'epub', 'convert', 'ebook'], caminho: 'pdf-to-epub', i18n: { nome: 'pdf:pdfToEpub.title', descrição: 'pdf:pdfToEpub.description",
+    "shortDescription": "Converter arquivos PDF para o formato EPUB",
+    "title": "PDF para EPUB"
+  },
+  "pdfToPng": {
+    "description": "Transforme documentos PDF em painéis PNG.",
+    "longDescription": "Carregue um PDF e converta cada página em uma imagem PNG de alta qualidade diretamente no seu navegador. Esta ferramenta é ideal para extrair conteúdo visual ou compartilhar páginas individuais. Nenhum dado é carregado — tudo é executado localmente.",
+    "shortDescription": "Converter PDF em imagens PNG",
+    "title": "PDF para PNG"
+  },
+  "protectPdf": {
+    "description": "Adicione proteção por senha aos seus arquivos PDF com segurança no seu navegador",
+    "shortDescription": "Proteja arquivos PDF com senha com segurança",
+    "title": "Proteger PDF"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "Todos {{count}} as páginas serão giradas",
+    "angleOptions": {
+      "clockwise90": "90° no sentido horário",
+      "counterClockwise270": "270° (90° sentido anti-horário)",
+      "upsideDown180": "180° (de cabeça para baixo)"
+    },
+    "applyToAllPages": "Aplicar a todas as páginas",
+    "description": "Girar páginas em um documento PDF.",
+    "inputTitle": "PDF de entrada",
+    "longDescription": "Altere a orientação das páginas do PDF girando-as 90, 180 ou 270 graus. Útil para corrigir documentos digitalizados incorretamente ou preparar PDFs para impressão.",
+    "pageRangesDescription": "Insira números de página ou intervalos separados por vírgulas (por exemplo, 1,3,5-7)",
+    "pageRangesPlaceholder": "por exemplo, 1,5-8",
+    "pagesWillBeRotated": "{{count}} página{{count !== 1 ? 's' : ''}} será girado",
+    "pdfPageCount": "PDF tem {{count}} página{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "PDF girado",
+    "rotatingPages": "Páginas rotativas",
+    "rotationAngle": "Ângulo de rotação",
+    "rotationSettings": "Configurações de rotação",
+    "shortDescription": "Girar páginas em um documento PDF",
+    "title": "Girar PDF",
+    "toolInfo": {
+      "description": "Esta ferramenta permite girar páginas em um documento PDF. Você pode girar todas as páginas ou especificar páginas individuais para girar. Escolha um ângulo de rotação: 90° no sentido horário, 180° (de cabeça para baixo) ou 270° (90° no sentido anti-horário). Para girar páginas específicas, desmarque \"Aplicar a todas as páginas\" e insira os números das páginas ou intervalos separados por vírgulas (por exemplo, 1, 3, 5-7).",
+      "title": "Como usar a ferramenta Girar PDF"
+    }
+  },
+  "splitPdf": {
+    "description": "Extraia páginas específicas de um documento PDF.",
+    "extractingPages": "Extraindo páginas",
+    "inputTitle": "PDF de entrada",
+    "pageExtractionPreview": "{{count}} página{{count !== 1 ? 's' : ''}} será extraído",
+    "pageRangesDescription": "Insira números de página ou intervalos separados por vírgulas (por exemplo, 1,3,5-7)",
+    "pageRangesPlaceholder": "por exemplo, 1,5-8",
+    "pageSelection": "Seleção de página",
+    "pdfPageCount": "PDF tem {{count}} página{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "PDF extraído",
+    "shortDescription": "Extrair páginas específicas de um arquivo PDF",
+    "title": "Dividir PDF",
+    "toolInfo": {
+      "description": "Esta ferramenta permite extrair páginas específicas de um documento PDF. Você pode especificar páginas individuais ou intervalos de páginas para extrair.",
+      "title": "Dividir PDF"
+    }
+  }
+}

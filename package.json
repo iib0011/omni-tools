@@ -14,7 +14,6 @@
   },
   "scripts": {
     "dev": "vite",
-    "prebuild": "npm run i18n:pull",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "test": "vitest",
@@ -25,7 +24,7 @@
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "prepare": "husky install",
     "i18n:pull": "locize download --project-id e7156a3e-66fb-4035-a0f0-cebf1c63a3ba --path ./public/locales",
-    "i18n:sync": "locize sync --project-id e7156a3e-66fb-4035-a0f0-cebf1c63a3ba --path ./public/locales --update-values true"
+    "i18n:sync": "locize sync --project-id e7156a3e-66fb-4035-a0f0-cebf1c63a3ba --path ./public/locales --update-values true --reference-language-only false"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",

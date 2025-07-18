@@ -17,15 +17,21 @@
     "description": "Convert CSV files to JSON format with customizable options for delimiters, quotes, and output formatting. Support for headers, comments, and dynamic type conversion.",
     "dynamicTypes": "Dynamic Types",
     "dynamicTypesDescription": "Automatically convert numbers and booleans",
+    "error": "Error",
     "errorParsing": "Error parsing CSV: {{error}}",
     "fieldQuote": "Field Quote (e.g., \")",
     "inputCsvFormat": "Input CSV Format",
     "inputTitle": "Input CSV",
+    "invalidCsvFormat": "Invalid CSV format",
     "resultTitle": "Output JSON",
     "shortDescription": "Convert CSV data to JSON format.",
     "skipEmptyLines": "Skip Empty Lines",
     "skipEmptyLinesDescription": "Ignore empty lines in the input CSV",
     "title": "Convert CSV to JSON",
+    "toolInfo": {
+      "description": "This tool transforms Comma Separated Values (CSV) files to JavaScript Object Notation (JSON) data structures. It supports various CSV formats with customizable delimiters, quote characters, and comment symbols. The converter can treat the first row as headers, skip empty lines, and automatically detect data types like numbers and booleans. The resulting JSON can be used for data migration, backups, or as input for other applications.",
+      "title": "What Is a CSV to JSON Converter?"
+    },
     "useHeaders": "Use Headers",
     "useHeadersDescription": "Treat the first row as column headers"
   },

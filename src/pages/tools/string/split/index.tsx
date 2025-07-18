@@ -12,6 +12,7 @@ import { ToolComponentProps } from '@tools/defineTool';
 import { FormikProps } from 'formik';
 import ToolContent from '@components/ToolContent';
 import { useTranslation } from 'react-i18next';
+import { ParseKeys } from 'i18next';
 
 const initialValues = {
   splitSeparatorType: 'symbol' as SplitOperatorType,
@@ -25,55 +26,45 @@ const initialValues = {
   charAfterChunk: ''
 };
 const splitOperators: {
-  title: string;
-  description: string;
+  title: ParseKeys<'string'>;
+  description: ParseKeys<'string'>;
   type: SplitOperatorType;
 }[] = [
   {
-    title: 'Use a Symbol for Splitting',
-    description:
-      'Character that will be used to\n' +
-      'break text into parts.\n' +
-      '(Space by default.)',
+    title: 'split.symbolTitle',
+    description: 'split.symbolDescription',
     type: 'symbol'
   },
   {
-    title: 'Use a Regex for Splitting',
+    title: 'split.regexTitle',
     type: 'regex',
-    description:
-      'Regular expression that will be\n' +
-      'used to break text into parts.\n' +
-      '(Multiple spaces by default.)'
+    description: 'split.regexDescription'
   },
   {
-    title: 'Use Length for Splitting',
-    description:
-      'Number of symbols that will be\n' + 'put in each output chunk.',
+    title: 'split.lengthTitle',
+    description: 'split.lengthDescription',
     type: 'length'
   },
   {
-    title: 'Use a Number of Chunks',
-    description: 'Number of chunks of equal\n' + 'length in the output.',
+    title: 'split.chunksTitle',
+    description: 'split.chunksDescription',
     type: 'chunks'
   }
 ];
 const outputOptions: {
-  description: string;
+  description: ParseKeys<'string'>;
   accessor: keyof typeof initialValues;
 }[] = [
   {
-    description:
-      'Character that will be put\n' +
-      'between the split chunks.\n' +
-      '(It\'s newline "\\n" by default.)',
+    description: 'split.outputSeparatorDescription',
     accessor: 'outputSeparator'
   },
   {
-    description: 'Character before each chunk',
+    description: 'split.charBeforeChunkDescription',
     accessor: 'charBeforeChunk'
   },
   {
-    description: 'Character after each chunk',
+    description: 'split.charAfterChunkDescription',
     accessor: 'charAfterChunk'
   }
 ];
@@ -183,9 +174,9 @@ export default function SplitText({ title }: ToolComponentProps) {
             <RadioWithTextField
               key={type}
               checked={type === values.splitSeparatorType}
-              title={t(`split.${type}Title`)}
+              title={t(title)}
               fieldName={'splitSeparatorType'}
-              description={t(`split.${type}Description`)}
+              description={t(description)}
               value={values[`${type}Value`]}
               onRadioClick={() => updateField('splitSeparatorType', type)}
               onTextChange={(val) => updateField(`${type}Value`, val)}
@@ -199,8 +190,7 @@ export default function SplitText({ title }: ToolComponentProps) {
               key={option.accessor}
               value={values[option.accessor]}
               onOwnChange={(value) => updateField(option.accessor, value)}
-              //@ts-ignore
-              description={t(`split.${option.accessor}Description`)}
+              description={t(option.description)}
             />
           ))
         }

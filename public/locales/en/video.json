@@ -83,6 +83,12 @@
       "title": "What is a {{title}}?"
     }
   },
+  "mergeVideo": {
+    "description": "Combine multiple video files into one continuous video.",
+    "longDescription": "This tool allows you to merge or append multiple video files into a single continuous video. Simply upload your video files, arrange them in the desired order, and merge them into one file for easy sharing or editing.",
+    "shortDescription": "Append and merge videos easily.",
+    "title": "Merge videos"
+  },
   "rotate": {
     "180Degrees": "180° (Upside down)",
     "270Degrees": "270° (90° Counter-clockwise)",

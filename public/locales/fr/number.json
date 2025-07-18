@@ -1,1 +1,89 @@
-{}
+{
+  "arithmeticSequence": {
+    "commonDifferenceDescription": "Différence courante entre les termes (d)",
+    "description": "Générez des séquences arithmétiques avec des paramètres personnalisables.",
+    "firstTermDescription": "Premier terme de la suite (a₁)",
+    "numberOfTermsDescription": "Nombre de termes à générer (n)",
+    "outputFormat": "Format de sortie",
+    "resultTitle": "Séquence générée",
+    "separatorDescription": "Séparateur entre les termes",
+    "sequenceParameters": "Paramètres de séquence",
+    "shortDescription": "Générer des séquences arithmétiques",
+    "title": "Séquence arithmétique",
+    "toolInfo": {
+      "description": "Une suite arithmétique est une suite de nombres dont la différence entre chaque terme consécutif est constante. Cette différence constante est appelée différence commune. Étant donné le premier terme (a₁) et la différence commune (d), chaque terme peut être trouvé en additionnant la différence commune au terme précédent.",
+      "title": "Qu'est-ce qu'une suite arithmétique ?"
+    }
+  },
+  "generate": {
+    "arithmeticSequenceOption": "Option de séquence arithmétique",
+    "description": "Générer une séquence de nombres avec des paramètres personnalisables.",
+    "numberOfElementsDescription": "Nombre d'éléments dans la séquence.",
+    "resultTitle": "Numéros générés",
+    "separator": "Séparateur",
+    "separatorDescription": "Séparez les éléments de la séquence arithmétique par ce caractère.",
+    "shortDescription": "Générer des nombres aléatoires dans des plages spécifiées",
+    "startSequenceDescription": "Démarrer la séquence à partir de ce numéro.",
+    "stepDescription": "Augmentez chaque élément de ce montant",
+    "title": "Générer",
+    "toolInfo": {
+      "description": "Cet outil vous permet de générer une séquence de nombres avec des paramètres personnalisables. Vous pouvez spécifier la valeur de départ, le pas et le nombre d'éléments.",
+      "title": "Générer des nombres"
+    }
+  },
+  "ohmsLaw": {
+    "description": "Calcule la tension, le courant et la résistance",
+    "longDescription": "Cette calculatrice applique la loi d'Ohm (V = I × R) pour déterminer n'importe lequel des trois paramètres électriques lorsque les deux autres sont connus. La loi d'Ohm est un principe fondamental du génie électrique qui décrit la relation entre la tension (V), le courant (I) et la résistance (R). Cet outil est essentiel pour les électroniciens amateurs, les ingénieurs électriciens et les étudiants travaillant sur des circuits afin de résoudre rapidement les valeurs inconnues de leurs conceptions électriques.",
+    "shortDescription": "Calculer la tension, le courant ou la résistance dans les circuits électriques en utilisant la loi d'Ohm",
+    "title": "loi d'Ohm"
+  },
+  "slackline": {
+    "description": "Calcule la tension dans une slackline",
+    "longDescription": "Cette calculatrice suppose une charge au centre de la corde",
+    "shortDescription": "Calculez la tension approximative d'une slackline ou d'une corde à linge. Ne vous fiez pas à cela pour votre sécurité.",
+    "title": "Tension de la slackline"
+  },
+  "sphereArea": {
+    "description": "Aire d'une sphère",
+    "longDescription": "Cette calculatrice détermine l'aire de surface d'une sphère selon la formule A = 4πr². Vous pouvez saisir le rayon pour trouver l'aire de surface ou saisir l'aire de surface pour calculer le rayon requis. Cet outil est utile aux étudiants en géométrie, aux ingénieurs travaillant avec des objets sphériques et à toute personne devant effectuer des calculs impliquant des surfaces sphériques.",
+    "shortDescription": "Calculer l'aire de surface d'une sphère en fonction de son rayon",
+    "title": "Aire d'une sphère"
+  },
+  "sphereVolume": {
+    "description": "Volume d'une sphère",
+    "longDescription": "Cette calculatrice calcule le volume d'une sphère selon la formule V = (4/3)πr³. Vous pouvez saisir le rayon ou le diamètre pour trouver le volume, ou saisir le volume pour déterminer le rayon requis. Cet outil est précieux pour les étudiants, les ingénieurs et les professionnels travaillant avec des objets sphériques dans des domaines tels que la physique, l'ingénierie et la fabrication.",
+    "shortDescription": "Calculer le volume d'une sphère en utilisant le rayon ou le diamètre",
+    "title": "Volume d'une sphère"
+  },
+  "sum": {
+    "description": "Calculez la somme d'une liste de nombres. Saisissez les nombres séparés par des virgules ou des sauts de ligne pour obtenir leur somme totale.",
+    "extractionTypes": {
+      "delimiter": {
+        "description": "Personnalisez le séparateur de nombres ici. (Par défaut, il s'agit d'un saut de ligne.)",
+        "title": "Délimiteur de nombre"
+      },
+      "smart": {
+        "description": "Détection automatique des nombres dans l'entrée.",
+        "title": "Somme intelligente"
+      }
+    },
+    "inputTitle": "Entrée",
+    "numberExtraction": "Extraction de nombres",
+    "printRunningSum": "Imprimer le total cumulé",
+    "printRunningSumDescription": "Affichez la somme telle qu'elle est calculée étape par étape.",
+    "resultTitle": "Total",
+    "runningSum": "Somme courante",
+    "shortDescription": "Calculer la somme des nombres",
+    "title": "Somme",
+    "toolInfo": {
+      "description": "Il s'agit d'un utilitaire en ligne, accessible depuis un navigateur, permettant de calculer la somme de plusieurs nombres. Vous pouvez saisir les nombres séparés par une virgule, un espace ou tout autre caractère, y compris le saut de ligne. Vous pouvez également simplement coller un fragment de données textuelles contenant les valeurs numériques à additionner : l'utilitaire les extraira et calculera leur somme.",
+      "title": "Qu'est-ce qu'une calculatrice de somme numérique ?"
+    }
+  },
+  "voltageDropInWire": {
+    "description": "Calcule la tension aller-retour et la perte de puissance dans un câble à 2 conducteurs",
+    "longDescription": "Ce calculateur permet de déterminer la chute de tension et la perte de puissance dans un câble électrique à deux conducteurs. Il prend en compte la longueur du câble, la section du fil, la résistivité du matériau et le flux de courant. Il calcule la chute de tension aller-retour, la résistance totale du câble et la puissance dissipée sous forme de chaleur. Cet outil est particulièrement utile aux ingénieurs électriciens, aux électriciens et aux bricoleurs pour la conception de systèmes électriques afin de garantir que les niveaux de tension restent dans des limites acceptables sous charge.",
+    "shortDescription": "Calculer la chute de tension et la perte de puissance dans les câbles électriques en fonction de la longueur, du matériau et du courant",
+    "title": "Chute de tension aller-retour dans le câble"
+  }
+}

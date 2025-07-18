@@ -15,11 +15,16 @@ import { useState } from 'react';
 import { DefinedTool } from '@tools/defineTool';
 import { filterTools, tools } from '@tools/index';
 import { useNavigate } from 'react-router-dom';
-import _ from 'lodash';
 import { Icon } from '@iconify/react';
 import { getToolCategoryTitle } from '@utils/string';
 import { useTranslation } from 'react-i18next';
-import { validNamespaces } from '../i18n';
+import { FullI18nKey, validNamespaces } from '../i18n';
+import {
+  getBookmarkedToolPaths,
+  isBookmarked,
+  toggleBookmarked
+} from '@utils/bookmark';
+import IconButton from '@mui/material/IconButton';
 
 const GroupHeader = styled('div')(({ theme }) => ({
   position: 'sticky',
@@ -36,61 +41,59 @@ const GroupItems = styled('ul')({
   padding: 0
 });
 
+type ToolInfo = {
+  label: FullI18nKey;
+  url: string;
+};
+
 export default function Hero() {
   const { t } = useTranslation(validNamespaces);
   const [inputValue, setInputValue] = useState<string>('');
   const theme = useTheme();
   const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
+  const [bookmarkedToolPaths, setBookmarkedToolPaths] = useState<string[]>(
+    getBookmarkedToolPaths()
+  );
   const navigate = useNavigate();
 
-  const exampleTools: { label: string; url: string; translationKey: string }[] =
-    [
-      {
-        label: t('translation:hero.examples.createTransparentImage'),
-        url: '/image-generic/create-transparent',
-        translationKey: 'translation:hero.examples.createTransparentImage'
-      },
-      {
-        label: t('translation:hero.examples.prettifyJson'),
-        url: '/json/prettify',
-        translationKey: 'translation:hero.examples.prettifyJson'
-      },
-      {
-        label: t('translation:hero.examples.changeGifSpeed'),
-        url: '/gif/change-speed',
-        translationKey: 'translation:hero.examples.changeGifSpeed'
-      },
-      {
-        label: t('translation:hero.examples.sortList'),
-        url: '/list/sort',
-        translationKey: 'translation:hero.examples.sortList'
-      },
-      {
-        label: t('translation:hero.examples.compressPng'),
-        url: '/png/compress-png',
-        translationKey: 'translation:hero.examples.compressPng'
-      },
-      {
-        label: t('translation:hero.examples.splitText'),
-        url: '/string/split',
-        translationKey: 'translation:hero.examples.splitText'
-      },
-      {
-        label: t('translation:hero.examples.splitPdf'),
-        url: '/pdf/split-pdf',
-        translationKey: 'translation:hero.examples.splitPdf'
-      },
-      {
-        label: t('translation:hero.examples.trimVideo'),
-        url: '/video/trim',
-        translationKey: 'translation:hero.examples.trimVideo'
-      },
-      {
-        label: t('translation:hero.examples.calculateNumberSum'),
-        url: '/number/sum',
-        translationKey: 'translation:hero.examples.calculateNumberSum'
-      }
-    ];
+  const exampleTools: ToolInfo[] = [
+    {
+      label: 'translation:hero.examples.createTransparentImage',
+      url: '/image-generic/create-transparent'
+    },
+    {
+      label: 'translation:hero.examples.prettifyJson',
+      url: '/json/prettify'
+    },
+    {
+      label: 'translation:hero.examples.changeGifSpeed',
+      url: '/gif/change-speed'
+    },
+    {
+      label: 'translation:hero.examples.sortList',
+      url: '/list/sort'
+    },
+    {
+      label: 'translation:hero.examples.compressPng',
+      url: '/png/compress-png'
+    },
+    {
+      label: 'translation:hero.examples.splitText',
+      url: '/string/split'
+    },
+    {
+      label: 'translation:hero.examples.splitPdf',
+      url: '/pdf/split-pdf'
+    },
+    {
+      label: 'translation:hero.examples.trimVideo',
+      url: '/video/trim'
+    },
+    {
+      label: 'translation:hero.examples.calculateNumberSum',
+      url: '/number/sum'
+    }
+  ];
 
   const handleInputChange = (
     event: React.ChangeEvent<{}>,
@@ -99,6 +102,24 @@ export default function Hero() {
     setInputValue(newInputValue);
     setFilteredTools(filterTools(tools, newInputValue, t));
   };
+  const toolsMap = new Map<string, ToolInfo>();
+  for (const tool of filteredTools) {
+    toolsMap.set(tool.path, {
+      label: tool.name,
+      url: '/' + tool.path
+    });
+  }
+
+  const displayedTools =
+    bookmarkedToolPaths.length > 0
+      ? bookmarkedToolPaths.flatMap((path) => {
+          const tool = toolsMap.get(path);
+          if (tool === undefined) {
+            return [];
+          }
+          return [tool];
+        })
+      : exampleTools;
 
   return (
     <Box width={{ xs: '90%', md: '80%', lg: '60%' }}>
@@ -130,7 +151,7 @@ export default function Hero() {
         renderGroup={(params) => {
           return (
             <li key={params.key}>
-              <GroupHeader>{getToolCategoryTitle(params.group)}</GroupHeader>
+              <GroupHeader>{getToolCategoryTitle(params.group, t)}</GroupHeader>
               <GroupItems>{params.children}</GroupItems>
             </li>
           );
@@ -159,14 +180,42 @@ export default function Hero() {
             {...props}
             onClick={() => navigate('/' + option.path)}
           >
-            <Stack direction={'row'} spacing={2} alignItems={'center'}>
-              <Icon fontSize={20} icon={option.icon} />
-              <Box>
-                <Typography fontWeight={'bold'}>{t(option.name)}</Typography>
-                <Typography fontSize={12}>
-                  {t(option.shortDescription)}
-                </Typography>
-              </Box>
+            <Stack
+              direction={'row'}
+              alignItems={'center'}
+              justifyContent={'space-between'}
+              width={'100%'}
+            >
+              <Stack direction={'row'} spacing={2} alignItems={'center'}>
+                <Icon fontSize={20} icon={option.icon} />
+                <Box>
+                  <Typography fontWeight={'bold'}>{t(option.name)}</Typography>
+                  <Typography fontSize={12}>
+                    {t(option.shortDescription)}
+                  </Typography>
+                </Box>
+              </Stack>
+              <IconButton
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleBookmarked(option.path);
+                  setBookmarkedToolPaths(getBookmarkedToolPaths());
+                }}
+              >
+                <Icon
+                  fontSize={20}
+                  color={
+                    isBookmarked(option.path)
+                      ? theme.palette.primary.main
+                      : theme.palette.grey[500]
+                  }
+                  icon={
+                    isBookmarked(option.path)
+                      ? 'mdi:bookmark'
+                      : 'mdi:bookmark-plus-outline'
+                  }
+                />
+              </IconButton>
             </Stack>
           </Box>
         )}
@@ -177,7 +226,7 @@ export default function Hero() {
         }}
       />
       <Grid container spacing={2} mt={2}>
-        {exampleTools.map((tool) => (
+        {displayedTools.map((tool) => (
           <Grid
             onClick={() =>
               navigate(tool.url.startsWith('/') ? tool.url : `/${tool.url}`)
@@ -186,7 +235,7 @@ export default function Hero() {
             xs={12}
             md={6}
             lg={4}
-            key={tool.translationKey}
+            key={tool.label}
           >
             <Box
               sx={{
@@ -202,10 +251,30 @@ export default function Hero() {
                 cursor: 'pointer',
                 '&:hover': {
                   backgroundColor: 'background.hover'
-                }
+                },
+                height: '100%'
               }}
             >
-              <Typography>{tool.label}</Typography>
+              <Stack direction={'row'} spacing={1} alignItems={'center'}>
+                <Typography textAlign={'center'}>{t(tool.label)}</Typography>
+                {bookmarkedToolPaths.length > 0 && (
+                  <IconButton
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const path = tool.url.substring(1);
+                      toggleBookmarked(path);
+                      setBookmarkedToolPaths(getBookmarkedToolPaths());
+                    }}
+                    size={'small'}
+                  >
+                    <Icon
+                      icon={'mdi:close'}
+                      color={theme.palette.grey[500]}
+                      fontSize={15}
+                    />
+                  </IconButton>
+                )}
+              </Stack>
             </Box>
           </Grid>
         ))}

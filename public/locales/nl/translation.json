@@ -1,1 +1,250 @@
-{}
+{
+  "audio": {
+    "changeSpeed": {
+      "description": "Wijzig de afspeelsnelheid van audiobestanden. Versnel of vertraag audio met behoud van toonhoogte.",
+      "name": "Wijzig audiosnelheid",
+      "shortDescription": "De snelheid van audiobestanden wijzigen"
+    },
+    "extractAudio": {
+      "description": "Haal het audiospoor uit een videobestand en sla het op als een afzonderlijk audiobestand in het door u gekozen formaat (AAC, MP3, WAV).",
+      "name": "Audio extraheren",
+      "shortDescription": "Extraheer audio uit videobestanden (MP4, MOV, enz.) naar AAC, MP3 of WAV."
+    }
+  },
+  "baseFileInput": {
+    "copyFailed": "Kopiëren mislukt: {{error}}",
+    "dropFileHere": "Laat je vallen {{type}} hier",
+    "fileCopied": "Bestand gekopieerd",
+    "selectFileDescription": "Klik hier om een te selecteren {{type}} Druk vanaf uw apparaat op Ctrl+V om een {{type}} vanaf uw klembord, of sleep en zet een bestand neer vanaf uw bureaublad"
+  },
+  "categories": {
+    "audio": {
+      "description": "Hulpmiddelen voor het werken met audio: audio uit video extraheren, de audiosnelheid aanpassen, meerdere audiobestanden samenvoegen en nog veel meer.",
+      "title": "Audio-hulpmiddelen"
+    },
+    "csv": {
+      "description": "Hulpmiddelen voor het werken met CSV-bestanden: converteer CSV naar verschillende formaten, manipuleer CSV-gegevens, valideer de CSV-structuur en verwerk CSV-bestanden efficiënt.",
+      "title": "CSV-hulpmiddelen"
+    },
+    "gif": {
+      "description": "Hulpmiddelen voor het werken met GIF-animaties: maak transparante GIF's, extraheer GIF-frames, voeg tekst toe aan GIF, snijd GIF's bij, draai ze, draai ze om en nog veel meer.",
+      "title": "GIF-hulpmiddelen"
+    },
+    "image-generic": {
+      "description": "Hulpmiddelen voor het werken met afbeeldingen: comprimeren, formaat wijzigen, bijsnijden, converteren naar JPG, roteren, achtergrond verwijderen en nog veel meer.",
+      "title": "Afbeeldingshulpmiddelen"
+    },
+    "json": {
+      "description": "Hulpmiddelen voor het werken met JSON-datastructuren: JSON-objecten mooier maken en verkleinen, JSON-arrays afvlakken, JSON-waarden stringen, gegevens analyseren en nog veel meer",
+      "title": "JSON-hulpmiddelen"
+    },
+    "list": {
+      "description": "Hulpmiddelen voor het werken met lijsten: lijsten sorteren, omkeren, willekeurig maken, unieke en dubbele listitems vinden, listitemscheidingstekens wijzigen en nog veel meer.",
+      "title": "Lijsthulpmiddelen"
+    },
+    "number": {
+      "description": "Hulpmiddelen voor het werken met getallen: genereer getallenreeksen, converteer getallen naar woorden en woorden naar getallen, sorteer, rond af, ontbind getallen en nog veel meer.",
+      "title": "Getallenhulpmiddelen"
+    },
+    "pdf": {
+      "description": "Hulpmiddelen voor het werken met PDF-bestanden: tekst uit PDF's extraheren, PDF's naar andere formaten converteren, PDF's bewerken en nog veel meer.",
+      "title": "PDF-hulpmiddelen"
+    },
+    "png": {
+      "description": "Hulpmiddelen voor het werken met PNG-afbeeldingen: converteer PNG's naar JPG's, maak transparante PNG's, wijzig PNG-kleuren, snijd PNG's bij, roteer ze, wijzig de grootte ervan en nog veel meer.",
+      "title": "PNG-hulpmiddelen"
+    },
+    "seeAll": "Bekijk alles {{title}}",
+    "string": {
+      "description": "Hulpmiddelen voor het werken met tekst: tekst naar afbeeldingen converteren, tekst zoeken en vervangen, tekst in fragmenten splitsen, tekstregels samenvoegen, tekst herhalen en nog veel meer.",
+      "title": "Teksthulpmiddelen"
+    },
+    "time": {
+      "description": "Hulpmiddelen voor het werken met tijd en datum: bereken tijdsverschillen, converteer tussen tijdzones, formatteer datums, genereer datumreeksen en nog veel meer.",
+      "title": "Tijdhulpmiddelen"
+    },
+    "try": "Poging {{title}}",
+    "video": {
+      "description": "Hulpmiddelen voor het werken met video's: frames uit video's halen, GIF's van video's maken, video's naar verschillende formaten converteren en nog veel meer.",
+      "title": "Videotools"
+    },
+    "xml": {
+      "description": "Hulpmiddelen voor het werken met XML-datastructuren - viewer, beautifier, validator en nog veel meer",
+      "title": "XML-hulpmiddelen"
+    }
+  },
+  "csv": {
+    "findIncompleteCsvRecords": {
+      "description": "Upload uw CSV-bestand via onderstaand formulier en deze tool controleert automatisch of er geen waarden in de rijen of kolommen ontbreken. In de toolopties kunt u de opmaak van het invoerbestand aanpassen (het scheidingsteken, de aanhalingstekens en het commentaarteken opgeven). Daarnaast kunt u de controle op lege waarden inschakelen, lege regels overslaan en een limiet instellen voor het aantal foutmeldingen in de uitvoer.",
+      "name": "Onvolledige CSV-records vinden",
+      "shortDescription": "Vind snel rijen en kolommen in CSV waar waarden ontbreken."
+    }
+  },
+  "hero": {
+    "brand": "OmniTools",
+    "description": "Verhoog je productiviteit met OmniTools, de ultieme toolkit om snel aan de slag te gaan! Krijg toegang tot duizenden gebruiksvriendelijke tools voor het bewerken van afbeeldingen, tekst, lijsten en gegevens, allemaal rechtstreeks vanuit je browser.",
+    "examples": {
+      "calculateNumberSum": "Bereken de getallensom",
+      "changeGifSpeed": "GIF-snelheid wijzigen",
+      "compressPng": "PNG comprimeren",
+      "createTransparentImage": "Een transparante afbeelding maken",
+      "prettifyJson": "JSON verfraaien",
+      "sortList": "Een lijst sorteren",
+      "splitPdf": "PDF splitsen",
+      "splitText": "Een tekst splitsen",
+      "trimVideo": "Video bijsnijden"
+    },
+    "searchPlaceholder": "Zoek in alle tools",
+    "title": "Krijg dingen snel gedaan met"
+  },
+  "inputFooter": {
+    "clear": "Duidelijk",
+    "copyToClipboard": "Kopiëren naar klembord",
+    "importFromFile": "Importeren uit bestand"
+  },
+  "list": {
+    "group": {
+      "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het groeperen van lijstitems. Voer uw lijst in en specificeer groeperingscriteria om items in logische groepen te ordenen. Perfect voor het categoriseren van gegevens, het organiseren van informatie of het maken van gestructureerde lijsten. Ondersteunt aangepaste scheidingstekens en diverse groeperingsopties.",
+      "name": "Groep",
+      "shortDescription": "Groepeer lijstitems op basis van gemeenschappelijke eigenschappen"
+    },
+    "reverse": {
+      "description": "Dit is een supereenvoudige browsergebaseerde applicatie die alle items in de lijst in spiegelbeeld afdrukt. De invoeritems kunnen worden gescheiden door een willekeurig symbool en u kunt ook de scheidingstekens van de omgekeerde items in de lijst wijzigen.",
+      "name": "Achteruit",
+      "shortDescription": "Snel een lijst omkeren"
+    },
+    "sort": {
+      "description": "Dit is een supereenvoudige browsergebaseerde applicatie die items in een lijst sorteert en in oplopende of aflopende volgorde rangschikt. U kunt de items alfabetisch, numeriek of op lengte sorteren. U kunt ook dubbele en lege items verwijderen, en afzonderlijke items met witruimte eromheen verwijderen. U kunt elk scheidingsteken gebruiken om de items in de invoerlijst te scheiden, of u kunt een reguliere expressie gebruiken om ze te scheiden. Daarnaast kunt u een nieuw scheidingsteken maken voor de gesorteerde uitvoerlijst.",
+      "name": "Soort",
+      "shortDescription": "Snel een lijst sorteren"
+    }
+  },
+  "navbar": {
+    "buyMeACoffee": "Koop me een koffie",
+    "home": "Thuis",
+    "tools": "Hulpmiddelen"
+  },
+  "number": {
+    "generate": {
+      "description": "Bereken snel een lijst met gehele getallen in uw browser. Om uw lijst te verkrijgen, specificeert u het eerste gehele getal, wijzigt u de waarde en het totale aantal in de onderstaande opties, en deze tool genereert dat aantal gehele getallen.",
+      "name": "Genereer getallen",
+      "shortDescription": "Bereken snel een lijst met gehele getallen in uw browser"
+    },
+    "sum": {
+      "description": "Dit is een supereenvoudige browserapplicatie die getallen optelt. De ingevoerde getallen kunnen worden gescheiden door een willekeurig symbool en je kunt ook het scheidingsteken van de opgetelde getallen wijzigen.",
+      "name": "Som getallen",
+      "shortDescription": "Snel een lijst met getallen optellen"
+    }
+  },
+  "numericInputWithUnit": {
+    "unit": "Eenheid"
+  },
+  "pdf": {
+    "compressPdf": {
+      "description": "Verklein de PDF-bestandsgrootte met behoud van kwaliteit met Ghostscript",
+      "name": "PDF comprimeren",
+      "shortDescription": "Comprimeer PDF-bestanden veilig in uw browser"
+    },
+    "mergePdf": {
+      "description": "Combineer meerdere PDF-bestanden tot één document.",
+      "name": "PDF samenvoegen",
+      "shortDescription": "Meerdere PDF-bestanden samenvoegen tot één document"
+    },
+    "pdfToEpub": {
+      "description": "Transformeer PDF-documenten naar EPUB-bestanden voor betere compatibiliteit met e-readers.",
+      "name": "PDF naar EPUB",
+      "shortDescription": "PDF-bestanden converteren naar EPUB-formaat"
+    },
+    "protectPdf": {
+      "description": "Voeg wachtwoordbeveiliging toe aan uw PDF-bestanden veilig in uw browser",
+      "name": "PDF beschermen",
+      "shortDescription": "PDF-bestanden veilig met een wachtwoord beveiligen"
+    },
+    "splitPdf": {
+      "description": "Specifieke pagina's uit een PDF-bestand extraheren met behulp van paginanummers of bereiken (bijv. 1, 5-8)",
+      "name": "PDF splitsen",
+      "shortDescription": "Specifieke pagina's uit een PDF-bestand extraheren"
+    }
+  },
+  "resultFooter": {
+    "copy": "Kopiëren naar klembord",
+    "download": "Download"
+  },
+  "string": {
+    "createPalindrome": {
+      "description": "'s Werelds eenvoudigste browsergebaseerde tool voor het maken van palindromen van elke tekst. Voer tekst in en transformeer deze direct in een palindroom die zowel van voor naar achter als van achter naar voren hetzelfde leest. Perfect voor woordspelletjes, het creëren van symmetrische tekstpatronen of het verkennen van taalkundige curiosa.",
+      "name": "Palindroom maken",
+      "shortDescription": "Maak een tekst die van voor naar achter en van achter naar voren hetzelfde leest"
+    },
+    "palindrome": {
+      "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma om te controleren of tekst een palindroom is. Controleer direct of uw tekst van voor naar achteren hetzelfde leest. Perfect voor woordpuzzels, taalkundige analyses of het valideren van symmetrische tekstpatronen. Ondersteunt diverse scheidingstekens en palindroomdetectie van meerdere woorden.",
+      "name": "Palindroom",
+      "shortDescription": "Controleren of de tekst van voor naar achter hetzelfde leest"
+    },
+    "repeat": {
+      "description": "Met deze tool kunt u een bepaalde tekst meerdere keren herhalen met een optionele scheidingsteken.",
+      "name": "Herhaal tekst",
+      "shortDescription": "Herhaal de tekst meerdere keren"
+    },
+    "reverse": {
+      "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het omkeren van tekst. Voer tekst in en laat deze direct omkeren, teken voor teken. Perfect voor het maken van spiegeltekst, het analyseren van palindromen of het experimenteren met tekstpatronen. Spaties en speciale tekens blijven behouden tijdens het omkeren.",
+      "name": "Achteruit",
+      "shortDescription": "Elke tekst teken voor teken omdraaien"
+    },
+    "toMorse": {
+      "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het converteren van tekst naar morsecode. Laad uw tekst in het invoerveld aan de linkerkant en u krijgt direct morsecode in het uitvoergebied. Krachtig, gratis en snel. Laad tekst – ontvang morsecode.",
+      "name": "String naar morse",
+      "shortDescription": "Snel tekst naar morse coderen"
+    },
+    "uppercase": {
+      "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het omzetten van tekst naar hoofdletters. Voer uw tekst in en deze wordt automatisch omgezet naar alleen hoofdletters. Perfect voor het maken van koppen, het benadrukken van tekst of het standaardiseren van tekstopmaak. Ondersteunt diverse tekstformaten en behoudt speciale tekens.",
+      "name": "Hoofdletters",
+      "shortDescription": "Tekst naar hoofdletters converteren"
+    }
+  },
+  "toolExamples": {
+    "subtitle": "Klik om te proberen!",
+    "title": "{{title}} Voorbeelden"
+  },
+  "toolFileResult": {
+    "copied": "Bestand gekopieerd",
+    "copyFailed": "Kopiëren mislukt: {{error}}",
+    "loading": "Bezig met laden... Dit kan even duren.",
+    "result": "Resultaat"
+  },
+  "toolHeader": {
+    "seeExamples": "Zie voorbeelden"
+  },
+  "toolLayout": {
+    "allToolsTitle": "Alle {{type}}"
+  },
+  "toolMultiFileResult": {
+    "copied": "Bestand gekopieerd",
+    "copyFailed": "Kopiëren mislukt: {{error}}",
+    "loading": "Bezig met laden... Dit kan even duren.",
+    "result": "Resultaat"
+  },
+  "toolMultipleAudioInput": {
+    "inputTitle": "Invoer {{type}}",
+    "noFilesSelected": "Geen bestanden geselecteerd"
+  },
+  "toolMultiplePdfInput": {
+    "inputTitle": "Invoer {{type}}",
+    "noFilesSelected": "Geen bestanden geselecteerd"
+  },
+  "toolOptions": {
+    "title": "Gereedschapsopties"
+  },
+  "toolTextInput": {
+    "copied": "Tekst gekopieerd",
+    "copyFailed": "Kopiëren mislukt: {{error}}",
+    "input": "Invoertekst",
+    "placeholder": "Voer hier uw tekst in..."
+  },
+  "toolTextResult": {
+    "copied": "Tekst gekopieerd",
+    "copyFailed": "Kopiëren mislukt: {{error}}",
+    "loading": "Bezig met laden... Dit kan even duren.",
+    "result": "Resultaat"
+  }
+}

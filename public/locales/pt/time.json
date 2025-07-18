@@ -1,1 +1,100 @@
-{}
+{
+  "checkLeapYears": {
+    "description": "Verifique se um ano é bissexto e obtenha informações sobre o ano bissexto.",
+    "inputTitle": "Ano de entrada",
+    "resultTitle": "Resultado do ano bissexto",
+    "shortDescription": "Verifique se um ano é bissexto",
+    "title": "Verifique os anos bissextos",
+    "toolInfo": {
+      "description": "Um ano bissexto é um ano que contém um dia adicional (29 de fevereiro) para manter o ano civil sincronizado com o ano astronômico. Anos bissextos ocorrem a cada 4 anos, exceto anos divisíveis por 100, mas não por 400.",
+      "title": "O que é um ano bissexto?"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "Adicionar nome das horas",
+    "addHoursNameDescription": "Adicionar a string horas aos valores de saída",
+    "description": "Converta dias em horas com opções personalizáveis.",
+    "hoursName": "Nome das horas",
+    "shortDescription": "Converter dias em horas",
+    "title": "Converter dias em horas",
+    "toolInfo": {
+      "description": "Esta ferramenta permite converter dias em horas. Você pode inserir dias como números ou unidades, e a ferramenta os converterá para horas. Você também pode optar por adicionar o sufixo \"horas\" aos valores de saída.",
+      "title": "Converter dias em horas"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "Adicionar nome dos dias",
+    "addDaysNameDescription": "Adicione a string days aos valores de saída",
+    "daysName": "Nome dos dias",
+    "description": "Converta horas em dias com opções personalizáveis.",
+    "shortDescription": "Converter horas em dias",
+    "title": "Converter horas em dias",
+    "toolInfo": {
+      "description": "Esta ferramenta permite converter horas em dias. Você pode inserir horas como números ou com unidades, e a ferramenta as converterá para dias. Você também pode optar por adicionar o sufixo \"dias\" aos valores de saída.",
+      "title": "Converter horas em dias"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "Adicionar preenchimento",
+    "addPaddingDescription": "Adicione preenchimento zero às horas, minutos e segundos.",
+    "description": "Converta os segundos para um formato de hora legível (horas:minutos:segundos). Insira o número de segundos para obter a hora formatada.",
+    "shortDescription": "Converter segundos para o formato de hora",
+    "timePadding": "Preenchimento de tempo",
+    "title": "Converter segundos em tempo",
+    "toolInfo": {
+      "title": "O que é um {{title}}?"
+    }
+  },
+  "convertTimeToSeconds": {
+    "description": "Converter hora formatada (HH:MM:SS) em segundos.",
+    "inputTitle": "Tempo de entrada",
+    "resultTitle": "Segundos",
+    "shortDescription": "Converter formato de hora em segundos",
+    "title": "Converter tempo em segundos",
+    "toolInfo": {
+      "description": "Esta ferramenta permite converter sequências de tempo formatadas (HH:MM:SS) em segundos. É útil para calcular durações e intervalos de tempo.",
+      "title": "Converter tempo em segundos"
+    }
+  },
+  "crontabGuru": {
+    "description": "Gere e compreenda expressões cron. Crie agendamentos cron para tarefas automatizadas e trabalhos do sistema.",
+    "shortDescription": "Gerar e compreender expressões cron",
+    "title": "Guru Crontab"
+  },
+  "timeBetweenDates": {
+    "description": "Calcule a diferença de tempo entre duas datas. Obtenha a duração exata em dias, horas, minutos e segundos.",
+    "endDate": "Data de término",
+    "endDateTime": "Data e hora de término",
+    "endTime": "Fim dos tempos",
+    "endTimezone": "Fim do fuso horário",
+    "shortDescription": "Calcular o tempo entre duas datas",
+    "startDate": "Data de início",
+    "startDateTime": "Data e hora de início",
+    "startTime": "Hora de início",
+    "startTimezone": "Fuso horário de início",
+    "title": "Tempo entre datas",
+    "toolInfo": {
+      "description": "Calcule a diferença horária exata entre duas datas e horas, com suporte para diferentes fusos horários. Esta ferramenta fornece uma análise detalhada da diferença horária em várias unidades (anos, meses, dias, horas, minutos e segundos).",
+      "title": "Calculadora de tempo entre datas"
+    }
+  },
+  "truncateClockTime": {
+    "description": "Trunque o horário do relógio para remover segundos ou minutos. Arredonde o horário para a hora, minuto ou intervalo personalizado mais próximo.",
+    "printDroppedComponents": "Imprimir componentes descartados",
+    "shortDescription": "Truncar o tempo do relógio para a precisão especificada",
+    "timePadding": "Preenchimento de tempo",
+    "title": "Truncar o tempo do relógio",
+    "toolInfo": {
+      "title": "O que é um {{title}}?"
+    },
+    "truncateMinutesAndSeconds": "Truncar minutos e segundos",
+    "truncateMinutesAndSecondsDescription": "Elimine ambos – os componentes de minutos e segundos de cada relógio.",
+    "truncateOnlySeconds": "Truncar apenas segundos",
+    "truncateOnlySecondsDescription": "Retire o componente de segundos de cada hora do relógio.",
+    "truncationSide": "Lado de truncamento",
+    "useZeroPadding": "Usar preenchimento zero",
+    "zeroPaddingDescription": "Faça com que todos os componentes de tempo tenham sempre dois dígitos de largura.",
+    "zeroPrintDescription": "Exibe as partes descartadas como valores zero \"00\".",
+    "zeroPrintTruncatedParts": "Partes truncadas com impressão zero"
+  }
+}

@@ -1,1 +1,113 @@
-{}
+{
+  "compressPdf": {
+    "compressedFileSize": "压缩文件大小",
+    "compressingPdf": "正在压缩 PDF...",
+    "compressionLevel": "压缩级别",
+    "compressionSettings": "压缩设置",
+    "description": "使用 Ghostscript 减小 PDF 文件大小同时保持质量",
+    "errorCompressingPdf": "压缩 PDF 失败： {{error}}",
+    "errorReadingPdf": "无法读取 PDF 文件。请确保它是有效的 PDF。",
+    "fileSize": "原始文件大小",
+    "highCompression": "高压缩",
+    "highCompressionDescription": "最大程度地减少文件大小，但会损失一些质量",
+    "inputTitle": "输入 PDF",
+    "lowCompression": "低压缩",
+    "lowCompressionDescription": "在尽量减少质量损失的情况下稍微减小文件大小",
+    "mediumCompression": "中等压缩",
+    "mediumCompressionDescription": "文件大小和质量之间的平衡",
+    "pages": "页数",
+    "resultTitle": "压缩 PDF",
+    "shortDescription": "在浏览器中安全地压缩 PDF 文件",
+    "title": "压缩PDF"
+  },
+  "editor": {
+    "description": "高级 PDF 编辑器，具备注释、表单填写、高亮显示和导出功能。您可以使用专业级工具（包括文本插入、绘图、高亮显示、签名和表单填写）直接在浏览器中编辑 PDF。",
+    "shortDescription": "使用高级注释、签名和编辑工具编辑 PDF",
+    "title": "PDF编辑器"
+  },
+  "merge": {
+    "inputTitle": "输入 PDF",
+    "loadingText": "提取页面",
+    "resultTitle": "输出合并的 PDF",
+    "toolInfo": {
+      "description": "此工具允许您将多个 PDF 文件合并为一个文档。要使用该工具，只需上传要合并的 PDF 文件即可。然后，该工具会将输入文件中的所有页面合并为一个 PDF 文档。",
+      "title": "如何使用合并 PDF 工具？"
+    }
+  },
+  "mergePdf": {
+    "description": "合并多个 PDF 文件为一个文档。",
+    "inputTitle": "输入 PDF",
+    "mergingPdfs": "合并 PDF",
+    "pdfOptions": "PDF 选项",
+    "resultTitle": "合并的 PDF",
+    "shortDescription": "将多个 PDF 文件合并为一个文档",
+    "sortByFileName": "按文件名排序",
+    "sortByFileNameDescription": "按文件名字母顺序对 PDF 进行排序",
+    "sortByUploadOrder": "按上传顺序排序",
+    "sortByUploadOrderDescription": "保持 PDF 按照上传顺序排列",
+    "title": "合并 PDF",
+    "toolInfo": {
+      "description": "此工具允许您将多个 PDF 文件合并为一个文档。您可以选择对 PDF 进行排序，该工具将按照指定的顺序进行合并。",
+      "title": "合并PDF文件"
+    }
+  },
+  "pdfToEpub": {
+    "description": "将 PDF 文档转换为 EPUB 文件，以实现更好的电子阅读器兼容性。', icon: 'material-symbols:import-contacts', component: lazy(() => import('./index')), keywords: ['pdf', 'epub', 'convert', 'ebook'], path: 'pdf-to-epub', i18n: { name: 'pdf:pdfToEpub.title', description: 'pdf:pdfToEpub.description",
+    "shortDescription": "将 PDF 文件转换为 EPUB 格式",
+    "title": "PDF 转 EPUB"
+  },
+  "pdfToPng": {
+    "description": "将 PDF 文档转换为 PNG 面板。",
+    "longDescription": "上传 PDF 后，直接在浏览器中将每个页面转换为高质量的 PNG 图像。此工具非常适合提取视觉内容或分享单个页面。无需上传数据，所有操作均在本地运行。",
+    "shortDescription": "将 PDF 转换为 PNG 图像",
+    "title": "PDF 转 PNG"
+  },
+  "protectPdf": {
+    "description": "在浏览器中安全地为 PDF 文件添加密码保护",
+    "shortDescription": "使用密码安全地保护 PDF 文件",
+    "title": "保护 PDF"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "全部 {{count}} 页面将会旋转",
+    "angleOptions": {
+      "clockwise90": "顺时针 90°",
+      "counterClockwise270": "270°（逆时针90°）",
+      "upsideDown180": "180°（上下颠倒）"
+    },
+    "applyToAllPages": "应用于所有页面",
+    "description": "旋转 PDF 文档中的页面。",
+    "inputTitle": "输入 PDF",
+    "longDescription": "通过将 PDF 页面旋转 90 度、180 度或 270 度来更改其方向。这对于修复扫描错误的文档或准备打印 PDF 非常有用。",
+    "pageRangesDescription": "输入页码或范围，以逗号分隔（例如，1,3,5-7）",
+    "pageRangesPlaceholder": "例如，1.5-8",
+    "pagesWillBeRotated": "{{count}} 页{{count !== 1 ? 's' : ''}} 将会轮换",
+    "pdfPageCount": "PDF 有 {{count}} 页{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "旋转的 PDF",
+    "rotatingPages": "旋转页面",
+    "rotationAngle": "旋转角度",
+    "rotationSettings": "旋转设置",
+    "shortDescription": "旋转 PDF 文档中的页面",
+    "title": "旋转 PDF",
+    "toolInfo": {
+      "description": "此工具允许您旋转 PDF 文档中的页面。您可以旋转所有页面，也可以指定单个页面进行旋转。选择旋转角度：顺时针 90°、上下 180° 或逆时针 270°。要旋转特定页面，请取消勾选“应用于所有页面”，并输入页码或以逗号分隔的范围（例如，1,3,5-7）。",
+      "title": "如何使用旋转 PDF 工具"
+    }
+  },
+  "splitPdf": {
+    "description": "从 PDF 文档中提取特定页面。",
+    "extractingPages": "提取页面",
+    "inputTitle": "输入 PDF",
+    "pageExtractionPreview": "{{count}} 页{{count !== 1 ? 's' : ''}} 将被提取",
+    "pageRangesDescription": "输入页码或范围，以逗号分隔（例如，1,3,5-7）",
+    "pageRangesPlaceholder": "例如，1.5-8",
+    "pageSelection": "页面选择",
+    "pdfPageCount": "PDF 有 {{count}} 页{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "提取的 PDF",
+    "shortDescription": "从 PDF 文件中提取特定页面",
+    "title": "拆分 PDF",
+    "toolInfo": {
+      "description": "此工具允许您从 PDF 文档中提取特定页面。您可以指定要提取的单个页面或页面范围。",
+      "title": "拆分 PDF"
+    }
+  }
+}

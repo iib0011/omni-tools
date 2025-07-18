@@ -23,7 +23,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SearchIcon from '@mui/icons-material/Search';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
-import { I18nNamespaces } from '../../i18n';
+import { I18nNamespaces, validNamespaces } from '../../i18n';
 
 const StyledLink = styled(Link)(({ theme }) => ({
   '&:hover': {
@@ -36,16 +36,12 @@ export default function ToolsByCategory() {
   const mainContentRef = React.useRef<HTMLDivElement>(null);
   const { categoryName } = useParams();
   const [searchTerm, setSearchTerm] = React.useState<string>('');
-  const rawTitle = getToolCategoryTitle(categoryName as string);
+  const { t } = useTranslation(validNamespaces);
+  const rawTitle = getToolCategoryTitle(categoryName as string, t);
   // First get tools by category without filtering
   const toolsByCategory =
-    getToolsByCategory().find(({ type }) => type === categoryName)?.tools ?? [];
-
-  const namespace =
-    toolsByCategory.length > 0
-      ? getI18nNamespaceFromToolCategory(toolsByCategory[0].type)
-      : 'translation';
-  const { t } = useTranslation(namespace);
+    getToolsByCategory(t).find(({ type }) => type === categoryName)?.tools ??
+    [];
 
   const categoryTools = filterTools(toolsByCategory, searchTerm, t);
 
@@ -58,7 +54,7 @@ export default function ToolsByCategory() {
   return (
     <Box sx={{ backgroundColor: 'background.default' }}>
       <Helmet>
-        <title>{`${rawTitle} Tools`}</title>
+        <title>{rawTitle}</title>
       </Helmet>
       <Box
         padding={{ xs: 1, md: 3, lg: 5 }}
@@ -77,10 +73,9 @@ export default function ToolsByCategory() {
             <IconButton onClick={() => navigate('/')}>
               <ArrowBackIcon color={'primary'} />
             </IconButton>
-            <Typography
-              fontSize={22}
-              color={theme.palette.primary.main}
-            >{`All ${rawTitle} Tools`}</Typography>
+            <Typography fontSize={22} color={theme.palette.primary.main}>
+              {t('translation:toolLayout.allToolsTitle', { type: rawTitle })}
+            </Typography>
           </Stack>
           <TextField
             placeholder={'Search'}

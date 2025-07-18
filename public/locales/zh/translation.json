@@ -1,1 +1,250 @@
-{}
+{
+  "audio": {
+    "changeSpeed": {
+      "description": "更改音频文件的播放速度。在保持音调不变的情况下加快或减慢音频速度。",
+      "name": "更改音频速度",
+      "shortDescription": "更改音频文件的速度"
+    },
+    "extractAudio": {
+      "description": "从视频文件中提取音轨并将其保存为您选择的格式（AAC、MP3、WAV）的单独音频文件。",
+      "name": "提取音频",
+      "shortDescription": "将视频文件（MP4、MOV 等）中的音频提取为 AAC、MP3 或 WAV。"
+    }
+  },
+  "baseFileInput": {
+    "copyFailed": "复制失败： {{error}}",
+    "dropFileHere": "放下你的 {{type}} 这里",
+    "fileCopied": "文件已复制",
+    "selectFileDescription": "单击此处选择一个 {{type}} 在您的设备上，按 Ctrl+V 使用 {{type}} 从剪贴板中，或从桌面拖放文件"
+  },
+  "categories": {
+    "audio": {
+      "description": "处理音频的工具——从视频中提取音频、调整音频速度、合并多个音频文件等等。",
+      "title": "音频工具"
+    },
+    "csv": {
+      "description": "处理 CSV 文件的工具 - 将 CSV 转换为不同的格式、操作 CSV 数据、验证 CSV 结构以及有效地处理 CSV 文件。",
+      "title": "CSV 工具"
+    },
+    "gif": {
+      "description": "处理 GIF 动画的工具 - 创建透明 GIF、提取 GIF 帧、向 GIF 添加文本、裁剪、旋转、反转 GIF 等等。",
+      "title": "GIF工具"
+    },
+    "image-generic": {
+      "description": "处理图片的工具——压缩、调整大小、裁剪、转换为 JPG、旋转、删除背景等等。",
+      "title": "图像工具"
+    },
+    "json": {
+      "description": "处理 JSON 数据结构的工具——美化和缩小 JSON 对象、展平 JSON 数组、字符串化 JSON 值、分析数据等等",
+      "title": "JSON 工具"
+    },
+    "list": {
+      "description": "处理列表的工具——排序、反转、随机化列表、查找唯一和重复的列表项、更改列表项分隔符等等。",
+      "title": "列表工具"
+    },
+    "number": {
+      "description": "处理数字的工具——生成数字序列、将数字转换为文字、将文字转换为数字、排序、舍入、因式分解等等。",
+      "title": "数字工具"
+    },
+    "pdf": {
+      "description": "处理 PDF 文件的工具 - 从 PDF 中提取文本、将 PDF 转换为其他格式、操作 PDF 等等。",
+      "title": "PDF工具"
+    },
+    "png": {
+      "description": "处理 PNG 图像的工具 - 将 PNG 转换为 JPG、创建透明 PNG、更改 PNG 颜色、裁剪、旋转、调整 PNG 大小等等。",
+      "title": "PNG工具"
+    },
+    "seeAll": "查看全部 {{title}}",
+    "string": {
+      "description": "处理文本的工具——将文本转换为图像、查找和替换文本、将文本拆分成片段、连接文本行、重复文本等等。",
+      "title": "文本工具"
+    },
+    "time": {
+      "description": "处理时间和日期的工具——计算时差、在时区之间转换、格式化日期、生成日期序列等等。",
+      "title": "时间工具"
+    },
+    "try": "尝试 {{title}}",
+    "video": {
+      "description": "处理视频的工具——从视频中提取帧、从视频创建 GIF、将视频转换为不同的格式等等。",
+      "title": "视频工具"
+    },
+    "xml": {
+      "description": "处理 XML 数据结构的工具 - 查看器、美化器、验证器等等",
+      "title": "XML 工具"
+    }
+  },
+  "csv": {
+    "findIncompleteCsvRecords": {
+      "description": "只需将您的 CSV 文件上传到下方表单，此工具就会自动检查所有行或列是否均缺失值。在工具选项中，您可以调整输入文件格式（指定分隔符、引号和注释符）。此外，您还可以启用空值检查、跳过空行，以及设置输出中错误消息的数量限制。",
+      "name": "查找不完整的 CSV 记录",
+      "shortDescription": "快速查找 CSV 中缺少值的行和列。"
+    }
+  },
+  "hero": {
+    "brand": "OmniTools",
+    "description": "使用 OmniTools 提升您的工作效率，这是一款快速完成任务的终极工具包！数千个用户友好的实用程序，可直接通过浏览器编辑图像、文本、列表和数据。",
+    "examples": {
+      "calculateNumberSum": "计算数字和",
+      "changeGifSpeed": "更改 GIF 速度",
+      "compressPng": "压缩 PNG",
+      "createTransparentImage": "创建透明图像",
+      "prettifyJson": "美化 JSON",
+      "sortList": "对列表进行排序",
+      "splitPdf": "拆分 PDF",
+      "splitText": "拆分文本",
+      "trimVideo": "修剪视频"
+    },
+    "searchPlaceholder": "搜索所有工具",
+    "title": "快速完成工作"
+  },
+  "inputFooter": {
+    "clear": "清除",
+    "copyToClipboard": "复制到剪贴板",
+    "importFromFile": "从文件导入"
+  },
+  "list": {
+    "group": {
+      "description": "世界上最简单的基于浏览器的列表项分组工具。输入您的列表并指定分组条件，即可将项目按逻辑分组。非常适合分类数据、组织信息或创建结构化列表。支持自定义分隔符和各种分组选项。",
+      "name": "团体",
+      "shortDescription": "按共同属性对列表项进行分组"
+    },
+    "reverse": {
+      "description": "这是一个基于浏览器的超级简单的应用程序，可以反向打印所有列表项。输入项可以用任意符号分隔，并且您还可以更改反向列表项的分隔符。",
+      "name": "撤销",
+      "shortDescription": "快速反转列表"
+    },
+    "sort": {
+      "description": "这是一款基于浏览器的超级简单应用程序，可以对列表中的项目进行排序，并按升序或降序排列。您可以按字母顺序、数字或长度对项目进行排序。您还可以删除重复和空白的项目，以及修剪周围有空格的单个项目。您可以使用任何分隔符分隔输入列表项，也可以使用正则表达式分隔它们。此外，您还可以为排序后的输出列表创建新的分隔符。",
+      "name": "种类",
+      "shortDescription": "快速对列表进行排序"
+    }
+  },
+  "navbar": {
+    "buyMeACoffee": "请我喝杯咖啡",
+    "home": "家",
+    "tools": "工具"
+  },
+  "number": {
+    "generate": {
+      "description": "在浏览器中快速计算整数列表。要获取列表，只需指定第一个整数，并在下方选项中更改值和总数，此实用程序就会生成相应数量的整数。",
+      "name": "生成数字",
+      "shortDescription": "在浏览器中快速计算整数列表"
+    },
+    "sum": {
+      "description": "这是一款基于浏览器的超级简单的求和应用程序。输入的数字可以用任意符号分隔，并且您还可以更改求和结果的分隔符。",
+      "name": "总和数",
+      "shortDescription": "快速对数字列表求和"
+    }
+  },
+  "numericInputWithUnit": {
+    "unit": "单元"
+  },
+  "pdf": {
+    "compressPdf": {
+      "description": "使用 Ghostscript 减小 PDF 文件大小同时保持质量",
+      "name": "压缩PDF",
+      "shortDescription": "在浏览器中安全地压缩 PDF 文件"
+    },
+    "mergePdf": {
+      "description": "合并多个 PDF 文件为一个文档。",
+      "name": "合并 PDF",
+      "shortDescription": "将多个 PDF 文件合并为一个文档"
+    },
+    "pdfToEpub": {
+      "description": "将 PDF 文档转换为 EPUB 文件，以实现更好的电子阅读器兼容性。",
+      "name": "PDF 转 EPUB",
+      "shortDescription": "将 PDF 文件转换为 EPUB 格式"
+    },
+    "protectPdf": {
+      "description": "在浏览器中安全地为 PDF 文件添加密码保护",
+      "name": "保护 PDF",
+      "shortDescription": "使用密码安全地保护 PDF 文件"
+    },
+    "splitPdf": {
+      "description": "使用页码或范围（例如 1,5-8）从 PDF 文件中提取特定页面",
+      "name": "拆分 PDF",
+      "shortDescription": "从 PDF 文件中提取特定页面"
+    }
+  },
+  "resultFooter": {
+    "copy": "复制到剪贴板",
+    "download": "下载"
+  },
+  "string": {
+    "createPalindrome": {
+      "description": "世界上最简单的基于浏览器的回文创建工具，可从任何文本创建回文。输入文本即可立即将其转换为正反读相同的回文。非常适合文字游戏、创建对称文本模式或探索语言学知识。",
+      "name": "创建回文",
+      "shortDescription": "创建正读和倒读相同的文本"
+    },
+    "palindrome": {
+      "description": "世界上最简单的基于浏览器的回文检测工具。即时验证文本正读和反读是否一致。非常适合字谜游戏、语言分析或验证对称文本模式。支持各种分隔符和多词回文检测。",
+      "name": "回文",
+      "shortDescription": "检查文本正读和反读是否相同"
+    },
+    "repeat": {
+      "description": "此工具允许您使用可选分隔符多次重复给定的文本。",
+      "name": "重复文本",
+      "shortDescription": "重复文本多次"
+    },
+    "reverse": {
+      "description": "世界上最简单的基于浏览器的文本反转工具。输入任意文本即可立即逐字符反转。非常适合创建镜像文本、分析回文或玩转文本模式。反转时保留空格和特殊字符。",
+      "name": "撤销",
+      "shortDescription": "逐个字符地反转任何文本"
+    },
+    "toMorse": {
+      "description": "世界上最简单的基于浏览器的文本转摩尔斯电码工具。只需在左侧输入框中输入文本，即可立即在输出区域获得摩尔斯电码。功能强大、免费且快速。输入文本，即可获得摩尔斯电码。",
+      "name": "字符串到莫尔斯",
+      "shortDescription": "快速将文本编码为摩尔斯电码"
+    },
+    "uppercase": {
+      "description": "世界上最简单的基于浏览器的大写文本转换工具。只需输入文本，即可自动转换为全部大写字母。非常适合创建标题、强调文本或标准化文本格式。支持各种文本格式并保留特殊字符。",
+      "name": "大写",
+      "shortDescription": "将文本转换为大写字母"
+    }
+  },
+  "toolExamples": {
+    "subtitle": "点击尝试！",
+    "title": "{{title}} 示例"
+  },
+  "toolFileResult": {
+    "copied": "文件已复制",
+    "copyFailed": "复制失败： {{error}}",
+    "loading": "正在加载...这可能需要一点时间。",
+    "result": "结果"
+  },
+  "toolHeader": {
+    "seeExamples": "查看示例"
+  },
+  "toolLayout": {
+    "allToolsTitle": "全部 {{type}}"
+  },
+  "toolMultiFileResult": {
+    "copied": "文件已复制",
+    "copyFailed": "复制失败： {{error}}",
+    "loading": "正在加载...这可能需要一点时间。",
+    "result": "结果"
+  },
+  "toolMultipleAudioInput": {
+    "inputTitle": "输入 {{type}}",
+    "noFilesSelected": "未选择任何文件"
+  },
+  "toolMultiplePdfInput": {
+    "inputTitle": "输入 {{type}}",
+    "noFilesSelected": "未选择任何文件"
+  },
+  "toolOptions": {
+    "title": "工具选项"
+  },
+  "toolTextInput": {
+    "copied": "文本已复制",
+    "copyFailed": "复制失败： {{error}}",
+    "input": "输入文本",
+    "placeholder": "在此处输入您的文本..."
+  },
+  "toolTextResult": {
+    "copied": "文本已复制",
+    "copyFailed": "复制失败： {{error}}",
+    "loading": "正在加载...这可能需要一点时间。",
+    "result": "结果"
+  }
+}

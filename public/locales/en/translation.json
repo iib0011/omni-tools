@@ -1,8 +1,4 @@
 {
-  "app": {
-    "language": "Language",
-    "title": "Omni Tools"
-  },
   "audio": {
     "changeSpeed": {
       "description": "Change the playback speed of audio files. Speed up or slow down audio while maintaining pitch.",
@@ -220,7 +216,7 @@
     "seeExamples": "See Examples"
   },
   "toolLayout": {
-    "allToolsTitle": "All {{type}} Tools"
+    "allToolsTitle": "All {{type}}"
   },
   "toolMultiFileResult": {
     "copied": "File copied",

@@ -1,1 +1,208 @@
-{}
+{
+  "duplicate": {
+    "concatenate": "连接",
+    "concatenateDescription": "连接副本（如果未选中，则项目将交织在一起）",
+    "copyDescription": "份数（可以是分数）",
+    "description": "世界上最简单的基于浏览器的列表项复制实用程序。输入您的列表并指定复制条件即可创建项目副本。非常适合数据扩展、测试或创建重复模式。",
+    "duplicationOptions": "复制选项",
+    "examples": {
+      "fractional": {
+        "description": "此示例显示如何复制具有小数份副本的列表。",
+        "title": "部分重复"
+      },
+      "interweave": {
+        "description": "此示例显示如何交织项目而不是连接它们。",
+        "title": "交织物品"
+      },
+      "reverse": {
+        "description": "此示例显示如何以相反的顺序复制列表。",
+        "title": "反向复制"
+      },
+      "simple": {
+        "description": "此示例显示如何复制单词列表。",
+        "title": "简单复制"
+      }
+    },
+    "inputTitle": "输入列表",
+    "joinSeparatorDescription": "用于连接重复列表的分隔符",
+    "resultTitle": "重复列表",
+    "reverse": "撤销",
+    "reverseDescription": "反转重复项",
+    "shortDescription": "按照指定条件复制列表项",
+    "splitByRegex": "按正则表达式拆分",
+    "splitBySymbol": "按符号拆分",
+    "splitOptions": "拆分选项",
+    "splitSeparatorDescription": "用于分割列表的分隔符",
+    "title": "复制",
+    "toolInfo": {
+      "description": "此工具允许您复制列表中的项目。您可以指定副本数量（包括小数），控制项目是连接还是交织，甚至可以反转重复的项目。它非常适合创建重复模式、生成测试数据或扩展具有可预测内容的列表。",
+      "title": "列表重复"
+    }
+  },
+  "findMostPopular": {
+    "description": "世界上最简单的基于浏览器的实用程序，用于查找列表中最热门的项目。输入您的列表，即可立即获取出现频率最高的项目。非常适合数据分析、趋势识别或查找共同点。",
+    "shortDescription": "查找最常出现的项目",
+    "title": "查找最受欢迎的"
+  },
+  "findUnique": {
+    "caseSensitiveItems": "区分大小写的项目",
+    "caseSensitiveItemsDescription": "将具有不同大小写的项目作为列表中的唯一元素输出。",
+    "delimiterDescription": "设置分隔符号或正则表达式。",
+    "description": "世界上最简单的基于浏览器的实用程序，用于在列表中查找唯一项。输入您的列表，即可立即获取所有唯一值（已删除重复项）。非常适合数据清理、重复数据删除或查找不同元素。",
+    "findAbsolutelyUniqueItems": "寻找绝对独特的物品",
+    "findAbsolutelyUniqueItemsDescription": "仅显示列表中存在于单个副本中的项目。",
+    "inputListDelimiter": "输入列表分隔符",
+    "inputTitle": "输入列表",
+    "outputListDelimiter": "输出列表分隔符",
+    "resultTitle": "独特物品",
+    "shortDescription": "在列表中查找唯一项",
+    "skipEmptyItems": "跳过空项目",
+    "skipEmptyItemsDescription": "不要在输出中包含空列表项。",
+    "title": "寻找独特的",
+    "trimItems": "修剪列表项",
+    "trimItemsDescription": "比较项目之前删除前导和尾随空格。",
+    "uniqueItemOptions": "独特物品选项"
+  },
+  "group": {
+    "deleteEmptyItems": "删除空项目",
+    "deleteEmptyItemsDescription": "忽略空项目并且不要将它们包含在组中。",
+    "description": "世界上最简单的基于浏览器的列表项分组工具。输入您的列表并指定分组条件，即可将项目按逻辑分组。非常适合分类数据、组织信息或创建结构化列表。支持自定义分隔符和各种分组选项。",
+    "emptyItemsAndPadding": "空项目和填充",
+    "groupNumberDescription": "组中项目的数量",
+    "groupSeparatorDescription": "组分隔符",
+    "groupSizeAndSeparators": "组大小和分隔符",
+    "inputItemSeparator": "输入项分隔符",
+    "inputTitle": "输入列表",
+    "itemSeparatorDescription": "项目分隔符",
+    "leftWrapDescription": "组的左换行符号。",
+    "padNonFullGroups": "填充非满组",
+    "padNonFullGroupsDescription": "使用自定义项目（在下面输入）填充非完整组。",
+    "paddingCharDescription": "使用此字符或项目来填充非完整组。",
+    "resultTitle": "分组项目",
+    "rightWrapDescription": "组的右换行符号。",
+    "shortDescription": "按共同属性对列表项进行分组",
+    "splitOperators": {
+      "regex": {
+        "description": "使用正则表达式分隔输入列表项。",
+        "title": "使用正则表达式进行拆分"
+      },
+      "symbol": {
+        "description": "用字符分隔输入列表项。",
+        "title": "使用符号进行拆分"
+      }
+    },
+    "splitSeparatorDescription": "设置分隔符号或正则表达式。",
+    "title": "团体"
+  },
+  "reverse": {
+    "description": "这是一个基于浏览器的超级简单的应用程序，可以反向打印所有列表项。输入项可以用任意符号分隔，并且您还可以更改反向列表项的分隔符。",
+    "inputTitle": "输入列表",
+    "itemSeparator": "项目分隔符",
+    "itemSeparatorDescription": "设置分隔符号或正则表达式。",
+    "outputListOptions": "输出列表选项",
+    "outputSeparatorDescription": "输出列表项分隔符。",
+    "resultTitle": "反转列表",
+    "shortDescription": "快速反转列表",
+    "splitOperators": {
+      "regex": {
+        "description": "使用正则表达式分隔输入列表项。",
+        "title": "使用正则表达式进行拆分"
+      },
+      "symbol": {
+        "description": "用字符分隔输入列表项。",
+        "title": "使用符号进行拆分"
+      }
+    },
+    "splitterMode": "分离器模式",
+    "title": "撤销",
+    "toolInfo": {
+      "description": "使用此实用程序，您可以反转列表中项目的顺序。该实用程序首先将输入列表拆分成单个项目，然后从最后一个项目到第一个项目进行迭代，并在迭代过程中将每个项目打印到输出中。输入列表可以包含任何可以表示为文本数据的内容，包括数字、数值、字符串、单词、句子等。输入项分隔符也可以是正则表达式。例如，正则表达式 /[;,]/ 允许您使用逗号或分号分隔的项目。输入和输出列表项分隔符可以在选项中自定义。默认情况下，输入和输出列表均以逗号分隔。Listabulous！",
+      "title": "什么是列表反转器？"
+    }
+  },
+  "rotate": {
+    "description": "世界上最简单的基于浏览器的列表项旋转工具。输入您的列表并指定旋转量，即可将列表项移动指定的位置。非常适合数据操作、循环移动或列表重新排序。",
+    "shortDescription": "按指定位置旋转列表项",
+    "title": "旋转"
+  },
+  "shuffle": {
+    "delimiterDescription": "设置分隔符号或正则表达式。",
+    "description": "世界上最简单的基于浏览器的列表项随机排序工具。输入您的列表，即可立即获得一个按随机顺序排列的列表项随机版本。非常适合创建多样性、测试随机性或混合有序数据。",
+    "inputListSeparator": "输入列表分隔符",
+    "inputTitle": "输入列表",
+    "joinSeparatorDescription": "在随机列表中使用此分隔符。",
+    "outputLengthDescription": "输出这么多的随机物品",
+    "resultTitle": "随机列表",
+    "shortDescription": "随机化列表项的顺序",
+    "shuffledListLength": "打乱列表长度",
+    "shuffledListSeparator": "随机列表分隔符",
+    "title": "随机播放"
+  },
+  "sort": {
+    "caseSensitive": "区分大小写排序",
+    "caseSensitiveDescription": "分别对大写和小写字母进行排序。按升序排列时，大写字母优先于小写字母。（仅适用于字母排序模式。）",
+    "description": "世界上最简单的基于浏览器的列表项排序工具。输入您的列表并指定排序条件，即可按升序或降序排列项目。非常适合数据整理、文本处理或创建有序列表。",
+    "inputItemSeparator": "输入项分隔符",
+    "inputTitle": "输入列表",
+    "joinSeparatorDescription": "使用此符号作为排序列表中项目之间的连接符。",
+    "orderDescription": "选择排序顺序。",
+    "orderOptions": {
+      "decreasing": "降序排列",
+      "increasing": "增加订单"
+    },
+    "removeDuplicates": "删除重复项",
+    "removeDuplicatesDescription": "删除重复的列表项。",
+    "resultTitle": "排序列表",
+    "shortDescription": "按指定顺序对列表项进行排序",
+    "sortMethod": "排序方法",
+    "sortMethodDescription": "选择排序方法。",
+    "sortOptions": {
+      "alphabetic": "按字母顺序排序",
+      "length": "按长度排序",
+      "numeric": "按数字排序"
+    },
+    "sortedItemProperties": "排序的项目属性",
+    "splitOperators": {
+      "regex": {
+        "description": "使用正则表达式分隔输入列表项。",
+        "title": "使用正则表达式进行拆分"
+      },
+      "symbol": {
+        "description": "用字符分隔输入列表项。",
+        "title": "使用符号进行拆分"
+      }
+    },
+    "splitSeparatorDescription": "设置分隔符号或正则表达式。",
+    "title": "种类"
+  },
+  "truncate": {
+    "description": "世界上最简单的基于浏览器的列表截断工具。输入您的列表并指定要保留的最大项目数。非常适合数据处理、列表管理或限制内容长度。",
+    "shortDescription": "将列表截断为指定数量的项目",
+    "title": "截短"
+  },
+  "unwrap": {
+    "description": "世界上最简单的基于浏览器的列表项展开工具。输入已展开的列表，并指定展开条件以展平有序的列表项。非常适合数据处理、文本操作或从结构化列表中提取内容。",
+    "shortDescription": "从结构化格式中解开列表项",
+    "title": "展开"
+  },
+  "wrap": {
+    "description": "在每个列表项之前和之后添加文本。",
+    "inputTitle": "输入列表",
+    "joinSeparatorDescription": "用于连接包装列表的分隔符",
+    "leftTextDescription": "每个项目前添加的文本",
+    "removeEmptyItems": "删除空项目",
+    "resultTitle": "包装列表",
+    "rightTextDescription": "每项后添加的文本",
+    "shortDescription": "使用指定条件包装列表项",
+    "splitByRegex": "按正则表达式拆分",
+    "splitBySymbol": "按符号拆分",
+    "splitOptions": "拆分选项",
+    "splitSeparatorDescription": "用于分割列表的分隔符",
+    "title": "裹",
+    "toolInfo": {
+      "description": "此工具允许您在列表中每个项目前后添加文本。您可以为左右两侧指定不同的文本，并控制列表的处理方式。它适用于为列表项添加引号、括号或其他格式，准备不同格式的数据，或创建结构化文本。",
+      "title": "列表包装"
+    },
+    "wrapOptions": "包装选项"
+  }
+}

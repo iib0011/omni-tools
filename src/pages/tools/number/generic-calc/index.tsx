@@ -27,6 +27,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTranslation } from 'react-i18next';
+import { validNamespaces } from '../../../../i18n';
 
 function numericSolveEquationFor(
   equation: string,
@@ -62,7 +63,7 @@ export default async function makeTool(
 
   return function GenericCalc({ title }: ToolComponentProps) {
     const { showSnackBar } = useContext(CustomSnackBarContext);
-    const { t } = useTranslation();
+    const { t } = useTranslation(validNamespaces);
     const theme = useTheme();
     const lessThanSmall = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -239,7 +240,9 @@ export default async function makeTool(
         initialValues={initialValues}
         toolInfo={{
           title: t(calcData.i18n.name),
-          description: t(calcData.i18n.longDescription)
+          description: calcData.i18n.longDescription
+            ? t(calcData.i18n.longDescription)
+            : undefined
         }}
         verticalGroups
         // @ts-ignore

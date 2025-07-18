@@ -17,11 +17,13 @@ import { FullI18nKey } from '../i18n';
 export default function ToolLayout({
   children,
   icon,
+  i18n,
   type,
-  i18n
+  fullPath
 }: {
   icon?: IconifyIcon | string;
   type: ToolCategory;
+  fullPath: string;
   children: ReactNode;
   i18n?: {
     name: FullI18nKey;
@@ -41,7 +43,7 @@ export default function ToolLayout({
   const toolDescription: string = t(i18n.description);
 
   const otherCategoryTools =
-    getToolsByCategory()
+    getToolsByCategory(t)
       .find((category) => category.type === type)
       ?.tools.filter((tool) => t(tool.name) !== toolTitle)
       .map((tool) => ({
@@ -68,14 +70,15 @@ export default function ToolLayout({
           description={toolDescription}
           icon={icon}
           type={type}
+          path={fullPath}
         />
         {children}
         <Separator backgroundColor="#5581b5" margin="50px" />
         <AllTools
-          title={t('toolLayout.allToolsTitle', {
+          title={t('translation:toolLayout.allToolsTitle', '', {
             type: capitalizeFirstLetter(
-              getToolsByCategory().find((category) => category.type === type)!
-                .rawTitle
+              getToolsByCategory(t).find((category) => category.type === type)!
+                .title
             )
           })}
           toolCards={otherCategoryTools}

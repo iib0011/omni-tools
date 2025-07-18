@@ -1,1 +1,250 @@
-{}
+{
+  "audio": {
+    "changeSpeed": {
+      "description": "Modifier la vitesse de lecture des fichiers audio. Accélérer ou ralentir le son tout en conservant la hauteur.",
+      "name": "Changer la vitesse audio",
+      "shortDescription": "Modifier la vitesse des fichiers audio"
+    },
+    "extractAudio": {
+      "description": "Extrayez la piste audio d'un fichier vidéo et enregistrez-la en tant que fichier audio séparé dans le format de votre choix (AAC, MP3, WAV).",
+      "name": "Extraire l'audio",
+      "shortDescription": "Extrayez l'audio des fichiers vidéo (MP4, MOV, etc.) vers AAC, MP3 ou WAV."
+    }
+  },
+  "baseFileInput": {
+    "copyFailed": "Échec de la copie : {{error}}",
+    "dropFileHere": "Déposez votre {{type}} ici",
+    "fileCopied": "Fichier copié",
+    "selectFileDescription": "Cliquez ici pour sélectionner un {{type}} depuis votre appareil, appuyez sur Ctrl+V pour utiliser un {{type}} depuis votre presse-papiers ou faites glisser et déposez un fichier depuis le bureau"
+  },
+  "categories": {
+    "audio": {
+      "description": "Outils pour travailler avec l'audio : extraire l'audio d'une vidéo, ajuster la vitesse de l'audio, fusionner plusieurs fichiers audio et bien plus encore.",
+      "title": "Outils audio"
+    },
+    "csv": {
+      "description": "Outils pour travailler avec des fichiers CSV : convertissez des fichiers CSV en différents formats, manipulez les données CSV, validez la structure CSV et traitez efficacement les fichiers CSV.",
+      "title": "Outils CSV"
+    },
+    "gif": {
+      "description": "Outils pour travailler avec des animations GIF : créez des GIF transparents, extrayez des cadres GIF, ajoutez du texte au GIF, recadrez, faites pivoter, inversez les GIF et bien plus encore.",
+      "title": "Outils GIF"
+    },
+    "image-generic": {
+      "description": "Outils pour travailler avec des images : compresser, redimensionner, recadrer, convertir en JPG, faire pivoter, supprimer l'arrière-plan et bien plus encore.",
+      "title": "Outils d'image"
+    },
+    "json": {
+      "description": "Outils pour travailler avec des structures de données JSON : embellir et minimiser des objets JSON, aplatir des tableaux JSON, transformer des valeurs JSON en chaînes, analyser des données et bien plus encore",
+      "title": "Outils JSON"
+    },
+    "list": {
+      "description": "Outils pour travailler avec des listes : trier, inverser, randomiser les listes, trouver des éléments de liste uniques et en double, modifier les séparateurs d'éléments de liste et bien plus encore.",
+      "title": "Liste des outils"
+    },
+    "number": {
+      "description": "Outils pour travailler avec des nombres : générer des séquences de nombres, convertir des nombres en mots et des mots en nombres, trier, arrondir, factoriser des nombres et bien plus encore.",
+      "title": "Outils numériques"
+    },
+    "pdf": {
+      "description": "Outils pour travailler avec des fichiers PDF : extraire du texte à partir de PDF, convertir des PDF en d'autres formats, manipuler des PDF et bien plus encore.",
+      "title": "Outils PDF"
+    },
+    "png": {
+      "description": "Outils pour travailler avec des images PNG : convertissez des PNG en JPG, créez des PNG transparents, modifiez les couleurs PNG, recadrez, faites pivoter, redimensionnez des PNG et bien plus encore.",
+      "title": "Outils PNG"
+    },
+    "seeAll": "Voir les {{title}}",
+    "string": {
+      "description": "Outils pour travailler avec du texte : convertissez du texte en images, recherchez et remplacez du texte, divisez du texte en fragments, joignez des lignes de texte, répétez du texte et bien plus encore.",
+      "title": "Outils de texte"
+    },
+    "time": {
+      "description": "Outils pour travailler avec l'heure et la date : calculez les différences horaires, convertissez entre les fuseaux horaires, formatez les dates, générez des séquences de dates et bien plus encore.",
+      "title": "Outils de temps"
+    },
+    "try": "Essayer {{title}}",
+    "video": {
+      "description": "Outils pour travailler avec des vidéos : extraire des images de vidéos, créer des GIF à partir de vidéos, convertir des vidéos en différents formats et bien plus encore.",
+      "title": "Outils vidéo"
+    },
+    "xml": {
+      "description": "Outils pour travailler avec des structures de données XML - visualiseur, embellisseur, validateur et bien plus encore",
+      "title": "Outils XML"
+    }
+  },
+  "csv": {
+    "findIncompleteCsvRecords": {
+      "description": "Il vous suffit de télécharger votre fichier CSV dans le formulaire ci-dessous et cet outil vérifiera automatiquement qu'aucune ligne ou colonne ne contient de valeur manquante. Dans les options de l'outil, vous pouvez ajuster le format du fichier d'entrée (spécifier le délimiteur, les guillemets et les commentaires). De plus, vous pouvez activer la vérification des valeurs vides, ignorer les lignes vides et limiter le nombre de messages d'erreur dans la sortie.",
+      "name": "Rechercher des enregistrements CSV incomplets",
+      "shortDescription": "Trouvez rapidement les lignes et les colonnes dans CSV auxquelles il manque des valeurs."
+    }
+  },
+  "hero": {
+    "brand": "OmniTools",
+    "description": "Boostez votre productivité avec OmniTools, la boîte à outils ultime pour accélérer vos tâches ! Accédez à des milliers d'utilitaires conviviaux pour modifier des images, du texte, des listes et des données, directement depuis votre navigateur.",
+    "examples": {
+      "calculateNumberSum": "Calculer la somme des nombres",
+      "changeGifSpeed": "Modifier la vitesse du GIF",
+      "compressPng": "Compresser PNG",
+      "createTransparentImage": "Créer une image transparente",
+      "prettifyJson": "Embellir JSON",
+      "sortList": "Trier une liste",
+      "splitPdf": "Diviser le PDF",
+      "splitText": "Diviser un texte",
+      "trimVideo": "Découper la vidéo"
+    },
+    "searchPlaceholder": "Rechercher tous les outils",
+    "title": "Faites avancer les choses rapidement avec"
+  },
+  "inputFooter": {
+    "clear": "Clair",
+    "copyToClipboard": "Copier dans le presse-papiers",
+    "importFromFile": "Importer à partir d'un fichier"
+  },
+  "list": {
+    "group": {
+      "description": "L'utilitaire de regroupement d'éléments de liste le plus simple au monde, accessible depuis un navigateur. Saisissez votre liste et spécifiez des critères de regroupement pour organiser les éléments en groupes logiques. Idéal pour catégoriser des données, organiser des informations ou créer des listes structurées. Prend en charge les séparateurs personnalisés et diverses options de regroupement.",
+      "name": "Groupe",
+      "shortDescription": "Regrouper les éléments de la liste par propriétés communes"
+    },
+    "reverse": {
+      "description": "Cette application très simple, basée sur un navigateur, imprime tous les éléments d'une liste à l'envers. Les éléments saisis peuvent être séparés par n'importe quel symbole et vous pouvez également modifier le séparateur des éléments inversés.",
+      "name": "Inverse",
+      "shortDescription": "Inverser rapidement une liste"
+    },
+    "sort": {
+      "description": "Il s'agit d'une application navigateur ultra-simple qui trie les éléments d'une liste et les organise par ordre croissant ou décroissant. Vous pouvez trier les éléments par ordre alphabétique, numérique ou par longueur. Vous pouvez également supprimer les doublons et les éléments vides, ainsi que les éléments individuels entourés d'espaces. Vous pouvez utiliser n'importe quel caractère séparateur pour séparer les éléments de la liste d'entrée ou une expression régulière. De plus, vous pouvez créer un nouveau délimiteur pour la liste de sortie triée.",
+      "name": "Trier",
+      "shortDescription": "Trier rapidement une liste"
+    }
+  },
+  "navbar": {
+    "buyMeACoffee": "Offre-moi un café",
+    "home": "Maison",
+    "tools": "Outils"
+  },
+  "number": {
+    "generate": {
+      "description": "Calculez rapidement une liste d'entiers dans votre navigateur. Pour obtenir votre liste, indiquez simplement le premier entier, modifiez la valeur et le nombre total dans les options ci-dessous, et cet utilitaire générera le nombre d'entiers correspondant.",
+      "name": "Générer des nombres",
+      "shortDescription": "Calculez rapidement une liste d'entiers dans votre navigateur"
+    },
+    "sum": {
+      "description": "Il s'agit d'une application très simple, accessible depuis un navigateur, qui additionne des nombres. Les nombres saisis peuvent être séparés par n'importe quel symbole et vous pouvez également modifier le séparateur des nombres additionnés.",
+      "name": "Somme des nombres",
+      "shortDescription": "Additionner rapidement une liste de nombres"
+    }
+  },
+  "numericInputWithUnit": {
+    "unit": "Unité"
+  },
+  "pdf": {
+    "compressPdf": {
+      "description": "Réduire la taille des fichiers PDF tout en maintenant la qualité grâce à Ghostscript",
+      "name": "Compresser le PDF",
+      "shortDescription": "Compresser des fichiers PDF en toute sécurité dans votre navigateur"
+    },
+    "mergePdf": {
+      "description": "Comment utiliser l'outil Fusionner PDF ?",
+      "name": "Fusionner des PDF",
+      "shortDescription": "Fusionner plusieurs fichiers PDF en un seul document"
+    },
+    "pdfToEpub": {
+      "description": "Transformez les documents PDF en fichiers EPUB pour une meilleure compatibilité avec les liseuses.",
+      "name": "PDF vers EPUB",
+      "shortDescription": "Convertir des fichiers PDF au format EPUB"
+    },
+    "protectPdf": {
+      "description": "Ajoutez une protection par mot de passe à vos fichiers PDF en toute sécurité dans votre navigateur",
+      "name": "Protéger le PDF",
+      "shortDescription": "Protégez les fichiers PDF en toute sécurité avec un mot de passe"
+    },
+    "splitPdf": {
+      "description": "Extraire des pages spécifiques d'un fichier PDF à l'aide de numéros de page ou de plages (par exemple, 1, 5-8)",
+      "name": "Diviser le PDF",
+      "shortDescription": "Extraire des pages spécifiques d'un fichier PDF"
+    }
+  },
+  "resultFooter": {
+    "copy": "Copier dans le presse-papiers",
+    "download": "Télécharger"
+  },
+  "string": {
+    "createPalindrome": {
+      "description": "L'utilitaire de navigateur le plus simple au monde pour créer des palindromes à partir de n'importe quel texte. Saisissez du texte et transformez-le instantanément en un palindrome qui se lit de la même manière à l'endroit comme à l'envers. Idéal pour les jeux de mots, la création de motifs de texte symétriques ou l'exploration de curiosités linguistiques.",
+      "name": "Créer un palindrome",
+      "shortDescription": "Créez un texte qui se lit de la même manière à l'avant et à l'arrière"
+    },
+    "palindrome": {
+      "description": "L'utilitaire le plus simple au monde, basé sur un navigateur, permet de vérifier si un texte est un palindrome. Vérifiez instantanément si votre texte se lit de la même manière à l'endroit comme à l'envers. Idéal pour les jeux de mots, l'analyse linguistique ou la validation de structures de texte symétriques. Prend en charge divers délimiteurs et la détection de palindromes multi-mots.",
+      "name": "Palindrome",
+      "shortDescription": "Vérifiez si le texte se lit de la même manière à l'avant et à l'arrière"
+    },
+    "repeat": {
+      "description": "Cet outil vous permet de répéter un texte donné plusieurs fois avec un séparateur optionnel.",
+      "name": "Répéter le texte",
+      "shortDescription": "Répéter le texte plusieurs fois"
+    },
+    "reverse": {
+      "description": "L'utilitaire d'inversion de texte le plus simple au monde, basé sur un navigateur. Saisissez n'importe quel texte et inversez-le instantanément, caractère par caractère. Idéal pour créer du texte miroir, analyser des palindromes ou jouer avec les motifs de texte. Préserve les espaces et les caractères spéciaux lors de l'inversion.",
+      "name": "Inverse",
+      "shortDescription": "Inverser n'importe quel texte caractère par caractère"
+    },
+    "toMorse": {
+      "description": "L'utilitaire de conversion de texte en code Morse le plus simple au monde, accessible depuis un navigateur. Chargez votre texte dans le formulaire de saisie à gauche et obtenez instantanément le code Morse dans la zone de sortie. Puissant, gratuit et rapide. Chargez du texte et obtenez le code Morse.",
+      "name": "Chaîne en morse",
+      "shortDescription": "Encoder rapidement du texte en morse"
+    },
+    "uppercase": {
+      "description": "L'utilitaire de conversion de texte en majuscules le plus simple au monde, accessible depuis un navigateur. Saisissez simplement votre texte et il sera automatiquement converti en majuscules. Idéal pour créer des titres, mettre en valeur du texte ou standardiser son format. Prend en charge divers formats de texte et préserve les caractères spéciaux.",
+      "name": "Majuscule",
+      "shortDescription": "Convertir le texte en lettres majuscules"
+    }
+  },
+  "toolExamples": {
+    "subtitle": "Cliquez pour essayer !",
+    "title": "{{title}} Exemples"
+  },
+  "toolFileResult": {
+    "copied": "Fichier copié",
+    "copyFailed": "Échec de la copie : {{error}}",
+    "loading": "Chargement... Cela peut prendre un moment.",
+    "result": "Résultat"
+  },
+  "toolHeader": {
+    "seeExamples": "Voir des exemples"
+  },
+  "toolLayout": {
+    "allToolsTitle": "Tous les {{type}}"
+  },
+  "toolMultiFileResult": {
+    "copied": "Fichier copié",
+    "copyFailed": "Échec de la copie : {{error}}",
+    "loading": "Chargement... Cela peut prendre un moment.",
+    "result": "Résultat"
+  },
+  "toolMultipleAudioInput": {
+    "inputTitle": "Saisir {{type}}",
+    "noFilesSelected": "Aucun fichier sélectionné"
+  },
+  "toolMultiplePdfInput": {
+    "inputTitle": "Saisir {{type}}",
+    "noFilesSelected": "Aucun fichier sélectionné"
+  },
+  "toolOptions": {
+    "title": "Options d'outils"
+  },
+  "toolTextInput": {
+    "copied": "Texte copié",
+    "copyFailed": "Échec de la copie : {{error}}",
+    "input": "Texte d'entrée",
+    "placeholder": "Entrez votre texte ici..."
+  },
+  "toolTextResult": {
+    "copied": "Texte copié",
+    "copyFailed": "Échec de la copie : {{error}}",
+    "loading": "Chargement... Cela peut prendre un moment.",
+    "result": "Résultat"
+  }
+}

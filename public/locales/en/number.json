@@ -57,6 +57,14 @@
   },
   "sum": {
     "description": "Calculate the sum of a list of numbers. Enter numbers separated by commas or newlines to get their total sum.",
+    "example1Description": "In this example, we calculate the sum of ten positive integers. These integers are listed as a column and their total sum equals 19494.",
+    "example1Title": "Sum of Ten Positive Numbers",
+    "example2Description": "This example reverses a column of twenty three-syllable nouns and prints all the words from the bottom to top. To separate the list items, it uses the \\n character as input item separator, which means that each item is on its own line.",
+    "example2Title": "Count Trees in the Park",
+    "example3Description": "In this example, we add together ninety different values – positive numbers, negative numbers, integers and decimal fractions. We set the input separator to a comma and after adding all of them together, we get 0 as output.",
+    "example3Title": "Sum of Integers and Decimals",
+    "example4Description": "In this example, we calculate the sum of all ten digits and enable the option \"Print Running Sum\". We get the intermediate values of the sum in the process of addition. Thus, we have the following sequence in the output: 0, 1 (0 + 1), 3 (0 + 1 + 2), 6 (0 + 1 + 2 + 3), 10 (0 + 1 + 2 + 3 + 4), and so on.",
+    "example4Title": "Running Sum of Numbers",
     "extractionTypes": {
       "delimiter": {
         "description": "Customize the number separator here. (By default a line break.)",

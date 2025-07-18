@@ -9,6 +9,7 @@ import { categoriesColors } from 'config/uiConfig';
 import { Icon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
 import { getI18nNamespaceFromToolCategory } from '@utils/string';
+import { validNamespaces } from '../../i18n';
 
 type ArrayElement<ArrayType extends readonly unknown[]> =
   ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
@@ -32,10 +33,10 @@ const SingleCategory = function ({
     `categories.${category.type}.description`,
     category.description
   );
-  const seeAllText = t('categories.seeAll', 'See all {{title}}', {
+  const seeAllText = t('translation:categories.seeAll', 'See all {{title}}', {
     title: categoryTitle
   });
-  const tryText = t('categories.try', 'Try {{title}}', {
+  const tryText = t('translation:categories.try', 'Try {{title}}', {
     //@ts-ignore
     title: t(category.example.title)
   });
@@ -111,9 +112,10 @@ const SingleCategory = function ({
   );
 };
 export default function Categories() {
+  const { t } = useTranslation();
   return (
     <Grid width={'80%'} container mt={2} spacing={2}>
-      {getToolsByCategory().map((category, index) => (
+      {getToolsByCategory(t).map((category, index) => (
         <SingleCategory key={category.type} category={category} index={index} />
       ))}
     </Grid>

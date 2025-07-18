@@ -1,1 +1,42 @@
-{}
+{
+  "changeSpeed": {
+    "description": "Ändern Sie die Wiedergabegeschwindigkeit von Audiodateien. Beschleunigen oder verlangsamen Sie die Wiedergabe, ohne die Tonhöhe zu verändern.",
+    "inputTitle": "Audioeingang",
+    "newAudioSpeed": "Neue Audiogeschwindigkeit",
+    "outputFormat": "Ausgabeformat",
+    "resultTitle": "Bearbeitetes Audio",
+    "settingSpeed": "Geschwindigkeit einstellen",
+    "shortDescription": "Ändern Sie die Geschwindigkeit von Audiodateien",
+    "speedDescription": "Standardmultiplikator: 2 bedeutet 2x schneller",
+    "title": "Audiogeschwindigkeit ändern",
+    "toolInfo": {
+      "title": "Was ist {{title}}?"
+    }
+  },
+  "extractAudio": {
+    "description": "Extrahieren Sie Audiospuren aus Videodateien.",
+    "extractingAudio": "Audio extrahieren",
+    "inputTitle": "Eingangsvideo",
+    "outputFormat": "Ausgabeformat",
+    "outputFormatDescription": "Wählen Sie das Format für das zu extrahierende Audio aus.",
+    "resultTitle": "Extrahiertes Audio",
+    "shortDescription": "Extrahieren Sie Audio aus Videodateien (MP4, MOV usw.) in AAC, MP3 oder WAV.",
+    "title": "Audio aus Video extrahieren",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie die Audiospur aus Videodateien extrahieren. Sie können zwischen verschiedenen Audioformaten wählen, darunter AAC, MP3 und WAV.",
+      "title": "Was ist {{title}}?"
+    }
+  },
+  "mergeAudio": {
+    "description": "Kombinieren Sie mehrere Audiodateien zu einer einzigen Audiodatei, indem Sie sie der Reihe nach aneinanderreihen.",
+    "longDescription": "Mit diesem Tool können Sie mehrere Audiodateien in der Reihenfolge des Hochladens zu einer einzigen Datei zusammenfügen. Ideal zum Kombinieren von Podcast-Segmenten, Musiktiteln oder anderen Audiodateien. Unterstützt verschiedene Audioformate, darunter MP3, AAC und WAV.",
+    "shortDescription": "Mehrere Audiodateien zu einer zusammenführen (MP3, AAC, WAV).",
+    "title": "Audio zusammenführen"
+  },
+  "trim": {
+    "description": "Schneiden und trimmen Sie Audiodateien, um bestimmte Segmente durch Angabe von Start- und Endzeiten zu extrahieren.",
+    "longDescription": "Mit diesem Tool können Sie Audiodateien durch Festlegen von Start- und Endzeiten kürzen. Sie können bestimmte Abschnitte aus längeren Audiodateien extrahieren, unerwünschte Teile entfernen oder kürzere Clips erstellen. Unterstützt verschiedene Audioformate, darunter MP3, AAC und WAV. Ideal für Podcast-Bearbeitung, Musikproduktion und alle anderen Audiobearbeitungsaufgaben.",
+    "shortDescription": "Schneiden Sie Audiodateien, um bestimmte Zeitsegmente zu extrahieren (MP3, AAC, WAV).",
+    "title": "Audio trimmen"
+  }
+}

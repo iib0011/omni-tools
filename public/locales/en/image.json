@@ -10,8 +10,15 @@
     "title": "Change image Opacity"
   },
   "compress": {
+    "compressedSize": "Compressed Size",
+    "compressionOptions": "Compression options",
     "description": "Reduce image file size while maintaining quality.",
+    "failedToCompress": "Failed to compress image. Please try again.",
+    "fileSizes": "File sizes",
     "inputTitle": "Input image",
+    "maxFileSizeDescription": "Maximum file size in megabytes",
+    "originalSize": "Original Size",
+    "qualityDescription": "Image quality percentage (lower means smaller file size)",
     "resultTitle": "Compressed image",
     "shortDescription": "Compress images to reduce file size while maintaining reasonable quality.",
     "title": "Compress Image"

@@ -1,5 +1,42 @@
 {
   "changeSpeed": {
-    "description": "Modifier la vitesse de lecture des fichiers audio. Accélérer ou ralentir le son tout en conservant la hauteur."
+    "description": "Modifier la vitesse de lecture des fichiers audio. Accélérer ou ralentir le son tout en conservant la hauteur.",
+    "inputTitle": "Entrée audio",
+    "newAudioSpeed": "Nouvelle vitesse audio",
+    "outputFormat": "Format de sortie",
+    "resultTitle": "Audio édité",
+    "settingSpeed": "Réglage de la vitesse",
+    "shortDescription": "Modifier la vitesse des fichiers audio",
+    "speedDescription": "Multiplicateur par défaut : 2 signifie 2x plus rapide",
+    "title": "Changer la vitesse audio",
+    "toolInfo": {
+      "title": "Qu'est-ce que {{title}}?"
+    }
+  },
+  "extractAudio": {
+    "description": "Extraire la piste audio des fichiers vidéo.",
+    "extractingAudio": "Extraction audio",
+    "inputTitle": "Entrée vidéo",
+    "outputFormat": "Format de sortie",
+    "outputFormatDescription": "Sélectionnez le format dans lequel l'audio doit être extrait.",
+    "resultTitle": "Audio extrait",
+    "shortDescription": "Extrayez l'audio des fichiers vidéo (MP4, MOV, etc.) vers AAC, MP3 ou WAV.",
+    "title": "Extraire l'audio d'une vidéo",
+    "toolInfo": {
+      "description": "Cet outil vous permet d'extraire la piste audio de vos fichiers vidéo. Vous pouvez choisir parmi différents formats audio, notamment AAC, MP3 et WAV.",
+      "title": "Qu'est-ce que {{title}}?"
+    }
+  },
+  "mergeAudio": {
+    "description": "Combinez plusieurs fichiers audio en un seul fichier audio en les concaténant en séquence.",
+    "longDescription": "Cet outil vous permet de fusionner plusieurs fichiers audio en un seul fichier en les concaténant dans l'ordre de leur mise en ligne. Idéal pour combiner des segments de podcast, des morceaux de musique ou tout autre fichier audio à assembler. Compatible avec différents formats audio, dont MP3, AAC et WAV.",
+    "shortDescription": "Fusionnez plusieurs fichiers audio en un seul (MP3, AAC, WAV).",
+    "title": "Fusionner l'audio"
+  },
+  "trim": {
+    "description": "Coupez et rognez des fichiers audio pour extraire des segments spécifiques en spécifiant les heures de début et de fin.",
+    "longDescription": "Cet outil vous permet de découper des fichiers audio en spécifiant les heures de début et de fin. Vous pouvez extraire des segments spécifiques de fichiers audio plus longs, supprimer des parties inutiles ou créer des clips plus courts. Il prend en charge divers formats audio, dont MP3, AAC et WAV. Idéal pour le montage de podcasts, la production musicale ou tout autre besoin d'édition audio.",
+    "shortDescription": "Découpez des fichiers audio pour extraire des segments de temps spécifiques (MP3, AAC, WAV).",
+    "title": "Couper le son"
   }
 }

@@ -1,1 +1,113 @@
-{}
+{
+  "compressPdf": {
+    "compressedFileSize": "Gecomprimeerde bestandsgrootte",
+    "compressingPdf": "PDF comprimeren...",
+    "compressionLevel": "Compressieniveau",
+    "compressionSettings": "Compressie-instellingen",
+    "description": "Verklein de PDF-bestandsgrootte met behoud van kwaliteit met Ghostscript",
+    "errorCompressingPdf": "PDF comprimeren is mislukt: {{error}}",
+    "errorReadingPdf": "PDF-bestand kan niet worden gelezen. Controleer of het een geldig PDF-bestand is.",
+    "fileSize": "Originele bestandsgrootte",
+    "highCompression": "Hoge compressie",
+    "highCompressionDescription": "Maximale bestandsgroottevermindering met enig kwaliteitsverlies",
+    "inputTitle": "PDF-invoer",
+    "lowCompression": "Lage compressie",
+    "lowCompressionDescription": "Verklein de bestandsgrootte lichtjes met minimaal kwaliteitsverlies",
+    "mediumCompression": "Gemiddelde compressie",
+    "mediumCompressionDescription": "Balans tussen bestandsgrootte en kwaliteit",
+    "pages": "Aantal pagina's",
+    "resultTitle": "Gecomprimeerde PDF",
+    "shortDescription": "Comprimeer PDF-bestanden veilig in uw browser",
+    "title": "PDF comprimeren"
+  },
+  "editor": {
+    "description": "Geavanceerde PDF-editor met mogelijkheden voor annotatie, formulieren invullen, markeren en exporteren. Bewerk uw PDF's rechtstreeks in de browser met professionele tools zoals tekst invoegen, tekenen, markeren, ondertekenen en formulieren invullen.",
+    "shortDescription": "Bewerk PDF's met geavanceerde hulpmiddelen voor annotatie, ondertekening en bewerking",
+    "title": "PDF-editor"
+  },
+  "merge": {
+    "inputTitle": "PDF-invoer",
+    "loadingText": "Pagina's extraheren",
+    "resultTitle": "Samengevoegde PDF-uitvoer",
+    "toolInfo": {
+      "description": "Met deze tool kun je meerdere PDF-bestanden samenvoegen tot één document. Om de tool te gebruiken, upload je eenvoudig de PDF-bestanden die je wilt samenvoegen. De tool combineert vervolgens alle pagina's uit de invoerbestanden tot één PDF-document.",
+      "title": "Hoe gebruik ik de PDF-samenvoegtool?"
+    }
+  },
+  "mergePdf": {
+    "description": "Combineer meerdere PDF-bestanden tot één document.",
+    "inputTitle": "PDF-invoer",
+    "mergingPdfs": "PDF's samenvoegen",
+    "pdfOptions": "PDF-opties",
+    "resultTitle": "Samengevoegde PDF",
+    "shortDescription": "Meerdere PDF-bestanden samenvoegen tot één document",
+    "sortByFileName": "Sorteren op bestandsnaam",
+    "sortByFileNameDescription": "PDF's alfabetisch sorteren op bestandsnaam",
+    "sortByUploadOrder": "Sorteren op uploadvolgorde",
+    "sortByUploadOrderDescription": "Bewaar PDF's in de volgorde waarin ze zijn geüpload",
+    "title": "PDF samenvoegen",
+    "toolInfo": {
+      "description": "Met deze tool kun je meerdere PDF-bestanden combineren tot één document. Je kunt kiezen hoe je de PDF's wilt sorteren en de tool voegt ze samen in de opgegeven volgorde.",
+      "title": "PDF-bestanden samenvoegen"
+    }
+  },
+  "pdfToEpub": {
+    "description": "PDF-documenten transformeren naar EPUB-bestanden voor betere compatibiliteit met e-readers.', pictogram: 'material-symbols:import-contacts', component: lazy(() => import('./index')), trefwoorden: ['pdf', 'epub', 'convert', 'ebook'], pad: 'pdf-naar-epub', i18n: { naam: 'pdf:pdfToEpub.title', beschrijving: 'pdf:pdfToEpub.description",
+    "shortDescription": "PDF-bestanden converteren naar EPUB-formaat",
+    "title": "PDF naar EPUB"
+  },
+  "pdfToPng": {
+    "description": "Transformeer PDF-documenten naar PNG-panelen.",
+    "longDescription": "Upload een PDF en converteer elke pagina rechtstreeks in je browser naar een hoogwaardige PNG-afbeelding. Deze tool is ideaal voor het extraheren van visuele content of het delen van individuele pagina's. Er worden geen gegevens geüpload - alles wordt lokaal uitgevoerd.",
+    "shortDescription": "PDF naar PNG-afbeeldingen converteren",
+    "title": "PDF naar PNG"
+  },
+  "protectPdf": {
+    "description": "Voeg wachtwoordbeveiliging toe aan uw PDF-bestanden veilig in uw browser",
+    "shortDescription": "PDF-bestanden veilig met een wachtwoord beveiligen",
+    "title": "PDF beschermen"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "Alle {{count}} pagina's worden gedraaid",
+    "angleOptions": {
+      "clockwise90": "90° met de klok mee",
+      "counterClockwise270": "270° (90° tegen de klok in)",
+      "upsideDown180": "180° (op zijn kop)"
+    },
+    "applyToAllPages": "Toepassen op alle pagina's",
+    "description": "Pagina's in een PDF-document roteren.",
+    "inputTitle": "PDF-invoer",
+    "longDescription": "Wijzig de oriëntatie van PDF-pagina's door ze 90, 180 of 270 graden te draaien. Handig voor het corrigeren van onjuist gescande documenten of het voorbereiden van PDF's voor afdrukken.",
+    "pageRangesDescription": "Voer paginanummers of bereiken in, gescheiden door komma's (bijv. 1, 3, 5-7)",
+    "pageRangesPlaceholder": "bijv. 1,5-8",
+    "pagesWillBeRotated": "{{count}} pagina{{count !== 1 ? 's' : ''}} zal worden gedraaid",
+    "pdfPageCount": "PDF heeft {{count}} pagina{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "Gedraaide PDF",
+    "rotatingPages": "Roterende pagina's",
+    "rotationAngle": "Rotatiehoek",
+    "rotationSettings": "Rotatie-instellingen",
+    "shortDescription": "Pagina's in een PDF-document roteren",
+    "title": "PDF roteren",
+    "toolInfo": {
+      "description": "Met deze tool kunt u pagina's in een PDF-document roteren. U kunt alle pagina's roteren of specifieke pagina's opgeven. Kies een rotatiehoek: 90° met de klok mee, 180° (ondersteboven) of 270° (90° tegen de klok in). Om specifieke pagina's te roteren, schakelt u 'Toepassen op alle pagina's' uit en voert u paginanummers of paginabereiken in, gescheiden door komma's (bijvoorbeeld 1, 3, 5-7).",
+      "title": "De PDF-rotatietool gebruiken"
+    }
+  },
+  "splitPdf": {
+    "description": "Specifieke pagina's uit een PDF-document extraheren.",
+    "extractingPages": "Pagina's extraheren",
+    "inputTitle": "PDF-invoer",
+    "pageExtractionPreview": "{{count}} pagina{{count !== 1 ? 's' : ''}} zal worden geëxtraheerd",
+    "pageRangesDescription": "Voer paginanummers of bereiken in, gescheiden door komma's (bijv. 1, 3, 5-7)",
+    "pageRangesPlaceholder": "bijv. 1,5-8",
+    "pageSelection": "Paginaselectie",
+    "pdfPageCount": "PDF heeft {{count}} pagina{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "Geëxtraheerde PDF",
+    "shortDescription": "Specifieke pagina's uit een PDF-bestand extraheren",
+    "title": "PDF splitsen",
+    "toolInfo": {
+      "description": "Met deze tool kunt u specifieke pagina's uit een PDF-document extraheren. U kunt specifieke pagina's of paginareeksen opgeven die u wilt extraheren.",
+      "title": "PDF splitsen"
+    }
+  }
+}

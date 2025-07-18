@@ -1,5 +1,6 @@
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import {
@@ -14,6 +15,7 @@ import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import SelectWithDesc from '@components/options/SelectWithDesc';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
+import { ParseKeys } from 'i18next';
 
 const initialValues = {
   splitSeparatorType: 'symbol' as SplitOperatorType,
@@ -25,23 +27,24 @@ const initialValues = {
   trimItems: false
 };
 const splitOperators: {
-  title: string;
-  description: string;
+  title: ParseKeys<'list'>;
+  description: ParseKeys<'list'>;
   type: SplitOperatorType;
 }[] = [
   {
-    title: 'Use a Symbol for Splitting',
-    description: 'Delimit input list items with a character.',
+    title: 'findMostPopular.splitOperators.symbol.title',
+    description: 'findMostPopular.splitOperators.symbol.description',
     type: 'symbol'
   },
   {
-    title: 'Use a Regex for Splitting',
+    title: 'findMostPopular.splitOperators.regex.title',
     type: 'regex',
-    description: 'Delimit input list items with a regular expression.'
+    description: 'findMostPopular.splitOperators.regex.description'
   }
 ];
 
 export default function FindMostPopular({ title }: ToolComponentProps) {
+  const { t } = useTranslation('list');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const compute = (optionsValues: typeof initialValues, input: any) => {
@@ -74,28 +77,35 @@ export default function FindMostPopular({ title }: ToolComponentProps) {
       title={title}
       input={input}
       inputComponent={
-        <ToolTextInput title={'Input list'} value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('findMostPopular.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
       resultComponent={
-        <ToolTextResult title={'Most popular items'} value={result} />
+        <ToolTextResult
+          title={t('findMostPopular.resultTitle')}
+          value={result}
+        />
       }
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [
         {
-          title: 'How to Extract List Items?',
+          title: t('findMostPopular.extractListItems'),
           component: (
             <Box>
               {splitOperators.map(({ title, description, type }) => (
                 <SimpleRadio
                   key={type}
                   onClick={() => updateField('splitSeparatorType', type)}
-                  title={title}
-                  description={description}
+                  title={t(title)}
+                  description={t(description)}
                   checked={values.splitSeparatorType === type}
                 />
               ))}
               <TextFieldWithDesc
-                description={'Set a delimiting symbol or regular expression.'}
+                description={t('findMostPopular.splitSeparatorDescription')}
                 value={values.splitSeparator}
                 onOwnChange={(val) => updateField('splitSeparator', val)}
               />
@@ -103,26 +113,24 @@ export default function FindMostPopular({ title }: ToolComponentProps) {
           )
         },
         {
-          title: 'Item comparison',
+          title: t('findMostPopular.itemComparison'),
           component: (
             <Box>
               <CheckboxWithDesc
-                title={'Remove empty items'}
-                description={'Ignore empty items from comparison.'}
+                title={t('findMostPopular.removeEmptyItems')}
+                description={t('findMostPopular.removeEmptyItemsDescription')}
                 checked={values.deleteEmptyItems}
                 onChange={(value) => updateField('deleteEmptyItems', value)}
               />
               <CheckboxWithDesc
-                title={'Trim top list items'}
-                description={
-                  'Remove leading and trailing spaces before comparing items'
-                }
+                title={t('findMostPopular.trimItems')}
+                description={t('findMostPopular.trimItemsDescription')}
                 checked={values.trimItems}
                 onChange={(value) => updateField('trimItems', value)}
               />
               <CheckboxWithDesc
-                title={'Ignore Item Case'}
-                description={'Compare all list items in lowercase.'}
+                title={t('findMostPopular.ignoreItemCase')}
+                description={t('findMostPopular.ignoreItemCaseDescription')}
                 checked={values.ignoreItemCase}
                 onChange={(value) => updateField('ignoreItemCase', value)}
               />
@@ -130,27 +138,42 @@ export default function FindMostPopular({ title }: ToolComponentProps) {
           )
         },
         {
-          title: 'Top item output format',
+          title: t('findMostPopular.outputFormat'),
           component: (
             <Box>
               <SelectWithDesc
                 selected={values.displayFormat}
                 options={[
-                  { label: 'Show item percentage', value: 'percentage' },
-                  { label: 'Show item count', value: 'count' },
-                  { label: 'Show item total', value: 'total' }
+                  {
+                    label: t('findMostPopular.displayOptions.percentage'),
+                    value: 'percentage'
+                  },
+                  {
+                    label: t('findMostPopular.displayOptions.count'),
+                    value: 'count'
+                  },
+                  {
+                    label: t('findMostPopular.displayOptions.total'),
+                    value: 'total'
+                  }
                 ]}
                 onChange={(value) => updateField('displayFormat', value)}
-                description={'How to display the most popular list items?'}
+                description={t('findMostPopular.displayFormatDescription')}
               />
               <SelectWithDesc
                 selected={values.sortingMethod}
                 options={[
-                  { label: 'Sort Alphabetically', value: 'alphabetic' },
-                  { label: 'Sort by count', value: 'count' }
+                  {
+                    label: t('findMostPopular.sortOptions.alphabetic'),
+                    value: 'alphabetic'
+                  },
+                  {
+                    label: t('findMostPopular.sortOptions.count'),
+                    value: 'count'
+                  }
                 ]}
                 onChange={(value) => updateField('sortingMethod', value)}
-                description={'Select a sorting method.'}
+                description={t('findMostPopular.sortingMethodDescription')}
               />
             </Box>
           )

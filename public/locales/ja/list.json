@@ -1,1 +1,208 @@
-{}
+{
+  "duplicate": {
+    "concatenate": "連結",
+    "concatenateDescription": "コピーを連結する（チェックを外すと、アイテムが織り交ぜられます）",
+    "copyDescription": "コピー数（端数も可）",
+    "description": "リストアイテムを複製するための、世界で最もシンプルなブラウザベースのユーティリティです。リストを入力し、複製条件を指定するだけで、アイテムのコピーを作成できます。データの拡張、テスト、繰り返しパターンの作成に最適です。",
+    "duplicationOptions": "複製オプション",
+    "examples": {
+      "fractional": {
+        "description": "この例では、リストを小数部数で複製する方法を示します。",
+        "title": "部分的な複製"
+      },
+      "interweave": {
+        "description": "この例では、項目を連結するのではなく織り交ぜる方法を示します。",
+        "title": "織り交ぜたアイテム"
+      },
+      "reverse": {
+        "description": "この例では、リストを逆の順序で複製する方法を示します。",
+        "title": "逆複製"
+      },
+      "simple": {
+        "description": "この例では、単語のリストを複製する方法を示します。",
+        "title": "単純な複製"
+      }
+    },
+    "inputTitle": "入力リスト",
+    "joinSeparatorDescription": "重複したリストを結合するための区切り文字",
+    "resultTitle": "重複リスト",
+    "reverse": "逆行する",
+    "reverseDescription": "重複したアイテムを元に戻す",
+    "shortDescription": "指定した条件でリスト項目を複製する",
+    "splitByRegex": "正規表現で分割",
+    "splitBySymbol": "シンボルで分割",
+    "splitOptions": "分割オプション",
+    "splitSeparatorDescription": "リストを分割するための区切り文字",
+    "title": "重複",
+    "toolInfo": {
+      "description": "このツールを使うと、リスト内の項目を複製できます。複製する数（小数点以下を含む）を指定したり、項目を連結するか織り交ぜるかを制御したり、複製した項目を反転させたりすることも可能です。繰り返しパターンの作成、テストデータの生成、あるいは予測可能な内容のリスト拡張などに便利です。",
+      "title": "リストの重複"
+    }
+  },
+  "findMostPopular": {
+    "description": "リスト内で最も人気のあるアイテムを見つけるための、世界で最もシンプルなブラウザベースのユーティリティです。リストを入力するだけで、最も頻繁に表示されるアイテムを瞬時に表示します。データ分析、トレンドの特定、共通要素の発見に最適です。",
+    "shortDescription": "最も頻繁に発生するアイテムを見つける",
+    "title": "最も人気のあるものを探す"
+  },
+  "findUnique": {
+    "caseSensitiveItems": "大文字と小文字を区別する項目",
+    "caseSensitiveItemsDescription": "大文字と小文字が異なる項目をリスト内の一意の要素として出力します。",
+    "delimiterDescription": "区切り記号または正規表現を設定します。",
+    "description": "リスト内の一意の項目を見つけるための、世界で最もシンプルなブラウザベースのユーティリティです。リストを入力すると、重複を除いたすべての一意の値が瞬時に取得されます。データのクリーニング、重複除去、または異なる要素の検索に最適です。",
+    "findAbsolutelyUniqueItems": "絶対にユニークなアイテムを見つける",
+    "findAbsolutelyUniqueItemsDescription": "リストの項目のうち、単一のコピー内に存在するものだけを表示します。",
+    "inputListDelimiter": "入力リスト区切り文字",
+    "inputTitle": "入力リスト",
+    "outputListDelimiter": "出力リスト区切り文字",
+    "resultTitle": "ユニークなアイテム",
+    "shortDescription": "リスト内のユニークなアイテムを見つける",
+    "skipEmptyItems": "空の項目をスキップ",
+    "skipEmptyItemsDescription": "出力に空のリスト項目を含めないでください。",
+    "title": "ユニークなものを見つける",
+    "trimItems": "リスト項目をトリムする",
+    "trimItemsDescription": "項目を比較する前に先頭と末尾のスペースを削除します。",
+    "uniqueItemOptions": "ユニークなアイテムオプション"
+  },
+  "group": {
+    "deleteEmptyItems": "空のアイテムを削除する",
+    "deleteEmptyItemsDescription": "空の項目は無視し、グループに含めません。",
+    "description": "リスト項目をグループ化するための、世界で最もシンプルなブラウザベースのユーティリティです。リストを入力し、グループ化の条件を指定するだけで、項目を論理的なグループに整理できます。データの分類、情報の整理、構造化されたリストの作成に最適です。カスタムセパレーターと様々なグループ化オプションをサポートしています。",
+    "emptyItemsAndPadding": "空の項目とパディング",
+    "groupNumberDescription": "グループ内のアイテム数",
+    "groupSeparatorDescription": "グループ区切り文字",
+    "groupSizeAndSeparators": "グループサイズと区切り",
+    "inputItemSeparator": "入力項目セパレーター",
+    "inputTitle": "入力リスト",
+    "itemSeparatorDescription": "項目区切り文字",
+    "leftWrapDescription": "グループの左折り返し記号。",
+    "padNonFullGroups": "非フルグループのパディング",
+    "padNonFullGroupsDescription": "いっぱいでないグループをカスタム項目で埋めます (以下に入力)。",
+    "paddingCharDescription": "この文字または項目を使用して、完全でないグループを埋め込みます。",
+    "resultTitle": "グループ化されたアイテム",
+    "rightWrapDescription": "グループの右折り返し記号。",
+    "shortDescription": "共通のプロパティでリスト項目をグループ化する",
+    "splitOperators": {
+      "regex": {
+        "description": "入力リスト項目を正規表現で区切ります。",
+        "title": "正規表現を使用して分割する"
+      },
+      "symbol": {
+        "description": "入力リスト項目を文字で区切ります。",
+        "title": "分割にシンボルを使用する"
+      }
+    },
+    "splitSeparatorDescription": "区切り記号または正規表現を設定します。",
+    "title": "グループ"
+  },
+  "reverse": {
+    "description": "これは、すべてのリスト項目を逆順に表示する、非常にシンプルなブラウザベースのアプリケーションです。入力項目は任意の記号で区切ることができ、逆順に表示するリスト項目の区切り文字を変更することもできます。",
+    "inputTitle": "入力リスト",
+    "itemSeparator": "アイテムセパレーター",
+    "itemSeparatorDescription": "区切り記号または正規表現を設定します。",
+    "outputListOptions": "出力リストオプション",
+    "outputSeparatorDescription": "出力リスト項目のセパレーター。",
+    "resultTitle": "逆リスト",
+    "shortDescription": "リストを素早く逆順にする",
+    "splitOperators": {
+      "regex": {
+        "description": "入力リスト項目を正規表現で区切ります。",
+        "title": "正規表現を使用して分割する"
+      },
+      "symbol": {
+        "description": "入力リスト項目を文字で区切ります。",
+        "title": "分割にシンボルを使用する"
+      }
+    },
+    "splitterMode": "スプリッターモード",
+    "title": "逆行する",
+    "toolInfo": {
+      "description": "このユーティリティを使えば、リスト内の項目の順序を逆にすることができます。このユーティリティはまず入力リストを個々の項目に分割し、最後の項目から最初の項目まで反復処理を行い、反復処理中に各項目を出力に出力します。入力リストには、数字、文字列、単語、文章など、テキストデータとして表現できるあらゆるものを含めることができます。入力項目の区切り文字には正規表現も使用できます。例えば、正規表現 /[;,]/ を使用すると、カンマ区切りまたはセミコロン区切りの項目を使用できます。入力リストと出力リストの項目の区切り文字は、オプションでカスタマイズできます。デフォルトでは、入力リストと出力リストの両方がカンマ区切りです。まさにリストの素晴らしさ！",
+      "title": "リストリバーサーとは何ですか?"
+    }
+  },
+  "rotate": {
+    "description": "リスト項目を回転させる、世界で最もシンプルなブラウザベースのユーティリティです。リストを入力し、回転量を指定すると、指定した数だけ項目を移動できます。データ操作、循環シフト、リストの並べ替えに最適です。",
+    "shortDescription": "リスト項目を指定された位置で回転する",
+    "title": "回転"
+  },
+  "shuffle": {
+    "delimiterDescription": "区切り記号または正規表現を設定します。",
+    "description": "リスト項目をシャッフルする、世界で最もシンプルなブラウザベースのユーティリティです。リストを入力すると、項目がランダムな順序で並んだランダムバージョンが瞬時に作成されます。バラエティ豊かなリストの作成、ランダム性のテスト、順序付けられたデータの混合などに最適です。",
+    "inputListSeparator": "入力リストセパレーター",
+    "inputTitle": "入力リスト",
+    "joinSeparatorDescription": "ランダム化されたリストではこの区切り文字を使用します。",
+    "outputLengthDescription": "これだけの数のランダムアイテムを出力する",
+    "resultTitle": "シャッフルされたリスト",
+    "shortDescription": "リスト項目の順序をランダムにする",
+    "shuffledListLength": "シャッフルリストの長さ",
+    "shuffledListSeparator": "シャッフルリストセパレーター",
+    "title": "シャッフル"
+  },
+  "sort": {
+    "caseSensitive": "大文字と小文字を区別する並べ替え",
+    "caseSensitiveDescription": "大文字と小文字を別々に並べ替えます。昇順リストでは、大文字が小文字よりも前に表示されます。（アルファベット順の並べ替えモードでのみ機能します。）",
+    "description": "リスト項目を並べ替えるための、世界で最もシンプルなブラウザベースのユーティリティです。リストを入力し、並べ替え条件を指定することで、項目を昇順または降順に並べ替えることができます。データの整理、テキスト処理、順序付きリストの作成に最適です。",
+    "inputItemSeparator": "入力項目セパレーター",
+    "inputTitle": "入力リスト",
+    "joinSeparatorDescription": "この記号は、ソートされたリスト内の項目間の結合子として使用します。",
+    "orderDescription": "並べ替え順序を選択します。",
+    "orderOptions": {
+      "decreasing": "降順",
+      "increasing": "昇順"
+    },
+    "removeDuplicates": "重複を削除する",
+    "removeDuplicatesDescription": "重複したリスト項目を削除します。",
+    "resultTitle": "ソートされたリスト",
+    "shortDescription": "リスト項目を指定された順序で並べ替える",
+    "sortMethod": "ソート方法",
+    "sortMethodDescription": "並べ替え方法を選択します。",
+    "sortOptions": {
+      "alphabetic": "アルファベット順に並べ替え",
+      "length": "長さで並べ替え",
+      "numeric": "数値順に並べ替える"
+    },
+    "sortedItemProperties": "並べ替えられたアイテムのプロパティ",
+    "splitOperators": {
+      "regex": {
+        "description": "入力リスト項目を正規表現で区切ります。",
+        "title": "正規表現を使用して分割する"
+      },
+      "symbol": {
+        "description": "入力リスト項目を文字で区切ります。",
+        "title": "分割にシンボルを使用する"
+      }
+    },
+    "splitSeparatorDescription": "区切り記号または正規表現を設定します。",
+    "title": "選別"
+  },
+  "truncate": {
+    "description": "リストを切り捨てるための、世界で最もシンプルなブラウザベースのユーティリティです。リストを入力し、保持するアイテムの最大数を指定します。データ処理、リスト管理、コンテンツの長さ制限などに最適です。",
+    "shortDescription": "リストを指定された項目数に切り捨てる",
+    "title": "切り捨て"
+  },
+  "unwrap": {
+    "description": "リスト項目を展開するための、世界で最もシンプルなブラウザベースのユーティリティです。展開されたリストを入力し、展開条件を指定することで、整理された項目をフラット化できます。データ処理、テキスト操作、構造化リストからのコンテンツ抽出に最適です。",
+    "shortDescription": "構造化された形式からリスト項目をアンラップする",
+    "title": "ラップを解除"
+  },
+  "wrap": {
+    "description": "各リスト項目の前後にテキストを追加します。",
+    "inputTitle": "入力リスト",
+    "joinSeparatorDescription": "ラップされたリストを結合するためのセパレーター",
+    "leftTextDescription": "各項目の前に追加するテキスト",
+    "removeEmptyItems": "空のアイテムを削除する",
+    "resultTitle": "ラップされたリスト",
+    "rightTextDescription": "各項目の後に追加するテキスト",
+    "shortDescription": "指定した条件でリスト項目を囲む",
+    "splitByRegex": "正規表現で分割",
+    "splitBySymbol": "シンボルで分割",
+    "splitOptions": "分割オプション",
+    "splitSeparatorDescription": "リストを分割するための区切り文字",
+    "title": "包む",
+    "toolInfo": {
+      "description": "このツールを使うと、リスト内の各項目の前後にテキストを追加できます。左右に異なるテキストを指定したり、リストの処理方法を制御したりできます。リスト項目に引用符、括弧、その他の書式を追加したり、さまざまな形式に合わせてデータを準備したり、構造化テキストを作成したりするのに役立ちます。",
+      "title": "リストの折り返し"
+    },
+    "wrapOptions": "ラップオプション"
+  }
+}
