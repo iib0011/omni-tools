@@ -280,8 +280,13 @@
       "longDescription": "This tool URL-decodes a previously URL-encoded string. URL-decoding is the inverse operation of URL-encoding. All percent-encoded characters get decoded to characters that you can understand. Some of the most well known percent-encoded values are %20 for a space, %3a for a colon, %2f for a slash, and %3f for a question mark. The two digits following the percent sign are character's char code values in hex.",
       "title": "String URL decoder"
     },
-
     "inputTitle": "Input String(URL-escaped)",
     "resultTitle": "Output string"
+  },
+  "privatebin": {
+    "title": "PrivateBin",
+    "description": "A secure paste service for sharing text content with encryption and expiration options.",
+    "shortDescription": "Share text securely with encryption and expiration",
+    "longDescription": "PrivateBin is a secure paste service that allows you to share text content with others. Your content is encrypted and can be configured with expiration times and burn-after-reading options. Perfect for sharing sensitive information, code snippets, or any text content that needs to be shared temporarily and securely."
   }
 }
