@@ -1,0 +1,63 @@
+import { useState } from 'react';
+import ToolContent from '@components/ToolContent';
+import ToolPdfInput from '@components/input/ToolPdfInput';
+import ToolFileResult from '@components/result/ToolFileResult';
+import { ToolComponentProps } from '@tools/defineTool';
+import { convertPdfToDocx } from './service';
+
+export default function PdfToWord({ title }: ToolComponentProps) {
+  const [input, setInput] = useState<File | null>(null);
+  const [outputFile, setOutputFile] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const compute = async (_: {}, file: File | null) => {
+    if (!file) return;
+    setLoading(true);
+    setOutputFile(null);
+    try {
+      const blob = await convertPdfToDocx(file);
+      const docxFile = new File([blob], file.name.replace(/\.pdf$/, '.docx'), {
+        type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+      });
+      setOutputFile(docxFile);
+    } catch (err) {
+      console.error('PDF to Word conversion failed:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+console.log('outputFile:', outputFile);
+
+
+  return (
+    <ToolContent
+      title={title}
+      input={input}
+      setInput={setInput}
+      initialValues={{}}
+      compute={compute}
+      inputComponent={
+        <ToolPdfInput
+          value={input}
+          onChange={setInput}
+          accept={['application/pdf']}
+          title="Upload a PDF"
+        />
+      }
+      resultComponent={
+        <ToolFileResult
+          title="Converted Word Document"
+          file={outputFile}
+          loading={loading}
+          loadingText="Converting PDF to Word..."
+        />
+      }
+      getGroups={null}
+      toolInfo={{
+        title: 'Convert PDF to Word',
+        description: 'Upload your PDF and get a .docx file with extracted text.',
+      }}
+    />
+  );
+}
+

@@ -127,6 +127,7 @@ export default function Hero() {
         <Typography sx={{ textAlign: 'center' }} fontSize={{ xs: 25, md: 30 }}>
           {t('translation:hero.title')}{' '}
           <Typography
+            component="span"
             fontSize={{ xs: 25, md: 30 }}
             display={'inline'}
             color={'primary'}
