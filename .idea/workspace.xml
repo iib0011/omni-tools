@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="docs: translation docs">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix: json comparison">
+      <change afterPath="$PROJECT_DIR$/src/components/input/ToolCodeInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/LineNumberInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/json/json-comparison/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/json/json-comparison/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="origin/main" />
@@ -272,7 +279,7 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "#190 on fork/AshAnand34/en-hi-translation",
+    "git-widget-placeholder": "#197 on fork/bhavesh158/json-compare",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools",
@@ -518,14 +525,6 @@
       <workItem from="1752403829295" duration="13253000" />
       <workItem from="1752493585622" duration="11629000" />
       <workItem from="1752507105323" duration="9008000" />
-    </task>
-    <task id="LOCAL-00184" summary="refactor: lib">
-      <option name="closed" value="true" />
-      <created>1743644942488</created>
-      <option name="number" value="00184" />
-      <option name="presentableId" value="LOCAL-00184" />
-      <option name="project" value="LOCAL" />
-      <updated>1743644942488</updated>
     </task>
     <task id="LOCAL-00185" summary="fix: path">
       <option name="closed" value="true" />
@@ -911,7 +910,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752515675314</updated>
     </task>
-    <option name="localTasksCounter" value="233" />
+    <task id="LOCAL-00233" summary="fix: json comparison">
+      <option name="closed" value="true" />
+      <created>1752803825523</created>
+      <option name="number" value="00233" />
+      <option name="presentableId" value="LOCAL-00233" />
+      <option name="project" value="LOCAL" />
+      <updated>1752803825523</updated>
+    </task>
+    <option name="localTasksCounter" value="234" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -958,7 +965,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: new logo and font" />
     <MESSAGE value="chore: white logo" />
     <MESSAGE value="chore: png icon" />
     <MESSAGE value="fix: remove xml viewer" />
@@ -983,7 +989,8 @@
     <MESSAGE value="fix: translation related behaviors" />
     <MESSAGE value="feat: password generator to test translation" />
     <MESSAGE value="docs: translation docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: translation docs" />
+    <MESSAGE value="fix: json comparison" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: json comparison" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

@@ -1,42 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import ToolContent from '@components/ToolContent';
-import LineNumberInput from '@components/input/LineNumberInput';
+import ToolCodeInput from '@components/input/ToolCodeInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { compareJson } from './service';
 import { ToolComponentProps } from '@tools/defineTool';
-import { Box, Grid, styled } from '@mui/material';
-
-const StyledContainer = styled(Box)({
-  position: 'relative',
-  width: '100%',
-  height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  minHeight: '500px',
-  marginBottom: '20px'
-});
-
-const StyledGrid = styled(Grid)({
-  flex: 1,
-  '& .MuiGrid-item': {
-    height: '100%'
-  }
-});
-
-const StyledInputWrapper = styled(Box)({
-  height: '100%',
-  '& > div': {
-    height: '100%',
-    '& textarea': {
-      height: '100% !important',
-      minHeight: '450px',
-      resize: 'none',
-      fontSize: '14px',
-      lineHeight: '1.5',
-      padding: '12px'
-    }
-  }
-});
+import { Grid } from '@mui/material';
 
 type InitialValuesType = {};
 
@@ -73,8 +41,8 @@ export default function JsonComparison({ title }: ToolComponentProps) {
     compareInputs();
   }, [input1, input2]);
 
-  const handleInput1Change = (value: string) => {
-    setInput1(value);
+  const handleInput1Change = (value: string | undefined) => {
+    setInput1(value ?? '');
   };
 
   const handleInput2Change = (value: string) => {
@@ -90,39 +58,31 @@ export default function JsonComparison({ title }: ToolComponentProps) {
       getGroups={null}
       compute={() => {}}
       inputComponent={
-        <StyledContainer>
-          <StyledGrid container spacing={2}>
-            <Grid item xs={4}>
-              <StyledInputWrapper>
-                <LineNumberInput
-                  title="First JSON"
-                  value={input1}
-                  onChange={handleInput1Change}
-                  placeholder="Paste your first JSON here..."
-                />
-              </StyledInputWrapper>
-            </Grid>
-            <Grid item xs={4}>
-              <StyledInputWrapper>
-                <LineNumberInput
-                  title="Second JSON"
-                  value={input2}
-                  onChange={handleInput2Change}
-                  placeholder="Paste your second JSON here..."
-                />
-              </StyledInputWrapper>
-            </Grid>
-            <Grid item xs={4}>
-              <StyledInputWrapper>
-                <ToolTextResult
-                  title="Differences"
-                  value={result}
-                  extension={'txt'}
-                />
-              </StyledInputWrapper>
-            </Grid>
-          </StyledGrid>
-        </StyledContainer>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6} lg={4}>
+            <ToolCodeInput
+              title="First JSON"
+              value={input1}
+              onChange={handleInput1Change}
+              language={'json'}
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <ToolCodeInput
+              title="Second JSON"
+              language={'json'}
+              value={input2}
+              onChange={handleInput2Change}
+            />
+          </Grid>
+          <Grid item xs={12} md={12} lg={4}>
+            <ToolTextResult
+              title="Differences"
+              value={result}
+              extension={'txt'}
+            />
+          </Grid>
+        </Grid>
       }
     />
   );
