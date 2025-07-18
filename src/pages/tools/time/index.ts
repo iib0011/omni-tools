@@ -1,3 +1,4 @@
+import { tool as timeConvertUnixToDate } from './convert-unix-to-date/meta';
 import { tool as timeCrontabGuru } from './crontab-guru/meta';
 import { tool as timeBetweenDates } from './time-between-dates/meta';
 import { tool as daysDoHours } from './convert-days-to-hours/meta';
@@ -15,5 +16,6 @@ export const timeTools = [
   truncateClockTime,
   timeBetweenDates,
   timeCrontabGuru,
-  checkLeapYear
+  checkLeapYear,
+  timeConvertUnixToDate
 ];
