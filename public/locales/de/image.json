@@ -1,0 +1,98 @@
+{
+  "changeColors": {
+    "description": "Welt",
+    "shortDescription": "Schnelles Austauschen der Farben in einem Bild",
+    "title": "Farben im Bild ändern"
+  },
+  "changeOpacity": {
+    "description": "Passen Sie die Transparenz Ihrer Bilder ganz einfach an. Laden Sie einfach Ihr Bild hoch, stellen Sie mit dem Schieberegler die gewünschte Deckkraft zwischen 0 (vollständig transparent) und 1 (vollständig undurchsichtig) ein und laden Sie das geänderte Bild herunter.",
+    "shortDescription": "Transparenz von Bildern anpassen",
+    "title": "Bilddeckkraft ändern"
+  },
+  "compress": {
+    "description": "Reduzieren Sie die Bilddateigröße, ohne die Qualität zu beeinträchtigen.",
+    "inputTitle": "Eingabebild",
+    "resultTitle": "Komprimiertes Bild",
+    "shortDescription": "Komprimieren Sie Bilder, um die Dateigröße zu reduzieren und gleichzeitig eine angemessene Qualität beizubehalten.",
+    "title": "Bild komprimieren"
+  },
+  "compressPng": {
+    "description": "Dies ist ein Programm zum Komprimieren von PNG-Bildern. Sobald Sie Ihr PNG-Bild in den Eingabebereich einfügen, komprimiert das Programm es und zeigt das Ergebnis im Ausgabebereich an. In den Optionen können Sie den Komprimierungsgrad anpassen und die alte und neue Bilddateigröße einsehen.",
+    "shortDescription": "PNG schnell komprimieren",
+    "title": "PNG komprimieren"
+  },
+  "convertJgpToPng": {
+    "description": "Konvertieren Sie Ihre JPG-Bilder schnell in PNG. Importieren Sie einfach Ihr PNG-Bild im Editor links",
+    "shortDescription": "Konvertieren Sie Ihre JPG-Bilder schnell in PNG",
+    "title": "Konvertieren Sie JPG in PNG"
+  },
+  "convertToJpg": {
+    "description": "Konvertieren Sie verschiedene Bildformate (PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW) in JPG mit anpassbaren Qualitäts- und Hintergrundfarbeinstellungen.",
+    "shortDescription": "Konvertieren Sie Bilder mit Qualitätskontrolle in JPG",
+    "title": "Bilder in JPG konvertieren"
+  },
+  "createTransparent": {
+    "description": "Welt",
+    "shortDescription": "Machen Sie ein Bild schnell transparent",
+    "title": "Transparentes PNG erstellen"
+  },
+  "crop": {
+    "description": "Schneiden Sie Bilder zu, um unerwünschte Bereiche zu entfernen.",
+    "inputTitle": "Eingabebild",
+    "resultTitle": "Zugeschnittenes Bild",
+    "shortDescription": "Bilder schnell zuschneiden.",
+    "title": "Bild zuschneiden"
+  },
+  "editor": {
+    "description": "Erweiterter Bildeditor mit Werkzeugen zum Zuschneiden, Drehen, Kommentieren, Anpassen von Farben und Hinzufügen von Wasserzeichen. Bearbeiten Sie Ihre Bilder mit professionellen Werkzeugen direkt in Ihrem Browser.",
+    "shortDescription": "Bearbeiten Sie Bilder mit erweiterten Tools und Funktionen",
+    "title": "Bildeditor"
+  },
+  "imageToText": {
+    "description": "Extrahieren Sie Text aus Bildern (JPG, PNG) mithilfe der optischen Zeichenerkennung (OCR).",
+    "shortDescription": "Extrahieren Sie mithilfe von OCR Text aus Bildern.",
+    "title": "Bild zu Text (OCR)"
+  },
+  "qrCode": {
+    "description": "Generieren Sie QR-Codes für verschiedene Datentypen: URL, Text, E-Mail, Telefon, SMS, WLAN, vCard und mehr.",
+    "shortDescription": "Erstellen Sie individuelle QR-Codes für verschiedene Datenformate.",
+    "title": "QR-Code-Generator"
+  },
+  "removeBackground": {
+    "description": "Welt",
+    "shortDescription": "Hintergründe automatisch aus Bildern entfernen",
+    "title": "Hintergrund aus Bild entfernen"
+  },
+  "resize": {
+    "description": "Passen Sie die Größe von Bildern an andere Abmessungen an.",
+    "dimensionType": "Dimensionstyp",
+    "heightDescription": "Höhe (in Pixeln)",
+    "inputTitle": "Eingabebild",
+    "maintainAspectRatio": "Seitenverhältnis beibehalten",
+    "maintainAspectRatioDescription": "Behalten Sie das ursprüngliche Seitenverhältnis des Bildes bei.",
+    "percentage": "Prozentsatz",
+    "percentageDescription": "Prozentsatz der Originalgröße (z. B. 50 für halbe Größe, 200 für doppelte Größe)",
+    "resizeByPercentage": "Größe um Prozent ändern",
+    "resizeByPercentageDescription": "Ändern Sie die Größe, indem Sie einen Prozentsatz der Originalgröße angeben.",
+    "resizeByPixels": "Größe in Pixeln ändern",
+    "resizeByPixelsDescription": "Ändern Sie die Größe, indem Sie die Abmessungen in Pixeln angeben.",
+    "resizeMethod": "Größenänderungsmethode",
+    "resultTitle": "Bildgröße geändert",
+    "setHeight": "Höhe festlegen",
+    "setHeightDescription": "Geben Sie die Höhe in Pixeln an und berechnen Sie die Breite basierend auf dem Seitenverhältnis.",
+    "setWidth": "Breite festlegen",
+    "setWidthDescription": "Geben Sie die Breite in Pixeln an und berechnen Sie die Höhe basierend auf dem Seitenverhältnis.",
+    "shortDescription": "Ändern Sie die Größe von Bildern ganz einfach.",
+    "title": "Bildgröße ändern",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie die Größe von JPG-, PNG-, SVG- und GIF-Bildern ändern. Sie können die Größe ändern, indem Sie die Abmessungen in Pixeln oder Prozent angeben und das ursprüngliche Seitenverhältnis beibehalten.",
+      "title": "Bildgröße ändern"
+    },
+    "widthDescription": "Breite (in Pixeln)"
+  },
+  "rotate": {
+    "description": "Drehen Sie ein Bild um einen bestimmten Winkel.",
+    "shortDescription": "Drehen Sie ein Bild ganz einfach.",
+    "title": "Bild drehen"
+  }
+}

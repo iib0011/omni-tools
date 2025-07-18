@@ -1,0 +1,208 @@
+{
+  "duplicate": {
+    "concatenate": "Verketten",
+    "concatenateDescription": "Kopien verketten (wenn nicht aktiviert, werden die Elemente miteinander verwoben)",
+    "copyDescription": "Anzahl der Kopien (kann Bruchteile sein)",
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Duplizieren von Listeneinträgen. Geben Sie Ihre Liste ein und legen Sie die Duplizierungskriterien fest, um Kopien von Einträgen zu erstellen. Ideal für Datenerweiterungen, Tests oder die Erstellung wiederkehrender Muster.",
+    "duplicationOptions": "Duplizierungsoptionen",
+    "examples": {
+      "fractional": {
+        "description": "Dieses Beispiel zeigt, wie eine Liste mit einer Bruchzahl von Kopien dupliziert wird.",
+        "title": "Bruchduplizierung"
+      },
+      "interweave": {
+        "description": "Dieses Beispiel zeigt, wie Elemente miteinander verwoben werden, anstatt sie zu verketten.",
+        "title": "Verweben von Gegenständen"
+      },
+      "reverse": {
+        "description": "Dieses Beispiel zeigt, wie eine Liste in umgekehrter Reihenfolge dupliziert wird.",
+        "title": "Rückwärtsduplizierung"
+      },
+      "simple": {
+        "description": "Dieses Beispiel zeigt, wie eine Liste von Wörtern dupliziert wird.",
+        "title": "Einfache Vervielfältigung"
+      }
+    },
+    "inputTitle": "Eingabeliste",
+    "joinSeparatorDescription": "Trennzeichen zum Verbinden der duplizierten Liste",
+    "resultTitle": "Duplizierte Liste",
+    "reverse": "Umkehren",
+    "reverseDescription": "Umkehren der duplizierten Elemente",
+    "shortDescription": "Doppelte Listenelemente mit angegebenen Kriterien",
+    "splitByRegex": "Aufteilen nach regulärem Ausdruck",
+    "splitBySymbol": "Nach Symbol teilen",
+    "splitOptions": "Teilungsoptionen",
+    "splitSeparatorDescription": "Trennzeichen zum Teilen der Liste",
+    "title": "Duplikat",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie Elemente einer Liste duplizieren. Sie können die Anzahl der Kopien (einschließlich Bruchzahlen) festlegen, steuern, ob Elemente verknüpft oder verwoben werden, und sogar die Duplikate umkehren. Es ist nützlich, um wiederkehrende Muster zu erstellen, Testdaten zu generieren oder Listen mit vorhersehbarem Inhalt zu erweitern.",
+      "title": "Listenduplizierung"
+    }
+  },
+  "findMostPopular": {
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Auffinden der beliebtesten Elemente in einer Liste. Geben Sie Ihre Liste ein und erhalten Sie sofort die am häufigsten vorkommenden Elemente. Ideal für Datenanalysen, Trenderkennung oder die Suche nach gemeinsamen Elementen.",
+    "shortDescription": "Am häufigsten vorkommende Elemente finden",
+    "title": "Finden Sie die beliebtesten"
+  },
+  "findUnique": {
+    "caseSensitiveItems": "Groß- und Kleinschreibung beachten",
+    "caseSensitiveItemsDescription": "Geben Sie Elemente mit unterschiedlicher Groß-/Kleinschreibung als eindeutige Elemente in der Liste aus.",
+    "delimiterDescription": "Legen Sie ein Trennsymbol oder einen regulären Ausdruck fest.",
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Auffinden eindeutiger Elemente in einer Liste. Geben Sie Ihre Liste ein und erhalten Sie sofort alle eindeutigen Werte, ohne Duplikate. Ideal für Datenbereinigung, Deduplizierung oder das Auffinden eindeutiger Elemente.",
+    "findAbsolutelyUniqueItems": "Finden Sie absolut einzigartige Artikel",
+    "findAbsolutelyUniqueItemsDescription": "Zeigen Sie nur die Elemente der Liste an, die in einer einzigen Kopie vorhanden sind.",
+    "inputListDelimiter": "Eingabelisten-Trennzeichen",
+    "inputTitle": "Eingabeliste",
+    "outputListDelimiter": "Ausgabelisten-Trennzeichen",
+    "resultTitle": "Einzigartige Gegenstände",
+    "shortDescription": "Suchen Sie nach eindeutigen Elementen in einer Liste",
+    "skipEmptyItems": "Leere Elemente überspringen",
+    "skipEmptyItemsDescription": "Schließen Sie die leeren Listenelemente nicht in die Ausgabe ein.",
+    "title": "Finden Sie einzigartige",
+    "trimItems": "Listenelemente kürzen",
+    "trimItemsDescription": "Entfernen Sie vor dem Vergleichen von Elementen führende und nachfolgende Leerzeichen.",
+    "uniqueItemOptions": "Einzigartige Artikeloptionen"
+  },
+  "group": {
+    "deleteEmptyItems": "Leere Elemente löschen",
+    "deleteEmptyItemsDescription": "Ignorieren Sie leere Elemente und nehmen Sie sie nicht in die Gruppen auf.",
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Gruppieren von Listenelementen. Geben Sie Ihre Liste ein und legen Sie Gruppierungskriterien fest, um Elemente in logische Gruppen zu ordnen. Ideal zum Kategorisieren von Daten, Organisieren von Informationen oder Erstellen strukturierter Listen. Unterstützt benutzerdefinierte Trennzeichen und verschiedene Gruppierungsoptionen.",
+    "emptyItemsAndPadding": "Leere Elemente und Polsterung",
+    "groupNumberDescription": "Anzahl der Elemente in einer Gruppe",
+    "groupSeparatorDescription": "Gruppentrennzeichen",
+    "groupSizeAndSeparators": "Gruppengröße und Trennzeichen",
+    "inputItemSeparator": "Eingabeelement-Trennzeichen",
+    "inputTitle": "Eingabeliste",
+    "itemSeparatorDescription": "Elementtrennzeichen",
+    "leftWrapDescription": "Linkes Umbruchsymbol der Gruppe.",
+    "padNonFullGroups": "Nicht volle Gruppen auffüllen",
+    "padNonFullGroupsDescription": "Füllen Sie nicht volle Gruppen mit einem benutzerdefinierten Element (unten eingeben).",
+    "paddingCharDescription": "Verwenden Sie dieses Zeichen oder Element, um nicht volle Gruppen aufzufüllen.",
+    "resultTitle": "Gruppierte Elemente",
+    "rightWrapDescription": "Rechtes Umbruchsymbol der Gruppe.",
+    "shortDescription": "Gruppieren Sie Listenelemente nach gemeinsamen Eigenschaften",
+    "splitOperators": {
+      "regex": {
+        "description": "Begrenzen Sie die Elemente der Eingabeliste mit einem regulären Ausdruck.",
+        "title": "Verwenden Sie einen regulären Ausdruck zum Aufteilen"
+      },
+      "symbol": {
+        "description": "Begrenzen Sie die Elemente der Eingabeliste durch ein Zeichen.",
+        "title": "Verwenden Sie ein Symbol zum Teilen"
+      }
+    },
+    "splitSeparatorDescription": "Legen Sie ein Trennsymbol oder einen regulären Ausdruck fest.",
+    "title": "Gruppe"
+  },
+  "reverse": {
+    "description": "Diese einfache browserbasierte Anwendung druckt alle Listenelemente rückwärts. Die Eingabeelemente können durch ein beliebiges Symbol getrennt werden. Sie können auch das Trennzeichen der umgekehrten Listenelemente ändern.",
+    "inputTitle": "Eingabeliste",
+    "itemSeparator": "Elementtrennzeichen",
+    "itemSeparatorDescription": "Legen Sie ein Trennsymbol oder einen regulären Ausdruck fest.",
+    "outputListOptions": "Ausgabelistenoptionen",
+    "outputSeparatorDescription": "Trennzeichen für Ausgabelistenelemente.",
+    "resultTitle": "Umgekehrte Liste",
+    "shortDescription": "Schnelles Umkehren einer Liste",
+    "splitOperators": {
+      "regex": {
+        "description": "Begrenzen Sie die Elemente der Eingabeliste mit einem regulären Ausdruck.",
+        "title": "Verwenden Sie einen regulären Ausdruck zum Aufteilen"
+      },
+      "symbol": {
+        "description": "Begrenzen Sie die Elemente der Eingabeliste durch ein Zeichen.",
+        "title": "Verwenden Sie ein Symbol zum Teilen"
+      }
+    },
+    "splitterMode": "Splitter-Modus",
+    "title": "Umkehren",
+    "toolInfo": {
+      "description": "Mit diesem Dienstprogramm können Sie die Reihenfolge der Elemente in einer Liste umkehren. Das Dienstprogramm zerlegt die Eingabeliste zunächst in einzelne Elemente und durchläuft diese dann vom letzten bis zum ersten Element. Dabei wird jedes Element ausgegeben. Die Eingabeliste kann alles enthalten, was sich als Text darstellen lässt, z. B. Ziffern, Zahlen, Zeichenfolgen, Wörter, Sätze usw. Das Trennzeichen für die Eingabeelemente kann auch ein regulärer Ausdruck sein. Beispielsweise ermöglicht der reguläre Ausdruck /[;,]/ die Verwendung von Elementen, die entweder durch Kommas oder Semikolons getrennt sind. Die Trennzeichen für die Elemente der Eingabe- und Ausgabeliste können in den Optionen angepasst werden. Standardmäßig sind sowohl die Eingabe- als auch die Ausgabelisten durch Kommas getrennt. Listabulous!",
+      "title": "Was ist ein Listenumkehrer?"
+    }
+  },
+  "rotate": {
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Rotieren von Listenelementen. Geben Sie Ihre Liste ein und legen Sie den Rotationsgrad fest, um die Elemente um eine bestimmte Anzahl von Positionen zu verschieben. Ideal für Datenmanipulation, zyklische Verschiebungen oder das Neuordnen von Listen.",
+    "shortDescription": "Listenelemente um angegebene Positionen rotieren",
+    "title": "Drehen"
+  },
+  "shuffle": {
+    "delimiterDescription": "Legen Sie ein Trennsymbol oder einen regulären Ausdruck fest.",
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Mischen von Listenelementen. Geben Sie Ihre Liste ein und erhalten Sie sofort eine zufällige Version mit Elementen in zufälliger Reihenfolge. Perfekt, um Abwechslung zu schaffen, Zufälligkeit zu testen oder geordnete Daten zu vermischen.",
+    "inputListSeparator": "Eingabelistentrennzeichen",
+    "inputTitle": "Eingabeliste",
+    "joinSeparatorDescription": "Verwenden Sie dieses Trennzeichen in der zufälligen Liste.",
+    "outputLengthDescription": "So viele zufällige Elemente ausgeben",
+    "resultTitle": "Gemischte Liste",
+    "shortDescription": "Zufällige Reihenfolge der Listenelemente",
+    "shuffledListLength": "Länge der gemischten Liste",
+    "shuffledListSeparator": "Trennzeichen für gemischte Listen",
+    "title": "Shuffle"
+  },
+  "sort": {
+    "caseSensitive": "Groß-/Kleinschreibung beachten",
+    "caseSensitiveDescription": "Groß- und Kleinbuchstaben werden getrennt sortiert. Großbuchstaben stehen in aufsteigender Reihenfolge vor Kleinbuchstaben. (Funktioniert nur im alphabetischen Sortiermodus.)",
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Sortieren von Listenelementen. Geben Sie Ihre Liste ein und legen Sie Sortierkriterien fest, um die Elemente in auf- oder absteigender Reihenfolge zu sortieren. Ideal für die Datenorganisation, Textverarbeitung oder das Erstellen sortierter Listen.",
+    "inputItemSeparator": "Trennzeichen für Eingabeelemente",
+    "inputTitle": "Eingabeliste",
+    "joinSeparatorDescription": "Verwenden Sie dieses Symbol als Verbindung zwischen Elementen in einer sortierten Liste.",
+    "orderDescription": "Wählen Sie eine Sortierreihenfolge aus.",
+    "orderOptions": {
+      "decreasing": "Absteigende Reihenfolge",
+      "increasing": "Zunehmende Ordnung"
+    },
+    "removeDuplicates": "Duplikate entfernen",
+    "removeDuplicatesDescription": "Löschen Sie doppelte Listenelemente.",
+    "resultTitle": "Sortierte Liste",
+    "shortDescription": "Listenelemente in angegebener Reihenfolge sortieren",
+    "sortMethod": "Sortiermethode",
+    "sortMethodDescription": "Wählen Sie eine Sortiermethode aus.",
+    "sortOptions": {
+      "alphabetic": "Alphabetisch sortieren",
+      "length": "Nach Länge sortieren",
+      "numeric": "Numerisch sortieren"
+    },
+    "sortedItemProperties": "Sortierte Artikeleigenschaften",
+    "splitOperators": {
+      "regex": {
+        "description": "Begrenzen Sie die Elemente der Eingabeliste mit einem regulären Ausdruck.",
+        "title": "Verwenden Sie einen regulären Ausdruck zum Aufteilen"
+      },
+      "symbol": {
+        "description": "Trennen Sie die Elemente der Eingabeliste durch ein Zeichen.",
+        "title": "Verwenden Sie ein Symbol zum Teilen"
+      }
+    },
+    "splitSeparatorDescription": "Legen Sie ein Trennsymbol oder einen regulären Ausdruck fest.",
+    "title": "Sortieren"
+  },
+  "truncate": {
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Kürzen von Listen. Geben Sie Ihre Liste ein und legen Sie die maximale Anzahl der zu behaltenden Elemente fest. Ideal für die Datenverarbeitung, Listenverwaltung oder die Begrenzung der Inhaltslänge.",
+    "shortDescription": "Liste auf die angegebene Anzahl von Elementen kürzen",
+    "title": "Kürzen"
+  },
+  "unwrap": {
+    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Entpacken von Listenelementen. Geben Sie Ihre verpackte Liste ein und legen Sie Entpackkriterien fest, um organisierte Elemente zu vereinfachen. Ideal für die Datenverarbeitung, Textbearbeitung oder das Extrahieren von Inhalten aus strukturierten Listen.",
+    "shortDescription": "Listenelemente aus strukturiertem Format auspacken",
+    "title": "Auspacken"
+  },
+  "wrap": {
+    "description": "Fügen Sie vor und nach jedem Listenelement Text hinzu.",
+    "inputTitle": "Eingabeliste",
+    "joinSeparatorDescription": "Trennzeichen zum Verbinden der umschlossenen Liste",
+    "leftTextDescription": "Vor jedem Element hinzuzufügender Text",
+    "removeEmptyItems": "Leere Elemente entfernen",
+    "resultTitle": "Umbrochene Liste",
+    "rightTextDescription": "Nach jedem Element hinzuzufügender Text",
+    "shortDescription": "Listenelemente mit angegebenen Kriterien umbrechen",
+    "splitByRegex": "Aufteilen nach regulärem Ausdruck",
+    "splitBySymbol": "Nach Symbol teilen",
+    "splitOptions": "Teilungsoptionen",
+    "splitSeparatorDescription": "Trennzeichen zum Teilen der Liste",
+    "title": "Wickeln",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie vor und nach jedem Listenelement Text hinzufügen. Sie können für die linke und rechte Seite unterschiedlichen Text festlegen und die Verarbeitung der Liste steuern. Es ist nützlich, um Listenelemente mit Anführungszeichen, Klammern oder anderen Formatierungen zu versehen, Daten für verschiedene Formate vorzubereiten oder strukturierten Text zu erstellen.",
+      "title": "Listenumbruch"
+    },
+    "wrapOptions": "Wrap-Optionen"
+  }
+}

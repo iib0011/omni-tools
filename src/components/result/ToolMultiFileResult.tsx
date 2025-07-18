@@ -9,8 +9,11 @@ import InputHeader from '../InputHeader';
 import greyPattern from '@assets/grey-pattern.png';
 import { globalInputHeight } from '../../config/uiConfig';
 import ResultFooter from './ResultFooter';
+import { useTranslation } from 'react-i18next';
+import React, { useContext } from 'react';
+import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 
-export default function ToolFileResult({
+export default function ToolMultiFileResult({
   title = 'Result',
   value,
   zipFile,
@@ -23,7 +26,9 @@ export default function ToolFileResult({
   loading?: boolean;
   loadingText?: string;
 }) {
+  const { t } = useTranslation();
   const theme = useTheme();
+  const { showSnackBar } = useContext(CustomSnackBarContext);
 
   const getFileType = (
     file: File
@@ -46,9 +51,25 @@ export default function ToolFileResult({
     URL.revokeObjectURL(url);
   };
 
+  const handleCopy = () => {
+    if (zipFile) {
+      const blob = new Blob([zipFile], { type: zipFile.type });
+      const clipboardItem = new ClipboardItem({ [zipFile.type]: blob });
+      navigator.clipboard
+        .write([clipboardItem])
+        .then(() => showSnackBar(t('toolMultiFileResult.copied'), 'success'))
+        .catch((err) => {
+          showSnackBar(
+            t('toolMultiFileResult.copyFailed', { error: err }),
+            'error'
+          );
+        });
+    }
+  };
+
   return (
     <Box>
-      <InputHeader title={title} />
+      <InputHeader title={title || t('toolMultiFileResult.result')} />
       <Box
         sx={{
           width: '100%',
@@ -77,7 +98,7 @@ export default function ToolFileResult({
           >
             <CircularProgress />
             <Typography variant="body2" sx={{ mt: 2 }}>
-              {loadingText}... This may take a moment.
+              {loadingText || t('toolMultiFileResult.loading')}
             </Typography>
           </Box>
         ) : (

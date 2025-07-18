@@ -1,0 +1,62 @@
+{
+  "escapeJson": {
+    "description": "Échappez les caractères spéciaux dans les chaînes JSON. Convertissez les données JSON au format correctement échappé pour une transmission ou un stockage sécurisé.",
+    "shortDescription": "Échapper aux caractères spéciaux dans JSON",
+    "title": "Échapper le JSON"
+  },
+  "jsonToXml": {
+    "description": "Convertissez des données JSON au format XML. Transformez des objets JSON structurés en documents XML bien formés.",
+    "shortDescription": "Convertir JSON au format XML",
+    "title": "JSON vers XML"
+  },
+  "minify": {
+    "description": "Supprimez tous les espaces inutiles du JSON.",
+    "inputTitle": "Entrée JSON",
+    "resultTitle": "JSON minifié",
+    "shortDescription": "Minifier JSON en supprimant les espaces",
+    "title": "Minifier JSON",
+    "toolInfo": {
+      "description": "La minification JSON consiste à supprimer tous les espaces inutiles des données JSON tout en préservant leur validité. Cela inclut la suppression des espaces, des sauts de ligne et des indentations inutiles à l'analyse correcte du JSON. La minification réduit la taille des données JSON, les rendant plus efficaces pour le stockage et la transmission, tout en conservant la même structure de données et les mêmes valeurs.",
+      "title": "Qu'est-ce que la minification JSON ?"
+    }
+  },
+  "prettify": {
+    "description": "Formatez JSON avec une indentation et un espacement appropriés.",
+    "indentation": "Échancrure",
+    "inputTitle": "Entrée JSON",
+    "resultTitle": "JSON embelli",
+    "shortDescription": "Formater et embellir le code JSON",
+    "title": "Embellir JSON",
+    "toolInfo": {
+      "description": "Cet outil vous permet de formater les données JSON avec une indentation et un espacement appropriés, les rendant plus lisibles et plus faciles à utiliser.",
+      "title": "Embellir JSON"
+    },
+    "useSpaces": "Utiliser les espaces",
+    "useSpacesDescription": "Indenter la sortie avec des espaces",
+    "useTabs": "Utiliser les onglets",
+    "useTabsDescription": "Indenter la sortie avec des tabulations."
+  },
+  "stringify": {
+    "description": "Convertissez des objets JavaScript au format de chaîne JSON. Sérialisez des structures de données en chaînes JSON pour le stockage ou la transmission.",
+    "shortDescription": "Convertir des objets en chaîne JSON",
+    "title": "Stringify JSON"
+  },
+  "tsvToJson": {
+    "description": "Convertissez les données TSV (valeurs séparées par des tabulations) au format JSON. Transformez les données tabulaires en objets JSON structurés.",
+    "shortDescription": "Convertir le format TSV au format JSON",
+    "title": "TSV vers JSON"
+  },
+  "validateJson": {
+    "description": "Vérifiez si JSON est valide et bien formé.",
+    "inputTitle": "Entrée JSON",
+    "invalidJson": "❌ {{error}}",
+    "resultTitle": "Résultat de validation",
+    "shortDescription": "Valider le code JSON pour les erreurs",
+    "title": "Valider JSON",
+    "toolInfo": {
+      "description": "JSON (JavaScript Object Notation) est un format d'échange de données léger. La validation JSON garantit la conformité de la structure des données à la norme JSON. Un objet JSON valide doit comporter : - des noms de propriétés entre guillemets ; - des accolades {} correctement équilibrées ; - aucune virgule après la dernière paire clé-valeur ; - une imbrication correcte des objets et des tableaux. Cet outil vérifie le JSON d'entrée et fournit des informations pour identifier et corriger les erreurs courantes.",
+      "title": "Qu'est-ce que la validation JSON ?"
+    },
+    "validJson": "✅ JSON valide"
+  }
+}

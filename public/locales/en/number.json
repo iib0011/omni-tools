@@ -1,0 +1,97 @@
+{
+  "arithmeticSequence": {
+    "commonDifferenceDescription": "Common difference between terms (d)",
+    "description": "Generate arithmetic sequences with customizable parameters.",
+    "firstTermDescription": "First term of the sequence (a₁)",
+    "numberOfTermsDescription": "Number of terms to generate (n)",
+    "outputFormat": "Output Format",
+    "resultTitle": "Generated Sequence",
+    "separatorDescription": "Separator between terms",
+    "sequenceParameters": "Sequence Parameters",
+    "shortDescription": "Generate arithmetic sequences",
+    "title": "Arithmetic Sequence",
+    "toolInfo": {
+      "description": "An arithmetic sequence is a sequence of numbers where the difference between each consecutive term is constant. This constant difference is called the common difference. Given the first term (a₁) and the common difference (d), each term can be found by adding the common difference to the previous term.",
+      "title": "What is an Arithmetic Sequence?"
+    }
+  },
+  "generate": {
+    "arithmeticSequenceOption": "Arithmetic sequence option",
+    "description": "Generate a sequence of numbers with customizable parameters.",
+    "numberOfElementsDescription": "Number of elements in sequence.",
+    "resultTitle": "Generated numbers",
+    "separator": "Separator",
+    "separatorDescription": "Separate elements in the arithmetic sequence by this character.",
+    "shortDescription": "Generate random numbers in specified ranges",
+    "startSequenceDescription": "Start sequence from this number.",
+    "stepDescription": "Increase each element by this amount",
+    "title": "Generate",
+    "toolInfo": {
+      "description": "This tool allows you to generate a sequence of numbers with customizable parameters. You can specify the starting value, step size, and number of elements.",
+      "title": "Generate numbers"
+    }
+  },
+  "ohmsLaw": {
+    "description": "Calculates voltage, current and resistance",
+    "longDescription": "This calculator applies Ohm's Law (V = I × R) to determine any of the three electrical parameters when the other two are known. Ohm's Law is a fundamental principle in electrical engineering that describes the relationship between voltage (V), current (I), and resistance (R). This tool is essential for electronics hobbyists, electrical engineers, and students working with circuits to quickly solve for unknown values in their electrical designs.",
+    "shortDescription": "Calculate voltage, current, or resistance in electrical circuits using Ohm's Law",
+    "title": "Ohm's Law"
+  },
+  "slackline": {
+    "description": "Calculates tension in a slackline",
+    "longDescription": "This calculator assumes a load in the center of the rope",
+    "shortDescription": "Calculate the approximate tension of a slackline or clothesline. Do not rely on this for safety.",
+    "title": "Slackline Tension"
+  },
+  "sphereArea": {
+    "description": "Area of a Sphere",
+    "longDescription": "This calculator determines the surface area of a sphere using the formula A = 4πr². You can either input the radius to find the surface area or enter the surface area to calculate the required radius. This tool is useful for students studying geometry, engineers working with spherical objects, and anyone needing to perform calculations involving spherical surfaces.",
+    "shortDescription": "Calculate the surface area of a sphere based on its radius",
+    "title": "Area of a Sphere"
+  },
+  "sphereVolume": {
+    "description": "Volume of a Sphere",
+    "longDescription": "This calculator computes the volume of a sphere using the formula V = (4/3)πr³. You can input either the radius or diameter to find the volume, or enter the volume to determine the required radius. The tool is valuable for students, engineers, and professionals working with spherical objects in fields such as physics, engineering, and manufacturing.",
+    "shortDescription": "Calculate the volume of a sphere using radius or diameter",
+    "title": "Volume of a Sphere"
+  },
+  "sum": {
+    "description": "Calculate the sum of a list of numbers. Enter numbers separated by commas or newlines to get their total sum.",
+    "example1Description": "In this example, we calculate the sum of ten positive integers. These integers are listed as a column and their total sum equals 19494.",
+    "example1Title": "Sum of Ten Positive Numbers",
+    "example2Description": "This example reverses a column of twenty three-syllable nouns and prints all the words from the bottom to top. To separate the list items, it uses the \\n character as input item separator, which means that each item is on its own line.",
+    "example2Title": "Count Trees in the Park",
+    "example3Description": "In this example, we add together ninety different values – positive numbers, negative numbers, integers and decimal fractions. We set the input separator to a comma and after adding all of them together, we get 0 as output.",
+    "example3Title": "Sum of Integers and Decimals",
+    "example4Description": "In this example, we calculate the sum of all ten digits and enable the option \"Print Running Sum\". We get the intermediate values of the sum in the process of addition. Thus, we have the following sequence in the output: 0, 1 (0 + 1), 3 (0 + 1 + 2), 6 (0 + 1 + 2 + 3), 10 (0 + 1 + 2 + 3 + 4), and so on.",
+    "example4Title": "Running Sum of Numbers",
+    "extractionTypes": {
+      "delimiter": {
+        "description": "Customize the number separator here. (By default a line break.)",
+        "title": "Number Delimiter"
+      },
+      "smart": {
+        "description": "Auto detect numbers in the input.",
+        "title": "Smart Sum"
+      }
+    },
+    "inputTitle": "Input",
+    "numberExtraction": "Number Extraction",
+    "printRunningSum": "Print Running Sum",
+    "printRunningSumDescription": "Display the sum as it's calculated step by step.",
+    "resultTitle": "Total",
+    "runningSum": "Running Sum",
+    "shortDescription": "Calculate sum of numbers",
+    "title": "Sum",
+    "toolInfo": {
+      "description": "This is an online browser-based utility for calculating the sum of a bunch of numbers. You can enter the numbers separated by a comma, space, or any other character, including the line break. You can also simply paste a fragment of textual data that contains numerical values that you want to sum up and the utility will extract them and find their sum.",
+      "title": "What Is a Number Sum Calculator?"
+    }
+  },
+  "voltageDropInWire": {
+    "description": "Calculates round trip voltage and power loss in a 2 conductor cable",
+    "longDescription": "This calculator helps determine the voltage drop and power loss in a two-conductor electrical cable. It takes into account the cable length, wire gauge (cross-sectional area), material resistivity, and current flow. The tool calculates the round-trip voltage drop, total resistance of the cable, and the power dissipated as heat. This is particularly useful for electrical engineers, electricians, and hobbyists when designing electrical systems to ensure voltage levels remain within acceptable limits at the load.",
+    "shortDescription": "Calculate voltage drop and power loss in electrical cables based on length, material, and current",
+    "title": "Round trip voltage drop in cable"
+  }
+}

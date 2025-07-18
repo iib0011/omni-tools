@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { InitialValuesType } from './types';
 import { compressImage } from './service';
 import ToolContent from '@components/ToolContent';
@@ -17,6 +18,7 @@ const initialValues: InitialValuesType = {
 };
 
 export default function CompressImage({ title }: ToolComponentProps) {
+  const { t } = useTranslation('image');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
@@ -37,7 +39,7 @@ export default function CompressImage({ title }: ToolComponentProps) {
         setResult(compressed);
         setCompressedSize(compressed.size);
       } else {
-        showSnackBar('Failed to compress image. Please try again.', 'error');
+        showSnackBar(t('compress.failedToCompress'), 'error');
       }
     } catch (err) {
       console.error('Error in compression:', err);
@@ -55,12 +57,12 @@ export default function CompressImage({ title }: ToolComponentProps) {
           value={input}
           onChange={setInput}
           accept={['image/*']}
-          title={'Input image'}
+          title={t('compress.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
-          title={'Compressed image'}
+          title={t('compress.resultTitle')}
           value={result}
           loading={isProcessing}
         />
@@ -68,14 +70,14 @@ export default function CompressImage({ title }: ToolComponentProps) {
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [
         {
-          title: 'Compression options',
+          title: t('compress.compressionOptions'),
           component: (
             <Box>
               <TextFieldWithDesc
                 name="maxFileSizeInMB"
                 type="number"
                 inputProps={{ min: 0.1, step: 0.1 }}
-                description="Maximum file size in megabytes"
+                description={t('compress.maxFileSizeDescription')}
                 onOwnChange={(value) =>
                   updateNumberField(value, 'maxFileSizeInMB', updateField)
                 }
@@ -85,7 +87,7 @@ export default function CompressImage({ title }: ToolComponentProps) {
                 name="quality"
                 type="number"
                 inputProps={{ min: 10, max: 100, step: 1 }}
-                description="Image quality percentage (lower means smaller file size)"
+                description={t('compress.qualityDescription')}
                 onOwnChange={(value) =>
                   updateNumberField(value, 'quality', updateField)
                 }
@@ -95,18 +97,20 @@ export default function CompressImage({ title }: ToolComponentProps) {
           )
         },
         {
-          title: 'File sizes',
+          title: t('compress.fileSizes'),
           component: (
             <Box>
               <Box>
                 {originalSize !== null && (
                   <Typography>
-                    Original Size: {(originalSize / 1024).toFixed(2)} KB
+                    {t('compress.originalSize')}:{' '}
+                    {(originalSize / 1024).toFixed(2)} KB
                   </Typography>
                 )}
                 {compressedSize !== null && (
                   <Typography>
-                    Compressed Size: {(compressedSize / 1024).toFixed(2)} KB
+                    {t('compress.compressedSize')}:{' '}
+                    {(compressedSize / 1024).toFixed(2)} KB
                   </Typography>
                 )}
               </Box>

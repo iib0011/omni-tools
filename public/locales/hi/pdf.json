@@ -1,0 +1,159 @@
+{
+  "compressPdf": {
+    "compressedFileSize": "संपीड़ित फ़ाइल का आकार",
+    "compressingPdf": "पीडीएफ संपीड़ित किया जा रहा है...",
+    "compressionLevel": "संपीड़न स्तर",
+    "compressionOptions": "संपीड़न विकल्प",
+    "compressionSettings": "संपीड़न सेटिंग्स",
+    "description": "PDF फ़ाइल आकार कम करें।",
+    "errorCompressingPdf": "पीडीएफ संपीड़ित करने में विफल: {{error}}",
+    "errorReadingPdf": "PDF फ़ाइल पढ़ने में विफल। कृपया सुनिश्चित करें कि यह एक मान्य PDF है।",
+    "fileSize": "मूल फ़ाइल आकार",
+    "high": "उच्च",
+    "highCompression": "उच्च संपीड़न",
+    "highCompressionDescription": "कुछ गुणवत्ता हानि के साथ अधिकतम फ़ाइल आकार में कमी",
+    "imageQuality": "छवि गुणवत्ता",
+    "inputTitle": "इनपुट PDF",
+    "low": "कम",
+    "lowCompression": "कम संपीड़न",
+    "lowCompressionDescription": "न्यूनतम गुणवत्ता हानि के साथ फ़ाइल आकार को थोड़ा कम करें",
+    "medium": "मध्यम",
+    "mediumCompression": "मध्यम संपीड़न",
+    "mediumCompressionDescription": "फ़ाइल आकार और गुणवत्ता के बीच संतुलन",
+    "pages": "पृष्ठों की संख्या",
+    "qualityPlaceholder": "गुणवत्ता (1-100)",
+    "removeMetadata": "मेटाडेटा हटाएं",
+    "resultTitle": "संपीड़ित PDF",
+    "shortDescription": "अपने ब्राउज़र में सुरक्षित रूप से पीडीएफ फ़ाइलों को संपीड़ित करें",
+    "title": "PDF संपीड़ित करें"
+  },
+  "editor": {
+    "description": "एनोटेशन, फ़ॉर्म-फ़िल, हाइलाइट और निर्यात क्षमताओं वाला उन्नत PDF संपादक। टेक्स्ट इंसर्शन, ड्रॉइंग, हाइलाइटिंग, हस्ताक्षर और फ़ॉर्म भरने जैसे पेशेवर-स्तरीय टूल से सीधे ब्राउज़र में अपनी PDF फ़ाइलों को संपादित करें।",
+    "shortDescription": "उन्नत एनोटेशन, हस्ताक्षर और संपादन टूल के साथ PDF संपादित करें",
+    "title": "पीडीएफ संपादक"
+  },
+  "merge": {
+    "inputTitle": "इनपुट PDF",
+    "loadingText": "पृष्ठ निकालना",
+    "resultTitle": "आउटपुट मर्ज किया गया PDF",
+    "toolInfo": {
+      "description": "यह टूल आपको कई PDF फ़ाइलों को एक ही दस्तावेज़ में मर्ज करने की सुविधा देता है। इस टूल का इस्तेमाल करने के लिए, बस उन PDF फ़ाइलों को अपलोड करें जिन्हें आप मर्ज करना चाहते हैं। फिर यह टूल इनपुट फ़ाइलों के सभी पृष्ठों को एक ही PDF दस्तावेज़ में मर्ज कर देगा।",
+      "title": "मर्ज पीडीएफ टूल का उपयोग कैसे करें?"
+    }
+  },
+  "mergePdf": {
+    "customOrder": "कस्टम क्रम",
+    "description": "कई PDF फ़ाइलों को एक दस्तावेज़ में जोड़ें।",
+    "includeBookmarks": "बुकमार्क शामिल करें",
+    "inputTitle": "इनपुट PDF फ़ाइलें",
+    "mergeOptions": "मर्ज विकल्प",
+    "mergeOrder": "मर्ज क्रम",
+    "mergingPdfs": "PDF को मर्ज करना",
+    "orderByFilename": "फ़ाइल नाम के अनुसार क्रम",
+    "orderByUpload": "अपलोड क्रम के अनुसार",
+    "pdfOptions": "पीडीएफ विकल्प",
+    "resultTitle": "मर्ज किया गया PDF",
+    "shortDescription": "कई पीडीएफ फ़ाइलों को एक दस्तावेज़ में मर्ज करें",
+    "sortByFileName": "फ़ाइल नाम के अनुसार क्रमबद्ध करें",
+    "sortByFileNameDescription": "PDF को फ़ाइल नाम के अनुसार वर्णानुक्रम में क्रमबद्ध करें",
+    "sortByUploadOrder": "अपलोड क्रम के अनुसार क्रमबद्ध करें",
+    "sortByUploadOrderDescription": "PDF को उसी क्रम में रखें जिस क्रम में उन्हें अपलोड किया गया था",
+    "title": "PDF मर्ज करें",
+    "toolInfo": {
+      "description": "यह टूल आपको कई PDF फ़ाइलों को एक ही दस्तावेज़ में संयोजित करने की सुविधा देता है। आप PDF फ़ाइलों को क्रमबद्ध करने का तरीका चुन सकते हैं और यह टूल उन्हें निर्दिष्ट क्रम में मर्ज कर देगा।",
+      "title": "पीडीएफ फाइलों को मर्ज करें"
+    }
+  },
+  "pdfToEpub": {
+    "conversionOptions": "रूपांतरण विकल्प",
+    "description": "PDF दस्तावेज़ों को EPUB फ़ाइलों में बदलें।",
+    "extractImages": "छवियां निकालें",
+    "generateToc": "सामग्री तालिका उत्पन्न करें",
+    "inputTitle": "इनपुट PDF",
+    "preserveFormatting": "फॉर्मेटिंग संरक्षित करें",
+    "resultTitle": "EPUB फ़ाइल",
+    "shortDescription": "पीडीएफ फ़ाइलों को ईपीयूबी प्रारूप में बदलें",
+    "title": "PDF से EPUB"
+  },
+  "pdfToPng": {
+    "description": "पीडीएफ दस्तावेजों को पीएनजी पैनल में बदलें।",
+    "longDescription": "एक PDF अपलोड करें और प्रत्येक पृष्ठ को सीधे अपने ब्राउज़र में एक उच्च-गुणवत्ता वाली PNG छवि में बदलें। यह टूल विज़ुअल सामग्री निकालने या अलग-अलग पृष्ठों को साझा करने के लिए आदर्श है। कोई डेटा अपलोड नहीं किया जाता है - सब कुछ स्थानीय रूप से चलता है।",
+    "shortDescription": "PDF को PNG छवियों में परिवर्तित करें",
+    "title": "पीडीएफ से पीएनजी"
+  },
+  "protectPdf": {
+    "allowCopying": "कॉपी करने की अनुमति दें",
+    "allowModification": "संशोधन की अनुमति दें",
+    "allowPrinting": "प्रिंटिंग की अनुमति दें",
+    "description": "PDF फ़ाइलों में पासवर्ड सुरक्षा जोड़ें।",
+    "inputTitle": "इनपुट PDF",
+    "ownerPassword": "मालिक पासवर्ड",
+    "ownerPasswordPlaceholder": "पासवर्ड",
+    "permissions": "अनुमतियां",
+    "protectionOptions": "सुरक्षा विकल्प",
+    "resultTitle": "सुरक्षित PDF",
+    "shortDescription": "पीडीएफ फ़ाइलों को सुरक्षित रूप से पासवर्ड सुरक्षित करें",
+    "title": "PDF सुरक्षित करें",
+    "userPassword": "उपयोगकर्ता पासवर्ड",
+    "userPasswordPlaceholder": "पासवर्ड"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "सभी {{count}} पृष्ठ घुमाए जाएंगे",
+    "angle180": "180 डिग्री",
+    "angle270": "270 डिग्री",
+    "angle90": "90 डिग्री",
+    "angleOptions": {
+      "clockwise90": "90° दक्षिणावर्त",
+      "counterClockwise270": "270° (90° वामावर्त)",
+      "upsideDown180": "180° (उल्टा)"
+    },
+    "applyToAll": "सभी पेजों पर लागू करें",
+    "applyToAllPages": "सभी पृष्ठों पर लागू करें",
+    "applyToSelected": "चयनित पेजों पर लागू करें",
+    "description": "PDF पेजों को घुमाएं।",
+    "inputTitle": "इनपुट PDF",
+    "longDescription": "PDF पृष्ठों को 90, 180, या 270 डिग्री घुमाकर उनका ओरिएंटेशन बदलें। गलत तरीके से स्कैन किए गए दस्तावेज़ों को ठीक करने या PDF को प्रिंट करने के लिए तैयार करने में उपयोगी।",
+    "pageRangesDescription": "पृष्ठ संख्या या श्रेणियाँ अल्पविराम से अलग करके दर्ज करें (उदाहरण के लिए, 1,3,5-7)",
+    "pageRangesPlaceholder": "उदाहरणार्थ, 1,5-8",
+    "pagesPlaceholder": "जैसे 1,3-5,7",
+    "pagesWillBeRotated": "{{count}} पृष्ठ{{count !== 1 ? 's' : ''}} घुमाया जाएगा",
+    "pdfPageCount": "पीडीएफ में है {{count}} पृष्ठ{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "घुमाया गया PDF",
+    "rotatingPages": "घूमते हुए पृष्ठ",
+    "rotationAngle": "घुमाने का कोण",
+    "rotationOptions": "घुमाने के विकल्प",
+    "rotationSettings": "रोटेशन सेटिंग्स",
+    "selectedPages": "चयनित पेज",
+    "shortDescription": "PDF दस्तावेज़ में पृष्ठों को घुमाएँ",
+    "title": "PDF घुमाएं",
+    "toolInfo": {
+      "description": "यह टूल आपको PDF दस्तावेज़ में पृष्ठों को घुमाने की सुविधा देता है। आप सभी पृष्ठों को घुमा सकते हैं या घुमाने के लिए अलग-अलग पृष्ठ निर्दिष्ट कर सकते हैं। घुमाव कोण चुनें: 90° दक्षिणावर्त, 180° (उल्टा), या 270° (90° वामावर्त)। विशिष्ट पृष्ठों को घुमाने के लिए, \"सभी पृष्ठों पर लागू करें\" को अनचेक करें और पृष्ठ संख्याएँ या अल्पविराम से अलग की गई श्रेणियाँ (जैसे, 1,3,5-7) दर्ज करें।",
+      "title": "रोटेट पीडीएफ टूल का उपयोग कैसे करें"
+    }
+  },
+  "splitPdf": {
+    "description": "PDF फ़ाइल से विशिष्ट पेज निकालें।",
+    "extractingPages": "पृष्ठ निकालना",
+    "includeBookmarks": "बुकमार्क शामिल करें",
+    "inputTitle": "इनपुट PDF",
+    "pageExtractionPreview": "{{count}} पृष्ठ{{count !== 1 ? 's' : ''}} निकाला जाएगा",
+    "pageRanges": "पेज श्रेणियां",
+    "pageRangesDescription": "पृष्ठ संख्या या श्रेणियाँ अल्पविराम से अलग करके दर्ज करें (उदाहरण के लिए, 1,3,5-7)",
+    "pageRangesPlaceholder": "उदाहरणार्थ, 1,5-8",
+    "pageSelection": "पृष्ठ चयन",
+    "pdfPageCount": "पीडीएफ में है {{count}} पृष्ठ{{count !== 1 ? 's' : ''}}",
+    "rangesPlaceholder": "जैसे 1,3-5,7",
+    "resultTitle": "विभाजित PDF फ़ाइलें",
+    "shortDescription": "पीडीएफ फ़ाइल से विशिष्ट पेज निकालें",
+    "splitByBookmarks": "बुकमार्क द्वारा विभाजित करें",
+    "splitByPages": "पेज द्वारा विभाजित करें",
+    "splitByRanges": "श्रेणियों द्वारा विभाजित करें",
+    "splitMethod": "विभाजन विधि",
+    "splitOptions": "विभाजन विकल्प",
+    "title": "PDF विभाजित करें",
+    "toolInfo": {
+      "description": "यह टूल आपको किसी PDF दस्तावेज़ से विशिष्ट पृष्ठ निकालने की सुविधा देता है। आप निकालने के लिए अलग-अलग पृष्ठ या पृष्ठों की श्रेणी निर्दिष्ट कर सकते हैं।",
+      "title": "PDF विभाजित करें"
+    }
+  }
+}

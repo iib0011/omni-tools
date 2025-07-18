@@ -1,0 +1,89 @@
+{
+  "arithmeticSequence": {
+    "commonDifferenceDescription": "术语之间的共同差异（d）",
+    "description": "生成具有可定制参数的算术序列。",
+    "firstTermDescription": "序列的第一项 (a₁)",
+    "numberOfTermsDescription": "生成的术语数（n）",
+    "outputFormat": "输出格式",
+    "resultTitle": "生成的序列",
+    "separatorDescription": "术语之间的分隔符",
+    "sequenceParameters": "序列参数",
+    "shortDescription": "生成等差序列",
+    "title": "等差序列",
+    "toolInfo": {
+      "description": "等差数列是指一系列连续数列中，各连续项之间的差为常数。这个常数差称为公差。给定第一项 (a₁) 和公差 (d)，可以通过将公差加到前一项来求出每一项。",
+      "title": "什么是等差序列？"
+    }
+  },
+  "generate": {
+    "arithmeticSequenceOption": "算术序列选项",
+    "description": "生成具有可定制参数的数字序列。",
+    "numberOfElementsDescription": "序列中的元素数量。",
+    "resultTitle": "生成的数字",
+    "separator": "分隔符",
+    "separatorDescription": "用该字符分隔算术序列中的元素。",
+    "shortDescription": "生成指定范围内的随机数",
+    "startSequenceDescription": "从该数字开始序列。",
+    "stepDescription": "将每个元素增加此量",
+    "title": "产生",
+    "toolInfo": {
+      "description": "此工具允许您生成具有可自定义参数的数字序列。您可以指定起始值、步长和元素数量。",
+      "title": "生成数字"
+    }
+  },
+  "ohmsLaw": {
+    "description": "计算电压、电流和电阻",
+    "longDescription": "此计算器应用欧姆定律 (V = I × R)，在已知其他两个电参数的情况下，确定任意三个电参数。欧姆定律是电气工程中的一个基本原理，描述了电压 (V)、电流 (I) 和电阻 (R) 之间的关系。对于电子爱好者、电气工程师和从事电路设计的学生来说，此工具必不可少，可以帮助他们快速求解电气设计中的未知值。",
+    "shortDescription": "使用欧姆定律计算电路中的电压、电流或电阻",
+    "title": "欧姆定律"
+  },
+  "slackline": {
+    "description": "计算松弛线的张力",
+    "longDescription": "该计算器假设绳索中心有负载",
+    "shortDescription": "计算松弛绳或晾衣绳的大致张力。不要依赖它来确保安全。",
+    "title": "松弛线张力"
+  },
+  "sphereArea": {
+    "description": "球体的面积",
+    "longDescription": "此计算器使用公式 A = 4πr² 计算球体的表面积。您可以输入半径来计算表面积，也可以直接输入表面积来计算所需的半径。此工具适用于学习几何的学生、处理球形物体的工程师以及任何需要进行球面计算的人。",
+    "shortDescription": "根据球体的半径计算其表面积",
+    "title": "球体的面积"
+  },
+  "sphereVolume": {
+    "description": "球体的体积",
+    "longDescription": "此计算器使用公式 V = (4/3)πr³ 计算球体的体积。您可以输入半径或直径来计算体积，也可以直接输入体积来确定所需的半径。对于在物理、工程和制造等领域处理球形物体的学生、工程师和专业人士来说，此工具非常有用。",
+    "shortDescription": "使用半径或直径计算球体的体积",
+    "title": "球体的体积"
+  },
+  "sum": {
+    "description": "计算一串数字的总和。输入以逗号或换行符分隔的数字，即可计算出它们的总和。",
+    "extractionTypes": {
+      "delimiter": {
+        "description": "在此自定义数字分隔符。（默认为换行符。）",
+        "title": "数字分隔符"
+      },
+      "smart": {
+        "description": "自动检测输入中的数字。",
+        "title": "智能总和"
+      }
+    },
+    "inputTitle": "输入",
+    "numberExtraction": "数字提取",
+    "printRunningSum": "打印运行总和",
+    "printRunningSumDescription": "显示逐步计算的总和。",
+    "resultTitle": "全部的",
+    "runningSum": "运行总和",
+    "shortDescription": "计算数字之和",
+    "title": "和",
+    "toolInfo": {
+      "description": "这是一个基于浏览器的在线实用程序，用于计算一组数字的总和。您可以输入用逗号、空格或任何其他字符（包括换行符）分隔的数字。您也可以直接粘贴一段包含要求和的数值的文本数据，该实用程序会提取这些数据并计算总和。",
+      "title": "什么是数字总和计算器？"
+    }
+  },
+  "voltageDropInWire": {
+    "description": "计算双芯电缆的往返电压和功率损耗",
+    "longDescription": "这款计算器可帮助计算双芯电缆的电压降和功率损耗。它考虑了电缆长度、线规（横截面积）、材料电阻率和电流。该工具可计算往返电压降、电缆总电阻以及以热量形式耗散的功率。这对于电气工程师、电工和业余爱好者在设计电气系统时尤其有用，可确保负载下的电压水平保持在可接受的范围内。",
+    "shortDescription": "根据长度、材料和电流计算电缆的电压降和功率损耗",
+    "title": "电缆往返电压降"
+  }
+}

@@ -11,6 +11,7 @@ import { FFmpeg } from '@ffmpeg/ffmpeg';
 import { fetchFile } from '@ffmpeg/util';
 import { debounce } from 'lodash';
 import ToolVideoInput from '@components/input/ToolVideoInput';
+import { useTranslation } from 'react-i18next';
 
 const ffmpeg = new FFmpeg();
 
@@ -28,6 +29,7 @@ const validationSchema = Yup.object({
 });
 
 export default function TrimVideo({ title }: ToolComponentProps) {
+  const { t } = useTranslation('video');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
@@ -85,7 +87,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Timestamps',
+      title: t('trim.timestamps'),
       component: (
         <Box>
           <TextFieldWithDesc
@@ -93,7 +95,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
               updateNumberField(value, 'trimStart', updateField)
             }
             value={values.trimStart}
-            label={'Start Time'}
+            label={t('trim.startTime')}
             sx={{ mb: 2, backgroundColor: 'background.paper' }}
           />
           <TextFieldWithDesc
@@ -101,7 +103,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
               updateNumberField(value, 'trimEnd', updateField)
             }
             value={values.trimEnd}
-            label={'End Time'}
+            label={t('trim.endTime')}
           />
         </Box>
       )
@@ -116,7 +118,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
           <ToolVideoInput
             value={input}
             onChange={setInput}
-            title={'Input Video'}
+            title={t('trim.inputTitle')}
             showTrimControls={true}
             onTrimChange={(trimStart, trimEnd) => {
               setFieldValue('trimStart', trimStart);
@@ -129,7 +131,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
       }}
       resultComponent={
         <ToolFileResult
-          title={'Trimmed Video'}
+          title={t('trim.resultTitle')}
           value={result}
           extension={'mp4'}
         />

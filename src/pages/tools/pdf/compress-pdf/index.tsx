@@ -1,24 +1,26 @@
 import { Box, Typography } from '@mui/material';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
+import { compressPdf } from './service';
+import { InitialValuesType, CompressionLevel } from './types';
 import ToolPdfInput from '@components/input/ToolPdfInput';
+import { GetGroupsType } from '@components/options/ToolOptions';
 import ToolFileResult from '@components/result/ToolFileResult';
+import SimpleRadio from '@components/options/SimpleRadio';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { PDFDocument } from 'pdf-lib';
-import { CompressionLevel, InitialValuesType } from './types';
-import { compressPdf } from './service';
-import SimpleRadio from '@components/options/SimpleRadio';
 import { CustomSnackBarContext } from '../../../../contexts/CustomSnackBarContext';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
-  compressionLevel: 'medium'
+  compressionLevel: 'low'
 };
 
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Low Compression',
-    description: 'Slightly reduce file size with minimal quality loss',
+    description: 'Minimal quality loss with slight file size reduction',
     sampleText: '',
     sampleResult: '',
     sampleOptions: {
@@ -49,6 +51,7 @@ export default function CompressPdf({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation('pdf');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [resultSize, setResultSize] = useState<string>('');
@@ -77,10 +80,7 @@ export default function CompressPdf({
       } catch (error) {
         console.error('Error getting PDF info:', error);
         setFileInfo(null);
-        showSnackBar(
-          'Error reading PDF file. Please make sure it is a valid PDF.',
-          'error'
-        );
+        showSnackBar(t('compressPdf.errorReadingPdf'), 'error');
       }
     };
 
@@ -112,9 +112,9 @@ export default function CompressPdf({
     } catch (error) {
       console.error('Error compressing PDF:', error);
       showSnackBar(
-        `Failed to compress PDF: ${
-          error instanceof Error ? error.message : String(error)
-        }`,
+        t('compressPdf.errorCompressingPdf', {
+          error: error instanceof Error ? error.message : String(error)
+        }),
         'error'
       );
       setResult(null);
@@ -130,18 +130,18 @@ export default function CompressPdf({
   }[] = [
     {
       value: 'low',
-      label: 'Low Compression',
-      description: 'Slightly reduce file size with minimal quality loss'
+      label: t('compressPdf.lowCompression'),
+      description: t('compressPdf.lowCompressionDescription')
     },
     {
       value: 'medium',
-      label: 'Medium Compression',
-      description: 'Balance between file size and quality'
+      label: t('compressPdf.mediumCompression'),
+      description: t('compressPdf.mediumCompressionDescription')
     },
     {
       value: 'high',
-      label: 'High Compression',
-      description: 'Maximum file size reduction with some quality loss'
+      label: t('compressPdf.highCompression'),
+      description: t('compressPdf.highCompressionDescription')
     }
   ];
 
@@ -157,26 +157,26 @@ export default function CompressPdf({
           value={input}
           onChange={setInput}
           accept={['application/pdf']}
-          title={'Input PDF'}
+          title={t('compressPdf.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
-          title={'Compressed PDF'}
+          title={t('compressPdf.resultTitle')}
           value={result}
           extension={'pdf'}
           loading={isProcessing}
-          loadingText={'Compressing PDF'}
+          loadingText={t('compressPdf.compressingPdf')}
         />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: 'Compression Settings',
+          title: t('compressPdf.compressionSettings'),
           component: (
             <Box>
               <Box>
                 <Typography variant="subtitle2" sx={{ mb: 1 }}>
-                  Compression Level
+                  {t('compressPdf.compressionLevel')}
                 </Typography>
 
                 {compressionOptions.map((option) => (
@@ -201,14 +201,16 @@ export default function CompressPdf({
                   }}
                 >
                   <Typography variant="body2">
-                    File size: <strong>{fileInfo.size}</strong>
+                    {t('compressPdf.fileSize')}:{' '}
+                    <strong>{fileInfo.size}</strong>
                   </Typography>
                   <Typography variant="body2">
-                    Pages: <strong>{fileInfo.pages}</strong>
+                    {t('compressPdf.pages')}: <strong>{fileInfo.pages}</strong>
                   </Typography>
                   {resultSize && (
                     <Typography variant="body2">
-                      Compressed file size: <strong>{resultSize}</strong>
+                      {t('compressPdf.compressedFileSize')}:{' '}
+                      <strong>{resultSize}</strong>
                     </Typography>
                   )}
                 </Box>

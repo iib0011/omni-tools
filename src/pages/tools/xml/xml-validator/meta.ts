@@ -2,13 +2,13 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('xml', {
-  name: 'XML Validator',
   path: 'xml-validator',
-  icon: 'mdi:check-decagram',
-  description:
-    'Validate XML files or strings to ensure they are well-formed and error-free.',
-  shortDescription: 'Validate XML for errors.',
-  keywords: ['xml', 'validate', 'check', 'syntax', 'error'],
-  userTypes: ['Developers'],
-  component: lazy(() => import('./index'))
+  icon: 'material-symbols:check-circle',
+  keywords: ['xml', 'validate', 'check', 'syntax', 'errors'],
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'xml:xmlValidator.title',
+    description: 'xml:xmlValidator.description',
+    shortDescription: 'xml:xmlValidator.shortDescription'
+  }
 });

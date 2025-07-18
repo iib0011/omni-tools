@@ -1,0 +1,261 @@
+{
+  "base64": {
+    "decode": "Base64 Decode",
+    "description": "Encode or decode text using Base64 encoding.",
+    "encode": "Base64 Encode",
+    "inputTitle": "Input Data",
+    "optionsTitle": "Base64 Options",
+    "resultTitle": "Result",
+    "shortDescription": "Encode or decode data using Base64.",
+    "title": "Base64 Encoder/Decoder",
+    "toolInfo": {
+      "description": "Base64 is an encoding scheme that represents data in an ASCII string format by translating it into a radix-64 representation. Although it can be used to encode strings, it is commonly used to encode binary data for transmission over media that are designed to deal with textual data.",
+      "title": "What is Base64?"
+    }
+  },
+  "censor": {
+    "description": "utility for censoring words in text. Load your text in the input form on the left, specify all the bad words in the options, and you'll instantly get censored text in the output area.\", longDescription: 'With this online tool, you can censor certain words in any text. You can specify a list of unwanted words (such as swear words or secret words) and the program will replace them with alternative words and create a safe-to-read text. The words can be specified in a multi-line text field in the options by entering one word per line.', keywords: ['text', 'censor', 'words', 'characters'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
+    "shortDescription": "Quickly mask bad words or replace them with alternative words.",
+    "title": "Text Censor"
+  },
+  "createPalindrome": {
+    "description": "World's simplest browser-based utility for creating palindromes from any text. Input text and instantly transform it into a palindrome that reads the same forward and backward. Perfect for word games, creating symmetrical text patterns, or exploring linguistic curiosities.",
+    "shortDescription": "Create text that reads the same forward and backward",
+    "title": "Create palindrome"
+  },
+  "extractSubstring": {
+    "description": "World's simplest browser-based utility for extracting substrings from text. Input your text and specify start and end positions to extract the desired portion. Perfect for data processing, text analysis, or extracting specific content from larger text blocks.",
+    "shortDescription": "Extract a portion of text between specified positions",
+    "title": "Extract substring"
+  },
+  "join": {
+    "blankLinesAndTrailingSpaces": "Blank Lines and Trailing Spaces",
+    "deleteBlankDescription": "Delete lines that don't have text symbols.",
+    "deleteBlankTitle": "Delete Blank Lines",
+    "deleteTrailingDescription": "Remove spaces and tabs at the end of the lines.",
+    "deleteTrailingTitle": "Delete Trailing Spaces",
+    "description": "Join text pieces together with customizable separators.",
+    "inputTitle": "Text Pieces",
+    "joinCharacterDescription": "Symbol that connects broken pieces of text. (Space by default.)",
+    "joinCharacterPlaceholder": "Join Character",
+    "resultTitle": "Joined Text",
+    "shortDescription": "Join text elements with a specified separator",
+    "textMergedOptions": "Text Merged Options",
+    "title": "Join Text",
+    "toolInfo": {
+      "description": "With this tool you can join parts of the text together. It takes a list of text values, separated by newlines, and merges them together. You can set the character that will be placed between the parts of the combined text. Also, you can ignore all empty lines and remove spaces and tabs at the end of all lines. Textabulous!",
+      "title": "What Is a Text Joiner?"
+    }
+  },
+  "palindrome": {
+    "description": "World's simplest browser-based utility for checking if text is a palindrome. Instantly verify if your text reads the same forward and backward. Perfect for word puzzles, linguistic analysis, or validating symmetrical text patterns. Supports various delimiters and multi-word palindrome detection.",
+    "shortDescription": "Check if text reads the same forward and backward",
+    "title": "Palindrome"
+  },
+  "passwordGenerator": {
+    "avoidAmbiguous": "Avoid ambiguous characters (i, I, l, 0, O)",
+    "description": "Generate secure random passwords with customizable length and character types. Choose from lowercase, uppercase, numbers, and special characters. Option to avoid ambiguous characters for better readability.",
+    "includeLowercase": "Include lowercase letters (a-z)",
+    "includeNumbers": "Include numbers (0-9)",
+    "includeSymbols": "Include special characters",
+    "includeUppercase": "Include uppercase letters (A-Z)",
+    "lengthDesc": "Length of the password",
+    "lengthPlaceholder": "e.g. 12",
+    "optionsTitle": "Password Options",
+    "resultTitle": "Generated Password",
+    "shortDescription": "Generate secure random passwords with custom options",
+    "title": "Password Generator",
+    "toolInfo": {
+      "description": "This tool generates secure random passwords based on your selected criteria. You can customize the length, include or exclude different character types, and avoid ambiguous characters for better readability. Perfect for creating strong passwords for accounts, applications, or any security needs.",
+      "title": "About Password Generator"
+    }
+  },
+  "quote": {
+    "allowDoubleQuotation": "Allow double quotation",
+    "description": "Add quotes around text with customizable options.",
+    "inputTitle": "Input Text",
+    "leftQuoteDescription": "Left quote character(s)",
+    "processAsMultiLine": "Process as multi-line text",
+    "quoteEmptyLines": "Quote empty lines",
+    "quoteOptions": "Quote Options",
+    "resultTitle": "Quoted Text",
+    "rightQuoteDescription": "Right quote character(s)",
+    "shortDescription": "Add quotes around text with various styles",
+    "title": "Text Quoter",
+    "toolInfo": {
+      "description": "This tool allows you to add quotes around text. You can choose different quote characters, handle multi-line text, and control how empty lines are processed. It's useful for preparing text for programming, formatting data, or creating stylized text.",
+      "title": "Text Quoter"
+    }
+  },
+  "randomizeCase": {
+    "description": "World's simplest browser-based utility for randomizing text case. Input your text and instantly transform it with random upper and lower case letters. Perfect for creating unique text effects, testing case sensitivity, or generating varied text patterns.",
+    "shortDescription": "Randomize the case of letters in text",
+    "title": "Randomize case"
+  },
+  "removeDuplicateLines": {
+    "description": "Load your text in the input form on the left and you'll instantly get text with no duplicate lines in the output area. Powerful, free, and fast. Load text lines – get unique text lines",
+    "shortDescription": "Quickly delete all repeated lines from text",
+    "title": "Remove duplicate lines"
+  },
+  "repeat": {
+    "delimiterDescription": "Delimiter for output copies.",
+    "delimiterPlaceholder": "Delimiter",
+    "description": "Repeat text multiple times with customizable separators.",
+    "inputTitle": "Input text",
+    "numberPlaceholder": "Number",
+    "repeatAmountDescription": "Number of repetitions.",
+    "repetitionsDelimiter": "Repetitions Delimiter",
+    "resultTitle": "Repeated text",
+    "shortDescription": "Repeat text multiple times",
+    "textRepetitions": "Text Repetitions",
+    "title": "Repeat Text",
+    "toolInfo": {
+      "description": "This tool allows you to repeat a given text multiple times with an optional separator.",
+      "title": "Repeat text"
+    }
+  },
+  "reverse": {
+    "description": "World's simplest browser-based utility for reversing text. Input any text and get it instantly reversed, character by character. Perfect for creating mirror text, analyzing palindromes, or playing with text patterns. Preserves spaces and special characters while reversing.",
+    "inputTitle": "Text to reverse",
+    "processMultiLine": "Process multi-line text",
+    "processMultiLineDescription": "Each line will be reversed independently",
+    "resultTitle": "Reversed text",
+    "reversalOptions": "Reversal options",
+    "shortDescription": "Reverse any text character by character",
+    "skipEmptyLines": "Skip empty lines",
+    "skipEmptyLinesDescription": "Empty lines will be removed from the output",
+    "title": "Reverse",
+    "trimWhitespace": "Trim whitespace",
+    "trimWhitespaceDescription": "Remove leading and trailing whitespace from each line"
+  },
+  "rot13": {
+    "description": "Encode or decode text using ROT13 cipher.",
+    "inputTitle": "Input Text",
+    "resultTitle": "ROT13 Result",
+    "shortDescription": "Encode or decode text using ROT13 cipher.",
+    "title": "ROT13 Encoder/Decoder",
+    "toolInfo": {
+      "description": "ROT13 (rotate by 13 places) is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the alphabet. ROT13 is a special case of the Caesar cipher which was developed in ancient Rome. Because there are 26 letters in the English alphabet, ROT13 is its own inverse; that is, to undo ROT13, the same algorithm is applied, so the same action can be used for encoding and decoding.",
+      "title": "What Is ROT13?"
+    }
+  },
+  "rotate": {
+    "description": "Rotate characters in text by specified positions.",
+    "inputTitle": "Input Text",
+    "processAsMultiLine": "Process as multi-line text (rotate each line separately)",
+    "resultTitle": "Rotated Text",
+    "rotateLeft": "Rotate Left",
+    "rotateRight": "Rotate Right",
+    "rotationOptions": "Rotation Options",
+    "shortDescription": "Shift characters in text by position.",
+    "stepDescription": "Number of positions to rotate",
+    "title": "Rotate Text",
+    "toolInfo": {
+      "description": "This tool allows you to rotate characters in a string by a specified number of positions. You can rotate to the left or right, and process multi-line text by rotating each line separately. String rotation is useful for simple text transformations, creating patterns, or implementing basic encryption techniques.",
+      "title": "String Rotation"
+    }
+  },
+  "split": {
+    "charAfterChunkDescription": "Character after each chunk",
+    "charBeforeChunkDescription": "Character before each chunk",
+    "chunksDescription": "Number of chunks of equal length in the output.",
+    "chunksTitle": "Use a Number of Chunks",
+    "description": "World's simplest browser-based utility for splitting text. Input your text and specify a separator to split it into multiple parts. Perfect for data processing, text manipulation, or extracting specific content from larger text blocks.",
+    "lengthDescription": "Number of characters that will be put in each output chunk.",
+    "lengthTitle": "Use Length for Splitting",
+    "outputSeparatorDescription": "Character that will be put between the split chunks. (It's newline \"\\n\" by default.)",
+    "outputSeparatorOptions": "Output Separator Options",
+    "regexDescription": "Regular expression that will be used to break text into parts. (Multiple spaces by default.)",
+    "regexTitle": "Use a Regex for Splitting",
+    "resultTitle": "Split Result",
+    "shortDescription": "Split text into multiple parts using a separator",
+    "splitSeparatorOptions": "Split separator options",
+    "symbolDescription": "Character that will be used to break text into parts. (Space by default.)",
+    "symbolTitle": "Use a Symbol for Splitting",
+    "title": "Split"
+  },
+  "statistic": {
+    "characterFrequencyAnalysis": "Character Frequency Analysis",
+    "characterFrequencyAnalysisDescription": "Count how often each character appears in the text",
+    "delimitersOptions": "Delimiters Options",
+    "description": "Analyze text and generate comprehensive statistics.",
+    "includeEmptyLines": "Include Empty Lines",
+    "includeEmptyLinesDescription": "Include blank lines when counting lines",
+    "inputTitle": "Input text",
+    "resultTitle": "Text Statistics",
+    "sentenceDelimitersDescription": "Enter custom characters used to delimit sentences in your language (separated by comma) or leave it blank for default.",
+    "sentenceDelimitersPlaceholder": "e.g. ., !, ?, ...",
+    "shortDescription": "Get statistics about your text",
+    "statisticsOptions": "Statistics Options",
+    "title": "Text Statistics",
+    "toolInfo": {
+      "description": "This tool allows you to analyze text and generate comprehensive statistics including character count, word count, line count, and frequency analysis of characters and words.",
+      "title": "What is a {{title}}?"
+    },
+    "wordDelimitersDescription": "Enter custom Regex to count Words or leave it blank for default.",
+    "wordDelimitersPlaceholder": "eg. \\s.,;:!?\"«»()…",
+    "wordFrequencyAnalysis": "Word Frequency Analysis",
+    "wordFrequencyAnalysisDescription": "Count how often each word appears in the text"
+  },
+  "textReplacer": {
+    "description": "Replace text patterns with new content.",
+    "findPatternInText": "Find This Pattern in Text",
+    "findPatternUsingRegexp": "Find a Pattern Using a RegExp",
+    "inputTitle": "Text to replace",
+    "newTextPlaceholder": "New text",
+    "regexpDescription": "Enter the regular expression that you want to replace.",
+    "replacePatternDescription": "Enter the pattern to use for replacement.",
+    "replaceText": "Replace Text",
+    "resultTitle": "Text with replacements",
+    "searchPatternDescription": "Enter the text pattern that you want to replace.",
+    "searchText": "Search text",
+    "shortDescription": "Quickly replace text in your content",
+    "title": "Text Replacer",
+    "toolInfo": {
+      "description": "Easily replace specific text in your content with this simple, browser-based tool. Just input your text, set the text you want to replace and the replacement value, and instantly get the updated version.",
+      "title": "Text Replacer"
+    }
+  },
+  "toMorse": {
+    "dashSymbolDescription": "Symbol that will correspond to the dash in Morse code.",
+    "description": "Convert text to Morse code.",
+    "dotSymbolDescription": "Symbol that will correspond to the dot in Morse code.",
+    "longSignal": "Long Signal",
+    "resultTitle": "Morse code",
+    "shortDescription": "Quickly encode text to morse",
+    "shortSignal": "Short Signal",
+    "title": "String To morse"
+  },
+  "truncate": {
+    "addTruncationIndicator": "Add Truncation Indicator",
+    "charactersPlaceholder": "Characters",
+    "description": "Shorten text to a specified length.",
+    "indicatorDescription": "Characters to add at the end (or start) of the text. Note: They count towards the length.",
+    "inputTitle": "Input text",
+    "leftSideDescription": "Remove characters from the start of the text.",
+    "leftSideTruncation": "Left-side Truncation",
+    "lengthAndLines": "Length and Lines",
+    "lineByLineDescription": "Truncate each line separately.",
+    "lineByLineTruncating": "Line-by-line Truncating",
+    "maxLengthDescription": "Number of characters to leave in the text.",
+    "numberPlaceholder": "Number",
+    "resultTitle": "Truncated text",
+    "rightSideDescription": "Remove characters from the end of the text.",
+    "rightSideTruncation": "Right-side Truncation",
+    "shortDescription": "Truncate text to a specified length",
+    "suffixAndAffix": "Suffix and Affix",
+    "title": "Truncate Text",
+    "toolInfo": {
+      "description": "Load your text in the input form on the left and you will automatically get truncated text on the right.",
+      "title": "Truncate text"
+    },
+    "truncationSide": "Truncation Side"
+  },
+  "uppercase": {
+    "description": "Convert text to uppercase letters.",
+    "inputTitle": "Input text",
+    "resultTitle": "Uppercase text",
+    "shortDescription": "Convert text to uppercase",
+    "title": "Convert to Uppercase"
+  }
+}

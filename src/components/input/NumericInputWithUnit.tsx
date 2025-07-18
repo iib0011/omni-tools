@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Grid, Select, MenuItem } from '@mui/material';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import Qty from 'js-quantities';
+import { useTranslation } from 'react-i18next';
 //
 
 const siPrefixes: { [key: string]: number } = {
@@ -23,6 +24,7 @@ export default function NumericInputWithUnit(props: {
   onOwnChange?: (value: { value: number; unit: string }) => void;
   defaultPrefix?: string;
 }) {
+  const { t } = useTranslation();
   const [inputValue, setInputValue] = useState(props.value.value);
   const [prefix, setPrefix] = useState(props.defaultPrefix || 'Default prefix');
 
@@ -158,7 +160,7 @@ export default function NumericInputWithUnit(props: {
         <Select
           fullWidth
           disabled={disableChangingUnit}
-          placeholder={'Unit'}
+          placeholder={t('numericInputWithUnit.unit')}
           sx={{ width: { xs: '75%', sm: '80%', md: '90%' } }}
           value={unit}
           onChange={(event) => {

@@ -1,10 +1,12 @@
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import ToolCard from './ToolCard';
 import { IconifyIcon } from '@iconify/react';
+import { useTranslation } from 'react-i18next';
+import { FullI18nKey } from '../../i18n';
 
 export interface ToolCardProps {
-  title: string;
-  description: string;
+  title: FullI18nKey;
+  description: FullI18nKey;
   link: string;
   icon: IconifyIcon | string;
 }
@@ -15,6 +17,7 @@ interface AllToolsProps {
 }
 
 export default function AllTools({ title, toolCards }: AllToolsProps) {
+  const { t } = useTranslation();
   return (
     <Box mt={4} mb={10}>
       <Typography mb={2} fontSize={30} color={'primary'}>
@@ -25,8 +28,10 @@ export default function AllTools({ title, toolCards }: AllToolsProps) {
           {toolCards.map((card, index) => (
             <Grid item xs={12} md={6} lg={4} key={index}>
               <ToolCard
-                title={card.title}
-                description={card.description}
+                //@ts-ignore
+                title={t(card.title)}
+                //@ts-ignore
+                description={t(card.description)}
                 link={card.link}
                 icon={card.icon}
               />

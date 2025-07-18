@@ -1,0 +1,38 @@
+{
+  "xmlBeautifier": {
+    "description": "使用适当的缩进和间距来格式化 XML。",
+    "indentation": "缩进",
+    "inputTitle": "输入 XML",
+    "resultTitle": "美化 XML",
+    "shortDescription": "格式化和美化 XML 代码",
+    "title": "XML美化器",
+    "toolInfo": {
+      "description": "此工具允许您使用适当的缩进和间距来格式化 XML 数据，使其更易读且更易于使用。",
+      "title": "XML美化器"
+    },
+    "useSpaces": "使用空格",
+    "useSpacesDescription": "使用空格缩进输出",
+    "useTabs": "使用标签",
+    "useTabsDescription": "使用制表符缩进输出。"
+  },
+  "xmlValidator": {
+    "description": "验证 XML 语法和结构。",
+    "placeholder": "在此处粘贴或导入 XML...",
+    "shortDescription": "验证 XML 代码是否存在错误",
+    "title": "XML验证器",
+    "toolInfo": {
+      "description": "此工具可用于验证 XML 的语法和结构。它会检查 XML 格式是否正确，并针对发现的任何问题提供详细的错误消息。",
+      "title": "XML验证器"
+    }
+  },
+  "xmlViewer": {
+    "description": "以树状格式查看和探索 XML 结构。",
+    "inputTitle": "输入 XML",
+    "resultTitle": "XML 树视图",
+    "title": "XML 查看器",
+    "toolInfo": {
+      "description": "该工具允许您以分层树格式查看 XML 数据，从而更容易探索和理解 XML 文档的结构。",
+      "title": "XML 查看器"
+    }
+  }
+}

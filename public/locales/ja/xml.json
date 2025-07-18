@@ -1,0 +1,38 @@
+{
+  "xmlBeautifier": {
+    "description": "適切なインデントとスペースを使用して XML をフォーマットします。",
+    "indentation": "インデント",
+    "inputTitle": "入力XML",
+    "resultTitle": "美化されたXML",
+    "shortDescription": "XML コードをフォーマットして美しくする",
+    "title": "XML 美化ツール",
+    "toolInfo": {
+      "description": "このツールを使用すると、適切なインデントと間隔で XML データをフォーマットできるため、読みやすく、操作しやすくなります。",
+      "title": "XML 美化ツール"
+    },
+    "useSpaces": "スペースを使用する",
+    "useSpacesDescription": "スペースで出力をインデントする",
+    "useTabs": "タブを使用する",
+    "useTabsDescription": "出力をタブでインデントします。"
+  },
+  "xmlValidator": {
+    "description": "XML 構文と構造を検証します。",
+    "placeholder": "ここに XML を貼り付けるかインポートします...",
+    "shortDescription": "XMLコードのエラーを検証する",
+    "title": "XMLバリデータ",
+    "toolInfo": {
+      "description": "このツールを使うと、XMLの構文と構造を検証できます。XMLが整形式であるかどうかを確認し、問題が見つかった場合は詳細なエラーメッセージを表示します。",
+      "title": "XMLバリデータ"
+    }
+  },
+  "xmlViewer": {
+    "description": "XML 構造をツリー形式で表示および探索します。",
+    "inputTitle": "入力XML",
+    "resultTitle": "XMLツリービュー",
+    "title": "XMLビューア",
+    "toolInfo": {
+      "description": "このツールを使用すると、XML データを階層ツリー形式で表示できるため、XML ドキュメントの構造を簡単に調査して理解できるようになります。",
+      "title": "XMLビューア"
+    }
+  }
+}

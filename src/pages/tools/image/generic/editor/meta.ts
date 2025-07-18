@@ -2,12 +2,15 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('image-generic', {
-  name: 'Image Editor',
+  i18n: {
+    name: 'image:editor.title',
+    description: 'image:editor.description',
+    shortDescription: 'image:editor.shortDescription'
+  },
+
   path: 'editor',
   icon: 'mdi:image-edit',
-  description:
-    'Advanced image editor with tools for cropping, rotating, annotating, adjusting colors, and adding watermarks. Edit your images with professional-grade tools directly in your browser.',
-  shortDescription: 'Edit images with advanced tools and features',
+
   keywords: [
     'image',
     'editor',

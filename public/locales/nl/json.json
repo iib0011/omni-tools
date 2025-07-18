@@ -1,0 +1,62 @@
+{
+  "escapeJson": {
+    "description": "Escape speciale tekens in JSON-strings. Converteer JSON-gegevens naar een correct geëscapete indeling voor veilige overdracht of opslag.",
+    "shortDescription": "Speciale tekens in JSON ontsnappen",
+    "title": "Ontsnappen aan JSON"
+  },
+  "jsonToXml": {
+    "description": "Converteer JSON-gegevens naar XML-formaat. Transformeer gestructureerde JSON-objecten naar correct vormgegeven XML-documenten.",
+    "shortDescription": "Converteer JSON naar XML-formaat",
+    "title": "JSON naar XML"
+  },
+  "minify": {
+    "description": "Verwijder alle onnodige witruimte uit JSON.",
+    "inputTitle": "Invoer JSON",
+    "resultTitle": "Geminimaliseerde JSON",
+    "shortDescription": "Verklein JSON door witruimte te verwijderen",
+    "title": "JSON verkleinen",
+    "toolInfo": {
+      "description": "JSON-minificatie is het proces waarbij alle onnodige witruimte uit JSON-gegevens wordt verwijderd, terwijl de geldigheid ervan behouden blijft. Dit omvat het verwijderen van spaties, nieuwe regels en inspringingen die niet nodig zijn voor een correcte parsering van de JSON. Minificatie verkleint de grootte van JSON-gegevens, waardoor deze efficiënter worden opgeslagen en verzonden, met behoud van exact dezelfde datastructuur en waarden.",
+      "title": "Wat is JSON-minificatie?"
+    }
+  },
+  "prettify": {
+    "description": "Formatteer JSON met de juiste inspringing en spatie.",
+    "indentation": "Inspringing",
+    "inputTitle": "Invoer JSON",
+    "resultTitle": "Verfraaide JSON",
+    "shortDescription": "JSON-code opmaken en verfraaien",
+    "title": "JSON verfraaien",
+    "toolInfo": {
+      "description": "Met deze tool kunt u JSON-gegevens opmaken met de juiste inspringing en spaties, waardoor ze beter leesbaar en eenvoudiger te gebruiken zijn.",
+      "title": "JSON verfraaien"
+    },
+    "useSpaces": "Gebruik spaties",
+    "useSpacesDescription": "Uitvoer inspringen met spaties",
+    "useTabs": "Tabbladen gebruiken",
+    "useTabsDescription": "Uitvoer inspringen met tabs."
+  },
+  "stringify": {
+    "description": "Converteer JavaScript-objecten naar JSON-stringformaat. Serialiseer datastructuren naar JSON-strings voor opslag of verzending.",
+    "shortDescription": "Objecten converteren naar JSON-string",
+    "title": "Stringify JSON"
+  },
+  "tsvToJson": {
+    "description": "Converteer TSV-gegevens (Tab-Separated Values) naar JSON-formaat. Transformeer tabelgegevens naar gestructureerde JSON-objecten.",
+    "shortDescription": "Converteer TSV naar JSON-formaat",
+    "title": "TSV naar JSON"
+  },
+  "validateJson": {
+    "description": "Controleer of JSON geldig en correct is geformuleerd.",
+    "inputTitle": "Invoer JSON",
+    "invalidJson": "❌ {{error}}",
+    "resultTitle": "Validatieresultaat",
+    "shortDescription": "Valideer JSON-code op fouten",
+    "title": "Valideer JSON",
+    "toolInfo": {
+      "description": "JSON (JavaScript Object Notation) is een lichtgewicht formaat voor gegevensuitwisseling. JSON-validatie zorgt ervoor dat de structuur van de gegevens voldoet aan de JSON-standaard. Een geldig JSON-object moet het volgende bevatten: - Eigenschapsnamen tussen dubbele aanhalingstekens. - Correct gebalanceerde accolades {}. - Geen afsluitende komma's na het laatste sleutel-waardepaar. - Correcte nesting van objecten en arrays. Deze tool controleert de invoer-JSON en geeft feedback om veelvoorkomende fouten te identificeren en te verhelpen.",
+      "title": "Wat is JSON-validatie?"
+    },
+    "validJson": "✅ Geldige JSON"
+  }
+}

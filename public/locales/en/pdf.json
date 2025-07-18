@@ -1,0 +1,114 @@
+{
+  "compressPdf": {
+    "compressedFileSize": "Compressed File Size",
+    "compressingPdf": "Compressing PDF...",
+    "compressionLevel": "Compression Level",
+    "compressionSettings": "Compression Settings",
+    "description": "Reduce PDF file size while maintaining quality using Ghostscript",
+    "errorCompressingPdf": "Failed to compress PDF: {{error}}",
+    "errorReadingPdf": "Failed to read PDF file. Please make sure it is a valid PDF.",
+    "fileSize": "Original File Size",
+    "highCompression": "High Compression",
+    "highCompressionDescription": "Maximum file size reduction with some quality loss",
+    "inputTitle": "Input PDF",
+    "longDescription": "Compress PDF files securely in your browser using Ghostscript. Your files never leave your device, ensuring complete privacy while reducing file sizes for email sharing, uploading to websites, or saving storage space. Powered by WebAssembly technology.",
+    "lowCompression": "Low Compression",
+    "lowCompressionDescription": "Slightly reduce file size with minimal quality loss",
+    "mediumCompression": "Medium Compression",
+    "mediumCompressionDescription": "Balance between file size and quality",
+    "pages": "Number of Pages",
+    "resultTitle": "Compressed PDF",
+    "shortDescription": "Compress PDF files securely in your browser",
+    "title": "Compress PDF"
+  },
+  "editor": {
+    "description": "Advanced PDF editor with annotation, form-fill, highlight, and export capabilities. Edit your PDFs directly in the browser with professional-grade tools including text insertion, drawing, highlighting, signing and form filling.",
+    "shortDescription": "Edit PDFs with advanced annotation, signing and editing tools",
+    "title": "PDF Editor"
+  },
+  "merge": {
+    "inputTitle": "Input PDF",
+    "loadingText": "Extracting pages",
+    "resultTitle": "Output merged PDF",
+    "toolInfo": {
+      "description": "This tool allows you to merge multiple PDF files into a single document. To use the tool, simply upload the PDF files you want to merge. The tool will then combine all pages from the input files into a single PDF document.",
+      "title": "How to Use the Merge PDF Tool?"
+    }
+  },
+  "mergePdf": {
+    "description": "Combine multiple PDF files into a single document.",
+    "inputTitle": "Input PDFs",
+    "mergingPdfs": "Merging PDFs",
+    "pdfOptions": "PDF Options",
+    "resultTitle": "Merged PDF",
+    "shortDescription": "Merge multiple PDF files into a single document",
+    "sortByFileName": "Sort by file name",
+    "sortByFileNameDescription": "Sort PDFs alphabetically by file name",
+    "sortByUploadOrder": "Sort by upload order",
+    "sortByUploadOrderDescription": "Keep PDFs in the order they were uploaded",
+    "title": "Merge PDF",
+    "toolInfo": {
+      "description": "This tool allows you to combine multiple PDF files into a single document. You can choose how to sort the PDFs and the tool will merge them in the specified order.",
+      "title": "Merge PDF Files"
+    }
+  },
+  "pdfToEpub": {
+    "description": "Transform PDF documents into EPUB files for better e-reader compatibility.', icon: 'material-symbols:import-contacts', component: lazy(() => import('./index')), keywords: ['pdf', 'epub', 'convert', 'ebook'], path: 'pdf-to-epub', i18n: { name: 'pdf:pdfToEpub.title', description: 'pdf:pdfToEpub.description",
+    "shortDescription": "Convert PDF files to EPUB format",
+    "title": "PDF to EPUB"
+  },
+  "pdfToPng": {
+    "description": "Transform PDF documents into PNG panels.",
+    "longDescription": "Upload a PDF and convert each page into a high-quality PNG image directly in your browser. This tool is ideal for extracting visual content or sharing individual pages. No data is uploaded — everything runs locally.",
+    "shortDescription": "Convert PDF into PNG images",
+    "title": "PDF to PNG"
+  },
+  "protectPdf": {
+    "description": "Add password protection to your PDF files securely in your browser",
+    "shortDescription": "Password protect PDF files securely",
+    "title": "Protect PDF"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "All {{count}} pages will be rotated",
+    "angleOptions": {
+      "clockwise90": "90° Clockwise",
+      "counterClockwise270": "270° (90° Counter-clockwise)",
+      "upsideDown180": "180° (Upside down)"
+    },
+    "applyToAllPages": "Apply to all pages",
+    "description": "Rotate pages in a PDF document.",
+    "inputTitle": "Input PDF",
+    "longDescription": "Change the orientation of PDF pages by rotating them 90, 180, or 270 degrees. Useful for fixing incorrectly scanned documents or preparing PDFs for printing.",
+    "pageRangesDescription": "Enter page numbers or ranges separated by commas (e.g., 1,3,5-7)",
+    "pageRangesPlaceholder": "e.g., 1,5-8",
+    "pagesWillBeRotated": "{{count}} page{{count !== 1 ? 's' : ''}} will be rotated",
+    "pdfPageCount": "PDF has {{count}} page{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "Rotated PDF",
+    "rotatingPages": "Rotating pages",
+    "rotationAngle": "Rotation Angle",
+    "rotationSettings": "Rotation Settings",
+    "shortDescription": "Rotate pages in a PDF document",
+    "title": "Rotate PDF",
+    "toolInfo": {
+      "description": "This tool allows you to rotate pages in a PDF document. You can rotate all pages or specify individual pages to rotate. Choose a rotation angle: 90° Clockwise, 180° (Upside down), or 270° (90° Counter-clockwise). To rotate specific pages, uncheck \"Apply to all pages\" and enter page numbers or ranges separated by commas (e.g., 1,3,5-7).",
+      "title": "How to Use the Rotate PDF Tool"
+    }
+  },
+  "splitPdf": {
+    "description": "Extract specific pages from a PDF document.",
+    "extractingPages": "Extracting pages",
+    "inputTitle": "Input PDF",
+    "pageExtractionPreview": "{{count}} page{{count !== 1 ? 's' : ''}} will be extracted",
+    "pageRangesDescription": "Enter page numbers or ranges separated by commas (e.g., 1,3,5-7)",
+    "pageRangesPlaceholder": "e.g., 1,5-8",
+    "pageSelection": "Page Selection",
+    "pdfPageCount": "PDF has {{count}} page{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "Extracted PDF",
+    "shortDescription": "Extract specific pages from a PDF file",
+    "title": "Split PDF",
+    "toolInfo": {
+      "description": "This tool allows you to extract specific pages from a PDF document. You can specify individual pages or ranges of pages to extract.",
+      "title": "Split PDF"
+    }
+  }
+}

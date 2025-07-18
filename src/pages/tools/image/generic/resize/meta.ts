@@ -2,13 +2,25 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('image-generic', {
-  name: 'Resize Image',
+  i18n: {
+    name: 'image:resize.title',
+    description: 'image:resize.description',
+    shortDescription: 'image:resize.shortDescription',
+    userTypes: ['General Users', 'Students', 'Developers']
+  },
+
   path: 'resize',
-  icon: 'mdi:resize',
-  description:
-    'Resize images to different dimensions while maintaining aspect ratio or custom sizes.',
-  shortDescription: 'Resize images to different dimensions',
-  keywords: ['resize', 'image', 'dimensions', 'scale', 'aspect ratio'],
-  userTypes: ['General Users', 'Students', 'Developers'],
+  icon: 'mdi:resize', // Iconify icon as a string
+
+  keywords: [
+    'resize',
+    'image',
+    'scale',
+    'jpg',
+    'png',
+    'svg',
+    'gif',
+    'dimensions'
+  ],
   component: lazy(() => import('./index'))
 });

@@ -1,0 +1,62 @@
+{
+  "escapeJson": {
+    "description": "Escapen Sie Sonderzeichen in JSON-Strings. Konvertieren Sie JSON-Daten in ein korrekt maskiertes Format für eine sichere Übertragung oder Speicherung.",
+    "shortDescription": "Escape-Sonderzeichen in JSON",
+    "title": "Escape-JSON"
+  },
+  "jsonToXml": {
+    "description": "Konvertieren Sie JSON-Daten in das XML-Format. Transformieren Sie strukturierte JSON-Objekte in wohlgeformte XML-Dokumente.",
+    "shortDescription": "Konvertieren Sie JSON in das XML-Format",
+    "title": "JSON zu XML"
+  },
+  "minify": {
+    "description": "Entfernen Sie alle unnötigen Leerzeichen aus JSON.",
+    "inputTitle": "JSON-Eingabe",
+    "resultTitle": "Minimiertes JSON",
+    "shortDescription": "Minimieren Sie JSON durch Entfernen von Leerzeichen",
+    "title": "JSON minimieren",
+    "toolInfo": {
+      "description": "Bei der JSON-Minimierung werden alle unnötigen Leerzeichen aus JSON-Daten entfernt, ohne dass deren Gültigkeit verloren geht. Dazu gehören Leerzeichen, Zeilenumbrüche und Einrückungen, die für die korrekte JSON-Analyse nicht erforderlich sind. Durch die Minimierung wird die Größe von JSON-Daten reduziert, wodurch die Speicherung und Übertragung effizienter wird, während die Datenstruktur und die Werte unverändert bleiben.",
+      "title": "Was ist JSON-Minimierung?"
+    }
+  },
+  "prettify": {
+    "description": "Formatieren Sie JSON mit den richtigen Einrückungen und Abständen.",
+    "indentation": "Vertiefung",
+    "inputTitle": "JSON-Eingabe",
+    "resultTitle": "Verschönertes JSON",
+    "shortDescription": "Formatieren und Verschönern von JSON-Code",
+    "title": "JSON verschönern",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie JSON-Daten mit den richtigen Einrückungen und Abständen formatieren, sodass sie besser lesbar und einfacher zu bearbeiten sind.",
+      "title": "JSON verschönern"
+    },
+    "useSpaces": "Räume verwenden",
+    "useSpacesDescription": "Ausgabe mit Leerzeichen einrücken",
+    "useTabs": "Verwenden von Registerkarten",
+    "useTabsDescription": "Einrücken der Ausgabe mit Tabulatoren."
+  },
+  "stringify": {
+    "description": "Konvertieren Sie JavaScript-Objekte in das JSON-String-Format. Serialisieren Sie Datenstrukturen zur Speicherung oder Übertragung in JSON-Strings.",
+    "shortDescription": "Konvertieren Sie Objekte in JSON-Zeichenfolgen",
+    "title": "Stringify JSON"
+  },
+  "tsvToJson": {
+    "description": "Konvertieren Sie TSV-Daten (Tab-Separated Values) in das JSON-Format. Transformieren Sie tabellarische Daten in strukturierte JSON-Objekte.",
+    "shortDescription": "Konvertieren Sie TSV in das JSON-Format",
+    "title": "TSV zu JSON"
+  },
+  "validateJson": {
+    "description": "Überprüfen Sie, ob JSON gültig und wohlgeformt ist.",
+    "inputTitle": "JSON-Eingabe",
+    "invalidJson": "❌ {{error}}",
+    "resultTitle": "Validierungsergebnis",
+    "shortDescription": "JSON-Code auf Fehler überprüfen",
+    "title": "JSON validieren",
+    "toolInfo": {
+      "description": "JSON (JavaScript Object Notation) ist ein einfaches Datenaustauschformat. Die JSON-Validierung stellt sicher, dass die Datenstruktur dem JSON-Standard entspricht. Ein gültiges JSON-Objekt muss Folgendes enthalten: – Eigenschaftsnamen in doppelten Anführungszeichen. – Ausgewogene geschweifte Klammern {}. – Keine abschließenden Kommas nach dem letzten Schlüssel-Wert-Paar. – Korrekte Verschachtelung von Objekten und Arrays. Dieses Tool prüft das eingegebene JSON und gibt Feedback, um häufige Fehler zu identifizieren und zu beheben.",
+      "title": "Was ist JSON-Validierung?"
+    },
+    "validJson": "✅ Gültiges JSON"
+  }
+}

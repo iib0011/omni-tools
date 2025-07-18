@@ -1,0 +1,62 @@
+{
+  "escapeJson": {
+    "description": "JSON文字列内の特殊文字をエスケープします。JSONデータを適切にエスケープされた形式に変換して、安全な転送や保存を実現します。",
+    "shortDescription": "JSON内の特殊文字をエスケープする",
+    "title": "JSON のエスケープ"
+  },
+  "jsonToXml": {
+    "description": "JSONデータをXML形式に変換します。構造化されたJSONオブジェクトを整形式のXMLドキュメントに変換します。",
+    "shortDescription": "JSONをXML形式に変換する",
+    "title": "JSONからXMLへ"
+  },
+  "minify": {
+    "description": "JSON から不要な空白をすべて削除します。",
+    "inputTitle": "入力JSON",
+    "resultTitle": "縮小されたJSON",
+    "shortDescription": "空白を削除してJSONを縮小する",
+    "title": "JSONを縮小する",
+    "toolInfo": {
+      "description": "JSONの縮小とは、JSONデータの妥当性を維持しながら、不要な空白文字をすべて削除するプロセスです。これには、JSONを正しく解析するために不要なスペース、改行、インデントなどが含まれます。縮小によりJSONデータのサイズが縮小され、データ構造と値は全く同じまま、保存と転送の効率が向上します。",
+      "title": "JSON の縮小とは何ですか?"
+    }
+  },
+  "prettify": {
+    "description": "適切なインデントとスペースを使用して JSON をフォーマットします。",
+    "indentation": "インデント",
+    "inputTitle": "入力JSON",
+    "resultTitle": "整形されたJSON",
+    "shortDescription": "JSON コードをフォーマットして美しくする",
+    "title": "JSONを美しくする",
+    "toolInfo": {
+      "description": "このツールを使用すると、JSON データを適切なインデントとスペースでフォーマットできるため、読みやすく、操作しやすくなります。",
+      "title": "JSONを美しくする"
+    },
+    "useSpaces": "スペースを使用する",
+    "useSpacesDescription": "スペースで出力をインデントする",
+    "useTabs": "タブを使用する",
+    "useTabsDescription": "出力をタブでインデントします。"
+  },
+  "stringify": {
+    "description": "JavaScriptオブジェクトをJSON文字列形式に変換します。データ構造をJSON文字列にシリアル化して保存または転送します。",
+    "shortDescription": "オブジェクトをJSON文字列に変換する",
+    "title": "JSONを文字列化する"
+  },
+  "tsvToJson": {
+    "description": "TSV（タブ区切り値）データをJSON形式に変換します。表形式のデータを構造化されたJSONオブジェクトに変換します。",
+    "shortDescription": "TSVをJSON形式に変換する",
+    "title": "TSVからJSONへ"
+  },
+  "validateJson": {
+    "description": "JSON が有効かつ整形式であるかどうかを確認します。",
+    "inputTitle": "入力JSON",
+    "invalidJson": "❌ {{error}}",
+    "resultTitle": "検証結果",
+    "shortDescription": "JSONコードのエラーを検証する",
+    "title": "JSONを検証する",
+    "toolInfo": {
+      "description": "JSON（JavaScript Object Notation）は軽量なデータ交換形式です。JSON検証は、データの構造がJSON標準に準拠していることを確認します。有効なJSONオブジェクトには、以下の要素が必要です。- プロパティ名が二重引用符で囲まれている。- 中括弧{}が適切にバランスされている。- 最後のキーと値のペアの後にカンマが付いていない。- オブジェクトと配列が適切にネストされている。このツールは入力されたJSONを検証し、一般的なエラーを特定して修正するためのフィードバックを提供します。",
+      "title": "JSON 検証とは何ですか?"
+    },
+    "validJson": "✅ 有効なJSON"
+  }
+}

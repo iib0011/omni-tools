@@ -1,0 +1,120 @@
+{
+  "changeSpeed": {
+    "defaultMultiplier": "Default multiplier: 2 means 2x faster",
+    "description": "Change the playback speed of video files. Speed up or slow down videos while maintaining audio synchronization. Supports various speed multipliers and common video formats.",
+    "inputTitle": "Input Video",
+    "newVideoSpeed": "New Video Speed",
+    "resultTitle": "Edited Video",
+    "settingSpeed": "Setting Speed",
+    "shortDescription": "Change video playback speed",
+    "title": "Change Video Speed",
+    "toolInfo": {
+      "title": "What is a {{title}}?"
+    }
+  },
+  "compress": {
+    "default": "Default",
+    "description": "Compress videos by scaling them to different resolutions like 240p, 480p, 720p, etc. This tool helps reduce file size while maintaining acceptable quality. Supports common video formats like MP4, WebM, and OGG.",
+    "inputTitle": "Input Video",
+    "loadingText": "Compressing video...",
+    "lossless": "Lossless",
+    "quality": "Quality (CRF)",
+    "resolution": "Resolution",
+    "resultTitle": "Compressed Video",
+    "shortDescription": "Compress videos by scaling to different resolutions",
+    "title": "Compress Video",
+    "worst": "Worst"
+  },
+  "cropVideo": {
+    "cropCoordinates": "Crop Coordinates",
+    "croppingVideo": "Cropping Video",
+    "description": "Crop video to remove unwanted areas.",
+    "errorBeyondHeight": "Crop area extends beyond video height ({{height}}px)",
+    "errorBeyondWidth": "Crop area extends beyond video width ({{width}}px)",
+    "errorCroppingVideo": "Error cropping video. Please check parameters and video file.",
+    "errorLoadingDimensions": "Failed to load video dimensions",
+    "errorNonNegativeCoordinates": "X and Y coordinates must be non-negative",
+    "errorPositiveDimensions": "Width and height must be positive",
+    "height": "Height",
+    "inputTitle": "Input Video",
+    "loadVideoForDimensions": "Load a video to see dimensions",
+    "resultTitle": "Cropped Video",
+    "shortDescription": "Crop video to remove unwanted areas",
+    "longDescription": "This tool allows you to crop video files to remove unwanted areas or focus on specific parts of the video. Useful for removing black bars, adjusting aspect ratios, or focusing on important content. Supports various video formats including MP4, MOV, and AVI.",
+    "title": "Crop Video",
+    "toolInfo": {
+      "description": "This tool allows you to crop video files to remove unwanted areas. You can specify the crop area by setting the X, Y coordinates and width, height dimensions.",
+      "title": "Crop Video"
+    },
+    "videoDimensions": "Video dimensions: {{width}} × {{height}} pixels",
+    "videoInformation": "Video Information",
+    "width": "Width",
+    "xCoordinate": "X (left)",
+    "yCoordinate": "Y (top)"
+  },
+  "flip": {
+    "description": "Flip video files horizontally or vertically. Mirror videos for special effects or correct orientation issues.",
+    "flippingVideo": "Flipping Video",
+    "horizontalLabel": "Horizontal (Mirror)",
+    "inputTitle": "Input Video",
+    "orientation": "Orientation",
+    "resultTitle": "Flipped Video",
+    "shortDescription": "Flip video horizontally or vertically",
+    "title": "Flip Video",
+    "verticalLabel": "Vertical (Upside Down)"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "Change the playback speed of GIF animations. Speed up or slow down GIFs while maintaining smooth animation.",
+      "shortDescription": "Change GIF animation speed",
+      "title": "Change GIF Speed"
+    }
+  },
+  "loop": {
+    "description": "Create a looping video by repeating the original video multiple times.",
+    "inputTitle": "Input Video",
+    "loopingVideo": "Looping Video",
+    "loops": "Loops",
+    "numberOfLoops": "Number of Loops",
+    "resultTitle": "Looped Video",
+    "shortDescription": "Create looping video files",
+    "title": "Loop Video",
+    "toolInfo": {
+      "description": "This tool allows you to create a looping video by repeating the original video multiple times. You can specify how many times the video should loop.",
+      "title": "What is a {{title}}?"
+    }
+  },
+  "mergeVideo": {
+    "description": "Combine multiple video files into one continuous video.",
+    "longDescription": "This tool allows you to merge or append multiple video files into a single continuous video. Simply upload your video files, arrange them in the desired order, and merge them into one file for easy sharing or editing.",
+    "shortDescription": "Append and merge videos easily.",
+    "title": "Merge videos"
+  },
+  "rotate": {
+    "180Degrees": "180° (Upside down)",
+    "270Degrees": "270° (90° Counter-clockwise)",
+    "90Degrees": "90° Clockwise",
+    "description": "Rotate video files by 90, 180, or 270 degrees. Correct video orientation or create special effects with precise rotation control.",
+    "inputTitle": "Input Video",
+    "resultTitle": "Rotated Video",
+    "rotatingVideo": "Rotating Video",
+    "rotation": "Rotation",
+    "shortDescription": "Rotate video by specified degrees",
+    "title": "Rotate Video"
+  },
+  "trim": {
+    "description": "Trim video files by specifying start and end times. Remove unwanted sections from the beginning or end of videos.",
+    "endTime": "End Time",
+    "inputTitle": "Input Video",
+    "resultTitle": "Trimmed Video",
+    "shortDescription": "Trim video by removing unwanted sections",
+    "startTime": "Start Time",
+    "timestamps": "Timestamps",
+    "title": "Trim Video"
+  },
+  "videoToGif": {
+    "description": "Convert video files to animated GIF format. Extract specific time ranges and create shareable animated images.",
+    "shortDescription": "Convert video to animated GIF",
+    "title": "Video to GIF"
+  }
+}

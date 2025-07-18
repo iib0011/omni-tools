@@ -2,12 +2,8 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('time', {
-  name: 'Crontab explainer',
   path: 'crontab-guru',
-  icon: 'mdi:calendar-clock',
-  description:
-    'Parse, validate, and explain crontab expressions in plain English.',
-  shortDescription: 'Crontab expression parser and explainer',
+  icon: 'material-symbols:schedule',
   keywords: [
     'crontab',
     'cron',
@@ -18,8 +14,11 @@ export const tool = defineTool('time', {
     'parser',
     'explain'
   ],
-  longDescription:
-    'Enter a crontab expression (like "35 16 * * 0-5") to get a human-readable explanation and validation. Useful for understanding and debugging cron schedules. Inspired by crontab.guru.',
-  userTypes: ['Developers'],
-  component: lazy(() => import('./index'))
+  component: lazy(() => import('./index')),
+  i18n: {
+    name: 'time:crontabGuru.title',
+    description: 'time:crontabGuru.description',
+    shortDescription: 'time:crontabGuru.shortDescription',
+    userTypes: ['Developers']
+  }
 });

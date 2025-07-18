@@ -1,0 +1,115 @@
+{
+  "comparison": {
+    "description": "दो JSON वस्तुओं की संरचना और मूल्यों में अंतर की पहचान करें।",
+    "shortDescription": "दो JSON वस्तुओं के बीच अंतर ढूंढें",
+    "title": "JSON तुलना करें"
+  },
+  "escape": {
+    "description": "JSON स्ट्रिंग में विशेष वर्णों को एस्केप करें।",
+    "escapeBackslashes": "बैकस्लैश एस्केप करें",
+    "escapeNewlines": "नई पंक्तियां एस्केप करें",
+    "escapeOptions": "एस्केप विकल्प",
+    "escapeQuotes": "उद्धरण एस्केप करें",
+    "escapeTabs": "टैब एस्केप करें",
+    "inputTitle": "इनपुट JSON",
+    "resultTitle": "एस्केप किया गया JSON",
+    "title": "JSON एस्केप करें"
+  },
+  "escapeJson": {
+    "description": "JSON स्ट्रिंग्स में विशेष वर्णों को एस्केप करें। सुरक्षित संचरण या संग्रहण के लिए JSON डेटा को उचित रूप से एस्केप किए गए प्रारूप में परिवर्तित करें।",
+    "shortDescription": "JSON में विशेष वर्णों से बचें",
+    "title": "JSON से बचें"
+  },
+  "jsonToXml": {
+    "conversionOptions": "रूपांतरण विकल्प",
+    "description": "JSON डेटा को XML प्रारूप में बदलें।",
+    "includeAttributes": "विशेषताएं शामिल करें",
+    "indentSize": "इंडेंट आकार",
+    "inputTitle": "इनपुट JSON",
+    "resultTitle": "XML परिणाम",
+    "rootElement": "मूल तत्व",
+    "rootPlaceholder": "तत्व नाम",
+    "shortDescription": "JSON को XML प्रारूप में परिवर्तित करें",
+    "sizePlaceholder": "आकार",
+    "title": "JSON से XML"
+  },
+  "minify": {
+    "compactArrays": "सरणियां संक्षिप्त करें",
+    "description": "JSON को संक्षिप्त प्रारूप में बदलें।",
+    "inputTitle": "इनपुट JSON",
+    "minifyOptions": "संक्षिप्त करने के विकल्प",
+    "removeComments": "टिप्पणियां हटाएं",
+    "removeWhitespace": "सफेद स्थान हटाएं",
+    "resultTitle": "संक्षिप्त JSON",
+    "shortDescription": "रिक्त स्थान हटाकर JSON को छोटा करें",
+    "title": "JSON संक्षिप्त करें",
+    "toolInfo": {
+      "description": "JSON मिनिफिकेशन, JSON डेटा से सभी अनावश्यक रिक्त स्थान वर्णों को हटाने की प्रक्रिया है, जबकि इसकी वैधता बरकरार रहती है। इसमें रिक्त स्थान, नई पंक्तियाँ और इंडेंटेशन हटाना शामिल है जो JSON को सही ढंग से पार्स करने के लिए आवश्यक नहीं हैं। मिनिफिकेशन JSON डेटा के आकार को कम करता है, जिससे यह संग्रहण और संचरण के लिए अधिक कुशल हो जाता है, जबकि डेटा संरचना और मान बिल्कुल समान रहते हैं।",
+      "title": "JSON मिनिमाइजेशन क्या है?"
+    }
+  },
+  "prettify": {
+    "description": "JSON को सुंदर प्रारूप में बदलें।",
+    "formattingOptions": "फॉर्मेटिंग विकल्प",
+    "indentCharacter": "इंडेंट वर्ण",
+    "indentSize": "इंडेंट आकार",
+    "indentation": "खरोज",
+    "inputTitle": "इनपुट JSON",
+    "resultTitle": "सुंदर JSON",
+    "shortDescription": "JSON कोड को प्रारूपित और सुशोभित करें",
+    "sizePlaceholder": "आकार",
+    "sortKeys": "कुंजियां क्रमबद्ध करें",
+    "space": "स्पेस",
+    "tab": "टैब",
+    "title": "JSON सुंदर बनाएं",
+    "toolInfo": {
+      "description": "यह टूल आपको JSON डेटा को उचित इंडेंटेशन और स्पेसिंग के साथ फॉर्मेट करने की अनुमति देता है, जिससे यह अधिक पठनीय और काम करने में आसान हो जाता है।",
+      "title": "JSON सुंदर बनाएं"
+    },
+    "useSpaces": "रिक्त स्थान का उपयोग करें",
+    "useSpacesDescription": "रिक्त स्थान के साथ आउटपुट इंडेंट करें",
+    "useTabs": "टैब का उपयोग करें",
+    "useTabsDescription": "टैब के साथ आउटपुट इंडेंट करें."
+  },
+  "stringify": {
+    "description": "JavaScript ऑब्जेक्ट को JSON स्ट्रिंग में बदलें।",
+    "includeFunctions": "फ़ंक्शन शामिल करें",
+    "includeUndefined": "अपरिभाषित शामिल करें",
+    "inputTitle": "इनपुट ऑब्जेक्ट",
+    "prettyPrint": "सुंदर प्रिंट",
+    "resultTitle": "JSON स्ट्रिंग",
+    "shortDescription": "ऑब्जेक्ट को JSON स्ट्रिंग में परिवर्तित करें",
+    "stringifyOptions": "स्ट्रिंगिफाई विकल्प",
+    "title": "JSON स्ट्रिंगिफाई"
+  },
+  "tsvToJson": {
+    "arrayFormat": "सरणी प्रारूप",
+    "conversionOptions": "रूपांतरण विकल्प",
+    "description": "TSV डेटा को JSON प्रारूप में बदलें।",
+    "firstRowAsHeaders": "पहली पंक्ति शीर्षक के रूप में",
+    "includeHeaders": "शीर्षक शामिल करें",
+    "inputTitle": "इनपुट TSV",
+    "objectFormat": "ऑब्जेक्ट प्रारूप",
+    "outputFormat": "आउटपुट प्रारूप",
+    "resultTitle": "JSON परिणाम",
+    "shortDescription": "TSV को JSON प्रारूप में परिवर्तित करें",
+    "title": "TSV से JSON"
+  },
+  "validateJson": {
+    "allowComments": "टिप्पणियां अनुमति दें",
+    "allowTrailingCommas": "अनुगामी कॉमा अनुमति दें",
+    "description": "JSON स्ट्रिंग की वैधता जांचें।",
+    "inputTitle": "इनपुट JSON",
+    "invalidJson": "❌ {{error}}",
+    "resultTitle": "मान्यता परिणाम",
+    "shortDescription": "त्रुटियों के लिए JSON कोड सत्यापित करें",
+    "strictMode": "सख्त मोड",
+    "title": "JSON मान्य करें",
+    "toolInfo": {
+      "description": "JSON (जावास्क्रिप्ट ऑब्जेक्ट नोटेशन) एक हल्का डेटा-इंटरचेंज फ़ॉर्मेट है। JSON सत्यापन यह सुनिश्चित करता है कि डेटा की संरचना JSON मानक के अनुरूप हो। एक मान्य JSON ऑब्जेक्ट में ये चीज़ें होनी चाहिए: - प्रॉपर्टी के नाम दोहरे उद्धरण चिह्नों में संलग्न हों। - उचित रूप से संतुलित कर्ली ब्रेसेज़ {}। - अंतिम कुंजी-मान युग्म के बाद कोई अनुगामी अल्पविराम न हो। - ऑब्जेक्ट्स और ऐरे का उचित नेस्टिंग। यह टूल इनपुट JSON की जाँच करता है और सामान्य त्रुटियों की पहचान करने और उन्हें ठीक करने में मदद के लिए फ़ीडबैक प्रदान करता है।",
+      "title": "JSON सत्यापन क्या है?"
+    },
+    "validJson": "✅ मान्य JSON",
+    "validationOptions": "मान्यता विकल्प"
+  }
+}

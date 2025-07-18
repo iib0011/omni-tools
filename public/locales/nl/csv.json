@@ -1,0 +1,114 @@
+{
+  "changeCsvSeparator": {
+    "description": "Wijzig het scheidingsteken in CSV-bestanden. Converteer tussen verschillende CSV-formaten, zoals komma's, puntkomma's, tabs of aangepaste scheidingstekens.",
+    "shortDescription": "Wijzig het scheidingsteken van CSV-bestanden",
+    "title": "CSV-scheidingsteken wijzigen"
+  },
+  "csvRowsToColumns": {
+    "description": "Deze tool converteert rijen van een CSV-bestand (Comma Separated Values) naar kolommen. De horizontale regels worden één voor één uit het invoerbestand (CSV) gehaald, 90 graden gedraaid en als verticale kolommen, gescheiden door komma's, na elkaar weergegeven.', longDescription: 'Deze tool converteert rijen van een CSV-bestand (Comma Separated Values) naar kolommen. Als de invoergegevens bijvoorbeeld 6 rijen bevatten, bevat de uitvoer 6 kolommen en worden de elementen van de rijen van boven naar beneden gerangschikt. In een correct opgemaakte CSV is het aantal waarden in elke rij hetzelfde. Wanneer er echter velden in rijen ontbreken, kan het programma deze herstellen en kunt u kiezen uit de beschikbare opties: ontbrekende gegevens vullen met lege elementen of ontbrekende gegevens vervangen door aangepaste elementen, zoals \"ontbrekend\", \"?\" of \"x\". Tijdens het conversieproces verwijdert de tool ook onnodige informatie uit het CSV-bestand, zoals lege regels (dit zijn regels zonder zichtbare informatie) en opmerkingen. Om de tool te helpen opmerkingen correct te identificeren, kunt u in de opties het symbool opgeven aan het begin van een regel waarmee een opmerking begint. Dit symbool is meestal een hekje \"#\" of een dubbele slash \"//\". Csv-abulous!",
+    "longDescription": "Deze tool converteert rijen van een CSV-bestand (Comma Separated Values) naar kolommen. Als de invoergegevens in CSV-formaat bijvoorbeeld 6 rijen bevatten, heeft de uitvoer 6 kolommen en worden de elementen van de rijen van boven naar beneden gerangschikt. In een correct opgemaakte CSV is het aantal waarden in elke rij hetzelfde. Wanneer er echter velden in rijen ontbreken, kan het programma deze herstellen en kunt u kiezen uit de beschikbare opties: ontbrekende gegevens vullen met lege elementen of ontbrekende gegevens vervangen door aangepaste elementen, zoals",
+    "shortDescription": "Converteer CSV-rijen naar kolommen.",
+    "title": "CSV-rijen naar kolommen converteren"
+  },
+  "csvToJson": {
+    "columnSeparator": "Kolomscheidingsteken (bijv. , ; \\t)",
+    "commentSymbol": "Commentaarsymbool (bijv. #)",
+    "conversionOptions": "Conversie-opties",
+    "description": "Converteer CSV-bestanden naar JSON-formaat met aanpasbare opties voor scheidingstekens, aanhalingstekens en uitvoeropmaak. Ondersteuning voor kopteksten, opmerkingen en dynamische typeconversie.",
+    "dynamicTypes": "Dynamische typen",
+    "dynamicTypesDescription": "Automatisch getallen en Booleaanse waarden converteren",
+    "errorParsing": "Fout bij het parseren van CSV: {{error}}",
+    "fieldQuote": "Veldcitaat (bijv. \")",
+    "inputCsvFormat": "CSV-invoerformaat",
+    "inputTitle": "CSV-invoer",
+    "resultTitle": "Uitvoer JSON",
+    "shortDescription": "Converteer CSV-gegevens naar JSON-formaat.",
+    "skipEmptyLines": "Lege regels overslaan",
+    "skipEmptyLinesDescription": "Negeer lege regels in de invoer-CSV",
+    "title": "CSV naar JSON converteren",
+    "useHeaders": "Gebruik headers",
+    "useHeadersDescription": "Behandel de eerste rij als kolomkoppen"
+  },
+  "csvToTsv": {
+    "description": "Upload uw CSV-bestand via onderstaand formulier en het wordt automatisch omgezet naar een TSV-bestand. In de toolopties kunt u het CSV-invoerformaat aanpassen: geef het veldscheidingsteken, het aanhalingsteken en het commentaarsymbool op, sla lege CSV-regels over en kies of u CSV-kolomkoppen wilt behouden.",
+    "longDescription": "Deze tool zet Comma Separated Values (CSV)-gegevens om in Tab Separated Values (TSV). Zowel CSV als TSV zijn populaire bestandsformaten voor het opslaan van tabelgegevens, maar ze gebruiken verschillende scheidingstekens om waarden te scheiden. CSV gebruikt komma's (",
+    "shortDescription": "Converteer CSV-gegevens naar TSV-formaat.",
+    "title": "CSV naar TSV converteren"
+  },
+  "csvToXml": {
+    "description": "Converteer CSV-bestanden naar XML-formaat met aanpasbare opties.",
+    "shortDescription": "Converteer CSV-gegevens naar XML-formaat.",
+    "title": "CSV naar XML converteren"
+  },
+  "csvToYaml": {
+    "description": "Upload uw CSV-bestand via onderstaand formulier en het wordt automatisch omgezet naar een YAML-bestand. In de toolopties kunt u het scheidingsteken voor velden, het aanhalingsteken voor velden en het commentaarteken opgeven om de tool aan te passen aan aangepaste CSV-indelingen. Daarnaast kunt u de uitvoer-YAML-indeling selecteren: een indeling die CSV-headers behoudt of een indeling die CSV-headers uitsluit.",
+    "longDescription": "Deze tool transformeert CSV-gegevens (Comma Separated Values) naar YAML-gegevens (Yet Another Markup Language). CSV is een eenvoudig tabelformaat dat wordt gebruikt om matrixachtige gegevenstypen weer te geven die bestaan uit rijen en kolommen. YAML daarentegen is een geavanceerder formaat (eigenlijk een superset van JSON), dat beter leesbare gegevens voor serialisatie genereert en lijsten, woordenboeken en geneste objecten ondersteunt. Dit programma ondersteunt verschillende CSV-invoerformaten: de invoergegevens kunnen door komma's (standaard), door puntkomma's, door slierten of een ander scheidingsteken worden gescheiden. U kunt het exacte scheidingsteken dat uw gegevens gebruiken in de opties opgeven. Op dezelfde manier kunt u in de opties het aanhalingsteken opgeven dat wordt gebruikt om CSV-velden in te sluiten (standaard een dubbel aanhalingsteken). U kunt ook regels overslaan die beginnen met opmerkingen door de opmerkingsymbolen in de opties op te geven. Zo houdt u uw gegevens overzichtelijk door onnodige regels over te slaan. Er zijn twee manieren om CSV naar YAML te converteren. De eerste methode converteert elke CSV-rij naar een YAML-lijst. De tweede methode extraheert headers uit de eerste CSV-rij en creëert YAML-objecten met sleutels op basis van deze headers. U kunt de YAML-uitvoer ook aanpassen door het aantal spaties voor inspringing van YAML-structuren op te geven. Als u de omgekeerde conversie wilt uitvoeren, dat wil zeggen YAML naar CSV wilt converteren, kunt u onze tool YAML naar CSV converteren gebruiken. Csv-abulous!",
+    "shortDescription": "Converteer snel een CSV-bestand naar een YAML-bestand.",
+    "title": "CSV naar YAML converteren"
+  },
+  "findIncompleteCsvRecords": {
+    "checkingOptions": "Opties controleren",
+    "commentCharacterDescription": "Voer het teken in dat het begin van een commentaarregel aangeeft. Regels die met dit symbool beginnen, worden overgeslagen.",
+    "csvInputOptions": "CSV-invoeropties",
+    "csvSeparatorDescription": "Voer het teken in dat gebruikt wordt om kolommen in het CSV-invoerbestand te scheiden.",
+    "deleteLinesWithNoData": "Regels zonder gegevens verwijderen",
+    "deleteLinesWithNoDataDescription": "Verwijder lege regels uit het CSV-invoerbestand.",
+    "description": "Upload uw CSV-bestand via onderstaand formulier en deze tool controleert automatisch of er geen waarden in de rijen of kolommen ontbreken. In de toolopties kunt u de opmaak van het invoerbestand aanpassen (het scheidingsteken, de aanhalingstekens en het commentaarteken opgeven). Daarnaast kunt u de controle op lege waarden inschakelen, lege regels overslaan en een limiet instellen voor het aantal foutmeldingen in de uitvoer.",
+    "findEmptyValues": "Lege waarden zoeken",
+    "findEmptyValuesDescription": "Geef een bericht weer over lege CSV-velden (dit zijn geen ontbrekende velden, maar velden die niets bevatten).",
+    "inputTitle": "CSV-invoer",
+    "limitNumberOfMessages": "Beperk het aantal berichten",
+    "messageLimitDescription": "Stel de limiet in voor het aantal berichten in de uitvoer.",
+    "quoteCharacterDescription": "Voer het aanhalingsteken in dat u wilt gebruiken om de CSV-invoervelden te citeren.",
+    "resultTitle": "CSV-status",
+    "shortDescription": "Vind snel rijen en kolommen in CSV waar waarden ontbreken.",
+    "title": "Onvolledige CSV-records vinden",
+    "toolInfo": {
+      "title": "Wat is een {{title}}?"
+    }
+  },
+  "insertCsvColumns": {
+    "appendColumns": "Kolommen toevoegen",
+    "commentCharacterDescription": "Voer het teken in dat het begin van een commentaarregel aangeeft. Regels die met dit symbool beginnen, worden overgeslagen.",
+    "csvOptions": "CSV-opties",
+    "csvSeparator": "CSV-scheidingsteken",
+    "csvToInsert": "CSV om in te voegen",
+    "csvToInsertDescription": "Voer een of meer kolommen in die u in het CSV-bestand wilt invoegen. Het teken dat wordt gebruikt om kolommen te scheiden, moet hetzelfde zijn als het teken in het CSV-invoerbestand. Let op: lege regels worden genegeerd.",
+    "customFillDescription": "Als het invoer-CSV-bestand niet compleet is (ontbrekende waarden), kunt u dan lege velden of aangepaste symbolen aan de records toevoegen om een goed opgemaakte CSV te maken?",
+    "customFillValueDescription": "Gebruik deze aangepaste waarde om ontbrekende velden in te vullen. (Werkt alleen met de modus 'Aangepaste waarden' hierboven.)",
+    "customPosition": "Aangepaste positie",
+    "customPositionOptionsDescription": "Selecteer de methode om de kolommen in het CSV-bestand in te voegen.",
+    "description": "Voeg nieuwe kolommen toe aan CSV-gegevens op de opgegeven posities.",
+    "fillWithCustomValues": "Vul met douanewaarden",
+    "fillWithEmptyValues": "Vullen met lege waarden",
+    "headerName": "Koptekstnaam",
+    "headerNameDescription": "Koptekst van de kolom waarna u kolommen wilt invoegen.",
+    "inputTitle": "CSV-invoer",
+    "insertingPositionDescription": "Geef aan waar de kolommen in het CSV-bestand moeten worden ingevoegd.",
+    "position": "Positie",
+    "positionOptions": "Positieopties",
+    "prependColumns": "Kolommen vooraf toevoegen",
+    "quoteCharDescription": "Voer het aanhalingsteken in dat u wilt gebruiken om de CSV-invoervelden te citeren.",
+    "resultTitle": "CSV-uitvoer",
+    "rowNumberDescription": "Nummer van de kolom waarna u kolommen wilt invoegen.",
+    "separatorDescription": "Voer het teken in dat gebruikt wordt om kolommen in het CSV-invoerbestand te scheiden.",
+    "shortDescription": "Voeg snel een of meer nieuwe kolommen in, waar dan ook in een CSV-bestand.",
+    "title": "CSV-kolommen invoegen",
+    "toolInfo": {
+      "description": "Met deze tool kunt u nieuwe kolommen op specifieke posities in CSV-gegevens invoegen. U kunt kolommen op aangepaste posities voorvoegen, toevoegen of invoegen op basis van koptekstnamen of kolomnummers.",
+      "title": "CSV-kolommen invoegen"
+    }
+  },
+  "swapCsvColumns": {
+    "description": "Upload uw CSV-bestand via het onderstaande formulier, geef aan welke kolommen u wilt omwisselen en de tool wijzigt automatisch de posities van de opgegeven kolommen in het uitvoerbestand. In de toolopties kunt u de kolomposities of -namen opgeven die u wilt omwisselen, onvolledige gegevens corrigeren en optioneel lege records en uitgeschakelde records verwijderen.",
+    "longDescription": "Deze tool reorganiseert CSV-gegevens door de posities van de kolommen om te wisselen. Het omwisselen van kolommen kan de leesbaarheid van een CSV-bestand verbeteren door veelgebruikte gegevens samen of vooraan te plaatsen, voor eenvoudigere gegevensvergelijking en -bewerking. U kunt bijvoorbeeld de eerste kolom omwisselen met de laatste of de tweede kolom met de derde. Om kolommen op basis van hun positie om te wisselen, selecteert u",
+    "shortDescription": "CSV-kolommen opnieuw ordenen.",
+    "title": "CSV-kolommen verwisselen"
+  },
+  "transposeCsv": {
+    "description": "Upload uw CSV-bestand via onderstaand formulier en deze tool transponeert uw CSV-bestand automatisch. In de toolopties kunt u het teken opgeven waarmee de commentaarregels in het CSV-bestand beginnen om ze te verwijderen. Als het CSV-bestand onvolledig is (ontbrekende waarden), kunt u de ontbrekende waarden vervangen door het lege teken of een aangepast teken.",
+    "longDescription": "Deze tool transponeert Comma Separated Values (CSV). Het behandelt de CSV als een matrix met data en draait alle elementen om over de hoofddiagonaal. De uitvoer bevat dezelfde CSV-data als de invoer, maar nu zijn alle rijen kolommen en alle kolommen rijen geworden. Na transpositie heeft het CSV-bestand tegengestelde afmetingen. Als het invoerbestand bijvoorbeeld 4 kolommen en 3 rijen heeft, heeft het uitvoerbestand 3 kolommen en 4 rijen. Tijdens de conversie zuivert het programma de data ook van onnodige regels en corrigeert het onvolledige data. De tool verwijdert automatisch alle lege records en opmerkingen die beginnen met een specifiek teken, dat u in de optie kunt instellen. Bovendien, in gevallen waarin de CSV-data beschadigd of verloren zijn, vult het hulpprogramma het bestand aan met lege velden of aangepaste velden die u in de opties kunt opgeven. Csv-abulous!",
+    "shortDescription": "Snel een CSV-bestand transponeren.",
+    "title": "CSV transponeren"
+  }
+}

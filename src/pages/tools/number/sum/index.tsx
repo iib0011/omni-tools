@@ -9,6 +9,7 @@ import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolContent from '@components/ToolContent';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   extractionType: 'smart' as NumberExtractionType,
@@ -118,6 +119,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function SumNumbers({ title }: ToolComponentProps) {
+  const { t } = useTranslation('number');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -126,16 +128,16 @@ export default function SumNumbers({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Number extraction',
+      title: t('sum.numberExtraction'),
       component: extractionTypes.map(
         ({ title, description, type, withTextField, textValueAccessor }) =>
           withTextField ? (
             <RadioWithTextField
               key={type}
               checked={type === values.extractionType}
-              title={title}
+              title={t(`sum.extractionTypes.${type}.title`)}
               fieldName={'extractionType'}
-              description={description}
+              description={t(`sum.extractionTypes.${type}.description`)}
               value={
                 textValueAccessor ? values[textValueAccessor].toString() : ''
               }
@@ -149,18 +151,18 @@ export default function SumNumbers({ title }: ToolComponentProps) {
               key={title}
               onClick={() => updateField('extractionType', type)}
               checked={values.extractionType === type}
-              description={description}
-              title={title}
+              description={t(`sum.extractionTypes.${type}.description`)}
+              title={t(`sum.extractionTypes.${type}.title`)}
             />
           )
       )
     },
     {
-      title: 'Running Sum',
+      title: t('sum.runningSum'),
       component: (
         <CheckboxWithDesc
-          title={'Print Running Sum'}
-          description={"Display the sum as it's calculated step by step."}
+          title={t('sum.printRunningSum')}
+          description={t('sum.printRunningSumDescription')}
           checked={values.printRunningSum}
           onChange={(value) => updateField('printRunningSum', value)}
         />
@@ -171,8 +173,16 @@ export default function SumNumbers({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       input={input}
-      inputComponent={<ToolTextInput value={input} onChange={setInput} />}
-      resultComponent={<ToolTextResult title={'Total'} value={result} />}
+      inputComponent={
+        <ToolTextInput
+          title={t('sum.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
+      }
+      resultComponent={
+        <ToolTextResult title={t('sum.resultTitle')} value={result} />
+      }
       initialValues={initialValues}
       getGroups={getGroups}
       compute={(optionsValues, input) => {
@@ -181,9 +191,8 @@ export default function SumNumbers({ title }: ToolComponentProps) {
       }}
       setInput={setInput}
       toolInfo={{
-        title: 'What Is a Number Sum Calculator?',
-        description:
-          'This is an online browser-based utility for calculating the sum of a bunch of numbers. You can enter the numbers separated by a comma, space, or any other character, including the line break. You can also simply paste a fragment of textual data that contains numerical values that you want to sum up and the utility will extract them and find their sum.'
+        title: t('sum.toolInfo.title'),
+        description: t('sum.toolInfo.description')
       }}
       exampleCards={exampleCards}
     />

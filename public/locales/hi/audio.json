@@ -1,0 +1,83 @@
+{
+  "changeSpeed": {
+    "description": "ऑडियो फ़ाइलों की प्लेबैक गति बदलें।",
+    "factorPlaceholder": "कारक (जैसे 0.5, 1.5, 2.0)",
+    "formatAac": "AAC",
+    "formatMp3": "MP3",
+    "formatWav": "WAV",
+    "inputTitle": "इनपुट ऑडियो",
+    "newAudioSpeed": "नई ऑडियो गति",
+    "outputFormat": "आउटपुट प्रारूप",
+    "preservePitch": "पिच संरक्षित करें",
+    "resultTitle": "गति बदली गई ऑडियो",
+    "settingSpeed": "गति सेट करना",
+    "shortDescription": "ऑडियो फ़ाइलों की गति बदलें",
+    "speedDescription": "डिफ़ॉल्ट गुणक: 2 का अर्थ है 2x तेज़",
+    "speedFactor": "गति कारक",
+    "speedOptions": "गति विकल्प",
+    "title": "ऑडियो गति बदलें",
+    "toolInfo": {
+      "title": "क्या है {{title}}?"
+    }
+  },
+  "extractAudio": {
+    "audioFormat": "ऑडियो प्रारूप",
+    "audioQuality": "ऑडियो गुणवत्ता",
+    "description": "वीडियो फ़ाइल से ऑडियो ट्रैक निकालें।",
+    "extractAllTracks": "सभी ट्रैक निकालें",
+    "extractingAudio": "ऑडियो निकालना",
+    "extractionOptions": "निकालने के विकल्प",
+    "formatAac": "AAC",
+    "formatMp3": "MP3",
+    "formatWav": "WAV",
+    "inputTitle": "इनपुट वीडियो",
+    "outputFormat": "आउटपुट प्रारूप",
+    "outputFormatDescription": "निकाले जाने वाले ऑडियो के लिए प्रारूप का चयन करें।",
+    "qualityHigh": "उच्च",
+    "qualityLow": "कम",
+    "qualityMedium": "मध्यम",
+    "resultTitle": "निकाला गया ऑडियो",
+    "shortDescription": "वीडियो फ़ाइलों (एमपी4, एमओवी, आदि) से ऑडियो निकालें एएसी, एमपी3, या डब्ल्यूएवी में।",
+    "title": "ऑडियो निकालें",
+    "toolInfo": {
+      "description": "यह टूल आपको वीडियो फ़ाइलों से ऑडियो ट्रैक निकालने की सुविधा देता है। आप AAC, MP3 और WAV सहित विभिन्न ऑडियो फ़ॉर्मेट में से चुन सकते हैं।",
+      "title": "क्या है {{title}}?"
+    }
+  },
+  "mergeAudio": {
+    "description": "कई ऑडियो फ़ाइलों को एक में जोड़ें।",
+    "formatAac": "AAC",
+    "formatMp3": "MP3",
+    "formatWav": "WAV",
+    "inputTitle": "इनपुट ऑडियो फ़ाइलें",
+    "longDescription": "यह टूल आपको कई ऑडियो फ़ाइलों को अपलोड करने के क्रम में जोड़कर उन्हें एक ही फ़ाइल में मर्ज करने की सुविधा देता है। पॉडकास्ट सेगमेंट, म्यूज़िक ट्रैक या किसी भी ऑडियो फ़ाइल को एक साथ जोड़ने के लिए यह बिल्कुल सही है। MP3, AAC और WAV सहित विभिन्न ऑडियो फ़ॉर्मेट को सपोर्ट करता है।",
+    "mergeMethod": "मर्ज विधि",
+    "mergeOptions": "मर्ज विकल्प",
+    "methodConcat": "क्रमबद्ध जोड़ना",
+    "methodMix": "मिश्रण",
+    "outputFormat": "आउटपुट प्रारूप",
+    "resultTitle": "मर्ज किया गया ऑडियो",
+    "shortDescription": "एकाधिक ऑडियो फ़ाइलों को एक में मर्ज करें (MP3, AAC, WAV)।",
+    "title": "ऑडियो मर्ज करें"
+  },
+  "trim": {
+    "description": "ऑडियो फ़ाइल से अनावश्यक भाग हटाएं।",
+    "endPlaceholder": "सेकंड",
+    "endTime": "अंतिम समय",
+    "fadeIn": "फेड इन",
+    "fadeInPlaceholder": "सेकंड",
+    "fadeOut": "फेड आउट",
+    "fadeOutPlaceholder": "सेकंड",
+    "formatMp3": "MP3",
+    "formatWav": "WAV",
+    "inputTitle": "इनपुट ऑडियो",
+    "longDescription": "यह टूल आपको ऑडियो फ़ाइलों को शुरू और खत्म होने का समय निर्दिष्ट करके ट्रिम करने की सुविधा देता है। आप लंबी ऑडियो फ़ाइलों से विशिष्ट खंड निकाल सकते हैं, अवांछित हिस्से हटा सकते हैं, या छोटी क्लिप बना सकते हैं। MP3, AAC, और WAV सहित विभिन्न ऑडियो फ़ॉर्मेट को सपोर्ट करता है। पॉडकास्ट एडिटिंग, म्यूज़िक प्रोडक्शन, या किसी भी ऑडियो एडिटिंग ज़रूरत के लिए बिल्कुल सही।",
+    "outputFormat": "आउटपुट प्रारूप",
+    "resultTitle": "ट्रिम किया गया ऑडियो",
+    "shortDescription": "विशिष्ट समय खंडों (MP3, AAC, WAV) को निकालने के लिए ऑडियो फ़ाइलों को ट्रिम करें।",
+    "startPlaceholder": "सेकंड",
+    "startTime": "शुरुआती समय",
+    "title": "ऑडियो ट्रिम करें",
+    "trimOptions": "ट्रिम विकल्प"
+  }
+}

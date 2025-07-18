@@ -1,0 +1,113 @@
+{
+  "compressPdf": {
+    "compressedFileSize": "Taille du fichier compressé",
+    "compressingPdf": "Compression des PDF...",
+    "compressionLevel": "Niveau de compression",
+    "compressionSettings": "Paramètres de compression",
+    "description": "Réduire la taille des fichiers PDF tout en maintenant la qualité grâce à Ghostscript",
+    "errorCompressingPdf": "Échec de la compression du PDF : {{error}}",
+    "errorReadingPdf": "Échec de la lecture du fichier PDF. Veuillez vous assurer qu'il s'agit d'un PDF valide.",
+    "fileSize": "Taille du fichier original",
+    "highCompression": "Compression élevée",
+    "highCompressionDescription": "Réduction maximale de la taille du fichier avec une certaine perte de qualité",
+    "inputTitle": "Entrée PDF",
+    "lowCompression": "Faible compression",
+    "lowCompressionDescription": "Réduisez légèrement la taille du fichier avec une perte de qualité minimale",
+    "mediumCompression": "Compression moyenne",
+    "mediumCompressionDescription": "Équilibre entre la taille et la qualité des fichiers",
+    "pages": "Nombre de pages",
+    "resultTitle": "PDF compressé",
+    "shortDescription": "Compresser des fichiers PDF en toute sécurité dans votre navigateur",
+    "title": "Compresser le PDF"
+  },
+  "editor": {
+    "description": "Éditeur PDF avancé avec fonctions d'annotation, de remplissage de formulaires, de surlignage et d'export. Modifiez vos PDF directement dans le navigateur avec des outils de qualité professionnelle, notamment l'insertion de texte, le dessin, le surlignage, la signature et le remplissage de formulaires.",
+    "shortDescription": "Modifier les PDF avec des outils avancés d'annotation, de signature et d'édition",
+    "title": "Editeur de PDF"
+  },
+  "merge": {
+    "inputTitle": "Entrée PDF",
+    "loadingText": "Extraire les pages",
+    "resultTitle": "Sortie du PDF fusionné",
+    "toolInfo": {
+      "description": "Cet outil vous permet de fusionner plusieurs fichiers PDF en un seul document. Pour utiliser cet outil, il vous suffit de télécharger les fichiers PDF que vous souhaitez fusionner. L'outil combinera ensuite toutes les pages des fichiers d'entrée en un seul document PDF.",
+      "title": "Comment utiliser l’outil de fusion de PDF ?"
+    }
+  },
+  "mergePdf": {
+    "description": "Comment utiliser l'outil Fusionner PDF ?",
+    "inputTitle": "PDF d'entrée",
+    "mergingPdfs": "Fusion de PDF",
+    "pdfOptions": "Options PDF",
+    "resultTitle": "PDF fusionné",
+    "shortDescription": "Fusionner plusieurs fichiers PDF en un seul document",
+    "sortByFileName": "Trier par nom de fichier",
+    "sortByFileNameDescription": "Trier les PDF par ordre alphabétique par nom de fichier",
+    "sortByUploadOrder": "Trier par ordre de téléchargement",
+    "sortByUploadOrderDescription": "Conserver les fichiers PDF dans l'ordre dans lequel ils ont été téléchargés",
+    "title": "Fusionner des PDF",
+    "toolInfo": {
+      "description": "Cet outil vous permet de combiner plusieurs fichiers PDF en un seul document. Vous pouvez choisir comment trier les PDF et l'outil les fusionnera dans l'ordre spécifié.",
+      "title": "Fusionner des fichiers PDF"
+    }
+  },
+  "pdfToEpub": {
+    "description": "Transformez les documents PDF en fichiers EPUB pour une meilleure compatibilité avec les liseuses.', icon: 'material-symbols:import-contacts', component: lazy(() => import('./index')), keywords: ['pdf', 'epub', 'convert', 'ebook'], path: 'pdf-to-epub', i18n: { name: 'pdf:pdfToEpub.title', description: 'pdf:pdfToEpub.description",
+    "shortDescription": "Convertir des fichiers PDF au format EPUB",
+    "title": "PDF vers EPUB"
+  },
+  "pdfToPng": {
+    "description": "Transformez les documents PDF en panneaux PNG.",
+    "longDescription": "Téléchargez un PDF et convertissez chaque page en image PNG de haute qualité directement dans votre navigateur. Cet outil est idéal pour extraire du contenu visuel ou partager des pages individuelles. Aucune donnée n'est téléchargée : tout fonctionne en local.",
+    "shortDescription": "Convertir des PDF en images PNG",
+    "title": "PDF en PNG"
+  },
+  "protectPdf": {
+    "description": "Ajoutez une protection par mot de passe à vos fichiers PDF en toute sécurité dans votre navigateur",
+    "shortDescription": "Protégez les fichiers PDF en toute sécurité avec un mot de passe",
+    "title": "Protéger le PDF"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "Les {{count}} pages seront tournées",
+    "angleOptions": {
+      "clockwise90": "90° dans le sens des aiguilles d'une montre",
+      "counterClockwise270": "270° (90° dans le sens inverse des aiguilles d'une montre)",
+      "upsideDown180": "180° (à l'envers)"
+    },
+    "applyToAllPages": "Appliquer à toutes les pages",
+    "description": "Faire pivoter les pages d'un document PDF.",
+    "inputTitle": "Entrée PDF",
+    "longDescription": "Modifiez l'orientation des pages PDF en les faisant pivoter de 90, 180 ou 270 degrés. Utile pour corriger des documents mal numérisés ou préparer des PDF pour l'impression.",
+    "pageRangesDescription": "Saisissez les numéros de page ou les plages séparés par des virgules (par exemple, 1, 3, 5-7)",
+    "pageRangesPlaceholder": "par exemple, 1,5-8",
+    "pagesWillBeRotated": "{{count}} page{{count !== 1 ? 's' : ''}} sera tourné",
+    "pdfPageCount": "PDF a {{count}} page{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "PDF pivoté",
+    "rotatingPages": "Rotation des pages",
+    "rotationAngle": "Angle de rotation",
+    "rotationSettings": "Paramètres de rotation",
+    "shortDescription": "Faire pivoter les pages d'un document PDF",
+    "title": "Faire pivoter le PDF",
+    "toolInfo": {
+      "description": "Cet outil vous permet de faire pivoter les pages d'un document PDF. Vous pouvez faire pivoter toutes les pages ou spécifier des pages individuelles. Choisissez un angle de rotation : 90° dans le sens horaire, 180° (à l'envers) ou 270° (90° dans le sens antihoraire). Pour faire pivoter des pages spécifiques, décochez « Appliquer à toutes les pages » et saisissez les numéros de page ou les plages de numéros séparés par des virgules (par exemple, 1, 3, 5-7).",
+      "title": "Comment utiliser l'outil de rotation PDF"
+    }
+  },
+  "splitPdf": {
+    "description": "Extraire des pages spécifiques d'un document PDF.",
+    "extractingPages": "Extraire les pages",
+    "inputTitle": "Entrée PDF",
+    "pageExtractionPreview": "{{count}} page{{count !== 1 ? 's' : ''}} sera(ont) extrait(s)",
+    "pageRangesDescription": "Saisissez les numéros de page ou les plages séparés par des virgules (par exemple, 1, 3, 5-7)",
+    "pageRangesPlaceholder": "par exemple, 1,5-8",
+    "pageSelection": "Sélection de page",
+    "pdfPageCount": "PDF a {{count}} page{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "PDF extrait",
+    "shortDescription": "Extraire des pages spécifiques d'un fichier PDF",
+    "title": "Diviser le PDF",
+    "toolInfo": {
+      "description": "Cet outil vous permet d'extraire des pages spécifiques d'un document PDF. Vous pouvez spécifier des pages individuelles ou des plages de pages à extraire.",
+      "title": "Diviser le PDF"
+    }
+  }
+}

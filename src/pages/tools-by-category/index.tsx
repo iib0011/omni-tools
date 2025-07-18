@@ -2,8 +2,8 @@ import {
   Box,
   Divider,
   Stack,
-  TextField,
   styled,
+  TextField,
   useTheme
 } from '@mui/material';
 import Grid from '@mui/material/Grid';
@@ -11,17 +11,20 @@ import Typography from '@mui/material/Typography';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { filterTools, getToolsByCategory } from '../../tools';
 import Hero from 'components/Hero';
-import { capitalizeFirstLetter, getToolCategoryTitle } from '@utils/string';
+import {
+  getI18nNamespaceFromToolCategory,
+  getToolCategoryTitle
+} from '@utils/string';
 import { Icon } from '@iconify/react';
 import { categoriesColors } from 'config/uiConfig';
 import React, { useEffect } from 'react';
 import IconButton from '@mui/material/IconButton';
-import { ArrowBack } from '@mui/icons-material';
-import BackButton from '@components/BackButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SearchIcon from '@mui/icons-material/Search';
 import { Helmet } from 'react-helmet';
 import UserTypeFilter, { useUserTypeFilter } from '@components/UserTypeFilter';
+import { useTranslation } from 'react-i18next';
+import { I18nNamespaces, validNamespaces } from '../../i18n';
 
 const StyledLink = styled(Link)(({ theme }) => ({
   '&:hover': {
@@ -36,7 +39,20 @@ export default function ToolsByCategory() {
   const { categoryName } = useParams();
   const [searchTerm, setSearchTerm] = React.useState<string>('');
   const { selectedUserTypes, setSelectedUserTypes } = useUserTypeFilter();
-  const rawTitle = getToolCategoryTitle(categoryName as string);
+  const { t } = useTranslation(validNamespaces);
+  const rawTitle = getToolCategoryTitle(categoryName as string, t);
+  // First get tools by category without filtering
+  const toolsByCategory =
+    getToolsByCategory(selectedUserTypes, t).find(
+      ({ type }) => type === categoryName
+    )?.tools ?? [];
+
+  const categoryTools = filterTools(
+    toolsByCategory,
+    searchTerm,
+    selectedUserTypes,
+    t
+  );
 
   useEffect(() => {
     if (mainContentRef.current) {
@@ -48,21 +64,10 @@ export default function ToolsByCategory() {
     setSelectedUserTypes(userTypes as any);
   };
 
-  const categoryTools =
-    getToolsByCategory(selectedUserTypes).find(
-      ({ type }) => type === categoryName
-    )?.tools ?? [];
-
-  const filteredTools = filterTools(
-    categoryTools,
-    searchTerm,
-    selectedUserTypes
-  );
-
   return (
     <Box sx={{ backgroundColor: 'background.default' }}>
       <Helmet>
-        <title>{`${rawTitle} Tools`}</title>
+        <title>{rawTitle}</title>
       </Helmet>
       <Box
         padding={{ xs: 1, md: 3, lg: 5 }}
@@ -81,10 +86,9 @@ export default function ToolsByCategory() {
             <IconButton onClick={() => navigate('/')}>
               <ArrowBackIcon color={'primary'} />
             </IconButton>
-            <Typography
-              fontSize={22}
-              color={theme.palette.primary.main}
-            >{`All ${rawTitle} Tools`}</Typography>
+            <Typography fontSize={22} color={theme.palette.primary.main}>
+              {t('translation:toolLayout.allToolsTitle', { type: rawTitle })}
+            </Typography>
           </Stack>
           <Stack direction={'row'} spacing={2} sx={{ minWidth: 0 }}>
             <TextField
@@ -107,7 +111,7 @@ export default function ToolsByCategory() {
           </Stack>
         </Stack>
         <Grid container spacing={2} mt={2}>
-          {filteredTools.map((tool, index) => (
+          {categoryTools.map((tool, index) => (
             <Grid item xs={12} md={6} lg={4} key={tool.path}>
               <Stack
                 sx={{
@@ -141,10 +145,12 @@ export default function ToolsByCategory() {
                     }}
                     to={'/' + tool.path}
                   >
-                    {tool.name}
+                    {/*@ts-ignore*/}
+                    {t(tool.name)}
                   </StyledLink>
                   <Typography sx={{ mt: 2 }}>
-                    {tool.shortDescription}
+                    {/*@ts-ignore*/}
+                    {t(tool.shortDescription)}
                   </Typography>
                 </Box>
               </Stack>

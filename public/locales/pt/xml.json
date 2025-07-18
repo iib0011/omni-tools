@@ -1,0 +1,38 @@
+{
+  "xmlBeautifier": {
+    "description": "Formate XML com recuo e espaçamento adequados.",
+    "indentation": "Recuo",
+    "inputTitle": "XML de entrada",
+    "resultTitle": "XML embelezado",
+    "shortDescription": "Formate e embeleze o código XML",
+    "title": "Embelezador XML",
+    "toolInfo": {
+      "description": "Esta ferramenta permite formatar dados XML com recuo e espaçamento adequados, tornando-os mais legíveis e fáceis de trabalhar.",
+      "title": "Embelezador XML"
+    },
+    "useSpaces": "Use Espaços",
+    "useSpacesDescription": "Recuar a saída com espaços",
+    "useTabs": "Usar guias",
+    "useTabsDescription": "Recuar a saída com tabulações."
+  },
+  "xmlValidator": {
+    "description": "Valide a sintaxe e a estrutura do XML.",
+    "placeholder": "Cole ou importe XML aqui...",
+    "shortDescription": "Validar código XML para erros",
+    "title": "Validador XML",
+    "toolInfo": {
+      "description": "Esta ferramenta permite validar a sintaxe e a estrutura do XML. Ela verifica se o XML está bem formado e fornece mensagens de erro detalhadas para quaisquer problemas encontrados.",
+      "title": "Validador XML"
+    }
+  },
+  "xmlViewer": {
+    "description": "Visualize e explore a estrutura XML em formato de árvore.",
+    "inputTitle": "XML de entrada",
+    "resultTitle": "Visualização em árvore XML",
+    "title": "Visualizador XML",
+    "toolInfo": {
+      "description": "Esta ferramenta permite que você visualize dados XML em um formato de árvore hierárquica, facilitando a exploração e a compreensão da estrutura de documentos XML.",
+      "title": "Visualizador XML"
+    }
+  }
+}

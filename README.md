@@ -30,21 +30,21 @@ Here is the [demo](https://omnitools.app) website.
 All files are processed entirely on the client side: nothing ever leaves your device.
 Plus, the Docker image is super lightweight at just 28MB, making it fast to deploy and easy to self-host.
 
-![img.png](img.png)
+![img.png](docs-images/img.png)
 
 ## Table of Contents
 
 - [Features](#features)
 - [Self-host](#self-hostrun)
 - [Contribute](#contribute)
-- [License](#license)
 - [Contact](#contact)
+- [License](#license)
 
 ## Features
 
 We strive to offer a variety of tools, including:
 
-## **Image/Video/Audio Tools**
+### **Image/Video/Audio Tools**
 
 - Image Resizer
 - Image Converter
@@ -53,33 +53,33 @@ We strive to offer a variety of tools, including:
 - Video Reverser
 - And more...
 
-## **PDF Tools**
+### **PDF Tools**
 
 - PDF Splitter
 - PDF Merger
 - PDF Editor
 - And more...
 
-## **Text/List Tools**
+### **Text/List Tools**
 
 - Case Converters
 - List Shuffler
 - Text Formatters
 - And more...
 
-## **Date and Time Tools**
+### **Date and Time Tools**
 
 - Date Calculators
 - Time Zone Converters
 - And more...
 
-## **Math Tools**
+### **Math Tools**
 
 - Generate Prime Numbers
 - Calculate voltage, current, or resistance
 - And more...
 
-## **Data Tools**
+### **Data Tools**
 
 - JSON Tools
 - CSV Tools
@@ -148,20 +148,34 @@ npm run test
 npm run test:e2e
 ```
 
+### i18n (Translations)
+The translation files are [here](public/locales). Only edit these if you are a developer. For non developers, use [Locize](https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK).
+
 <img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date"/>
 
 ## 🤝 Looking to contribute?
 
 We welcome contributions! You can help by:
 
-- ✅ Reporting bugs
-- ✅ Suggesting new features in GitHub issues or [here](https://tally.so/r/nrkkx2)
-- ✅ Improving documentation
-- ✅ Submitting pull requests
+- Reporting bugs
+- Suggesting new features in GitHub issues or [here](https://tally.so/r/nrkkx2)
+- Translating in [Locize project](https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK).
+- Improving documentation
+- Submitting pull requests
+
 
 You can also join our [Discord server](https://discord.gg/SDbbn3hT4b)
+## 🧡 Sponsors
+<div align="center">
+  <a href="https://www.locize.com/" target="_blank">
+    <img src="docs-images/locizeSponsor.svg" alt="Locize" width="200"/>
+  </a>
+</div>
 
-### Contributors
+Thanks to [Locize](https://www.locize.com) for sponsoring OmniTools and supporting localization efforts.
+They make translation management simple and developer-friendly.
+
+## Contributors
 
 <a href="https://github.com/iib0011/omni-tools/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=iib0011/omni-tools" />

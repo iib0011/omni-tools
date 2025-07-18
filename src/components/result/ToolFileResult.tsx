@@ -5,6 +5,7 @@ import greyPattern from '@assets/grey-pattern.png';
 import { globalInputHeight } from '../../config/uiConfig';
 import ResultFooter from './ResultFooter';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
+import { useTranslation } from 'react-i18next';
 
 export default function ToolFileResult({
   title = 'Result',
@@ -19,6 +20,7 @@ export default function ToolFileResult({
   loading?: boolean;
   loadingText?: string;
 }) {
+  const { t } = useTranslation();
   const [preview, setPreview] = React.useState<string | null>(null);
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const theme = useTheme();
@@ -41,9 +43,9 @@ export default function ToolFileResult({
 
       navigator.clipboard
         .write([clipboardItem])
-        .then(() => showSnackBar('File copied', 'success'))
+        .then(() => showSnackBar(t('toolFileResult.copied'), 'success'))
         .catch((err) => {
-          showSnackBar('Failed to copy: ' + err, 'error');
+          showSnackBar(t('toolFileResult.copyFailed', { error: err }), 'error');
         });
     }
   };
@@ -91,7 +93,7 @@ export default function ToolFileResult({
 
   return (
     <Box>
-      <InputHeader title={title} />
+      <InputHeader title={title || t('toolFileResult.result')} />
       <Box
         sx={{
           width: '100%',
@@ -114,7 +116,7 @@ export default function ToolFileResult({
           >
             <CircularProgress />
             <Typography variant="body2" sx={{ mt: 2 }}>
-              {loadingText}... This may take a moment.
+              {loadingText || t('toolFileResult.loading')}
             </Typography>
           </Box>
         ) : (

@@ -1,0 +1,208 @@
+{
+  "duplicate": {
+    "concatenate": "Concatenar",
+    "concatenateDescription": "Concatenar cópias (se desmarcado, os itens serão entrelaçados)",
+    "copyDescription": "Número de cópias (pode ser fracionário)",
+    "description": "O utilitário baseado em navegador mais simples do mundo para duplicar itens de lista. Insira sua lista e especifique critérios de duplicação para criar cópias dos itens. Perfeito para expansão de dados, testes ou criação de padrões repetidos.",
+    "duplicationOptions": "Opções de duplicação",
+    "examples": {
+      "fractional": {
+        "description": "Este exemplo mostra como duplicar uma lista com um número fracionário de cópias.",
+        "title": "Duplicação fracionária"
+      },
+      "interweave": {
+        "description": "Este exemplo mostra como entrelaçar itens em vez de concatená-los.",
+        "title": "Itens entrelaçados"
+      },
+      "reverse": {
+        "description": "Este exemplo mostra como duplicar uma lista na ordem inversa.",
+        "title": "Duplicação reversa"
+      },
+      "simple": {
+        "description": "Este exemplo mostra como duplicar uma lista de palavras.",
+        "title": "Duplicação simples"
+      }
+    },
+    "inputTitle": "Lista de Entrada",
+    "joinSeparatorDescription": "Separador para unir a lista duplicada",
+    "resultTitle": "Lista Duplicada",
+    "reverse": "Reverter",
+    "reverseDescription": "Reverter os itens duplicados",
+    "shortDescription": "Itens de lista duplicados com critérios especificados",
+    "splitByRegex": "Dividir por expressão regular",
+    "splitBySymbol": "Dividido por símbolo",
+    "splitOptions": "Opções de divisão",
+    "splitSeparatorDescription": "Separador para dividir a lista",
+    "title": "Duplicado",
+    "toolInfo": {
+      "description": "Esta ferramenta permite duplicar itens em uma lista. Você pode especificar o número de cópias (incluindo valores fracionários), controlar se os itens serão concatenados ou entrelaçados e até mesmo reverter os itens duplicados. É útil para criar padrões repetidos, gerar dados de teste ou expandir listas com conteúdo previsível.",
+      "title": "Duplicação de lista"
+    }
+  },
+  "findMostPopular": {
+    "description": "O utilitário baseado em navegador mais simples do mundo para encontrar os itens mais populares em uma lista. Insira sua lista e obtenha instantaneamente os itens que aparecem com mais frequência. Perfeito para análise de dados, identificação de tendências ou busca por elementos comuns.",
+    "shortDescription": "Encontre os itens mais frequentes",
+    "title": "Encontre os mais populares"
+  },
+  "findUnique": {
+    "caseSensitiveItems": "Itens que diferenciam maiúsculas de minúsculas",
+    "caseSensitiveItemsDescription": "Produza itens com maiúsculas e minúsculas diferentes como elementos exclusivos na lista.",
+    "delimiterDescription": "Defina um símbolo delimitador ou uma expressão regular.",
+    "description": "O utilitário baseado em navegador mais simples do mundo para encontrar itens únicos em uma lista. Insira sua lista e obtenha instantaneamente todos os valores únicos, com as duplicatas removidas. Perfeito para limpeza de dados, desduplicação ou busca de elementos distintos.",
+    "findAbsolutelyUniqueItems": "Encontre itens absolutamente únicos",
+    "findAbsolutelyUniqueItemsDescription": "Exibe somente os itens da lista que existem em uma única cópia.",
+    "inputListDelimiter": "Delimitador de lista de entrada",
+    "inputTitle": "Lista de Entrada",
+    "outputListDelimiter": "Delimitador da lista de saída",
+    "resultTitle": "Itens Únicos",
+    "shortDescription": "Encontre itens exclusivos em uma lista",
+    "skipEmptyItems": "Pular itens vazios",
+    "skipEmptyItemsDescription": "Não inclua os itens da lista vazia na saída.",
+    "title": "Encontre algo único",
+    "trimItems": "Itens da lista de corte",
+    "trimItemsDescription": "Remova os espaços iniciais e finais antes de comparar itens.",
+    "uniqueItemOptions": "Opções de itens exclusivos"
+  },
+  "group": {
+    "deleteEmptyItems": "Excluir itens vazios",
+    "deleteEmptyItemsDescription": "Ignore itens vazios e não os inclua nos grupos.",
+    "description": "O utilitário baseado em navegador mais simples do mundo para agrupar itens de lista. Insira sua lista e especifique critérios de agrupamento para organizar os itens em grupos lógicos. Perfeito para categorizar dados, organizar informações ou criar listas estruturadas. Suporta separadores personalizados e diversas opções de agrupamento.",
+    "emptyItemsAndPadding": "Itens vazios e preenchimento",
+    "groupNumberDescription": "Número de itens em um grupo",
+    "groupSeparatorDescription": "Caractere separador de grupo",
+    "groupSizeAndSeparators": "Tamanho do grupo e separadores",
+    "inputItemSeparator": "Separador de itens de entrada",
+    "inputTitle": "Lista de entrada",
+    "itemSeparatorDescription": "Caractere separador de itens",
+    "leftWrapDescription": "Símbolo de envoltório esquerdo do grupo.",
+    "padNonFullGroups": "Grupos não completos",
+    "padNonFullGroupsDescription": "Preencha grupos não completos com um item personalizado (insira abaixo).",
+    "paddingCharDescription": "Use este caractere ou item para preencher grupos não completos.",
+    "resultTitle": "Itens agrupados",
+    "rightWrapDescription": "Símbolo de envoltório direito do grupo.",
+    "shortDescription": "Agrupar itens da lista por propriedades comuns",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimite itens da lista de entrada com uma expressão regular.",
+        "title": "Use um Regex para Divisão"
+      },
+      "symbol": {
+        "description": "Delimitar itens da lista de entrada com um caractere.",
+        "title": "Use um símbolo para dividir"
+      }
+    },
+    "splitSeparatorDescription": "Defina um símbolo delimitador ou uma expressão regular.",
+    "title": "Grupo"
+  },
+  "reverse": {
+    "description": "Este é um aplicativo super simples baseado em navegador que imprime todos os itens da lista em ordem inversa. Os itens de entrada podem ser separados por qualquer símbolo e você também pode alterar o separador dos itens da lista em ordem inversa.",
+    "inputTitle": "Lista de entrada",
+    "itemSeparator": "Separador de Itens",
+    "itemSeparatorDescription": "Defina um símbolo delimitador ou uma expressão regular.",
+    "outputListOptions": "Opções da lista de saída",
+    "outputSeparatorDescription": "Separador de itens da lista de saída.",
+    "resultTitle": "Lista invertida",
+    "shortDescription": "Inverter uma lista rapidamente",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimite itens da lista de entrada com uma expressão regular.",
+        "title": "Use um Regex para Divisão"
+      },
+      "symbol": {
+        "description": "Delimitar itens da lista de entrada com um caractere.",
+        "title": "Use um símbolo para dividir"
+      }
+    },
+    "splitterMode": "Modo divisor",
+    "title": "Reverter",
+    "toolInfo": {
+      "description": "Com este utilitário, você pode inverter a ordem dos itens em uma lista. O utilitário primeiro divide a lista de entrada em itens individuais e, em seguida, itera entre eles, do último item para o primeiro, imprimindo cada item na saída durante a iteração. A lista de entrada pode conter qualquer coisa que possa ser representada como dados textuais, o que inclui dígitos, números, strings, palavras, frases, etc. O separador de itens de entrada também pode ser uma expressão regular. Por exemplo, a expressão regular /[;,]/ permitirá que você use itens separados por vírgula ou ponto e vírgula. Os delimitadores dos itens da lista de entrada e saída podem ser personalizados nas opções. Por padrão, as listas de entrada e saída são separadas por vírgula. Listabulous!",
+      "title": "O que é um inversor de lista?"
+    }
+  },
+  "rotate": {
+    "description": "O utilitário baseado em navegador mais simples do mundo para rotacionar itens de lista. Insira sua lista e especifique o valor de rotação para deslocar os itens em um número específico de posições. Perfeito para manipulação de dados, deslocamentos circulares ou reordenação de listas.",
+    "shortDescription": "Girar itens da lista por posições especificadas",
+    "title": "Girar"
+  },
+  "shuffle": {
+    "delimiterDescription": "Defina um símbolo delimitador ou uma expressão regular.",
+    "description": "O utilitário baseado em navegador mais simples do mundo para embaralhar itens de lista. Insira sua lista e obtenha instantaneamente uma versão aleatória com itens em ordem aleatória. Perfeito para criar variedade, testar aleatoriedade ou misturar dados ordenados.",
+    "inputListSeparator": "Separador de lista de entrada",
+    "inputTitle": "Lista de entrada",
+    "joinSeparatorDescription": "Use este separador na lista aleatória.",
+    "outputLengthDescription": "Produzir esta quantidade de itens aleatórios",
+    "resultTitle": "Lista embaralhada",
+    "shortDescription": "Randomize a ordem dos itens da lista",
+    "shuffledListLength": "Comprimento da lista embaralhada",
+    "shuffledListSeparator": "Separador de lista embaralhada",
+    "title": "Embaralhar"
+  },
+  "sort": {
+    "caseSensitive": "Classificação com diferenciação entre maiúsculas e minúsculas",
+    "caseSensitiveDescription": "Classifique itens em letras maiúsculas e minúsculas separadamente. Letras maiúsculas precedem letras minúsculas em uma lista crescente. (Funciona apenas no modo de classificação alfabética.)",
+    "description": "O utilitário baseado em navegador mais simples do mundo para classificar itens de lista. Insira sua lista e especifique critérios de classificação para organizar os itens em ordem crescente ou decrescente. Perfeito para organização de dados, processamento de texto ou criação de listas ordenadas.",
+    "inputItemSeparator": "Separador de itens de entrada",
+    "inputTitle": "Lista de entrada",
+    "joinSeparatorDescription": "Use este símbolo para unir itens em uma lista classificada.",
+    "orderDescription": "Selecione uma ordem de classificação.",
+    "orderOptions": {
+      "decreasing": "Ordem decrescente",
+      "increasing": "Ordem crescente"
+    },
+    "removeDuplicates": "Remover duplicatas",
+    "removeDuplicatesDescription": "Excluir itens duplicados da lista.",
+    "resultTitle": "Lista ordenada",
+    "shortDescription": "Classificar itens da lista na ordem especificada",
+    "sortMethod": "Método de classificação",
+    "sortMethodDescription": "Selecione um método de classificação.",
+    "sortOptions": {
+      "alphabetic": "Classificar em ordem alfabética",
+      "length": "Classificar por comprimento",
+      "numeric": "Classificar numericamente"
+    },
+    "sortedItemProperties": "Propriedades de itens classificados",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimite itens da lista de entrada com uma expressão regular.",
+        "title": "Use um Regex para Divisão"
+      },
+      "symbol": {
+        "description": "Delimitar itens da lista de entrada com um caractere.",
+        "title": "Use um símbolo para dividir"
+      }
+    },
+    "splitSeparatorDescription": "Defina um símbolo delimitador ou uma expressão regular.",
+    "title": "Organizar"
+  },
+  "truncate": {
+    "description": "O utilitário baseado em navegador mais simples do mundo para truncar listas. Insira sua lista e especifique o número máximo de itens a serem mantidos. Perfeito para processamento de dados, gerenciamento de listas ou limitação de tamanho de conteúdo.",
+    "shortDescription": "Truncar lista para um número específico de itens",
+    "title": "Truncar"
+  },
+  "unwrap": {
+    "description": "O utilitário baseado em navegador mais simples do mundo para descompactar itens de lista. Insira sua lista encapsulada e especifique critérios de descompactação para simplificar os itens organizados. Perfeito para processamento de dados, manipulação de texto ou extração de conteúdo de listas estruturadas.",
+    "shortDescription": "Desembrulhe itens de lista do formato estruturado",
+    "title": "Desembrulhar"
+  },
+  "wrap": {
+    "description": "Adicione texto antes e depois de cada item da lista.",
+    "inputTitle": "Lista de Entrada",
+    "joinSeparatorDescription": "Separador para unir a lista encapsulada",
+    "leftTextDescription": "Texto para adicionar antes de cada item",
+    "removeEmptyItems": "Remover itens vazios",
+    "resultTitle": "Lista encapsulada",
+    "rightTextDescription": "Texto para adicionar após cada item",
+    "shortDescription": "Encapsule os itens da lista com critérios especificados",
+    "splitByRegex": "Dividir por expressão regular",
+    "splitBySymbol": "Dividido por símbolo",
+    "splitOptions": "Opções de divisão",
+    "splitSeparatorDescription": "Separador para dividir a lista",
+    "title": "Enrolar",
+    "toolInfo": {
+      "description": "Esta ferramenta permite adicionar texto antes e depois de cada item de uma lista. Você pode especificar textos diferentes para os lados esquerdo e direito e controlar como a lista é processada. É útil para adicionar aspas, colchetes ou outras formatações aos itens da lista, preparar dados para diferentes formatos ou criar texto estruturado.",
+      "title": "Encapsulamento de lista"
+    },
+    "wrapOptions": "Opções de envoltório"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "changeSpeed": {
+    "defaultMultiplier": "Multiplicador predeterminado: 2 significa 2 veces más rápido",
+    "description": "Cambia la velocidad de reproducción de tus archivos de video. Acelera o ralentiza los videos manteniendo la sincronización del audio. Compatible con varios multiplicadores de velocidad y formatos de video comunes.",
+    "inputTitle": "Vídeo de entrada",
+    "newVideoSpeed": "Nueva velocidad de video",
+    "resultTitle": "Vídeo editado",
+    "settingSpeed": "Ajuste de velocidad",
+    "shortDescription": "Cambiar la velocidad de reproducción del vídeo",
+    "title": "Cambiar la velocidad del video",
+    "toolInfo": {
+      "title": "¿Qué es un? {{title}}?"
+    }
+  },
+  "compress": {
+    "default": "Por defecto",
+    "description": "Comprime videos escalándolos a diferentes resoluciones como 240p, 480p, 720p, etc. Esta herramienta ayuda a reducir el tamaño del archivo manteniendo una calidad aceptable. Es compatible con formatos de video comunes como MP4, WebM y OGG.",
+    "inputTitle": "Vídeo de entrada",
+    "loadingText": "Comprimiendo video...",
+    "lossless": "Sin pérdida",
+    "quality": "Calidad (CRF)",
+    "resolution": "Resolución",
+    "resultTitle": "Vídeo comprimido",
+    "shortDescription": "Comprimir vídeos escalando a diferentes resoluciones",
+    "title": "Comprimir vídeo",
+    "worst": "El peor"
+  },
+  "cropVideo": {
+    "cropCoordinates": "Coordenadas de cultivo",
+    "croppingVideo": "Recortar vídeo",
+    "description": "Recortar el vídeo para eliminar áreas no deseadas.",
+    "errorBeyondHeight": "El área de recorte se extiende más allá de la altura del video ({{height}}píxeles)",
+    "errorBeyondWidth": "El área de recorte se extiende más allá del ancho del video ({{width}}píxeles)",
+    "errorCroppingVideo": "Error al recortar el vídeo. Por favor, revise los parámetros y el archivo de vídeo.",
+    "errorLoadingDimensions": "No se pudieron cargar las dimensiones del vídeo",
+    "errorNonNegativeCoordinates": "Las coordenadas X e Y deben ser no negativas",
+    "errorPositiveDimensions": "El ancho y la altura deben ser positivos",
+    "height": "Altura",
+    "inputTitle": "Vídeo de entrada",
+    "loadVideoForDimensions": "Cargar un vídeo para ver las dimensiones",
+    "resultTitle": "Vídeo recortado",
+    "shortDescription": "Recortar el vídeo para eliminar áreas no deseadas",
+    "title": "Recortar vídeo",
+    "toolInfo": {
+      "description": "Esta herramienta permite recortar archivos de vídeo para eliminar áreas no deseadas. Puede especificar el área de recorte configurando las coordenadas X e Y, así como las dimensiones de ancho y alto.",
+      "title": "Recortar vídeo"
+    },
+    "videoDimensions": "Dimensiones del vídeo: {{width}} × {{height}} píxeles",
+    "videoInformation": "Información del vídeo",
+    "width": "Ancho",
+    "xCoordinate": "X (izquierda)",
+    "yCoordinate": "Y (arriba)"
+  },
+  "flip": {
+    "description": "Voltee archivos de video horizontal o verticalmente. Refleje videos para efectos especiales o corregir problemas de orientación.",
+    "flippingVideo": "Vídeo invertido",
+    "horizontalLabel": "Horizontal (Espejo)",
+    "inputTitle": "Vídeo de entrada",
+    "orientation": "Orientación",
+    "resultTitle": "Vídeo invertido",
+    "shortDescription": "Voltear el vídeo horizontal o verticalmente",
+    "title": "Voltear vídeo",
+    "verticalLabel": "Vertical (al revés)"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "Cambia la velocidad de reproducción de los GIF. Acelera o ralentiza los GIF manteniendo una animación fluida.",
+      "shortDescription": "Cambiar la velocidad de la animación GIF",
+      "title": "Cambiar la velocidad del GIF"
+    }
+  },
+  "loop": {
+    "description": "Crea un vídeo en bucle repitiendo el vídeo original varias veces.",
+    "inputTitle": "Vídeo de entrada",
+    "loopingVideo": "Vídeo en bucle",
+    "loops": "Bucles",
+    "numberOfLoops": "Número de bucles",
+    "resultTitle": "Vídeo en bucle",
+    "shortDescription": "Crear archivos de vídeo en bucle",
+    "title": "Vídeo en bucle",
+    "toolInfo": {
+      "description": "Esta herramienta permite crear un vídeo en bucle repitiendo el vídeo original varias veces. Puedes especificar cuántas veces debe repetirse.",
+      "title": "¿Qué es un? {{title}}?"
+    }
+  },
+  "rotate": {
+    "180Degrees": "180° (al revés)",
+    "270Degrees": "270° (90° en sentido antihorario)",
+    "90Degrees": "90° en sentido horario",
+    "description": "Gira archivos de vídeo 90, 180 o 270 grados. Corrige la orientación del vídeo o crea efectos especiales con un control de rotación preciso.",
+    "inputTitle": "Vídeo de entrada",
+    "resultTitle": "Vídeo rotado",
+    "rotatingVideo": "Vídeo giratorio",
+    "rotation": "Rotación",
+    "shortDescription": "Girar el vídeo en grados específicos",
+    "title": "Girar vídeo"
+  },
+  "trim": {
+    "description": "Recorta archivos de vídeo especificando la hora de inicio y la hora de fin. Elimina las secciones no deseadas del principio o del final de los vídeos.",
+    "endTime": "Fin de los tiempos",
+    "inputTitle": "Vídeo de entrada",
+    "resultTitle": "Vídeo recortado",
+    "shortDescription": "Recortar el vídeo eliminando las secciones no deseadas",
+    "startTime": "Hora de inicio",
+    "timestamps": "Marcas de tiempo",
+    "title": "Recortar vídeo"
+  },
+  "videoToGif": {
+    "description": "Convierte archivos de vídeo a formato GIF animado. Extrae intervalos de tiempo específicos y crea imágenes animadas para compartir.",
+    "shortDescription": "Convertir vídeo a GIF animado",
+    "title": "Vídeo a GIF"
+  }
+}

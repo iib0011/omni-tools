@@ -11,6 +11,7 @@ import SimpleRadio from '@components/options/SimpleRadio';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import { processImage } from './service';
 import { InitialValuesType } from './types';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   resizeMethod: 'pixels' as 'pixels' | 'percentage',
@@ -45,6 +46,7 @@ const validationSchema = Yup.object({
 });
 
 export default function ResizeImage({ title }: ToolComponentProps) {
+  const { t } = useTranslation('image');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
@@ -58,22 +60,20 @@ export default function ResizeImage({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Resize Method',
+      title: t('resize.resizeMethod'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('resizeMethod', 'pixels')}
             checked={values.resizeMethod === 'pixels'}
-            description={'Resize by specifying dimensions in pixels.'}
-            title={'Resize by Pixels'}
+            description={t('resize.resizeByPixelsDescription')}
+            title={t('resize.resizeByPixels')}
           />
           <SimpleRadio
             onClick={() => updateField('resizeMethod', 'percentage')}
             checked={values.resizeMethod === 'percentage'}
-            description={
-              'Resize by specifying a percentage of the original size.'
-            }
-            title={'Resize by Percentage'}
+            description={t('resize.resizeByPercentageDescription')}
+            title={t('resize.resizeByPercentage')}
           />
         </Box>
       )
@@ -81,7 +81,7 @@ export default function ResizeImage({ title }: ToolComponentProps) {
     ...(values.resizeMethod === 'pixels'
       ? [
           {
-            title: 'Dimension Type',
+            title: t('resize.dimensionType'),
             component: (
               <Box>
                 <CheckboxWithDesc
@@ -89,35 +89,29 @@ export default function ResizeImage({ title }: ToolComponentProps) {
                   onChange={(value) =>
                     updateField('maintainAspectRatio', value)
                   }
-                  description={
-                    'Maintain the original aspect ratio of the image.'
-                  }
-                  title={'Maintain Aspect Ratio'}
+                  description={t('resize.maintainAspectRatioDescription')}
+                  title={t('resize.maintainAspectRatio')}
                 />
                 {values.maintainAspectRatio && (
                   <Box>
                     <SimpleRadio
                       onClick={() => updateField('dimensionType', 'width')}
                       checked={values.dimensionType === 'width'}
-                      description={
-                        'Specify the width in pixels and calculate height based on aspect ratio.'
-                      }
-                      title={'Set Width'}
+                      description={t('resize.setWidthDescription')}
+                      title={t('resize.setWidth')}
                     />
                     <SimpleRadio
                       onClick={() => updateField('dimensionType', 'height')}
                       checked={values.dimensionType === 'height'}
-                      description={
-                        'Specify the height in pixels and calculate width based on aspect ratio.'
-                      }
-                      title={'Set Height'}
+                      description={t('resize.setHeightDescription')}
+                      title={t('resize.setHeight')}
                     />
                   </Box>
                 )}
                 <TextFieldWithDesc
                   value={values.width}
                   onOwnChange={(val) => updateField('width', val)}
-                  description={'Width (in pixels)'}
+                  description={t('resize.widthDescription')}
                   disabled={
                     values.maintainAspectRatio &&
                     values.dimensionType === 'height'
@@ -131,7 +125,7 @@ export default function ResizeImage({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.height}
                   onOwnChange={(val) => updateField('height', val)}
-                  description={'Height (in pixels)'}
+                  description={t('resize.heightDescription')}
                   disabled={
                     values.maintainAspectRatio &&
                     values.dimensionType === 'width'
@@ -148,15 +142,13 @@ export default function ResizeImage({ title }: ToolComponentProps) {
         ]
       : [
           {
-            title: 'Percentage',
+            title: t('resize.percentage'),
             component: (
               <Box>
                 <TextFieldWithDesc
                   value={values.percentage}
                   onOwnChange={(val) => updateField('percentage', val)}
-                  description={
-                    'Percentage of original size (e.g., 50 for half size, 200 for double size)'
-                  }
+                  description={t('resize.percentageDescription')}
                   inputProps={{
                     'data-testid': 'percentage-input',
                     type: 'number',
@@ -183,20 +175,19 @@ export default function ResizeImage({ title }: ToolComponentProps) {
           value={input}
           onChange={setInput}
           accept={['image/jpeg', 'image/png', 'image/svg+xml', 'image/gif']}
-          title={'Input Image'}
+          title={t('resize.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
-          title={'Resized Image'}
+          title={t('resize.resultTitle')}
           value={result}
           extension={input?.name.split('.').pop() || 'png'}
         />
       }
       toolInfo={{
-        title: 'Resize Image',
-        description:
-          'This tool allows you to resize JPG, PNG, SVG, or GIF images. You can resize by specifying dimensions in pixels or by percentage, with options to maintain the original aspect ratio.'
+        title: t('resize.toolInfo.title'),
+        description: t('resize.toolInfo.description')
       }}
     />
   );

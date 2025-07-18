@@ -1,0 +1,62 @@
+{
+  "xmlBeautifier": {
+    "description": "XML को सुंदर प्रारूप में बदलें।",
+    "formattingOptions": "फॉर्मेटिंग विकल्प",
+    "indentCharacter": "इंडेंट वर्ण",
+    "indentSize": "इंडेंट आकार",
+    "indentation": "खरोज",
+    "inputTitle": "इनपुट XML",
+    "preserveWhitespace": "सफेद स्थान संरक्षित करें",
+    "removeComments": "टिप्पणियां हटाएं",
+    "resultTitle": "सुंदर XML",
+    "shortDescription": "XML कोड को प्रारूपित और सुशोभित करें",
+    "sizePlaceholder": "आकार",
+    "sortAttributes": "विशेषताएं क्रमबद्ध करें",
+    "space": "स्पेस",
+    "tab": "टैब",
+    "title": "XML सुंदर बनाएं",
+    "toolInfo": {
+      "description": "यह उपकरण आपको XML डेटा को उचित इंडेंटेशन और स्पेसिंग के साथ फॉर्मेट करने की अनुमति देता है, जिससे यह अधिक पठनीय और काम करने में आसान हो जाता है।",
+      "title": "XML सुंदर बनाएं"
+    },
+    "useSpaces": "रिक्त स्थान का उपयोग करें",
+    "useSpacesDescription": "रिक्त स्थान के साथ आउटपुट इंडेंट करें",
+    "useTabs": "टैब का उपयोग करें",
+    "useTabsDescription": "टैब के साथ आउटपुट इंडेंट करें."
+  },
+  "xmlValidator": {
+    "allowCDATA": "CDATA अनुमति दें",
+    "allowComments": "टिप्पणियां अनुमति दें",
+    "description": "XML स्ट्रिंग की वैधता जांचें।",
+    "inputTitle": "इनपुट XML",
+    "placeholder": "XML को यहां चिपकाएं या आयात करें...",
+    "resultTitle": "मान्यता परिणाम",
+    "shortDescription": "त्रुटियों के लिए XML कोड मान्य करें",
+    "showErrorDetails": "त्रुटि विवरण दिखाएं",
+    "showLineNumbers": "पंक्ति संख्याएं दिखाएं",
+    "strictMode": "सख्त मोड",
+    "title": "XML मान्य करें",
+    "toolInfo": {
+      "description": "यह टूल आपको XML सिंटैक्स और संरचना को सत्यापित करने की अनुमति देता है। यह जाँचता है कि XML सही ढंग से बना है या नहीं और किसी भी समस्या के लिए विस्तृत त्रुटि संदेश प्रदान करता है।",
+      "title": "XML मान्य करें"
+    },
+    "validationOptions": "मान्यता विकल्प"
+  },
+  "xmlViewer": {
+    "collapseAll": "सभी संक्षिप्त करें",
+    "description": "XML को पेड़ संरचना में देखें।",
+    "expandAll": "सभी विस्तारित करें",
+    "highlightSyntax": "सिंटैक्स हाइलाइट करें",
+    "inputTitle": "इनपुट XML",
+    "lineNumbers": "पंक्ति संख्याएं",
+    "resultTitle": "XML पेड़",
+    "showAttributes": "विशेषताएं दिखाएं",
+    "showTextNodes": "टेक्स्ट नोड दिखाएं",
+    "title": "XML व्यूअर",
+    "toolInfo": {
+      "description": "यह उपकरण आपको XML डेटा को पदानुक्रमित वृक्ष प्रारूप में देखने की अनुमति देता है, जिससे XML दस्तावेज़ों की संरचना का पता लगाना और समझना आसान हो जाता है।",
+      "title": "XML व्यूअर"
+    },
+    "viewerOptions": "व्यूअर विकल्प"
+  }
+}

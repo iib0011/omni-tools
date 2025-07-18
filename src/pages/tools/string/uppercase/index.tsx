@@ -5,6 +5,7 @@ import { UppercaseInput } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolContent from '@components/ToolContent';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {};
 
@@ -35,6 +36,7 @@ const exampleCards: CardExampleType<typeof initialValues>[] = [
 ];
 
 export default function Uppercase({ title }: ToolComponentProps) {
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -53,9 +55,15 @@ export default function Uppercase({ title }: ToolComponentProps) {
       compute={computeExternal}
       input={input}
       setInput={setInput}
-      inputComponent={<ToolTextInput value={input} onChange={setInput} />}
+      inputComponent={
+        <ToolTextInput
+          title={t('uppercase.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
+      }
       resultComponent={
-        <ToolTextResult title={'Uppercase text'} value={result} />
+        <ToolTextResult title={t('uppercase.resultTitle')} value={result} />
       }
       exampleCards={exampleCards}
     />

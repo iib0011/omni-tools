@@ -5,6 +5,7 @@ import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { convertTimetoSeconds } from './service';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {};
 type InitialValuesType = typeof initialValues;
@@ -75,6 +76,7 @@ export default function TimeToSeconds({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation('time');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -92,7 +94,10 @@ export default function TimeToSeconds({
       getGroups={null}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('convertTimeToSeconds.toolInfo.title', { title }),
+        description: longDescription
+      }}
       exampleCards={exampleCards}
     />
   );

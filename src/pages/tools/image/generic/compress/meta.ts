@@ -2,13 +2,16 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('image-generic', {
-  name: 'Compress Image',
+  i18n: {
+    name: 'image:compress.title',
+    description: 'image:compress.description',
+    shortDescription: 'image:compress.shortDescription',
+    userTypes: ['General Users', 'Students', 'Developers']
+  },
+
   path: 'compress',
   icon: 'material-symbols-light:compress-rounded',
-  description:
-    'Reduce image file size while maintaining quality. Compress images for easier sharing, uploading, or storage.',
-  shortDescription: 'Compress images to reduce file size',
-  keywords: ['compress', 'image', 'reduce', 'size', 'optimize'],
-  userTypes: ['General Users', 'Students', 'Developers'],
+
+  keywords: ['image', 'compress', 'reduce', 'quality'],
   component: lazy(() => import('./index'))
 });

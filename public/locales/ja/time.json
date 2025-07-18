@@ -1,0 +1,100 @@
+{
+  "checkLeapYears": {
+    "description": "その年がうるう年かどうかを確認し、うるう年情報を取得します。",
+    "inputTitle": "入力年",
+    "resultTitle": "閏年の結果",
+    "shortDescription": "その年がうるう年かどうかをチェックする",
+    "title": "うるう年を確認する",
+    "toolInfo": {
+      "description": "閏年とは、暦年を天文年と一致させるために、1日（2月29日）が追加される年です。閏年は4年に1度発生しますが、100で割り切れるが400で割り切れない年は例外です。",
+      "title": "うるう年とは何ですか?"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "営業時間名を追加",
+    "addHoursNameDescription": "出力値に文字列「時間」を追加します",
+    "description": "カスタマイズ可能なオプションを使用して日数を時間数に変換します。",
+    "hoursName": "時間名",
+    "shortDescription": "日数を時間数に変換する",
+    "title": "日数を時間数に変換する",
+    "toolInfo": {
+      "description": "このツールを使うと、日数を時間数に変換できます。日数を数値または単位付きで入力すると、ツールが時間数に変換します。また、出力値の末尾に「時間」を付けることもできます。",
+      "title": "日数を時間数に変換する"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "曜日名を追加",
+    "addDaysNameDescription": "出力値に文字列 days を追加します",
+    "daysName": "日付名",
+    "description": "カスタマイズ可能なオプションを使用して時間を日数に変換します。",
+    "shortDescription": "時間を日数に変換する",
+    "title": "時間を日数に変換する",
+    "toolInfo": {
+      "description": "このツールを使うと、時間を日数に変換できます。時間を数値または単位付きで入力すると、ツールが日数に変換します。また、出力値の末尾に「日数」を付けることもできます。",
+      "title": "時間を日数に変換する"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "パディングを追加",
+    "addPaddingDescription": "時間、分、秒にゼロパディングを追加します。",
+    "description": "秒数を判読可能な時刻形式（時:分:秒）に変換します。秒数を入力すると、フォーマットされた時刻が表示されます。",
+    "shortDescription": "秒を時間形式に変換する",
+    "timePadding": "時間のパディング",
+    "title": "秒を時間に変換する",
+    "toolInfo": {
+      "title": "何ですか {{title}}？"
+    }
+  },
+  "convertTimeToSeconds": {
+    "description": "フォーマットされた時間 (HH:MM:SS) を秒に変換します。",
+    "inputTitle": "入力時間",
+    "resultTitle": "秒",
+    "shortDescription": "時間形式を秒に変換する",
+    "title": "時間を秒に変換する",
+    "toolInfo": {
+      "description": "このツールを使うと、フォーマットされた時刻文字列（HH:MM:SS）を秒数に変換できます。期間や時間間隔を計算するのに便利です。",
+      "title": "時間を秒に変換する"
+    }
+  },
+  "crontabGuru": {
+    "description": "cron式を生成し、理解します。自動化されたタスクやシステムジョブのcronスケジュールを作成します。",
+    "shortDescription": "cron式を生成して理解する",
+    "title": "クロンタブの達人"
+  },
+  "timeBetweenDates": {
+    "description": "2つの日付間の時差を計算します。正確な日数、時間、分、秒を取得します。",
+    "endDate": "終了日",
+    "endDateTime": "終了日時",
+    "endTime": "終了時間",
+    "endTimezone": "終了タイムゾーン",
+    "shortDescription": "2つの日付間の時間を計算する",
+    "startDate": "開始日",
+    "startDateTime": "開始日時",
+    "startTime": "開始時間",
+    "startTimezone": "開始タイムゾーン",
+    "title": "日付間の時間",
+    "toolInfo": {
+      "description": "2つの日付と時刻の正確な時差を計算します。複数のタイムゾーンに対応しています。このツールは、時差を様々な単位（年、月、日、時、分、秒）で詳細に表示します。",
+      "title": "日付間の時間計算機"
+    }
+  },
+  "truncateClockTime": {
+    "description": "秒数または分数を切り捨てて時計の時刻を表示します。時間を最も近い時間、分、またはカスタム間隔に丸めます。",
+    "printDroppedComponents": "ドロップされたコンポーネントを印刷する",
+    "shortDescription": "指定された精度でクロック時間を切り捨てる",
+    "timePadding": "時間のパディング",
+    "title": "時計時間を切り捨てる",
+    "toolInfo": {
+      "title": "何ですか {{title}}？"
+    },
+    "truncateMinutesAndSeconds": "分と秒を切り捨てる",
+    "truncateMinutesAndSecondsDescription": "各クロック時間から分と秒の両方の要素を削除します。",
+    "truncateOnlySeconds": "秒のみ切り捨て",
+    "truncateOnlySecondsDescription": "各クロック時間から秒の要素を削除します。",
+    "truncationSide": "切り捨て側",
+    "useZeroPadding": "ゼロパディングを使用する",
+    "zeroPaddingDescription": "すべての時間コンポーネントを常に 2 桁の幅にします。",
+    "zeroPrintDescription": "ドロップされた部分をゼロ値「00」として表示します。",
+    "zeroPrintTruncatedParts": "ゼロ印刷切り捨て部分"
+  }
+}
