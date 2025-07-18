@@ -109,5 +109,11 @@
       "description": "此工具允许您从 PDF 文档中提取特定页面。您可以指定要提取的单个页面或页面范围。",
       "title": "拆分 PDF"
     }
+  },
+  "pdfToWord": {
+    "name": "PDF转Word",
+    "description": "将PDF文件转换为Word文档，以便更准确地进行编辑和格式化。",
+    "shortDescription": "将PDF文件转换为Word文档",
+    "longDescription": "将PDF文档转换为可编辑的Word (.docx) 文件，同时保留格式、图像和布局。所有处理都在您的浏览器中安全进行，以确保隐私。"
   }
 }

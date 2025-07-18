@@ -109,5 +109,11 @@
       "description": "Cet outil vous permet d'extraire des pages spécifiques d'un document PDF. Vous pouvez spécifier des pages individuelles ou des plages de pages à extraire.",
       "title": "Diviser le PDF"
     }
+  },
+  "pdfToWord": {
+    "name": "PDF vers Word",
+    "description": "Convertissez les fichiers PDF en documents Word pour une édition et une mise en forme faciles avec plus de précision.",
+    "shortDescription": "Convertir les fichiers PDF en documents Word",
+    "longDescription": "Convertissez les documents PDF en fichiers Word (.docx) modifiables tout en préservant le formatage, les images et la mise en page. Tout le traitement est effectué en toute sécurité dans votre navigateur pour garantir la confidentialité."
   }
 }

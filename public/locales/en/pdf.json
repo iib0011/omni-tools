@@ -109,5 +109,11 @@
       "description": "This tool allows you to extract specific pages from a PDF document. You can specify individual pages or ranges of pages to extract.",
       "title": "Split PDF"
     }
+  },
+  "pdfToWord": {
+    "name": "PDF to Word",
+    "description": "Convert PDF files to Word documents for easy editing and formatting with more accuracy.",
+    "shortDescription": "Convert PDF files to Word documents",
+    "longDescription": "Convert PDF documents into editable Word (.docx) files while preserving formatting, images, and layout. All processing is done securely in your browser to ensure privacy."
   }
 }

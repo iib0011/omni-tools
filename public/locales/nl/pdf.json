@@ -109,5 +109,11 @@
       "description": "Met deze tool kunt u specifieke pagina's uit een PDF-document extraheren. U kunt specifieke pagina's of paginareeksen opgeven die u wilt extraheren.",
       "title": "PDF splitsen"
     }
+  },
+  "pdfToWord": {
+    "name": "PDF naar Word",
+    "description": "Converteer PDF-bestanden naar Word-documenten voor eenvoudig bewerken en formatteren met meer nauwkeurigheid.",
+    "shortDescription": "Converteer PDF-bestanden naar Word-documenten",
+    "longDescription": "Converteer PDF-documenten naar bewerkbare Word-bestanden (.docx) met behoud van opmaak, afbeeldingen en lay-out. Alle verwerking gebeurt veilig in uw browser om privacy te waarborgen."
   }
 }
