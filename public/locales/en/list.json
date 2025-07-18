@@ -1,0 +1,258 @@
+{
+  "duplicate": {
+    "concatenate": "Concatenate",
+    "concatenateDescription": "Concatenate copies (if unchecked, items will be interweaved)",
+    "copyDescription": "Number of copies (can be fractional)",
+    "description": "World's simplest browser-based utility for duplicating list items. Input your list and specify duplication criteria to create copies of items. Perfect for data expansion, testing, or creating repeated patterns.",
+    "duplicationOptions": "Duplication Options",
+    "error": "Error",
+    "example1Description": "This example shows how to duplicate a list of words.",
+    "example1Title": "Simple duplication",
+    "example2Description": "This example shows how to duplicate a list in reverse order.",
+    "example2Title": "Reverse duplication",
+    "example3Description": "This example shows how to interweave items instead of concatenating them.",
+    "example3Title": "Interweaving items",
+    "example4Description": "This example shows how to duplicate a list with a fractional number of copies.",
+    "example4Title": "Fractional duplication",
+    "examples": {
+      "fractional": {
+        "description": "This example shows how to duplicate a list with a fractional number of copies.",
+        "title": "Fractional duplication"
+      },
+      "interweave": {
+        "description": "This example shows how to interweave items instead of concatenating them.",
+        "title": "Interweaving items"
+      },
+      "reverse": {
+        "description": "This example shows how to duplicate a list in reverse order.",
+        "title": "Reverse duplication"
+      },
+      "simple": {
+        "description": "This example shows how to duplicate a list of words.",
+        "title": "Simple duplication"
+      }
+    },
+    "inputTitle": "Input List",
+    "joinSeparatorDescription": "Separator to join the duplicated list",
+    "resultTitle": "Duplicated List",
+    "reverse": "Reverse",
+    "reverseDescription": "Reverse the duplicated items",
+    "shortDescription": "Duplicate list items with specified criteria",
+    "splitByRegex": "Split by Regular Expression",
+    "splitBySymbol": "Split by Symbol",
+    "splitOptions": "Split Options",
+    "splitSeparatorDescription": "Separator to split the list",
+    "title": "Duplicate",
+    "toolInfo": {
+      "description": "This tool allows you to duplicate items in a list. You can specify the number of copies (including fractional values), control whether items are concatenated or interweaved, and even reverse the duplicated items. It's useful for creating repeated patterns, generating test data, or expanding lists with predictable content.",
+      "title": "List Duplication"
+    },
+    "unknownError": "An unknown error occurred",
+    "validation": {
+      "copyMustBeNumber": "Number of copies must be a number",
+      "copyMustBePositive": "Number of copies must be positive",
+      "copyRequired": "Number of copies is required",
+      "joinSeparatorRequired": "The join separator is required",
+      "separatorRequired": "The separator is required"
+    }
+  },
+  "findMostPopular": {
+    "description": "World's simplest browser-based utility for finding the most popular items in a list. Input your list and instantly get the items that appear most frequently. Perfect for data analysis, trend identification, or finding common elements.",
+    "displayFormatDescription": "How to display the most popular list items?",
+    "displayOptions": {
+      "count": "Show item count",
+      "percentage": "Show item percentage",
+      "total": "Show item total"
+    },
+    "extractListItems": "How to Extract List Items?",
+    "ignoreItemCase": "Ignore Item Case",
+    "ignoreItemCaseDescription": "Compare all list items in lowercase.",
+    "inputTitle": "Input list",
+    "itemComparison": "Item comparison",
+    "outputFormat": "Top item output format",
+    "removeEmptyItems": "Remove empty items",
+    "removeEmptyItemsDescription": "Ignore empty items from comparison.",
+    "resultTitle": "Most popular items",
+    "shortDescription": "Find most frequently occurring items",
+    "sortOptions": {
+      "alphabetic": "Sort Alphabetically",
+      "count": "Sort by count"
+    },
+    "sortingMethodDescription": "Select a sorting method.",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimit input list items with a regular expression.",
+        "title": "Use a Regex for Splitting"
+      },
+      "symbol": {
+        "description": "Delimit input list items with a character.",
+        "title": "Use a Symbol for Splitting"
+      }
+    },
+    "splitSeparatorDescription": "Set a delimiting symbol or regular expression.",
+    "title": "Find most popular",
+    "trimItems": "Trim top list items",
+    "trimItemsDescription": "Remove leading and trailing spaces before comparing items"
+  },
+  "findUnique": {
+    "caseSensitiveItems": "Case Sensitive Items",
+    "caseSensitiveItemsDescription": "Output items with different case as unique elements in the list.",
+    "delimiterDescription": "Set a delimiting symbol or regular expression.",
+    "description": "World's simplest browser-based utility for finding unique items in a list. Input your list and instantly get all unique values with duplicates removed. Perfect for data cleaning, deduplication, or finding distinct elements.",
+    "findAbsolutelyUniqueItems": "Find Absolutely Unique Items",
+    "findAbsolutelyUniqueItemsDescription": "Display only those items of the list that exist in a single copy.",
+    "inputListDelimiter": "Input List Delimiter",
+    "inputTitle": "Input List",
+    "outputListDelimiter": "Output List Delimiter",
+    "resultTitle": "Unique Items",
+    "shortDescription": "Find unique items in a list",
+    "skipEmptyItems": "Skip Empty Items",
+    "skipEmptyItemsDescription": "Don't include the empty list items in the output.",
+    "title": "Find unique",
+    "trimItems": "Trim List Items",
+    "trimItemsDescription": "Remove leading and trailing spaces before comparing items.",
+    "uniqueItemOptions": "Unique Item Options"
+  },
+  "group": {
+    "deleteEmptyItems": "Delete Empty Items",
+    "deleteEmptyItemsDescription": "Ignore empty items and don't include them in the groups.",
+    "description": "World's simplest browser-based utility for grouping list items. Input your list and specify grouping criteria to organize items into logical groups. Perfect for categorizing data, organizing information, or creating structured lists. Supports custom separators and various grouping options.",
+    "emptyItemsAndPadding": "Empty Items and Padding",
+    "groupNumberDescription": "Number of items in a group",
+    "groupSeparatorDescription": "Group separator character",
+    "groupSizeAndSeparators": "Group Size and Separators",
+    "inputItemSeparator": "Input Item Separator",
+    "inputTitle": "Input list",
+    "itemSeparatorDescription": "Item separator character",
+    "leftWrapDescription": "Group's left wrap symbol.",
+    "padNonFullGroups": "Pad Non-full Groups",
+    "padNonFullGroupsDescription": "Fill non-full groups with a custom item (enter below).",
+    "paddingCharDescription": "Use this character or item to pad non-full groups.",
+    "resultTitle": "Grouped items",
+    "rightWrapDescription": "Group's right wrap symbol.",
+    "shortDescription": "Group list items by common properties",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimit input list items with a regular expression.",
+        "title": "Use a Regex for Splitting"
+      },
+      "symbol": {
+        "description": "Delimit input list items with a character.",
+        "title": "Use a Symbol for Splitting"
+      }
+    },
+    "splitSeparatorDescription": "Set a delimiting symbol or regular expression.",
+    "title": "Group"
+  },
+  "reverse": {
+    "description": "This is a super simple browser-based application prints all list items in reverse. The input items can be separated by any symbol and you can also change the separator of the reversed list items.",
+    "inputTitle": "Input list",
+    "itemSeparator": "Item Separator",
+    "itemSeparatorDescription": "Set a delimiting symbol or regular expression.",
+    "outputListOptions": "Output List Options",
+    "outputSeparatorDescription": "Output list item separator.",
+    "resultTitle": "Reversed list",
+    "shortDescription": "Quickly reverse a list",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimit input list items with a regular expression.",
+        "title": "Use a Regex for Splitting"
+      },
+      "symbol": {
+        "description": "Delimit input list items with a character.",
+        "title": "Use a Symbol for Splitting"
+      }
+    },
+    "splitterMode": "Splitter Mode",
+    "title": "Reverse",
+    "toolInfo": {
+      "description": "With this utility, you can reverse the order of items in a list. The utility first splits the input list into individual items and then iterates through them from the last item to the first item, printing each item to the output during the iteration. The input list may contain anything that can be represented as textual data, which includes digits, numbers, strings, words, sentences, etc. The input item separator can also be a regular expression. For example, the regex /[;,]/ will allow you to use items that are either comma- or semicolon-separated. The input and output list items delimiters can be customized in the options. By default, both input and output lists are comma-separated. Listabulous!",
+      "title": "What Is a List Reverser?"
+    }
+  },
+  "rotate": {
+    "description": "World's simplest browser-based utility for rotating list items. Input your list and specify rotation amount to shift items by a specified number of positions. Perfect for data manipulation, circular shifts, or reordering lists.",
+    "shortDescription": "Rotate list items by specified positions",
+    "title": "Rotate"
+  },
+  "shuffle": {
+    "delimiterDescription": "Set a delimiting symbol or regular expression.",
+    "description": "World's simplest browser-based utility for shuffling list items. Input your list and instantly get a randomized version with items in random order. Perfect for creating variety, testing randomness, or mixing up ordered data.",
+    "inputListSeparator": "Input list separator",
+    "inputTitle": "Input list",
+    "joinSeparatorDescription": "Use this separator in the randomized list.",
+    "outputLengthDescription": "Output this many random items",
+    "resultTitle": "Shuffled list",
+    "shortDescription": "Randomize the order of list items",
+    "shuffledListLength": "Shuffled List Length",
+    "shuffledListSeparator": "Shuffled List Separator",
+    "title": "Shuffle"
+  },
+  "sort": {
+    "caseSensitive": "Case Sensitive Sort",
+    "caseSensitiveDescription": "Sort uppercase and lowercase items separately. Capital letters precede lowercase letters in an ascending list. (Works only in alphabetical sorting mode.)",
+    "description": "World's simplest browser-based utility for sorting list items. Input your list and specify sorting criteria to organize items in ascending or descending order. Perfect for data organization, text processing, or creating ordered lists.",
+    "inputItemSeparator": "Input item separator",
+    "inputTitle": "Input list",
+    "joinSeparatorDescription": "Use this symbol as a joiner between items in a sorted list.",
+    "orderDescription": "Select a sorting order.",
+    "orderOptions": {
+      "decreasing": "Decreasing order",
+      "increasing": "Increasing order"
+    },
+    "removeDuplicates": "Remove duplicates",
+    "removeDuplicatesDescription": "Delete duplicate list items.",
+    "resultTitle": "Sorted list",
+    "shortDescription": "Sort list items in specified order",
+    "sortMethod": "Sort method",
+    "sortMethodDescription": "Select a sorting method.",
+    "sortOptions": {
+      "alphabetic": "Sort Alphabetically",
+      "length": "Sort by Length",
+      "numeric": "Sort Numerically"
+    },
+    "sortedItemProperties": "Sorted item properties",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimit input list items with a regular expression.",
+        "title": "Use a Regex for Splitting"
+      },
+      "symbol": {
+        "description": "Delimit input list items with a character.",
+        "title": "Use a Symbol for Splitting"
+      }
+    },
+    "splitSeparatorDescription": "Set a delimiting symbol or regular expression.",
+    "title": "Sort"
+  },
+  "truncate": {
+    "description": "World's simplest browser-based utility for truncating lists. Input your list and specify the maximum number of items to keep. Perfect for data processing, list management, or limiting content length.",
+    "shortDescription": "Truncate list to specified number of items",
+    "title": "Truncate"
+  },
+  "unwrap": {
+    "description": "World's simplest browser-based utility for unwrapping list items. Input your wrapped list and specify unwrapping criteria to flatten organized items. Perfect for data processing, text manipulation, or extracting content from structured lists.",
+    "shortDescription": "Unwrap list items from structured format",
+    "title": "Unwrap"
+  },
+  "wrap": {
+    "description": "Add text before and after each list item.",
+    "inputTitle": "Input List",
+    "joinSeparatorDescription": "Separator to join the wrapped list",
+    "leftTextDescription": "Text to add before each item",
+    "removeEmptyItems": "Remove empty items",
+    "resultTitle": "Wrapped List",
+    "rightTextDescription": "Text to add after each item",
+    "shortDescription": "Wrap list items with specified criteria",
+    "splitByRegex": "Split by Regular Expression",
+    "splitBySymbol": "Split by Symbol",
+    "splitOptions": "Split Options",
+    "splitSeparatorDescription": "Separator to split the list",
+    "title": "Wrap",
+    "toolInfo": {
+      "description": "This tool allows you to add text before and after each item in a list. You can specify different text for the left and right sides, and control how the list is processed. It's useful for adding quotes, brackets, or other formatting to list items, preparing data for different formats, or creating structured text.",
+      "title": "List Wrapping"
+    },
+    "wrapOptions": "Wrap Options"
+  }
+}

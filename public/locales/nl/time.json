@@ -1,0 +1,100 @@
+{
+  "checkLeapYears": {
+    "description": "Controleer of een jaar een schrikkeljaar is en ontvang informatie over schrikkeljaren.",
+    "inputTitle": "Invoerjaar",
+    "resultTitle": "Resultaat van een schrikkeljaar",
+    "shortDescription": "Controleren of een jaar een schrikkeljaar is",
+    "title": "Controleer schrikkeljaren",
+    "toolInfo": {
+      "description": "Een schrikkeljaar is een jaar met een extra dag (29 februari) om het kalenderjaar gelijk te laten lopen met het astronomische jaar. Schrikkeljaren komen elke vier jaar voor, behalve jaren die deelbaar zijn door 100 maar niet door 400.",
+      "title": "Wat is een schrikkeljaar?"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "Urennaam toevoegen",
+    "addHoursNameDescription": "Voeg de tekenreeks uren toe aan de uitvoerwaarden",
+    "description": "Converteer dagen naar uren met aanpasbare opties.",
+    "hoursName": "Uren Naam",
+    "shortDescription": "Dagen naar uren omrekenen",
+    "title": "Dagen naar uren converteren",
+    "toolInfo": {
+      "description": "Met deze tool kunt u dagen naar uren omrekenen. U kunt dagen invoeren als getallen of met eenheden, waarna de tool ze naar uren converteert. U kunt er ook voor kiezen om het achtervoegsel 'uren' aan de uitvoerwaarden toe te voegen.",
+      "title": "Dagen naar uren converteren"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "Dagennaam toevoegen",
+    "addDaysNameDescription": "Voeg de tekenreeks dagen toe aan de uitvoerwaarden",
+    "daysName": "Dagen Naam",
+    "description": "Converteer uren naar dagen met aanpasbare opties.",
+    "shortDescription": "Uren naar dagen omrekenen",
+    "title": "Uren naar dagen omrekenen",
+    "toolInfo": {
+      "description": "Met deze tool kunt u uren naar dagen omrekenen. U kunt uren invoeren als getallen of met eenheden, waarna de tool ze naar dagen converteert. U kunt er ook voor kiezen om het achtervoegsel 'dagen' aan de uitvoerwaarden toe te voegen.",
+      "title": "Uren naar dagen omrekenen"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "Opvulling toevoegen",
+    "addPaddingDescription": "Voeg nulvulling toe aan uren, minuten en seconden.",
+    "description": "Converteer seconden naar een leesbaar tijdsformaat (uren:minuten:seconden). Voer het aantal seconden in om de tijd in het juiste formaat te krijgen.",
+    "shortDescription": "Seconden naar tijdformaat converteren",
+    "timePadding": "Tijdvulling",
+    "title": "Seconden naar tijd converteren",
+    "toolInfo": {
+      "title": "Wat is een {{title}}?"
+    }
+  },
+  "convertTimeToSeconds": {
+    "description": "Converteer de geformatteerde tijd (UU:MM:SS) naar seconden.",
+    "inputTitle": "Invoertijd",
+    "resultTitle": "Seconden",
+    "shortDescription": "Tijdformaat naar seconden converteren",
+    "title": "Tijd naar seconden converteren",
+    "toolInfo": {
+      "description": "Met deze tool kun je geformatteerde tijdreeksen (UU:MM:SS) omzetten naar seconden. Dit is handig voor het berekenen van tijdsduren en tijdsintervallen.",
+      "title": "Tijd naar seconden converteren"
+    }
+  },
+  "crontabGuru": {
+    "description": "Genereer en begrijp cron-expressies. Maak cron-schema's voor geautomatiseerde taken en systeemtaken.",
+    "shortDescription": "Genereer en begrijp cron-expressies",
+    "title": "Crontab-goeroe"
+  },
+  "timeBetweenDates": {
+    "description": "Bereken het tijdsverschil tussen twee datums. Bereken de exacte duur in dagen, uren, minuten en seconden.",
+    "endDate": "Einddatum",
+    "endDateTime": "Einddatum en -tijd",
+    "endTime": "Eindtijd",
+    "endTimezone": "Eindtijdzone",
+    "shortDescription": "Bereken de tijd tussen twee data",
+    "startDate": "Startdatum",
+    "startDateTime": "Startdatum en -tijd",
+    "startTime": "Starttijd",
+    "startTimezone": "Starttijdzone",
+    "title": "Tijd tussen data",
+    "toolInfo": {
+      "description": "Bereken het exacte tijdsverschil tussen twee datums en tijden, met ondersteuning voor verschillende tijdzones. Deze tool biedt een gedetailleerde weergave van het tijdsverschil in verschillende eenheden (jaren, maanden, dagen, uren, minuten en seconden).",
+      "title": "Tijd tussen datums calculator"
+    }
+  },
+  "truncateClockTime": {
+    "description": "Kort de kloktijd in om seconden of minuten te verwijderen. Rond de tijd af naar het dichtstbijzijnde uur, minuut of aangepaste interval.",
+    "printDroppedComponents": "Afdrukken van verwijderde componenten",
+    "shortDescription": "De kloktijd afkappen tot de opgegeven precisie",
+    "timePadding": "Tijdvulling",
+    "title": "Kloktijd afkappen",
+    "toolInfo": {
+      "title": "Wat is een {{title}}?"
+    },
+    "truncateMinutesAndSeconds": "Minuten en seconden afkappen",
+    "truncateMinutesAndSecondsDescription": "Laat beide componenten – de minuten en seconden – van elke kloktijd weg.",
+    "truncateOnlySeconds": "Alleen seconden afkappen",
+    "truncateOnlySecondsDescription": "Verwijder het secondecomponent van elke kloktijd.",
+    "truncationSide": "Afkappingszijde",
+    "useZeroPadding": "Gebruik nulvulling",
+    "zeroPaddingDescription": "Zorg ervoor dat alle tijdcomponenten altijd twee cijfers breed zijn.",
+    "zeroPrintDescription": "Geef de verwijderde onderdelen weer als nulwaarden \"00\".",
+    "zeroPrintTruncatedParts": "Afgekapte onderdelen zonder afdrukken"
+  }
+}

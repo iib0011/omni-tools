@@ -1,0 +1,113 @@
+{
+  "changeSpeed": {
+    "defaultMultiplier": "Multiplicateur par défaut : 2 signifie 2x plus rapide",
+    "description": "Modifiez la vitesse de lecture des fichiers vidéo. Accélérez ou ralentissez les vidéos tout en conservant la synchronisation audio. Prise en charge de divers multiplicateurs de vitesse et formats vidéo courants.",
+    "inputTitle": "Entrée vidéo",
+    "newVideoSpeed": "Nouvelle vitesse vidéo",
+    "resultTitle": "Vidéo éditée",
+    "settingSpeed": "Réglage de la vitesse",
+    "shortDescription": "Modifier la vitesse de lecture vidéo",
+    "title": "Modifier la vitesse de la vidéo",
+    "toolInfo": {
+      "title": "Qu'est-ce qu'un {{title}}?"
+    }
+  },
+  "compress": {
+    "default": "Défaut",
+    "description": "Compressez vos vidéos en les adaptant à différentes résolutions (240p, 480p, 720p, etc.). Cet outil permet de réduire la taille des fichiers tout en conservant une qualité acceptable. Il prend en charge les formats vidéo courants comme MP4, WebM et OGG.",
+    "inputTitle": "Entrée vidéo",
+    "loadingText": "Compression vidéo...",
+    "lossless": "Sans perte",
+    "quality": "Qualité (CRF)",
+    "resolution": "Résolution",
+    "resultTitle": "Vidéo compressée",
+    "shortDescription": "Compresser des vidéos en les mettant à l'échelle vers différentes résolutions",
+    "title": "Compresser la vidéo",
+    "worst": "Pire"
+  },
+  "cropVideo": {
+    "cropCoordinates": "Coordonnées de culture",
+    "croppingVideo": "Recadrage vidéo",
+    "description": "Recadrez la vidéo pour supprimer les zones indésirables.",
+    "errorBeyondHeight": "La zone de recadrage s'étend au-delà de la hauteur de la vidéo ({{height}}px)",
+    "errorBeyondWidth": "La zone de recadrage s'étend au-delà de la largeur de la vidéo ({{width}}px)",
+    "errorCroppingVideo": "Erreur lors du recadrage de la vidéo. Veuillez vérifier les paramètres et le fichier vidéo.",
+    "errorLoadingDimensions": "Échec du chargement des dimensions de la vidéo",
+    "errorNonNegativeCoordinates": "Les coordonnées X et Y doivent être non négatives",
+    "errorPositiveDimensions": "La largeur et la hauteur doivent être positives",
+    "height": "Hauteur",
+    "inputTitle": "Entrée vidéo",
+    "loadVideoForDimensions": "Chargez une vidéo pour voir les dimensions",
+    "resultTitle": "Vidéo recadrée",
+    "shortDescription": "Recadrer la vidéo pour supprimer les zones indésirables",
+    "title": "Recadrer la vidéo",
+    "toolInfo": {
+      "description": "Cet outil vous permet de recadrer des fichiers vidéo afin de supprimer les zones indésirables. Vous pouvez spécifier la zone de recadrage en définissant les coordonnées X et Y, ainsi que les dimensions de largeur et de hauteur.",
+      "title": "Recadrer la vidéo"
+    },
+    "videoDimensions": "Dimensions de la vidéo : {{width}} × {{height}} pixels",
+    "videoInformation": "Informations vidéo",
+    "width": "Largeur",
+    "xCoordinate": "X (gauche)",
+    "yCoordinate": "Y (en haut)"
+  },
+  "flip": {
+    "description": "Retournez les fichiers vidéo horizontalement ou verticalement. Inversez les vidéos pour obtenir des effets spéciaux ou corriger les problèmes d'orientation.",
+    "flippingVideo": "Retournement vidéo",
+    "horizontalLabel": "Horizontal (miroir)",
+    "inputTitle": "Entrée vidéo",
+    "orientation": "Orientation",
+    "resultTitle": "Vidéo inversée",
+    "shortDescription": "Retourner la vidéo horizontalement ou verticalement",
+    "title": "Retourner la vidéo",
+    "verticalLabel": "Vertical (à l'envers)"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "Modifiez la vitesse de lecture des animations GIF. Accélérez ou ralentissez les GIF tout en conservant une animation fluide.",
+      "shortDescription": "Modifier la vitesse de l'animation GIF",
+      "title": "Modifier la vitesse du GIF"
+    }
+  },
+  "loop": {
+    "description": "Créez une vidéo en boucle en répétant la vidéo originale plusieurs fois.",
+    "inputTitle": "Entrée vidéo",
+    "loopingVideo": "Vidéo en boucle",
+    "loops": "Boucles",
+    "numberOfLoops": "Nombre de boucles",
+    "resultTitle": "Vidéo en boucle",
+    "shortDescription": "Créer des fichiers vidéo en boucle",
+    "title": "Vidéo en boucle",
+    "toolInfo": {
+      "description": "Cet outil vous permet de créer une vidéo en boucle en répétant la vidéo originale plusieurs fois. Vous pouvez spécifier le nombre de répétitions.",
+      "title": "Qu'est-ce qu'un {{title}}?"
+    }
+  },
+  "rotate": {
+    "180Degrees": "180° (à l'envers)",
+    "270Degrees": "270° (90° dans le sens inverse des aiguilles d'une montre)",
+    "90Degrees": "90° dans le sens des aiguilles d'une montre",
+    "description": "Faites pivoter vos fichiers vidéo de 90, 180 ou 270 degrés. Corrigez l'orientation de vos vidéos ou créez des effets spéciaux grâce à un contrôle précis de la rotation.",
+    "inputTitle": "Entrée vidéo",
+    "resultTitle": "Vidéo tournée",
+    "rotatingVideo": "Vidéo rotative",
+    "rotation": "Rotation",
+    "shortDescription": "Faire pivoter la vidéo selon les degrés spécifiés",
+    "title": "Faire pivoter la vidéo"
+  },
+  "trim": {
+    "description": "Découpez vos fichiers vidéo en spécifiant les heures de début et de fin. Supprimez les sections indésirables au début ou à la fin de vos vidéos.",
+    "endTime": "Fin des temps",
+    "inputTitle": "Entrée vidéo",
+    "resultTitle": "Vidéo coupée",
+    "shortDescription": "Coupez la vidéo en supprimant les sections indésirables",
+    "startTime": "Heure de début",
+    "timestamps": "Horodatages",
+    "title": "Découper la vidéo"
+  },
+  "videoToGif": {
+    "description": "Convertissez des fichiers vidéo au format GIF animé. Extrayez des plages horaires spécifiques et créez des images animées partageables.",
+    "shortDescription": "Convertir une vidéo en GIF animé",
+    "title": "Vidéo en GIF"
+  }
+}

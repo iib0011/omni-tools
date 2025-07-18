@@ -1,0 +1,113 @@
+{
+  "changeSpeed": {
+    "defaultMultiplier": "デフォルトの乗数: 2は2倍速を意味します",
+    "description": "動画ファイルの再生速度を変更できます。音声の同期を維持しながら、動画の再生速度を上げたり下げたりできます。様々な速度調整機能と一般的な動画形式に対応しています。",
+    "inputTitle": "入力ビデオ",
+    "newVideoSpeed": "新しいビデオ速度",
+    "resultTitle": "編集されたビデオ",
+    "settingSpeed": "速度設定",
+    "shortDescription": "ビデオの再生速度を変更する",
+    "title": "ビデオ速度の変更",
+    "toolInfo": {
+      "title": "何ですか {{title}}？"
+    }
+  },
+  "compress": {
+    "default": "デフォルト",
+    "description": "動画を240p、480p、720pなどの様々な解像度にスケーリングして圧縮します。このツールは、許容できる品質を維持しながらファイルサイズを縮小するのに役立ちます。MP4、WebM、OGGなどの一般的な動画形式をサポートしています。",
+    "inputTitle": "入力ビデオ",
+    "loadingText": "ビデオを圧縮しています...",
+    "lossless": "ロスレス",
+    "quality": "品質（CRF）",
+    "resolution": "解決",
+    "resultTitle": "圧縮ビデオ",
+    "shortDescription": "さまざまな解像度に合わせてビデオを圧縮する",
+    "title": "ビデオを圧縮する",
+    "worst": "最悪"
+  },
+  "cropVideo": {
+    "cropCoordinates": "作物の座標",
+    "croppingVideo": "ビデオの切り取り",
+    "description": "ビデオをトリミングして不要な部分を削除します。",
+    "errorBeyondHeight": "切り取り領域がビデオの高さを超えて拡張されます（{{height}}ピクセル)",
+    "errorBeyondWidth": "切り取り領域がビデオの幅を超えています（{{width}}ピクセル)",
+    "errorCroppingVideo": "ビデオのトリミング中にエラーが発生しました。パラメータとビデオファイルを確認してください。",
+    "errorLoadingDimensions": "ビデオのサイズを読み込めませんでした",
+    "errorNonNegativeCoordinates": "X座標とY座標は負でない必要があります",
+    "errorPositiveDimensions": "幅と高さは正の数でなければなりません",
+    "height": "身長",
+    "inputTitle": "入力ビデオ",
+    "loadVideoForDimensions": "ビデオをロードして寸法を確認してください",
+    "resultTitle": "切り抜かれたビデオ",
+    "shortDescription": "不要な部分を削除するためにビデオをトリミングする",
+    "title": "ビデオをトリミング",
+    "toolInfo": {
+      "description": "このツールを使うと、動画ファイルをトリミングして不要な部分を削除できます。X、Y座標と幅、高さの寸法を設定することで、トリミング領域を指定できます。",
+      "title": "ビデオをトリミング"
+    },
+    "videoDimensions": "ビデオのサイズ: {{width}} × {{height}} ピクセル",
+    "videoInformation": "ビデオ情報",
+    "width": "幅",
+    "xCoordinate": "X（左）",
+    "yCoordinate": "Y（上）"
+  },
+  "flip": {
+    "description": "ビデオファイルを水平または垂直に反転します。特殊効果や向きの問題を修正するためにビデオをミラーリングします。",
+    "flippingVideo": "反転ビデオ",
+    "horizontalLabel": "水平（ミラー）",
+    "inputTitle": "入力ビデオ",
+    "orientation": "オリエンテーション",
+    "resultTitle": "反転ビデオ",
+    "shortDescription": "ビデオを水平または垂直に反転する",
+    "title": "フリップビデオ",
+    "verticalLabel": "垂直（逆さま）"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "GIFアニメーションの再生速度を変更します。スムーズなアニメーションを維持しながら、GIFの再生速度を上げたり下げたりできます。",
+      "shortDescription": "GIFアニメーションの速度を変更する",
+      "title": "GIFの速度を変更する"
+    }
+  },
+  "loop": {
+    "description": "元のビデオを複数回繰り返してループビデオを作成します。",
+    "inputTitle": "入力ビデオ",
+    "loopingVideo": "ループビデオ",
+    "loops": "ループ",
+    "numberOfLoops": "ループ数",
+    "resultTitle": "ループ動画",
+    "shortDescription": "ループ動画ファイルを作成する",
+    "title": "ループビデオ",
+    "toolInfo": {
+      "description": "このツールを使えば、元の動画を複数回繰り返し再生することで、ループ動画を作成できます。動画をループさせる回数も指定できます。",
+      "title": "何ですか {{title}}？"
+    }
+  },
+  "rotate": {
+    "180Degrees": "180°（上下逆さま）",
+    "270Degrees": "270°（反時計回り90°）",
+    "90Degrees": "90°時計回り",
+    "description": "ビデオファイルを90度、180度、または270度回転できます。正確な回転制御により、ビデオの向きを修正したり、特殊効果を作成したりできます。",
+    "inputTitle": "入力ビデオ",
+    "resultTitle": "回転したビデオ",
+    "rotatingVideo": "回転するビデオ",
+    "rotation": "回転",
+    "shortDescription": "指定した角度でビデオを回転する",
+    "title": "ビデオを回転する"
+  },
+  "trim": {
+    "description": "開始時間と終了時間を指定してビデオファイルをトリミングします。ビデオの先頭または末尾の不要な部分を削除します。",
+    "endTime": "終了時間",
+    "inputTitle": "入力ビデオ",
+    "resultTitle": "トリミングされたビデオ",
+    "shortDescription": "不要な部分を削除してビデオをトリミングする",
+    "startTime": "開始時間",
+    "timestamps": "タイムスタンプ",
+    "title": "ビデオをトリムする"
+  },
+  "videoToGif": {
+    "description": "ビデオファイルをアニメーションGIF形式に変換します。特定の時間範囲を抽出し、共有可能なアニメーション画像を作成します。",
+    "shortDescription": "ビデオをアニメーションGIFに変換する",
+    "title": "ビデオをGIFに変換"
+  }
+}

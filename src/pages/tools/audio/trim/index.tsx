@@ -1,5 +1,6 @@
 import { Box, FormControlLabel, Radio, RadioGroup } from '@mui/material';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
@@ -22,6 +23,7 @@ const formatOptions = [
 ];
 
 export default function Trim({ title, longDescription }: ToolComponentProps) {
+  const { t } = useTranslation('audio');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -48,28 +50,28 @@ export default function Trim({ title, longDescription }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Time Settings',
+      title: t('trim.timeSettings'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.startTime}
             onOwnChange={(val) => updateField('startTime', val)}
-            description="Start time in format HH:MM:SS (e.g., 00:00:30)"
-            label="Start Time"
+            description={t('trim.startTimeDescription')}
+            label={t('trim.startTime')}
           />
           <Box mt={2}>
             <TextFieldWithDesc
               value={values.endTime}
               onOwnChange={(val) => updateField('endTime', val)}
-              description="End time in format HH:MM:SS (e.g., 00:01:30)"
-              label="End Time"
+              description={t('trim.endTimeDescription')}
+              label={t('trim.endTime')}
             />
           </Box>
         </Box>
       )
     },
     {
-      title: 'Output Format',
+      title: t('trim.outputFormat'),
       component: (
         <Box mt={2}>
           <RadioGroup
@@ -104,15 +106,19 @@ export default function Trim({ title, longDescription }: ToolComponentProps) {
         <ToolAudioInput
           value={input}
           onChange={setInput}
-          title={'Input Audio'}
+          title={t('trim.inputTitle')}
         />
       }
       resultComponent={
         loading ? (
-          <ToolFileResult title="Trimming Audio" value={null} loading={true} />
+          <ToolFileResult
+            title={t('trim.trimmingAudio')}
+            value={null}
+            loading={true}
+          />
         ) : (
           <ToolFileResult
-            title="Trimmed Audio"
+            title={t('trim.resultTitle')}
             value={result}
             extension={result ? result.name.split('.').pop() : undefined}
           />
@@ -122,7 +128,10 @@ export default function Trim({ title, longDescription }: ToolComponentProps) {
       getGroups={getGroups}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('trim.toolInfo.title', { title }),
+        description: longDescription
+      }}
     />
   );
 }

@@ -17,6 +17,7 @@ import { tool as stringTruncate } from './truncate/meta';
 import { tool as stringBase64 } from './base64/meta';
 import { tool as stringStatistic } from './statistic/meta';
 import { tool as stringCensor } from './censor/meta';
+import { tool as stringPasswordGenerator } from './password-generator/meta';
 
 export const stringTools = [
   stringSplit,
@@ -37,5 +38,6 @@ export const stringTools = [
   stringRot13,
   stringBase64,
   stringStatistic,
-  stringCensor
+  stringCensor,
+  stringPasswordGenerator
 ];

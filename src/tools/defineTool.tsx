@@ -1,16 +1,20 @@
 import ToolLayout from '../components/ToolLayout';
 import React, { JSXElementConstructor, LazyExoticComponent } from 'react';
 import { IconifyIcon } from '@iconify/react';
+import { FullI18nKey, validNamespaces } from '../i18n';
+import { useTranslation } from 'react-i18next';
 
 export interface ToolMeta {
   path: string;
   component: LazyExoticComponent<JSXElementConstructor<ToolComponentProps>>;
   keywords: string[];
   icon: IconifyIcon | string;
-  name: string;
-  description: string;
-  shortDescription: string;
-  longDescription?: string;
+  i18n: {
+    name: FullI18nKey;
+    description: FullI18nKey;
+    shortDescription: FullI18nKey;
+    longDescription?: FullI18nKey;
+  };
 }
 
 export type ToolCategory =
@@ -31,9 +35,9 @@ export type ToolCategory =
 export interface DefinedTool {
   type: ToolCategory;
   path: string;
-  name: string;
-  description: string;
-  shortDescription: string;
+  name: FullI18nKey;
+  description: FullI18nKey;
+  shortDescription: FullI18nKey;
   icon: IconifyIcon | string;
   keywords: string[];
   component: () => JSX.Element;
@@ -48,34 +52,31 @@ export const defineTool = (
   basePath: ToolCategory,
   options: ToolMeta
 ): DefinedTool => {
-  const {
-    icon,
-    path,
-    name,
-    description,
-    keywords,
-    component,
-    shortDescription,
-    longDescription
-  } = options;
+  const { icon, path, keywords, component, i18n } = options;
   const Component = component;
   return {
     type: basePath,
     path: `${basePath}/${path}`,
-    name,
+    name: i18n.name,
     icon,
-    description,
-    shortDescription,
+    description: i18n.description,
+    shortDescription: i18n.shortDescription,
     keywords,
-    component: () => {
+    component: function ToolComponent() {
+      const { t } = useTranslation(validNamespaces);
       return (
         <ToolLayout
-          title={name}
-          description={description}
           icon={icon}
           type={basePath}
+          i18n={i18n}
+          fullPath={`${basePath}/${path}`}
         >
-          <Component title={name} longDescription={longDescription} />
+          <Component
+            title={t(i18n.name)}
+            longDescription={
+              i18n.longDescription ? t(i18n.longDescription) : undefined
+            }
+          />
         </ToolLayout>
       );
     }

@@ -8,6 +8,7 @@ import { GetGroupsType } from '@components/options/ToolOptions';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import { convertDaysToHours } from './service';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   hoursFlag: false
@@ -18,7 +19,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
     title: 'Full Days to Hours',
     description:
       'This example calculates how many hours there are in 1 day, in one week (7 days), in one month (30 days), and in even longer time periods. To see all the results at once, we enter each individual day value on a new line. We also use the "days" suffix in the input and add the "hours" suffix to the output.',
-    sampleText: `1 day 
+    sampleText: `1 day
 7 days
 30 days
 90 days
@@ -62,6 +63,7 @@ export default function ConvertDaysToHours({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation('time');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -74,14 +76,14 @@ export default function ConvertDaysToHours({
     updateField
   }) => [
     {
-      title: 'Hours Name',
+      title: t('convertDaysToHours.hoursName'),
       component: (
         <Box>
           <CheckboxWithDesc
             onChange={(val) => updateField('hoursFlag', val)}
             checked={values.hoursFlag}
-            title={'Add Hours Name'}
-            description={'Append the string hours to output values'}
+            title={t('convertDaysToHours.addHoursName')}
+            description={t('convertDaysToHours.addHoursNameDescription')}
           />
         </Box>
       )
@@ -98,7 +100,10 @@ export default function ConvertDaysToHours({
       getGroups={getGroups}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('convertDaysToHours.toolInfo.title'),
+        description: t('convertDaysToHours.toolInfo.description')
+      }}
       exampleCards={exampleCards}
     />
   );

@@ -1,0 +1,38 @@
+{
+  "xmlBeautifier": {
+    "description": "Formatteer XML met de juiste inspringing en spatie.",
+    "indentation": "Inspringing",
+    "inputTitle": "Invoer XML",
+    "resultTitle": "Verfraaide XML",
+    "shortDescription": "XML-code opmaken en verfraaien",
+    "title": "XML-verfraaier",
+    "toolInfo": {
+      "description": "Met deze tool kunt u XML-gegevens opmaken met de juiste inspringing en spaties, waardoor ze beter leesbaar worden en u er gemakkelijker mee kunt werken.",
+      "title": "XML-verfraaier"
+    },
+    "useSpaces": "Gebruik spaties",
+    "useSpacesDescription": "Uitvoer inspringen met spaties",
+    "useTabs": "Tabbladen gebruiken",
+    "useTabsDescription": "Uitvoer inspringen met tabs."
+  },
+  "xmlValidator": {
+    "description": "Valideer XML-syntaxis en -structuur.",
+    "placeholder": "Plak of importeer hier XML...",
+    "shortDescription": "XML-code valideren op fouten",
+    "title": "XML-validator",
+    "toolInfo": {
+      "description": "Met deze tool kunt u de XML-syntaxis en -structuur valideren. De tool controleert of de XML correct is opgemaakt en geeft gedetailleerde foutmeldingen bij gevonden problemen.",
+      "title": "XML-validator"
+    }
+  },
+  "xmlViewer": {
+    "description": "Bekijk en verken de XML-structuur in een boomstructuur.",
+    "inputTitle": "Invoer XML",
+    "resultTitle": "XML-boomweergave",
+    "title": "XML-viewer",
+    "toolInfo": {
+      "description": "Met deze tool kunt u XML-gegevens in een hiërarchische boomstructuur bekijken, waardoor u de structuur van XML-documenten eenvoudiger kunt verkennen en begrijpen.",
+      "title": "XML-viewer"
+    }
+  }
+}

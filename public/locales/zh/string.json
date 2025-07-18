@@ -1,0 +1,261 @@
+{
+  "base64": {
+    "decode": "Base64解码",
+    "description": "使用 Base64 编码对文本进行编码或解码。",
+    "encode": "Base64编码",
+    "inputTitle": "输入数据",
+    "optionsTitle": "Base64 选项",
+    "resultTitle": "结果",
+    "shortDescription": "使用 Base64 对数据进行编码或解码。",
+    "title": "Base64 编码器/解码器",
+    "toolInfo": {
+      "description": "Base64 是一种编码方案，它将 ASCII 字符串格式的数据转换为 radix-64 表示形式。虽然 Base64 也可以用来编码字符串，但它更常用于编码二进制数据，以便在专门处理文本数据的介质上传输。",
+      "title": "什么是Base64？"
+    }
+  },
+  "censor": {
+    "description": "用于审查文本中单词的实用程序。在左侧的输入表单中加载您的文本，并在选项中指定所有脏话，您将立即在输出区域获得已审查的文本。\", longDescription: '使用此在线工具，您可以审查任何文本中的某些单词。您可以指定不想要的单词列表（例如脏话或秘密单词），程序会用替代单词替换它们，并创建可安全阅读的文本。您可以在选项中的多行文本字段中通过每行输入一个单词来指定这些单词。', keywords: ['text', 'censor', 'words', 'characters'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
+    "shortDescription": "快速掩盖脏话或用替代词代替。",
+    "title": "文本审查"
+  },
+  "createPalindrome": {
+    "description": "世界上最简单的基于浏览器的回文创建工具，可从任何文本创建回文。输入文本即可立即将其转换为正反读相同的回文。非常适合文字游戏、创建对称文本模式或探索语言学知识。",
+    "shortDescription": "创建正读和倒读相同的文本",
+    "title": "创建回文"
+  },
+  "extractSubstring": {
+    "description": "世界上最简单的基于浏览器的文本子字符串提取工具。输入文本并指定起始和终止位置即可提取所需部分。非常适合数据处理、文本分析或从较大文本块中提取特定内容。",
+    "shortDescription": "提取指定位置之间的部分文本",
+    "title": "提取子字符串"
+  },
+  "join": {
+    "blankLinesAndTrailingSpaces": "空行和尾随空格",
+    "deleteBlankDescription": "删除没有文本符号的行。",
+    "deleteBlankTitle": "删除空白行",
+    "deleteTrailingDescription": "删除行尾的空格和制表符。",
+    "deleteTrailingTitle": "删除尾随空格",
+    "description": "使用可自定义的分隔符将文本片段连接在一起。",
+    "inputTitle": "文本片段",
+    "joinCharacterDescription": "连接文本片段的符号。（默认为空格。）",
+    "joinCharacterPlaceholder": "加入角色",
+    "resultTitle": "连接文本",
+    "shortDescription": "使用指定的分隔符连接文本元素",
+    "textMergedOptions": "文本合并选项",
+    "title": "加入文本",
+    "toolInfo": {
+      "description": "使用此工具，您可以将文本的各个部分连接在一起。它接收一个以换行符分隔的文本值列表，并将它们合并在一起。您可以设置合并文本各部分之间的字符。此外，您还可以忽略所有空行，并删除所有行末的空格和制表符。Textabulous！",
+      "title": "什么是文本连接器？"
+    }
+  },
+  "palindrome": {
+    "description": "世界上最简单的基于浏览器的回文检测工具。即时验证文本正读和反读是否一致。非常适合字谜游戏、语言分析或验证对称文本模式。支持各种分隔符和多词回文检测。",
+    "shortDescription": "检查文本正读和反读是否相同",
+    "title": "回文"
+  },
+  "passwordGenerator": {
+    "avoidAmbiguous": "避免使用歧义字符（i、I、l、0、O）",
+    "description": "生成安全的随机密码，可自定义长度和字符类型。密码类型包括小写字母、大写字母、数字和特殊字符。此外，还可选择避免使用模糊字符，以提高可读性。",
+    "includeLowercase": "包含小写字母（a-z）",
+    "includeNumbers": "包含数字 (0-9)",
+    "includeSymbols": "包含特殊字符",
+    "includeUppercase": "包含大写字母（A-Z）",
+    "lengthDesc": "密码长度",
+    "lengthPlaceholder": "例如 12",
+    "optionsTitle": "密码选项",
+    "resultTitle": "生成的密码",
+    "shortDescription": "使用自定义选项生成安全的随机密码",
+    "title": "密码生成器",
+    "toolInfo": {
+      "description": "此工具可根据您选择的条件生成安全的随机密码。您可以自定义长度，包含或排除不同的字符类型，并避免使用模糊字符以提高可读性。非常适合为帐户、应用程序或任何安全需求创建强密码。",
+      "title": "关于密码生成器"
+    }
+  },
+  "quote": {
+    "allowDoubleQuotation": "允许双引号",
+    "description": "使用可自定义的选项在文本周围添加引号。",
+    "inputTitle": "输入文本",
+    "leftQuoteDescription": "左引号字符",
+    "processAsMultiLine": "作为多行文本处理",
+    "quoteEmptyLines": "引用空行",
+    "quoteOptions": "报价选项",
+    "resultTitle": "引用文本",
+    "rightQuoteDescription": "右引号字符",
+    "shortDescription": "使用各种样式在文本周围添加引号",
+    "title": "文字引述者",
+    "toolInfo": {
+      "description": "此工具可用于在文本周围添加引号。您可以选择不同的引号字符、处理多行文本以及控制空行的处理方式。它对于准备编程文本、格式化数据或创建风格化文本非常有用。",
+      "title": "文字引述者"
+    }
+  },
+  "randomizeCase": {
+    "description": "世界上最简单的基于浏览器的文本大小写随机化工具。输入文本后，即可立即将其转换为随机的大小写字母。非常适合创建独特的文本效果、测试大小写敏感度或生成丰富的文本模式。",
+    "shortDescription": "随机化文本中字母的大小写",
+    "title": "随机化案例"
+  },
+  "removeDuplicateLines": {
+    "description": "在左侧的输入表单中加载文本，即可立即在输出区域获得无重复行的文本。功能强大、免费且快速。加载文本行 – 获取独特的文本行",
+    "shortDescription": "快速删除文本中所有重复的行",
+    "title": "删除重复的行"
+  },
+  "repeat": {
+    "delimiterDescription": "输出副本的分隔符。",
+    "delimiterPlaceholder": "分隔符",
+    "description": "使用可自定义的分隔符多次重复文本。",
+    "inputTitle": "输入文本",
+    "numberPlaceholder": "数字",
+    "repeatAmountDescription": "重复次数。",
+    "repetitionsDelimiter": "重复分隔符",
+    "resultTitle": "重复的文本",
+    "shortDescription": "重复文本多次",
+    "textRepetitions": "文本重复",
+    "title": "重复文本",
+    "toolInfo": {
+      "description": "此工具允许您使用可选分隔符多次重复给定的文本。",
+      "title": "重复文本"
+    }
+  },
+  "reverse": {
+    "description": "世界上最简单的基于浏览器的文本反转工具。输入任意文本即可立即逐字符反转。非常适合创建镜像文本、分析回文或玩转文本模式。反转时保留空格和特殊字符。",
+    "inputTitle": "反转文本",
+    "processMultiLine": "处理多行文本",
+    "processMultiLineDescription": "每行将单独反转",
+    "resultTitle": "反转文本",
+    "reversalOptions": "逆转期权",
+    "shortDescription": "逐个字符地反转任何文本",
+    "skipEmptyLines": "跳过空行",
+    "skipEmptyLinesDescription": "输出中的空行将被删除",
+    "title": "撤销",
+    "trimWhitespace": "修剪空格",
+    "trimWhitespaceDescription": "删除每行的前导和尾随空格"
+  },
+  "rot13": {
+    "description": "使用 ROT13 密码对文本进行编码或解码。",
+    "inputTitle": "输入文本",
+    "resultTitle": "ROT13 结果",
+    "shortDescription": "使用 ROT13 密码对文本进行编码或解码。",
+    "title": "ROT13编码器/解码器",
+    "toolInfo": {
+      "description": "ROT13（循环13位）是一种简单的字母替换密码，用字母表中该字母后面的第13个字母替换该字母。ROT13是古罗马凯撒密码的一个特例。由于英语字母表有26个字母，因此ROT13是其自身的逆；也就是说，要撤销ROT13，需要应用相同的算法，因此编码和解码的操作相同。",
+      "title": "ROT13 是什么？"
+    }
+  },
+  "rotate": {
+    "description": "按指定位置旋转文本中的字符。",
+    "inputTitle": "输入文本",
+    "processAsMultiLine": "作为多行文本处理（分别旋转每一行）",
+    "resultTitle": "旋转文本",
+    "rotateLeft": "向左旋转",
+    "rotateRight": "向右旋转",
+    "rotationOptions": "旋转选项",
+    "shortDescription": "按位置移动文本中的字符。",
+    "stepDescription": "旋转位置数",
+    "title": "旋转文本",
+    "toolInfo": {
+      "description": "此工具允许您将字符串中的字符旋转指定位数。您可以向左或向右旋转，并通过分别旋转每一行来处理多行文本。字符串旋转对于简单的文本转换、创建模式或实现基本的加密技术非常有用。",
+      "title": "琴弦旋转"
+    }
+  },
+  "split": {
+    "charAfterChunkDescription": "每个块后的字符",
+    "charBeforeChunkDescription": "每个块前的字符",
+    "chunksDescription": "输出中等长数据块的数量。",
+    "chunksTitle": "使用多个块",
+    "description": "世界上最简单的基于浏览器的文本分割工具。输入文本并指定分隔符即可将其拆分为多个部分。非常适合数据处理、文本操作或从较大的文本块中提取特定内容。",
+    "lengthDescription": "每个输出块中放入的符号数量。",
+    "lengthTitle": "使用长度进行拆分",
+    "outputSeparatorDescription": "插入拆分块之间的字符。（默认为换行符“\\n”。）",
+    "outputSeparatorOptions": "输出分隔符选项",
+    "regexDescription": "用于将文本拆分成多个部分的正则表达式。（默认为多个空格。）",
+    "regexTitle": "使用正则表达式进行拆分",
+    "resultTitle": "文本片段",
+    "shortDescription": "使用分隔符将文本拆分为多个部分",
+    "splitSeparatorOptions": "拆分分隔符选项",
+    "symbolDescription": "用于将文本拆分成多个部分的字符。（默认为空格。）",
+    "symbolTitle": "使用符号进行拆分",
+    "title": "分裂"
+  },
+  "statistic": {
+    "characterFrequencyAnalysis": "字频分析",
+    "characterFrequencyAnalysisDescription": "计算每个字符在文本中出现的频率",
+    "delimitersOptions": "分隔符选项",
+    "description": "分析文本并生成综合统计数据。",
+    "includeEmptyLines": "包含空行",
+    "includeEmptyLinesDescription": "计算行数时包含空行",
+    "inputTitle": "输入文本",
+    "resultTitle": "文本统计",
+    "sentenceDelimitersDescription": "输入用于分隔您语言中的句子的自定义字符（以逗号分隔）或将其留空作为默认设置。",
+    "sentenceDelimitersPlaceholder": "例如。，！，？，...",
+    "shortDescription": "获取有关文本的统计数据",
+    "statisticsOptions": "统计选项",
+    "title": "文本统计",
+    "toolInfo": {
+      "description": "该工具允许您分析文本并生成全面的统计数据，包括字符数、字数、行数以及字符和单词的频率分析。",
+      "title": "什么是 {{title}}？"
+    },
+    "wordDelimitersDescription": "输入自定义正则表达式来计算单词数，或将其留空作为默认值。",
+    "wordDelimitersPlaceholder": "例如。 \\s.,;:!?”«»()…",
+    "wordFrequencyAnalysis": "词频分析",
+    "wordFrequencyAnalysisDescription": "计算每个单词在文本中出现的频率"
+  },
+  "textReplacer": {
+    "description": "用新内容替换文本模式。",
+    "findPatternInText": "在文本中查找此模式",
+    "findPatternUsingRegexp": "使用正则表达式查找模式",
+    "inputTitle": "要替换的文本",
+    "newTextPlaceholder": "新文本",
+    "regexpDescription": "输入要替换的正则表达式。",
+    "replacePatternDescription": "输入用于替换的模式。",
+    "replaceText": "替换文本",
+    "resultTitle": "带替换的文本",
+    "searchPatternDescription": "输入您想要替换的文本模式。",
+    "searchText": "搜索文本",
+    "shortDescription": "快速替换内容中的文本",
+    "title": "文本替换器",
+    "toolInfo": {
+      "description": "使用这款基于浏览器的简单工具，轻松替换内容中的特定文本。只需输入文本，设置要替换的文本和替换值，即可立即获取更新版本。",
+      "title": "文本替换器"
+    }
+  },
+  "toMorse": {
+    "dashSymbolDescription": "与摩尔斯电码中的破折号相对应的符号。",
+    "description": "将文本转换为摩尔斯电码。",
+    "dotSymbolDescription": "与摩尔斯电码中的点对应的符号。",
+    "longSignal": "长信号",
+    "resultTitle": "摩尔斯电码",
+    "shortDescription": "快速将文本编码为摩尔斯电码",
+    "shortSignal": "短信号",
+    "title": "字符串到莫尔斯"
+  },
+  "truncate": {
+    "addTruncationIndicator": "添加截断指示符",
+    "charactersPlaceholder": "人物",
+    "description": "将文本缩短至指定长度。",
+    "indicatorDescription": "在文本末尾（或开头）添加的字符。注意：这些字符计入长度。",
+    "inputTitle": "输入文本",
+    "leftSideDescription": "从文本开头删除字符。",
+    "leftSideTruncation": "左侧截断",
+    "lengthAndLines": "长度和线条",
+    "lineByLineDescription": "分别截断每一行。",
+    "lineByLineTruncating": "逐行截断",
+    "maxLengthDescription": "文本中保留的字符数。",
+    "numberPlaceholder": "数字",
+    "resultTitle": "文本被截断",
+    "rightSideDescription": "删除文本末尾的字符。",
+    "rightSideTruncation": "右侧截断",
+    "shortDescription": "将文本截断为指定长度",
+    "suffixAndAffix": "后缀和词缀",
+    "title": "截断文本",
+    "toolInfo": {
+      "description": "在左侧的输入表单中加载您的文本，您将自动在右侧获得截断文本。",
+      "title": "截断文本"
+    },
+    "truncationSide": "截断侧"
+  },
+  "uppercase": {
+    "description": "将文本转换为大写字母。",
+    "inputTitle": "输入文本",
+    "resultTitle": "大写文本",
+    "shortDescription": "将文本转换为大写",
+    "title": "转换为大写"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "changeSpeed": {
+    "defaultMultiplier": "默认乘数：2 表示速度快 2 倍",
+    "description": "更改视频文件的播放速度。在保持音频同步的同时，加快或减慢视频速度。支持各种倍速器和常见视频格式。",
+    "inputTitle": "输入视频",
+    "newVideoSpeed": "新视频速度",
+    "resultTitle": "编辑视频",
+    "settingSpeed": "设定速度",
+    "shortDescription": "更改视频播放速度",
+    "title": "更改视频速度",
+    "toolInfo": {
+      "title": "什么是 {{title}}？"
+    }
+  },
+  "compress": {
+    "default": "默认",
+    "description": "通过将视频缩放到不同的分辨率（例如 240p、480p、720p 等）来压缩视频。此工具有助于在保持可接受质量的同时减小文件大小。支持 MP4、WebM 和 OGG 等常见视频格式。",
+    "inputTitle": "输入视频",
+    "loadingText": "正在压缩视频...",
+    "lossless": "无损",
+    "quality": "质量（CRF）",
+    "resolution": "解决",
+    "resultTitle": "压缩视频",
+    "shortDescription": "通过缩放到不同的分辨率来压缩视频",
+    "title": "压缩视频",
+    "worst": "最差"
+  },
+  "cropVideo": {
+    "cropCoordinates": "作物坐标",
+    "croppingVideo": "裁剪视频",
+    "description": "裁剪视频以删除不需要的区域。",
+    "errorBeyondHeight": "裁剪区域超出视频高度（{{height}}像素）",
+    "errorBeyondWidth": "裁剪区域超出视频宽度（{{width}}像素）",
+    "errorCroppingVideo": "裁剪视频时出错。请检查参数和视频文件。",
+    "errorLoadingDimensions": "无法加载视频尺寸",
+    "errorNonNegativeCoordinates": "X 和 Y 坐标必须为非负数",
+    "errorPositiveDimensions": "宽度和高度必须为正数",
+    "height": "高度",
+    "inputTitle": "输入视频",
+    "loadVideoForDimensions": "加载视频以查看尺寸",
+    "resultTitle": "裁剪视频",
+    "shortDescription": "裁剪视频以删除不需要的区域",
+    "title": "裁剪视频",
+    "toolInfo": {
+      "description": "此工具允许您裁剪视频文件以删除不需要的区域。您可以通过设置 X、Y 坐标以及宽度和高度尺寸来指定裁剪区域。",
+      "title": "裁剪视频"
+    },
+    "videoDimensions": "视频尺寸： {{width}} × {{height}} 像素",
+    "videoInformation": "视频信息",
+    "width": "宽度",
+    "xCoordinate": "X（左）",
+    "yCoordinate": "Y（顶部）"
+  },
+  "flip": {
+    "description": "水平或垂直翻转视频文件。镜像视频以获得特殊效果或纠正方向问题。",
+    "flippingVideo": "翻转视频",
+    "horizontalLabel": "水平（镜像）",
+    "inputTitle": "输入视频",
+    "orientation": "方向",
+    "resultTitle": "翻转视频",
+    "shortDescription": "水平或垂直翻转视频",
+    "title": "翻转视频",
+    "verticalLabel": "垂直（倒置）"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "更改 GIF 动画的播放速度。在保持动画流畅的情况下，加快或减慢 GIF 的速度。",
+      "shortDescription": "更改 GIF 动画速度",
+      "title": "更改 GIF 速度"
+    }
+  },
+  "loop": {
+    "description": "通过多次重复播放原始视频来创建循环视频。",
+    "inputTitle": "输入视频",
+    "loopingVideo": "循环视频",
+    "loops": "循环",
+    "numberOfLoops": "循环次数",
+    "resultTitle": "循环视频",
+    "shortDescription": "创建循环视频文件",
+    "title": "循环视频",
+    "toolInfo": {
+      "description": "此工具可让您通过多次重复播放原始视频来创建循环视频。您可以指定视频循环播放的次数。",
+      "title": "什么是 {{title}}？"
+    }
+  },
+  "rotate": {
+    "180Degrees": "180°（上下颠倒）",
+    "270Degrees": "270°（逆时针90°）",
+    "90Degrees": "顺时针 90°",
+    "description": "将视频文件旋转 90 度、180 度或 270 度。通过精确的旋转控制来校正视频方向或创建特殊效果。",
+    "inputTitle": "输入视频",
+    "resultTitle": "旋转视频",
+    "rotatingVideo": "旋转视频",
+    "rotation": "旋转",
+    "shortDescription": "按指定角度旋转视频",
+    "title": "旋转视频"
+  },
+  "trim": {
+    "description": "通过指定开始和结束时间来修剪视频文件。从视频的开头或结尾删除不需要的部分。",
+    "endTime": "结束时间",
+    "inputTitle": "输入视频",
+    "resultTitle": "修剪的视频",
+    "shortDescription": "通过删除不需要的部分来修剪视频",
+    "startTime": "开始时间",
+    "timestamps": "时间戳",
+    "title": "修剪视频"
+  },
+  "videoToGif": {
+    "description": "将视频文件转换为 GIF 动画格式。提取特定时间范围并创建可共享的动画图像。",
+    "shortDescription": "将视频转换为动画 GIF",
+    "title": "视频转GIF"
+  }
+}

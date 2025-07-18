@@ -1,0 +1,61 @@
+{
+  "changeSpeed": {
+    "description": "Change the playback speed of audio files. Speed up or slow down audio while maintaining pitch.",
+    "inputTitle": "Input Audio",
+    "newAudioSpeed": "New Audio Speed",
+    "outputFormat": "Output Format",
+    "resultTitle": "Edited Audio",
+    "settingSpeed": "Setting Speed",
+    "shortDescription": "Change the speed of audio files",
+    "speedDescription": "Default multiplier: 2 means 2x faster",
+    "title": "Change audio speed",
+    "toolInfo": {
+      "title": "What is {{title}}?"
+    }
+  },
+  "extractAudio": {
+    "description": "Extract audio track from video files.",
+    "extractingAudio": "Extracting Audio",
+    "inputTitle": "Input Video",
+    "outputFormat": "Output Format",
+    "outputFormatDescription": "Select the format for the audio to be extracted as.",
+    "resultTitle": "Extracted Audio",
+    "shortDescription": "Extract audio from video files (MP4, MOV, etc.) to AAC, MP3, or WAV.",
+    "title": "Extract Audio from Video",
+    "toolInfo": {
+      "description": "This tool allows you to extract the audio track from video files. You can choose from different audio formats including AAC, MP3, and WAV.",
+      "title": "What is {{title}}?"
+    }
+  },
+  "mergeAudio": {
+    "description": "Combine multiple audio files into a single audio file by concatenating them in sequence.",
+    "inputTitle": "Input Audio Files",
+    "longDescription": "This tool allows you to merge multiple audio files into a single file by concatenating them in the order you upload them. Perfect for combining podcast segments, music tracks, or any audio files that need to be joined together. Supports various audio formats including MP3, AAC, and WAV.",
+    "mergingAudio": "Merging Audio",
+    "outputFormat": "Output Format",
+    "resultTitle": "Merged Audio",
+    "shortDescription": "Merge multiple audio files into one (MP3, AAC, WAV).",
+    "title": "Merge Audio",
+    "toolInfo": {
+      "title": "What is {{title}}?"
+    }
+  },
+  "trim": {
+    "description": "Cut and trim audio files to extract specific segments by specifying start and end times.",
+    "endTime": "End Time",
+    "endTimeDescription": "End time in format HH:MM:SS (e.g., 00:01:30)",
+    "inputTitle": "Input Audio",
+    "longDescription": "This tool allows you to trim audio files by specifying start and end times. You can extract specific segments from longer audio files, remove unwanted parts, or create shorter clips. Supports various audio formats including MP3, AAC, and WAV. Perfect for podcast editing, music production, or any audio editing needs.",
+    "outputFormat": "Output Format",
+    "resultTitle": "Trimmed Audio",
+    "shortDescription": "Trim audio files to extract specific time segments (MP3, AAC, WAV).",
+    "startTime": "Start Time",
+    "startTimeDescription": "Start time in format HH:MM:SS (e.g., 00:00:30)",
+    "timeSettings": "Time Settings",
+    "title": "Trim Audio",
+    "toolInfo": {
+      "title": "What is {{title}}?"
+    },
+    "trimmingAudio": "Trimming Audio"
+  }
+}

@@ -1,5 +1,6 @@
 import { Box, FormControlLabel, Radio, RadioGroup } from '@mui/material';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
@@ -24,6 +25,7 @@ export default function MergeAudio({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation('audio');
   const [input, setInput] = useState<MultiAudioInput[]>([]);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -51,7 +53,7 @@ export default function MergeAudio({
     updateField
   }) => [
     {
-      title: 'Output Format',
+      title: t('mergeAudio.outputFormat'),
       component: (
         <Box mt={2}>
           <RadioGroup
@@ -87,16 +89,20 @@ export default function MergeAudio({
           value={input}
           onChange={setInput}
           accept={['audio/*', '.mp3', '.wav', '.aac']}
-          title={'Input Audio Files'}
+          title={t('mergeAudio.inputTitle')}
           type="audio"
         />
       }
       resultComponent={
         loading ? (
-          <ToolFileResult title="Merging Audio" value={null} loading={true} />
+          <ToolFileResult
+            title={t('mergeAudio.mergingAudio')}
+            value={null}
+            loading={true}
+          />
         ) : (
           <ToolFileResult
-            title="Merged Audio"
+            title={t('mergeAudio.resultTitle')}
             value={result}
             extension={result ? result.name.split('.').pop() : undefined}
           />
@@ -106,7 +112,10 @@ export default function MergeAudio({
       getGroups={getGroups}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('mergeAudio.toolInfo.title', { title }),
+        description: longDescription
+      }}
     />
   );
 }

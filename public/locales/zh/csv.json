@@ -1,0 +1,114 @@
+{
+  "changeCsvSeparator": {
+    "description": "更改 CSV 文件中的分隔符。在不同的 CSV 格式（例如逗号、分号、制表符或自定义分隔符）之间进行转换。",
+    "shortDescription": "更改 CSV 文件分隔符",
+    "title": "更改 CSV 分隔符"
+  },
+  "csvRowsToColumns": {
+    "description": "此工具可将 CSV（逗号分隔值）文件的行转换为列。它会从输入的 CSV 文件中逐行提取水平线，将其旋转 90 度，然后将其输出为垂直列，并以逗号分隔。', longDescription: '此工具可将 CSV（逗号分隔值）文件的行转换为列。例如，如果输入的 CSV 数据有 6 行，则输出将有 6 列，并且行中的元素将按从上到下的顺序排列。在格式正确的 CSV 文件中，每行的值数量相同。但是，如果行中缺少字段，程序可以修复它们，您可以从可用选项中进行选择：用空元素填充缺失数据，或用自定义元素（例如“missing”、“?”或“x”）替换缺失数据。在转换过程中，该工具还会清除 CSV 文件中的不必要信息，例如空行（这些行没有可见的信息）和注释。为了帮助工具正确识别注释，您可以在选项中指定行首的注释符号。此符号通常是井号“#”或双斜杠“//”。CSV 真棒！",
+    "longDescription": "此工具可将 CSV（逗号分隔值）文件的行转换为列。例如，如果输入的 CSV 数据有 6 行，则输出将有 6 列，并且行中的元素将按从上到下的顺序排列。在格式正确的 CSV 文件中，每行的值数量相同。但是，如果行中缺少字段，程序可以修复它们，您可以从以下选项中进行选择：用空元素填充缺失数据，或用自定义元素替换缺失数据，例如",
+    "shortDescription": "将 CSV 行转换为列。",
+    "title": "将 CSV 行转换为列"
+  },
+  "csvToJson": {
+    "columnSeparator": "列分隔符（例如，，；\\t）",
+    "commentSymbol": "注释符号（例如 #）",
+    "conversionOptions": "转换选项",
+    "description": "将 CSV 文件转换为 JSON 格式，并可自定义分隔符、引号和输出格式。支持标题、注释和动态类型转换。",
+    "dynamicTypes": "动态类型",
+    "dynamicTypesDescription": "自动转换数字和布尔值",
+    "errorParsing": "解析 CSV 时出错： {{error}}",
+    "fieldQuote": "字段引号（例如“）",
+    "inputCsvFormat": "输入 CSV 格式",
+    "inputTitle": "输入 CSV",
+    "resultTitle": "输出 JSON",
+    "shortDescription": "将 CSV 数据转换为 JSON 格式。",
+    "skipEmptyLines": "跳过空行",
+    "skipEmptyLinesDescription": "忽略输入 CSV 中的空行",
+    "title": "将 CSV 转换为 JSON",
+    "useHeaders": "使用标题",
+    "useHeadersDescription": "将第一行视为列标题"
+  },
+  "csvToTsv": {
+    "description": "使用下方表单上传您的 CSV 文件，它将自动转换为 TSV 文件。在工具选项中，您可以自定义输入的 CSV 格式——指定字段分隔符、引号和注释符号，以及跳过空的 CSV 行，并选择是否保留 CSV 列标题。",
+    "longDescription": "此工具将逗号分隔值 (CSV) 数据转换为制表符分隔值 (TSV)。CSV 和 TSV 都是用于存储表格数据的常用文件格式，但它们使用不同的分隔符来分隔值——CSV 使用逗号 (",
+    "shortDescription": "将 CSV 数据转换为 TSV 格式。",
+    "title": "将 CSV 转换为 TSV"
+  },
+  "csvToXml": {
+    "description": "使用可自定义的选项将 CSV 文件转换为 XML 格式。",
+    "shortDescription": "将 CSV 数据转换为 XML 格式。",
+    "title": "将 CSV 转换为 XML"
+  },
+  "csvToYaml": {
+    "description": "只需在下方表单中上传您的 CSV 文件，它就会自动转换为 YAML 文件。在工具选项中，您可以指定字段分隔符、字段引号和注释符，以使工具适应自定义 CSV 格式。此外，您还可以选择输出 YAML 格式：保留 CSV 标头或不包含 CSV 标头。",
+    "longDescription": "此工具可将 CSV（逗号分隔值）数据转换为 YAML（另一种标记语言）数据。CSV 是一种简单的表格格式，用于表示由行和列组成的矩阵式数据类型。而 YAML 是一种更高级的格式（实际上是 JSON 的超集），它能够创建更易于序列化的数据，并且支持列表、字典和嵌套对象。此程序支持多种 CSV 输入格式——输入数据可以使用逗号分隔（默认）、分号分隔、竖线分隔或使用其他完全不同的分隔符。您可以在选项中指定数据使用的确切分隔符。同样，您可以在选项中指定用于包装 CSV 字段的引号字符（默认为双引号）。您还可以通过在选项中指定注释符号来跳过以注释开头的行。这样可以通过跳过不必要的行来保持数据整洁。有两种方法可以将 CSV 转换为 YAML。第一种方法将每个 CSV 行转换为 YAML 列表。第二种方法从第一个 CSV 行中提取标题，并根据这些标题创建带有键的 YAML 对象。您还可以通过指定 YAML 结构缩进的空格数来自定义输出 YAML 格式。如果您需要执行反向转换，即将 YAML 转换为 CSV，可以使用我们的“将 YAML 转换为 CSV”工具。CSV 真棒！",
+    "shortDescription": "快速将 CSV 文件转换为 YAML 文件。",
+    "title": "将 CSV 转换为 YAML"
+  },
+  "findIncompleteCsvRecords": {
+    "checkingOptions": "检查选项",
+    "commentCharacterDescription": "输入表示注释行开始的字符。以此符号开头的行将被跳过。",
+    "csvInputOptions": "CSV 输入选项",
+    "csvSeparatorDescription": "输入用于分隔 CSV 输入文件中列的字符。",
+    "deleteLinesWithNoData": "删除没有数据的行",
+    "deleteLinesWithNoDataDescription": "从 CSV 输入文件中删除空行。",
+    "description": "只需将您的 CSV 文件上传到下方表单，此工具就会自动检查所有行或列是否均缺失值。在工具选项中，您可以调整输入文件格式（指定分隔符、引号和注释符）。此外，您还可以启用空值检查、跳过空行，以及设置输出中错误消息的数量限制。",
+    "findEmptyValues": "查找空值",
+    "findEmptyValuesDescription": "显示有关 CSV 字段为空的消息（这些不是缺失的字段，而是不包含任何内容的字段）。",
+    "inputTitle": "输入 CSV",
+    "limitNumberOfMessages": "限制消息数量",
+    "messageLimitDescription": "设置输出中消息数量的限制。",
+    "quoteCharacterDescription": "输入用于引用 CSV 输入字段的引号字符。",
+    "resultTitle": "CSV 状态",
+    "shortDescription": "快速查找 CSV 中缺少值的行和列。",
+    "title": "查找不完整的 CSV 记录",
+    "toolInfo": {
+      "title": "什么是 {{title}}？"
+    }
+  },
+  "insertCsvColumns": {
+    "appendColumns": "附加列",
+    "commentCharacterDescription": "输入表示注释行开始的字符。以此符号开头的行将被跳过。",
+    "csvOptions": "CSV 选项",
+    "csvSeparator": "CSV 分隔符",
+    "csvToInsert": "要插入的 CSV",
+    "csvToInsertDescription": "输入要插入到 CSV 中的一个或多个列。用于分隔列的字符必须与 CSV 输入文件中的字符相同。注：空行将被忽略",
+    "customFillDescription": "如果输入的 CSV 文件不完整（缺少值），则向记录中添加空字段或自定义符号以制作格式良好的 CSV？",
+    "customFillValueDescription": "使用此自定义值填写缺失的字段。（仅适用于上述“自定义值”模式。）",
+    "customPosition": "自定义位置",
+    "customPositionOptionsDescription": "选择在 CSV 文件中插入列的方法。",
+    "description": "在指定位置向 CSV 数据添加新列。",
+    "fillWithCustomValues": "填写海关价值",
+    "fillWithEmptyValues": "填充空值",
+    "headerName": "标头名称",
+    "headerNameDescription": "您想要在其后插入列的列标题。",
+    "inputTitle": "输入 CSV",
+    "insertingPositionDescription": "指定在 CSV 文件中插入列的位置。",
+    "position": "位置",
+    "positionOptions": "位置选项",
+    "prependColumns": "添加列",
+    "quoteCharDescription": "输入用于引用 CSV 输入字段的引号字符。",
+    "resultTitle": "输出 CSV",
+    "rowNumberDescription": "您想要在其后插入列的列号。",
+    "separatorDescription": "输入用于分隔 CSV 输入文件中列的字符。",
+    "shortDescription": "在 CSV 文件中的任何位置快速插入一个或多个新列。",
+    "title": "插入 CSV 列",
+    "toolInfo": {
+      "description": "此工具允许您在 CSV 数据的指定位置插入新列。您可以根据标题名称或列号在自定义位置添加、追加或插入列。",
+      "title": "插入 CSV 列"
+    }
+  },
+  "swapCsvColumns": {
+    "description": "只需在下方表单中上传您的 CSV 文件，指定要交换的列，该工具就会自动更改输出文件中指定列的位置。在工具选项中，您可以指定要交换的列位置或名称，还可以修复不完整的数据，并选择性地删除空记录和已注释掉的记录。",
+    "longDescription": "此工具通过交换列的位置来重新组织 CSV 数据。交换列可以将常用数据放在一起或放在最前面，以便于数据比较和编辑，从而提高 CSV 文件的可读性。例如，您可以将第一列与最后一列交换，或者将第二列与第三列交换。要根据列的位置交换列，请选择",
+    "shortDescription": "重新排序 CSV 列。",
+    "title": "交换 CSV 列"
+  },
+  "transposeCsv": {
+    "description": "只需使用下方表格上传您的 CSV 文件，此工具就会自动转置您的 CSV 文件。在工具选项中，您可以指定 CSV 文件中注释行的起始字符，以将其移除。此外，如果 CSV 文件不完整（缺少值），您可以使用空字符或自定义字符替换缺失值。",
+    "longDescription": "此工具用于转置逗号分隔值 (CSV)。它将 CSV 视为数据矩阵，并将所有元素沿主对角线翻转。输出包含与输入相同的 CSV 数据，但现在所有行都变成了列，所有列都变成了行。转置后，CSV 文件的尺寸将相反。例如，如果输入文件有 4 列 3 行，则输出文件将有 3 列 4 行。在转换过程中，程序还会清除数据中不必要的行，并更正不完整的数据。具体来说，该工具会自动删除所有以特定字符开头的空记录和注释，您可以在选项中设置这些字符。此外，如果 CSV 数据损坏或丢失，该实用程序会使用空字段或自定义字段（可在选项中指定）来填充文件。CSV 真是太棒了！",
+    "shortDescription": "快速转置 CSV 文件。",
+    "title": "转置 CSV"
+  }
+}

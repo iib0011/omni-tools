@@ -1,0 +1,113 @@
+{
+  "changeSpeed": {
+    "defaultMultiplier": "Standardmultiplikator: 2 bedeutet 2x schneller",
+    "description": "Ändern Sie die Wiedergabegeschwindigkeit von Videodateien. Beschleunigen oder verlangsamen Sie Videos, während die Audiosynchronisation erhalten bleibt. Unterstützt verschiedene Geschwindigkeitsmultiplikatoren und gängige Videoformate.",
+    "inputTitle": "Eingangsvideo",
+    "newVideoSpeed": "Neue Videogeschwindigkeit",
+    "resultTitle": "Bearbeitetes Video",
+    "settingSpeed": "Geschwindigkeit einstellen",
+    "shortDescription": "Ändern der Videowiedergabegeschwindigkeit",
+    "title": "Videogeschwindigkeit ändern",
+    "toolInfo": {
+      "title": "Was ist ein {{title}}?"
+    }
+  },
+  "compress": {
+    "default": "Standard",
+    "description": "Komprimieren Sie Videos, indem Sie sie auf verschiedene Auflösungen wie 240p, 480p, 720p usw. skalieren. Dieses Tool hilft, die Dateigröße zu reduzieren und gleichzeitig eine akzeptable Qualität beizubehalten. Unterstützt gängige Videoformate wie MP4, WebM und OGG.",
+    "inputTitle": "Eingangsvideo",
+    "loadingText": "Video wird komprimiert...",
+    "lossless": "Verlustfrei",
+    "quality": "Qualität (CRF)",
+    "resolution": "Auflösung",
+    "resultTitle": "Komprimiertes Video",
+    "shortDescription": "Komprimieren Sie Videos durch Skalieren auf verschiedene Auflösungen",
+    "title": "Video komprimieren",
+    "worst": "Am schlimmsten"
+  },
+  "cropVideo": {
+    "cropCoordinates": "Zuschneidekoordinaten",
+    "croppingVideo": "Video zuschneiden",
+    "description": "Schneiden Sie das Video zu, um unerwünschte Bereiche zu entfernen.",
+    "errorBeyondHeight": "Der Zuschneidebereich geht über die Videohöhe hinaus ({{height}}px)",
+    "errorBeyondWidth": "Der Zuschneidebereich geht über die Videobreite hinaus ({{width}}px)",
+    "errorCroppingVideo": "Fehler beim Zuschneiden des Videos. Bitte überprüfen Sie die Parameter und die Videodatei.",
+    "errorLoadingDimensions": "Videoabmessungen konnten nicht geladen werden",
+    "errorNonNegativeCoordinates": "X- und Y-Koordinaten dürfen nicht negativ sein",
+    "errorPositiveDimensions": "Breite und Höhe müssen positiv sein",
+    "height": "Höhe",
+    "inputTitle": "Eingangsvideo",
+    "loadVideoForDimensions": "Laden Sie ein Video, um die Abmessungen anzuzeigen",
+    "resultTitle": "Zugeschnittenes Video",
+    "shortDescription": "Video zuschneiden, um unerwünschte Bereiche zu entfernen",
+    "title": "Video zuschneiden",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie Videodateien zuschneiden, um unerwünschte Bereiche zu entfernen. Sie können den Zuschneidebereich festlegen, indem Sie die X- und Y-Koordinaten sowie die Breiten- und Höhenmaße festlegen.",
+      "title": "Video zuschneiden"
+    },
+    "videoDimensions": "Videoabmessungen: {{width}} × {{height}} Pixel",
+    "videoInformation": "Videoinformationen",
+    "width": "Breite",
+    "xCoordinate": "X (links)",
+    "yCoordinate": "Y (oben)"
+  },
+  "flip": {
+    "description": "Drehen Sie Videodateien horizontal oder vertikal. Spiegeln Sie Videos für Spezialeffekte oder zum Korrigieren von Ausrichtungsproblemen.",
+    "flippingVideo": "Video spiegeln",
+    "horizontalLabel": "Horizontal (Spiegel)",
+    "inputTitle": "Eingangsvideo",
+    "orientation": "Orientierung",
+    "resultTitle": "Gespiegeltes Video",
+    "shortDescription": "Video horizontal oder vertikal spiegeln",
+    "title": "Video umdrehen",
+    "verticalLabel": "Vertikal (auf dem Kopf stehend)"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "Ändern Sie die Wiedergabegeschwindigkeit von GIF-Animationen. Beschleunigen oder verlangsamen Sie GIFs, ohne die Animation zu verlangsamen.",
+      "shortDescription": "Ändern Sie die Geschwindigkeit der GIF-Animation",
+      "title": "GIF-Geschwindigkeit ändern"
+    }
+  },
+  "loop": {
+    "description": "Erstellen Sie ein Loop-Video, indem Sie das Originalvideo mehrmals wiederholen.",
+    "inputTitle": "Eingangsvideo",
+    "loopingVideo": "Videoschleife",
+    "loops": "Schleifen",
+    "numberOfLoops": "Anzahl der Schleifen",
+    "resultTitle": "Videoschleife",
+    "shortDescription": "Erstellen Sie Loop-Videodateien",
+    "title": "Video in Endlosschleife",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie ein Loop-Video erstellen, indem Sie das Originalvideo mehrmals wiederholen. Sie können festlegen, wie oft das Video wiederholt werden soll.",
+      "title": "Was ist ein {{title}}?"
+    }
+  },
+  "rotate": {
+    "180Degrees": "180° (auf den Kopf gestellt)",
+    "270Degrees": "270° (90° gegen den Uhrzeigersinn)",
+    "90Degrees": "90° im Uhrzeigersinn",
+    "description": "Drehen Sie Videodateien um 90, 180 oder 270 Grad. Korrigieren Sie die Videoausrichtung oder erstellen Sie Spezialeffekte mit präziser Rotationssteuerung.",
+    "inputTitle": "Eingangsvideo",
+    "resultTitle": "Gedrehtes Video",
+    "rotatingVideo": "Rotierendes Video",
+    "rotation": "Drehung",
+    "shortDescription": "Video um angegebene Gradzahlen drehen",
+    "title": "Video drehen"
+  },
+  "trim": {
+    "description": "Kürzen Sie Videodateien, indem Sie Start- und Endzeiten festlegen. Entfernen Sie unerwünschte Abschnitte am Anfang oder Ende von Videos.",
+    "endTime": "Endzeit",
+    "inputTitle": "Eingangsvideo",
+    "resultTitle": "Getrimmtes Video",
+    "shortDescription": "Schneiden Sie das Video, indem Sie unerwünschte Abschnitte entfernen",
+    "startTime": "Startzeit",
+    "timestamps": "Zeitstempel",
+    "title": "Video trimmen"
+  },
+  "videoToGif": {
+    "description": "Konvertieren Sie Videodateien in das animierte GIF-Format. Extrahieren Sie bestimmte Zeitbereiche und erstellen Sie gemeinsam nutzbare animierte Bilder.",
+    "shortDescription": "Video in animiertes GIF konvertieren",
+    "title": "Video zu GIF"
+  }
+}

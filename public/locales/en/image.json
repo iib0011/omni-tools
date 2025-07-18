@@ -1,0 +1,105 @@
+{
+  "changeColors": {
+    "description": "World",
+    "shortDescription": "Quickly swap colors in a image",
+    "title": "Change colors in image"
+  },
+  "changeOpacity": {
+    "description": "Easily adjust the transparency of your images. Simply upload your image, use the slider to set the desired opacity level between 0 (fully transparent) and 1 (fully opaque), and download the modified image.",
+    "shortDescription": "Adjust transparency of images",
+    "title": "Change image Opacity"
+  },
+  "compress": {
+    "compressedSize": "Compressed Size",
+    "compressionOptions": "Compression options",
+    "description": "Reduce image file size while maintaining quality.",
+    "failedToCompress": "Failed to compress image. Please try again.",
+    "fileSizes": "File sizes",
+    "inputTitle": "Input image",
+    "maxFileSizeDescription": "Maximum file size in megabytes",
+    "originalSize": "Original Size",
+    "qualityDescription": "Image quality percentage (lower means smaller file size)",
+    "resultTitle": "Compressed image",
+    "shortDescription": "Compress images to reduce file size while maintaining reasonable quality.",
+    "title": "Compress Image"
+  },
+  "compressPng": {
+    "description": "This is a program that compresses PNG pictures. As soon as you paste your PNG picture in the input area, the program will compress it and show the result in the output area. In the options, you can adjust the compression level, as well as find the old and new picture file sizes.",
+    "shortDescription": "Quickly compress a PNG",
+    "title": "Compress png"
+  },
+  "convertJgpToPng": {
+    "description": "Quickly convert your JPG images to PNG. Just import your PNG image in the editor on the left",
+    "shortDescription": "Quickly convert your JPG images to PNG",
+    "title": "Convert JPG to PNG"
+  },
+  "convertToJpg": {
+    "description": "Convert various image formats (PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW) to JPG with customizable quality and background color settings.",
+    "shortDescription": "Convert images to JPG with quality control",
+    "title": "Convert Images to JPG"
+  },
+  "createTransparent": {
+    "description": "World",
+    "shortDescription": "Quickly make an image transparent",
+    "title": "Create transparent PNG"
+  },
+  "crop": {
+    "description": "Crop images to remove unwanted areas.",
+    "inputTitle": "Input image",
+    "resultTitle": "Cropped image",
+    "shortDescription": "Crop images quickly.",
+    "title": "Crop Image"
+  },
+  "editor": {
+    "description": "Advanced image editor with tools for cropping, rotating, annotating, adjusting colors, and adding watermarks. Edit your images with professional-grade tools directly in your browser.",
+    "shortDescription": "Edit images with advanced tools and features",
+    "title": "Image Editor"
+  },
+  "imageToText": {
+    "description": "Extract text from images (JPG, PNG) using optical character recognition (OCR).",
+    "shortDescription": "Extract text from images using OCR.",
+    "title": "Image to Text (OCR)"
+  },
+  "qrCode": {
+    "description": "Generate QR codes for different data types: URL, Text, Email, Phone, SMS, WiFi, vCard, and more.",
+    "shortDescription": "Create customized QR codes for various data formats.",
+    "title": "QR Code Generator"
+  },
+  "removeBackground": {
+    "description": "World",
+    "shortDescription": "Automatically remove backgrounds from images",
+    "title": "Remove Background from Image"
+  },
+  "resize": {
+    "description": "Resize images to different dimensions.",
+    "dimensionType": "Dimension Type",
+    "heightDescription": "Height (in pixels)",
+    "inputTitle": "Input Image",
+    "maintainAspectRatio": "Maintain Aspect Ratio",
+    "maintainAspectRatioDescription": "Maintain the original aspect ratio of the image.",
+    "percentage": "Percentage",
+    "percentageDescription": "Percentage of original size (e.g., 50 for half size, 200 for double size)",
+    "resizeByPercentage": "Resize by Percentage",
+    "resizeByPercentageDescription": "Resize by specifying a percentage of the original size.",
+    "resizeByPixels": "Resize by Pixels",
+    "resizeByPixelsDescription": "Resize by specifying dimensions in pixels.",
+    "resizeMethod": "Resize Method",
+    "resultTitle": "Resized Image",
+    "setHeight": "Set Height",
+    "setHeightDescription": "Specify the height in pixels and calculate width based on aspect ratio.",
+    "setWidth": "Set Width",
+    "setWidthDescription": "Specify the width in pixels and calculate height based on aspect ratio.",
+    "shortDescription": "Resize images easily.",
+    "title": "Resize Image",
+    "toolInfo": {
+      "description": "This tool allows you to resize JPG, PNG, SVG, or GIF images. You can resize by specifying dimensions in pixels or by percentage, with options to maintain the original aspect ratio.",
+      "title": "Resize Image"
+    },
+    "widthDescription": "Width (in pixels)"
+  },
+  "rotate": {
+    "description": "Rotate an image by a specified angle.",
+    "shortDescription": "Rotate an image easily.",
+    "title": "Rotate Image"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "changeSpeed": {
+    "description": "Wijzig de afspeelsnelheid van audiobestanden. Versnel of vertraag audio met behoud van toonhoogte.",
+    "inputTitle": "Invoer audio",
+    "newAudioSpeed": "Nieuwe audiosnelheid",
+    "outputFormat": "Uitvoerformaat",
+    "resultTitle": "Bewerkte audio",
+    "settingSpeed": "Snelheid instellen",
+    "shortDescription": "De snelheid van audiobestanden wijzigen",
+    "speedDescription": "Standaardvermenigvuldiger: 2 betekent 2x sneller",
+    "title": "Wijzig audiosnelheid",
+    "toolInfo": {
+      "title": "Wat is {{title}}?"
+    }
+  },
+  "extractAudio": {
+    "description": "Haal een audiotrack uit videobestanden.",
+    "extractingAudio": "Audio extraheren",
+    "inputTitle": "Invoervideo",
+    "outputFormat": "Uitvoerformaat",
+    "outputFormatDescription": "Selecteer het formaat waarin u de audio wilt extraheren.",
+    "resultTitle": "Geëxtraheerde audio",
+    "shortDescription": "Extraheer audio uit videobestanden (MP4, MOV, enz.) naar AAC, MP3 of WAV.",
+    "title": "Audio uit video extraheren",
+    "toolInfo": {
+      "description": "Met deze tool kun je de audiotrack uit videobestanden halen. Je kunt kiezen uit verschillende audioformaten, waaronder AAC, MP3 en WAV.",
+      "title": "Wat is {{title}}?"
+    }
+  },
+  "mergeAudio": {
+    "description": "Combineer meerdere audiobestanden tot één audiobestand door ze in volgorde te plaatsen.",
+    "longDescription": "Met deze tool kun je meerdere audiobestanden samenvoegen tot één bestand door ze te combineren in de volgorde waarin je ze uploadt. Perfect voor het combineren van podcastfragmenten, muzieknummers of andere audiobestanden die moeten worden samengevoegd. Ondersteunt diverse audioformaten, waaronder MP3, AAC en WAV.",
+    "shortDescription": "Voeg meerdere audiobestanden samen tot één bestand (MP3, AAC, WAV).",
+    "title": "Audio samenvoegen"
+  },
+  "trim": {
+    "description": "Knip en trim audiobestanden om specifieke segmenten te extraheren door start- en eindtijden op te geven.",
+    "longDescription": "Met deze tool kun je audiobestanden inkorten door de begin- en eindtijd op te geven. Je kunt specifieke segmenten uit langere audiobestanden halen, ongewenste delen verwijderen of kortere clips maken. Ondersteunt diverse audioformaten, waaronder MP3, AAC en WAV. Perfect voor podcastbewerking, muziekproductie of andere audiobewerkingsbehoeften.",
+    "shortDescription": "Trim audiobestanden om specifieke tijdssegmenten te extraheren (MP3, AAC, WAV).",
+    "title": "Audio bijsnijden"
+  }
+}

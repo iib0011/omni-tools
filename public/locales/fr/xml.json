@@ -1,0 +1,38 @@
+{
+  "xmlBeautifier": {
+    "description": "Formater XML avec une indentation et un espacement appropriés.",
+    "indentation": "Indentation",
+    "inputTitle": "XML d'entrée",
+    "resultTitle": "XML embelli",
+    "shortDescription": "Formater et embellir le code XML",
+    "title": "Embellisseur XML",
+    "toolInfo": {
+      "description": "Cet outil vous permet de formater les données XML avec une indentation et un espacement appropriés, les rendant plus lisibles et plus faciles à utiliser.",
+      "title": "Embellisseur XML"
+    },
+    "useSpaces": "Utiliser les espaces",
+    "useSpacesDescription": "Indenter la sortie avec des espaces",
+    "useTabs": "Utiliser les onglets",
+    "useTabsDescription": "Indenter la sortie avec des tabulations."
+  },
+  "xmlValidator": {
+    "description": "Valider la syntaxe et la structure XML.",
+    "placeholder": "Collez ou importez du XML ici...",
+    "shortDescription": "Valider le code XML pour les erreurs",
+    "title": "Validateur XML",
+    "toolInfo": {
+      "description": "Cet outil vous permet de valider la syntaxe et la structure XML. Il vérifie la bonne formation du XML et fournit des messages d'erreur détaillés pour tout problème détecté.",
+      "title": "Validateur XML"
+    }
+  },
+  "xmlViewer": {
+    "description": "Afficher et explorer la structure XML dans un format arborescent.",
+    "inputTitle": "XML d'entrée",
+    "resultTitle": "Vue arborescente du XML",
+    "title": "Visionneuse XML",
+    "toolInfo": {
+      "description": "Cet outil vous permet de visualiser les données XML dans un format d'arborescence hiérarchique, ce qui facilite l'exploration et la compréhension de la structure des documents XML.",
+      "title": "Visionneuse XML"
+    }
+  }
+}

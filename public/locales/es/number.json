@@ -1,0 +1,89 @@
+{
+  "arithmeticSequence": {
+    "commonDifferenceDescription": "Diferencia común entre términos (d)",
+    "description": "Genere secuencias aritméticas con parámetros personalizables.",
+    "firstTermDescription": "Primer término de la secuencia (a₁)",
+    "numberOfTermsDescription": "Número de términos a generar (n)",
+    "outputFormat": "Formato de salida",
+    "resultTitle": "Secuencia generada",
+    "separatorDescription": "Separador entre términos",
+    "sequenceParameters": "Parámetros de secuencia",
+    "shortDescription": "Generar secuencias aritméticas",
+    "title": "Sucesión aritmética",
+    "toolInfo": {
+      "description": "Una sucesión aritmética es una secuencia de números donde la diferencia entre cada término consecutivo es constante. Esta diferencia constante se denomina diferencia común. Dados el primer término (a₁) y la diferencia común (d), cada término se puede hallar sumando la diferencia común al término anterior.",
+      "title": "¿Qué es una secuencia aritmética?"
+    }
+  },
+  "generate": {
+    "arithmeticSequenceOption": "Opción de secuencia aritmética",
+    "description": "Genere una secuencia de números con parámetros personalizables.",
+    "numberOfElementsDescription": "Número de elementos en secuencia.",
+    "resultTitle": "Números generados",
+    "separator": "Separador",
+    "separatorDescription": "Separa elementos de la secuencia aritmética mediante este carácter.",
+    "shortDescription": "Generar números aleatorios en rangos específicos",
+    "startSequenceDescription": "Inicie la secuencia desde este número.",
+    "stepDescription": "Aumente cada elemento en esta cantidad",
+    "title": "Generar",
+    "toolInfo": {
+      "description": "Esta herramienta permite generar una secuencia de números con parámetros personalizables. Se puede especificar el valor inicial, el tamaño del paso y el número de elementos.",
+      "title": "Generar números"
+    }
+  },
+  "ohmsLaw": {
+    "description": "Calcula voltaje, corriente y resistencia.",
+    "longDescription": "Esta calculadora aplica la Ley de Ohm (V = I × R) para determinar cualquiera de los tres parámetros eléctricos cuando se conocen los otros dos. La Ley de Ohm es un principio fundamental en ingeniería eléctrica que describe la relación entre el voltaje (V), la corriente (I) y la resistencia (R). Esta herramienta es esencial para aficionados a la electrónica, ingenieros eléctricos y estudiantes que trabajan con circuitos para resolver rápidamente valores desconocidos en sus diseños eléctricos.",
+    "shortDescription": "Calcular voltaje, corriente o resistencia en circuitos eléctricos utilizando la Ley de Ohm",
+    "title": "Ley de Ohm"
+  },
+  "slackline": {
+    "description": "Calcula la tensión en una slackline",
+    "longDescription": "Esta calculadora asume una carga en el centro de la cuerda.",
+    "shortDescription": "Calcula la tensión aproximada de un slackline o tendedero. No confíes en esto para tu seguridad.",
+    "title": "Tensión de la slackline"
+  },
+  "sphereArea": {
+    "description": "Área de una esfera",
+    "longDescription": "Esta calculadora determina el área superficial de una esfera mediante la fórmula A = 4πr². Puedes introducir el radio para hallar el área superficial o introducir el área superficial para calcular el radio requerido. Esta herramienta es útil para estudiantes de geometría, ingenieros que trabajan con objetos esféricos y cualquier persona que necesite realizar cálculos con superficies esféricas.",
+    "shortDescription": "Calcular el área superficial de una esfera en función de su radio.",
+    "title": "Área de una esfera"
+  },
+  "sphereVolume": {
+    "description": "Volumen de una esfera",
+    "longDescription": "Esta calculadora calcula el volumen de una esfera mediante la fórmula V = (4/3)πr³. Puede introducir el radio o el diámetro para calcular el volumen, o bien introducir el volumen para determinar el radio requerido. Esta herramienta es útil para estudiantes, ingenieros y profesionales que trabajan con objetos esféricos en campos como la física, la ingeniería y la fabricación.",
+    "shortDescription": "Calcular el volumen de una esfera usando el radio o el diámetro.",
+    "title": "Volumen de una esfera"
+  },
+  "sum": {
+    "description": "Calcula la suma de una lista de números. Introduce los números separados por comas o saltos de línea para obtener la suma total.",
+    "extractionTypes": {
+      "delimiter": {
+        "description": "Personaliza aquí el separador de números (predeterminado: un salto de línea).",
+        "title": "Delimitador de números"
+      },
+      "smart": {
+        "description": "Detectar automáticamente números en la entrada.",
+        "title": "Suma inteligente"
+      }
+    },
+    "inputTitle": "Aporte",
+    "numberExtraction": "Extracción de números",
+    "printRunningSum": "Imprimir suma continua",
+    "printRunningSumDescription": "Muestra la suma a medida que se calcula paso a paso.",
+    "resultTitle": "Total",
+    "runningSum": "Suma continua",
+    "shortDescription": "Calcular la suma de números",
+    "title": "Suma",
+    "toolInfo": {
+      "description": "Esta es una utilidad en línea para calcular la suma de un conjunto de números. Puede introducir los números separados por coma, espacio o cualquier otro carácter, incluido el salto de línea. También puede pegar un fragmento de texto que contenga valores numéricos que desee sumar y la utilidad los extraerá y calculará su suma.",
+      "title": "¿Qué es una calculadora de suma de números?"
+    }
+  },
+  "voltageDropInWire": {
+    "description": "Calcula el voltaje de ida y vuelta y la pérdida de potencia en un cable de 2 conductores.",
+    "longDescription": "Esta calculadora ayuda a determinar la caída de tensión y la pérdida de potencia en un cable eléctrico de dos conductores. Considera la longitud del cable, el calibre del cable (área de la sección transversal), la resistividad del material y el flujo de corriente. La herramienta calcula la caída de tensión de ida y vuelta, la resistencia total del cable y la potencia disipada en forma de calor. Resulta especialmente útil para ingenieros eléctricos, electricistas y aficionados al diseñar sistemas eléctricos para garantizar que los niveles de tensión se mantengan dentro de los límites aceptables en la carga.",
+    "shortDescription": "Calcular la caída de tensión y la pérdida de potencia en cables eléctricos en función de la longitud, el material y la corriente.",
+    "title": "Caída de tensión de ida y vuelta en el cable"
+  }
+}

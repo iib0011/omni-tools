@@ -1,0 +1,114 @@
+{
+  "changeCsvSeparator": {
+    "description": "Ändern Sie das Trennzeichen in CSV-Dateien. Konvertieren Sie zwischen verschiedenen CSV-Formaten wie Komma, Semikolon, Tabulator oder benutzerdefinierten Trennzeichen.",
+    "shortDescription": "CSV-Dateitrennzeichen ändern",
+    "title": "CSV-Trennzeichen ändern"
+  },
+  "csvRowsToColumns": {
+    "description": "Dieses Tool konvertiert Zeilen einer CSV-Datei (Comma Separated Values) in Spalten. Es extrahiert die horizontalen Zeilen einzeln aus der CSV-Eingabedatei, dreht sie um 90 Grad und gibt sie als vertikale Spalten nacheinander, durch Kommas getrennt, aus.', longDescription: 'Dieses Tool konvertiert Zeilen einer CSV-Datei (Comma Separated Values) in Spalten. Wenn die CSV-Eingabedaten beispielsweise sechs Zeilen haben, enthält die Ausgabe sechs Spalten, und die Elemente der Zeilen werden von oben nach unten angeordnet. In einer korrekt formatierten CSV-Datei ist die Anzahl der Werte in jeder Zeile gleich. Fehlende Felder in Zeilen können vom Programm korrigiert werden. Sie haben die Wahl zwischen verschiedenen Optionen: Füllen Sie fehlende Daten mit leeren Elementen auf oder ersetzen Sie fehlende Daten durch benutzerdefinierte Elemente wie \"missing\", \"?\" oder \"x\". Während der Konvertierung bereinigt das Tool die CSV-Datei außerdem von unnötigen Informationen wie Leerzeilen (Zeilen ohne sichtbare Informationen) und Kommentaren. Damit das Tool Kommentare korrekt erkennt, können Sie in den Optionen das Symbol am Zeilenanfang angeben, mit dem ein Kommentar beginnt. Dieses Symbol ist typischerweise ein Rautezeichen (#) oder ein doppelter Schrägstrich (//). CSV-abulous!",
+    "longDescription": "Dieses Tool konvertiert Zeilen einer CSV-Datei (Comma Separated Values) in Spalten. Wenn die CSV-Eingabedaten beispielsweise sechs Zeilen umfassen, enthält die Ausgabe sechs Spalten, und die Elemente der Zeilen werden von oben nach unten angeordnet. In einer korrekt formatierten CSV-Datei ist die Anzahl der Werte in jeder Zeile gleich. Sollten in Zeilen jedoch Felder fehlen, kann das Programm diese korrigieren. Sie haben die Wahl zwischen verschiedenen Optionen: Füllen Sie fehlende Daten mit leeren Elementen auf oder ersetzen Sie fehlende Daten durch benutzerdefinierte Elemente, wie z. B.",
+    "shortDescription": "Konvertieren Sie CSV-Zeilen in Spalten.",
+    "title": "CSV-Zeilen in Spalten konvertieren"
+  },
+  "csvToJson": {
+    "columnSeparator": "Spaltentrennzeichen (z. B. , ; \\t)",
+    "commentSymbol": "Kommentarsymbol (z. B. #)",
+    "conversionOptions": "Konvertierungsoptionen",
+    "description": "Konvertieren Sie CSV-Dateien in das JSON-Format mit anpassbaren Optionen für Trennzeichen, Anführungszeichen und Ausgabeformatierung. Unterstützt werden Header, Kommentare und dynamische Typkonvertierung.",
+    "dynamicTypes": "Dynamische Typen",
+    "dynamicTypesDescription": "Automatische Konvertierung von Zahlen und Booleschen Werten",
+    "errorParsing": "Fehler beim Parsen der CSV-Datei: {{error}}",
+    "fieldQuote": "Feld Zitat (z. B. \")",
+    "inputCsvFormat": "Eingabe-CSV-Format",
+    "inputTitle": "Eingabe-CSV",
+    "resultTitle": "JSON-Ausgabe",
+    "shortDescription": "Konvertieren Sie CSV-Daten in das JSON-Format.",
+    "skipEmptyLines": "Leere Zeilen überspringen",
+    "skipEmptyLinesDescription": "Leere Zeilen in der CSV-Eingabe ignorieren",
+    "title": "Konvertieren Sie CSV in JSON",
+    "useHeaders": "Verwenden Sie Überschriften",
+    "useHeadersDescription": "Behandeln Sie die erste Zeile als Spaltenüberschrift"
+  },
+  "csvToTsv": {
+    "description": "Laden Sie Ihre CSV-Datei im untenstehenden Formular hoch. Sie wird automatisch in eine TSV-Datei konvertiert. In den Tool-Optionen können Sie das CSV-Eingabeformat anpassen – Feldtrennzeichen, Anführungszeichen und Kommentarsymbol festlegen, leere CSV-Zeilen überspringen und festlegen, ob CSV-Spaltenüberschriften beibehalten werden sollen.",
+    "longDescription": "Dieses Tool wandelt CSV-Daten (Comma Separated Values) in TSV-Daten (Tab Separated Values) um. Sowohl CSV als auch TSV sind gängige Dateiformate zur Speicherung tabellarischer Daten, verwenden jedoch unterschiedliche Trennzeichen zur Trennung der Werte – CSV verwendet Kommas (",
+    "shortDescription": "Konvertieren Sie CSV-Daten in das TSV-Format.",
+    "title": "Konvertieren Sie CSV in TSV"
+  },
+  "csvToXml": {
+    "description": "Konvertieren Sie CSV-Dateien mit anpassbaren Optionen in das XML-Format.",
+    "shortDescription": "Konvertieren Sie CSV-Daten in das XML-Format.",
+    "title": "Konvertieren Sie CSV in XML"
+  },
+  "csvToYaml": {
+    "description": "Laden Sie Ihre CSV-Datei einfach im untenstehenden Formular hoch. Sie wird dann automatisch in eine YAML-Datei konvertiert. In den Tool-Optionen können Sie Feldtrennzeichen, Anführungszeichen und Kommentarzeichen festlegen, um das Tool an benutzerdefinierte CSV-Formate anzupassen. Zusätzlich können Sie das YAML-Ausgabeformat auswählen: eines, das CSV-Header beibehält, oder eines, das CSV-Header ausschließt.",
+    "longDescription": "Dieses Tool wandelt CSV-Daten (Comma Separated Values) in YAML-Daten (Yet Another Markup Language) um. CSV ist ein einfaches, tabellarisches Format zur Darstellung matrixartiger Datentypen mit Zeilen und Spalten. YAML hingegen ist ein erweitertes Format (eigentlich eine Obermenge von JSON), das besser lesbare Daten für die Serialisierung erzeugt und Listen, Wörterbücher und verschachtelte Objekte unterstützt. Das Programm unterstützt verschiedene CSV-Eingabeformate – die Eingabedaten können durch Kommas (Standard), Semikolons, Pipes oder ein anderes Trennzeichen getrennt sein. Sie können das genaue Trennzeichen Ihrer Daten in den Optionen festlegen. Ebenso können Sie in den Optionen das Anführungszeichen festlegen, das zum Umschließen von CSV-Feldern verwendet wird (standardmäßig ein doppeltes Anführungszeichen). Sie können auch Zeilen überspringen, die mit Kommentaren beginnen, indem Sie die Kommentarsymbole in den Optionen angeben. So halten Sie Ihre Daten übersichtlich, indem Sie unnötige Zeilen überspringen. Es gibt zwei Möglichkeiten, CSV in YAML zu konvertieren. Die erste Methode konvertiert jede CSV-Zeile in eine YAML-Liste. Die zweite Methode extrahiert Header aus der ersten CSV-Zeile und erstellt YAML-Objekte mit Schlüsseln basierend auf diesen Headern. Sie können das YAML-Ausgabeformat auch anpassen, indem Sie die Anzahl der Leerzeichen für die Einrückung von YAML-Strukturen angeben. Wenn Sie die umgekehrte Konvertierung durchführen, d. h. YAML in CSV umwandeln möchten, können Sie unser Tool „YAML in CSV konvertieren“ verwenden. CSV-genial!",
+    "shortDescription": "Konvertieren Sie schnell eine CSV-Datei in eine YAML-Datei.",
+    "title": "Konvertieren Sie CSV in YAML"
+  },
+  "findIncompleteCsvRecords": {
+    "checkingOptions": "Optionen prüfen",
+    "commentCharacterDescription": "Geben Sie das Zeichen ein, das den Beginn einer Kommentarzeile kennzeichnet. Zeilen, die mit diesem Symbol beginnen, werden übersprungen.",
+    "csvInputOptions": "CSV-Eingabeoptionen",
+    "csvSeparatorDescription": "Geben Sie das Zeichen ein, das zum Trennen von Spalten in der CSV-Eingabedatei verwendet wird.",
+    "deleteLinesWithNoData": "Zeilen ohne Daten löschen",
+    "deleteLinesWithNoDataDescription": "Entfernen Sie leere Zeilen aus der CSV-Eingabedatei.",
+    "description": "Laden Sie einfach Ihre CSV-Datei im untenstehenden Formular hoch. Das Tool prüft automatisch, ob in Zeilen und Spalten Werte fehlen. In den Tool-Optionen können Sie das Eingabedateiformat anpassen (Trennzeichen, Anführungszeichen und Kommentarzeichen festlegen). Zusätzlich können Sie die Prüfung auf leere Werte aktivieren, leere Zeilen überspringen und die Anzahl der Fehlermeldungen in der Ausgabe begrenzen.",
+    "findEmptyValues": "Leere Werte finden",
+    "findEmptyValuesDescription": "Zeigt eine Meldung zu leeren CSV-Feldern an (das sind keine fehlenden Felder, sondern Felder, die nichts enthalten).",
+    "inputTitle": "Eingabe-CSV",
+    "limitNumberOfMessages": "Anzahl der Nachrichten begrenzen",
+    "messageLimitDescription": "Legen Sie die Begrenzung der Anzahl der Nachrichten in der Ausgabe fest.",
+    "quoteCharacterDescription": "Geben Sie das Anführungszeichen ein, das zum Zitieren der CSV-Eingabefelder verwendet wird.",
+    "resultTitle": "CSV-Status",
+    "shortDescription": "Finden Sie schnell Zeilen und Spalten in CSV, in denen Werte fehlen.",
+    "title": "Unvollständige CSV-Datensätze finden",
+    "toolInfo": {
+      "title": "Was ist ein {{title}}?"
+    }
+  },
+  "insertCsvColumns": {
+    "appendColumns": "Spalten anhängen",
+    "commentCharacterDescription": "Geben Sie das Zeichen ein, das den Beginn einer Kommentarzeile kennzeichnet. Zeilen, die mit diesem Symbol beginnen, werden übersprungen.",
+    "csvOptions": "CSV-Optionen",
+    "csvSeparator": "CSV-Trennzeichen",
+    "csvToInsert": "CSV zum Einfügen",
+    "csvToInsertDescription": "Geben Sie eine oder mehrere Spalten ein, die Sie in die CSV-Datei einfügen möchten. Das Zeichen zur Spaltentrennung muss mit dem Zeichen in der CSV-Eingabedatei übereinstimmen. Hinweis: Leere Zeilen werden ignoriert.",
+    "customFillDescription": "Wenn die CSV-Eingabedatei unvollständig ist (fehlende Werte), fügen Sie den Datensätzen dann leere Felder oder benutzerdefinierte Symbole hinzu, um eine wohlgeformte CSV-Datei zu erstellen?",
+    "customFillValueDescription": "Verwenden Sie diesen benutzerdefinierten Wert, um fehlende Felder auszufüllen. (Funktioniert nur mit dem oben beschriebenen Modus „Benutzerdefinierte Werte“).",
+    "customPosition": "Benutzerdefinierte Position",
+    "customPositionOptionsDescription": "Wählen Sie die Methode zum Einfügen der Spalten in die CSV-Datei.",
+    "description": "Fügen Sie den CSV-Daten an angegebenen Positionen neue Spalten hinzu.",
+    "fillWithCustomValues": "Mit Zollwerten füllen",
+    "fillWithEmptyValues": "Mit leeren Werten füllen",
+    "headerName": "Kopfzeilenname",
+    "headerNameDescription": "Überschrift der Spalte, nach der Sie Spalten einfügen möchten.",
+    "inputTitle": "Eingabe-CSV",
+    "insertingPositionDescription": "Geben Sie an, wo die Spalten in der CSV-Datei eingefügt werden sollen.",
+    "position": "Position",
+    "positionOptions": "Positionsoptionen",
+    "prependColumns": "Spalten voranstellen",
+    "quoteCharDescription": "Geben Sie das Anführungszeichen ein, das zum Zitieren der CSV-Eingabefelder verwendet wird.",
+    "resultTitle": "Ausgabe-CSV",
+    "rowNumberDescription": "Nummer der Spalte, nach der Sie Spalten einfügen möchten.",
+    "separatorDescription": "Geben Sie das Zeichen ein, das zum Trennen von Spalten in der CSV-Eingabedatei verwendet wird.",
+    "shortDescription": "Fügen Sie schnell eine oder mehrere neue Spalten an beliebiger Stelle in einer CSV-Datei ein.",
+    "title": "CSV-Spalten einfügen",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie neue Spalten an bestimmten Positionen in CSV-Daten einfügen. Sie können Spalten basierend auf Überschriftennamen oder Spaltennummern an benutzerdefinierten Positionen voranstellen, anhängen oder einfügen.",
+      "title": "CSV-Spalten einfügen"
+    }
+  },
+  "swapCsvColumns": {
+    "description": "Laden Sie einfach Ihre CSV-Datei im untenstehenden Formular hoch und geben Sie die zu tauschenden Spalten an. Das Tool ändert dann automatisch die Positionen der angegebenen Spalten in der Ausgabedatei. In den Tool-Optionen können Sie die zu tauschenden Spaltenpositionen oder -namen angeben, unvollständige Daten korrigieren und optional leere und auskommentierte Datensätze entfernen.",
+    "longDescription": "Dieses Tool reorganisiert CSV-Daten, indem es die Positionen der Spalten tauscht. Das Tauschen von Spalten verbessert die Lesbarkeit einer CSV-Datei, indem häufig verwendete Daten zusammen oder nach vorne platziert werden, um den Vergleich und die Bearbeitung zu erleichtern. Sie können beispielsweise die erste Spalte mit der letzten oder die zweite Spalte mit der dritten tauschen. Um Spalten basierend auf ihren Positionen zu tauschen, wählen Sie das",
+    "shortDescription": "CSV-Spalten neu anordnen.",
+    "title": "CSV-Spalten austauschen"
+  },
+  "transposeCsv": {
+    "description": "Laden Sie einfach Ihre CSV-Datei in das untenstehende Formular hoch. Das Tool transponiert Ihre CSV-Datei automatisch. In den Tool-Optionen können Sie das Zeichen angeben, mit dem die Kommentarzeilen in der CSV-Datei beginnen, um diese zu entfernen. Falls die CSV-Datei unvollständig ist (fehlende Werte), können Sie fehlende Werte durch ein Leerzeichen oder ein benutzerdefiniertes Zeichen ersetzen.",
+    "longDescription": "Dieses Tool transponiert Komma-getrennte Werte (CSV). Es behandelt die CSV-Datei wie eine Datenmatrix und spiegelt alle Elemente entlang der Hauptdiagonale. Die Ausgabe enthält dieselben CSV-Daten wie die Eingabe, wobei nun alle Zeilen zu Spalten und alle Spalten zu Zeilen werden. Nach der Transposition weist die CSV-Datei entgegengesetzte Dimensionen auf. Wenn die Eingabedatei beispielsweise 4 Spalten und 3 Zeilen enthält, enthält die Ausgabedatei 3 Spalten und 4 Zeilen. Während der Konvertierung bereinigt das Programm die Daten außerdem von unnötigen Zeilen und korrigiert unvollständige Daten. Insbesondere löscht das Tool automatisch alle leeren Datensätze und Kommentare, die mit einem bestimmten Zeichen beginnen, das Sie in den Optionen festlegen können. Sollten die CSV-Daten beschädigt oder verloren gehen, ergänzt das Dienstprogramm die Datei zusätzlich mit leeren Feldern oder benutzerdefinierten Feldern, die Sie in den Optionen festlegen können. CSV-unverständlich!",
+    "shortDescription": "Transponieren Sie schnell eine CSV-Datei.",
+    "title": "CSV transponieren"
+  }
+}

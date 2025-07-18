@@ -1,13 +1,14 @@
-import { Box, TextField, Typography, Alert } from '@mui/material';
-import { useCallback, useState, useEffect } from 'react';
-import ToolFileResult from '@components/result/ToolFileResult';
+import { Box, Typography, TextField, Alert } from '@mui/material';
+import React, { useState, useCallback } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
-import { GetGroupsType } from '@components/options/ToolOptions';
-import { debounce } from 'lodash';
-import ToolVideoInput from '@components/input/ToolVideoInput';
 import { cropVideo, getVideoDimensions } from './service';
 import { InitialValuesType } from './types';
+import ToolVideoInput from '@components/input/ToolVideoInput';
+import { GetGroupsType } from '@components/options/ToolOptions';
+import ToolFileResult from '@components/result/ToolFileResult';
+import { debounce } from 'lodash';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   x: 0,
@@ -17,6 +18,7 @@ const initialValues: InitialValuesType = {
 };
 
 export default function CropVideo({ title }: ToolComponentProps) {
+  const { t } = useTranslation('video');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -30,19 +32,23 @@ export default function CropVideo({ title }: ToolComponentProps) {
     if (!videoDimensions) return '';
 
     if (values.x < 0 || values.y < 0) {
-      return 'X and Y coordinates must be non-negative';
+      return t('cropVideo.errorNonNegativeCoordinates');
     }
 
     if (values.width <= 0 || values.height <= 0) {
-      return 'Width and height must be positive';
+      return t('cropVideo.errorPositiveDimensions');
     }
 
     if (values.x + values.width > videoDimensions.width) {
-      return `Crop area extends beyond video width (${videoDimensions.width}px)`;
+      return t('cropVideo.errorBeyondWidth', {
+        width: videoDimensions.width
+      });
     }
 
     if (values.y + values.height > videoDimensions.height) {
-      return `Crop area extends beyond video height (${videoDimensions.height}px)`;
+      return t('cropVideo.errorBeyondHeight', {
+        height: videoDimensions.height
+      });
     }
 
     return '';
@@ -68,9 +74,7 @@ export default function CropVideo({ title }: ToolComponentProps) {
       setResult(croppedFile);
     } catch (error) {
       console.error('Error cropping video:', error);
-      setProcessingError(
-        'Error cropping video. Please check parameters and video file.'
-      );
+      setProcessingError(t('cropVideo.errorCroppingVideo'));
     } finally {
       setLoading(false);
     }
@@ -86,24 +90,26 @@ export default function CropVideo({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Video Information',
+      title: t('cropVideo.videoInformation'),
       component: (
         <Box>
           {videoDimensions ? (
             <Typography variant="body2" sx={{ mb: 2 }}>
-              Video dimensions: {videoDimensions.width} ×{' '}
-              {videoDimensions.height} pixels
+              {t('cropVideo.videoDimensions', {
+                width: videoDimensions.width,
+                height: videoDimensions.height
+              })}
             </Typography>
           ) : (
             <Typography variant="body2" sx={{ mb: 2 }}>
-              Load a video to see dimensions
+              {t('cropVideo.loadVideoForDimensions')}
             </Typography>
           )}
         </Box>
       )
     },
     {
-      title: 'Crop Coordinates',
+      title: t('cropVideo.cropCoordinates'),
       component: (
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           {processingError && (
@@ -113,7 +119,7 @@ export default function CropVideo({ title }: ToolComponentProps) {
           )}
           <Box sx={{ display: 'flex', gap: 2 }}>
             <TextField
-              label="X (left)"
+              label={t('cropVideo.xCoordinate')}
               type="number"
               value={values.x}
               onChange={(e) => updateField('x', parseInt(e.target.value) || 0)}
@@ -121,7 +127,7 @@ export default function CropVideo({ title }: ToolComponentProps) {
               inputProps={{ min: 0 }}
             />
             <TextField
-              label="Y (top)"
+              label={t('cropVideo.yCoordinate')}
               type="number"
               value={values.y}
               onChange={(e) => updateField('y', parseInt(e.target.value) || 0)}
@@ -131,7 +137,7 @@ export default function CropVideo({ title }: ToolComponentProps) {
           </Box>
           <Box sx={{ display: 'flex', gap: 2 }}>
             <TextField
-              label="Width"
+              label={t('cropVideo.width')}
               type="number"
               value={values.width}
               onChange={(e) =>
@@ -141,7 +147,7 @@ export default function CropVideo({ title }: ToolComponentProps) {
               inputProps={{ min: 1 }}
             />
             <TextField
-              label="Height"
+              label={t('cropVideo.height')}
               type="number"
               value={values.height}
               onChange={(e) =>
@@ -183,7 +189,7 @@ export default function CropVideo({ title }: ToolComponentProps) {
                 })
                 .catch((error) => {
                   console.error('Error getting video dimensions:', error);
-                  setProcessingError('Failed to load video dimensions');
+                  setProcessingError(t('cropVideo.errorLoadingDimensions'));
                 });
             } else {
               setVideoDimensions(null);
@@ -191,20 +197,20 @@ export default function CropVideo({ title }: ToolComponentProps) {
             }
             setInput(video);
           }}
-          title={'Input Video'}
+          title={t('cropVideo.inputTitle')}
         />
       )}
       resultComponent={
         loading ? (
           <ToolFileResult
-            title={'Cropping Video'}
+            title={t('cropVideo.croppingVideo')}
             value={null}
             loading={true}
             extension={''}
           />
         ) : (
           <ToolFileResult
-            title={'Cropped Video'}
+            title={t('cropVideo.resultTitle')}
             value={result}
             extension={'mp4'}
           />

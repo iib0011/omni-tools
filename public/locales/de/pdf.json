@@ -1,0 +1,113 @@
+{
+  "compressPdf": {
+    "compressedFileSize": "Komprimierte Dateigröße",
+    "compressingPdf": "PDF wird komprimiert...",
+    "compressionLevel": "Komprimierungsstufe",
+    "compressionSettings": "Komprimierungseinstellungen",
+    "description": "Reduzieren Sie die PDF-Dateigröße bei gleichbleibender Qualität mit Ghostscript",
+    "errorCompressingPdf": "PDF konnte nicht komprimiert werden: {{error}}",
+    "errorReadingPdf": "PDF-Datei konnte nicht gelesen werden. Bitte stellen Sie sicher, dass es sich um eine gültige PDF-Datei handelt.",
+    "fileSize": "Originaldateigröße",
+    "highCompression": "Hohe Kompression",
+    "highCompressionDescription": "Maximale Reduzierung der Dateigröße mit gewissem Qualitätsverlust",
+    "inputTitle": "Eingabe-PDF",
+    "lowCompression": "Geringe Kompression",
+    "lowCompressionDescription": "Reduzieren Sie die Dateigröße leicht mit minimalem Qualitätsverlust",
+    "mediumCompression": "Mittlere Kompression",
+    "mediumCompressionDescription": "Gleichgewicht zwischen Dateigröße und Qualität",
+    "pages": "Seitenanzahl",
+    "resultTitle": "Komprimiertes PDF",
+    "shortDescription": "Komprimieren Sie PDF-Dateien sicher in Ihrem Browser",
+    "title": "PDF komprimieren"
+  },
+  "editor": {
+    "description": "Erweiterter PDF-Editor mit Funktionen zum Kommentieren, Ausfüllen von Formularen, Hervorheben und Exportieren. Bearbeiten Sie Ihre PDFs direkt im Browser mit professionellen Tools wie Texteinfügung, Zeichnen, Hervorheben, Unterschreiben und Ausfüllen von Formularen.",
+    "shortDescription": "Bearbeiten Sie PDFs mit erweiterten Werkzeugen zum Kommentieren, Signieren und Bearbeiten",
+    "title": "PDF Editor"
+  },
+  "merge": {
+    "inputTitle": "Eingabe-PDF",
+    "loadingText": "Seiten extrahieren",
+    "resultTitle": "Zusammengeführtes PDF ausgeben",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie mehrere PDF-Dateien zu einem einzigen Dokument zusammenführen. Laden Sie dazu einfach die zusammenzuführenden PDF-Dateien hoch. Das Tool fügt dann alle Seiten der Eingabedateien zu einem einzigen PDF-Dokument zusammen.",
+      "title": "Wie verwende ich das Tool zum Zusammenführen von PDFs?"
+    }
+  },
+  "mergePdf": {
+    "description": "Kombinieren Sie mehrere PDF-Dateien zu einem einzigen Dokument.",
+    "inputTitle": "Eingabe-PDFs",
+    "mergingPdfs": "PDFs zusammenführen",
+    "pdfOptions": "PDF-Optionen",
+    "resultTitle": "Zusammengeführte PDF",
+    "shortDescription": "Mehrere PDF-Dateien zu einem einzigen Dokument zusammenführen",
+    "sortByFileName": "Nach Dateinamen sortieren",
+    "sortByFileNameDescription": "PDFs alphabetisch nach Dateinamen sortieren",
+    "sortByUploadOrder": "Nach Upload-Reihenfolge sortieren",
+    "sortByUploadOrderDescription": "Behalten Sie PDFs in der Reihenfolge bei, in der sie hochgeladen wurden",
+    "title": "PDF zusammenführen",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie mehrere PDF-Dateien zu einem einzigen Dokument zusammenführen. Sie können die Sortierung der PDFs wählen, und das Tool fügt sie in der angegebenen Reihenfolge zusammen.",
+      "title": "PDF-Dateien zusammenführen"
+    }
+  },
+  "pdfToEpub": {
+    "description": "Wandeln Sie PDF-Dokumente in EPUB-Dateien um, um eine bessere E-Reader-Kompatibilität zu erzielen.‘, Symbol: ‚Materialsymbole:Kontakte importieren‘, Komponente: lazy(() => import(‚./index‘)), Schlüsselwörter: [‚pdf‘, ‚epub‘, ‚konvertieren‘, ‚ebook‘], Pfad: ‚pdf-zu-epub‘, i18n: {Name: ‚pdf:pdfToEpub.title‘, Beschreibung: ‚pdf:pdfToEpub.description‘",
+    "shortDescription": "Konvertieren Sie PDF-Dateien in das EPUB-Format",
+    "title": "PDF zu EPUB"
+  },
+  "pdfToPng": {
+    "description": "Wandeln Sie PDF-Dokumente in PNG-Panels um.",
+    "longDescription": "Laden Sie eine PDF-Datei hoch und konvertieren Sie jede Seite direkt in Ihrem Browser in ein hochwertiges PNG-Bild. Dieses Tool eignet sich ideal zum Extrahieren visueller Inhalte oder zum Teilen einzelner Seiten. Es werden keine Daten hochgeladen – alles läuft lokal.",
+    "shortDescription": "Konvertieren Sie PDF in PNG-Bilder",
+    "title": "PDF zu PNG"
+  },
+  "protectPdf": {
+    "description": "Fügen Sie Ihren PDF-Dateien sicher in Ihrem Browser einen Passwortschutz hinzu",
+    "shortDescription": "PDF-Dateien sicher mit einem Passwort schützen",
+    "title": "PDF schützen"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "Alle {{count}} Seiten werden gedreht",
+    "angleOptions": {
+      "clockwise90": "90° im Uhrzeigersinn",
+      "counterClockwise270": "270° (90° gegen den Uhrzeigersinn)",
+      "upsideDown180": "180° (auf den Kopf gestellt)"
+    },
+    "applyToAllPages": "Auf alle Seiten anwenden",
+    "description": "Drehen Sie Seiten in einem PDF-Dokument.",
+    "inputTitle": "Eingabe-PDF",
+    "longDescription": "Ändern Sie die Ausrichtung von PDF-Seiten, indem Sie sie um 90, 180 oder 270 Grad drehen. Nützlich zum Korrigieren falsch gescannter Dokumente oder zum Vorbereiten von PDFs für den Druck.",
+    "pageRangesDescription": "Geben Sie Seitenzahlen oder Bereiche durch Kommas getrennt ein (z. B. 1,3,5-7).",
+    "pageRangesPlaceholder": "z.B. 1,5-8",
+    "pagesWillBeRotated": "{{count}} Seite{{count !== 1 ? 's' : ''}} wird gedreht",
+    "pdfPageCount": "PDF hat {{count}} Seite{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "Gedrehtes PDF",
+    "rotatingPages": "Seiten drehen",
+    "rotationAngle": "Drehwinkel",
+    "rotationSettings": "Rotationseinstellungen",
+    "shortDescription": "Seiten in einem PDF-Dokument drehen",
+    "title": "PDF drehen",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie Seiten in einem PDF-Dokument drehen. Sie können alle Seiten drehen oder einzelne Seiten auswählen. Wählen Sie einen Drehwinkel: 90° im Uhrzeigersinn, 180° (auf dem Kopf) oder 270° (90° gegen den Uhrzeigersinn). Um bestimmte Seiten zu drehen, deaktivieren Sie „Auf alle Seiten anwenden“ und geben Sie Seitenzahlen oder -bereiche durch Kommas getrennt ein (z. B. 1, 3, 5-7).",
+      "title": "So verwenden Sie das Tool zum Drehen von PDFs"
+    }
+  },
+  "splitPdf": {
+    "description": "Extrahieren Sie bestimmte Seiten aus einem PDF-Dokument.",
+    "extractingPages": "Seiten extrahieren",
+    "inputTitle": "Eingabe-PDF",
+    "pageExtractionPreview": "{{count}} Seite{{count !== 1 ? 's' : ''}} wird extrahiert",
+    "pageRangesDescription": "Geben Sie Seitenzahlen oder Bereiche durch Kommas getrennt ein (z. B. 1,3,5-7).",
+    "pageRangesPlaceholder": "z.B. 1,5-8",
+    "pageSelection": "Seitenauswahl",
+    "pdfPageCount": "PDF hat {{count}} Seite{{count !== 1 ? 's' : ''}}",
+    "resultTitle": "Extrahiertes PDF",
+    "shortDescription": "Extrahieren Sie bestimmte Seiten aus einer PDF-Datei",
+    "title": "PDF teilen",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie bestimmte Seiten aus einem PDF-Dokument extrahieren. Sie können einzelne Seiten oder Seitenbereiche zum Extrahieren angeben.",
+      "title": "PDF teilen"
+    }
+  }
+}

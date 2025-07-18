@@ -11,6 +11,7 @@ import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import SimpleRadio from '@components/options/SimpleRadio';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import * as Yup from 'yup';
+import { useTranslation } from 'react-i18next';
 
 interface InitialValuesType {
   splitOperatorType: SplitOperatorType;
@@ -85,6 +86,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function Wrap({ title }: ToolComponentProps) {
+  const { t } = useTranslation('list');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -117,50 +119,50 @@ export default function Wrap({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Split Options',
+      title: t('wrap.splitOptions'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('splitOperatorType', 'symbol')}
             checked={values.splitOperatorType === 'symbol'}
-            title={'Split by Symbol'}
+            title={t('wrap.splitBySymbol')}
           />
           <SimpleRadio
             onClick={() => updateField('splitOperatorType', 'regex')}
             checked={values.splitOperatorType === 'regex'}
-            title={'Split by Regular Expression'}
+            title={t('wrap.splitByRegex')}
           />
           <TextFieldWithDesc
             value={values.splitSeparator}
             onOwnChange={(val) => updateField('splitSeparator', val)}
-            description={'Separator to split the list'}
+            description={t('wrap.splitSeparatorDescription')}
           />
           <TextFieldWithDesc
             value={values.joinSeparator}
             onOwnChange={(val) => updateField('joinSeparator', val)}
-            description={'Separator to join the wrapped list'}
+            description={t('wrap.joinSeparatorDescription')}
           />
           <CheckboxWithDesc
             checked={values.deleteEmptyItems}
             onChange={(checked) => updateField('deleteEmptyItems', checked)}
-            title={'Remove empty items'}
+            title={t('wrap.removeEmptyItems')}
           />
         </Box>
       )
     },
     {
-      title: 'Wrap Options',
+      title: t('wrap.wrapOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.left}
             onOwnChange={(val) => updateField('left', val)}
-            description={'Text to add before each item'}
+            description={t('wrap.leftTextDescription')}
           />
           <TextFieldWithDesc
             value={values.right}
             onOwnChange={(val) => updateField('right', val)}
-            description={'Text to add after each item'}
+            description={t('wrap.rightTextDescription')}
           />
         </Box>
       )
@@ -171,16 +173,21 @@ export default function Wrap({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       inputComponent={
-        <ToolTextInput title="Input List" value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('wrap.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
-      resultComponent={<ToolTextResult title="Wrapped List" value={result} />}
+      resultComponent={
+        <ToolTextResult title={t('wrap.resultTitle')} value={result} />
+      }
       initialValues={initialValues}
       getGroups={getGroups}
       validationSchema={validationSchema}
       toolInfo={{
-        title: 'List Wrapping',
-        description:
-          "This tool allows you to add text before and after each item in a list. You can specify different text for the left and right sides, and control how the list is processed. It's useful for adding quotes, brackets, or other formatting to list items, preparing data for different formats, or creating structured text."
+        title: t('wrap.toolInfo.title'),
+        description: t('wrap.toolInfo.description')
       }}
       exampleCards={exampleCards}
       input={input}

@@ -1,0 +1,283 @@
+{
+  "duplicate": {
+    "concatenate": "CONCATENATE",
+    "concatenateDescription": "प्रतियों को संयोजित करें (यदि अनचेक किया गया, तो आइटम आपस में गुंथ जाएंगे)",
+    "copyDescription": "प्रतियों की संख्या (आंशिक हो सकती है)",
+    "countPlaceholder": "संख्या",
+    "description": "सूची में आइटम को दोहराएं।",
+    "duplicateAll": "सभी आइटम दोहराएं",
+    "duplicateCount": "दोहराव की संख्या",
+    "duplicateEach": "प्रत्येक आइटम दोहराएं",
+    "duplicationOptions": "दोहराव विकल्प",
+    "examples": {
+      "fractional": {
+        "description": "यह उदाहरण दिखाता है कि किसी सूची की आंशिक संख्या की प्रतिलिपि कैसे बनाई जाए।",
+        "title": "आंशिक दोहराव"
+      },
+      "interweave": {
+        "description": "यह उदाहरण दिखाता है कि वस्तुओं को संयोजित करने के बजाय उन्हें कैसे आपस में जोड़ा जाए।",
+        "title": "आपस में जुड़ी हुई वस्तुएँ"
+      },
+      "reverse": {
+        "description": "यह उदाहरण दिखाता है कि किसी सूची को उल्टे क्रम में कैसे दोहराया जाए।",
+        "title": "रिवर्स डुप्लिकेशन"
+      },
+      "simple": {
+        "description": "यह उदाहरण दिखाता है कि शब्दों की सूची की प्रतिलिपि कैसे बनाई जाए।",
+        "title": "सरल दोहराव"
+      }
+    },
+    "inputTitle": "इनपुट सूची",
+    "joinSeparatorDescription": "डुप्लिकेट सूची में शामिल करने के लिए विभाजक",
+    "resultTitle": "दोहराई गई सूची",
+    "reverse": "सूची उलटा करें",
+    "reverseDescription": "डुप्लिकेट आइटम को उलट दें",
+    "separatorPlaceholder": "विभाजक",
+    "shortDescription": "निर्दिष्ट मानदंडों के साथ डुप्लिकेट सूची आइटम",
+    "splitByRegex": "नियमित अभिव्यक्ति द्वारा विभाजित",
+    "splitBySymbol": "प्रतीक द्वारा विभाजित",
+    "splitOptions": "विभाजित विकल्प",
+    "splitSeparatorDescription": "सूची को विभाजित करने के लिए विभाजक",
+    "title": "आइटम दोहराएं",
+    "toolInfo": {
+      "description": "यह टूल आपको सूची में आइटम्स की प्रतिलिपि बनाने की अनुमति देता है। आप प्रतियों की संख्या (आंशिक मानों सहित) निर्दिष्ट कर सकते हैं, नियंत्रित कर सकते हैं कि आइटम्स संयोजित हों या अंतर्गुंथित, और यहाँ तक कि डुप्लिकेट किए गए आइटम्स को उलट भी सकते हैं। यह दोहराए गए पैटर्न बनाने, परीक्षण डेटा उत्पन्न करने, या पूर्वानुमानित सामग्री वाली सूचियों का विस्तार करने के लिए उपयोगी है।",
+      "title": "सूची दोहराव"
+    }
+  },
+  "findMostPopular": {
+    "caseSensitive": "केस संवेदी",
+    "countPlaceholder": "संख्या",
+    "description": "सूची में सबसे अधिक बार आने वाले आइटम खोजें।",
+    "inputTitle": "इनपुट सूची",
+    "popularityOptions": "लोकप्रियता विकल्प",
+    "removeEmpty": "खाली आइटम हटाएं",
+    "resultTitle": "लोकप्रिय आइटम",
+    "separatorPlaceholder": "विभाजक",
+    "shortDescription": "सबसे अधिक बार आने वाली वस्तुओं को खोजें",
+    "title": "सबसे लोकप्रिय खोजें",
+    "topCount": "शीर्ष संख्या"
+  },
+  "findUnique": {
+    "caseSensitive": "केस संवेदी",
+    "caseSensitiveItems": "केस सेंसिटिव आइटम",
+    "caseSensitiveItemsDescription": "सूची में अलग-अलग केस वाले आइटम को अद्वितीय तत्व के रूप में आउटपुट करें।",
+    "delimiterDescription": "एक सीमांकक प्रतीक या नियमित अभिव्यक्ति सेट करें.",
+    "description": "सूची से अद्वितीय आइटम निकालें।",
+    "findAbsolutelyUniqueItems": "बिल्कुल अनोखी वस्तुएँ खोजें",
+    "findAbsolutelyUniqueItemsDescription": "सूची के केवल उन आइटमों को प्रदर्शित करें जो एकल प्रतिलिपि में मौजूद हों।",
+    "inputListDelimiter": "इनपुट सूची सीमांकक",
+    "inputTitle": "इनपुट सूची",
+    "outputListDelimiter": "आउटपुट सूची सीमांकक",
+    "removeEmpty": "खाली आइटम हटाएं",
+    "resultTitle": "अद्वितीय आइटम",
+    "separatorPlaceholder": "विभाजक",
+    "shortDescription": "सूची में अद्वितीय आइटम खोजें",
+    "skipEmptyItems": "खाली आइटम छोड़ें",
+    "skipEmptyItemsDescription": "आउटपुट में खाली सूची आइटम शामिल न करें।",
+    "title": "अद्वितीय आइटम खोजें",
+    "trimItems": "सूची आइटम ट्रिम करें",
+    "trimItemsDescription": "वस्तुओं की तुलना करने से पहले प्रारंभिक और अंतिम रिक्त स्थान हटा दें।",
+    "trimWhitespace": "सफेद स्थान ट्रिम करें",
+    "uniqueItemOptions": "अद्वितीय आइटम विकल्प",
+    "uniqueOptions": "अद्वितीय विकल्प"
+  },
+  "group": {
+    "deleteEmptyItems": "खाली आइटम हटाएं",
+    "deleteEmptyItemsDescription": "खाली आइटमों को अनदेखा करें और उन्हें समूहों में शामिल न करें।",
+    "description": "सूची आइटम को समूहित करने के लिए सरल उपकरण।",
+    "emptyItemsAndPadding": "खाली आइटम और पैडिंग",
+    "groupByFirstChar": "पहले वर्ण के अनुसार समूहित करें",
+    "groupByLastChar": "अंतिम वर्ण के अनुसार समूहित करें",
+    "groupByLength": "लंबाई के अनुसार समूहित करें",
+    "groupByPattern": "पैटर्न के अनुसार समूहित करें",
+    "groupHeaders": "समूह शीर्षक जोड़ें",
+    "groupNumberDescription": "एक समूह में वस्तुओं की संख्या",
+    "groupSeparatorDescription": "समूह विभाजक वर्ण",
+    "groupSizeAndSeparators": "समूह का आकार और विभाजक",
+    "groupingOptions": "समूहीकरण विकल्प",
+    "inputItemSeparator": "इनपुट आइटम विभाजक",
+    "inputTitle": "इनपुट सूची",
+    "itemSeparatorDescription": "आइटम विभाजक वर्ण",
+    "leftWrapDescription": "समूह का बायां आवरण प्रतीक.",
+    "outputFormat": "आउटपुट प्रारूप",
+    "padNonFullGroups": "पैड गैर-पूर्ण समूह",
+    "padNonFullGroupsDescription": "गैर-पूर्ण समूहों को कस्टम आइटम से भरें (नीचे दर्ज करें).",
+    "paddingCharDescription": "गैर-पूर्ण समूहों को पैड करने के लिए इस वर्ण या आइटम का उपयोग करें.",
+    "patternPlaceholder": "रेगेक्स पैटर्न",
+    "resultTitle": "समूहित सूची",
+    "rightWrapDescription": "समूह का दायाँ आवरण प्रतीक.",
+    "separatorPlaceholder": "विभाजक",
+    "shortDescription": "सामान्य गुणों द्वारा सूची आइटम को समूहित करें",
+    "splitOperators": {
+      "regex": {
+        "description": "नियमित अभिव्यक्ति के साथ इनपुट सूची आइटम को सीमांकित करें.",
+        "title": "विभाजन के लिए रेगेक्स का उपयोग करें"
+      },
+      "symbol": {
+        "description": "इनपुट सूची आइटम को किसी वर्ण से सीमांकित करें.",
+        "title": "विभाजन के लिए प्रतीक का उपयोग करें"
+      }
+    },
+    "splitSeparatorDescription": "एक सीमांकक प्रतीक या नियमित अभिव्यक्ति सेट करें.",
+    "title": "सूची समूहित करें"
+  },
+  "reverse": {
+    "description": "सूची में आइटम के क्रम को उलटा करें।",
+    "inputTitle": "इनपुट सूची",
+    "itemSeparator": "आइटम विभाजक",
+    "itemSeparatorDescription": "एक सीमांकक प्रतीक या नियमित अभिव्यक्ति सेट करें.",
+    "outputListOptions": "आउटपुट सूची विकल्प",
+    "outputSeparatorDescription": "आउटपुट सूची आइटम विभाजक.",
+    "resultTitle": "उलटी सूची",
+    "reverseEachItem": "प्रत्येक आइटम उलटा करें",
+    "reverseOptions": "उलटाने के विकल्प",
+    "reverseOrder": "क्रम उलटा करें",
+    "separatorPlaceholder": "विभाजक",
+    "shortDescription": "जल्दी से सूची को उलटा करें",
+    "splitOperators": {
+      "regex": {
+        "description": "नियमित अभिव्यक्ति के साथ इनपुट सूची आइटम को सीमांकित करें.",
+        "title": "विभाजन के लिए रेगेक्स का उपयोग करें"
+      },
+      "symbol": {
+        "description": "इनपुट सूची आइटम को किसी वर्ण से सीमांकित करें.",
+        "title": "विभाजन के लिए प्रतीक का उपयोग करें"
+      }
+    },
+    "splitterMode": "स्प्लिटर मोड",
+    "title": "सूची उलटा करें",
+    "toolInfo": {
+      "description": "इस उपयोगिता से, आप किसी सूची में आइटम्स के क्रम को उलट सकते हैं। यह उपयोगिता पहले इनपुट सूची को अलग-अलग आइटम्स में विभाजित करती है और फिर अंतिम आइटम से पहले आइटम तक उनमें पुनरावृति करती है, और पुनरावृत्ति के दौरान प्रत्येक आइटम को आउटपुट में प्रिंट करती है। इनपुट सूची में कुछ भी हो सकता है जिसे पाठ्य डेटा के रूप में दर्शाया जा सकता है, जिसमें अंक, संख्याएँ, स्ट्रिंग, शब्द, वाक्य आदि शामिल हैं। इनपुट आइटम विभाजक एक नियमित अभिव्यक्ति भी हो सकता है। उदाहरण के लिए, रेगुलर एक्सप्रेशन /[;,]/ आपको अल्पविराम या अर्धविराम से अलग किए गए आइटम्स का उपयोग करने की अनुमति देगा। इनपुट और आउटपुट सूची आइटम विभाजक विकल्पों में अनुकूलित किए जा सकते हैं। डिफ़ॉल्ट रूप से, इनपुट और आउटपुट दोनों सूचियाँ अल्पविराम से अलग होती हैं। Listabulous!",
+      "title": "सूची उलटने वाला क्या है?"
+    }
+  },
+  "rotate": {
+    "description": "सूची में आइटम को निर्दिष्ट स्थानों द्वारा घुमाएं।",
+    "inputTitle": "इनपुट सूची",
+    "resultTitle": "घुमाई गई सूची",
+    "rotateDirection": "घुमाने की दिशा",
+    "rotateLeft": "बाईं ओर घुमाएं",
+    "rotateRight": "दाईं ओर घुमाएं",
+    "rotateSteps": "घुमाने के चरण",
+    "rotationOptions": "घुमाने के विकल्प",
+    "separatorPlaceholder": "विभाजक",
+    "shortDescription": "सूची आइटम को निर्दिष्ट स्थानों पर घुमाएँ",
+    "stepsPlaceholder": "चरणों की संख्या",
+    "title": "सूची घुमाएं"
+  },
+  "shuffle": {
+    "delimiterDescription": "एक सीमांकक प्रतीक या नियमित अभिव्यक्ति सेट करें.",
+    "description": "सूची में आइटम को यादृच्छिक क्रम में व्यवस्थित करें।",
+    "inputListSeparator": "इनपुट सूची विभाजक",
+    "inputTitle": "इनपुट सूची",
+    "joinSeparatorDescription": "यादृच्छिक सूची में इस विभाजक का उपयोग करें।",
+    "outputLengthDescription": "इतने सारे यादृच्छिक आइटम आउटपुट करें",
+    "randomSeed": "यादृच्छिक बीज",
+    "resultTitle": "फेरबदल की गई सूची",
+    "seedPlaceholder": "बीज मान",
+    "separatorPlaceholder": "विभाजक",
+    "shortDescription": "सूची आइटमों का क्रम यादृच्छिक करें",
+    "shuffleOptions": "फेरबदल विकल्प",
+    "shuffledListLength": "फेरबदल सूची की लंबाई",
+    "shuffledListSeparator": "फेरबदल सूची विभाजक",
+    "title": "सूची फेरबदल करें"
+  },
+  "sort": {
+    "ascending": "आरोही",
+    "caseSensitive": "केस सेंसिटिव सॉर्ट",
+    "caseSensitiveDescription": "बड़े और छोटे अक्षरों वाले आइटम को अलग-अलग क्रमबद्ध करें। बड़े अक्षरों को आरोही क्रम में छोटे अक्षरों से पहले रखें। (केवल वर्णानुक्रमिक क्रम में काम करता है।)",
+    "descending": "अवरोही",
+    "description": "सूची में आइटम को क्रमबद्ध करें।",
+    "inputItemSeparator": "इनपुट आइटम विभाजक",
+    "inputTitle": "इनपुट सूची",
+    "joinSeparatorDescription": "इस प्रतीक का उपयोग क्रमबद्ध सूची में आइटमों के बीच जोड़ने वाले के रूप में करें।",
+    "orderDescription": "एक सॉर्टिंग क्रम का चयन करें.",
+    "orderOptions": {
+      "decreasing": "घटते क्रम",
+      "increasing": "बढ़ते क्रम"
+    },
+    "removeDuplicates": "डुप्लिकेट हटाएं",
+    "removeDuplicatesDescription": "डुप्लिकेट सूची आइटम हटाएं.",
+    "removeEmpty": "खाली आइटम हटाएं",
+    "resultTitle": "क्रमबद्ध सूची",
+    "separatorPlaceholder": "विभाजक",
+    "shortDescription": "सूची आइटम को निर्दिष्ट क्रम में सॉर्ट करें",
+    "sortAlphabetically": "वर्णानुक्रमिक रूप से क्रमबद्ध करें",
+    "sortByLength": "लंबाई के अनुसार क्रमबद्ध करें",
+    "sortMethod": "सॉर्ट विधि",
+    "sortMethodDescription": "एक सॉर्टिंग विधि का चयन करें.",
+    "sortNumerically": "संख्यात्मक रूप से क्रमबद्ध करें",
+    "sortOptions": {
+      "alphabetic": "वर्णानुक्रम में क्रमबद्ध करें",
+      "length": "लंबाई के अनुसार क्रमबद्ध करें",
+      "numeric": "संख्यात्मक रूप से क्रमबद्ध करें"
+    },
+    "sortOrder": "क्रमबद्ध करने का क्रम",
+    "sortedItemProperties": "क्रमबद्ध आइटम गुण",
+    "sortingOptions": "क्रमबद्ध करने के विकल्प",
+    "splitOperators": {
+      "regex": {
+        "description": "नियमित अभिव्यक्ति के साथ इनपुट सूची आइटम को सीमांकित करें.",
+        "title": "विभाजन के लिए रेगेक्स का उपयोग करें"
+      },
+      "symbol": {
+        "description": "इनपुट सूची आइटम को किसी वर्ण से सीमांकित करें.",
+        "title": "विभाजन के लिए प्रतीक का उपयोग करें"
+      }
+    },
+    "splitSeparatorDescription": "एक सीमांकक प्रतीक या नियमित अभिव्यक्ति सेट करें.",
+    "title": "सूची क्रमबद्ध करें",
+    "trimWhitespace": "सफेद स्थान ट्रिम करें"
+  },
+  "truncate": {
+    "description": "सूची को निर्दिष्ट लंबाई तक काटें।",
+    "inputTitle": "इनपुट सूची",
+    "lengthPlaceholder": "लंबाई",
+    "resultTitle": "काटी गई सूची",
+    "separatorPlaceholder": "विभाजक",
+    "shortDescription": "सूची को निर्दिष्ट संख्या में आइटम तक छोटा करें",
+    "title": "सूची काटें",
+    "truncateFrom": "कहाँ से काटें",
+    "truncateFromEnd": "अंत से",
+    "truncateFromStart": "शुरुआत से",
+    "truncateLength": "काटने की लंबाई",
+    "truncationOptions": "काटने के विकल्प"
+  },
+  "unwrap": {
+    "characterPlaceholder": "वर्ण",
+    "description": "लपेटी गई सूची को खोलें।",
+    "inputTitle": "इनपुट सूची",
+    "removeEmpty": "खाली आइटम हटाएं",
+    "resultTitle": "खोली गई सूची",
+    "separatorPlaceholder": "विभाजक",
+    "shortDescription": "संरचित प्रारूप से सूची आइटम खोलना",
+    "title": "सूची खोलें",
+    "unwrapCharacter": "खोलने का वर्ण",
+    "unwrapOptions": "खोलने के विकल्प"
+  },
+  "wrap": {
+    "characterPlaceholder": "वर्ण",
+    "description": "सूची आइटम को निर्दिष्ट लंबाई में लपेटें।",
+    "inputTitle": "इनपुट सूची",
+    "joinSeparatorDescription": "लिपटे सूची में शामिल करने के लिए विभाजक",
+    "leftTextDescription": "प्रत्येक आइटम से पहले जोड़ने के लिए पाठ",
+    "removeEmptyItems": "खाली आइटम हटाएँ",
+    "resultTitle": "लपेटी गई सूची",
+    "rightTextDescription": "प्रत्येक आइटम के बाद जोड़ने के लिए पाठ",
+    "separatorPlaceholder": "विभाजक",
+    "shortDescription": "सूची आइटम को निर्दिष्ट मानदंडों के साथ लपेटें",
+    "splitByRegex": "नियमित अभिव्यक्ति द्वारा विभाजित",
+    "splitBySymbol": "प्रतीक द्वारा विभाजित",
+    "splitOptions": "विभाजित विकल्प",
+    "splitSeparatorDescription": "सूची को विभाजित करने के लिए विभाजक",
+    "title": "सूची लपेटें",
+    "toolInfo": {
+      "description": "यह टूल आपको सूची में प्रत्येक आइटम के पहले और बाद में टेक्स्ट जोड़ने की अनुमति देता है। आप बाएँ और दाएँ पक्षों के लिए अलग-अलग टेक्स्ट निर्दिष्ट कर सकते हैं, और सूची को कैसे संसाधित किया जाए, इसे नियंत्रित कर सकते हैं। यह सूची आइटम में उद्धरण चिह्न, कोष्ठक या अन्य स्वरूपण जोड़ने, विभिन्न स्वरूपों के लिए डेटा तैयार करने, या संरचित टेक्स्ट बनाने के लिए उपयोगी है।",
+      "title": "सूची लपेटना"
+    },
+    "widthPlaceholder": "चौड़ाई",
+    "wrapCharacter": "लपेटने का वर्ण",
+    "wrapOptions": "लपेटने के विकल्प",
+    "wrapWidth": "लपेटने की चौड़ाई"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "arithmeticSequence": {
+    "commonDifferenceDescription": "Gemeinsamer Unterschied zwischen Begriffen (d)",
+    "description": "Generieren Sie arithmetische Folgen mit anpassbaren Parametern.",
+    "firstTermDescription": "Erster Term der Folge (a₁)",
+    "numberOfTermsDescription": "Anzahl der zu generierenden Terme (n)",
+    "outputFormat": "Ausgabeformat",
+    "resultTitle": "Generierte Sequenz",
+    "separatorDescription": "Trennzeichen zwischen Begriffen",
+    "sequenceParameters": "Sequenzparameter",
+    "shortDescription": "Arithmetische Folgen generieren",
+    "title": "Arithmetische Folge",
+    "toolInfo": {
+      "description": "Eine arithmetische Folge ist eine Zahlenfolge, bei der die Differenz zwischen den aufeinanderfolgenden Termen konstant ist. Diese konstante Differenz wird als gemeinsame Differenz bezeichnet. Gegeben sind der erste Term (a₁) und die gemeinsame Differenz (d). Jeder Term kann durch Addition der gemeinsamen Differenz zum vorherigen Term ermittelt werden.",
+      "title": "Was ist eine arithmetische Folge?"
+    }
+  },
+  "generate": {
+    "arithmeticSequenceOption": "Arithmetische Sequenzoption",
+    "description": "Generieren Sie eine Zahlenfolge mit anpassbaren Parametern.",
+    "numberOfElementsDescription": "Anzahl der Elemente in der Sequenz.",
+    "resultTitle": "Generierte Zahlen",
+    "separator": "Separator",
+    "separatorDescription": "Trennen Sie Elemente in der arithmetischen Folge durch dieses Zeichen.",
+    "shortDescription": "Generieren Sie Zufallszahlen in angegebenen Bereichen",
+    "startSequenceDescription": "Starten Sie die Sequenz ab dieser Nummer.",
+    "stepDescription": "Erhöhen Sie jedes Element um diesen Betrag",
+    "title": "Erzeugen",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie eine Zahlenfolge mit anpassbaren Parametern generieren. Sie können den Startwert, die Schrittweite und die Anzahl der Elemente festlegen.",
+      "title": "Zahlen generieren"
+    }
+  },
+  "ohmsLaw": {
+    "description": "Berechnet Spannung, Strom und Widerstand",
+    "longDescription": "Dieser Rechner wendet das Ohmsche Gesetz (V = I × R) an, um drei elektrische Parameter zu bestimmen, wenn die beiden anderen bekannt sind. Das Ohmsche Gesetz ist ein grundlegendes Prinzip der Elektrotechnik und beschreibt die Beziehung zwischen Spannung (V), Stromstärke (I) und Widerstand (R). Dieses Tool ist unverzichtbar für Elektronikbastler, Elektroingenieure und Studierende, die mit Schaltkreisen arbeiten, um unbekannte Werte in ihren elektrischen Konstruktionen schnell zu berechnen.",
+    "shortDescription": "Berechnen Sie Spannung, Strom oder Widerstand in Stromkreisen mit dem Ohmschen Gesetz",
+    "title": "Ohmsches Gesetz"
+  },
+  "slackline": {
+    "description": "Berechnet die Spannung einer Slackline",
+    "longDescription": "Dieser Rechner geht von einer Last in der Mitte des Seils aus",
+    "shortDescription": "Berechne die ungefähre Spannung einer Slackline oder Wäscheleine. Verlasse dich aus Sicherheitsgründen nicht darauf.",
+    "title": "Slackline-Spannung"
+  },
+  "sphereArea": {
+    "description": "Fläche einer Kugel",
+    "longDescription": "Dieser Rechner berechnet die Oberfläche einer Kugel mit der Formel A = 4πr². Sie können entweder den Radius eingeben, um die Oberfläche zu berechnen, oder die Oberfläche eingeben, um den gewünschten Radius zu berechnen. Dieses Tool ist nützlich für Geometriestudenten, Ingenieure, die mit sphärischen Objekten arbeiten, und alle, die Berechnungen mit sphärischen Oberflächen durchführen müssen.",
+    "shortDescription": "Berechnen Sie die Oberfläche einer Kugel anhand ihres Radius",
+    "title": "Fläche einer Kugel"
+  },
+  "sphereVolume": {
+    "description": "Volumen einer Kugel",
+    "longDescription": "Dieser Rechner berechnet das Volumen einer Kugel mit der Formel V = (4/3)πr³. Sie können entweder den Radius oder den Durchmesser eingeben, um das Volumen zu ermitteln, oder das Volumen eingeben, um den gewünschten Radius zu bestimmen. Das Tool ist nützlich für Studierende, Ingenieure und Fachleute, die mit kugelförmigen Objekten in Bereichen wie Physik, Ingenieurwesen und Fertigung arbeiten.",
+    "shortDescription": "Berechnen Sie das Volumen einer Kugel anhand des Radius oder Durchmessers",
+    "title": "Volumen einer Kugel"
+  },
+  "sum": {
+    "description": "Berechnen Sie die Summe einer Zahlenliste. Geben Sie die Zahlen durch Kommas oder Zeilenumbrüche getrennt ein, um die Gesamtsumme zu erhalten.",
+    "extractionTypes": {
+      "delimiter": {
+        "description": "Passen Sie hier das Zahlentrennzeichen an. (Standardmäßig ein Zeilenumbruch.)",
+        "title": "Zahlentrennzeichen"
+      },
+      "smart": {
+        "description": "Automatische Erkennung von Zahlen in der Eingabe.",
+        "title": "Smart Sum"
+      }
+    },
+    "inputTitle": "Eingang",
+    "numberExtraction": "Zahlenextraktion",
+    "printRunningSum": "Laufende Summe drucken",
+    "printRunningSumDescription": "Zeigen Sie die Summe an, während sie Schritt für Schritt berechnet wird.",
+    "resultTitle": "Gesamt",
+    "runningSum": "Laufende Summe",
+    "shortDescription": "Summe der Zahlen berechnen",
+    "title": "Summe",
+    "toolInfo": {
+      "description": "Dies ist ein browserbasiertes Online-Dienstprogramm zum Berechnen der Summe mehrerer Zahlen. Sie können die Zahlen durch Komma, Leerzeichen oder ein beliebiges anderes Zeichen (einschließlich Zeilenumbruch) getrennt eingeben. Sie können auch einfach einen Textabschnitt mit numerischen Werten einfügen, die Sie summieren möchten. Das Dienstprogramm extrahiert diese und berechnet deren Summe.",
+      "title": "Was ist ein Zahlensummenrechner?"
+    }
+  },
+  "voltageDropInWire": {
+    "description": "Berechnet die Rundreisespannung und den Leistungsverlust in einem 2-adrigen Kabel",
+    "longDescription": "Dieser Rechner hilft bei der Ermittlung des Spannungsabfalls und der Verlustleistung in einem zweiadrigen Elektrokabel. Er berücksichtigt Kabellänge, Drahtquerschnitt, Materialwiderstand und Stromfluss. Das Tool berechnet den Hin- und Rückspannungsabfall, den Gesamtwiderstand des Kabels und die in Wärme umgewandelte Leistung. Dies ist besonders nützlich für Elektroingenieure, Elektriker und Bastler bei der Konstruktion elektrischer Systeme, um sicherzustellen, dass die Spannungspegel an der Last innerhalb akzeptabler Grenzen bleiben.",
+    "shortDescription": "Berechnen Sie Spannungsabfall und Leistungsverlust in elektrischen Kabeln basierend auf Länge, Material und Stromstärke",
+    "title": "Hin- und Rückspannungsabfall im Kabel"
+  }
+}

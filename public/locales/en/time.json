@@ -1,0 +1,102 @@
+{
+  "checkLeapYears": {
+    "description": "Check if a year is a leap year and get leap year information.",
+    "exampleDescription": "One of our friends was born on a leap year on February 29th and as a consequence, she has a birthday only once every 4 years. As we can never really remember when her birthday is, we are using our program to create a reminder list of the upcoming leap years. To create a list of her next birthdays, we load a sequence of years from 2025 to 2040 into the input and get the status of each year. If the program says that it's a leap year, then we know that we'll be invited to a birthday party on February 29th.",
+    "exampleTitle": "Find Birthdays on February 29",
+    "inputTitle": "Input year",
+    "resultTitle": "Leap year result",
+    "shortDescription": "Check if a year is a leap year",
+    "title": "Check Leap Years",
+    "toolInfo": {
+      "description": "A leap year is a year containing one additional day (February 29) to keep the calendar year synchronized with the astronomical year. Leap years occur every 4 years, except for years that are divisible by 100 but not by 400.",
+      "title": "What is a Leap Year?"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "Add Hours Name",
+    "addHoursNameDescription": "Append the string hours to output values",
+    "description": "Convert days to hours with customizable options.",
+    "hoursName": "Hours Name",
+    "shortDescription": "Convert days to hours",
+    "title": "Convert Days to Hours",
+    "toolInfo": {
+      "description": "This tool allows you to convert days to hours. You can input days as numbers or with units, and the tool will convert them to hours. You can also choose to append the 'hours' suffix to the output values.",
+      "title": "Convert Days to Hours"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "Add Days Name",
+    "addDaysNameDescription": "Append the string days to output values",
+    "daysName": "Days Name",
+    "description": "Convert hours to days with customizable options.",
+    "shortDescription": "Convert hours to days",
+    "title": "Convert Hours to Days",
+    "toolInfo": {
+      "description": "This tool allows you to convert hours to days. You can input hours as numbers or with units, and the tool will convert them to days. You can also choose to append the 'days' suffix to the output values.",
+      "title": "Convert Hours to Days"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "Add Padding",
+    "addPaddingDescription": "Add zero padding to hours, minutes, and seconds.",
+    "description": "Convert seconds to a readable time format (hours:minutes:seconds). Enter the number of seconds to get the formatted time.",
+    "shortDescription": "Convert seconds to time format",
+    "timePadding": "Time Padding",
+    "title": "Convert Seconds to Time",
+    "toolInfo": {
+      "title": "What is a {{title}}?"
+    }
+  },
+  "convertTimeToSeconds": {
+    "description": "Convert formatted time (HH:MM:SS) to seconds.",
+    "inputTitle": "Input time",
+    "resultTitle": "Seconds",
+    "shortDescription": "Convert time format to seconds",
+    "title": "Convert Time to Seconds",
+    "toolInfo": {
+      "description": "This tool allows you to convert formatted time strings (HH:MM:SS) to seconds. It's useful for calculating durations and time intervals.",
+      "title": "Convert Time to Seconds"
+    }
+  },
+  "crontabGuru": {
+    "description": "Generate and understand cron expressions. Create cron schedules for automated tasks and system jobs.",
+    "shortDescription": "Generate and understand cron expressions",
+    "title": "Crontab Guru"
+  },
+  "timeBetweenDates": {
+    "description": "Calculate the time difference between two dates. Get the exact duration in days, hours, minutes, and seconds.",
+    "endDate": "End Date",
+    "endDateTime": "End Date & Time",
+    "endTime": "End Time",
+    "endTimezone": "End Timezone",
+    "shortDescription": "Calculate time between two dates",
+    "startDate": "Start Date",
+    "startDateTime": "Start Date & Time",
+    "startTime": "Start Time",
+    "startTimezone": "Start Timezone",
+    "title": "Time Between Dates",
+    "toolInfo": {
+      "description": "Calculate the exact time difference between two dates and times, with support for different timezones. This tool provides a detailed breakdown of the time difference in various units (years, months, days, hours, minutes, and seconds).",
+      "title": "Time Between Dates Calculator"
+    }
+  },
+  "truncateClockTime": {
+    "description": "Truncate clock time to remove seconds or minutes. Round time to the nearest hour, minute, or custom interval.",
+    "printDroppedComponents": "Print Dropped Components",
+    "shortDescription": "Truncate clock time to specified precision",
+    "timePadding": "Time Padding",
+    "title": "Truncate Clock Time",
+    "toolInfo": {
+      "title": "What is a {{title}}?"
+    },
+    "truncateMinutesAndSeconds": "Truncate Minutes and Seconds",
+    "truncateMinutesAndSecondsDescription": "Drop both – the minutes and seconds components from each clock time.",
+    "truncateOnlySeconds": "Truncate Only Seconds",
+    "truncateOnlySecondsDescription": "Drop the seconds component from each clock time.",
+    "truncationSide": "Truncation Side",
+    "useZeroPadding": "Use Zero Padding",
+    "zeroPaddingDescription": "Make all time components always be two digits wide.",
+    "zeroPrintDescription": "Display the dropped parts as zero values \"00\".",
+    "zeroPrintTruncatedParts": "Zero-print Truncated Parts"
+  }
+}

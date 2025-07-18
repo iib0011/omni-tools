@@ -8,6 +8,7 @@ import { parsePageRanges, splitPdf } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { PDFDocument } from 'pdf-lib';
 import ToolPdfInput from '@components/input/ToolPdfInput';
+import { useTranslation } from 'react-i18next';
 
 type InitialValuesType = {
   pageRanges: string;
@@ -48,6 +49,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function SplitPdf({ title }: ToolComponentProps) {
+  const { t } = useTranslation('pdf');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
@@ -83,9 +85,7 @@ export default function SplitPdf({ title }: ToolComponentProps) {
     }
     try {
       const count = parsePageRanges(pageRanges, totalPages).length;
-      setPageRangePreview(
-        `${count} page${count !== 1 ? 's' : ''} will be extracted`
-      );
+      setPageRangePreview(t('splitPdf.pageExtractionPreview', { count }));
     } catch (error) {
       setPageRangePreview('');
     }
@@ -118,26 +118,26 @@ export default function SplitPdf({ title }: ToolComponentProps) {
           value={input}
           onChange={setInput}
           accept={['application/pdf']}
-          title={'Input PDF'}
+          title={t('splitPdf.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
-          title={'Output PDF with selected pages'}
+          title={t('splitPdf.resultTitle')}
           value={result}
           extension={'pdf'}
           loading={isProcessing}
-          loadingText={'Extracting pages'}
+          loadingText={t('splitPdf.extractingPages')}
         />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: 'Page Selection',
+          title: t('splitPdf.pageSelection'),
           component: (
             <Box>
               {totalPages > 0 && (
                 <Typography variant="body2" sx={{ mb: 1 }}>
-                  PDF has {totalPages} page{totalPages !== 1 ? 's' : ''}
+                  {t('splitPdf.pdfPageCount', { count: totalPages })}
                 </Typography>
               )}
               <TextFieldWithDesc
@@ -145,10 +145,8 @@ export default function SplitPdf({ title }: ToolComponentProps) {
                 onOwnChange={(val) => {
                   updateField('pageRanges', val);
                 }}
-                description={
-                  'Enter page numbers or ranges separated by commas (e.g., 1,3,5-7)'
-                }
-                placeholder={'e.g., 1,5-8'}
+                description={t('splitPdf.pageRangesDescription')}
+                placeholder={t('splitPdf.pageRangesPlaceholder')}
               />
               {pageRangePreview && (
                 <Typography
@@ -164,15 +162,8 @@ export default function SplitPdf({ title }: ToolComponentProps) {
       ]}
       onValuesChange={onValuesChange}
       toolInfo={{
-        title: 'How to Use the Split PDF Tool',
-        description: `This tool allows you to extract specific pages from a PDF document. You can specify individual page numbers (e.g., 1,3,5) or page ranges (e.g., 2-6) or a combination of both (e.g., 1,3-5,8).
-
-Leave the page ranges field empty to include all pages from the PDF.
-
-Examples:
-- "1,5,9" extracts pages 1, 5, and 9
-- "1-5" extracts pages 1 through 5
-- "1,3-5,8-10" extracts pages 1, 3, 4, 5, 8, 9, and 10`
+        title: t('splitPdf.toolInfo.title'),
+        description: t('splitPdf.toolInfo.description')
       }}
     />
   );

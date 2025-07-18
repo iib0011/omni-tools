@@ -1,0 +1,100 @@
+{
+  "checkLeapYears": {
+    "description": "Vérifiez si une année est bissextile et obtenez des informations sur les années bissextiles.",
+    "inputTitle": "Année d'entrée",
+    "resultTitle": "Résultat de l'année bissextile",
+    "shortDescription": "Vérifiez si une année est bissextile",
+    "title": "Vérifiez les années bissextiles",
+    "toolInfo": {
+      "description": "Une année bissextile est une année comportant un jour supplémentaire (le 29 février) pour synchroniser l'année civile avec l'année astronomique. Les années bissextiles ont lieu tous les 4 ans, sauf pour les années divisibles par 100 mais pas par 400.",
+      "title": "Qu'est-ce qu'une année bissextile ?"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "Ajouter le nom des heures",
+    "addHoursNameDescription": "Ajoutez la chaîne hours aux valeurs de sortie",
+    "description": "Convertissez les jours en heures avec des options personnalisables.",
+    "hoursName": "Nom des heures",
+    "shortDescription": "Convertir des jours en heures",
+    "title": "Convertir des jours en heures",
+    "toolInfo": {
+      "description": "Cet outil vous permet de convertir des jours en heures. Vous pouvez saisir les jours sous forme de nombres ou d'unités, et l'outil les convertira en heures. Vous pouvez également ajouter le suffixe « heures » aux valeurs de sortie.",
+      "title": "Convertir des jours en heures"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "Ajouter le nom du jour",
+    "addDaysNameDescription": "Ajoutez la chaîne days aux valeurs de sortie",
+    "daysName": "Nom des jours",
+    "description": "Convertissez les heures en jours avec des options personnalisables.",
+    "shortDescription": "Convertir des heures en jours",
+    "title": "Convertir des heures en jours",
+    "toolInfo": {
+      "description": "Cet outil vous permet de convertir des heures en jours. Vous pouvez saisir des heures sous forme de nombres ou d'unités, et l'outil les convertira en jours. Vous pouvez également ajouter le suffixe « jours » aux valeurs de sortie.",
+      "title": "Convertir des heures en jours"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "Ajouter un rembourrage",
+    "addPaddingDescription": "Ajoutez un remplissage de zéro aux heures, minutes et secondes.",
+    "description": "Convertissez les secondes dans un format horaire lisible (heures:minutes:secondes). Saisissez le nombre de secondes pour obtenir l'heure formatée.",
+    "shortDescription": "Convertir les secondes au format horaire",
+    "timePadding": "Remplissage temporel",
+    "title": "Convertir les secondes en temps",
+    "toolInfo": {
+      "title": "Qu'est-ce qu'un {{title}}?"
+    }
+  },
+  "convertTimeToSeconds": {
+    "description": "Convertissez l'heure formatée (HH:MM:SS) en secondes.",
+    "inputTitle": "Heure d'entrée",
+    "resultTitle": "Secondes",
+    "shortDescription": "Convertir le format de l'heure en secondes",
+    "title": "Convertir le temps en secondes",
+    "toolInfo": {
+      "description": "Cet outil permet de convertir des chaînes de temps formatées (HH:MM:SS) en secondes. Il est utile pour calculer des durées et des intervalles de temps.",
+      "title": "Convertir le temps en secondes"
+    }
+  },
+  "crontabGuru": {
+    "description": "Générez et comprenez les expressions Cron. Créez des planifications Cron pour les tâches automatisées et les tâches système.",
+    "shortDescription": "Générer et comprendre les expressions cron",
+    "title": "Crontab Guru"
+  },
+  "timeBetweenDates": {
+    "description": "Calculez le décalage horaire entre deux dates. Obtenez la durée exacte en jours, heures, minutes et secondes.",
+    "endDate": "Date de fin",
+    "endDateTime": "Date et heure de fin",
+    "endTime": "Fin des temps",
+    "endTimezone": "Fuseau horaire de fin",
+    "shortDescription": "Calculer le temps entre deux dates",
+    "startDate": "Date de début",
+    "startDateTime": "Date et heure de début",
+    "startTime": "Heure de début",
+    "startTimezone": "Fuseau horaire de départ",
+    "title": "Temps entre les dates",
+    "toolInfo": {
+      "description": "Calculez le décalage horaire exact entre deux dates et heures, avec la prise en charge de différents fuseaux horaires. Cet outil fournit une analyse détaillée du décalage horaire en différentes unités (années, mois, jours, heures, minutes et secondes).",
+      "title": "Calculateur de temps entre les dates"
+    }
+  },
+  "truncateClockTime": {
+    "description": "Tronquez l'heure pour supprimer les secondes ou les minutes. Arrondissez l'heure à l'heure, à la minute ou à l'intervalle personnalisé le plus proche.",
+    "printDroppedComponents": "Imprimer les composants supprimés",
+    "shortDescription": "Tronquer l'heure de l'horloge à la précision spécifiée",
+    "timePadding": "Remplissage temporel",
+    "title": "Tronquer l'heure de l'horloge",
+    "toolInfo": {
+      "title": "Qu'est-ce qu'un {{title}}?"
+    },
+    "truncateMinutesAndSeconds": "Tronquer les minutes et les secondes",
+    "truncateMinutesAndSecondsDescription": "Supprimez les deux composants – les minutes et les secondes – de chaque heure d’horloge.",
+    "truncateOnlySeconds": "Tronquer uniquement les secondes",
+    "truncateOnlySecondsDescription": "Supprimez le composant secondes de chaque heure d'horloge.",
+    "truncationSide": "Côté troncature",
+    "useZeroPadding": "Utiliser le remplissage zéro",
+    "zeroPaddingDescription": "Faites en sorte que tous les composants de temps aient toujours une largeur de deux chiffres.",
+    "zeroPrintDescription": "Afficher les parties supprimées sous forme de valeurs nulles « 00 ».",
+    "zeroPrintTruncatedParts": "Parties tronquées sans impression"
+  }
+}

@@ -10,6 +10,7 @@ import { findIncompleteCsvRecords } from './service';
 import { InitialValuesType } from './types';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   csvSeparator: ',',
@@ -103,6 +104,7 @@ export default function FindIncompleteCsvRecords({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation('csv');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -115,55 +117,57 @@ export default function FindIncompleteCsvRecords({
     updateField
   }) => [
     {
-      title: 'Csv input Options',
+      title: t('findIncompleteCsvRecords.csvInputOptions'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.csvSeparator}
             onOwnChange={(val) => updateField('csvSeparator', val)}
-            description={
-              'Enter the character used to delimit columns in the CSV input file.'
-            }
+            description={t('findIncompleteCsvRecords.csvSeparatorDescription')}
           />
           <TextFieldWithDesc
             value={values.quoteCharacter}
             onOwnChange={(val) => updateField('quoteCharacter', val)}
-            description={
-              'Enter the quote character used to quote the CSV input fields.'
-            }
+            description={t(
+              'findIncompleteCsvRecords.quoteCharacterDescription'
+            )}
           />
           <TextFieldWithDesc
             value={values.commentCharacter}
             onOwnChange={(val) => updateField('commentCharacter', val)}
-            description={
-              'Enter the character indicating the start of a comment line. Lines starting with this symbol will be skipped.'
-            }
+            description={t(
+              'findIncompleteCsvRecords.commentCharacterDescription'
+            )}
           />
         </Box>
       )
     },
     {
-      title: 'Checking Options',
+      title: t('findIncompleteCsvRecords.checkingOptions'),
       component: (
         <Box>
           <CheckboxWithDesc
             checked={values.emptyLines}
             onChange={(value) => updateField('emptyLines', value)}
-            title="Delete Lines with No Data"
-            description="Remove empty lines from CSV input file."
+            title={t('findIncompleteCsvRecords.deleteLinesWithNoData')}
+            description={t(
+              'findIncompleteCsvRecords.deleteLinesWithNoDataDescription'
+            )}
           />
 
           <CheckboxWithDesc
             checked={values.emptyValues}
             onChange={(value) => updateField('emptyValues', value)}
-            title="Find Empty Values"
-            description="Display a message about CSV fields that are empty (These are not missing fields but fields that contain nothing)."
+            title={t('findIncompleteCsvRecords.findEmptyValues')}
+            description={t(
+              'findIncompleteCsvRecords.findEmptyValuesDescription'
+            )}
           />
 
           <CheckboxWithDesc
             checked={values.messageLimit}
             onChange={(value) => updateField('messageLimit', value)}
-            title="Limit number of messages"
+            title={t('findIncompleteCsvRecords.limitNumberOfMessages')}
           />
 
           {values.messageLimit && (
@@ -172,7 +176,9 @@ export default function FindIncompleteCsvRecords({
               onOwnChange={(val) => updateField('messageNumber', Number(val))}
               type="number"
               inputProps={{ min: 1 }}
-              description={'Set the limit of number of messages in the output.'}
+              description={t(
+                'findIncompleteCsvRecords.messageLimitDescription'
+              )}
             />
           )}
         </Box>
@@ -184,15 +190,27 @@ export default function FindIncompleteCsvRecords({
       title={title}
       input={input}
       inputComponent={
-        <ToolTextInput title={'Input CSV'} value={input} onChange={setInput} />
+        <ToolTextInput
+          title={t('findIncompleteCsvRecords.inputTitle')}
+          value={input}
+          onChange={setInput}
+        />
       }
-      resultComponent={<ToolTextResult title={'CSV Status'} value={result} />}
+      resultComponent={
+        <ToolTextResult
+          title={t('findIncompleteCsvRecords.resultTitle')}
+          value={result}
+        />
+      }
       initialValues={initialValues}
       exampleCards={exampleCards}
       getGroups={getGroups}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{
+        title: t('findIncompleteCsvRecords.toolInfo.title', { title }),
+        description: longDescription
+      }}
     />
   );
 }

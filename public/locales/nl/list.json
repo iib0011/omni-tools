@@ -1,0 +1,208 @@
+{
+  "duplicate": {
+    "concatenate": "Concateneren",
+    "concatenateDescription": "Kopieën samenvoegen (indien niet aangevinkt, worden de items verweven)",
+    "copyDescription": "Aantal kopieën (kan fractioneel zijn)",
+    "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het dupliceren van lijstitems. Voer uw lijst in en specificeer duplicatiecriteria om kopieën van items te maken. Perfect voor data-uitbreiding, testen of het creëren van herhaalde patronen.",
+    "duplicationOptions": "Duplicatieopties",
+    "examples": {
+      "fractional": {
+        "description": "Dit voorbeeld laat zien hoe u een lijst kunt dupliceren met een fractioneel aantal kopieën.",
+        "title": "Fractionele duplicatie"
+      },
+      "interweave": {
+        "description": "Dit voorbeeld laat zien hoe u items kunt verweven in plaats van aaneenschakelen.",
+        "title": "Verweven items"
+      },
+      "reverse": {
+        "description": "Dit voorbeeld laat zien hoe u een lijst in omgekeerde volgorde kunt dupliceren.",
+        "title": "Omgekeerde duplicatie"
+      },
+      "simple": {
+        "description": "Dit voorbeeld laat zien hoe u een lijst met woorden kunt dupliceren.",
+        "title": "Eenvoudige duplicatie"
+      }
+    },
+    "inputTitle": "Invoerlijst",
+    "joinSeparatorDescription": "Scheidingsteken om de gedupliceerde lijst samen te voegen",
+    "resultTitle": "Gedupliceerde lijst",
+    "reverse": "Achteruit",
+    "reverseDescription": "Draai de gedupliceerde items om",
+    "shortDescription": "Dubbele lijstitems met opgegeven criteria",
+    "splitByRegex": "Gesplitst door reguliere expressie",
+    "splitBySymbol": "Gesplitst op symbool",
+    "splitOptions": "Gesplitste opties",
+    "splitSeparatorDescription": "Scheidingsteken om de lijst te splitsen",
+    "title": "Duplicaat",
+    "toolInfo": {
+      "description": "Met deze tool kunt u items in een lijst dupliceren. U kunt het aantal kopieën (inclusief fractionele waarden) opgeven, bepalen of items worden samengevoegd of verweven, en zelfs de gedupliceerde items omkeren. Dit is handig voor het creëren van herhaalde patronen, het genereren van testgegevens of het uitbreiden van lijsten met voorspelbare inhoud.",
+      "title": "Lijstduplicatie"
+    }
+  },
+  "findMostPopular": {
+    "description": "'s Werelds eenvoudigste browsergebaseerde tool om de populairste items in een lijst te vinden. Voer je lijst in en krijg direct de items die het vaakst voorkomen. Perfect voor data-analyse, trendidentificatie of het vinden van gemeenschappelijke elementen.",
+    "shortDescription": "Vind de meest voorkomende items",
+    "title": "Vind de meest populaire"
+  },
+  "findUnique": {
+    "caseSensitiveItems": "Hoofdlettergevoelige items",
+    "caseSensitiveItemsDescription": "Geef items met verschillende hoofdletters/kleine letters weer als unieke elementen in de lijst.",
+    "delimiterDescription": "Stel een scheidingsteken of reguliere expressie in.",
+    "description": "'s Werelds eenvoudigste browsergebaseerde tool voor het vinden van unieke items in een lijst. Voer uw lijst in en ontvang direct alle unieke waarden, inclusief verwijderde duplicaten. Perfect voor dataopschoning, deduplicatie of het vinden van afzonderlijke elementen.",
+    "findAbsolutelyUniqueItems": "Vind absoluut unieke items",
+    "findAbsolutelyUniqueItemsDescription": "Geef alleen die items van de lijst weer die in één exemplaar aanwezig zijn.",
+    "inputListDelimiter": "Invoerlijst scheidingsteken",
+    "inputTitle": "Invoerlijst",
+    "outputListDelimiter": "Uitvoerlijstscheidingsteken",
+    "resultTitle": "Unieke items",
+    "shortDescription": "Vind unieke items in een lijst",
+    "skipEmptyItems": "Lege items overslaan",
+    "skipEmptyItemsDescription": "Neem de lege lijst-items niet op in de uitvoer.",
+    "title": "Vind uniek",
+    "trimItems": "Items in de trimlijst",
+    "trimItemsDescription": "Verwijder spaties voor en na de items voordat u ze vergelijkt.",
+    "uniqueItemOptions": "Unieke itemopties"
+  },
+  "group": {
+    "deleteEmptyItems": "Lege items verwijderen",
+    "deleteEmptyItemsDescription": "Negeer lege items en neem ze niet op in de groepen.",
+    "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het groeperen van lijstitems. Voer uw lijst in en specificeer groeperingscriteria om items in logische groepen te ordenen. Perfect voor het categoriseren van gegevens, het organiseren van informatie of het maken van gestructureerde lijsten. Ondersteunt aangepaste scheidingstekens en diverse groeperingsopties.",
+    "emptyItemsAndPadding": "Lege items en opvulling",
+    "groupNumberDescription": "Aantal items in een groep",
+    "groupSeparatorDescription": "Groepsscheidingsteken",
+    "groupSizeAndSeparators": "Groepsgrootte en scheidingstekens",
+    "inputItemSeparator": "Scheidingsteken voor invoeritems",
+    "inputTitle": "Invoerlijst",
+    "itemSeparatorDescription": "Itemscheidingsteken",
+    "leftWrapDescription": "Linksomloopsymbool van de groep.",
+    "padNonFullGroups": "Pad Niet-volledige groepen",
+    "padNonFullGroupsDescription": "Vul niet-volledige groepen met een aangepast item (voer hieronder in).",
+    "paddingCharDescription": "Gebruik dit karakter of item om groepen aan te vullen die niet vol zijn.",
+    "resultTitle": "Gegroepeerde items",
+    "rightWrapDescription": "Symbool voor de rechteromslag van de groep.",
+    "shortDescription": "Groepeer lijstitems op basis van gemeenschappelijke eigenschappen",
+    "splitOperators": {
+      "regex": {
+        "description": "Beperk de items in de invoerlijst met een reguliere expressie.",
+        "title": "Gebruik een Regex voor het splitsen"
+      },
+      "symbol": {
+        "description": "Beperk de items in de invoerlijst met een teken.",
+        "title": "Gebruik een symbool voor splitsen"
+      }
+    },
+    "splitSeparatorDescription": "Stel een scheidingsteken of reguliere expressie in.",
+    "title": "Groep"
+  },
+  "reverse": {
+    "description": "Dit is een supereenvoudige browserapplicatie die alle items in de lijst in spiegelbeeld afdrukt. De invoeritems kunnen worden gescheiden door een willekeurig symbool en u kunt ook de scheidingstekens van de omgekeerde items in de lijst wijzigen.",
+    "inputTitle": "Invoerlijst",
+    "itemSeparator": "Itemscheidingsteken",
+    "itemSeparatorDescription": "Stel een scheidingsteken of reguliere expressie in.",
+    "outputListOptions": "Opties voor uitvoerlijst",
+    "outputSeparatorDescription": "Scheidingsteken voor uitvoerlijst-items.",
+    "resultTitle": "Omgekeerde lijst",
+    "shortDescription": "Een lijst snel omkeren",
+    "splitOperators": {
+      "regex": {
+        "description": "Beperk de items in de invoerlijst met een reguliere expressie.",
+        "title": "Gebruik een Regex voor het splitsen"
+      },
+      "symbol": {
+        "description": "Beperk de items in de invoerlijst met een teken.",
+        "title": "Gebruik een symbool voor splitsen"
+      }
+    },
+    "splitterMode": "Splittermodus",
+    "title": "Achteruit",
+    "toolInfo": {
+      "description": "Met dit hulpprogramma kunt u de volgorde van items in een lijst omkeren. Het hulpprogramma splitst de invoerlijst eerst op in afzonderlijke items en doorloopt deze vervolgens van het laatste naar het eerste item, waarbij elk item tijdens de iteratie in de uitvoer wordt afgedrukt. De invoerlijst kan alles bevatten wat kan worden weergegeven als tekstuele gegevens, zoals cijfers, getallen, strings, woorden, zinnen, enz. Het scheidingsteken voor invoeritems kan ook een reguliere expressie zijn. Met de regex /[;,]/ kunt u bijvoorbeeld items gebruiken die door komma's of puntkomma's worden gescheiden. De scheidingstekens voor invoer- en uitvoerlijstitems kunnen in de opties worden aangepast. Standaard zijn zowel invoer- als uitvoerlijsten door komma's gescheiden. Listabulous!",
+      "title": "Wat is een lijstomkeerder?"
+    }
+  },
+  "rotate": {
+    "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het roteren van lijstitems. Voer uw lijst in en specificeer de rotatiehoeveelheid om items met een bepaald aantal posities te verschuiven. Perfect voor gegevensmanipulatie, circulaire verschuivingen of het opnieuw ordenen van lijsten.",
+    "shortDescription": "Lijstitems roteren op opgegeven posities",
+    "title": "Draaien"
+  },
+  "shuffle": {
+    "delimiterDescription": "Stel een scheidingsteken of reguliere expressie in.",
+    "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het herschikken van lijstitems. Voer je lijst in en ontvang direct een gerandomiseerde versie met items in willekeurige volgorde. Perfect voor het creëren van variatie, het testen van willekeur of het door elkaar halen van geordende gegevens.",
+    "inputListSeparator": "Scheidingsteken voor invoerlijst",
+    "inputTitle": "Invoerlijst",
+    "joinSeparatorDescription": "Gebruik dit scheidingsteken in de willekeurige lijst.",
+    "outputLengthDescription": "Geef zoveel willekeurige items weer",
+    "resultTitle": "Geschudde lijst",
+    "shortDescription": "De volgorde van lijstitems willekeurig maken",
+    "shuffledListLength": "Lengte van de geschudde lijst",
+    "shuffledListSeparator": "Geschudde lijstscheidingsteken",
+    "title": "Schudden"
+  },
+  "sort": {
+    "caseSensitive": "Hoofdlettergevoelig sorteren",
+    "caseSensitiveDescription": "Sorteer hoofdletters en kleine letters apart. Hoofdletters gaan vooraf aan kleine letters in een oplopende lijst. (Werkt alleen in alfabetische sorteermodus.)",
+    "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het sorteren van lijstitems. Voer uw lijst in en specificeer sorteercriteria om items in oplopende of aflopende volgorde te ordenen. Perfect voor gegevensorganisatie, tekstverwerking of het maken van geordende lijsten.",
+    "inputItemSeparator": "Scheidingsteken voor invoeritems",
+    "inputTitle": "Invoerlijst",
+    "joinSeparatorDescription": "Gebruik dit symbool als verbindingsstuk tussen items in een gesorteerde lijst.",
+    "orderDescription": "Selecteer een sorteervolgorde.",
+    "orderOptions": {
+      "decreasing": "Afnemende volgorde",
+      "increasing": "Toenemende orde"
+    },
+    "removeDuplicates": "Duplicaten verwijderen",
+    "removeDuplicatesDescription": "Verwijder dubbele lijstonderdelen.",
+    "resultTitle": "Gesorteerde lijst",
+    "shortDescription": "Lijstitems in de opgegeven volgorde sorteren",
+    "sortMethod": "Sorteermethode",
+    "sortMethodDescription": "Selecteer een sorteermethode.",
+    "sortOptions": {
+      "alphabetic": "Alfabetisch sorteren",
+      "length": "Sorteren op lengte",
+      "numeric": "Numeriek sorteren"
+    },
+    "sortedItemProperties": "Gesorteerde itemeigenschappen",
+    "splitOperators": {
+      "regex": {
+        "description": "Beperk de items in de invoerlijst met een reguliere expressie.",
+        "title": "Gebruik een Regex voor het splitsen"
+      },
+      "symbol": {
+        "description": "Beperk de items in de invoerlijst met een teken.",
+        "title": "Gebruik een symbool voor splitsen"
+      }
+    },
+    "splitSeparatorDescription": "Stel een scheidingsteken of reguliere expressie in.",
+    "title": "Soort"
+  },
+  "truncate": {
+    "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het afkappen van lijsten. Voer uw lijst in en specificeer het maximale aantal items dat u wilt behouden. Perfect voor gegevensverwerking, lijstbeheer of het beperken van de lengte van content.",
+    "shortDescription": "Lijst afkappen tot een bepaald aantal items",
+    "title": "Afkappen"
+  },
+  "unwrap": {
+    "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het uitpakken van lijstitems. Voer uw ingepakte lijst in en specificeer uitpakcriteria om georganiseerde items plat te maken. Perfect voor gegevensverwerking, tekstmanipulatie of het extraheren van inhoud uit gestructureerde lijsten.",
+    "shortDescription": "Lijstitems uit gestructureerde opmaak uitpakken",
+    "title": "Uitpakken"
+  },
+  "wrap": {
+    "description": "Voeg tekst toe voor en na elk item in de lijst.",
+    "inputTitle": "Invoerlijst",
+    "joinSeparatorDescription": "Scheidingsteken om de ingepakte lijst samen te voegen",
+    "leftTextDescription": "Tekst die vóór elk item moet worden toegevoegd",
+    "removeEmptyItems": "Lege items verwijderen",
+    "resultTitle": "Ingepakte lijst",
+    "rightTextDescription": "Tekst die na elk item moet worden toegevoegd",
+    "shortDescription": "Lijstitems inpakken met opgegeven criteria",
+    "splitByRegex": "Gesplitst door reguliere expressie",
+    "splitBySymbol": "Gesplitst op symbool",
+    "splitOptions": "Gesplitste opties",
+    "splitSeparatorDescription": "Scheidingsteken om de lijst te splitsen",
+    "title": "Wrap",
+    "toolInfo": {
+      "description": "Met deze tool kunt u tekst voor en na elk item in een lijst toevoegen. U kunt verschillende tekst opgeven voor de linker- en rechterkant en bepalen hoe de lijst wordt verwerkt. Deze tool is handig voor het toevoegen van aanhalingstekens, haakjes of andere opmaak aan lijstitems, het voorbereiden van gegevens voor verschillende formaten of het maken van gestructureerde tekst.",
+      "title": "Lijstomloop"
+    },
+    "wrapOptions": "Wrap-opties"
+  }
+}

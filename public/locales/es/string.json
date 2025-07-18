@@ -1,0 +1,261 @@
+{
+  "base64": {
+    "decode": "Descodificación Base64",
+    "description": "Codificar o decodificar texto utilizando la codificación Base64.",
+    "encode": "Codificación Base64",
+    "inputTitle": "Datos de entrada",
+    "optionsTitle": "Opciones de Base64",
+    "resultTitle": "Resultado",
+    "shortDescription": "Codificar o decodificar datos utilizando Base64.",
+    "title": "Codificador/decodificador Base64",
+    "toolInfo": {
+      "description": "Base64 es un esquema de codificación que representa datos en formato de cadena ASCII traduciéndolos a una representación de base 64. Si bien puede usarse para codificar cadenas, se usa comúnmente para codificar datos binarios para su transmisión a través de medios diseñados para procesar datos textuales.",
+      "title": "¿Qué es Base64?"
+    }
+  },
+  "censor": {
+    "description": "Utilidad para censurar palabras en texto. Cargue su texto en el formulario de entrada de la izquierda, especifique todas las palabras incorrectas en las opciones y obtendrá el texto censurado al instante en el área de salida. longDescription: 'Con esta herramienta en línea, puede censurar ciertas palabras en cualquier texto. Puede especificar una lista de palabras no deseadas (como palabras malsonantes o palabras secretas) y el programa las reemplazará con palabras alternativas y creará un texto seguro. Las palabras se pueden especificar en un campo de texto de varias líneas en las opciones, introduciendo una palabra por línea.', keywords: ['text', 'censor', 'words', 'characters'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description'",
+    "shortDescription": "Enmascare rápidamente las malas palabras o reemplácelas con palabras alternativas.",
+    "title": "Censor de texto"
+  },
+  "createPalindrome": {
+    "description": "La utilidad de navegador más sencilla del mundo para crear palíndromos a partir de cualquier texto. Introduce texto y transfórmalo al instante en un palíndromo que se lee igual de derecho a revés. Perfecto para juegos de palabras, crear patrones de texto simétricos o explorar curiosidades lingüísticas.",
+    "shortDescription": "Crea texto que se lea igual hacia adelante y hacia atrás",
+    "title": "Crear palíndromo"
+  },
+  "extractSubstring": {
+    "description": "La utilidad basada en navegador más sencilla del mundo para extraer subcadenas de texto. Introduce el texto y especifica las posiciones inicial y final para extraer la parte deseada. Perfecta para el procesamiento de datos, el análisis de texto o la extracción de contenido específico de bloques de texto más grandes.",
+    "shortDescription": "Extraer una porción de texto entre posiciones específicas",
+    "title": "Extraer subcadena"
+  },
+  "join": {
+    "blankLinesAndTrailingSpaces": "Líneas en blanco y espacios finales",
+    "deleteBlankDescription": "Eliminar líneas que no tengan símbolos de texto.",
+    "deleteBlankTitle": "Eliminar líneas en blanco",
+    "deleteTrailingDescription": "Eliminar espacios y tabulaciones al final de las líneas.",
+    "deleteTrailingTitle": "Eliminar espacios finales",
+    "description": "Une fragmentos de texto con separadores personalizables.",
+    "inputTitle": "Fragmentos de texto",
+    "joinCharacterDescription": "Símbolo que conecta fragmentos de texto. (Espacio por defecto).",
+    "joinCharacterPlaceholder": "Unirse al personaje",
+    "resultTitle": "Texto unido",
+    "shortDescription": "Unir elementos de texto con un separador especificado",
+    "textMergedOptions": "Opciones de texto fusionado",
+    "title": "Unirse al texto",
+    "toolInfo": {
+      "description": "Con esta herramienta puedes unir partes del texto. Toma una lista de valores de texto, separados por saltos de línea, y los fusiona. Puedes configurar el carácter que se colocará entre las partes del texto combinado. También puedes ignorar todas las líneas vacías y eliminar los espacios y tabulaciones al final de todas las líneas. ¡Textabulento!",
+      "title": "¿Qué es un ensamblador de texto?"
+    }
+  },
+  "palindrome": {
+    "description": "La utilidad de navegador más sencilla del mundo para comprobar si un texto es un palíndromo. Comprueba al instante si tu texto se lee igual de adelante hacia atrás. Ideal para juegos de palabras, análisis lingüísticos o la validación de patrones de texto simétricos. Admite varios delimitadores y detección de palíndromos de varias palabras.",
+    "shortDescription": "Comprueba si el texto se lee igual hacia adelante y hacia atrás",
+    "title": "Palíndromo"
+  },
+  "passwordGenerator": {
+    "avoidAmbiguous": "Evite caracteres ambiguos (i, I, l, 0, O)",
+    "description": "Genere contraseñas aleatorias seguras con longitud y tipos de caracteres personalizables. Elija entre minúsculas, mayúsculas, números y caracteres especiales. Opción para evitar caracteres ambiguos para una mejor legibilidad.",
+    "includeLowercase": "Incluir letras minúsculas (a-z)",
+    "includeNumbers": "Incluir números (0-9)",
+    "includeSymbols": "Incluir caracteres especiales",
+    "includeUppercase": "Incluir letras mayúsculas (A-Z)",
+    "lengthDesc": "Longitud de la contraseña",
+    "lengthPlaceholder": "p. ej. 12",
+    "optionsTitle": "Opciones de contraseña",
+    "resultTitle": "Contraseña generada",
+    "shortDescription": "Genere contraseñas aleatorias seguras con opciones personalizadas",
+    "title": "Generador de contraseñas",
+    "toolInfo": {
+      "description": "Esta herramienta genera contraseñas aleatorias seguras según los criterios que selecciones. Puedes personalizar la longitud, incluir o excluir diferentes tipos de caracteres y evitar caracteres ambiguos para una mejor legibilidad. Perfecta para crear contraseñas seguras para cuentas, aplicaciones o cualquier necesidad de seguridad.",
+      "title": "Acerca del generador de contraseñas"
+    }
+  },
+  "quote": {
+    "allowDoubleQuotation": "Permitir comillas dobles",
+    "description": "Agregue comillas alrededor del texto con opciones personalizables.",
+    "inputTitle": "Texto de entrada",
+    "leftQuoteDescription": "Carácter(es) de comillas izquierdas",
+    "processAsMultiLine": "Procesar como texto de varias líneas",
+    "quoteEmptyLines": "Citar líneas vacías",
+    "quoteOptions": "Opciones de cotización",
+    "resultTitle": "Texto citado",
+    "rightQuoteDescription": "Carácter(es) de comillas derechas",
+    "shortDescription": "Agregue comillas alrededor del texto con varios estilos",
+    "title": "Citador de texto",
+    "toolInfo": {
+      "description": "Esta herramienta permite añadir comillas al texto. Permite elegir diferentes caracteres de comillas, gestionar texto multilínea y controlar el procesamiento de líneas vacías. Resulta útil para preparar texto para programación, formatear datos o crear texto estilizado.",
+      "title": "Citador de texto"
+    }
+  },
+  "randomizeCase": {
+    "description": "La utilidad de navegador más sencilla del mundo para aleatorizar mayúsculas y minúsculas. Introduce tu texto y transfórmalo al instante con mayúsculas y minúsculas aleatorias. Perfecta para crear efectos de texto únicos, comprobar la distinción entre mayúsculas y minúsculas o generar patrones de texto variados.",
+    "shortDescription": "Aleatorizar el caso de las letras en el texto",
+    "title": "Aleatorizar caso"
+  },
+  "removeDuplicateLines": {
+    "description": "Carga tu texto en el formulario de entrada de la izquierda y obtendrás texto al instante sin líneas duplicadas en el área de salida. Potente, gratuito y rápido. Carga líneas de texto: obtén líneas de texto únicas.",
+    "shortDescription": "Eliminar rápidamente todas las líneas repetidas del texto",
+    "title": "Eliminar líneas duplicadas"
+  },
+  "repeat": {
+    "delimiterDescription": "Delimitador para copias de salida.",
+    "delimiterPlaceholder": "Delimitador",
+    "description": "Repita el texto varias veces con separadores personalizables.",
+    "inputTitle": "Texto de entrada",
+    "numberPlaceholder": "Número",
+    "repeatAmountDescription": "Número de repeticiones.",
+    "repetitionsDelimiter": "Delimitador de repeticiones",
+    "resultTitle": "Texto repetido",
+    "shortDescription": "Repetir el texto varias veces",
+    "textRepetitions": "Repeticiones de texto",
+    "title": "Repetir texto",
+    "toolInfo": {
+      "description": "Esta herramienta le permite repetir un texto determinado varias veces con un separador opcional.",
+      "title": "Repetir texto"
+    }
+  },
+  "reverse": {
+    "description": "La utilidad de navegador más sencilla del mundo para invertir texto. Introduce cualquier texto y revísalo al instante, carácter por carácter. Perfecta para crear texto espejo, analizar palíndromos o experimentar con patrones de texto. Conserva los espacios y caracteres especiales al invertir.",
+    "inputTitle": "Texto para revertir",
+    "processMultiLine": "Procesar texto de varias líneas",
+    "processMultiLineDescription": "Cada línea se invertirá independientemente",
+    "resultTitle": "Texto invertido",
+    "reversalOptions": "Opciones de reversión",
+    "shortDescription": "Invertir cualquier texto carácter por carácter",
+    "skipEmptyLines": "Saltar líneas vacías",
+    "skipEmptyLinesDescription": "Las líneas vacías se eliminarán de la salida.",
+    "title": "Contrarrestar",
+    "trimWhitespace": "Recortar espacios en blanco",
+    "trimWhitespaceDescription": "Eliminar los espacios iniciales y finales de cada línea"
+  },
+  "rot13": {
+    "description": "Codificar o decodificar texto utilizando el cifrado ROT13.",
+    "inputTitle": "Texto de entrada",
+    "resultTitle": "Resultado de ROT13",
+    "shortDescription": "Codificar o decodificar texto utilizando el cifrado ROT13.",
+    "title": "Codificador/decodificador ROT13",
+    "toolInfo": {
+      "description": "ROT13 (rotación de 13 posiciones) es un cifrado simple de sustitución de letras que reemplaza una letra por la decimotercera letra siguiente en el alfabeto. ROT13 es un caso especial del cifrado César, desarrollado en la antigua Roma. Dado que el alfabeto inglés tiene 26 letras, ROT13 es su propio inverso; es decir, para deshacer ROT13, se aplica el mismo algoritmo, por lo que se puede usar la misma acción para codificar y decodificar.",
+      "title": "¿Qué es ROT13?"
+    }
+  },
+  "rotate": {
+    "description": "Girar caracteres en el texto en posiciones específicas.",
+    "inputTitle": "Texto de entrada",
+    "processAsMultiLine": "Procesar como texto de varias líneas (rotar cada línea por separado)",
+    "resultTitle": "Texto rotado",
+    "rotateLeft": "Girar a la izquierda",
+    "rotateRight": "Girar a la derecha",
+    "rotationOptions": "Opciones de rotación",
+    "shortDescription": "Desplazar caracteres en el texto por posición.",
+    "stepDescription": "Número de posiciones a rotar",
+    "title": "Girar texto",
+    "toolInfo": {
+      "description": "Esta herramienta permite rotar caracteres en una cadena un número específico de posiciones. Puede rotar a la izquierda o a la derecha, y procesar texto de varias líneas rotando cada línea por separado. La rotación de cadenas es útil para transformaciones de texto simples, la creación de patrones o la implementación de técnicas básicas de cifrado.",
+      "title": "Rotación de cuerdas"
+    }
+  },
+  "split": {
+    "charAfterChunkDescription": "Carácter después de cada fragmento",
+    "charBeforeChunkDescription": "Carácter antes de cada fragmento",
+    "chunksDescription": "Número de fragmentos de igual longitud en la salida.",
+    "chunksTitle": "Utilice varios fragmentos",
+    "description": "La utilidad para navegador más sencilla del mundo para dividir texto. Introduce tu texto y especifica un separador para dividirlo en varias partes. Ideal para procesar datos, manipular texto o extraer contenido específico de bloques de texto más grandes.",
+    "lengthDescription": "Número de símbolos que se colocarán en cada fragmento de salida.",
+    "lengthTitle": "Utilice la longitud para dividir",
+    "outputSeparatorDescription": "Carácter que se colocará entre los fragmentos divididos. (Por defecto, es el salto de línea \"\\n\").",
+    "outputSeparatorOptions": "Opciones de separador de salida",
+    "regexDescription": "Expresión regular que se usará para dividir el texto en partes. (Múltiples espacios por defecto).",
+    "regexTitle": "Utilice una expresión regular para dividir",
+    "resultTitle": "Fragmentos de texto",
+    "shortDescription": "Dividir el texto en varias partes usando un separador",
+    "splitSeparatorOptions": "Opciones de separador dividido",
+    "symbolDescription": "Carácter que se utilizará para dividir el texto en partes. (Espacio por defecto).",
+    "symbolTitle": "Utilice un símbolo para dividir",
+    "title": "Dividir"
+  },
+  "statistic": {
+    "characterFrequencyAnalysis": "Análisis de frecuencia de caracteres",
+    "characterFrequencyAnalysisDescription": "Cuenta con qué frecuencia aparece cada carácter en el texto.",
+    "delimitersOptions": "Opciones de delimitadores",
+    "description": "Analizar texto y generar estadísticas completas.",
+    "includeEmptyLines": "Incluir líneas vacías",
+    "includeEmptyLinesDescription": "Incluya líneas en blanco al contar líneas",
+    "inputTitle": "Texto de entrada",
+    "resultTitle": "Estadísticas de texto",
+    "sentenceDelimitersDescription": "Introduzca caracteres personalizados utilizados para delimitar oraciones en su idioma (separados por coma) o déjelo en blanco como valor predeterminado.",
+    "sentenceDelimitersPlaceholder": "p.ej. ., !, ?, ...",
+    "shortDescription": "Obtenga estadísticas sobre su texto",
+    "statisticsOptions": "Opciones de estadísticas",
+    "title": "Estadísticas de texto",
+    "toolInfo": {
+      "description": "Esta herramienta le permite analizar texto y generar estadísticas completas que incluyen recuento de caracteres, recuento de palabras, recuento de líneas y análisis de frecuencia de caracteres y palabras.",
+      "title": "¿Qué es un? {{title}}?"
+    },
+    "wordDelimitersDescription": "Ingrese una expresión regular personalizada para contar palabras o déjela en blanco para el valor predeterminado.",
+    "wordDelimitersPlaceholder": "p. ej. \\s.,;:!?\"«»()…",
+    "wordFrequencyAnalysis": "Análisis de frecuencia de palabras",
+    "wordFrequencyAnalysisDescription": "Cuenta con qué frecuencia aparece cada palabra en el texto."
+  },
+  "textReplacer": {
+    "description": "Reemplazar patrones de texto con contenido nuevo.",
+    "findPatternInText": "Encuentra este patrón en el texto",
+    "findPatternUsingRegexp": "Encontrar un patrón usando una expresión regular",
+    "inputTitle": "Texto a reemplazar",
+    "newTextPlaceholder": "Nuevo texto",
+    "regexpDescription": "Introduzca la expresión regular que desea reemplazar.",
+    "replacePatternDescription": "Introduzca el patrón que se utilizará para el reemplazo.",
+    "replaceText": "Reemplazar texto",
+    "resultTitle": "Texto con reemplazos",
+    "searchPatternDescription": "Introduzca el patrón de texto que desea reemplazar.",
+    "searchText": "Buscar texto",
+    "shortDescription": "Reemplace rápidamente el texto en su contenido",
+    "title": "Reemplazador de texto",
+    "toolInfo": {
+      "description": "Reemplace fácilmente texto específico en su contenido con esta sencilla herramienta basada en navegador. Simplemente ingrese el texto, configure el texto que desea reemplazar y el valor de reemplazo, y obtenga la versión actualizada al instante.",
+      "title": "Reemplazador de texto"
+    }
+  },
+  "toMorse": {
+    "dashSymbolDescription": "Símbolo que corresponderá al guión en código Morse.",
+    "description": "Convertir texto a código Morse.",
+    "dotSymbolDescription": "Símbolo que corresponderá al punto en código Morse.",
+    "longSignal": "Señal larga",
+    "resultTitle": "Código Morse",
+    "shortDescription": "Codifique rápidamente texto en morse",
+    "shortSignal": "Señal corta",
+    "title": "Cadena a morse"
+  },
+  "truncate": {
+    "addTruncationIndicator": "Agregar indicador de truncamiento",
+    "charactersPlaceholder": "Personajes",
+    "description": "Acortar el texto a una longitud específica.",
+    "indicatorDescription": "Caracteres que se añaden al final (o al principio) del texto. Nota: Se consideran para la longitud.",
+    "inputTitle": "Texto de entrada",
+    "leftSideDescription": "Eliminar caracteres del inicio del texto.",
+    "leftSideTruncation": "Truncamiento del lado izquierdo",
+    "lengthAndLines": "Longitud y líneas",
+    "lineByLineDescription": "Truncar cada línea por separado.",
+    "lineByLineTruncating": "Truncamiento línea por línea",
+    "maxLengthDescription": "Número de caracteres a dejar en el texto.",
+    "numberPlaceholder": "Número",
+    "resultTitle": "Texto truncado",
+    "rightSideDescription": "Eliminar caracteres del final del texto.",
+    "rightSideTruncation": "Truncamiento del lado derecho",
+    "shortDescription": "Truncar texto a una longitud especificada",
+    "suffixAndAffix": "Sufijo y afijo",
+    "title": "Truncar texto",
+    "toolInfo": {
+      "description": "Cargue su texto en el formulario de entrada de la izquierda y obtendrá automáticamente el texto truncado a la derecha.",
+      "title": "Truncar texto"
+    },
+    "truncationSide": "Lado de truncamiento"
+  },
+  "uppercase": {
+    "description": "Convertir texto a letras mayúsculas.",
+    "inputTitle": "Texto de entrada",
+    "resultTitle": "Texto en mayúsculas",
+    "shortDescription": "Convertir texto a mayúsculas",
+    "title": "Convertir a mayúsculas"
+  }
+}

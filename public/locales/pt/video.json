@@ -1,0 +1,113 @@
+{
+  "changeSpeed": {
+    "defaultMultiplier": "Multiplicador padrão: 2 significa 2x mais rápido",
+    "description": "Altere a velocidade de reprodução de arquivos de vídeo. Acelere ou desacelere vídeos, mantendo a sincronização do áudio. Suporta vários multiplicadores de velocidade e formatos de vídeo comuns.",
+    "inputTitle": "Entrada de vídeo",
+    "newVideoSpeed": "Nova velocidade de vídeo",
+    "resultTitle": "Vídeo editado",
+    "settingSpeed": "Definindo a velocidade",
+    "shortDescription": "Alterar a velocidade de reprodução do vídeo",
+    "title": "Alterar velocidade do vídeo",
+    "toolInfo": {
+      "title": "O que é um {{title}}?"
+    }
+  },
+  "compress": {
+    "default": "Padrão",
+    "description": "Compacte vídeos dimensionando-os para diferentes resoluções, como 240p, 480p, 720p, etc. Esta ferramenta ajuda a reduzir o tamanho do arquivo, mantendo uma qualidade aceitável. Suporta formatos de vídeo comuns, como MP4, WebM e OGG.",
+    "inputTitle": "Entrada de vídeo",
+    "loadingText": "Compactando vídeo...",
+    "lossless": "Sem perdas",
+    "quality": "Qualidade (CRF)",
+    "resolution": "Resolução",
+    "resultTitle": "Vídeo compactado",
+    "shortDescription": "Comprimir vídeos dimensionando-os para diferentes resoluções",
+    "title": "Comprimir vídeo",
+    "worst": "Pior"
+  },
+  "cropVideo": {
+    "cropCoordinates": "Coordenadas de corte",
+    "croppingVideo": "Recortando vídeo",
+    "description": "Corte o vídeo para remover áreas indesejadas.",
+    "errorBeyondHeight": "A área de corte se estende além da altura do vídeo ({{height}}px)",
+    "errorBeyondWidth": "A área de corte se estende além da largura do vídeo ({{width}}px)",
+    "errorCroppingVideo": "Erro ao cortar o vídeo. Verifique os parâmetros e o arquivo de vídeo.",
+    "errorLoadingDimensions": "Falha ao carregar as dimensões do vídeo",
+    "errorNonNegativeCoordinates": "As coordenadas X e Y devem ser não negativas",
+    "errorPositiveDimensions": "Largura e altura devem ser positivas",
+    "height": "Altura",
+    "inputTitle": "Entrada de vídeo",
+    "loadVideoForDimensions": "Carregue um vídeo para ver as dimensões",
+    "resultTitle": "Vídeo recortado",
+    "shortDescription": "Recorte o vídeo para remover áreas indesejadas",
+    "title": "Cortar vídeo",
+    "toolInfo": {
+      "description": "Esta ferramenta permite cortar arquivos de vídeo para remover áreas indesejadas. Você pode especificar a área de corte definindo as coordenadas X, Y e as dimensões de largura e altura.",
+      "title": "Cortar vídeo"
+    },
+    "videoDimensions": "Dimensões do vídeo: {{width}} × {{height}} pixels",
+    "videoInformation": "Informações do vídeo",
+    "width": "Largura",
+    "xCoordinate": "X (esquerda)",
+    "yCoordinate": "Y (topo)"
+  },
+  "flip": {
+    "description": "Inverta arquivos de vídeo horizontal ou verticalmente. Espelhe vídeos para obter efeitos especiais ou corrigir problemas de orientação.",
+    "flippingVideo": "Invertendo o vídeo",
+    "horizontalLabel": "Horizontal (Espelho)",
+    "inputTitle": "Entrada de vídeo",
+    "orientation": "Orientação",
+    "resultTitle": "Vídeo invertido",
+    "shortDescription": "Inverter o vídeo horizontalmente ou verticalmente",
+    "title": "Flip Video",
+    "verticalLabel": "Vertical (de cabeça para baixo)"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "Altere a velocidade de reprodução de animações GIF. Acelere ou desacelere GIFs, mantendo a animação suave.",
+      "shortDescription": "Alterar a velocidade da animação GIF",
+      "title": "Alterar velocidade do GIF"
+    }
+  },
+  "loop": {
+    "description": "Crie um vídeo em loop repetindo o vídeo original várias vezes.",
+    "inputTitle": "Entrada de vídeo",
+    "loopingVideo": "Vídeo em loop",
+    "loops": "Laços",
+    "numberOfLoops": "Número de Loops",
+    "resultTitle": "Vídeo em loop",
+    "shortDescription": "Crie arquivos de vídeo em loop",
+    "title": "Vídeo em loop",
+    "toolInfo": {
+      "description": "Esta ferramenta permite criar um vídeo em loop repetindo o vídeo original várias vezes. Você pode especificar quantas vezes o vídeo deve ser repetido.",
+      "title": "O que é um {{title}}?"
+    }
+  },
+  "rotate": {
+    "180Degrees": "180° (de cabeça para baixo)",
+    "270Degrees": "270° (90° sentido anti-horário)",
+    "90Degrees": "90° no sentido horário",
+    "description": "Gire arquivos de vídeo em 90, 180 ou 270 graus. Corrija a orientação do vídeo ou crie efeitos especiais com controle de rotação preciso.",
+    "inputTitle": "Entrada de vídeo",
+    "resultTitle": "Vídeo girado",
+    "rotatingVideo": "Vídeo rotativo",
+    "rotation": "Rotação",
+    "shortDescription": "Girar o vídeo em graus especificados",
+    "title": "Girar vídeo"
+  },
+  "trim": {
+    "description": "Corte arquivos de vídeo especificando os horários de início e término. Remova trechos indesejados do início ou do fim dos vídeos.",
+    "endTime": "Fim dos tempos",
+    "inputTitle": "Entrada de vídeo",
+    "resultTitle": "Vídeo recortado",
+    "shortDescription": "Corte o vídeo removendo seções indesejadas",
+    "startTime": "Hora de início",
+    "timestamps": "Carimbos de data e hora",
+    "title": "Cortar vídeo"
+  },
+  "videoToGif": {
+    "description": "Converta arquivos de vídeo para o formato GIF animado. Extraia intervalos de tempo específicos e crie imagens animadas compartilháveis.",
+    "shortDescription": "Converter vídeo em GIF animado",
+    "title": "Vídeo para GIF"
+  }
+}

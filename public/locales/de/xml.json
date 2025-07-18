@@ -1,0 +1,38 @@
+{
+  "xmlBeautifier": {
+    "description": "Formatieren Sie XML mit den richtigen Einrückungen und Abständen.",
+    "indentation": "Vertiefung",
+    "inputTitle": "XML-Eingabe",
+    "resultTitle": "Verschönertes XML",
+    "shortDescription": "XML-Code formatieren und verschönern",
+    "title": "XML-Verschönerer",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie XML-Daten mit den richtigen Einrückungen und Abständen formatieren, sodass sie besser lesbar und einfacher zu bearbeiten sind.",
+      "title": "XML-Verschönerer"
+    },
+    "useSpaces": "Räume verwenden",
+    "useSpacesDescription": "Ausgabe mit Leerzeichen einrücken",
+    "useTabs": "Verwenden von Registerkarten",
+    "useTabsDescription": "Einrücken der Ausgabe mit Tabulatoren."
+  },
+  "xmlValidator": {
+    "description": "Validieren Sie die XML-Syntax und -Struktur.",
+    "placeholder": "XML hier einfügen oder importieren ...",
+    "shortDescription": "XML-Code auf Fehler validieren",
+    "title": "XML-Validator",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie die XML-Syntax und -Struktur validieren. Es prüft die korrekte XML-Formatierung und gibt bei festgestellten Problemen detaillierte Fehlermeldungen aus.",
+      "title": "XML-Validator"
+    }
+  },
+  "xmlViewer": {
+    "description": "Zeigen Sie die XML-Struktur in einem Baumformat an und erkunden Sie sie.",
+    "inputTitle": "XML-Eingabe",
+    "resultTitle": "XML-Strukturansicht",
+    "title": "XML-Viewer",
+    "toolInfo": {
+      "description": "Mit diesem Tool können Sie XML-Daten in einem hierarchischen Baumformat anzeigen, wodurch die Untersuchung und das Verständnis der Struktur von XML-Dokumenten erleichtert wird.",
+      "title": "XML-Viewer"
+    }
+  }
+}

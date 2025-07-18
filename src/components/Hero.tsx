@@ -15,9 +15,16 @@ import { useState } from 'react';
 import { DefinedTool } from '@tools/defineTool';
 import { filterTools, tools } from '@tools/index';
 import { useNavigate } from 'react-router-dom';
-import _ from 'lodash';
 import { Icon } from '@iconify/react';
 import { getToolCategoryTitle } from '@utils/string';
+import { useTranslation } from 'react-i18next';
+import { FullI18nKey, validNamespaces } from '../i18n';
+import {
+  getBookmarkedToolPaths,
+  isBookmarked,
+  toggleBookmarked
+} from '@utils/bookmark';
+import IconButton from '@mui/material/IconButton';
 
 const GroupHeader = styled('div')(({ theme }) => ({
   position: 'sticky',
@@ -33,44 +40,98 @@ const GroupHeader = styled('div')(({ theme }) => ({
 const GroupItems = styled('ul')({
   padding: 0
 });
-const exampleTools: { label: string; url: string }[] = [
-  {
-    label: 'Create a transparent image',
-    url: '/image-generic/create-transparent'
-  },
-  { label: 'Prettify JSON', url: '/json/prettify' },
-  { label: 'Change GIF speed', url: '/gif/change-speed' },
-  { label: 'Sort a list', url: '/list/sort' },
-  { label: 'Compress PNG', url: '/png/compress-png' },
-  { label: 'Split a text', url: '/string/split' },
-  { label: 'Split PDF', url: '/pdf/split-pdf' },
-  { label: 'Trim video', url: '/video/trim' },
-  { label: 'Calculate number sum', url: '/number/sum' }
-];
+
+type ToolInfo = {
+  label: FullI18nKey;
+  url: string;
+};
+
 export default function Hero() {
+  const { t } = useTranslation(validNamespaces);
   const [inputValue, setInputValue] = useState<string>('');
   const theme = useTheme();
   const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
+  const [bookmarkedToolPaths, setBookmarkedToolPaths] = useState<string[]>(
+    getBookmarkedToolPaths()
+  );
   const navigate = useNavigate();
+
+  const exampleTools: ToolInfo[] = [
+    {
+      label: 'translation:hero.examples.createTransparentImage',
+      url: '/image-generic/create-transparent'
+    },
+    {
+      label: 'translation:hero.examples.prettifyJson',
+      url: '/json/prettify'
+    },
+    {
+      label: 'translation:hero.examples.changeGifSpeed',
+      url: '/gif/change-speed'
+    },
+    {
+      label: 'translation:hero.examples.sortList',
+      url: '/list/sort'
+    },
+    {
+      label: 'translation:hero.examples.compressPng',
+      url: '/png/compress-png'
+    },
+    {
+      label: 'translation:hero.examples.splitText',
+      url: '/string/split'
+    },
+    {
+      label: 'translation:hero.examples.splitPdf',
+      url: '/pdf/split-pdf'
+    },
+    {
+      label: 'translation:hero.examples.trimVideo',
+      url: '/video/trim'
+    },
+    {
+      label: 'translation:hero.examples.calculateNumberSum',
+      url: '/number/sum'
+    }
+  ];
+
   const handleInputChange = (
     event: React.ChangeEvent<{}>,
     newInputValue: string
   ) => {
     setInputValue(newInputValue);
-    setFilteredTools(filterTools(tools, newInputValue));
+    setFilteredTools(filterTools(tools, newInputValue, t));
   };
+  const toolsMap = new Map<string, ToolInfo>();
+  for (const tool of filteredTools) {
+    toolsMap.set(tool.path, {
+      label: tool.name,
+      url: '/' + tool.path
+    });
+  }
+
+  const displayedTools =
+    bookmarkedToolPaths.length > 0
+      ? bookmarkedToolPaths.flatMap((path) => {
+          const tool = toolsMap.get(path);
+          if (tool === undefined) {
+            return [];
+          }
+          return [tool];
+        })
+      : exampleTools;
 
   return (
     <Box width={{ xs: '90%', md: '80%', lg: '60%' }}>
       <Stack mb={1} direction={'row'} spacing={1} justifyContent={'center'}>
         <Typography sx={{ textAlign: 'center' }} fontSize={{ xs: 25, md: 30 }}>
-          Get Things Done Quickly with{' '}
+          {t('translation:hero.title')}{' '}
           <Typography
             fontSize={{ xs: 25, md: 30 }}
             display={'inline'}
             color={'primary'}
           >
-            OmniTools
+            {t('translation:hero.brand')}
           </Typography>
         </Typography>
       </Stack>
@@ -79,9 +140,7 @@ export default function Hero() {
         fontSize={{ xs: 15, md: 20 }}
         mb={2}
       >
-        Boost your productivity with OmniTools, the ultimate toolkit for getting
-        things done quickly! Access thousands of user-friendly utilities for
-        editing images, text, lists, and data, all directly from your browser.
+        {t('translation:hero.description')}
       </Typography>
 
       <Autocomplete
@@ -92,18 +151,18 @@ export default function Hero() {
         renderGroup={(params) => {
           return (
             <li key={params.key}>
-              <GroupHeader>{getToolCategoryTitle(params.group)}</GroupHeader>
+              <GroupHeader>{getToolCategoryTitle(params.group, t)}</GroupHeader>
               <GroupItems>{params.children}</GroupItems>
             </li>
           );
         }}
         inputValue={inputValue}
-        getOptionLabel={(option) => option.name}
+        getOptionLabel={(option) => t(option.name)}
         renderInput={(params) => (
           <TextField
             {...params}
             fullWidth
-            placeholder={'Search all tools'}
+            placeholder={t('translation:hero.searchPlaceholder')}
             InputProps={{
               ...params.InputProps,
               endAdornment: <SearchIcon />,
@@ -121,12 +180,42 @@ export default function Hero() {
             {...props}
             onClick={() => navigate('/' + option.path)}
           >
-            <Stack direction={'row'} spacing={2} alignItems={'center'}>
-              <Icon fontSize={20} icon={option.icon} />
-              <Box>
-                <Typography fontWeight={'bold'}>{option.name}</Typography>
-                <Typography fontSize={12}>{option.shortDescription}</Typography>
-              </Box>
+            <Stack
+              direction={'row'}
+              alignItems={'center'}
+              justifyContent={'space-between'}
+              width={'100%'}
+            >
+              <Stack direction={'row'} spacing={2} alignItems={'center'}>
+                <Icon fontSize={20} icon={option.icon} />
+                <Box>
+                  <Typography fontWeight={'bold'}>{t(option.name)}</Typography>
+                  <Typography fontSize={12}>
+                    {t(option.shortDescription)}
+                  </Typography>
+                </Box>
+              </Stack>
+              <IconButton
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleBookmarked(option.path);
+                  setBookmarkedToolPaths(getBookmarkedToolPaths());
+                }}
+              >
+                <Icon
+                  fontSize={20}
+                  color={
+                    isBookmarked(option.path)
+                      ? theme.palette.primary.main
+                      : theme.palette.grey[500]
+                  }
+                  icon={
+                    isBookmarked(option.path)
+                      ? 'mdi:bookmark'
+                      : 'mdi:bookmark-plus-outline'
+                  }
+                />
+              </IconButton>
             </Stack>
           </Box>
         )}
@@ -137,7 +226,7 @@ export default function Hero() {
         }}
       />
       <Grid container spacing={2} mt={2}>
-        {exampleTools.map((tool) => (
+        {displayedTools.map((tool) => (
           <Grid
             onClick={() =>
               navigate(tool.url.startsWith('/') ? tool.url : `/${tool.url}`)
@@ -162,10 +251,30 @@ export default function Hero() {
                 cursor: 'pointer',
                 '&:hover': {
                   backgroundColor: 'background.hover'
-                }
+                },
+                height: '100%'
               }}
             >
-              <Typography>{tool.label}</Typography>
+              <Stack direction={'row'} spacing={1} alignItems={'center'}>
+                <Typography textAlign={'center'}>{t(tool.label)}</Typography>
+                {bookmarkedToolPaths.length > 0 && (
+                  <IconButton
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const path = tool.url.substring(1);
+                      toggleBookmarked(path);
+                      setBookmarkedToolPaths(getBookmarkedToolPaths());
+                    }}
+                    size={'small'}
+                  >
+                    <Icon
+                      icon={'mdi:close'}
+                      color={theme.palette.grey[500]}
+                      fontSize={15}
+                    />
+                  </IconButton>
+                )}
+              </Stack>
             </Box>
           </Grid>
         ))}

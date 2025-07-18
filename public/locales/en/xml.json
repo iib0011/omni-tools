@@ -1,0 +1,38 @@
+{
+  "xmlBeautifier": {
+    "description": "Format XML with proper indentation and spacing.",
+    "indentation": "Indentation",
+    "inputTitle": "Input XML",
+    "resultTitle": "Beautified XML",
+    "shortDescription": "Format and beautify XML code",
+    "title": "XML Beautifier",
+    "toolInfo": {
+      "description": "This tool allows you to format XML data with proper indentation and spacing, making it more readable and easier to work with.",
+      "title": "XML Beautifier"
+    },
+    "useSpaces": "Use Spaces",
+    "useSpacesDescription": "Indent output with spaces",
+    "useTabs": "Use Tabs",
+    "useTabsDescription": "Indent output with tabs."
+  },
+  "xmlValidator": {
+    "description": "Validate XML syntax and structure.",
+    "placeholder": "Paste or import XML here...",
+    "shortDescription": "Validate XML code for errors",
+    "title": "XML Validator",
+    "toolInfo": {
+      "description": "This tool allows you to validate XML syntax and structure. It checks if the XML is well-formed and provides detailed error messages for any issues found.",
+      "title": "XML Validator"
+    }
+  },
+  "xmlViewer": {
+    "description": "View and explore XML structure in a tree format.",
+    "inputTitle": "Input XML",
+    "resultTitle": "XML Tree View",
+    "title": "XML Viewer",
+    "toolInfo": {
+      "description": "This tool allows you to view XML data in a hierarchical tree format, making it easier to explore and understand the structure of XML documents.",
+      "title": "XML Viewer"
+    }
+  }
+}

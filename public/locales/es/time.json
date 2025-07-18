@@ -1,0 +1,100 @@
+{
+  "checkLeapYears": {
+    "description": "Compruebe si un año es bisiesto y obtenga información sobre el año bisiesto.",
+    "inputTitle": "Año de entrada",
+    "resultTitle": "Resultado del año bisiesto",
+    "shortDescription": "Comprobar si un año es bisiesto",
+    "title": "Consultar años bisiestos",
+    "toolInfo": {
+      "description": "Un año bisiesto es un año que contiene un día adicional (29 de febrero) para mantener la sincronización del año calendario con el año astronómico. Los años bisiestos ocurren cada 4 años, excepto los años divisibles por 100, pero no por 400.",
+      "title": "¿Qué es un año bisiesto?"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "Agregar nombre de horas",
+    "addHoursNameDescription": "Añade la cadena horas a los valores de salida",
+    "description": "Convierta días en horas con opciones personalizables.",
+    "hoursName": "Horas Nombre",
+    "shortDescription": "Convertir días a horas",
+    "title": "Convertir días a horas",
+    "toolInfo": {
+      "description": "Esta herramienta permite convertir días a horas. Puede introducir los días como números o con unidades, y la herramienta los convertirá a horas. También puede añadir el sufijo \"horas\" a los valores de salida.",
+      "title": "Convertir días a horas"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "Agregar nombre de días",
+    "addDaysNameDescription": "Añade la cadena días a los valores de salida",
+    "daysName": "Nombre de los días",
+    "description": "Convierte horas en días con opciones personalizables.",
+    "shortDescription": "Convertir horas a días",
+    "title": "Convertir horas a días",
+    "toolInfo": {
+      "description": "Esta herramienta permite convertir horas a días. Puede introducir las horas como números o con unidades, y la herramienta las convertirá a días. También puede añadir el sufijo \"días\" a los valores de salida.",
+      "title": "Convertir horas a días"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "Añadir relleno",
+    "addPaddingDescription": "Añade relleno de ceros a las horas, minutos y segundos.",
+    "description": "Convierte los segundos a un formato de hora legible (horas:minutos:segundos). Introduce la cantidad de segundos para obtener la hora formateada.",
+    "shortDescription": "Convertir segundos a formato de hora",
+    "timePadding": "Relleno de tiempo",
+    "title": "Convertir segundos a tiempo",
+    "toolInfo": {
+      "title": "¿Qué es un? {{title}}?"
+    }
+  },
+  "convertTimeToSeconds": {
+    "description": "Convierte la hora formateada (HH:MM:SS) a segundos.",
+    "inputTitle": "Hora de entrada",
+    "resultTitle": "Artículos de segunda clase",
+    "shortDescription": "Convertir formato de hora a segundos",
+    "title": "Convertir tiempo a segundos",
+    "toolInfo": {
+      "description": "Esta herramienta permite convertir cadenas de tiempo formateadas (HH:MM:SS) a segundos. Resulta útil para calcular duraciones e intervalos de tiempo.",
+      "title": "Convertir tiempo a segundos"
+    }
+  },
+  "crontabGuru": {
+    "description": "Generar y comprender expresiones cron. Crear programaciones cron para tareas automatizadas y trabajos del sistema.",
+    "shortDescription": "Generar y comprender expresiones cron",
+    "title": "Gurú de Crontab"
+  },
+  "timeBetweenDates": {
+    "description": "Calcula la diferencia horaria entre dos fechas. Obtén la duración exacta en días, horas, minutos y segundos.",
+    "endDate": "Fecha de finalización",
+    "endDateTime": "Fecha y hora de finalización",
+    "endTime": "Fin de los tiempos",
+    "endTimezone": "Zona horaria final",
+    "shortDescription": "Calcular el tiempo entre dos fechas",
+    "startDate": "Fecha de inicio",
+    "startDateTime": "Fecha y hora de inicio",
+    "startTime": "Hora de inicio",
+    "startTimezone": "Zona horaria de inicio",
+    "title": "Tiempo entre fechas",
+    "toolInfo": {
+      "description": "Calcula la diferencia horaria exacta entre dos fechas y horas, compatible con diferentes zonas horarias. Esta herramienta proporciona un desglose detallado de la diferencia horaria en varias unidades (años, meses, días, horas, minutos y segundos).",
+      "title": "Calculadora de tiempo entre fechas"
+    }
+  },
+  "truncateClockTime": {
+    "description": "Trunca la hora del reloj para quitar segundos o minutos. Redondea la hora a la hora, minuto o intervalo personalizado más cercano.",
+    "printDroppedComponents": "Imprimir componentes descartados",
+    "shortDescription": "Truncar el tiempo del reloj a la precisión especificada",
+    "timePadding": "Relleno de tiempo",
+    "title": "Truncar el tiempo del reloj",
+    "toolInfo": {
+      "title": "¿Qué es un? {{title}}?"
+    },
+    "truncateMinutesAndSeconds": "Truncar minutos y segundos",
+    "truncateMinutesAndSecondsDescription": "Elimina ambos componentes: los minutos y los segundos de cada hora del reloj.",
+    "truncateOnlySeconds": "Truncar solo segundos",
+    "truncateOnlySecondsDescription": "Elimina el componente de segundos de cada hora del reloj.",
+    "truncationSide": "Lado de truncamiento",
+    "useZeroPadding": "Utilice relleno de ceros",
+    "zeroPaddingDescription": "Haga que todos los componentes de tiempo siempre tengan dos dígitos de ancho.",
+    "zeroPrintDescription": "Muestra las partes descartadas como valores cero \"00\".",
+    "zeroPrintTruncatedParts": "Piezas truncadas de impresión cero"
+  }
+}

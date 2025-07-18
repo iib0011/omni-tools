@@ -1,0 +1,38 @@
+{
+  "xmlBeautifier": {
+    "description": "Formatear XML con sangría y espaciado adecuados.",
+    "indentation": "Sangría",
+    "inputTitle": "XML de entrada",
+    "resultTitle": "XML embellecido",
+    "shortDescription": "Formatear y embellecer el código XML",
+    "title": "Embellecedor XML",
+    "toolInfo": {
+      "description": "Esta herramienta le permite formatear datos XML con sangría y espaciado adecuados, haciéndolos más legibles y fáciles de trabajar.",
+      "title": "Embellecedor XML"
+    },
+    "useSpaces": "Utilice espacios",
+    "useSpacesDescription": "Sangrar la salida con espacios",
+    "useTabs": "Usar pestañas",
+    "useTabsDescription": "Sangrar la salida con tabulaciones."
+  },
+  "xmlValidator": {
+    "description": "Validar la sintaxis y estructura XML.",
+    "placeholder": "Pegue o importe XML aquí...",
+    "shortDescription": "Validar el código XML para detectar errores",
+    "title": "Validador XML",
+    "toolInfo": {
+      "description": "Esta herramienta permite validar la sintaxis y la estructura del XML. Comprueba si el XML está bien formado y proporciona mensajes de error detallados para cualquier problema detectado.",
+      "title": "Validador XML"
+    }
+  },
+  "xmlViewer": {
+    "description": "Ver y explorar la estructura XML en formato de árbol.",
+    "inputTitle": "XML de entrada",
+    "resultTitle": "Vista de árbol XML",
+    "title": "Visor XML",
+    "toolInfo": {
+      "description": "Esta herramienta le permite ver datos XML en un formato de árbol jerárquico, lo que facilita la exploración y la comprensión de la estructura de los documentos XML.",
+      "title": "Visor XML"
+    }
+  }
+}

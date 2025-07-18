@@ -1,0 +1,42 @@
+{
+  "changeSpeed": {
+    "description": "Altere a velocidade de reprodução dos arquivos de áudio. Acelere ou desacelere o áudio, mantendo o tom.",
+    "inputTitle": "Áudio de entrada",
+    "newAudioSpeed": "Nova velocidade de áudio",
+    "outputFormat": "Formato de saída",
+    "resultTitle": "Áudio editado",
+    "settingSpeed": "Definindo a velocidade",
+    "shortDescription": "Alterar a velocidade dos arquivos de áudio",
+    "speedDescription": "Multiplicador padrão: 2 significa 2x mais rápido",
+    "title": "Alterar velocidade do áudio",
+    "toolInfo": {
+      "title": "O que é {{title}}?"
+    }
+  },
+  "extractAudio": {
+    "description": "Extraia faixas de áudio de arquivos de vídeo.",
+    "extractingAudio": "Extraindo áudio",
+    "inputTitle": "Entrada de vídeo",
+    "outputFormat": "Formato de saída",
+    "outputFormatDescription": "Selecione o formato para o áudio ser extraído.",
+    "resultTitle": "Áudio extraído",
+    "shortDescription": "Extraia áudio de arquivos de vídeo (MP4, MOV, etc.) para AAC, MP3 ou WAV.",
+    "title": "Extrair áudio de vídeo",
+    "toolInfo": {
+      "description": "Esta ferramenta permite extrair a faixa de áudio de arquivos de vídeo. Você pode escolher entre diferentes formatos de áudio, incluindo AAC, MP3 e WAV.",
+      "title": "O que é {{title}}?"
+    }
+  },
+  "mergeAudio": {
+    "description": "Combine vários arquivos de áudio em um único arquivo de áudio concatenando-os em sequência.",
+    "longDescription": "Esta ferramenta permite mesclar vários arquivos de áudio em um único arquivo, concatenando-os na ordem em que foram enviados. Perfeito para combinar segmentos de podcast, faixas de música ou qualquer arquivo de áudio que precise ser unido. Suporta vários formatos de áudio, incluindo MP3, AAC e WAV.",
+    "shortDescription": "Mescle vários arquivos de áudio em um (MP3, AAC, WAV).",
+    "title": "Mesclar áudio"
+  },
+  "trim": {
+    "description": "Corte e apare arquivos de áudio para extrair segmentos específicos, especificando horários de início e término.",
+    "longDescription": "Esta ferramenta permite cortar arquivos de áudio especificando os tempos de início e término. Você pode extrair segmentos específicos de arquivos de áudio mais longos, remover partes indesejadas ou criar clipes mais curtos. Suporta vários formatos de áudio, incluindo MP3, AAC e WAV. Perfeito para edição de podcasts, produção musical ou qualquer necessidade de edição de áudio.",
+    "shortDescription": "Corte arquivos de áudio para extrair segmentos de tempo específicos (MP3, AAC, WAV).",
+    "title": "Aparar áudio"
+  }
+}
