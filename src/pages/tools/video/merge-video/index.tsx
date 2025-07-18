@@ -19,32 +19,22 @@ export default function MergeVideo({
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
 
-  console.log('MergeVideo component rendering, input:', input);
-
   const compute = async (
     _values: InitialValuesType,
     input: MultiVideoInput[]
   ) => {
-    console.log('Compute called with input:', input);
     if (!input || input.length < 2) {
-      console.log('Not enough files to merge');
       return;
     }
     setLoading(true);
     try {
       const files = input.map((item) => item.file);
-      console.log(
-        'Files to merge:',
-        files.map((f) => f.name)
-      );
       const mergedBlob = await mergeVideos(files, initialValues);
       const mergedFile = new File([mergedBlob], 'merged-video.mp4', {
         type: 'video/mp4'
       });
       setResult(mergedFile);
-      console.log('Merge successful');
     } catch (err) {
-      console.error(`Failed to merge video: ${err}`);
       setResult(null);
     } finally {
       setLoading(false);
@@ -59,7 +49,6 @@ export default function MergeVideo({
         <ToolMultipleVideoInput
           value={input}
           onChange={(newInput) => {
-            console.log('Input changed:', newInput);
             setInput(newInput);
           }}
           accept={['video/*', '.mp4', '.avi', '.mov', '.mkv']}

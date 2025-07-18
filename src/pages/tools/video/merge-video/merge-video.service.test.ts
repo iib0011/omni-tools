@@ -49,4 +49,14 @@ describe('merge-video', () => {
     expect(result).toBeInstanceOf(Blob);
     expect(result.type).toBe('video/mp4');
   });
+
+  it('handles different video formats by re-encoding', async () => {
+    const mockFile1 = createMockFile('video1.avi', 'video/x-msvideo');
+    const mockFile2 = createMockFile('video2.mov', 'video/quicktime');
+
+    const result = await mergeVideos([mockFile1, mockFile2], {});
+
+    expect(result).toBeInstanceOf(Blob);
+    expect(result.type).toBe('video/mp4');
+  });
 });
