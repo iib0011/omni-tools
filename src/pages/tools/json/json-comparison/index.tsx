@@ -3,7 +3,6 @@ import ToolContent from '@components/ToolContent';
 import LineNumberInput from '@components/input/LineNumberInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { compareJson } from './service';
-import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import { Box, Grid, styled } from '@mui/material';
 
@@ -42,33 +41,6 @@ const StyledInputWrapper = styled(Box)({
 type InitialValuesType = {};
 
 const initialValues: InitialValuesType = {};
-
-const exampleCards: CardExampleType<InitialValuesType>[] = [
-  {
-    title: 'Compare Simple JSON Objects',
-    description:
-      'Compare two JSON objects to find differences in their structure and values.',
-    sampleText: `{
-  "name": "John",
-  "age": 30,
-  "address": {
-    "city": "New York",
-    "country": "USA"
-  }
-}`,
-    sampleResult: `{
-  "name": "John",
-  "age": 25,
-  "address": {
-    "city": "London",
-    "country": "UK"
-  }
-}`,
-    sampleOptions: {
-      ...initialValues
-    }
-  }
-];
 
 export default function JsonComparison({ title }: ToolComponentProps) {
   const [input1, setInput1] = useState<string>('');
@@ -115,8 +87,8 @@ export default function JsonComparison({ title }: ToolComponentProps) {
       input={input1}
       setInput={setInput1}
       initialValues={initialValues}
+      getGroups={null}
       compute={() => {}}
-      exampleCards={exampleCards}
       inputComponent={
         <StyledContainer>
           <StyledGrid container spacing={2}>
