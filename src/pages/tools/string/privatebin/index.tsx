@@ -79,10 +79,12 @@ export default function PrivateBin({
     try {
       const pasteId = await createPaste(input, values);
       setResult(
-        `Paste created successfully!\n\nPaste ID: ${pasteId}\n\nShare this ID with others to retrieve the content.`
+        `${t('string:privatebin.pasteCreatedSuccess')}\n\n${t(
+          'string:privatebin.pasteIdLabel'
+        )} ${pasteId}\n\n${t('string:privatebin.shareIdMessage')}`
       );
     } catch (err) {
-      setError(`Failed to create paste: ${err}`);
+      setError(`${t('string:privatebin.errorFailedCreate')} ${err}`);
     } finally {
       setLoading(false);
     }
@@ -90,7 +92,7 @@ export default function PrivateBin({
 
   const handleRetrieve = async () => {
     if (!retrieveId.trim() || !retrievePassword.trim()) {
-      setError('Please enter both paste ID and password');
+      setError(t('string:privatebin.errorEnterBoth'));
       return;
     }
 
@@ -99,9 +101,9 @@ export default function PrivateBin({
 
     try {
       const content = await retrievePaste(retrieveId, retrievePassword);
-      setResult(`Retrieved content:\n\n${content}`);
+      setResult(`${t('string:privatebin.retrievedContent')}\n\n${content}`);
     } catch (err) {
-      setError(`Failed to retrieve paste: ${err}`);
+      setError(`${t('string:privatebin.errorFailedRetrieve')} ${err}`);
     } finally {
       setLoading(false);
     }
@@ -112,11 +114,11 @@ export default function PrivateBin({
     updateField
   }) => [
     {
-      title: 'Paste Settings',
+      title: t('string:privatebin.pasteSettings'),
       component: (
         <Box>
           <FormControl fullWidth sx={{ mb: 2 }}>
-            <InputLabel>Expiration</InputLabel>
+            <InputLabel>{t('string:privatebin.expiration')}</InputLabel>
             <Select
               value={values.expiration}
               onChange={(e) =>
@@ -125,19 +127,29 @@ export default function PrivateBin({
                   e.target.value as InitialValuesType['expiration']
                 )
               }
-              label="Expiration"
+              label={t('string:privatebin.expiration')}
             >
-              <MenuItem value="1hour">1 Hour</MenuItem>
-              <MenuItem value="1day">1 Day</MenuItem>
-              <MenuItem value="1week">1 Week</MenuItem>
-              <MenuItem value="1month">1 Month</MenuItem>
-              <MenuItem value="never">Never</MenuItem>
+              <MenuItem value="1hour">
+                {t('string:privatebin.expirationOptions.1hour')}
+              </MenuItem>
+              <MenuItem value="1day">
+                {t('string:privatebin.expirationOptions.1day')}
+              </MenuItem>
+              <MenuItem value="1week">
+                {t('string:privatebin.expirationOptions.1week')}
+              </MenuItem>
+              <MenuItem value="1month">
+                {t('string:privatebin.expirationOptions.1month')}
+              </MenuItem>
+              <MenuItem value="never">
+                {t('string:privatebin.expirationOptions.never')}
+              </MenuItem>
             </Select>
           </FormControl>
 
           <TextField
             fullWidth
-            label="Password (optional)"
+            label={t('string:privatebin.passwordOptional')}
             value={values.password}
             onChange={(e) => updateField('password', e.target.value)}
             type="password"
@@ -153,7 +165,7 @@ export default function PrivateBin({
                 }
               />
             }
-            label="Burn after reading"
+            label={t('string:privatebin.burnAfterReading')}
           />
         </Box>
       )
@@ -168,26 +180,25 @@ export default function PrivateBin({
           onChange={handleTabChange}
           aria-label="privatebin tabs"
         >
-          <Tab label="Create Paste" />
-          <Tab label="Retrieve Paste" />
+          <Tab label={t('string:privatebin.createPaste')} />
+          <Tab label={t('string:privatebin.retrievePaste')} />
         </Tabs>
 
         <TabPanel value={tabValue} index={0}>
           <Box sx={{ mb: 3 }}>
             <Typography variant="h6" gutterBottom>
-              Create a new paste
+              {t('string:privatebin.createPasteTitle')}
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-              Enter your text below and configure the settings. Your content
-              will be encrypted and stored securely.
+              {t('string:privatebin.createPasteDescription')}
             </Typography>
           </Box>
 
           <ToolTextInput
             value={input}
             onChange={setInput}
-            title="Paste Content"
-            placeholder="Enter your text here..."
+            title={t('string:privatebin.pasteContent')}
+            placeholder={t('string:privatebin.pasteContentPlaceholder')}
           />
 
           <Box sx={{ mt: 3 }}>
@@ -197,7 +208,9 @@ export default function PrivateBin({
               disabled={loading || !input.trim()}
               fullWidth
             >
-              {loading ? 'Creating...' : 'Create Paste'}
+              {loading
+                ? t('string:privatebin.creating')
+                : t('string:privatebin.createPasteButton')}
             </Button>
           </Box>
         </TabPanel>
@@ -205,16 +218,16 @@ export default function PrivateBin({
         <TabPanel value={tabValue} index={1}>
           <Box sx={{ mb: 3 }}>
             <Typography variant="h6" gutterBottom>
-              Retrieve a paste
+              {t('string:privatebin.retrievePasteTitle')}
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-              Enter the paste ID and password to retrieve the content.
+              {t('string:privatebin.retrievePasteDescription')}
             </Typography>
           </Box>
 
           <TextField
             fullWidth
-            label="Paste ID"
+            label={t('string:privatebin.pasteId')}
             value={retrieveId}
             onChange={(e) => setRetrieveId(e.target.value)}
             sx={{ mb: 2 }}
@@ -222,7 +235,7 @@ export default function PrivateBin({
 
           <TextField
             fullWidth
-            label="Password"
+            label={t('string:privatebin.password')}
             value={retrievePassword}
             onChange={(e) => setRetrievePassword(e.target.value)}
             type="password"
@@ -235,7 +248,9 @@ export default function PrivateBin({
             disabled={loading || !retrieveId.trim() || !retrievePassword.trim()}
             fullWidth
           >
-            {loading ? 'Retrieving...' : 'Retrieve Paste'}
+            {loading
+              ? t('string:privatebin.retrieving')
+              : t('string:privatebin.retrievePasteButton')}
           </Button>
         </TabPanel>
       </Paper>
