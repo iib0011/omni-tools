@@ -18,6 +18,8 @@ import { tool as stringBase64 } from './base64/meta';
 import { tool as stringStatistic } from './statistic/meta';
 import { tool as stringCensor } from './censor/meta';
 import { tool as stringPasswordGenerator } from './password-generator/meta';
+import { tool as stringEncodeUrl } from './url-encode/meta';
+import { tool as StringDecodeUrl } from './url-decode/meta';
 
 export const stringTools = [
   stringSplit,
@@ -39,5 +41,7 @@ export const stringTools = [
   stringBase64,
   stringStatistic,
   stringCensor,
-  stringPasswordGenerator
+  stringPasswordGenerator,
+  stringEncodeUrl,
+  StringDecodeUrl
 ];
