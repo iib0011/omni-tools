@@ -6,12 +6,12 @@ export const tool = defineTool('csv', {
     name: 'csv:csvToYaml.title',
     description: 'csv:csvToYaml.description',
     shortDescription: 'csv:csvToYaml.shortDescription',
-    longDescription: 'csv:csvToYaml.longDescription'
+    longDescription: 'csv:csvToYaml.longDescription',
+    userTypes: ['Developers']
   },
 
   path: 'csv-to-yaml',
   icon: 'nonicons:yaml-16',
   keywords: ['csv', 'to', 'yaml'],
-
   component: lazy(() => import('./index'))
 });

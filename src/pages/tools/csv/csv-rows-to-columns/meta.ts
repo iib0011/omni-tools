@@ -6,7 +6,8 @@ export const tool = defineTool('csv', {
     name: 'csv:csvRowsToColumns.title',
     description: 'csv:csvRowsToColumns.description',
     shortDescription: 'csv:csvRowsToColumns.shortDescription',
-    longDescription: 'csv:csvRowsToColumns.longDescription'
+    longDescription: 'csv:csvRowsToColumns.longDescription',
+    userTypes: ['General Users', 'Students', 'Developers']
   },
   path: 'csv-rows-to-columns',
   icon: 'fluent:text-arrow-down-right-column-24-filled',

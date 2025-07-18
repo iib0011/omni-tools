@@ -103,7 +103,7 @@ export default function ToolHeader({
         items={[
           { title: 'All tools', link: '/' },
           {
-            title: getToolsByCategory(t).find(
+            title: getToolsByCategory([], t).find(
               (category) => category.type === type
             )!.rawTitle,
             link: '/categories/' + type

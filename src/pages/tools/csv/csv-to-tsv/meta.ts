@@ -6,7 +6,8 @@ export const tool = defineTool('csv', {
     name: 'csv:csvToTsv.title',
     description: 'csv:csvToTsv.description',
     shortDescription: 'csv:csvToTsv.shortDescription',
-    longDescription: 'csv:csvToTsv.longDescription'
+    longDescription: 'csv:csvToTsv.longDescription',
+    userTypes: ['General Users', 'Students', 'Developers']
   },
 
   path: 'csv-to-tsv',

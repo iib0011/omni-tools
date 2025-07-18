@@ -5,7 +5,8 @@ export const tool = defineTool('csv', {
   i18n: {
     name: 'csv:csvToXml.title',
     description: 'csv:csvToXml.description',
-    shortDescription: 'csv:csvToXml.shortDescription'
+    shortDescription: 'csv:csvToXml.shortDescription',
+    userTypes: ['General Users', 'Students', 'Developers']
   },
 
   path: 'csv-to-xml',

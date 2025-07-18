@@ -10,6 +10,7 @@ export const tool = defineTool('json', {
   i18n: {
     name: 'json:escapeJson.title',
     description: 'json:escapeJson.description',
-    shortDescription: 'json:escapeJson.shortDescription'
+    shortDescription: 'json:escapeJson.shortDescription',
+    userTypes: ['Developers']
   }
 });

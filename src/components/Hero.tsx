@@ -17,6 +17,7 @@ import { filterTools, tools } from '@tools/index';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import { getToolCategoryTitle } from '@utils/string';
+import UserTypeFilter, { useUserTypeFilter } from './UserTypeFilter';
 import { useTranslation } from 'react-i18next';
 import { FullI18nKey, validNamespaces } from '../i18n';
 import {
@@ -50,6 +51,7 @@ export default function Hero() {
   const { t } = useTranslation(validNamespaces);
   const [inputValue, setInputValue] = useState<string>('');
   const theme = useTheme();
+  const { selectedUserTypes, setSelectedUserTypes } = useUserTypeFilter();
   const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
   const [bookmarkedToolPaths, setBookmarkedToolPaths] = useState<string[]>(
     getBookmarkedToolPaths()
@@ -96,12 +98,18 @@ export default function Hero() {
   ];
 
   const handleInputChange = (
-    event: React.ChangeEvent<{}>,
+    _event: React.ChangeEvent<{}>,
     newInputValue: string
   ) => {
     setInputValue(newInputValue);
-    setFilteredTools(filterTools(tools, newInputValue, t));
+    setFilteredTools(filterTools(tools, newInputValue, selectedUserTypes, t));
   };
+
+  const handleUserTypesChange = (userTypes: string[]) => {
+    setSelectedUserTypes(userTypes as any);
+    setFilteredTools(filterTools(tools, inputValue, userTypes as any, t));
+  };
+
   const toolsMap = new Map<string, ToolInfo>();
   for (const tool of filteredTools) {
     toolsMap.set(tool.path, {
@@ -217,6 +225,11 @@ export default function Hero() {
                 />
               </IconButton>
             </Stack>
+            <UserTypeFilter
+              selectedUserTypes={selectedUserTypes}
+              onUserTypesChange={handleUserTypesChange}
+              label="User Type"
+            />
           </Box>
         )}
         onChange={(event, newValue) => {

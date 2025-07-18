@@ -10,6 +10,7 @@ export const tool = defineTool('json', {
   i18n: {
     name: 'json:minify.title',
     description: 'json:minify.description',
-    shortDescription: 'json:minify.shortDescription'
+    shortDescription: 'json:minify.shortDescription',
+    userTypes: ['Developers']
   }
 });

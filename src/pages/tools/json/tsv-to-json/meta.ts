@@ -10,6 +10,7 @@ export const tool = defineTool('json', {
   i18n: {
     name: 'json:tsvToJson.title',
     description: 'json:tsvToJson.description',
-    shortDescription: 'json:tsvToJson.shortDescription'
+    shortDescription: 'json:tsvToJson.shortDescription',
+    userTypes: ['Developers']
   }
 });

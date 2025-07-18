@@ -10,6 +10,7 @@ export const tool = defineTool('json', {
   i18n: {
     name: 'json:prettify.title',
     description: 'json:prettify.description',
-    shortDescription: 'json:prettify.shortDescription'
+    shortDescription: 'json:prettify.shortDescription',
+    userTypes: ['Developers']
   }
 });
