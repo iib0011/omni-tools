@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import React, { useContext, useRef } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import InputHeader from '../InputHeader';
@@ -21,6 +21,7 @@ export default function ToolCodeInput({
   const { t } = useTranslation();
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const theme = useTheme();
 
   const handleCopy = () => {
     navigator.clipboard
@@ -56,6 +57,7 @@ export default function ToolCodeInput({
         <Editor
           height={'87%'}
           language={language}
+          theme={theme.palette.mode === 'dark' ? 'vs-dark' : 'light'}
           value={value}
           onChange={(value) => onChange(value ?? '')}
         />

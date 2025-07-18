@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: i18n pull dutch">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: sync locize">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/en/video.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/video.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/merge-video/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/merge-video/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/ToolCodeInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolCodeInput.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +27,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fork/y1hao/bookmark" />
+        <entry key="$PROJECT_DIR$" value="fork/bhavesh158/json-compare" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,185 +46,192 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GitHubPullRequestState">{
-  &quot;prStates&quot;: [
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts51PkS9&quot;,
-        &quot;number&quot;: 22
+      "id": {
+        "id": "PR_kwDOMJIfts51PkS9",
+        "number": 22
       },
-      &quot;lastSeen&quot;: 1741207144695
+      "lastSeen": 1741207144695
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6NiNYl&quot;,
-        &quot;number&quot;: 32
+      "id": {
+        "id": "PR_kwDOMJIfts6NiNYl",
+        "number": 32
       },
-      &quot;lastSeen&quot;: 1741209723869
+      "lastSeen": 1741209723869
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Nheyd&quot;,
-        &quot;number&quot;: 31
+      "id": {
+        "id": "PR_kwDOMJIfts6Nheyd",
+        "number": 31
       },
-      &quot;lastSeen&quot;: 1741213371410
+      "lastSeen": 1741213371410
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6NmRBs&quot;,
-        &quot;number&quot;: 33
+      "id": {
+        "id": "PR_kwDOMJIfts6NmRBs",
+        "number": 33
       },
-      &quot;lastSeen&quot;: 1741282429036
+      "lastSeen": 1741282429036
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts5zyFTs&quot;,
-        &quot;number&quot;: 15
+      "id": {
+        "id": "PR_kwDOMJIfts5zyFTs",
+        "number": 15
       },
-      &quot;lastSeen&quot;: 1741535540953
+      "lastSeen": 1741535540953
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QQB3c&quot;,
-        &quot;number&quot;: 59
+      "id": {
+        "id": "PR_kwDOMJIfts6QQB3c",
+        "number": 59
       },
-      &quot;lastSeen&quot;: 1743018960900
+      "lastSeen": 1743018960900
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QMPEg&quot;,
-        &quot;number&quot;: 58
+      "id": {
+        "id": "PR_kwDOMJIfts6QMPEg",
+        "number": 58
       },
-      &quot;lastSeen&quot;: 1743019452983
+      "lastSeen": 1743019452983
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QZvRI&quot;,
-        &quot;number&quot;: 61
+      "id": {
+        "id": "PR_kwDOMJIfts6QZvRI",
+        "number": 61
       },
-      &quot;lastSeen&quot;: 1743103196866
+      "lastSeen": 1743103196866
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QqPrQ&quot;,
-        &quot;number&quot;: 73
+      "id": {
+        "id": "PR_kwDOMJIfts6QqPrQ",
+        "number": 73
       },
-      &quot;lastSeen&quot;: 1743265865001
+      "lastSeen": 1743265865001
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Qp5nI&quot;,
-        &quot;number&quot;: 72
+      "id": {
+        "id": "PR_kwDOMJIfts6Qp5nI",
+        "number": 72
       },
-      &quot;lastSeen&quot;: 1743338472110
+      "lastSeen": 1743338472110
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QsjlS&quot;,
-        &quot;number&quot;: 76
+      "id": {
+        "id": "PR_kwDOMJIfts6QsjlS",
+        "number": 76
       },
-      &quot;lastSeen&quot;: 1743352150953
+      "lastSeen": 1743352150953
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Q0JBe&quot;,
-        &quot;number&quot;: 82
+      "id": {
+        "id": "PR_kwDOMJIfts6Q0JBe",
+        "number": 82
       },
-      &quot;lastSeen&quot;: 1743470267269
+      "lastSeen": 1743470267269
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6UE9-x&quot;,
-        &quot;number&quot;: 102
+      "id": {
+        "id": "PR_kwDOMJIfts6UE9-x",
+        "number": 102
       },
-      &quot;lastSeen&quot;: 1747171977348
+      "lastSeen": 1747171977348
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6XPua_&quot;,
-        &quot;number&quot;: 117
+      "id": {
+        "id": "PR_kwDOMJIfts6XPua_",
+        "number": 117
       },
-      &quot;lastSeen&quot;: 1747929835864
+      "lastSeen": 1747929835864
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6XY-mZ&quot;,
-        &quot;number&quot;: 119
+      "id": {
+        "id": "PR_kwDOMJIfts6XY-mZ",
+        "number": 119
       },
-      &quot;lastSeen&quot;: 1748028108508
+      "lastSeen": 1748028108508
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Xdz4n&quot;,
-        &quot;number&quot;: 120
+      "id": {
+        "id": "PR_kwDOMJIfts6Xdz4n",
+        "number": 120
       },
-      &quot;lastSeen&quot;: 1748282672214
+      "lastSeen": 1748282672214
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6X_zxl&quot;,
-        &quot;number&quot;: 131
+      "id": {
+        "id": "PR_kwDOMJIfts6X_zxl",
+        "number": 131
       },
-      &quot;lastSeen&quot;: 1748881279494
+      "lastSeen": 1748881279494
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6bhieT&quot;,
-        &quot;number&quot;: 152
+      "id": {
+        "id": "PR_kwDOMJIfts6bhieT",
+        "number": 152
       },
-      &quot;lastSeen&quot;: 1751848489082
+      "lastSeen": 1751848489082
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6dOyRk&quot;,
-        &quot;number&quot;: 154
+      "id": {
+        "id": "PR_kwDOMJIfts6dOyRk",
+        "number": 154
       },
-      &quot;lastSeen&quot;: 1751849436454
+      "lastSeen": 1751849436454
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6cHjNi&quot;,
-        &quot;number&quot;: 153
+      "id": {
+        "id": "PR_kwDOMJIfts6cHjNi",
+        "number": 153
       },
-      &quot;lastSeen&quot;: 1751849501498
+      "lastSeen": 1751849501498
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Zs1FN&quot;,
-        &quot;number&quot;: 145
+      "id": {
+        "id": "PR_kwDOMJIfts6Zs1FN",
+        "number": 145
       },
-      &quot;lastSeen&quot;: 1751849770308
+      "lastSeen": 1751849770308
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6bgKi9&quot;,
-        &quot;number&quot;: 150
+      "id": {
+        "id": "PR_kwDOMJIfts6bgKi9",
+        "number": 150
       },
-      &quot;lastSeen&quot;: 1751850367300
+      "lastSeen": 1751850367300
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6eUKC-&quot;,
-        &quot;number&quot;: 176
+      "id": {
+        "id": "PR_kwDOMJIfts6eUKC-",
+        "number": 176
       },
-      &quot;lastSeen&quot;: 1752158748013
+      "lastSeen": 1752158748013
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6eqzP7&quot;,
-        &quot;number&quot;: 190
+      "id": {
+        "id": "PR_kwDOMJIfts6eqzP7",
+        "number": 190
       },
-      &quot;lastSeen&quot;: 1752404173008
+      "lastSeen": 1752404173008
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6et6vx&quot;,
-        &quot;number&quot;: 192
+      "id": {
+        "id": "PR_kwDOMJIfts6et6vx",
+        "number": 192
       },
-      &quot;lastSeen&quot;: 1752585709582
+      "lastSeen": 1752585709582
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6d36mi",
+        "number": 168
+      },
+      "lastSeen": 1752805763664
     }
   ]
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
@@ -285,7 +291,7 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "#168 on fork/AshAnand34/merge-video-tool",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools",
@@ -415,9 +421,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.i18n:sync" />
         <item itemvalue="npm.i18n:pull" />
         <item itemvalue="npm.i18n:extract" />
-        <item itemvalue="npm.i18n:sync" />
         <item itemvalue="Vitest.generatePassword" />
       </list>
     </recent_temporary>
@@ -532,14 +538,6 @@
       <workItem from="1752403829295" duration="13253000" />
       <workItem from="1752493585622" duration="11629000" />
       <workItem from="1752507105323" duration="9008000" />
-    </task>
-    <task id="LOCAL-00195" summary="fix: misc">
-      <option name="closed" value="true" />
-      <created>1747172914927</created>
-      <option name="number" value="00195" />
-      <option name="presentableId" value="LOCAL-00195" />
-      <option name="project" value="LOCAL" />
-      <updated>1747172914927</updated>
     </task>
     <task id="LOCAL-00196" summary="chore: revert create-tool.mjs">
       <option name="closed" value="true" />
@@ -925,7 +923,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752605940802</updated>
     </task>
-    <option name="localTasksCounter" value="244" />
+    <task id="LOCAL-00244" summary="chore: sync locize">
+      <option name="closed" value="true" />
+      <created>1752805853344</created>
+      <option name="number" value="00244" />
+      <option name="presentableId" value="LOCAL-00244" />
+      <option name="project" value="LOCAL" />
+      <updated>1752805853344</updated>
+    </task>
+    <option name="localTasksCounter" value="245" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -972,7 +978,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: pdf editor" />
     <MESSAGE value="chore: style link" />
     <MESSAGE value="refactor: PDF editor" />
     <MESSAGE value="docs: edit pdf meta" />
@@ -997,7 +1002,8 @@
     <MESSAGE value="fix: broken translations" />
     <MESSAGE value="fix: i18n tsc" />
     <MESSAGE value="chore: i18n pull dutch" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: i18n pull dutch" />
+    <MESSAGE value="chore: sync locize" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: sync locize" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
