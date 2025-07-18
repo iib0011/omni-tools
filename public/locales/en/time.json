@@ -98,5 +98,21 @@
     "zeroPaddingDescription": "Make all time components always be two digits wide.",
     "zeroPrintDescription": "Display the dropped parts as zero values \"00\".",
     "zeroPrintTruncatedParts": "Zero-print Truncated Parts"
+  },
+  "convertUnixToDate": {
+    "title": "Convert Unix to Date",
+    "description": "Convert a Unix timestamp to a human-readable date.",
+    "shortDescription": "Convert Unix timestamp to date",
+    "longDescription": "",
+    "withLabel": "Options",
+    "outputOptions": "Output Options",
+    "addUtcLabel": "Add 'UTC' suffix",
+    "addUtcLabelDescription": "Display 'UTC' after the converted date (only for UTC mode)",
+    "useLocalTime": "Use Local Time",
+    "useLocalTimeDescription": "Show converted date in your local timezone instead of UTC",
+    "toolInfo": {
+      "title": "Convert Unix to Date",
+      "description": "This tool converts a Unix timestamp (in seconds) into a human-readable date format (e.g., YYYY-MM-DD HH:MM:SS). It supports both local and UTC output, making it useful for quickly interpreting timestamps from logs, APIs, or systems that use Unix time."
+    }
   }
 }
