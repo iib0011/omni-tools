@@ -109,5 +109,11 @@
     "description": "Convert video files to animated GIF format. Extract specific time ranges and create shareable animated images.",
     "shortDescription": "Convert video to animated GIF",
     "title": "Video to GIF"
+  },
+  "mergeVideo": {
+    "description": "Combine multiple video files into one continuous video.",
+    "shortDescription": "Append and merge videos easily.",
+    "title": "Merge videos",
+    "longDescription": "This tool allows you to merge or append multiple video files into a single continuous video. Simply upload your video files, arrange them in the desired order, and merge them into one file for easy sharing or editing."
   }
 }
