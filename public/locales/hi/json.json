@@ -1,4 +1,9 @@
 {
+  "comparison": {
+    "description": "दो JSON वस्तुओं की संरचना और मूल्यों में अंतर की पहचान करें।",
+    "shortDescription": "दो JSON वस्तुओं के बीच अंतर ढूंढें",
+    "title": "JSON तुलना करें"
+  },
   "escape": {
     "description": "JSON स्ट्रिंग में विशेष वर्णों को एस्केप करें।",
     "escapeBackslashes": "बैकस्लैश एस्केप करें",
@@ -106,10 +111,5 @@
     },
     "validJson": "✅ मान्य JSON",
     "validationOptions": "मान्यता विकल्प"
-  },
-  "comparison": {
-    "title": "JSON तुलना करें",
-    "description": "दो JSON वस्तुओं की संरचना और मूल्यों में अंतर की पहचान करें।",
-    "shortDescription": "दो JSON वस्तुओं के बीच अंतर ढूंढें"
   }
 }

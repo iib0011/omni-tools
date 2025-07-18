@@ -1,4 +1,9 @@
 {
+  "comparison": {
+    "description": "Compare two JSON objects to identify differences in structure and values.",
+    "shortDescription": "Find differences between two JSON objects",
+    "title": "Compare JSON"
+  },
   "escapeJson": {
     "description": "Escape special characters in JSON strings. Convert JSON data to properly escaped format for safe transmission or storage.",
     "shortDescription": "Escape special characters in JSON",
@@ -58,10 +63,5 @@
       "title": "What is JSON Validation?"
     },
     "validJson": "✅ Valid JSON"
-  },
-  "comparison": {
-    "title": "Compare JSON",
-    "description": "Compare two JSON objects to identify differences in structure and values.",
-    "shortDescription": "Find differences between two JSON objects"
   }
 }
