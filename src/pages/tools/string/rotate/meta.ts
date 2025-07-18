@@ -6,13 +6,13 @@ export const tool = defineTool('string', {
   i18n: {
     name: 'string:rotate.title',
     description: 'string:rotate.description',
-    shortDescription: 'string:rotate.shortDescription'
+    shortDescription: 'string:rotate.shortDescription',
+    userTypes: ['General Users', 'Students', 'Developers']
   },
 
   path: 'rotate',
   icon: 'carbon:rotate',
 
   keywords: ['rotate'],
-  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });

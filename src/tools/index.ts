@@ -198,6 +198,7 @@ export const getToolsByCategory = (
   type: ToolCategory;
   example: { title: string; path: string };
   tools: DefinedTool[];
+  userTypes: UserType[]; // <-- Add this line
 }[] => {
   const groupedByType: Partial<Record<ToolCategory, DefinedTool[]>> =
     Object.groupBy(tools, ({ type }) => type);
@@ -214,6 +215,11 @@ export const getToolsByCategory = (
           ? filterToolsByUserTypes(tools ?? [], userTypes)
           : tools ?? [];
 
+      // Aggregate unique userTypes from all tools in this category
+      const aggregatedUserTypes = Array.from(
+        new Set((filteredTools ?? []).flatMap((tool) => tool.userTypes ?? []))
+      );
+
       return {
         rawTitle: categoryConfig?.title
           ? t(categoryConfig.title)
@@ -228,7 +234,8 @@ export const getToolsByCategory = (
         example:
           filteredTools.length > 0
             ? { title: filteredTools[0].name, path: filteredTools[0].path }
-            : { title: '', path: '' }
+            : { title: '', path: '' },
+        userTypes: aggregatedUserTypes // <-- Add this line
       };
     })
     .filter((category) => category.tools.length > 0) // Only show categories with tools

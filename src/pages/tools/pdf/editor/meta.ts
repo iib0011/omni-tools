@@ -5,7 +5,8 @@ export const tool = defineTool('pdf', {
   i18n: {
     name: 'pdf:editor.title',
     description: 'pdf:editor.description',
-    shortDescription: 'pdf:editor.shortDescription'
+    shortDescription: 'pdf:editor.shortDescription',
+    userTypes: ['General Users', 'Students', 'Developers']
   },
 
   path: 'editor',
@@ -26,6 +27,5 @@ export const tool = defineTool('pdf', {
     'annotation',
     'markup'
   ],
-  userTypes: ['General Users', 'Students', 'Developers'],
   component: lazy(() => import('./index'))
 });
