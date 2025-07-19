@@ -5,7 +5,10 @@ import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
 import { useTranslation } from 'react-i18next';
 import Editor from '@monaco-editor/react';
-import { globalInputHeight } from '../../config/uiConfig';
+import {
+  globalInputHeight,
+  codeInputHeightOffset
+} from '../../config/uiConfig';
 
 export default function ToolCodeInput({
   value,
@@ -53,14 +56,58 @@ export default function ToolCodeInput({
   return (
     <Box>
       <InputHeader title={title || t('toolTextInput.input')} />
-      <Box height={globalInputHeight}>
-        <Editor
-          height={'87%'}
-          language={language}
-          theme={theme.palette.mode === 'dark' ? 'vs-dark' : 'light'}
-          value={value}
-          onChange={(value) => onChange(value ?? '')}
-        />
+      <Box
+        height={`${globalInputHeight + codeInputHeightOffset}px`} // The +codeInputHeightOffset compensates for internal padding/border differences between Monaco Editor and MUI TextField
+        sx={{
+          display: 'flex',
+          flexDirection: 'column'
+        }}
+      >
+        <Box
+          sx={(theme) => ({
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            backgroundColor: 'background.paper',
+            '.monaco-editor': {
+              height: '100% !important',
+              outline: 'none !important',
+              '.overflow-guard': {
+                height: '100% !important',
+                border:
+                  theme.palette.mode === 'light'
+                    ? '1px solid rgba(0, 0, 0, 0.23)'
+                    : '1px solid rgba(255, 255, 255, 0.23)',
+                borderRadius: 1,
+                transition: theme.transitions.create(
+                  ['border-color', 'background-color'],
+                  {
+                    duration: theme.transitions.duration.shorter
+                  }
+                )
+              },
+              '&:hover .overflow-guard': {
+                borderColor: theme.palette.text.primary
+              }
+            },
+            '.decorationsOverviewRuler': {
+              display: 'none !important'
+            }
+          })}
+        >
+          <Editor
+            height="100%"
+            language={language}
+            theme={theme.palette.mode === 'dark' ? 'vs-dark' : 'light'}
+            value={value}
+            onChange={(value) => onChange(value ?? '')}
+            options={{
+              overviewRuler: {
+                enabled: false
+              }
+            }}
+          />
+        </Box>
         <InputFooter handleCopy={handleCopy} handleImport={handleImportClick} />
         <input
           type="file"
