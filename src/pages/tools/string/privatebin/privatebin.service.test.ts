@@ -2,8 +2,6 @@ import { expect, describe, it, vi, beforeEach } from 'vitest';
 import { createPaste, retrievePaste } from './service';
 import { InitialValuesType } from './types';
 
-globalThis.crypto = require('crypto').webcrypto;
-
 describe('PrivateBin Service', () => {
   beforeEach(() => {
     localStorage.clear();
@@ -39,7 +37,7 @@ describe('PrivateBin Service', () => {
     const pastes = JSON.parse(
       localStorage.getItem('privatebin_pastes') || '{}'
     );
-    pastes[pasteId].createdAt = Date.now() - 2 * 60 * 60 * 1000; // 2 hours ago
+    pastes[pasteId].createdAt -= 2 * 60 * 60 * 1000; // 2 hours ago
     localStorage.setItem('privatebin_pastes', JSON.stringify(pastes));
     await expect(retrievePaste(pasteId, options.password)).rejects.toThrow(
       'Paste has expired'

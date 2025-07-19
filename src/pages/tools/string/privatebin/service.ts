@@ -99,21 +99,20 @@ function generateId(): string {
   );
 }
 
-function getExpirationTime(expiration: string): number {
-  const now = Date.now();
+function getExpirationDuration(expiration: string): number {
   switch (expiration) {
     case '1hour':
-      return now + 60 * 60 * 1000;
+      return 60 * 60 * 1000;
     case '1day':
-      return now + 24 * 60 * 60 * 1000;
+      return 24 * 60 * 60 * 1000;
     case '1week':
-      return now + 7 * 24 * 60 * 60 * 1000;
+      return 7 * 24 * 60 * 60 * 1000;
     case '1month':
-      return now + 30 * 24 * 60 * 60 * 1000;
+      return 30 * 24 * 60 * 60 * 1000;
     case 'never':
       return 0;
     default:
-      return now + 24 * 60 * 60 * 1000;
+      return 24 * 60 * 60 * 1000;
   }
 }
 
@@ -150,9 +149,11 @@ export async function retrievePaste(
   }
 
   // Check expiration
+  const duration = getExpirationDuration(paste.expiration);
   if (
     paste.expiration !== 'never' &&
-    paste.createdAt + getExpirationTime(paste.expiration) < Date.now()
+    duration > 0 &&
+    paste.createdAt + duration < Date.now()
   ) {
     delete pastes[id];
     localStorage.setItem('privatebin_pastes', JSON.stringify(pastes));
