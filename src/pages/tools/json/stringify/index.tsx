@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
-import ToolTextInput from '@components/input/ToolTextInput';
+import ToolCodeInput from '@components/input/ToolCodeInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { stringifyJson } from './service';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -103,10 +103,11 @@ export default function StringifyJson({ title }: ToolComponentProps) {
       compute={compute}
       exampleCards={exampleCards}
       inputComponent={
-        <ToolTextInput
+        <ToolCodeInput
           title="JavaScript Object/Array"
           value={input}
           onChange={setInput}
+          language="json"
         />
       }
       resultComponent={

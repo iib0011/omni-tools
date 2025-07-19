@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
-import ToolTextInput from '@components/input/ToolTextInput';
+import ToolCodeInput from '@components/input/ToolCodeInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { escapeJson } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
@@ -88,7 +88,12 @@ export default function EscapeJsonTool({
     <ToolContent
       title={title}
       inputComponent={
-        <ToolTextInput title="Input JSON" value={input} onChange={setInput} />
+        <ToolCodeInput
+          title="Input JSON"
+          value={input}
+          onChange={setInput}
+          language="json"
+        />
       }
       resultComponent={
         <ToolTextResult

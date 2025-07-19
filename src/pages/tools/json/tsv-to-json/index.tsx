@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
-import ToolTextInput from '@components/input/ToolTextInput';
+import ToolCodeInput from '@components/input/ToolCodeInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { convertTsvToJson } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
@@ -216,7 +216,12 @@ export default function TsvToJson({
       exampleCards={exampleCards}
       getGroups={getGroups}
       inputComponent={
-        <ToolTextInput title="Input TSV" value={input} onChange={setInput} />
+        <ToolCodeInput
+          title="Input TSV"
+          value={input}
+          onChange={setInput}
+          language="tsv"
+        />
       }
       resultComponent={
         <ToolTextResult title="Output JSON" value={result} extension={'json'} />

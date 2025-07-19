@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ToolTextInput from '@components/input/ToolTextInput';
+import ToolCodeInput from '@components/input/ToolCodeInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { validateJson } from './service';
@@ -65,10 +65,11 @@ export default function ValidateJson({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       inputComponent={
-        <ToolTextInput
+        <ToolCodeInput
           title={t('validateJson.inputTitle')}
           value={input}
           onChange={setInput}
+          language="json"
         />
       }
       resultComponent={
