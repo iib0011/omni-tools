@@ -1,3 +1,4 @@
+import { tool as stringPrivatebin } from './privatebin/meta';
 import { tool as stringRemoveDuplicateLines } from './remove-duplicate-lines/meta';
 import { tool as stringRotate } from './rotate/meta';
 import { tool as stringQuote } from './quote/meta';
