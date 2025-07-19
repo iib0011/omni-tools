@@ -102,8 +102,12 @@ export default function ToolCodeInput({
             value={value}
             onChange={(value) => onChange(value ?? '')}
             options={{
-              overviewRuler: {
-                enabled: false
+              scrollbar: {
+                vertical: 'visible',
+                horizontal: 'visible',
+                verticalScrollbarSize: 10,
+                horizontalScrollbarSize: 10,
+                alwaysConsumeMouseWheel: false
               }
             }}
           />
