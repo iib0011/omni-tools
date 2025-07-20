@@ -1,0 +1,13 @@
+{
+  "cssJsMinify": {
+    "title": "Minify CSS/JS",
+    "description": "Compress your CSS or JavaScript code by removing unnecessary spaces, line breaks, and comments.",
+    "shortDescription": "Minify CSS and JavaScript code",
+    "longDescription": "",
+    "language": "Language",
+    "toolInfo": {
+      "title": "Minify CSS/JS",
+      "description": "This tool minifies your CSS or JavaScript code by removing unnecessary characters like whitespace, line breaks, and comments—without affecting functionality. Ideal for optimizing web performance and reducing file size before deployment."
+    }
+  }
+}

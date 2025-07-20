@@ -1,0 +1,12 @@
+{
+  "cssJsMinify": {
+    "title": "Minificar CSS/JS",
+    "description": "Comprime seu código CSS ou JavaScript removendo espaços, quebras de linha e comentários desnecessários.",
+    "shortDescription": "Minificar código CSS e JavaScript",
+    "longDescription": "",
+    "toolInfo": {
+      "title": "Minificar CSS/JS",
+      "description": "Esta ferramenta minifica seu código CSS ou JavaScript removendo caracteres desnecessários, como espaços em branco, quebras de linha e comentários — sem afetar a funcionalidade. Ideal para otimizar o desempenho da web e reduzir o tamanho dos arquivos antes da implantação."
+    }
+  }
+}

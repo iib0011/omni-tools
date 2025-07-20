@@ -12,6 +12,7 @@ import pdf from '../../public/locales/en/pdf.json';
 import audio from '../../public/locales/en/audio.json';
 import xml from '../../public/locales/en/xml.json';
 import image from '../../public/locales/en/image.json';
+import dev from '../../public/locales/en/dev.json';
 
 declare module 'i18next' {
   interface CustomTypeOptions {
@@ -28,6 +29,7 @@ declare module 'i18next' {
       audio: typeof audio;
       xml: typeof xml;
       image: typeof image;
+      dev: typeof dev;
     };
   }
 }

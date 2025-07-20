@@ -1,0 +1,12 @@
+{
+  "cssJsMinify": {
+    "title": "Minifier CSS/JS",
+    "description": "Compressez votre code CSS ou JavaScript en supprimant les espaces, sauts de ligne et commentaires inutiles.",
+    "shortDescription": "Minifier du code CSS et JavaScript",
+    "longDescription": "",
+    "toolInfo": {
+      "title": "Minifier CSS/JS",
+      "description": "Cet outil minifie votre code CSS ou JavaScript en supprimant les caractères superflus comme les espaces, les sauts de ligne et les commentaires — sans altérer le fonctionnement du code. Idéal pour optimiser les performances web et réduire la taille des fichiers avant mise en production."
+    }
+  }
+}

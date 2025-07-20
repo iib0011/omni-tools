@@ -71,6 +71,10 @@
     "xml": {
       "description": "Tools for working with XML data structures - viewer, beautifier, validator and much more",
       "title": "XML Tools"
+    },
+    "dev": {
+      "description": "Essential utilities for developers: code formatters, encoders/decoders, diff tools, UUID generators, and more",
+      "title": "Dev Tools"
     }
   },
   "csv": {

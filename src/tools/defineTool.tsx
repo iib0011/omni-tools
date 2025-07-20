@@ -30,7 +30,8 @@ export type ToolCategory =
   | 'pdf'
   | 'image-generic'
   | 'audio'
-  | 'xml';
+  | 'xml'
+  | 'dev';
 
 export interface DefinedTool {
   type: ToolCategory;
