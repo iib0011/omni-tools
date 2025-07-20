@@ -1,56 +1,84 @@
-import { expect, describe, it } from 'vitest';
-import { convertUnixToDate } from './service';
+import { describe, it, expect } from 'vitest';
+import { minifyCss, minifyJs } from './service';
 
-describe('convertUnixToDate', () => {
-  it('should convert a single Unix timestamp with label (UTC)', () => {
-    const input = '0';
-    const result = convertUnixToDate(input, true, false);
-    expect(result).toBe('1970-01-01 00:00:00.000 UTC');
+describe('minifyCss', () => {
+  it('should remove comments and whitespace', () => {
+    const input = `
+      /* Comment */
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    `;
+    const result = minifyCss(input);
+    expect(result).toBe('body{margin:0;padding:0}');
   });
 
-  it('should convert a single Unix timestamp without label (UTC)', () => {
-    const input = '1234567890';
-    const result = convertUnixToDate(input, false, false);
-    expect(result).toBe('2009-02-13 23:31:30.000');
-  });
-
-  it('should convert a single Unix timestamp in local time', () => {
-    const input = '1234567890';
-    const result = convertUnixToDate(input, true, true);
-    expect(result.endsWith('UTC')).toBe(false);
-  });
-
-  it('should handle multiple lines with label (UTC)', () => {
-    const input = '0\n2147483647';
-    const result = convertUnixToDate(input, true, false);
+  it('should handle nested rules', () => {
+    const input = `
+      @media screen and (max-width: 600px) {
+        body {
+          background-color: red;
+        }
+      }
+    `;
+    const result = minifyCss(input);
     expect(result).toBe(
-      '1970-01-01 00:00:00.000 UTC\n2038-01-19 03:14:07.000 UTC'
+      '@media screen and (max-width:600px){body{background-color:red}}'
     );
   });
 
-  it('should handle multiple lines with local time', () => {
-    const input = '1672531199\n1721287227';
-    const result = convertUnixToDate(input, false, true);
-    const lines = result.split('\n');
-    expect(lines.length).toBe(2);
-    expect(lines[0].endsWith('UTC')).toBe(false);
-  });
-
-  it('should return empty string for invalid input', () => {
-    const input = 'not_a_number';
-    const result = convertUnixToDate(input, true, false);
-    expect(result).toBe('');
+  it('should remove semicolon before closing brace', () => {
+    const input = `h1 { color: blue; }`;
+    const result = minifyCss(input);
+    expect(result).toBe('h1{color:blue}');
   });
 
   it('should return empty string for empty input', () => {
-    const input = '';
-    const result = convertUnixToDate(input, false, false);
-    expect(result).toBe('');
+    expect(minifyCss('')).toBe('');
+  });
+});
+
+describe('minifyJs', () => {
+  it('should remove line and block comments', () => {
+    const input = `
+// This is a comment
+/* Another comment */
+function test() {
+  console.log("Hello");
+}
+    `;
+    const result = minifyJs(input);
+    expect(result).toBe('function test(){console.log("Hello")}');
   });
 
-  it('should ignore invalid lines in multiline input', () => {
-    const input = 'abc\n1600000000';
-    const result = convertUnixToDate(input, true, false);
-    expect(result).toBe('\n2020-09-13 12:26:40.000 UTC');
+  it('should remove unnecessary spaces and semicolons', () => {
+    const input = `
+      const x = 1 ;
+      const y = 2 ;
+      console.log( x + y );
+    `;
+    const result = minifyJs(input);
+    expect(result).toBe('const x=1;const y=2;console.log(x+y);');
+  });
+
+  it('should handle multi-line function with logic', () => {
+    const input = `
+      function sum(a, b) {
+        return a + b;
+      }
+    `;
+    const result = minifyJs(input);
+    expect(result).toBe('function sum(a,b){return a+b}');
+  });
+
+  it('should return empty string for empty input', () => {
+    expect(minifyJs('')).toBe('');
+  });
+
+  it('should not crash on malformed JS', () => {
+    const input = `function {`;
+    const result = minifyJs(input);
+    expect(typeof result).toBe('string'); // still returns a string
   });
 });
