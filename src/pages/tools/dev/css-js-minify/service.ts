@@ -1,5 +1,3 @@
-import { containsOnlyDigits } from '@utils/string';
-
 export function minifyCss(input: string): string {
   try {
     return input
