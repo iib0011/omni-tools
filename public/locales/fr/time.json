@@ -56,6 +56,22 @@
       "title": "Convertir le temps en secondes"
     }
   },
+  "convertUnixToDate": {
+    "addUtcLabel": "Ajouter le suffixe 'UTC'",
+    "addUtcLabelDescription": "Affiche 'UTC' après la date convertie (uniquement en mode UTC)",
+    "description": "Convertit un timestamp Unix en une date lisible par un humain.",
+    "longDescription": "Cet outil permet de convertir un timestamp Unix (en secondes) en une date lisible au format AAAA-MM-JJ HH:MM:SS. Il prend en charge l'affichage en UTC ou dans le fuseau horaire local, ce qui est pratique pour interpréter rapidement des horodatages issus de journaux, d'API ou de systèmes utilisant le temps Unix.",
+    "outputOptions": "Options de sortie",
+    "shortDescription": "Conversion de timestamp Unix en date",
+    "title": "Convertir un timestamp Unix en date",
+    "toolInfo": {
+      "description": "Cet outil convertit un timestamp Unix (en secondes) en une date lisible (par ex. AAAA-MM-JJ HH:MM:SS). Il prend en charge l'affichage en heure locale ou en UTC, ce qui le rend utile pour analyser rapidement des données issues de journaux ou d’APIs.",
+      "title": "Convertir un timestamp Unix en date"
+    },
+    "useLocalTime": "Utiliser l’heure locale",
+    "useLocalTimeDescription": "Affiche la date convertie dans votre fuseau horaire local au lieu de l’heure UTC",
+    "withLabel": "Options"
+  },
   "crontabGuru": {
     "description": "Générez et comprenez les expressions Cron. Créez des planifications Cron pour les tâches automatisées et les tâches système.",
     "shortDescription": "Générer et comprendre les expressions cron",
@@ -96,21 +112,5 @@
     "zeroPaddingDescription": "Faites en sorte que tous les composants de temps aient toujours une largeur de deux chiffres.",
     "zeroPrintDescription": "Afficher les parties supprimées sous forme de valeurs nulles « 00 ».",
     "zeroPrintTruncatedParts": "Parties tronquées sans impression"
-  },
-  "convertUnixToDate": {
-    "title": "Convertir un timestamp Unix en date",
-    "description": "Convertit un timestamp Unix en une date lisible par un humain.",
-    "shortDescription": "Conversion de timestamp Unix en date",
-    "longDescription": "Cet outil permet de convertir un timestamp Unix (en secondes) en une date lisible au format AAAA-MM-JJ HH:MM:SS. Il prend en charge l'affichage en UTC ou dans le fuseau horaire local, ce qui est pratique pour interpréter rapidement des horodatages issus de journaux, d'API ou de systèmes utilisant le temps Unix.",
-    "withLabel": "Options",
-    "outputOptions": "Options de sortie",
-    "addUtcLabel": "Ajouter le suffixe 'UTC'",
-    "addUtcLabelDescription": "Affiche 'UTC' après la date convertie (uniquement en mode UTC)",
-    "useLocalTime": "Utiliser l’heure locale",
-    "useLocalTimeDescription": "Affiche la date convertie dans votre fuseau horaire local au lieu de l’heure UTC",
-    "toolInfo": {
-      "title": "Convertir un timestamp Unix en date",
-      "description": "Cet outil convertit un timestamp Unix (en secondes) en une date lisible (par ex. AAAA-MM-JJ HH:MM:SS). Il prend en charge l'affichage en heure locale ou en UTC, ce qui le rend utile pour analyser rapidement des données issues de journaux ou d’APIs."
-    }
   }
 }

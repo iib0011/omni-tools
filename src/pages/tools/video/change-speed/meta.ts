@@ -10,6 +10,7 @@ export const tool = defineTool('video', {
   i18n: {
     name: 'video:changeSpeed.title',
     description: 'video:changeSpeed.description',
-    shortDescription: 'video:changeSpeed.shortDescription'
+    shortDescription: 'video:changeSpeed.shortDescription',
+    userTypes: ['generalUsers']
   }
 });

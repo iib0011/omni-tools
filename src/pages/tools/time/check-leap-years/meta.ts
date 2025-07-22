@@ -10,6 +10,7 @@ export const tool = defineTool('time', {
   i18n: {
     name: 'time:checkLeapYears.title',
     description: 'time:checkLeapYears.description',
-    shortDescription: 'time:checkLeapYears.shortDescription'
+    shortDescription: 'time:checkLeapYears.shortDescription',
+    userTypes: ['generalUsers']
   }
 });

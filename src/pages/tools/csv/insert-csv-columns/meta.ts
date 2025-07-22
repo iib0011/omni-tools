@@ -12,6 +12,5 @@ export const tool = defineTool('csv', {
   icon: 'hugeicons:column-insert',
 
   keywords: ['insert', 'csv', 'columns', 'append', 'prepend'],
-
   component: lazy(() => import('./index'))
 });

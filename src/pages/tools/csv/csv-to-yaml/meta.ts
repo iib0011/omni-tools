@@ -12,6 +12,5 @@ export const tool = defineTool('csv', {
   path: 'csv-to-yaml',
   icon: 'nonicons:yaml-16',
   keywords: ['csv', 'to', 'yaml'],
-
   component: lazy(() => import('./index'))
 });
