@@ -10,6 +10,7 @@ export const tool = defineTool('time', {
   i18n: {
     name: 'time:timeBetweenDates.title',
     description: 'time:timeBetweenDates.description',
-    shortDescription: 'time:timeBetweenDates.shortDescription'
+    shortDescription: 'time:timeBetweenDates.shortDescription',
+    userTypes: ['generalUsers', 'developers']
   }
 });

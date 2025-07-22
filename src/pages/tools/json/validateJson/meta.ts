@@ -2,7 +2,7 @@ import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
 export const tool = defineTool('json', {
-  path: 'validate-json',
+  path: 'validateJson',
   icon: 'material-symbols:check-circle',
 
   keywords: ['json', 'validate', 'check', 'syntax', 'errors'],

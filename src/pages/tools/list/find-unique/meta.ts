@@ -10,6 +10,7 @@ export const tool = defineTool('list', {
   i18n: {
     name: 'list:findUnique.title',
     description: 'list:findUnique.description',
-    shortDescription: 'list:findUnique.shortDescription'
+    shortDescription: 'list:findUnique.shortDescription',
+    userTypes: ['generalUsers', 'developers']
   }
 });

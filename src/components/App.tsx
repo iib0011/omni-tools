@@ -12,6 +12,7 @@ import { darkTheme, lightTheme } from '../config/muiConfig';
 import ScrollToTopButton from './ScrollToTopButton';
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../i18n';
+import { UserTypeFilterProvider } from 'providers/UserTypeFilterProvider';
 
 export type Mode = 'dark' | 'light' | 'system';
 
@@ -57,18 +58,20 @@ function App() {
           }}
         >
           <CustomSnackBarProvider>
-            <BrowserRouter>
-              <Navbar
-                mode={mode}
-                onChangeMode={() => {
-                  setMode((prev) => nextMode(prev));
-                  localStorage.setItem('theme', nextMode(mode));
-                }}
-              />
-              <Suspense fallback={<Loading />}>
-                <AppRoutes />
-              </Suspense>
-            </BrowserRouter>
+            <UserTypeFilterProvider>
+              <BrowserRouter>
+                <Navbar
+                  mode={mode}
+                  onChangeMode={() => {
+                    setMode((prev) => nextMode(prev));
+                    localStorage.setItem('theme', nextMode(mode));
+                  }}
+                />
+                <Suspense fallback={<Loading />}>
+                  <AppRoutes />
+                </Suspense>
+              </BrowserRouter>
+            </UserTypeFilterProvider>
           </CustomSnackBarProvider>
         </SnackbarProvider>
         <ScrollToTopButton />
