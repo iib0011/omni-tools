@@ -10,6 +10,7 @@ export const tool = defineTool('string', {
   i18n: {
     name: 'string:uppercase.title',
     description: 'string:uppercase.description',
-    shortDescription: 'string:uppercase.shortDescription'
+    shortDescription: 'string:uppercase.shortDescription',
+    userTypes: ['generalUsers', 'developers']
   }
 });

@@ -22,28 +22,38 @@ import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SearchIcon from '@mui/icons-material/Search';
 import { Helmet } from 'react-helmet';
+import UserTypeFilter from '@components/UserTypeFilter';
 import { useTranslation } from 'react-i18next';
 import { I18nNamespaces, validNamespaces } from '../../i18n';
+import { useUserTypeFilter } from '../../providers/UserTypeFilterProvider';
 
 const StyledLink = styled(Link)(({ theme }) => ({
   '&:hover': {
     color: theme.palette.mode === 'dark' ? 'white' : theme.palette.primary.light
   }
 }));
+
 export default function ToolsByCategory() {
   const navigate = useNavigate();
   const theme = useTheme();
   const mainContentRef = React.useRef<HTMLDivElement>(null);
   const { categoryName } = useParams();
   const [searchTerm, setSearchTerm] = React.useState<string>('');
+  const { selectedUserTypes, setSelectedUserTypes } = useUserTypeFilter();
   const { t } = useTranslation(validNamespaces);
   const rawTitle = getToolCategoryTitle(categoryName as string, t);
   // First get tools by category without filtering
-  const toolsByCategory =
-    getToolsByCategory(t).find(({ type }) => type === categoryName)?.tools ??
-    [];
+  const toolsByCategory = getToolsByCategory(selectedUserTypes, t).find(
+    ({ type }) => type === categoryName
+  );
+  const categoryDefinedTools = toolsByCategory?.tools ?? [];
 
-  const categoryTools = filterTools(toolsByCategory, searchTerm, t);
+  const categoryTools = filterTools(
+    categoryDefinedTools,
+    searchTerm,
+    selectedUserTypes,
+    t
+  );
 
   useEffect(() => {
     if (mainContentRef.current) {
@@ -90,7 +100,20 @@ export default function ToolsByCategory() {
             onChange={(event) => setSearchTerm(event.target.value)}
           />
         </Stack>
-        <Grid container spacing={2} mt={2}>
+        <Box
+          width={'100%'}
+          display={'flex'}
+          alignItems={'center'}
+          justifyContent={'center'}
+          my={2}
+        >
+          <UserTypeFilter
+            userTypes={toolsByCategory?.userTypes ?? undefined}
+            selectedUserTypes={selectedUserTypes}
+            onUserTypesChange={setSelectedUserTypes}
+          />
+        </Box>
+        <Grid container spacing={2}>
           {categoryTools.map((tool, index) => (
             <Grid item xs={12} md={6} lg={4} key={tool.path}>
               <Stack

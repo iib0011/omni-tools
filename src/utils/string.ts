@@ -114,7 +114,7 @@ export const getToolCategoryTitle = (
   categoryName: string,
   t: TFunction<I18nNamespaces[]>
 ): string =>
-  getToolsByCategory(t).find((category) => category.type === categoryName)!
+  getToolsByCategory([], t).find((category) => category.type === categoryName)!
     .rawTitle;
 
 // Type guard to check if a value is a valid I18nNamespaces
