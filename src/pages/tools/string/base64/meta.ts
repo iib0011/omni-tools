@@ -11,6 +11,6 @@ export const tool = defineTool('string', {
     name: 'string:base64.title',
     description: 'string:base64.description',
     shortDescription: 'string:base64.shortDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   }
 });

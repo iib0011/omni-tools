@@ -12,6 +12,6 @@ export const tool = defineTool('list', {
     name: 'list:duplicate.title',
     description: 'list:duplicate.description',
     shortDescription: 'list:duplicate.shortDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   }
 });

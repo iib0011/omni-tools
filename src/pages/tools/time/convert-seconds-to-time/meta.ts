@@ -11,6 +11,6 @@ export const tool = defineTool('time', {
     name: 'time:convertSecondsToTime.title',
     description: 'time:convertSecondsToTime.description',
     shortDescription: 'time:convertSecondsToTime.shortDescription',
-    userTypes: ['General Users', 'Students']
+    userTypes: ['General Users']
   }
 });

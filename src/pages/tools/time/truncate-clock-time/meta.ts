@@ -11,6 +11,6 @@ export const tool = defineTool('time', {
     name: 'time:truncateClockTime.title',
     description: 'time:truncateClockTime.description',
     shortDescription: 'time:truncateClockTime.shortDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   }
 });

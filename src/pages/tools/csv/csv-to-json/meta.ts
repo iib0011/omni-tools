@@ -6,7 +6,7 @@ export const tool = defineTool('csv', {
     name: 'csv:csvToJson.title',
     description: 'csv:csvToJson.description',
     shortDescription: 'csv:csvToJson.shortDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   },
 
   path: 'csv-to-json',

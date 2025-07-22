@@ -6,7 +6,7 @@ export const tool = defineTool('string', {
     name: 'string:textReplacer.title',
     description: 'string:textReplacer.description',
     shortDescription: 'string:textReplacer.shortDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   },
 
   path: 'replacer',

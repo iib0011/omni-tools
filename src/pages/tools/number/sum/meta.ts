@@ -12,6 +12,6 @@ export const tool = defineTool('number', {
     name: 'number:sum.title',
     description: 'number:sum.description',
     shortDescription: 'number:sum.shortDescription',
-    userTypes: ['General Users', 'Students']
+    userTypes: ['General Users']
   }
 });

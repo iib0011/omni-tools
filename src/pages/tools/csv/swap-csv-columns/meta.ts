@@ -7,7 +7,7 @@ export const tool = defineTool('csv', {
     description: 'csv:swapCsvColumns.description',
     shortDescription: 'csv:swapCsvColumns.shortDescription',
     longDescription: 'csv:swapCsvColumns.longDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   },
 
   path: 'swap-csv-columns',

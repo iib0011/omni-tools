@@ -11,6 +11,6 @@ export const tool = defineTool('time', {
     name: 'time:checkLeapYears.title',
     description: 'time:checkLeapYears.description',
     shortDescription: 'time:checkLeapYears.shortDescription',
-    userTypes: ['General Users', 'Students']
+    userTypes: ['General Users']
   }
 });

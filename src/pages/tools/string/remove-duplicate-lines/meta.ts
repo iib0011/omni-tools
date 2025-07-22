@@ -11,6 +11,6 @@ export const tool = defineTool('string', {
     name: 'string:removeDuplicateLines.title',
     description: 'string:removeDuplicateLines.description',
     shortDescription: 'string:removeDuplicateLines.shortDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   }
 });

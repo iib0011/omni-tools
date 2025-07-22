@@ -11,6 +11,6 @@ export const tool = defineTool('video', {
     name: 'video:changeSpeed.title',
     description: 'video:changeSpeed.description',
     shortDescription: 'video:changeSpeed.shortDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   }
 });

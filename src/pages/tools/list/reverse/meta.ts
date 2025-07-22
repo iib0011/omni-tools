@@ -10,7 +10,7 @@ export const tool = defineTool('list', {
     name: 'list:reverse.title',
     description: 'list:reverse.description',
     shortDescription: 'list:reverse.shortDescription',
-    userTypes: ['General Users', 'Students']
+    userTypes: ['General Users']
   },
   component: lazy(() => import('./index'))
 });

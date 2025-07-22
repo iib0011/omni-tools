@@ -11,6 +11,6 @@ export const tool = defineTool('list', {
     name: 'list:findUnique.title',
     description: 'list:findUnique.description',
     shortDescription: 'list:findUnique.shortDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   }
 });

@@ -12,6 +12,6 @@ export const tool = defineTool('string', {
     name: 'string:quote.title',
     description: 'string:quote.description',
     shortDescription: 'string:quote.shortDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   }
 });

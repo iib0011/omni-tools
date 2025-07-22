@@ -7,7 +7,7 @@ export const tool = defineTool('audio', {
     description: 'audio:trim.description',
     shortDescription: 'audio:trim.shortDescription',
     longDescription: 'audio:trim.longDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   },
 
   path: 'trim',

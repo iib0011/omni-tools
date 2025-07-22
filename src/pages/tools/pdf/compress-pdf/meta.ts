@@ -24,6 +24,6 @@ export const tool = defineTool('pdf', {
     name: 'pdf:compressPdf.title',
     description: 'pdf:compressPdf.description',
     shortDescription: 'pdf:compressPdf.shortDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   }
 });

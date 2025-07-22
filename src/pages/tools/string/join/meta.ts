@@ -12,6 +12,6 @@ export const tool = defineTool('string', {
     name: 'string:join.title',
     description: 'string:join.description',
     shortDescription: 'string:join.shortDescription',
-    userTypes: ['General Users', 'Students']
+    userTypes: ['General Users']
   }
 });

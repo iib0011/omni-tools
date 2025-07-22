@@ -22,6 +22,6 @@ export const tool = defineTool('audio', {
     name: 'audio:extractAudio.title',
     description: 'audio:extractAudio.description',
     shortDescription: 'audio:extractAudio.shortDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   }
 });

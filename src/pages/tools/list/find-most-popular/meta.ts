@@ -12,6 +12,6 @@ export const tool = defineTool('list', {
     name: 'list:findMostPopular.title',
     description: 'list:findMostPopular.description',
     shortDescription: 'list:findMostPopular.shortDescription',
-    userTypes: ['General Users', 'Students', 'Developers']
+    userTypes: ['General Users', 'Developers']
   }
 });
