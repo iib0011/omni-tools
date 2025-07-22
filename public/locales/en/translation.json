@@ -248,7 +248,7 @@
     "result": "Result"
   },
   "userTypes": {
-    "generalUsers": "General users",
-    "developers": "Developers"
+    "developers": "Developers",
+    "generalUsers": "General users"
   }
 }

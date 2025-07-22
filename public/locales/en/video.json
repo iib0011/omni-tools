@@ -38,9 +38,9 @@
     "height": "Height",
     "inputTitle": "Input Video",
     "loadVideoForDimensions": "Load a video to see dimensions",
+    "longDescription": "This tool allows you to crop video files to remove unwanted areas or focus on specific parts of the video. Useful for removing black bars, adjusting aspect ratios, or focusing on important content. Supports various video formats including MP4, MOV, and AVI.",
     "resultTitle": "Cropped Video",
     "shortDescription": "Crop video to remove unwanted areas",
-    "longDescription": "This tool allows you to crop video files to remove unwanted areas or focus on specific parts of the video. Useful for removing black bars, adjusting aspect ratios, or focusing on important content. Supports various video formats including MP4, MOV, and AVI.",
     "title": "Crop Video",
     "toolInfo": {
       "description": "This tool allows you to crop video files to remove unwanted areas. You can specify the crop area by setting the X, Y coordinates and width, height dimensions.",
