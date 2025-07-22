@@ -7,7 +7,7 @@ export const tool = defineTool('pdf', {
     description: 'pdf:pdfToPng.description',
     shortDescription: 'pdf:pdfToPng.shortDescription',
     longDescription: 'pdf:pdfToPng.longDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   },
 
   path: 'pdf-to-png',

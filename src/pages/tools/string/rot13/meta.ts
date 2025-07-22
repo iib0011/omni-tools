@@ -7,7 +7,7 @@ export const tool = defineTool('string', {
     name: 'string:rot13.title',
     description: 'string:rot13.description',
     shortDescription: 'string:rot13.shortDescription',
-    userTypes: ['General Users', 'Developers']
+    userTypes: ['generalUsers', 'developers']
   },
 
   path: 'rot13',

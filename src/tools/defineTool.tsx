@@ -4,7 +4,7 @@ import { IconifyIcon } from '@iconify/react';
 import { FullI18nKey, validNamespaces } from '../i18n';
 import { useTranslation } from 'react-i18next';
 
-export type UserType = 'General Users' | 'Developers' | 'CyberSec';
+export type UserType = 'generalUsers' | 'developers';
 
 export interface ToolMeta {
   path: string;

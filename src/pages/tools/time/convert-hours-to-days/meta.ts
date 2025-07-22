@@ -11,6 +11,6 @@ export const tool = defineTool('time', {
     name: 'time:convertHoursToDays.title',
     description: 'time:convertHoursToDays.description',
     shortDescription: 'time:convertHoursToDays.shortDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   }
 });

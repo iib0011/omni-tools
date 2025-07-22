@@ -11,6 +11,6 @@ export const tool = defineTool('video', {
     name: 'video:rotate.title',
     description: 'video:rotate.description',
     shortDescription: 'video:rotate.shortDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   }
 });

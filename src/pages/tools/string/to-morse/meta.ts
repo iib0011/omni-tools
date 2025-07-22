@@ -11,6 +11,6 @@ export const tool = defineTool('string', {
     name: 'string:toMorse.title',
     description: 'string:toMorse.description',
     shortDescription: 'string:toMorse.shortDescription',
-    userTypes: ['General Users', 'Developers']
+    userTypes: ['generalUsers', 'developers']
   }
 });

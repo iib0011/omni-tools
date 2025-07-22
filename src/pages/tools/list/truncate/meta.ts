@@ -11,6 +11,6 @@ export const tool = defineTool('list', {
     name: 'list:truncate.title',
     description: 'list:truncate.description',
     shortDescription: 'list:truncate.shortDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   }
 });

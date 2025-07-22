@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Box, Chip, Typography } from '@mui/material';
+import React from 'react';
+import { Box, Chip } from '@mui/material';
 import { UserType } from '@tools/defineTool';
+import { useTranslation } from 'react-i18next';
 
 interface UserTypeFilterProps {
   selectedUserTypes: UserType[];
@@ -11,8 +12,9 @@ interface UserTypeFilterProps {
 export default function UserTypeFilter({
   selectedUserTypes,
   onUserTypesChange,
-  userTypes = ['General Users', 'Developers', 'CyberSec']
+  userTypes = ['generalUsers', 'developers']
 }: UserTypeFilterProps) {
+  const { t } = useTranslation('translation');
   if (userTypes.length <= 1) return null;
   return (
     <Box
@@ -28,7 +30,7 @@ export default function UserTypeFilter({
       {userTypes.map((userType) => (
         <Chip
           key={userType}
-          label={userType}
+          label={t(`userTypes.${userType}`)}
           color={selectedUserTypes.includes(userType) ? 'primary' : 'default'}
           onClick={() => {
             const isSelected = selectedUserTypes.includes(userType);

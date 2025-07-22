@@ -246,5 +246,9 @@
     "copyFailed": "Failed to copy: {{error}}",
     "loading": "Loading... This may take a moment.",
     "result": "Result"
+  },
+  "userTypes": {
+    "generalUsers": "General users",
+    "developers": "Developers"
   }
 }

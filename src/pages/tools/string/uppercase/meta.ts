@@ -11,6 +11,6 @@ export const tool = defineTool('string', {
     name: 'string:uppercase.title',
     description: 'string:uppercase.description',
     shortDescription: 'string:uppercase.shortDescription',
-    userTypes: ['General Users', 'Developers']
+    userTypes: ['generalUsers', 'developers']
   }
 });

@@ -12,6 +12,6 @@ export const tool = defineTool('list', {
     name: 'list:rotate.title',
     description: 'list:rotate.description',
     shortDescription: 'list:rotate.shortDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   }
 });

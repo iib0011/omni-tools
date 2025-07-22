@@ -12,6 +12,6 @@ export const tool = defineTool('string', {
     name: 'string:createPalindrome.title',
     description: 'string:createPalindrome.description',
     shortDescription: 'string:createPalindrome.shortDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   }
 });

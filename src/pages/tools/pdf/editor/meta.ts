@@ -6,7 +6,7 @@ export const tool = defineTool('pdf', {
     name: 'pdf:editor.title',
     description: 'pdf:editor.description',
     shortDescription: 'pdf:editor.shortDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   },
 
   path: 'editor',

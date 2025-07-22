@@ -11,6 +11,6 @@ export const tool = defineTool('number', {
     name: 'number:arithmeticSequence.title',
     description: 'number:arithmeticSequence.description',
     shortDescription: 'number:arithmeticSequence.shortDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   }
 });

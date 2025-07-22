@@ -6,7 +6,7 @@ export const tool = defineTool('image-generic', {
     name: 'image:compress.title',
     description: 'image:compress.description',
     shortDescription: 'image:compress.shortDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   },
 
   path: 'compress',

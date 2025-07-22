@@ -7,7 +7,7 @@ export const tool = defineTool('pdf', {
     description: 'pdf:rotatePdf.description',
     shortDescription: 'pdf:rotatePdf.shortDescription',
     longDescription: 'pdf:rotatePdf.longDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   },
 
   path: 'rotate-pdf',

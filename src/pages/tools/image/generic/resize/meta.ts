@@ -6,7 +6,7 @@ export const tool = defineTool('image-generic', {
     name: 'image:resize.title',
     description: 'image:resize.description',
     shortDescription: 'image:resize.shortDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   },
 
   path: 'resize',

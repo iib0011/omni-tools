@@ -12,6 +12,6 @@ export const tool = defineTool('list', {
     name: 'list:sort.title',
     description: 'list:sort.description',
     shortDescription: 'list:sort.shortDescription',
-    userTypes: ['General Users', 'Developers']
+    userTypes: ['generalUsers', 'developers']
   }
 });

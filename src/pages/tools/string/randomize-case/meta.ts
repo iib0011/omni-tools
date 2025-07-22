@@ -12,6 +12,6 @@ export const tool = defineTool('string', {
     name: 'string:randomizeCase.title',
     description: 'string:randomizeCase.description',
     shortDescription: 'string:randomizeCase.shortDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   }
 });

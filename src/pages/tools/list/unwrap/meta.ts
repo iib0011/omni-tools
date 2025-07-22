@@ -12,6 +12,6 @@ export const tool = defineTool('list', {
     name: 'list:unwrap.title',
     description: 'list:unwrap.description',
     shortDescription: 'list:unwrap.shortDescription',
-    userTypes: ['General Users', 'Developers']
+    userTypes: ['generalUsers', 'developers']
   }
 });

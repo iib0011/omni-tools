@@ -7,7 +7,7 @@ export const tool = defineTool('audio', {
     description: 'audio:mergeAudio.description',
     shortDescription: 'audio:mergeAudio.shortDescription',
     longDescription: 'audio:mergeAudio.longDescription',
-    userTypes: ['General Users', 'Developers']
+    userTypes: ['generalUsers', 'developers']
   },
 
   path: 'merge-audio',

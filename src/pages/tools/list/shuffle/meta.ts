@@ -12,6 +12,6 @@ export const tool = defineTool('list', {
     name: 'list:shuffle.title',
     description: 'list:shuffle.description',
     shortDescription: 'list:shuffle.shortDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   }
 });

@@ -138,14 +138,14 @@ const categoriesConfig: {
 ];
 const CATEGORIES_USER_TYPES_MAPPINGS: Partial<Record<ToolCategory, UserType>> =
   {
-    xml: 'Developers',
-    csv: 'Developers',
-    json: 'Developers',
-    gif: 'General Users',
-    png: 'General Users',
-    'image-generic': 'General Users',
-    video: 'General Users',
-    audio: 'General Users'
+    xml: 'developers',
+    csv: 'developers',
+    json: 'developers',
+    gif: 'generalUsers',
+    png: 'generalUsers',
+    'image-generic': 'generalUsers',
+    video: 'generalUsers',
+    audio: 'generalUsers'
   };
 // Filter tools by user types
 export const filterToolsByUserTypes = (

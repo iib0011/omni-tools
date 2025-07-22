@@ -19,7 +19,7 @@ export const tool = defineTool('video', {
     name: 'video:cropVideo.title',
     description: 'video:cropVideo.description',
     shortDescription: 'video:cropVideo.shortDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   },
   component: lazy(() => import('./index'))
 });

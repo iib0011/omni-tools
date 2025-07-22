@@ -10,6 +10,6 @@ export const tool = defineTool('video', {
     name: 'video:videoToGif.title',
     description: 'video:videoToGif.description',
     shortDescription: 'video:videoToGif.shortDescription',
-    userTypes: ['General Users']
+    userTypes: ['generalUsers']
   }
 });
