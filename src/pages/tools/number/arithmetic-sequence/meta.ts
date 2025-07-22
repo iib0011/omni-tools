@@ -10,6 +10,7 @@ export const tool = defineTool('number', {
   i18n: {
     name: 'number:arithmeticSequence.title',
     description: 'number:arithmeticSequence.description',
-    shortDescription: 'number:arithmeticSequence.shortDescription'
+    shortDescription: 'number:arithmeticSequence.shortDescription',
+    userTypes: ['generalUsers']
   }
 });

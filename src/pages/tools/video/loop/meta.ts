@@ -10,6 +10,7 @@ export const tool = defineTool('video', {
   i18n: {
     name: 'video:loop.title',
     description: 'video:loop.description',
-    shortDescription: 'video:loop.shortDescription'
+    shortDescription: 'video:loop.shortDescription',
+    userTypes: ['generalUsers']
   }
 });
