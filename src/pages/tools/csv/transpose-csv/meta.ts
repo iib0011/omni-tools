@@ -6,8 +6,7 @@ export const tool = defineTool('csv', {
     name: 'csv:transposeCsv.title',
     description: 'csv:transposeCsv.description',
     shortDescription: 'csv:transposeCsv.shortDescription',
-    longDescription: 'csv:transposeCsv.longDescription',
-    userTypes: ['Developers']
+    longDescription: 'csv:transposeCsv.longDescription'
   },
 
   path: 'transpose-csv',

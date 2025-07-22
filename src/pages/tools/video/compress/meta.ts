@@ -22,6 +22,6 @@ export const tool = defineTool('video', {
     name: 'video:compress.title',
     description: 'video:compress.description',
     shortDescription: 'video:compress.shortDescription',
-    userTypes: ['General Users', 'Developers']
+    userTypes: ['General Users']
   }
 });

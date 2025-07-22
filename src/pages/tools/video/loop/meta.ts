@@ -11,6 +11,6 @@ export const tool = defineTool('video', {
     name: 'video:loop.title',
     description: 'video:loop.description',
     shortDescription: 'video:loop.shortDescription',
-    userTypes: ['General Users', 'Developers']
+    userTypes: ['General Users']
   }
 });

@@ -11,7 +11,6 @@ export const tool = defineTool('csv', {
   i18n: {
     name: 'csv:findIncompleteCsvRecords.title',
     description: 'csv:findIncompleteCsvRecords.description',
-    shortDescription: 'csv:findIncompleteCsvRecords.shortDescription',
-    userTypes: ['Developers']
+    shortDescription: 'csv:findIncompleteCsvRecords.shortDescription'
   }
 });

@@ -6,8 +6,7 @@ export const tool = defineTool('csv', {
     name: 'csv:csvToYaml.title',
     description: 'csv:csvToYaml.description',
     shortDescription: 'csv:csvToYaml.shortDescription',
-    longDescription: 'csv:csvToYaml.longDescription',
-    userTypes: ['Developers']
+    longDescription: 'csv:csvToYaml.longDescription'
   },
 
   path: 'csv-to-yaml',

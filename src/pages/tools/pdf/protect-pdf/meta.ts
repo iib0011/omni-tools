@@ -23,6 +23,6 @@ export const tool = defineTool('pdf', {
     name: 'pdf:protectPdf.title',
     description: 'pdf:protectPdf.description',
     shortDescription: 'pdf:protectPdf.shortDescription',
-    userTypes: ['General Users', 'Developers']
+    userTypes: ['General Users']
   }
 });

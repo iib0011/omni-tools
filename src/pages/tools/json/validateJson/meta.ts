@@ -10,7 +10,6 @@ export const tool = defineTool('json', {
   i18n: {
     name: 'json:validateJson.title',
     description: 'json:validateJson.description',
-    shortDescription: 'json:validateJson.shortDescription',
-    userTypes: ['General Users', 'Developers']
+    shortDescription: 'json:validateJson.shortDescription'
   }
 });

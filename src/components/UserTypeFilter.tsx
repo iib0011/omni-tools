@@ -2,17 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Box, Chip, Typography } from '@mui/material';
 import { UserType } from '@tools/defineTool';
 
-const userTypes: UserType[] = ['General Users', 'Developers', 'CyberSec'];
-
 interface UserTypeFilterProps {
   selectedUserTypes: UserType[];
+  userTypes?: UserType[];
   onUserTypesChange: (userTypes: UserType[]) => void;
 }
 
 export default function UserTypeFilter({
   selectedUserTypes,
-  onUserTypesChange
+  onUserTypesChange,
+  userTypes = ['General Users', 'Developers', 'CyberSec']
 }: UserTypeFilterProps) {
+  if (userTypes.length <= 1) return null;
   return (
     <Box
       sx={{

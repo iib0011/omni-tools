@@ -10,6 +10,6 @@ export const meta = defineTool('pdf', {
     name: 'pdf:pdfToEpub.title',
     description: 'pdf:pdfToEpub.description',
     shortDescription: 'pdf:pdfToEpub.shortDescription',
-    userTypes: ['General Users', 'Developers']
+    userTypes: ['General Users']
   }
 });

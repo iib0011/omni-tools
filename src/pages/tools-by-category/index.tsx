@@ -43,13 +43,13 @@ export default function ToolsByCategory() {
   const { t } = useTranslation(validNamespaces);
   const rawTitle = getToolCategoryTitle(categoryName as string, t);
   // First get tools by category without filtering
-  const toolsByCategory =
-    getToolsByCategory(selectedUserTypes, t).find(
-      ({ type }) => type === categoryName
-    )?.tools ?? [];
+  const toolsByCategory = getToolsByCategory(selectedUserTypes, t).find(
+    ({ type }) => type === categoryName
+  );
+  const categoryDefinedTools = toolsByCategory?.tools ?? [];
 
   const categoryTools = filterTools(
-    toolsByCategory,
+    categoryDefinedTools,
     searchTerm,
     selectedUserTypes,
     t
@@ -108,6 +108,7 @@ export default function ToolsByCategory() {
           my={2}
         >
           <UserTypeFilter
+            userTypes={toolsByCategory?.userTypes ?? undefined}
             selectedUserTypes={selectedUserTypes}
             onUserTypesChange={setSelectedUserTypes}
           />

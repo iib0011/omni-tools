@@ -5,8 +5,7 @@ export const tool = defineTool('csv', {
   i18n: {
     name: 'csv:insertCsvColumns.title',
     description: 'csv:insertCsvColumns.description',
-    shortDescription: 'csv:insertCsvColumns.shortDescription',
-    userTypes: ['Developers']
+    shortDescription: 'csv:insertCsvColumns.shortDescription'
   },
 
   path: 'insert-csv-columns',

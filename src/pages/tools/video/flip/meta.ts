@@ -11,6 +11,6 @@ export const tool = defineTool('video', {
     name: 'video:flip.title',
     description: 'video:flip.description',
     shortDescription: 'video:flip.shortDescription',
-    userTypes: ['General Users', 'Developers']
+    userTypes: ['General Users']
   }
 });

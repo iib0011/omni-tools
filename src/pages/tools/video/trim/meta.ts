@@ -10,6 +10,6 @@ export const tool = defineTool('video', {
     name: 'video:trim.title',
     description: 'video:trim.description',
     shortDescription: 'video:trim.shortDescription',
-    userTypes: ['General Users', 'Developers']
+    userTypes: ['General Users']
   }
 });

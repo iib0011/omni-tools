@@ -88,6 +88,7 @@ const SingleCategory = function ({
               <Grid item xs={12} md={6}>
                 <Button
                   fullWidth
+                  sx={{ height: '100%' }}
                   onClick={() => navigate('/categories/' + category.type)}
                   variant={'contained'}
                 >
@@ -96,7 +97,7 @@ const SingleCategory = function ({
               </Grid>
               <Grid item xs={12} md={6}>
                 <Button
-                  sx={{ backgroundColor: 'background.default' }}
+                  sx={{ backgroundColor: 'background.default', height: '100%' }}
                   fullWidth
                   onClick={() => navigate(category.example.path)}
                   variant={'outlined'}
