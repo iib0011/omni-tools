@@ -22,9 +22,10 @@ import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SearchIcon from '@mui/icons-material/Search';
 import { Helmet } from 'react-helmet';
-import UserTypeFilter, { useUserTypeFilter } from '@components/UserTypeFilter';
+import UserTypeFilter from '@components/UserTypeFilter';
 import { useTranslation } from 'react-i18next';
 import { I18nNamespaces, validNamespaces } from '../../i18n';
+import { useUserTypeFilter } from '../../providers/UserTypeFilterProvider';
 
 const StyledLink = styled(Link)(({ theme }) => ({
   '&:hover': {
@@ -60,10 +61,6 @@ export default function ToolsByCategory() {
     }
   }, []);
 
-  const handleUserTypesChange = (userTypes: string[]) => {
-    setSelectedUserTypes(userTypes as any);
-  };
-
   return (
     <Box sx={{ backgroundColor: 'background.default' }}>
       <Helmet>
@@ -90,27 +87,32 @@ export default function ToolsByCategory() {
               {t('translation:toolLayout.allToolsTitle', { type: rawTitle })}
             </Typography>
           </Stack>
-          <Stack direction={'row'} spacing={2} sx={{ minWidth: 0 }}>
-            <TextField
-              placeholder={'Search'}
-              InputProps={{
-                endAdornment: <SearchIcon />,
-                sx: {
-                  borderRadius: 4,
-                  backgroundColor: 'background.paper',
-                  maxWidth: 400
-                }
-              }}
-              onChange={(event) => setSearchTerm(event.target.value)}
-            />
-            <UserTypeFilter
-              selectedUserTypes={selectedUserTypes}
-              onUserTypesChange={handleUserTypesChange}
-              label="User Type"
-            />
-          </Stack>
+          <TextField
+            placeholder={'Search'}
+            InputProps={{
+              endAdornment: <SearchIcon />,
+              sx: {
+                borderRadius: 4,
+                backgroundColor: 'background.paper',
+                maxWidth: 400
+              }
+            }}
+            onChange={(event) => setSearchTerm(event.target.value)}
+          />
         </Stack>
-        <Grid container spacing={2} mt={2}>
+        <Box
+          width={'100%'}
+          display={'flex'}
+          alignItems={'center'}
+          justifyContent={'center'}
+          my={2}
+        >
+          <UserTypeFilter
+            selectedUserTypes={selectedUserTypes}
+            onUserTypesChange={setSelectedUserTypes}
+          />
+        </Box>
+        <Grid container spacing={2}>
           {categoryTools.map((tool, index) => (
             <Grid item xs={12} md={6} lg={4} key={tool.path}>
               <Stack

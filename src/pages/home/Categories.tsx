@@ -7,10 +7,9 @@ import Button from '@mui/material/Button';
 import { useState } from 'react';
 import { categoriesColors } from 'config/uiConfig';
 import { Icon } from '@iconify/react';
-import { useUserTypeFilter } from '@components/UserTypeFilter';
 import { useTranslation } from 'react-i18next';
 import { getI18nNamespaceFromToolCategory } from '@utils/string';
-import { validNamespaces } from '../../i18n';
+import { useUserTypeFilter } from '../../providers/UserTypeFilterProvider';
 
 type ArrayElement<ArrayType extends readonly unknown[]> =
   ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
@@ -119,7 +118,7 @@ export default function Categories() {
   const categories = getToolsByCategory(selectedUserTypes, t);
 
   return (
-    <Grid width={'80%'} container mt={2} spacing={2}>
+    <Grid width={'80%'} container spacing={2}>
       {categories.map((category, index) => (
         <SingleCategory key={category.type} category={category} index={index} />
       ))}

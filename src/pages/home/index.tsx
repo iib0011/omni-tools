@@ -2,17 +2,12 @@ import { Box, useTheme } from '@mui/material';
 import Hero from 'components/Hero';
 import Categories from './Categories';
 import { Helmet } from 'react-helmet';
-import UserTypeFilter, { useUserTypeFilter } from 'components/UserTypeFilter';
-import { UserType } from '@tools/defineTool';
+import { useUserTypeFilter } from 'providers/UserTypeFilterProvider';
+import UserTypeFilter from '@components/UserTypeFilter';
 
 export default function Home() {
   const theme = useTheme();
   const { selectedUserTypes, setSelectedUserTypes } = useUserTypeFilter();
-
-  const handleUserTypesChange = (userTypes: UserType[]) => {
-    setSelectedUserTypes(userTypes);
-  };
-
   return (
     <Box
       padding={{
@@ -36,11 +31,12 @@ export default function Home() {
     >
       <Helmet title={'OmniTools'} />
       <Hero />
-      <UserTypeFilter
-        selectedUserTypes={selectedUserTypes}
-        onUserTypesChange={handleUserTypesChange}
-        label="Filter by User Type"
-      />
+      <Box my={3}>
+        <UserTypeFilter
+          selectedUserTypes={selectedUserTypes}
+          onUserTypesChange={setSelectedUserTypes}
+        />
+      </Box>
       <Categories />
     </Box>
   );
