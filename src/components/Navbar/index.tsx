@@ -16,7 +16,8 @@ import {
   Stack,
   Select,
   MenuItem,
-  FormControl
+  FormControl,
+  Typography
 } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -29,16 +30,16 @@ interface NavbarProps {
   onChangeMode: () => void;
 }
 const languages = [
-  { code: 'en', label: 'English' },
-  { code: 'de', label: 'Deutsch' },
-  { code: 'es', label: 'Español' },
-  { code: 'fr', label: 'Français' },
-  { code: 'pt', label: 'Português' },
-  { code: 'ja', label: '日本語' },
-  { code: 'hi', label: 'हिंदी' },
-  { code: 'nl', label: 'Nederlands' },
-  { code: 'ru', label: 'Русский' },
-  { code: 'zh', label: '中文' }
+  { code: 'en', label: 'English', flag: 'circle-flags:lang-en' },
+  { code: 'de', label: 'Deutsch', flag: 'circle-flags:lang-de' },
+  { code: 'es', label: 'Español', flag: 'circle-flags:lang-es' },
+  { code: 'fr', label: 'Français', flag: 'circle-flags:lang-fr' },
+  { code: 'pt', label: 'Português', flag: 'circle-flags:lang-pt' },
+  { code: 'ja', label: '日本語', flag: 'circle-flags:lang-ja' },
+  { code: 'hi', label: 'हिंदी', flag: 'circle-flags:lang-hi' },
+  { code: 'nl', label: 'Nederlands', flag: 'circle-flags:lang-nl' },
+  { code: 'ru', label: 'Русский', flag: 'circle-flags:lang-ru' },
+  { code: 'zh', label: '中文', flag: 'circle-flags:lang-zh' }
 ];
 
 const Navbar: React.FC<NavbarProps> = ({
@@ -89,7 +90,10 @@ const Navbar: React.FC<NavbarProps> = ({
       >
         {languages.map((lang) => (
           <MenuItem key={lang.code} value={lang.code}>
-            {lang.label}
+            <Stack direction="row" alignItems="center" spacing={1}>
+              <Icon key={lang.code} icon={lang.flag} fontSize={30} />
+              <Typography>{lang.label}</Typography>
+            </Stack>
           </MenuItem>
         ))}
       </Select>
@@ -112,12 +116,14 @@ const Navbar: React.FC<NavbarProps> = ({
       }
     />,
     <Icon
+      key="discord"
       onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
       style={{ cursor: 'pointer' }}
       fontSize={30}
       icon={'ic:baseline-discord'}
     />,
     <iframe
+      key="github-star"
       src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
       frameBorder="0"
       scrolling="0"
@@ -126,6 +132,7 @@ const Navbar: React.FC<NavbarProps> = ({
       title="GitHub"
     ></iframe>,
     <Button
+      key="buy-me-a-coffee"
       onClick={() => {
         window.open('https://buymeacoffee.com/iib0011', '_blank');
       }}
