@@ -8,7 +8,6 @@ export type UserType =
   | 'General Users'
   | 'Developers'
   | 'Designers'
-  | 'Students'
   | 'CyberSec';
 
 export interface ToolMeta {

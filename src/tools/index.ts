@@ -145,6 +145,10 @@ export const filterToolsByUserTypes = (
   if (userTypes.length === 0) return tools;
 
   return tools.filter((tool) => {
+    // Always treat xml tools as dev-only
+    if (tool.type === 'xml') {
+      return userTypes.includes('Developers');
+    }
     // If tool has no userTypes defined, show it to all users
     if (!tool.userTypes || tool.userTypes.length === 0) return true;
 

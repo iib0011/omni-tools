@@ -1,23 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Box,
-  Chip,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  OutlinedInput,
-  Select,
-  SelectChangeEvent,
-  Typography,
-  useTheme
-} from '@mui/material';
+import { Box, Chip, Typography } from '@mui/material';
 import { UserType } from '@tools/defineTool';
 
 const userTypes: UserType[] = [
   'General Users',
   'Developers',
   'Designers',
-  'Students',
   'CyberSec'
 ];
 
@@ -32,54 +20,28 @@ export default function UserTypeFilter({
   onUserTypesChange,
   label = 'Filter by User Type'
 }: UserTypeFilterProps) {
-  const theme = useTheme();
-
-  const handleChange = (event: SelectChangeEvent<UserType[]>) => {
-    const {
-      target: { value }
-    } = event;
-    const newUserTypes =
-      typeof value === 'string' ? (value.split(',') as UserType[]) : value;
-    onUserTypesChange(newUserTypes);
-  };
-
   return (
     <Box sx={{ minWidth: 200 }}>
-      <FormControl fullWidth>
-        <InputLabel id="user-type-filter-label">{label}</InputLabel>
-        <Select
-          labelId="user-type-filter-label"
-          id="user-type-filter"
-          multiple
-          value={selectedUserTypes}
-          onChange={handleChange}
-          input={<OutlinedInput label={label} />}
-          renderValue={(selected) => (
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-              {selected.map((value) => (
-                <Chip
-                  key={value}
-                  label={value}
-                  size="small"
-                  sx={{
-                    backgroundColor: theme.palette.primary.main,
-                    color: 'white',
-                    '& .MuiChip-deleteIcon': {
-                      color: 'white'
-                    }
-                  }}
-                />
-              ))}
-            </Box>
-          )}
-        >
-          {userTypes.map((userType) => (
-            <MenuItem key={userType} value={userType}>
-              {userType}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+      <Typography variant="subtitle2" sx={{ mb: 1 }}>
+        {label}
+      </Typography>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+        {userTypes.map((userType) => (
+          <Chip
+            key={userType}
+            label={userType}
+            color={selectedUserTypes.includes(userType) ? 'primary' : 'default'}
+            onClick={() => {
+              const isSelected = selectedUserTypes.includes(userType);
+              const newUserTypes = isSelected
+                ? selectedUserTypes.filter((ut) => ut !== userType)
+                : [...selectedUserTypes, userType];
+              onUserTypesChange(newUserTypes);
+            }}
+            sx={{ cursor: 'pointer' }}
+          />
+        ))}
+      </Box>
     </Box>
   );
 }
