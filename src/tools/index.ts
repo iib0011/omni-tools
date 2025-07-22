@@ -136,7 +136,17 @@ const categoriesConfig: {
     title: 'translation:categories.xml.title'
   }
 ];
-
+const CATEGORIES_USER_TYPES_MAPPINGS: Partial<Record<ToolCategory, UserType>> =
+  {
+    xml: 'Developers',
+    csv: 'Developers',
+    json: 'Developers',
+    gif: 'General Users',
+    png: 'General Users',
+    'image-generic': 'General Users',
+    video: 'General Users',
+    audio: 'General Users'
+  };
 // Filter tools by user types
 export const filterToolsByUserTypes = (
   tools: DefinedTool[],
@@ -145,9 +155,8 @@ export const filterToolsByUserTypes = (
   if (userTypes.length === 0) return tools;
 
   return tools.filter((tool) => {
-    const devToolsCategories: ToolCategory[] = ['xml', 'json', 'csv'];
-    if (devToolsCategories.includes(tool.type)) {
-      return userTypes.includes('Developers');
+    if (CATEGORIES_USER_TYPES_MAPPINGS[tool.type]) {
+      return userTypes.includes(CATEGORIES_USER_TYPES_MAPPINGS[tool.type]!);
     }
     // If tool has no userTypes defined, show it to all users
     if (!tool.userTypes || tool.userTypes.length === 0) return true;
@@ -242,7 +251,14 @@ export const getToolsByCategory = (
         userTypes: aggregatedUserTypes // <-- Add this line
       };
     })
-    .filter((category) => category.tools.length > 0) // Only show categories with tools
+    .filter((category) => category.tools.length > 0)
+    .filter((category) =>
+      userTypes.length > 0
+        ? [...category.userTypes, CATEGORIES_USER_TYPES_MAPPINGS[category.type]]
+            .filter(Boolean)
+            .some((categoryUserType) => userTypes.includes(categoryUserType!))
+        : true
+    ) // Only show categories with tools
     .sort(
       (a, b) =>
         toolCategoriesOrder.indexOf(a.type) -
