@@ -18,11 +18,11 @@ export const tool = defineTool('pdf', {
     'browser',
     'encryption'
   ],
-
   component: lazy(() => import('./index')),
   i18n: {
     name: 'pdf:protectPdf.title',
     description: 'pdf:protectPdf.description',
-    shortDescription: 'pdf:protectPdf.shortDescription'
+    shortDescription: 'pdf:protectPdf.shortDescription',
+    userTypes: ['generalUsers']
   }
 });

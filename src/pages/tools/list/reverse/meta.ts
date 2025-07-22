@@ -5,12 +5,12 @@ import { lazy } from 'react';
 export const tool = defineTool('list', {
   path: 'reverse',
   icon: 'proicons:reverse',
-
   keywords: ['reverse'],
-  component: lazy(() => import('./index')),
   i18n: {
     name: 'list:reverse.title',
     description: 'list:reverse.description',
-    shortDescription: 'list:reverse.shortDescription'
-  }
+    shortDescription: 'list:reverse.shortDescription',
+    userTypes: ['generalUsers']
+  },
+  component: lazy(() => import('./index'))
 });

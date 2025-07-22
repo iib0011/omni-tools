@@ -11,6 +11,7 @@ export const tool = defineTool('list', {
   i18n: {
     name: 'list:shuffle.title',
     description: 'list:shuffle.description',
-    shortDescription: 'list:shuffle.shortDescription'
+    shortDescription: 'list:shuffle.shortDescription',
+    userTypes: ['generalUsers']
   }
 });

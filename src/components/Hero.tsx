@@ -25,6 +25,7 @@ import {
   toggleBookmarked
 } from '@utils/bookmark';
 import IconButton from '@mui/material/IconButton';
+import { useUserTypeFilter } from '../providers/UserTypeFilterProvider';
 
 const GroupHeader = styled('div')(({ theme }) => ({
   position: 'sticky',
@@ -50,6 +51,7 @@ export default function Hero() {
   const { t } = useTranslation(validNamespaces);
   const [inputValue, setInputValue] = useState<string>('');
   const theme = useTheme();
+  const { selectedUserTypes } = useUserTypeFilter();
   const [filteredTools, setFilteredTools] = useState<DefinedTool[]>(tools);
   const [bookmarkedToolPaths, setBookmarkedToolPaths] = useState<string[]>(
     getBookmarkedToolPaths()
@@ -96,12 +98,13 @@ export default function Hero() {
   ];
 
   const handleInputChange = (
-    event: React.ChangeEvent<{}>,
+    _event: React.ChangeEvent<{}>,
     newInputValue: string
   ) => {
     setInputValue(newInputValue);
-    setFilteredTools(filterTools(tools, newInputValue, t));
+    setFilteredTools(filterTools(tools, newInputValue, selectedUserTypes, t));
   };
+
   const toolsMap = new Map<string, ToolInfo>();
   for (const tool of filteredTools) {
     toolsMap.set(tool.path, {

@@ -10,6 +10,7 @@ export const tool = defineTool('list', {
   i18n: {
     name: 'list:truncate.title',
     description: 'list:truncate.description',
-    shortDescription: 'list:truncate.shortDescription'
+    shortDescription: 'list:truncate.shortDescription',
+    userTypes: ['generalUsers']
   }
 });

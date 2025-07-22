@@ -4,9 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: sync locize">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: translate userTypes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/ToolCodeInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/ToolCodeInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/de/pdf.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/de/pdf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/audio.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/audio.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/csv.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/csv.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/image.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/image.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/json.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/json.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/list.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/list.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/number.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/number.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/pdf.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/pdf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/string.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/string.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/time.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/time.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/video.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/video.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/es/pdf.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/es/pdf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/es/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/es/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/fr/pdf.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/fr/pdf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/fr/time.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/fr/time.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/fr/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/fr/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/hi/json.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/hi/json.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/hi/pdf.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/hi/pdf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/ja/pdf.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ja/pdf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/nl/pdf.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/nl/pdf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/pt/pdf.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/pt/pdf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/ru/pdf.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ru/pdf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/zh/pdf.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/zh/pdf.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +47,23 @@
     <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fork/bhavesh158/json-compare" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,198 +76,217 @@
     },
     {
       &quot;state&quot;: &quot;OPEN&quot;
+    },
+    {
+      &quot;searchQuery&quot;: &quot;filter&quot;,
+      &quot;state&quot;: &quot;OPEN&quot;
     }
   ],
   &quot;lastFilter&quot;: {
+    &quot;searchQuery&quot;: &quot;filter&quot;,
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOMJIfts51PkS9",
-        "number": 22
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts51PkS9&quot;,
+        &quot;number&quot;: 22
       },
-      "lastSeen": 1741207144695
+      &quot;lastSeen&quot;: 1741207144695
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NiNYl",
-        "number": 32
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NiNYl&quot;,
+        &quot;number&quot;: 32
       },
-      "lastSeen": 1741209723869
+      &quot;lastSeen&quot;: 1741209723869
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Nheyd",
-        "number": 31
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Nheyd&quot;,
+        &quot;number&quot;: 31
       },
-      "lastSeen": 1741213371410
+      &quot;lastSeen&quot;: 1741213371410
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NmRBs",
-        "number": 33
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NmRBs&quot;,
+        &quot;number&quot;: 33
       },
-      "lastSeen": 1741282429036
+      &quot;lastSeen&quot;: 1741282429036
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts5zyFTs",
-        "number": 15
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts5zyFTs&quot;,
+        &quot;number&quot;: 15
       },
-      "lastSeen": 1741535540953
+      &quot;lastSeen&quot;: 1741535540953
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QQB3c",
-        "number": 59
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QQB3c&quot;,
+        &quot;number&quot;: 59
       },
-      "lastSeen": 1743018960900
+      &quot;lastSeen&quot;: 1743018960900
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QMPEg",
-        "number": 58
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QMPEg&quot;,
+        &quot;number&quot;: 58
       },
-      "lastSeen": 1743019452983
+      &quot;lastSeen&quot;: 1743019452983
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QZvRI",
-        "number": 61
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QZvRI&quot;,
+        &quot;number&quot;: 61
       },
-      "lastSeen": 1743103196866
+      &quot;lastSeen&quot;: 1743103196866
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QqPrQ",
-        "number": 73
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QqPrQ&quot;,
+        &quot;number&quot;: 73
       },
-      "lastSeen": 1743265865001
+      &quot;lastSeen&quot;: 1743265865001
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Qp5nI",
-        "number": 72
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Qp5nI&quot;,
+        &quot;number&quot;: 72
       },
-      "lastSeen": 1743338472110
+      &quot;lastSeen&quot;: 1743338472110
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QsjlS",
-        "number": 76
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QsjlS&quot;,
+        &quot;number&quot;: 76
       },
-      "lastSeen": 1743352150953
+      &quot;lastSeen&quot;: 1743352150953
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Q0JBe",
-        "number": 82
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Q0JBe&quot;,
+        &quot;number&quot;: 82
       },
-      "lastSeen": 1743470267269
+      &quot;lastSeen&quot;: 1743470267269
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6UE9-x",
-        "number": 102
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6UE9-x&quot;,
+        &quot;number&quot;: 102
       },
-      "lastSeen": 1747171977348
+      &quot;lastSeen&quot;: 1747171977348
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6XPua_",
-        "number": 117
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6XPua_&quot;,
+        &quot;number&quot;: 117
       },
-      "lastSeen": 1747929835864
+      &quot;lastSeen&quot;: 1747929835864
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6XY-mZ",
-        "number": 119
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6XY-mZ&quot;,
+        &quot;number&quot;: 119
       },
-      "lastSeen": 1748028108508
+      &quot;lastSeen&quot;: 1748028108508
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Xdz4n",
-        "number": 120
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Xdz4n&quot;,
+        &quot;number&quot;: 120
       },
-      "lastSeen": 1748282672214
+      &quot;lastSeen&quot;: 1748282672214
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6X_zxl",
-        "number": 131
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6X_zxl&quot;,
+        &quot;number&quot;: 131
       },
-      "lastSeen": 1748881279494
+      &quot;lastSeen&quot;: 1748881279494
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6bhieT",
-        "number": 152
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6bhieT&quot;,
+        &quot;number&quot;: 152
       },
-      "lastSeen": 1751848489082
+      &quot;lastSeen&quot;: 1751848489082
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6dOyRk",
-        "number": 154
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6dOyRk&quot;,
+        &quot;number&quot;: 154
       },
-      "lastSeen": 1751849436454
+      &quot;lastSeen&quot;: 1751849436454
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6cHjNi",
-        "number": 153
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6cHjNi&quot;,
+        &quot;number&quot;: 153
       },
-      "lastSeen": 1751849501498
+      &quot;lastSeen&quot;: 1751849501498
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Zs1FN",
-        "number": 145
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Zs1FN&quot;,
+        &quot;number&quot;: 145
       },
-      "lastSeen": 1751849770308
+      &quot;lastSeen&quot;: 1751849770308
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6bgKi9",
-        "number": 150
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6bgKi9&quot;,
+        &quot;number&quot;: 150
       },
-      "lastSeen": 1751850367300
+      &quot;lastSeen&quot;: 1751850367300
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6eUKC-",
-        "number": 176
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6eUKC-&quot;,
+        &quot;number&quot;: 176
       },
-      "lastSeen": 1752158748013
+      &quot;lastSeen&quot;: 1752158748013
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6eqzP7",
-        "number": 190
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6eqzP7&quot;,
+        &quot;number&quot;: 190
       },
-      "lastSeen": 1752404173008
+      &quot;lastSeen&quot;: 1752404173008
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6et6vx",
-        "number": 192
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6et6vx&quot;,
+        &quot;number&quot;: 192
       },
-      "lastSeen": 1752585709582
+      &quot;lastSeen&quot;: 1752585709582
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6d36mi",
-        "number": 168
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6d36mi&quot;,
+        &quot;number&quot;: 168
       },
-      "lastSeen": 1752805763664
+      &quot;lastSeen&quot;: 1752805763664
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6fnXKf&quot;,
+        &quot;number&quot;: 208
+      },
+      &quot;lastSeen&quot;: 1752862212326
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6fo_ig&quot;,
+        &quot;number&quot;: 209
+      },
+      &quot;lastSeen&quot;: 1753201966322
     }
   ]
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
@@ -291,7 +346,7 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "#209 on fork/AshAnand34/tools-filtering",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools",
@@ -316,8 +371,9 @@
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "refactai_advanced_settings",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
+    "ts.rename.search.for.js.occurrences": "false",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -346,7 +402,7 @@
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\categories" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.i18n:sync">
     <configuration name="generatePassword" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
@@ -420,11 +476,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.i18n:sync" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="Vitest.generatePassword" />
         <item itemvalue="npm.i18n:pull" />
         <item itemvalue="npm.i18n:extract" />
-        <item itemvalue="Vitest.generatePassword" />
       </list>
     </recent_temporary>
   </component>
@@ -538,46 +594,12 @@
       <workItem from="1752403829295" duration="13253000" />
       <workItem from="1752493585622" duration="11629000" />
       <workItem from="1752507105323" duration="9008000" />
-    </task>
-    <task id="LOCAL-00196" summary="chore: revert create-tool.mjs">
-      <option name="closed" value="true" />
-      <created>1748027090253</created>
-      <option name="number" value="00196" />
-      <option name="presentableId" value="LOCAL-00196" />
-      <option name="project" value="LOCAL" />
-      <updated>1748027090253</updated>
-    </task>
-    <task id="LOCAL-00197" summary="fix: misc">
-      <option name="closed" value="true" />
-      <created>1748027889103</created>
-      <option name="number" value="00197" />
-      <option name="presentableId" value="LOCAL-00197" />
-      <option name="project" value="LOCAL" />
-      <updated>1748027889103</updated>
-    </task>
-    <task id="LOCAL-00198" summary="chore: remove unnecessary prop">
-      <option name="closed" value="true" />
-      <created>1748028055669</created>
-      <option name="number" value="00198" />
-      <option name="presentableId" value="LOCAL-00198" />
-      <option name="project" value="LOCAL" />
-      <updated>1748028055669</updated>
-    </task>
-    <task id="LOCAL-00199" summary="fix: compute flow">
-      <option name="closed" value="true" />
-      <created>1748881153433</created>
-      <option name="number" value="00199" />
-      <option name="presentableId" value="LOCAL-00199" />
-      <option name="project" value="LOCAL" />
-      <updated>1748881153433</updated>
-    </task>
-    <task id="LOCAL-00200" summary="feat: qr code generation init">
-      <option name="closed" value="true" />
-      <created>1749147227565</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
-      <option name="project" value="LOCAL" />
-      <updated>1749147227565</updated>
+      <workItem from="1752875788332" duration="3566000" />
+      <workItem from="1753099267173" duration="21000" />
+      <workItem from="1753123130080" duration="4054000" />
+      <workItem from="1753201599796" duration="4449000" />
+      <workItem from="1753206561770" duration="119000" />
+      <workItem from="1753206717510" duration="3599000" />
     </task>
     <task id="LOCAL-00201" summary="chore: rename from Omni Tools to OmniTools">
       <option name="closed" value="true" />
@@ -931,7 +953,47 @@
       <option name="project" value="LOCAL" />
       <updated>1752805853344</updated>
     </task>
-    <option name="localTasksCounter" value="245" />
+    <task id="LOCAL-00245" summary="feat: language browser detection">
+      <option name="closed" value="true" />
+      <created>1753124389709</created>
+      <option name="number" value="00245" />
+      <option name="presentableId" value="LOCAL-00245" />
+      <option name="project" value="LOCAL" />
+      <updated>1753124389709</updated>
+    </task>
+    <task id="LOCAL-00246" summary="fix: misc">
+      <option name="closed" value="true" />
+      <created>1753206794968</created>
+      <option name="number" value="00246" />
+      <option name="presentableId" value="LOCAL-00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1753206794968</updated>
+    </task>
+    <task id="LOCAL-00247" summary="chore: show only necessary tags on a category">
+      <option name="closed" value="true" />
+      <created>1753207817041</created>
+      <option name="number" value="00247" />
+      <option name="presentableId" value="LOCAL-00247" />
+      <option name="project" value="LOCAL" />
+      <updated>1753207817041</updated>
+    </task>
+    <task id="LOCAL-00248" summary="chore: CATEGORIES_USER_TYPES_MAPPINGS">
+      <option name="closed" value="true" />
+      <created>1753209484099</created>
+      <option name="number" value="00248" />
+      <option name="presentableId" value="LOCAL-00248" />
+      <option name="project" value="LOCAL" />
+      <updated>1753209484099</updated>
+    </task>
+    <task id="LOCAL-00249" summary="chore: translate userTypes">
+      <option name="closed" value="true" />
+      <created>1753210033390</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1753210033390</updated>
+    </task>
+    <option name="localTasksCounter" value="250" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -978,11 +1040,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: style link" />
-    <MESSAGE value="refactor: PDF editor" />
-    <MESSAGE value="docs: edit pdf meta" />
-    <MESSAGE value="fix: misc" />
-    <MESSAGE value="chore: locize upload" />
     <MESSAGE value="chore: i18n in meta" />
     <MESSAGE value="chore: add i18n to meta script" />
     <MESSAGE value="chore: bundle translations at build time" />
@@ -1003,7 +1060,12 @@
     <MESSAGE value="fix: i18n tsc" />
     <MESSAGE value="chore: i18n pull dutch" />
     <MESSAGE value="chore: sync locize" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: sync locize" />
+    <MESSAGE value="feat: language browser detection" />
+    <MESSAGE value="fix: misc" />
+    <MESSAGE value="chore: show only necessary tags on a category" />
+    <MESSAGE value="chore: CATEGORIES_USER_TYPES_MAPPINGS" />
+    <MESSAGE value="chore: translate userTypes" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: translate userTypes" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

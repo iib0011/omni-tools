@@ -10,6 +10,7 @@ export const tool = defineTool('string', {
   i18n: {
     name: 'string:base64.title',
     description: 'string:base64.description',
-    shortDescription: 'string:base64.shortDescription'
+    shortDescription: 'string:base64.shortDescription',
+    userTypes: ['generalUsers', 'developers']
   }
 });

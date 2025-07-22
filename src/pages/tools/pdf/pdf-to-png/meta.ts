@@ -6,13 +6,13 @@ export const tool = defineTool('pdf', {
     name: 'pdf:pdfToPng.title',
     description: 'pdf:pdfToPng.description',
     shortDescription: 'pdf:pdfToPng.shortDescription',
-    longDescription: 'pdf:pdfToPng.longDescription'
+    longDescription: 'pdf:pdfToPng.longDescription',
+    userTypes: ['generalUsers']
   },
 
   path: 'pdf-to-png',
   icon: 'mdi:image-multiple', // Iconify icon ID
 
   keywords: ['pdf', 'png', 'convert', 'image', 'extract', 'pages'],
-
   component: lazy(() => import('./index'))
 });

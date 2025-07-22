@@ -6,7 +6,8 @@ export const tool = defineTool('audio', {
     name: 'audio:mergeAudio.title',
     description: 'audio:mergeAudio.description',
     shortDescription: 'audio:mergeAudio.shortDescription',
-    longDescription: 'audio:mergeAudio.longDescription'
+    longDescription: 'audio:mergeAudio.longDescription',
+    userTypes: ['generalUsers', 'developers']
   },
 
   path: 'merge-audio',
@@ -24,6 +25,5 @@ export const tool = defineTool('audio', {
     'audio editing',
     'multiple files'
   ],
-
   component: lazy(() => import('./index'))
 });

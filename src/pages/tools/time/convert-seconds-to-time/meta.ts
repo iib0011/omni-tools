@@ -10,6 +10,7 @@ export const tool = defineTool('time', {
   i18n: {
     name: 'time:convertSecondsToTime.title',
     description: 'time:convertSecondsToTime.description',
-    shortDescription: 'time:convertSecondsToTime.shortDescription'
+    shortDescription: 'time:convertSecondsToTime.shortDescription',
+    userTypes: ['generalUsers']
   }
 });
