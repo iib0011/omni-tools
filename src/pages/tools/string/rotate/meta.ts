@@ -6,7 +6,8 @@ export const tool = defineTool('string', {
   i18n: {
     name: 'string:rotate.title',
     description: 'string:rotate.description',
-    shortDescription: 'string:rotate.shortDescription'
+    shortDescription: 'string:rotate.shortDescription',
+    userTypes: ['generalUsers', 'developers']
   },
 
   path: 'rotate',
