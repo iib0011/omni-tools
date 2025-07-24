@@ -6,7 +6,8 @@ export const tool = defineTool('number', {
     name: 'number:randomNumberGenerator.title',
     description: 'number:randomNumberGenerator.description',
     shortDescription: 'number:randomNumberGenerator.shortDescription',
-    longDescription: 'number:randomNumberGenerator.longDescription'
+    longDescription: 'number:randomNumberGenerator.longDescription',
+    userTypes: ['generalUsers']
   },
   path: 'random-number-generator',
   icon: 'mdi:dice-multiple',
