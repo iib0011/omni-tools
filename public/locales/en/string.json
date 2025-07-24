@@ -282,5 +282,43 @@
       "shortDescription": "Quickly URL-escape a string.",
       "title": "String URL encoder"
     }
+  },
+  "privatebin": {
+    "title": "PrivateBin",
+    "description": "A secure paste service for sharing text content with encryption and expiration options.",
+    "shortDescription": "Share text securely with encryption and expiration",
+    "longDescription": "PrivateBin is a secure paste service that allows you to share text content with others. Your content is encrypted and can be configured with expiration times and burn-after-reading options. Perfect for sharing sensitive information, code snippets, or any text content that needs to be shared temporarily and securely.",
+    "createPaste": "Create Paste",
+    "retrievePaste": "Retrieve Paste",
+    "createPasteTitle": "Create a new paste",
+    "createPasteDescription": "Enter your text below and configure the settings. Your content will be encrypted and stored securely.",
+    "retrievePasteTitle": "Retrieve a paste",
+    "retrievePasteDescription": "Enter the paste ID and password to retrieve the content.",
+    "pasteContent": "Paste Content",
+    "pasteContentPlaceholder": "Enter your text here...",
+    "pasteSettings": "Paste Settings",
+    "expiration": "Expiration",
+    "passwordOptional": "Password (optional)",
+    "burnAfterReading": "Burn after reading",
+    "pasteId": "Paste ID",
+    "password": "Password",
+    "creating": "Creating...",
+    "retrieving": "Retrieving...",
+    "createPasteButton": "Create Paste",
+    "retrievePasteButton": "Retrieve Paste",
+    "pasteCreatedSuccess": "Paste created successfully!",
+    "pasteIdLabel": "Paste ID:",
+    "shareIdMessage": "Share this ID with others to retrieve the content.",
+    "retrievedContent": "Retrieved content:",
+    "errorEnterBoth": "Please enter both paste ID and password",
+    "errorFailedCreate": "Failed to create paste:",
+    "errorFailedRetrieve": "Failed to retrieve paste:",
+    "expirationOptions": {
+      "1hour": "1 Hour",
+      "1day": "1 Day",
+      "1week": "1 Week",
+      "1month": "1 Month",
+      "never": "Never"
+    }
   }
 }
