@@ -6,7 +6,8 @@ export const tool = defineTool('number', {
     name: 'number:randomPortGenerator.title',
     description: 'number:randomPortGenerator.description',
     shortDescription: 'number:randomPortGenerator.shortDescription',
-    longDescription: 'number:randomPortGenerator.longDescription'
+    longDescription: 'number:randomPortGenerator.longDescription',
+    userTypes: ['developers']
   },
   path: 'random-port-generator',
   icon: 'mdi:network',

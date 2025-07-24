@@ -1,22 +1,20 @@
-import { Box, Alert, Chip } from '@mui/material';
+import { Alert, Box } from '@mui/material';
 import { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import {
-  generateRandomPorts,
-  validateInput,
   formatPorts,
+  generateRandomPorts,
   getPortRangeInfo,
-  isCommonPort,
-  getPortService
+  validateInput
 } from './service';
 import { InitialValuesType, RandomPortResult } from './types';
 import { useTranslation } from 'react-i18next';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
-import RadioWithTextField from '@components/options/RadioWithTextField';
+import SimpleRadio from '@components/options/SimpleRadio';
 
 const initialValues: InitialValuesType = {
   portRange: 'registered',
@@ -32,7 +30,7 @@ export default function RandomPortGenerator({
   title,
   longDescription
 }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('number');
   const [result, setResult] = useState<RandomPortResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [formattedResult, setFormattedResult] = useState<string>('');
@@ -59,40 +57,43 @@ export default function RandomPortGenerator({
       setFormattedResult(formatted);
     } catch (err) {
       console.error('Random port generation failed:', err);
-      setError(t('number:randomPortGenerator.error.generationFailed'));
+      setError(t('randomPortGenerator.error.generationFailed'));
     }
   };
-
+  const portOptions = [
+    {
+      value: 'well-known',
+      label: t('randomPortGenerator.options.range.wellKnown')
+    },
+    {
+      value: 'registered',
+      label: t('randomPortGenerator.options.range.registered')
+    },
+    {
+      value: 'dynamic',
+      label: t('randomPortGenerator.options.range.dynamic')
+    },
+    {
+      value: 'custom',
+      label: t('randomPortGenerator.options.range.custom')
+    }
+  ] as const;
   const getGroups: GetGroupsType<InitialValuesType> | null = ({
     values,
     updateField
   }) => [
     {
-      title: t('number:randomPortGenerator.options.range.title'),
+      title: t('randomPortGenerator.options.range.title'),
       component: (
         <Box>
-          <RadioWithTextField
-            value={values.portRange}
-            onTextChange={(value: any) => updateField('portRange', value)}
-            options={[
-              {
-                value: 'well-known',
-                label: t('number:randomPortGenerator.options.range.wellKnown')
-              },
-              {
-                value: 'registered',
-                label: t('number:randomPortGenerator.options.range.registered')
-              },
-              {
-                value: 'dynamic',
-                label: t('number:randomPortGenerator.options.range.dynamic')
-              },
-              {
-                value: 'custom',
-                label: t('number:randomPortGenerator.options.range.custom')
-              }
-            ]}
-          />
+          {portOptions.map((option) => (
+            <SimpleRadio
+              key={option.value}
+              title={option.label}
+              checked={values.portRange === option.value}
+              onClick={() => updateField('portRange', option.value)}
+            />
+          ))}
 
           {values.portRange === 'custom' && (
             <Box sx={{ mt: 2 }}>
@@ -102,7 +103,7 @@ export default function RandomPortGenerator({
                   updateField('minPort', parseInt(value) || 1024)
                 }
                 description={t(
-                  'number:randomPortGenerator.options.range.minPortDescription'
+                  'randomPortGenerator.options.range.minPortDescription'
                 )}
                 inputProps={{
                   type: 'number',
@@ -117,7 +118,7 @@ export default function RandomPortGenerator({
                   updateField('maxPort', parseInt(value) || 49151)
                 }
                 description={t(
-                  'number:randomPortGenerator.options.range.maxPortDescription'
+                  'randomPortGenerator.options.range.maxPortDescription'
                 )}
                 inputProps={{
                   type: 'number',
@@ -140,14 +141,14 @@ export default function RandomPortGenerator({
       )
     },
     {
-      title: t('number:randomPortGenerator.options.generation.title'),
+      title: t('randomPortGenerator.options.generation.title'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.count.toString()}
             onOwnChange={(value) => updateField('count', parseInt(value) || 5)}
             description={t(
-              'number:randomPortGenerator.options.generation.countDescription'
+              'randomPortGenerator.options.generation.countDescription'
             )}
             inputProps={{
               type: 'number',
@@ -159,37 +160,37 @@ export default function RandomPortGenerator({
 
           <CheckboxWithDesc
             title={t(
-              'number:randomPortGenerator.options.generation.allowDuplicates.title'
+              'randomPortGenerator.options.generation.allowDuplicates.title'
             )}
             checked={values.allowDuplicates}
             onChange={(value) => updateField('allowDuplicates', value)}
             description={t(
-              'number:randomPortGenerator.options.generation.allowDuplicates.description'
+              'randomPortGenerator.options.generation.allowDuplicates.description'
             )}
           />
 
           <CheckboxWithDesc
             title={t(
-              'number:randomPortGenerator.options.generation.sortResults.title'
+              'randomPortGenerator.options.generation.sortResults.title'
             )}
             checked={values.sortResults}
             onChange={(value) => updateField('sortResults', value)}
             description={t(
-              'number:randomPortGenerator.options.generation.sortResults.description'
+              'randomPortGenerator.options.generation.sortResults.description'
             )}
           />
         </Box>
       )
     },
     {
-      title: t('number:randomPortGenerator.options.output.title'),
+      title: t('randomPortGenerator.options.output.title'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.separator}
             onOwnChange={(value) => updateField('separator', value)}
             description={t(
-              'number:randomPortGenerator.options.output.separatorDescription'
+              'randomPortGenerator.options.output.separatorDescription'
             )}
             inputProps={{
               'data-testid': 'separator-input'
@@ -215,80 +216,17 @@ export default function RandomPortGenerator({
           )}
 
           {result && (
-            <Box>
-              <ToolTextResult
-                title={t('number:randomPortGenerator.result.title')}
-                value={formattedResult}
-              />
-
-              <Box sx={{ mt: 2, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-                <Chip
-                  label={`${t('number:randomPortGenerator.result.range')}: ${
-                    result.range.min
-                  } - ${result.range.max}`}
-                  variant="outlined"
-                  color="primary"
-                />
-                <Chip
-                  label={`${t('number:randomPortGenerator.result.count')}: ${
-                    result.count
-                  }`}
-                  variant="outlined"
-                  color="secondary"
-                />
-                {result.hasDuplicates && (
-                  <Chip
-                    label={t('number:randomPortGenerator.result.hasDuplicates')}
-                    variant="outlined"
-                    color="warning"
-                  />
-                )}
-                {result.isSorted && (
-                  <Chip
-                    label={t('number:randomPortGenerator.result.isSorted')}
-                    variant="outlined"
-                    color="success"
-                  />
-                )}
-              </Box>
-
-              {result.ports.length > 0 && (
-                <Box sx={{ mt: 2 }}>
-                  <strong>
-                    {t('number:randomPortGenerator.result.portDetails')}:
-                  </strong>
-                  <Box
-                    sx={{ mt: 1, display: 'flex', gap: 1, flexWrap: 'wrap' }}
-                  >
-                    {result.ports.slice(0, 10).map((port, index) => (
-                      <Chip
-                        key={index}
-                        label={`${port}${
-                          isCommonPort(port) ? ` (${getPortService(port)})` : ''
-                        }`}
-                        variant="outlined"
-                        size="small"
-                        color={isCommonPort(port) ? 'warning' : 'default'}
-                      />
-                    ))}
-                    {result.ports.length > 10 && (
-                      <Chip
-                        label={`+${result.ports.length - 10} more`}
-                        variant="outlined"
-                        size="small"
-                      />
-                    )}
-                  </Box>
-                </Box>
-              )}
-            </Box>
+            <ToolTextResult
+              title={t('randomPortGenerator.result.title')}
+              value={formattedResult}
+            />
           )}
         </Box>
       }
       toolInfo={{
-        title: t('number:randomPortGenerator.info.title'),
+        title: t('randomPortGenerator.info.title'),
         description:
-          longDescription || t('number:randomPortGenerator.info.description')
+          longDescription || t('randomPortGenerator.info.description')
       }}
     />
   );

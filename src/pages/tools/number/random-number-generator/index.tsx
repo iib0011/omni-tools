@@ -1,10 +1,10 @@
-import { Box, Alert, Chip } from '@mui/material';
+import { Alert, Box } from '@mui/material';
 import { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { GetGroupsType } from '@components/options/ToolOptions';
-import { generateRandomNumbers, validateInput, formatNumbers } from './service';
+import { formatNumbers, generateRandomNumbers, validateInput } from './service';
 import { InitialValuesType, RandomNumberResult } from './types';
 import { useTranslation } from 'react-i18next';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
@@ -24,7 +24,7 @@ export default function RandomNumberGenerator({
   title,
   longDescription
 }: ToolComponentProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('number');
   const [result, setResult] = useState<RandomNumberResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [formattedResult, setFormattedResult] = useState<string>('');
@@ -55,7 +55,7 @@ export default function RandomNumberGenerator({
       setFormattedResult(formatted);
     } catch (err) {
       console.error('Random number generation failed:', err);
-      setError(t('number:randomNumberGenerator.error.generationFailed'));
+      setError(t('randomNumberGenerator.error.generationFailed'));
     }
   };
 
@@ -64,7 +64,7 @@ export default function RandomNumberGenerator({
     updateField
   }) => [
     {
-      title: t('number:randomNumberGenerator.options.range.title'),
+      title: t('randomNumberGenerator.options.range.title'),
       component: (
         <Box>
           <TextFieldWithDesc
@@ -73,7 +73,7 @@ export default function RandomNumberGenerator({
               updateField('minValue', parseInt(value) || 1)
             }
             description={t(
-              'number:randomNumberGenerator.options.range.minDescription'
+              'randomNumberGenerator.options.range.minDescription'
             )}
             inputProps={{
               type: 'number',
@@ -86,7 +86,7 @@ export default function RandomNumberGenerator({
               updateField('maxValue', parseInt(value) || 100)
             }
             description={t(
-              'number:randomNumberGenerator.options.range.maxDescription'
+              'randomNumberGenerator.options.range.maxDescription'
             )}
             inputProps={{
               type: 'number',
@@ -97,14 +97,14 @@ export default function RandomNumberGenerator({
       )
     },
     {
-      title: t('number:randomNumberGenerator.options.generation.title'),
+      title: t('randomNumberGenerator.options.generation.title'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.count.toString()}
             onOwnChange={(value) => updateField('count', parseInt(value) || 10)}
             description={t(
-              'number:randomNumberGenerator.options.generation.countDescription'
+              'randomNumberGenerator.options.generation.countDescription'
             )}
             inputProps={{
               type: 'number',
@@ -116,48 +116,48 @@ export default function RandomNumberGenerator({
 
           <CheckboxWithDesc
             title={t(
-              'number:randomNumberGenerator.options.generation.allowDecimals.title'
+              'randomNumberGenerator.options.generation.allowDecimals.title'
             )}
             checked={values.allowDecimals}
             onChange={(value) => updateField('allowDecimals', value)}
             description={t(
-              'number:randomNumberGenerator.options.generation.allowDecimals.description'
+              'randomNumberGenerator.options.generation.allowDecimals.description'
             )}
           />
 
           <CheckboxWithDesc
             title={t(
-              'number:randomNumberGenerator.options.generation.allowDuplicates.title'
+              'randomNumberGenerator.options.generation.allowDuplicates.title'
             )}
             checked={values.allowDuplicates}
             onChange={(value) => updateField('allowDuplicates', value)}
             description={t(
-              'number:randomNumberGenerator.options.generation.allowDuplicates.description'
+              'randomNumberGenerator.options.generation.allowDuplicates.description'
             )}
           />
 
           <CheckboxWithDesc
             title={t(
-              'number:randomNumberGenerator.options.generation.sortResults.title'
+              'randomNumberGenerator.options.generation.sortResults.title'
             )}
             checked={values.sortResults}
             onChange={(value) => updateField('sortResults', value)}
             description={t(
-              'number:randomNumberGenerator.options.generation.sortResults.description'
+              'randomNumberGenerator.options.generation.sortResults.description'
             )}
           />
         </Box>
       )
     },
     {
-      title: t('number:randomNumberGenerator.options.output.title'),
+      title: t('randomNumberGenerator.options.output.title'),
       component: (
         <Box>
           <TextFieldWithDesc
             value={values.separator}
             onOwnChange={(value) => updateField('separator', value)}
             description={t(
-              'number:randomNumberGenerator.options.output.separatorDescription'
+              'randomNumberGenerator.options.output.separatorDescription'
             )}
             inputProps={{
               'data-testid': 'separator-input'
@@ -183,52 +183,17 @@ export default function RandomNumberGenerator({
           )}
 
           {result && (
-            <Box>
-              <ToolTextResult
-                title={t('number:randomNumberGenerator.result.title')}
-                value={formattedResult}
-              />
-
-              <Box sx={{ mt: 2, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-                <Chip
-                  label={`${t('number:randomNumberGenerator.result.range')}: ${
-                    result.min
-                  } - ${result.max}`}
-                  variant="outlined"
-                  color="primary"
-                />
-                <Chip
-                  label={`${t('number:randomNumberGenerator.result.count')}: ${
-                    result.count
-                  }`}
-                  variant="outlined"
-                  color="secondary"
-                />
-                {result.hasDuplicates && (
-                  <Chip
-                    label={t(
-                      'number:randomNumberGenerator.result.hasDuplicates'
-                    )}
-                    variant="outlined"
-                    color="warning"
-                  />
-                )}
-                {result.isSorted && (
-                  <Chip
-                    label={t('number:randomNumberGenerator.result.isSorted')}
-                    variant="outlined"
-                    color="success"
-                  />
-                )}
-              </Box>
-            </Box>
+            <ToolTextResult
+              title={t('randomNumberGenerator.result.title')}
+              value={formattedResult}
+            />
           )}
         </Box>
       }
       toolInfo={{
-        title: t('number:randomNumberGenerator.info.title'),
+        title: t('randomNumberGenerator.info.title'),
         description:
-          longDescription || t('number:randomNumberGenerator.info.description')
+          longDescription || t('randomNumberGenerator.info.description')
       }}
     />
   );

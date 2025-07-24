@@ -8,5 +8,7 @@ export const numberTools = [
   numberSum,
   numberGenerate,
   numberArithmeticSequence,
+  numberRandomPortGenerator,
+  numberRandomNumberGenerator,
   ...genericCalcTools
 ];
