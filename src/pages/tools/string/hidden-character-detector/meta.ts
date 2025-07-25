@@ -6,7 +6,8 @@ export const tool = defineTool('string', {
     name: 'string:hiddenCharacterDetector.title',
     description: 'string:hiddenCharacterDetector.description',
     shortDescription: 'string:hiddenCharacterDetector.shortDescription',
-    longDescription: 'string:hiddenCharacterDetector.longDescription'
+    longDescription: 'string:hiddenCharacterDetector.longDescription',
+    userTypes: ['developers']
   },
   path: 'hidden-character-detector',
   icon: 'material-symbols:visibility-off',

@@ -44,5 +44,6 @@ export const stringTools = [
   stringCensor,
   stringPasswordGenerator,
   stringEncodeUrl,
-  StringDecodeUrl
+  StringDecodeUrl,
+  stringHiddenCharacterDetector
 ];

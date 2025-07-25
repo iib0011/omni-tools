@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Typography, Alert, Paper } from '@mui/material';
+import { Alert, Box, Paper, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -7,7 +7,6 @@ import { InitialValuesType } from './types';
 import { analyzeHiddenCharacters } from './service';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
-import { GetGroupsType } from '@components/options/ToolOptions';
 
 const initialValues: InitialValuesType = {
   showUnicodeCodes: true,
@@ -33,41 +32,35 @@ export default function HiddenCharacterDetector({
       setAnalysis(analysisResult);
 
       if (analysisResult.totalHiddenChars === 0) {
-        setResult(t('string:hiddenCharacterDetector.noHiddenChars'));
+        setResult(t('hiddenCharacterDetector.noHiddenChars'));
       } else {
-        let output = t('string:hiddenCharacterDetector.foundChars', {
+        let output = t('hiddenCharacterDetector.foundChars', {
           count: analysisResult.totalHiddenChars
         });
 
         analysisResult.hiddenCharacters.forEach((char: any) => {
-          output += `${t('string:hiddenCharacterDetector.position')} ${
+          output += `${t('hiddenCharacterDetector.position')} ${
             char.position
           }: ${char.name} (${char.unicode})\n`;
           if (values.showUnicodeCodes) {
-            output += `  ${t('string:hiddenCharacterDetector.unicode')}: ${
+            output += `  ${t('hiddenCharacterDetector.unicode')}: ${
               char.unicode
             }\n`;
           }
-          output += `  ${t('string:hiddenCharacterDetector.category')}: ${
+          output += `  ${t('hiddenCharacterDetector.category')}: ${
             char.category
           }\n`;
           if (char.isRTL)
-            output += `  ⚠️  ${t(
-              'string:hiddenCharacterDetector.rtlOverride'
-            )}\n`;
+            output += `  ⚠️  ${t('hiddenCharacterDetector.rtlOverride')}\n`;
           if (char.isInvisible)
-            output += `  👁️  ${t(
-              'string:hiddenCharacterDetector.invisibleChar'
-            )}\n`;
+            output += `  👁️  ${t('hiddenCharacterDetector.invisibleChar')}\n`;
           if (char.isZeroWidth)
-            output += `  📏  ${t(
-              'string:hiddenCharacterDetector.zeroWidthChar'
-            )}\n`;
+            output += `  📏  ${t('hiddenCharacterDetector.zeroWidthChar')}\n`;
           output += '\n';
         });
 
         if (analysisResult.hasRTLOverride) {
-          output += `⚠️  ${t('string:hiddenCharacterDetector.rtlWarning')}\n`;
+          output += `⚠️  ${t('hiddenCharacterDetector.rtlWarning')}\n`;
         }
 
         setResult(output);
@@ -77,22 +70,6 @@ export default function HiddenCharacterDetector({
     }
   };
 
-  const getGroups: GetGroupsType<InitialValuesType> = ({
-    values,
-    updateField
-  }) => [
-    {
-      title: t('string:hiddenCharacterDetector.analysisOptions'),
-      component: (
-        <Box>
-          <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-            {t('string:hiddenCharacterDetector.optionsDescription')}
-          </Typography>
-        </Box>
-      )
-    }
-  ];
-
   return (
     <ToolContent
       title={title}
@@ -101,31 +78,31 @@ export default function HiddenCharacterDetector({
           <ToolTextInput
             value={input}
             onChange={setInput}
-            title={t('string:hiddenCharacterDetector.inputTitle')}
-            placeholder={t('string:hiddenCharacterDetector.inputPlaceholder')}
+            title={t('hiddenCharacterDetector.inputTitle')}
+            placeholder={t('hiddenCharacterDetector.inputPlaceholder')}
           />
 
           {analysis && analysis.hasRTLOverride && (
             <Alert severity="warning" sx={{ mt: 2 }}>
-              {t('string:hiddenCharacterDetector.rtlAlert')}
+              {t('hiddenCharacterDetector.rtlAlert')}
             </Alert>
           )}
 
           {analysis && analysis.totalHiddenChars > 0 && (
             <Paper sx={{ p: 2, mt: 2, backgroundColor: '#fff3cd' }}>
               <Typography variant="h6" gutterBottom>
-                {t('string:hiddenCharacterDetector.summary')}
+                {t('hiddenCharacterDetector.summary')}
               </Typography>
               <Typography variant="body2">
-                {t('string:hiddenCharacterDetector.totalChars', {
+                {t('hiddenCharacterDetector.totalChars', {
                   count: analysis.totalHiddenChars
                 })}
                 {analysis.hasRTLOverride &&
-                  ` • ${t('string:hiddenCharacterDetector.rtlFound')}`}
+                  ` • ${t('hiddenCharacterDetector.rtlFound')}`}
                 {analysis.hasInvisibleChars &&
-                  ` • ${t('string:hiddenCharacterDetector.invisibleFound')}`}
+                  ` • ${t('hiddenCharacterDetector.invisibleFound')}`}
                 {analysis.hasZeroWidthChars &&
-                  ` • ${t('string:hiddenCharacterDetector.zeroWidthFound')}`}
+                  ` • ${t('hiddenCharacterDetector.zeroWidthFound')}`}
               </Typography>
             </Paper>
           )}
@@ -133,7 +110,7 @@ export default function HiddenCharacterDetector({
       }
       resultComponent={<ToolTextResult value={result} />}
       initialValues={initialValues}
-      getGroups={getGroups}
+      getGroups={null}
       compute={compute}
       input={input}
       setInput={setInput}
