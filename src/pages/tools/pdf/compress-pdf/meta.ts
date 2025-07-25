@@ -19,11 +19,11 @@ export const tool = defineTool('pdf', {
     'browser',
     'webassembly'
   ],
-
   component: lazy(() => import('./index')),
   i18n: {
     name: 'pdf:compressPdf.title',
     description: 'pdf:compressPdf.description',
-    shortDescription: 'pdf:compressPdf.shortDescription'
+    shortDescription: 'pdf:compressPdf.shortDescription',
+    userTypes: ['generalUsers']
   }
 });

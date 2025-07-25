@@ -5,6 +5,7 @@ import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolImageInput from '@components/input/ToolImageInput';
 import { removeBackground } from '@imgly/background-removal';
+import * as heic2any from 'heic2any';
 
 const initialValues = {};
 
@@ -23,8 +24,33 @@ export default function RemoveBackgroundFromImage({
     setIsProcessing(true);
 
     try {
-      // Convert the input file to a Blob URL
-      const inputUrl = URL.createObjectURL(input);
+      let fileToProcess = input;
+      // Check if the file is HEIC (by MIME type or extension)
+      if (
+        input.type === 'image/heic' ||
+        input.name?.toLowerCase().endsWith('.heic')
+      ) {
+        // Convert HEIC to PNG using heic2any
+        const convertedBlob = await heic2any.default({
+          blob: input,
+          toType: 'image/png'
+        });
+        // heic2any returns a Blob or an array of Blobs
+        let pngBlob;
+        if (Array.isArray(convertedBlob)) {
+          pngBlob = convertedBlob[0];
+        } else {
+          pngBlob = convertedBlob;
+        }
+        fileToProcess = new File(
+          [pngBlob],
+          input.name.replace(/\.[^/.]+$/, '') + '.png',
+          { type: 'image/png' }
+        );
+      }
+
+      // Convert the file to a Blob URL
+      const inputUrl = URL.createObjectURL(fileToProcess);
 
       // Process the image with the background removal library
       const blob = await removeBackground(inputUrl, {
@@ -36,7 +62,7 @@ export default function RemoveBackgroundFromImage({
       // Create a new file from the blob
       const newFile = new File(
         [blob],
-        input.name.replace(/\.[^/.]+$/, '') + '-no-bg.png',
+        fileToProcess.name.replace(/\.[^/.]+$/, '') + '-no-bg.png',
         {
           type: 'image/png'
         }

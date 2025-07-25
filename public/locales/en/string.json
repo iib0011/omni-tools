@@ -258,30 +258,30 @@
     "shortDescription": "Convert text to uppercase",
     "title": "Convert to Uppercase"
   },
-  "urlEncode": {
-    "toolInfo": {
-      "description": "Load your string and it will automatically get URL-escaped.",
-      "shortDescription": "Quickly URL-escape a string.",
-      "longDescription": "This tool URL-encodes a string. Special URL characters get converted to percent-sign encoding. This encoding is called percent-encoding because each character's numeric value gets converted to a percent sign followed by a two-digit hexadecimal value. The hex values are determined based on the character's codepoint value. For example, a space gets escaped to %20, a colon to %3a, a slash to %2f. Characters that are not special stay unchanged. In case you also need to convert non-special characters to percent-encoding, then we've also added an extra option that lets you do that. Select the encode-non-special-chars option to enable this behavior.",
-      "title": "String URL encoder"
-    },
-    "encodingOption": {
-      "title": "Encoding Options",
-      "nonSpecialCharPlaceholder": "Encode non-special characters",
-      "nonSpecialCharDescription": "If selected, then all characters in the input string will be converted to URL-encoding (not just special)."
-    },
-    "inputTitle": "Input String",
-    "resultTitle": "Url-escaped String"
-  },
   "urlDecode": {
+    "inputTitle": "Input String(URL-escaped)",
+    "resultTitle": "Output string",
     "toolInfo": {
       "description": "Load your string and it will automatically get URL-unescaped.",
-      "shortDescription": "Quickly URL-unescape a string.",
       "longDescription": "This tool URL-decodes a previously URL-encoded string. URL-decoding is the inverse operation of URL-encoding. All percent-encoded characters get decoded to characters that you can understand. Some of the most well known percent-encoded values are %20 for a space, %3a for a colon, %2f for a slash, and %3f for a question mark. The two digits following the percent sign are character's char code values in hex.",
+      "shortDescription": "Quickly URL-unescape a string.",
       "title": "String URL decoder"
+    }
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "If selected, then all characters in the input string will be converted to URL-encoding (not just special).",
+      "nonSpecialCharPlaceholder": "Encode non-special characters",
+      "title": "Encoding Options"
     },
-    "inputTitle": "Input String(URL-escaped)",
-    "resultTitle": "Output string"
+    "inputTitle": "Input String",
+    "resultTitle": "Url-escaped String",
+    "toolInfo": {
+      "description": "Load your string and it will automatically get URL-escaped.",
+      "longDescription": "This tool URL-encodes a string. Special URL characters get converted to percent-sign encoding. This encoding is called percent-encoding because each character's numeric value gets converted to a percent sign followed by a two-digit hexadecimal value. The hex values are determined based on the character's codepoint value. For example, a space gets escaped to %20, a colon to %3a, a slash to %2f. Characters that are not special stay unchanged. In case you also need to convert non-special characters to percent-encoding, then we've also added an extra option that lets you do that. Select the encode-non-special-chars option to enable this behavior.",
+      "shortDescription": "Quickly URL-escape a string.",
+      "title": "String URL encoder"
+    }
   },
   "hiddenCharacterDetector": {
     "title": "Hidden Character Detector",

@@ -6,7 +6,8 @@ export const tool = defineTool('audio', {
     name: 'audio:trim.title',
     description: 'audio:trim.description',
     shortDescription: 'audio:trim.shortDescription',
-    longDescription: 'audio:trim.longDescription'
+    longDescription: 'audio:trim.longDescription',
+    userTypes: ['generalUsers', 'developers']
   },
 
   path: 'trim',
@@ -24,6 +25,5 @@ export const tool = defineTool('audio', {
     'audio editing',
     'time'
   ],
-
   component: lazy(() => import('./index'))
 });

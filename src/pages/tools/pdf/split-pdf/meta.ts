@@ -9,6 +9,7 @@ export const meta = defineTool('pdf', {
   i18n: {
     name: 'pdf:splitPdf.title',
     description: 'pdf:splitPdf.description',
-    shortDescription: 'pdf:splitPdf.shortDescription'
+    shortDescription: 'pdf:splitPdf.shortDescription',
+    userTypes: ['generalUsers']
   }
 });
