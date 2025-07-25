@@ -1,6 +1,6 @@
 import { stringTools } from '../pages/tools/string';
 import { imageTools } from '../pages/tools/image';
-import { DefinedTool, ToolCategory } from './defineTool';
+import { DefinedTool, ToolCategory, UserType } from './defineTool';
 import { capitalizeFirstLetter } from '@utils/string';
 import { numberTools } from '../pages/tools/number';
 import { videoTools } from '../pages/tools/video';
@@ -145,6 +145,36 @@ const categoriesConfig: {
     title: 'translation:categories.converters.title'
   }
 ];
+const CATEGORIES_USER_TYPES_MAPPINGS: Partial<Record<ToolCategory, UserType>> =
+  {
+    xml: 'developers',
+    csv: 'developers',
+    json: 'developers',
+    gif: 'generalUsers',
+    png: 'generalUsers',
+    'image-generic': 'generalUsers',
+    video: 'generalUsers',
+    audio: 'generalUsers'
+  };
+// Filter tools by user types
+export const filterToolsByUserTypes = (
+  tools: DefinedTool[],
+  userTypes: UserType[]
+): DefinedTool[] => {
+  if (userTypes.length === 0) return tools;
+
+  return tools.filter((tool) => {
+    if (CATEGORIES_USER_TYPES_MAPPINGS[tool.type]) {
+      return userTypes.includes(CATEGORIES_USER_TYPES_MAPPINGS[tool.type]!);
+    }
+    // If tool has no userTypes defined, show it to all users
+    if (!tool.userTypes || tool.userTypes.length === 0) return true;
+
+    // Check if tool has any of the selected user types
+    return tool.userTypes.some((userType) => userTypes.includes(userType));
+  });
+};
+
 // use for changelogs
 // console.log(
 //   'tools',
@@ -153,12 +183,22 @@ const categoriesConfig: {
 export const filterTools = (
   tools: DefinedTool[],
   query: string,
+  userTypes: UserType[] = [],
   t: TFunction<I18nNamespaces[]>
 ): DefinedTool[] => {
-  if (!query) return tools;
+  let filteredTools = tools;
+
+  // First filter by user types
+  if (userTypes.length > 0) {
+    filteredTools = filterToolsByUserTypes(tools, userTypes);
+  }
+
+  // Then filter by search query
+  if (!query) return filteredTools;
 
   const lowerCaseQuery = query.toLowerCase();
-  return tools.filter(
+
+  return filteredTools.filter(
     (tool) =>
       t(tool.name).toLowerCase().includes(lowerCaseQuery) ||
       t(tool.description).toLowerCase().includes(lowerCaseQuery) ||
@@ -170,6 +210,7 @@ export const filterTools = (
 };
 
 export const getToolsByCategory = (
+  userTypes: UserType[] = [],
   t: TFunction<I18nNamespaces[]>
 ): {
   title: string;
@@ -179,14 +220,28 @@ export const getToolsByCategory = (
   type: ToolCategory;
   example: { title: string; path: string };
   tools: DefinedTool[];
+  userTypes: UserType[]; // <-- Add this line
 }[] => {
   const groupedByType: Partial<Record<ToolCategory, DefinedTool[]>> =
     Object.groupBy(tools, ({ type }) => type);
+
   return (Object.entries(groupedByType) as Entries<typeof groupedByType>)
     .map(([type, tools]) => {
       const categoryConfig = categoriesConfig.find(
         (config) => config.type === type
       );
+
+      // Filter tools by user types if specified
+      const filteredTools =
+        userTypes.length > 0
+          ? filterToolsByUserTypes(tools ?? [], userTypes)
+          : tools ?? [];
+
+      // Aggregate unique userTypes from all tools in this category
+      const aggregatedUserTypes = Array.from(
+        new Set((filteredTools ?? []).flatMap((tool) => tool.userTypes ?? []))
+      );
+
       return {
         rawTitle: categoryConfig?.title
           ? t(categoryConfig.title)
@@ -197,12 +252,22 @@ export const getToolsByCategory = (
         description: categoryConfig?.value ? t(categoryConfig.value) : '',
         type,
         icon: categoryConfig!.icon,
-        tools: tools ?? [],
-        example: tools
-          ? { title: tools[0].name, path: tools[0].path }
-          : { title: '', path: '' }
+        tools: filteredTools,
+        example:
+          filteredTools.length > 0
+            ? { title: filteredTools[0].name, path: filteredTools[0].path }
+            : { title: '', path: '' },
+        userTypes: aggregatedUserTypes // <-- Add this line
       };
     })
+    .filter((category) => category.tools.length > 0)
+    .filter((category) =>
+      userTypes.length > 0
+        ? [...category.userTypes, CATEGORIES_USER_TYPES_MAPPINGS[category.type]]
+            .filter(Boolean)
+            .some((categoryUserType) => userTypes.includes(categoryUserType!))
+        : true
+    ) // Only show categories with tools
     .sort(
       (a, b) =>
         toolCategoriesOrder.indexOf(a.type) -

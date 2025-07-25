@@ -4,6 +4,8 @@ import { IconifyIcon } from '@iconify/react';
 import { FullI18nKey, validNamespaces } from '../i18n';
 import { useTranslation } from 'react-i18next';
 
+export type UserType = 'generalUsers' | 'developers';
+
 export interface ToolMeta {
   path: string;
   component: LazyExoticComponent<JSXElementConstructor<ToolComponentProps>>;
@@ -14,21 +16,22 @@ export interface ToolMeta {
     description: FullI18nKey;
     shortDescription: FullI18nKey;
     longDescription?: FullI18nKey;
+    userTypes?: UserType[];
   };
 }
 
 export type ToolCategory =
   | 'string'
+  | 'image-generic'
   | 'png'
   | 'number'
   | 'gif'
-  | 'video'
   | 'list'
   | 'json'
   | 'time'
   | 'csv'
+  | 'video'
   | 'pdf'
-  | 'image-generic'
   | 'audio'
   | 'xml'
   | 'converters';
@@ -42,6 +45,7 @@ export interface DefinedTool {
   icon: IconifyIcon | string;
   keywords: string[];
   component: () => JSX.Element;
+  userTypes?: UserType[];
 }
 
 export interface ToolComponentProps {
@@ -63,6 +67,7 @@ export const defineTool = (
     description: i18n.description,
     shortDescription: i18n.shortDescription,
     keywords,
+    userTypes: i18n.userTypes,
     component: function ToolComponent() {
       const { t } = useTranslation(validNamespaces);
       return (

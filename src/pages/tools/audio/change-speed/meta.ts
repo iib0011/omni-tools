@@ -20,6 +20,7 @@ export const tool = defineTool('audio', {
   i18n: {
     name: 'audio:changeSpeed.title',
     description: 'audio:changeSpeed.description',
-    shortDescription: 'audio:changeSpeed.shortDescription'
+    shortDescription: 'audio:changeSpeed.shortDescription',
+    userTypes: ['generalUsers', 'developers']
   }
 });

@@ -11,6 +11,7 @@ export const tool = defineTool('number', {
   i18n: {
     name: 'number:sum.title',
     description: 'number:sum.description',
-    shortDescription: 'number:sum.shortDescription'
+    shortDescription: 'number:sum.shortDescription',
+    userTypes: ['generalUsers']
   }
 });
