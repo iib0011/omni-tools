@@ -246,5 +246,9 @@
     "copyFailed": "复制失败： {{error}}",
     "loading": "正在加载...这可能需要一点时间。",
     "result": "结果"
+  },
+  "userTypes": {
+    "developers": "开发人员",
+    "generalUsers": "普通用户"
   }
 }

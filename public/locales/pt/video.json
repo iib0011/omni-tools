@@ -38,6 +38,7 @@
     "height": "Altura",
     "inputTitle": "Entrada de vídeo",
     "loadVideoForDimensions": "Carregue um vídeo para ver as dimensões",
+    "longDescription": "Esta ferramenta permite cortar arquivos de vídeo para remover áreas indesejadas ou focar em partes específicas do vídeo. Útil para remover barras pretas, ajustar proporções ou focar em conteúdo importante. Suporta vários formatos de vídeo, incluindo MP4, MOV e AVI.",
     "resultTitle": "Vídeo recortado",
     "shortDescription": "Recorte o vídeo para remover áreas indesejadas",
     "title": "Cortar vídeo",
@@ -82,6 +83,12 @@
       "description": "Esta ferramenta permite criar um vídeo em loop repetindo o vídeo original várias vezes. Você pode especificar quantas vezes o vídeo deve ser repetido.",
       "title": "O que é um {{title}}?"
     }
+  },
+  "mergeVideo": {
+    "description": "Combine vários arquivos de vídeo em um vídeo contínuo.",
+    "longDescription": "Esta ferramenta permite mesclar ou anexar vários arquivos de vídeo em um único vídeo contínuo. Basta enviar seus arquivos de vídeo, organizá-los na ordem desejada e mesclá-los em um único arquivo para facilitar o compartilhamento ou a edição.",
+    "shortDescription": "Adicione e mescle vídeos facilmente.",
+    "title": "Mesclar vídeos"
   },
   "rotate": {
     "180Degrees": "180° (de cabeça para baixo)",

@@ -5,6 +5,15 @@
     "copyDescription": "Anzahl der Kopien (kann Bruchteile sein)",
     "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Duplizieren von Listeneinträgen. Geben Sie Ihre Liste ein und legen Sie die Duplizierungskriterien fest, um Kopien von Einträgen zu erstellen. Ideal für Datenerweiterungen, Tests oder die Erstellung wiederkehrender Muster.",
     "duplicationOptions": "Duplizierungsoptionen",
+    "error": "Fehler",
+    "example1Description": "Dieses Beispiel zeigt, wie eine Liste von Wörtern dupliziert wird.",
+    "example1Title": "Einfache Vervielfältigung",
+    "example2Description": "Dieses Beispiel zeigt, wie eine Liste in umgekehrter Reihenfolge dupliziert wird.",
+    "example2Title": "Rückwärtsduplizierung",
+    "example3Description": "Dieses Beispiel zeigt, wie Elemente miteinander verwoben werden, anstatt sie zu verketten.",
+    "example3Title": "Verweben von Gegenständen",
+    "example4Description": "Dieses Beispiel zeigt, wie eine Liste mit einer Bruchzahl von Kopien dupliziert wird.",
+    "example4Title": "Bruchduplizierung",
     "examples": {
       "fractional": {
         "description": "Dieses Beispiel zeigt, wie eine Liste mit einer Bruchzahl von Kopien dupliziert wird.",
@@ -37,12 +46,53 @@
     "toolInfo": {
       "description": "Mit diesem Tool können Sie Elemente einer Liste duplizieren. Sie können die Anzahl der Kopien (einschließlich Bruchzahlen) festlegen, steuern, ob Elemente verknüpft oder verwoben werden, und sogar die Duplikate umkehren. Es ist nützlich, um wiederkehrende Muster zu erstellen, Testdaten zu generieren oder Listen mit vorhersehbarem Inhalt zu erweitern.",
       "title": "Listenduplizierung"
+    },
+    "unknownError": "Ein unbekannter Fehler ist aufgetreten",
+    "validation": {
+      "copyMustBeNumber": "Die Anzahl der Kopien muss eine Zahl sein",
+      "copyMustBePositive": "Die Anzahl der Kopien muss positiv sein",
+      "copyRequired": "Anzahl der Kopien ist erforderlich",
+      "joinSeparatorRequired": "Der Join-Separator ist erforderlich",
+      "separatorRequired": "Das Trennzeichen ist erforderlich"
     }
   },
   "findMostPopular": {
     "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Auffinden der beliebtesten Elemente in einer Liste. Geben Sie Ihre Liste ein und erhalten Sie sofort die am häufigsten vorkommenden Elemente. Ideal für Datenanalysen, Trenderkennung oder die Suche nach gemeinsamen Elementen.",
+    "displayFormatDescription": "Wie werden die beliebtesten Listenelemente angezeigt?",
+    "displayOptions": {
+      "count": "Anzahl der Elemente anzeigen",
+      "percentage": "Artikelprozentsatz anzeigen",
+      "total": "Artikelsumme anzeigen"
+    },
+    "extractListItems": "Wie extrahiere ich Listenelemente?",
+    "ignoreItemCase": "Groß-/Kleinschreibung ignorieren",
+    "ignoreItemCaseDescription": "Vergleichen Sie alle Listenelemente in Kleinbuchstaben.",
+    "inputTitle": "Eingabeliste",
+    "itemComparison": "Artikelvergleich",
+    "outputFormat": "Ausgabeformat für Top-Elemente",
+    "removeEmptyItems": "Leere Elemente entfernen",
+    "removeEmptyItemsDescription": "Leere Elemente beim Vergleich ignorieren.",
+    "resultTitle": "Die beliebtesten Artikel",
     "shortDescription": "Am häufigsten vorkommende Elemente finden",
-    "title": "Finden Sie die beliebtesten"
+    "sortOptions": {
+      "alphabetic": "Alphabetisch sortieren",
+      "count": "Nach Anzahl sortieren"
+    },
+    "sortingMethodDescription": "Wählen Sie eine Sortiermethode aus.",
+    "splitOperators": {
+      "regex": {
+        "description": "Begrenzen Sie die Elemente der Eingabeliste mit einem regulären Ausdruck.",
+        "title": "Verwenden Sie einen regulären Ausdruck zum Aufteilen"
+      },
+      "symbol": {
+        "description": "Begrenzen Sie die Elemente der Eingabeliste durch ein Zeichen.",
+        "title": "Verwenden Sie ein Symbol zum Teilen"
+      }
+    },
+    "splitSeparatorDescription": "Legen Sie ein Trennsymbol oder einen regulären Ausdruck fest.",
+    "title": "Finden Sie die beliebtesten",
+    "trimItems": "Top-Listenelemente kürzen",
+    "trimItemsDescription": "Entfernen Sie führende und nachfolgende Leerzeichen, bevor Sie Elemente vergleichen"
   },
   "findUnique": {
     "caseSensitiveItems": "Groß- und Kleinschreibung beachten",

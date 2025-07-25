@@ -1,4 +1,9 @@
 {
+  "comparison": {
+    "description": "比较两个 JSON 对象以识别结构和值的差异。",
+    "shortDescription": "查找两个 JSON 对象之间的差异",
+    "title": "比较 JSON"
+  },
   "escapeJson": {
     "description": "转义 JSON 字符串中的特殊字符。将 JSON 数据转换为正确的转义格式，以便安全传输或存储。",
     "shortDescription": "转义 JSON 中的特殊字符",

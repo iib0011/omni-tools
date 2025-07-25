@@ -17,15 +17,21 @@
     "description": "区切り文字、引用符、出力フォーマットなどのカスタマイズ可能なオプションを使用して、CSVファイルをJSON形式に変換します。ヘッダー、コメント、動的な型変換をサポートします。",
     "dynamicTypes": "動的型",
     "dynamicTypesDescription": "数値とブール値を自動的に変換する",
+    "error": "エラー",
     "errorParsing": "CSV 解析エラー: {{error}}",
     "fieldQuote": "フィールド引用符（例： \"）",
     "inputCsvFormat": "入力CSV形式",
     "inputTitle": "入力CSV",
+    "invalidCsvFormat": "無効なCSV形式",
     "resultTitle": "出力JSON",
     "shortDescription": "CSV データを JSON 形式に変換します。",
     "skipEmptyLines": "空行をスキップ",
     "skipEmptyLinesDescription": "入力CSV内の空行を無視する",
     "title": "CSVをJSONに変換する",
+    "toolInfo": {
+      "description": "このツールは、カンマ区切り値（CSV）ファイルをJavaScript Object Notation（JSON）データ構造に変換します。カスタマイズ可能な区切り文字、引用符、コメント記号など、様々なCSV形式に対応しています。変換機能は、最初の行をヘッダーとして扱い、空行をスキップし、数値やブール値などのデータ型を自動検出します。変換後のJSONは、データ移行、バックアップ、または他のアプリケーションへの入力として使用できます。",
+      "title": "CSV から JSON へのコンバーターとは何ですか?"
+    },
     "useHeaders": "ヘッダーを使用する",
     "useHeadersDescription": "最初の行を列ヘッダーとして扱う"
   },

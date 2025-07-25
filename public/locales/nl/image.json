@@ -10,8 +10,15 @@
     "title": "Afbeeldingsdekking wijzigen"
   },
   "compress": {
+    "compressedSize": "Gecomprimeerde grootte",
+    "compressionOptions": "Compressie-opties",
     "description": "Verklein de bestandsgrootte van een afbeelding, maar behoud de kwaliteit.",
+    "failedToCompress": "Het comprimeren van de afbeelding is mislukt. Probeer het opnieuw.",
+    "fileSizes": "Bestandsgroottes",
     "inputTitle": "Invoerafbeelding",
+    "maxFileSizeDescription": "Maximale bestandsgrootte in megabytes",
+    "originalSize": "Originele grootte",
+    "qualityDescription": "Beeldkwaliteitspercentage (lager betekent kleinere bestandsgrootte)",
     "resultTitle": "Gecomprimeerde afbeelding",
     "shortDescription": "Comprimeer afbeeldingen om de bestandsgrootte te verkleinen, maar zorg er wel voor dat de kwaliteit redelijk blijft.",
     "title": "Afbeelding comprimeren"

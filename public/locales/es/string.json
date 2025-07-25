@@ -28,6 +28,31 @@
     "shortDescription": "Extraer una porción de texto entre posiciones específicas",
     "title": "Extraer subcadena"
   },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "Opciones de análisis",
+    "category": "Categoría",
+    "description": "Detecta caracteres Unicode ocultos, especialmente caracteres RTL Override que podrían usarse en ataques.",
+    "foundChars": "Encontró {{count}} personaje(s) oculto(s):",
+    "inputPlaceholder": "Introduzca texto para comprobar si hay caracteres ocultos...",
+    "inputTitle": "Texto para analizar",
+    "invisibleChar": "Personaje invisible",
+    "invisibleFound": "Personajes invisibles encontrados",
+    "longDescription": "Esta herramienta le ayuda a detectar caracteres Unicode ocultos en el texto, especialmente caracteres de anulación de derecha a izquierda (RTL), que pueden usarse en ataques. Puede identificar caracteres invisibles, caracteres de ancho cero y otras secuencias Unicode potencialmente maliciosas que podrían estar ocultas en texto aparentemente inocente.",
+    "noHiddenChars": "No se detectaron caracteres ocultos en el texto.",
+    "optionsDescription": "Configure qué tipos de caracteres ocultos detectar y cómo mostrar los resultados.",
+    "position": "Posición",
+    "rtlAlert": "¡Se detectaron caracteres de anulación RTL! Este texto puede contener caracteres ocultos maliciosos.",
+    "rtlFound": "Se encontró una anulación de RTL",
+    "rtlOverride": "Carácter de anulación RTL",
+    "rtlWarning": "ADVERTENCIA: Se detectaron caracteres de anulación RTL. Podría usarse en ataques.",
+    "shortDescription": "Encuentra caracteres Unicode ocultos en el texto",
+    "summary": "Resumen del análisis",
+    "title": "Detector de caracteres ocultos",
+    "totalChars": "Total de personajes ocultos: {{count}}",
+    "unicode": "Unicode",
+    "zeroWidthChar": "Carácter de ancho cero",
+    "zeroWidthFound": "Se encontraron caracteres de ancho cero"
+  },
   "join": {
     "blankLinesAndTrailingSpaces": "Líneas en blanco y espacios finales",
     "deleteBlankDescription": "Eliminar líneas que no tengan símbolos de texto.",
@@ -257,5 +282,30 @@
     "resultTitle": "Texto en mayúsculas",
     "shortDescription": "Convertir texto a mayúsculas",
     "title": "Convertir a mayúsculas"
+  },
+  "urlDecode": {
+    "inputTitle": "Cadena de entrada (URL escapada)",
+    "resultTitle": "Cadena de salida",
+    "toolInfo": {
+      "description": "Cargue su cadena y automáticamente obtendrá la URL sin escape.",
+      "longDescription": "Esta herramienta decodifica una cadena previamente codificada. La decodificación es la operación inversa de la codificación. Todos los caracteres con porcentaje se decodifican en caracteres comprensibles. Algunos de los valores más conocidos son %20 para un espacio, %3a para dos puntos, %2f para una barra diagonal y %3f para un signo de interrogación. Los dos dígitos después del signo de porcentaje son los valores del código char en hexadecimal.",
+      "shortDescription": "Eliminar rápidamente el escape de una URL de una cadena.",
+      "title": "Decodificador de URL de cadena"
+    }
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "Si se selecciona, todos los caracteres en la cadena de entrada se convertirán a codificación URL (no solo especial).",
+      "nonSpecialCharPlaceholder": "Codificar caracteres no especiales",
+      "title": "Opciones de codificación"
+    },
+    "inputTitle": "Cadena de entrada",
+    "resultTitle": "Cadena con URL escapada",
+    "toolInfo": {
+      "description": "Cargue su cadena y se escapará automáticamente mediante URL.",
+      "longDescription": "Esta herramienta codifica una cadena en URL. Los caracteres especiales de URL se convierten a codificación de porcentaje. Esta codificación se denomina codificación porcentual porque el valor numérico de cada carácter se convierte en un signo de porcentaje seguido de un valor hexadecimal de dos dígitos. Los valores hexadecimales se determinan en función del valor del punto de código del carácter. Por ejemplo, un espacio se escapa a %20, los dos puntos a %3a y una barra a %2f. Los caracteres que no son especiales se mantienen sin cambios. Si también necesita convertir caracteres no especiales a codificación de porcentaje, hemos añadido una opción adicional que le permite hacerlo. Seleccione la opción \"codificar caracteres no especiales\" para habilitar esta función.",
+      "shortDescription": "Escapar rápidamente una URL de una cadena.",
+      "title": "Codificador de URL de cadena"
+    }
   }
 }

@@ -37,6 +37,101 @@
     "shortDescription": "Calcular voltaje, corriente o resistencia en circuitos eléctricos utilizando la Ley de Ohm",
     "title": "Ley de Ohm"
   },
+  "randomNumberGenerator": {
+    "description": "Genere números aleatorios dentro de un rango específico con opciones personalizables.",
+    "error": {
+      "generationFailed": "No se pudieron generar números aleatorios. Por favor, revise sus parámetros de entrada."
+    },
+    "info": {
+      "description": "Un generador de números aleatorios crea números impredecibles dentro de un rango específico. Esta herramienta utiliza generación de números aleatorios criptográficamente segura para garantizar resultados verdaderamente aleatorios. Útil para simulaciones, juegos, muestreo estadístico y escenarios de prueba.",
+      "title": "¿Qué es un generador de números aleatorios?"
+    },
+    "longDescription": "Genera números aleatorios dentro de un rango específico con opciones para enteros o decimales, permitiendo o evitando duplicados y ordenando resultados. Ideal para simulaciones, pruebas, juegos y análisis estadístico.",
+    "options": {
+      "generation": {
+        "allowDecimals": {
+          "description": "Generar números decimales en lugar de enteros",
+          "title": "Permitir números decimales"
+        },
+        "allowDuplicates": {
+          "description": "Permitir que el mismo número aparezca varias veces",
+          "title": "Permitir duplicados"
+        },
+        "countDescription": "Número de números aleatorios a generar (1-10 000)",
+        "sortResults": {
+          "description": "Ordena los números generados en orden ascendente",
+          "title": "Ordenar resultados"
+        },
+        "title": "Opciones de generación"
+      },
+      "output": {
+        "separatorDescription": "Caracteres para separar los números generados",
+        "title": "Configuración de salida"
+      },
+      "range": {
+        "maxDescription": "Valor máximo (inclusive)",
+        "minDescription": "Valor mínimo (inclusive)",
+        "title": "Ajustes de rango"
+      }
+    },
+    "result": {
+      "count": "Contar",
+      "hasDuplicates": "Contiene duplicados",
+      "isSorted": "Ordenado",
+      "range": "Rango",
+      "title": "Números aleatorios generados"
+    },
+    "shortDescription": "Generar números aleatorios en rangos personalizados",
+    "title": "Generador de números aleatorios"
+  },
+  "randomPortGenerator": {
+    "description": "Genere puertos de red aleatorios dentro de rangos específicos con opciones personalizables.",
+    "error": {
+      "generationFailed": "No se pudieron generar puertos aleatorios. Por favor, revise sus parámetros de entrada."
+    },
+    "info": {
+      "description": "Un generador de puertos aleatorio crea números de puerto de red impredecibles dentro de rangos específicos. Esta herramienta cumple con los estándares de números de puerto de la IANA e incluye la identificación de servicios comunes. Resulta útil para desarrollo, pruebas, configuración de red y para evitar conflictos de puertos.",
+      "title": "¿Qué es un generador de puertos aleatorios?"
+    },
+    "longDescription": "Genera puertos de red aleatorios dentro de rangos específicos (conocidos, registrados, dinámicos o personalizados). Ideal para desarrollo, pruebas y configuración de red. Incluye identificación de servicios de puerto para puertos comunes.",
+    "options": {
+      "generation": {
+        "allowDuplicates": {
+          "description": "Permitir que el mismo puerto aparezca varias veces",
+          "title": "Permitir duplicados"
+        },
+        "countDescription": "Número de puertos aleatorios a generar (1-1000)",
+        "sortResults": {
+          "description": "Ordenar los puertos generados en orden ascendente",
+          "title": "Ordenar resultados"
+        },
+        "title": "Opciones de generación"
+      },
+      "output": {
+        "separatorDescription": "Caracteres para separar los puertos generados",
+        "title": "Configuración de salida"
+      },
+      "range": {
+        "custom": "Gama personalizada",
+        "dynamic": "Puertos dinámicos (49152-65535)",
+        "maxPortDescription": "Número máximo de puerto (1-65535)",
+        "minPortDescription": "Número de puerto mínimo (1-65535)",
+        "registered": "Puertos registrados (1024-49151)",
+        "title": "Configuración del rango de puertos",
+        "wellKnown": "Puertos conocidos (1-1023)"
+      }
+    },
+    "result": {
+      "count": "Contar",
+      "hasDuplicates": "Contiene duplicados",
+      "isSorted": "Ordenado",
+      "portDetails": "Detalles del puerto",
+      "range": "Rango de puerto",
+      "title": "Puertos aleatorios generados"
+    },
+    "shortDescription": "Generar puertos de red aleatorios",
+    "title": "Generador de puertos aleatorios"
+  },
   "slackline": {
     "description": "Calcula la tensión en una slackline",
     "longDescription": "Esta calculadora asume una carga en el centro de la cuerda.",
@@ -57,6 +152,14 @@
   },
   "sum": {
     "description": "Calcula la suma de una lista de números. Introduce los números separados por comas o saltos de línea para obtener la suma total.",
+    "example1Description": "En este ejemplo, calculamos la suma de diez enteros positivos. Estos enteros se muestran en una columna y su suma total es 19494.",
+    "example1Title": "Suma de diez números positivos",
+    "example2Description": "Este ejemplo invierte una columna de veintitrés sílabas e imprime todas las palabras de abajo a arriba. Para separar los elementos de la lista, utiliza el carácter \\n como separador de elementos de entrada, lo que significa que cada elemento ocupa una línea independiente.",
+    "example2Title": "Contar árboles en el parque",
+    "example3Description": "En este ejemplo, sumamos noventa valores diferentes: números positivos, negativos, enteros y fracciones decimales. Usamos una coma como separador de entrada y, tras sumar todos los valores, obtenemos 0 como resultado.",
+    "example3Title": "Suma de números enteros y decimales",
+    "example4Description": "En este ejemplo, calculamos la suma de los diez dígitos y activamos la opción \"Imprimir suma continua\". Obtenemos los valores intermedios de la suma durante la adición. Por lo tanto, obtenemos la siguiente secuencia en la salida: 0, 1 (0 + 1), 3 (0 + 1 + 2), 6 (0 + 1 + 2 + 3), 10 (0 + 1 + 2 + 3 + 4), y así sucesivamente.",
+    "example4Title": "Suma continua de números",
     "extractionTypes": {
       "delimiter": {
         "description": "Personaliza aquí el separador de números (predeterminado: un salto de línea).",

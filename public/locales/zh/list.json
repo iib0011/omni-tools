@@ -5,6 +5,15 @@
     "copyDescription": "份数（可以是分数）",
     "description": "世界上最简单的基于浏览器的列表项复制实用程序。输入您的列表并指定复制条件即可创建项目副本。非常适合数据扩展、测试或创建重复模式。",
     "duplicationOptions": "复制选项",
+    "error": "错误",
+    "example1Description": "此示例显示如何复制单词列表。",
+    "example1Title": "简单复制",
+    "example2Description": "此示例显示如何以相反的顺序复制列表。",
+    "example2Title": "反向复制",
+    "example3Description": "此示例显示如何交织项目而不是连接它们。",
+    "example3Title": "交织物品",
+    "example4Description": "此示例显示如何复制具有小数份副本的列表。",
+    "example4Title": "部分重复",
     "examples": {
       "fractional": {
         "description": "此示例显示如何复制具有小数份副本的列表。",
@@ -37,12 +46,53 @@
     "toolInfo": {
       "description": "此工具允许您复制列表中的项目。您可以指定副本数量（包括小数），控制项目是连接还是交织，甚至可以反转重复的项目。它非常适合创建重复模式、生成测试数据或扩展具有可预测内容的列表。",
       "title": "列表重复"
+    },
+    "unknownError": "发生未知错误",
+    "validation": {
+      "copyMustBeNumber": "份数必须是数字",
+      "copyMustBePositive": "副本数量必须为正数",
+      "copyRequired": "需要复印份数",
+      "joinSeparatorRequired": "连接分隔符是必需的",
+      "separatorRequired": "分隔符是必需的"
     }
   },
   "findMostPopular": {
     "description": "世界上最简单的基于浏览器的实用程序，用于查找列表中最热门的项目。输入您的列表，即可立即获取出现频率最高的项目。非常适合数据分析、趋势识别或查找共同点。",
+    "displayFormatDescription": "如何显示最受欢迎的列表项？",
+    "displayOptions": {
+      "count": "显示项目数",
+      "percentage": "显示项目百分比",
+      "total": "显示商品总数"
+    },
+    "extractListItems": "如何提取列表项？",
+    "ignoreItemCase": "忽略项目大小写",
+    "ignoreItemCaseDescription": "比较所有列表项的小写形式。",
+    "inputTitle": "输入列表",
+    "itemComparison": "商品比较",
+    "outputFormat": "顶级项目输出格式",
+    "removeEmptyItems": "删除空项目",
+    "removeEmptyItemsDescription": "从比较中忽略空项。",
+    "resultTitle": "最受欢迎的商品",
     "shortDescription": "查找最常出现的项目",
-    "title": "查找最受欢迎的"
+    "sortOptions": {
+      "alphabetic": "按字母顺序排序",
+      "count": "按数量排序"
+    },
+    "sortingMethodDescription": "选择排序方法。",
+    "splitOperators": {
+      "regex": {
+        "description": "使用正则表达式分隔输入列表项。",
+        "title": "使用正则表达式进行拆分"
+      },
+      "symbol": {
+        "description": "用字符分隔输入列表项。",
+        "title": "使用符号进行拆分"
+      }
+    },
+    "splitSeparatorDescription": "设置分隔符号或正则表达式。",
+    "title": "查找最受欢迎的",
+    "trimItems": "修剪顶部列表项",
+    "trimItemsDescription": "在比较项目之前删除前导空格和尾随空格"
   },
   "findUnique": {
     "caseSensitiveItems": "区分大小写的项目",

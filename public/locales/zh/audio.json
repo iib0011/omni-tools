@@ -29,14 +29,33 @@
   },
   "mergeAudio": {
     "description": "按顺序连接多个音频文件，将其合并为一个音频文件。",
+    "inputTitle": "输入音频文件",
     "longDescription": "此工具允许您将多个音频文件按照上传顺序串联成一个文件。非常适合合并播客片段、音乐曲目或任何需要合并的音频文件。支持多种音频格式，包括 MP3、AAC 和 WAV。",
+    "mergingAudio": "合并音频",
+    "outputFormat": "输出格式",
+    "resultTitle": "合并音频",
     "shortDescription": "将多个音频文件合并为一个（MP3、AAC、WAV）。",
-    "title": "合并音频"
+    "title": "合并音频",
+    "toolInfo": {
+      "title": "什么是 {{title}}？"
+    }
   },
   "trim": {
     "description": "通过指定开始和结束时间来剪切和修剪音频文件以提取特定片段。",
+    "endTime": "结束时间",
+    "endTimeDescription": "结束时间格式为 HH:MM:SS（例如 00:01:30）",
+    "inputTitle": "输入音频",
     "longDescription": "此工具允许您通过指定开始和结束时间来修剪音频文件。您可以从较长的音频文件中提取特定片段，删除不需要的部分，或创建较短的片段。支持多种音频格式，包括 MP3、AAC 和 WAV。非常适合播客编辑、音乐制作或任何音频编辑需求。",
+    "outputFormat": "输出格式",
+    "resultTitle": "修剪音频",
     "shortDescription": "修剪音频文件以提取特定时间段（MP3、AAC、WAV）。",
-    "title": "修剪音频"
+    "startTime": "开始时间",
+    "startTimeDescription": "开始时间格式为 HH:MM:SS（例如 00:00:30）",
+    "timeSettings": "时间设置",
+    "title": "修剪音频",
+    "toolInfo": {
+      "title": "什么是 {{title}}？"
+    },
+    "trimmingAudio": "修剪音频"
   }
 }

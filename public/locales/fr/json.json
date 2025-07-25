@@ -1,4 +1,9 @@
 {
+  "comparison": {
+    "description": "Comparez deux objets JSON pour identifier les différences de structure et de valeurs.",
+    "shortDescription": "Trouver les différences entre deux objets JSON",
+    "title": "Comparer JSON"
+  },
   "escapeJson": {
     "description": "Échappez les caractères spéciaux dans les chaînes JSON. Convertissez les données JSON au format correctement échappé pour une transmission ou un stockage sécurisé.",
     "shortDescription": "Échapper aux caractères spéciaux dans JSON",
