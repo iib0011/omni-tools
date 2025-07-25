@@ -1,4 +1,3 @@
-import { tool as audioAACMP3 } from './AAC-MP3/meta';
 import { tool as audioMergeAudio } from './merge-audio/meta';
 import { tool as audioTrim } from './trim/meta';
 import { tool as audioChangeSpeed } from './change-speed/meta';
@@ -8,6 +7,5 @@ export const audioTools = [
   audioExtractAudio,
   audioChangeSpeed,
   audioTrim,
-  audioMergeAudio,
-  audioAACMP3
+  audioMergeAudio
 ];
