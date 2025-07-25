@@ -57,11 +57,5 @@
       "title": "What is {{title}}?"
     },
     "trimmingAudio": "Trimming Audio"
-  },
-  "AACMP3": {
-    "title": "AAC to MP3",
-    "description": "convert AAC audio files to MP3 format.Which is a common audio format used for music and other audio files.",
-    "shortDescription": "convert AAC audio files to MP3 format.",
-    "longDescription": "convert AAC audio files to MP3 format. MP3 is a widely used audio format that provides good sound quality and is compatible with most devices and platforms. This tool allows you to convert your AAC files to MP3 easily, making it convenient for playback on various devices."
-  }
+  } 
 }
