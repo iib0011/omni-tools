@@ -280,8 +280,23 @@
       "longDescription": "This tool URL-decodes a previously URL-encoded string. URL-decoding is the inverse operation of URL-encoding. All percent-encoded characters get decoded to characters that you can understand. Some of the most well known percent-encoded values are %20 for a space, %3a for a colon, %2f for a slash, and %3f for a question mark. The two digits following the percent sign are character's char code values in hex.",
       "title": "String URL decoder"
     },
-
     "inputTitle": "Input String(URL-escaped)",
     "resultTitle": "Output string"
+  },
+  "textCompare": {
+    "title": "Compare Texts",
+    "description": "Identify differences between two text blocks, highlighting insertions, deletions, and modifications.",
+    "shortDescription": "Compare two texts",
+    "longDescription": "",
+    "withLabel": "Options",
+    "outputOptions": "Comparison Options",
+    "addDiffHighlight": "Highlight differences",
+    "addDiffHighlightDescription": "Enable syntax highlighting to better visualize changes between texts",
+    "ignoreWhitespace": "Ignore Whitespace",
+    "ignoreWhitespaceDescription": "Ignore changes that are only due to whitespace (e.g., spaces, tabs, line breaks)",
+    "toolInfo": {
+      "title": "Compare Texts",
+      "description": "This tool compares two text inputs and highlights the differences (insertions, deletions, and substitutions). It's useful for reviewing code changes, document revisions, or analyzing updates between versions of a file or message."
+    }
   }
 }
