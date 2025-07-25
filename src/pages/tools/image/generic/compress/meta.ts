@@ -5,12 +5,13 @@ export const tool = defineTool('image-generic', {
   i18n: {
     name: 'image:compress.title',
     description: 'image:compress.description',
-    shortDescription: 'image:compress.shortDescription'
+    shortDescription: 'image:compress.shortDescription',
+    userTypes: ['generalUsers']
   },
 
   path: 'compress',
-  component: lazy(() => import('./index')),
   icon: 'material-symbols-light:compress-rounded',
 
-  keywords: ['image', 'compress', 'reduce', 'quality']
+  keywords: ['image', 'compress', 'reduce', 'quality'],
+  component: lazy(() => import('./index'))
 });

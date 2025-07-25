@@ -17,15 +17,21 @@
     "description": "Konvertieren Sie CSV-Dateien in das JSON-Format mit anpassbaren Optionen für Trennzeichen, Anführungszeichen und Ausgabeformatierung. Unterstützt werden Header, Kommentare und dynamische Typkonvertierung.",
     "dynamicTypes": "Dynamische Typen",
     "dynamicTypesDescription": "Automatische Konvertierung von Zahlen und Booleschen Werten",
+    "error": "Fehler",
     "errorParsing": "Fehler beim Parsen der CSV-Datei: {{error}}",
     "fieldQuote": "Feld Zitat (z. B. \")",
     "inputCsvFormat": "Eingabe-CSV-Format",
     "inputTitle": "Eingabe-CSV",
+    "invalidCsvFormat": "Ungültiges CSV-Format",
     "resultTitle": "JSON-Ausgabe",
     "shortDescription": "Konvertieren Sie CSV-Daten in das JSON-Format.",
     "skipEmptyLines": "Leere Zeilen überspringen",
     "skipEmptyLinesDescription": "Leere Zeilen in der CSV-Eingabe ignorieren",
     "title": "Konvertieren Sie CSV in JSON",
+    "toolInfo": {
+      "description": "Dieses Tool konvertiert CSV-Dateien (Comma Separated Values) in JSON-Datenstrukturen (JavaScript Object Notation). Es unterstützt verschiedene CSV-Formate mit anpassbaren Trennzeichen, Anführungszeichen und Kommentarsymbolen. Der Konverter kann die erste Zeile als Überschrift behandeln, Leerzeilen überspringen und Datentypen wie Zahlen und Boolesche Werte automatisch erkennen. Das resultierende JSON kann für Datenmigration, Backups oder als Eingabe für andere Anwendungen verwendet werden.",
+      "title": "Was ist ein CSV-zu-JSON-Konverter?"
+    },
     "useHeaders": "Verwenden Sie Überschriften",
     "useHeadersDescription": "Behandeln Sie die erste Zeile als Spaltenüberschrift"
   },

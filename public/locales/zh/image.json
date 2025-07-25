@@ -10,8 +10,15 @@
     "title": "更改图像不透明度"
   },
   "compress": {
+    "compressedSize": "压缩尺寸",
+    "compressionOptions": "压缩选项",
     "description": "在保持质量的同时减小图像文件大小。",
+    "failedToCompress": "压缩图片失败，请重试。",
+    "fileSizes": "文件大小",
     "inputTitle": "输入图像",
+    "maxFileSizeDescription": "最大文件大小（以兆字节为单位）",
+    "originalSize": "原始尺寸",
+    "qualityDescription": "图像质量百分比（越低表示文件大小越小）",
     "resultTitle": "压缩图像",
     "shortDescription": "压缩图像以减小文件大小，同时保持合理的质量。",
     "title": "压缩图像"

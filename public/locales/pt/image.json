@@ -10,8 +10,15 @@
     "title": "Alterar opacidade da imagem"
   },
   "compress": {
+    "compressedSize": "Tamanho compactado",
+    "compressionOptions": "Opções de compressão",
     "description": "Reduza o tamanho do arquivo de imagem, mantendo a qualidade.",
+    "failedToCompress": "Falha ao compactar a imagem. Tente novamente.",
+    "fileSizes": "Tamanhos de arquivo",
     "inputTitle": "Imagem de entrada",
+    "maxFileSizeDescription": "Tamanho máximo do arquivo em megabytes",
+    "originalSize": "Tamanho original",
+    "qualityDescription": "Porcentagem de qualidade da imagem (menor significa menor tamanho de arquivo)",
     "resultTitle": "Imagem compactada",
     "shortDescription": "Compacte imagens para reduzir o tamanho do arquivo, mantendo uma qualidade razoável.",
     "title": "Comprimir imagem"

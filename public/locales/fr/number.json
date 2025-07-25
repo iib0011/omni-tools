@@ -37,6 +37,101 @@
     "shortDescription": "Calculer la tension, le courant ou la résistance dans les circuits électriques en utilisant la loi d'Ohm",
     "title": "loi d'Ohm"
   },
+  "randomNumberGenerator": {
+    "description": "Générez des nombres aléatoires dans une plage spécifiée avec des options personnalisables.",
+    "error": {
+      "generationFailed": "Échec de la génération de nombres aléatoires. Veuillez vérifier vos paramètres d'entrée."
+    },
+    "info": {
+      "description": "Un générateur de nombres aléatoires crée des nombres imprévisibles dans une plage spécifiée. Cet outil utilise une génération de nombres aléatoires sécurisée par cryptographie pour garantir des résultats véritablement aléatoires. Il est utile pour les simulations, les jeux, l'échantillonnage statistique et les scénarios de test.",
+      "title": "Qu'est-ce qu'un générateur de nombres aléatoires ?"
+    },
+    "longDescription": "Générez des nombres aléatoires dans une plage spécifiée avec des options pour les entiers ou les décimales, autorisez ou empêchez les doublons et triez les résultats. Idéal pour les simulations, les tests, les jeux et l'analyse statistique.",
+    "options": {
+      "generation": {
+        "allowDecimals": {
+          "description": "Générer des nombres décimaux au lieu d'entiers",
+          "title": "Autoriser les nombres décimaux"
+        },
+        "allowDuplicates": {
+          "description": "Autoriser le même numéro à apparaître plusieurs fois",
+          "title": "Autoriser les doublons"
+        },
+        "countDescription": "Nombre de nombres aléatoires à générer (1 à 10 000)",
+        "sortResults": {
+          "description": "Trier les nombres générés par ordre croissant",
+          "title": "Trier les résultats"
+        },
+        "title": "Options de génération"
+      },
+      "output": {
+        "separatorDescription": "Caractère(s) pour séparer les nombres générés",
+        "title": "Paramètres de sortie"
+      },
+      "range": {
+        "maxDescription": "Valeur maximale (incluse)",
+        "minDescription": "Valeur minimale (incluse)",
+        "title": "Paramètres de plage"
+      }
+    },
+    "result": {
+      "count": "Compter",
+      "hasDuplicates": "Contient des doublons",
+      "isSorted": "Trié",
+      "range": "Gamme",
+      "title": "Nombres aléatoires générés"
+    },
+    "shortDescription": "Générer des nombres aléatoires dans des plages personnalisées",
+    "title": "Générateur de nombres aléatoires"
+  },
+  "randomPortGenerator": {
+    "description": "Générez des ports réseau aléatoires dans des plages spécifiées avec des options personnalisables.",
+    "error": {
+      "generationFailed": "Échec de la génération de ports aléatoires. Veuillez vérifier vos paramètres d'entrée."
+    },
+    "info": {
+      "description": "Un générateur de ports aléatoires crée des numéros de ports réseau imprévisibles dans des plages spécifiées. Cet outil respecte les normes IANA relatives aux numéros de ports et inclut l'identification des services courants. Il est utile pour le développement, les tests, la configuration réseau et la prévention des conflits de ports.",
+      "title": "Qu'est-ce qu'un générateur de ports aléatoires ?"
+    },
+    "longDescription": "Générez des ports réseau aléatoires dans des plages spécifiées (connues, enregistrées, dynamiques ou personnalisées). Idéal pour le développement, les tests et la configuration réseau. Inclut l'identification des services de port pour les ports courants.",
+    "options": {
+      "generation": {
+        "allowDuplicates": {
+          "description": "Autoriser le même port à apparaître plusieurs fois",
+          "title": "Autoriser les doublons"
+        },
+        "countDescription": "Nombre de ports aléatoires à générer (1 à 1 000)",
+        "sortResults": {
+          "description": "Trier les ports générés par ordre croissant",
+          "title": "Trier les résultats"
+        },
+        "title": "Options de génération"
+      },
+      "output": {
+        "separatorDescription": "Caractère(s) pour séparer les ports générés",
+        "title": "Paramètres de sortie"
+      },
+      "range": {
+        "custom": "Gamme personnalisée",
+        "dynamic": "Ports dynamiques (49152-65535)",
+        "maxPortDescription": "Numéro de port maximal (1-65535)",
+        "minPortDescription": "Numéro de port minimum (1-65535)",
+        "registered": "Ports enregistrés (1024-49151)",
+        "title": "Paramètres de plage de ports",
+        "wellKnown": "Ports connus (1-1023)"
+      }
+    },
+    "result": {
+      "count": "Compter",
+      "hasDuplicates": "Contient des doublons",
+      "isSorted": "Trié",
+      "portDetails": "Détails du port",
+      "range": "Port Range",
+      "title": "Ports aléatoires générés"
+    },
+    "shortDescription": "Générer des ports réseau aléatoires",
+    "title": "Générateur de ports aléatoires"
+  },
   "slackline": {
     "description": "Calcule la tension dans une slackline",
     "longDescription": "Cette calculatrice suppose une charge au centre de la corde",
@@ -57,6 +152,14 @@
   },
   "sum": {
     "description": "Calculez la somme d'une liste de nombres. Saisissez les nombres séparés par des virgules ou des sauts de ligne pour obtenir leur somme totale.",
+    "example1Description": "Dans cet exemple, nous calculons la somme de dix entiers positifs. Ces entiers sont répertoriés dans une colonne et leur somme totale est égale à 19 494.",
+    "example1Title": "Somme de dix nombres positifs",
+    "example2Description": "Cet exemple inverse une colonne de vingt noms de trois syllabes et affiche tous les mots de bas en haut. Pour séparer les éléments de la liste, le caractère \\n est utilisé comme séparateur d'entrée, ce qui signifie que chaque élément est sur sa propre ligne.",
+    "example2Title": "Compter les arbres dans le parc",
+    "example3Description": "Dans cet exemple, nous additionnons quatre-vingt-dix valeurs différentes : nombres positifs, nombres négatifs, entiers et fractions décimales. Nous utilisons une virgule comme séparateur d'entrée et, après addition, nous obtenons 0 en sortie.",
+    "example3Title": "Somme des nombres entiers et décimaux",
+    "example4Description": "Dans cet exemple, nous calculons la somme des dix chiffres et activons l'option « Imprimer la somme cumulée ». Nous obtenons les valeurs intermédiaires de la somme lors de l'addition. Nous obtenons ainsi la séquence suivante en sortie : 0, 1 (0 + 1), 3 (0 + 1 + 2), 6 (0 + 1 + 2 + 3), 10 (0 + 1 + 2 + 3 + 4), etc.",
+    "example4Title": "Somme courante de nombres",
     "extractionTypes": {
       "delimiter": {
         "description": "Personnalisez le séparateur de nombres ici. (Par défaut, il s'agit d'un saut de ligne.)",

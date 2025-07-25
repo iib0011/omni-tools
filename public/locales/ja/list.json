@@ -5,6 +5,15 @@
     "copyDescription": "コピー数（端数も可）",
     "description": "リストアイテムを複製するための、世界で最もシンプルなブラウザベースのユーティリティです。リストを入力し、複製条件を指定するだけで、アイテムのコピーを作成できます。データの拡張、テスト、繰り返しパターンの作成に最適です。",
     "duplicationOptions": "複製オプション",
+    "error": "エラー",
+    "example1Description": "この例では、単語のリストを複製する方法を示します。",
+    "example1Title": "単純な複製",
+    "example2Description": "この例では、リストを逆の順序で複製する方法を示します。",
+    "example2Title": "逆複製",
+    "example3Description": "この例では、項目を連結するのではなく織り交ぜる方法を示します。",
+    "example3Title": "織り交ぜたアイテム",
+    "example4Description": "この例では、リストを小数部数で複製する方法を示します。",
+    "example4Title": "部分的な複製",
     "examples": {
       "fractional": {
         "description": "この例では、リストを小数部数で複製する方法を示します。",
@@ -37,12 +46,53 @@
     "toolInfo": {
       "description": "このツールを使うと、リスト内の項目を複製できます。複製する数（小数点以下を含む）を指定したり、項目を連結するか織り交ぜるかを制御したり、複製した項目を反転させたりすることも可能です。繰り返しパターンの作成、テストデータの生成、あるいは予測可能な内容のリスト拡張などに便利です。",
       "title": "リストの重複"
+    },
+    "unknownError": "不明なエラーが発生しました",
+    "validation": {
+      "copyMustBeNumber": "コピー数は数字でなければなりません",
+      "copyMustBePositive": "コピー数は正の数でなければなりません",
+      "copyRequired": "コピー数が必要です",
+      "joinSeparatorRequired": "結合セパレーターは必須です",
+      "separatorRequired": "セパレータは必須です"
     }
   },
   "findMostPopular": {
     "description": "リスト内で最も人気のあるアイテムを見つけるための、世界で最もシンプルなブラウザベースのユーティリティです。リストを入力するだけで、最も頻繁に表示されるアイテムを瞬時に表示します。データ分析、トレンドの特定、共通要素の発見に最適です。",
+    "displayFormatDescription": "最も人気のあるリスト項目を表示するにはどうすればいいですか?",
+    "displayOptions": {
+      "count": "アイテム数を表示",
+      "percentage": "アイテムの割合を表示",
+      "total": "アイテムの合計を表示"
+    },
+    "extractListItems": "リスト項目を抽出するにはどうすればいいですか?",
+    "ignoreItemCase": "項目の大文字と小文字を区別しない",
+    "ignoreItemCaseDescription": "リスト項目をすべて小文字で比較します。",
+    "inputTitle": "入力リスト",
+    "itemComparison": "アイテム比較",
+    "outputFormat": "トップ項目の出力形式",
+    "removeEmptyItems": "空のアイテムを削除する",
+    "removeEmptyItemsDescription": "比較から空の項目を無視します。",
+    "resultTitle": "最も人気のある商品",
     "shortDescription": "最も頻繁に発生するアイテムを見つける",
-    "title": "最も人気のあるものを探す"
+    "sortOptions": {
+      "alphabetic": "アルファベット順に並べ替え",
+      "count": "カウントで並べ替え"
+    },
+    "sortingMethodDescription": "並べ替え方法を選択します。",
+    "splitOperators": {
+      "regex": {
+        "description": "入力リスト項目を正規表現で区切ります。",
+        "title": "正規表現を使用して分割する"
+      },
+      "symbol": {
+        "description": "入力リスト項目を文字で区切ります。",
+        "title": "分割にシンボルを使用する"
+      }
+    },
+    "splitSeparatorDescription": "区切り記号または正規表現を設定します。",
+    "title": "最も人気のあるものを探す",
+    "trimItems": "上位リスト項目をトリミングする",
+    "trimItemsDescription": "項目を比較する前に先頭と末尾のスペースを削除します"
   },
   "findUnique": {
     "caseSensitiveItems": "大文字と小文字を区別する項目",

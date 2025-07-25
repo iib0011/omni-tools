@@ -1,6 +1,8 @@
 {
   "checkLeapYears": {
     "description": "Controleer of een jaar een schrikkeljaar is en ontvang informatie over schrikkeljaren.",
+    "exampleDescription": "Een van onze vriendinnen is geboren in een schrikkeljaar, op 29 februari, en daardoor is ze maar eens in de vier jaar jarig. Omdat we ons haar verjaardag nooit echt kunnen herinneren, gebruiken we ons programma om een herinneringslijst te maken voor de komende schrikkeljaren. Om een lijst met haar volgende verjaardagen te maken, laden we een reeks jaren van 2025 tot en met 2040 in de invoer en bekijken we de status van elk jaar. Als het programma aangeeft dat het een schrikkeljaar is, weten we dat we uitgenodigd worden voor een verjaardagsfeestje op 29 februari.",
+    "exampleTitle": "Vind verjaardagen op 29 februari",
     "inputTitle": "Invoerjaar",
     "resultTitle": "Resultaat van een schrikkeljaar",
     "shortDescription": "Controleren of een jaar een schrikkeljaar is",
@@ -55,6 +57,21 @@
       "description": "Met deze tool kun je geformatteerde tijdreeksen (UU:MM:SS) omzetten naar seconden. Dit is handig voor het berekenen van tijdsduren en tijdsintervallen.",
       "title": "Tijd naar seconden converteren"
     }
+  },
+  "convertUnixToDate": {
+    "addUtcLabel": "Voeg 'UTC'-achtervoegsel toe",
+    "addUtcLabelDescription": "'UTC' weergeven na de geconverteerde datum (alleen voor UTC-modus)",
+    "description": "Converteer een Unix-tijdstempel naar een voor mensen leesbare datum.",
+    "outputOptions": "Uitvoeropties",
+    "shortDescription": "Unix-tijdstempel naar datum converteren",
+    "title": "Unix naar Date converteren",
+    "toolInfo": {
+      "description": "Deze tool converteert een Unix-tijdstempel (in seconden) naar een voor mensen leesbaar datumformaat (bijv. JJJJ-MM-DD UU:MM:SS). De tool ondersteunt zowel lokale als UTC-uitvoer, waardoor het handig is voor het snel interpreteren van tijdstempels uit logs, API's of systemen die Unix-tijd gebruiken.",
+      "title": "Unix naar Date converteren"
+    },
+    "useLocalTime": "Gebruik lokale tijd",
+    "useLocalTimeDescription": "Toon de geconverteerde datum in uw lokale tijdzone in plaats van UTC",
+    "withLabel": "Opties"
   },
   "crontabGuru": {
     "description": "Genereer en begrijp cron-expressies. Maak cron-schema's voor geautomatiseerde taken en systeemtaken.",

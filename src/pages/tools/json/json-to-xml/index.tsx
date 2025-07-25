@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ToolContent from '@components/ToolContent';
-import ToolTextInput from '@components/input/ToolTextInput';
+import ToolCodeInput from '@components/input/ToolCodeInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { convertJsonToXml } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
@@ -84,7 +84,12 @@ export default function JsonToXml({ title }: ToolComponentProps) {
       compute={compute}
       exampleCards={exampleCards}
       inputComponent={
-        <ToolTextInput title="Input Json" value={input} onChange={setInput} />
+        <ToolCodeInput
+          title="Input Json"
+          value={input}
+          onChange={setInput}
+          language="json"
+        />
       }
       resultComponent={
         <ToolTextResult title="Output XML" value={result} extension={'xml'} />

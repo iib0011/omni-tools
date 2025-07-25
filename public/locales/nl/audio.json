@@ -29,14 +29,33 @@
   },
   "mergeAudio": {
     "description": "Combineer meerdere audiobestanden tot één audiobestand door ze in volgorde te plaatsen.",
+    "inputTitle": "Invoer audiobestanden",
     "longDescription": "Met deze tool kun je meerdere audiobestanden samenvoegen tot één bestand door ze te combineren in de volgorde waarin je ze uploadt. Perfect voor het combineren van podcastfragmenten, muzieknummers of andere audiobestanden die moeten worden samengevoegd. Ondersteunt diverse audioformaten, waaronder MP3, AAC en WAV.",
+    "mergingAudio": "Audio samenvoegen",
+    "outputFormat": "Uitvoerformaat",
+    "resultTitle": "Samengevoegde audio",
     "shortDescription": "Voeg meerdere audiobestanden samen tot één bestand (MP3, AAC, WAV).",
-    "title": "Audio samenvoegen"
+    "title": "Audio samenvoegen",
+    "toolInfo": {
+      "title": "Wat is {{title}}?"
+    }
   },
   "trim": {
     "description": "Knip en trim audiobestanden om specifieke segmenten te extraheren door start- en eindtijden op te geven.",
+    "endTime": "Eindtijd",
+    "endTimeDescription": "Eindtijd in het formaat UU:MM:SS (bijv. 00:01:30)",
+    "inputTitle": "Invoer audio",
     "longDescription": "Met deze tool kun je audiobestanden inkorten door de begin- en eindtijd op te geven. Je kunt specifieke segmenten uit langere audiobestanden halen, ongewenste delen verwijderen of kortere clips maken. Ondersteunt diverse audioformaten, waaronder MP3, AAC en WAV. Perfect voor podcastbewerking, muziekproductie of andere audiobewerkingsbehoeften.",
+    "outputFormat": "Uitvoerformaat",
+    "resultTitle": "Bijgesneden audio",
     "shortDescription": "Trim audiobestanden om specifieke tijdssegmenten te extraheren (MP3, AAC, WAV).",
-    "title": "Audio bijsnijden"
+    "startTime": "Starttijd",
+    "startTimeDescription": "Starttijd in het formaat UU:MM:SS (bijv. 00:00:30)",
+    "timeSettings": "Tijdinstellingen",
+    "title": "Audio bijsnijden",
+    "toolInfo": {
+      "title": "Wat is {{title}}?"
+    },
+    "trimmingAudio": "Audio bijsnijden"
   }
 }

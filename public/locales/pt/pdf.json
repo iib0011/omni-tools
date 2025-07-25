@@ -11,6 +11,7 @@
     "highCompression": "Alta compressão",
     "highCompressionDescription": "Redução máxima do tamanho do arquivo com alguma perda de qualidade",
     "inputTitle": "PDF de entrada",
+    "longDescription": "Compacte arquivos PDF com segurança no seu navegador usando o Ghostscript. Seus arquivos nunca saem do seu dispositivo, garantindo total privacidade e reduzindo o tamanho dos arquivos para compartilhamento por e-mail, upload para sites ou economia de espaço de armazenamento. Desenvolvido com a tecnologia WebAssembly.",
     "lowCompression": "Baixa compressão",
     "lowCompressionDescription": "Reduza ligeiramente o tamanho do arquivo com perda mínima de qualidade",
     "mediumCompression": "Compressão média",

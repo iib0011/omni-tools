@@ -5,7 +5,16 @@ export const tool = defineTool('string', {
   path: 'url-decode-string',
   icon: 'codicon:symbol-string',
 
-  keywords: ['uppercase'],
+  keywords: [
+    'url',
+    'decode',
+    'string',
+    'url decode',
+    'unescape',
+    'encoding',
+    'percent',
+    'decode url'
+  ],
   component: lazy(() => import('./index')),
   i18n: {
     name: 'string:urlDecode.toolInfo.title',

@@ -10,8 +10,15 @@
     "title": "画像の不透明度を変更する"
   },
   "compress": {
+    "compressedSize": "圧縮サイズ",
+    "compressionOptions": "圧縮オプション",
     "description": "品質を維持しながら画像ファイルのサイズを縮小します。",
+    "failedToCompress": "画像の圧縮に失敗しました。もう一度お試しください。",
+    "fileSizes": "ファイルサイズ",
     "inputTitle": "入力画像",
+    "maxFileSizeDescription": "最大ファイルサイズ（メガバイト）",
+    "originalSize": "オリジナルサイズ",
+    "qualityDescription": "画像品質のパーセンテージ（低いほどファイルサイズが小さくなります）",
     "resultTitle": "圧縮画像",
     "shortDescription": "適切な品質を維持しながら画像を圧縮してファイル サイズを縮小します。",
     "title": "画像を圧縮"

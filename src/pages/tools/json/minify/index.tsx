@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
-import ToolTextInput from '@components/input/ToolTextInput';
+import ToolCodeInput from '@components/input/ToolCodeInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { minifyJson } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
@@ -60,10 +60,11 @@ export default function MinifyJson({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       inputComponent={
-        <ToolTextInput
+        <ToolCodeInput
           title={t('minify.inputTitle')}
           value={input}
           onChange={setInput}
+          language="json"
         />
       }
       resultComponent={

@@ -5,6 +5,15 @@
     "copyDescription": "Aantal kopieën (kan fractioneel zijn)",
     "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het dupliceren van lijstitems. Voer uw lijst in en specificeer duplicatiecriteria om kopieën van items te maken. Perfect voor data-uitbreiding, testen of het creëren van herhaalde patronen.",
     "duplicationOptions": "Duplicatieopties",
+    "error": "Fout",
+    "example1Description": "Dit voorbeeld laat zien hoe u een lijst met woorden kunt dupliceren.",
+    "example1Title": "Eenvoudige duplicatie",
+    "example2Description": "Dit voorbeeld laat zien hoe u een lijst in omgekeerde volgorde kunt dupliceren.",
+    "example2Title": "Omgekeerde duplicatie",
+    "example3Description": "Dit voorbeeld laat zien hoe u items kunt verweven in plaats van aaneenschakelen.",
+    "example3Title": "Verweven items",
+    "example4Description": "Dit voorbeeld laat zien hoe u een lijst kunt dupliceren met een fractioneel aantal kopieën.",
+    "example4Title": "Fractionele duplicatie",
     "examples": {
       "fractional": {
         "description": "Dit voorbeeld laat zien hoe u een lijst kunt dupliceren met een fractioneel aantal kopieën.",
@@ -37,12 +46,53 @@
     "toolInfo": {
       "description": "Met deze tool kunt u items in een lijst dupliceren. U kunt het aantal kopieën (inclusief fractionele waarden) opgeven, bepalen of items worden samengevoegd of verweven, en zelfs de gedupliceerde items omkeren. Dit is handig voor het creëren van herhaalde patronen, het genereren van testgegevens of het uitbreiden van lijsten met voorspelbare inhoud.",
       "title": "Lijstduplicatie"
+    },
+    "unknownError": "Er is een onbekende fout opgetreden",
+    "validation": {
+      "copyMustBeNumber": "Aantal exemplaren moet een getal zijn",
+      "copyMustBePositive": "Het aantal kopieën moet positief zijn",
+      "copyRequired": "Aantal exemplaren is vereist",
+      "joinSeparatorRequired": "Het join-scheidingsteken is vereist",
+      "separatorRequired": "De scheidingsteken is vereist"
     }
   },
   "findMostPopular": {
     "description": "'s Werelds eenvoudigste browsergebaseerde tool om de populairste items in een lijst te vinden. Voer je lijst in en krijg direct de items die het vaakst voorkomen. Perfect voor data-analyse, trendidentificatie of het vinden van gemeenschappelijke elementen.",
+    "displayFormatDescription": "Hoe geef ik de populairste lijstitems weer?",
+    "displayOptions": {
+      "count": "Toon aantal items",
+      "percentage": "Itempercentage weergeven",
+      "total": "Toon item totaal"
+    },
+    "extractListItems": "Hoe kan ik lijst-items extraheren?",
+    "ignoreItemCase": "Negeer itemcase",
+    "ignoreItemCaseDescription": "Vergelijk alle lijstitems in kleine letters.",
+    "inputTitle": "Invoerlijst",
+    "itemComparison": "Artikelvergelijking",
+    "outputFormat": "Top item-uitvoerformaat",
+    "removeEmptyItems": "Lege items verwijderen",
+    "removeEmptyItemsDescription": "Negeer lege items in de vergelijking.",
+    "resultTitle": "Meest populaire artikelen",
     "shortDescription": "Vind de meest voorkomende items",
-    "title": "Vind de meest populaire"
+    "sortOptions": {
+      "alphabetic": "Alfabetisch sorteren",
+      "count": "Sorteren op aantal"
+    },
+    "sortingMethodDescription": "Selecteer een sorteermethode.",
+    "splitOperators": {
+      "regex": {
+        "description": "Beperk de items in de invoerlijst met een reguliere expressie.",
+        "title": "Gebruik een Regex voor het splitsen"
+      },
+      "symbol": {
+        "description": "Beperk de items in de invoerlijst met een teken.",
+        "title": "Gebruik een symbool voor splitsen"
+      }
+    },
+    "splitSeparatorDescription": "Stel een scheidingsteken of reguliere expressie in.",
+    "title": "Vind de meest populaire",
+    "trimItems": "Items in de bovenste lijst bijsnijden",
+    "trimItemsDescription": "Verwijder voorloop- en volgspaties voordat u items vergelijkt"
   },
   "findUnique": {
     "caseSensitiveItems": "Hoofdlettergevoelige items",

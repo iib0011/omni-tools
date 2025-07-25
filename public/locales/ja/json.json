@@ -1,4 +1,9 @@
 {
+  "comparison": {
+    "description": "2 つの JSON オブジェクトを比較して、構造と値の違いを識別します。",
+    "shortDescription": "2つのJSONオブジェクトの違いを見つける",
+    "title": "JSONを比較する"
+  },
   "escapeJson": {
     "description": "JSON文字列内の特殊文字をエスケープします。JSONデータを適切にエスケープされた形式に変換して、安全な転送や保存を実現します。",
     "shortDescription": "JSON内の特殊文字をエスケープする",

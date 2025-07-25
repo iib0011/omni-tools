@@ -1,6 +1,8 @@
 {
   "checkLeapYears": {
     "description": "Vérifiez si une année est bissextile et obtenez des informations sur les années bissextiles.",
+    "exampleDescription": "Une de nos amies est née le 29 février, une année bissextile. Par conséquent, son anniversaire n'est célébré qu'une fois tous les quatre ans. Comme nous ne nous souvenons jamais vraiment de sa date d'anniversaire, nous utilisons notre programme pour créer une liste de rappel des prochaines années bissextiles. Pour cela, nous chargeons une séquence d'années de 2025 à 2040 dans l'entrée et obtenons le statut de chaque année. Si le programme indique qu'il s'agit d'une année bissextile, nous savons que nous serons invités à une fête d'anniversaire le 29 février.",
+    "exampleTitle": "Trouver les anniversaires du 29 février",
     "inputTitle": "Année d'entrée",
     "resultTitle": "Résultat de l'année bissextile",
     "shortDescription": "Vérifiez si une année est bissextile",
@@ -56,6 +58,22 @@
       "title": "Convertir le temps en secondes"
     }
   },
+  "convertUnixToDate": {
+    "addUtcLabel": "Ajouter le suffixe 'UTC'",
+    "addUtcLabelDescription": "Affiche 'UTC' après la date convertie (uniquement en mode UTC)",
+    "description": "Convertit un timestamp Unix en une date lisible par un humain.",
+    "longDescription": "Cet outil permet de convertir un timestamp Unix (en secondes) en une date lisible au format AAAA-MM-JJ HH:MM:SS. Il prend en charge l'affichage en UTC ou dans le fuseau horaire local, ce qui est pratique pour interpréter rapidement des horodatages issus de journaux, d'API ou de systèmes utilisant le temps Unix.",
+    "outputOptions": "Options de sortie",
+    "shortDescription": "Conversion de timestamp Unix en date",
+    "title": "Convertir un timestamp Unix en date",
+    "toolInfo": {
+      "description": "Cet outil convertit un timestamp Unix (en secondes) en une date lisible (par ex. AAAA-MM-JJ HH:MM:SS). Il prend en charge l'affichage en heure locale ou en UTC, ce qui le rend utile pour analyser rapidement des données issues de journaux ou d’APIs.",
+      "title": "Convertir un timestamp Unix en date"
+    },
+    "useLocalTime": "Utiliser l’heure locale",
+    "useLocalTimeDescription": "Affiche la date convertie dans votre fuseau horaire local au lieu de l’heure UTC",
+    "withLabel": "Options"
+  },
   "crontabGuru": {
     "description": "Générez et comprenez les expressions Cron. Créez des planifications Cron pour les tâches automatisées et les tâches système.",
     "shortDescription": "Générer et comprendre les expressions cron",
@@ -96,21 +114,5 @@
     "zeroPaddingDescription": "Faites en sorte que tous les composants de temps aient toujours une largeur de deux chiffres.",
     "zeroPrintDescription": "Afficher les parties supprimées sous forme de valeurs nulles « 00 ».",
     "zeroPrintTruncatedParts": "Parties tronquées sans impression"
-  },
-  "convertUnixToDate": {
-    "title": "Convertir un timestamp Unix en date",
-    "description": "Convertit un timestamp Unix en une date lisible par un humain.",
-    "shortDescription": "Conversion de timestamp Unix en date",
-    "longDescription": "Cet outil permet de convertir un timestamp Unix (en secondes) en une date lisible au format AAAA-MM-JJ HH:MM:SS. Il prend en charge l'affichage en UTC ou dans le fuseau horaire local, ce qui est pratique pour interpréter rapidement des horodatages issus de journaux, d'API ou de systèmes utilisant le temps Unix.",
-    "withLabel": "Options",
-    "outputOptions": "Options de sortie",
-    "addUtcLabel": "Ajouter le suffixe 'UTC'",
-    "addUtcLabelDescription": "Affiche 'UTC' après la date convertie (uniquement en mode UTC)",
-    "useLocalTime": "Utiliser l’heure locale",
-    "useLocalTimeDescription": "Affiche la date convertie dans votre fuseau horaire local au lieu de l’heure UTC",
-    "toolInfo": {
-      "title": "Convertir un timestamp Unix en date",
-      "description": "Cet outil convertit un timestamp Unix (en secondes) en une date lisible (par ex. AAAA-MM-JJ HH:MM:SS). Il prend en charge l'affichage en heure locale ou en UTC, ce qui le rend utile pour analyser rapidement des données issues de journaux ou d’APIs."
-    }
   }
 }

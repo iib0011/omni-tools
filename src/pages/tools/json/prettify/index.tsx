@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import React, { useRef, useState } from 'react';
-import ToolTextInput from '@components/input/ToolTextInput';
+import ToolCodeInput from '@components/input/ToolCodeInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { beautifyJson } from './service';
 import ToolInfo from '@components/ToolInfo';
@@ -130,10 +130,11 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
       title={title}
       input={input}
       inputComponent={
-        <ToolTextInput
+        <ToolCodeInput
           title={t('prettify.inputTitle')}
           value={input}
           onChange={setInput}
+          language="json"
         />
       }
       resultComponent={

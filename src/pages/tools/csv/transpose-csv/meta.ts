@@ -13,6 +13,5 @@ export const tool = defineTool('csv', {
   icon: 'carbon:transpose',
 
   keywords: ['transpose', 'csv'],
-
   component: lazy(() => import('./index'))
 });

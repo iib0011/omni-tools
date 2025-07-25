@@ -28,6 +28,31 @@
     "shortDescription": "Extract a portion of text between specified positions",
     "title": "Extract substring"
   },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "Analysis Options",
+    "category": "Category",
+    "description": "Detect hidden Unicode characters, especially RTL Override characters that could be used in attacks.",
+    "foundChars": "Found {{count}} hidden character(s):",
+    "inputPlaceholder": "Enter text to check for hidden characters...",
+    "inputTitle": "Text to Analyze",
+    "invisibleChar": "Invisible Character",
+    "invisibleFound": "Invisible characters found",
+    "longDescription": "This tool helps you detect hidden Unicode characters in text, particularly Right-to-Left (RTL) Override characters that can be used in attacks. It can identify invisible characters, zero-width characters, and other potentially malicious Unicode sequences that might be hidden in seemingly innocent text.",
+    "noHiddenChars": "No hidden characters detected in the text.",
+    "optionsDescription": "Configure which types of hidden characters to detect and how to display the results.",
+    "position": "Position",
+    "rtlAlert": "⚠️ RTL Override characters detected! This text may contain malicious hidden characters.",
+    "rtlFound": "RTL Override found",
+    "rtlOverride": "RTL Override Character",
+    "rtlWarning": "WARNING: RTL Override characters detected! This could be used in attacks.",
+    "shortDescription": "Find hidden Unicode characters in text",
+    "summary": "Analysis Summary",
+    "title": "Hidden Character Detector",
+    "totalChars": "Total hidden characters: {{count}}",
+    "unicode": "Unicode",
+    "zeroWidthChar": "Zero Width Character",
+    "zeroWidthFound": "Zero-width characters found"
+  },
   "join": {
     "blankLinesAndTrailingSpaces": "Blank Lines and Trailing Spaces",
     "deleteBlankDescription": "Delete lines that don't have text symbols.",
@@ -258,30 +283,30 @@
     "shortDescription": "Convert text to uppercase",
     "title": "Convert to Uppercase"
   },
-  "urlEncode": {
-    "toolInfo": {
-      "description": "Load your string and it will automatically get URL-escaped.",
-      "shortDescription": "Quickly URL-escape a string.",
-      "longDescription": "This tool URL-encodes a string. Special URL characters get converted to percent-sign encoding. This encoding is called percent-encoding because each character's numeric value gets converted to a percent sign followed by a two-digit hexadecimal value. The hex values are determined based on the character's codepoint value. For example, a space gets escaped to %20, a colon to %3a, a slash to %2f. Characters that are not special stay unchanged. In case you also need to convert non-special characters to percent-encoding, then we've also added an extra option that lets you do that. Select the encode-non-special-chars option to enable this behavior.",
-      "title": "String URL encoder"
-    },
-    "encodingOption": {
-      "title": "Encoding Options",
-      "nonSpecialCharPlaceholder": "Encode non-special characters",
-      "nonSpecialCharDescription": "If selected, then all characters in the input string will be converted to URL-encoding (not just special)."
-    },
-    "inputTitle": "Input String",
-    "resultTitle": "Url-escaped String"
-  },
   "urlDecode": {
+    "inputTitle": "Input String(URL-escaped)",
+    "resultTitle": "Output string",
     "toolInfo": {
       "description": "Load your string and it will automatically get URL-unescaped.",
-      "shortDescription": "Quickly URL-unescape a string.",
       "longDescription": "This tool URL-decodes a previously URL-encoded string. URL-decoding is the inverse operation of URL-encoding. All percent-encoded characters get decoded to characters that you can understand. Some of the most well known percent-encoded values are %20 for a space, %3a for a colon, %2f for a slash, and %3f for a question mark. The two digits following the percent sign are character's char code values in hex.",
+      "shortDescription": "Quickly URL-unescape a string.",
       "title": "String URL decoder"
+    }
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "If selected, then all characters in the input string will be converted to URL-encoding (not just special).",
+      "nonSpecialCharPlaceholder": "Encode non-special characters",
+      "title": "Encoding Options"
     },
     "inputTitle": "Input String(URL-escaped)",
-    "resultTitle": "Output string"
+    "resultTitle": "Output string",
+    "toolInfo": {
+      "description": "Load your string and it will automatically get URL-escaped.",
+      "longDescription": "This tool URL-encodes a string. Special URL characters get converted to percent-sign encoding. This encoding is called percent-encoding because each character's numeric value gets converted to a percent sign followed by a two-digit hexadecimal value. The hex values are determined based on the character's codepoint value. For example, a space gets escaped to %20, a colon to %3a, a slash to %2f. Characters that are not special stay unchanged. In case you also need to convert non-special characters to percent-encoding, then we've also added an extra option that lets you do that. Select the encode-non-special-chars option to enable this behavior.",
+      "shortDescription": "Quickly URL-escape a string.",
+      "title": "String URL encoder"
+    }
   },
   "textCompare": {
     "title": "Compare Texts",
