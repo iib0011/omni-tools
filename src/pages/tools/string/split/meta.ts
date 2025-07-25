@@ -3,6 +3,7 @@ import { lazy } from 'react';
 
 export const tool = defineTool('string', {
   path: 'split',
+
   icon: 'material-symbols-light:call-split',
 
   keywords: ['split'],
@@ -10,6 +11,7 @@ export const tool = defineTool('string', {
   i18n: {
     name: 'string:split.title',
     description: 'string:split.description',
-    shortDescription: 'string:split.shortDescription'
+    shortDescription: 'string:split.shortDescription',
+    userTypes: ['generalUsers', 'developers']
   }
 });

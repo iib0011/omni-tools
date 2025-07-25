@@ -5,8 +5,7 @@ export const tool = defineTool('time', {
   i18n: {
     name: 'time:convertUnixToDate.title',
     description: 'time:convertUnixToDate.description',
-    shortDescription: 'time:convertUnixToDate.shortDescription',
-    longDescription: 'time:convertUnixToDate.longDescription'
+    shortDescription: 'time:convertUnixToDate.shortDescription'
   },
   path: 'convert-unix-to-date',
   icon: 'material-symbols:schedule',

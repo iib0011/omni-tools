@@ -246,5 +246,9 @@
     "copyFailed": "Échec de la copie : {{error}}",
     "loading": "Chargement... Cela peut prendre un moment.",
     "result": "Résultat"
+  },
+  "userTypes": {
+    "developers": "Développeurs",
+    "generalUsers": "Grand public"
   }
 }

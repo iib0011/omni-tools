@@ -11,6 +11,7 @@ export const tool = defineTool('list', {
   i18n: {
     name: 'list:findMostPopular.title',
     description: 'list:findMostPopular.description',
-    shortDescription: 'list:findMostPopular.shortDescription'
+    shortDescription: 'list:findMostPopular.shortDescription',
+    userTypes: ['generalUsers', 'developers']
   }
 });

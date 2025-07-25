@@ -9,6 +9,7 @@ export const meta = defineTool('pdf', {
   i18n: {
     name: 'pdf:mergePdf.title',
     description: 'pdf:mergePdf.description',
-    shortDescription: 'pdf:mergePdf.shortDescription'
+    shortDescription: 'pdf:mergePdf.shortDescription',
+    userTypes: ['generalUsers']
   }
 });

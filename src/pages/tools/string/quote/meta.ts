@@ -11,6 +11,7 @@ export const tool = defineTool('string', {
   i18n: {
     name: 'string:quote.title',
     description: 'string:quote.description',
-    shortDescription: 'string:quote.shortDescription'
+    shortDescription: 'string:quote.shortDescription',
+    userTypes: ['generalUsers', 'developers']
   }
 });

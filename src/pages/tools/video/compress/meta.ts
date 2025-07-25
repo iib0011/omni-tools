@@ -8,15 +8,20 @@ export const tool = defineTool('video', {
   keywords: [
     'compress',
     'video',
-    'resize',
-    'scale',
-    'resolution',
-    'reduce size'
+    'reduce',
+    'size',
+    'optimize',
+    'mp4',
+    'mov',
+    'avi',
+    'video editing',
+    'shrink'
   ],
   component: lazy(() => import('./index')),
   i18n: {
     name: 'video:compress.title',
     description: 'video:compress.description',
-    shortDescription: 'video:compress.shortDescription'
+    shortDescription: 'video:compress.shortDescription',
+    userTypes: ['generalUsers']
   }
 });
