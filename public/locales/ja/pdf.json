@@ -53,7 +53,7 @@
     }
   },
   "pdfToEpub": {
-    "description": "PDF文書をEPUBファイルに変換して、電子書籍リーダーとの互換性を高めます。', icon: 'material-symbols:import-contacts', components: lazy(() => import('./index')), keywords: ['pdf', 'epub', 'convert', 'ebook'], path: 'pdf-to-epub', i18n: { name: 'pdf:pdfToEpub.title', description: 'pdf:pdfToEpub.description",
+    "description": "電子書籍リーダーとの互換性を高めるために、PDF ドキュメントを EPUB ファイルに変換します。",
     "shortDescription": "PDFファイルをEPUB形式に変換する",
     "title": "PDFからEPUBへ"
   },

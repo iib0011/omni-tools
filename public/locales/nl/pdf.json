@@ -53,7 +53,7 @@
     }
   },
   "pdfToEpub": {
-    "description": "PDF-documenten transformeren naar EPUB-bestanden voor betere compatibiliteit met e-readers.', pictogram: 'material-symbols:import-contacts', component: lazy(() => import('./index')), trefwoorden: ['pdf', 'epub', 'convert', 'ebook'], pad: 'pdf-naar-epub', i18n: { naam: 'pdf:pdfToEpub.title', beschrijving: 'pdf:pdfToEpub.description",
+    "description": "Transformeer PDF-documenten naar EPUB-bestanden voor betere compatibiliteit met e-readers.",
     "shortDescription": "PDF-bestanden converteren naar EPUB-formaat",
     "title": "PDF naar EPUB"
   },

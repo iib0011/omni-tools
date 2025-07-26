@@ -53,7 +53,7 @@
     }
   },
   "pdfToEpub": {
-    "description": "Wandeln Sie PDF-Dokumente in EPUB-Dateien um, um eine bessere E-Reader-Kompatibilität zu erzielen.‘, Symbol: ‚Materialsymbole:Kontakte importieren‘, Komponente: lazy(() => import(‚./index‘)), Schlüsselwörter: [‚pdf‘, ‚epub‘, ‚konvertieren‘, ‚ebook‘], Pfad: ‚pdf-zu-epub‘, i18n: {Name: ‚pdf:pdfToEpub.title‘, Beschreibung: ‚pdf:pdfToEpub.description‘",
+    "description": "Wandeln Sie PDF-Dokumente in EPUB-Dateien um, um eine bessere E-Reader-Kompatibilität zu erzielen.",
     "shortDescription": "Konvertieren Sie PDF-Dateien in das EPUB-Format",
     "title": "PDF zu EPUB"
   },

@@ -53,7 +53,7 @@
     }
   },
   "pdfToEpub": {
-    "description": "将 PDF 文档转换为 EPUB 文件，以实现更好的电子阅读器兼容性。', icon: 'material-symbols:import-contacts', component: lazy(() => import('./index')), keywords: ['pdf', 'epub', 'convert', 'ebook'], path: 'pdf-to-epub', i18n: { name: 'pdf:pdfToEpub.title', description: 'pdf:pdfToEpub.description",
+    "description": "将 PDF 文档转换为 EPUB 文件，以实现更好的电子阅读器兼容性。",
     "shortDescription": "将 PDF 文件转换为 EPUB 格式",
     "title": "PDF 转 EPUB"
   },

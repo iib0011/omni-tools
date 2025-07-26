@@ -67,7 +67,7 @@
   },
   "pdfToEpub": {
     "conversionOptions": "रूपांतरण विकल्प",
-    "description": "PDF दस्तावेज़ों को EPUB फ़ाइलों में बदलें।",
+    "description": "बेहतर ई-रीडर संगतता के लिए PDF दस्तावेज़ों को EPUB फ़ाइलों में बदलें।",
     "extractImages": "छवियां निकालें",
     "generateToc": "सामग्री तालिका उत्पन्न करें",
     "inputTitle": "इनपुट PDF",

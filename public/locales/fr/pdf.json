@@ -53,7 +53,7 @@
     }
   },
   "pdfToEpub": {
-    "description": "Transformez les documents PDF en fichiers EPUB pour une meilleure compatibilité avec les liseuses.', icon: 'material-symbols:import-contacts', component: lazy(() => import('./index')), keywords: ['pdf', 'epub', 'convert', 'ebook'], path: 'pdf-to-epub', i18n: { name: 'pdf:pdfToEpub.title', description: 'pdf:pdfToEpub.description",
+    "description": "Transformez les documents PDF en fichiers EPUB pour une meilleure compatibilité avec les liseuses.",
     "shortDescription": "Convertir des fichiers PDF au format EPUB",
     "title": "PDF vers EPUB"
   },
