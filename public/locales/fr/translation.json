@@ -71,6 +71,10 @@
     "xml": {
       "description": "Outils pour travailler avec des structures de données XML - visualiseur, embellisseur, validateur et bien plus encore",
       "title": "Outils XML"
+    },
+    "dev": {
+      "description": "Outils essentiels pour les développeurs : formateurs de code, encodeurs/décodeurs, outils de comparaison, générateurs d'UUID et bien plus encore",
+      "title": "Outils de développement"
     }
   },
   "csv": {

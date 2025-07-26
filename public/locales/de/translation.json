@@ -71,6 +71,10 @@
     "xml": {
       "description": "Tools zum Arbeiten mit XML-Datenstrukturen – Viewer, Beautifier, Validator und vieles mehr",
       "title": "XML-Tools"
+    },
+    "dev": {
+      "description": "Unverzichtbare Tools für Entwickler: Code-Formatter, Encoder/Decoder, Vergleichswerkzeuge, UUID-Generatoren und vieles mehr",
+      "title": "Entwickler-Tools"
     }
   },
   "csv": {

@@ -1,0 +1,12 @@
+{
+  "cssJsMinify": {
+    "title": "CSS/JSの最小化",
+    "description": "不要なスペース、改行、コメントを削除してCSSまたはJavaScriptコードを圧縮します。",
+    "shortDescription": "CSSおよびJavaScriptコードを最小化",
+    "longDescription": "",
+    "toolInfo": {
+      "title": "CSS/JSの最小化",
+      "description": "このツールは、不要な文字（空白、改行、コメントなど）を削除することで、CSSまたはJavaScriptコードを最小化します。機能を損なうことなく、Webパフォーマンスを最適化し、デプロイ前のファイルサイズを削減するのに最適です。"
+    }
+  }
+}

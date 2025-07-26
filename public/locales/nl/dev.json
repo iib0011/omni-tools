@@ -1,0 +1,12 @@
+{
+  "cssJsMinify": {
+    "title": "CSS/JS verkleinen",
+    "description": "Comprimeer je CSS- of JavaScript-code door overbodige spaties, regeleinden en opmerkingen te verwijderen.",
+    "shortDescription": "CSS- en JavaScript-code verkleinen",
+    "longDescription": "",
+    "toolInfo": {
+      "title": "CSS/JS verkleinen",
+      "description": "Deze tool verkleint je CSS- of JavaScript-code door onnodige tekens zoals spaties, regeleinden en opmerkingen te verwijderen — zonder de functionaliteit aan te tasten. Ideaal om de webprestaties te optimaliseren en de bestandsgrootte vóór deployment te verkleinen."
+    }
+  }
+}
