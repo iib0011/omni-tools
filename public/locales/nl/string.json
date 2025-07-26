@@ -28,6 +28,31 @@
     "shortDescription": "Een tekstgedeelte tussen opgegeven posities extraheren",
     "title": "Substring extraheren"
   },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "Analyse-opties",
+    "category": "Categorie",
+    "description": "Detecteer verborgen Unicode-tekens, met name RTL-override-tekens die bij aanvallen kunnen worden gebruikt.",
+    "foundChars": "Gevonden {{count}} verborgen teken(s):",
+    "inputPlaceholder": "Voer tekst in om te controleren op verborgen tekens...",
+    "inputTitle": "Te analyseren tekst",
+    "invisibleChar": "Onzichtbaar personage",
+    "invisibleFound": "Onzichtbare karakters gevonden",
+    "longDescription": "Deze tool helpt u verborgen Unicode-tekens in tekst te detecteren, met name RTL-override-tekens (Right-to-Left) die bij aanvallen kunnen worden gebruikt. De tool kan onzichtbare tekens, tekens met een breedte van nul en andere potentieel schadelijke Unicode-reeksen identificeren die mogelijk verborgen zijn in ogenschijnlijk onschuldige tekst.",
+    "noHiddenChars": "Er zijn geen verborgen tekens in de tekst gedetecteerd.",
+    "optionsDescription": "Configureer welke typen verborgen tekens moeten worden gedetecteerd en hoe de resultaten moeten worden weergegeven.",
+    "position": "Positie",
+    "rtlAlert": "⚠️ RTL Override-tekens gedetecteerd! Deze tekst kan schadelijke verborgen tekens bevatten.",
+    "rtlFound": "RTL Override gevonden",
+    "rtlOverride": "RTL-override-teken",
+    "rtlWarning": "WAARSCHUWING: RTL-override-tekens gedetecteerd! Deze kunnen worden gebruikt bij aanvallen.",
+    "shortDescription": "Verborgen Unicode-tekens in tekst vinden",
+    "summary": "Analyse Samenvatting",
+    "title": "Verborgen karakterdetector",
+    "totalChars": "Totaal aantal verborgen tekens: {{count}}",
+    "unicode": "Unicode",
+    "zeroWidthChar": "Teken met nulbreedte",
+    "zeroWidthFound": "Er zijn tekens met een breedte van nul gevonden"
+  },
   "join": {
     "blankLinesAndTrailingSpaces": "Lege regels en spaties aan het einde",
     "deleteBlankDescription": "Verwijder regels die geen tekstsymbolen bevatten.",
@@ -257,5 +282,30 @@
     "resultTitle": "Hoofdlettertekst",
     "shortDescription": "Tekst naar hoofdletters converteren",
     "title": "Omzetten naar hoofdletters"
+  },
+  "urlDecode": {
+    "inputTitle": "Invoerreeks (URL-escaped)",
+    "resultTitle": "Uitvoerreeks",
+    "toolInfo": {
+      "description": "Laad uw string en de URL-escaping wordt automatisch verwijderd.",
+      "longDescription": "Deze tool decodeert een eerder URL-gecodeerde string via URL. URL-decodering is de omgekeerde bewerking van URL-codering. Alle procentgecodeerde tekens worden gedecodeerd naar tekens die u kunt begrijpen. Enkele van de bekendste procentgecodeerde waarden zijn %20 voor een spatie, %3a voor een dubbele punt, %2f voor een slash en %3f voor een vraagteken. De twee cijfers na het procentteken zijn de hexadecimale tekencodewaarden.",
+      "shortDescription": "Snel URL-unescaping van een string uitvoeren.",
+      "title": "String URL-decoder"
+    }
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "Als u deze optie selecteert, worden alle tekens in de invoerreeks omgezet naar URL-codering (niet alleen speciale tekens).",
+      "nonSpecialCharPlaceholder": "Niet-speciale tekens coderen",
+      "title": "Coderingsopties"
+    },
+    "inputTitle": "Invoerreeks",
+    "resultTitle": "Url-escaped String",
+    "toolInfo": {
+      "description": "Laad uw string en deze wordt automatisch URL-escaped.",
+      "longDescription": "Deze tool URL-codeert een string. Speciale URL-tekens worden omgezet naar procenttekencodering. Deze codering wordt procentcodering genoemd, omdat de numerieke waarde van elk teken wordt omgezet naar een procentteken gevolgd door een tweecijferige hexadecimale waarde. De hexadecimale waarden worden bepaald op basis van de codepointwaarde van het teken. Een spatie wordt bijvoorbeeld geëscapete naar %20, een dubbele punt naar %3a en een slash naar %2f. Tekens die niet speciaal zijn, blijven ongewijzigd. Mocht u ook niet-speciale tekens naar procentcodering moeten converteren, dan hebben we ook een extra optie toegevoegd waarmee u dat kunt doen. Selecteer de optie 'encode-non-special-chars' om dit gedrag in te schakelen.",
+      "shortDescription": "Snelle URL-escaping van een string.",
+      "title": "String URL-encoder"
+    }
   }
 }

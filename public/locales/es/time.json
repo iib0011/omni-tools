@@ -1,6 +1,8 @@
 {
   "checkLeapYears": {
     "description": "Compruebe si un año es bisiesto y obtenga información sobre el año bisiesto.",
+    "exampleDescription": "Una amiga nuestra nació en un año bisiesto, el 29 de febrero, y por eso solo cumple años cada cuatro años. Como nunca recordamos su cumpleaños, usamos nuestro programa para crear una lista de recordatorios de los próximos años bisiestos. Para crear una lista de sus próximos cumpleaños, cargamos una secuencia de años del 2025 al 2040 en la entrada y obtenemos el estado de cada año. Si el programa indica que es un año bisiesto, sabemos que nos invitarán a una fiesta de cumpleaños el 29 de febrero.",
+    "exampleTitle": "Encuentra cumpleaños el 29 de febrero",
     "inputTitle": "Año de entrada",
     "resultTitle": "Resultado del año bisiesto",
     "shortDescription": "Comprobar si un año es bisiesto",
@@ -55,6 +57,21 @@
       "description": "Esta herramienta permite convertir cadenas de tiempo formateadas (HH:MM:SS) a segundos. Resulta útil para calcular duraciones e intervalos de tiempo.",
       "title": "Convertir tiempo a segundos"
     }
+  },
+  "convertUnixToDate": {
+    "addUtcLabel": "Añadir el sufijo 'UTC'",
+    "addUtcLabelDescription": "Mostrar 'UTC' después de la fecha convertida (solo para el modo UTC)",
+    "description": "Convierte una marca de tiempo de Unix en una fecha legible para humanos.",
+    "outputOptions": "Opciones de salida",
+    "shortDescription": "Convertir la marca de tiempo de Unix a fecha",
+    "title": "Convertir Unix a fecha",
+    "toolInfo": {
+      "description": "Esta herramienta convierte una marca de tiempo Unix (en segundos) a un formato de fecha legible (p. ej., AAAA-MM-DD HH:MM:SS). Admite salida local y UTC, lo que la hace útil para interpretar rápidamente marcas de tiempo de registros, API o sistemas que usan hora Unix.",
+      "title": "Convertir Unix a fecha"
+    },
+    "useLocalTime": "Utilice la hora local",
+    "useLocalTimeDescription": "Mostrar la fecha convertida en su zona horaria local en lugar de UTC",
+    "withLabel": "Opciones"
   },
   "crontabGuru": {
     "description": "Generar y comprender expresiones cron. Crear programaciones cron para tareas automatizadas y trabajos del sistema.",

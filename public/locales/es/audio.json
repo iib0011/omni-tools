@@ -29,14 +29,33 @@
   },
   "mergeAudio": {
     "description": "Combine varios archivos de audio en un solo archivo de audio concatenándolos en secuencia.",
+    "inputTitle": "Archivos de audio de entrada",
     "longDescription": "Esta herramienta te permite fusionar varios archivos de audio en uno solo concatenándolos en el orden en que los subes. Es perfecta para combinar segmentos de podcast, pistas de música o cualquier archivo de audio que necesite unirse. Admite varios formatos de audio, como MP3, AAC y WAV.",
+    "mergingAudio": "Fusión de audio",
+    "outputFormat": "Formato de salida",
+    "resultTitle": "Audio fusionado",
     "shortDescription": "Fusionar varios archivos de audio en uno (MP3, AAC, WAV).",
-    "title": "Fusionar audio"
+    "title": "Fusionar audio",
+    "toolInfo": {
+      "title": "Qué es {{title}}?"
+    }
   },
   "trim": {
     "description": "Corte y recorte archivos de audio para extraer segmentos específicos especificando las horas de inicio y finalización.",
+    "endTime": "Fin de los tiempos",
+    "endTimeDescription": "Hora de finalización en formato HH:MM:SS (por ejemplo, 00:01:30)",
+    "inputTitle": "Entrada de audio",
     "longDescription": "Esta herramienta te permite recortar archivos de audio especificando la hora de inicio y la hora de fin. Puedes extraer segmentos específicos de archivos de audio más largos, eliminar partes no deseadas o crear clips más cortos. Compatible con varios formatos de audio, como MP3, AAC y WAV. Ideal para edición de podcasts, producción musical o cualquier otra necesidad de edición de audio.",
+    "outputFormat": "Formato de salida",
+    "resultTitle": "Audio recortado",
     "shortDescription": "Recorta archivos de audio para extraer segmentos de tiempo específicos (MP3, AAC, WAV).",
-    "title": "Recortar audio"
+    "startTime": "Hora de inicio",
+    "startTimeDescription": "Hora de inicio en formato HH:MM:SS (por ejemplo, 00:00:30)",
+    "timeSettings": "Ajustes de hora",
+    "title": "Recortar audio",
+    "toolInfo": {
+      "title": "Qué es {{title}}?"
+    },
+    "trimmingAudio": "Recorte de audio"
   }
 }

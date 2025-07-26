@@ -29,14 +29,33 @@
   },
   "mergeAudio": {
     "description": "Combine vários arquivos de áudio em um único arquivo de áudio concatenando-os em sequência.",
+    "inputTitle": "Arquivos de áudio de entrada",
     "longDescription": "Esta ferramenta permite mesclar vários arquivos de áudio em um único arquivo, concatenando-os na ordem em que foram enviados. Perfeito para combinar segmentos de podcast, faixas de música ou qualquer arquivo de áudio que precise ser unido. Suporta vários formatos de áudio, incluindo MP3, AAC e WAV.",
+    "mergingAudio": "Mesclando áudio",
+    "outputFormat": "Formato de saída",
+    "resultTitle": "Áudio mesclado",
     "shortDescription": "Mescle vários arquivos de áudio em um (MP3, AAC, WAV).",
-    "title": "Mesclar áudio"
+    "title": "Mesclar áudio",
+    "toolInfo": {
+      "title": "O que é {{title}}?"
+    }
   },
   "trim": {
     "description": "Corte e apare arquivos de áudio para extrair segmentos específicos, especificando horários de início e término.",
+    "endTime": "Fim dos tempos",
+    "endTimeDescription": "Hora final no formato HH:MM:SS (por exemplo, 00:01:30)",
+    "inputTitle": "Áudio de entrada",
     "longDescription": "Esta ferramenta permite cortar arquivos de áudio especificando os tempos de início e término. Você pode extrair segmentos específicos de arquivos de áudio mais longos, remover partes indesejadas ou criar clipes mais curtos. Suporta vários formatos de áudio, incluindo MP3, AAC e WAV. Perfeito para edição de podcasts, produção musical ou qualquer necessidade de edição de áudio.",
+    "outputFormat": "Formato de saída",
+    "resultTitle": "Áudio aparado",
     "shortDescription": "Corte arquivos de áudio para extrair segmentos de tempo específicos (MP3, AAC, WAV).",
-    "title": "Aparar áudio"
+    "startTime": "Hora de início",
+    "startTimeDescription": "Hora de início no formato HH:MM:SS (por exemplo, 00:00:30)",
+    "timeSettings": "Configurações de tempo",
+    "title": "Aparar áudio",
+    "toolInfo": {
+      "title": "O que é {{title}}?"
+    },
+    "trimmingAudio": "Cortando áudio"
   }
 }

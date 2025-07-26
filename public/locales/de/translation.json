@@ -246,5 +246,9 @@
     "copyFailed": "Kopieren fehlgeschlagen: {{error}}",
     "loading": "Wird geladen... Dies kann einen Moment dauern.",
     "result": "Ergebnis"
+  },
+  "userTypes": {
+    "developers": "Entwickler",
+    "generalUsers": "Allgemeine Benutzer"
   }
 }

@@ -11,6 +11,7 @@
     "highCompression": "高压缩",
     "highCompressionDescription": "最大程度地减少文件大小，但会损失一些质量",
     "inputTitle": "输入 PDF",
+    "longDescription": "使用 Ghostscript 在浏览器中安全地压缩 PDF 文件。您的文件永远不会离开您的设备，在确保绝对隐私的同时，还能缩减文件大小，方便您通过电子邮件共享、上传到网站或节省存储空间。由 WebAssembly 技术提供支持。",
     "lowCompression": "低压缩",
     "lowCompressionDescription": "在尽量减少质量损失的情况下稍微减小文件大小",
     "mediumCompression": "中等压缩",
@@ -52,7 +53,7 @@
     }
   },
   "pdfToEpub": {
-    "description": "将 PDF 文档转换为 EPUB 文件，以实现更好的电子阅读器兼容性。', icon: 'material-symbols:import-contacts', component: lazy(() => import('./index')), keywords: ['pdf', 'epub', 'convert', 'ebook'], path: 'pdf-to-epub', i18n: { name: 'pdf:pdfToEpub.title', description: 'pdf:pdfToEpub.description",
+    "description": "将 PDF 文档转换为 EPUB 文件，以实现更好的电子阅读器兼容性。",
     "shortDescription": "将 PDF 文件转换为 EPUB 格式",
     "title": "PDF 转 EPUB"
   },

@@ -1,6 +1,8 @@
 {
   "checkLeapYears": {
     "description": "Prüfen Sie, ob ein Jahr ein Schaltjahr ist, und erhalten Sie Informationen zum Schaltjahr.",
+    "exampleDescription": "Eine unserer Freundinnen wurde in einem Schaltjahr am 29. Februar geboren und hat daher nur alle vier Jahre Geburtstag. Da wir uns nie genau merken können, wann ihr Geburtstag ist, erstellen wir mit unserem Programm eine Erinnerungsliste für die kommenden Schaltjahre. Dazu laden wir eine Jahresfolge von 2025 bis 2040 in die Eingabe und ermitteln den Status jedes Jahres. Wenn das Programm anzeigt, dass es ein Schaltjahr ist, wissen wir, dass wir am 29. Februar zu einer Geburtstagsfeier eingeladen werden.",
+    "exampleTitle": "Finden Sie Geburtstage am 29. Februar",
     "inputTitle": "Jahr eingeben",
     "resultTitle": "Schaltjahrergebnis",
     "shortDescription": "Prüfen, ob ein Jahr ein Schaltjahr ist",
@@ -55,6 +57,21 @@
       "description": "Mit diesem Tool können Sie formatierte Zeitzeichenfolgen (HH:MM:SS) in Sekunden umwandeln. Es ist nützlich für die Berechnung von Dauern und Zeitintervallen.",
       "title": "Zeit in Sekunden umrechnen"
     }
+  },
+  "convertUnixToDate": {
+    "addUtcLabel": "Suffix „UTC“ hinzufügen",
+    "addUtcLabelDescription": "Anzeige „UTC“ nach dem konvertierten Datum (nur für den UTC-Modus)",
+    "description": "Konvertieren Sie einen Unix-Zeitstempel in ein für Menschen lesbares Datum.",
+    "outputOptions": "Ausgabeoptionen",
+    "shortDescription": "Unix-Zeitstempel in Datum konvertieren",
+    "title": "Konvertieren Sie Unix in Datum",
+    "toolInfo": {
+      "description": "Dieses Tool konvertiert einen Unix-Zeitstempel (in Sekunden) in ein lesbares Datumsformat (z. B. JJJJ-MM-TT HH:MM:SS). Es unterstützt sowohl die lokale als auch die UTC-Ausgabe und eignet sich daher für die schnelle Interpretation von Zeitstempeln aus Protokollen, APIs oder Systemen, die Unix-Zeit verwenden.",
+      "title": "Konvertieren Sie Unix in Datum"
+    },
+    "useLocalTime": "Lokale Zeit verwenden",
+    "useLocalTimeDescription": "Zeigen Sie das konvertierte Datum in Ihrer lokalen Zeitzone anstelle von UTC an",
+    "withLabel": "Optionen"
   },
   "crontabGuru": {
     "description": "Generieren und verstehen Sie Cron-Ausdrücke. Erstellen Sie Cron-Zeitpläne für automatisierte Aufgaben und Systemjobs.",

@@ -17,15 +17,21 @@
     "description": "将 CSV 文件转换为 JSON 格式，并可自定义分隔符、引号和输出格式。支持标题、注释和动态类型转换。",
     "dynamicTypes": "动态类型",
     "dynamicTypesDescription": "自动转换数字和布尔值",
+    "error": "错误",
     "errorParsing": "解析 CSV 时出错： {{error}}",
     "fieldQuote": "字段引号（例如“）",
     "inputCsvFormat": "输入 CSV 格式",
     "inputTitle": "输入 CSV",
+    "invalidCsvFormat": "CSV格式无效",
     "resultTitle": "输出 JSON",
     "shortDescription": "将 CSV 数据转换为 JSON 格式。",
     "skipEmptyLines": "跳过空行",
     "skipEmptyLinesDescription": "忽略输入 CSV 中的空行",
     "title": "将 CSV 转换为 JSON",
+    "toolInfo": {
+      "description": "此工具可将逗号分隔值 (CSV) 文件转换为 JavaScript 对象表示法 (JSON) 数据结构。它支持各种 CSV 格式，并带有可自定义的分隔符、引号和注释符号。转换器可以将第一行视为标题，跳过空行，并自动检测数字和布尔值等数据类型。生成的 JSON 可用于数据迁移、备份或作为其他应用程序的输入。",
+      "title": "什么是 CSV 到 JSON 转换器？"
+    },
     "useHeaders": "使用标题",
     "useHeadersDescription": "将第一行视为列标题"
   },

@@ -28,6 +28,31 @@
     "shortDescription": "Extraire une partie de texte entre des positions spécifiées",
     "title": "Extraire la sous-chaîne"
   },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "Options d'analyse",
+    "category": "Catégorie",
+    "description": "Détectez les caractères Unicode cachés, en particulier les caractères RTL Override qui pourraient être utilisés dans des attaques.",
+    "foundChars": "Trouvé {{count}} personnage(s) caché(s) :",
+    "inputPlaceholder": "Saisissez du texte pour vérifier les caractères cachés...",
+    "inputTitle": "Texte à analyser",
+    "invisibleChar": "Personnage invisible",
+    "invisibleFound": "Personnages invisibles trouvés",
+    "longDescription": "Cet outil vous aide à détecter les caractères Unicode cachés dans un texte, notamment les caractères de substitution de droite à gauche (RTL) qui peuvent être utilisés dans des attaques. Il peut identifier les caractères invisibles, les caractères de largeur nulle et autres séquences Unicode potentiellement malveillantes qui peuvent se cacher dans un texte apparemment innocent.",
+    "noHiddenChars": "Aucun caractère caché détecté dans le texte.",
+    "optionsDescription": "Configurez les types de caractères cachés à détecter et comment afficher les résultats.",
+    "position": "Position",
+    "rtlAlert": "⚠️ Caractères de substitution RTL détectés ! Ce texte peut contenir des caractères cachés malveillants.",
+    "rtlFound": "Remplacement RTL trouvé",
+    "rtlOverride": "Caractère de remplacement RTL",
+    "rtlWarning": "AVERTISSEMENT : Caractères de substitution RTL détectés ! Ceci pourrait être utilisé dans des attaques.",
+    "shortDescription": "Rechercher les caractères Unicode cachés dans le texte",
+    "summary": "Résumé de l'analyse",
+    "title": "Détecteur de caractères cachés",
+    "totalChars": "Nombre total de caractères cachés : {{count}}",
+    "unicode": "Unicode",
+    "zeroWidthChar": "Caractère de largeur nulle",
+    "zeroWidthFound": "Caractères de largeur nulle trouvés"
+  },
   "join": {
     "blankLinesAndTrailingSpaces": "Lignes vides et espaces de fin",
     "deleteBlankDescription": "Supprimez les lignes qui n’ont pas de symboles de texte.",
@@ -257,5 +282,30 @@
     "resultTitle": "Texte en majuscules",
     "shortDescription": "Convertir le texte en majuscules",
     "title": "Convertir en majuscules"
+  },
+  "urlDecode": {
+    "inputTitle": "Chaîne d'entrée (URL échappée)",
+    "resultTitle": "Chaîne de sortie",
+    "toolInfo": {
+      "description": "Chargez votre chaîne et elle sera automatiquement sans échappement d'URL.",
+      "longDescription": "Cet outil décode l'URL d'une chaîne précédemment encodée. Le décodage d'URL est l'opération inverse de l'encodage d'URL. Tous les caractères encodés en pourcentage sont décodés en caractères compréhensibles. Parmi les valeurs encodées en pourcentage les plus connues, on trouve %20 pour un espace, %3a pour deux points, %2f pour une barre oblique et %3f pour un point d'interrogation. Les deux chiffres suivant le signe de pourcentage correspondent aux valeurs hexadécimales du caractère.",
+      "shortDescription": "Annulez rapidement l'échappement URL d'une chaîne.",
+      "title": "Décodeur d'URL de chaîne"
+    }
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "Si cette option est sélectionnée, tous les caractères de la chaîne d'entrée seront convertis en codage URL (pas seulement spécial).",
+      "nonSpecialCharPlaceholder": "Encoder les caractères non spéciaux",
+      "title": "Options d'encodage"
+    },
+    "inputTitle": "Chaîne d'entrée",
+    "resultTitle": "Chaîne d'échappement d'URL",
+    "toolInfo": {
+      "description": "Chargez votre chaîne et elle sera automatiquement échappée par URL.",
+      "longDescription": "Cet outil encode une chaîne en URL. Les caractères d'URL spéciaux sont convertis en pourcentage. Ce codage est appelé « encodage en pourcentage » car la valeur numérique de chaque caractère est convertie en pourcentage suivi d'une valeur hexadécimale à deux chiffres. Les valeurs hexadécimales sont déterminées en fonction de la valeur du point de code du caractère. Par exemple, un espace est converti en %20, deux points en %3a et une barre oblique en %2f. Les caractères non spéciaux restent inchangés. Si vous devez également convertir des caractères non spéciaux en pourcentage, nous avons ajouté une option supplémentaire. Sélectionnez l'option « encode-non-special-chars » pour activer ce comportement.",
+      "shortDescription": "Échappez rapidement une chaîne par URL.",
+      "title": "Encodeur d'URL de chaîne"
+    }
   }
 }

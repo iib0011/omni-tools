@@ -5,6 +5,15 @@
     "copyDescription": "Nombre de copies (fractionnable)",
     "description": "L'utilitaire de duplication d'éléments de liste le plus simple au monde, accessible depuis un navigateur. Saisissez votre liste et spécifiez des critères de duplication pour créer des copies d'éléments. Idéal pour l'expansion de données, les tests ou la création de modèles répétitifs.",
     "duplicationOptions": "Options de Duplication",
+    "error": "Erreur",
+    "example1Description": "Cet exemple montre comment dupliquer une liste de mots.",
+    "example1Title": "Duplication simple",
+    "example2Description": "Cet exemple montre comment dupliquer une liste dans l’ordre inverse.",
+    "example2Title": "Duplication inversée",
+    "example3Description": "Cet exemple montre comment entrelacer des éléments au lieu de les concaténer.",
+    "example3Title": "Éléments entrelacés",
+    "example4Description": "Cet exemple montre comment dupliquer une liste avec un nombre fractionnaire de copies.",
+    "example4Title": "duplication fractionnaire",
     "examples": {
       "fractional": {
         "description": "Cet exemple montre comment dupliquer une liste avec un nombre fractionnaire de copies.",
@@ -37,12 +46,53 @@
     "toolInfo": {
       "description": "Cet outil vous permet de dupliquer des éléments d'une liste. Vous pouvez spécifier le nombre de copies (y compris les valeurs fractionnaires), contrôler si les éléments sont concaténés ou entrelacés, et même inverser les éléments dupliqués. Il est utile pour créer des motifs répétés, générer des données de test ou étendre des listes au contenu prévisible.",
       "title": "Duplication de liste"
+    },
+    "unknownError": "Une erreur inconnue s'est produite",
+    "validation": {
+      "copyMustBeNumber": "Le nombre de copies doit être un nombre",
+      "copyMustBePositive": "Le nombre de copies doit être positif",
+      "copyRequired": "Le nombre de copies est requis",
+      "joinSeparatorRequired": "Le séparateur de jointure est obligatoire",
+      "separatorRequired": "Le séparateur est obligatoire"
     }
   },
   "findMostPopular": {
     "description": "L'utilitaire de recherche par navigateur le plus simple au monde pour trouver les éléments les plus populaires d'une liste. Saisissez votre liste et obtenez instantanément les éléments qui apparaissent le plus fréquemment. Idéal pour l'analyse de données, l'identification de tendances ou la recherche d'éléments communs.",
+    "displayFormatDescription": "Comment afficher les éléments de liste les plus populaires ?",
+    "displayOptions": {
+      "count": "Afficher le nombre d'articles",
+      "percentage": "Afficher le pourcentage de l'article",
+      "total": "Afficher le total des articles"
+    },
+    "extractListItems": "Comment extraire des éléments de liste ?",
+    "ignoreItemCase": "Ignorer la casse de l'élément",
+    "ignoreItemCaseDescription": "Comparez tous les éléments de la liste en minuscules.",
+    "inputTitle": "Liste d'entrée",
+    "itemComparison": "Comparaison d'articles",
+    "outputFormat": "Format de sortie de l'élément principal",
+    "removeEmptyItems": "Supprimer les éléments vides",
+    "removeEmptyItemsDescription": "Ignorer les éléments vides de la comparaison.",
+    "resultTitle": "Articles les plus populaires",
     "shortDescription": "Trouver les éléments les plus fréquemment utilisés",
-    "title": "Trouver les plus populaires"
+    "sortOptions": {
+      "alphabetic": "Trier par ordre alphabétique",
+      "count": "Trier par nombre"
+    },
+    "sortingMethodDescription": "Sélectionnez une méthode de tri.",
+    "splitOperators": {
+      "regex": {
+        "description": "Délimitez les éléments de la liste d’entrée avec une expression régulière.",
+        "title": "Utiliser une expression régulière pour le fractionnement"
+      },
+      "symbol": {
+        "description": "Délimitez les éléments de la liste d'entrée avec un caractère.",
+        "title": "Utiliser un symbole pour le fractionnement"
+      }
+    },
+    "splitSeparatorDescription": "Définissez un symbole de délimitation ou une expression régulière.",
+    "title": "Trouver les plus populaires",
+    "trimItems": "Réduire les éléments de la liste principale",
+    "trimItemsDescription": "Supprimez les espaces de début et de fin avant de comparer les éléments"
   },
   "findUnique": {
     "caseSensitiveItems": "Éléments sensibles à la casse",

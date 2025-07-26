@@ -1,3 +1,4 @@
+import { tool as stringHiddenCharacterDetector } from './hidden-character-detector/meta';
 import { tool as stringRemoveDuplicateLines } from './remove-duplicate-lines/meta';
 import { tool as stringRotate } from './rotate/meta';
 import { tool as stringQuote } from './quote/meta';
@@ -43,5 +44,6 @@ export const stringTools = [
   stringCensor,
   stringPasswordGenerator,
   stringEncodeUrl,
-  StringDecodeUrl
+  StringDecodeUrl,
+  stringHiddenCharacterDetector
 ];

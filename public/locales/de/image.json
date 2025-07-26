@@ -10,8 +10,15 @@
     "title": "Bilddeckkraft ändern"
   },
   "compress": {
+    "compressedSize": "Komprimierte Größe",
+    "compressionOptions": "Komprimierungsoptionen",
     "description": "Reduzieren Sie die Bilddateigröße, ohne die Qualität zu beeinträchtigen.",
+    "failedToCompress": "Das Komprimieren des Bilds ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "fileSizes": "Dateigrößen",
     "inputTitle": "Eingabebild",
+    "maxFileSizeDescription": "Maximale Dateigröße in Megabyte",
+    "originalSize": "Originalgröße",
+    "qualityDescription": "Bildqualität in Prozent (niedriger bedeutet kleinere Dateigröße)",
     "resultTitle": "Komprimiertes Bild",
     "shortDescription": "Komprimieren Sie Bilder, um die Dateigröße zu reduzieren und gleichzeitig eine angemessene Qualität beizubehalten.",
     "title": "Bild komprimieren"

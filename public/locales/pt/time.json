@@ -1,6 +1,8 @@
 {
   "checkLeapYears": {
     "description": "Verifique se um ano é bissexto e obtenha informações sobre o ano bissexto.",
+    "exampleDescription": "Uma de nossas amigas nasceu em um ano bissexto, em 29 de fevereiro, e, como consequência, ela faz aniversário apenas uma vez a cada 4 anos. Como nunca conseguimos lembrar exatamente quando é o aniversário dela, estamos usando nosso programa para criar uma lista de lembretes dos próximos anos bissextos. Para criar uma lista dos próximos aniversários dela, carregamos uma sequência de anos de 2025 a 2040 na entrada e obtemos o status de cada ano. Se o programa disser que é um ano bissexto, sabemos que seremos convidados para uma festa de aniversário no dia 29 de fevereiro.",
+    "exampleTitle": "Encontre aniversários em 29 de fevereiro",
     "inputTitle": "Ano de entrada",
     "resultTitle": "Resultado do ano bissexto",
     "shortDescription": "Verifique se um ano é bissexto",
@@ -55,6 +57,21 @@
       "description": "Esta ferramenta permite converter sequências de tempo formatadas (HH:MM:SS) em segundos. É útil para calcular durações e intervalos de tempo.",
       "title": "Converter tempo em segundos"
     }
+  },
+  "convertUnixToDate": {
+    "addUtcLabel": "Adicionar sufixo 'UTC'",
+    "addUtcLabelDescription": "Exibir 'UTC' após a data convertida (somente para o modo UTC)",
+    "description": "Converta um registro de data e hora Unix em uma data legível por humanos.",
+    "outputOptions": "Opções de saída",
+    "shortDescription": "Converter registro de data e hora Unix em data",
+    "title": "Converter Unix para Data",
+    "toolInfo": {
+      "description": "Esta ferramenta converte um registro de data e hora Unix (em segundos) em um formato de data legível (por exemplo, AAAA-MM-DD HH:MM:SS). Ela suporta saída local e UTC, o que a torna útil para interpretar rapidamente registros de data e hora de logs, APIs ou sistemas que utilizam o horário Unix.",
+      "title": "Converter Unix para Data"
+    },
+    "useLocalTime": "Usar hora local",
+    "useLocalTimeDescription": "Mostrar a data convertida no seu fuso horário local em vez de UTC",
+    "withLabel": "Opções"
   },
   "crontabGuru": {
     "description": "Gere e compreenda expressões cron. Crie agendamentos cron para tarefas automatizadas e trabalhos do sistema.",

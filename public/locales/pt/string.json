@@ -28,6 +28,31 @@
     "shortDescription": "Extrair uma parte do texto entre posições especificadas",
     "title": "Extrair substring"
   },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "Opções de análise",
+    "category": "Categoria",
+    "description": "Detecte caracteres Unicode ocultos, especialmente caracteres RTL Override que podem ser usados em ataques.",
+    "foundChars": "Encontrado {{count}} personagem(ns) oculto(s):",
+    "inputPlaceholder": "Digite o texto para verificar se há caracteres ocultos...",
+    "inputTitle": "Texto para Analisar",
+    "invisibleChar": "Personagem Invisível",
+    "invisibleFound": "Personagens invisíveis encontrados",
+    "longDescription": "Esta ferramenta ajuda a detectar caracteres Unicode ocultos em textos, especialmente caracteres de substituição da direita para a esquerda (RTL), que podem ser usados em ataques. Ela pode identificar caracteres invisíveis, caracteres de largura zero e outras sequências Unicode potencialmente maliciosas que podem estar ocultas em textos aparentemente inofensivos.",
+    "noHiddenChars": "Nenhum caractere oculto detectado no texto.",
+    "optionsDescription": "Configure quais tipos de caracteres ocultos detectar e como exibir os resultados.",
+    "position": "Posição",
+    "rtlAlert": "⚠️ Caracteres de substituição RTL detectados! Este texto pode conter caracteres ocultos maliciosos.",
+    "rtlFound": "Substituição RTL encontrada",
+    "rtlOverride": "Caractere de substituição RTL",
+    "rtlWarning": "AVISO: Caracteres de substituição RTL detectados! Isso pode ser usado em ataques.",
+    "shortDescription": "Encontre caracteres Unicode ocultos no texto",
+    "summary": "Resumo da Análise",
+    "title": "Detector de caracteres ocultos",
+    "totalChars": "Total de caracteres ocultos: {{count}}",
+    "unicode": "Unicode",
+    "zeroWidthChar": "Caractere de largura zero",
+    "zeroWidthFound": "Caracteres de largura zero encontrados"
+  },
   "join": {
     "blankLinesAndTrailingSpaces": "Linhas em branco e espaços finais",
     "deleteBlankDescription": "Exclua linhas que não tenham símbolos de texto.",
@@ -257,5 +282,30 @@
     "resultTitle": "Texto em maiúsculas",
     "shortDescription": "Converter texto em letras maiúsculas",
     "title": "Converter para maiúsculas"
+  },
+  "urlDecode": {
+    "inputTitle": "String de entrada (com escape de URL)",
+    "resultTitle": "Cadeia de saída",
+    "toolInfo": {
+      "description": "Carregue sua string e ela receberá automaticamente o URL sem escape.",
+      "longDescription": "Esta ferramenta decodifica por URL uma string previamente codificada por URL. A decodificação por URL é a operação inversa da codificação por URL. Todos os caracteres codificados em porcentagem são decodificados para caracteres que você possa entender. Alguns dos valores codificados em porcentagem mais conhecidos são %20 para um espaço, %3a para dois pontos, %2f para uma barra e %3f para um ponto de interrogação. Os dois dígitos após o sinal de porcentagem são os valores do código char do caractere em hexadecimal.",
+      "shortDescription": "Desfazer o escape de URL de uma string rapidamente.",
+      "title": "Decodificador de URL de string"
+    }
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "Se selecionado, todos os caracteres na sequência de entrada serão convertidos para codificação de URL (não apenas especial).",
+      "nonSpecialCharPlaceholder": "Codificar caracteres não especiais",
+      "title": "Opções de codificação"
+    },
+    "inputTitle": "Cadeia de entrada",
+    "resultTitle": "String com escape de URL",
+    "toolInfo": {
+      "description": "Carregue sua string e ela terá o URL escapado automaticamente.",
+      "longDescription": "Esta ferramenta codifica uma string por URL. Caracteres especiais de URL são convertidos para codificação de sinal de porcentagem. Essa codificação é chamada de codificação de porcentagem porque o valor numérico de cada caractere é convertido para um sinal de porcentagem seguido por um valor hexadecimal de dois dígitos. Os valores hexadecimais são determinados com base no valor do ponto de código do caractere. Por exemplo, um espaço é convertido para %20, dois-pontos para %3a e uma barra para %2f. Caracteres que não são especiais permanecem inalterados. Caso você também precise converter caracteres não especiais para codificação de porcentagem, adicionamos uma opção extra que permite isso. Selecione a opção encode-non-special-chars para habilitar esse comportamento.",
+      "shortDescription": "Escapar rapidamente uma string por URL.",
+      "title": "Codificador de URL de string"
+    }
   }
 }

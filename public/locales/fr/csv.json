@@ -17,15 +17,21 @@
     "description": "Convertissez des fichiers CSV au format JSON avec des options personnalisables pour les délimiteurs, les guillemets et le formatage de sortie. Prise en charge des en-têtes, des commentaires et de la conversion de type dynamique.",
     "dynamicTypes": "Types dynamiques",
     "dynamicTypesDescription": "Convertir automatiquement les nombres et les booléens",
+    "error": "Erreur",
     "errorParsing": "Erreur lors de l'analyse du fichier CSV : {{error}}",
     "fieldQuote": "Citation de champ (par exemple, \")",
     "inputCsvFormat": "Format d'entrée CSV",
     "inputTitle": "Entrée CSV",
+    "invalidCsvFormat": "Format CSV non valide",
     "resultTitle": "Sortie JSON",
     "shortDescription": "Convertissez les données CSV au format JSON.",
     "skipEmptyLines": "Sauter les lignes vides",
     "skipEmptyLinesDescription": "Ignorer les lignes vides dans le fichier CSV d'entrée",
     "title": "Convertir CSV en JSON",
+    "toolInfo": {
+      "description": "Cet outil convertit les fichiers CSV (valeurs séparées par des virgules) en structures de données JSON (JavaScript Object Notation). Il prend en charge différents formats CSV avec des délimiteurs, des guillemets et des symboles de commentaires personnalisables. Le convertisseur peut traiter la première ligne comme un en-tête, ignorer les lignes vides et détecter automatiquement les types de données comme les nombres et les booléens. Le JSON obtenu peut être utilisé pour la migration de données, les sauvegardes ou comme entrée pour d'autres applications.",
+      "title": "Qu'est-ce qu'un convertisseur CSV en JSON ?"
+    },
     "useHeaders": "Utiliser les en-têtes",
     "useHeadersDescription": "Traiter la première ligne comme en-tête de colonne"
   },

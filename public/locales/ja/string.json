@@ -28,6 +28,31 @@
     "shortDescription": "指定した位置の間のテキストの一部を抽出する",
     "title": "部分文字列の抽出"
   },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "分析オプション",
+    "category": "カテゴリ",
+    "description": "隠された Unicode 文字、特に攻撃に使用される可能性のある RTL Override 文字を検出します。",
+    "foundChars": "見つかった {{count}} 隠し文字:",
+    "inputPlaceholder": "隠し文字をチェックするテキストを入力してください...",
+    "inputTitle": "分析するテキスト",
+    "invisibleChar": "見えないキャラクター",
+    "invisibleFound": "見えない文字が見つかりました",
+    "longDescription": "このツールは、テキスト内の隠れたUnicode文字、特に攻撃に利用される可能性のある右から左への（RTL）オーバーライド文字を検出するのに役立ちます。一見無害なテキストに隠れている可能性のある、不可視文字、ゼロ幅文字、その他の潜在的に悪意のあるUnicodeシーケンスを識別できます。",
+    "noHiddenChars": "テキスト内に隠し文字は検出されませんでした。",
+    "optionsDescription": "検出する隠し文字の種類と結果の表示方法を設定します。",
+    "position": "位置",
+    "rtlAlert": "⚠️ RTL オーバーライド文字が検出されました。このテキストには悪意のある隠し文字が含まれている可能性があります。",
+    "rtlFound": "RTLオーバーライドが見つかりました",
+    "rtlOverride": "RTLオーバーライド文字",
+    "rtlWarning": "警告: RTL オーバーライド文字が検出されました。これは攻撃に使用される可能性があります。",
+    "shortDescription": "テキスト内の隠れたUnicode文字を見つける",
+    "summary": "分析概要",
+    "title": "隠し文字検出",
+    "totalChars": "隠し文字の合計数: {{count}}",
+    "unicode": "ユニコード",
+    "zeroWidthChar": "ゼロ幅文字",
+    "zeroWidthFound": "ゼロ幅文字が見つかりました"
+  },
   "join": {
     "blankLinesAndTrailingSpaces": "空白行と末尾のスペース",
     "deleteBlankDescription": "テキスト シンボルのない行を削除します。",
@@ -257,5 +282,30 @@
     "resultTitle": "大文字のテキスト",
     "shortDescription": "テキストを大文字に変換する",
     "title": "大文字に変換"
+  },
+  "urlDecode": {
+    "inputTitle": "入力文字列（URLエスケープ）",
+    "resultTitle": "出力文字列",
+    "toolInfo": {
+      "description": "文字列を読み込むと、自動的に URL エスケープが解除されます。",
+      "longDescription": "このツールは、URLエンコードされた文字列をURLデコードします。URLデコードはURLエンコードの逆の操作です。パーセントエンコードされた文字はすべて、ユーザーが理解できる文字にデコードされます。よく知られているパーセントエンコード値としては、スペースの場合は%20、コロンの場合は%3a、スラッシュの場合は%2f、疑問符の場合は%3fなどがあります。パーセント記号の後の2桁の数字は、文字の16進数による文字コード値です。",
+      "shortDescription": "文字列をすばやく URL アンエスケープします。",
+      "title": "文字列URLデコーダー"
+    }
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "選択すると、入力文字列内のすべての文字が URL エンコードに変換されます (特殊な文字だけでなく)。",
+      "nonSpecialCharPlaceholder": "特殊文字以外の文字をエンコードする",
+      "title": "エンコードオプション"
+    },
+    "inputTitle": "入力文字列",
+    "resultTitle": "URLエスケープ文字列",
+    "toolInfo": {
+      "description": "文字列を読み込むと、自動的に URL エスケープされます。",
+      "longDescription": "このツールは文字列をURLエンコードします。URLの特殊文字はパーセント記号エンコードに変換されます。このエンコードは、各文字の数値がパーセント記号とそれに続く2桁の16進数値に変換されるため、パーセントエンコードと呼ばれます。16進数値は文字のコードポイント値に基づいて決定されます。例えば、スペースは%20、コロンは%3a、スラッシュは%2fにエスケープされます。特殊文字以外の文字は変更されません。特殊文字以外の文字もパーセントエンコードに変換する必要がある場合は、そのための追加オプションも追加しました。この動作を有効にするには、encode-non-special-charsオプションを選択してください。",
+      "shortDescription": "文字列をすばやく URL エスケープします。",
+      "title": "文字列URLエンコーダ"
+    }
   }
 }

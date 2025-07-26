@@ -37,6 +37,101 @@
     "shortDescription": "Calculate voltage, current, or resistance in electrical circuits using Ohm's Law",
     "title": "Ohm's Law"
   },
+  "randomNumberGenerator": {
+    "description": "Generate random numbers within a specified range with customizable options.",
+    "error": {
+      "generationFailed": "Failed to generate random numbers. Please check your input parameters."
+    },
+    "info": {
+      "description": "A random number generator creates unpredictable numbers within a specified range. This tool uses cryptographically secure random number generation to ensure truly random results. Useful for simulations, games, statistical sampling, and testing scenarios.",
+      "title": "What is a Random Number Generator?"
+    },
+    "longDescription": "Generate random numbers within a specified range with options for integers or decimals, allowing or preventing duplicates, and sorting results. Perfect for simulations, testing, games, and statistical analysis.",
+    "options": {
+      "generation": {
+        "allowDecimals": {
+          "description": "Generate decimal numbers instead of integers",
+          "title": "Allow Decimal Numbers"
+        },
+        "allowDuplicates": {
+          "description": "Allow the same number to appear multiple times",
+          "title": "Allow Duplicates"
+        },
+        "countDescription": "Number of random numbers to generate (1-10,000)",
+        "sortResults": {
+          "description": "Sort the generated numbers in ascending order",
+          "title": "Sort Results"
+        },
+        "title": "Generation Options"
+      },
+      "output": {
+        "separatorDescription": "Character(s) to separate the generated numbers",
+        "title": "Output Settings"
+      },
+      "range": {
+        "maxDescription": "Maximum value (inclusive)",
+        "minDescription": "Minimum value (inclusive)",
+        "title": "Range Settings"
+      }
+    },
+    "result": {
+      "count": "Count",
+      "hasDuplicates": "Contains Duplicates",
+      "isSorted": "Sorted",
+      "range": "Range",
+      "title": "Generated Random Numbers"
+    },
+    "shortDescription": "Generate random numbers in custom ranges",
+    "title": "Random Number Generator"
+  },
+  "randomPortGenerator": {
+    "description": "Generate random network ports within specified ranges with customizable options.",
+    "error": {
+      "generationFailed": "Failed to generate random ports. Please check your input parameters."
+    },
+    "info": {
+      "description": "A random port generator creates unpredictable network port numbers within specified ranges. This tool follows IANA port number standards and includes identification of common services. Useful for development, testing, network configuration, and avoiding port conflicts.",
+      "title": "What is a Random Port Generator?"
+    },
+    "longDescription": "Generate random network ports within specified ranges (well-known, registered, dynamic, or custom). Perfect for development, testing, and network configuration. Includes port service identification for common ports.",
+    "options": {
+      "generation": {
+        "allowDuplicates": {
+          "description": "Allow the same port to appear multiple times",
+          "title": "Allow Duplicates"
+        },
+        "countDescription": "Number of random ports to generate (1-1,000)",
+        "sortResults": {
+          "description": "Sort the generated ports in ascending order",
+          "title": "Sort Results"
+        },
+        "title": "Generation Options"
+      },
+      "output": {
+        "separatorDescription": "Character(s) to separate the generated ports",
+        "title": "Output Settings"
+      },
+      "range": {
+        "custom": "Custom Range",
+        "dynamic": "Dynamic Ports (49152-65535)",
+        "maxPortDescription": "Maximum port number (1-65535)",
+        "minPortDescription": "Minimum port number (1-65535)",
+        "registered": "Registered Ports (1024-49151)",
+        "title": "Port Range Settings",
+        "wellKnown": "Well-Known Ports (1-1023)"
+      }
+    },
+    "result": {
+      "count": "Count",
+      "hasDuplicates": "Contains Duplicates",
+      "isSorted": "Sorted",
+      "portDetails": "Port Details",
+      "range": "Port Range",
+      "title": "Generated Random Ports"
+    },
+    "shortDescription": "Generate random network ports",
+    "title": "Random Port Generator"
+  },
   "slackline": {
     "description": "Calculates tension in a slackline",
     "longDescription": "This calculator assumes a load in the center of the rope",

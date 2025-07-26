@@ -1,6 +1,8 @@
 {
   "checkLeapYears": {
     "description": "その年がうるう年かどうかを確認し、うるう年情報を取得します。",
+    "exampleDescription": "友人の一人は閏年の2月29日に生まれたため、誕生日は4年に一度しかありません。彼女の誕生日がいつなのかはなかなか思い出せないので、プログラムを使って、今後の閏年のリマインダーリストを作成しています。彼女の次の誕生日のリストを作成するには、2025年から2040年までの一連の年を入力に読み込み、各年のステータスを取得します。プログラムが閏年だと判断した場合、2月29日の誕生日パーティーに招待されることがわかります。",
+    "exampleTitle": "2月29日の誕生日を検索",
     "inputTitle": "入力年",
     "resultTitle": "閏年の結果",
     "shortDescription": "その年がうるう年かどうかをチェックする",
@@ -55,6 +57,21 @@
       "description": "このツールを使うと、フォーマットされた時刻文字列（HH:MM:SS）を秒数に変換できます。期間や時間間隔を計算するのに便利です。",
       "title": "時間を秒に変換する"
     }
+  },
+  "convertUnixToDate": {
+    "addUtcLabel": "「UTC」サフィックスを追加",
+    "addUtcLabelDescription": "変換された日付の後に「UTC」を表示します（UTCモードのみ）",
+    "description": "Unix タイムスタンプを人間が読める日付に変換します。",
+    "outputOptions": "出力オプション",
+    "shortDescription": "Unixタイムスタンプを日付に変換する",
+    "title": "Unix を日付に変換する",
+    "toolInfo": {
+      "description": "このツールは、Unixタイムスタンプ（秒単位）を人間が判読できる日付形式（例：YYYY-MM-DD HH:MM:SS）に変換します。ローカルタイムスタンプとUTCタイムスタンプの両方の出力をサポートしているため、ログ、API、またはUnixタイムを使用するシステムからのタイムスタンプを素早く解釈するのに役立ちます。",
+      "title": "Unix を日付に変換する"
+    },
+    "useLocalTime": "現地時間を使用する",
+    "useLocalTimeDescription": "UTC ではなくローカルタイムゾーンで変換された日付を表示します",
+    "withLabel": "オプション"
   },
   "crontabGuru": {
     "description": "cron式を生成し、理解します。自動化されたタスクやシステムジョブのcronスケジュールを作成します。",

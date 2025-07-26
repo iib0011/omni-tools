@@ -11,6 +11,7 @@
     "highCompression": "Compression élevée",
     "highCompressionDescription": "Réduction maximale de la taille du fichier avec une certaine perte de qualité",
     "inputTitle": "Entrée PDF",
+    "longDescription": "Compressez vos fichiers PDF en toute sécurité dans votre navigateur grâce à Ghostscript. Vos fichiers restent sur votre appareil, garantissant une confidentialité totale tout en réduisant leur taille pour le partage par e-mail, le téléchargement sur des sites web et l'économie d'espace de stockage. Optimisé par la technologie WebAssembly.",
     "lowCompression": "Faible compression",
     "lowCompressionDescription": "Réduisez légèrement la taille du fichier avec une perte de qualité minimale",
     "mediumCompression": "Compression moyenne",
@@ -52,7 +53,7 @@
     }
   },
   "pdfToEpub": {
-    "description": "Transformez les documents PDF en fichiers EPUB pour une meilleure compatibilité avec les liseuses.', icon: 'material-symbols:import-contacts', component: lazy(() => import('./index')), keywords: ['pdf', 'epub', 'convert', 'ebook'], path: 'pdf-to-epub', i18n: { name: 'pdf:pdfToEpub.title', description: 'pdf:pdfToEpub.description",
+    "description": "Transformez les documents PDF en fichiers EPUB pour une meilleure compatibilité avec les liseuses.",
     "shortDescription": "Convertir des fichiers PDF au format EPUB",
     "title": "PDF vers EPUB"
   },
