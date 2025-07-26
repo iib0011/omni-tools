@@ -38,6 +38,7 @@
     "height": "Hoogte",
     "inputTitle": "Invoervideo",
     "loadVideoForDimensions": "Laad een video om de afmetingen te zien",
+    "longDescription": "Met deze tool kun je videobestanden bijsnijden om ongewenste delen te verwijderen of om de focus te leggen op specifieke delen van de video. Handig voor het verwijderen van zwarte balken, het aanpassen van beeldverhoudingen of het focussen op belangrijke content. Ondersteunt diverse videoformaten, waaronder MP4, MOV en AVI.",
     "resultTitle": "Bijgesneden video",
     "shortDescription": "Video bijsnijden om ongewenste gebieden te verwijderen",
     "title": "Bijsnijden Video",
@@ -82,6 +83,12 @@
       "description": "Met deze tool kun je een herhalende video maken door de originele video meerdere keren te herhalen. Je kunt zelf aangeven hoe vaak de video moet worden herhaald.",
       "title": "Wat is een {{title}}?"
     }
+  },
+  "mergeVideo": {
+    "description": "Combineer meerdere videobestanden tot één doorlopende video.",
+    "longDescription": "Met deze tool kun je meerdere videobestanden samenvoegen of toevoegen tot één doorlopende video. Upload je videobestanden, rangschik ze in de gewenste volgorde en voeg ze samen tot één bestand om ze eenvoudig te delen of te bewerken.",
+    "shortDescription": "Eenvoudig video's toevoegen en samenvoegen.",
+    "title": "Video's samenvoegen"
   },
   "rotate": {
     "180Degrees": "180° (op zijn kop)",

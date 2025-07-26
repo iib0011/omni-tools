@@ -29,14 +29,33 @@
   },
   "mergeAudio": {
     "description": "Kombinieren Sie mehrere Audiodateien zu einer einzigen Audiodatei, indem Sie sie der Reihe nach aneinanderreihen.",
+    "inputTitle": "Audiodateien eingeben",
     "longDescription": "Mit diesem Tool können Sie mehrere Audiodateien in der Reihenfolge des Hochladens zu einer einzigen Datei zusammenfügen. Ideal zum Kombinieren von Podcast-Segmenten, Musiktiteln oder anderen Audiodateien. Unterstützt verschiedene Audioformate, darunter MP3, AAC und WAV.",
+    "mergingAudio": "Audio zusammenführen",
+    "outputFormat": "Ausgabeformat",
+    "resultTitle": "Zusammengeführtes Audio",
     "shortDescription": "Mehrere Audiodateien zu einer zusammenführen (MP3, AAC, WAV).",
-    "title": "Audio zusammenführen"
+    "title": "Audio zusammenführen",
+    "toolInfo": {
+      "title": "Was ist {{title}}?"
+    }
   },
   "trim": {
     "description": "Schneiden und trimmen Sie Audiodateien, um bestimmte Segmente durch Angabe von Start- und Endzeiten zu extrahieren.",
+    "endTime": "Endzeit",
+    "endTimeDescription": "Endzeit im Format HH:MM:SS (z. B. 00:01:30)",
+    "inputTitle": "Audioeingang",
     "longDescription": "Mit diesem Tool können Sie Audiodateien durch Festlegen von Start- und Endzeiten kürzen. Sie können bestimmte Abschnitte aus längeren Audiodateien extrahieren, unerwünschte Teile entfernen oder kürzere Clips erstellen. Unterstützt verschiedene Audioformate, darunter MP3, AAC und WAV. Ideal für Podcast-Bearbeitung, Musikproduktion und alle anderen Audiobearbeitungsaufgaben.",
+    "outputFormat": "Ausgabeformat",
+    "resultTitle": "Getrimmtes Audio",
     "shortDescription": "Schneiden Sie Audiodateien, um bestimmte Zeitsegmente zu extrahieren (MP3, AAC, WAV).",
-    "title": "Audio trimmen"
+    "startTime": "Startzeit",
+    "startTimeDescription": "Startzeit im Format HH:MM:SS (z. B. 00:00:30)",
+    "timeSettings": "Zeiteinstellungen",
+    "title": "Audio trimmen",
+    "toolInfo": {
+      "title": "Was ist {{title}}?"
+    },
+    "trimmingAudio": "Audio trimmen"
   }
 }

@@ -38,6 +38,7 @@
     "height": "Höhe",
     "inputTitle": "Eingangsvideo",
     "loadVideoForDimensions": "Laden Sie ein Video, um die Abmessungen anzuzeigen",
+    "longDescription": "Mit diesem Tool können Sie Videodateien zuschneiden, um unerwünschte Bereiche zu entfernen oder bestimmte Videoteile hervorzuheben. Nützlich zum Entfernen schwarzer Balken, Anpassen des Seitenverhältnisses oder zum Fokussieren auf wichtige Inhalte. Unterstützt verschiedene Videoformate, darunter MP4, MOV und AVI.",
     "resultTitle": "Zugeschnittenes Video",
     "shortDescription": "Video zuschneiden, um unerwünschte Bereiche zu entfernen",
     "title": "Video zuschneiden",
@@ -82,6 +83,12 @@
       "description": "Mit diesem Tool können Sie ein Loop-Video erstellen, indem Sie das Originalvideo mehrmals wiederholen. Sie können festlegen, wie oft das Video wiederholt werden soll.",
       "title": "Was ist ein {{title}}?"
     }
+  },
+  "mergeVideo": {
+    "description": "Kombinieren Sie mehrere Videodateien zu einem fortlaufenden Video.",
+    "longDescription": "Mit diesem Tool können Sie mehrere Videodateien zu einem einzigen zusammenhängenden Video zusammenfügen oder anhängen. Laden Sie einfach Ihre Videodateien hoch, ordnen Sie sie in der gewünschten Reihenfolge an und fügen Sie sie zu einer Datei zusammen, um sie einfach zu teilen oder zu bearbeiten.",
+    "shortDescription": "Videos einfach anhängen und zusammenführen.",
+    "title": "Videos zusammenführen"
   },
   "rotate": {
     "180Degrees": "180° (auf den Kopf gestellt)",

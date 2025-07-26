@@ -37,6 +37,101 @@
     "shortDescription": "使用欧姆定律计算电路中的电压、电流或电阻",
     "title": "欧姆定律"
   },
+  "randomNumberGenerator": {
+    "description": "使用可自定义的选项生成指定范围内的随机数。",
+    "error": {
+      "generationFailed": "随机数生成失败，请检查输入参数。"
+    },
+    "info": {
+      "description": "随机数生成器会在指定范围内生成不可预测的数字。此工具使用加密安全的随机数生成技术，确保结果真正随机。适用于模拟、游戏、统计抽样和测试场景。",
+      "title": "什么是随机数生成器？"
+    },
+    "longDescription": "生成指定范围内的随机数，可选择整数或小数，允许或禁止重复，并对结果进行排序。非常适合模拟、测试、游戏和统计分析。",
+    "options": {
+      "generation": {
+        "allowDecimals": {
+          "description": "生成十进制数而不是整数",
+          "title": "允许小数"
+        },
+        "allowDuplicates": {
+          "description": "允许同一个数字出现多次",
+          "title": "允许重复"
+        },
+        "countDescription": "生成的随机数的数量（1-10,000）",
+        "sortResults": {
+          "description": "按升序对生成的数字进行排序",
+          "title": "对结果进行排序"
+        },
+        "title": "生成选项"
+      },
+      "output": {
+        "separatorDescription": "用于分隔生成的数字的字符",
+        "title": "输出设置"
+      },
+      "range": {
+        "maxDescription": "最大值（含）",
+        "minDescription": "最小值（含）",
+        "title": "范围设置"
+      }
+    },
+    "result": {
+      "count": "数数",
+      "hasDuplicates": "包含重复项",
+      "isSorted": "已排序",
+      "range": "范围",
+      "title": "生成的随机数"
+    },
+    "shortDescription": "生成自定义范围内的随机数",
+    "title": "随机数生成器"
+  },
+  "randomPortGenerator": {
+    "description": "使用可定制的选项在指定范围内生成随机网络端口。",
+    "error": {
+      "generationFailed": "无法生成随机端口。请检查您的输入参数。"
+    },
+    "info": {
+      "description": "随机端口生成器可在指定范围内创建不可预测的网络端口号。此工具遵循 IANA 端口号标准，并包含常用服务的识别功能。适用于开发、测试、网络配置以及避免端口冲突。",
+      "title": "什么是随机端口生成器？"
+    },
+    "longDescription": "在指定范围内（知名、注册、动态或自定义）生成随机网络端口。非常适合开发、测试和网络配置。包含常用端口的端口服务识别。",
+    "options": {
+      "generation": {
+        "allowDuplicates": {
+          "description": "允许同一端口出现多次",
+          "title": "允许重复"
+        },
+        "countDescription": "要生成的随机端口数量（1-1,000）",
+        "sortResults": {
+          "description": "按升序对生成的端口进行排序",
+          "title": "对结果进行排序"
+        },
+        "title": "生成选项"
+      },
+      "output": {
+        "separatorDescription": "用于分隔生成的端口的字符",
+        "title": "输出设置"
+      },
+      "range": {
+        "custom": "自定义范围",
+        "dynamic": "动态端口（49152-65535）",
+        "maxPortDescription": "最大端口号（1-65535）",
+        "minPortDescription": "最小端口号（1-65535）",
+        "registered": "注册端口（1024-49151）",
+        "title": "端口范围设置",
+        "wellKnown": "知名端口（1-1023）"
+      }
+    },
+    "result": {
+      "count": "数数",
+      "hasDuplicates": "包含重复项",
+      "isSorted": "已排序",
+      "portDetails": "端口详细信息",
+      "range": "端口范围",
+      "title": "生成的随机端口"
+    },
+    "shortDescription": "生成随机网络端口",
+    "title": "随机端口生成器"
+  },
   "slackline": {
     "description": "计算松弛线的张力",
     "longDescription": "该计算器假设绳索中心有负载",
@@ -57,6 +152,14 @@
   },
   "sum": {
     "description": "计算一串数字的总和。输入以逗号或换行符分隔的数字，即可计算出它们的总和。",
+    "example1Description": "在此示例中，我们计算十个正整数的和。这些整数列成一列，它们的总和等于 19494。",
+    "example1Title": "十个正数之和",
+    "example2Description": "此示例反转一列二十个三音节名词，并从下到上打印所有单词。为了分隔列表项，它使用 \\n 字符作为输入项分隔符，这意味着每个项都独占一行。",
+    "example2Title": "数一数公园里的树木",
+    "example3Description": "在这个例子中，我们将 90 个不同的值相加——正数、负数、整数和小数。我们将输入分隔符设置为逗号，将它们全部相加后，输出结果为 0。",
+    "example3Title": "整数和小数之和",
+    "example4Description": "在此示例中，我们计算所有十位数字的总和，并启用“打印运行总和”选项。我们获取加法过程中和的中间值。因此，输出结果为以下序列：0, 1 (0 + 1), 3 (0 + 1 + 2), 6 (0 + 1 + 2 + 3), 10 (0 + 1 + 2 + 3 + 4)，依此类推。",
+    "example4Title": "数字的累计和",
     "extractionTypes": {
       "delimiter": {
         "description": "在此自定义数字分隔符。（默认为换行符。）",

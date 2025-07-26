@@ -5,6 +5,15 @@
     "copyDescription": "Número de cópias (pode ser fracionário)",
     "description": "O utilitário baseado em navegador mais simples do mundo para duplicar itens de lista. Insira sua lista e especifique critérios de duplicação para criar cópias dos itens. Perfeito para expansão de dados, testes ou criação de padrões repetidos.",
     "duplicationOptions": "Opções de duplicação",
+    "error": "Erro",
+    "example1Description": "Este exemplo mostra como duplicar uma lista de palavras.",
+    "example1Title": "Duplicação simples",
+    "example2Description": "Este exemplo mostra como duplicar uma lista na ordem inversa.",
+    "example2Title": "Duplicação reversa",
+    "example3Description": "Este exemplo mostra como entrelaçar itens em vez de concatená-los.",
+    "example3Title": "Itens entrelaçados",
+    "example4Description": "Este exemplo mostra como duplicar uma lista com um número fracionário de cópias.",
+    "example4Title": "Duplicação fracionária",
     "examples": {
       "fractional": {
         "description": "Este exemplo mostra como duplicar uma lista com um número fracionário de cópias.",
@@ -37,12 +46,53 @@
     "toolInfo": {
       "description": "Esta ferramenta permite duplicar itens em uma lista. Você pode especificar o número de cópias (incluindo valores fracionários), controlar se os itens serão concatenados ou entrelaçados e até mesmo reverter os itens duplicados. É útil para criar padrões repetidos, gerar dados de teste ou expandir listas com conteúdo previsível.",
       "title": "Duplicação de lista"
+    },
+    "unknownError": "Ocorreu um erro desconhecido",
+    "validation": {
+      "copyMustBeNumber": "O número de cópias deve ser um número",
+      "copyMustBePositive": "O número de cópias deve ser positivo",
+      "copyRequired": "Número de cópias necessário",
+      "joinSeparatorRequired": "O separador de junção é necessário",
+      "separatorRequired": "O separador é necessário"
     }
   },
   "findMostPopular": {
     "description": "O utilitário baseado em navegador mais simples do mundo para encontrar os itens mais populares em uma lista. Insira sua lista e obtenha instantaneamente os itens que aparecem com mais frequência. Perfeito para análise de dados, identificação de tendências ou busca por elementos comuns.",
+    "displayFormatDescription": "Como exibir os itens de lista mais populares?",
+    "displayOptions": {
+      "count": "Mostrar contagem de itens",
+      "percentage": "Mostrar porcentagem do item",
+      "total": "Mostrar total do item"
+    },
+    "extractListItems": "Como extrair itens de lista?",
+    "ignoreItemCase": "Ignorar maiúsculas e minúsculas",
+    "ignoreItemCaseDescription": "Compare todos os itens da lista em letras minúsculas.",
+    "inputTitle": "Lista de entrada",
+    "itemComparison": "Comparação de itens",
+    "outputFormat": "Formato de saída do item principal",
+    "removeEmptyItems": "Remover itens vazios",
+    "removeEmptyItemsDescription": "Ignore itens vazios da comparação.",
+    "resultTitle": "Itens mais populares",
     "shortDescription": "Encontre os itens mais frequentes",
-    "title": "Encontre os mais populares"
+    "sortOptions": {
+      "alphabetic": "Classificar em ordem alfabética",
+      "count": "Classificar por contagem"
+    },
+    "sortingMethodDescription": "Selecione um método de classificação.",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimite itens da lista de entrada com uma expressão regular.",
+        "title": "Use um Regex para Divisão"
+      },
+      "symbol": {
+        "description": "Delimitar itens da lista de entrada com um caractere.",
+        "title": "Use um símbolo para dividir"
+      }
+    },
+    "splitSeparatorDescription": "Defina um símbolo delimitador ou uma expressão regular.",
+    "title": "Encontre os mais populares",
+    "trimItems": "Cortar itens da lista principal",
+    "trimItemsDescription": "Remova os espaços iniciais e finais antes de comparar itens"
   },
   "findUnique": {
     "caseSensitiveItems": "Itens que diferenciam maiúsculas de minúsculas",

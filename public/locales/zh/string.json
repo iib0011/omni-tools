@@ -28,6 +28,31 @@
     "shortDescription": "提取指定位置之间的部分文本",
     "title": "提取子字符串"
   },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "分析选项",
+    "category": "类别",
+    "description": "检测隐藏的 Unicode 字符，尤其是可能用于攻击的 RTL 覆盖字符。",
+    "foundChars": "成立 {{count}} 隐藏角色：",
+    "inputPlaceholder": "输入文本以检查隐藏字符...",
+    "inputTitle": "要分析的文本",
+    "invisibleChar": "隐形角色",
+    "invisibleFound": "发现隐形字符",
+    "longDescription": "此工具可帮助您检测文本中隐藏的 Unicode 字符，尤其是可能用于攻击的从右到左 (RTL) 覆盖字符。它可以识别隐藏字符、零宽度字符以及其他可能隐藏在看似无害的文本中的潜在恶意 Unicode 序列。",
+    "noHiddenChars": "文本中未检测到隐藏字符。",
+    "optionsDescription": "配置要检测的隐藏字符类型以及如何显示结果。",
+    "position": "位置",
+    "rtlAlert": "⚠️ 检测到 RTL 覆盖字符！此文本可能包含恶意隐藏字符。",
+    "rtlFound": "发现 RTL 覆盖",
+    "rtlOverride": "RTL 覆盖字符",
+    "rtlWarning": "警告：检测到 RTL 覆盖字符！这可能被用于攻击。",
+    "shortDescription": "查找文本中隐藏的 Unicode 字符",
+    "summary": "分析摘要",
+    "title": "隐藏字符检测器",
+    "totalChars": "隐藏角色总数： {{count}}",
+    "unicode": "Unicode",
+    "zeroWidthChar": "零宽度字符",
+    "zeroWidthFound": "发现零宽度字符"
+  },
   "join": {
     "blankLinesAndTrailingSpaces": "空行和尾随空格",
     "deleteBlankDescription": "删除没有文本符号的行。",
@@ -257,5 +282,30 @@
     "resultTitle": "大写文本",
     "shortDescription": "将文本转换为大写",
     "title": "转换为大写"
+  },
+  "urlDecode": {
+    "inputTitle": "输入字符串（URL 转义）",
+    "resultTitle": "输出字符串",
+    "toolInfo": {
+      "description": "加载您的字符串，它将自动获得 URL 非转义。",
+      "longDescription": "此工具用于对先前 URL 编码的字符串进行 URL 解码。URL 解码是 URL 编码的逆操作。所有百分号编码的字符都会被解码为您可以理解的字符。一些最常用的百分号编码值包括：%20 表示空格，%3a 表示冒号，%2f 表示斜杠，%3f 表示问号。百分号后面的两位数字是该字符的十六进制字符码值。",
+      "shortDescription": "快速对字符串进行 URL 转义。",
+      "title": "字符串 URL 解码器"
+    }
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "如果选中，则输入字符串中的所有字符都将转换为 URL 编码（不仅仅是特殊字符）。",
+      "nonSpecialCharPlaceholder": "对非特殊字符进行编码",
+      "title": "编码选项"
+    },
+    "inputTitle": "输入字符串",
+    "resultTitle": "URL转义字符串",
+    "toolInfo": {
+      "description": "加载您的字符串，它将自动进行 URL 转义。",
+      "longDescription": "此工具会对字符串进行 URL 编码。特殊 URL 字符会被转换为百分号编码。这种编码之所以称为百分号编码，是因为每个字符的数值都会被转换为百分号，后跟两位十六进制值。十六进制值根据字符的代码点值确定。例如，空格会被转义为 %20，冒号会被转义为 %3a，斜杠会被转义为 %2f。非特殊字符保持不变。如果您还需要将非特殊字符转换为百分号编码，我们还添加了一个额外的选项来实现此目的。选择“encode-non-special-chars”选项即可启用此行为。",
+      "shortDescription": "快速对字符串进行 URL 转义。",
+      "title": "字符串 URL 编码器"
+    }
   }
 }

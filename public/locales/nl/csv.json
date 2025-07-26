@@ -17,15 +17,21 @@
     "description": "Converteer CSV-bestanden naar JSON-formaat met aanpasbare opties voor scheidingstekens, aanhalingstekens en uitvoeropmaak. Ondersteuning voor kopteksten, opmerkingen en dynamische typeconversie.",
     "dynamicTypes": "Dynamische typen",
     "dynamicTypesDescription": "Automatisch getallen en Booleaanse waarden converteren",
+    "error": "Fout",
     "errorParsing": "Fout bij het parseren van CSV: {{error}}",
     "fieldQuote": "Veldcitaat (bijv. \")",
     "inputCsvFormat": "CSV-invoerformaat",
     "inputTitle": "CSV-invoer",
+    "invalidCsvFormat": "Ongeldige CSV-indeling",
     "resultTitle": "Uitvoer JSON",
     "shortDescription": "Converteer CSV-gegevens naar JSON-formaat.",
     "skipEmptyLines": "Lege regels overslaan",
     "skipEmptyLinesDescription": "Negeer lege regels in de invoer-CSV",
     "title": "CSV naar JSON converteren",
+    "toolInfo": {
+      "description": "Deze tool transformeert CSV-bestanden (Comma Separated Values) naar JSON-datastructuren (JavaScript Object Notation). Het ondersteunt diverse CSV-formaten met aanpasbare scheidingstekens, aanhalingstekens en commentaarsymbolen. De converter kan de eerste rij als kopteksten behandelen, lege regels overslaan en automatisch gegevenstypen zoals getallen en Booleaanse waarden detecteren. De resulterende JSON kan worden gebruikt voor datamigratie, back-ups of als invoer voor andere applicaties.",
+      "title": "Wat is een CSV naar JSON-converter?"
+    },
     "useHeaders": "Gebruik headers",
     "useHeadersDescription": "Behandel de eerste rij als kolomkoppen"
   },

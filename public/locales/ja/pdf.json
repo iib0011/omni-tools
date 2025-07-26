@@ -11,6 +11,7 @@
     "highCompression": "高圧縮",
     "highCompressionDescription": "多少の品質低下を伴いファイルサイズを最大限に削減",
     "inputTitle": "入力PDF",
+    "longDescription": "Ghostscriptを使ってブラウザ内で安全にPDFファイルを圧縮できます。ファイルはデバイスから一切出ないので、完全なプライバシーを確保しながら、メール共有、ウェブサイトへのアップロード、ストレージ容量の節約のためにファイルサイズを縮小できます。WebAssemblyテクノロジーを搭載しています。",
     "lowCompression": "低圧縮",
     "lowCompressionDescription": "品質の低下を最小限に抑えながらファイルサイズをわずかに削減",
     "mediumCompression": "中圧縮",
@@ -52,7 +53,7 @@
     }
   },
   "pdfToEpub": {
-    "description": "PDF文書をEPUBファイルに変換して、電子書籍リーダーとの互換性を高めます。', icon: 'material-symbols:import-contacts', components: lazy(() => import('./index')), keywords: ['pdf', 'epub', 'convert', 'ebook'], path: 'pdf-to-epub', i18n: { name: 'pdf:pdfToEpub.title', description: 'pdf:pdfToEpub.description",
+    "description": "電子書籍リーダーとの互換性を高めるために、PDF ドキュメントを EPUB ファイルに変換します。",
     "shortDescription": "PDFファイルをEPUB形式に変換する",
     "title": "PDFからEPUBへ"
   },

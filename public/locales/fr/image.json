@@ -10,8 +10,15 @@
     "title": "Modifier l'opacité de l'image"
   },
   "compress": {
+    "compressedSize": "Taille compressée",
+    "compressionOptions": "Options de compression",
     "description": "Réduisez la taille du fichier image tout en conservant la qualité.",
+    "failedToCompress": "Échec de la compression de l'image. Veuillez réessayer.",
+    "fileSizes": "Tailles de fichiers",
     "inputTitle": "Image d'entrée",
+    "maxFileSizeDescription": "Taille maximale du fichier en mégaoctets",
+    "originalSize": "Taille originale",
+    "qualityDescription": "Pourcentage de qualité d'image (plus faible signifie une taille de fichier plus petite)",
     "resultTitle": "Image compressée",
     "shortDescription": "Compresser des images en maintenant une qualité raisonnable.",
     "title": "Compresser une image"

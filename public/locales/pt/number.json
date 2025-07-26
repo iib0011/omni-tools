@@ -37,6 +37,101 @@
     "shortDescription": "Calcular tensão, corrente ou resistência em circuitos elétricos usando a Lei de Ohm",
     "title": "Lei de Ohm"
   },
+  "randomNumberGenerator": {
+    "description": "Gere números aleatórios dentro de um intervalo especificado com opções personalizáveis.",
+    "error": {
+      "generationFailed": "Falha ao gerar números aleatórios. Verifique seus parâmetros de entrada."
+    },
+    "info": {
+      "description": "Um gerador de números aleatórios cria números imprevisíveis dentro de um intervalo especificado. Esta ferramenta utiliza geração de números aleatórios criptograficamente segura para garantir resultados verdadeiramente aleatórios. Útil para simulações, jogos, amostragem estatística e cenários de teste.",
+      "title": "O que é um gerador de números aleatórios?"
+    },
+    "longDescription": "Gere números aleatórios dentro de um intervalo especificado com opções para números inteiros ou decimais, permitindo ou impedindo duplicatas e classificando os resultados. Perfeito para simulações, testes, jogos e análises estatísticas.",
+    "options": {
+      "generation": {
+        "allowDecimals": {
+          "description": "Gerar números decimais em vez de inteiros",
+          "title": "Permitir números decimais"
+        },
+        "allowDuplicates": {
+          "description": "Permitir que o mesmo número apareça várias vezes",
+          "title": "Permitir duplicatas"
+        },
+        "countDescription": "Número de números aleatórios a serem gerados (1-10.000)",
+        "sortResults": {
+          "description": "Classifique os números gerados em ordem crescente",
+          "title": "Classificar resultados"
+        },
+        "title": "Opções de geração"
+      },
+      "output": {
+        "separatorDescription": "Caractere(s) para separar os números gerados",
+        "title": "Configurações de saída"
+      },
+      "range": {
+        "maxDescription": "Valor máximo (inclusive)",
+        "minDescription": "Valor mínimo (inclusive)",
+        "title": "Configurações de alcance"
+      }
+    },
+    "result": {
+      "count": "Contar",
+      "hasDuplicates": "Contém duplicatas",
+      "isSorted": "Classificado",
+      "range": "Faixa",
+      "title": "Números aleatórios gerados"
+    },
+    "shortDescription": "Gerar números aleatórios em intervalos personalizados",
+    "title": "Gerador de números aleatórios"
+  },
+  "randomPortGenerator": {
+    "description": "Gere portas de rede aleatórias dentro de intervalos especificados com opções personalizáveis.",
+    "error": {
+      "generationFailed": "Falha ao gerar portas aleatórias. Verifique seus parâmetros de entrada."
+    },
+    "info": {
+      "description": "Um gerador de portas aleatório cria números de portas de rede imprevisíveis dentro de intervalos especificados. Esta ferramenta segue os padrões de números de portas da IANA e inclui a identificação de serviços comuns. Útil para desenvolvimento, testes, configuração de rede e prevenção de conflitos de portas.",
+      "title": "O que é um gerador de portas aleatórias?"
+    },
+    "longDescription": "Gere portas de rede aleatórias dentro de intervalos especificados (conhecidas, registradas, dinâmicas ou personalizadas). Ideal para desenvolvimento, testes e configuração de rede. Inclui identificação de serviço de porta para portas comuns.",
+    "options": {
+      "generation": {
+        "allowDuplicates": {
+          "description": "Permitir que a mesma porta apareça várias vezes",
+          "title": "Permitir duplicatas"
+        },
+        "countDescription": "Número de portas aleatórias a serem geradas (1-1.000)",
+        "sortResults": {
+          "description": "Classifique as portas geradas em ordem crescente",
+          "title": "Classificar resultados"
+        },
+        "title": "Opções de geração"
+      },
+      "output": {
+        "separatorDescription": "Caractere(s) para separar as portas geradas",
+        "title": "Configurações de saída"
+      },
+      "range": {
+        "custom": "Faixa personalizada",
+        "dynamic": "Portas Dinâmicas (49152-65535)",
+        "maxPortDescription": "Número máximo de portas (1-65535)",
+        "minPortDescription": "Número mínimo de porta (1-65535)",
+        "registered": "Portos Registrados (1024-49151)",
+        "title": "Configurações de intervalo de portas",
+        "wellKnown": "Portos Conhecidos (1-1023)"
+      }
+    },
+    "result": {
+      "count": "Contar",
+      "hasDuplicates": "Contém duplicatas",
+      "isSorted": "Classificado",
+      "portDetails": "Detalhes do porto",
+      "range": "Port Range",
+      "title": "Portas aleatórias geradas"
+    },
+    "shortDescription": "Gerar portas de rede aleatórias",
+    "title": "Gerador de portas aleatórias"
+  },
   "slackline": {
     "description": "Calcula a tensão em uma slackline",
     "longDescription": "Esta calculadora assume uma carga no centro da corda",
@@ -57,6 +152,14 @@
   },
   "sum": {
     "description": "Calcule a soma de uma lista de números. Insira os números separados por vírgulas ou quebras de linha para obter a soma total.",
+    "example1Description": "Neste exemplo, calculamos a soma de dez números inteiros positivos. Esses números inteiros são listados em uma coluna e sua soma total é igual a 19.494.",
+    "example1Title": "Soma de Dez Números Positivos",
+    "example2Description": "Este exemplo inverte uma coluna de vinte substantivos trissílabos e exibe todas as palavras de baixo para cima. Para separar os itens da lista, ele usa o caractere \\n como separador de itens de entrada, o que significa que cada item está em sua própria linha.",
+    "example2Title": "Contagem de árvores no parque",
+    "example3Description": "Neste exemplo, somamos noventa valores diferentes – números positivos, números negativos, inteiros e frações decimais. Definimos uma vírgula como separador de entrada e, após somar todos eles, obtemos 0 como saída.",
+    "example3Title": "Soma de números inteiros e decimais",
+    "example4Description": "Neste exemplo, calculamos a soma de todos os dez dígitos e ativamos a opção \"Imprimir Soma Corrente\". Obtemos os valores intermediários da soma no processo de adição. Assim, temos a seguinte sequência na saída: 0, 1 (0 + 1), 3 (0 + 1 + 2), 6 (0 + 1 + 2 + 3), 10 (0 + 1 + 2 + 3 + 4) e assim por diante.",
+    "example4Title": "Soma de números em execução",
     "extractionTypes": {
       "delimiter": {
         "description": "Personalize o separador de números aqui. (Por padrão, uma quebra de linha.)",

@@ -28,6 +28,31 @@
     "shortDescription": "Extrahieren Sie einen Textabschnitt zwischen angegebenen Positionen",
     "title": "Teilzeichenfolge extrahieren"
   },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "Analyseoptionen",
+    "category": "Kategorie",
+    "description": "Erkennen Sie versteckte Unicode-Zeichen, insbesondere RTL-Override-Zeichen, die für Angriffe verwendet werden könnten.",
+    "foundChars": "Gefunden {{count}} versteckte(s) Zeichen:",
+    "inputPlaceholder": "Geben Sie Text ein, um nach versteckten Zeichen zu suchen ...",
+    "inputTitle": "Zu analysierender Text",
+    "invisibleChar": "Unsichtbarer Charakter",
+    "invisibleFound": "Unsichtbare Zeichen gefunden",
+    "longDescription": "Mit diesem Tool können Sie versteckte Unicode-Zeichen in Texten erkennen, insbesondere Rechts-nach-Links-Override-Zeichen (RTL), die für Angriffe missbraucht werden können. Es erkennt unsichtbare Zeichen, Zeichen mit der Breite Null und andere potenziell schädliche Unicode-Sequenzen, die in scheinbar harmlosem Text versteckt sein können.",
+    "noHiddenChars": "Im Text wurden keine versteckten Zeichen erkannt.",
+    "optionsDescription": "Konfigurieren Sie, welche Arten von versteckten Zeichen erkannt werden sollen und wie die Ergebnisse angezeigt werden sollen.",
+    "position": "Position",
+    "rtlAlert": "⚠️ RTL-Override-Zeichen erkannt! Dieser Text kann schädliche versteckte Zeichen enthalten.",
+    "rtlFound": "RTL-Override gefunden",
+    "rtlOverride": "RTL-Überschreibungszeichen",
+    "rtlWarning": "WARNUNG: RTL-Override-Zeichen erkannt! Dies könnte für Angriffe missbraucht werden.",
+    "shortDescription": "Suchen Sie nach versteckten Unicode-Zeichen im Text",
+    "summary": "Zusammenfassung der Analyse",
+    "title": "Detektor für versteckte Zeichen",
+    "totalChars": "Gesamtzahl der versteckten Zeichen: {{count}}",
+    "unicode": "Unicode",
+    "zeroWidthChar": "Zeichen mit Nullbreite",
+    "zeroWidthFound": "Zeichen mit der Breite Null gefunden"
+  },
   "join": {
     "blankLinesAndTrailingSpaces": "Leere Zeilen und Leerzeichen am Ende",
     "deleteBlankDescription": "Löschen Sie Zeilen, die keine Textsymbole enthalten.",
@@ -257,5 +282,30 @@
     "resultTitle": "Großbuchstaben",
     "shortDescription": "Text in Großbuchstaben umwandeln",
     "title": "In Großbuchstaben umwandeln"
+  },
+  "urlDecode": {
+    "inputTitle": "Eingabezeichenfolge (URL-Escapezeichen)",
+    "resultTitle": "Ausgabezeichenfolge",
+    "toolInfo": {
+      "description": "Laden Sie Ihre Zeichenfolge und die URL wird automatisch entmaskiert.",
+      "longDescription": "Dieses Tool dekodiert eine zuvor URL-kodierte Zeichenfolge. URL-Dekodierung ist die Umkehrung der URL-Kodierung. Alle prozentkodierten Zeichen werden in verständliche Zeichen dekodiert. Zu den bekanntesten prozentkodierten Werten zählen %20 für ein Leerzeichen, %3a für einen Doppelpunkt, %2f für einen Schrägstrich und %3f für ein Fragezeichen. Die beiden Ziffern nach dem Prozentzeichen geben die hexadezimalen Zeichencodewerte des Zeichens an.",
+      "shortDescription": "Entfernen Sie schnell die URL aus einer Zeichenfolge.",
+      "title": "String-URL-Decoder"
+    }
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "Wenn diese Option ausgewählt ist, werden alle Zeichen in der Eingabezeichenfolge in die URL-Kodierung konvertiert (nicht nur spezielle).",
+      "nonSpecialCharPlaceholder": "Nicht-Sonderzeichen kodieren",
+      "title": "Kodierungsoptionen"
+    },
+    "inputTitle": "Eingabezeichenfolge",
+    "resultTitle": "URL-Escape-String",
+    "toolInfo": {
+      "description": "Laden Sie Ihre Zeichenfolge und sie wird automatisch mit URL-Escapezeichen versehen.",
+      "longDescription": "Dieses Tool kodiert eine Zeichenfolge URL-kodiert. Spezielle URL-Zeichen werden in Prozentzeichen umgewandelt. Diese Kodierung wird als Prozentkodierung bezeichnet, da der numerische Wert jedes Zeichens in ein Prozentzeichen gefolgt von einem zweistelligen Hexadezimalwert umgewandelt wird. Die Hexadezimalwerte werden anhand des Codepunktwerts des Zeichens bestimmt. Beispielsweise wird ein Leerzeichen in %20, ein Doppelpunkt in %3a und ein Schrägstrich in %2f umgewandelt. Nicht spezielle Zeichen bleiben unverändert. Falls Sie auch nicht spezielle Zeichen in Prozentkodierung umwandeln müssen, haben wir eine zusätzliche Option hinzugefügt, die dies ermöglicht. Aktivieren Sie dazu die Option „encode-non-special-chars“.",
+      "shortDescription": "Schnelles URL-Escapen einer Zeichenfolge.",
+      "title": "String-URL-Encoder"
+    }
   }
 }

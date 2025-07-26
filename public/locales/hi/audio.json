@@ -53,17 +53,22 @@
     "longDescription": "यह टूल आपको कई ऑडियो फ़ाइलों को अपलोड करने के क्रम में जोड़कर उन्हें एक ही फ़ाइल में मर्ज करने की सुविधा देता है। पॉडकास्ट सेगमेंट, म्यूज़िक ट्रैक या किसी भी ऑडियो फ़ाइल को एक साथ जोड़ने के लिए यह बिल्कुल सही है। MP3, AAC और WAV सहित विभिन्न ऑडियो फ़ॉर्मेट को सपोर्ट करता है।",
     "mergeMethod": "मर्ज विधि",
     "mergeOptions": "मर्ज विकल्प",
+    "mergingAudio": "ऑडियो मर्ज करना",
     "methodConcat": "क्रमबद्ध जोड़ना",
     "methodMix": "मिश्रण",
     "outputFormat": "आउटपुट प्रारूप",
     "resultTitle": "मर्ज किया गया ऑडियो",
     "shortDescription": "एकाधिक ऑडियो फ़ाइलों को एक में मर्ज करें (MP3, AAC, WAV)।",
-    "title": "ऑडियो मर्ज करें"
+    "title": "ऑडियो मर्ज करें",
+    "toolInfo": {
+      "title": "क्या है {{title}}?"
+    }
   },
   "trim": {
     "description": "ऑडियो फ़ाइल से अनावश्यक भाग हटाएं।",
     "endPlaceholder": "सेकंड",
     "endTime": "अंतिम समय",
+    "endTimeDescription": "समाप्ति समय HH:MM:SS प्रारूप में (उदाहरणार्थ, 00:01:30)",
     "fadeIn": "फेड इन",
     "fadeInPlaceholder": "सेकंड",
     "fadeOut": "फेड आउट",
@@ -77,7 +82,13 @@
     "shortDescription": "विशिष्ट समय खंडों (MP3, AAC, WAV) को निकालने के लिए ऑडियो फ़ाइलों को ट्रिम करें।",
     "startPlaceholder": "सेकंड",
     "startTime": "शुरुआती समय",
+    "startTimeDescription": "प्रारंभ समय HH:MM:SS प्रारूप में (उदाहरणार्थ, 00:00:30)",
+    "timeSettings": "समय सैट करना",
     "title": "ऑडियो ट्रिम करें",
-    "trimOptions": "ट्रिम विकल्प"
+    "toolInfo": {
+      "title": "क्या है {{title}}?"
+    },
+    "trimOptions": "ट्रिम विकल्प",
+    "trimmingAudio": "ऑडियो ट्रिमिंग"
   }
 }

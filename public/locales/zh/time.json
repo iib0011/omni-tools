@@ -1,6 +1,8 @@
 {
   "checkLeapYears": {
     "description": "检查某一年份是否为闰年并获取闰年信息。",
+    "exampleDescription": "我们的一位朋友出生在闰年，也就是2月29日，因此她每四年才过一次生日。由于我们永远无法记住她的生日，所以我们用程序创建了一个即将到来的闰年的提醒列表。为了创建她接下来的生日列表，我们将从2025年到2040年的一系列年份加载到输入中，并获取每年的状态。如果程序显示是闰年，那么我们就知道我们会在2月29日被邀请参加一个生日派对。",
+    "exampleTitle": "查找 2 月 29 日的生日",
     "inputTitle": "输入年份",
     "resultTitle": "闰年结果",
     "shortDescription": "检查年份是否为闰年",
@@ -55,6 +57,21 @@
       "description": "此工具可让您将格式化的时间字符串 (HH:MM:SS) 转换为秒。它对于计算持续时间和时间间隔非常有用。",
       "title": "将时间转换为秒"
     }
+  },
+  "convertUnixToDate": {
+    "addUtcLabel": "添加“UTC”后缀",
+    "addUtcLabelDescription": "转换后的日期后显示“UTC”（仅适用于 UTC 模式）",
+    "description": "将 Unix 时间戳转换为人类可读的日期。",
+    "outputOptions": "输出选项",
+    "shortDescription": "将 Unix 时间戳转换为日期",
+    "title": "将 Unix 转换为日期",
+    "toolInfo": {
+      "description": "此工具可将 Unix 时间戳（以秒为单位）转换为人类可读的日期格式（例如 YYYY-MM-DD HH:MM:SS）。它支持本地和 UTC 输出，因此可用于快速解释来自日志、API 或使用 Unix 时间的系统的时间戳。",
+      "title": "将 Unix 转换为日期"
+    },
+    "useLocalTime": "使用当地时间",
+    "useLocalTimeDescription": "显示以当地时区而非 UTC 转换的日期",
+    "withLabel": "选项"
   },
   "crontabGuru": {
     "description": "生成并理解 cron 表达式。为自动化任务和系统作业创建 cron 计划。",

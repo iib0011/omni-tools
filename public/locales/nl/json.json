@@ -1,4 +1,9 @@
 {
+  "comparison": {
+    "description": "Vergelijk twee JSON-objecten om verschillen in structuur en waarden te identificeren.",
+    "shortDescription": "Vind verschillen tussen twee JSON-objecten",
+    "title": "JSON vergelijken"
+  },
   "escapeJson": {
     "description": "Escape speciale tekens in JSON-strings. Converteer JSON-gegevens naar een correct geëscapete indeling voor veilige overdracht of opslag.",
     "shortDescription": "Speciale tekens in JSON ontsnappen",

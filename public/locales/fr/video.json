@@ -38,6 +38,7 @@
     "height": "Hauteur",
     "inputTitle": "Entrée vidéo",
     "loadVideoForDimensions": "Chargez une vidéo pour voir les dimensions",
+    "longDescription": "Cet outil vous permet de recadrer des fichiers vidéo pour supprimer les zones indésirables ou vous concentrer sur des parties spécifiques. Il est utile pour supprimer les barres noires, ajuster les proportions ou se concentrer sur le contenu important. Il prend en charge divers formats vidéo, dont MP4, MOV et AVI.",
     "resultTitle": "Vidéo recadrée",
     "shortDescription": "Recadrer la vidéo pour supprimer les zones indésirables",
     "title": "Recadrer la vidéo",
@@ -82,6 +83,12 @@
       "description": "Cet outil vous permet de créer une vidéo en boucle en répétant la vidéo originale plusieurs fois. Vous pouvez spécifier le nombre de répétitions.",
       "title": "Qu'est-ce qu'un {{title}}?"
     }
+  },
+  "mergeVideo": {
+    "description": "Combinez plusieurs fichiers vidéo en une seule vidéo continue.",
+    "longDescription": "Cet outil vous permet de fusionner ou d'ajouter plusieurs fichiers vidéo en une seule vidéo continue. Téléchargez simplement vos fichiers vidéo, organisez-les dans l'ordre souhaité et fusionnez-les en un seul fichier pour un partage ou un montage simplifiés.",
+    "shortDescription": "Ajoutez et fusionnez facilement des vidéos.",
+    "title": "Fusionner des vidéos"
   },
   "rotate": {
     "180Degrees": "180° (à l'envers)",

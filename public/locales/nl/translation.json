@@ -246,5 +246,9 @@
     "copyFailed": "Kopiëren mislukt: {{error}}",
     "loading": "Bezig met laden... Dit kan even duren.",
     "result": "Resultaat"
+  },
+  "userTypes": {
+    "developers": "Ontwikkelaars",
+    "generalUsers": "Algemene gebruikers"
   }
 }

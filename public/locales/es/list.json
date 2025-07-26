@@ -5,6 +5,15 @@
     "copyDescription": "Número de copias (puede ser fraccionario)",
     "description": "La utilidad basada en navegador más sencilla del mundo para duplicar elementos de listas. Introduce tu lista y especifica los criterios de duplicación para crear copias de elementos. Perfecta para ampliar datos, realizar pruebas o crear patrones repetidos.",
     "duplicationOptions": "Opciones de duplicación",
+    "error": "Error",
+    "example1Description": "Este ejemplo muestra cómo duplicar una lista de palabras.",
+    "example1Title": "Duplicación simple",
+    "example2Description": "Este ejemplo muestra cómo duplicar una lista en orden inverso.",
+    "example2Title": "Duplicación inversa",
+    "example3Description": "Este ejemplo muestra cómo entrelazar elementos en lugar de concatenarlos.",
+    "example3Title": "Elementos entretejidos",
+    "example4Description": "Este ejemplo muestra cómo duplicar una lista con un número fraccionario de copias.",
+    "example4Title": "Duplicación fraccionaria",
     "examples": {
       "fractional": {
         "description": "Este ejemplo muestra cómo duplicar una lista con un número fraccionario de copias.",
@@ -37,12 +46,53 @@
     "toolInfo": {
       "description": "Esta herramienta permite duplicar elementos en una lista. Se puede especificar el número de copias (incluidos los valores fraccionarios), controlar si los elementos están concatenados o entrelazados, e incluso invertir la duplicación. Resulta útil para crear patrones repetidos, generar datos de prueba o ampliar listas con contenido predecible.",
       "title": "Duplicación de listas"
+    },
+    "unknownError": "Se produjo un error desconocido",
+    "validation": {
+      "copyMustBeNumber": "El número de copias debe ser un número",
+      "copyMustBePositive": "El número de copias debe ser positivo",
+      "copyRequired": "Se requiere número de copias",
+      "joinSeparatorRequired": "Se requiere el separador de unión",
+      "separatorRequired": "Se requiere el separador"
     }
   },
   "findMostPopular": {
     "description": "La utilidad de navegador más sencilla del mundo para encontrar los elementos más populares en una lista. Introduce tu lista y obtén al instante los elementos que aparecen con más frecuencia. Perfecta para análisis de datos, identificación de tendencias o búsqueda de elementos comunes.",
+    "displayFormatDescription": "¿Cómo mostrar los elementos de la lista más populares?",
+    "displayOptions": {
+      "count": "Mostrar el número de artículos",
+      "percentage": "Mostrar porcentaje del artículo",
+      "total": "Mostrar el total del artículo"
+    },
+    "extractListItems": "¿Cómo extraer elementos de una lista?",
+    "ignoreItemCase": "Ignorar mayúsculas y minúsculas del artículo",
+    "ignoreItemCaseDescription": "Compara todos los elementos de la lista en minúsculas.",
+    "inputTitle": "Lista de entrada",
+    "itemComparison": "Comparación de artículos",
+    "outputFormat": "Formato de salida del elemento superior",
+    "removeEmptyItems": "Eliminar elementos vacíos",
+    "removeEmptyItemsDescription": "Ignore los elementos vacíos de la comparación.",
+    "resultTitle": "Artículos más populares",
     "shortDescription": "Encuentra los elementos que aparecen con más frecuencia",
-    "title": "Encuentra los más populares"
+    "sortOptions": {
+      "alphabetic": "Ordenar alfabéticamente",
+      "count": "Ordenar por conteo"
+    },
+    "sortingMethodDescription": "Seleccione un método de clasificación.",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimitar los elementos de la lista de entrada con una expresión regular.",
+        "title": "Utilice una expresión regular para dividir"
+      },
+      "symbol": {
+        "description": "Delimitar los elementos de la lista de entrada con un carácter.",
+        "title": "Utilice un símbolo para dividir"
+      }
+    },
+    "splitSeparatorDescription": "Establezca un símbolo delimitador o una expresión regular.",
+    "title": "Encuentra los más populares",
+    "trimItems": "Recortar los elementos superiores de la lista",
+    "trimItemsDescription": "Elimine los espacios iniciales y finales antes de comparar elementos"
   },
   "findUnique": {
     "caseSensitiveItems": "Elementos que distinguen entre mayúsculas y minúsculas",

@@ -17,15 +17,21 @@
     "description": "Converta arquivos CSV para o formato JSON com opções personalizáveis para delimitadores, aspas e formatação de saída. Suporte para cabeçalhos, comentários e conversão dinâmica de tipos.",
     "dynamicTypes": "Tipos dinâmicos",
     "dynamicTypesDescription": "Converta números e booleanos automaticamente",
+    "error": "Erro",
     "errorParsing": "Erro ao analisar CSV: {{error}}",
     "fieldQuote": "Citação de campo (por exemplo, \")",
     "inputCsvFormat": "Formato CSV de entrada",
     "inputTitle": "Entrada CSV",
+    "invalidCsvFormat": "Formato CSV inválido",
     "resultTitle": "Saída JSON",
     "shortDescription": "Converta dados CSV para o formato JSON.",
     "skipEmptyLines": "Pular linhas vazias",
     "skipEmptyLinesDescription": "Ignorar linhas vazias no CSV de entrada",
     "title": "Converter CSV para JSON",
+    "toolInfo": {
+      "description": "Esta ferramenta transforma arquivos CSV (Valores Separados por Vírgula) em estruturas de dados JavaScript Object Notation (JSON). Ela suporta diversos formatos CSV com delimitadores, aspas e símbolos de comentário personalizáveis. O conversor pode tratar a primeira linha como cabeçalho, pular linhas vazias e detectar automaticamente tipos de dados como números e booleanos. O JSON resultante pode ser usado para migração de dados, backups ou como entrada para outros aplicativos.",
+      "title": "O que é um conversor de CSV para JSON?"
+    },
     "useHeaders": "Usar Cabeçalhos",
     "useHeadersDescription": "Tratar a primeira linha como cabeçalhos de coluna"
   },

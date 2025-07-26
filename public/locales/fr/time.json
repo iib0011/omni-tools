@@ -1,6 +1,8 @@
 {
   "checkLeapYears": {
     "description": "Vérifiez si une année est bissextile et obtenez des informations sur les années bissextiles.",
+    "exampleDescription": "Une de nos amies est née le 29 février, une année bissextile. Par conséquent, son anniversaire n'est célébré qu'une fois tous les quatre ans. Comme nous ne nous souvenons jamais vraiment de sa date d'anniversaire, nous utilisons notre programme pour créer une liste de rappel des prochaines années bissextiles. Pour cela, nous chargeons une séquence d'années de 2025 à 2040 dans l'entrée et obtenons le statut de chaque année. Si le programme indique qu'il s'agit d'une année bissextile, nous savons que nous serons invités à une fête d'anniversaire le 29 février.",
+    "exampleTitle": "Trouver les anniversaires du 29 février",
     "inputTitle": "Année d'entrée",
     "resultTitle": "Résultat de l'année bissextile",
     "shortDescription": "Vérifiez si une année est bissextile",

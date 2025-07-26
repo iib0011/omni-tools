@@ -38,6 +38,7 @@
     "height": "高度",
     "inputTitle": "输入视频",
     "loadVideoForDimensions": "加载视频以查看尺寸",
+    "longDescription": "此工具可让您裁剪视频文件，去除不需要的区域或聚焦视频的特定部分。它可用于去除黑条、调整宽高比或聚焦重要内容。支持多种视频格式，包括 MP4、MOV 和 AVI。",
     "resultTitle": "裁剪视频",
     "shortDescription": "裁剪视频以删除不需要的区域",
     "title": "裁剪视频",
@@ -82,6 +83,12 @@
       "description": "此工具可让您通过多次重复播放原始视频来创建循环视频。您可以指定视频循环播放的次数。",
       "title": "什么是 {{title}}？"
     }
+  },
+  "mergeVideo": {
+    "description": "将多个视频文件合并为一个连续的视频。",
+    "longDescription": "此工具允许您将多个视频文件合并或附加为一个连续的视频。只需上传您的视频文件，按所需顺序排列，然后将它们合并为一个文件，即可轻松共享或编辑。",
+    "shortDescription": "轻松附加和合并视频。",
+    "title": "合并视频"
   },
   "rotate": {
     "180Degrees": "180°（上下颠倒）",
