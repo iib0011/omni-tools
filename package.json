@@ -39,6 +39,7 @@
     "@mui/material": "^5.15.20",
     "@playwright/test": "^1.45.0",
     "@simplepdf/react-embed-pdf": "^1.9.0",
+    "@types/convert-units": "^2.3.12",
     "@types/ffmpeg": "^1.0.7",
     "@types/js-quantities": "^1.6.6",
     "@types/lodash": "^4.17.5",
@@ -83,6 +84,7 @@
     "react-router-dom": "^6.23.1",
     "tesseract.js": "^6.0.0",
     "type-fest": "^4.35.0",
+    "units-converter": "^1.0.3",
     "use-deep-compare-effect": "^1.8.1",
     "yup": "^1.4.0"
   },

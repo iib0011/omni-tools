@@ -15,6 +15,7 @@ import { pdfTools } from '../pages/tools/pdf';
 import { xmlTools } from '../pages/tools/xml';
 import { TFunction } from 'i18next';
 import { FullI18nKey, I18nNamespaces } from '../i18n';
+import { conversionTools } from '../pages/tools/conversion';
 
 const toolCategoriesOrder: ToolCategory[] = [
   'image-generic',
@@ -27,6 +28,7 @@ const toolCategoriesOrder: ToolCategory[] = [
   'list',
   'csv',
   'number',
+  'conversion', // <-- Renamed measurement to conversion
   'png',
   'time',
   'xml',
@@ -43,7 +45,8 @@ export const tools: DefinedTool[] = [
   ...numberTools,
   ...timeTools,
   ...audioTools,
-  ...xmlTools
+  ...xmlTools,
+  ...conversionTools
 ];
 const categoriesConfig: {
   type: ToolCategory;
@@ -134,6 +137,12 @@ const categoriesConfig: {
     icon: 'mdi-light:xml',
     value: 'translation:categories.xml.description',
     title: 'translation:categories.xml.title'
+  },
+  {
+    type: 'conversion',
+    icon: 'material-symbols-light:conversion-path',
+    value: 'translation:categories.conversion.description',
+    title: 'translation:categories.conversion.title'
   }
 ];
 const CATEGORIES_USER_TYPES_MAPPINGS: Partial<Record<ToolCategory, UserType>> =
