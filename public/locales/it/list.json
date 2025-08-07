@@ -1,0 +1,258 @@
+{
+  "duplicate": {
+    "concatenate": "Concatena",
+    "concatenateDescription": "Concatena le copie (se deselezionato, gli elementi saranno intrecciati)",
+    "copyDescription": "Numero di copie (può essere frazionario)",
+    "description": "La più semplice utility al mondo basata su browser per duplicare gli elementi di un elenco. Inserite l'elenco e specificate i criteri di duplicazione per creare copie degli elementi. Perfetto per l'espansione dei dati, i test o la creazione di modelli ripetuti.",
+    "duplicationOptions": "Opzioni di duplicazione",
+    "error": "Errore",
+    "example1Description": "Questo esempio mostra come duplicare un elenco di parole",
+    "example1Title": "Semplice duplicazione",
+    "example2Description": "Questo esempio mostra come duplicare un elenco in ordine inverso",
+    "example2Title": "Duplicazione inversa",
+    "example3Description": "Questo esempio mostra come intrecciare gli elementi invece di concatenarli",
+    "example3Title": "Intreccio di elementi",
+    "example4Description": "Questo esempio mostra come duplicare un elenco con un numero frazionario di copie",
+    "example4Title": "Duplicazione frazionata",
+    "examples": {
+      "fractional": {
+        "description": "Questo esempio mostra come duplicare una lista con un numero frazionario di copie",
+        "title": "Duplicazione frazionaria"
+      },
+      "interweave": {
+        "description": "Questo esempio mostra come intrecciare gli elementi invece di concatenarli",
+        "title": "Intreccio di elementi"
+      },
+      "reverse": {
+        "description": "Questo esempio mostra come duplicare un elenco in ordine inverso.",
+        "title": "Duplicazione inversa"
+      },
+      "simple": {
+        "description": "Questo esempio mostra come duplicare un elenco di parole",
+        "title": "Duplicazione semplice"
+      }
+    },
+    "inputTitle": "Elenco di input",
+    "joinSeparatorDescription": "Separatore per unire l'elenco duplicato",
+    "resultTitle": "Elenco duplicato",
+    "reverse": "Invertire",
+    "reverseDescription": "Invertire gli elementi duplicati",
+    "shortDescription": "Duplica gli elementi dell'elenco con i criteri specificati",
+    "splitByRegex": "Dividi per espressione regolare",
+    "splitBySymbol": "Dividi per simbolo",
+    "splitOptions": "Opzioni di divisione",
+    "splitSeparatorDescription": "Separatore per dividere l'elenco",
+    "title": "Duplicato",
+    "toolInfo": {
+      "description": "Questo strumento consente di duplicare gli elementi di un elenco. È possibile specificare il numero di copie (compresi i valori frazionari), controllare se gli elementi vengono concatenati o intrecciati e persino invertire gli elementi duplicati. È utile per creare schemi ripetuti, generare dati di prova o espandere elenchi con contenuti prevedibili.",
+      "title": "Duplicazione di elenchi"
+    },
+    "unknownError": "Si è verificato un errore sconosciuto",
+    "validation": {
+      "copyMustBeNumber": "Il numero di copie deve essere un numero",
+      "copyMustBePositive": "Il numero di copie deve essere positivo",
+      "copyRequired": "Il numero di copie è richiesto",
+      "joinSeparatorRequired": "Il separatore di unione è richiesto",
+      "separatorRequired": "Il separatore è richiesto"
+    }
+  },
+  "findMostPopular": {
+    "description": "La più semplice utility al mondo basata su browser per trovare gli elementi più popolari in una lista. Inserite il vostro elenco e ottenete immediatamente gli elementi che compaiono più frequentemente. Perfetto per l'analisi dei dati, l'identificazione di tendenze o la ricerca di elementi comuni.",
+    "displayFormatDescription": "Come visualizzare gli elementi più popolari dell'elenco?",
+    "displayOptions": {
+      "count": "Mostra il conteggio degli elementi",
+      "percentage": "Mostra la percentuale degli elementi",
+      "total": "Mostra il totale degli elementi"
+    },
+    "extractListItems": "Come estrarre gli elementi dell'elenco?",
+    "ignoreItemCase": "Ignora le maiuscole degli elementi",
+    "ignoreItemCaseDescription": "Confronta tutti gli elementi dell'elenco in minuscolo",
+    "inputTitle": "Elenco di input",
+    "itemComparison": "Confronto tra elementi",
+    "outputFormat": "Formato di output dell'elemento superiore",
+    "removeEmptyItems": "Rimuovi gli elementi vuoti",
+    "removeEmptyItemsDescription": "Ignora gli elementi vuoti dal confronto",
+    "resultTitle": "Articoli più popolari",
+    "shortDescription": "Trova gli elementi più frequenti",
+    "sortOptions": {
+      "alphabetic": "Ordina in ordine alfabetico",
+      "count": "Ordina per numero"
+    },
+    "sortingMethodDescription": "Seleziona un metodo di ordinamento",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimita gli elementi dell'elenco di input con un'espressione regolare",
+        "title": "Usa una Regex per la suddivisione"
+      },
+      "symbol": {
+        "description": "Delimita gli elementi dell'elenco di input con un carattere.",
+        "title": "Utilizzare un simbolo per la divisione"
+      }
+    },
+    "splitSeparatorDescription": "Imposta un simbolo di delimitazione o un'espressione regolare",
+    "title": "Trova i più popolari",
+    "trimItems": "Riduci gli elementi dell'elenco superiore",
+    "trimItemsDescription": "Rimuove gli spazi iniziali e finali prima di confrontare gli elementi"
+  },
+  "findUnique": {
+    "caseSensitiveItems": "Elementi sensibili alle maiuscole",
+    "caseSensitiveItemsDescription": "Emette gli elementi con casi diversi come elementi unici nell'elenco",
+    "delimiterDescription": "Imposta un simbolo di delimitazione o un'espressione regolare",
+    "description": "La più semplice utility al mondo basata su browser per trovare elementi unici in un elenco. Inserite il vostro elenco e otterrete immediatamente tutti i valori unici con la rimozione dei duplicati. Perfetto per la pulizia dei dati, la deduplicazione o la ricerca di elementi distinti.",
+    "findAbsolutelyUniqueItems": "Trova elementi assolutamente unici",
+    "findAbsolutelyUniqueItemsDescription": "Visualizza solo gli elementi dell'elenco che esistono in un'unica copia",
+    "inputListDelimiter": "Delimitatore dell'elenco di input",
+    "inputTitle": "Elenco di input",
+    "outputListDelimiter": "Delimitatore dell'elenco di output",
+    "resultTitle": "Oggetti unici",
+    "shortDescription": "Trova elementi unici in un elenco",
+    "skipEmptyItems": "Salta gli elementi vuoti",
+    "skipEmptyItemsDescription": "Non includere gli elementi vuoti dell'elenco nell'output",
+    "title": "Trova unico",
+    "trimItems": "Elimina elementi dall'elenco",
+    "trimItemsDescription": "Rimuove gli spazi iniziali e finali prima di confrontare gli elementi",
+    "uniqueItemOptions": "Opzioni oggetto unico"
+  },
+  "group": {
+    "deleteEmptyItems": "Elimina elementi vuoti",
+    "deleteEmptyItemsDescription": "Ignora gli elementi vuoti e non includerli nei gruppi.",
+    "description": "L'utilità basata su browser più semplice al mondo per raggruppare elementi di un elenco. Inserisci il tuo elenco e specifica i criteri di raggruppamento per organizzare gli elementi in gruppi logici. Perfetta per categorizzare dati, organizzare informazioni o creare elenchi strutturati. Supporta separatori personalizzati e varie opzioni di raggruppamento.",
+    "emptyItemsAndPadding": "Elementi vuoti e riempimento",
+    "groupNumberDescription": "Numero di elementi in un gruppo",
+    "groupSeparatorDescription": "Carattere separatore di gruppo",
+    "groupSizeAndSeparators": "Dimensione del gruppo e separatori",
+    "inputItemSeparator": "Separatore di elementi di input",
+    "inputTitle": "Elenco di input",
+    "itemSeparatorDescription": "Carattere separatore di elementi",
+    "leftWrapDescription": "Simbolo di avvolgimento a sinistra del gruppo.",
+    "padNonFullGroups": "Riempimento gruppi non completi",
+    "padNonFullGroupsDescription": "Riempi i gruppi non completi con un elemento personalizzato (inseriscilo qui sotto).",
+    "paddingCharDescription": "Usa questo carattere o elemento per riempire i gruppi non completi.",
+    "resultTitle": "Elementi raggruppati",
+    "rightWrapDescription": "Simbolo di avvolgimento a destra del gruppo.",
+    "shortDescription": "Raggruppa gli elementi dell'elenco in base a proprietà comuni",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimita gli elementi dell'elenco di input con un'espressione regolare.",
+        "title": "Usa un'espressione regolare per la divisione"
+      },
+      "symbol": {
+        "description": "Delimita gli elementi dell'elenco di input con un carattere.",
+        "title": "Usa un simbolo per la divisione"
+      }
+    },
+    "splitSeparatorDescription": "Imposta un simbolo di delimitazione o un'espressione regolare.",
+    "title": "Gruppo"
+  },
+  "reverse": {
+    "description": "Si tratta di un'applicazione browser-based semplicissima che stampa tutti gli elementi dell'elenco in ordine inverso. Gli elementi di input possono essere separati da qualsiasi simbolo ed è anche possibile modificare il separatore degli elementi dell'elenco invertito.",
+    "inputTitle": "Elenco di input",
+    "itemSeparator": "Separatore di elementi",
+    "itemSeparatorDescription": "Imposta un simbolo di delimitazione o un'espressione regolare.",
+    "outputListOptions": "Opzioni elenco di output",
+    "outputSeparatorDescription": "Separatore di elementi dell'elenco di output.",
+    "resultTitle": "Elenco invertito",
+    "shortDescription": "Inverti rapidamente un elenco",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimita gli elementi dell'elenco di input con un'espressione regolare.",
+        "title": "Usa un'espressione regolare per la divisione"
+      },
+      "symbol": {
+        "description": "Delimita gli elementi dell'elenco di input con un carattere.",
+        "title": "Usa un simbolo per la divisione"
+      }
+    },
+    "splitterMode": "Modalità splitter",
+    "title": "Inverti",
+    "toolInfo": {
+      "description": "Con questa utility è possibile invertire l'ordine degli elementi in un elenco. L'utilità prima divide l'elenco di input in singoli elementi, quindi li scorre dall'ultimo al primo, stampando ciascun elemento nell'output durante l'iterazione. L'elenco di input può contenere qualsiasi cosa che possa essere rappresentata come dati testuali, inclusi cifre, numeri, stringhe, parole, frasi, ecc. Il separatore degli elementi di input può anche essere un'espressione regolare. Ad esempio, l'espressione regolare /[;,]/ consente di utilizzare elementi separati da virgola o punto e virgola. I delimitatori degli elementi dell'elenco di input e di output possono essere personalizzati nelle opzioni. Per impostazione predefinita, sia l'elenco di input che quello di output sono separati da virgola. Listabulous!",
+      "title": "Che cos'è un invertitore di elenco?"
+    }
+  },
+  "rotate": {
+    "description": "L'utilità basata su browser più semplice al mondo per ruotare gli elementi di un elenco. Inserisci il tuo elenco e specifica la quantità di rotazione per spostare gli elementi di un numero specificato di posizioni. Perfetto per la manipolazione dei dati, gli spostamenti circolari o il riordino degli elenchi.",
+    "shortDescription": "Ruota gli elementi dell'elenco di posizioni specificate",
+    "title": "Ruota"
+  },
+  "shuffle": {
+    "delimiterDescription": "Imposta un simbolo di delimitazione o un'espressione regolare.",
+    "description": "L'utilità basata su browser più semplice al mondo per mescolare gli elementi di un elenco. Inserisci il tuo elenco e ottieni immediatamente una versione randomizzata con gli elementi in ordine casuale. Perfetto per creare varietà, testare la casualità o mescolare dati ordinati.",
+    "inputListSeparator": "Separatore elenco di input",
+    "inputTitle": "Elenco di input",
+    "joinSeparatorDescription": "Utilizza questo separatore nell'elenco randomizzato.",
+    "outputLengthDescription": "Genera questo numero di elementi casuali",
+    "resultTitle": "Elenco mescolato",
+    "shortDescription": "Mescola l'ordine degli elementi dell'elenco",
+    "shuffledListLength": "Lunghezza dell'elenco mescolato",
+    "shuffledListSeparator": "Separatore dell'elenco mescolato",
+    "title": "Mescola"
+  },
+  "sort": {
+    "caseSensitive": "Ordinamento sensibile alle maiuscole/minuscole",
+    "caseSensitiveDescription": "Ordina separatamente gli elementi maiuscoli e minuscoli. Le lettere maiuscole precedono quelle minuscole in un elenco ascendente. (Funziona solo in modalità di ordinamento alfabetico.)",
+    "description": "L'utilità basata su browser più semplice al mondo per ordinare gli elementi di un elenco. Inserisci il tuo elenco e specifica i criteri di ordinamento per organizzare gli elementi in ordine crescente o decrescente. Perfetto per l'organizzazione dei dati, l'elaborazione di testi o la creazione di elenchi ordinati.",
+    "inputItemSeparator": "Separatore di elementi di input",
+    "inputTitle": "Elenco di input",
+    "joinSeparatorDescription": "Utilizza questo simbolo come separatore tra gli elementi in un elenco ordinato.",
+    "orderDescription": "Seleziona un ordine di ordinamento.",
+    "orderOptions": {
+      "decreasing": "Ordine decrescente",
+      "increasing": "Ordine crescente"
+    },
+    "removeDuplicates": "Rimuovi duplicati",
+    "removeDuplicatesDescription": "Elimina gli elementi duplicati dell'elenco.",
+    "resultTitle": "Elenco ordinato",
+    "shortDescription": "Ordina gli elementi dell'elenco nell'ordine specificato",
+    "sortMethod": "Metodo di ordinamento",
+    "sortMethodDescription": "Seleziona un metodo di ordinamento.",
+    "sortOptions": {
+      "alphabetic": "Ordina in ordine alfabetico",
+      "length": "Ordina per lunghezza",
+      "numeric": "Ordina numericamente"
+    },
+    "sortedItemProperties": "Proprietà degli elementi ordinati",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimita gli elementi dell'elenco di input con un'espressione regolare.",
+        "title": "Usa un'espressione regolare per la divisione"
+      },
+      "symbol": {
+        "description": "Delimita gli elementi dell'elenco di input con un carattere.",
+        "title": "Usa un simbolo per la divisione"
+      }
+    },
+    "splitSeparatorDescription": "Imposta un simbolo di delimitazione o un'espressione regolare.",
+    "title": "Ordina"
+  },
+  "truncate": {
+    "description": "L'utilità basata su browser più semplice al mondo per troncare gli elenchi. Inserisci il tuo elenco e specifica il numero massimo di elementi da conservare. Perfetta per l'elaborazione dei dati, la gestione degli elenchi o la limitazione della lunghezza dei contenuti.",
+    "shortDescription": "Tronca l'elenco al numero specificato di elementi",
+    "title": "Tronca"
+  },
+  "unwrap": {
+    "description": "L'utilità basata su browser più semplice al mondo per decomprimere elementi di elenco. Inserisci il tuo elenco compresso e specifica i criteri di decompressione per appiattire gli elementi organizzati. Perfetto per l'elaborazione dei dati, la manipolazione del testo o l'estrazione di contenuti da elenchi strutturati.",
+    "shortDescription": "Decomprimi elementi di elenco da formato strutturato",
+    "title": "Decomprimi"
+  },
+  "wrap": {
+    "description": "Aggiungi testo prima e dopo ogni elemento dell'elenco.",
+    "inputTitle": "Elenco di input",
+    "joinSeparatorDescription": "Separatore per unire l'elenco avvolto",
+    "leftTextDescription": "Testo da aggiungere prima di ogni elemento",
+    "removeEmptyItems": "Rimuovi elementi vuoti",
+    "resultTitle": "Elenco avvolto",
+    "rightTextDescription": "Testo da aggiungere dopo ogni elemento",
+    "shortDescription": "Avvolgi gli elementi dell'elenco con criteri specificati",
+    "splitByRegex": "Dividi per espressione regolare",
+    "splitBySymbol": "Dividi per simbolo",
+    "splitOptions": "Opzioni di divisione",
+    "splitSeparatorDescription": "Separatore per dividere l'elenco",
+    "title": "Avvolgi",
+    "toolInfo": {
+      "description": "Questo strumento consente di aggiungere testo prima e dopo ogni elemento di un elenco. È possibile specificare testi diversi per il lato sinistro e quello destro e controllare la modalità di elaborazione dell'elenco. È utile per aggiungere virgolette, parentesi o altre formattazioni agli elementi dell'elenco, preparare i dati per diversi formati o creare testo strutturato.",
+      "title": "Avvolgimento elenco"
+    },
+    "wrapOptions": "Opzioni di avvolgimento"
+  }
+}

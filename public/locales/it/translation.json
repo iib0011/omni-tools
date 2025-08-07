@@ -1,0 +1,254 @@
+{
+  "audio": {
+    "changeSpeed": {
+      "description": "Cambia la velocità di riproduzione dei file audio. Accelera o rallenta l'audio mantenendo l'intonazione",
+      "name": "Cambia velocità audio",
+      "shortDescription": "Cambia la velocità dei file audio"
+    },
+    "extractAudio": {
+      "description": "Estrai la traccia audio da un file video e salvala come file audio separato nel formato scelto (AAC, MP3, WAV).",
+      "name": "Estrai audio",
+      "shortDescription": "Estrarre l'audio da file video (MP4, MOV, ecc.) in formato AAC, MP3 o WAV."
+    }
+  },
+  "baseFileInput": {
+    "copyFailed": "Copia fallita: {{error}}",
+    "dropFileHere": "Lascia qui il tuo {{type}}",
+    "fileCopied": "File copiato",
+    "selectFileDescription": "Fare clic qui per selezionare un {{type}} dal dispositivo, premere Ctrl+V per utilizzare un {{type}} dagli appunti o trascinare un file dal desktop"
+  },
+  "categories": {
+    "audio": {
+      "description": "Strumenti per lavorare con l'audio - estrarre l'audio da un video, regolare la velocità dell'audio, unire più file audio e molto altro",
+      "title": "Strumenti audio"
+    },
+    "csv": {
+      "description": "Strumenti per lavorare con i file CSV - convertire CSV in diversi formati, manipolare i dati CSV, convalidare la struttura CSV ed elaborare i file CSV in modo efficiente.",
+      "title": "Strumenti CSV"
+    },
+    "gif": {
+      "description": "Strumenti per lavorare con le animazioni GIF - creare GIF trasparenti, estrarre fotogrammi GIF, aggiungere testo alle GIF, ritagliare, ruotare, invertire le GIF e molto altro",
+      "title": "Strumenti GIF"
+    },
+    "image-generic": {
+      "description": "Strumenti per lavorare con le immagini - comprimere, ridimensionare, ritagliare, convertire in JPG, ruotare, rimuovere lo sfondo e molto altro.",
+      "title": "Strumenti per le immagini"
+    },
+    "json": {
+      "description": "Strumenti per lavorare con le strutture di dati JSON - prettificare e minificare gli oggetti JSON, appiattire gli array JSON, stringere i valori JSON, analizzare i dati e molto altro",
+      "title": "Strumenti JSON"
+    },
+    "list": {
+      "description": "Strumenti per lavorare con gli elenchi - ordinare, invertire, randomizzare gli elenchi, trovare gli elementi unici e duplicati degli elenchi, modificare i separatori degli elementi degli elenchi e molto altro",
+      "title": "Strumenti elenco"
+    },
+    "number": {
+      "description": "Strumenti per lavorare con i numeri: generare sequenze di numeri, convertire numeri in parole e parole in numeri, ordinare, arrotondare, fattorizzare i numeri e molto altro.",
+      "title": "Strumenti per i numeri"
+    },
+    "pdf": {
+      "description": "Strumenti per lavorare con i file PDF - estrarre il testo dai PDF, convertire i PDF in altri formati, manipolare i PDF e molto altro.",
+      "title": "Strumenti PDF"
+    },
+    "png": {
+      "description": "Strumenti per lavorare con le immagini PNG - convertire PNG in JPG, creare PNG trasparenti, cambiare i colori PNG, ritagliare, ruotare, ridimensionare PNG e molto altro.",
+      "title": "Strumenti PNG"
+    },
+    "seeAll": "Vedi tutti gli {{title}}",
+    "string": {
+      "description": "Strumenti per lavorare con il testo - convertire il testo in immagini, trovare e sostituire il testo, dividere il testo in frammenti, unire le linee di testo, ripetere il testo e molto altro.",
+      "title": "Strumenti per il testo"
+    },
+    "time": {
+      "description": "Strumenti per lavorare con l'ora e la data - calcolare le differenze di orario, convertire tra i fusi orari, formattare le date, generare sequenze di date e molto altro.",
+      "title": "Strumenti per il tempo"
+    },
+    "try": "Prova {{title}}",
+    "video": {
+      "description": "Strumenti per lavorare con i video - estrarre fotogrammi dai video, creare GIF dai video, convertire i video in diversi formati e molto altro.",
+      "title": "Strumenti video"
+    },
+    "xml": {
+      "description": "Strumenti per lavorare con le strutture dati XML - visualizzatore, abbellitore, validatore e molto altro",
+      "title": "Strumenti XML"
+    }
+  },
+  "csv": {
+    "findIncompleteCsvRecords": {
+      "description": "Basta caricare il proprio file CSV nel modulo sottostante e questo strumento verificherà automaticamente se nessuna delle righe o delle colonne presenta valori mancanti. Nelle opzioni dello strumento, è possibile regolare il formato del file di input (specificare il delimitatore, il carattere di citazione e il carattere di commento). Inoltre, è possibile attivare il controllo dei valori vuoti, saltare le righe vuote e impostare un limite al numero di messaggi di errore nell'output.",
+      "name": "Trova record CSV incompleti",
+      "shortDescription": "Trova rapidamente le righe e le colonne in CSV che mancano di valori."
+    }
+  },
+  "hero": {
+    "brand": "OmniTools",
+    "description": "Aumenta la tua produttività con OmniTools, il kit di strumenti definitivo per fare le cose velocemente! Accedete a migliaia di utility facili da usare per modificare immagini, testo, elenchi e dati, tutto direttamente dal vostro browser",
+    "examples": {
+      "calculateNumberSum": "Calcola la somma dei numeri",
+      "changeGifSpeed": "Cambia la velocità della GIF",
+      "compressPng": "Comprimi PNG",
+      "createTransparentImage": "Crea un'immagine trasparente",
+      "prettifyJson": "Abbellire JSON",
+      "sortList": "Ordina un elenco",
+      "splitPdf": "Dividi PDF",
+      "splitText": "Dividi un testo",
+      "trimVideo": "Ritagliare il video"
+    },
+    "searchPlaceholder": "Cerca tutti gli strumenti",
+    "title": "Fai le cose rapidamente con"
+  },
+  "inputFooter": {
+    "clear": "Pulisci",
+    "copyToClipboard": "Copia negli appunti",
+    "importFromFile": "Importa da file"
+  },
+  "list": {
+    "group": {
+      "description": "L'utilità più semplice al mondo, basata sul browser, per raggruppare gli elementi di un elenco. Inserite il vostro elenco e specificate i criteri di raggruppamento per organizzare gli elementi in gruppi logici. Perfetto per categorizzare i dati, organizzare le informazioni o creare elenchi strutturati. Supporta separatori personalizzati e varie opzioni di raggruppamento.",
+      "name": "Gruppo",
+      "shortDescription": "Raggruppa gli elementi di un elenco in base a proprietà comuni"
+    },
+    "reverse": {
+      "description": "Si tratta di un'applicazione super semplice basata su browser che stampa tutti gli elementi dell'elenco al contrario. Gli elementi di input possono essere separati da qualsiasi simbolo e si può anche cambiare il separatore degli elementi dell'elenco invertito.",
+      "name": "Invertire",
+      "shortDescription": "Inverte rapidamente un elenco"
+    },
+    "sort": {
+      "description": "Si tratta di una semplicissima applicazione basata su browser che ordina gli elementi di un elenco e li dispone in ordine crescente o decrescente. È possibile ordinare gli elementi in ordine alfabetico, numerico o in base alla loro lunghezza. È inoltre possibile rimuovere gli elementi duplicati e vuoti, nonché tagliare i singoli elementi che presentano spazi bianchi. È possibile utilizzare qualsiasi carattere separatore per separare gli elementi dell'elenco di input o, in alternativa, utilizzare un'espressione regolare per separarli. Inoltre, è possibile creare un nuovo delimitatore per l'elenco di output ordinato.",
+      "name": "Ordina",
+      "shortDescription": "Ordinamento rapido di un elenco"
+    }
+  },
+  "navbar": {
+    "buyMeACoffee": "Comprami un caffè",
+    "home": "Home",
+    "tools": "Strumenti"
+  },
+  "number": {
+    "generate": {
+      "description": "Calcola rapidamente un elenco di numeri interi nel browser. Per ottenere l'elenco, basta specificare il primo numero intero, il valore di modifica e il conteggio totale nelle opzioni sottostanti e questa utility genererà quel numero di numeri interi",
+      "name": "Generare numeri",
+      "shortDescription": "Calcola rapidamente un elenco di numeri interi nel browser"
+    },
+    "sum": {
+      "description": "Questa è un'applicazione super semplice basata su browser che somma numeri. I numeri in ingresso possono essere separati da qualsiasi simbolo e si può anche cambiare il separatore dei numeri sommati.",
+      "name": "Somma numeri",
+      "shortDescription": "Somma rapidamente un elenco di numeri"
+    }
+  },
+  "numericInputWithUnit": {
+    "unit": "Unità"
+  },
+  "pdf": {
+    "compressPdf": {
+      "description": "Ridurre le dimensioni dei file PDF mantenendo la qualità utilizzando Ghostscript",
+      "name": "Comprimi PDF",
+      "shortDescription": "Comprimi i file PDF in modo sicuro nel tuo browser"
+    },
+    "mergePdf": {
+      "description": "Unisci più file PDF in un unico documento",
+      "name": "Unisci PDF",
+      "shortDescription": "Unire più file PDF in un unico documento"
+    },
+    "pdfToEpub": {
+      "description": "Trasforma i documenti PDF in file EPUB per una migliore compatibilità con gli e-reader",
+      "name": "PDF a EPUB",
+      "shortDescription": "Convertire i file PDF in formato EPUB"
+    },
+    "protectPdf": {
+      "description": "Aggiungi la protezione con password ai tuoi file PDF in modo sicuro nel tuo browser",
+      "name": "Proteggi PDF",
+      "shortDescription": "Proteggi i file PDF con password in modo sicuro"
+    },
+    "splitPdf": {
+      "description": "Estrarre pagine specifiche da un file PDF utilizzando numeri di pagina o intervalli (ad esempio, 1,5-8)",
+      "name": "Dividi PDF",
+      "shortDescription": "Estrarre pagine specifiche da un file PDF"
+    }
+  },
+  "resultFooter": {
+    "copy": "Copia negli appunti",
+    "download": "Scarica"
+  },
+  "string": {
+    "createPalindrome": {
+      "description": "La più semplice utility al mondo basata su browser per creare palindromi da qualsiasi testo. Inserite un testo e trasformatelo istantaneamente in un palindromo che si legge allo stesso modo sia in avanti che all'indietro. Perfetto per i giochi di parole, per creare modelli di testo simmetrici o per esplorare curiosità linguistiche.",
+      "name": "Crea palindromo",
+      "shortDescription": "Crea un testo che si legge allo stesso modo in avanti e all'indietro"
+    },
+    "palindrome": {
+      "description": "La più semplice utility al mondo basata su browser per verificare se un testo è un palindromo. Verifica istantaneamente se il testo si legge allo stesso modo in avanti e all'indietro. Perfetto per i puzzle di parole, l'analisi linguistica o la convalida di modelli di testo simmetrici. Supporta vari delimitatori e il rilevamento di palindromi a più parole.",
+      "name": "Palindromo",
+      "shortDescription": "Verifica se il testo si legge allo stesso modo in avanti e all'indietro"
+    },
+    "repeat": {
+      "description": "Questo strumento consente di ripetere più volte un determinato testo con un separatore opzionale",
+      "name": "Ripeti testo",
+      "shortDescription": "Ripeti testo più volte"
+    },
+    "reverse": {
+      "description": "La più semplice utility al mondo basata su browser per l'inversione del testo. Inserite un testo qualsiasi e lo invertirete istantaneamente, carattere per carattere. Perfetto per creare testi speculari, analizzare palindromi o giocare con i modelli di testo. Preserva gli spazi e i caratteri speciali durante l'inversione.",
+      "name": "Invertire",
+      "shortDescription": "Inverte qualsiasi testo carattere per carattere"
+    },
+    "toMorse": {
+      "description": "La più semplice utility al mondo basata su browser per convertire il testo in codice Morse. Caricate il vostro testo nel modulo di input a sinistra e otterrete immediatamente il codice Morse nell'area di output. Potente, gratuito e veloce. Carica il testo - ottieni il codice Morse",
+      "name": "String To Morse",
+      "shortDescription": "Codifica rapidamente il testo in morse"
+    },
+    "uppercase": {
+      "description": "La più semplice utility al mondo basata su browser per convertire il testo in maiuscolo. Basta inserire il testo per convertirlo automaticamente in tutte le lettere maiuscole. Perfetto per creare titoli, enfatizzare il testo o standardizzare il formato del testo. Supporta vari formati di testo e conserva i caratteri speciali.",
+      "name": "Maiuscolo",
+      "shortDescription": "Converte il testo in lettere maiuscole"
+    }
+  },
+  "toolExamples": {
+    "subtitle": "Clicca per provare!",
+    "title": "{{title}} Esempi"
+  },
+  "toolFileResult": {
+    "copied": "File copiato",
+    "copyFailed": "Copia fallita: {{error}}",
+    "loading": "Caricamento... Potrebbe volerci un attimo.",
+    "result": "Risultato"
+  },
+  "toolHeader": {
+    "seeExamples": "Vedi esempi"
+  },
+  "toolLayout": {
+    "allToolsTitle": "Tutti {{type}}"
+  },
+  "toolMultiFileResult": {
+    "copied": "File copiato",
+    "copyFailed": "Copia fallita: {{error}}",
+    "loading": "Caricamento... Potrebbe volerci un attimo.",
+    "result": "Risultato"
+  },
+  "toolMultipleAudioInput": {
+    "inputTitle": "Input {{type}}",
+    "noFilesSelected": "Nessun file selezionato"
+  },
+  "toolMultiplePdfInput": {
+    "inputTitle": "Input {{type}}",
+    "noFilesSelected": "Nessun file selezionato"
+  },
+  "toolOptions": {
+    "title": "Opzioni dello strumento"
+  },
+  "toolTextInput": {
+    "copied": "Testo copiato",
+    "copyFailed": "Copia fallita: {{error}}",
+    "input": "Testo inserito",
+    "placeholder": "Inserisci il tuo testo qui..."
+  },
+  "toolTextResult": {
+    "copied": "Testo copiato",
+    "copyFailed": "Copia fallita: {{error}}",
+    "loading": "Caricamento... Potrebbe volerci un attimo.",
+    "result": "Risultato"
+  },
+  "userTypes": {
+    "developers": "Sviluppatori",
+    "generalUsers": "Utenti generici"
+  }
+}
