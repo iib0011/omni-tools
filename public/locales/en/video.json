@@ -116,5 +116,18 @@
     "description": "Convert video files to animated GIF format. Extract specific time ranges and create shareable animated images.",
     "shortDescription": "Convert video to animated GIF",
     "title": "Video to GIF"
+  },
+  "resize": {
+    "default": "Default",
+    "description": "Resize videos by scaling them to different resolutions like 240p, 480p, 720p, etc. This tool helps reduce width while maintaining acceptable quality. Supports common video formats like MP4, WebM, and OGG.",
+    "inputTitle": "Input Video",
+    "loadingText": "Resizing video...",
+    "lossless": "Lossless",
+
+    "resolution": "Resolution",
+    "resultTitle": "Resized Video",
+    "shortDescription": "Resize videos by scaling to different resolutions",
+    "title": "Resize Video",
+    "worst": "Worst"
   }
 }

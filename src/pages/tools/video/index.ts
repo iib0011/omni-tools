@@ -8,6 +8,7 @@ import { tool as rotateVideo } from './rotate/meta';
 import { tool as compressVideo } from './compress/meta';
 import { tool as loopVideo } from './loop/meta';
 import { tool as cropVideo } from './crop-video/meta';
+import { tool as resizeVideo } from './resize/meta';
 
 export const videoTools = [
   ...gifTools,
@@ -19,5 +20,6 @@ export const videoTools = [
   cropVideo,
   changeSpeed,
   videoToGif,
-  videoMergeVideo
+  videoMergeVideo,
+  resizeVideo
 ];
