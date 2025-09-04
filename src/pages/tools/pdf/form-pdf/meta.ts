@@ -3,14 +3,14 @@ import { lazy } from 'react';
 
 export const tool = defineTool('pdf', {
   i18n: {
-    name: 'pdf:editor.title',
-    description: 'pdf:editor.description',
-    shortDescription: 'pdf:editor.shortDescription',
+    name: 'pdf:formBuilder.title',
+    description: 'pdf:formBuilder.description',
+    shortDescription: 'pdf:formBuilder.shortDescription',
     userTypes: ['generalUsers']
   },
 
   path: 'form-pdf',
-  icon: 'mdi:file-document-edit',
+  icon: 'material-symbols-light:checklist',
 
   keywords: [
     'pdf',
@@ -21,11 +21,7 @@ export const tool = defineTool('pdf', {
     'form',
     'fill',
     'text',
-    'drawing',
-    'signature',
-    'export',
-    'annotation',
-    'markup'
+    'export'
   ],
   component: lazy(() => import('./index'))
 });

@@ -81,6 +81,7 @@
     "react-image-crop": "^11.0.7",
     "react-konva": "^18.2.10",
     "react-pdf": "^7.7.3",
+    "react-rnd": "^10.5.2",
     "react-router-dom": "^6.23.1",
     "tesseract.js": "^6.0.0",
     "type-fest": "^4.35.0",
