@@ -34,7 +34,9 @@ i18n
       escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
     },
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json'
+      loadPath: `${
+        (import.meta as any).env.BASE_URL?.replace(/\/$/, '') || ''
+      }/locales/{{lng}}/{{ns}}.json`
     },
     detection: {
       lookupLocalStorage: 'lang',
