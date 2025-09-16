@@ -10,6 +10,8 @@ RUN npm run build
 
 FROM nginx:alpine
 
+ENV DEFAULT_LANG=en
+
 COPY --from=build /app/dist /usr/share/nginx/html
 
 RUN sed -i 's/application\/javascript.*js;/application\/javascript                js mjs;/' /etc/nginx/mime.types
