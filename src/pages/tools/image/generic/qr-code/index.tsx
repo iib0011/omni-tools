@@ -40,7 +40,7 @@ const initialValues: InitialValuesType = {
   // WiFi
   wifiSsid: '',
   wifiPassword: '',
-  wifiEncryption: 'WPA/WPA2',
+  wifiEncryption: 'WPA',
 
   // vCard
   vCardName: '',
@@ -353,7 +353,7 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                   label="Encryption Type"
                   margin="normal"
                 >
-                  <MenuItem value="WPA/WPA2">WPA/WPA2</MenuItem>
+                  <MenuItem value="WPA">WPA</MenuItem>
                   <MenuItem value="WEP">WEP</MenuItem>
                   <MenuItem value="None">None</MenuItem>
                 </TextField>
