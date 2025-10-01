@@ -109,6 +109,16 @@ services:
 
 ```
 
+### Static hosting
+```bash
+git clone https://github.com/iib0011/omni-tools
+cd omni-tools
+npm i
+npm run build
+```
+then serve the `dist` subdir as a vhost (not in a subdir as there are non-relative links)
+
+
 ## Contribute
 
 This is a React Project with Typescript Material UI. We use icons from [Iconify](https://icon-sets.iconify.design)
