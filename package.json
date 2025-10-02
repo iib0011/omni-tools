@@ -68,7 +68,7 @@
     "nerdamer-prime": "^1.2.4",
     "notistack": "^3.0.1",
     "omggif": "^1.0.10",
-    "onnxruntime-web": "^1.21.0",
+    "onnxruntime-web": "1.21.0",
     "pdf-lib": "^1.17.1",
     "pdfjs-dist": "^5.2.133",
     "playwright": "^1.45.0",
