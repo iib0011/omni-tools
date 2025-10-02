@@ -6,25 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/pages/tools/number/generic-calc/data/temperature.ts&#10;- package.json&#10;- .idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/trim/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/trim/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/rotate/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/rotate/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/change-speed/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/compress/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/compress/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/crop-video/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/crop-video/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/flip/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/flip/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/loop/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/loop/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/merge-video/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/merge-video/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/rotate/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/rotate/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,313 +40,313 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fork/ssagar1999/feature/244" />
+        <entry key="$PROJECT_DIR$" value="28f4c64d3044df927dc088435164e803e14f8794" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "assignee": "iib0011"
+      &quot;assignee&quot;: &quot;iib0011&quot;
     },
     {
-      "searchQuery": "filter",
-      "state": "OPEN"
+      &quot;searchQuery&quot;: &quot;filter&quot;,
+      &quot;state&quot;: &quot;OPEN&quot;
     },
     {
-      "state": "OPEN"
+      &quot;state&quot;: &quot;OPEN&quot;
     }
   ],
-  "lastFilter": {
-    "state": "OPEN"
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOMJIfts51PkS9",
-        "number": 22
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts51PkS9&quot;,
+        &quot;number&quot;: 22
       },
-      "lastSeen": 1741207144695
+      &quot;lastSeen&quot;: 1741207144695
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NiNYl",
-        "number": 32
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NiNYl&quot;,
+        &quot;number&quot;: 32
       },
-      "lastSeen": 1741209723869
+      &quot;lastSeen&quot;: 1741209723869
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Nheyd",
-        "number": 31
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Nheyd&quot;,
+        &quot;number&quot;: 31
       },
-      "lastSeen": 1741213371410
+      &quot;lastSeen&quot;: 1741213371410
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6NmRBs",
-        "number": 33
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6NmRBs&quot;,
+        &quot;number&quot;: 33
       },
-      "lastSeen": 1741282429036
+      &quot;lastSeen&quot;: 1741282429036
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts5zyFTs",
-        "number": 15
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts5zyFTs&quot;,
+        &quot;number&quot;: 15
       },
-      "lastSeen": 1741535540953
+      &quot;lastSeen&quot;: 1741535540953
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QQB3c",
-        "number": 59
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QQB3c&quot;,
+        &quot;number&quot;: 59
       },
-      "lastSeen": 1743018960900
+      &quot;lastSeen&quot;: 1743018960900
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QMPEg",
-        "number": 58
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QMPEg&quot;,
+        &quot;number&quot;: 58
       },
-      "lastSeen": 1743019452983
+      &quot;lastSeen&quot;: 1743019452983
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QZvRI",
-        "number": 61
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QZvRI&quot;,
+        &quot;number&quot;: 61
       },
-      "lastSeen": 1743103196866
+      &quot;lastSeen&quot;: 1743103196866
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QqPrQ",
-        "number": 73
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QqPrQ&quot;,
+        &quot;number&quot;: 73
       },
-      "lastSeen": 1743265865001
+      &quot;lastSeen&quot;: 1743265865001
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Qp5nI",
-        "number": 72
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Qp5nI&quot;,
+        &quot;number&quot;: 72
       },
-      "lastSeen": 1743338472110
+      &quot;lastSeen&quot;: 1743338472110
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6QsjlS",
-        "number": 76
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6QsjlS&quot;,
+        &quot;number&quot;: 76
       },
-      "lastSeen": 1743352150953
+      &quot;lastSeen&quot;: 1743352150953
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Q0JBe",
-        "number": 82
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Q0JBe&quot;,
+        &quot;number&quot;: 82
       },
-      "lastSeen": 1743470267269
+      &quot;lastSeen&quot;: 1743470267269
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6UE9-x",
-        "number": 102
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6UE9-x&quot;,
+        &quot;number&quot;: 102
       },
-      "lastSeen": 1747171977348
+      &quot;lastSeen&quot;: 1747171977348
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6XPua_",
-        "number": 117
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6XPua_&quot;,
+        &quot;number&quot;: 117
       },
-      "lastSeen": 1747929835864
+      &quot;lastSeen&quot;: 1747929835864
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6XY-mZ",
-        "number": 119
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6XY-mZ&quot;,
+        &quot;number&quot;: 119
       },
-      "lastSeen": 1748028108508
+      &quot;lastSeen&quot;: 1748028108508
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Xdz4n",
-        "number": 120
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Xdz4n&quot;,
+        &quot;number&quot;: 120
       },
-      "lastSeen": 1748282672214
+      &quot;lastSeen&quot;: 1748282672214
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6X_zxl",
-        "number": 131
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6X_zxl&quot;,
+        &quot;number&quot;: 131
       },
-      "lastSeen": 1748881279494
+      &quot;lastSeen&quot;: 1748881279494
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6bhieT",
-        "number": 152
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6bhieT&quot;,
+        &quot;number&quot;: 152
       },
-      "lastSeen": 1751848489082
+      &quot;lastSeen&quot;: 1751848489082
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6dOyRk",
-        "number": 154
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6dOyRk&quot;,
+        &quot;number&quot;: 154
       },
-      "lastSeen": 1751849436454
+      &quot;lastSeen&quot;: 1751849436454
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6cHjNi",
-        "number": 153
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6cHjNi&quot;,
+        &quot;number&quot;: 153
       },
-      "lastSeen": 1751849501498
+      &quot;lastSeen&quot;: 1751849501498
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6Zs1FN",
-        "number": 145
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6Zs1FN&quot;,
+        &quot;number&quot;: 145
       },
-      "lastSeen": 1751849770308
+      &quot;lastSeen&quot;: 1751849770308
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6bgKi9",
-        "number": 150
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6bgKi9&quot;,
+        &quot;number&quot;: 150
       },
-      "lastSeen": 1751850367300
+      &quot;lastSeen&quot;: 1751850367300
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6eUKC-",
-        "number": 176
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6eUKC-&quot;,
+        &quot;number&quot;: 176
       },
-      "lastSeen": 1752158748013
+      &quot;lastSeen&quot;: 1752158748013
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6et6vx",
-        "number": 192
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6et6vx&quot;,
+        &quot;number&quot;: 192
       },
-      "lastSeen": 1752585709582
+      &quot;lastSeen&quot;: 1752585709582
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6d36mi",
-        "number": 168
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6d36mi&quot;,
+        &quot;number&quot;: 168
       },
-      "lastSeen": 1752805763664
+      &quot;lastSeen&quot;: 1752805763664
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6fnXKf",
-        "number": 208
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6fnXKf&quot;,
+        &quot;number&quot;: 208
       },
-      "lastSeen": 1752862212326
+      &quot;lastSeen&quot;: 1752862212326
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6rjINx",
-        "number": 259
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6rjINx&quot;,
+        &quot;number&quot;: 259
       },
-      "lastSeen": 1759434090574
+      &quot;lastSeen&quot;: 1759434090574
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6qcP13",
-        "number": 256
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6qcP13&quot;,
+        &quot;number&quot;: 256
       },
-      "lastSeen": 1759434257615
+      &quot;lastSeen&quot;: 1759434257615
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6ow8QZ",
-        "number": 252
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6ow8QZ&quot;,
+        &quot;number&quot;: 252
       },
-      "lastSeen": 1759434340504
+      &quot;lastSeen&quot;: 1759434340504
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6myVeZ",
-        "number": 247
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6myVeZ&quot;,
+        &quot;number&quot;: 247
       },
-      "lastSeen": 1759434588110
+      &quot;lastSeen&quot;: 1759434588110
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6i5ZAq",
-        "number": 239
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6i5ZAq&quot;,
+        &quot;number&quot;: 239
       },
-      "lastSeen": 1759434599664
+      &quot;lastSeen&quot;: 1759434599664
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6iiuGd",
-        "number": 237
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6iiuGd&quot;,
+        &quot;number&quot;: 237
       },
-      "lastSeen": 1759434652702
+      &quot;lastSeen&quot;: 1759434652702
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6gwm8n",
-        "number": 230
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6gwm8n&quot;,
+        &quot;number&quot;: 230
       },
-      "lastSeen": 1759434669914
+      &quot;lastSeen&quot;: 1759434669914
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6f5JeZ",
-        "number": 220
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6f5JeZ&quot;,
+        &quot;number&quot;: 220
       },
-      "lastSeen": 1759434706785
+      &quot;lastSeen&quot;: 1759434706785
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6ftgWI",
-        "number": 217
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6ftgWI&quot;,
+        &quot;number&quot;: 217
       },
-      "lastSeen": 1759434804548
+      &quot;lastSeen&quot;: 1759434804548
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6XsHfL",
-        "number": 128
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6XsHfL&quot;,
+        &quot;number&quot;: 128
       },
-      "lastSeen": 1759434870000
+      &quot;lastSeen&quot;: 1759434870000
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6ec-tz",
-        "number": 180
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6ec-tz&quot;,
+        &quot;number&quot;: 180
       },
-      "lastSeen": 1759434882113
+      &quot;lastSeen&quot;: 1759434882113
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6fsi5n",
-        "number": 216
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6fsi5n&quot;,
+        &quot;number&quot;: 216
       },
-      "lastSeen": 1759434902813
+      &quot;lastSeen&quot;: 1759434902813
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6ZkP3F",
-        "number": 142
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6ZkP3F&quot;,
+        &quot;number&quot;: 142
       },
-      "lastSeen": 1759434918778
+      &quot;lastSeen&quot;: 1759434918778
     },
     {
-      "id": {
-        "id": "PR_kwDOMJIfts6qcbuA",
-        "number": 257
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMJIfts6qcbuA&quot;,
+        &quot;number&quot;: 257
       },
-      "lastSeen": 1759438234107
+      &quot;lastSeen&quot;: 1759438234107
     }
   ]
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
@@ -377,9 +359,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/node_modules/react-image-crop/dist/index.d.ts" root0="SKIP_INSPECTION" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -396,66 +378,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Docker.Dockerfile build.executor": "Run",
-    "Docker.Dockerfile.executor": "Run",
-    "Node.js.add-i18n-to-meta.js.executor": "Run",
-    "Node.js.locize-upload.js.executor": "Run",
-    "Node.js.update-i18n-from-meta.js.executor": "Run",
-    "Playwright.Create transparent PNG.should make png color transparent.executor": "Run",
-    "Playwright.JoinText Component.executor": "Run",
-    "Playwright.JoinText Component.should merge text pieces with specified join character.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Vitest.compute function (1).executor": "Run",
-    "Vitest.compute function.executor": "Run",
-    "Vitest.generatePassword.executor": "Run",
-    "Vitest.mergeText.executor": "Run",
-    "Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor": "Run",
-    "Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor": "Run",
-    "Vitest.parsePageRanges.executor": "Run",
-    "Vitest.removeDuplicateLines function.executor": "Run",
-    "Vitest.removeDuplicateLines function.newlines option.executor": "Run",
-    "Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor": "Run",
-    "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
-    "Vitest.replaceText function.executor": "Run",
-    "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.i18n:extract.executor": "Run",
-    "npm.i18n:pull.executor": "Run",
-    "npm.i18n:push.executor": "Run",
-    "npm.i18n:sync.executor": "Run",
-    "npm.lint.executor": "Run",
-    "npm.prebuild.executor": "Run",
-    "npm.script:create:tool.executor": "Run",
-    "npm.test.executor": "Run",
-    "npm.test:e2e.executor": "Run",
-    "npm.test:e2e:run.executor": "Run",
-    "npm.typecheck.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib",
-    "ts.rename.search.for.js.occurrences": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.Dockerfile build.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.add-i18n-to-meta.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.locize-upload.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.update-i18n-from-meta.js.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.Create transparent PNG.should make png color transparent.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.JoinText Component.executor&quot;: &quot;Run&quot;,
+    &quot;Playwright.JoinText Component.should merge text pieces with specified join character.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Vitest.compute function (1).executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.compute function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.generatePassword.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines and preserve blank lines when deleteBlankLines is false.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.mergeText.should merge lines, preserve blank lines and trailing spaces when both deleteBlankLines and deleteTrailingSpaces are false.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.parsePageRanges.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.newlines option.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.removeDuplicateLines function.newlines option.should filter newlines when newlines is set to filter.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.replaceText function.executor&quot;: &quot;Run&quot;,
+    &quot;Vitest.timeBetweenDates.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ibrahima/IdeaProjects/omni-tools&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.i18n:extract.executor&quot;: &quot;Run&quot;,
+    &quot;npm.i18n:pull.executor&quot;: &quot;Run&quot;,
+    &quot;npm.i18n:push.executor&quot;: &quot;Run&quot;,
+    &quot;npm.i18n:sync.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
+    &quot;npm.prebuild.executor&quot;: &quot;Run&quot;,
+    &quot;npm.script:create:tool.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test:e2e:run.executor&quot;: &quot;Run&quot;,
+    &quot;npm.typecheck.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.rename.search.for.js.occurrences&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
