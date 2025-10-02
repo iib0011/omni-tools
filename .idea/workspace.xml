@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: translate userTypes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/random-number-generator/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/random-number-generator/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/random-port-generator/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/random-port-generator/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/random-port-generator/meta.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/random-port-generator/meta.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/temperature.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-png/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-png/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,230 +45,313 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fork/AshAnand34/tool/random-generators" />
+        <entry key="$PROJECT_DIR$" value="fork/ssagar1999/feature/244" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;history&quot;: [
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
     {
-      &quot;assignee&quot;: &quot;iib0011&quot;
+      "assignee": "iib0011"
     },
     {
-      &quot;state&quot;: &quot;OPEN&quot;
+      "searchQuery": "filter",
+      "state": "OPEN"
     },
     {
-      &quot;searchQuery&quot;: &quot;filter&quot;,
-      &quot;state&quot;: &quot;OPEN&quot;
+      "state": "OPEN"
     }
   ],
-  &quot;lastFilter&quot;: {
-    &quot;searchQuery&quot;: &quot;filter&quot;,
-    &quot;state&quot;: &quot;OPEN&quot;
+  "lastFilter": {
+    "state": "OPEN"
   }
-}</component>
-  <component name="GitHubPullRequestState">{
-  &quot;prStates&quot;: [
+}]]></component>
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts51PkS9&quot;,
-        &quot;number&quot;: 22
+      "id": {
+        "id": "PR_kwDOMJIfts51PkS9",
+        "number": 22
       },
-      &quot;lastSeen&quot;: 1741207144695
+      "lastSeen": 1741207144695
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6NiNYl&quot;,
-        &quot;number&quot;: 32
+      "id": {
+        "id": "PR_kwDOMJIfts6NiNYl",
+        "number": 32
       },
-      &quot;lastSeen&quot;: 1741209723869
+      "lastSeen": 1741209723869
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Nheyd&quot;,
-        &quot;number&quot;: 31
+      "id": {
+        "id": "PR_kwDOMJIfts6Nheyd",
+        "number": 31
       },
-      &quot;lastSeen&quot;: 1741213371410
+      "lastSeen": 1741213371410
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6NmRBs&quot;,
-        &quot;number&quot;: 33
+      "id": {
+        "id": "PR_kwDOMJIfts6NmRBs",
+        "number": 33
       },
-      &quot;lastSeen&quot;: 1741282429036
+      "lastSeen": 1741282429036
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts5zyFTs&quot;,
-        &quot;number&quot;: 15
+      "id": {
+        "id": "PR_kwDOMJIfts5zyFTs",
+        "number": 15
       },
-      &quot;lastSeen&quot;: 1741535540953
+      "lastSeen": 1741535540953
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QQB3c&quot;,
-        &quot;number&quot;: 59
+      "id": {
+        "id": "PR_kwDOMJIfts6QQB3c",
+        "number": 59
       },
-      &quot;lastSeen&quot;: 1743018960900
+      "lastSeen": 1743018960900
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QMPEg&quot;,
-        &quot;number&quot;: 58
+      "id": {
+        "id": "PR_kwDOMJIfts6QMPEg",
+        "number": 58
       },
-      &quot;lastSeen&quot;: 1743019452983
+      "lastSeen": 1743019452983
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QZvRI&quot;,
-        &quot;number&quot;: 61
+      "id": {
+        "id": "PR_kwDOMJIfts6QZvRI",
+        "number": 61
       },
-      &quot;lastSeen&quot;: 1743103196866
+      "lastSeen": 1743103196866
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QqPrQ&quot;,
-        &quot;number&quot;: 73
+      "id": {
+        "id": "PR_kwDOMJIfts6QqPrQ",
+        "number": 73
       },
-      &quot;lastSeen&quot;: 1743265865001
+      "lastSeen": 1743265865001
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Qp5nI&quot;,
-        &quot;number&quot;: 72
+      "id": {
+        "id": "PR_kwDOMJIfts6Qp5nI",
+        "number": 72
       },
-      &quot;lastSeen&quot;: 1743338472110
+      "lastSeen": 1743338472110
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6QsjlS&quot;,
-        &quot;number&quot;: 76
+      "id": {
+        "id": "PR_kwDOMJIfts6QsjlS",
+        "number": 76
       },
-      &quot;lastSeen&quot;: 1743352150953
+      "lastSeen": 1743352150953
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Q0JBe&quot;,
-        &quot;number&quot;: 82
+      "id": {
+        "id": "PR_kwDOMJIfts6Q0JBe",
+        "number": 82
       },
-      &quot;lastSeen&quot;: 1743470267269
+      "lastSeen": 1743470267269
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6UE9-x&quot;,
-        &quot;number&quot;: 102
+      "id": {
+        "id": "PR_kwDOMJIfts6UE9-x",
+        "number": 102
       },
-      &quot;lastSeen&quot;: 1747171977348
+      "lastSeen": 1747171977348
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6XPua_&quot;,
-        &quot;number&quot;: 117
+      "id": {
+        "id": "PR_kwDOMJIfts6XPua_",
+        "number": 117
       },
-      &quot;lastSeen&quot;: 1747929835864
+      "lastSeen": 1747929835864
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6XY-mZ&quot;,
-        &quot;number&quot;: 119
+      "id": {
+        "id": "PR_kwDOMJIfts6XY-mZ",
+        "number": 119
       },
-      &quot;lastSeen&quot;: 1748028108508
+      "lastSeen": 1748028108508
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Xdz4n&quot;,
-        &quot;number&quot;: 120
+      "id": {
+        "id": "PR_kwDOMJIfts6Xdz4n",
+        "number": 120
       },
-      &quot;lastSeen&quot;: 1748282672214
+      "lastSeen": 1748282672214
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6X_zxl&quot;,
-        &quot;number&quot;: 131
+      "id": {
+        "id": "PR_kwDOMJIfts6X_zxl",
+        "number": 131
       },
-      &quot;lastSeen&quot;: 1748881279494
+      "lastSeen": 1748881279494
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6bhieT&quot;,
-        &quot;number&quot;: 152
+      "id": {
+        "id": "PR_kwDOMJIfts6bhieT",
+        "number": 152
       },
-      &quot;lastSeen&quot;: 1751848489082
+      "lastSeen": 1751848489082
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6dOyRk&quot;,
-        &quot;number&quot;: 154
+      "id": {
+        "id": "PR_kwDOMJIfts6dOyRk",
+        "number": 154
       },
-      &quot;lastSeen&quot;: 1751849436454
+      "lastSeen": 1751849436454
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6cHjNi&quot;,
-        &quot;number&quot;: 153
+      "id": {
+        "id": "PR_kwDOMJIfts6cHjNi",
+        "number": 153
       },
-      &quot;lastSeen&quot;: 1751849501498
+      "lastSeen": 1751849501498
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6Zs1FN&quot;,
-        &quot;number&quot;: 145
+      "id": {
+        "id": "PR_kwDOMJIfts6Zs1FN",
+        "number": 145
       },
-      &quot;lastSeen&quot;: 1751849770308
+      "lastSeen": 1751849770308
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6bgKi9&quot;,
-        &quot;number&quot;: 150
+      "id": {
+        "id": "PR_kwDOMJIfts6bgKi9",
+        "number": 150
       },
-      &quot;lastSeen&quot;: 1751850367300
+      "lastSeen": 1751850367300
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6eUKC-&quot;,
-        &quot;number&quot;: 176
+      "id": {
+        "id": "PR_kwDOMJIfts6eUKC-",
+        "number": 176
       },
-      &quot;lastSeen&quot;: 1752158748013
+      "lastSeen": 1752158748013
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6eqzP7&quot;,
-        &quot;number&quot;: 190
+      "id": {
+        "id": "PR_kwDOMJIfts6et6vx",
+        "number": 192
       },
-      &quot;lastSeen&quot;: 1752404173008
+      "lastSeen": 1752585709582
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6et6vx&quot;,
-        &quot;number&quot;: 192
+      "id": {
+        "id": "PR_kwDOMJIfts6d36mi",
+        "number": 168
       },
-      &quot;lastSeen&quot;: 1752585709582
+      "lastSeen": 1752805763664
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6d36mi&quot;,
-        &quot;number&quot;: 168
+      "id": {
+        "id": "PR_kwDOMJIfts6fnXKf",
+        "number": 208
       },
-      &quot;lastSeen&quot;: 1752805763664
+      "lastSeen": 1752862212326
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6fnXKf&quot;,
-        &quot;number&quot;: 208
+      "id": {
+        "id": "PR_kwDOMJIfts6rjINx",
+        "number": 259
       },
-      &quot;lastSeen&quot;: 1752862212326
+      "lastSeen": 1759434090574
     },
     {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOMJIfts6fo_ig&quot;,
-        &quot;number&quot;: 209
+      "id": {
+        "id": "PR_kwDOMJIfts6qcP13",
+        "number": 256
       },
-      &quot;lastSeen&quot;: 1753201966322
+      "lastSeen": 1759434257615
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6ow8QZ",
+        "number": 252
+      },
+      "lastSeen": 1759434340504
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6myVeZ",
+        "number": 247
+      },
+      "lastSeen": 1759434588110
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6i5ZAq",
+        "number": 239
+      },
+      "lastSeen": 1759434599664
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6iiuGd",
+        "number": 237
+      },
+      "lastSeen": 1759434652702
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6gwm8n",
+        "number": 230
+      },
+      "lastSeen": 1759434669914
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6f5JeZ",
+        "number": 220
+      },
+      "lastSeen": 1759434706785
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6ftgWI",
+        "number": 217
+      },
+      "lastSeen": 1759434804548
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6XsHfL",
+        "number": 128
+      },
+      "lastSeen": 1759434870000
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6ec-tz",
+        "number": 180
+      },
+      "lastSeen": 1759434882113
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6fsi5n",
+        "number": 216
+      },
+      "lastSeen": 1759434902813
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6ZkP3F",
+        "number": 142
+      },
+      "lastSeen": 1759434918778
+    },
+    {
+      "id": {
+        "id": "PR_kwDOMJIfts6qcbuA",
+        "number": 257
+      },
+      "lastSeen": 1759438234107
     }
   ]
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/iib0011/omni-tools.git&quot;,
@@ -279,9 +364,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/node_modules/react-image-crop/dist/index.d.ts" root0="SKIP_INSPECTION" />
   </component>
-  <component name="KubernetesApiProvider">{
-    &quot;isMigrated&quot;: true
-    }</component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -326,7 +411,7 @@
     "Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor": "Run",
     "Vitest.replaceText function.executor": "Run",
     "Vitest.timeBetweenDates.executor": "Run",
-    "git-widget-placeholder": "#218 on fork/AshAnand34/tool/random-generators",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ibrahima/IdeaProjects/omni-tools",
@@ -347,6 +432,7 @@
     "npm.test.executor": "Run",
     "npm.test:e2e.executor": "Run",
     "npm.test:e2e:run.executor": "Run",
+    "npm.typecheck.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\prettier",
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
@@ -415,16 +501,6 @@
       </envs>
       <method v="2" />
     </configuration>
-    <configuration name="i18n:extract" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="i18n:extract" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="i18n:pull" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -447,8 +523,18 @@
       </envs>
       <method v="2" />
     </configuration>
+    <configuration name="typecheck" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="typecheck" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="npm.i18n:extract" />
+      <item itemvalue="npm.typecheck" />
       <item itemvalue="npm.i18n:pull" />
       <item itemvalue="npm.i18n:sync" />
       <item itemvalue="npm.dev" />
@@ -457,10 +543,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.typecheck" />
         <item itemvalue="npm.i18n:sync" />
         <item itemvalue="Vitest.generatePassword" />
         <item itemvalue="npm.i18n:pull" />
-        <item itemvalue="npm.i18n:extract" />
       </list>
     </recent_temporary>
   </component>
