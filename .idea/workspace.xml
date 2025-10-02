@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/pages/tools/number/generic-calc/data/temperature.ts&#10;- package.json&#10;- .idea/workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: Remove onnxruntime-web dependency (main)&#10;&#10;This commit removes the onnxruntime-web package&#10;from package.json.&#10;```">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -659,14 +658,6 @@
       <workItem from="1753206561770" duration="119000" />
       <workItem from="1753206717510" duration="3599000" />
     </task>
-    <task id="LOCAL-00202" summary="fix: tools by category page title">
-      <option name="closed" value="true" />
-      <created>1751846877842</created>
-      <option name="number" value="00202" />
-      <option name="presentableId" value="LOCAL-00202" />
-      <option name="project" value="LOCAL" />
-      <updated>1751846877842</updated>
-    </task>
     <task id="LOCAL-00203" summary="chore: use scrollY">
       <option name="closed" value="true" />
       <created>1751848478091</created>
@@ -1051,7 +1042,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759439927012</updated>
     </task>
-    <option name="localTasksCounter" value="251" />
+    <task id="LOCAL-00251" summary="feat: Remove onnxruntime-web dependency (main)&#10;&#10;This commit removes the onnxruntime-web package&#10;from package.json.&#10;```">
+      <option name="closed" value="true" />
+      <created>1759441368519</created>
+      <option name="number" value="00251" />
+      <option name="presentableId" value="LOCAL-00251" />
+      <option name="project" value="LOCAL" />
+      <updated>1759441368519</updated>
+    </task>
+    <option name="localTasksCounter" value="252" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1115,9 +1114,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: translation related behaviors" />
-    <MESSAGE value="feat: password generator to test translation" />
-    <MESSAGE value="docs: translation docs" />
     <MESSAGE value="fix: translations" />
     <MESSAGE value="chore: delete unused i18n json files" />
     <MESSAGE value="fix: create-tool.mjs to use i18n object" />
@@ -1134,13 +1130,16 @@
     <MESSAGE value="chore: show only necessary tags on a category" />
     <MESSAGE value="chore: CATEGORIES_USER_TYPES_MAPPINGS" />
     <MESSAGE value="chore: translate userTypes" />
-    <MESSAGE value="```" />
     <MESSAGE value="```&#10;feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion" />
     <MESSAGE value="```&#10;feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing" />
     <MESSAGE value="```&#10;feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/" />
     <MESSAGE value="```&#10;feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/pages/tools/number/generic-calc/data/temperature.ts&#10;- package.json&#10;- .idea/workspace.xml&#10;```" />
     <MESSAGE value="feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/pages/tools/number/generic-calc/data/temperature.ts&#10;- package.json&#10;- .idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/pages/tools/number/generic-calc/data/temperature.ts&#10;- package.json&#10;- .idea/workspace.xml" />
+    <MESSAGE value="```" />
+    <MESSAGE value="```&#10;feat: Remove onnxruntime-web dependency (main)&#10;&#10;This commit" />
+    <MESSAGE value="```&#10;feat: Remove onnxruntime-web dependency (main)&#10;&#10;This commit removes the onnxruntime-web package&#10;from package.json.&#10;```" />
+    <MESSAGE value="feat: Remove onnxruntime-web dependency (main)&#10;&#10;This commit removes the onnxruntime-web package&#10;from package.json.&#10;```" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Remove onnxruntime-web dependency (main)&#10;&#10;This commit removes the onnxruntime-web package&#10;from package.json.&#10;```" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
