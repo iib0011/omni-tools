@@ -64,7 +64,7 @@ export async function changeAudioSpeed(
     let mimeType = 'audio/mp3';
     if (outputFormat === 'aac') mimeType = 'audio/aac';
     if (outputFormat === 'wav') mimeType = 'audio/wav';
-    const blob = new Blob([data], { type: mimeType });
+    const blob = new Blob([data as any], { type: mimeType });
     const newFile = new File(
       [blob],
       fileName.replace(/\.[^/.]+$/, `-${newSpeed}x.${outputFormat}`),

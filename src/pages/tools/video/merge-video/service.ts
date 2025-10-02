@@ -112,7 +112,7 @@ export async function mergeVideos(
       throw new Error('Output file is empty or corrupted');
     }
 
-    return new Blob([mergedData], { type: 'video/mp4' });
+    return new Blob([mergedData as any], { type: 'video/mp4' });
   } catch (error) {
     console.error('Error merging videos:', error);
     throw error instanceof Error

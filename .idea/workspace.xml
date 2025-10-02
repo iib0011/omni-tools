@@ -4,14 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="chore: translate userTypes">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/pages/tools/number/generic-calc/data/temperature.ts&#10;- package.json&#10;- .idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/number/generic-calc/data/temperature.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-png/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/pdf-to-png/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/change-speed/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/extract-audio/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/merge-audio/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/audio/trim/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/audio/trim/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/resize/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/image/generic/rotate/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/image/generic/rotate/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/merge-pdf/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/rotate-pdf/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/pdf/split-pdf/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/change-speed/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/compress/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/compress/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/crop-video/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/crop-video/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/flip/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/flip/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/gif/change-speed/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/loop/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/loop/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/merge-video/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/merge-video/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/rotate/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/rotate/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/trim/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tools/video/video-to-gif/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -469,19 +482,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
-    <configuration name="generatePassword" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <vitest-options value="--run" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/pages/tools/string/password-generator/password-generator.service.test.ts" />
-      <test-names>
-        <test-name value="generatePassword" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
         <settings />
@@ -501,16 +501,6 @@
       </envs>
       <method v="2" />
     </configuration>
-    <configuration name="i18n:pull" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="i18n:pull" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="i18n:sync" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -521,6 +511,26 @@
       <envs>
         <env name="LOCIZE_API_KEY" value="a2ac4dc2-d10e-4d35-bcf7-92db87381711" />
       </envs>
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:e2e" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:e2e" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="typecheck" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -534,19 +544,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="npm.test" />
+      <item itemvalue="npm.test:e2e" />
       <item itemvalue="npm.typecheck" />
-      <item itemvalue="npm.i18n:pull" />
       <item itemvalue="npm.i18n:sync" />
       <item itemvalue="npm.dev" />
-      <item itemvalue="Vitest.generatePassword" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.test:e2e" />
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.typecheck" />
         <item itemvalue="npm.i18n:sync" />
-        <item itemvalue="Vitest.generatePassword" />
-        <item itemvalue="npm.i18n:pull" />
       </list>
     </recent_temporary>
   </component>
@@ -666,14 +676,6 @@
       <workItem from="1753201599796" duration="4449000" />
       <workItem from="1753206561770" duration="119000" />
       <workItem from="1753206717510" duration="3599000" />
-    </task>
-    <task id="LOCAL-00201" summary="chore: rename from Omni Tools to OmniTools">
-      <option name="closed" value="true" />
-      <created>1751630993003</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
-      <option name="project" value="LOCAL" />
-      <updated>1751630993003</updated>
     </task>
     <task id="LOCAL-00202" summary="fix: tools by category page title">
       <option name="closed" value="true" />
@@ -1059,7 +1061,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753210033390</updated>
     </task>
-    <option name="localTasksCounter" value="250" />
+    <task id="LOCAL-00250" summary="feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/pages/tools/number/generic-calc/data/temperature.ts&#10;- package.json&#10;- .idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1759439927012</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
+      <option name="project" value="LOCAL" />
+      <updated>1759439927012</updated>
+    </task>
+    <option name="localTasksCounter" value="251" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1084,6 +1094,11 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
                   <option value="origin/examples" />
                 </option>
               </RecentGroup>
@@ -1096,7 +1111,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -1106,12 +1133,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: i18n in meta" />
-    <MESSAGE value="chore: add i18n to meta script" />
-    <MESSAGE value="chore: bundle translations at build time" />
-    <MESSAGE value="fix: tsc" />
-    <MESSAGE value="chore: remove unnecessary" />
-    <MESSAGE value="chore: saveMissing" />
     <MESSAGE value="fix: translation related behaviors" />
     <MESSAGE value="feat: password generator to test translation" />
     <MESSAGE value="docs: translation docs" />
@@ -1131,7 +1152,13 @@
     <MESSAGE value="chore: show only necessary tags on a category" />
     <MESSAGE value="chore: CATEGORIES_USER_TYPES_MAPPINGS" />
     <MESSAGE value="chore: translate userTypes" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: translate userTypes" />
+    <MESSAGE value="```" />
+    <MESSAGE value="```&#10;feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion" />
+    <MESSAGE value="```&#10;feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing" />
+    <MESSAGE value="```&#10;feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/" />
+    <MESSAGE value="```&#10;feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/pages/tools/number/generic-calc/data/temperature.ts&#10;- package.json&#10;- .idea/workspace.xml&#10;```" />
+    <MESSAGE value="feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/pages/tools/number/generic-calc/data/temperature.ts&#10;- package.json&#10;- .idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/pages/tools/number/generic-calc/data/temperature.ts&#10;- package.json&#10;- .idea/workspace.xml" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

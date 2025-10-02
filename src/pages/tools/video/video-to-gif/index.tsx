@@ -98,7 +98,7 @@ export default function VideoToGif({
 
         const data = await ffmpeg.readFile(outputName);
 
-        const blob = new Blob([data], { type: 'image/gif' });
+        const blob = new Blob([data as any], { type: 'image/gif' });
         const convertedFile = new File([blob], outputName, {
           type: 'image/gif'
         });
