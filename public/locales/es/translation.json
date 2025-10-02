@@ -71,6 +71,10 @@
     "xml": {
       "description": "Herramientas para trabajar con estructuras de datos XML: visor, embellecedor, validador y mucho más",
       "title": "Herramientas XML"
+    },
+    "dev": {
+      "description": "Herramientas esenciales para desarrolladores: formateadores de código, codificadores/decodificadores, herramientas de comparación, generadores de UUID y mucho más",
+      "title": "Herramientas de desarrollo"
     }
   },
   "csv": {

@@ -71,6 +71,10 @@
     "xml": {
       "description": "Hulpmiddelen voor het werken met XML-datastructuren - viewer, beautifier, validator en nog veel meer",
       "title": "XML-hulpmiddelen"
+    },
+    "dev": {
+      "description": "Essentiële hulpmiddelen voor ontwikkelaars: codeformatters, encoders/decoders, vergelijkingstools, UUID-generators en meer",
+      "title": "Ontwikkelaarstools"
     }
   },
   "csv": {

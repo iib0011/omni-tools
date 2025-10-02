@@ -15,7 +15,8 @@ export const validNamespaces = [
   'audio',
   'xml',
   'translation',
-  'image'
+  'image',
+  'dev'
 ] as const satisfies readonly Namespace[];
 
 export type I18nNamespaces = (typeof validNamespaces)[number];

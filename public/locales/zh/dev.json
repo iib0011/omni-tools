@@ -1,0 +1,12 @@
+{
+  "cssJsMinify": {
+    "title": "压缩 CSS/JS",
+    "description": "通过删除不必要的空格、换行和注释来压缩您的 CSS 或 JavaScript 代码。",
+    "shortDescription": "压缩 CSS 和 JavaScript 代码",
+    "longDescription": "",
+    "toolInfo": {
+      "title": "压缩 CSS/JS",
+      "description": "该工具通过删除空格、换行符和注释等多余字符来压缩您的 CSS 或 JavaScript 代码，同时不影响功能。非常适合在部署前优化网页性能并减少文件大小。"
+    }
+  }
+}

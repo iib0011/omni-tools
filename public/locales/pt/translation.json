@@ -71,6 +71,10 @@
     "xml": {
       "description": "Ferramentas para trabalhar com estruturas de dados XML - visualizador, embelezador, validador e muito mais",
       "title": "Ferramentas XML"
+    },
+    "dev": {
+      "description": "Ferramentas essenciais para desenvolvedores: formatadores de código, codificadores/decodificadores, ferramentas de comparação, geradores de UUID e muito mais",
+      "title": "Ferramentas de desenvolvimento"
     }
   },
   "csv": {

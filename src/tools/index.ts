@@ -13,6 +13,7 @@ import { timeTools } from '../pages/tools/time';
 import { IconifyIcon } from '@iconify/react';
 import { pdfTools } from '../pages/tools/pdf';
 import { xmlTools } from '../pages/tools/xml';
+import { devTools } from '../pages/tools/dev';
 import { TFunction } from 'i18next';
 import { FullI18nKey, I18nNamespaces } from '../i18n';
 
@@ -30,7 +31,8 @@ const toolCategoriesOrder: ToolCategory[] = [
   'png',
   'time',
   'xml',
-  'gif'
+  'gif',
+  'dev'
 ];
 export const tools: DefinedTool[] = [
   ...imageTools,
@@ -43,7 +45,8 @@ export const tools: DefinedTool[] = [
   ...numberTools,
   ...timeTools,
   ...audioTools,
-  ...xmlTools
+  ...xmlTools,
+  ...devTools
 ];
 const categoriesConfig: {
   type: ToolCategory;
@@ -134,6 +137,12 @@ const categoriesConfig: {
     icon: 'mdi-light:xml',
     value: 'translation:categories.xml.description',
     title: 'translation:categories.xml.title'
+  },
+  {
+    type: 'dev',
+    icon: 'mdi:code-block-braces',
+    value: 'translation:categories.dev.description',
+    title: 'translation:categories.dev.title'
   }
 ];
 const CATEGORIES_USER_TYPES_MAPPINGS: Partial<Record<ToolCategory, UserType>> =

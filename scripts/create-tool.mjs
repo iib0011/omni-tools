@@ -150,7 +150,8 @@ const validNamespaces = [
   'audio',
   'xml',
   'translation',
-  'image'
+  'image',
+  'dev'
 ];
 const isValidI18nNamespace = (value) => {
   return validNamespaces.includes(value);

@@ -1,0 +1,12 @@
+{
+  "cssJsMinify": {
+    "title": "CSS/JS minimieren",
+    "description": "Komprimieren Sie Ihren CSS- oder JavaScript-Code, indem Sie überflüssige Leerzeichen, Zeilenumbrüche und Kommentare entfernen.",
+    "shortDescription": "CSS- und JavaScript-Code minimieren",
+    "longDescription": "",
+    "toolInfo": {
+      "title": "CSS/JS minimieren",
+      "description": "Dieses Tool minimiert Ihren CSS- oder JavaScript-Code, indem es unnötige Zeichen wie Leerzeichen, Zeilenumbrüche und Kommentare entfernt – ohne die Funktionalität zu beeinträchtigen. Ideal zur Optimierung der Webleistung und zur Reduzierung der Dateigröße vor dem Deployment."
+    }
+  }
+}

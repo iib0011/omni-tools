@@ -55,7 +55,16 @@ const translationFiles = [
     namespace: 'time',
     file: '../src/pages/tools/time/i18n/en.json'
   },
-  { lang: 'en', namespace: 'xml', file: '../src/pages/tools/xml/i18n/en.json' },
+  {
+    lang: 'en',
+    namespace: 'xml',
+    file: '../src/pages/tools/xml/i18n/en.json'
+  },
+  {
+    lang: 'en',
+    namespace: 'dev',
+    file: '../src/pages/tools/dev/i18n/en.json'
+  },
 
   // Hindi translations
   { lang: 'hi', namespace: 'translation', file: '../src/i18n/hi.json' },
