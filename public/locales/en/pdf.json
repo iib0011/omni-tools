@@ -26,6 +26,11 @@
     "shortDescription": "Edit PDFs with advanced annotation, signing and editing tools",
     "title": "PDF Editor"
   },
+  "formBuilder": {
+    "title": "PDF Form Builder",
+    "description": "Create and and customize interactive PDF forms directly in your browser. Add text fields, checkboxes, radio buttons, labels, and more, with full drag-and-drop support, styling options, and export capabilities.",
+    "shortDescription": "Design and build interactive PDF forms easily with drag-and-drop tools"
+  },
   "merge": {
     "inputTitle": "Input PDF",
     "loadingText": "Extracting pages",
