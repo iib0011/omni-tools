@@ -1,8 +1,11 @@
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
+import * as Yup from 'yup';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
+import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
+import { updateNumberField } from '@utils/string';
 import { InitialValuesType } from './types';
 import ToolVideoInput from '@components/input/ToolVideoInput';
 import ToolFileResult from '@components/result/ToolFileResult';
@@ -13,8 +16,18 @@ import { fetchFile } from '@ffmpeg/util';
 const initialValues: InitialValuesType = {
   quality: 'mid',
   fps: '10',
-  scale: '320:-1:flags=bicubic'
+  scale: '320:-1:flags=bicubic',
+  start: 0,
+  end: 100
 };
+
+const validationSchema = Yup.object({
+  start: Yup.number().min(0, 'Start time must be positive'),
+  end: Yup.number().min(
+    Yup.ref('start'),
+    'End time must be greater than start time'
+  )
+});
 
 export default function VideoToGif({
   title,
@@ -26,14 +39,16 @@ export default function VideoToGif({
 
   const compute = (values: InitialValuesType, input: File | null) => {
     if (!input) return;
-    const { fps, scale } = values;
+    const { fps, scale, start, end } = values;
     let ffmpeg: FFmpeg | null = null;
     let ffmpegLoaded = false;
 
     const convertVideoToGif = async (
       file: File,
       fps: string,
-      scale: string
+      scale: string,
+      start: number,
+      end: number
     ): Promise<void> => {
       setLoading(true);
 
@@ -58,6 +73,10 @@ export default function VideoToGif({
         await ffmpeg.exec([
           '-i',
           fileName,
+          '-ss',
+          start.toString(),
+          '-to',
+          end.toString(),
           '-vf',
           `fps=${fps},scale=${scale},palettegen`,
           'palette.png'
@@ -68,6 +87,10 @@ export default function VideoToGif({
           fileName,
           '-i',
           'palette.png',
+          '-ss',
+          start.toString(),
+          '-to',
+          end.toString(),
           '-filter_complex',
           `fps=${fps},scale=${scale}[x];[x][1:v]paletteuse`,
           outputName
@@ -92,7 +115,7 @@ export default function VideoToGif({
       }
     };
 
-    convertVideoToGif(input, fps, scale);
+    convertVideoToGif(input, fps, scale, start, end);
   };
 
   const getGroups: GetGroupsType<InitialValuesType> | null = ({
@@ -141,6 +164,28 @@ export default function VideoToGif({
           />
         </Box>
       )
+    },
+    {
+      title: 'Timestamps',
+      component: (
+        <Box>
+          <TextFieldWithDesc
+            onOwnChange={(value) =>
+              updateNumberField(value, 'start', updateField)
+            }
+            value={values.start}
+            label="Start Time"
+            sx={{ mb: 2, backgroundColor: 'background.paper' }}
+          />
+          <TextFieldWithDesc
+            onOwnChange={(value) =>
+              updateNumberField(value, 'end', updateField)
+            }
+            value={values.end}
+            label="End Time"
+          />
+        </Box>
+      )
     }
   ];
 
@@ -148,9 +193,22 @@ export default function VideoToGif({
     <ToolContent
       title={title}
       input={input}
-      inputComponent={
-        <ToolVideoInput value={input} onChange={setInput} title="Input Video" />
-      }
+      renderCustomInput={({ start, end }, setFieldValue) => {
+        return (
+          <ToolVideoInput
+            value={input}
+            onChange={setInput}
+            title={'Input Video'}
+            showTrimControls={true}
+            onTrimChange={(start, end) => {
+              setFieldValue('start', start);
+              setFieldValue('end', end);
+            }}
+            trimStart={start}
+            trimEnd={end}
+          />
+        );
+      }}
       resultComponent={
         loading ? (
           <ToolFileResult
