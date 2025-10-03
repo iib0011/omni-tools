@@ -122,7 +122,8 @@
   "navbar": {
     "buyMeACoffee": "Compre-me um café",
     "home": "Lar",
-    "tools": "Ferramentas"
+    "tools": "Ferramentas",
+    "hireMe": "Me contrate"
   },
   "number": {
     "generate": {

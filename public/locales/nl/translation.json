@@ -122,7 +122,8 @@
   "navbar": {
     "buyMeACoffee": "Koop me een koffie",
     "home": "Thuis",
-    "tools": "Hulpmiddelen"
+    "tools": "Hulpmiddelen",
+    "hireMe": "Neem mij aan"
   },
   "number": {
     "generate": {

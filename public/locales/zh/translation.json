@@ -122,7 +122,8 @@
   "navbar": {
     "buyMeACoffee": "请我喝杯咖啡",
     "home": "家",
-    "tools": "工具"
+    "tools": "工具",
+    "hireMe": "雇用我"
   },
   "number": {
     "generate": {

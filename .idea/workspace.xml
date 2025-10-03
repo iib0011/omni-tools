@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: Upgrade onnxruntime-web and onnxruntime-common (main)&#10;&#10;Upgrades onnxruntime-web and onnxruntime-common to versions&#10;1.23.0. This includes updates to dependencies and related&#10;packages.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: Update workspace and translation files (main)&#10;&#10;This commit includes the following changes:&#10;&#10;- Updated the workspace configuration in .idea/workspace.xml to&#10;  reflect the recent npm script execution.&#10;- Modified the English translation file (translation.json) by&#10;  reordering the &quot;navbar&quot; keys." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -660,23 +656,7 @@
       <workItem from="1753206561770" duration="119000" />
       <workItem from="1753206717510" duration="3599000" />
       <workItem from="1759497758761" duration="1012000" />
-      <workItem from="1759502144651" duration="196000" />
-    </task>
-    <task id="LOCAL-00206" summary="chore: new logo and font">
-      <option name="closed" value="true" />
-      <created>1752022118195</created>
-      <option name="number" value="00206" />
-      <option name="presentableId" value="LOCAL-00206" />
-      <option name="project" value="LOCAL" />
-      <updated>1752022118199</updated>
-    </task>
-    <task id="LOCAL-00207" summary="chore: white logo">
-      <option name="closed" value="true" />
-      <created>1752022731608</created>
-      <option name="number" value="00207" />
-      <option name="presentableId" value="LOCAL-00207" />
-      <option name="project" value="LOCAL" />
-      <updated>1752022731608</updated>
+      <workItem from="1759502144651" duration="586000" />
     </task>
     <task id="LOCAL-00208" summary="chore: png icon">
       <option name="closed" value="true" />
@@ -1054,7 +1034,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759442775014</updated>
     </task>
-    <option name="localTasksCounter" value="255" />
+    <task id="LOCAL-00255" summary="chore: Replace &quot;Buy me a coffee&quot; with &quot;Hire me&quot; (main)&#10;&#10;This commit replaces the &quot;Buy me a coffee&quot; button with a&#10;&quot;Hire me&quot; button in the navbar. It also updates the&#10;corresponding translation in the `en/translation.json` file.&#10;The icon has been changed to a job search icon, and the&#10;link points to a Google Drive document.">
+      <option name="closed" value="true" />
+      <created>1759502472647</created>
+      <option name="number" value="00255" />
+      <option name="presentableId" value="LOCAL-00255" />
+      <option name="project" value="LOCAL" />
+      <updated>1759502472647</updated>
+    </task>
+    <task id="LOCAL-00256" summary="feat: Update workspace and translation files (main)&#10;&#10;This commit includes the following changes:&#10;&#10;- Updated the workspace configuration in .idea/workspace.xml to&#10;  reflect the recent npm script execution.&#10;- Modified the English translation file (translation.json) by&#10;  reordering the &quot;navbar&quot; keys.">
+      <option name="closed" value="true" />
+      <created>1759502707923</created>
+      <option name="number" value="00256" />
+      <option name="presentableId" value="LOCAL-00256" />
+      <option name="project" value="LOCAL" />
+      <updated>1759502707923</updated>
+    </task>
+    <option name="localTasksCounter" value="257" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1118,22 +1114,12 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="```&#10;feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing" />
-    <MESSAGE value="```&#10;feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/" />
-    <MESSAGE value="```&#10;feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/pages/tools/number/generic-calc/data/temperature.ts&#10;- package.json&#10;- .idea/workspace.xml&#10;```" />
-    <MESSAGE value="feat: remove temperature conversion from generic-calc&#10;&#10;This commit removes the temperature conversion tool from the&#10;generic-calc tool. This is because the tool was causing issues.&#10;&#10;The following files were modified:&#10;- src/pages/tools/number/generic-calc/data/index.ts&#10;- src/pages/tools/number/generic-calc/data/temperature.ts&#10;- package.json&#10;- .idea/workspace.xml" />
-    <MESSAGE value="feat: Remove onnxruntime-web dependency (main)&#10;&#10;This commit removes the onnxruntime-web package&#10;from package.json.&#10;```" />
-    <MESSAGE value="```&#10;feat: Remove onnxruntime-web dependency (main)&#10;&#10;This commit removes the" />
-    <MESSAGE value="```&#10;feat: Remove onnxruntime-web dependency (main)&#10;&#10;This commit" />
-    <MESSAGE value="```&#10;feat: Remove onnxruntime-web dependency (main)&#10;&#10;This commit removes the onnxruntime-web package&#10;from package.json.&#10;```" />
-    <MESSAGE value="```&#10;feat: Remove onnxruntime-web dependency (main)&#10;&#10;This commit removes the on" />
     <MESSAGE value="```&#10;feat: Remove onnxruntime-web dependency (main)&#10;&#10;This commit removes the onnxruntime-web package&#10;from package.json.&#10;```&#10;" />
     <MESSAGE value="{&#13;&#10;  &quot;error&quot;: {&#13;&#10;    &quot;code&quot;: 503,&#13;&#10;    &quot;message&quot;: &quot;The model is overloaded. Please try again later.&quot;,&#13;&#10;    &quot;status&quot;: &quot;UNAVAILABLE&quot;&#13;&#10;  }&#13;&#10;}" />
     <MESSAGE value="```&#10;chore: Remove onnxruntime-web dependency (main)&#10;&#10;This commit removes the on" />
     <MESSAGE value="```&#10;chore: Remove onnxruntime-web dependency (main)&#10;&#10;This commit removes the onnxruntime-web package&#10;from package.json and package-lock.json.&#10;```" />
     <MESSAGE value="```&#10;chore: Remove onnxruntime-web dependency (main)&#10;&#10;This commit removes the onnxruntime-web package&#10;from package.json and package-lock.json.&#10;```&#10;" />
     <MESSAGE value="fix: onnxruntime-web version" />
-    <MESSAGE value="```" />
     <MESSAGE value="```&#10;feat: Upgrade Node.js versions in CI (main)&#10;&#10;This commit updates the Node" />
     <MESSAGE value="```&#10;feat: Upgrade Node.js versions in CI (main)&#10;&#10;This commit updates the Node.js versions used in the CI&#10;workflows to version 20. This ensures that" />
     <MESSAGE value="```&#10;feat: Upgrade Node.js versions in CI (main)&#10;&#10;This commit updates the Node.js versions used in the CI&#10;workflows to version 20. This ensures that the CI&#10;environment uses a more up-to-date and supported version&#10;of Node.js.&#10;```&#10;" />
@@ -1143,7 +1129,17 @@
     <MESSAGE value="feat: Upgrade onnxruntime-web and onnxruntime-common (main)&#10;&#10;Upgrades onnxruntime-web and onnxruntime-common to versions&#10;1" />
     <MESSAGE value="feat: Upgrade onnxruntime-web and onnxruntime-common (main)&#10;&#10;Upgrades onnxruntime-web and onnxruntime-common to versions&#10;1.23.0. This includes updates to dependencies and related&#10;packages.&#10;" />
     <MESSAGE value="feat: Upgrade onnxruntime-web and onnxruntime-common (main)&#10;&#10;Upgrades onnxruntime-web and onnxruntime-common to versions&#10;1.23.0. This includes updates to dependencies and related&#10;packages." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Upgrade onnxruntime-web and onnxruntime-common (main)&#10;&#10;Upgrades onnxruntime-web and onnxruntime-common to versions&#10;1.23.0. This includes updates to dependencies and related&#10;packages." />
+    <MESSAGE value="```&#10;feat: Replace &quot;Buy me a coffee&quot; with &quot;Hire me&quot; (main)&#10;&#10;" />
+    <MESSAGE value="```&#10;feat: Replace &quot;Buy me a coffee&quot; with &quot;Hire me&quot; (main)&#10;&#10;This commit replaces the &quot;Buy me a coffee&quot; button with a&#10;&quot;Hire" />
+    <MESSAGE value="```&#10;feat: Replace &quot;Buy me a coffee&quot; with &quot;Hire me&quot; (main)&#10;&#10;This commit replaces the &quot;Buy me a coffee&quot; button with a&#10;&quot;Hire me&quot; button in the navbar. It also updates the&#10;corresponding translation in the `en/translation.json` file.&#10;The icon has been changed to a" />
+    <MESSAGE value="```&#10;feat: Replace &quot;Buy me a coffee&quot; with &quot;Hire me&quot; (main)&#10;&#10;This commit replaces the &quot;Buy me a coffee&quot; button with a&#10;&quot;Hire me&quot; button in the navbar. It also updates the&#10;corresponding translation in the `en/translation.json` file.&#10;The icon has been changed to a job search icon, and the&#10;link points to a Google Drive document.&#10;```" />
+    <MESSAGE value="chore: Replace &quot;Buy me a coffee&quot; with &quot;Hire me&quot; (main)&#10;&#10;This commit replaces the &quot;Buy me a coffee&quot; button with a&#10;&quot;Hire me&quot; button in the navbar. It also updates the&#10;corresponding translation in the `en/translation.json` file.&#10;The icon has been changed to a job search icon, and the&#10;link points to a Google Drive document." />
+    <MESSAGE value="```" />
+    <MESSAGE value="```&#10;feat: Update workspace and translation files (main)&#10;&#10;This commit includes the following changes:" />
+    <MESSAGE value="```&#10;feat: Update workspace and translation files (main)&#10;&#10;This commit includes the following changes:&#10;&#10;- Updated the workspace configuration in .idea/workspace.xml to&#10;  reflect" />
+    <MESSAGE value="```&#10;feat: Update workspace and translation files (main)&#10;&#10;This commit includes the following changes:&#10;&#10;- Updated the workspace configuration in .idea/workspace.xml to&#10;  reflect the recent npm script execution.&#10;- Modified the English translation file (translation.json) by&#10;  reordering the &quot;navbar&quot; keys.&#10;```&#10;" />
+    <MESSAGE value="feat: Update workspace and translation files (main)&#10;&#10;This commit includes the following changes:&#10;&#10;- Updated the workspace configuration in .idea/workspace.xml to&#10;  reflect the recent npm script execution.&#10;- Modified the English translation file (translation.json) by&#10;  reordering the &quot;navbar&quot; keys." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Update workspace and translation files (main)&#10;&#10;This commit includes the following changes:&#10;&#10;- Updated the workspace configuration in .idea/workspace.xml to&#10;  reflect the recent npm script execution.&#10;- Modified the English translation file (translation.json) by&#10;  reordering the &quot;navbar&quot; keys." />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

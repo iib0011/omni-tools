@@ -122,7 +122,8 @@
   "navbar": {
     "buyMeACoffee": "Offre-moi un café",
     "home": "Maison",
-    "tools": "Outils"
+    "tools": "Outils",
+    "hireMe": "Contrátame"
   },
   "number": {
     "generate": {

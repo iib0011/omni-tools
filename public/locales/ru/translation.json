@@ -122,7 +122,8 @@
   "navbar": {
     "buyMeACoffee": "Купи мне кофе",
     "home": "Дом",
-    "tools": "Инструменты"
+    "tools": "Инструменты",
+    "hireMe": "Нанимайте меня"
   },
   "number": {
     "generate": {
