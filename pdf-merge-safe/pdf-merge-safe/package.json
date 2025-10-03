@@ -1,0 +1,16 @@
+{
+  "name": "pdf-merge-safe",
+  "version": "1.0.0",
+  "description": "Merge PDFs with safe handling of encrypted/signed inputs (pdf-lib).",
+  "type": "commonjs",
+  "scripts": {
+    "scan": "node src/scan.js",
+    "merge": "node src/index.js",
+    "merge:yes": "node src/index.js --yes",
+    "make:normal": "node scripts/make-normal.js",
+    "make:encrypted": "node scripts/make-encrypted.js"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  }
+}
