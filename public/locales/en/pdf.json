@@ -63,6 +63,18 @@
     "shortDescription": "Convert PDF into PNG images",
     "title": "PDF to PNG"
   },
+  "pdfToWord": {
+    "description": "Convert PDF documents to editable Word (.docx) format while preserving text, formatting, and layout.",
+    "longDescription": "Upload your PDF and convert it to an editable Word document directly in your browser. This tool extracts text, images, and formatting to create a .docx file that can be opened and edited in Microsoft Word or compatible applications. No data is uploaded — everything runs locally.",
+    "shortDescription": "Convert PDF files to editable Word documents",
+    "title": "PDF to Word",
+    "convertingPdf": "Converting PDF to Word...",
+    "resultTitle": "Converted Word Document",
+    "toolInfo": {
+      "description": "This tool converts PDF documents to editable Word (.docx) format. The conversion preserves text content, basic formatting, and images when possible. The resulting Word document can be opened and edited in Microsoft Word or compatible applications.",
+      "title": "PDF to Word Converter"
+    }
+  },
   "protectPdf": {
     "description": "Add password protection to your PDF files securely in your browser",
     "shortDescription": "Password protect PDF files securely",
