@@ -464,7 +464,7 @@
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\categories" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.i18n:sync">
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
         <settings />
@@ -535,11 +535,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.i18n:sync" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.test:e2e" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.typecheck" />
-        <item itemvalue="npm.i18n:sync" />
       </list>
     </recent_temporary>
   </component>
