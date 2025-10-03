@@ -122,7 +122,8 @@
   "navbar": {
     "buyMeACoffee": "Buy me a coffee",
     "home": "Home",
-    "tools": "Tools"
+    "tools": "Tools",
+    "hireMe": "Hire me"
   },
   "number": {
     "generate": {

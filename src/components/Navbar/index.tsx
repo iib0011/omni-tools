@@ -127,7 +127,10 @@ const Navbar: React.FC<NavbarProps> = ({
     ></iframe>,
     <Button
       onClick={() => {
-        window.open('https://buymeacoffee.com/iib0011', '_blank');
+        window.open(
+          'https://drive.google.com/file/d/1-r9-rDYnDJic9dnDywKTAsueehIAVp5F/view?usp=sharing',
+          '_blank'
+        );
       }}
       sx={{ borderRadius: '100px' }}
       variant={'contained'}
@@ -135,11 +138,11 @@ const Navbar: React.FC<NavbarProps> = ({
         <Icon
           style={{ cursor: 'pointer' }}
           fontSize={25}
-          icon={'mdi:heart-outline'}
+          icon={'hugeicons:job-search'}
         />
       }
     >
-      {t('navbar.buyMeACoffee')}
+      {t('navbar.hireMe')}
     </Button>
   ];
   const drawerList = (

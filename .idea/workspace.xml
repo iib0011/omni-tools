@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="feat: Upgrade onnxruntime-web and onnxruntime-common (main)&#10;&#10;Upgrades onnxruntime-web and onnxruntime-common to versions&#10;1.23.0. This includes updates to dependencies and related&#10;packages.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -659,6 +659,8 @@
       <workItem from="1753201599796" duration="4449000" />
       <workItem from="1753206561770" duration="119000" />
       <workItem from="1753206717510" duration="3599000" />
+      <workItem from="1759497758761" duration="1012000" />
+      <workItem from="1759502144651" duration="196000" />
     </task>
     <task id="LOCAL-00206" summary="chore: new logo and font">
       <option name="closed" value="true" />
