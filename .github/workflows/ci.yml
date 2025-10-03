@@ -8,6 +8,12 @@ on:
   pull_request:
     branches:
       - main
+      
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+
 jobs:
   test-and-build:
     runs-on: ubuntu-latest
@@ -65,11 +71,19 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Log in to the Github Container registry
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Extract metadata for Docker
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: iib0011/omni-tools
+          images: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+            iib0011/omni-tools
           tags: |
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
             type=semver,pattern={{version}},enable=${{ startsWith(github.ref, 'refs/tags/v') }}
