@@ -121,9 +121,9 @@
   },
   "navbar": {
     "buyMeACoffee": "Купи мне кофе",
+    "hireMe": "Нанимайте меня",
     "home": "Дом",
-    "tools": "Инструменты",
-    "hireMe": "Нанимайте меня"
+    "tools": "Инструменты"
   },
   "number": {
     "generate": {

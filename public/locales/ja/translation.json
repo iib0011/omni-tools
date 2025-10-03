@@ -121,9 +121,9 @@
   },
   "navbar": {
     "buyMeACoffee": "コーヒーを買ってください",
+    "hireMe": "私を雇ってください",
     "home": "家",
-    "tools": "ツール",
-    "hireMe": "私を雇ってください"
+    "tools": "ツール"
   },
   "number": {
     "generate": {

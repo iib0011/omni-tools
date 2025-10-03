@@ -121,9 +121,9 @@
   },
   "navbar": {
     "buyMeACoffee": "Offre-moi un café",
+    "hireMe": "Contrátame",
     "home": "Maison",
-    "tools": "Outils",
-    "hireMe": "Contrátame"
+    "tools": "Outils"
   },
   "number": {
     "generate": {
