@@ -1,0 +1,117 @@
+{
+  "checkLeapYears": {
+    "description": "Verifica se un anno è bisestile e ottieni informazioni sugli anni bisestili.",
+    "exampleDescription": "Una nostra amica è nata il 29 febbraio di un anno bisestile e, di conseguenza, festeggia il suo compleanno solo una volta ogni 4 anni. Dato che non riusciamo mai a ricordarci quando è il suo compleanno, utilizziamo il nostro programma per creare un elenco di promemoria degli anni bisestili futuri. Per creare un elenco dei suoi prossimi compleanni, carichiamo una sequenza di anni dal 2025 al 2040 nell'input e otteniamo lo stato di ciascun anno. Se il programma dice che è un anno bisestile, allora sappiamo che saremo invitati a una festa di compleanno il 29 febbraio.",
+    "exampleTitle": "Trova i compleanni il 29 febbraio",
+    "inputTitle": "Inserisci l'anno",
+    "resultTitle": "Risultato dell'anno bisestile",
+    "shortDescription": "Verifica se un anno è bisestile",
+    "title": "Verifica anni bisestili",
+    "toolInfo": {
+      "description": "Un anno bisestile è un anno che contiene un giorno in più (il 29 febbraio) per mantenere il calendario sincronizzato con l'anno astronomico. Gli anni bisestili si verificano ogni 4 anni, ad eccezione degli anni divisibili per 100 ma non per 400.",
+      "title": "Che cos'è un anno bisestile?"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "Aggiungi nome ore",
+    "addHoursNameDescription": "Aggiungi la stringa ore ai valori di output",
+    "description": "Converti i giorni in ore con opzioni personalizzabili.",
+    "hoursName": "Nome ore",
+    "shortDescription": "Converti giorni in ore",
+    "title": "Converti giorni in ore",
+    "toolInfo": {
+      "description": "Questo strumento ti consente di convertire i giorni in ore. È possibile inserire i giorni come numeri o con unità di misura e lo strumento li convertirà in ore. È anche possibile scegliere di aggiungere il suffisso 'ore' ai valori di output.",
+      "title": "Converti giorni in ore"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "Aggiungi nome giorni",
+    "addDaysNameDescription": "Aggiungi la stringa giorni ai valori di output",
+    "daysName": "Nome giorni",
+    "description": "Converti le ore in giorni con opzioni personalizzabili.",
+    "shortDescription": "Converti le ore in giorni",
+    "title": "Converti le ore in giorni",
+    "toolInfo": {
+      "description": "Questo strumento consente di convertire le ore in giorni. È possibile inserire le ore come numeri o con unità di misura e lo strumento le convertirà in giorni. È anche possibile scegliere di aggiungere il suffisso ‘giorni’ ai valori di output.",
+      "title": "Converti ore in giorni"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "Aggiungi riempimento",
+    "addPaddingDescription": "Aggiungi riempimento con zeri a ore, minuti e secondi.",
+    "description": "Converti i secondi in un formato di tempo leggibile (ore:minuti:secondi). Inserisci il numero di secondi per ottenere l'ora formattata.",
+    "shortDescription": "Converti i secondi in formato ora",
+    "timePadding": "Riempimento ora",
+    "title": "Converti i secondi in ora",
+    "toolInfo": {
+      "title": "Che cos'è un {{title}}?"
+    }
+  },
+  "convertTimeToSeconds": {
+    "description": "Converti l'ora formattata (HH:MM:SS) in secondi.",
+    "inputTitle": "Inserisci l'ora",
+    "resultTitle": "Secondi",
+    "shortDescription": "Converti il formato dell'ora in secondi",
+    "title": "Converti tempo in secondi",
+    "toolInfo": {
+      "description": "Questo strumento consente di convertire stringhe di tempo formattate (HH:MM:SS) in secondi. È utile per calcolare durate e intervalli di tempo.",
+      "title": "Converti tempo in secondi"
+    }
+  },
+  "convertUnixToDate": {
+    "addUtcLabel": "Aggiungi suffisso ‘UTC’",
+    "addUtcLabelDescription": "Visualizza ‘UTC’ dopo la data convertita (solo per la modalità UTC)",
+    "description": "Converti un timestamp Unix in una data leggibile dall'utente.",
+    "outputOptions": "Opzioni di output",
+    "shortDescription": "Converti timestamp Unix in data",
+    "title": "Converti Unix in data",
+    "toolInfo": {
+      "description": "Questo strumento converte un timestamp Unix (in secondi) in un formato data leggibile (ad esempio, AAAA-MM-GG HH:MM:SS). Supporta sia l'output locale che UTC, rendendolo utile per interpretare rapidamente i timestamp da log, API o sistemi che utilizzano il tempo Unix.",
+      "title": "Converti Unix in data"
+    },
+    "useLocalTime": "Usa ora locale",
+    "useLocalTimeDescription": "Mostra la data convertita nel tuo fuso orario locale invece che UTC",
+    "withLabel": "Opzioni"
+  },
+  "crontabGuru": {
+    "description": "Genera e comprendi le espressioni cron. Crea pianificazioni cron per attività automatizzate e lavori di sistema.",
+    "shortDescription": "Genera e comprendi le espressioni cron",
+    "title": "Crontab Guru"
+  },
+  "timeBetweenDates": {
+    "description": "Calcola la differenza di tempo tra due date. Ottieni la durata esatta in giorni, ore, minuti e secondi.",
+    "endDate": "Data di fine",
+    "endDateTime": "Data e ora di fine",
+    "endTime": "Ora di fine",
+    "endTimezone": "Fuso orario di fine",
+    "shortDescription": "Calcola il tempo tra due date",
+    "startDate": "Data di inizio",
+    "startDateTime": "Data e ora di inizio",
+    "startTime": "Ora di inizio",
+    "startTimezone": "Fuso orario di inizio",
+    "title": "Tempo tra le date",
+    "toolInfo": {
+      "description": "Calcola la differenza di tempo esatta tra due date e orari, con supporto per diversi fusi orari. Questo strumento fornisce un'analisi dettagliata della differenza di tempo in varie unità (anni, mesi, giorni, ore, minuti e secondi).",
+      "title": "Calcolatore del tempo tra date"
+    }
+  },
+  "truncateClockTime": {
+    "description": "Tronca l'ora per rimuovere secondi o minuti. Arrotondare l'ora all'ora, al minuto o all'intervallo personalizzato più vicino.",
+    "printDroppedComponents": "Stampa componenti troncati",
+    "shortDescription": "Troncare l'ora con la precisione specificata",
+    "timePadding": "Riempimento dell'ora",
+    "title": "Troncare l'ora",
+    "toolInfo": {
+      "title": "Che cos'è un {{title}}?"
+    },
+    "truncateMinutesAndSeconds": "Tronca minuti e secondi",
+    "truncateMinutesAndSecondsDescription": "Elimina entrambi i componenti minuti e secondi da ogni ora.",
+    "truncateOnlySeconds": "Tronca solo i secondi",
+    "truncateOnlySecondsDescription": "Elimina i secondi da ogni ora dell'orologio.",
+    "truncationSide": "Lato di troncamento",
+    "useZeroPadding": "Usa riempimento con zeri",
+    "zeroPaddingDescription": "Rendere tutte le componenti dell'ora sempre di due cifre.",
+    "zeroPrintDescription": "Visualizzare le parti eliminate come valori zero \"00\".",
+    "zeroPrintTruncatedParts": "Stampa a zero delle parti troncate"
+  }
+}
