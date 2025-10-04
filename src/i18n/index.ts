@@ -23,6 +23,30 @@ export type FullI18nKey = {
   [K in I18nNamespaces]: `${K}:${ParseKeys<K>}`;
 }[I18nNamespaces];
 
+const currentLang = localStorage.getItem('lang');
+const userHasChosenLang = localStorage.getItem('userChosenLang'); // Flag to track if user manually selected
+
+if (
+  window.DEFAULT_LANG &&
+  (!currentLang || (!userHasChosenLang && currentLang === 'en'))
+) {
+  const supportedLangs = [
+    'en',
+    'de',
+    'es',
+    'fr',
+    'pt',
+    'ja',
+    'hi',
+    'nl',
+    'ru',
+    'zh'
+  ];
+  if (supportedLangs.includes(window.DEFAULT_LANG)) {
+    localStorage.setItem('lang', window.DEFAULT_LANG);
+  }
+}
+
 i18n
   .use(Backend)
   .use(LanguageDetector)

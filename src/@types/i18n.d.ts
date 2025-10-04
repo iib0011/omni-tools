@@ -31,3 +31,9 @@ declare module 'i18next' {
     };
   }
 }
+
+declare global {
+  interface Window {
+    DEFAULT_LANG?: string;
+  }
+}
