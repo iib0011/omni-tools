@@ -17,10 +17,22 @@
     "fileCopied": "File copied",
     "selectFileDescription": "Click here to select a {{type}} from your device, press Ctrl+V to use a {{type}} from your clipboard, or drag and drop a file from desktop"
   },
+  "converters": {
+    "audioconverter": {
+      "title": "Audio Converter",
+      "description": "Convert audio files between different formats.",
+      "shortDescription": "Convert audio files to various formats.",
+      "longDescription": "This tool allows you to convert audio files from one format to another, supporting a wide range of audio formats for seamless conversion."
+    }
+  },
   "categories": {
     "audio": {
       "description": "Tools for working with audio – extract audio from video, adjusting audio speed, merging multiple audio files and much more.",
       "title": "Audio Tools"
+    },
+    "converters": {
+      "description": "Tools for converting data between different formats – convert images, audio, video, text, and more.",
+      "title": "Converter Tools"
     },
     "csv": {
       "description": "Tools for working with CSV files - convert CSV to different formats, manipulate CSV data, validate CSV structure, and process CSV files efficiently.",
