@@ -63,6 +63,11 @@
     "shortDescription": "PDFをPNG画像に変換する",
     "title": "PDFからPNGへ"
   },
+  "convertToPdf": {
+    "description": "様々な画像形式（PNG、GIF、JPG、TIF、PSD、SVG、WEBP、HEIC、RAW）をPDFに変換します。画像サイズとページの向きを調整できます。",
+    "shortDescription": "画像を PDF に変換し、画像のサイズやページの向きを調整できます。",
+    "title": "画像を PDF に変換"
+  },
   "protectPdf": {
     "description": "ブラウザで安全にPDFファイルにパスワード保護を追加します",
     "shortDescription": "PDFファイルをパスワードで安全に保護する",

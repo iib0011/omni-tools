@@ -63,6 +63,11 @@
     "shortDescription": "将 PDF 转换为 PNG 图像",
     "title": "PDF 转 PNG"
   },
+  "convertToPdf": {
+    "title": "将图像转换为 PDF",
+    "description": "将各种图像格式（PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW）转换为 PDF，并可调整图像大小和页面方向。",
+    "shortDescription": "将图像转换为 PDF，可调整大小和方向"
+  },
   "protectPdf": {
     "description": "在浏览器中安全地为 PDF 文件添加密码保护",
     "shortDescription": "使用密码安全地保护 PDF 文件",
