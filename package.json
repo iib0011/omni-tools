@@ -83,6 +83,7 @@
     "react-konva": "^18.2.10",
     "react-router-dom": "^6.23.1",
     "styled-components": "^6.1.19",
+    "stylis-plugin-rtl": "^2.1.1",
     "tesseract.js": "^6.0.0",
     "type-fest": "^4.35.0",
     "use-deep-compare-effect": "^1.8.1",
