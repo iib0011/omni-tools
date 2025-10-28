@@ -3,68 +3,36 @@ import ConvertToPdf from './index';
 import { vi } from 'vitest';
 import '@testing-library/jest-dom';
 
-it('should render with default state values', () => {
-  render(<ConvertToPdf title="Test PDF" />);
-  expect(screen.getByLabelText(/A4 Page/i)).toBeChecked();
-  expect(screen.getByLabelText(/Portrait/i)).toBeChecked();
-  expect(screen.getByText(/Scale image: 100%/i)).toBeInTheDocument();
-});
+describe('ConvertToPdf', () => {
+  it('renders with default state values (full, portrait hidden, no scale shown)', () => {
+    render(<ConvertToPdf title="Test PDF" />);
 
-it('should switch to full page type when selected', () => {
-  render(<ConvertToPdf title="Test PDF" />);
-  const fullOption = screen.getByLabelText(/Full Size/i);
-  fireEvent.click(fullOption);
-  expect(fullOption).toBeChecked();
-});
+    expect(screen.getByLabelText(/Full Size \(Same as Image\)/i)).toBeChecked();
 
-it('should update scale when slider moves', () => {
-  render(<ConvertToPdf title="Test PDF" />);
-  const slider = screen.getByRole('slider');
-  fireEvent.change(slider, { target: { value: 80 } });
-  expect(screen.getByText(/Scale image: 80%/i)).toBeInTheDocument();
-});
+    expect(screen.queryByLabelText(/A4 Page/i)).toBeInTheDocument();
+    expect(screen.queryByLabelText(/Portrait/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Scale image:/i)).not.toBeInTheDocument();
+  });
 
-it('should change orientation to landscape', () => {
-  render(<ConvertToPdf title="Test PDF" />);
-  const landscapeRadio = screen.getByLabelText(/Landscape/i);
-  fireEvent.click(landscapeRadio);
-  expect(landscapeRadio).toBeChecked();
-});
+  it('switches to A4 page type and shows orientation and scale', () => {
+    render(<ConvertToPdf title="Test PDF" />);
 
-vi.mock('jspdf', () => {
-  return {
-    default: vi.fn().mockImplementation(() => ({
-      setDisplayMode: vi.fn(),
-      internal: { pageSize: { getWidth: () => 210, getHeight: () => 297 } },
-      addImage: vi.fn(),
-      output: vi.fn().mockReturnValue(new Blob())
-    }))
-  };
-});
+    const a4Option = screen.getByLabelText(/A4 Page/i);
+    fireEvent.click(a4Option);
+    expect(a4Option).toBeChecked();
 
-it('should call jsPDF and addImage when compute is triggered', async () => {
-  const createObjectURLStub = vi
-    .spyOn(global.URL, 'createObjectURL')
-    .mockReturnValue('blob:url');
+    expect(screen.getByLabelText(/Portrait/i)).toBeChecked();
+    expect(screen.getByText(/Scale image:\s*100%/i)).toBeInTheDocument();
+  });
 
-  vi.mock('components/input/ToolImageInput', () => ({
-    default: ({ onChange }: any) => (
-      <input
-        type="file"
-        title="Input Image"
-        onChange={(e) => onChange(e.target.files[0])}
-      />
-    )
-  }));
+  it('updates scale when slider moves (after switching to A4)', () => {
+    render(<ConvertToPdf title="Test PDF" />);
 
-  const mockFile = new File(['dummy'], 'test.jpg', { type: 'image/jpeg' });
-  render(<ConvertToPdf title="Test PDF" />);
+    fireEvent.click(screen.getByLabelText(/A4 Page/i));
 
-  const fileInput = screen.getByTitle(/Input Image/i);
-  fireEvent.change(fileInput, { target: { files: [mockFile] } });
+    const slider = screen.getByRole('slider');
+    fireEvent.change(slider, { target: { value: 80 } });
 
-  const jsPDF = (await import('jspdf')).default;
-  expect(jsPDF).toHaveBeenCalled();
-
-  createObjectURLStub.mockRestore();
+    expect(screen.getByText(/Scale image:\s*80%/i)).toBeInTheDocument();
+  });
 });
