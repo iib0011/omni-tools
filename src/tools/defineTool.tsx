@@ -33,7 +33,8 @@ export type ToolCategory =
   | 'video'
   | 'pdf'
   | 'audio'
-  | 'xml';
+  | 'xml'
+  | 'conversion';
 
 export interface DefinedTool {
   type: ToolCategory;

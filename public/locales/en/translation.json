@@ -42,6 +42,10 @@
       "description": "Tools for working with lists – sort, reverse, randomize lists, find unique and duplicate list items, change list item separators, and much more.",
       "title": "List Tools"
     },
+    "conversion": {
+      "description": "Comprehensive tools for converting between all major and niche units: length, area, volume, mass, temperature, speed, digital storage, energy, voltage, current, power, and more. Instantly switch between metric, imperial, and scientific units for science, engineering, daily life..",
+      "title": "Conversion Tools"
+    },
     "number": {
       "description": "Tools for working with numbers – generate number sequences, convert numbers to words and words to numbers, sort, round, factor numbers, and much more.",
       "title": "Number Tools"
@@ -251,5 +255,60 @@
   "userTypes": {
     "developers": "Developers",
     "generalUsers": "General users"
+  },
+  "lengthConverter": {
+    "title": "Length Converter",
+    "description": "Convert between metric, imperial, and US customary units of length and distance. Instantly switch between meters, kilometers, miles, yards, feet, inches, and more. Useful for science, engineering, travel, and everyday tasks. Enable Expert mode to unlock all available units.",
+    "shortDescription": "Convert length and distance units"
+  },
+  "areaConverter": {
+    "title": "Area Converter",
+    "description": "Easily convert between square meters, acres, hectares, square feet, and other area units. Supports metric and imperial systems. Perfect for land measurement, real estate, and construction projects. Enable Expert mode to unlock all available units.",
+    "shortDescription": "Convert area units"
+  },
+  "volumeConverter": {
+    "title": "Volume Converter",
+    "description": "Convert between liters, milliliters, gallons, quarts, pints, cups, and more. Handles both metric and US/UK imperial volume units. Great for cooking, science, and industrial applications. Enable Expert mode to unlock all available units.",
+    "shortDescription": "Convert volume and capacity units"
+  },
+  "massConverter": {
+    "title": "Mass Converter",
+    "description": "Switch between grams, kilograms, tons, pounds, ounces, and other mass and weight units. Supports metric, imperial, and US customary systems. Ideal for science, nutrition, and shipping. Enable Expert mode to unlock all available units.",
+    "shortDescription": "Convert mass and weight units"
+  },
+  "temperatureConverter": {
+    "title": "Temperature Converter",
+    "description": "Convert between Celsius, Fahrenheit, Kelvin, and Rankine. Instantly switch temperature units for science, cooking, weather, and engineering. Enable Expert mode to unlock all available units.",
+    "shortDescription": "Convert temperature units"
+  },
+  "speedConverter": {
+    "title": "Speed Converter",
+    "description": "Convert between meters per second, kilometers per hour, miles per hour, knots, and more. Useful for physics, travel, automotive, and sports. Enable Expert mode to unlock all available units.",
+    "shortDescription": "Convert speed units"
+  },
+  "digitalConverter": {
+    "title": "Digital Storage Converter",
+    "description": "Convert between bits, bytes, kilobytes, megabytes, gigabytes, terabytes, and more. Instantly switch digital storage units for computing, IT, and data management. Enable Expert mode to unlock all available units.",
+    "shortDescription": "Convert digital storage units"
+  },
+  "energyConverter": {
+    "title": "Energy Converter",
+    "description": "Convert between joules, calories, kilowatt-hours, electronvolts, BTUs, and more. Useful for physics, engineering, nutrition, and energy management. Enable Expert mode to unlock all available units.",
+    "shortDescription": "Convert energy units"
+  },
+  "voltageConverter": {
+    "title": "Voltage Converter",
+    "description": "Convert between volts, millivolts, kilovolts, and more. Instantly switch voltage units for electronics, engineering, and physics. Enable Expert mode to unlock all available units.",
+    "shortDescription": "Convert voltage units"
+  },
+  "currentConverter": {
+    "title": "Current Converter",
+    "description": "Convert between amperes, milliamperes, kiloamperes, and more. Instantly switch current units for electronics, engineering, and physics. Enable Expert mode to unlock all available units.",
+    "shortDescription": "Convert electric current units"
+  },
+  "powerConverter": {
+    "title": "Power Converter",
+    "description": "Convert between watts, kilowatts, megawatts, horsepower, and more. Instantly switch power units for electronics, engineering, and physics. Enable Expert mode to unlock all available units.",
+    "shortDescription": "Convert power units"
   }
 }
