@@ -1,3 +1,4 @@
+import { tool as splitImage } from './split/meta';
 import { tool as resizeImage } from './resize/meta';
 import { tool as compressImage } from './compress/meta';
 import { tool as changeColors } from './change-colors/meta';
@@ -22,5 +23,6 @@ export const imageGenericTools = [
   imageToText,
   qrCodeGenerator,
   rotateImage,
-  convertToJpg
+  convertToJpg,
+  splitImage
 ];
