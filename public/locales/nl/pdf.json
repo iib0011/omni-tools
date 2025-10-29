@@ -63,6 +63,11 @@
     "shortDescription": "PDF naar PNG-afbeeldingen converteren",
     "title": "PDF naar PNG"
   },
+  "convertToPdf": {
+    "title": "Afbeeldingen naar PDF",
+    "description": "Verschillende afbeeldingsformaten (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) naar PDF converteren, met opties om de afbeelding te schalen en de paginaoriëntatie te kiezen.",
+    "shortDescription": "Afbeeldingen naar PDF converteren met schaal- en oriëntatiecontrole"
+  },
   "protectPdf": {
     "description": "Voeg wachtwoordbeveiliging toe aan uw PDF-bestanden veilig in uw browser",
     "shortDescription": "PDF-bestanden veilig met een wachtwoord beveiligen",

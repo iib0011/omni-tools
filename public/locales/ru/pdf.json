@@ -63,6 +63,11 @@
     "shortDescription": "Конвертировать PDF в изображения PNG",
     "title": "PDF в PNG"
   },
+  "convertToPdf": {
+    "title": "Изображения в PDF",
+    "description": "Преобразовать различные форматы изображений (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) в PDF с возможностью масштабирования изображения и выбора ориентации страницы.",
+    "shortDescription": "Преобразовать изображения в PDF с управлением масштабом и ориентацией"
+  },
   "protectPdf": {
     "description": "Добавьте надежную защиту паролем для ваших PDF-файлов в браузере.",
     "shortDescription": "Надежная защита паролем PDF-файлов",
