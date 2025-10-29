@@ -1,0 +1,114 @@
+{
+  "compressPdf": {
+    "compressedFileSize": "حجم الملف المضغوط",
+    "compressingPdf": "جاري ضغط PDF...",
+    "compressionLevel": "مستوى الضغط",
+    "compressionSettings": "إعدادات الضغط",
+    "description": "تقليل حجم ملف PDF مع الحفاظ على الجودة باستخدام Ghostscript",
+    "errorCompressingPdf": "فشل ضغط PDF: {{error}}",
+    "errorReadingPdf": "فشل قراءة ملف PDF. يرجى التأكد من أنه ملف PDF صالح.",
+    "fileSize": "حجم الملف الأصلي",
+    "highCompression": "ضغط عالي",
+    "highCompressionDescription": "أقصى تقليل لحجم الملف مع بعض فقدان الجودة",
+    "inputTitle": "إدخال PDF",
+    "longDescription": "ضغط ملفات PDF بشكل آمن في متصفحك باستخدام Ghostscript. لا تغادر ملفاتك جهازك أبدًا، مما يضمن خصوصية كاملة أثناء تقليل أحجام الملفات لمشاركة البريد الإلكتروني أو التحميل على المواقع الإلكترونية أو توفير مساحة التخزين. مدعوم بتقنية WebAssembly.",
+    "lowCompression": "ضغط منخفض",
+    "lowCompressionDescription": "تقليل طفيف لحجم الملف مع الحد الأدنى من فقدان الجودة",
+    "mediumCompression": "ضغط متوسط",
+    "mediumCompressionDescription": "توازن بين حجم الملف والجودة",
+    "pages": "عدد الصفحات",
+    "resultTitle": "PDF مضغوط",
+    "shortDescription": "ضغط ملفات PDF بشكل آمن في متصفحك",
+    "title": "ضغط PDF"
+  },
+  "editor": {
+    "description": "محرر PDF متقدم مع قدرات التعليق وملء النماذج والتظليل والتصدير. قم بتحرير ملفات PDF الخاصة بك مباشرة في المتصفح باستخدام أدوات احترافية بما في ذلك إدراج النص والرسم والتظليل والتوقيع وملء النماذج.",
+    "shortDescription": "تحرير ملفات PDF بأدوات تعليق وتوقيع وتحرير متقدمة",
+    "title": "محرر PDF"
+  },
+  "merge": {
+    "inputTitle": "إدخال PDF",
+    "loadingText": "استخراج الصفحات",
+    "resultTitle": "إخراج PDF مدمج",
+    "toolInfo": {
+      "description": "تتيح لك هذه الأداة دمج ملفات PDF متعددة في مستند واحد. لاستخدام الأداة، ما عليك سوى تحميل ملفات PDF التي تريد دمجها. ستجمع الأداة بعد ذلك جميع الصفحات من الملفات المدخلة في مستند PDF واحد.",
+      "title": "كيفية استخدام أداة دمج PDF؟"
+    }
+  },
+  "mergePdf": {
+    "description": "دمج ملفات PDF متعددة في مستند واحد.",
+    "inputTitle": "إدخال ملفات PDF",
+    "mergingPdfs": "دمج ملفات PDF",
+    "pdfOptions": "خيارات PDF",
+    "resultTitle": "PDF مدمج",
+    "shortDescription": "دمج ملفات PDF متعددة في مستند واحد",
+    "sortByFileName": "الترتيب حسب اسم الملف",
+    "sortByFileNameDescription": "ترتيب ملفات PDF أبجديًا حسب اسم الملف",
+    "sortByUploadOrder": "الترتيب حسب ترتيب التحميل",
+    "sortByUploadOrderDescription": "الحفاظ على ملفات PDF بالترتيب الذي تم تحميلها به",
+    "title": "دمج PDF",
+    "toolInfo": {
+      "description": "تتيح لك هذه الأداة دمج ملفات PDF متعددة في مستند واحد. يمكنك اختيار كيفية ترتيب ملفات PDF وستقوم الأداة بدمجها بالترتيب المحدد.",
+      "title": "دمج ملفات PDF"
+    }
+  },
+  "pdfToEpub": {
+    "description": "تحويل مستندات PDF إلى ملفات EPUB لتوافق أفضل مع قارئ الكتب الإلكترونية.",
+    "shortDescription": "تحويل ملفات PDF إلى تنسيق EPUB",
+    "title": "PDF إلى EPUB"
+  },
+  "pdfToPng": {
+    "description": "تحويل مستندات PDF إلى صور PNG.",
+    "longDescription": "قم بتحميل PDF وتحويل كل صفحة إلى صورة PNG عالية الجودة مباشرة في متصفحك. هذه الأداة مثالية لاستخراج المحتوى المرئي أو مشاركة الصفحات الفردية. لا يتم تحميل أي بيانات - كل شيء يعمل محليًا.",
+    "shortDescription": "تحويل PDF إلى صور PNG",
+    "title": "PDF إلى PNG"
+  },
+  "protectPdf": {
+    "description": "إضافة حماية بكلمة مرور إلى ملفات PDF الخاصة بك بشكل آمن في متصفحك",
+    "shortDescription": "حماية ملفات PDF بكلمة مرور بشكل آمن",
+    "title": "حماية PDF"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "سيتم تدوير جميع {{count}} صفحة",
+    "angleOptions": {
+      "clockwise90": "90° باتجاه عقارب الساعة",
+      "counterClockwise270": "270° (90° عكس عقارب الساعة)",
+      "upsideDown180": "180° (رأسًا على عقب)"
+    },
+    "applyToAllPages": "تطبيق على جميع الصفحات",
+    "description": "تدوير الصفحات في مستند PDF.",
+    "inputTitle": "إدخال PDF",
+    "longDescription": "تغيير اتجاه صفحات PDF عن طريق تدويرها 90 أو 180 أو 270 درجة. مفيد لإصلاح المستندات الممسوحة ضوئيًا بشكل غير صحيح أو إعداد ملفات PDF للطباعة.",
+    "pageRangesDescription": "أدخل أرقام الصفحات أو النطاقات مفصولة بفواصل (مثال: 1,3,5-7)",
+    "pageRangesPlaceholder": "مثال: 1,5-8",
+    "pagesWillBeRotated": "سيتم تدوير {{count}} صفحة{{count !== 1 ? '' : ''}}",
+    "pdfPageCount": "يحتوي PDF على {{count}} صفحة{{count !== 1 ? '' : ''}}",
+    "resultTitle": "PDF مدور",
+    "rotatingPages": "تدوير الصفحات",
+    "rotationAngle": "زاوية الدوران",
+    "rotationSettings": "إعدادات الدوران",
+    "shortDescription": "تدوير الصفحات في مستند PDF",
+    "title": "تدوير PDF",
+    "toolInfo": {
+      "description": "تتيح لك هذه الأداة تدوير الصفحات في مستند PDF. يمكنك تدوير جميع الصفحات أو تحديد صفحات فردية لتدويرها. اختر زاوية الدوران: 90° باتجاه عقارب الساعة، 180° (رأسًا على عقب)، أو 270° (90° عكس عقارب الساعة). لتدوير صفحات محددة، قم بإلغاء تحديد \"تطبيق على جميع الصفحات\" وأدخل أرقام الصفحات أو النطاقات مفصولة بفواصل (مثال: 1,3,5-7).",
+      "title": "كيفية استخدام أداة تدوير PDF"
+    }
+  },
+  "splitPdf": {
+    "description": "استخراج صفحات محددة من مستند PDF.",
+    "extractingPages": "استخراج الصفحات",
+    "inputTitle": "إدخال PDF",
+    "pageExtractionPreview": "سيتم استخراج {{count}} صفحة{{count !== 1 ? '' : ''}}",
+    "pageRangesDescription": "أدخل أرقام الصفحات أو النطاقات مفصولة بفواصل (مثال: 1,3,5-7)",
+    "pageRangesPlaceholder": "مثال: 1,5-8",
+    "pageSelection": "تحديد الصفحات",
+    "pdfPageCount": "يحتوي PDF على {{count}} صفحة{{count !== 1 ? '' : ''}}",
+    "resultTitle": "PDF مستخرج",
+    "shortDescription": "استخراج صفحات محددة من ملف PDF",
+    "title": "تقسيم PDF",
+    "toolInfo": {
+      "description": "تتيح لك هذه الأداة استخراج صفحات محددة من مستند PDF. يمكنك تحديد صفحات فردية أو نطاقات من الصفحات لاستخراجها.",
+      "title": "تقسيم PDF"
+    }
+  }
+}
