@@ -181,6 +181,10 @@ They make translation management simple and developer-friendly.
   <img src="https://contrib.rocks/image?repo=iib0011/omni-tools" />
 </a>
 
+
+- 📄 Planned: [PDF Translation Support](docs/pdf_translation.md)
+
+
 ## Contact
 
 For any questions or suggestions, feel free to open an issue or contact me at:
