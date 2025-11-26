@@ -1,0 +1,120 @@
+{
+  "changeSpeed": {
+    "defaultMultiplier": "기본 배수: 2는 2배 빠름을 의미합니다.",
+    "description": "비디오 파일의 재생 속도를 변경합니다. 오디오 동기화를 유지하면서 비디오 속도를 높이거나 낮춥니다. 다양한 속도 배수 및 일반적인 비디오 형식을 지원합니다.",
+    "inputTitle": "입력 비디오",
+    "newVideoSpeed": "새 비디오 속도",
+    "resultTitle": "편집된 비디오",
+    "settingSpeed": "속도 설정 중",
+    "shortDescription": "비디오 재생 속도 변경",
+    "title": "비디오 속도 변경",
+    "toolInfo": {
+      "title": "{{title}}이란?"
+    }
+  },
+  "compress": {
+    "default": "기본값",
+    "description": "240p, 480p, 720p 등과 같은 다른 해상도로 비디오를 확장하여 압축합니다. 이 도구는 허용 가능한 품질을 유지하면서 파일 크기를 줄이는 데 도움이 됩니다. MP4, WebM 및 OGG와 같은 일반적인 비디오 형식을 지원합니다.",
+    "inputTitle": "입력 비디오",
+    "loadingText": "비디오 압축 중...",
+    "lossless": "무손실",
+    "quality": "품질 (CRF)",
+    "resolution": "해상도",
+    "resultTitle": "압축된 비디오",
+    "shortDescription": "다른 해상도로 확장하여 비디오 압축",
+    "title": "비디오 압축",
+    "worst": "최악"
+  },
+  "cropVideo": {
+    "cropCoordinates": "자르기 좌표",
+    "croppingVideo": "비디오 자르는 중",
+    "description": "원하지 않는 영역을 제거하기 위해 비디오를 자릅니다.",
+    "errorBeyondHeight": "자르기 영역이 비디오 높이({{height}}px)를 초과합니다.",
+    "errorBeyondWidth": "자르기 영역이 비디오 너비({{width}}px)를 초과합니다.",
+    "errorCroppingVideo": "비디오를 자르는 중 오류가 발생했습니다. 매개변수와 비디오 파일을 확인하십시오.",
+    "errorLoadingDimensions": "비디오 크기를 로드하지 못했습니다.",
+    "errorNonNegativeCoordinates": "X 및 Y 좌표는 음수가 아니어야 합니다.",
+    "errorPositiveDimensions": "너비와 높이는 양수여야 합니다.",
+    "height": "높이",
+    "inputTitle": "입력 비디오",
+    "loadVideoForDimensions": "크기를 보려면 비디오를 로드하십시오.",
+    "longDescription": "이 도구를 사용하면 비디오 파일에서 원하지 않는 영역을 제거하거나 비디오의 특정 부분에 초점을 맞출 수 있습니다. 검은 막대를 제거하거나, 화면 비율을 조정하거나, 중요한 콘텐츠에 초점을 맞추는 데 유용합니다. MP4, MOV 및 AVI를 포함한 다양한 비디오 형식을 지원합니다.",
+    "resultTitle": "잘린 비디오",
+    "shortDescription": "원하지 않는 영역을 제거하기 위해 비디오 자르기",
+    "title": "비디오 자르기",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 비디오 파일에서 원하지 않는 영역을 제거할 수 있습니다. X, Y 좌표와 너비, 높이 크기를 설정하여 자르기 영역을 지정할 수 있습니다.",
+      "title": "비디오 자르기"
+    },
+    "videoDimensions": "비디오 크기: {{width}} × {{height}} 픽셀",
+    "videoInformation": "비디오 정보",
+    "width": "너비",
+    "xCoordinate": "X (왼쪽)",
+    "yCoordinate": "Y (위쪽)"
+  },
+  "flip": {
+    "description": "비디오 파일을 가로 또는 세로로 뒤집습니다. 특수 효과를 위해 비디오를 미러링하거나 방향 문제를 수정합니다.",
+    "flippingVideo": "비디오 뒤집는 중",
+    "horizontalLabel": "가로 (미러)",
+    "inputTitle": "입력 비디오",
+    "orientation": "방향",
+    "resultTitle": "뒤집힌 비디오",
+    "shortDescription": "비디오를 가로 또는 세로로 뒤집기",
+    "title": "비디오 뒤집기",
+    "verticalLabel": "세로 (거꾸로)"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "GIF 애니메이션의 재생 속도를 변경합니다. 부드러운 애니메이션을 유지하면서 GIF 속도를 높이거나 낮춥니다.",
+      "shortDescription": "GIF 애니메이션 속도 변경",
+      "title": "GIF 속도 변경"
+    }
+  },
+  "loop": {
+    "description": "원본 비디오를 여러 번 반복하여 반복 비디오를 만듭니다.",
+    "inputTitle": "입력 비디오",
+    "loopingVideo": "비디오 반복 중",
+    "loops": "반복",
+    "numberOfLoops": "반복 횟수",
+    "resultTitle": "반복된 비디오",
+    "shortDescription": "반복 비디오 파일 만들기",
+    "title": "비디오 반복",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 원본 비디오를 여러 번 반복하여 반복 비디오를 만들 수 있습니다. 비디오가 몇 번 반복되어야 하는지 지정할 수 있습니다.",
+      "title": "{{title}}이란?"
+    }
+  },
+  "mergeVideo": {
+    "description": "여러 비디오 파일을 하나의 연속적인 비디오로 결합합니다.",
+    "longDescription": "이 도구를 사용하면 여러 비디오 파일을 하나의 연속적인 비디오로 병합하거나 추가할 수 있습니다. 비디오 파일을 업로드하고 원하는 순서로 정렬한 다음 하나의 파일로 병합하여 쉽게 공유하거나 편집할 수 있습니다.",
+    "shortDescription": "비디오를 쉽게 추가하고 병합합니다.",
+    "title": "비디오 병합"
+  },
+  "rotate": {
+    "180Degrees": "180° (거꾸로)",
+    "270Degrees": "270° (시계 반대 방향 90°)",
+    "90Degrees": "시계 방향 90°",
+    "description": "비디오 파일을 90, 180 또는 270도 회전합니다. 정밀한 회전 제어로 비디오 방향을 수정하거나 특수 효과를 만듭니다.",
+    "inputTitle": "입력 비디오",
+    "resultTitle": "회전된 비디오",
+    "rotatingVideo": "비디오 회전 중",
+    "rotation": "회전",
+    "shortDescription": "지정된 각도로 비디오 회전",
+    "title": "비디오 회전"
+  },
+  "trim": {
+    "description": "시작 및 종료 시간을 지정하여 비디오 파일을 자릅니다. 비디오의 시작 또는 끝에서 원하지 않는 부분을 제거합니다.",
+    "endTime": "종료 시간",
+    "inputTitle": "입력 비디오",
+    "resultTitle": "잘린 비디오",
+    "shortDescription": "원하지 않는 부분을 제거하여 비디오 자르기",
+    "startTime": "시작 시간",
+    "timestamps": "타임스탬프",
+    "title": "비디오 자르기"
+  },
+  "videoToGif": {
+    "description": "비디오 파일을 애니메이션 GIF 형식으로 변환합니다. 특정 시간 범위를 추출하고 공유 가능한 애니메이션 이미지를 만듭니다.",
+    "shortDescription": "비디오를 애니메이션 GIF로 변환",
+    "title": "비디오를 GIF로"
+  }
+}

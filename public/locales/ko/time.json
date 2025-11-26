@@ -1,0 +1,117 @@
+{
+  "checkLeapYears": {
+    "description": "윤년인지 확인하고 윤년 정보를 가져옵니다.",
+    "exampleDescription": "우리 친구 중 한 명은 2월 29일 윤년에 태어나서 4년에 한 번씩만 생일이 돌아옵니다. 우리는 그녀의 생일이 언제인지 잘 기억하지 못해서, 프로그램을 사용하여 다가오는 윤년의 알림 목록을 만들고 있습니다. 그녀의 다음 생일 목록을 만들기 위해 2025년부터 2040년까지의 연도를 입력하고 각 연도의 상태를 확인합니다. 프로그램이 윤년이라고 알려주면 2월 29일에 생일 파티에 초대받을 것을 알 수 있습니다.",
+    "exampleTitle": "2월 29일 생일 찾기",
+    "inputTitle": "입력 연도",
+    "resultTitle": "윤년 결과",
+    "shortDescription": "윤년인지 확인",
+    "title": "윤년 확인",
+    "toolInfo": {
+      "description": "윤년은 달력 연도를 천문 연도와 동기화하기 위해 하루(2월 29일)를 추가하는 해입니다. 윤년은 100으로 나누어지지만 400으로 나누어지지 않는 해를 제외하고 4년마다 발생합니다.",
+      "title": "윤년이란?"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "시간 이름 추가",
+    "addHoursNameDescription": "출력 값에 '시간' 문자열 추가",
+    "description": "사용자 지정 옵션을 사용하여 일을 시간으로 변환합니다.",
+    "hoursName": "시간 이름",
+    "shortDescription": "일을 시간으로 변환",
+    "title": "일-시간 변환",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 일을 시간으로 변환할 수 있습니다. 일을 숫자나 단위와 함께 입력하면 도구가 시간으로 변환합니다. 출력 값에 '시간' 접미사를 추가할 수도 있습니다.",
+      "title": "일-시간 변환"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "일 이름 추가",
+    "addDaysNameDescription": "출력 값에 '일' 문자열 추가",
+    "daysName": "일 이름",
+    "description": "사용자 지정 옵션을 사용하여 시간을 일로 변환합니다.",
+    "shortDescription": "시간을 일로 변환",
+    "title": "시간-일 변환",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 시간을 일로 변환할 수 있습니다. 시간을 숫자나 단위와 함께 입력하면 도구가 일로 변환합니다. 출력 값에 '일' 접미사를 추가할 수도 있습니다.",
+      "title": "시간-일 변환"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "패딩 추가",
+    "addPaddingDescription": "시, 분, 초에 0 패딩을 추가합니다.",
+    "description": "초를 읽기 쉬운 시간 형식(시:분:초)으로 변환합니다. 서식이 지정된 시간을 얻으려면 초 수를 입력하세요.",
+    "shortDescription": "초를 시간 형식으로 변환",
+    "timePadding": "시간 패딩",
+    "title": "초-시간 변환",
+    "toolInfo": {
+      "title": "{{title}}이란?"
+    }
+  },
+  "convertTimeToSeconds": {
+    "description": "서식이 지정된 시간(HH:MM:SS)을 초로 변환합니다.",
+    "inputTitle": "입력 시간",
+    "resultTitle": "초",
+    "shortDescription": "시간 형식을 초로 변환",
+    "title": "시간-초 변환",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 서식이 지정된 시간 문자열(HH:MM:SS)을 초로 변환할 수 있습니다. 기간 및 시간 간격을 계산하는 데 유용합니다.",
+      "title": "시간-초 변환"
+    }
+  },
+  "convertUnixToDate": {
+    "addUtcLabel": "'UTC' 접미사 추가",
+    "addUtcLabelDescription": "변환된 날짜 뒤에 'UTC' 표시 (UTC 모드만 해당)",
+    "description": "유닉스 타임스탬프를 사람이 읽을 수 있는 날짜로 변환합니다.",
+    "outputOptions": "출력 옵션",
+    "shortDescription": "유닉스 타임스탬프를 날짜로 변환",
+    "title": "유닉스-날짜 변환",
+    "toolInfo": {
+      "description": "이 도구는 유닉스 타임스탬프(초 단위)를 사람이 읽을 수 있는 날짜 형식(예: YYYY-MM-DD HH:MM:SS)으로 변환합니다. 로컬 및 UTC 출력을 모두 지원하므로 로그, API 또는 유닉스 시간을 사용하는 시스템의 타임스탬프를 빠르게 해석하는 데 유용합니다.",
+      "title": "유닉스-날짜 변환"
+    },
+    "useLocalTime": "현지 시간 사용",
+    "useLocalTimeDescription": "UTC 대신 현지 시간대로 변환된 날짜 표시",
+    "withLabel": "옵션"
+  },
+  "crontabGuru": {
+    "description": "cron 표현식을 생성하고 이해합니다. 자동화된 작업 및 시스템 작업을 위한 cron 스케줄을 만듭니다.",
+    "shortDescription": "cron 표현식 생성 및 이해",
+    "title": "크론탭 구루"
+  },
+  "timeBetweenDates": {
+    "description": "두 날짜 사이의 시간 차이를 계산합니다. 일, 시, 분, 초 단위의 정확한 기간을 가져옵니다.",
+    "endDate": "종료 날짜",
+    "endDateTime": "종료 날짜 및 시간",
+    "endTime": "종료 시간",
+    "endTimezone": "종료 시간대",
+    "shortDescription": "두 날짜 사이의 시간 계산",
+    "startDate": "시작 날짜",
+    "startDateTime": "시작 날짜 및 시간",
+    "startTime": "시작 시간",
+    "startTimezone": "시작 시간대",
+    "title": "날짜 간 시간",
+    "toolInfo": {
+      "description": "다른 시간대를 지원하여 두 날짜 및 시간 사이의 정확한 시간 차이를 계산합니다. 이 도구는 다양한 단위(년, 월, 일, 시, 분, 초)로 시간 차이에 대한 자세한 분석을 제공합니다.",
+      "title": "날짜 간 시간 계산기"
+    }
+  },
+  "truncateClockTime": {
+    "description": "시계 시간을 잘라 초 또는 분을 제거합니다. 시간을 가장 가까운 시간, 분 또는 사용자 지정 간격으로 반올림합니다.",
+    "printDroppedComponents": "삭제된 구성 요소 인쇄",
+    "shortDescription": "지정된 정밀도로 시계 시간 자르기",
+    "timePadding": "시간 패딩",
+    "title": "시계 시간 자르기",
+    "toolInfo": {
+      "title": "{{title}}이란?"
+    },
+    "truncateMinutesAndSeconds": "분 & 초 자르기",
+    "truncateMinutesAndSecondsDescription": "각 시계 시간에서 분과 초 구성 요소를 모두 삭제합니다.",
+    "truncateOnlySeconds": "초만 자르기",
+    "truncateOnlySecondsDescription": "각 시계 시간에서 초 구성 요소를 삭제합니다.",
+    "truncationSide": "자르기 측",
+    "useZeroPadding": "0 패딩 사용",
+    "zeroPaddingDescription": "모든 시간 구성 요소를 항상 두 자리 너비로 만듭니다.",
+    "zeroPrintDescription": "삭제된 부분을 0 값 \"00\"으로 표시합니다.",
+    "zeroPrintTruncatedParts": "잘린 부분 0으로 인쇄"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "comparison": {
+    "description": "두 JSON 객체를 비교하여 구조와 값의 차이를 확인합니다.",
+    "shortDescription": "두 JSON 객체 간 차이점 찾기",
+    "title": "JSON 비교"
+  },
+  "escapeJson": {
+    "description": "JSON 문자열에서 특수 문자를 이스케이프 처리합니다. JSON 데이터를 안전하게 전송하거나 저장할 수 있도록 변환합니다.",
+    "shortDescription": "JSON의 특수 문자 이스케이프",
+    "title": "JSON 이스케이프"
+  },
+  "jsonToXml": {
+    "description": "JSON 데이터를 XML 형식으로 변환합니다. 구조화된 JSON 객체를 잘 형성된 XML 문서로 변환합니다.",
+    "shortDescription": "JSON을 XML 형식으로 변환",
+    "title": "JSON을 XML로 변환"
+  },
+  "minify": {
+    "description": "JSON에서 모든 불필요한 공백을 제거합니다.",
+    "inputTitle": "입력 JSON",
+    "resultTitle": "축소된 JSON",
+    "shortDescription": "JSON에서 공백 제거",
+    "title": "JSON 축소",
+    "toolInfo": {
+      "description": "JSON 축소는 JSON 데이터에서 모든 불필요한 공백 문자를 제거하는 과정입니다. 여기에는 공백, 줄 바꿈 및 들여쓰기가 포함되며, JSON의 유효성을 유지하면서 데이터 크기를 줄입니다.",
+      "title": "JSON 축소란 무엇인가요?"
+    }
+  },
+  "prettify": {
+    "description": "JSON을 적절한 들여쓰기와 공백으로 포맷합니다.",
+    "indentation": "들여쓰기",
+    "inputTitle": "입력 JSON",
+    "resultTitle": "정돈된 JSON",
+    "shortDescription": "JSON 코드를 포맷하고 정돈시킴",
+    "title": "JSON 정돈",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 JSON 데이터를 적절한 들여쓰기와 공백으로 포맷하여 더 읽기 쉽고 작업하기 쉽게 만들 수 있습니다.",
+      "title": "JSON 정돈이란 무엇인가요?"
+    },
+    "useSpaces": "공백 사용",
+    "useSpacesDescription": "출력을 공백으로 들여쓰기",
+    "useTabs": "탭 사용",
+    "useTabsDescription": "출력을 탭으로 들여쓰기"
+  },
+  "stringify": {
+    "description": "JavaScript 객체를 JSON 문자열 형식으로 변환합니다. 데이터 구조를 JSON 문자열로 직렬화하여 저장하거나 전송할 수 있습니다.",
+    "shortDescription": "객체를 JSON 문자열로 변환",
+    "title": "JSON 문자열화"
+  },
+  "tsvToJson": {
+    "description": "TSV(탭으로 구분된 값) 데이터를 JSON 형식으로 변환합니다. 표 형식 데이터를 구조화된 JSON 객체로 변환합니다.",
+    "shortDescription": "TSV를 JSON 형식으로 변환",
+    "title": "TSV를 JSON으로 변환"
+  },
+  "validateJson": {
+    "description": "JSON이 유효하고 잘 형성되었는지 확인합니다.",
+    "inputTitle": "입력 JSON",
+    "invalidJson": "❌ {{error}}",
+    "resultTitle": "유효성 검사 결과",
+    "shortDescription": "JSON 코드의 오류를 확인",
+    "title": "JSON 유효성 검사",
+    "toolInfo": {
+      "description": "JSON(JavaScript Object Notation)은 가벼운 데이터 교환 형식입니다. JSON 유효성 검사는 데이터 구조가 JSON 표준을 준수하는지 확인합니다. 유효한 JSON 객체는 다음을 포함해야 합니다: - 속성 이름은 큰따옴표로 묶여야 합니다. - 중괄호 {}가 올바르게 균형을 이루어야 합니다. - 마지막 키-값 쌍 뒤에 쉼표가 없어야 합니다. - 객체와 배열이 올바르게 중첩되어야 합니다. 이 도구는 입력 JSON을 확인하고 일반적인 오류를 식별하고 수정하는 데 도움을 줍니다.",
+      "title": "JSON 유효성 검사란 무엇인가요?"
+    },
+    "validJson": "✅ 유효한 JSON"
+  }
+}
