@@ -5,13 +5,18 @@ import { BaseFileInputProps } from './file-input-utils';
 
 interface AudioFileInputProps extends Omit<BaseFileInputProps, 'accept'> {
   accept?: string[];
+  audioRef?: React.RefObject<HTMLAudioElement>;
+  onLoadedMetadata?: (e: React.SyntheticEvent<HTMLAudioElement>) => void;
 }
 
 export default function ToolAudioInput({
   accept = ['audio/*', '.mp3', '.wav', '.aac'],
+  audioRef: externalAudioRef,
+  onLoadedMetadata,
   ...props
 }: AudioFileInputProps) {
-  const audioRef = useRef<HTMLAudioElement>(null);
+  const internalAudioRef = useRef<HTMLAudioElement>(null);
+  const audioRef = externalAudioRef || internalAudioRef;
 
   return (
     <BaseFileInput {...props} type={'audio'} accept={accept}>
@@ -33,6 +38,7 @@ export default function ToolAudioInput({
               src={preview}
               style={{ maxWidth: '100%' }}
               controls
+              onLoadedMetadata={onLoadedMetadata}
             />
           ) : (
             <Typography variant="body2" color="textSecondary">
