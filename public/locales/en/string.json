@@ -309,20 +309,19 @@
     }
   },
   "unicode": {
-    "title": "Unicode Encoder/Decoder",
-    "description": "Encode text to Unicode escape sequences and decode them back.",
-    "shortDescription": "Encode or decode text using Unicode escape sequences.",
-    "longDescription": "This tool allows you to encode plain text into Unicode escape sequences (e.g., \\uXXXX) and decode them back. You can choose to output the hexadecimal digits in either uppercase or lowercase for encoding.",
+    "title": "Unicode Encoder / Decoder",
     "inputTitle": "Input",
-    "resultTitle": "Output",
-    "optionsTitle": "Options",
+    "resultTitle": "Processed Output",
+    "optionsTitle": "Mode",
     "caseOptionsTitle": "Case Options",
-    "encode": "Unicode Encode",
-    "decode": "Unicode Decode",
+    "encode": "Encode",
+    "decode": "Decode",
     "uppercase": "Uppercase Hex",
+    "description": "Convert text to Unicode escape sequences or decode them back to readable text.",
+    "shortDescription": "Encode or decode text using Unicode escape sequences.",
     "toolInfo": {
-      "title": "What is Unicode Escape?",
-      "description": "Unicode escape sequences are used to represent characters that may not be available in the character set of the document. They are written as '\\u' followed by four hexadecimal digits."
+      "title": "Unicode Encoder / Decoder",
+      "description": "This tool lets you convert plain text into Unicode escape sequences (e.g., \\uXXXX) and decode Unicode escape sequences back into standard text. You can also choose whether the hexadecimal output is formatted in uppercase or lowercase when encoding."
     }
   }
 }
