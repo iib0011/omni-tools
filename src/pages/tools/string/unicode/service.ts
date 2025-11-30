@@ -1,20 +1,13 @@
 import { InitialValuesType } from './types';
 
-export function main(input: string, options: InitialValuesType): string {
-  return input;
-}
-
-export function unicode(
-  input: string,
-  encode: boolean,
-  uppercase: boolean
-): string {
-  if (encode) {
+export function unicode(input: string, options: InitialValuesType): string {
+  if (!input) return '';
+  if (options.mode === 'encode') {
     let result = '';
     for (let i = 0; i < input.length; i++) {
       let hex = input.charCodeAt(i).toString(16);
       hex = ('0000' + hex).slice(-4);
-      if (uppercase) {
+      if (options.uppercase) {
         hex = hex.toUpperCase();
       }
       result += '\\u' + hex;
