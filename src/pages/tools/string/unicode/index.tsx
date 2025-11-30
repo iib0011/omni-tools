@@ -1,4 +1,4 @@
-import { Box, FormControlLabel, Switch } from '@mui/material';
+import { Box } from '@mui/material';
 import { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -9,6 +9,7 @@ import { CardExampleType } from '@components/examples/ToolExamples';
 import { unicode } from './service';
 import { InitialValuesType } from './types';
 import SimpleRadio from '@components/options/SimpleRadio';
+import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
@@ -51,17 +52,13 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
     }
   }
 ];
-export default function Unicode({
-  title,
-  longDescription
-}: ToolComponentProps) {
+export default function Unicode({ title }: ToolComponentProps) {
   const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
   const compute = (values: InitialValuesType, input: string) => {
-    if (!input) return;
-    setResult(unicode(input, values.mode === 'encode', values.uppercase));
+    setResult(unicode(input, values));
   };
 
   const getGroups: GetGroupsType<InitialValuesType> = ({
@@ -89,15 +86,10 @@ export default function Unicode({
       title: t('unicode.caseOptionsTitle'),
       component: (
         <Box>
-          <FormControlLabel
-            control={
-              <Switch
-                checked={values.uppercase}
-                onChange={(e) => updateField('uppercase', e.target.checked)}
-                disabled={values.mode === 'decode'}
-              />
-            }
-            label={t('unicode.uppercase')}
+          <CheckboxWithDesc
+            checked={values.uppercase}
+            onChange={(value) => updateField('uppercase', value)}
+            title={t('unicode.uppercase')}
           />
         </Box>
       )
