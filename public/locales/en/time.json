@@ -113,5 +113,11 @@
     "zeroPaddingDescription": "Make all time components always be two digits wide.",
     "zeroPrintDescription": "Display the dropped parts as zero values \"00\".",
     "zeroPrintTruncatedParts": "Zero-print Truncated Parts"
+  },
+  "convertTimeToDecimal": {
+    "title": "Convert time to decimal",
+    "description": "Convert formatted length of time (HH:MM:SS) to decimal format, e.g. 3.43 hours.",
+    "shortDescription": "Convert human time to decimal time",
+    "longDescription": "Convert formatted length of time (HH:MM:SS) to decimal format, e.g. 3.43 hours."
   }
 }
