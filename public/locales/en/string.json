@@ -307,5 +307,21 @@
       "shortDescription": "Quickly URL-escape a string.",
       "title": "String URL encoder"
     }
+  },
+  "unicode": {
+    "title": "Unicode Encoder / Decoder",
+    "inputTitle": "Input",
+    "resultTitle": "Processed Output",
+    "optionsTitle": "Mode",
+    "caseOptionsTitle": "Case Options",
+    "encode": "Encode",
+    "decode": "Decode",
+    "uppercase": "Uppercase Hex",
+    "description": "Convert text to Unicode escape sequences or decode them back to readable text.",
+    "shortDescription": "Encode or decode text using Unicode escape sequences.",
+    "toolInfo": {
+      "title": "Unicode Encoder / Decoder",
+      "description": "This tool lets you convert plain text into Unicode escape sequences (e.g., \\uXXXX) and decode Unicode escape sequences back into standard text. You can also choose whether the hexadecimal output is formatted in uppercase or lowercase when encoding."
+    }
   }
 }
