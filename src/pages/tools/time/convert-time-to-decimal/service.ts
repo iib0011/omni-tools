@@ -1,24 +1,37 @@
 import { InitialValuesType } from './types';
+import { humanTimeValidation } from 'utils/time';
 
 export function convertTimeToDecimal(
   input: string,
   options: InitialValuesType
 ): string {
-  if (!input || (!input.includes(':') && !input.includes('.'))) {
-    return '';
+  if (!input) return '';
+
+  const dp = parseInt(options.decimalPlaces, 10);
+  if (isNaN(dp) || dp < 0) {
+    return 'Invalid decimal places value.';
   }
 
-  let splitTime = input.split(/[.:]/);
+  // Multiple lines processing
+  const lines = input.split('\n');
+  if (!lines) return '';
 
-  let hours = parseInt(splitTime[0]);
-  let minutes = parseInt(splitTime[1]);
-  let seconds = splitTime[2] ? parseInt(splitTime[2]) : 0;
+  const result: string[] = [];
 
-  let decimalTime = hours + minutes / 60;
+  lines.forEach((line) => {
+    line = line.trim();
+    if (!line) return;
 
-  if (seconds !== 0) {
-    decimalTime += seconds / 3600;
-  }
+    const { isValid, hours, minutes, seconds } = humanTimeValidation(line);
 
-  return decimalTime.toFixed(parseInt(options.decimalPlaces)).toString();
+    if (!isValid) {
+      result.push('Incorrect input format use `HH:MM:(SS)` or `HH.MM.(SS )`.');
+      return;
+    }
+
+    const decimalTime = hours + minutes / 60 + seconds / 3600;
+    result.push(decimalTime.toFixed(dp).toString());
+  });
+
+  return result.join('\n');
 }
