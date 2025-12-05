@@ -9,7 +9,7 @@ export const tool = defineTool('time', {
     longDescription: 'time:convertTimeToDecimal.longDescription'
   },
   path: 'convert-time-to-decimal',
-  icon: 'material-symbols:schedule',
+  icon: 'material-symbols-light:decimal-increase-rounded',
   keywords: ['convert', 'time', 'to', 'decimal'],
   component: lazy(() => import('./index'))
 });
