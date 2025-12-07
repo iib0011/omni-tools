@@ -1,24 +1,25 @@
-import { Box } from '@mui/material';
-import React, { useCallback, useState } from 'react';
+import { Box, Typography } from '@mui/material';
+import React, { useCallback, useState, useEffect } from 'react';
 import * as Yup from 'yup';
 import ToolFileResult from '@components/result/ToolFileResult';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
-import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
-import { updateNumberField } from '@utils/string';
 import { FFmpeg } from '@ffmpeg/ffmpeg';
 import { fetchFile } from '@ffmpeg/util';
 import { debounce } from 'lodash';
 import ToolVideoInput from '@components/input/ToolVideoInput';
 import { useTranslation } from 'react-i18next';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
+import { formatTime } from '@components/input/file-input-utils';
 
 const ffmpeg = new FFmpeg();
 
-const initialValues = {
+const getInitialValues = (duration: number = 0) => ({
   trimStart: 0,
-  trimEnd: 100
-};
+  trimEnd: duration || 0
+});
 
 const validationSchema = Yup.object({
   trimStart: Yup.number().min(0, 'Start time must be positive'),
@@ -32,14 +33,23 @@ export default function TrimVideo({ title }: ToolComponentProps) {
   const { t } = useTranslation('video');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
+  const [videoDuration, setVideoDuration] = useState(0);
+  const [initialValuesState, setInitialValuesState] = useState(
+    getInitialValues(0)
+  );
 
   const compute = async (
-    optionsValues: typeof initialValues,
+    optionsValues: ReturnType<typeof getInitialValues>,
     input: File | null
   ) => {
-    if (!input) return;
+    if (!input || videoDuration === 0) return;
 
     const { trimStart, trimEnd } = optionsValues;
+
+    // Validate trim values
+    if (trimStart < 0 || trimEnd <= trimStart || trimEnd > videoDuration) {
+      return;
+    }
 
     try {
       if (!ffmpeg.loaded) {
@@ -81,54 +91,148 @@ export default function TrimVideo({ title }: ToolComponentProps) {
       console.error('Error trimming video:', error);
     }
   };
-  const debouncedCompute = useCallback(debounce(compute, 1000), []);
-  const getGroups: GetGroupsType<typeof initialValues> = ({
+
+  const debouncedCompute = useCallback(debounce(compute, 1000), [
+    videoDuration
+  ]);
+
+  const handleVideoLoad = (duration: number) => {
+    setVideoDuration(duration);
+    if (duration > 0) {
+      setInitialValuesState(getInitialValues(duration));
+    }
+  };
+
+  const getGroups: GetGroupsType<ReturnType<typeof getInitialValues>> = ({
     values,
     updateField
-  }) => [
-    {
-      title: t('trim.timestamps'),
-      component: (
-        <Box>
-          <TextFieldWithDesc
-            onOwnChange={(value) =>
-              updateNumberField(value, 'trimStart', updateField)
-            }
-            value={values.trimStart}
-            label={t('trim.startTime')}
-            sx={{ mb: 2, backgroundColor: 'background.paper' }}
-          />
-          <TextFieldWithDesc
-            onOwnChange={(value) =>
-              updateNumberField(value, 'trimEnd', updateField)
-            }
-            value={values.trimEnd}
-            label={t('trim.endTime')}
-          />
-        </Box>
-      )
+  }) => {
+    if (videoDuration === 0) {
+      return [
+        {
+          title: t('trim.timestamps'),
+          component: (
+            <Box>
+              <Typography variant="body2" color="text.secondary">
+                Please upload a video to enable trim controls
+              </Typography>
+            </Box>
+          )
+        }
+      ];
     }
-  ];
+
+    return [
+      {
+        title: t('trim.timestamps'),
+        component: (
+          <Box sx={{ px: 2, py: 3 }}>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                mb: 3
+              }}
+            >
+              <Box>
+                <Typography variant="body2" color="text.secondary" gutterBottom>
+                  Start Time
+                </Typography>
+                <Typography variant="h6" fontWeight="bold">
+                  {formatTime(values.trimStart)}
+                </Typography>
+              </Box>
+              <Box>
+                <Typography variant="body2" color="text.secondary" gutterBottom>
+                  End Time
+                </Typography>
+                <Typography variant="h6" fontWeight="bold">
+                  {formatTime(values.trimEnd)}
+                </Typography>
+              </Box>
+              <Box>
+                <Typography variant="body2" color="text.secondary" gutterBottom>
+                  Duration
+                </Typography>
+                <Typography variant="h6" fontWeight="bold">
+                  {formatTime(values.trimEnd - values.trimStart)}
+                </Typography>
+              </Box>
+            </Box>
+            <Box sx={{ px: 1 }}>
+              <Slider
+                range
+                min={0}
+                max={videoDuration}
+                step={0.1}
+                value={[values.trimStart, values.trimEnd]}
+                onChange={(values) => {
+                  if (Array.isArray(values)) {
+                    updateField('trimStart', values[0]);
+                    updateField('trimEnd', values[1]);
+                  }
+                }}
+                allowCross={false}
+                pushable={0.1}
+                trackStyle={[
+                  { backgroundColor: '#1976d2', height: 6 },
+                  { backgroundColor: '#1976d2', height: 6 }
+                ]}
+                handleStyle={[
+                  {
+                    borderColor: '#1976d2',
+                    height: 20,
+                    width: 20,
+                    marginLeft: -10,
+                    marginTop: -7,
+                    backgroundColor: '#1976d2'
+                  },
+                  {
+                    borderColor: '#1976d2',
+                    height: 20,
+                    width: 20,
+                    marginLeft: -10,
+                    marginTop: -7,
+                    backgroundColor: '#1976d2'
+                  }
+                ]}
+                railStyle={{ backgroundColor: '#e0e0e0', height: 6 }}
+              />
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                mt: 1
+              }}
+            >
+              <Typography variant="caption" color="text.secondary">
+                {formatTime(0)}
+              </Typography>
+              <Typography variant="caption" color="text.secondary">
+                {formatTime(videoDuration)}
+              </Typography>
+            </Box>
+          </Box>
+        )
+      }
+    ];
+  };
+
   return (
     <ToolContent
       title={title}
       input={input}
-      renderCustomInput={({ trimStart, trimEnd }, setFieldValue) => {
-        return (
-          <ToolVideoInput
-            value={input}
-            onChange={setInput}
-            title={t('trim.inputTitle')}
-            showTrimControls={true}
-            onTrimChange={(trimStart, trimEnd) => {
-              setFieldValue('trimStart', trimStart);
-              setFieldValue('trimEnd', trimEnd);
-            }}
-            trimStart={trimStart}
-            trimEnd={trimEnd}
-          />
-        );
-      }}
+      inputComponent={
+        <ToolVideoInput
+          value={input}
+          onChange={setInput}
+          title={t('trim.inputTitle')}
+          showTrimControls={false}
+          onVideoDurationChange={handleVideoLoad}
+        />
+      }
       resultComponent={
         <ToolFileResult
           title={t('trim.resultTitle')}
@@ -136,7 +240,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
           extension={'mp4'}
         />
       }
-      initialValues={initialValues}
+      initialValues={initialValuesState}
       getGroups={getGroups}
       compute={debouncedCompute}
       setInput={setInput}

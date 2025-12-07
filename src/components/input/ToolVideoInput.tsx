@@ -8,6 +8,7 @@ import { BaseFileInputProps, formatTime } from './file-input-utils';
 interface VideoFileInputProps extends Omit<BaseFileInputProps, 'accept'> {
   showTrimControls?: boolean;
   onTrimChange?: (trimStart: number, trimEnd: number) => void;
+  onVideoDurationChange?: (duration: number) => void;
   trimStart?: number;
   trimEnd?: number;
   accept?: string[];
@@ -16,6 +17,7 @@ interface VideoFileInputProps extends Omit<BaseFileInputProps, 'accept'> {
 export default function ToolVideoInput({
   showTrimControls = false,
   onTrimChange,
+  onVideoDurationChange,
   trimStart = 0,
   trimEnd = 100,
   accept = ['video/*', '.mkv'],
@@ -27,6 +29,10 @@ export default function ToolVideoInput({
   const onVideoLoad = (e: React.SyntheticEvent<HTMLVideoElement>) => {
     const duration = e.currentTarget.duration;
     setVideoDuration(duration);
+
+    if (onVideoDurationChange) {
+      onVideoDurationChange(duration);
+    }
 
     if (onTrimChange && trimStart === 0 && trimEnd === 100) {
       onTrimChange(0, duration);
