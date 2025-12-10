@@ -8,10 +8,7 @@ import SelectWithDesc from '@components/options/SelectWithDesc';
 import { convertAudio } from './service';
 import { useTranslation } from 'react-i18next';
 import { GetGroupsType } from '@components/options/ToolOptions';
-
-type InitialValuesType = {
-  outputFormat: 'mp3' | 'aac' | 'wav';
-};
+import { InitialValuesType, AUDIO_FORMATS, AudioFormat } from './types';
 
 const initialValues: InitialValuesType = {
   outputFormat: 'mp3'
@@ -25,6 +22,24 @@ export default function AudioConverter({
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
+
+  const compute = async (
+    values: InitialValuesType,
+    inputFile: File | null
+  ): Promise<void> => {
+    if (!inputFile) return;
+
+    try {
+      setLoading(true);
+      const resultFile = await convertAudio(inputFile, values);
+      setResult(resultFile);
+    } catch (error) {
+      console.error('Conversion failed:', error);
+      setResult(null);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // Explicitly type getGroups to match GetGroupsType<InitialValuesType>
   const getGroups: GetGroupsType<InitialValuesType> = ({
@@ -42,17 +57,11 @@ export default function AudioConverter({
         <Box>
           <SelectWithDesc
             selected={values.outputFormat}
-            onChange={(value) =>
-              updateField(
-                'outputFormat',
-                value as InitialValuesType['outputFormat']
-              )
-            }
-            options={[
-              { label: 'MP3', value: 'mp3' },
-              { label: 'AAC', value: 'aac' },
-              { label: 'WAV', value: 'wav' }
-            ]}
+            onChange={(value) => updateField('outputFormat', value)}
+            options={Object.entries(AUDIO_FORMATS).map(([value]) => ({
+              label: value.toUpperCase(),
+              value: value as AudioFormat
+            }))}
             description={t(
               'audioConverter.outputFormatDescription',
               'Select the desired output audio format'
@@ -62,24 +71,6 @@ export default function AudioConverter({
       )
     }
   ];
-
-  const compute = async (
-    values: InitialValuesType,
-    inputFile: File | null
-  ): Promise<void> => {
-    if (!inputFile) return;
-
-    try {
-      setLoading(true);
-      const resultFile = await convertAudio(inputFile, values.outputFormat);
-      setResult(resultFile);
-    } catch (error) {
-      console.error('Conversion failed:', error);
-      setResult(null);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <ToolContent
