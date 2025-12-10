@@ -2,13 +2,19 @@ import React, { useRef } from 'react';
 import { Box, Typography } from '@mui/material';
 import BaseFileInput from './BaseFileInput';
 import { BaseFileInputProps } from './file-input-utils';
+import { AUDIO_FORMATS } from 'pages/tools/converters/audio-converter/types';
 
 interface AudioFileInputProps extends Omit<BaseFileInputProps, 'accept'> {
   accept?: string[];
 }
 
+const AUDIO_ACCEPT_TYPES = [
+  'audio/*',
+  ...Object.keys(AUDIO_FORMATS).map((format) => `.${format}`)
+];
+
 export default function ToolAudioInput({
-  accept = ['audio/*', '.mp3', '.wav', '.aac'],
+  accept = AUDIO_ACCEPT_TYPES,
   ...props
 }: AudioFileInputProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
