@@ -55,6 +55,10 @@ export default function BaseFileInput({
     fileInputRef.current?.click();
   };
 
+  const handleRemoveFile = () => {
+    onChange(null as any);
+  };
+
   const handleCopy = () => {
     if (isArray(value)) {
       const blob = new Blob([value[0]], { type: value[0].type });
@@ -208,7 +212,11 @@ export default function BaseFileInput({
           </Box>
         )}
       </Box>
-      <InputFooter handleCopy={handleCopy} handleImport={handleImportClick} />
+      <InputFooter
+        handleCopy={handleCopy}
+        handleImport={handleImportClick}
+        handleClear={handleRemoveFile}
+      />
       <input
         ref={fileInputRef}
         style={{ display: 'none' }}
