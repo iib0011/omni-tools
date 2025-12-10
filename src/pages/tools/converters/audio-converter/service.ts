@@ -63,7 +63,13 @@ export async function convertAudio(
     const baseName = input.name.replace(/\.[^.]+$/, '');
     const convertedFileName = `${baseName}.${options.outputFormat}`;
 
-    return new File([data], convertedFileName, { type: mimeType });
+    return new File(
+      [new Blob([data as any], { type: mimeType })],
+      convertedFileName,
+      {
+        type: mimeType
+      }
+    );
   } finally {
     // Clean up FFmpeg virtual filesystem
     try {
