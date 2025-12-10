@@ -63,6 +63,11 @@
     "shortDescription": "Convertir des PDF en images PNG",
     "title": "PDF en PNG"
   },
+  "convertToPdf": {
+    "title": "Images vers PDF",
+    "description": "Convertir divers formats d'image (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) en PDF, avec des options pour redimensionner l'image et choisir l'orientation de la page.",
+    "shortDescription": "Convertir des images en PDF avec contrôle de taille et d'orientation"
+  },
   "protectPdf": {
     "description": "Ajoutez une protection par mot de passe à vos fichiers PDF en toute sécurité dans votre navigateur",
     "shortDescription": "Protégez les fichiers PDF en toute sécurité avec un mot de passe",

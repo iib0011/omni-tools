@@ -71,7 +71,7 @@ export default function ChangeSpeed({ title }: ToolComponentProps) {
         const data = await ffmpeg.readFile('output.gif');
 
         // Create a new file from the processed data
-        const blob = new Blob([data], { type: 'image/gif' });
+        const blob = new Blob([data as any], { type: 'image/gif' });
         const newFile = new File(
           [blob],
           file.name.replace('.gif', `-${newSpeed}x.gif`),

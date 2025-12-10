@@ -53,7 +53,7 @@ export async function compressVideo(
   }
   const compressedData = await ffmpeg.readFile(outputName);
   return new File(
-    [new Blob([compressedData], { type: 'video/mp4' })],
+    [new Blob([compressedData as any], { type: 'video/mp4' })],
     `${input.name.replace(/\.[^/.]+$/, '')}_compressed_${options.width}p.mp4`,
     { type: 'video/mp4' }
   );

@@ -21,6 +21,7 @@ import { tool as stringCensor } from './censor/meta';
 import { tool as stringPasswordGenerator } from './password-generator/meta';
 import { tool as stringEncodeUrl } from './url-encode/meta';
 import { tool as StringDecodeUrl } from './url-decode/meta';
+import { tool as stringUnicode } from './unicode/meta';
 
 export const stringTools = [
   stringSplit,
@@ -45,5 +46,6 @@ export const stringTools = [
   stringPasswordGenerator,
   stringEncodeUrl,
   StringDecodeUrl,
+  stringUnicode,
   stringHiddenCharacterDetector
 ];

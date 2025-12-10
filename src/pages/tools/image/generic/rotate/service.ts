@@ -66,7 +66,7 @@ export const processImage = async (
 
     // Read the output file
     const data = await ffmpeg.readFile('output.' + file.name.split('.').pop());
-    return new File([data], file.name, { type: file.type });
+    return new File([data as any], file.name, { type: file.type });
   } catch (error) {
     console.error('Error processing image:', error);
     return null;

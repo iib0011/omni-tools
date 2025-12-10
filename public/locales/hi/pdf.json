@@ -82,6 +82,11 @@
     "shortDescription": "PDF को PNG छवियों में परिवर्तित करें",
     "title": "पीडीएफ से पीएनजी"
   },
+  "convertToPdf": {
+    "title": "PDF में छवि बदलें",
+    "description": "विभिन्न छवि प्रारूपों (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) को PDF में परिवर्तित करें और छवि का आकार और पृष्ठ की अभिविन्यास समायोजित करें।",
+    "shortDescription": "छवियों को PDF में परिवर्तित करें, आकार और अभिविन्यास समायोजित करने योग्य"
+  },
   "protectPdf": {
     "allowCopying": "कॉपी करने की अनुमति दें",
     "allowModification": "संशोधन की अनुमति दें",

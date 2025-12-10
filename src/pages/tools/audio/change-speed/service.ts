@@ -41,7 +41,7 @@ export async function changeAudioSpeed(
     const outputName = `output.${outputFormat}`;
     await ffmpeg.writeFile(fileName, await fetchFile(input));
     const audioFilter = computeAudioFilter(newSpeed);
-    let args = ['-i', fileName, '-filter:a', audioFilter];
+    const args = ['-i', fileName, '-filter:a', audioFilter];
     if (outputFormat === 'mp3') {
       args.push('-b:a', '192k', '-f', 'mp3', outputName);
     } else if (outputFormat === 'aac') {
@@ -64,7 +64,7 @@ export async function changeAudioSpeed(
     let mimeType = 'audio/mp3';
     if (outputFormat === 'aac') mimeType = 'audio/aac';
     if (outputFormat === 'wav') mimeType = 'audio/wav';
-    const blob = new Blob([data], { type: mimeType });
+    const blob = new Blob([data as any], { type: mimeType });
     const newFile = new File(
       [blob],
       fileName.replace(/\.[^/.]+$/, `-${newSpeed}x.${outputFormat}`),

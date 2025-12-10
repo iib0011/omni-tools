@@ -148,7 +148,7 @@ export const processImage = async (
       const data = await ffmpeg.readFile('output.gif');
 
       // Create a new File object
-      return new File([data], file.name, { type: 'image/gif' });
+      return new File([data as any], file.name, { type: 'image/gif' });
     } catch (error) {
       console.error('Error processing GIF with FFmpeg:', error);
       // Fall back to canvas method if FFmpeg processing fails

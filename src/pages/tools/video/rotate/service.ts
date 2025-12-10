@@ -37,7 +37,7 @@ export async function rotateVideo(
 
   const rotatedData = await ffmpeg.readFile(outputName);
   return new File(
-    [new Blob([rotatedData], { type: 'video/mp4' })],
+    [new Blob([rotatedData as any], { type: 'video/mp4' })],
     `${input.name.replace(/\.[^/.]+$/, '')}_rotated.mp4`,
     { type: 'video/mp4' }
   );
