@@ -13,6 +13,7 @@ import { timeTools } from '../pages/tools/time';
 import { IconifyIcon } from '@iconify/react';
 import { pdfTools } from '../pages/tools/pdf';
 import { xmlTools } from '../pages/tools/xml';
+import { convertersTools } from '../pages/tools/converters';
 import { TFunction } from 'i18next';
 import { FullI18nKey, I18nNamespaces } from '../i18n';
 
@@ -30,7 +31,8 @@ const toolCategoriesOrder: ToolCategory[] = [
   'png',
   'time',
   'xml',
-  'gif'
+  'gif',
+  'converters'
 ];
 export const tools: DefinedTool[] = [
   ...imageTools,
@@ -43,7 +45,8 @@ export const tools: DefinedTool[] = [
   ...numberTools,
   ...timeTools,
   ...audioTools,
-  ...xmlTools
+  ...xmlTools,
+  ...convertersTools
 ];
 const categoriesConfig: {
   type: ToolCategory;
@@ -134,6 +137,12 @@ const categoriesConfig: {
     icon: 'mdi-light:xml',
     value: 'translation:categories.xml.description',
     title: 'translation:categories.xml.title'
+  },
+  {
+    type: 'converters',
+    icon: 'streamline-plump:convert-pdf-1',
+    value: 'translation:categories.converters.description',
+    title: 'translation:categories.converters.title'
   }
 ];
 const CATEGORIES_USER_TYPES_MAPPINGS: Partial<Record<ToolCategory, UserType>> =
@@ -145,7 +154,8 @@ const CATEGORIES_USER_TYPES_MAPPINGS: Partial<Record<ToolCategory, UserType>> =
     png: 'generalUsers',
     'image-generic': 'generalUsers',
     video: 'generalUsers',
-    audio: 'generalUsers'
+    audio: 'generalUsers',
+    converters: 'generalUsers'
   };
 // Filter tools by user types
 export const filterToolsByUserTypes = (
