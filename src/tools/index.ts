@@ -140,7 +140,7 @@ const categoriesConfig: {
   },
   {
     type: 'converters',
-    icon: 'mdi:swap-horizontal',
+    icon: 'streamline-plump:convert-pdf-1',
     value: 'translation:categories.converters.description',
     title: 'translation:categories.converters.title'
   }
@@ -154,7 +154,8 @@ const CATEGORIES_USER_TYPES_MAPPINGS: Partial<Record<ToolCategory, UserType>> =
     png: 'generalUsers',
     'image-generic': 'generalUsers',
     video: 'generalUsers',
-    audio: 'generalUsers'
+    audio: 'generalUsers',
+    converters: 'generalUsers'
   };
 // Filter tools by user types
 export const filterToolsByUserTypes = (
