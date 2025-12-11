@@ -101,5 +101,28 @@
     "description": "Rotate an image by a specified angle.",
     "shortDescription": "Rotate an image easily.",
     "title": "Rotate Image"
+  },
+  "memeGenerator": {
+    "title": "Meme Generator",
+    "description": "Create custom memes by adding text to images.",
+    "shortDescription": "Add text to images to create memes.",
+    "inputTitle": "Upload Image",
+    "resultTitle": "Generated Meme",
+    "textOptions": "Text Options",
+    "topText": "Top Text",
+    "topTextDescription": "Text to appear at the top of the image",
+    "bottomText": "Bottom Text",
+    "bottomTextDescription": "Text to appear at the bottom of the image",
+    "styleOptions": "Style Options",
+    "fontSize": "Font Size",
+    "fontSizeDescription": "Size of the text relative to image height",
+    "textColor": "Text Color",
+    "textColorDescription": "Color of the text",
+    "strokeColor": "Stroke Color",
+    "strokeColorDescription": "Color of the text outline",
+    "toolInfo": {
+      "title": "Meme Generator",
+      "description": "Upload an image and add top and bottom text to create a meme. You can customize the font size and colors."
+    }
   }
 }
