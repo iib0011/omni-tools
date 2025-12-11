@@ -60,6 +60,11 @@
     "shortDescription": "Extract text from images using OCR.",
     "title": "Image to Text (OCR)"
   },
+  "memeCreator": {
+    "description": "Create memes by adding custom text to your images. Upload an image from your local device, add top and bottom text, customize the font size, colors, and position. All processing happens in your browser - your images never leave your device.",
+    "shortDescription": "Add custom text to images to create memes",
+    "title": "Meme Creator"
+  },
   "qrCode": {
     "description": "Generate QR codes for different data types: URL, Text, Email, Phone, SMS, WiFi, vCard, and more.",
     "shortDescription": "Create customized QR codes for various data formats.",
