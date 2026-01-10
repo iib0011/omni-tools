@@ -37,12 +37,26 @@ const base64Tool = {
   userTypes: ['generalUsers', 'developers']
 } as unknown as DefinedTool;
 
+const otherPdfTool = {
+  type: 'pdf',
+  path: 'pdf/other-pdf',
+  name: 'pdf:otherPdf.title' as FullI18nKey,
+  description: 'pdf:otherPdf.description' as FullI18nKey,
+  shortDescription: 'pdf:otherPdf.shortDescription' as FullI18nKey,
+  icon: 'icon',
+  keywords: [],
+  component: (() => null) as unknown,
+  userTypes: ['generalUsers']
+} as unknown as DefinedTool;
 type NamespacedT = TFunction<I18nNamespaces[]>;
 
 const enTranslations: Record<string, string> = {
   'pdf:mergePdf.title': 'Merge PDF',
   'pdf:mergePdf.description': 'Merge multiple PDF files into one document',
   'pdf:mergePdf.shortDescription': 'Merge PDF files',
+  'pdf:otherPdf.title': 'Document helper',
+  'pdf:otherPdf.description': 'Helper for pdf tasks',
+  'pdf:otherPdf.shortDescription': 'PDF helper',
   'string:base64.title': 'Base64 Encoder/Decoder',
   'string:base64.description': 'Encode or decode Base64 text',
   'string:base64.shortDescription': 'Convert text to and from Base64'
@@ -58,7 +72,7 @@ const makeT = (dict: Record<string, string>): NamespacedT =>
   ((key: string) => dict[key] ?? key) as unknown as NamespacedT;
 
 describe('filterTools token-based search', () => {
-  const tools = [mergePdfTool, base64Tool];
+  const tools = [mergePdfTool, base64Tool, otherPdfTool];
   const tEn = makeT(enTranslations);
   const tEs = makeT(esTranslations);
 
@@ -101,5 +115,15 @@ describe('filterTools token-based search', () => {
   it('works with non-English localized strings', () => {
     const result = filterTools(tools, 'unir pdf', [], tEs);
     expect(result).toContain(mergePdfTool);
+  });
+
+  it('tolerates single-character typos in query tokens', () => {
+    const result = filterTools(tools, 'merhe pdf', [], tEn);
+    expect(result[0]).toBe(mergePdfTool);
+  });
+
+  it('ranks tools with title matches above description-only matches', () => {
+    const result = filterTools(tools, 'pdf', [], tEn);
+    expect(result[0]).toBe(mergePdfTool);
   });
 });

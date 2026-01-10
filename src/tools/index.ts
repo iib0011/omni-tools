@@ -181,6 +181,111 @@ export const filterToolsByUserTypes = (
 //   'tools',
 //   tools.map(({ name, type }) => ({ type, name }))
 // );
+
+const levenshtein = (a: string, b: string): number => {
+  if (a === b) return 0;
+  const aLen = a.length;
+  const bLen = b.length;
+
+  if (aLen === 0) return bLen;
+  if (bLen === 0) return aLen;
+
+  const dp: number[][] = Array.from({ length: aLen + 1 }, () =>
+    Array<number>(bLen + 1).fill(0)
+  );
+
+  for (let i = 0; i <= aLen; i += 1) dp[i][0] = i;
+  for (let j = 0; j <= bLen; j += 1) dp[0][j] = j;
+
+  for (let i = 1; i <= aLen; i += 1) {
+    for (let j = 1; j <= bLen; j += 1) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + cost
+      );
+    }
+  }
+
+  return dp[aLen][bLen];
+};
+
+type SearchField = { text: string; weight: number };
+
+const splitWords = (text: string): string[] =>
+  text.split(/[^a-z0-9]+/g).filter(Boolean);
+
+const computeToolScore = (
+  tool: DefinedTool,
+  tokens: string[],
+  t: TFunction<I18nNamespaces[]>
+): number => {
+  const fields: SearchField[] = [
+    { text: t(tool.name).toLowerCase(), weight: 5 },
+    { text: t(tool.shortDescription).toLowerCase(), weight: 3 },
+    { text: t(tool.description).toLowerCase(), weight: 2 },
+    ...(tool.keywords ?? []).map((kw) => ({
+      text: kw.toLowerCase(),
+      weight: 4
+    }))
+  ];
+
+  let totalScore = 0;
+
+  for (const token of tokens) {
+    if (!token) continue;
+
+    let bestForToken = 0;
+
+    for (const field of fields) {
+      const text = field.text;
+      if (!text) continue;
+
+      let fieldScore = 0;
+
+      if (text.includes(token)) {
+        // Base score for substring match
+        fieldScore = field.weight * 2;
+
+        const words = splitWords(text);
+        if (words.includes(token)) {
+          // Boost whole-word matches
+          fieldScore += field.weight;
+        }
+      } else {
+        const words = splitWords(text);
+
+        for (const word of words) {
+          if (!word) continue;
+
+          // Quick length check before full distance calculation
+          if (Math.abs(word.length - token.length) > 1) continue;
+
+          const dist = levenshtein(token, word);
+          if (dist === 1) {
+            fieldScore = Math.max(fieldScore, field.weight);
+          }
+        }
+      }
+
+      if (fieldScore > bestForToken) {
+        bestForToken = fieldScore;
+      }
+    }
+
+    // If any token fails to match (exact or fuzzy), treat the tool as a non-match.
+    if (bestForToken === 0) {
+      return 0;
+    }
+
+    totalScore += bestForToken;
+  }
+
+  return totalScore;
+};
+
 export const filterTools = (
   tools: DefinedTool[],
   query: string,
@@ -194,14 +299,13 @@ export const filterTools = (
     filteredTools = filterToolsByUserTypes(tools, userTypes);
   }
 
-  // Normalize query: trim, collapse internal whitespace, lowercase, split into tokens
+  // Normalize query: trim, collapse internal whitespace, lowercase
   const normalizedQuery = query.trim().toLowerCase().replace(/\s+/g, ' ');
 
   // If query is empty after normalization, return all tools (after user-type filtering)
   if (!normalizedQuery) return filteredTools;
 
   const rawTokens = normalizedQuery.split(' ').filter(Boolean);
-
   if (rawTokens.length === 0) return filteredTools;
 
   // Expand tokens with simple alpha+digit concatenation variants, e.g. "base" + "64" -> "base64".
@@ -218,22 +322,22 @@ export const filterTools = (
     }
   }
 
-  return filteredTools.filter((tool) => {
-    // `keywords` act as per-tool, potentially multi-language synonyms/aliases used only for search.
-    // They are never displayed directly, so they may intentionally contain phrases from
-    // different languages (e.g. "join pdf", "unir pdf", "fusionner pdf").
-    const searchableTexts = [
-      t(tool.name),
-      t(tool.description),
-      t(tool.shortDescription),
-      ...tool.keywords
-    ].map((text) => text.toLowerCase());
+  const scored = filteredTools
+    .map((tool) => ({
+      tool,
+      score: computeToolScore(tool, tokens, t)
+    }))
+    .filter(({ score }) => score > 0)
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
 
-    // Require that every query token (original or derived) appears in at least one of the searchable strings
-    return tokens.every((token) =>
-      searchableTexts.some((text) => text.includes(token))
-    );
-  });
+      const aName = t(a.tool.name).toLowerCase();
+      const bName = t(b.tool.name).toLowerCase();
+
+      return aName.localeCompare(bName);
+    });
+
+  return scored.map(({ tool }) => tool);
 };
 
 export const getToolsByCategory = (
