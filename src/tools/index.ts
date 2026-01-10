@@ -200,11 +200,28 @@ export const filterTools = (
   // If query is empty after normalization, return all tools (after user-type filtering)
   if (!normalizedQuery) return filteredTools;
 
-  const tokens = normalizedQuery.split(' ').filter(Boolean);
+  const rawTokens = normalizedQuery.split(' ').filter(Boolean);
 
-  if (tokens.length === 0) return filteredTools;
+  if (rawTokens.length === 0) return filteredTools;
+
+  // Expand tokens with simple alpha+digit concatenation variants, e.g. "base" + "64" -> "base64".
+  // This, combined with per-tool `keywords`, allows us to support aliases like
+  // "base 64" / "base64" / "b64" without requiring every form in every keyword list.
+  const tokens: string[] = [...rawTokens];
+
+  for (let i = 0; i < rawTokens.length - 1; i += 1) {
+    const current = rawTokens[i];
+    const next = rawTokens[i + 1];
+
+    if (/^[a-zA-Z]+$/.test(current) && /^\d+$/.test(next)) {
+      tokens.push(`${current}${next}`);
+    }
+  }
 
   return filteredTools.filter((tool) => {
+    // `keywords` act as per-tool, potentially multi-language synonyms/aliases used only for search.
+    // They are never displayed directly, so they may intentionally contain phrases from
+    // different languages (e.g. "join pdf", "unir pdf", "fusionner pdf").
     const searchableTexts = [
       t(tool.name),
       t(tool.description),
@@ -212,7 +229,7 @@ export const filterTools = (
       ...tool.keywords
     ].map((text) => text.toLowerCase());
 
-    // Require that every query token appears in at least one of the searchable strings
+    // Require that every query token (original or derived) appears in at least one of the searchable strings
     return tokens.every((token) =>
       searchableTexts.some((text) => text.includes(token))
     );

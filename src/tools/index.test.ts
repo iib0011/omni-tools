@@ -11,7 +11,16 @@ const mergePdfTool = {
   description: 'pdf:mergePdf.description' as FullI18nKey,
   shortDescription: 'pdf:mergePdf.shortDescription' as FullI18nKey,
   icon: 'icon',
-  keywords: ['pdf', 'merge', 'extract', 'pages', 'combine', 'document'],
+  keywords: [
+    'pdf',
+    'merge',
+    'extract',
+    'pages',
+    'combine',
+    'document',
+    'join',
+    'append'
+  ],
   component: (() => null) as unknown,
   userTypes: ['generalUsers']
 } as unknown as DefinedTool;
@@ -23,7 +32,7 @@ const base64Tool = {
   description: 'string:base64.description' as FullI18nKey,
   shortDescription: 'string:base64.shortDescription' as FullI18nKey,
   icon: 'icon',
-  keywords: ['base64'],
+  keywords: ['b64'],
   component: (() => null) as unknown,
   userTypes: ['generalUsers', 'developers']
 } as unknown as DefinedTool;
@@ -48,7 +57,7 @@ const esTranslations: Record<string, string> = {
 const makeT = (dict: Record<string, string>): NamespacedT =>
   ((key: string) => dict[key] ?? key) as unknown as NamespacedT;
 
-describe('filterTools token-based search (Phase 1)', () => {
+describe('filterTools token-based search', () => {
   const tools = [mergePdfTool, base64Tool];
   const tEn = makeT(enTranslations);
   const tEs = makeT(esTranslations);
@@ -69,6 +78,19 @@ describe('filterTools token-based search (Phase 1)', () => {
   it('matches base64 tool with different queries and is case-insensitive', () => {
     expect(filterTools(tools, 'Base64', [], tEn)).toContain(base64Tool);
     expect(filterTools(tools, 'base64 encoder', [], tEn)).toContain(base64Tool);
+  });
+
+  it('matches tools using keyword-based English synonyms', () => {
+    const result = filterTools(tools, 'pdf join', [], tEn);
+    expect(result).toContain(mergePdfTool);
+  });
+
+  it('matches base64 tool with spaced and short-form variants', () => {
+    const resultBase64Spaced = filterTools(tools, 'base 64', [], tEn);
+    const resultB64 = filterTools(tools, 'b64', [], tEn);
+
+    expect(resultBase64Spaced).toContain(base64Tool);
+    expect(resultB64).toContain(base64Tool);
   });
 
   it('ignores trailing spaces', () => {
