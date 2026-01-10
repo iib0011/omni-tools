@@ -11,6 +11,6 @@ export const tool = defineTool('csv', {
   path: 'csv-to-xml',
   icon: 'mdi-light:xml',
 
-  keywords: ['csv', 'xml', 'convert', 'transform', 'parse'],
+  keywords: ['convert', 'transform', 'parse'],
   component: lazy(() => import('./index'))
 });

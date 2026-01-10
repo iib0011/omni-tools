@@ -2,18 +2,7 @@ import type { GenericCalcType } from './types';
 
 const volumeSphere: GenericCalcType = {
   icon: 'gravity-ui:sphere',
-  keywords: [
-    'sphere',
-    'volume',
-    'geometry',
-    'mathematics',
-    'radius',
-    'diameter',
-    'calculation',
-    '3D',
-    'shape',
-    'capacity'
-  ],
+  keywords: ['geometry', 'radius', 'diameter', 'capacity', '3d'],
   i18n: {
     name: 'number:sphereVolume.title',
     description: 'number:sphereVolume.description',
