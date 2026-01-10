@@ -194,20 +194,29 @@ export const filterTools = (
     filteredTools = filterToolsByUserTypes(tools, userTypes);
   }
 
-  // Then filter by search query
-  if (!query) return filteredTools;
+  // Normalize query: trim, collapse internal whitespace, lowercase, split into tokens
+  const normalizedQuery = query.trim().toLowerCase().replace(/\s+/g, ' ');
 
-  const lowerCaseQuery = query.toLowerCase();
+  // If query is empty after normalization, return all tools (after user-type filtering)
+  if (!normalizedQuery) return filteredTools;
 
-  return filteredTools.filter(
-    (tool) =>
-      t(tool.name).toLowerCase().includes(lowerCaseQuery) ||
-      t(tool.description).toLowerCase().includes(lowerCaseQuery) ||
-      t(tool.shortDescription).toLowerCase().includes(lowerCaseQuery) ||
-      tool.keywords.some((keyword) =>
-        keyword.toLowerCase().includes(lowerCaseQuery)
-      )
-  );
+  const tokens = normalizedQuery.split(' ').filter(Boolean);
+
+  if (tokens.length === 0) return filteredTools;
+
+  return filteredTools.filter((tool) => {
+    const searchableTexts = [
+      t(tool.name),
+      t(tool.description),
+      t(tool.shortDescription),
+      ...tool.keywords
+    ].map((text) => text.toLowerCase());
+
+    // Require that every query token appears in at least one of the searchable strings
+    return tokens.every((token) =>
+      searchableTexts.some((text) => text.includes(token))
+    );
+  });
 };
 
 export const getToolsByCategory = (
