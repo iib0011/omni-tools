@@ -116,7 +116,7 @@
   "group": {
     "deleteEmptyItems": "Delete Empty Items",
     "deleteEmptyItemsDescription": "Ignore empty items and don't include them in the groups.",
-    "description": "World's simplest browser-based utility for grouping list items. Input your list and specify grouping criteria to organize items into logical groups. Perfect for categorizing data, organizing information, or creating structured lists. Supports custom separators and various grouping options.",
+    "description": "Split a list into sequential chunks of size N. Example: [1,2,3,4,5] with group size 2 → [1,2][3,4][5]. Customize separators, wrapping, and optional padding for the last chunk.",
     "emptyItemsAndPadding": "Empty Items and Padding",
     "groupNumberDescription": "Number of items in a group",
     "groupSeparatorDescription": "Group separator character",
@@ -130,7 +130,7 @@
     "paddingCharDescription": "Use this character or item to pad non-full groups.",
     "resultTitle": "Grouped items",
     "rightWrapDescription": "Group's right wrap symbol.",
-    "shortDescription": "Group list items by common properties",
+    "shortDescription": "Split a list into fixed size chunks",
     "splitOperators": {
       "regex": {
         "description": "Delimit input list items with a regular expression.",
@@ -142,7 +142,7 @@
       }
     },
     "splitSeparatorDescription": "Set a delimiting symbol or regular expression.",
-    "title": "Group"
+    "title": "Chunk List"
   },
   "reverse": {
     "description": "This is a super simple browser-based application prints all list items in reverse. The input items can be separated by any symbol and you can also change the separator of the reversed list items.",
