@@ -1,16 +1,16 @@
 {
-  "name": "omni-tools",
-  "description": "This project offers a variety of online tools to help with everyday tasks, \nall available for free and open for community contributions",
+  "name": "techsentinel-toolbox",
+  "description": "TechSentinel Toolbox - Suite d'outils en ligne pour simplifier vos tâches quotidiennes",
   "version": "0.1.0",
   "private": true,
   "author": {
-    "name": "Ibrahima Gaye Coulibaly",
-    "email": "ibracool99@gmail.com",
-    "url": "https://github.com/iib0011"
+    "name": "TechSentinel",
+    "email": "contact@techsentinel.fr",
+    "url": "https://techsentinel.fr"
   },
   "bugs": {
-    "url": "https://github.com/iib0011/omni-tools/issues",
-    "email": "ibracool99@gmail.com"
+    "url": "https://github.com/neosoda/Tools/issues",
+    "email": "contact@techsentinel.fr"
   },
   "scripts": {
     "dev": "vite",

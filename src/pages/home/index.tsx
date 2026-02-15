@@ -16,11 +16,10 @@ export default function Home() {
         lg: 5
       }}
       sx={{
-        background: `url(/assets/${
-          theme.palette.mode === 'dark'
+        background: `url(/assets/${theme.palette.mode === 'dark'
             ? 'background-dark.png'
             : 'background.svg'
-        })`,
+          })`,
         backgroundColor: 'background.default'
       }}
       display={'flex'}
@@ -29,7 +28,7 @@ export default function Home() {
       justifyContent={'center'}
       width={'100%'}
     >
-      <Helmet title={'OmniTools'} />
+      <Helmet title={'TechSentinel Toolbox'} />
       <Hero />
       <Box my={3}>
         <UserTypeFilter

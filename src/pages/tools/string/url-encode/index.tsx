@@ -20,8 +20,8 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
     title: 'Encode an actual URL',
     description:
       'This example URL-encodes a string that also happens to be a valid web link. Special characters in this example are a colon, slash, question mark and equals sign.',
-    sampleText: 'https://omnitools.app/',
-    sampleResult: 'https%3A%2F%2Fomnitools.app%2F',
+    sampleText: 'https://tools.techsentinel.fr/',
+    sampleResult: 'https%3A%2F%2Ftools.techsentinel.fr%2F',
     sampleOptions: initialValues
   },
   {
@@ -53,22 +53,22 @@ export default function EncodeString({
     values,
     updateField
   }) => [
-    {
-      title: t('urlEncode.encodingOption.title'),
-      component: (
-        <Box>
-          <CheckboxWithDesc
-            checked={values.nonSpecialChar}
-            onChange={(value) => updateField('nonSpecialChar', value)}
-            title={t('urlEncode.encodingOption.nonSpecialCharPlaceholder')}
-            description={t(
-              'urlEncode.encodingOption.nonSpecialCharDescription'
-            )}
-          />
-        </Box>
-      )
-    }
-  ];
+      {
+        title: t('urlEncode.encodingOption.title'),
+        component: (
+          <Box>
+            <CheckboxWithDesc
+              checked={values.nonSpecialChar}
+              onChange={(value) => updateField('nonSpecialChar', value)}
+              title={t('urlEncode.encodingOption.nonSpecialCharPlaceholder')}
+              description={t(
+                'urlEncode.encodingOption.nonSpecialCharDescription'
+              )}
+            />
+          </Box>
+        )
+      }
+    ];
 
   return (
     <ToolContent
