@@ -81,8 +81,8 @@
     }
   },
   "hero": {
-    "brand": "OmniTools",
-    "description": "Aumente su productividad con OmniTools, ¡el kit de herramientas definitivo para agilizar su trabajo! Acceda a miles de utilidades intuitivas para editar imágenes, texto, listas y datos, todo directamente desde su navegador.",
+    "brand": "TechSentinel Toolbox",
+    "description": "Aumente su productividad con TechSentinel Toolbox, ¡el kit de herramientas definitivo para agilizar su trabajo! Acceda a miles de utilidades intuitivas para editar imágenes, texto, listas y datos, todo directamente desde su navegador.",
     "examples": {
       "calculateNumberSum": "Calcular la suma de números",
       "changeGifSpeed": "Cambiar la velocidad del GIF",
@@ -253,3 +253,4 @@
     "generalUsers": "Usuarios generales"
   }
 }
+

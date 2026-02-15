@@ -93,8 +93,8 @@
     }
   },
   "hero": {
-    "brand": "OmniTools",
-    "description": "Boost your productivity with OmniTools, the ultimate toolkit for getting things done quickly! Access thousands of user-friendly utilities for editing images, text, lists, and data, all directly from your browser.",
+    "brand": "TechSentinel Toolbox",
+    "description": "Boost your productivity with TechSentinel Toolbox, the ultimate toolkit for getting things done quickly! Access thousands of user-friendly utilities for editing images, text, lists, and data, all directly from your browser.",
     "examples": {
       "calculateNumberSum": "Calculate number sum",
       "changeGifSpeed": "Change GIF speed",

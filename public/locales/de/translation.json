@@ -81,8 +81,8 @@
     }
   },
   "hero": {
-    "brand": "OmniTools",
-    "description": "Steigern Sie Ihre Produktivität mit OmniTools, dem ultimativen Toolkit für schnelles Arbeiten! Greifen Sie direkt von Ihrem Browser aus auf Tausende benutzerfreundliche Dienstprogramme zum Bearbeiten von Bildern, Texten, Listen und Daten zu.",
+    "brand": "TechSentinel Toolbox",
+    "description": "Steigern Sie Ihre Produktivität mit TechSentinel Toolbox, dem ultimativen Toolkit für schnelles Arbeiten! Greifen Sie direkt von Ihrem Browser aus auf Tausende benutzerfreundliche Dienstprogramme zum Bearbeiten von Bildern, Texten, Listen und Daten zu.",
     "examples": {
       "calculateNumberSum": "Zahlensumme berechnen",
       "changeGifSpeed": "GIF-Geschwindigkeit ändern",
@@ -253,3 +253,4 @@
     "generalUsers": "Allgemeine Benutzer"
   }
 }
+

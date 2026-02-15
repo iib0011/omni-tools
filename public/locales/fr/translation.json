@@ -81,8 +81,8 @@
     }
   },
   "hero": {
-    "brand": "OmniTools",
-    "description": "Boostez votre productivité avec OmniTools, la boîte à outils ultime pour accélérer vos tâches ! Accédez à des milliers d'utilitaires conviviaux pour modifier des images, du texte, des listes et des données, directement depuis votre navigateur.",
+    "brand": "TechSentinel Toolbox",
+    "description": "Boostez votre productivité avec TechSentinel Toolbox, la boîte à outils ultime pour accélérer vos tâches ! Accédez à des milliers d'utilitaires conviviaux pour modifier des images, du texte, des listes et des données, directement depuis votre navigateur.",
     "examples": {
       "calculateNumberSum": "Calculer la somme des nombres",
       "changeGifSpeed": "Modifier la vitesse du GIF",

@@ -81,8 +81,8 @@
     }
   },
   "hero": {
-    "brand": "OmniTools",
-    "description": "使用 OmniTools 提升您的工作效率，这是一款快速完成任务的终极工具包！数千个用户友好的实用程序，可直接通过浏览器编辑图像、文本、列表和数据。",
+    "brand": "TechSentinel Toolbox",
+    "description": "使用 TechSentinel Toolbox 提升您的工作效率，这是一款快速完成任务的终极工具包！数千个用户友好的实用程序，可直接通过浏览器编辑图像、文本、列表和数据。",
     "examples": {
       "calculateNumberSum": "计算数字和",
       "changeGifSpeed": "更改 GIF 速度",
@@ -253,3 +253,4 @@
     "generalUsers": "普通用户"
   }
 }
+
