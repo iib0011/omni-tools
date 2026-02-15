@@ -109,6 +109,72 @@ services:
 
 ```
 
+### Coolify Deployment
+
+OmniTools is fully compatible with [Coolify](https://coolify.io) for easy self-hosting.
+
+#### Quick Start
+
+1. **Create a new application in Coolify**
+   - Go to your Coolify dashboard
+   - Click "New Resource" → "Application"
+   - Select "Public Repository"
+
+2. **Configure the repository**
+   - Repository URL: `https://github.com/iib0011/omni-tools`
+   - Branch: `main`
+   - Build Pack: `Dockerfile`
+
+3. **Configure deployment settings**
+   - Port: `80` (internal)
+   - Healthcheck Path: `/health`
+   - Healthcheck Interval: `30s`
+
+4. **Deploy**
+   - Click "Deploy" and wait for the build to complete
+   - Access your application via the provided URL
+
+#### Environment Variables
+
+The following environment variables can be configured in Coolify:
+
+| Variable | Description | Default | Required |
+|----------|-------------|---------|----------|
+| `PORT` | External port to expose | `8080` | No |
+| `NODE_ENV` | Node environment | `production` | No |
+| `LOCIZE_API_KEY` | API key for Locize translations | - | No |
+
+#### Advanced Configuration
+
+**Custom Domain:**
+- In Coolify, navigate to your application settings
+- Add your custom domain under "Domains"
+- Coolify will automatically handle SSL certificates via Let's Encrypt
+
+**Resource Limits:**
+- Memory: Minimum 512MB recommended, 1GB for optimal performance
+- CPU: 0.5 cores minimum
+
+**Persistent Storage:**
+Not required - OmniTools processes all files client-side
+
+#### Troubleshooting
+
+**Build fails:**
+- Ensure you have sufficient memory (minimum 1GB during build)
+- Check Coolify logs for specific error messages
+
+**Application not accessible:**
+- Verify healthcheck is passing at `/health`
+- Check that port 80 is correctly mapped
+- Review nginx logs in Coolify dashboard
+
+**Performance issues:**
+- Increase memory allocation to 1GB
+- Enable gzip compression (already configured in nginx.conf)
+
+
+
 ## Contribute
 
 This is a React Project with Typescript Material UI. We use icons from [Iconify](https://icon-sets.iconify.design)

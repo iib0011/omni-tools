@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  omni-tools:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: omni-tools:latest
+    container_name: omni-tools
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8080}:80"
+    environment:
+      # Add environment variables here if needed
+      - NODE_ENV=production
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/health" ]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+      # Coolify labels (if using Coolify)
+      - "coolify.managed=true"
+    networks:
+      - omni-tools-network
+
+networks:
+  omni-tools-network:
+    driver: bridge

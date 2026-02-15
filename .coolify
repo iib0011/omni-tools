@@ -1,0 +1,20 @@
+# Coolify Configuration
+# This file helps Coolify understand how to deploy this application
+
+# Build configuration
+BUILD_COMMAND=npm run build
+BUILD_PATH=dist
+
+# Port configuration
+PORT=80
+
+# Healthcheck endpoint
+HEALTHCHECK_PATH=/health
+
+# Docker configuration
+DOCKERFILE_LOCATION=./Dockerfile
+DOCKER_COMPOSE_LOCATION=./docker-compose.yml
+
+# Environment variables
+# Add any required environment variables here
+# FORMAT: KEY=value

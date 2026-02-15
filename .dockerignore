@@ -1,5 +1,49 @@
+# Dependencies
 node_modules
-playwright-report
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing
 coverage
-dist
+playwright-report
 test-results
+.vitest
+
+# Build outputs (will be rebuilt in Docker)
+dist
+build
+
+# Development files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Git
+.git
+.gitignore
+.github
+
+# Documentation
+README.md
+docs-images
+LICENSE
+CODEOWNERS
+
+# Husky
+.husky
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
