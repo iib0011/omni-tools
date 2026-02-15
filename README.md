@@ -1,257 +1,167 @@
 <div align="center">
-        <img src="src/assets/logo.png" width="220" />
-        <br /><br />
-<a href="https://trendshift.io/repositories/13055" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13055" alt="iib0011%2Fomni-tools | Trendshift" style="width: 200px;" width="200"/></a>
-   <br /><br />
-<a href="https://github.com/iib0011/omni-tools/releases">
-          <img src="https://img.shields.io/badge/version-0.6.0-blue?style=for-the-badge" />
-        </a>
-        <a href="https://hub.docker.com/r/iib0011/omni-tools">
-          <img src="https://img.shields.io/docker/pulls/iib0011/omni-tools?style=for-the-badge&logo=docker" />
-        </a>
-        <a href="https://github.com/iib0011">
-          <img src="https://img.shields.io/github/stars/iib0011/omni-tools?style=for-the-badge&logo=github" />
-        </a>
-        <a href="https://github.com/iib0011/omni-tools/blob/main/LICENSE">
-          <img src="https://img.shields.io/github/license/iib0011/omni-tools?style=for-the-badge" />
-        </a>
-        <a href="https://discord.gg/SDbbn3hT4b">
-          <img src="https://img.shields.io/discord/1342971141823664179?label=Discord&style=for-the-badge" />
-        </a>
-        <br /><br />
+  <img src="src/assets/logo.png" width="220" />
+  <br /><br />
+  <h1>TechSentinel Toolbox</h1>
+  <p>Une collection complète d'outils en ligne pour simplifier vos tâches quotidiennes</p>
+  <br />
 </div>
 
-Welcome to OmniTools, a self-hosted web app offering a variety of online tools to simplify everyday tasks.
-Whether you are coding, manipulating images/videos, PDFs or crunching numbers, OmniTools has you covered. Please don't
-forget to
-star the repo to support us.
-Here is the [demo](https://omnitools.app) website.
+## 📋 À propos
 
-All files are processed entirely on the client side: nothing ever leaves your device.
-Plus, the Docker image is super lightweight at just 28MB, making it fast to deploy and easy to self-host.
+**TechSentinel Toolbox** est une application web auto-hébergée offrant une variété d'outils en ligne pour simplifier vos tâches quotidiennes. Que vous travailliez avec des images, des vidéos, des PDFs, du texte ou des données, TechSentinel Toolbox vous accompagne.
 
-![img.png](docs-images/img.png)
+**Sécurité et confidentialité** : Tous les fichiers sont traités entièrement côté client. Rien ne quitte jamais votre appareil.
 
-## Table of Contents
+**Performance** : L'image Docker est ultra-légère (28 MB), rapide à déployer et facile à auto-héberger.
 
-- [Features](#features)
-- [Self-host](#self-hostrun)
-- [Contribute](#contribute)
-- [Contact](#contact)
-- [License](#license)
+![TechSentinel Toolbox](docs-images/img.png)
 
-## Features
+## ✨ Fonctionnalités
 
-We strive to offer a variety of tools, including:
+### 🖼️ **Outils Image/Vidéo/Audio**
+- Redimensionneur d'images
+- Convertisseur d'images
+- Éditeur d'images
+- Découpe vidéo
+- Inversion vidéo
+- Et bien plus...
 
-### **Image/Video/Audio Tools**
+### 📄 **Outils PDF**
+- Diviseur PDF
+- Fusionneur PDF
+- Éditeur PDF
+- Et bien plus...
 
-- Image Resizer
-- Image Converter
-- Image Editor
-- Video Trimmer
-- Video Reverser
-- And more...
+### 📝 **Outils Texte/Liste**
+- Convertisseurs de casse
+- Mélangeur de listes
+- Formateurs de texte
+- Et bien plus...
 
-### **PDF Tools**
+### 🕐 **Outils Date et Heure**
+- Calculateurs de dates
+- Convertisseurs de fuseaux horaires
+- Et bien plus...
 
-- PDF Splitter
-- PDF Merger
-- PDF Editor
-- And more...
+### 🔢 **Outils Mathématiques**
+- Générateur de nombres premiers
+- Calculateur de tension, courant, résistance
+- Et bien plus...
 
-### **Text/List Tools**
+### 💾 **Outils de Données**
+- Outils JSON
+- Outils CSV
+- Outils XML
+- Et bien plus...
 
-- Case Converters
-- List Shuffler
-- Text Formatters
-- And more...
-
-### **Date and Time Tools**
-
-- Date Calculators
-- Time Zone Converters
-- And more...
-
-### **Math Tools**
-
-- Generate Prime Numbers
-- Calculate voltage, current, or resistance
-- And more...
-
-### **Data Tools**
-
-- JSON Tools
-- CSV Tools
-- XML Tools
-- And more...
-
-Stay tuned as we continue to expand and improve our collection!
-
-## Self-host/Run
+## 🚀 Installation & Déploiement
 
 ### Docker
 
 ```bash
-docker run -d --name omni-tools --restart unless-stopped -p 8080:80 iib0011/omni-tools:latest
+docker build -t techsentinel-toolbox .
+docker run -d --name techsentinel-toolbox --restart unless-stopped -p 8080:3000 techsentinel-toolbox
 ```
 
 ### Docker Compose
 
 ```yaml
 services:
-  omni-tools:
-    image: iib0011/omni-tools:latest
-    container_name: omni-tools
+  techsentinel-toolbox:
+    build: .
+    container_name: techsentinel-toolbox
     restart: unless-stopped
     ports:
-      - "8080:80"
-
+      - "8080:3000"
 ```
 
-### Coolify Deployment
+### Déploiement Coolify
 
-OmniTools is fully compatible with [Coolify](https://coolify.io) for easy self-hosting.
+TechSentinel Toolbox est entièrement compatible avec [Coolify](https://coolify.io).
 
-#### Quick Start
+#### Démarrage rapide
 
-1. **Create a new application in Coolify**
-   - Go to your Coolify dashboard
-   - Click "New Resource" → "Application"
-   - Select "Public Repository"
+1. **Créer une nouvelle application dans Coolify**
+   - Type : Application
+   - Source : Public Repository
 
-2. **Configure the repository**
-   - Repository URL: `https://github.com/iib0011/omni-tools`
-   - Branch: `main`
-   - Build Pack: `Dockerfile`
+2. **Configurer le dépôt**
+   - URL : `https://github.com/neosoda/Tools`
+   - Branche : `main`
+   - Build Pack : `Dockerfile`
 
-3. **Configure deployment settings**
-   - Port: `80` (internal)
-   - Healthcheck Path: `/health`
-   - Healthcheck Interval: `30s`
+3. **Configurer les paramètres de déploiement**
+   - Port : `3000` (interne)
+   - Healthcheck Path : `/health`
+   - Healthcheck Interval : `30s`
 
-4. **Deploy**
-   - Click "Deploy" and wait for the build to complete
-   - Access your application via the provided URL
+4. **Déployer**
+   - Cliquez sur "Deploy"
+   - Accédez à votre application via l'URL fournie
 
-#### Environment Variables
+#### Variables d'environnement
 
-The following environment variables can be configured in Coolify:
+| Variable | Description | Par défaut | Requis |
+|----------|-------------|------------|--------|
+| `PORT` | Port externe | `8080` | Non |
+| `NODE_ENV` | Environnement Node | `production` | Non |
+| `LOCIZE_API_KEY` | Clé API pour traductions | - | Non |
 
-| Variable | Description | Default | Required |
-|----------|-------------|---------|----------|
-| `PORT` | External port to expose | `8080` | No |
-| `NODE_ENV` | Node environment | `production` | No |
-| `LOCIZE_API_KEY` | API key for Locize translations | - | No |
+## 🛠️ Développement
 
-#### Advanced Configuration
-
-**Custom Domain:**
-- In Coolify, navigate to your application settings
-- Add your custom domain under "Domains"
-- Coolify will automatically handle SSL certificates via Let's Encrypt
-
-**Resource Limits:**
-- Memory: Minimum 512MB recommended, 1GB for optimal performance
-- CPU: 0.5 cores minimum
-
-**Persistent Storage:**
-Not required - OmniTools processes all files client-side
-
-#### Troubleshooting
-
-**Build fails:**
-- Ensure you have sufficient memory (minimum 1GB during build)
-- Check Coolify logs for specific error messages
-
-**Application not accessible:**
-- Verify healthcheck is passing at `/health`
-- Check that port 80 is correctly mapped
-- Review nginx logs in Coolify dashboard
-
-**Performance issues:**
-- Increase memory allocation to 1GB
-- Enable gzip compression (already configured in nginx.conf)
-
-
-
-## Contribute
-
-This is a React Project with Typescript Material UI. We use icons from [Iconify](https://icon-sets.iconify.design)
-
-### Project setup
+### Configuration du projet
 
 ```bash
-git clone https://github.com/iib0011/omni-tools.git
-cd omni-tools
-npm i
+git clone https://github.com/neosoda/Tools.git
+cd Tools
+npm install
 npm run dev
 ```
 
-### Create a new tool
+### Créer un nouvel outil
 
 ```bash
-npm run script:create:tool my-tool-name folder1 # npm run script:create:tool split pdf
+npm run script:create:tool mon-outil-nom dossier1
 ```
 
-For tools located under multiple nested directories, use:
+Pour les outils dans des répertoires imbriqués :
 
 ```bash
-npm run script:create:tool my-tool-name folder1/folder2 # npm run script:create:tool compress image/png
+npm run script:create:tool compress image/png
 ```
 
-Use `folder1\folder2` on Windows.
-
-### Run tests
+### Exécuter les tests
 
 ```bash
-npm run test
+npm run test        # Tests unitaires
+npm run test:e2e    # Tests end-to-end
 ```
 
-- For e2e tests
+### Traductions (i18n)
 
-```bash
-npm run test:e2e
-```
+Les fichiers de traduction sont disponibles dans [public/locales](public/locales).
 
-### i18n (Translations)
-The translation files are [here](public/locales). Only edit these if you are a developer. For non developers, use [Locize](https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK).
+## 🤝 Contribuer
 
-<img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date"/>
+Les contributions sont les bienvenues ! Vous pouvez aider en :
 
-## 🤝 Looking to contribute?
+- Signalant des bugs
+- Suggérant de nouvelles fonctionnalités
+- Améliorant la documentation
+- Soumettant des pull requests
 
-We welcome contributions! You can help by:
+## 📧 Contact
 
-- Reporting bugs
-- Suggesting new features in GitHub issues or [here](https://tally.so/r/nrkkx2)
-- Translating in [Locize project](https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK).
-- Improving documentation
-- Submitting pull requests
+Pour toute question ou suggestion :
+**[contact@techsentinel.fr](mailto:contact@techsentinel.fr)**
 
+## 📜 Licence
 
-You can also join our [Discord server](https://discord.gg/SDbbn3hT4b)
-## 🧡 Sponsors
+Ce projet est sous licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus de détails.
+
+---
+
 <div align="center">
-  <a href="https://www.locize.com/" target="_blank">
-    <img src="docs-images/locizeSponsor.svg" alt="Locize" width="200"/>
-  </a>
+  <p>Développé avec ❤️ par <strong>TechSentinel</strong></p>
+  <p><a href="https://techsentinel.fr">techsentinel.fr</a></p>
 </div>
-
-Thanks to [Locize](https://www.locize.com) for sponsoring OmniTools and supporting localization efforts.
-They make translation management simple and developer-friendly.
-
-## Contributors
-
-<a href="https://github.com/iib0011/omni-tools/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=iib0011/omni-tools" />
-</a>
-
-## Contact
-
-For any questions or suggestions, feel free to open an issue or contact me at:
-[ibracool99@gmail.com](mailto:ibracool99@gmail.com)
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

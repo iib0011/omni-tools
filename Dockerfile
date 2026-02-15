@@ -17,8 +17,8 @@ FROM nginx:alpine
 # Add labels for better container management
 LABEL org.opencontainers.image.title="OmniTools"
 LABEL org.opencontainers.image.description="Self-hosted web app with variety of online tools"
-LABEL org.opencontainers.image.source="https://github.com/iib0011/omni-tools"
-LABEL org.opencontainers.image.vendor="Ibrahima Gaye Coulibaly"
+LABEL org.opencontainers.image.source="https://github.com/neosoda/Tools"
+LABEL org.opencontainers.image.vendor="TechSentinel"
 
 # Copy built assets from build stage
 COPY --from=build /app/dist /usr/share/nginx/html

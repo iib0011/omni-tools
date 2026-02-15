@@ -91,7 +91,7 @@ docker-compose down
 1. **Créer une nouvelle application**
    - Type : Application
    - Source : Public Repository
-   - URL : `https://github.com/iib0011/omni-tools`
+   - URL : `https://github.com/neosoda/Tools`
 
 2. **Configuration du Build**
    - Build Pack : Dockerfile
