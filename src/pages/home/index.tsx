@@ -4,6 +4,8 @@ import Categories from './Categories';
 import { Helmet } from 'react-helmet';
 import { useUserTypeFilter } from 'providers/UserTypeFilterProvider';
 import UserTypeFilter from '@components/UserTypeFilter';
+import backgroundDark from 'assets/background-dark.png';
+import backgroundLight from 'assets/background.svg';
 
 export default function Home() {
   const theme = useTheme();
@@ -16,10 +18,8 @@ export default function Home() {
         lg: 5
       }}
       sx={{
-        background: `url(/assets/${
-          theme.palette.mode === 'dark'
-            ? 'background-dark.png'
-            : 'background.svg'
+        background: `url(${
+          theme.palette.mode === 'dark' ? backgroundDark : backgroundLight
         })`,
         backgroundColor: 'background.default'
       }}
