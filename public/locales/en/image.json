@@ -101,5 +101,54 @@
     "description": "Rotate an image by a specified angle.",
     "shortDescription": "Rotate an image easily.",
     "title": "Rotate Image"
+  },
+  "split": {
+    "title": "Split Image into Pages",
+    "shortDescription": "Split a large image into multiple pages (PDF).",
+    "description": "Split a map or large image into pages matching the selected paper format and padding. Specify pixels per printing square and square count to scale the image correctly.",
+    "inputTitle": "Input image",
+    "resultTitle": "Split PDF",
+    "pageParameters": {
+      "title": "Page parameters",
+      "selectPageFormat": "Select page format",
+      "padding": {
+        "label": "Padding",
+        "description": "Padding around the map on each page (in selected units)"
+      }
+    },
+    "scaleParameters": {
+      "title": "Scale parameters",
+      "pxPerSquareQuantity": {
+        "label": "Pixels per squares quantity",
+        "description": "How many pixels correspond to the specified number of squares on the original image (horizontal or vertical)"
+      },
+      "squareQuantity": {
+        "label": "Squares quantity",
+        "description": "Number of play squares across (horizontal or vertical) used for scaling"
+      },
+      "unitsPerOneSquare": {
+        "label": "Units per square",
+        "description": "Physical size of one square in the selected units"
+      }
+    },
+    "units": {
+      "title": "Units",
+      "select": "Select measurement units",
+      "options": {
+        "pt": "Points (pt)",
+        "mm": "Millimeters (mm)",
+        "in": "Inches (in)"
+      }
+    },
+    "input": {
+      "imagePlaceholder": "Drop or select an image with a tactical map"
+    },
+    "pdfOptions": {
+      "downloadLabel": "Download PDF"
+    },
+    "toolInfo": {
+      "title": "About Split",
+      "description": "This tool slices a large image into pages of the selected paper format and packs them into a PDF. Useful for printing maps across multiple sheets."
+    }
   }
 }
