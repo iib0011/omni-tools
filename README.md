@@ -90,6 +90,10 @@ Stay tuned as we continue to expand and improve our collection!
 
 ## Self-host/Run
 
+> [!TIP]
+> You can use either the DockerHub Image `iib0011/omni-tools` <br />
+> or use the GitHub Container Registry `ghcr.io/iib0011/omni-tools`
+
 ### Docker
 
 ```bash
