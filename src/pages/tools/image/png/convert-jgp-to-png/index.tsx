@@ -23,6 +23,11 @@ export default function ConvertJgpToPng({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
 
+  const handleRemove = () => {
+    setInput(null);
+    setResult(null);
+  };
+
   const compute = async (
     optionsValues: typeof initialValues,
     input: any
@@ -101,12 +106,34 @@ export default function ConvertJgpToPng({ title }: ToolComponentProps) {
       title={title}
       input={input}
       inputComponent={
-        <ToolImageInput
-          value={input}
-          onChange={setInput}
-          accept={['image/jpeg']}
-          title={'Input JPG'}
-        />
+        <Box>
+          <ToolImageInput
+            value={input}
+            onChange={(file) => {
+              setInput(file);
+              setResult(null);
+            }}
+            accept={['image/jpeg']}
+            title={'Input JPG'}
+          />
+          {input && (
+            <Box mt={1}>
+              <button
+                onClick={handleRemove}
+                style={{
+                  padding: '6px 10px',
+                  borderRadius: 6,
+                  border: '1px solid #e57373',
+                  background: 'transparent',
+                  color: '#e57373',
+                  cursor: 'pointer'
+                }}
+              >
+                Remove file
+              </button>
+            </Box>
+          )}
+        </Box>
       }
       resultComponent={
         <ToolFileResult title={'Output PNG'} value={result} extension={'png'} />
