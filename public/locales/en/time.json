@@ -119,5 +119,14 @@
     "description": "Convert a formatted time duration (HH:MM:SS) into a decimal hour value.",
     "shortDescription": "Convert human time to decimal time",
     "longDescription": "Convert a formatted time string (HH:MM:SS or HH:MM) into its decimal-hour equivalent. Hours can be any positive number, while minutes and seconds accept values from 0-59 and can be single or double digits (e.g., '12:5' or '12:05'). This function interprets hours, minutes, and seconds, then calculates the total duration as a single decimal value. It is useful for productivity tracking, payroll calculations, time-based billing, data analysis, or any workflow that requires converting human-readable time into a numerical format that can be easily summed, compared, or processed. For example, '03:26:00' becomes 3.43 hours, and '12:5' becomes 12.08 hours."
+  },
+  "discordTimestamp": {
+    "name": "Discord Timestamp Generator",
+    "description": "Generate Discord formatted timestamps from date and time",
+    "shortDescription": "Generate Discord timestamps",
+    "toolInfo": {
+      "title": "What is a Discord Timestamp",
+      "description": "Discord timestamps allow you to display dynamic dates and times that automatically adjust to each user's local timezone. This tool converts a date and time into the special Discord timestamp format."
+    }
   }
 }
