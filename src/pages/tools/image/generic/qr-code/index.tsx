@@ -18,6 +18,7 @@ const initialValues: InitialValuesType = {
   size: '200',
   bgColor: '#FFFFFF',
   fgColor: '#000000',
+  correctionLevel: 'M',
 
   // URL
   url: 'https://example.com',
@@ -117,6 +118,9 @@ const validationSchema = Yup.object().shape({
     .required('Size is required'),
   bgColor: Yup.string().required('Background color is required'),
   fgColor: Yup.string().required('Foreground color is required'),
+  correctionLevel: Yup.mixed<'L' | 'M' | 'Q' | 'H'>()
+    .oneOf(['L', 'M', 'Q', 'H'])
+    .required('Correction level is required'),
 
   // URL
   url: Yup.string().when('qrCodeType', {
@@ -211,6 +215,25 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 max: 1000
               }}
             />
+            <TextField
+              select
+              fullWidth
+              label="Error Correction Level"
+              margin="normal"
+              value={values.correctionLevel}
+              onChange={(e) =>
+                updateField(
+                  'correctionLevel',
+                  e.target.value as 'L' | 'M' | 'Q' | 'H'
+                )
+              }
+              helperText="Higher levels survive more damage but encode less data"
+            >
+              <MenuItem value="L">L (~7%)</MenuItem>
+              <MenuItem value="M">M (~15%)</MenuItem>
+              <MenuItem value="Q">Q (~25%)</MenuItem>
+              <MenuItem value="H">H (~30%)</MenuItem>
+            </TextField>
             <ColorSelector
               description="Background Color"
               value={values.bgColor}
@@ -440,7 +463,8 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
           dark: options.fgColor,
           light: options.bgColor
         },
-        width: Number(options.size) || 200
+        width: Number(options.size) || 200,
+        errorCorrectionLevel: options.correctionLevel
       },
       async (error, url) => {
         const res = await fetch(url);
