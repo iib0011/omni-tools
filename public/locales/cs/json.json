@@ -1,0 +1,67 @@
+{
+  "comparison": {
+    "description": "Porovnejte dva JSON objekty a zjistěte rozdíly ve struktuře a hodnotách.",
+    "shortDescription": "Najít rozdíly mezi dvěma JSON objekty",
+    "title": "Porovnat JSON"
+  },
+  "escapeJson": {
+    "description": "Escapujte speciální znaky v JSON řetězcích. Převeďte JSON data do správně escapovaného formátu pro bezpečný přenos nebo uložení.",
+    "shortDescription": "Escapovat speciální znaky v JSON",
+    "title": "Escapovat JSON"
+  },
+  "jsonToXml": {
+    "description": "Převeďte JSON data do formátu XML. Přetvořte strukturované JSON objekty do validních XML dokumentů.",
+    "shortDescription": "Převést JSON na XML",
+    "title": "JSON na XML"
+  },
+  "minify": {
+    "description": "Odstraňte všechny zbytečné bílé znaky z JSON.",
+    "inputTitle": "Vstupní JSON",
+    "resultTitle": "Zmenšený JSON",
+    "shortDescription": "Zmenšit JSON odstraněním bílých znaků",
+    "title": "Zmenšit JSON",
+    "toolInfo": {
+      "description": "Minifikace JSON je proces odstranění všech nepotřebných bílých znaků z JSON dat při zachování jejich validity. Zahrnuje odstranění mezer, nových řádků a odsazení, které nejsou nutné pro správné parsování JSON. Minifikace snižuje velikost dat, což zlepšuje efektivitu při ukládání a přenosu, přičemž struktura i hodnoty zůstávají stejné.",
+      "title": "Co je minifikace JSON?"
+    }
+  },
+  "prettify": {
+    "description": "Formátujte JSON s vhodným odsazením a mezerami.",
+    "indentation": "Odsazení",
+    "inputTitle": "Vstupní JSON",
+    "resultTitle": "Naformátovaný JSON",
+    "shortDescription": "Formátovat a zpřehlednit JSON kód",
+    "title": "Formátovat JSON",
+    "toolInfo": {
+      "description": "Tento nástroj umožňuje naformátovat JSON data s vhodným odsazením a mezerami, což zvyšuje jejich čitelnost a usnadňuje práci s nimi.",
+      "title": "Formátovat JSON"
+    },
+    "useSpaces": "Použít mezery",
+    "useSpacesDescription": "Odsadit výstup pomocí mezer",
+    "useTabs": "Použít tabulátory",
+    "useTabsDescription": "Odsadit výstup pomocí tabulátorů"
+  },
+  "stringify": {
+    "description": "Převeďte JavaScript objekty na JSON řetězec. Serializujte datové struktury do JSON pro uložení nebo přenos.",
+    "shortDescription": "Převést objekty na JSON řetězec",
+    "title": "Serializovat JSON"
+  },
+  "tsvToJson": {
+    "description": "Převeďte TSV (Tab-Separated Values) data do formátu JSON. Přetvořte tabulková data do strukturovaných JSON objektů.",
+    "shortDescription": "Převést TSV na JSON",
+    "title": "TSV na JSON"
+  },
+  "validateJson": {
+    "description": "Zkontrolujte, zda je JSON validní a správně zapsaný.",
+    "inputTitle": "Vstupní JSON",
+    "invalidJson": "❌ {{error}}",
+    "resultTitle": "Výsledek validace",
+    "shortDescription": "Validovat JSON kód a najít chyby",
+    "title": "Validovat JSON",
+    "toolInfo": {
+      "description": "JSON (JavaScript Object Notation) je lehký formát pro výměnu dat. Validace JSON zajišťuje, že data odpovídají standardu JSON. Platný JSON objekt musí mít: - Názvy vlastností v uvozovkách. - Správně uzavřené složené závorky {}. - Žádné čárky navíc za poslední dvojicí klíč-hodnota. - Správné vnoření objektů a polí. Tento nástroj kontroluje vstupní JSON a poskytuje zpětnou vazbu pro odhalení a opravu běžných chyb.",
+      "title": "Co je validace JSON?"
+    },
+    "validJson": "✅ Platný JSON"
+  }
+}

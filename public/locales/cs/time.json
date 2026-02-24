@@ -1,0 +1,117 @@
+{
+  "checkLeapYears": {
+    "description": "Zkontrolujte, zda je rok přestupný, a získejte informace o přestupných letech.",
+    "exampleDescription": "Jedna naše kamarádka se narodila v přestupném roce 29. února, takže má narozeniny jen jednou za 4 roky. Abychom si nikdy nepamatovali přesně, kdy má narozeniny, používáme náš program k vytvoření seznamu nadcházejících přestupných let. Pro vytvoření seznamu jejích příštích narozenin zadáme roky 2025 až 2040 a získáme stav každého roku. Pokud program ukáže, že jde o přestupný rok, víme, že budeme pozváni na narozeninovou oslavu 29. února.",
+    "exampleTitle": "Najít narozeniny 29. února",
+    "inputTitle": "Zadejte rok",
+    "resultTitle": "Výsledek přestupného roku",
+    "shortDescription": "Zkontrolovat, zda je rok přestupný",
+    "title": "Kontrola přestupných let",
+    "toolInfo": {
+      "description": "Přestupný rok je rok, který obsahuje jeden dodatečný den (29. února), aby byl kalendářní rok synchronizován s astronomickým rokem. Přestupné roky nastávají každé 4 roky, s výjimkou let dělitelných 100, ale ne 400.",
+      "title": "Co je přestupný rok?"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "Přidat označení hodin",
+    "addHoursNameDescription": "Připojit řetězec 'hodiny' k výstupním hodnotám",
+    "description": "Převod dnů na hodiny s možností přizpůsobení.",
+    "hoursName": "Označení hodin",
+    "shortDescription": "Převést dny na hodiny",
+    "title": "Převod dnů na hodiny",
+    "toolInfo": {
+      "description": "Tento nástroj umožňuje převést dny na hodiny. Dny můžete zadat jako čísla nebo s jednotkami, a nástroj je převede na hodiny. Můžete také zvolit, zda připojit příponu 'hodiny' k výstupním hodnotám.",
+      "title": "Převod dnů na hodiny"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "Přidat označení dnů",
+    "addDaysNameDescription": "Připojit řetězec 'dny' k výstupním hodnotám",
+    "daysName": "Označení dnů",
+    "description": "Převod hodin na dny s možností přizpůsobení.",
+    "shortDescription": "Převést hodiny na dny",
+    "title": "Převod hodin na dny",
+    "toolInfo": {
+      "description": "Tento nástroj umožňuje převést hodiny na dny. Hodiny můžete zadat jako čísla nebo s jednotkami, a nástroj je převede na dny. Můžete také zvolit, zda připojit příponu 'dny' k výstupním hodnotám.",
+      "title": "Převod hodin na dny"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "Přidat nulové doplnění",
+    "addPaddingDescription": "Přidat nulové doplnění pro hodiny, minuty a sekundy.",
+    "description": "Převést sekundy na čitelný časový formát (hodiny:minuty:sekundy). Zadejte počet sekund a získejte formátovaný čas.",
+    "shortDescription": "Převést sekundy na časový formát",
+    "timePadding": "Doplnění času",
+    "title": "Převod sekund na čas",
+    "toolInfo": {
+      "title": "Co je {{title}}?"
+    }
+  },
+  "convertTimeToSeconds": {
+    "description": "Převést čas ve formátu HH:MM:SS na sekundy.",
+    "inputTitle": "Zadejte čas",
+    "resultTitle": "Sekundy",
+    "shortDescription": "Převést časový formát na sekundy",
+    "title": "Převod času na sekundy",
+    "toolInfo": {
+      "description": "Tento nástroj umožňuje převést časové řetězce ve formátu HH:MM:SS na sekundy. Je užitečný pro výpočty trvání a časových intervalů.",
+      "title": "Převod času na sekundy"
+    }
+  },
+  "convertUnixToDate": {
+    "addUtcLabel": "Přidat příponu 'UTC'",
+    "addUtcLabelDescription": "Zobrazit 'UTC' po převedeném datu (pouze v režimu UTC)",
+    "description": "Převést Unix timestamp na čitelné datum.",
+    "outputOptions": "Možnosti výstupu",
+    "shortDescription": "Převést Unix timestamp na datum",
+    "title": "Převod Unix času na datum",
+    "toolInfo": {
+      "description": "Tento nástroj převádí Unix timestamp (v sekundách) na čitelný datumový formát (např. RRRR-MM-DD HH:MM:SS). Podporuje výstup v lokálním čase i UTC, což je užitečné pro rychlou interpretaci timestampů z logů, API nebo systémů používajících Unix čas.",
+      "title": "Převod Unix času na datum"
+    },
+    "useLocalTime": "Použít místní čas",
+    "useLocalTimeDescription": "Zobrazit převedené datum ve vašem místním časovém pásmu místo UTC",
+    "withLabel": "Možnosti"
+  },
+  "crontabGuru": {
+    "description": "Generujte a interpretujte cron výrazy. Vytvářejte cron plány pro automatizované úlohy a systémové procesy.",
+    "shortDescription": "Generujte a pochopte cron výrazy",
+    "title": "Crontab Guru"
+  },
+  "timeBetweenDates": {
+    "description": "Vypočítat časový rozdíl mezi dvěma daty. Získejte přesné trvání v dnech, hodinách, minutách a sekundách.",
+    "endDate": "Koncové datum",
+    "endDateTime": "Koncové datum a čas",
+    "endTime": "Koncový čas",
+    "endTimezone": "Koncové časové pásmo",
+    "shortDescription": "Vypočítat čas mezi dvěma daty",
+    "startDate": "Počáteční datum",
+    "startDateTime": "Počáteční datum a čas",
+    "startTime": "Počáteční čas",
+    "startTimezone": "Počáteční časové pásmo",
+    "title": "Čas mezi daty",
+    "toolInfo": {
+      "description": "Vypočítá přesný časový rozdíl mezi dvěma daty a časy s podporou různých časových pásem. Nástroj poskytuje podrobný rozpis rozdílu v různých jednotkách (roky, měsíce, dny, hodiny, minuty a sekundy).",
+      "title": "Kalkulačka času mezi daty"
+    }
+  },
+  "truncateClockTime": {
+    "description": "Oříznout čas na hodinách, aby se odstranily sekundy nebo minuty. Zaokrouhlit čas na nejbližší hodinu, minutu nebo vlastní interval.",
+    "printDroppedComponents": "Zobrazit odstraněné složky",
+    "shortDescription": "Oříznout čas na určenou přesnost",
+    "timePadding": "Doplnění času",
+    "title": "Oříznout čas",
+    "toolInfo": {
+      "title": "Co je {{title}}?"
+    },
+    "truncateMinutesAndSeconds": "Oříznout minuty a sekundy",
+    "truncateMinutesAndSecondsDescription": "Odstranit složky minut i sekund z každého času.",
+    "truncateOnlySeconds": "Oříznout pouze sekundy",
+    "truncateOnlySecondsDescription": "Odstranit složku sekund z každého času.",
+    "truncationSide": "Strana oříznutí",
+    "useZeroPadding": "Použít nulové doplnění",
+    "zeroPaddingDescription": "Všechny složky času budou mít vždy dvě číslice.",
+    "zeroPrintDescription": "Zobrazit odstraněné části jako nuly '00'.",
+    "zeroPrintTruncatedParts": "Zobrazit odstraněné části jako nuly"
+  }
+}
