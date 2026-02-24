@@ -1,7 +1,6 @@
-export interface DiscordTimestampInput {
-  date: string;
-}
+export type DiscordTimestampFormat = 't' | 'T' | 'd' | 'D' | 'f' | 'F' | 'R';
 
-export interface DiscordTimestampResult {
-  value: string;
-}
+export type InitialValuesType = {
+  format: DiscordTimestampFormat;
+  enforceUTC: boolean;
+};
