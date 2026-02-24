@@ -6,7 +6,6 @@ import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
 import ToolFileResult from 'components/result/ToolFileResult';
 import Color from 'color';
 import React, { useState } from 'react';
-import * as Yup from 'yup';
 import { areColorsSimilar } from 'utils/color';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -16,17 +15,10 @@ const initialValues = {
   color: 'white',
   similarity: '10'
 };
-const validationSchema = Yup.object({
-  // splitSeparator: Yup.string().required('The separator is required')
-});
+
 export default function ConvertJgpToPng({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
-
-  const handleRemove = () => {
-    setInput(null);
-    setResult(null);
-  };
 
   const compute = async (
     optionsValues: typeof initialValues,
@@ -106,34 +98,12 @@ export default function ConvertJgpToPng({ title }: ToolComponentProps) {
       title={title}
       input={input}
       inputComponent={
-        <Box>
-          <ToolImageInput
-            value={input}
-            onChange={(file) => {
-              setInput(file);
-              setResult(null);
-            }}
-            accept={['image/jpeg']}
-            title={'Input JPG'}
-          />
-          {input && (
-            <Box mt={1}>
-              <button
-                onClick={handleRemove}
-                style={{
-                  padding: '6px 10px',
-                  borderRadius: 6,
-                  border: '1px solid #e57373',
-                  background: 'transparent',
-                  color: '#e57373',
-                  cursor: 'pointer'
-                }}
-              >
-                Remove file
-              </button>
-            </Box>
-          )}
-        </Box>
+        <ToolImageInput
+          value={input}
+          onChange={setInput}
+          accept={['image/jpeg']}
+          title={'Input JPG'}
+        />
       }
       resultComponent={
         <ToolFileResult title={'Output PNG'} value={result} extension={'png'} />
