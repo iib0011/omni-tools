@@ -35,6 +35,7 @@ const languages = [
   { code: 'fr', label: 'Français' },
   { code: 'pt', label: 'Português' },
   { code: 'ja', label: '日本語' },
+  { code: 'ko', label: '한국어' },
   { code: 'hi', label: 'हिंदी' },
   { code: 'nl', label: 'Nederlands' },
   { code: 'ru', label: 'Русский' },

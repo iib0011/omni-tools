@@ -1,0 +1,61 @@
+{
+  "changeSpeed": {
+    "description": "오디오 파일의 재생 속도를 변경합니다. 음높이를 유지하면서 오디오 속도를 높이거나 낮춥니다.",
+    "inputTitle": "입력 오디오",
+    "newAudioSpeed": "새 오디오 속도",
+    "outputFormat": "출력 형식",
+    "resultTitle": "편집된 오디오",
+    "settingSpeed": "속도 설정",
+    "shortDescription": "오디오 파일의 속도를 변경합니다",
+    "speedDescription": "기본 승수: 2는 2배 빠름을 의미합니다",
+    "title": "오디오 속도 변경",
+    "toolInfo": {
+      "title": "{{title}}란 무엇인가요?"
+    }
+  },
+  "extractAudio": {
+    "description": "비디오 파일에서 오디오 트랙을 추출합니다.",
+    "extractingAudio": "오디오 추출 중",
+    "inputTitle": "입력 비디오",
+    "outputFormat": "출력 형식",
+    "outputFormatDescription": "추출할 오디오 형식을 선택하세요.",
+    "resultTitle": "추출된 오디오",
+    "shortDescription": "비디오 파일(MP4, MOV 등)에서 오디오를 AAC, MP3 또는 WAV로 추출합니다.",
+    "title": "비디오에서 오디오 추출",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 비디오 파일에서 오디오 트랙을 추출할 수 있습니다. AAC, MP3, WAV 등 다양한 오디오 형식 중에서 선택할 수 있습니다.",
+      "title": "{{title}}란 무엇인가요?"
+    }
+  },
+  "mergeAudio": {
+    "description": "여러 오디오 파일을 순서대로 연결하여 단일 오디오 파일로 결합합니다.",
+    "inputTitle": "입력 오디오 파일",
+    "longDescription": "이 도구를 사용하면 여러 오디오 파일을 업로드한 순서대로 연결하여 단일 파일로 병합할 수 있습니다. 팟캐스트 세그먼트, 음악 트랙 또는 함께 연결해야 하는 모든 오디오 파일을 결합하는 데 적합합니다. MP3, AAC, WAV 등 다양한 오디오 형식을 지원합니다.",
+    "mergingAudio": "오디오 병합 중",
+    "outputFormat": "출력 형식",
+    "resultTitle": "병합된 오디오",
+    "shortDescription": "여러 오디오 파일을 하나로 병합합니다(MP3, AAC, WAV).",
+    "title": "오디오 병합",
+    "toolInfo": {
+      "title": "{{title}}란 무엇인가요?"
+    }
+  },
+  "trim": {
+    "description": "시작 및 종료 시간을 지정하여 특정 세그먼트를 추출하기 위해 오디오 파일을 자르고 다듬습니다.",
+    "endTime": "종료 시간",
+    "endTimeDescription": "종료 시간 형식 HH:MM:SS (예: 00:01:30)",
+    "inputTitle": "입력 오디오",
+    "longDescription": "이 도구를 사용하면 시작 및 종료 시간을 지정하여 오디오 파일을 다듬을 수 있습니다. 긴 오디오 파일에서 특정 세그먼트를 추출하거나, 원하지 않는 부분을 제거하거나, 더 짧은 클립을 만들 수 있습니다. MP3, AAC, WAV 등 다양한 오디오 형식을 지원합니다. 팟캐스트 편집, 음악 제작 또는 모든 오디오 편집 요구에 적합합니다.",
+    "outputFormat": "출력 형식",
+    "resultTitle": "다듬어진 오디오",
+    "shortDescription": "오디오 파일을 다듬어 특정 시간 세그먼트를 추출합니다(MP3, AAC, WAV).",
+    "startTime": "시작 시간",
+    "startTimeDescription": "시작 시간 형식 HH:MM:SS (예: 00:00:30)",
+    "timeSettings": "시간 설정",
+    "title": "오디오 다듬기",
+    "toolInfo": {
+      "title": "{{title}}란 무엇인가요?"
+    },
+    "trimmingAudio": "오디오 다듬는 중"
+  }
+}

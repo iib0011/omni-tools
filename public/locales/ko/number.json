@@ -1,0 +1,192 @@
+{
+  "arithmeticSequence": {
+    "commonDifferenceDescription": "항 사이의 공차 (d)",
+    "description": "사용자 정의 가능한 매개변수로 산술 수열을 생성합니다.",
+    "firstTermDescription": "수열의 첫 번째 항 (a₁)",
+    "numberOfTermsDescription": "생성할 항의 개수 (n)",
+    "outputFormat": "출력 형식",
+    "resultTitle": "생성된 수열",
+    "separatorDescription": "항 사이의 구분자",
+    "sequenceParameters": "수열 매개변수",
+    "shortDescription": "산술 수열 생성",
+    "title": "산술 수열",
+    "toolInfo": {
+      "description": "산술 수열은 각 연속 항 사이의 차이가 일정한 수열입니다. 이 일정한 차이를 공차라고 합니다. 첫 번째 항 (a₁)과 공차 (d)가 주어지면, 각 항은 이전 항에 공차를 더하여 구할 수 있습니다.",
+      "title": "산술 수열이란?"
+    }
+  },
+  "generate": {
+    "arithmeticSequenceOption": "산술 수열 옵션",
+    "description": "사용자 정의 가능한 매개변수로 수열을 생성합니다.",
+    "numberOfElementsDescription": "수열의 요소 개수.",
+    "resultTitle": "생성된 숫자",
+    "separator": "구분자",
+    "separatorDescription": "산술 수열의 요소를 이 문자로 구분합니다.",
+    "shortDescription": "지정된 범위에서 임의의 숫자 생성",
+    "startSequenceDescription": "이 숫자부터 수열을 시작합니다.",
+    "stepDescription": "각 요소를 이 값만큼 증가시킵니다.",
+    "title": "생성",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 사용자 정의 가능한 매개변수로 숫자 수열을 생성할 수 있습니다. 시작 값, 단계 크기, 요소 수를 지정할 수 있습니다.",
+      "title": "숫자 생성"
+    }
+  },
+  "ohmsLaw": {
+    "description": "전압, 전류 및 저항 계산",
+    "longDescription": "이 계산기는 옴의 법칙 (V = I × R)을 적용하여 세 가지 전기 매개변수 중 두 가지가 주어졌을 때 나머지 하나를 계산합니다. 옴의 법칙은 전압 (V), 전류 (I), 저항 (R) 간의 관계를 설명하는 전기 공학의 기본 원칙입니다. 이 도구는 전자 취미가, 전기 공학자 및 회로 설계 학생들이 전기 설계에서 미지의 값을 빠르게 계산하는 데 필수적입니다.",
+    "shortDescription": "옴의 법칙을 사용하여 전기 회로의 전압, 전류 또는 저항 계산",
+    "title": "옴의 법칙"
+  },
+  "randomNumberGenerator": {
+    "description": "사용자 정의 가능한 옵션으로 지정된 범위 내에서 임의의 숫자를 생성합니다.",
+    "error": {
+      "generationFailed": "임의의 숫자 생성에 실패했습니다. 입력 매개변수를 확인하세요."
+    },
+    "info": {
+      "description": "임의의 숫자 생성기는 지정된 범위 내에서 예측할 수 없는 숫자를 생성합니다. 이 도구는 암호학적으로 안전한 임의의 숫자 생성을 사용하여 진정으로 무작위 결과를 보장합니다. 시뮬레이션, 게임, 통계 샘플링 및 테스트 시나리오에 유용합니다.",
+      "title": "임의의 숫자 생성기란?"
+    },
+    "longDescription": "지정된 범위 내에서 임의의 숫자를 생성하며, 정수 또는 소수를 선택할 수 있고, 중복 허용 여부 및 결과 정렬 옵션을 제공합니다. 시뮬레이션, 테스트, 게임 및 통계 분석에 적합합니다.",
+    "options": {
+      "generation": {
+        "allowDecimals": {
+          "description": "정수가 아닌 소수를 생성합니다.",
+          "title": "소수 허용"
+        },
+        "allowDuplicates": {
+          "description": "동일한 숫자가 여러 번 나타날 수 있도록 허용합니다.",
+          "title": "중복 허용"
+        },
+        "countDescription": "생성할 임의의 숫자 개수 (1-10,000)",
+        "sortResults": {
+          "description": "생성된 숫자를 오름차순으로 정렬합니다.",
+          "title": "결과 정렬"
+        },
+        "title": "생성 옵션"
+      },
+      "output": {
+        "separatorDescription": "생성된 숫자를 구분할 문자",
+        "title": "출력 설정"
+      },
+      "range": {
+        "maxDescription": "최대값 (포함)",
+        "minDescription": "최소값 (포함)",
+        "title": "범위 설정"
+      }
+    },
+    "result": {
+      "count": "개수",
+      "hasDuplicates": "중복 포함",
+      "isSorted": "정렬됨",
+      "range": "범위",
+      "title": "생성된 임의의 숫자"
+    },
+    "shortDescription": "사용자 정의 범위에서 임의의 숫자 생성",
+    "title": "임의의 숫자 생성기"
+  },
+  "randomPortGenerator": {
+    "description": "사용자 정의 가능한 옵션으로 지정된 범위 내에서 임의의 네트워크 포트를 생성합니다.",
+    "error": {
+      "generationFailed": "임의의 포트 생성에 실패했습니다. 입력 매개변수를 확인하세요."
+    },
+    "info": {
+      "description": "임의의 포트 생성기는 지정된 범위 내에서 예측할 수 없는 네트워크 포트 번호를 생성합니다. 이 도구는 IANA 포트 번호 표준을 따르며 일반적인 서비스 식별을 포함합니다. 개발, 테스트, 네트워크 구성 및 포트 충돌 방지에 유용합니다.",
+      "title": "임의의 포트 생성기란?"
+    },
+    "longDescription": "지정된 범위 내에서 임의의 네트워크 포트를 생성합니다 (잘 알려진 포트, 등록된 포트, 동적 포트 또는 사용자 정의). 개발, 테스트 및 네트워크 구성에 적합합니다. 일반적인 포트에 대한 서비스 식별을 포함합니다.",
+    "options": {
+      "generation": {
+        "allowDuplicates": {
+          "description": "동일한 포트가 여러 번 나타날 수 있도록 허용합니다.",
+          "title": "중복 허용"
+        },
+        "countDescription": "생성할 임의의 포트 개수 (1-1,000)",
+        "sortResults": {
+          "description": "생성된 포트를 오름차순으로 정렬합니다.",
+          "title": "결과 정렬"
+        },
+        "title": "생성 옵션"
+      },
+      "output": {
+        "separatorDescription": "생성된 포트를 구분할 문자",
+        "title": "출력 설정"
+      },
+      "range": {
+        "custom": "사용자 정의 범위",
+        "dynamic": "동적 포트 (49152-65535)",
+        "maxPortDescription": "최대 포트 번호 (1-65535)",
+        "minPortDescription": "최소 포트 번호 (1-65535)",
+        "registered": "등록된 포트 (1024-49151)",
+        "title": "포트 범위 설정",
+        "wellKnown": "잘 알려진 포트 (1-1023)"
+      }
+    },
+    "result": {
+      "count": "개수",
+      "hasDuplicates": "중복 포함",
+      "isSorted": "정렬됨",
+      "portDetails": "포트 세부정보",
+      "range": "포트 범위",
+      "title": "생성된 임의의 포트"
+    },
+    "shortDescription": "임의의 네트워크 포트 생성",
+    "title": "임의의 포트 생성기"
+  },
+  "slackline": {
+    "description": "슬랙라인의 장력을 계산합니다.",
+    "longDescription": "이 계산기는 로프 중앙에 하중이 가해진다고 가정합니다.",
+    "shortDescription": "슬랙라인 또는 빨랫줄의 대략적인 장력을 계산합니다. 안전을 위해 이 계산에 의존하지 마십시오.",
+    "title": "슬랙라인 장력"
+  },
+  "sphereArea": {
+    "description": "구의 겉넓이",
+    "longDescription": "이 계산기는 A = 4πr² 공식을 사용하여 구의 겉넓이를 계산합니다. 반지름을 입력하여 겉넓이를 구하거나 겉넓이를 입력하여 필요한 반지름을 계산할 수 있습니다. 이 도구는 기하학을 공부하는 학생, 구형 물체로 작업하는 엔지니어 및 구형 표면과 관련된 계산을 수행해야 하는 모든 사람에게 유용합니다.",
+    "shortDescription": "반지름을 기준으로 구의 겉넓이 계산",
+    "title": "구의 겉넓이"
+  },
+  "sphereVolume": {
+    "description": "구의 부피",
+    "longDescription": "이 계산기는 V = (4/3)πr³ 공식을 사용하여 구의 부피를 계산합니다. 반지름 또는 지름을 입력하여 부피를 구하거나 부피를 입력하여 필요한 반지름을 결정할 수 있습니다. 이 도구는 물리학, 공학 및 제조와 같은 분야에서 구형 물체로 작업하는 학생, 엔지니어 및 전문가에게 유용합니다.",
+    "shortDescription": "반지름 또는 지름을 사용하여 구의 부피 계산",
+    "title": "구의 부피"
+  },
+  "sum": {
+    "description": "숫자 목록의 합계를 계산합니다. 쉼표나 줄 바꿈으로 구분된 숫자를 입력하여 총합을 구합니다.",
+    "example1Description": "이 예에서는 10개의 양의 정수의 합을 계산합니다. 이 정수들은 열로 나열되며 총합은 19494입니다.",
+    "example1Title": "10개 양수의 합",
+    "example2Description": "이 예에서는 20개의 3음절 명사 열을 뒤집고 모든 단어를 아래에서 위로 인쇄합니다. 목록 항목을 구분하기 위해 입력 항목 구분 기호로 \\n 문자를 사용하므로 각 항목이 자체 줄에 있습니다.",
+    "example2Title": "공원의 나무 세기",
+    "example3Description": "이 예에서는 양수, 음수, 정수 및 소수 등 90개의 다른 값을 더합니다. 입력 구분 기호를 쉼표로 설정하고 모두 더하면 출력으로 0을 얻습니다.",
+    "example3Title": "정수와 소수의 합",
+    "example4Description": "이 예에서는 10자리 숫자를 모두 더하고 \"실행 합계 인쇄\" 옵션을 활성화합니다. 덧셈 과정에서 합계의 중간 값을 얻습니다. 따라서 출력에는 0, 1(0+1), 3(0+1+2), 6(0+1+2+3), 10(0+1+2+3+4) 등의 순서가 있습니다.",
+    "example4Title": "숫자의 실행 합계",
+    "extractionTypes": {
+      "delimiter": {
+        "description": "여기에서 숫자 구분 기호를 사용자 정의합니다. (기본값은 줄 바꿈입니다.)",
+        "title": "숫자 구분 기호"
+      },
+      "smart": {
+        "description": "입력에서 숫자를 자동으로 감지합니다.",
+        "title": "스마트 합계"
+      }
+    },
+    "inputTitle": "입력",
+    "numberExtraction": "숫자 추출",
+    "printRunningSum": "실행 합계 인쇄",
+    "printRunningSumDescription": "계산되는 대로 합계를 단계별로 표시합니다.",
+    "resultTitle": "총계",
+    "runningSum": "실행 합계",
+    "shortDescription": "숫자 합계 계산",
+    "title": "합계",
+    "toolInfo": {
+      "description": "이것은 여러 숫자의 합계를 계산하기 위한 온라인 브라우저 기반 유틸리티입니다. 쉼표, 공백 또는 줄 바꿈을 포함한 다른 문자로 구분된 숫자를 입력할 수 있습니다. 합산하려는 숫자 값이 포함된 텍스트 데이터 조각을 간단히 붙여넣을 수도 있으며 유틸리티가 이를 추출하여 합계를 찾습니다.",
+      "title": "숫자 합계 계산기란?"
+    }
+  },
+  "voltageDropInWire": {
+    "description": "2선 케이블의 왕복 전압 및 전력 손실을 계산합니다.",
+    "longDescription": "이 계산기는 2선 전기 케이블의 전압 강하 및 전력 손실을 결정하는 데 도움이 됩니다. 케이블 길이, 전선 게이지(단면적), 재료 저항 및 전류 흐름을 고려합니다. 이 도구는 왕복 전압 강하, 케이블의 총 저항 및 열로 소산되는 전력을 계산합니다. 이는 전기 시스템을 설계할 때 부하에서 전압 수준이 허용 가능한 한계 내에 있도록 보장하기 위해 전기 엔지니어, 전기 기술자 및 취미가에게 특히 유용합니다.",
+    "shortDescription": "길이, 재료 및 전류를 기준으로 전기 케이블의 전압 강하 및 전력 손실 계산",
+    "title": "케이블의 왕복 전압 강하"
+  }
+}
