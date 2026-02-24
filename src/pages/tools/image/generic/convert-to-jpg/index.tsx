@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import * as Yup from 'yup';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
+import heic2any from 'heic2any';
 
 const initialValues = {
   quality: 85,
@@ -17,6 +18,13 @@ const validationSchema = Yup.object({
   quality: Yup.number().min(1).max(100).required('Quality is required'),
   backgroundColor: Yup.string().required('Background color is required')
 });
+
+function isHeicLike(file: File) {
+  if (['heic', 'heif'].includes(file.type)) return true;
+
+  const name = file.name.toLowerCase();
+  return name.endsWith('.heic') || name.endsWith('.heif');
+}
 
 export default function ConvertToJpg({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
@@ -33,14 +41,39 @@ export default function ConvertToJpg({ title }: ToolComponentProps) {
       quality: number,
       backgroundColor: string
     ) => {
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      if (ctx == null) return;
-
-      const img = new Image();
-      img.src = URL.createObjectURL(file);
-
       try {
+        let workingBlob: Blob = file;
+        let workingName = file.name;
+
+        if (isHeicLike(file)) {
+          try {
+            const converted = await heic2any({
+              blob: file,
+              toType: 'image/png',
+              quality: 1
+            });
+            const blobOut = Array.isArray(converted) ? converted[0] : converted;
+
+            workingBlob = blobOut as Blob;
+            workingName = file.name.replace(/\.[^/.]+$/, '') + '.png';
+            const pngFile = new File([workingBlob], workingName, {
+              type: 'image/png'
+            });
+            setInput(pngFile);
+          } catch (e) {
+            console.error('heic2any conversion failed:', e);
+            throw e;
+          }
+        }
+
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        const objectUrl = URL.createObjectURL(workingBlob);
+        const img = new Image();
+        img.src = objectUrl;
+
         await img.decode();
 
         canvas.width = img.width;
@@ -51,34 +84,34 @@ export default function ConvertToJpg({ title }: ToolComponentProps) {
         try {
           //@ts-ignore
           bgColor = Color(backgroundColor).rgb().array();
-        } catch (err) {
+        } catch {
           bgColor = [255, 255, 255]; // Default to white
         }
-
         ctx.fillStyle = `rgb(${bgColor[0]}, ${bgColor[1]}, ${bgColor[2]})`;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        // Draw the image on top
         ctx.drawImage(img, 0, 0);
 
-        // Convert to JPG with specified quality
-        canvas.toBlob(
-          (blob) => {
-            if (blob) {
-              const fileName = file.name.replace(/\.[^/.]+$/, '') + '.jpg';
-              const newFile = new File([blob], fileName, {
-                type: 'image/jpeg'
-              });
-              setResult(newFile);
-            }
-          },
-          'image/jpeg',
-          quality / 100
-        );
+        URL.revokeObjectURL(objectUrl);
+
+        await new Promise<void>((resolve) => {
+          canvas.toBlob(
+            (blob) => {
+              if (blob) {
+                const baseName = workingName.replace(/\.[^/.]+$/, '');
+                const outName = baseName + '.jpg';
+                const newFile = new File([blob], outName, {
+                  type: 'image/jpeg'
+                });
+                setResult(newFile);
+              }
+              resolve();
+            },
+            'image/jpeg',
+            quality / 100
+          );
+        });
       } catch (error) {
         console.error('Error processing image:', error);
-      } finally {
-        URL.revokeObjectURL(img.src);
       }
     };
 
