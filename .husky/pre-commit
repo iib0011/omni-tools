@@ -1,1 +1,9 @@
-npx lint-staged
+#!/bin/bash
+
+if [ -f "yarn.lock" ]; then
+  yarn lint-staged
+elif [ -f "pnpm-lock.yaml" ]; then
+  pnpm lint-staged
+else
+  npx lint-staged
+fi
