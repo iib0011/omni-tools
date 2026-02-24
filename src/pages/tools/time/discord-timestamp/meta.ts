@@ -5,11 +5,13 @@ const DiscordTimestamp = lazy(() => import('./index'));
 export const tool = defineTool('time', {
   path: 'discord-timestamp',
   component: DiscordTimestamp,
-  icon: 'mdi:clock',
-  keywords: ['discord', 'timestamp', 'time'],
+  icon: 'ic:baseline-discord',
+  keywords: ['discord', 'timestamp', 'time', 'datetime'],
   i18n: {
     name: 'time:discordTimestamp.name',
     description: 'time:discordTimestamp.description',
-    shortDescription: 'time:discordTimestamp.shortDescription'
+    shortDescription: 'time:discordTimestamp.shortDescription',
+    longDescription: 'time:discordTimestamp.toolInfo.description',
+    userTypes: ['generalUsers', 'developers']
   }
 });
