@@ -122,11 +122,29 @@
   },
   "discordTimestamp": {
     "name": "Discord Timestamp Generator",
-    "description": "Generate Discord formatted timestamps from date and time",
-    "shortDescription": "Generate Discord timestamps",
+    "description": "Convert dates and times into Discord's special timestamp format that automatically adapts to each user's local timezone and language",
+    "shortDescription": "Generate Discord timestamps from dates",
+    "inputTitle": "Input Datetimes",
+    "outputTitle": "Discord Timestamps",
+    "formats": {
+      "title": "Timestamp Format",
+      "description": "Choose how the timestamp will appear in Discord — hover over each option to see an example",
+      "short_time": "Short Time (ex: 14:30)",
+      "long_time": "Long Time (ex: 14:30:00)",
+      "short_date": "Short Date (ex: 01/01/2025)",
+      "long_date": "Long Date (ex: 1 January 2025)",
+      "short_datetime": "Short Date & Time (ex: 1 January 2025 14:30)",
+      "long_datetime": "Long Date & Time (ex: Monday, 1 January 2025 14:30)",
+      "relative": "Relative (ex: 2 hours ago)"
+    },
+    "utc": {
+      "title": "Input Options",
+      "label": "Enforce UTC",
+      "description": "Treat input datetimes as UTC. Disable to use your local timezone instead"
+    },
     "toolInfo": {
-      "title": "What is a Discord Timestamp",
-      "description": "Discord timestamps allow you to display dynamic dates and times that automatically adjust to each user's local timezone. This tool converts a date and time into the special Discord timestamp format."
+      "title": "What is a Discord Timestamp?",
+      "description": "Discord timestamps are a special syntax that displays dates and times dynamically. Instead of showing a fixed time, they automatically convert to each viewer's local timezone and language — so everyone sees the correct time for their location. Simply enter one datetime per line, choose a format, and paste the results directly into Discord. The tool processes each line independently — blank lines are preserved in the output, invalid lines are flagged with ❌, and valid datetimes are converted instantly. Enable UTC mode to ensure consistent results regardless of your local timezone."
     }
   }
 }
