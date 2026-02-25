@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+import JsonViewer from '@components/common/JsonViewer';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import ToolCodeInput from '@components/input/ToolCodeInput';
@@ -94,6 +95,13 @@ export default function StringifyJson({ title }: ToolComponentProps) {
     }
   };
 
+  let parsedData: unknown = null;
+  try {
+    parsedData = result ? JSON.parse(result) : null;
+  } catch {
+    parsedData = null;
+  }
+
   return (
     <ToolContent
       title={title}
@@ -111,7 +119,15 @@ export default function StringifyJson({ title }: ToolComponentProps) {
         />
       }
       resultComponent={
-        <ToolTextResult title="JSON String" value={result} extension={'json'} />
+        <>
+          <ToolTextResult
+            title="JSON String"
+            value={result}
+            extension={'json'}
+          />
+
+          {parsedData && <JsonViewer data={parsedData} />}
+        </>
       }
       getGroups={({ values, updateField }) => [
         {
