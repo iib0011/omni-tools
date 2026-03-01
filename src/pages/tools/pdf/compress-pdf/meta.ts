@@ -6,13 +6,11 @@ export const tool = defineTool('pdf', {
   icon: 'material-symbols:compress',
 
   keywords: [
-    'pdf',
-    'compress',
     'reduce',
     'size',
     'optimize',
     'shrink',
-    'file size',
+    'file',
     'ghostscript',
     'secure',
     'private',

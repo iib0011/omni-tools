@@ -12,10 +12,8 @@ export const tool = defineTool('image-generic', {
   icon: 'mdi:text-recognition', // Iconify icon as a string
 
   keywords: [
-    'ocr',
     'optical character recognition',
-    'image to text',
-    'extract text',
+    'extract',
     'scan',
     'tesseract',
     'jpg',
