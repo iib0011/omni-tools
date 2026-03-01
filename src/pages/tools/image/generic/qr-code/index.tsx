@@ -365,7 +365,8 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardName}
                   onOwnChange={(val) => updateField('vCardName', val)}
-                  description="Full Name"
+                  label="Full Name"
+                  InputLabelProps={{ shrink: true }}
                   inputProps={{
                     placeholder: 'John Doe'
                   }}
@@ -373,7 +374,8 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardEmail}
                   onOwnChange={(val) => updateField('vCardEmail', val)}
-                  description="Email"
+                  label="Email"
+                  InputLabelProps={{ shrink: true }}
                   inputProps={{
                     placeholder: 'john@example.com',
                     type: 'email'
@@ -382,7 +384,8 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardPhone}
                   onOwnChange={(val) => updateField('vCardPhone', val)}
-                  description="Phone"
+                  label="Phone"
+                  InputLabelProps={{ shrink: true }}
                   inputProps={{
                     placeholder: '+1234567890',
                     type: 'tel'
@@ -391,7 +394,8 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardAddress}
                   onOwnChange={(val) => updateField('vCardAddress', val)}
-                  description="Address"
+                  label="Address"
+                  InputLabelProps={{ shrink: true }}
                   inputProps={{
                     placeholder: '123 Main St, City, Country'
                   }}
@@ -399,7 +403,8 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardCompany}
                   onOwnChange={(val) => updateField('vCardCompany', val)}
-                  description="Company (optional)"
+                  label="Company (optional)"
+                  InputLabelProps={{ shrink: true }}
                   inputProps={{
                     placeholder: 'Company name'
                   }}
@@ -407,7 +412,8 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardTitle}
                   onOwnChange={(val) => updateField('vCardTitle', val)}
-                  description="Job Title (optional)"
+                  label="Job Title (optional)"
+                  InputLabelProps={{ shrink: true }}
                   inputProps={{
                     placeholder: 'Software Developer'
                   }}
@@ -415,7 +421,8 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardWebsite}
                   onOwnChange={(val) => updateField('vCardWebsite', val)}
-                  description="Website (optional)"
+                  label="Website (optional)"
+                  InputLabelProps={{ shrink: true }}
                   inputProps={{
                     placeholder: 'https://example.com'
                   }}
