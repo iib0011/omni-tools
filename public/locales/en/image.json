@@ -101,5 +101,10 @@
     "description": "Rotate an image by a specified angle.",
     "shortDescription": "Rotate an image easily.",
     "title": "Rotate Image"
+  },
+  "batchWatermark": {
+    "title": "Batch Watermark Images",
+    "description": "Add a text watermark based on each file name. Process multiple images at once.",
+    "shortDescription": "Watermark images from filename"
   }
 }

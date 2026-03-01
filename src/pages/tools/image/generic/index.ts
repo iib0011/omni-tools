@@ -10,6 +10,8 @@ import { tool as qrCodeGenerator } from './qr-code/meta';
 import { tool as rotateImage } from './rotate/meta';
 import { tool as convertToJpg } from './convert-to-jpg/meta';
 import { tool as imageEditor } from './editor/meta';
+import { tool as batchWatermark } from './batch-watermark/meta';
+
 export const imageGenericTools = [
   imageEditor,
   resizeImage,
@@ -22,5 +24,6 @@ export const imageGenericTools = [
   imageToText,
   qrCodeGenerator,
   rotateImage,
-  convertToJpg
+  convertToJpg,
+  batchWatermark
 ];
