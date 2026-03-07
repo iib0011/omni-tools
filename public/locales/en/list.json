@@ -113,36 +113,36 @@
     "trimItemsDescription": "Remove leading and trailing spaces before comparing items.",
     "uniqueItemOptions": "Unique Item Options"
   },
-  "group": {
+  "chunk": {
     "deleteEmptyItems": "Delete Empty Items",
-    "deleteEmptyItemsDescription": "Ignore empty items and don't include them in the groups.",
-    "description": "World's simplest browser-based utility for grouping list items. Input your list and specify grouping criteria to organize items into logical groups. Perfect for categorizing data, organizing information, or creating structured lists. Supports custom separators and various grouping options.",
+    "deleteEmptyItemsDescription": "Ignore empty items and exclude them from the result.",
+    "description": "Split a list into consecutive chunks of a fixed size. This tool separates input items, chunks them sequentially, optionally pads incomplete chunks, and formats the output using custom separators and wrappers.",
     "emptyItemsAndPadding": "Empty Items and Padding",
-    "groupNumberDescription": "Number of items in a group",
-    "groupSeparatorDescription": "Group separator character",
-    "groupSizeAndSeparators": "Group Size and Separators",
+    "groupNumberDescription": "Number of items per group",
+    "groupSeparatorDescription": "Separator placed between groups",
+    "groupSizeAndSeparators": "Group Size and Output Format",
     "inputItemSeparator": "Input Item Separator",
     "inputTitle": "Input list",
-    "itemSeparatorDescription": "Item separator character",
-    "leftWrapDescription": "Group's left wrap symbol.",
-    "padNonFullGroups": "Pad Non-full Groups",
-    "padNonFullGroupsDescription": "Fill non-full groups with a custom item (enter below).",
-    "paddingCharDescription": "Use this character or item to pad non-full groups.",
-    "resultTitle": "Grouped items",
-    "rightWrapDescription": "Group's right wrap symbol.",
-    "shortDescription": "Group list items by common properties",
+    "itemSeparatorDescription": "Separator placed between items inside a group",
+    "leftWrapDescription": "Symbol added before each group",
+    "padNonFullGroups": "Pad Incomplete Groups",
+    "padNonFullGroupsDescription": "Fill the last group if it has fewer items than required.",
+    "paddingCharDescription": "Character or value used to pad incomplete groups.",
+    "resultTitle": "Grouped output",
+    "rightWrapDescription": "Symbol added after each group",
+    "shortDescription": "Split a list into fixed-size chunks",
     "splitOperators": {
       "regex": {
-        "description": "Delimit input list items with a regular expression.",
-        "title": "Use a Regex for Splitting"
+        "description": "Split input items using a regular expression.",
+        "title": "Use Regex Splitting"
       },
       "symbol": {
-        "description": "Delimit input list items with a character.",
-        "title": "Use a Symbol for Splitting"
+        "description": "Split input items using a single character.",
+        "title": "Use Symbol Splitting"
       }
     },
-    "splitSeparatorDescription": "Set a delimiting symbol or regular expression.",
-    "title": "Group"
+    "splitSeparatorDescription": "Delimiter symbol or regular expression used to split input items.",
+    "title": "Chunk List"
   },
   "reverse": {
     "description": "This is a super simple browser-based application prints all list items in reverse. The input items can be separated by any symbol and you can also change the separator of the reversed list items.",

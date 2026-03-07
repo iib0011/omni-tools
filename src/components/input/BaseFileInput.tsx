@@ -115,6 +115,14 @@ export default function BaseFileInput({
     setIsDragging(false);
   };
 
+  const handleClear = () => {
+    onChange(null);
+    setPreview(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
+
   useEffect(() => {
     const handlePaste = (event: ClipboardEvent) => {
       const clipboardItems = event.clipboardData?.items ?? [];
@@ -208,7 +216,11 @@ export default function BaseFileInput({
           </Box>
         )}
       </Box>
-      <InputFooter handleCopy={handleCopy} handleImport={handleImportClick} />
+      <InputFooter
+        handleCopy={handleCopy}
+        handleImport={handleImportClick}
+        handleClear={value ? handleClear : undefined}
+      />
       <input
         ref={fileInputRef}
         style={{ display: 'none' }}

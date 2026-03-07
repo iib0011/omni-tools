@@ -38,7 +38,7 @@
     },
     "useSpaces": "Utiliser les espaces",
     "useSpacesDescription": "Indenter la sortie avec des espaces",
-    "useTabs": "Utiliser les onglets",
+    "useTabs": "Utiliser les tabulations",
     "useTabsDescription": "Indenter la sortie avec des tabulations."
   },
   "stringify": {
