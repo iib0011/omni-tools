@@ -29,7 +29,6 @@ const toolCategoriesOrder: ToolCategory[] = [
   'csv',
   'number',
   'png',
-  'time',
   'xml',
   'gif',
   'converters'
@@ -89,12 +88,6 @@ const categoriesConfig: {
     icon: 'lets-icons:json-light',
     value: 'translation:categories.json.description',
     title: 'translation:categories.json.title'
-  },
-  {
-    type: 'time',
-    icon: 'mdi:clock-time-five',
-    value: 'translation:categories.time.description',
-    title: 'translation:categories.time.title'
   },
   {
     type: 'csv',
@@ -176,12 +169,12 @@ export const filterToolsByUserTypes = (
   });
 };
 
-// use for changelogs
-// console.log(
-//   'tools',
-//   tools.map(({ name, type }) => ({ type, name }))
-// );
-
+/**
+ * Returns the Levenshtein distance between two strings.
+ * @param a - First string.
+ * @param b - Second string.
+ * @returns Minimum number of single-character edits (insert, delete, substitute).
+ */
 const levenshtein = (a: string, b: string): number => {
   if (a === b) return 0;
   const aLen = a.length;
@@ -212,24 +205,49 @@ const levenshtein = (a: string, b: string): number => {
   return dp[aLen][bLen];
 };
 
-type SearchField = { text: string; weight: number };
+type SearchField = {
+  text: string;
+  words: string[];
+  weight: number;
+};
 
 const splitWords = (text: string): string[] =>
   text.split(/[^a-z0-9]+/g).filter(Boolean);
+
+/**
+ * Normalizes a string by converting it to lowercase and removing diacritics
+ * (accent marks). Useful for locale-insensitive string comparison and search.
+ *
+ * @param text - The string to normalize
+ * @returns The normalized string with lowercase letters and no diacritics
+ */
+const normalizeText = (text: string): string =>
+  text
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/\p{Diacritic}/gu, '');
 
 const computeToolScore = (
   tool: DefinedTool,
   tokens: string[],
   t: TFunction<I18nNamespaces[]>
 ): number => {
+  const name = normalizeText(t(tool.name));
+  const shortDescription = normalizeText(t(tool.shortDescription));
+  const description = normalizeText(t(tool.description));
+
   const fields: SearchField[] = [
-    { text: t(tool.name).toLowerCase(), weight: 5 },
-    { text: t(tool.shortDescription).toLowerCase(), weight: 3 },
-    { text: t(tool.description).toLowerCase(), weight: 2 },
-    ...(tool.keywords ?? []).map((kw) => ({
-      text: kw.toLowerCase(),
-      weight: 4
-    }))
+    { text: name, words: splitWords(name), weight: 5 },
+    { text: shortDescription, words: splitWords(shortDescription), weight: 3 },
+    { text: description, words: splitWords(description), weight: 2 },
+    ...(tool.keywords ?? []).map((kw) => {
+      const normalized = normalizeText(kw);
+      return {
+        text: normalized,
+        words: splitWords(normalized),
+        weight: 4
+      };
+    })
   ];
 
   let totalScore = 0;
@@ -240,26 +258,18 @@ const computeToolScore = (
     let bestForToken = 0;
 
     for (const field of fields) {
-      const text = field.text;
-      if (!text) continue;
-
       let fieldScore = 0;
 
-      if (text.includes(token)) {
+      if (field.text.includes(token)) {
         // Base score for substring match
         fieldScore = field.weight * 2;
 
-        const words = splitWords(text);
-        if (words.includes(token)) {
+        if (field.words.includes(token)) {
           // Boost whole-word matches
           fieldScore += field.weight;
         }
       } else {
-        const words = splitWords(text);
-
-        for (const word of words) {
-          if (!word) continue;
-
+        for (const word of field.words) {
           // Quick length check before full distance calculation
           if (Math.abs(word.length - token.length) > 1) continue;
 
@@ -274,11 +284,8 @@ const computeToolScore = (
         bestForToken = fieldScore;
       }
     }
-
     // If any token fails to match (exact or fuzzy), treat the tool as a non-match.
-    if (bestForToken === 0) {
-      return 0;
-    }
+    if (bestForToken === 0) return 0;
 
     totalScore += bestForToken;
   }
