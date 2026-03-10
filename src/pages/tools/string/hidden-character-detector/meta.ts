@@ -11,15 +11,6 @@ export const tool = defineTool('string', {
   },
   path: 'hidden-character-detector',
   icon: 'material-symbols:visibility-off',
-  keywords: [
-    'hidden',
-    'character',
-    'detector',
-    'unicode',
-    'rtl',
-    'override',
-    'security',
-    'invisible'
-  ],
+  keywords: ['unicode', 'rtl', 'override', 'security', 'invisible'],
   component: lazy(() => import('./index'))
 });
