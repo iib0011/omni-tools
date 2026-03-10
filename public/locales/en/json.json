@@ -63,5 +63,10 @@
       "title": "What is JSON Validation?"
     },
     "validJson": "✅ Valid JSON"
+  },
+  "sortJson": {
+    "title": "Sort JSON",
+    "description": "Sort a JSON array of objects by any key in ascending or descending order.",
+    "shortDescription": "Sort JSON array by key"
   }
 }
