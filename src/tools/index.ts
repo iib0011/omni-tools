@@ -225,7 +225,9 @@ const normalizeText = (text: string): string =>
   text
     .toLowerCase()
     .normalize('NFKD')
-    .replace(/\p{Diacritic}/gu, '');
+    .replace(/\p{Diacritic}/gu, '')
+    .trim()
+    .replace(/\s+/g, ' ');
 
 const computeToolScore = (
   tool: DefinedTool,
@@ -306,8 +308,7 @@ export const filterTools = (
     filteredTools = filterToolsByUserTypes(tools, userTypes);
   }
 
-  // Normalize query: trim, collapse internal whitespace, lowercase
-  const normalizedQuery = query.trim().toLowerCase().replace(/\s+/g, ' ');
+  const normalizedQuery = normalizeText(query);
 
   // If query is empty after normalization, return all tools (after user-type filtering)
   if (!normalizedQuery) return filteredTools;
