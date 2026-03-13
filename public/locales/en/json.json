@@ -46,11 +46,6 @@
     "shortDescription": "Convert objects to JSON string",
     "title": "Stringify JSON"
   },
-  "tsvToJson": {
-    "description": "Convert TSV (Tab-Separated Values) data to JSON format. Transform tabular data into structured JSON objects.",
-    "shortDescription": "Convert TSV to JSON format",
-    "title": "TSV to JSON"
-  },
   "validateJson": {
     "description": "Check if JSON is valid and well-formed.",
     "inputTitle": "Input JSON",
