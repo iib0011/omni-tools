@@ -101,5 +101,56 @@
     "description": "Rotate an image by a specified angle.",
     "shortDescription": "Rotate an image easily.",
     "title": "Rotate Image"
+  },
+  "heicConverter": {
+    "title": "HEIC Converter",
+    "description": "Convert HEIC/HEIF images to JPG, PNG, or WebP formats with customizable quality and resize options.",
+    "shortDescription": "Convert HEIC/HEIF images to common formats",
+    "longDescription": "Convert HEIC and HEIF images (commonly used by Apple devices) to widely supported formats like JPG, PNG, or WebP. Features include quality control, resizing options, and file size optimization.",
+    "input": {
+      "title": "Upload HEIC/HEIF Image"
+    },
+    "options": {
+      "outputFormat": {
+        "title": "Output Format",
+        "jpg": "JPEG (JPG)",
+        "png": "PNG",
+        "webp": "WebP"
+      },
+      "quality": {
+        "description": "Quality setting for JPEG output (1-100, higher = better quality)"
+      },
+      "resize": {
+        "title": "Resize Options",
+        "none": "No resize",
+        "width": "Set width",
+        "height": "Set height",
+        "both": "Set both width and height"
+      },
+      "resizeValue": {
+        "description": "Size in pixels for the selected resize mode"
+      },
+      "advanced": {
+        "title": "Advanced Options"
+      },
+      "preserveMetadata": {
+        "title": "Preserve Metadata",
+        "description": "Keep EXIF data and other image metadata (when possible)"
+      }
+    },
+    "result": {
+      "title": "Converted Image",
+      "originalSize": "Original Size",
+      "convertedSize": "Converted Size",
+      "compression": "Compression"
+    },
+    "error": {
+      "invalidFile": "Please upload a valid HEIC or HEIF image file.",
+      "conversionFailed": "Failed to convert the image. Please try again."
+    },
+    "info": {
+      "title": "What is HEIC Converter?",
+      "description": "HEIC (High Efficiency Image Container) is Apple's image format that provides better compression than JPEG while maintaining high quality. This tool converts HEIC/HEIF files to widely supported formats for better compatibility across devices and platforms."
+    }
   }
 }
