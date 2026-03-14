@@ -28,7 +28,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    supportedLngs: ['en', 'de', 'es', 'fr', 'pt', 'ja', 'hi', 'nl', 'ru', 'zh'],
+    supportedLngs: ['en', 'de', 'es', 'fr', 'pt', 'ja', 'ko', 'hi', 'nl', 'ru', 'zh'],
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
