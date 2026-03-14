@@ -46,11 +46,6 @@
     "shortDescription": "Преобразование объектов в строку JSON",
     "title": "Строкификация JSON"
   },
-  "tsvToJson": {
-    "description": "Преобразуйте данные TSV (значения, разделенные табуляцией) в формат JSON. Преобразуйте табличные данные в структурированные объекты JSON.",
-    "shortDescription": "Конвертировать формат TSV в JSON",
-    "title": "TSV в JSON"
-  },
   "validateJson": {
     "description": "Проверьте корректность и правильность формата JSON.",
     "inputTitle": "Входной JSON",

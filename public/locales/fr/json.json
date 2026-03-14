@@ -46,11 +46,6 @@
     "shortDescription": "Convertir des objets en chaîne JSON",
     "title": "Stringify JSON"
   },
-  "tsvToJson": {
-    "description": "Convertissez les données TSV (valeurs séparées par des tabulations) au format JSON. Transformez les données tabulaires en objets JSON structurés.",
-    "shortDescription": "Convertir le format TSV au format JSON",
-    "title": "TSV vers JSON"
-  },
   "validateJson": {
     "description": "Vérifiez si JSON est valide et bien formé.",
     "inputTitle": "Entrée JSON",
