@@ -59,7 +59,7 @@ function App() {
         >
           <CustomSnackBarProvider>
             <UserTypeFilterProvider>
-              <BrowserRouter>
+              <BrowserRouter basename={import.meta.env.BASE_URL}>
                 <Navbar
                   mode={mode}
                   onChangeMode={() => {
