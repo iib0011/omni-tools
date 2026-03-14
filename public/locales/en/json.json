@@ -51,6 +51,12 @@
     "shortDescription": "Convert TSV to JSON format",
     "title": "TSV to JSON"
   },
+
+  "jsonToCsv": {
+    "description": "Convert JSON data to CSV format. Transform structured JSON objects into comma-separated values for spreadsheet applications.",
+    "shortDescription": "Convert JSON to CSV format",
+    "title": "JSON to CSV"
+  },
   "validateJson": {
     "description": "Check if JSON is valid and well-formed.",
     "inputTitle": "Input JSON",
