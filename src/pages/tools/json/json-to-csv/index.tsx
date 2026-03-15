@@ -7,13 +7,10 @@ import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import { Box } from '@mui/material';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
+import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import SimpleRadio from '@components/options/SimpleRadio';
-
-type InitialValuesType = {
-  delimiter: ',' | ';' | '\t';
-  includeHeaders: boolean;
-  quoteStrings: 'always' | 'auto' | 'never';
-};
+import { InitialValuesType } from './types';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   delimiter: ',',
@@ -24,23 +21,14 @@ const initialValues: InitialValuesType = {
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Array of objects',
-    description: 'Convert a JSON array of objects into CSV rows.',
-    sampleText: `
-{
-  "users": [
-    {
-      "name": "John",
-      "age": 30,
-      "city": "New York"
-    },
-    {
-      "name": "Alice",
-      "age": 25,
-      "city": "London"
-    }
-  ]
-}`,
-    sampleResult: `name,age,city\nJohn,30,New York\nAlice,25,London`,
+    description:
+      'Convert multiple JSON objects into CSV rows, one row per object.',
+    sampleText: `[
+  { "name": "John Doe", "age": 25, "city": "New York" },
+  { "name": "Jane Doe", "age": 30, "city": "Los Angeles" },
+  { "name": "Bob Smith", "age": 22, "city": "Chicago" }
+]`,
+    sampleResult: `name,age,city\nJohn Doe,25,New York\nJane Doe,30,Los Angeles\nBob Smith,22,Chicago`,
     sampleOptions: {
       ...initialValues
     }
@@ -51,14 +39,32 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
       'Nested keys are flattened using dot notation (e.g. address.city).',
     sampleText: `[
   {
-    "name": "Bob",
+    "name": "John Doe",
+    "age": 25,
     "address": {
-      "city": "Berlin",
-      "zip": "10115"
-    }
+      "street": "123 Main St",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "10001"
+    },
+    "hobbies": ["reading", "running"]
   }
 ]`,
-    sampleResult: `name,address.city,address.zip\nBob,Berlin,10115`,
+    sampleResult: `name,age,address.street,address.city,address.state,address.postalCode,hobbies[0],hobbies[1]\nJohn Doe,25,123 Main St,New York,NY,10001,reading,running`,
+    sampleOptions: {
+      ...initialValues
+    }
+  },
+  {
+    title: 'Sparse rows',
+    description:
+      'Missing keys are filled with empty values to keep columns aligned.',
+    sampleText: `[
+  { "name": "Alice", "age": 30 },
+  { "name": "Bob", "city": "Paris" },
+  { "name": "Carol", "age": 25, "city": "Rome" }
+]`,
+    sampleResult: `name,age,city\nAlice,30,\nBob,,Paris\nCarol,25,Rome`,
     sampleOptions: {
       ...initialValues
     }
@@ -66,6 +72,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function JsonToCsv({ title }: ToolComponentProps) {
+  const { t } = useTranslation('json');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -94,83 +101,60 @@ export default function JsonToCsv({ title }: ToolComponentProps) {
       exampleCards={exampleCards}
       inputComponent={
         <ToolCodeInput
-          title="Input JSON"
+          title={t('jsonToCsv.inputTitle')}
           value={input}
           onChange={setInput}
           language="json"
         />
       }
       resultComponent={
-        <ToolTextResult title="Output CSV" value={result} extension={'csv'} />
+        <ToolTextResult
+          title={t('jsonToCsv.outputTitle')}
+          value={result}
+          extension={'csv'}
+        />
       }
       getGroups={({ values, updateField }) => [
         {
-          title: 'CSV Delimiter',
+          title: t('jsonToCsv.delimiterOption'),
           component: (
             <Box>
-              <SimpleRadio
-                checked={values.delimiter === ','}
-                title={'Comma  ,'}
-                description={
-                  'Standard CSV delimiter, compatible with most tools.'
-                }
-                onClick={() => updateField('delimiter', ',')}
-              />
-              <SimpleRadio
-                checked={values.delimiter === ';'}
-                title={'Semicolon  ;'}
-                description={
-                  'Common in European locales where commas are used as decimal separators.'
-                }
-                onClick={() => updateField('delimiter', ';')}
-              />
-              <SimpleRadio
-                checked={values.delimiter === '\t'}
-                title={'Tab  \\t'}
-                description={'Produces a TSV (tab-separated values) file.'}
-                onClick={() => updateField('delimiter', '\t')}
+              <TextFieldWithDesc
+                description={t('jsonToCsv.options.delimiter')}
+                value={values.delimiter}
+                onOwnChange={(val) => updateField('delimiter', val)}
               />
             </Box>
           )
         },
         {
-          title: 'String Quoting',
+          title: t('jsonToCsv.quotingOption'),
           component: (
             <Box>
               <SimpleRadio
                 checked={values.quoteStrings === 'auto'}
-                title={'Auto (recommended)'}
-                description={
-                  'Only wrap a cell in double-quotes when it contains the delimiter, a quote, or a newline.'
-                }
+                title={t('jsonToCsv.options.autoQuote.label')}
+                description={t('jsonToCsv.options.autoQuote.description')}
                 onClick={() => updateField('quoteStrings', 'auto')}
               />
               <SimpleRadio
                 checked={values.quoteStrings === 'always'}
-                title={'Always quote'}
-                description={'Wrap every cell in double-quotes.'}
+                title={t('jsonToCsv.options.alwaysQuote.label')}
+                description={t('jsonToCsv.options.alwaysQuote.description')}
                 onClick={() => updateField('quoteStrings', 'always')}
-              />
-              <SimpleRadio
-                checked={values.quoteStrings === 'never'}
-                title={'Never quote'}
-                description={
-                  'Never add quotes. Use only when you are sure values contain no special characters.'
-                }
-                onClick={() => updateField('quoteStrings', 'never')}
               />
             </Box>
           )
         },
         {
-          title: 'Headers',
+          title: t('jsonToCsv.headerOption'),
           component: (
             <Box>
               <CheckboxWithDesc
                 checked={values.includeHeaders}
                 onChange={(value) => updateField('includeHeaders', value)}
-                title="Include header row"
-                description="Output the JSON keys as the first row of the CSV."
+                title={t('jsonToCsv.options.header.label')}
+                description={t('jsonToCsv.options.header.description')}
               />
             </Box>
           )
