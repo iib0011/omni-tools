@@ -82,6 +82,8 @@ export function convertJsonToCsv(
 ): string {
   const { delimiter, includeHeaders } = options;
 
+  if (!delimiter) throw new Error('No CSV delimiter.');
+
   let parsed: unknown;
 
   try {
