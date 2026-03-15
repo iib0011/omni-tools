@@ -53,9 +53,29 @@
   },
 
   "jsonToCsv": {
-    "description": "Convert JSON data to CSV format. Transform structured JSON objects into comma-separated values for spreadsheet applications.",
+    "description": "Convert JSON data to CSV format. Supports nested objects and arrays, automatic header detection, and configurable delimiters and quoting — ready for Excel, Google Sheets, or any spreadsheet application.",
     "shortDescription": "Convert JSON to CSV format",
-    "title": "JSON to CSV"
+    "title": "JSON to CSV",
+    "quotingOption": "String Quoting",
+    "delimiterOption": "Delimiter",
+    "headerOption": "Headers",
+    "inputTitle": "Input JSON",
+    "outputTitle": "Output CSV",
+    "options": {
+      "delimiter": "Character used to separate values in each row (e.g. comma, semicolon, tab)",
+      "alwaysQuote": {
+        "label": "Always quote",
+        "description": "Wrap every cell in double-quotes, regardless of its content."
+      },
+      "autoQuote": {
+        "label": "Auto (recommended)",
+        "description": "Only quote cells that contain the delimiter, a double-quote, or a newline. Keeps output clean and minimal."
+      },
+      "header": {
+        "label": "Include header row",
+        "description": "Use JSON keys as column names in the first row. Recommended for readability and import compatibility."
+      }
+    }
   },
   "validateJson": {
     "description": "Check if JSON is valid and well-formed.",
