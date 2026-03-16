@@ -150,6 +150,8 @@ export default function Hero() {
         sx={{ mb: 2 }}
         autoHighlight
         options={filteredTools}
+        // Disable default MUI filtering since we already apply custom filterTools
+        filterOptions={(options) => options}
         groupBy={(option) => option.type}
         renderGroup={(params) => {
           return (
