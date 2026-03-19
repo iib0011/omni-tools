@@ -101,5 +101,10 @@
     "description": "Rotate an image by a specified angle.",
     "shortDescription": "Rotate an image easily.",
     "title": "Rotate Image"
+  },
+  "convertToWebp": {
+    "description": "Convert various image formats (PNG, JPG, JPEG) to WebP format.",
+    "shortDescription": "Convert Images to WebP Format with maximum file size.",
+    "title": "Convert Image to WebP"
   }
 }
