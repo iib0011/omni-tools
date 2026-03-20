@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { InitialValuesType } from './types';
-import { compressImage } from './service';
+import { compressImages } from './service';
 import ToolContent from '@components/ToolContent';
-import ToolImageInput from '@components/input/ToolImageInput';
+import ToolMultipleImageInput, {
+  MultiImageInput
+} from '@components/input/ToolMultipleImageInput';
 import { ToolComponentProps } from '@tools/defineTool';
-import ToolFileResult from '@components/result/ToolFileResult';
+import ToolMultiFileResult from '@components/result/ToolMultiFileResult';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
@@ -19,28 +21,42 @@ const initialValues: InitialValuesType = {
 
 export default function CompressImage({ title }: ToolComponentProps) {
   const { t } = useTranslation('image');
-  const [input, setInput] = useState<File | null>(null);
-  const [result, setResult] = useState<File | null>(null);
+  const [input, setInput] = useState<MultiImageInput[]>([]);
+  const [results, setResults] = useState<File[]>([]);
+  const [zipFile, setZipFile] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
   const [originalSize, setOriginalSize] = useState<number | null>(null); // Store original file size
   const [compressedSize, setCompressedSize] = useState<number | null>(null); // Store compressed file size
   const { showSnackBar } = useContext(CustomSnackBarContext);
 
-  const compute = async (values: InitialValuesType, input: File | null) => {
-    if (!input) return;
+  const compute = async (
+    values: InitialValuesType,
+    input: MultiImageInput[]
+  ) => {
+    if (!input.length) return;
 
-    setOriginalSize(input.size);
+    setOriginalSize(input.reduce((acc, img) => acc + img.file.size, 0));
+
     try {
       setIsProcessing(true);
 
-      const compressed = await compressImage(input, values);
+      const output = await compressImages(
+        input.map((img) => img.file),
+        values
+      );
 
-      if (compressed) {
-        setResult(compressed);
-        setCompressedSize(compressed.size);
-      } else {
+      if (!output) {
+        showSnackBar(t('compress.failedToCompress'), 'error');
+        return;
+      }
+
+      if (output.results.length < input.length) {
         showSnackBar(t('compress.failedToCompress'), 'error');
       }
+
+      setResults(output.results);
+      setZipFile(output.zipFile);
+      setCompressedSize(output.results.reduce((acc, f) => acc + f.size, 0));
     } catch (err) {
       console.error('Error in compression:', err);
     } finally {
@@ -53,17 +69,19 @@ export default function CompressImage({ title }: ToolComponentProps) {
       title={title}
       input={input}
       inputComponent={
-        <ToolImageInput
+        <ToolMultipleImageInput
           value={input}
+          type={'image'}
           onChange={setInput}
           accept={['image/*']}
           title={t('compress.inputTitle')}
         />
       }
       resultComponent={
-        <ToolFileResult
+        <ToolMultiFileResult
           title={t('compress.resultTitle')}
-          value={result}
+          value={results}
+          zipFile={zipFile}
           loading={isProcessing}
         />
       }
