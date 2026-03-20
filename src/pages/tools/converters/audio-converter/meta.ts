@@ -3,10 +3,10 @@ import { lazy } from 'react';
 
 export const tool = defineTool('converters', {
   i18n: {
-    name: 'converters:audioconverter.title',
-    description: 'converters:audioconverter.description',
-    shortDescription: 'converters:audioconverter.shortDescription',
-    longDescription: 'converters:audioconverter.longDescription'
+    name: 'converters:audioConverter.title',
+    description: 'converters:audioConverter.description',
+    shortDescription: 'converters:audioConverter.shortDescription',
+    longDescription: 'converters:audioConverter.longDescription'
   },
   path: 'audio-converter',
   icon: 'mdi:music-note-outline',

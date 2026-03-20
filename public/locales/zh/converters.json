@@ -1,5 +1,5 @@
 {
-  "audioconverter": {
+  "audioConverter": {
     "title": "音频转换器",
     "description": "在不同格式之间转换音频文件。",
     "shortDescription": "将音频文件转换为各种格式。",
