@@ -65,14 +65,14 @@ export default function ConvertToJpg({ title }: ToolComponentProps) {
         canvas.toBlob(
           (blob) => {
             if (blob) {
-              const fileName = file.name.replace(/\.[^/.]+$/, '') + '.jpg';
+              const fileName = file.name.replace(/\.[^/.]+$/, '') + '.webp';
               const newFile = new File([blob], fileName, {
-                type: 'image/jpeg'
+                type: 'image/webp'
               });
               setResult(newFile);
             }
           },
-          'image/jpeg',
+          'image/webp',
           quality / 100
         );
       } catch (error) {
@@ -93,18 +93,22 @@ export default function ConvertToJpg({ title }: ToolComponentProps) {
         <ToolImageInput
           value={input}
           onChange={setInput}
-          accept={['image/jpg']}
+          accept={['image/jpeg', 'image/png', 'image/gif', 'image/jpg']}
           title={'Input Image'}
         />
       }
       resultComponent={
-        <ToolFileResult title={'Output JPG'} value={result} extension={'jpg'} />
+        <ToolFileResult
+          title={'Output WebP'}
+          value={result}
+          extension={'webp'}
+        />
       }
       initialValues={initialValues}
       validationSchema={validationSchema}
       getGroups={({ values, updateField }) => [
         {
-          title: 'JPG Quality Settings',
+          title: 'WebP Size Settings',
           component: (
             <Box>
               <Box mb={3}>
