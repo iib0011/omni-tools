@@ -1,0 +1,12 @@
+{
+  "audioConverter": {
+    "title": "Convertisseur Audio",
+    "description": "Convertissez des fichiers audio entre différents formats.",
+    "shortDescription": "Convertissez des fichiers audio en divers formats.",
+    "longDescription": "Cet outil vous permet de convertir des fichiers audio d'un format à un autre, en support une large gamme de formats audio pour une conversion transparente.",
+    "outputFormat": "Format de Sortie",
+    "outputFormatDescription": "Sélectionnez le format audio de sortie souhaité",
+    "inputTitle": "Entrée Audio",
+    "outputTitle": "Audio Converti"
+  }
+}
