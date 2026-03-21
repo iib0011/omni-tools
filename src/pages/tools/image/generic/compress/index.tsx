@@ -7,6 +7,7 @@ import ToolMultipleImageInput, {
   MultiImageInput
 } from '@components/input/ToolMultipleImageInput';
 import { ToolComponentProps } from '@tools/defineTool';
+import ToolFileResult from '@components/result/ToolFileResult';
 import ToolMultiFileResult from '@components/result/ToolMultiFileResult';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { Box } from '@mui/material';
@@ -78,12 +79,20 @@ export default function CompressImage({ title }: ToolComponentProps) {
         />
       }
       resultComponent={
-        <ToolMultiFileResult
-          title={t('compress.resultTitle')}
-          value={results}
-          zipFile={zipFile}
-          loading={isProcessing}
-        />
+        zipFile ? (
+          <ToolMultiFileResult
+            title={t('compress.resultTitle')}
+            value={results}
+            zipFile={zipFile}
+            loading={isProcessing}
+          />
+        ) : (
+          <ToolFileResult
+            title={t('compress.resultTitle')}
+            value={results[0] ?? null}
+            extension={results[0]?.name.split('.').pop() || 'png'}
+          />
+        )
       }
       initialValues={initialValues}
       getGroups={({ values, updateField }) => [

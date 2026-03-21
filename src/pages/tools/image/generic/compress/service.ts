@@ -5,7 +5,7 @@ import JSZip from 'jszip';
 export const compressImages = async (
   files: File[],
   options: InitialValuesType
-): Promise<{ results: File[]; zipFile: File } | null> => {
+): Promise<{ results: File[]; zipFile: File | null } | null> => {
   try {
     const { maxFileSizeInMB, quality } = options;
 
@@ -38,6 +38,8 @@ export const compressImages = async (
     const results = compressed.filter((f): f is File => f !== null);
 
     if (results.length === 0) return null;
+
+    if (results.length === 1) return { results, zipFile: null };
 
     const zip = new JSZip();
     results.forEach((file) => zip.file(file.name, file));
