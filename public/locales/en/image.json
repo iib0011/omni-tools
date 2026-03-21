@@ -22,7 +22,7 @@
     "originalSize": "Total original size",
     "qualityDescription": "Image quality percentage — lower value means smaller file size",
     "resultTitle": "Compressed images",
-    "shortDescription": "Compress one or multiple images at once. Download results individually or as a ZIP archive.",
+    "shortDescription": "Compress one or multiple images at once.",
     "title": "Compress Images"
   },
   "compressPng": {
@@ -94,10 +94,10 @@
     "title": "Remove Background from Image"
   },
   "resize": {
-    "description": "Resize images to different dimensions.",
+    "description": "Resize images using pixel dimensions or percentage scaling. Maintain aspect ratio and set width or height with automatic adjustment. Download results individually or as a ZIP archive.",
     "dimensionType": "Dimension Type",
     "heightDescription": "Height (in pixels)",
-    "inputTitle": "Input Image",
+    "inputTitle": "Input Images",
     "maintainAspectRatio": "Maintain Aspect Ratio",
     "maintainAspectRatioDescription": "Maintain the original aspect ratio of the image.",
     "percentage": "Percentage",
@@ -107,16 +107,16 @@
     "resizeByPixels": "Resize by Pixels",
     "resizeByPixelsDescription": "Resize by specifying dimensions in pixels.",
     "resizeMethod": "Resize Method",
-    "resultTitle": "Resized Image",
+    "resultTitle": "Resized Image(s)",
     "setHeight": "Set Height",
     "setHeightDescription": "Specify the height in pixels and calculate width based on aspect ratio.",
     "setWidth": "Set Width",
     "setWidthDescription": "Specify the width in pixels and calculate height based on aspect ratio.",
-    "shortDescription": "Resize images easily.",
+    "shortDescription": "Resize one or multiple images at once.",
     "title": "Resize Image",
     "toolInfo": {
-      "description": "This tool allows you to resize JPG, PNG, SVG, or GIF images. You can resize by specifying dimensions in pixels or by percentage, with options to maintain the original aspect ratio.",
-      "title": "Resize Image"
+      "description": "This tool allows you to resize one or multiple JPG, PNG, SVG, or GIF images at once. Upload a single image or a batch of images and resize them by specifying dimensions in pixels or by percentage, with options to maintain the original aspect ratio. When processing multiple images, results are bundled into a ZIP file for easy download.",
+      "title": "Resize Image(s)"
     },
     "widthDescription": "Width (in pixels)"
   },
