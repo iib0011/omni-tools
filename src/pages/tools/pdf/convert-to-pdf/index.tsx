@@ -9,7 +9,9 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
-import ToolImageInput from 'components/input/ToolImageInput';
+import ToolMultipleImageInput, {
+  MultiImageInput
+} from '@components/input/ToolMultipleImageInput';
 import ToolFileResult from 'components/result/ToolFileResult';
 import { ToolComponentProps } from '@tools/defineTool';
 import { FormValues, Orientation, PageType, initialValues } from './types';
@@ -18,7 +20,8 @@ import { buildPdf } from './service';
 const initialFormValues: FormValues = initialValues;
 
 export default function ConvertToPdf({ title }: ToolComponentProps) {
-  const [input, setInput] = useState<File | null>(null);
+  const [input, setInput] = useState<File[]>([]);
+  const [inputImages, setInputImages] = useState<MultiImageInput[]>([]);
   const [result, setResult] = useState<File | null>(null);
   const [imageSize, setImageSize] = useState<{
     widthMm: number;
@@ -27,10 +30,15 @@ export default function ConvertToPdf({ title }: ToolComponentProps) {
     heightPx: number;
   } | null>(null);
 
+  const handleInputChange = (files: MultiImageInput[]) => {
+    setInputImages(files);
+    setInput(files.map(({ file }) => file));
+  };
+
   const compute = async (values: FormValues) => {
-    if (!input) return;
+    if (!input.length) return;
     const { pdfFile, imageSize } = await buildPdf({
-      file: input,
+      files: input,
       pageType: values.pageType,
       orientation: values.orientation,
       scale: values.scale
@@ -40,7 +48,7 @@ export default function ConvertToPdf({ title }: ToolComponentProps) {
   };
 
   return (
-    <ToolContent<FormValues, File | null>
+    <ToolContent<FormValues, File[]>
       title={title}
       input={input}
       setInput={setInput}
@@ -48,9 +56,10 @@ export default function ConvertToPdf({ title }: ToolComponentProps) {
       compute={compute}
       inputComponent={
         <Box>
-          <ToolImageInput
-            value={input}
-            onChange={setInput}
+          <ToolMultipleImageInput
+            type="image"
+            value={inputImages}
+            onChange={handleInputChange}
             accept={[
               'image/png',
               'image/jpeg',
@@ -65,7 +74,7 @@ export default function ConvertToPdf({ title }: ToolComponentProps) {
               'image/x-sony-arw',
               'image/vnd.adobe.photoshop'
             ]}
-            title="Input Image"
+            title="Input Images"
           />
         </Box>
       }
