@@ -9,13 +9,18 @@ import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 
 const initialValues = {
-  quality: 85,
-  backgroundColor: '#ffffff'
+  backgroundColor: '#ffffff',
+  // Initial Max Size is 5MB
+  maxSize: 50
 };
 
 const validationSchema = Yup.object({
   quality: Yup.number().min(1).max(100).required('Quality is required'),
-  backgroundColor: Yup.string().required('Background color is required')
+  backgroundColor: Yup.string().required('Background color is required'),
+  maxSize: Yup.number()
+    .min(1)
+    .max(100)
+    .required('Maximum file size is required')
 });
 
 export default function ConvertToJpg({ title }: ToolComponentProps) {
@@ -30,7 +35,7 @@ export default function ConvertToJpg({ title }: ToolComponentProps) {
 
     const processImage = async (
       file: File,
-      quality: number,
+      maxSize: number,
       backgroundColor: string
     ) => {
       const canvas = document.createElement('canvas');
@@ -62,19 +67,19 @@ export default function ConvertToJpg({ title }: ToolComponentProps) {
         ctx.drawImage(img, 0, 0);
 
         // Convert to JPG with specified quality
-        canvas.toBlob(
-          (blob) => {
-            if (blob) {
-              const fileName = file.name.replace(/\.[^/.]+$/, '') + '.webp';
-              const newFile = new File([blob], fileName, {
-                type: 'image/webp'
-              });
-              setResult(newFile);
-            }
-          },
-          'image/webp',
-          quality / 100
-        );
+        canvas.toBlob((blob) => {
+          if (blob) {
+            const fileName = file.name.replace(/\.[^/.]+$/, '') + '.webp';
+            const newFile = new File([blob], fileName, {
+              type: 'image/webp'
+            });
+
+            // Calculate if Size of Image Exceeds the Max
+
+            // Return File As Result
+            setResult(newFile);
+          }
+        }, 'image/webp');
       } catch (error) {
         console.error('Error processing image:', error);
       } finally {
@@ -82,7 +87,7 @@ export default function ConvertToJpg({ title }: ToolComponentProps) {
       }
     };
 
-    processImage(input, optionsValues.quality, optionsValues.backgroundColor);
+    processImage(input, optionsValues.maxSize, optionsValues.backgroundColor);
   };
 
   return (
@@ -113,13 +118,13 @@ export default function ConvertToJpg({ title }: ToolComponentProps) {
             <Box>
               <Box mb={3}>
                 <Typography variant="body2" color="text.secondary" gutterBottom>
-                  JPG Quality: {values.quality}%
+                  WebP File Size: {values.maxSize}MB
                 </Typography>
                 <Slider
-                  value={values.quality}
+                  value={values.maxSize}
                   onChange={(_, value) =>
                     updateField(
-                      'quality',
+                      'maxSize',
                       Array.isArray(value) ? value[0] : value
                     )
                   }
