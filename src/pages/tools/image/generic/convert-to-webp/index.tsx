@@ -10,7 +10,7 @@ import { ToolComponentProps } from '@tools/defineTool';
 
 const initialValues = {
   backgroundColor: '#ffffff',
-  // Initial Max Size is 5MB
+  // Initial Max Size is 50MB
   maxSize: 50
 };
 
@@ -32,6 +32,7 @@ export default function ConvertToJpg({ title }: ToolComponentProps) {
     input: any
   ): Promise<void> => {
     if (!input) return;
+    setResult(null);
 
     const processImage = async (
       file: File,
@@ -66,20 +67,48 @@ export default function ConvertToJpg({ title }: ToolComponentProps) {
         // Draw the image on top
         ctx.drawImage(img, 0, 0);
 
-        // Convert to JPG with specified quality
-        canvas.toBlob((blob) => {
-          if (blob) {
-            const fileName = file.name.replace(/\.[^/.]+$/, '') + '.webp';
-            const newFile = new File([blob], fileName, {
-              type: 'image/webp'
-            });
+        // Check If Size is Within Constraint
+        const quality = 100;
+        const maxByteCount = maxSize * 1024 * 1024;
+        const fileName = file.name.replace(/\.[^/.]+$/, '') + '.webp';
 
-            // Calculate if Size of Image Exceeds the Max
+        const convertWithSize = (quality: number): Promise<void> => {
+          return new Promise((resolve, reject) => {
+            canvas.toBlob(
+              (blob) => {
+                if (blob) {
+                  const newFile = new File([blob], fileName, {
+                    type: 'image/webp'
+                  });
 
-            // Return File As Result
-            setResult(newFile);
-          }
-        }, 'image/webp');
+                  // Step Down by 10% Quality Every Time
+                  if (newFile.size > maxByteCount) {
+                    if (quality > 10) {
+                      convertWithSize(quality - 10)
+                        .then(resolve)
+                        .catch(reject);
+                    } else {
+                      reject(
+                        new Error(
+                          'Image cannot be converted within given size!'
+                        )
+                      );
+                    }
+                  } else {
+                    setResult(newFile);
+                    resolve();
+                  }
+                } else {
+                  reject(new Error('Canvas toBlob returned as null'));
+                }
+              },
+              'image/webp',
+              quality / 100
+            );
+          });
+        };
+
+        await convertWithSize(quality);
       } catch (error) {
         console.error('Error processing image:', error);
       } finally {
@@ -87,7 +116,11 @@ export default function ConvertToJpg({ title }: ToolComponentProps) {
       }
     };
 
-    processImage(input, optionsValues.maxSize, optionsValues.backgroundColor);
+    await processImage(
+      input,
+      optionsValues.maxSize,
+      optionsValues.backgroundColor
+    );
   };
 
   return (
@@ -132,7 +165,7 @@ export default function ConvertToJpg({ title }: ToolComponentProps) {
                   max={100}
                   step={1}
                   valueLabelDisplay="auto"
-                  valueLabelFormat={(value) => `${value}%`}
+                  valueLabelFormat={(value) => `${value}MB`}
                   sx={{ mt: 1 }}
                 />
                 <Typography variant="caption" color="text.secondary">
