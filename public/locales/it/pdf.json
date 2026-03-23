@@ -1,0 +1,114 @@
+{
+  "compressPdf": {
+    "compressedFileSize": "Dimensione file compresso",
+    "compressingPdf": "Compressione PDF in corso...",
+    "compressionLevel": "Livello di compressione",
+    "compressionSettings": "Impostazioni di compressione",
+    "description": "Riduci le dimensioni del file PDF mantenendo la qualità utilizzando Ghostscript",
+    "errorCompressingPdf": "Impossibile comprimere il PDF: {{error}}",
+    "errorReadingPdf": "Impossibile leggere il file PDF. Assicurati che sia un PDF valido.",
+    "fileSize": "Dimensione file originale",
+    "highCompression": "Compressione elevata",
+    "highCompressionDescription": "Riduzione massima delle dimensioni del file con una leggera perdita di qualità",
+    "inputTitle": "PDF di input",
+    "longDescription": "Comprimi i file PDF in modo sicuro nel tuo browser utilizzando Ghostscript. I tuoi file non lasciano mai il tuo dispositivo, garantendo la completa privacy e riducendo al contempo le dimensioni dei file per la condivisione tramite e-mail, il caricamento su siti web o il risparmio di spazio di archiviazione. Basato sulla tecnologia WebAssembly.",
+    "lowCompression": "Bassa compressione",
+    "lowCompressionDescription": "Riduci leggermente le dimensioni del file con una perdita minima di qualità",
+    "mediumCompression": "Compressione media",
+    "mediumCompressionDescription": "Equilibrio tra dimensioni del file e qualità",
+    "pages": "Numero di pagine",
+    "resultTitle": "PDF compresso",
+    "shortDescription": "Comprimi i file PDF in modo sicuro nel tuo browser",
+    "title": "Comprimi PDF"
+  },
+  "editor": {
+    "description": "Editor PDF avanzato con funzionalità di annotazione, compilazione di moduli, evidenziazione ed esportazione. Modifica i tuoi PDF direttamente nel browser con strumenti di livello professionale, tra cui inserimento di testo, disegno, evidenziazione, firma e compilazione di moduli.",
+    "shortDescription": "Modifica i PDF con strumenti avanzati di annotazione, firma e modifica",
+    "title": "Editor PDF"
+  },
+  "merge": {
+    "inputTitle": "Inserisci PDF",
+    "loadingText": "Estrazione pagine",
+    "resultTitle": "PDF unito",
+    "toolInfo": {
+      "description": "Questo strumento consente di unire più file PDF in un unico documento. Per utilizzare lo strumento, è sufficiente caricare i file PDF che si desidera unire. Lo strumento combinerà quindi tutte le pagine dei file di input in un unico documento PDF.",
+      "title": "Come utilizzare lo strumento Unisci PDF?"
+    }
+  },
+  "mergePdf": {
+    "description": "Combina più file PDF in un unico documento.",
+    "inputTitle": "PDF di input",
+    "mergingPdfs": "Unione di PDF",
+    "pdfOptions": "Opzioni PDF",
+    "resultTitle": "PDF unito",
+    "shortDescription": "Unisci più file PDF in un unico documento",
+    "sortByFileName": "Ordina per nome file",
+    "sortByFileNameDescription": "Ordina i PDF in ordine alfabetico per nome file",
+    "sortByUploadOrder": "Ordina per ordine di caricamento",
+    "sortByUploadOrderDescription": "Mantieni i PDF nell'ordine in cui sono stati caricati",
+    "title": "Unisci PDF",
+    "toolInfo": {
+      "description": "Questo strumento ti consente di unire più file PDF in un unico documento. È possibile scegliere come ordinare i PDF e lo strumento li unirà nell'ordine specificato.",
+      "title": "Unisci file PDF"
+    }
+  },
+  "pdfToEpub": {
+    "description": "Trasforma i documenti PDF in file EPUB per una migliore compatibilità con gli e-reader.",
+    "shortDescription": "Converti i file PDF in formato EPUB",
+    "title": "Da PDF a EPUB"
+  },
+  "pdfToPng": {
+    "description": "Trasforma i documenti PDF in pannelli PNG.",
+    "longDescription": "Carica un PDF e converti ogni pagina in un'immagine PNG di alta qualità direttamente nel tuo browser. Questo strumento è ideale per estrarre contenuti visivi o condividere singole pagine. Nessun dato viene caricato: tutto viene eseguito localmente.",
+    "shortDescription": "Converti PDF in immagini PNG",
+    "title": "Da PDF a PNG"
+  },
+  "protectPdf": {
+    "description": "Aggiungi una protezione con password ai tuoi file PDF in modo sicuro nel tuo browser",
+    "shortDescription": "Proteggi i file PDF con password in modo sicuro",
+    "title": "Proteggi PDF"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "Tutte le {{count}} pagine saranno ruotate",
+    "angleOptions": {
+      "clockwise90": "90° in senso orario",
+      "counterClockwise270": "270° (90° in senso antiorario)",
+      "upsideDown180": "180° (capovolto)"
+    },
+    "applyToAllPages": "Applica a tutte le pagine",
+    "description": "Ruota le pagine in un documento PDF.",
+    "inputTitle": "Inserisci PDF",
+    "longDescription": "Modifica l'orientamento delle pagine PDF ruotandole di 90, 180 o 270 gradi. Utile per correggere documenti scansionati in modo errato o preparare PDF per la stampa.",
+    "pageRangesDescription": "Inserisci i numeri di pagina o gli intervalli separati da virgole (ad esempio, 1, 3, 5-7)",
+    "pageRangesPlaceholder": "ad esempio, 1, 5-8",
+    "pagesWillBeRotated": "{{count}} pagina{{count !== 1 ? ‘s’ : ‘’}} verrà ruotata",
+    "pdfPageCount": "Il PDF ha {{count}} pagina{{count !== 1 ? ‘s’ : ‘’}}",
+    "resultTitle": "PDF ruotato",
+    "rotatingPages": "Ruotare pagine",
+    "rotationAngle": "Angolo di rotazione",
+    "rotationSettings": "Impostazioni di rotazione",
+    "shortDescription": "Ruota le pagine in un documento PDF",
+    "title": "Ruota PDF",
+    "toolInfo": {
+      "description": "Questo strumento consente di ruotare le pagine di un documento PDF. È possibile ruotare tutte le pagine o specificare singole pagine da ruotare. Scegliere un angolo di rotazione: 90° in senso orario, 180° (capovolto) o 270° (90° in senso antiorario). Per ruotare pagine specifiche, deselezionare \"Applica a tutte le pagine\" e inserire i numeri di pagina o gli intervalli separati da virgole (ad esempio, 1,3,5-7).",
+      "title": "Come utilizzare lo strumento Ruota PDF"
+    }
+  },
+  "splitPdf": {
+    "description": "Estrai pagine specifiche da un documento PDF.",
+    "extractingPages": "Estrazione pagine",
+    "inputTitle": "PDF di input",
+    "pageExtractionPreview": "Verranno estratte {{count}} pagine{{count !== 1 ? 's' : ‘’}}",
+    "pageRangesDescription": "Inserisci i numeri di pagina o gli intervalli separati da virgole (ad es. 1, 3, 5-7)",
+    "pageRangesPlaceholder": "ad es. 1, 5-8",
+    "pageSelection": "Selezione pagine",
+    "pdfPageCount": "Il PDF ha {{count}} pagine{{count !== 1 ? ‘s’ : ‘’}}",
+    "resultTitle": "PDF estratto",
+    "shortDescription": "Estrai pagine specifiche da un file PDF",
+    "title": "Dividi PDF",
+    "toolInfo": {
+      "description": "Questo strumento consente di estrarre pagine specifiche da un documento PDF. È possibile specificare singole pagine o intervalli di pagine da estrarre.",
+      "title": "Dividi PDF"
+    }
+  }
+}
