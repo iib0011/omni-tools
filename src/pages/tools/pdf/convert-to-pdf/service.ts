@@ -1,59 +1,91 @@
 import jsPDF from 'jspdf';
-import { Orientation, PageType, ImageSize } from './types';
+import { ImageSize, InitialValuesType, LoadedImage } from './types';
+import { heicTo, isHeic } from 'heic-to';
 
-export interface ComputeOptions {
-  files: File[];
-  pageType: PageType;
-  orientation: Orientation;
-  scale: number; // 10..100 (only applied for A4)
-}
+const pxToMm = (px: number) => px * 0.264583;
 
-export interface ComputeResult {
-  pdfFile: File;
-  imageSize: ImageSize;
-}
+function returnImageFormat(file: File): 'PNG' | 'JPEG' {
+  const type = file.type.toLowerCase();
+  const name = file.name.toLowerCase();
 
-interface LoadedImage {
-  image: HTMLImageElement;
-  objectUrl: string;
-  format: 'PNG' | 'JPEG';
-}
+  if (type.includes('png') || name.endsWith('.png')) return 'PNG';
 
-function getPdfImageFormat(file: File): 'PNG' | 'JPEG' {
-  if (file.type === 'image/png' || file.name.toLowerCase().endsWith('.png')) {
-    return 'PNG';
+  if (
+    type.includes('jpeg') ||
+    type.includes('jpg') ||
+    name.endsWith('.jpg') ||
+    name.endsWith('.jpeg')
+  ) {
+    return 'JPEG';
   }
 
+  if (type.includes('webp') || name.endsWith('.webp')) return 'JPEG';
+
+  if (type.includes('gif') || name.endsWith('.gif')) return 'JPEG';
+
+  console.warn(`Unsupported format: ${file.type}, defaulting to JPEG`);
   return 'JPEG';
 }
 
 async function loadImage(file: File): Promise<LoadedImage> {
+  let processedFile = file;
+
+  if (await isHeic(file)) {
+    const convertedBlob = await heicTo({
+      blob: file,
+      type: 'image/jpeg'
+    });
+
+    processedFile = new File([convertedBlob], file.name + '.jpg', {
+      type: 'image/jpeg'
+    });
+  }
+
   const image = new Image();
-  const objectUrl = URL.createObjectURL(file);
+  const objectUrl = URL.createObjectURL(processedFile);
   image.src = objectUrl;
   await image.decode();
-  return { image, objectUrl, format: getPdfImageFormat(file) };
+  return {
+    image,
+    objectUrl,
+    format: returnImageFormat(file),
+    filename: processedFile.name
+  };
 }
 
-export async function buildPdf({
-  files,
-  pageType,
-  orientation,
-  scale
-}: ComputeOptions): Promise<ComputeResult> {
+export async function buildPdf(
+  files: File[],
+  options: InitialValuesType
+): Promise<{ pdfFile: File; imageSizes: ImageSize[] }> {
   if (!files.length) {
     throw new Error('No files selected');
   }
 
+  const { pageType, orientation, scale } = options;
+
   let loadedImages: LoadedImage[] = [];
+  const imageSizes: ImageSize[] = [];
+
+  const results = await Promise.all(
+    files.map((file) =>
+      loadImage(file).catch((err) => {
+        console.warn(`Skipping ${file.name}:`, err);
+        return null;
+      })
+    )
+  );
+
+  loadedImages = results.filter((img): img is LoadedImage => img !== null);
+
+  if (!loadedImages.length) {
+    throw new Error('No images could be loaded');
+  }
+
+  const { image: firstImage, filename: firstImageFileName } = loadedImages[0];
+  const firstImageWidthMm = pxToMm(firstImage.width);
+  const firstImageHeightMm = pxToMm(firstImage.height);
 
   try {
-    const pxToMm = (px: number) => px * 0.264583;
-    loadedImages = await Promise.all(files.map((file) => loadImage(file)));
-    const firstImage = loadedImages[0].image;
-    const firstImageWidthMm = pxToMm(firstImage.width);
-    const firstImageHeightMm = pxToMm(firstImage.height);
-
     const pdf =
       pageType === 'full'
         ? new jsPDF({
@@ -107,23 +139,22 @@ export async function buildPdf({
       const y = pageType === 'full' ? 0 : (pageHeight - finalHeight) / 2;
 
       pdf.addImage(image, format, x, y, finalWidth, finalHeight);
+      imageSizes.push({
+        widthMm: imageWidthMm,
+        heightMm: imageHeightMm,
+        widthPx: image.width,
+        heightPx: image.height
+      });
     }
 
     const blob = pdf.output('blob');
-    const firstFileName = files[0].name.replace(/\.[^/.]+$/, '');
+    const firstFileName = firstImageFileName.replace(/\.[^/.]+$/, '');
     const fileName =
-      files.length === 1
-        ? `${firstFileName}.pdf`
-        : `${firstFileName}-merged.pdf`;
+      files.length === 1 ? `${firstFileName}.pdf` : 'merged-images.pdf';
 
     return {
       pdfFile: new File([blob], fileName, { type: 'application/pdf' }),
-      imageSize: {
-        widthMm: firstImageWidthMm,
-        heightMm: firstImageHeightMm,
-        widthPx: firstImage.width,
-        heightPx: firstImage.height
-      }
+      imageSizes: imageSizes
     };
   } finally {
     loadedImages.forEach(({ objectUrl }) => URL.revokeObjectURL(objectUrl));
