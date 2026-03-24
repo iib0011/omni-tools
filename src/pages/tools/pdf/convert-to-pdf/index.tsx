@@ -14,67 +14,66 @@ import ToolMultipleImageInput, {
 } from '@components/input/ToolMultipleImageInput';
 import ToolFileResult from 'components/result/ToolFileResult';
 import { ToolComponentProps } from '@tools/defineTool';
-import { FormValues, Orientation, PageType, initialValues } from './types';
+import { Orientation, PageType, InitialValuesType, ImageSize } from './types';
 import { buildPdf } from './service';
+import { useTranslation } from 'react-i18next';
 
-const initialFormValues: FormValues = initialValues;
+const initialValues: InitialValuesType = {
+  pageType: 'full',
+  orientation: 'portrait',
+  scale: 100
+};
 
 export default function ConvertToPdf({ title }: ToolComponentProps) {
-  const [input, setInput] = useState<File[]>([]);
-  const [inputImages, setInputImages] = useState<MultiImageInput[]>([]);
+  const { t } = useTranslation('pdf');
+  const [input, setInput] = useState<MultiImageInput[]>([]);
   const [result, setResult] = useState<File | null>(null);
-  const [imageSize, setImageSize] = useState<{
-    widthMm: number;
-    heightMm: number;
-    widthPx: number;
-    heightPx: number;
-  } | null>(null);
+  const [imageSizes, setImageSizes] = useState<ImageSize[] | null>(null);
+  const [isProcessing, setIsProcessing] = useState<boolean>(false);
 
-  const handleInputChange = (files: MultiImageInput[]) => {
-    setInputImages(files);
-    setInput(files.map(({ file }) => file));
-  };
-
-  const compute = async (values: FormValues) => {
+  const compute = async (
+    optionsValues: InitialValuesType,
+    input: MultiImageInput[]
+  ) => {
     if (!input.length) return;
-    const { pdfFile, imageSize } = await buildPdf({
-      files: input,
-      pageType: values.pageType,
-      orientation: values.orientation,
-      scale: values.scale
-    });
-    setResult(pdfFile);
-    setImageSize(imageSize);
+
+    setIsProcessing(true);
+
+    try {
+      const files = input.sort((a, b) => a.order - b.order).map((i) => i.file);
+
+      const { pdfFile, imageSizes } = await buildPdf(files, optionsValues);
+      setResult(pdfFile);
+      setImageSizes(imageSizes);
+    } catch (error) {
+      throw new Error('Error converting image(s) to PDF:' + error);
+    } finally {
+      setIsProcessing(false);
+    }
   };
 
   return (
-    <ToolContent<FormValues, File[]>
+    <ToolContent
       title={title}
       input={input}
       setInput={setInput}
-      initialValues={initialFormValues}
+      initialValues={initialValues}
       compute={compute}
       inputComponent={
         <Box>
           <ToolMultipleImageInput
             type="image"
-            value={inputImages}
-            onChange={handleInputChange}
+            value={input}
+            onChange={setInput}
             accept={[
               'image/png',
               'image/jpeg',
               'image/webp',
-              'image/tiff',
               'image/gif',
               'image/heic',
-              'image/heif',
-              'image/x-adobe-dng',
-              'image/x-canon-cr2',
-              'image/x-nikon-nef',
-              'image/x-sony-arw',
-              'image/vnd.adobe.photoshop'
+              'image/heif'
             ]}
-            title="Input Images"
+            title={t('convertToPdf.inputTitle')}
           />
         </Box>
       }
@@ -85,7 +84,9 @@ export default function ConvertToPdf({ title }: ToolComponentProps) {
             component: (
               <Stack spacing={4}>
                 <Box>
-                  <Typography variant="h6">PDF Type</Typography>
+                  <Typography variant="h6">
+                    {t('convertToPdf.options.type')}
+                  </Typography>
                   <RadioGroup
                     row
                     value={values.pageType}
@@ -96,27 +97,37 @@ export default function ConvertToPdf({ title }: ToolComponentProps) {
                     <FormControlLabel
                       value="full"
                       control={<Radio />}
-                      label="Full Size (Same as Image)"
+                      label={t('convertToPdf.options.fullsize')}
                     />
                     <FormControlLabel
                       value="a4"
                       control={<Radio />}
-                      label="A4 Page"
+                      label={t('convertToPdf.options.a4')}
                     />
                   </RadioGroup>
 
-                  {values.pageType === 'full' && imageSize && (
-                    <Typography variant="body2" color="text.secondary">
-                      Image size: {imageSize.widthMm.toFixed(1)} ×{' '}
-                      {imageSize.heightMm.toFixed(1)} mm ({imageSize.widthPx} ×{' '}
-                      {imageSize.heightPx} px)
-                    </Typography>
+                  {values.pageType === 'full' && imageSizes && (
+                    <Stack spacing={1} mt={1}>
+                      {imageSizes.map((size, index) => (
+                        <Typography
+                          key={index}
+                          variant="body2"
+                          color="text.secondary"
+                        >
+                          {t('convertToPdf.options.image')} {index + 1}:{' '}
+                          {size.widthMm.toFixed(1)} × {size.heightMm.toFixed(1)}{' '}
+                          mm ({size.widthPx} × {size.heightPx} px)
+                        </Typography>
+                      ))}
+                    </Stack>
                   )}
                 </Box>
 
                 {values.pageType === 'a4' && (
                   <Box>
-                    <Typography variant="h6">Orientation</Typography>
+                    <Typography variant="h6">
+                      {t('convertToPdf.options.orientation')}
+                    </Typography>
                     <RadioGroup
                       row
                       value={values.orientation}
@@ -130,12 +141,12 @@ export default function ConvertToPdf({ title }: ToolComponentProps) {
                       <FormControlLabel
                         value="portrait"
                         control={<Radio />}
-                        label="Portrait (Vertical)"
+                        label={t('convertToPdf.options.portrait')}
                       />
                       <FormControlLabel
                         value="landscape"
                         control={<Radio />}
-                        label="Landscape (Horizontal)"
+                        label={t('convertToPdf.options.landscape')}
                       />
                     </RadioGroup>
                   </Box>
@@ -143,8 +154,10 @@ export default function ConvertToPdf({ title }: ToolComponentProps) {
 
                 {values.pageType === 'a4' && (
                   <Box>
-                    <Typography variant="h6">Scale</Typography>
-                    <Typography>Scale image: {values.scale}%</Typography>
+                    <Typography variant="h6">
+                      {t('convertToPdf.options.scale')}
+                    </Typography>
+                    <Typography>{values.scale}%</Typography>
                     <Slider
                       value={values.scale}
                       onChange={(_, v) => updateField('scale', v as number)}
@@ -161,7 +174,12 @@ export default function ConvertToPdf({ title }: ToolComponentProps) {
         ] as const;
       }}
       resultComponent={
-        <ToolFileResult title="Output PDF" value={result} extension="pdf" />
+        <ToolFileResult
+          title={t('convertToPdf.resultTitle')}
+          value={result}
+          extension="pdf"
+          loading={isProcessing}
+        />
       }
     />
   );
