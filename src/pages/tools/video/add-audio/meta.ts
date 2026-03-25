@@ -3,7 +3,7 @@ import { lazy } from 'react';
 
 export const tool = defineTool('video', {
   path: 'add-audio',
-  icon: 'icon-park-outline:music',
+  icon: 'tabler:music-plus',
 
   keywords: [
     'add',
