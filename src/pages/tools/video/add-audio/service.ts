@@ -1,6 +1,6 @@
 import { FFmpeg } from '@ffmpeg/ffmpeg';
 import { fetchFile } from '@ffmpeg/util';
-import { AddAudioOptions } from './types';
+import { initialValuesType } from './types';
 
 const ffmpeg = new FFmpeg();
 
@@ -20,17 +20,18 @@ export function timeToSeconds(time: string): number {
   return parts[0] || 0;
 }
 
-function hasDurationConstraint(options: AddAudioOptions): boolean {
+function hasDurationConstraint(options: initialValuesType): boolean {
   const start = timeToSeconds(options.startTime);
   const end = timeToSeconds(options.endTime);
   return start > 0 || end > 0;
 }
 
-function buildAudioFilterChain(options: AddAudioOptions): string {
+function buildAudioFilterChain(options: initialValuesType): string {
   const volumeScale = (options.volume / 100).toFixed(2);
   const start = timeToSeconds(options.startTime);
   const end = timeToSeconds(options.endTime);
   const hasConstraint = start > 0 || end > 0;
+  const delay = start * 1000;
 
   const filters: string[] = [];
   filters.push(`volume=${volumeScale}`);
@@ -38,9 +39,9 @@ function buildAudioFilterChain(options: AddAudioOptions): string {
   if (hasConstraint) {
     if (start > 0 && end > 0) {
       filters.push(`atrim=start=0:end=${end - start}`);
-      filters.push(`adelay=${start * 1000}|${start * 1000}`);
+      filters.push(`adelay=${delay}|${delay}`);
     } else if (start > 0) {
-      filters.push(`adelay=${start * 1000}|${start * 1000}`);
+      filters.push(`adelay=${delay}|${delay}`);
     } else if (end > 0) {
       filters.push(`atrim=start=0:end=${end}`);
     }
@@ -50,20 +51,18 @@ function buildAudioFilterChain(options: AddAudioOptions): string {
   return filters.join(',');
 }
 
-function buildReplaceFilter(options: AddAudioOptions): string {
+function buildAudioModeFilter(options: initialValuesType): string {
   const chain = buildAudioFilterChain(options);
-  return `[1:a]${chain}[aout]`;
-}
 
-function buildMixFilter(options: AddAudioOptions): string {
-  const chain = buildAudioFilterChain(options);
-  return `[1:a]${chain}[a1];[0:a][a1]amerge=inputs=2[aout]`;
+  return options.mode === 'replace'
+    ? `[1:a]${chain}[aout]`
+    : `[1:a]${chain}[a1];[0:a][a1]amix=inputs=2:duration=longest[aout]`;
 }
 
 export async function addAudioToVideo(
   video: File,
   audio: File,
-  options: AddAudioOptions
+  options: initialValuesType
 ): Promise<File> {
   await ensureLoaded();
 
@@ -73,6 +72,8 @@ export async function addAudioToVideo(
 
   await ffmpeg.writeFile(inputVideo, await fetchFile(video));
   await ffmpeg.writeFile(inputAudio, await fetchFile(audio));
+
+  const audioModeFilter = buildAudioModeFilter(options);
 
   const inputArgs: string[] = [];
   inputArgs.push('-i', inputVideo);
@@ -91,7 +92,7 @@ export async function addAudioToVideo(
       '-c:v',
       'copy',
       '-filter_complex',
-      buildReplaceFilter(options),
+      audioModeFilter,
       '-map',
       '0:v:0',
       '-map',
@@ -106,13 +107,11 @@ export async function addAudioToVideo(
       '-c:v',
       'copy',
       '-filter_complex',
-      buildMixFilter(options),
+      audioModeFilter,
       '-map',
       '0:v',
       '-map',
       '[aout]',
-      '-ac',
-      '2',
       ...(hasConstraint ? [] : ['-shortest']),
       '-y',
       outputName
@@ -121,14 +120,16 @@ export async function addAudioToVideo(
 
   try {
     await ffmpeg.exec(args);
+    const data = await ffmpeg.readFile(outputName);
+    return new File(
+      [new Blob([data as any], { type: 'video/mp4' })],
+      `${video.name.replace(/\.[^/.]+$/, '')}_with_audio.mp4`,
+      { type: 'video/mp4' }
+    );
   } catch (error) {
     console.error('FFmpeg execution failed:', error);
+    throw error;
+  } finally {
+    await ffmpeg.deleteFile(outputName);
   }
-
-  const data = await ffmpeg.readFile(outputName);
-  return new File(
-    [new Blob([data as any], { type: 'video/mp4' })],
-    `${video.name.replace(/\.[^/.]+$/, '')}_with_audio.mp4`,
-    { type: 'video/mp4' }
-  );
 }
