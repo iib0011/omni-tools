@@ -1,5 +1,5 @@
 import { Box, Typography, Slider } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import * as Yup from 'yup';
 import ToolFileResult from '@components/result/ToolFileResult';
 import ToolContent from '@components/ToolContent';
@@ -13,6 +13,7 @@ import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { useTranslation } from 'react-i18next';
 import { addAudioToVideo } from './service';
 import { AudioMode, timingMode, initialValuesType } from './types';
+import debounce from 'lodash/debounce';
 
 const initialValues: initialValuesType = {
   mode: 'replace',
@@ -24,22 +25,17 @@ const initialValues: initialValuesType = {
 };
 
 const validationSchema = Yup.object({
-  mode: Yup.string()
-    .oneOf(['replace', 'mix'], 'Mode must be replace or mix')
-    .required('Mode is required'),
-  volume: Yup.number()
-    .min(0, 'Volume must be at least 0')
-    .max(200, 'Volume must be at most 200')
-    .required('Volume is required'),
+  mode: Yup.string().oneOf(['replace', 'mix']).required(),
+  volume: Yup.number().min(0).max(200).required(),
   loop: Yup.boolean().required(),
   timingMode: Yup.string()
     .oneOf(['default', 'start', 'end', 'startEnd'])
     .required(),
   startTime: Yup.string()
-    .matches(/^\d{2}:\d{2}:\d{2}$/, 'Format must be HH:MM:SS')
+    .matches(/^\d{2}:\d{2}:\d{2}$/)
     .required(),
   endTime: Yup.string()
-    .matches(/^\d{2}:\d{2}:\d{2}$/, 'Format must be HH:MM:SS')
+    .matches(/^\d{2}:\d{2}:\d{2}$/)
     .required()
 });
 
@@ -61,34 +57,35 @@ export default function AddAudio({ title }: ToolComponentProps) {
   const [audioInput, setAudioInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
+  const [currentValues, setCurrentValues] = useState(initialValues);
 
+  // core compute function
   const compute = async (
-    optionsValues: initialValuesType,
-    input: File | null
+    video: File,
+    audio: File,
+    options: initialValuesType
   ) => {
-    if (!input || !audioInput) return;
-
+    if (!video || !audio) return;
     try {
       setLoading(true);
-
-      const outputFile = await addAudioToVideo(
-        input,
-        audioInput,
-        optionsValues
-      );
+      const outputFile = await addAudioToVideo(video, audio, options);
       setResult(outputFile);
-    } catch (error) {
-      console.error('Error adding audio to video:', error);
+    } catch (err) {
+      console.error('Error adding audio to video:', err);
     } finally {
       setLoading(false);
     }
   };
 
+  // debounced version for fast option changes
+  const debouncedCompute = useCallback(debounce(compute, 1000), []);
+
+  // automatically recompute whenever video, audio, or options change
   useEffect(() => {
     if (videoInput && audioInput) {
-      compute(initialValues, videoInput);
+      debouncedCompute(videoInput, audioInput, currentValues);
     }
-  });
+  }, [videoInput, audioInput, currentValues]);
 
   const getGroups: GetGroupsType<typeof initialValues> = ({
     values,
@@ -99,7 +96,7 @@ export default function AddAudio({ title }: ToolComponentProps) {
       component: (
         <ToolAudioInput
           value={audioInput}
-          onChange={setAudioInput}
+          onChange={(file) => setAudioInput(file)}
           title={t('addAudio.audioInputTitle')}
         />
       )
@@ -119,6 +116,7 @@ export default function AddAudio({ title }: ToolComponentProps) {
               checked={values.mode === option.value}
               onClick={() => {
                 updateField('mode', option.value);
+                setCurrentValues((prev) => ({ ...prev, mode: option.value }));
               }}
             />
           ))}
@@ -128,12 +126,18 @@ export default function AddAudio({ title }: ToolComponentProps) {
           <SimpleRadio
             title={t('addAudio.loop')}
             checked={values.loop === true}
-            onClick={() => updateField('loop', true)}
+            onClick={() => {
+              updateField('loop', true);
+              setCurrentValues((prev) => ({ ...prev, loop: true }));
+            }}
           />
           <SimpleRadio
             title={t('addAudio.noLoop')}
             checked={values.loop === false}
-            onClick={() => updateField('loop', false)}
+            onClick={() => {
+              updateField('loop', false);
+              setCurrentValues((prev) => ({ ...prev, loop: false }));
+            }}
           />
         </Box>
       )
@@ -144,9 +148,11 @@ export default function AddAudio({ title }: ToolComponentProps) {
         <Box>
           <Slider
             value={values.volume}
-            onChange={(_, value) =>
-              updateField('volume', Array.isArray(value) ? value[0] : value)
-            }
+            onChange={(_, value) => {
+              const vol = Array.isArray(value) ? value[0] : value;
+              updateField('volume', vol);
+              setCurrentValues((prev) => ({ ...prev, volume: vol }));
+            }}
             min={0}
             max={200}
             step={1}
@@ -154,7 +160,6 @@ export default function AddAudio({ title }: ToolComponentProps) {
             valueLabelFormat={(value) => `${value}%`}
             sx={{ mt: 1 }}
           />
-
           <Typography mt={0.5} fontSize={14}>
             {values.volume}%
           </Typography>
@@ -170,9 +175,15 @@ export default function AddAudio({ title }: ToolComponentProps) {
             }))}
             onChange={(value) => {
               updateField('timingMode', value);
+              setCurrentValues((prev) => ({ ...prev, timingMode: value }));
               if (value === 'default') {
                 updateField('startTime', '00:00:00');
                 updateField('endTime', '00:00:00');
+                setCurrentValues((prev) => ({
+                  ...prev,
+                  startTime: '00:00:00',
+                  endTime: '00:00:00'
+                }));
               }
             }}
             description={t('addAudio.timingModeDesc')}
@@ -182,7 +193,10 @@ export default function AddAudio({ title }: ToolComponentProps) {
             <Box mt={1}>
               <TextFieldWithDesc
                 value={values.startTime}
-                onOwnChange={(val: string) => updateField('startTime', val)}
+                onOwnChange={(val) => {
+                  updateField('startTime', val);
+                  setCurrentValues((prev) => ({ ...prev, startTime: val }));
+                }}
                 label={t('addAudio.startTime')}
                 description={t('addAudio.startTimeDesc')}
               />
@@ -193,7 +207,10 @@ export default function AddAudio({ title }: ToolComponentProps) {
             <Box mt={1}>
               <TextFieldWithDesc
                 value={values.endTime}
-                onOwnChange={(val: string) => updateField('endTime', val)}
+                onOwnChange={(val) => {
+                  updateField('endTime', val);
+                  setCurrentValues((prev) => ({ ...prev, endTime: val }));
+                }}
                 label={t('addAudio.endTime')}
                 description={t('addAudio.endTimeDesc')}
               />
@@ -219,14 +236,14 @@ export default function AddAudio({ title }: ToolComponentProps) {
         <ToolFileResult
           title={t('addAudio.resultTitle')}
           value={result}
-          extension={'mp4'}
+          extension="mp4"
           loading={loading}
           loadingText={t('addAudio.loadingText')}
         />
       }
       initialValues={initialValues}
       getGroups={getGroups}
-      compute={compute}
+      compute={() => {}} // compute is now handled by useEffect
       setInput={setVideoInput}
       validationSchema={validationSchema}
     />
