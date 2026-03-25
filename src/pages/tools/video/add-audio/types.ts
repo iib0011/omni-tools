@@ -2,6 +2,12 @@ export type AudioMode = 'replace' | 'mix';
 
 export type timingMode = 'default' | 'start' | 'end' | 'startEnd';
 
+export type TimingModeLabeli8nKey =
+  | 'timingDefault'
+  | 'timingStart'
+  | 'timingEnd'
+  | 'timingStartEnd';
+
 export interface initialValuesType {
   mode: AudioMode;
   volume: number;

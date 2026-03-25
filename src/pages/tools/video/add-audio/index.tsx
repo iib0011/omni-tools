@@ -12,7 +12,12 @@ import SelectWithDesc from '@components/options/SelectWithDesc';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { useTranslation } from 'react-i18next';
 import { addAudioToVideo } from './service';
-import { AudioMode, timingMode, initialValuesType } from './types';
+import {
+  AudioMode,
+  timingMode,
+  initialValuesType,
+  TimingModeLabeli8nKey
+} from './types';
 import debounce from 'lodash/debounce';
 
 const initialValues: initialValuesType = {
@@ -44,7 +49,10 @@ const modeOptions: { value: AudioMode; label: string }[] = [
   { value: 'mix', label: 'mix' }
 ];
 
-const durationModeOptions: { value: timingMode; label: string }[] = [
+const durationModeOptions: {
+  value: timingMode;
+  label: TimingModeLabeli8nKey;
+}[] = [
   { value: 'default', label: 'timingDefault' },
   { value: 'start', label: 'timingStart' },
   { value: 'end', label: 'timingEnd' },
