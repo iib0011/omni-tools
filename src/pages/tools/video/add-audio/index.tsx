@@ -1,11 +1,10 @@
-import { Box, Typography } from '@mui/material';
-import React, { useCallback, useState } from 'react';
+import { Box, Typography, Slider } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 import * as Yup from 'yup';
 import ToolFileResult from '@components/result/ToolFileResult';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
-import { debounce } from 'lodash';
 import ToolVideoInput from '@components/input/ToolVideoInput';
 import ToolAudioInput from '@components/input/ToolAudioInput';
 import SimpleRadio from '@components/options/SimpleRadio';
@@ -13,15 +12,15 @@ import SelectWithDesc from '@components/options/SelectWithDesc';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { useTranslation } from 'react-i18next';
 import { addAudioToVideo } from './service';
-import { AddAudioFormValues, AudioMode, DurationMode } from './types';
+import { AudioMode, timingMode, initialValuesType } from './types';
 
-const initialValues: AddAudioFormValues = {
+const initialValues: initialValuesType = {
   mode: 'replace',
   volume: 100,
   loop: true,
   startTime: '00:00:00',
   endTime: '00:00:00',
-  durationMode: 'default'
+  timingMode: 'default'
 };
 
 const validationSchema = Yup.object({
@@ -33,7 +32,7 @@ const validationSchema = Yup.object({
     .max(200, 'Volume must be at most 200')
     .required('Volume is required'),
   loop: Yup.boolean().required(),
-  durationMode: Yup.string()
+  timingMode: Yup.string()
     .oneOf(['default', 'start', 'end', 'startEnd'])
     .required(),
   startTime: Yup.string()
@@ -49,20 +48,11 @@ const modeOptions: { value: AudioMode; label: string }[] = [
   { value: 'mix', label: 'mix' }
 ];
 
-const volumeOptions: { value: string; label: string }[] = [
-  { value: '0', label: 'volumeMute' },
-  { value: '25', label: 'volume25' },
-  { value: '50', label: 'volume50' },
-  { value: '100', label: 'volume100' },
-  { value: '150', label: 'volume150' },
-  { value: '200', label: 'volume200' }
-];
-
-const durationModeOptions: { value: DurationMode; label: string }[] = [
-  { value: 'default', label: 'durationDefault' },
-  { value: 'start', label: 'durationStart' },
-  { value: 'end', label: 'durationEnd' },
-  { value: 'startEnd', label: 'durationStartEnd' }
+const durationModeOptions: { value: timingMode; label: string }[] = [
+  { value: 'default', label: 'timingDefault' },
+  { value: 'start', label: 'timingStart' },
+  { value: 'end', label: 'timingEnd' },
+  { value: 'startEnd', label: 'timingStartEnd' }
 ];
 
 export default function AddAudio({ title }: ToolComponentProps) {
@@ -73,31 +63,19 @@ export default function AddAudio({ title }: ToolComponentProps) {
   const [loading, setLoading] = useState(false);
 
   const compute = async (
-    optionsValues: typeof initialValues,
+    optionsValues: initialValuesType,
     input: File | null
   ) => {
     if (!input || !audioInput) return;
-    setLoading(true);
-
-    const startTime =
-      optionsValues.durationMode === 'start' ||
-      optionsValues.durationMode === 'startEnd'
-        ? optionsValues.startTime
-        : '00:00:00';
-    const endTime =
-      optionsValues.durationMode === 'end' ||
-      optionsValues.durationMode === 'startEnd'
-        ? optionsValues.endTime
-        : '00:00:00';
 
     try {
-      const outputFile = await addAudioToVideo(input, audioInput, {
-        mode: optionsValues.mode,
-        volume: optionsValues.volume,
-        loop: optionsValues.loop,
-        startTime,
-        endTime
-      });
+      setLoading(true);
+
+      const outputFile = await addAudioToVideo(
+        input,
+        audioInput,
+        optionsValues
+      );
       setResult(outputFile);
     } catch (error) {
       console.error('Error adding audio to video:', error);
@@ -106,7 +84,11 @@ export default function AddAudio({ title }: ToolComponentProps) {
     }
   };
 
-  const debouncedCompute = useCallback(debounce(compute, 1000), [audioInput]);
+  useEffect(() => {
+    if (videoInput && audioInput) {
+      compute(initialValues, videoInput);
+    }
+  });
 
   const getGroups: GetGroupsType<typeof initialValues> = ({
     values,
@@ -141,7 +123,7 @@ export default function AddAudio({ title }: ToolComponentProps) {
             />
           ))}
           <Typography mt={3} mb={1} fontSize={22}>
-            {t('addAudio.sound')}
+            {t('addAudio.loopOption')}
           </Typography>
           <SimpleRadio
             title={t('addAudio.loop')}
@@ -160,35 +142,43 @@ export default function AddAudio({ title }: ToolComponentProps) {
       title: t('addAudio.volume'),
       component: (
         <Box>
-          <SelectWithDesc
-            selected={values.volume.toString()}
-            options={volumeOptions.map((opt) => ({
-              label: t(`addAudio.${opt.label}`),
-              value: opt.value
-            }))}
-            onChange={(value) => updateField('volume', Number(value))}
-            description={t('addAudio.volumeDesc')}
+          <Slider
+            value={values.volume}
+            onChange={(_, value) =>
+              updateField('volume', Array.isArray(value) ? value[0] : value)
+            }
+            min={0}
+            max={200}
+            step={1}
+            valueLabelDisplay="auto"
+            valueLabelFormat={(value) => `${value}%`}
+            sx={{ mt: 1 }}
           />
+
+          <Typography mt={0.5} fontSize={14}>
+            {values.volume}%
+          </Typography>
+
           <Typography mt={2} mb={1} fontSize={22}>
-            {t('addAudio.duration')}
+            {t('addAudio.timing')}
           </Typography>
           <SelectWithDesc
-            selected={values.durationMode}
+            selected={values.timingMode}
             options={durationModeOptions.map((opt) => ({
               label: t(`addAudio.${opt.label}`),
               value: opt.value
             }))}
             onChange={(value) => {
-              updateField('durationMode', value as DurationMode);
+              updateField('timingMode', value);
               if (value === 'default') {
                 updateField('startTime', '00:00:00');
                 updateField('endTime', '00:00:00');
               }
             }}
-            description={t('addAudio.durationModeDesc')}
+            description={t('addAudio.timingModeDesc')}
           />
-          {(values.durationMode === 'start' ||
-            values.durationMode === 'startEnd') && (
+          {(values.timingMode === 'start' ||
+            values.timingMode === 'startEnd') && (
             <Box mt={1}>
               <TextFieldWithDesc
                 value={values.startTime}
@@ -198,8 +188,8 @@ export default function AddAudio({ title }: ToolComponentProps) {
               />
             </Box>
           )}
-          {(values.durationMode === 'end' ||
-            values.durationMode === 'startEnd') && (
+          {(values.timingMode === 'end' ||
+            values.timingMode === 'startEnd') && (
             <Box mt={1}>
               <TextFieldWithDesc
                 value={values.endTime}
@@ -236,7 +226,7 @@ export default function AddAudio({ title }: ToolComponentProps) {
       }
       initialValues={initialValues}
       getGroups={getGroups}
-      compute={debouncedCompute}
+      compute={compute}
       setInput={setVideoInput}
       validationSchema={validationSchema}
     />
