@@ -12,12 +12,7 @@ import SelectWithDesc from '@components/options/SelectWithDesc';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { useTranslation } from 'react-i18next';
 import { addAudioToVideo } from './service';
-import {
-  AudioMode,
-  timingMode,
-  initialValuesType,
-  TimingModeLabeli8nKey
-} from './types';
+import { AudioMode, timingMode, initialValuesType } from './types';
 import debounce from 'lodash/debounce';
 
 const initialValues: initialValuesType = {
@@ -49,15 +44,12 @@ const modeOptions: { value: AudioMode; label: string }[] = [
   { value: 'mix', label: 'mix' }
 ];
 
-const durationModeOptions: {
-  value: timingMode;
-  label: TimingModeLabeli8nKey;
-}[] = [
-  { value: 'default', label: 'timingDefault' },
-  { value: 'start', label: 'timingStart' },
-  { value: 'end', label: 'timingEnd' },
-  { value: 'startEnd', label: 'timingStartEnd' }
-];
+const durationModeOptions = [
+  { value: 'default', label: 'addAudio.timingDefault' },
+  { value: 'start', label: 'addAudio.timingStart' },
+  { value: 'end', label: 'addAudio.timingEnd' },
+  { value: 'startEnd', label: 'addAudio.timingStartEnd' }
+] as const;
 
 export default function AddAudio({ title }: ToolComponentProps) {
   const { t } = useTranslation('video');
@@ -178,7 +170,7 @@ export default function AddAudio({ title }: ToolComponentProps) {
           <SelectWithDesc
             selected={values.timingMode}
             options={durationModeOptions.map((opt) => ({
-              label: t(`addAudio.${opt.label}`),
+              label: t(opt.label),
               value: opt.value
             }))}
             onChange={(value) => {
