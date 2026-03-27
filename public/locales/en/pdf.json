@@ -65,8 +65,20 @@
   },
   "convertToPdf": {
     "title": "Images to PDF",
-    "description": "Convert various image formats (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) to PDF, with options to scale the image and choose page orientation.",
-    "shortDescription": "Convert images to PDF with scale and orientation control"
+    "description": "Convert various image formats (PNG, GIF, JPG, WEBP, HEIC, HEIF) to PDF, with options to scale the image and choose page orientation.",
+    "shortDescription": "Convert images to PDF with scale and orientation control",
+    "inputTitle": "Input Images",
+    "resultTitle": "Output PDF",
+    "options": {
+      "type": "PDF Type",
+      "orientation": "Orientation",
+      "scale": "Scale",
+      "portrait": "Portrait (Vertical)",
+      "landscape": "Landscape (Horizontal)",
+      "fullsize": "Full Size (Image size)",
+      "a4": "A4 Page",
+      "image": "Image"
+    }
   },
   "protectPdf": {
     "description": "Add password protection to your PDF files securely in your browser",

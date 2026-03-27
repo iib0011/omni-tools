@@ -5,6 +5,7 @@ import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
 import ImageIcon from '@mui/icons-material/Image';
 import { useTranslation } from 'react-i18next';
+import { heicTo, isHeic } from 'heic-to';
 
 interface MultiImageInputComponentProps {
   accept: string[];
@@ -30,16 +31,44 @@ export default function ToolMultiImageInput({
   const { t } = useTranslation();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const files = event.target.files;
-    if (files) {
-      const newFiles: MultiImageInput[] = Array.from(files).map((file) => ({
-        file,
-        order: value.length,
-        preview: URL.createObjectURL(file)
-      }));
-      onChange([...value, ...newFiles]);
-    }
+    if (!files) return;
+
+    const newFiles: MultiImageInput[] = await Promise.all(
+      Array.from(files).map(async (file, index) => {
+        let processedFile = file;
+
+        try {
+          if (await isHeic(file)) {
+            const convertedBlob = await heicTo({
+              blob: file,
+              type: 'image/jpeg'
+            });
+
+            processedFile = new File(
+              [convertedBlob],
+              file.name.replace(/\.[^/.]+$/, '') + '.jpg',
+              { type: 'image/jpeg' }
+            );
+          }
+        } catch (err) {
+          console.warn('HEIC conversion failed:', file.name, err);
+        }
+
+        return {
+          file: processedFile,
+          order: value.length + index,
+          preview: URL.createObjectURL(processedFile)
+        };
+      })
+    );
+
+    onChange([...value, ...newFiles]);
+
+    event.target.value = '';
   };
 
   const handleImportClick = () => {
@@ -47,15 +76,27 @@ export default function ToolMultiImageInput({
   };
 
   function handleClear() {
+    value.forEach((f) => {
+      if (f.preview) URL.revokeObjectURL(f.preview);
+    });
     onChange([]);
+  }
+
+  function handleRemove(index: number) {
+    const fileToRemove = value[index];
+    if (fileToRemove?.preview) {
+      URL.revokeObjectURL(fileToRemove.preview);
+    }
+
+    const updatedFiles = value.filter((_, i) => i !== index);
+    onChange(updatedFiles);
   }
 
   function fileNameTruncate(fileName: string) {
     const maxLength = 10;
-    if (fileName.length > maxLength) {
-      return fileName.slice(0, maxLength) + '...';
-    }
-    return fileName;
+    return fileName.length > maxLength
+      ? fileName.slice(0, maxLength) + '...'
+      : fileName;
   }
 
   return (
@@ -137,10 +178,7 @@ export default function ToolMultiImageInput({
                   </Typography>
                   <Box
                     sx={{ cursor: 'pointer' }}
-                    onClick={() => {
-                      const updatedFiles = value.filter((_, i) => i !== index);
-                      onChange(updatedFiles);
-                    }}
+                    onClick={() => handleRemove(index)}
                   >
                     ✖
                   </Box>
@@ -162,7 +200,7 @@ export default function ToolMultiImageInput({
         type="file"
         accept={accept.join(',')}
         onChange={handleFileChange}
-        multiple={true}
+        multiple
       />
     </Box>
   );
