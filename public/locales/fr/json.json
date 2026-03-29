@@ -38,18 +38,13 @@
     },
     "useSpaces": "Utiliser les espaces",
     "useSpacesDescription": "Indenter la sortie avec des espaces",
-    "useTabs": "Utiliser les onglets",
+    "useTabs": "Utiliser les tabulations",
     "useTabsDescription": "Indenter la sortie avec des tabulations."
   },
   "stringify": {
     "description": "Convertissez des objets JavaScript au format de chaîne JSON. Sérialisez des structures de données en chaînes JSON pour le stockage ou la transmission.",
     "shortDescription": "Convertir des objets en chaîne JSON",
     "title": "Stringify JSON"
-  },
-  "tsvToJson": {
-    "description": "Convertissez les données TSV (valeurs séparées par des tabulations) au format JSON. Transformez les données tabulaires en objets JSON structurés.",
-    "shortDescription": "Convertir le format TSV au format JSON",
-    "title": "TSV vers JSON"
   },
   "validateJson": {
     "description": "Vérifiez si JSON est valide et bien formé.",

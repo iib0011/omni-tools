@@ -5,7 +5,7 @@ import { lazy } from 'react';
 export const tool = defineTool('string', {
   path: 'to-morse',
   icon: 'arcticons:morse',
-  keywords: ['to', 'morse'],
+  keywords: [],
   component: lazy(() => import('./index')),
   i18n: {
     name: 'string:toMorse.title',

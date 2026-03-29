@@ -214,5 +214,18 @@
     "shortDescription": "CSV फ़ाइल को शीघ्रता से ट्रांसपोज़ करें.",
     "title": "CSV ट्रांसपोज़ करें",
     "transposeOptions": "ट्रांसपोज़ विकल्प"
+  },
+  "tsvToJson": {
+    "arrayFormat": "सरणी प्रारूप",
+    "conversionOptions": "रूपांतरण विकल्प",
+    "description": "TSV डेटा को JSON प्रारूप में बदलें।",
+    "firstRowAsHeaders": "पहली पंक्ति शीर्षक के रूप में",
+    "includeHeaders": "शीर्षक शामिल करें",
+    "inputTitle": "इनपुट TSV",
+    "objectFormat": "ऑब्जेक्ट प्रारूप",
+    "outputFormat": "आउटपुट प्रारूप",
+    "resultTitle": "JSON परिणाम",
+    "shortDescription": "TSV को JSON प्रारूप में परिवर्तित करें",
+    "title": "TSV से JSON"
   }
 }
