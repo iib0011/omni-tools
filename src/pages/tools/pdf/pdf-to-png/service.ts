@@ -1,6 +1,6 @@
 import * as pdfjsLib from 'pdfjs-dist';
 import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.min?url';
-import JSZip from 'jszip';
+import { zipFiles } from '@utils/zip';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
@@ -16,7 +16,6 @@ export async function convertPdfToPngImages(pdfFile: File): Promise<{
 }> {
   const arrayBuffer = await pdfFile.arrayBuffer();
   const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-  const zip = new JSZip();
   const images: ImagePreview[] = [];
 
   for (let i = 1; i <= pdf.numPages; i++) {
@@ -37,14 +36,11 @@ export async function convertPdfToPngImages(pdfFile: File): Promise<{
     const filename = `page-${i}.png`;
     const url = URL.createObjectURL(blob);
     images.push({ blob, url, filename });
-    zip.file(filename, blob);
   }
 
-  const zipBuffer = await zip.generateAsync({ type: 'arraybuffer' });
-  const zipFile = new File(
-    [zipBuffer],
-    pdfFile.name.replace(/\.pdf$/i, '-pages.zip'),
-    { type: 'application/zip' }
+  const zipFile = await zipFiles(
+    images.map(({ blob, filename }) => ({ blob, filename })),
+    pdfFile.name.replace(/\.pdf$/i, '-pages.zip')
   );
 
   return { images, zipFile };
