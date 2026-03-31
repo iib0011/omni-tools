@@ -12,7 +12,6 @@ import ToolMultipleImageInput, {
 import ToolMultiFileResult from '@components/result/ToolMultiFileResult';
 import { CustomSnackBarContext } from '../../../../../contexts/CustomSnackBarContext';
 import processImages from './service';
-import { t } from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
@@ -33,7 +32,7 @@ const validationSchema = Yup.object({
 export default function ConvertToWebp({ title }: ToolComponentProps) {
   const { t } = useTranslation('image');
   const [input, setInput] = useState<MultiImageInput[]>([]);
-  const [result, setResult] = useState<File[] | null>([]);
+  const [result, setResult] = useState<File[]>([]);
   const [zipFile, setZipFile] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
   const { showSnackBar } = useContext(CustomSnackBarContext);
@@ -42,7 +41,7 @@ export default function ConvertToWebp({ title }: ToolComponentProps) {
     optionsValues: typeof initialValues,
     input: MultiImageInput[]
   ): Promise<void> => {
-    if (!input) return;
+    if (!input || input.length === 0) return;
 
     // Running the Service
     try {
@@ -55,13 +54,14 @@ export default function ConvertToWebp({ title }: ToolComponentProps) {
 
       if (!output) {
         showSnackBar(t('convertToWebp.failedToConvert'), 'error');
-        setResult(null);
+        setZipFile(null);
       } else {
         setResult(output.convertedFiles);
+        setZipFile(output.zipFile);
       }
     } catch (error) {
       showSnackBar(`Error converting files: ${error}`, 'error');
-      setResult(null);
+      setZipFile(null);
     } finally {
       setIsProcessing(false);
     }
