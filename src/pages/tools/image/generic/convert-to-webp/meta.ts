@@ -8,7 +8,7 @@ export const tool = defineTool('image-generic', {
     shortDescription: 'image:convertToWebp.shortDescription'
   },
 
-  path: 'comvert-to-webp',
+  path: 'convert-to-webp',
   icon: 'iconoir:media-image-list',
 
   keywords: ['convert', 'jpg', 'jpeg', 'png', 'webp', 'compression'],
