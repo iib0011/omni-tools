@@ -126,8 +126,9 @@
     "title": "Rotate Image"
   },
   "convertToWebp": {
-    "description": "Convert various image formats (PNG, JPG, JPEG) to WebP format.",
+    "description": "Convert various image formats (PNG, JPG, JPEG and more) to WebP format.",
     "shortDescription": "Convert Images to WebP Format with maximum file size.",
-    "title": "Convert Image to WebP"
+    "title": "Convert Image to WebP",
+    "failedToConvert": "Conversion of image(s) to WebP failed. Please try again."
   }
 }

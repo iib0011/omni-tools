@@ -1,35 +1,55 @@
 import { MultiImageInput } from '@components/input/ToolMultipleImageInput';
+import JSZip from 'jszip';
 
 // Take In Multiple Images, Then Convert All into WebP
 export default async function processImages(
   files: MultiImageInput[],
   maxFileSizeInMb: number,
   backgroundColor: string
-): Promise<{ convertedFiles: File[] } | null> {
+): Promise<{ convertedFiles: File[]; zipFile: File | null } | null> {
   try {
     // Map Out the files
-    const convertedFiles = await Promise.all(
+    const output = await Promise.all(
       files.map(async (file) => {
         try {
-          // Extract File Object from MultiImageInput
+          // Process Images One by One
           const processedImage = await processSingleImage(
             file.file,
             maxFileSizeInMb,
             backgroundColor
           );
-          console.log('\nProcessed image is', processedImage);
-          return null;
+
+          return processedImage;
         } catch (error) {
-          console.log('Error converting files', error);
-          return null;
+          throw new Error(error as string);
         }
       })
     );
+
+    // Filter Out The Valid Files
+    const convertedFiles = output.filter((f): f is File => f !== null);
+
+    // Checking the Need to Convert
+    if (convertedFiles.length === 0) return null;
+
+    if (convertedFiles.length === 1) return { convertedFiles, zipFile: null };
+
+    // Converting Into Zip File
+    const zip = new JSZip();
+    convertedFiles.forEach((file) => zip.file(file.name, file));
+    const zipBlob = await zip.generateAsync({ type: 'blob' });
+    const zipFile = new File([zipBlob], 'compressed-images.zip', {
+      type: 'application/zip'
+    });
+
+    if (convertedFiles) {
+      return { convertedFiles, zipFile };
+    } else {
+      return null;
+    }
   } catch (error) {
-    console.log('Error converting files', error);
-    return null;
+    throw new Error(error as string);
   }
-  return null;
 }
 
 // Process and Return An Image
@@ -105,11 +125,11 @@ async function processSingleImage(
     };
 
     const result = await convertWithSize(quality);
-    // Recursive Call
+
+    // Return the Final Result Upon Recursion End
     return result;
   } catch (error) {
-    console.log('Error processing image:', error);
-    return null;
+    throw new Error(error as string);
   } finally {
     URL.revokeObjectURL(img.src);
   }

@@ -1,8 +1,6 @@
 import { Box, Slider, Typography } from '@mui/material';
-import ToolImageInput from 'components/input/ToolImageInput';
 import ColorSelector from 'components/options/ColorSelector';
 import ToolFileResult from 'components/result/ToolFileResult';
-import Color from 'color';
 import React, { useContext, useState } from 'react';
 import * as Yup from 'yup';
 import ToolContent from '@components/ToolContent';
@@ -14,6 +12,8 @@ import ToolMultipleImageInput, {
 import ToolMultiFileResult from '@components/result/ToolMultiFileResult';
 import { CustomSnackBarContext } from '../../../../../contexts/CustomSnackBarContext';
 import processImages from './service';
+import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   backgroundColor: '#ffffff',
@@ -31,8 +31,9 @@ const validationSchema = Yup.object({
 });
 
 export default function ConvertToWebp({ title }: ToolComponentProps) {
+  const { t } = useTranslation('image');
   const [input, setInput] = useState<MultiImageInput[]>([]);
-  const [result, setResult] = useState<File[]>([]);
+  const [result, setResult] = useState<File[] | null>([]);
   const [zipFile, setZipFile] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
   const { showSnackBar } = useContext(CustomSnackBarContext);
@@ -44,11 +45,26 @@ export default function ConvertToWebp({ title }: ToolComponentProps) {
     if (!input) return;
 
     // Running the Service
-    await processImages(
-      input,
-      optionsValues.maxFileSizeInMb,
-      optionsValues.backgroundColor
-    );
+    try {
+      setIsProcessing(true);
+      const output = await processImages(
+        input,
+        optionsValues.maxFileSizeInMb,
+        optionsValues.backgroundColor
+      );
+
+      if (!output) {
+        showSnackBar(t('convertToWebp.failedToConvert'), 'error');
+        setResult(null);
+      } else {
+        setResult(output.convertedFiles);
+      }
+    } catch (error) {
+      showSnackBar(`Error converting files: ${error}`, 'error');
+      setResult(null);
+    } finally {
+      setIsProcessing(false);
+    }
 
     console.log('Images are processed');
   };
