@@ -101,5 +101,11 @@
     "description": "Girar una imagen en un ángulo específico.",
     "shortDescription": "Girar una imagen fácilmente.",
     "title": "Girar imagen"
+  },
+  "convertToWebp": {
+    "description": "Convierte varios formatos de imagen (PNG, JPG, JPEG y más) al formato WebP.",
+    "shortDescription": "Convierte imágenes al formato WebP con tamaño máximo de archivo.",
+    "title": "Convertir imagen a WebP",
+    "failedToConvert": "La conversión de la imagen(s) a WebP falló. Por favor, inténtalo de nuevo."
   }
 }

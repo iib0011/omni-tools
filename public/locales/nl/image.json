@@ -101,5 +101,11 @@
     "description": "Draai een afbeelding met een bepaalde hoek.",
     "shortDescription": "Draai een afbeelding eenvoudig.",
     "title": "Afbeelding roteren"
+  },
+  "convertToWebp": {
+    "description": "Converteer verschillende afbeeldingsindelingen (PNG, JPG, JPEG en meer) naar WebP-indeling.",
+    "shortDescription": "Converteer afbeeldingen naar WebP-indeling met maximale bestandsgrootte.",
+    "title": "Afbeelding naar WebP converteren",
+    "failedToConvert": "Conversie van afbeelding(en) naar WebP mislukt. Probeer het opnieuw."
   }
 }
