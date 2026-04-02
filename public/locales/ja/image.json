@@ -101,11 +101,5 @@
     "description": "指定された角度で画像を回転します。",
     "shortDescription": "画像を簡単に回転します。",
     "title": "画像を回転する"
-  },
-  "convertToWebp": {
-    "description": "PNG、JPG、JPEGなど、さまざまな画像形式をWebP形式に変換します。",
-    "shortDescription": "最大ファイルサイズで画像をWebP形式に変換します。",
-    "title": "画像をWebPに変換",
-    "failedToConvert": "画像のWebPへの変換に失敗しました。もう一度やり直してください。"
   }
 }

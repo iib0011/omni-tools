@@ -226,11 +226,5 @@
     "watermarkOptions": "वॉटरमार्क विकल्प",
     "watermarkText": "वॉटरमार्क टेक्स्ट",
     "watermarkType": "वॉटरमार्क प्रकार"
-  },
-  "convertToWebp": {
-    "description": "विभिन्न छवि प्रारूपों (PNG, JPG, JPEG और अधिक) को WebP प्रारूप में रूपांतरित करें।",
-    "shortDescription": "अधिकतम फ़ाइल आकार के साथ छवियों को WebP प्रारूप में रूपांतरित करें।",
-    "title": "छवि को WebP में रूपांतरित करें",
-    "failedToConvert": "छवि(यों) को WebP में रूपांतरण विफल रहा। कृपया पुनः प्रयास करें।"
   }
 }

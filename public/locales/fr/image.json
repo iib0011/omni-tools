@@ -101,11 +101,5 @@
     "description": "Faire pivoter une image selon un angle spécifié.",
     "shortDescription": "Faites pivoter une image facilement.",
     "title": "Faire pivoter l'image"
-  },
-  "convertToWebp": {
-    "description": "Convertissez divers formats d'image (PNG, JPG, JPEG et plus) au format WebP.",
-    "shortDescription": "Convertissez les images au format WebP avec une taille de fichier maximale.",
-    "title": "Convertir l'image en WebP",
-    "failedToConvert": "La conversion de l'image en WebP a échoué. Veuillez réessayer."
   }
 }

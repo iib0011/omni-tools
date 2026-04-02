@@ -101,11 +101,5 @@
     "description": "Drehen Sie ein Bild um einen bestimmten Winkel.",
     "shortDescription": "Drehen Sie ein Bild ganz einfach.",
     "title": "Bild drehen"
-  },
-  "convertToWebp": {
-    "description": "Konvertieren Sie verschiedene Bildformate (PNG, JPG, JPEG und mehr) in das WebP-Format.",
-    "shortDescription": "Konvertieren Sie Bilder mit maximaler Dateigröße in das WebP-Format.",
-    "title": "Bild in WebP konvertieren",
-    "failedToConvert": "Konvertierung des/der Bilder(s) in WebP fehlgeschlagen. Bitte versuchen Sie es erneut."
   }
 }

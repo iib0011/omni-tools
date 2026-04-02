@@ -124,19 +124,5 @@
     "description": "Rotate an image by a specified angle.",
     "shortDescription": "Rotate an image easily.",
     "title": "Rotate Image"
-  },
-  "convertToWebp": {
-    "description": "Convert various image formats to WebP format with customizable quality and background color settings.",
-    "shortDescription": "Convert Images to WebP Format with quality control.",
-    "title": "Convert Images to WebP",
-    "failedToConvert": "Conversion of image(s) to WebP failed. Please try again.",
-    "inputTitle": "Input Images",
-    "resultTitle": "WEBP Images",
-    "options": {
-      "title": "Conversion Settings",
-      "quality": "Conversion Quality:",
-      "qualityDescription": "Higher values = better quality, larger file size",
-      "colorDescription": "Background color (for transparent images)"
-    }
   }
 }

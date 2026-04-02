@@ -101,11 +101,5 @@
     "description": "按指定角度旋转图像。",
     "shortDescription": "轻松旋转图像。",
     "title": "旋转图像"
-  },
-  "convertToWebp": {
-    "description": "将各种图像格式（PNG、JPG、JPEG 等）转换为 WebP 格式。",
-    "shortDescription": "将图像转换为 WebP 格式，支持最大文件大小限制。",
-    "title": "将图像转换为 WebP",
-    "failedToConvert": "将图像转换为 WebP 失败。请重试。"
   }
 }
