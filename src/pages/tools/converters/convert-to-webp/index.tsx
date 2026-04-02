@@ -10,7 +10,7 @@ import ToolMultipleImageInput, {
   MultiImageInput
 } from '@components/input/ToolMultipleImageInput';
 import ToolMultiFileResult from '@components/result/ToolMultiFileResult';
-import { CustomSnackBarContext } from '../../../../../contexts/CustomSnackBarContext';
+import { CustomSnackBarContext } from '../../../../contexts/CustomSnackBarContext';
 import { convertToWebp } from './service';
 import { useTranslation } from 'react-i18next';
 import debounce from 'lodash/debounce';
@@ -31,7 +31,7 @@ const validationSchema = Yup.object({
 });
 
 export default function ConvertToWebp({ title }: ToolComponentProps) {
-  const { t } = useTranslation('image');
+  const { t } = useTranslation('converters');
   const [input, setInput] = useState<MultiImageInput[]>([]);
   const [result, setResult] = useState<File[]>([]);
   const [zipFile, setZipFile] = useState<File | null>(null);
