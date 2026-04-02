@@ -1,27 +1,26 @@
-import { MultiImageInput } from '@components/input/ToolMultipleImageInput';
 import JSZip from 'jszip';
 
-// Take In Multiple Images, Then Convert All into WebP
-export default async function processImages(
-  files: MultiImageInput[],
-  maxFileSizeInMb: number,
+export const convertToWebp = async (
+  files: File[],
+  quality: number,
   backgroundColor: string
-): Promise<{ convertedFiles: File[]; zipFile: File | null } | null> {
+): Promise<{ convertedFiles: File[]; zipFile: File | null } | null> => {
   try {
     // Map Out the files
     const output = await Promise.all(
       files.map(async (file) => {
         try {
           // Process Images One by One
-          const processedImage = await processSingleImage(
-            file.file,
-            maxFileSizeInMb,
+          const processedImage = await processImage(
+            file,
+            quality,
             backgroundColor
           );
 
           return processedImage;
         } catch (error) {
-          throw new Error(error as string);
+          console.error(`Error converting ${file.name} to WEBP:`, error);
+          return null;
         }
       })
     );
@@ -50,12 +49,12 @@ export default async function processImages(
   } catch (error) {
     throw new Error(error as string);
   }
-}
+};
 
 // Process and Return An Image
-async function processSingleImage(
-  currentFile: File,
-  maxFileSizeInMb: number,
+async function processImage(
+  file: File,
+  quality: number,
   backgroundColor: string
 ): Promise<File | null> {
   const canvas = document.createElement('canvas');
@@ -63,7 +62,7 @@ async function processSingleImage(
   if (ctx == null) return null;
 
   const img = new Image();
-  img.src = URL.createObjectURL(currentFile);
+  img.src = URL.createObjectURL(file);
 
   try {
     await img.decode();
@@ -86,50 +85,20 @@ async function processSingleImage(
     // Draw the image on top
     ctx.drawImage(img, 0, 0);
 
-    // Check If Size is Within Constraint
-    const quality = 100;
-    const maxByteCount = maxFileSizeInMb * 1024 * 1024;
-    const fileName = currentFile.name.replace(/\.[^/.]+$/, '') + '.webp';
+    const fileName = file.name.replace(/\.[^/.]+$/, '') + '.webp';
 
-    const convertWithSize = (quality: number): Promise<File | null> => {
-      return new Promise((resolve, reject) => {
-        canvas.toBlob(
-          (blob) => {
-            if (blob) {
-              const newFile = new File([blob], fileName, {
-                type: 'image/webp'
-              });
+    const blob: Blob = await new Promise((resolve, reject) => {
+      canvas.toBlob(
+        (b) => (b ? resolve(b) : reject('Canvas toBlob returned null')),
+        'image/webp',
+        quality / 100
+      );
+    });
 
-              // Step Down by 10% Quality Every Time
-              if (newFile.size > maxByteCount) {
-                if (quality > 10) {
-                  convertWithSize(quality - 10)
-                    .then(resolve)
-                    .catch(reject);
-                } else {
-                  reject(
-                    new Error('Image cannot be converted within given size!')
-                  );
-                }
-              } else {
-                resolve(newFile);
-              }
-            } else {
-              reject(new Error('Canvas toBlob returned as null'));
-            }
-          },
-          'image/webp',
-          quality / 100
-        );
-      });
-    };
-
-    const result = await convertWithSize(quality);
-
-    // Return the Final Result Upon Recursion End
-    return result;
+    return new File([blob], fileName, { type: 'image/webp' });
   } catch (error) {
-    throw new Error(error as string);
+    console.error(`Error converting ${file.name} to WEBP:`, error);
+    return null;
   } finally {
     URL.revokeObjectURL(img.src);
   }
