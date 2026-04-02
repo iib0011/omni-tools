@@ -129,6 +129,14 @@
     "description": "Convert various image formats (PNG, JPG, JPEG and more) to WebP format.",
     "shortDescription": "Convert Images to WebP Format with maximum file size.",
     "title": "Convert Image to WebP",
-    "failedToConvert": "Conversion of image(s) to WebP failed. Please try again."
+    "failedToConvert": "Conversion of image(s) to WebP failed. Please try again.",
+    "inputTitle": "Input Images",
+    "resultTitle": "WEBP Images",
+    "options": {
+      "title": "Conversion Settings",
+      "quality": "Conversion Quality:",
+      "qualityDescription": "Higher values = better quality, larger file size",
+      "colorDescription": "Background color (for transparent images)"
+    }
   }
 }
