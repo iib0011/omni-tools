@@ -1,7 +1,7 @@
 import { Box, Slider, Typography } from '@mui/material';
 import ColorSelector from 'components/options/ColorSelector';
 import ToolFileResult from 'components/result/ToolFileResult';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useCallback } from 'react';
 import * as Yup from 'yup';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -11,13 +11,14 @@ import ToolMultipleImageInput, {
 } from '@components/input/ToolMultipleImageInput';
 import ToolMultiFileResult from '@components/result/ToolMultiFileResult';
 import { CustomSnackBarContext } from '../../../../../contexts/CustomSnackBarContext';
-import processImages from './service';
+import { convertToWebp } from './service';
 import { useTranslation } from 'react-i18next';
+import debounce from 'lodash/debounce';
 
 const initialValues: InitialValuesType = {
   backgroundColor: '#ffffff',
-  // Initial Max Size is 50MB
-  maxFileSizeInMb: 50
+
+  quality: 100
 };
 
 const validationSchema = Yup.object({
@@ -40,21 +41,22 @@ export default function ConvertToWebp({ title }: ToolComponentProps) {
   const compute = async (
     optionsValues: typeof initialValues,
     input: MultiImageInput[]
-  ): Promise<void> => {
+  ) => {
     if (!input || input.length === 0) return;
 
     // Running the Service
     try {
       setIsProcessing(true);
-      const output = await processImages(
-        input,
-        optionsValues.maxFileSizeInMb,
+
+      const output = await convertToWebp(
+        input.map((img) => img.file),
+        optionsValues.quality,
         optionsValues.backgroundColor
       );
 
       if (!output) {
         showSnackBar(t('convertToWebp.failedToConvert'), 'error');
-        setZipFile(null);
+        return;
       } else {
         setResult(output.convertedFiles);
         setZipFile(output.zipFile);
@@ -69,6 +71,8 @@ export default function ConvertToWebp({ title }: ToolComponentProps) {
     console.log('Images are processed');
   };
 
+  const debouncedCompute = useCallback(debounce(compute, 1000), []);
+
   return (
     <ToolContent
       title={title}
@@ -79,22 +83,23 @@ export default function ConvertToWebp({ title }: ToolComponentProps) {
           type={'image'}
           onChange={setInput}
           accept={['image/*']}
-          title={'Input Image'}
+          title={t('convertToWebp.inputTitle')}
         />
       }
       resultComponent={
         zipFile ? (
           <ToolMultiFileResult
-            title={'Output WebP'}
+            title={t('convertToWebp.resultTitle')}
             value={result}
             zipFile={zipFile}
             loading={isProcessing}
           />
         ) : (
           <ToolFileResult
-            title={'Output WebP'}
+            title={t('convertToWebp.resultTitle')}
             value={result[0] ?? null}
             extension={'webp'}
+            loading={isProcessing}
           />
         )
       }
@@ -102,18 +107,18 @@ export default function ConvertToWebp({ title }: ToolComponentProps) {
       validationSchema={validationSchema}
       getGroups={({ values, updateField }) => [
         {
-          title: 'WebP Size Settings',
+          title: t('convertToWebp.options.title'),
           component: (
             <Box>
               <Box mb={3}>
                 <Typography variant="body2" color="text.secondary" gutterBottom>
-                  WebP File Size: {values.maxFileSizeInMb}MB
+                  {t('convertToWebp.options.quality')} {values.quality}%
                 </Typography>
                 <Slider
-                  value={values.maxFileSizeInMb}
+                  value={values.quality}
                   onChange={(_, value) =>
                     updateField(
-                      'maxFileSizeInMb',
+                      'quality',
                       Array.isArray(value) ? value[0] : value
                     )
                   }
@@ -121,25 +126,25 @@ export default function ConvertToWebp({ title }: ToolComponentProps) {
                   max={100}
                   step={1}
                   valueLabelDisplay="auto"
-                  valueLabelFormat={(value) => `${value}MB`}
+                  valueLabelFormat={(value) => `${value}%`}
                   sx={{ mt: 1 }}
                 />
                 <Typography variant="caption" color="text.secondary">
-                  Higher values = better quality, larger file size
+                  {t('convertToWebp.options.qualityDescription')}
                 </Typography>
               </Box>
 
               <ColorSelector
                 value={values.backgroundColor}
                 onColorChange={(val) => updateField('backgroundColor', val)}
-                description={'Background color (for transparent images)'}
+                description={t('convertToWebp.options.colorDescription')}
                 inputProps={{ 'data-testid': 'background-color-input' }}
               />
             </Box>
           )
         }
       ]}
-      compute={compute}
+      compute={debouncedCompute}
       setInput={setInput}
     />
   );
