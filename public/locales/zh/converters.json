@@ -8,5 +8,19 @@
     "outputFormatDescription": "选择所需的输出音频格式",
     "inputTitle": "音频输入",
     "outputTitle": "转换后的音频"
+  },
+  "convertToWebp": {
+    "description": "使用可自定义的质量和背景颜色设置将各种图像格式转换为 WebP 格式。",
+    "shortDescription": "使用质量控制将图像转换为 WebP 格式。",
+    "title": "将图像转换为 WebP",
+    "failedToConvert": "将图像转换为 WebP 失败。请重试。",
+    "inputTitle": "输入图像",
+    "resultTitle": "WEBP 图像",
+    "options": {
+      "title": "转换设置",
+      "quality": "转换质量：",
+      "qualityDescription": "值越高 = 质量越好，文件大小越大",
+      "colorDescription": "背景颜色（用于透明图像）"
+    }
   }
 }

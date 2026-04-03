@@ -17,7 +17,6 @@ import debounce from 'lodash/debounce';
 
 const initialValues: InitialValuesType = {
   backgroundColor: '#ffffff',
-
   quality: 100
 };
 

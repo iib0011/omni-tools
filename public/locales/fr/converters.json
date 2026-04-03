@@ -8,5 +8,19 @@
     "outputFormatDescription": "Sélectionnez le format audio de sortie souhaité",
     "inputTitle": "Entrée Audio",
     "outputTitle": "Audio Converti"
+  },
+  "convertToWebp": {
+    "description": "Convertissez divers formats d'image au format WebP avec des paramètres de qualité et de couleur de fond personnalisables.",
+    "shortDescription": "Convertissez les images au format WebP avec contrôle de la qualité.",
+    "title": "Convertir des images en WebP",
+    "failedToConvert": "La conversion de l'image ou des images en WebP a échoué. Veuillez réessayer.",
+    "inputTitle": "Images d'entrée",
+    "resultTitle": "Images WEBP",
+    "options": {
+      "title": "Paramètres de conversion",
+      "quality": "Qualité de conversion:",
+      "qualityDescription": "Valeurs plus élevées = meilleure qualité, taille de fichier plus grande",
+      "colorDescription": "Couleur de fond (pour les images transparentes)"
+    }
   }
 }
