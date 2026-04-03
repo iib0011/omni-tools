@@ -8,5 +8,19 @@
     "outputFormatDescription": "Selecteer het gewenste audio-uitvoerformat",
     "inputTitle": "Audio-invoer",
     "outputTitle": "Geconverteerde Audio"
+  },
+  "convertToWebp": {
+    "description": "Converteer verschillende afbeeldingsindelingen naar WebP-indeling met aanpasbare instellingen voor kwaliteit en achtergrondkleur.",
+    "shortDescription": "Converteer afbeeldingen naar WebP-indeling met kwaliteitsbeheer.",
+    "title": "Afbeeldingen naar WebP converteren",
+    "failedToConvert": "Conversie van afbeelding(en) naar WebP mislukt. Probeer het opnieuw.",
+    "inputTitle": "Invoerafbeeldingen",
+    "resultTitle": "WEBP-afbeeldingen",
+    "options": {
+      "title": "Conversie-instellingen",
+      "quality": "Conversiekwaliteit:",
+      "qualityDescription": "Hogere waarden = betere kwaliteit, groter bestandsformaat",
+      "colorDescription": "Achtergrondkleur (voor transparante afbeeldingen)"
+    }
   }
 }
