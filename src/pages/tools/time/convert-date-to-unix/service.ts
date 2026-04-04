@@ -20,6 +20,17 @@ function computeUnixToDate(input: string, useLocalTime: boolean): string {
   }
 }
 
+// Changing a Date Object Into Unix
+function computeDatetoUnix(input: string, useLocalTime: boolean) {
+  if (useLocalTime) {
+    // Get User Time Zone
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    console.log('Time Zone is ', timeZone);
+  }
+
+  // Not Using Local Time (Either UTC is Given or Assume +00)
+}
+
 export function convertUnixToDate(
   input: string,
   withLabel: boolean,

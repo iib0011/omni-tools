@@ -148,18 +148,16 @@
     }
   },
   "convertDateToUnix": {
-    "addUtcLabel": "I've Labeled the UTC Timezone",
-    "addUtcLabelDescription": "Use Custom-Defined UTC",
     "description": "Convert a human-readable date to a Unix Timestamp.",
     "outputOptions": "Output Options",
     "shortDescription": "Convert date to Unix timestamp.",
     "title": "Convert Date to Unix",
     "toolInfo": {
-      "description": "This tool converts a Unix timestamp (in seconds) into a human-readable date format (e.g., YYYY-MM-DD HH:MM:SS). It supports both local and UTC output, making it useful for quickly interpreting timestamps from logs, APIs, or systems that use Unix time.",
+      "description": "This tool converts a human-readable date format (e.g., YYYY-MM-DD HH:MM:SS) into a Unix Timestamp. The user can choose to specify a given UTC offset (e.g., YYYY-MM-DD HH:MM:SS +XX:XX) or use the local timezone. If the user doesn't provide either an offset or choose to use the local timezone, the result is given with an offset of +00:00. ",
       "title": "Convert Date to Unix"
     },
     "useLocalTime": "Use Local Time",
-    "useLocalTimeDescription": "Input the time in your local timezone instead of UTC",
+    "useLocalTimeDescription": "The input time and date is processed as your browser's time zone. Additional specifications will be ignored.",
     "withLabel": "Options"
   }
 }

@@ -11,45 +11,42 @@ import { convertUnixToDate } from './service';
 import { useTranslation } from 'react-i18next';
 
 const initialValues = {
-  withLabel: true,
   useLocalTime: false
 };
 type InitialValuesType = typeof initialValues;
 
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
-    title: 'Basic Unix Time to Date',
+    title: 'Basic Date to Unix',
     description:
-      'This example shows how Unix timestamps are converted into human-readable dates. Each timestamp represents the number of seconds that have elapsed since January 1, 1970 (UTC).',
-    sampleText: `0
-1721287227
-2147483647`,
-    sampleResult: `1970-01-01 00:00:00:000 UTC
-2024-07-18 10:00:27:000 UTC
-2038-01-19 03:14:07:000 UTC`,
-    sampleOptions: { withLabel: true, useLocalTime: false }
+      'In this example, a plain human-readable timeframe is converted into a Unix timestamp. The UTC offset is treated as +00:00. ',
+    sampleText: `1990-03-17 14:23:00
+2012-12-21 00:00:00`,
+    sampleResult: `637674180
+1356048000`,
+    sampleOptions: { useLocalTime: false }
   },
   {
-    title: 'Without UTC Suffix',
+    title: 'With UTC Offset',
     description:
-      'In this example, the UTC suffix is removed from the output. This might be useful for embedding timestamps into other formats or for cleaner display.',
-    sampleText: `1234567890
-1672531199`,
-    sampleResult: `2009-02-13 23:31:30
-2022-12-31 23:59:59:000`,
-    sampleOptions: { withLabel: false, useLocalTime: false }
+      'In this example, the UTC offset is provided after stating the timeframe with a space.',
+    sampleText: `1985-06-15 12:00:00 +00:00
+2025-04-04 10:00:00 +08:00`,
+    sampleResult: `487598400
+1743724800`,
+    sampleOptions: { useLocalTime: false }
   },
   {
     title: 'Use Local Time',
     description:
-      'This example demonstrates how timestamps are shown in your local timezone rather than UTC. The UTC suffix is omitted in this case.',
-    sampleText: `1721287227`,
-    sampleResult: `2024-07-18 12:00:27`,
-    sampleOptions: { withLabel: true, useLocalTime: true }
+      "This example uses your browser's timezone. Any suffix provided as the UTC offset is ignored.  In this case we assume the timezone of the user to be UTC+6.",
+    sampleText: `2025-04-04 07:30:00`,
+    sampleResult: `1743744600`,
+    sampleOptions: { useLocalTime: true }
   }
 ];
 
-export default function ConvertUnixToDate({ title }: ToolComponentProps) {
+export default function convertDateToUnix({ title }: ToolComponentProps) {
   const { t } = useTranslation('time');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
@@ -63,20 +60,14 @@ export default function ConvertUnixToDate({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: t('convertUnixToDate.withLabel'),
+      title: t('convertDateToUnix.withLabel'),
       component: (
         <Box>
           <CheckboxWithDesc
-            onChange={(val) => updateField('withLabel', val)}
-            checked={values.withLabel}
-            title={t('convertUnixToDate.addUtcLabel')}
-            description={t('convertUnixToDate.addUtcLabelDescription')}
-          />
-          <CheckboxWithDesc
             onChange={(val) => updateField('useLocalTime', val)}
             checked={values.useLocalTime}
-            title={t('convertUnixToDate.useLocalTime')}
-            description={t('convertUnixToDate.useLocalTimeDescription')}
+            title={t('convertDateToUnix.useLocalTime')}
+            description={t('convertDateToUnix.useLocalTimeDescription')}
           />
         </Box>
       )
@@ -94,8 +85,8 @@ export default function ConvertUnixToDate({ title }: ToolComponentProps) {
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: t('convertUnixToDate.toolInfo.title'),
-        description: t('convertUnixToDate.toolInfo.description')
+        title: t('convertDateToUnix.toolInfo.title'),
+        description: t('convertDateToUnix.toolInfo.description')
       }}
     />
   );
