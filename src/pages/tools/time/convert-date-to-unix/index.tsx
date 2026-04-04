@@ -6,7 +6,7 @@ import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
-import { convertUnixToDate } from './service';
+import { convertToUnix } from './service';
 import { useTranslation } from 'react-i18next';
 import InitialValuesType from './types';
 import { exampleCards } from './example';
@@ -20,8 +20,8 @@ export default function convertDateToUnix({ title }: ToolComponentProps) {
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
-  const compute = (values: typeof initialValues, input: string) => {
-    setResult(convertUnixToDate(input, values.useLocalTime));
+  const compute = (values: InitialValuesType, input: string) => {
+    setResult(convertToUnix(input, values.useLocalTime));
   };
 
   const getGroups: GetGroupsType<InitialValuesType> | null = ({

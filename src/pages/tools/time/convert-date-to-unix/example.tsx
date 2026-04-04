@@ -8,8 +8,8 @@ export const exampleCards: CardExampleType<InitialValuesType>[] = [
       'In this example, a plain human-readable timeframe is converted into a Unix timestamp. The UTC offset is treated as +00:00. ',
     sampleText: `1990-03-17 14:23:00
 2012-12-21 00:00:00`,
-    sampleResult: `637674180
-1356048000`,
+    sampleResult: `637654980
+1356019200`,
     sampleOptions: { useLocalTime: false }
   },
   {
@@ -18,15 +18,15 @@ export const exampleCards: CardExampleType<InitialValuesType>[] = [
       'In this example, the UTC offset is provided after stating the timeframe with a space.',
     sampleText: `1985-06-15 12:00:00 +00:00
 2025-04-04 10:00:00 +08:00`,
-    sampleResult: `487598400
-1743724800`,
+    sampleResult: `487656000
+1743732000`,
     sampleOptions: { useLocalTime: false }
   },
   {
     title: 'Use Local Time',
     description:
-      "This example uses your browser's timezone. Any suffix provided as the UTC offset is ignored.  In this case we assume the timezone of the user to be UTC+6.",
-    sampleText: `2025-04-04 07:30:00`,
+      "This example uses your browser's timezone. Any suffix provided as the UTC offset is ignored.  In this example we assume the timezone of the user to be UTC+6.",
+    sampleText: `2025-04-04 11:30:00`,
     sampleResult: `1743744600`,
     sampleOptions: { useLocalTime: true }
   }

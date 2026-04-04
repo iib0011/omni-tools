@@ -1,51 +1,49 @@
-import { containsOnlyDigits } from '@utils/string';
-
-function computeUnixToDate(input: string, useLocalTime: boolean): string {
-  if (!containsOnlyDigits(input)) {
-    return '';
-  }
-  const timestamp = parseInt(input, 10);
-  const date = new Date(timestamp * 1000); // Convert from seconds to milliseconds
-
-  if (useLocalTime) {
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    const hours = String(date.getHours()).padStart(2, '0');
-    const minutes = String(date.getMinutes()).padStart(2, '0');
-    const seconds = String(date.getSeconds()).padStart(2, '0');
-    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-  } else {
-    return date.toISOString().replace('T', ' ').replace('Z', '');
-  }
-}
-
 // Changing a Date Object Into Unix
-function computeDatetoUnix(input: string, useLocalTime: boolean) {
-  if (useLocalTime) {
-    // Get User Time Zone
-    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    console.log('Time Zone is ', timeZone);
-  }
+function computeDateToUnix(input: string, useLocalTime: boolean): string {
+  try {
+    // Extract Data
+    const splitInput = input.split(' ');
+    const timeFrame = splitInput[0] + ' ' + splitInput[1];
+    const utcOffset = splitInput.length > 2 ? splitInput[2] : null;
 
-  // Not Using Local Time (Either UTC is Given or Assume +00)
+    // Convert into Unix
+    const rawUnixValue: number = Date.parse(timeFrame) / 1000;
+
+    // Unsuccesful Conversion
+    if (isNaN(rawUnixValue)) {
+      return 'Invalid Date Time';
+    }
+
+    // Case 1: Base Scenario (Not Local, No Offsets)
+    if (!useLocalTime && !utcOffset) {
+      return `${rawUnixValue}`;
+    }
+
+    if (useLocalTime) {
+      // Get User Time Zone
+      const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      console.log('Time Zone is ', timeZone);
+    }
+
+    return `Valid Date`;
+  } catch (err) {
+    // Not Using Local Time (Either UTC is Given or Assume +00)
+    console.log('Error', err);
+    return 'Invalid Date Time';
+  }
 }
 
-export function convertUnixToDate(
-  input: string,
-  useLocalTime: boolean
-): string {
-  const result: string[] = [];
+export function convertToUnix(input: string, useLocalTime: boolean): string {
+  // Empty Input
+  if (!input) return '';
 
+  const result: string[] = [];
   const lines = input.split('\n');
 
+  // Process Input Lines
   lines.forEach((line) => {
-    const parts = line.split(' ');
-    const timestamp = parts[0];
-    const formattedDate = computeUnixToDate(timestamp, useLocalTime);
-
-    const label = !useLocalTime ? ' UTC' : '';
-    result.push(formattedDate ? `${formattedDate}${label}` : '');
+    const formattedDate = computeDateToUnix(line, useLocalTime);
+    result.push(formattedDate);
   });
 
   return result.join('\n');
