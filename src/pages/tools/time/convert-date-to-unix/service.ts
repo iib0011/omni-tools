@@ -33,7 +33,6 @@ function computeDatetoUnix(input: string, useLocalTime: boolean) {
 
 export function convertUnixToDate(
   input: string,
-  withLabel: boolean,
   useLocalTime: boolean
 ): string {
   const result: string[] = [];
@@ -45,7 +44,7 @@ export function convertUnixToDate(
     const timestamp = parts[0];
     const formattedDate = computeUnixToDate(timestamp, useLocalTime);
 
-    const label = !useLocalTime && withLabel ? ' UTC' : '';
+    const label = !useLocalTime ? ' UTC' : '';
     result.push(formattedDate ? `${formattedDate}${label}` : '');
   });
 

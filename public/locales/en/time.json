@@ -158,6 +158,6 @@
     },
     "useLocalTime": "Use Local Time",
     "useLocalTimeDescription": "The input time and date is processed as your browser's time zone. Additional specifications will be ignored.",
-    "withLabel": "Options"
+    "options": "Options"
   }
 }
