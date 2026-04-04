@@ -9,6 +9,7 @@ import { tool as convertTimetoSeconds } from './convert-time-to-seconds/meta';
 import { tool as truncateClockTime } from './truncate-clock-time/meta';
 import { tool as checkLeapYear } from './check-leap-years/meta';
 import { tool as discordTimestamp } from './discord-timestamp/meta';
+import { tool as timeConvertDateToUnix } from './convert-date-to-unix/meta';
 
 export const timeTools = [
   daysDoHours,
@@ -20,6 +21,7 @@ export const timeTools = [
   timeCrontabGuru,
   checkLeapYear,
   timeConvertUnixToDate,
+  timeConvertDateToUnix,
   timeConvertTimeToDecimal,
   discordTimestamp
 ];

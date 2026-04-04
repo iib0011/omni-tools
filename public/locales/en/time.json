@@ -146,5 +146,20 @@
       "title": "What is a Discord Timestamp?",
       "description": "Discord timestamps are a special syntax that displays dates and times dynamically. Instead of showing a fixed time, they automatically convert to each viewer's local timezone and language — so everyone sees the correct time for their location. Simply enter one datetime per line, choose a format, and paste the results directly into Discord. The tool processes each line independently — blank lines are preserved in the output, invalid lines are flagged with ❌, and valid datetimes are converted instantly. Enable UTC mode to ensure consistent results regardless of your local timezone."
     }
+  },
+  "convertDateToUnix": {
+    "addUtcLabel": "I've Labeled the UTC Timezone",
+    "addUtcLabelDescription": "Use Custom-Defined UTC",
+    "description": "Convert a human-readable date to a Unix Timestamp.",
+    "outputOptions": "Output Options",
+    "shortDescription": "Convert date to Unix timestamp.",
+    "title": "Convert Date to Unix",
+    "toolInfo": {
+      "description": "This tool converts a Unix timestamp (in seconds) into a human-readable date format (e.g., YYYY-MM-DD HH:MM:SS). It supports both local and UTC output, making it useful for quickly interpreting timestamps from logs, APIs, or systems that use Unix time.",
+      "title": "Convert Date to Unix"
+    },
+    "useLocalTime": "Use Local Time",
+    "useLocalTimeDescription": "Input the time in your local timezone instead of UTC",
+    "withLabel": "Options"
   }
 }
