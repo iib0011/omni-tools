@@ -6,23 +6,34 @@ function computeDateToUnix(input: string, useLocalTime: boolean): string {
     const timeFrame = splitInput[0] + ' ' + splitInput[1];
     const utcOffset = splitInput.length > 2 ? splitInput[2] : null;
 
-    // Convert into Unix
-    const rawUnixValue: number = Date.parse(timeFrame) / 1000;
+    // Convert into Unix (This Has The Local Offset)
+    const localUnixValue: number = Date.parse(timeFrame) / 1000;
 
     // Unsuccesful Conversion
-    if (isNaN(rawUnixValue)) {
+    if (isNaN(localUnixValue)) {
       return 'Invalid Date Time';
     }
 
-    // Case 1: Base Scenario (Not Local, No Offsets)
+    // Case 1: Base Scenario (Assume Time with GMT +00)
     if (!useLocalTime && !utcOffset) {
-      return `${rawUnixValue}`;
+      // Get A Reference Object
+      const refTimeDate = new Date();
+      const offsetMinutes = refTimeDate.getTimezoneOffset();
+      console.log(`Offset minutes for ${localUnixValue} is ${offsetMinutes}`);
+
+      // Remove the Offset
+      const processedDateTime = localUnixValue - offsetMinutes * 60;
+      return `${processedDateTime}`;
     }
 
+    // Case 2: Time Given with Custom Offset
+    if (!useLocalTime && utcOffset) {
+      // Verify Offset
+    }
+
+    // Case 3: Local (Time Given is Local Time)
     if (useLocalTime) {
-      // Get User Time Zone
-      const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      console.log('Time Zone is ', timeZone);
+      return `${localUnixValue}`;
     }
 
     return `Valid Date`;
