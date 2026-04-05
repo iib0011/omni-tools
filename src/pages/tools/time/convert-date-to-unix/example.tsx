@@ -18,7 +18,7 @@ export const exampleCards: CardExampleType<InitialValuesType>[] = [
       'In this example, the UTC offset is provided after stating the timeframe with a space.',
     sampleText: `1985-06-15 12:00:00 +00:00
 2025-04-04 10:00:00 +08:00`,
-    sampleResult: `487656000
+    sampleResult: `487684800
 1743732000`,
     sampleOptions: { useLocalTime: false }
   },

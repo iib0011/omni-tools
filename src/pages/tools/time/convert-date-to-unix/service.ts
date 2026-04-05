@@ -16,19 +16,28 @@ function computeDateToUnix(input: string, useLocalTime: boolean): string {
 
     // Case 1: Base Scenario (Assume Time with GMT +00)
     if (!useLocalTime && !utcOffset) {
-      // Get A Reference Object
-      const refTimeDate = new Date();
-      const offsetMinutes = refTimeDate.getTimezoneOffset();
-      console.log(`Offset minutes for ${localUnixValue} is ${offsetMinutes}`);
-
-      // Remove the Offset
-      const processedDateTime = localUnixValue - offsetMinutes * 60;
+      const processedDateTime = convertToGMTZero(localUnixValue);
       return `${processedDateTime}`;
     }
 
     // Case 2: Time Given with Custom Offset
     if (!useLocalTime && utcOffset) {
-      // Verify Offset
+      // Verify Offset (-12:00 to +14.00 in 15 Minute Intervals)
+      const regexMatch = utcOffset.match(/^[+-](0\d|1[0-4]):(00|15|30|45)$/);
+
+      // Invalid Regex
+      if (!regexMatch) {
+        return 'Invalid Date Time';
+      }
+
+      // Variables to Be Processed
+      const hours = Number(regexMatch[1]);
+      const minutes = Number(regexMatch[2]) + hours * 60;
+      const offset = minutes * 60;
+
+      // Remove The Offset to The Time (Opposite of First Symbol - If Input Time is +08:00 Then We Need to Deduct by 8 Hours)
+      const processedDateTime = convertToGMTZero(localUnixValue) - offset;
+      return `${processedDateTime}`;
     }
 
     // Case 3: Local (Time Given is Local Time)
@@ -42,6 +51,16 @@ function computeDateToUnix(input: string, useLocalTime: boolean): string {
     console.log('Error', err);
     return 'Invalid Date Time';
   }
+}
+
+function convertToGMTZero(localUnixValue: number): number {
+  // Get A Reference Object
+  const refTimeDate = new Date();
+  const offsetMinutes = refTimeDate.getTimezoneOffset();
+
+  // Remove the Offset
+  const processedDateTime = localUnixValue - offsetMinutes * 60;
+  return processedDateTime;
 }
 
 export function convertToUnix(input: string, useLocalTime: boolean): string {
