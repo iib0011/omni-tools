@@ -119,5 +119,32 @@
     "description": "Convert a formatted time duration (HH:MM:SS) into a decimal hour value.",
     "shortDescription": "Convert human time to decimal time",
     "longDescription": "Convert a formatted time string (HH:MM:SS or HH:MM) into its decimal-hour equivalent. Hours can be any positive number, while minutes and seconds accept values from 0-59 and can be single or double digits (e.g., '12:5' or '12:05'). This function interprets hours, minutes, and seconds, then calculates the total duration as a single decimal value. It is useful for productivity tracking, payroll calculations, time-based billing, data analysis, or any workflow that requires converting human-readable time into a numerical format that can be easily summed, compared, or processed. For example, '03:26:00' becomes 3.43 hours, and '12:5' becomes 12.08 hours."
+  },
+  "discordTimestamp": {
+    "name": "Discord Timestamp Generator",
+    "description": "Convert dates and times into Discord's special timestamp format that automatically adapts to each user's local timezone and language",
+    "shortDescription": "Generate Discord timestamps from dates",
+    "inputTitle": "Input Datetimes",
+    "outputTitle": "Discord Timestamps",
+    "formats": {
+      "title": "Timestamp Format",
+      "description": "Choose how the timestamp will appear in Discord — hover over each option to see an example",
+      "short_time": "Short Time (ex: 14:30)",
+      "long_time": "Long Time (ex: 14:30:00)",
+      "short_date": "Short Date (ex: 01/01/2025)",
+      "long_date": "Long Date (ex: 1 January 2025)",
+      "short_datetime": "Short Date & Time (ex: 1 January 2025 14:30)",
+      "long_datetime": "Long Date & Time (ex: Monday, 1 January 2025 14:30)",
+      "relative": "Relative (ex: 2 hours ago)"
+    },
+    "utc": {
+      "title": "Input Options",
+      "label": "Enforce UTC",
+      "description": "Treat input datetimes as UTC. Disable to use your local timezone instead"
+    },
+    "toolInfo": {
+      "title": "What is a Discord Timestamp?",
+      "description": "Discord timestamps are a special syntax that displays dates and times dynamically. Instead of showing a fixed time, they automatically convert to each viewer's local timezone and language — so everyone sees the correct time for their location. Simply enter one datetime per line, choose a format, and paste the results directly into Discord. The tool processes each line independently — blank lines are preserved in the output, invalid lines are flagged with ❌, and valid datetimes are converted instantly. Enable UTC mode to ensure consistent results regardless of your local timezone."
+    }
   }
 }

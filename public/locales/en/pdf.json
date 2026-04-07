@@ -65,8 +65,20 @@
   },
   "convertToPdf": {
     "title": "Images to PDF",
-    "description": "Convert various image formats (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) to PDF, with options to scale the image and choose page orientation.",
-    "shortDescription": "Convert images to PDF with scale and orientation control"
+    "description": "Convert various image formats (PNG, GIF, JPG, WEBP, HEIC, HEIF) to PDF, with options to scale the image and choose page orientation.",
+    "shortDescription": "Convert images to PDF with scale and orientation control",
+    "inputTitle": "Input Images",
+    "resultTitle": "Output PDF",
+    "options": {
+      "type": "PDF Type",
+      "orientation": "Orientation",
+      "scale": "Scale",
+      "portrait": "Portrait (Vertical)",
+      "landscape": "Landscape (Horizontal)",
+      "fullsize": "Full Size (Image size)",
+      "a4": "A4 Page",
+      "image": "Image"
+    }
   },
   "protectPdf": {
     "description": "Add password protection to your PDF files securely in your browser",
@@ -86,8 +98,8 @@
     "longDescription": "Change the orientation of PDF pages by rotating them 90, 180, or 270 degrees. Useful for fixing incorrectly scanned documents or preparing PDFs for printing.",
     "pageRangesDescription": "Enter page numbers or ranges separated by commas (e.g., 1,3,5-7)",
     "pageRangesPlaceholder": "e.g., 1,5-8",
-    "pagesWillBeRotated": "{{count}} page{{count !== 1 ? 's' : ''}} will be rotated",
-    "pdfPageCount": "PDF has {{count}} page{{count !== 1 ? 's' : ''}}",
+    "pagesWillBeRotated": "{{count}} page{{plural}} will be rotated",
+    "pdfPageCount": "PDF has {{count}} page{{plural}}",
     "resultTitle": "Rotated PDF",
     "rotatingPages": "Rotating pages",
     "rotationAngle": "Rotation Angle",
@@ -103,11 +115,11 @@
     "description": "Extract specific pages from a PDF document.",
     "extractingPages": "Extracting pages",
     "inputTitle": "Input PDF",
-    "pageExtractionPreview": "{{count}} page{{count !== 1 ? 's' : ''}} will be extracted",
+    "pageExtractionPreview": "{{count}} page{{ plural }} will be extracted",
     "pageRangesDescription": "Enter page numbers or ranges separated by commas (e.g., 1,3,5-7)",
     "pageRangesPlaceholder": "e.g., 1,5-8",
     "pageSelection": "Page Selection",
-    "pdfPageCount": "PDF has {{count}} page{{count !== 1 ? 's' : ''}}",
+    "pdfPageCount": "PDF has {{count}} page{{plural}}",
     "resultTitle": "Extracted PDF",
     "shortDescription": "Extract specific pages from a PDF file",
     "title": "Split PDF",

@@ -1,0 +1,26 @@
+{
+  "audioConverter": {
+    "title": "オーディオコンバーター",
+    "description": "オーディオファイルを異なるフォーマット間で変換します。",
+    "shortDescription": "オーディオファイルをさまざまなフォーマットに変換します。",
+    "longDescription": "このツールは、オーディオファイルを1つのフォーマットから別のフォーマットに変換でき、シームレスな変換のための幅広いオーディオフォーマットをサポートしています。",
+    "outputFormat": "出力フォーマット",
+    "outputFormatDescription": "目的の出力オーディオフォーマットを選択してください",
+    "inputTitle": "オーディオ入力",
+    "outputTitle": "変換済みオーディオ"
+  },
+  "convertToWebp": {
+    "description": "カスタマイズ可能な品質と背景色の設定で、さまざまな画像形式をWebP形式に変換します。",
+    "shortDescription": "品質制御を備えた画像をWebP形式に変換します。",
+    "title": "画像をWebPに変換",
+    "failedToConvert": "画像のWebPへの変換に失敗しました。もう一度やり直してください。",
+    "inputTitle": "入力画像",
+    "resultTitle": "WEBP画像",
+    "options": {
+      "title": "変換設定",
+      "quality": "変換品質:",
+      "qualityDescription": "値が高いほど品質が高く、ファイルサイズが大きくなります",
+      "colorDescription": "背景色（透明な画像用）"
+    }
+  }
+}

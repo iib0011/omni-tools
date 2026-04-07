@@ -260,6 +260,10 @@
     "loading": "Loading... This may take a moment.",
     "result": "Result"
   },
+  "toolMultipleImageInput": {
+    "inputTitle": "Images Input",
+    "noFilesSelected": "No files selected"
+  },
   "userTypes": {
     "developers": "Developers",
     "generalUsers": "General users"

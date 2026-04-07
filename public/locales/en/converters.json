@@ -1,8 +1,26 @@
 {
-  "audioconverter": {
+  "audioConverter": {
     "title": "Audio Converter",
     "description": "Convert audio files between different formats.",
     "shortDescription": "Convert audio files to various formats.",
-    "longDescription": "This tool allows you to convert audio files from one format to another, supporting a wide range of audio formats for seamless conversion."
+    "longDescription": "This tool allows you to convert audio files from one format to another, supporting a wide range of audio formats for seamless conversion.",
+    "outputFormat": "output Format",
+    "outputFormatDescription": "Select the desired output audio format",
+    "inputTitle": "Audio Input",
+    "outputTitle": "Converted Audio"
+  },
+  "convertToWebp": {
+    "description": "Convert various image formats to WebP format with customizable quality and background color settings.",
+    "shortDescription": "Convert Images to WebP Format with quality control.",
+    "title": "Convert Images to WebP",
+    "failedToConvert": "Conversion of image(s) to WebP failed. Please try again.",
+    "inputTitle": "Input Images",
+    "resultTitle": "WEBP Images",
+    "options": {
+      "title": "Conversion Settings",
+      "quality": "Conversion Quality:",
+      "qualityDescription": "Higher values = better quality, larger file size",
+      "colorDescription": "Background color (for transparent images)"
+    }
   }
 }

@@ -4,18 +4,7 @@ import wire_gauge from '../../../../../datatables/data/wire_gauge';
 
 const voltageDropInWire: GenericCalcType = {
   icon: 'simple-icons:wire',
-  keywords: [
-    'voltage drop',
-    'cable',
-    'wire',
-    'electrical',
-    'resistance',
-    'power loss',
-    'conductor',
-    'resistivity',
-    'AWG',
-    'gauge'
-  ],
+  keywords: ['awg', 'gauge', 'resistivity', 'conductor'],
   path: 'cable-voltage-drop',
   formula: 'x = (((p * L) / (A/10**6) ) *2) * I',
   i18n: {
