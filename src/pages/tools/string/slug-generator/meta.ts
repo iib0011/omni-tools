@@ -6,7 +6,8 @@ export const tool = defineTool('string', {
     name: 'string:slugGenerator.title',
     description: 'string:slugGenerator.description',
     shortDescription: 'string:slugGenerator.shortDescription',
-    longDescription: 'string:slugGenerator.longDescription'
+    longDescription: 'string:slugGenerator.longDescription',
+    userTypes: ['developers', 'generalUsers']
   },
   path: 'slug-generator',
   icon: 'solar:link-bold-duotone',
