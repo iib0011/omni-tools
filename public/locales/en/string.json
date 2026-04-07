@@ -325,9 +325,16 @@
     }
   },
   "slugGenerator": {
-    "title": "Slug generator",
+    "title": "Slug Generator",
     "description": "Convert any text into a URL-friendly slug.",
     "shortDescription": "Generate URL-friendly slugs from text.",
-    "longDescription": "This tool helps you create SEO-friendly slugs for URLs by converting text to lowercase, removing special characters, and replacing spaces with dashes. It's perfect for blog post titles, product names, or any other content that needs a clean, readable URL."
+    "longDescription": "Convert any text into clean, SEO-friendly slugs for use in URLs. The tool handles spaces, special characters, accented letters, and multiple lines at once — making it easy to batch-process blog post titles, product names, or page headings into consistent, readable URL segments.",
+    "inputTitle": "Input Text",
+    "resultTitle": "URL Slugs",
+    "options": {
+      "title": "Slug Options",
+      "caseLabel": "Case Sensitive",
+      "caseDescription": "Preserve the original casing of the input instead of converting to lowercase"
+    }
   }
 }
