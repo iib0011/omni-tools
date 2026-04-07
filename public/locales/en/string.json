@@ -323,5 +323,18 @@
       "title": "Unicode Encoder / Decoder",
       "description": "This tool lets you convert plain text into Unicode escape sequences (e.g., \\uXXXX) and decode Unicode escape sequences back into standard text. You can also choose whether the hexadecimal output is formatted in uppercase or lowercase when encoding."
     }
+  },
+  "slugGenerator": {
+    "title": "Slug Generator",
+    "description": "Convert any text into a URL-friendly slug.",
+    "shortDescription": "Generate URL-friendly slugs from text.",
+    "longDescription": "Convert any text into clean, SEO-friendly slugs for use in URLs. The tool handles spaces, special characters, accented letters, and multiple lines at once — making it easy to batch-process blog post titles, product names, or page headings into consistent, readable URL segments.",
+    "inputTitle": "Input Text",
+    "resultTitle": "URL Slugs",
+    "options": {
+      "title": "Slug Options",
+      "caseLabel": "Case Sensitive",
+      "caseDescription": "Preserve the original casing of the input instead of converting to lowercase"
+    }
   }
 }
