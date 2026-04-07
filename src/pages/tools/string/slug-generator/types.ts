@@ -1,1 +1,3 @@
-export type InitialValuesType = Record<string, never>;
+export type InitialValuesType = {
+  caseSensitive: boolean;
+};
