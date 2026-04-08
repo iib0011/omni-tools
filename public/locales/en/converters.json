@@ -22,5 +22,19 @@
       "qualityDescription": "Higher values = better quality, larger file size",
       "colorDescription": "Background color (for transparent images)"
     }
+  },
+  "convertToJPG": {
+    "description": "Convert various image formats to JPG with customizable quality and background color settings.",
+    "shortDescription": "Convert images to JPG Format with quality control",
+    "title": "Convert Images to JPG",
+    "failedToConvert": "Conversion of image(s) to JPG failed. Please try again.",
+    "inputTitle": "Input Images",
+    "resultTitle": "JPG Images",
+    "options": {
+      "title": "Conversion Settings",
+      "quality": "Conversion Quality:",
+      "qualityDescription": "Higher values = better quality, larger file size",
+      "colorDescription": "Background color (for transparent images)"
+    }
   }
 }

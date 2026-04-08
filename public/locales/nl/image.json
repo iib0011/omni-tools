@@ -33,11 +33,6 @@
     "shortDescription": "Converteer uw JPG-afbeeldingen snel naar PNG",
     "title": "JPG naar PNG converteren"
   },
-  "convertToJpg": {
-    "description": "Converteer verschillende afbeeldingsformaten (PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW) naar JPG met aanpasbare instellingen voor de kwaliteit en achtergrondkleur.",
-    "shortDescription": "Converteer afbeeldingen naar JPG met kwaliteitscontrole",
-    "title": "Afbeeldingen naar JPG converteren"
-  },
   "createTransparent": {
     "description": "Wereld",
     "shortDescription": "Snel een afbeelding transparant maken",
