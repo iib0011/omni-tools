@@ -180,6 +180,19 @@
       "title": "String Rotation"
     }
   },
+  "slugGenerator": {
+    "description": "Convert any text into a URL-friendly slug.",
+    "inputTitle": "Input Text",
+    "longDescription": "Convert any text into clean, SEO-friendly slugs for use in URLs. The tool handles spaces, special characters, accented letters, and multiple lines at once — making it easy to batch-process blog post titles, product names, or page headings into consistent, readable URL segments.",
+    "options": {
+      "caseDescription": "Preserve the original casing of the input instead of converting to lowercase",
+      "caseLabel": "Case Sensitive",
+      "title": "Slug Options"
+    },
+    "resultTitle": "URL Slugs",
+    "shortDescription": "Generate URL-friendly slugs from text.",
+    "title": "Slug Generator"
+  },
   "split": {
     "charAfterChunkDescription": "Character after each chunk",
     "charBeforeChunkDescription": "Character before each chunk",
@@ -276,6 +289,22 @@
     },
     "truncationSide": "Truncation Side"
   },
+  "unicode": {
+    "caseOptionsTitle": "Case Options",
+    "decode": "Decode",
+    "description": "Convert text to Unicode escape sequences or decode them back to readable text.",
+    "encode": "Encode",
+    "inputTitle": "Input",
+    "optionsTitle": "Mode",
+    "resultTitle": "Processed Output",
+    "shortDescription": "Encode or decode text using Unicode escape sequences.",
+    "title": "Unicode Encoder / Decoder",
+    "toolInfo": {
+      "description": "This tool lets you convert plain text into Unicode escape sequences (e.g., \\uXXXX) and decode Unicode escape sequences back into standard text. You can also choose whether the hexadecimal output is formatted in uppercase or lowercase when encoding.",
+      "title": "Unicode Encoder / Decoder"
+    },
+    "uppercase": "Uppercase Hex"
+  },
   "uppercase": {
     "description": "Convert text to uppercase letters.",
     "inputTitle": "Input text",
@@ -306,35 +335,6 @@
       "longDescription": "This tool URL-encodes a string. Special URL characters get converted to percent-sign encoding. This encoding is called percent-encoding because each character's numeric value gets converted to a percent sign followed by a two-digit hexadecimal value. The hex values are determined based on the character's codepoint value. For example, a space gets escaped to %20, a colon to %3a, a slash to %2f. Characters that are not special stay unchanged. In case you also need to convert non-special characters to percent-encoding, then we've also added an extra option that lets you do that. Select the encode-non-special-chars option to enable this behavior.",
       "shortDescription": "Quickly URL-escape a string.",
       "title": "String URL encoder"
-    }
-  },
-  "unicode": {
-    "title": "Unicode Encoder / Decoder",
-    "inputTitle": "Input",
-    "resultTitle": "Processed Output",
-    "optionsTitle": "Mode",
-    "caseOptionsTitle": "Case Options",
-    "encode": "Encode",
-    "decode": "Decode",
-    "uppercase": "Uppercase Hex",
-    "description": "Convert text to Unicode escape sequences or decode them back to readable text.",
-    "shortDescription": "Encode or decode text using Unicode escape sequences.",
-    "toolInfo": {
-      "title": "Unicode Encoder / Decoder",
-      "description": "This tool lets you convert plain text into Unicode escape sequences (e.g., \\uXXXX) and decode Unicode escape sequences back into standard text. You can also choose whether the hexadecimal output is formatted in uppercase or lowercase when encoding."
-    }
-  },
-  "slugGenerator": {
-    "title": "Slug Generator",
-    "description": "Convert any text into a URL-friendly slug.",
-    "shortDescription": "Generate URL-friendly slugs from text.",
-    "longDescription": "Convert any text into clean, SEO-friendly slugs for use in URLs. The tool handles spaces, special characters, accented letters, and multiple lines at once — making it easy to batch-process blog post titles, product names, or page headings into consistent, readable URL segments.",
-    "inputTitle": "Input Text",
-    "resultTitle": "URL Slugs",
-    "options": {
-      "title": "Slug Options",
-      "caseLabel": "Case Sensitive",
-      "caseDescription": "Preserve the original casing of the input instead of converting to lowercase"
     }
   }
 }

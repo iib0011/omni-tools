@@ -21,6 +21,11 @@
     "shortDescription": "Comprimeer PDF-bestanden veilig in uw browser",
     "title": "PDF comprimeren"
   },
+  "convertToPdf": {
+    "description": "Verschillende afbeeldingsformaten (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) naar PDF converteren, met opties om de afbeelding te schalen en de paginaoriëntatie te kiezen.",
+    "shortDescription": "Afbeeldingen naar PDF converteren met schaal- en oriëntatiecontrole",
+    "title": "Afbeeldingen naar PDF"
+  },
   "editor": {
     "description": "Geavanceerde PDF-editor met mogelijkheden voor annotatie, formulieren invullen, markeren en exporteren. Bewerk uw PDF's rechtstreeks in de browser met professionele tools zoals tekst invoegen, tekenen, markeren, ondertekenen en formulieren invullen.",
     "shortDescription": "Bewerk PDF's met geavanceerde hulpmiddelen voor annotatie, ondertekening en bewerking",
@@ -62,11 +67,6 @@
     "longDescription": "Upload een PDF en converteer elke pagina rechtstreeks in je browser naar een hoogwaardige PNG-afbeelding. Deze tool is ideaal voor het extraheren van visuele content of het delen van individuele pagina's. Er worden geen gegevens geüpload - alles wordt lokaal uitgevoerd.",
     "shortDescription": "PDF naar PNG-afbeeldingen converteren",
     "title": "PDF naar PNG"
-  },
-  "convertToPdf": {
-    "title": "Afbeeldingen naar PDF",
-    "description": "Verschillende afbeeldingsformaten (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) naar PDF converteren, met opties om de afbeelding te schalen en de paginaoriëntatie te kiezen.",
-    "shortDescription": "Afbeeldingen naar PDF converteren met schaal- en oriëntatiecontrole"
   },
   "protectPdf": {
     "description": "Voeg wachtwoordbeveiliging toe aan uw PDF-bestanden veilig in uw browser",

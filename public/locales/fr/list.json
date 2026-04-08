@@ -113,37 +113,6 @@
     "trimItemsDescription": "Supprimez les espaces de début et de fin avant de comparer les éléments.",
     "uniqueItemOptions": "Options d'articles uniques"
   },
-  "group": {
-    "deleteEmptyItems": "Supprimer les éléments vides",
-    "deleteEmptyItemsDescription": "Ignorez les éléments vides et ne les incluez pas dans les groupes.",
-    "description": "L'utilitaire de regroupement d'éléments de liste le plus simple au monde, accessible depuis un navigateur. Saisissez votre liste et spécifiez des critères de regroupement pour organiser les éléments en groupes logiques. Idéal pour catégoriser des données, organiser des informations ou créer des listes structurées. Prend en charge les séparateurs personnalisés et diverses options de regroupement.",
-    "emptyItemsAndPadding": "Éléments vides et remplissage",
-    "groupNumberDescription": "Nombre d'éléments dans un groupe",
-    "groupSeparatorDescription": "Caractère séparateur de groupe",
-    "groupSizeAndSeparators": "Taille du groupe et séparateurs",
-    "inputItemSeparator": "Séparateur d'éléments d'entrée",
-    "inputTitle": "Liste d'entrée",
-    "itemSeparatorDescription": "Caractère séparateur d'éléments",
-    "leftWrapDescription": "Symbole d'enroulement gauche du groupe.",
-    "padNonFullGroups": "Groupes non complets de Pad",
-    "padNonFullGroupsDescription": "Remplissez les groupes non complets avec un élément personnalisé (saisissez ci-dessous).",
-    "paddingCharDescription": "Utilisez ce caractère ou cet objet pour compléter les groupes non complets.",
-    "resultTitle": "Articles groupés",
-    "rightWrapDescription": "Symbole d'enveloppement droit du groupe.",
-    "shortDescription": "Regrouper les éléments de la liste par propriétés communes",
-    "splitOperators": {
-      "regex": {
-        "description": "Délimitez les éléments de la liste d’entrée avec une expression régulière.",
-        "title": "Utiliser une expression régulière pour le fractionnement"
-      },
-      "symbol": {
-        "description": "Délimitez les éléments de la liste d'entrée avec un caractère.",
-        "title": "Utiliser un symbole pour le fractionnement"
-      }
-    },
-    "splitSeparatorDescription": "Définissez un symbole de délimitation ou une expression régulière.",
-    "title": "Groupe"
-  },
   "reverse": {
     "description": "Cette application très simple, basée sur un navigateur, imprime tous les éléments d'une liste à l'envers. Les éléments saisis peuvent être séparés par n'importe quel symbole et vous pouvez également modifier le séparateur des éléments inversés.",
     "inputTitle": "Liste d'entrée",

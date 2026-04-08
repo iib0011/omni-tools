@@ -11,11 +11,10 @@
   },
   "compress": {
     "compressedSize": "Total compressed size",
-    "compressionOptions": "Compression options",
     "compressing": "Compressing images...",
+    "compressionOptions": "Compression options",
     "description": "Reduce the file size of one or multiple images while preserving visual quality. Upload a batch of images and download them all at once as a ZIP archive.",
     "failedToCompress": "Image(s) compression failed. Please try again.",
-    "someFailedToCompress": "Some images could not be compressed and were skipped.",
     "fileSizes": "File sizes",
     "inputTitle": "Images Input",
     "maxFileSizeDescription": "Maximum output file size per image in megabytes",
@@ -23,6 +22,7 @@
     "qualityDescription": "Image quality percentage — lower value means smaller file size",
     "resultTitle": "Compressed images",
     "shortDescription": "Compress one or multiple images at once.",
+    "someFailedToCompress": "Some images could not be compressed and were skipped.",
     "title": "Compress Images"
   },
   "compressPng": {
@@ -59,29 +59,29 @@
   },
   "qrCode": {
     "description": "Generate QR codes for different data types: URL, Text, Email, Phone, SMS, WiFi, vCard, and more.",
-    "shortDescription": "Create customized QR codes for various data formats.",
-    "title": "QR Code Generator",
-    "resultOutput": "Generated QR code",
     "options": {
-      "qrType": "Select QR Code Type",
-      "encryptionType": "Encryption Type",
+      "address": "Address",
+      "company": "Company (optional)",
       "email": "Email",
       "emailBody": "Email Body (optional)",
       "emailSubject": "Email Subject (optional)",
-      "text": "Enter the text",
-      "name": "Name",
+      "encryptionType": "Encryption Type",
       "fullName": "Full Name",
-      "address": "Address",
-      "company": "Company (optional)",
       "job": "Job Title (optional)",
-      "website": "Website (optional)",
       "message": "Message (optional)",
-      "phone": "Phone Number",
-      "url": "Enter the URL",
-      "ssid": "Network Name (SSID)",
+      "name": "Name",
       "password": "Password",
-      "size": "Size in pixels (100-1000)"
-    }
+      "phone": "Phone Number",
+      "qrType": "Select QR Code Type",
+      "size": "Size in pixels (100-1000)",
+      "ssid": "Network Name (SSID)",
+      "text": "Enter the text",
+      "url": "Enter the URL",
+      "website": "Website (optional)"
+    },
+    "resultOutput": "Generated QR code",
+    "shortDescription": "Create customized QR codes for various data formats.",
+    "title": "QR Code Generator"
   },
   "removeBackground": {
     "description": "World",

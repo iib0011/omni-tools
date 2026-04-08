@@ -21,6 +21,11 @@
     "shortDescription": "在浏览器中安全地压缩 PDF 文件",
     "title": "压缩PDF"
   },
+  "convertToPdf": {
+    "description": "将各种图像格式（PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW）转换为 PDF，并可调整图像大小和页面方向。",
+    "shortDescription": "将图像转换为 PDF，可调整大小和方向",
+    "title": "将图像转换为 PDF"
+  },
   "editor": {
     "description": "高级 PDF 编辑器，具备注释、表单填写、高亮显示和导出功能。您可以使用专业级工具（包括文本插入、绘图、高亮显示、签名和表单填写）直接在浏览器中编辑 PDF。",
     "shortDescription": "使用高级注释、签名和编辑工具编辑 PDF",
@@ -62,11 +67,6 @@
     "longDescription": "上传 PDF 后，直接在浏览器中将每个页面转换为高质量的 PNG 图像。此工具非常适合提取视觉内容或分享单个页面。无需上传数据，所有操作均在本地运行。",
     "shortDescription": "将 PDF 转换为 PNG 图像",
     "title": "PDF 转 PNG"
-  },
-  "convertToPdf": {
-    "title": "将图像转换为 PDF",
-    "description": "将各种图像格式（PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW）转换为 PDF，并可调整图像大小和页面方向。",
-    "shortDescription": "将图像转换为 PDF，可调整大小和方向"
   },
   "protectPdf": {
     "description": "在浏览器中安全地为 PDF 文件添加密码保护",

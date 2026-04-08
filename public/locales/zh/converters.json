@@ -1,26 +1,26 @@
 {
   "audioConverter": {
-    "title": "音频转换器",
     "description": "在不同格式之间转换音频文件。",
-    "shortDescription": "将音频文件转换为各种格式。",
+    "inputTitle": "音频输入",
     "longDescription": "此工具允许您将音频文件从一种格式转换为另一种格式，支持多种音频格式的无缝转换。",
     "outputFormat": "输出格式",
     "outputFormatDescription": "选择所需的输出音频格式",
-    "inputTitle": "音频输入",
-    "outputTitle": "转换后的音频"
+    "outputTitle": "转换后的音频",
+    "shortDescription": "将音频文件转换为各种格式。",
+    "title": "音频转换器"
   },
   "convertToWebp": {
     "description": "使用可自定义的质量和背景颜色设置将各种图像格式转换为 WebP 格式。",
-    "shortDescription": "使用质量控制将图像转换为 WebP 格式。",
-    "title": "将图像转换为 WebP",
     "failedToConvert": "将图像转换为 WebP 失败。请重试。",
     "inputTitle": "输入图像",
-    "resultTitle": "WEBP 图像",
     "options": {
-      "title": "转换设置",
+      "colorDescription": "背景颜色（用于透明图像）",
       "quality": "转换质量：",
       "qualityDescription": "值越高 = 质量越好，文件大小越大",
-      "colorDescription": "背景颜色（用于透明图像）"
-    }
+      "title": "转换设置"
+    },
+    "resultTitle": "WEBP 图像",
+    "shortDescription": "使用质量控制将图像转换为 WebP 格式。",
+    "title": "将图像转换为 WebP"
   }
 }

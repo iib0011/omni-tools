@@ -21,6 +21,11 @@
     "shortDescription": "Komprimieren Sie PDF-Dateien sicher in Ihrem Browser",
     "title": "PDF komprimieren"
   },
+  "convertToPdf": {
+    "description": "Verschiedene Bildformate (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) in PDF konvertieren, mit Optionen zum Skalieren des Bildes und zur Wahl der Seitenorientierung.",
+    "shortDescription": "Bilder in PDF mit Skalierungs- und Orientierungskontrolle konvertieren",
+    "title": "Bilder in PDF konvertieren"
+  },
   "editor": {
     "description": "Erweiterter PDF-Editor mit Funktionen zum Kommentieren, Ausfüllen von Formularen, Hervorheben und Exportieren. Bearbeiten Sie Ihre PDFs direkt im Browser mit professionellen Tools wie Texteinfügung, Zeichnen, Hervorheben, Unterschreiben und Ausfüllen von Formularen.",
     "shortDescription": "Bearbeiten Sie PDFs mit erweiterten Werkzeugen zum Kommentieren, Signieren und Bearbeiten",
@@ -62,11 +67,6 @@
     "longDescription": "Laden Sie eine PDF-Datei hoch und konvertieren Sie jede Seite direkt in Ihrem Browser in ein hochwertiges PNG-Bild. Dieses Tool eignet sich ideal zum Extrahieren visueller Inhalte oder zum Teilen einzelner Seiten. Es werden keine Daten hochgeladen – alles läuft lokal.",
     "shortDescription": "Konvertieren Sie PDF in PNG-Bilder",
     "title": "PDF zu PNG"
-  },
-  "convertToPdf": {
-    "title": "Bilder in PDF konvertieren",
-    "description": "Verschiedene Bildformate (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) in PDF konvertieren, mit Optionen zum Skalieren des Bildes und zur Wahl der Seitenorientierung.",
-    "shortDescription": "Bilder in PDF mit Skalierungs- und Orientierungskontrolle konvertieren"
   },
   "protectPdf": {
     "description": "Fügen Sie Ihren PDF-Dateien sicher in Ihrem Browser einen Passwortschutz hinzu",

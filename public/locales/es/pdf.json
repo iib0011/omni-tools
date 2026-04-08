@@ -21,6 +21,11 @@
     "shortDescription": "Comprime archivos PDF de forma segura en tu navegador",
     "title": "Comprimir PDF"
   },
+  "convertToPdf": {
+    "description": "Convertir varios formatos de imagen (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) a PDF, con opciones para escalar la imagen y elegir la orientación de la página.",
+    "shortDescription": "Convertir imágenes a PDF con control de escala y orientación",
+    "title": "Imágenes a PDF"
+  },
   "editor": {
     "description": "Editor de PDF avanzado con funciones de anotación, rellenado de formularios, resaltado y exportación. Edite sus PDF directamente en el navegador con herramientas profesionales que incluyen inserción de texto, dibujo, resaltado, firma y rellenado de formularios.",
     "shortDescription": "Edite archivos PDF con herramientas avanzadas de anotación, firma y edición",
@@ -62,11 +67,6 @@
     "longDescription": "Sube un PDF y convierte cada página en una imagen PNG de alta calidad directamente en tu navegador. Esta herramienta es ideal para extraer contenido visual o compartir páginas individuales. No se cargan datos: todo se ejecuta localmente.",
     "shortDescription": "Convertir PDF a imágenes PNG",
     "title": "PDF a PNG"
-  },
-  "convertToPdf": {
-    "title": "Imágenes a PDF",
-    "description": "Convertir varios formatos de imagen (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) a PDF, con opciones para escalar la imagen y elegir la orientación de la página.",
-    "shortDescription": "Convertir imágenes a PDF con control de escala y orientación"
   },
   "protectPdf": {
     "description": "Agregue protección con contraseña a sus archivos PDF de forma segura en su navegador",

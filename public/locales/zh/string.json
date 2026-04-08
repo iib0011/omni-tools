@@ -276,6 +276,22 @@
     },
     "truncationSide": "截断侧"
   },
+  "unicode": {
+    "caseOptionsTitle": "大小写选项",
+    "decode": "解码",
+    "description": "将文本转换为 Unicode 转义序列，或将其解码回可读文本。",
+    "encode": "编码",
+    "inputTitle": "输入",
+    "optionsTitle": "模式",
+    "resultTitle": "处理结果",
+    "shortDescription": "使用 Unicode 转义序列对文本进行编码或解码。",
+    "title": "Unicode 编码器 / 解码器",
+    "toolInfo": {
+      "description": "此工具可让您将纯文本转换为 Unicode 转义序列（例如，\\uXXXX），以及将 Unicode 转义序列解码回标准文本。您还可以选择编码时十六进制输出以大写或小写格式显示。",
+      "title": "Unicode 编码器 / 解码器"
+    },
+    "uppercase": "大写十六进制"
+  },
   "uppercase": {
     "description": "将文本转换为大写字母。",
     "inputTitle": "输入文本",
@@ -306,22 +322,6 @@
       "longDescription": "此工具会对字符串进行 URL 编码。特殊 URL 字符会被转换为百分号编码。这种编码之所以称为百分号编码，是因为每个字符的数值都会被转换为百分号，后跟两位十六进制值。十六进制值根据字符的代码点值确定。例如，空格会被转义为 %20，冒号会被转义为 %3a，斜杠会被转义为 %2f。非特殊字符保持不变。如果您还需要将非特殊字符转换为百分号编码，我们还添加了一个额外的选项来实现此目的。选择“encode-non-special-chars”选项即可启用此行为。",
       "shortDescription": "快速对字符串进行 URL 转义。",
       "title": "字符串 URL 编码器"
-    }
-  },
-  "unicode": {
-    "title": "Unicode 编码器 / 解码器",
-    "inputTitle": "输入",
-    "resultTitle": "处理结果",
-    "optionsTitle": "模式",
-    "caseOptionsTitle": "大小写选项",
-    "encode": "编码",
-    "decode": "解码",
-    "uppercase": "大写十六进制",
-    "description": "将文本转换为 Unicode 转义序列，或将其解码回可读文本。",
-    "shortDescription": "使用 Unicode 转义序列对文本进行编码或解码。",
-    "toolInfo": {
-      "title": "Unicode 编码器 / 解码器",
-      "description": "此工具可让您将纯文本转换为 Unicode 转义序列（例如，\\uXXXX），以及将 Unicode 转义序列解码回标准文本。您还可以选择编码时十六进制输出以大写或小写格式显示。"
     }
   }
 }
