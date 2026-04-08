@@ -33,11 +33,6 @@
     "shortDescription": "快速将您的 JPG 图像转换为 PNG",
     "title": "JPG 转换为 PNG"
   },
-  "convertToJpg": {
-    "description": "将各种图像格式（PNG、GIF、TIF、PSD、SVG、WEBP、HEIC、RAW）转换为 JPG，并可自定义质量和背景颜色设置。",
-    "shortDescription": "将图像转换为 JPG 格式并进行质量控制",
-    "title": "将图像转换为 JPG"
-  },
   "createTransparent": {
     "description": "世界",
     "shortDescription": "快速使图像透明",

@@ -58,11 +58,6 @@
     "shortDescription": "अपनी JPG छवियों को शीघ्रता से PNG में बदलें",
     "title": "JPG को PNG में बदलें"
   },
-  "convertToJpg": {
-    "description": "अनुकूलन योग्य गुणवत्ता और पृष्ठभूमि रंग सेटिंग्स के साथ विभिन्न छवि प्रारूपों (PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW) को JPG में परिवर्तित करें।",
-    "shortDescription": "गुणवत्ता नियंत्रण के साथ छवियों को JPG में परिवर्तित करें",
-    "title": "छवियों को JPG में परिवर्तित करें"
-  },
   "createTransparent": {
     "description": "दुनिया",
     "shortDescription": "किसी छवि को शीघ्रता से पारदर्शी बनाएँ",

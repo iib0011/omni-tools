@@ -33,11 +33,6 @@
     "shortDescription": "Convierte rápidamente tus imágenes JPG a PNG",
     "title": "Convertir JPG a PNG"
   },
-  "convertToJpg": {
-    "description": "Convierte varios formatos de imagen (PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW) a JPG con configuraciones de color de fondo y calidad personalizables.",
-    "shortDescription": "Convierte imágenes a JPG con control de calidad",
-    "title": "Convertir imágenes a JPG"
-  },
   "createTransparent": {
     "description": "Mundo",
     "shortDescription": "Hacer que una imagen sea transparente rápidamente",

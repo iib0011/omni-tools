@@ -33,11 +33,6 @@
     "shortDescription": "JPG画像をPNGに素早く変換",
     "title": "JPGをPNGに変換する"
   },
-  "convertToJpg": {
-    "description": "さまざまな画像形式 (PNG、GIF、TIF、PSD、SVG、WEBP、HEIC、RAW) を、カスタマイズ可能な品質と背景色の設定で JPG に変換します。",
-    "shortDescription": "品質管理しながら画像をJPGに変換する",
-    "title": "画像をJPGに変換する"
-  },
   "createTransparent": {
     "description": "世界",
     "shortDescription": "画像を素早く透明にする",
