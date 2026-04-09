@@ -13,6 +13,9 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: iib0011/omni-tools
 
+permissions:
+  contents: read
+  packages: write
 
 jobs:
   test-and-build:
