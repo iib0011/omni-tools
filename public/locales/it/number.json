@@ -1,0 +1,192 @@
+{
+  "arithmeticSequence": {
+    "commonDifferenceDescription": "Differenza comune tra i termini (d)",
+    "description": "Genera sequenze aritmetiche con parametri personalizzabili.",
+    "firstTermDescription": "Primo termine della sequenza (a₁)",
+    "numberOfTermsDescription": "Numero di termini da generare (n)",
+    "outputFormat": "Formato di output",
+    "resultTitle": "Sequenza generata",
+    "separatorDescription": "Separatore tra i termini",
+    "sequenceParameters": "Parametri della sequenza",
+    "shortDescription": "Genera sequenze aritmetiche",
+    "title": "Sequenza aritmetica",
+    "toolInfo": {
+      "description": "Una sequenza aritmetica è una sequenza di numeri in cui la differenza tra ogni termine consecutivo è costante. Questa differenza costante è chiamata differenza comune. Dato il primo termine (a₁) e la differenza comune (d), ogni termine può essere trovato aggiungendo la differenza comune al termine precedente.",
+      "title": "Che cos'è una sequenza aritmetica?"
+    }
+  },
+  "generate": {
+    "arithmeticSequenceOption": "Opzione sequenza aritmetica",
+    "description": "Genera una sequenza di numeri con parametri personalizzabili.",
+    "numberOfElementsDescription": "Numero di elementi nella sequenza.",
+    "resultTitle": "Numeri generati",
+    "separator": "Separatore",
+    "separatorDescription": "Separa gli elementi nella sequenza aritmetica con questo carattere.",
+    "shortDescription": "Genera numeri casuali in intervalli specificati",
+    "startSequenceDescription": "Inizia la sequenza da questo numero.",
+    "stepDescription": "Aumenta ogni elemento di questo valore",
+    "title": "Genera",
+    "toolInfo": {
+      "description": "Questo strumento consente di generare una sequenza di numeri con parametri personalizzabili. È possibile specificare il valore iniziale, la dimensione del passo e il numero di elementi.",
+      "title": "Genera numeri"
+    }
+  },
+  "ohmsLaw": {
+    "description": "Calcola tensione, corrente e resistenza",
+    "longDescription": "Questo calcolatore applica la legge di Ohm (V = I × R) per determinare uno qualsiasi dei tre parametri elettrici quando gli altri due sono noti. La legge di Ohm è un principio fondamentale dell'ingegneria elettrica che descrive la relazione tra tensione (V), corrente (I) e resistenza (R). Questo strumento è essenziale per gli appassionati di elettronica, gli ingegneri elettrici e gli studenti che lavorano con i circuiti per risolvere rapidamente i valori sconosciuti nei loro progetti elettrici.",
+    "shortDescription": "Calcola la tensione, la corrente o la resistenza nei circuiti elettrici utilizzando la legge di Ohm",
+    "title": "Legge di Ohm"
+  },
+  "randomNumberGenerator": {
+    "description": "Genera numeri casuali all'interno di un intervallo specificato con opzioni personalizzabili.",
+    "error": {
+      "generationFailed": "Impossibile generare numeri casuali. Controlla i parametri di input."
+    },
+    "info": {
+      "description": "Un generatore di numeri casuali crea numeri imprevedibili all'interno di un intervallo specificato. Questo strumento utilizza la generazione di numeri casuali crittograficamente sicura per garantire risultati veramente casuali. Utile per simulazioni, giochi, campionamenti statistici e scenari di test.",
+      "title": "Che cos'è un generatore di numeri casuali?"
+    },
+    "longDescription": "Genera numeri casuali all'interno di un intervallo specificato con opzioni per numeri interi o decimali, consentendo o impedendo duplicati e ordinando i risultati. Perfetto per simulazioni, test, giochi e analisi statistiche.",
+    "options": {
+      "generation": {
+        "allowDecimals": {
+          "description": "Genera numeri decimali invece di interi",
+          "title": "Consenti numeri decimali"
+        },
+        "allowDuplicates": {
+          "description": "Consenti la ripetizione dello stesso numero",
+          "title": "Consenti duplicati"
+        },
+        "countDescription": "Numero di numeri casuali da generare (1-10.000)",
+        "sortResults": {
+          "description": "Ordina i numeri generati in ordine crescente",
+          "title": "Ordina risultati"
+        },
+        "title": "Opzioni di generazione"
+      },
+      "output": {
+        "separatorDescription": "Caratteri utilizzati per separare i numeri generati",
+        "title": "Impostazioni di output"
+      },
+      "range": {
+        "maxDescription": "Valore massimo (incluso)",
+        "minDescription": "Valore minimo (incluso)",
+        "title": "Impostazioni intervallo"
+      }
+    },
+    "result": {
+      "count": "Conteggio",
+      "hasDuplicates": "Contiene duplicati",
+      "isSorted": "Ordinato",
+      "range": "Intervallo",
+      "title": "Numeri casuali generati"
+    },
+    "shortDescription": "Genera numeri casuali in intervalli personalizzati",
+    "title": "Generatore di numeri casuali"
+  },
+  "randomPortGenerator": {
+    "description": "Genera porte di rete casuali entro intervalli specificati con opzioni personalizzabili.",
+    "error": {
+      "generationFailed": "Impossibile generare porte casuali. Controllare i parametri di input."
+    },
+    "info": {
+      "description": "Un generatore di porte casuali crea numeri di porta di rete imprevedibili all'interno di intervalli specificati. Questo strumento segue gli standard IANA per i numeri di porta e include l'identificazione dei servizi comuni. Utile per lo sviluppo, il collaudo, la configurazione di rete e per evitare conflitti di porta.",
+      "title": "Che cos'è un generatore di porte casuali?"
+    },
+    "longDescription": "Genera porte di rete casuali entro intervalli specificati (ben noti, registrati, dinamici o personalizzati). Perfetto per lo sviluppo, il collaudo e la configurazione di rete. Include l'identificazione dei servizi di porta per le porte comuni.",
+    "options": {
+      "generation": {
+        "allowDuplicates": {
+          "description": "Consenti la comparsa più volte della stessa porta",
+          "title": "Consenti duplicati"
+        },
+        "countDescription": "Numero di porte casuali da generare (1-1.000)",
+        "sortResults": {
+          "description": "Ordina le porte generate in ordine crescente",
+          "title": "Ordina risultati"
+        },
+        "title": "Opzioni di generazione"
+      },
+      "output": {
+        "separatorDescription": "Caratteri per separare le porte generate",
+        "title": "Impostazioni di output"
+      },
+      "range": {
+        "custom": "Intervallo personalizzato",
+        "dynamic": "Porte dinamiche (49152-65535)",
+        "maxPortDescription": "Numero massimo di porte (1-65535)",
+        "minPortDescription": "Numero di porta minimo (1-65535)",
+        "registered": "Porte registrate (1024-49151)",
+        "title": "Impostazioni intervallo porte",
+        "wellKnown": "Porte ben note (1-1023)"
+      }
+    },
+    "result": {
+      "count": "Conteggio",
+      "hasDuplicates": "Contiene duplicati",
+      "isSorted": "Ordinato",
+      "portDetails": "Dettagli porta",
+      "range": "Intervallo porte",
+      "title": "Porte casuali generate"
+    },
+    "shortDescription": "Genera porte di rete casuali",
+    "title": "Generatore di porte casuali"
+  },
+  "slackline": {
+    "description": "Calcola la tensione in una slackline",
+    "longDescription": "Questo calcolatore ipotizza un carico al centro della corda",
+    "shortDescription": "Calcola la tensione approssimativa di una slackline o di uno stendibiancheria. Non fare affidamento su questo calcolo per la sicurezza.",
+    "title": "Tensione della slackline"
+  },
+  "sphereArea": {
+    "description": "Area di una sfera",
+    "longDescription": "Questo calcolatore determina l'area della superficie di una sfera utilizzando la formula A = 4πr². È possibile inserire il raggio per trovare l'area della superficie oppure inserire l'area della superficie per calcolare il raggio richiesto. Questo strumento è utile per gli studenti che studiano geometria, gli ingegneri che lavorano con oggetti sferici e chiunque abbia bisogno di eseguire calcoli che coinvolgono superfici sferiche.",
+    "shortDescription": "Calcola l'area della superficie di una sfera in base al suo raggio",
+    "title": "Area di una sfera"
+  },
+  "sphereVolume": {
+    "description": "Volume di una sfera",
+    "longDescription": "Questo calcolatore calcola il volume di una sfera utilizzando la formula V = (4/3)πr³. È possibile inserire il raggio o il diametro per trovare il volume, oppure inserire il volume per determinare il raggio richiesto. Lo strumento è utile per studenti, ingegneri e professionisti che lavorano con oggetti sferici in campi quali la fisica, l'ingegneria e la produzione.",
+    "shortDescription": "Calcola il volume di una sfera utilizzando il raggio o il diametro",
+    "title": "Volume di una sfera"
+  },
+  "sum": {
+    "description": "Calcola la somma di un elenco di numeri. Inserisci i numeri separati da virgole o nuove righe per ottenere la loro somma totale.",
+    "example1Description": "In questo esempio, calcoliamo la somma di dieci numeri interi positivi. Questi numeri interi sono elencati in una colonna e la loro somma totale è pari a 19494.",
+    "example1Title": "Somma di dieci numeri positivi",
+    "example2Description": "Questo esempio inverte una colonna di ventitré nomi di tre sillabe e stampa tutte le parole dal basso verso l'alto. Per separare gli elementi dell'elenco, utilizza il carattere \\n come separatore degli elementi di input, il che significa che ogni elemento si trova su una riga separata.",
+    "example2Title": "Conta gli alberi nel parco",
+    "example3Description": "In questo esempio, sommiamo novanta valori diversi: numeri positivi, numeri negativi, interi e frazioni decimali. Impostiamo il separatore di input su una virgola e, dopo averli sommati tutti, otteniamo 0 come output.",
+    "example3Title": "Somma di numeri interi e decimali",
+    "example4Description": "In questo esempio, calcoliamo la somma di tutte e dieci le cifre e abilitiamo l'opzione \"Stampa somma parziale\". Otteniamo i valori intermedi della somma durante il processo di addizione. Pertanto, nell'output abbiamo la seguente sequenza: 0, 1 (0 + 1), 3 (0 + 1 + 2), 6 (0 + 1 + 2 + 3), 10 (0 + 1 + 2 + 3 + 4) e così via.",
+    "example4Title": "Somma parziale dei numeri",
+    "extractionTypes": {
+      "delimiter": {
+        "description": "Personalizza qui il separatore numerico. (Per impostazione predefinita, un'interruzione di riga.)",
+        "title": "Delimitatore numerico"
+      },
+      "smart": {
+        "description": "Rileva automaticamente i numeri nell'input.",
+        "title": "Somma intelligente"
+      }
+    },
+    "inputTitle": "Input",
+    "numberExtraction": "Estrazione numeri",
+    "printRunningSum": "Stampa somma parziale",
+    "printRunningSumDescription": "Visualizza la somma man mano che viene calcolata.",
+    "resultTitle": "Totale",
+    "runningSum": "Somma parziale",
+    "shortDescription": "Calcola la somma dei numeri",
+    "title": "Somma",
+    "toolInfo": {
+      "description": "Si tratta di un'utilità online basata su browser per calcolare la somma di una serie di numeri. È possibile inserire i numeri separati da una virgola, uno spazio o qualsiasi altro carattere, inclusa l'interruzione di riga. È anche possibile incollare semplicemente un frammento di dati testuali che contiene i valori numerici che si desidera sommare e l'utilità li estrarrà e ne calcolerà la somma.",
+      "title": "Che cos'è un calcolatore della somma dei numeri?"
+    }
+  },
+  "voltageDropInWire": {
+    "description": "Calcola la tensione di andata e ritorno e la perdita di potenza in un cavo a 2 conduttori",
+    "longDescription": "Questo calcolatore aiuta a determinare la caduta di tensione e la perdita di potenza in un cavo elettrico a due conduttori. Tiene conto della lunghezza del cavo, della sezione del filo (area della sezione trasversale), della resistività del materiale e del flusso di corrente. Lo strumento calcola la caduta di tensione di andata e ritorno, la resistenza totale del cavo e la potenza dissipata sotto forma di calore. Ciò è particolarmente utile per ingegneri elettrici, elettricisti e hobbisti nella progettazione di sistemi elettrici, per garantire che i livelli di tensione rimangano entro limiti accettabili al carico.",
+    "shortDescription": "Calcola la caduta di tensione e la perdita di potenza nei cavi elettrici in base alla lunghezza, al materiale e alla corrente",
+    "title": "Caduta di tensione di andata e ritorno nel cavo"
+  }
+}
