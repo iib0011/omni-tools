@@ -68,7 +68,7 @@ function computeDateToUnix(input: string, useLocalTime: boolean): string {
 
     // Unsuccesful Conversion
     if (isNaN(localUnixValue)) {
-      return 'Invalid Date Time';
+      return '';
     }
 
     // Case 1: Base Scenario (Assume Time with GMT +00)
@@ -84,7 +84,7 @@ function computeDateToUnix(input: string, useLocalTime: boolean): string {
 
       // Invalid Regex
       if (!regexMatch) {
-        return 'Invalid Date Time';
+        return '';
       }
 
       // Variables to Be Processed
@@ -103,8 +103,7 @@ function computeDateToUnix(input: string, useLocalTime: boolean): string {
     }
   } catch (err) {
     // Not Using Local Time (Either UTC is Given or Assume +00)
-    console.log('Error', err);
-    return 'Invalid Date Time';
+    return '';
   }
 }
 
