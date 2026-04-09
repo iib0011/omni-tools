@@ -13,13 +13,15 @@ export default function ToolTextResult({
   value,
   extension = 'txt',
   keepSpecialCharacters,
-  loading
+  loading,
+  extraAction
 }: {
   title?: string;
   value: string;
   extension?: string;
   keepSpecialCharacters?: boolean;
   loading?: boolean;
+  extraAction?: React.ReactNode;
 }) {
   const { t } = useTranslation();
   const { showSnackBar } = useContext(CustomSnackBarContext);
@@ -82,7 +84,10 @@ export default function ToolTextResult({
           inputProps={{ 'data-testid': 'text-result' }}
         />
       )}
-      <ResultFooter handleCopy={handleCopy} handleDownload={handleDownload} />
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+        <ResultFooter handleCopy={handleCopy} handleDownload={handleDownload} />
+        {extraAction}
+      </Box>
     </Box>
   );
 }
