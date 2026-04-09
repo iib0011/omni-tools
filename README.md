@@ -128,17 +128,17 @@ npm run dev
 
 ### Create a new tool
 
-```bash
-npm run script:create:tool my-tool-name folder1 # npm run script:create:tool split pdf
-```
+Create new tools manually. Please do not rely on `npm run script:create:tool`.
 
-For tools located under multiple nested directories, use:
+Checklist:
 
-```bash
-npm run script:create:tool my-tool-name folder1/folder2 # npm run script:create:tool compress image/png
-```
+- Create the tool folder under `src/pages/tools/<category>/<tool-name>/` or `src/pages/tools/<category>/<sub-category>/<tool-name>/`.
+- Add `meta.ts`, `index.tsx`, and `service.ts`. Add `types.ts` when the tool needs local types.
+- Export the tool from the matching category `index.ts` file, such as `src/pages/tools/pdf/index.ts` or `src/pages/tools/image/generic/index.ts`.
+- Add the English strings in `public/locales/en/<namespace>.json`.
+- If you add a new top-level category, update `src/tools/index.ts` for the tool list, category order, and category config.
 
-Use `folder1\folder2` on Windows.
+The simplest workflow is to copy a similar tool from the same category and adjust it.
 
 ### Run tests
 
