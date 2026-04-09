@@ -33,11 +33,6 @@
     "shortDescription": "Быстро конвертируйте изображения JPG в PNG",
     "title": "Конвертировать JPG в PNG"
   },
-  "convertToJpg": {
-    "description": "Конвертируйте различные форматы изображений (PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW) в JPG с настраиваемыми параметрами качества и цвета фона.",
-    "shortDescription": "Конвертируйте изображения в JPG с контролем качества",
-    "title": "Конвертировать изображения в JPG"
-  },
   "createTransparent": {
     "description": "Мир",
     "shortDescription": "Быстро сделать изображение прозрачным",

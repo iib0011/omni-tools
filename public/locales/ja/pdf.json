@@ -21,6 +21,11 @@
     "shortDescription": "ブラウザでPDFファイルを安全に圧縮",
     "title": "PDFを圧縮"
   },
+  "convertToPdf": {
+    "description": "様々な画像形式（PNG、GIF、JPG、TIF、PSD、SVG、WEBP、HEIC、RAW）をPDFに変換します。画像サイズとページの向きを調整できます。",
+    "shortDescription": "画像を PDF に変換し、画像のサイズやページの向きを調整できます。",
+    "title": "画像を PDF に変換"
+  },
   "editor": {
     "description": "注釈、フォーム入力、ハイライト、エクスポート機能を備えた高度なPDFエディター。テキスト挿入、描画、ハイライト、署名、フォーム入力などのプロ仕様のツールを使って、ブラウザ内で直接PDFを編集できます。",
     "shortDescription": "高度な注釈、署名、編集ツールでPDFを編集",
@@ -62,11 +67,6 @@
     "longDescription": "PDFをアップロードすると、ブラウザ内で各ページを高画質のPNG画像に変換できます。このツールは、ビジュアルコンテンツの抽出や個々のページの共有に最適です。データはアップロードされず、すべてローカルで実行されます。",
     "shortDescription": "PDFをPNG画像に変換する",
     "title": "PDFからPNGへ"
-  },
-  "convertToPdf": {
-    "description": "様々な画像形式（PNG、GIF、JPG、TIF、PSD、SVG、WEBP、HEIC、RAW）をPDFに変換します。画像サイズとページの向きを調整できます。",
-    "shortDescription": "画像を PDF に変換し、画像のサイズやページの向きを調整できます。",
-    "title": "画像を PDF に変換"
   },
   "protectPdf": {
     "description": "ブラウザで安全にPDFファイルにパスワード保護を追加します",

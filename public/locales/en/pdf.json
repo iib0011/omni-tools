@@ -21,6 +21,23 @@
     "shortDescription": "Compress PDF files securely in your browser",
     "title": "Compress PDF"
   },
+  "convertToPdf": {
+    "description": "Convert various image formats (PNG, GIF, JPG, WEBP, HEIC, HEIF) to PDF, with options to scale the image and choose page orientation.",
+    "inputTitle": "Input Images",
+    "options": {
+      "a4": "A4 Page",
+      "fullsize": "Full Size (Image size)",
+      "image": "Image",
+      "landscape": "Landscape (Horizontal)",
+      "orientation": "Orientation",
+      "portrait": "Portrait (Vertical)",
+      "scale": "Scale",
+      "type": "PDF Type"
+    },
+    "resultTitle": "Output PDF",
+    "shortDescription": "Convert images to PDF with scale and orientation control",
+    "title": "Images to PDF"
+  },
   "editor": {
     "description": "Advanced PDF editor with annotation, form-fill, highlight, and export capabilities. Edit your PDFs directly in the browser with professional-grade tools including text insertion, drawing, highlighting, signing and form filling.",
     "shortDescription": "Edit PDFs with advanced annotation, signing and editing tools",
@@ -62,23 +79,6 @@
     "longDescription": "Upload a PDF and convert each page into a high-quality PNG image directly in your browser. This tool is ideal for extracting visual content or sharing individual pages. No data is uploaded — everything runs locally.",
     "shortDescription": "Convert PDF into PNG images",
     "title": "PDF to PNG"
-  },
-  "convertToPdf": {
-    "title": "Images to PDF",
-    "description": "Convert various image formats (PNG, GIF, JPG, WEBP, HEIC, HEIF) to PDF, with options to scale the image and choose page orientation.",
-    "shortDescription": "Convert images to PDF with scale and orientation control",
-    "inputTitle": "Input Images",
-    "resultTitle": "Output PDF",
-    "options": {
-      "type": "PDF Type",
-      "orientation": "Orientation",
-      "scale": "Scale",
-      "portrait": "Portrait (Vertical)",
-      "landscape": "Landscape (Horizontal)",
-      "fullsize": "Full Size (Image size)",
-      "a4": "A4 Page",
-      "image": "Image"
-    }
   },
   "protectPdf": {
     "description": "Add password protection to your PDF files securely in your browser",
