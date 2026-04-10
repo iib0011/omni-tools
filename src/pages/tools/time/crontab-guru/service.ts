@@ -34,6 +34,11 @@ function convertMinutes(minutes: string) {
   if (!minutes) return '*';
 
   try {
+    // Single Minute
+    if (input.length === 1 && validateWithinRange(Number(input[0]), 0, 59)) {
+      return input[0];
+    }
+
     // Every Minute
     if (input[0] === 'every' && input.length === 1) {
       return '*';
@@ -58,7 +63,7 @@ function convertMinutes(minutes: string) {
       if (
         validateWithinRange(start, 0, 59) &&
         validateWithinRange(end, 0, 59) &&
-        start > end
+        start < end
       ) {
         return `${start}-${end}`;
       }
@@ -75,7 +80,11 @@ function convertMinutes(minutes: string) {
         // Number
         else if (value !== 'and' && value !== ',' && index % 2 === 0) {
           const currentNumber = Number(value);
-          processedString = processedString + `${currentNumber}`;
+          if (validateWithinRange(currentNumber, 0, 59)) {
+            processedString = processedString + `${currentNumber}`;
+          } else {
+            throw new Error('Number not in range');
+          }
         }
         // Number or Connector At The Wrong Index
         else {
@@ -95,6 +104,12 @@ function validateWithinRange(
   start: number,
   end: number
 ): boolean {
+  // Check if It's A Number (Not NaN)
+  if (isNaN(input)) {
+    return false;
+  }
+
+  // Check Within Range
   if (end >= input && input >= start) {
     return true;
   }
