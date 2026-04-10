@@ -14,17 +14,33 @@ export function validateCrontab(expr: string): boolean {
   return isValidCron(expr, { seconds: false, allowBlankDay: true });
 }
 
-export function main(input: string, _options: any): string {
+export function main(input: string, mode: string): string {
   if (!input.trim()) return '';
-  if (!validateCrontab(input)) {
-    return 'Invalid crontab expression.';
+
+  // Cron to Description
+  if (mode === 'cron-to-description') {
+    if (!validateCrontab(input)) {
+      return 'Invalid crontab expression.';
+    }
+    return explainCrontab(input);
   }
-  return explainCrontab(input);
+
+  // Description to Cron
+  else {
+    return convertDescriptionToCron(input);
+  }
 }
 
 // Description to Cron
+function convertDescriptionToCron(input: string): string {
+  const fields = input.split('\n');
+  const minutes = convertMinutes(fields[0].split(':')[1]);
+  console.log('minutes returned is ', minutes);
+  return minutes;
+}
+
 // Minutes
-function convertMinutes(minutes: string) {
+function convertMinutes(minutes: string): string {
   minutes = minutes.trim().toLowerCase();
 
   // Split Based Off Spaces
@@ -58,7 +74,7 @@ function convertMinutes(minutes: string) {
     // Minute to Minute
     if (input.length === 3 && input[1] === 'to') {
       const start = Number(input[0]);
-      const end = Number(input[0]);
+      const end = Number(input[2]);
 
       if (
         validateWithinRange(start, 0, 59) &&
@@ -69,7 +85,7 @@ function convertMinutes(minutes: string) {
       }
     }
 
-    // Minute AND Minute (Or Use Comma)
+    // Minute AND Minute (Or Use Comma - Need Space In Between)
     if (input.includes('and') || input.includes(',')) {
       let processedString = '';
       input.map((value, index) => {
@@ -97,6 +113,8 @@ function convertMinutes(minutes: string) {
   } catch (error) {
     return '';
   }
+
+  return '';
 }
 
 function validateWithinRange(

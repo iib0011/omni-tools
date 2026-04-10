@@ -7,8 +7,6 @@ import ToolTextResult from '@components/result/ToolTextResult';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { main, validateCrontab } from './service';
 import { InitialValuesType } from './types';
-import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
-import { t } from 'i18next';
 import SimpleRadio from '@components/options/SimpleRadio';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import { useTranslation } from 'react-i18next';
@@ -59,10 +57,15 @@ export default function CrontabGuru({
   const [hasInteracted, setHasInteracted] = useState<boolean>(false);
 
   const compute = (values: InitialValuesType, input: string) => {
-    if (hasInteracted) {
+    // For Cron to Description Only (Special Error Message)
+    if (hasInteracted && values.mode === 'cron-to-description') {
       setIsValid(validateCrontab(input));
     }
-    setResult(main(input, values));
+    // Other Scenarios Just Leave As Is For Now
+    else {
+      setIsValid(true);
+    }
+    setResult(main(input, values.mode));
   };
 
   const handleInputChange = (val: string) => {
@@ -79,12 +82,21 @@ export default function CrontabGuru({
       component: (
         <Box>
           <SimpleRadio
-            onClick={() => updateField('mode', 'cron-to-description')}
+            onClick={() => {
+              updateField('mode', 'cron-to-description');
+              setInput('');
+            }}
             checked={values.mode === 'cron-to-description'}
             title={t('crontabGuru.cron-to-description')}
           />
           <SimpleRadio
-            onClick={() => updateField('mode', 'description-to-cron')}
+            onClick={() => {
+              updateField('mode', 'description-to-cron');
+              // Fill in Template for Input When Changed to Description to CRON
+              setInput(
+                'Minutes: \nHours: \nDay of Month: \nMonth: \nDay of week: \n'
+              );
+            }}
             checked={values.mode === 'description-to-cron'}
             title={t('crontabGuru.description-to-cron')}
           />
