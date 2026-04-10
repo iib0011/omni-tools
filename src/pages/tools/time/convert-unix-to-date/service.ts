@@ -105,6 +105,7 @@ function computeDateToUnix(input: string, useLocalTime: boolean): string {
     // Not Using Local Time (Either UTC is Given or Assume +00)
     return '';
   }
+  return '';
 }
 
 function convertToGMTZero(localUnixValue: number): number {
