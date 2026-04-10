@@ -34,36 +34,40 @@ export function main(input: string, mode: string): string {
 // Description to Cron
 function convertDescriptionToCron(input: string): string {
   const fields = input.split('\n');
-  const minutes = convertMinutes(fields[0].split(':')[1]);
-  console.log('minutes returned is ', minutes);
-  return minutes;
+  const minutes = convertTime(fields[0].split(':')[1], 0, 59);
+  const hours = convertTime(fields[1].split(':')[1], 0, 23);
+  const dayOfMonth = convertTime(fields[2].split(':')[1], 1, 31);
+  const month = convertTime(fields[3].split(':')[1], 1, 12);
+  const dayOfWeek = convertTime(fields[4].split(':')[1], 0, 6);
+
+  return `${minutes} ${hours} ${dayOfMonth} ${month} ${dayOfWeek}`;
 }
 
-// Minutes
-function convertMinutes(minutes: string): string {
-  minutes = minutes.trim().toLowerCase();
-
-  // Split Based Off Spaces
-  const input = minutes.split(' ');
+// Units
+function convertTime(rawInput: string, start: number, end: number): string {
+  const input = rawInput.trim().toLowerCase().split(' ');
 
   // If Left Blank Assume It Means Every
-  if (!minutes) return '*';
+  if (!rawInput || input.length === 0) return '*';
 
   try {
-    // Single Minute
-    if (input.length === 1 && validateWithinRange(Number(input[0]), 0, 59)) {
+    // Single Unit
+    if (
+      input.length === 1 &&
+      validateWithinRange(Number(input[0]), start, end)
+    ) {
       return input[0];
     }
 
-    // Every Minute
-    if (input[0] === 'every' && input.length === 1) {
+    // Every Unit
+    if ((input[0] === 'every' || input[0] === '*') && input.length === 1) {
       return '*';
     }
 
-    // Every N Minutes
+    // Every N Units
     if (input[0] === 'every' && input.length === 2) {
       const value = Number(input[1]);
-      if (validateWithinRange(value, 0, 59)) {
+      if (validateWithinRange(value, start, end)) {
         return `*/${value}`;
       }
 
@@ -71,21 +75,21 @@ function convertMinutes(minutes: string): string {
       return '';
     }
 
-    // Minute to Minute
+    // Unit to Unit
     if (input.length === 3 && input[1] === 'to') {
-      const start = Number(input[0]);
-      const end = Number(input[2]);
+      const rangeStart = Number(input[0]);
+      const rangeEnd = Number(input[2]);
 
       if (
-        validateWithinRange(start, 0, 59) &&
-        validateWithinRange(end, 0, 59) &&
-        start < end
+        validateWithinRange(rangeStart, start, end) &&
+        validateWithinRange(rangeEnd, start, end) &&
+        rangeStart < rangeEnd
       ) {
-        return `${start}-${end}`;
+        return `${rangeStart}-${rangeEnd}`;
       }
     }
 
-    // Minute AND Minute (Or Use Comma - Need Space In Between)
+    // Unit AND Unit (Or Use Comma - Need Space In Between)
     if (input.includes('and') || input.includes(',')) {
       let processedString = '';
       input.map((value, index) => {
@@ -96,7 +100,7 @@ function convertMinutes(minutes: string): string {
         // Number
         else if (value !== 'and' && value !== ',' && index % 2 === 0) {
           const currentNumber = Number(value);
-          if (validateWithinRange(currentNumber, 0, 59)) {
+          if (validateWithinRange(currentNumber, start, end)) {
             processedString = processedString + `${currentNumber}`;
           } else {
             throw new Error('Number not in range');
@@ -110,6 +114,21 @@ function convertMinutes(minutes: string): string {
       // Upon Completion
       return processedString;
     }
+
+    // Range With Step (X to Y Every Z)
+    if (input[1] === 'to' && input[3] === 'every' && input.length === 5) {
+      const rangeStart = Number(input[0]);
+      const rangeEnd = Number(input[2]);
+      const step = Number(input[4]);
+
+      if (
+        validateWithinRange(rangeStart, start, end) &&
+        validateWithinRange(rangeEnd, start, end) &&
+        validateWithinRange(step, 1, end - start)
+      ) {
+        return `${rangeStart}-${rangeEnd}/${step}`;
+      }
+    }
   } catch (error) {
     return '';
   }
@@ -117,13 +136,14 @@ function convertMinutes(minutes: string): string {
   return '';
 }
 
+// Validate Number, and Make Sure Input Falls Within Range
 function validateWithinRange(
   input: number,
   start: number,
   end: number
 ): boolean {
-  // Check if It's A Number (Not NaN)
-  if (isNaN(input)) {
+  // Check if It's A Number, Not Negative and Is Integer (Not NaN)
+  if (isNaN(input) || input < 0 || !Number.isInteger(input)) {
     return false;
   }
 
