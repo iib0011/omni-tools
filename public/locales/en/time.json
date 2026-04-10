@@ -84,7 +84,7 @@
     "shortDescription": "Generate and understand cron expressions",
     "title": "Crontab Guru",
     "options": "Options",
-    "cron-to-description": "Cron To Desription",
+    "cron-to-description": "Cron To Description",
     "description-to-cron": "Description to Cron"
   },
   "discordTimestamp": {
