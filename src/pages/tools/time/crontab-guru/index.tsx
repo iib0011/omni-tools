@@ -1,4 +1,4 @@
-import { Alert } from '@mui/material';
+import { Alert, Box } from '@mui/material';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -6,10 +6,16 @@ import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { main, validateCrontab } from './service';
+import { InitialValuesType } from './types';
+import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
+import { t } from 'i18next';
+import SimpleRadio from '@components/options/SimpleRadio';
+import { GetGroupsType } from '@components/options/ToolOptions';
+import { useTranslation } from 'react-i18next';
 
-const initialValues = {};
-
-type InitialValuesType = typeof initialValues;
+const initialValues: InitialValuesType = {
+  mode: 'cron-to-description'
+};
 
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
@@ -17,28 +23,28 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
     description: 'At 16:35 on every day-of-week from Sunday through Friday.',
     sampleText: '35 16 * * 0-5',
     sampleResult: 'At 04:35 PM, Sunday through Friday',
-    sampleOptions: {}
+    sampleOptions: { mode: 'cron-to-description' }
   },
   {
     title: 'Every minute',
     description: 'Runs every minute.',
     sampleText: '* * * * *',
     sampleResult: 'Every minute',
-    sampleOptions: {}
+    sampleOptions: { mode: 'cron-to-description' }
   },
   {
     title: 'Every 5 minutes',
     description: 'Runs every 5 minutes.',
     sampleText: '*/5 * * * *',
     sampleResult: 'Every 5 minutes',
-    sampleOptions: {}
+    sampleOptions: { mode: 'cron-to-description' }
   },
   {
     title: 'At 12:00 PM on the 1st of every month',
     description: 'Runs at noon on the first day of each month.',
     sampleText: '0 12 1 * *',
     sampleResult: 'At 12:00 PM, on day 1 of the month',
-    sampleOptions: {}
+    sampleOptions: { mode: 'cron-to-description' }
   }
 ];
 
@@ -46,6 +52,7 @@ export default function CrontabGuru({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation('time');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
   const [isValid, setIsValid] = useState<boolean | null>(null);
@@ -62,6 +69,29 @@ export default function CrontabGuru({
     if (!hasInteracted) setHasInteracted(true);
     setInput(val);
   };
+
+  const getGroups: GetGroupsType<InitialValuesType> = ({
+    values,
+    updateField
+  }) => [
+    {
+      title: t('crontabGuru.options'),
+      component: (
+        <Box>
+          <SimpleRadio
+            onClick={() => updateField('mode', 'cron-to-description')}
+            checked={values.mode === 'cron-to-description'}
+            title={t('crontabGuru.cron-to-description')}
+          />
+          <SimpleRadio
+            onClick={() => updateField('mode', 'description-to-cron')}
+            checked={values.mode === 'description-to-cron'}
+            title={t('crontabGuru.description-to-cron')}
+          />
+        </Box>
+      )
+    }
+  ];
 
   return (
     <ToolContent
@@ -119,7 +149,7 @@ export default function CrontabGuru({
       }
       initialValues={initialValues}
       exampleCards={exampleCards}
-      getGroups={null}
+      getGroups={getGroups}
       setInput={setInput}
       compute={compute}
       toolInfo={{ title: `What is a ${title}?`, description: longDescription }}

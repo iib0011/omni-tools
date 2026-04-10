@@ -82,7 +82,10 @@
   "crontabGuru": {
     "description": "Generate and understand cron expressions. Create cron schedules for automated tasks and system jobs.",
     "shortDescription": "Generate and understand cron expressions",
-    "title": "Crontab Guru"
+    "title": "Crontab Guru",
+    "options": "Options",
+    "cron-to-description": "Cron To Desription",
+    "description-to-cron": "Description to Cron"
   },
   "discordTimestamp": {
     "description": "Convert dates and times into Discord's special timestamp format that automatically adapts to each user's local timezone and language",
