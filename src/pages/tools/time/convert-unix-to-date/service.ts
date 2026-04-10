@@ -34,7 +34,7 @@ function computeUnixToDate(input: string, useLocalTime: boolean): string {
   }
 }
 
-function convertUnixToDate(
+export function convertUnixToDate(
   input: string,
   withLabel: boolean,
   useLocalTime: boolean
