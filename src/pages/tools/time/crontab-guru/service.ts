@@ -42,7 +42,7 @@ function convertMinutes(minutes: string) {
     // Every N Minutes
     if (input[0] === 'every' && input.length === 2) {
       const value = Number(input[1]);
-      if (59 >= value && value >= 0) {
+      if (validateWithinRange(value, 0, 59)) {
         return `*/${value}`;
       }
 
@@ -51,7 +51,52 @@ function convertMinutes(minutes: string) {
     }
 
     // Minute to Minute
+    if (input.length === 3 && input[1] === 'to') {
+      const start = Number(input[0]);
+      const end = Number(input[0]);
+
+      if (
+        validateWithinRange(start, 0, 59) &&
+        validateWithinRange(end, 0, 59) &&
+        start > end
+      ) {
+        return `${start}-${end}`;
+      }
+    }
+
+    // Minute AND Minute (Or Use Comma)
+    if (input.includes('and') || input.includes(',')) {
+      let processedString = '';
+      input.map((value, index) => {
+        // Between Values Should Be Comma
+        if ((value === 'and' || value === ',') && index % 2 === 1) {
+          processedString = processedString + ',';
+        }
+        // Number
+        else if (value !== 'and' && value !== ',' && index % 2 === 0) {
+          const currentNumber = Number(value);
+          processedString = processedString + `${currentNumber}`;
+        }
+        // Number or Connector At The Wrong Index
+        else {
+          throw new Error('Invalid Number');
+        }
+      });
+      // Upon Completion
+      return processedString;
+    }
   } catch (error) {
     return '';
   }
+}
+
+function validateWithinRange(
+  input: number,
+  start: number,
+  end: number
+): boolean {
+  if (end >= input && input >= start) {
+    return true;
+  }
+  return false;
 }
