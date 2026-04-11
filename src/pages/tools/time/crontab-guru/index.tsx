@@ -43,6 +43,15 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
     sampleText: '0 12 1 * *',
     sampleResult: 'At 12:00 PM, on day 1 of the month',
     sampleOptions: { mode: 'cron-to-description' }
+  },
+  {
+    title: 'Converting Description to Cron',
+    description:
+      'Below are some examples of how to use this mode. Please follow the format(s) given to ensure proper output.',
+    sampleText:
+      'Minutes: every \nHours: 2 \nDay of Month: every 5\nMonth: 1 to 10 every 3\nDay of week: 2 and 5',
+    sampleResult: '* 2 */5 1-10/3 2,5',
+    sampleOptions: { mode: 'description-to-cron' }
   }
 ];
 
