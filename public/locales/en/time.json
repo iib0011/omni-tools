@@ -66,21 +66,21 @@
   },
   "convertUnixToDate": {
     "addUtcLabel": "Add 'UTC' suffix",
-    "addUtcLabelDescription": "Display 'UTC' after the converted date (only for UTC mode)",
-    "description": "Convert a Unix timestamp to a human-readable date or vice versa.",
-    "outputOptions": "Output Options",
-    "shortDescription": "Convert Unix timestamp to date and vice versa.",
-    "title": "Convert Unix to Date / Date to Unix",
+    "addUtcLabelDescription": "Append 'UTC' after the converted date (available only in UTC mode)",
+    "description": "Convert Unix timestamps to readable dates and convert dates back to Unix timestamps.",
+    "shortDescription": "Convert Unix timestamps and dates in both directions.",
+    "title": "Convert Unix ↔ Date",
     "toolInfo": {
-      "description": "This tool converts a Unix timestamp (in seconds) into a human-readable date format (e.g., YYYY-MM-DD HH:MM:SS). It supports both local and UTC output, making it useful for quickly interpreting timestamps from logs, APIs, or systems that use Unix time. The tool also converts a human-readable date format (e.g., YYYY-MM-DD HH:MM:SS) into a Unix Timestamp. The user can choose to specify a given UTC offset (e.g., YYYY-MM-DD HH:MM:SS +XX:XX) or use the local timezone. If the user doesn't provide either an offset or choose to use the local timezone, the result is given with an offset of +00:00. ",
-      "title": "Convert Unix to Date / Date to Unix"
+      "title": "Convert Unix ↔ Date",
+      "description": "This tool converts Unix timestamps (in seconds) into human-readable date formats such as YYYY-MM-DD HH:MM:SS, and also converts formatted dates back into Unix timestamps. You can choose UTC output, local timezone output, or provide a custom UTC offset (for example: YYYY-MM-DD HH:MM:SS +XX:XX). If no offset is provided and local timezone is not selected, UTC (+00:00) is used by default."
     },
     "useLocalTime": "Use Local Time",
-    "useLocalTimeDescription": "Show converted date in your local timezone instead of UTC",
-    "withLabel": "Options",
-    "optionsTitle": "Mode",
-    "date-to-unix": "Convert Date To Unix",
-    "unix-to-date": "Convert Unix To Date"
+    "useUTC": "Use UTC",
+    "useLocalTimeDescription": "Display the converted date in your local timezone instead of UTC",
+    "tzOptions": "Timezone Options",
+    "optionsTitle": "Conversion Mode",
+    "date-to-unix": "Date → Unix",
+    "unix-to-date": "Unix → Date"
   },
   "crontabGuru": {
     "description": "Generate and understand cron expressions. Create cron schedules for automated tasks and system jobs.",
