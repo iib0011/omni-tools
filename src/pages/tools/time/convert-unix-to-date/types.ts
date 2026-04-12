@@ -1,5 +1,7 @@
+export type mode = 'date-to-unix' | 'unix-to-date';
+
 export default interface InitialValuesType {
-  mode: string;
+  mode: mode;
   withLabel: boolean;
   useLocalTime: boolean;
 }
