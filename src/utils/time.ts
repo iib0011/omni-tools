@@ -56,3 +56,23 @@ export function humanTimeValidation(input: string): TimeValidationResult {
 
   return { isValid: true, hours, minutes, seconds };
 }
+
+/**
+ * Extracts the datetime string and optional UTC offset from a raw input line.
+ * Supports formats like:
+ *   "2026-04-11 10:00"
+ *   "2026-04-11 10:00 +02:00"
+ *   "2026-04-11T10:30:00Z"
+ *   "April 11, 2026 10:00 -05:00"
+ */
+export function parseDateInput(input: string): {
+  dateTime: string;
+  utcOffset: string | null;
+} {
+  const match = input.trim().match(/^(.+?)\s*([+-]\d{2}:\d{2}|Z)$/);
+  if (!match) return { dateTime: input.trim(), utcOffset: null };
+  return {
+    dateTime: match[1].trim(),
+    utcOffset: match[2] ?? null
+  };
+}

@@ -65,20 +65,25 @@
     }
   },
   "convertUnixToDate": {
-    "addUtcLabel": "添加“UTC”后缀",
-    "addUtcLabelDescription": "转换后的日期后显示“UTC”（仅适用于 UTC 模式）",
-    "description": "将 Unix 时间戳转换为人类可读的日期。",
+    "addUtcLabel": "添加 \"UTC\" 后缀",
+    "addUtcLabelDescription": "在转换的日期后显示 \"UTC\"（仅限 UTC 模式）",
+    "date-to-unix": "日期 → Unix",
+    "description": "将 Unix 时间戳转换为可读日期，并将格式化日期转换回 Unix 时间戳（双向转换）。",
+    "optionsTitle": "转换模式",
     "outputOptions": "输出选项",
-    "shortDescription": "将 Unix 时间戳转换为日期",
-    "title": "将 Unix 转换为日期",
+    "shortDescription": "双向转换 Unix 时间戳和日期。",
+    "title": "转换 Unix ↔ 日期",
     "toolInfo": {
-      "description": "此工具可将 Unix 时间戳（以秒为单位）转换为人类可读的日期格式（例如 YYYY-MM-DD HH:MM:SS）。它支持本地和 UTC 输出，因此可用于快速解释来自日志、API 或使用 Unix 时间的系统的时间戳。",
-      "title": "将 Unix 转换为日期"
+      "description": "此工具将 Unix 时间戳（以秒为单位）转换为人类可读的日期格式（例如，YYYY-MM-DD HH:MM:SS），并将格式化日期转换回 Unix 时间戳。您可以选择 UTC 输出、本地时区输出，或提供自定义 UTC 偏移（例如，YYYY-MM-DD HH:MM:SS +XX:XX）。如果未提供偏移且未选择本地时区，则默认使用 UTC (+00:00)。",
+      "title": "转换 Unix ↔ 日期"
     },
-    "useLocalTime": "使用当地时间",
-    "useLocalTimeDescription": "显示以当地时区而非 UTC 转换的日期",
-    "withLabel": "选项"
+    "tzOptions": "时区选项",
+    "unix-to-date": "Unix → 日期",
+    "useLocalTime": "使用本地时间",
+    "useLocalTimeDescription": "显示使用本地时区而非 UTC 转换的日期",
+    "useUTC": "使用 UTC"
   },
+
   "crontabGuru": {
     "description": "生成并理解 cron 表达式。为自动化任务和系统作业创建 cron 计划。",
     "shortDescription": "生成并理解 cron 表达式",
