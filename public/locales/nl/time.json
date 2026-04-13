@@ -61,17 +61,21 @@
   "convertUnixToDate": {
     "addUtcLabel": "Voeg 'UTC'-achtervoegsel toe",
     "addUtcLabelDescription": "'UTC' weergeven na de geconverteerde datum (alleen voor UTC-modus)",
-    "description": "Converteer een Unix-tijdstempel naar een voor mensen leesbare datum.",
+    "date-to-unix": "Datum → Unix",
+    "description": "Converteer Unix-tijdstempels naar leesbare datums en converteer geformatteerde datums terug naar Unix-tijdstempels (in beide richtingen).",
+    "optionsTitle": "Conversie-modus",
     "outputOptions": "Uitvoeropties",
-    "shortDescription": "Unix-tijdstempel naar datum converteren",
-    "title": "Unix naar Date converteren",
+    "shortDescription": "Converteer Unix-tijdstempels en datums in beide richtingen.",
+    "title": "Unix ↔ Datum converteren",
     "toolInfo": {
-      "description": "Deze tool converteert een Unix-tijdstempel (in seconden) naar een voor mensen leesbaar datumformaat (bijv. JJJJ-MM-DD UU:MM:SS). De tool ondersteunt zowel lokale als UTC-uitvoer, waardoor het handig is voor het snel interpreteren van tijdstempels uit logs, API's of systemen die Unix-tijd gebruiken.",
-      "title": "Unix naar Date converteren"
+      "description": "Deze tool converteert Unix-tijdstempels (in seconden) naar voor mensen leesbare datumformaten zoals JJJJ-MM-DD UU:MM:SS, en converteert ook geformatteerde datums terug naar Unix-tijdstempels. U kunt UTC-uitvoer, lokale tijdzoneuitvoer of een aangepaste UTC-offset opgeven (bijvoorbeeld: JJJJ-MM-DD UU:MM:SS +XX:XX). Als er geen offset is opgegeven en lokale tijdzone niet is geselecteerd, wordt standaard UTC (+00:00) gebruikt.",
+      "title": "Unix ↔ Datum converteren"
     },
+    "tzOptions": "Tijdzone-opties",
+    "unix-to-date": "Unix → Datum",
     "useLocalTime": "Gebruik lokale tijd",
     "useLocalTimeDescription": "Toon de geconverteerde datum in uw lokale tijdzone in plaats van UTC",
-    "withLabel": "Opties"
+    "useUTC": "UTC gebruiken"
   },
   "crontabGuru": {
     "description": "Genereer en begrijp cron-expressies. Maak cron-schema's voor geautomatiseerde taken en systeemtaken.",
