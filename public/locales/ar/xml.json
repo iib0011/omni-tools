@@ -1,0 +1,38 @@
+{
+  "xmlBeautifier": {
+    "description": "تنسيق XML بمسافات بادئة ومسافات مناسبة.",
+    "indentation": "المسافة البادئة",
+    "inputTitle": "إدخال XML",
+    "resultTitle": "XML منسق",
+    "shortDescription": "تنسيق وتجميل كود XML",
+    "title": "أداة تجميل XML",
+    "toolInfo": {
+      "description": "تتيح لك هذه الأداة تنسيق بيانات XML بمسافات بادئة ومسافات مناسبة، مما يجعلها أكثر قابلية للقراءة وأسهل في العمل معها.",
+      "title": "أداة تجميل XML"
+    },
+    "useSpaces": "استخدام المسافات",
+    "useSpacesDescription": "إضافة مسافة بادئة للمخرجات بالمسافات",
+    "useTabs": "استخدام علامات التبويب",
+    "useTabsDescription": "إضافة مسافة بادئة للمخرجات بعلامات التبويب."
+  },
+  "xmlValidator": {
+    "description": "التحقق من صحة بناء جملة XML والهيكل.",
+    "placeholder": "الصق أو استورد XML هنا...",
+    "shortDescription": "التحقق من صحة كود XML للكشف عن الأخطاء",
+    "title": "أداة التحقق من XML",
+    "toolInfo": {
+      "description": "تتيح لك هذه الأداة التحقق من صحة بناء جملة XML والهيكل. تتحقق مما إذا كان XML منسقًا بشكل صحيح وتوفر رسائل خطأ مفصلة لأية مشاكل يتم العثور عليها.",
+      "title": "أداة التحقق من XML"
+    }
+  },
+  "xmlViewer": {
+    "description": "عرض واستكشاف بنية XML بتنسيق شجري.",
+    "inputTitle": "إدخال XML",
+    "resultTitle": "عرض شجرة XML",
+    "title": "عارض XML",
+    "toolInfo": {
+      "description": "تتيح لك هذه الأداة عرض بيانات XML بتنسيق شجري هرمي، مما يسهل استكشاف وفهم بنية مستندات XML.",
+      "title": "عارض XML"
+    }
+  }
+}
