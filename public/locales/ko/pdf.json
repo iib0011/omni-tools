@@ -1,0 +1,119 @@
+{
+  "compressPdf": {
+    "compressedFileSize": "압축된 파일 크기",
+    "compressingPdf": "PDF 압축 중...",
+    "compressionLevel": "압축 수준",
+    "compressionSettings": "압축 설정",
+    "description": "Ghostscript를 사용하여 품질을 유지하면서 PDF 파일 크기를 줄입니다.",
+    "errorCompressingPdf": "PDF 압축 실패: {{error}}",
+    "errorReadingPdf": "PDF 파일을 읽지 못했습니다. 유효한 PDF인지 확인하십시오.",
+    "fileSize": "원본 파일 크기",
+    "highCompression": "높은 압축률",
+    "highCompressionDescription": "일부 품질 손실과 함께 최대 파일 크기 감소",
+    "inputTitle": "입력 PDF",
+    "longDescription": "Ghostscript를 사용하여 브라우저에서 안전하게 PDF 파일을 압축합니다. 파일은 장치를 떠나지 않으므로 이메일 공유, 웹 사이트 업로드 또는 저장 공간 절약을 위해 파일 크기를 줄이면서 완전한 개인 정보 보호를 보장합니다. WebAssembly 기술로 구동됩니다.",
+    "lowCompression": "낮은 압축률",
+    "lowCompressionDescription": "최소한의 품질 손실로 파일 크기를 약간 줄입니다.",
+    "mediumCompression": "중간 압축률",
+    "mediumCompressionDescription": "파일 크기와 품질 간의 균형",
+    "pages": "페이지 수",
+    "resultTitle": "압축된 PDF",
+    "shortDescription": "브라우저에서 안전하게 PDF 파일 압축",
+    "title": "PDF 압축"
+  },
+  "editor": {
+    "description": "주석, 양식 채우기, 강조 표시 및 내보내기 기능이 있는 고급 PDF 편집기입니다. 텍스트 삽입, 그리기, 강조 표시, 서명 및 양식 채우기를 포함한 전문가 수준의 도구를 사용하여 브라우저에서 직접 PDF를 편집하십시오.",
+    "shortDescription": "고급 주석, 서명 및 편집 도구로 PDF 편집",
+    "title": "PDF 편집기"
+  },
+  "merge": {
+    "inputTitle": "입력 PDF",
+    "loadingText": "페이지 추출 중",
+    "resultTitle": "병합된 PDF 출력",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 여러 PDF 파일을 단일 문서로 병합할 수 있습니다. 도구를 사용하려면 병합하려는 PDF 파일을 업로드하기만 하면 됩니다. 그러면 도구가 입력 파일의 모든 페이지를 단일 PDF 문서로 결합합니다.",
+      "title": "PDF 병합 도구 사용 방법"
+    }
+  },
+  "mergePdf": {
+    "description": "여러 PDF 파일을 단일 문서로 결합합니다.",
+    "inputTitle": "입력 PDF",
+    "mergingPdfs": "PDF 병합 중",
+    "pdfOptions": "PDF 옵션",
+    "resultTitle": "병합된 PDF",
+    "shortDescription": "여러 PDF 파일을 단일 문서로 병합",
+    "sortByFileName": "파일 이름으로 정렬",
+    "sortByFileNameDescription": "파일 이름순으로 PDF 정렬",
+    "sortByUploadOrder": "업로드 순서로 정렬",
+    "sortByUploadOrderDescription": "업로드된 순서대로 PDF 유지",
+    "title": "PDF 병합",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 여러 PDF 파일을 단일 문서로 결합할 수 있습니다. PDF 정렬 방법을 선택할 수 있으며 도구는 지정된 순서대로 병합합니다.",
+      "title": "PDF 파일 병합"
+    }
+  },
+  "pdfToEpub": {
+    "description": "더 나은 전자책 리더 호환성을 위해 PDF 문서를 EPUB 파일로 변환합니다.",
+    "shortDescription": "PDF 파일을 EPUB 형식으로 변환",
+    "title": "PDF를 EPUB로 변환"
+  },
+  "pdfToPng": {
+    "description": "PDF 문서를 PNG 패널로 변환합니다.",
+    "longDescription": "PDF를 업로드하고 각 페이지를 브라우저에서 직접 고품질 PNG 이미지로 변환합니다. 이 도구는 시각적 콘텐츠를 추출하거나 개별 페이지를 공유하는 데 이상적입니다. 데이터는 업로드되지 않으며 모든 것이 로컬에서 실행됩니다.",
+    "shortDescription": "PDF를 PNG 이미지로 변환",
+    "title": "PDF를 PNG로 변환"
+  },
+  "convertToPdf": {
+    "title": "이미지를 PDF로",
+    "description": "다양한 이미지 형식(PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW)을 PDF로 변환하고 이미지 크기 조정 및 페이지 방향 선택 옵션을 제공합니다.",
+    "shortDescription": "이미지를 PDF로 변환하고 크기 및 방향 제어"
+  },
+  "protectPdf": {
+    "description": "브라우저에서 안전하게 PDF 파일에 암호 보호를 추가합니다.",
+    "shortDescription": "안전하게 PDF 파일 암호 보호",
+    "title": "PDF 보호"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "모든 {{count}} 페이지가 회전됩니다.",
+    "angleOptions": {
+      "clockwise90": "시계 방향 90°",
+      "counterClockwise270": "270° (시계 반대 방향 90°)",
+      "upsideDown180": "180° (거꾸로)"
+    },
+    "applyToAllPages": "모든 페이지에 적용",
+    "description": "PDF 문서의 페이지를 회전합니다.",
+    "inputTitle": "입력 PDF",
+    "longDescription": "PDF 페이지의 방향을 90, 180 또는 270도 회전하여 변경합니다. 잘못 스캔된 문서를 수정하거나 인쇄용 PDF를 준비하는 데 유용합니다.",
+    "pageRangesDescription": "쉼표로 구분된 페이지 번호 또는 범위 입력 (예: 1,3,5-7)",
+    "pageRangesPlaceholder": "예: 1,5-8",
+    "pagesWillBeRotated": "{{count}} 페이지가 회전됩니다.",
+    "pdfPageCount": "PDF에 {{count}} 페이지가 있습니다.",
+    "resultTitle": "회전된 PDF",
+    "rotatingPages": "페이지 회전 중",
+    "rotationAngle": "회전 각도",
+    "rotationSettings": "회전 설정",
+    "shortDescription": "PDF 문서의 페이지 회전",
+    "title": "PDF 회전",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 PDF 문서의 페이지를 회전할 수 있습니다. 모든 페이지를 회전하거나 회전할 개별 페이지를 지정할 수 있습니다. 회전 각도 선택: 시계 방향 90°, 180°(거꾸로) 또는 270°(시계 반대 방향 90°). 특정 페이지를 회전하려면 \"모든 페이지에 적용\"을 선택 취소하고 쉼표로 구분된 페이지 번호 또는 범위를 입력합니다(예: 1,3,5-7).",
+      "title": "PDF 회전 도구 사용 방법"
+    }
+  },
+  "splitPdf": {
+    "description": "PDF 문서에서 특정 페이지를 추출합니다.",
+    "extractingPages": "페이지 추출 중",
+    "inputTitle": "입력 PDF",
+    "pageExtractionPreview": "{{count}} 페이지가 추출됩니다.",
+    "pageRangesDescription": "쉼표로 구분된 페이지 번호 또는 범위 입력 (예: 1,3,5-7)",
+    "pageRangesPlaceholder": "예: 1,5-8",
+    "pageSelection": "페이지 선택",
+    "pdfPageCount": "PDF에 {{count}} 페이지가 있습니다.",
+    "resultTitle": "추출된 PDF",
+    "shortDescription": "PDF 파일에서 특정 페이지 추출",
+    "title": "PDF 분할",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 PDF 문서에서 특정 페이지를 추출할 수 있습니다. 추출할 개별 페이지 또는 페이지 범위를 지정할 수 있습니다.",
+      "title": "PDF 분할"
+    }
+  }
+}
