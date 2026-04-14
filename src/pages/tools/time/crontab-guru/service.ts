@@ -35,7 +35,7 @@ export function main(input: string): string {
       const trimmed = line.trim();
       if (!trimmed) return '';
       if (!validateCrontab(trimmed))
-        return `Invalid cron expression: "${trimmed}"`;
+        return `Invalid crontab expression: "${trimmed}"`;
       return explainCrontab(trimmed);
     })
     .join('\n');
