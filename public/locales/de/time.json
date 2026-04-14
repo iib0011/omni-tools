@@ -78,9 +78,10 @@
     "useUTC": "UTC verwenden"
   },
   "crontabGuru": {
-    "description": "Generieren und verstehen Sie Cron-Ausdrücke. Erstellen Sie Cron-Zeitpläne für automatisierte Aufgaben und Systemjobs.",
-    "shortDescription": "Cron-Ausdrücke generieren und verstehen",
-    "title": "Crontab Guru"
+    "title": "Crontab Guru",
+    "description": "Analysieren und erklären Sie Cron-Ausdrücke auf Deutsch. Verstehen Sie sofort, was ein Cron-Zeitplan bewirkt, validieren Sie die Syntax und verarbeiten Sie mehrere Ausdrücke gleichzeitig.",
+    "shortDescription": "Cron-Ausdrücke analysieren und verständlich erklären",
+    "longDescription": "Crontab Guru ist ein Cron-Ausdruck-Parser und -Validator, der komplexe Cron-Syntax in klare, lesbare Beschreibungen übersetzt. Egal ob Sie automatische Backups, Systemwartungsaufgaben oder CI/CD-Pipelines planen – dieses Tool hilft Ihnen zu verstehen, wann genau Ihre Jobs ausgeführt werden. Unterstützt standardmäßige 5-Feld-Cron-Ausdrücke, validiert die Syntax in Echtzeit und verarbeitet mehrere Ausdrücke gleichzeitig – einen pro Zeile. Verfügbar auf Englisch, Französisch, Spanisch, Deutsch, Japanisch, Chinesisch, Portugiesisch, Niederländisch und Russisch."
   },
   "timeBetweenDates": {
     "description": "Berechnen Sie die Zeitdifferenz zwischen zwei Daten. Ermitteln Sie die genaue Dauer in Tagen, Stunden, Minuten und Sekunden.",

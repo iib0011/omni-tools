@@ -83,9 +83,10 @@
     "unix-to-date": "Unix → Date"
   },
   "crontabGuru": {
-    "description": "Generate and understand cron expressions. Create cron schedules for automated tasks and system jobs.",
-    "shortDescription": "Generate and understand cron expressions",
-    "title": "Crontab Guru"
+    "title": "Crontab Guru",
+    "description": "Parse and explain cron expressions in plain English. Instantly understand what any cron schedule does, validate syntax, and process multiple expressions at once.",
+    "shortDescription": "Parse and explain cron expressions in plain English",
+    "longDescription": "Crontab Guru is a cron expression parser and validator that translates complex cron syntax into plain, human-readable descriptions. Whether you're scheduling automated backups, system maintenance tasks, or CI/CD pipelines, this tool helps you understand exactly when your jobs will run. Supports standard 5-field cron expressions, validates syntax in real time, and processes multiple expressions at once — one per line. Available in English, French, Spanish, German, Japanese, Chinese, Portuguese, Dutch, and Russian."
   },
   "timeBetweenDates": {
     "description": "Calculate the time difference between two dates. Get the exact duration in days, hours, minutes, and seconds.",

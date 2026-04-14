@@ -78,9 +78,10 @@
     "useUTC": "Usar UTC"
   },
   "crontabGuru": {
-    "description": "Generar y comprender expresiones cron. Crear programaciones cron para tareas automatizadas y trabajos del sistema.",
-    "shortDescription": "Generar y comprender expresiones cron",
-    "title": "Gurú de Crontab"
+    "title": "Crontab Guru",
+    "description": "Analiza y explica expresiones cron en español. Entiende al instante qué hace cualquier programación cron, valida la sintaxis y procesa múltiples expresiones a la vez.",
+    "shortDescription": "Analiza y explica expresiones cron en lenguaje claro",
+    "longDescription": "Crontab Guru es un analizador y validador de expresiones cron que traduce la compleja sintaxis cron en descripciones claras y legibles. Ya sea que estés programando copias de seguridad automáticas, tareas de mantenimiento del sistema o pipelines CI/CD, esta herramienta te ayuda a entender exactamente cuándo se ejecutarán tus tareas. Admite expresiones cron estándar de 5 campos, valida la sintaxis en tiempo real y procesa múltiples expresiones a la vez — una por línea. Disponible en inglés, francés, español, alemán, japonés, chino, portugués, neerlandés y ruso."
   },
   "timeBetweenDates": {
     "description": "Calcula la diferencia horaria entre dos fechas. Obtén la duración exacta en días, horas, minutos y segundos.",

@@ -78,9 +78,10 @@
     "useUTC": "UTC gebruiken"
   },
   "crontabGuru": {
-    "description": "Genereer en begrijp cron-expressies. Maak cron-schema's voor geautomatiseerde taken en systeemtaken.",
-    "shortDescription": "Genereer en begrijp cron-expressies",
-    "title": "Crontab-goeroe"
+    "title": "Crontab Guru",
+    "description": "Parseer en verklaar cron-expressies in het Nederlands. Begrijp direct wat een cron-schema doet, valideer de syntaxis en verwerk meerdere expressies tegelijk.",
+    "shortDescription": "Cron-expressies parseren en in begrijpelijke taal uitleggen",
+    "longDescription": "Crontab Guru is een cron-expressie-parser en -validator die complexe cron-syntaxis vertaalt naar duidelijke, leesbare beschrijvingen. Of u nu automatische back-ups, systeemonderhoudstaken of CI/CD-pipelines plant, deze tool helpt u precies te begrijpen wanneer uw taken worden uitgevoerd. Ondersteunt standaard cron-expressies met 5 velden, valideert de syntaxis in realtime en verwerkt meerdere expressies tegelijk — één per regel. Beschikbaar in het Engels, Frans, Spaans, Duits, Japans, Chinees, Portugees, Nederlands en Russisch."
   },
   "timeBetweenDates": {
     "description": "Bereken het tijdsverschil tussen twee datums. Bereken de exacte duur in dagen, uren, minuten en seconden.",
