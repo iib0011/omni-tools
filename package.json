@@ -72,7 +72,7 @@
     "omggif": "^1.0.10",
     "onnxruntime-web": "1.21.0",
     "pdf-lib": "^1.17.1",
-    "pdfjs-dist": "^5.2.133",
+    "pdfjs-dist": "^5.6.205",
     "playwright": "^1.45.0",
     "qrcode": "^1.5.4",
     "rc-slider": "^11.1.8",
