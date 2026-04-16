@@ -1,6 +1,6 @@
 import * as pdfjsLib from 'pdfjs-dist';
 import pdfWorker from 'pdfjs-dist/legacy/build/pdf.worker.min.mjs?url';
-import { PdfImage } from './types';
+import { PdfImageObject } from './types';
 
 // Initialise The PDF JS Worker
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
@@ -17,6 +17,7 @@ export async function processPDF(input: File) {
     for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
       const page = await pdf.getPage(pageNum);
       const ops = await page.getOperatorList();
+      let imageNum = 1;
 
       // Look through commands
       for (let i = 0; i < ops.fnArray.length; i++) {
@@ -26,15 +27,16 @@ export async function processPDF(input: File) {
         if (fn === pdfjsLib.OPS.paintImageXObject) {
           // Extract Data
           const imgName = await ops.argsArray[i][0];
-          const img = await page.objs.get(imgName);
-
-          // TODO: Img Null? - Need to Wait Longer
-          console.log('Image created is ', img);
+          const img = (await new Promise((resolve) => {
+            page.objs.get(imgName, resolve);
+          })) as PdfImageObject;
 
           // Retrieve File
-          const file = await processImage(img);
+          const file = await processImage(img, pageNum, imageNum);
           console.log('File is ', file);
         }
+
+        imageNum++;
       }
     }
   } catch (error) {
@@ -44,7 +46,13 @@ export async function processPDF(input: File) {
   }
 }
 
-async function processImage(img: PdfImage): Promise<File | null> {
+async function processImage(
+  img: PdfImageObject,
+  pageNum: number,
+  imageNum: number
+): Promise<File | null> {
+  console.log('Image Received is ', img);
+
   try {
     // Create Canvas
     const canvas = document.createElement('canvas');
@@ -58,9 +66,7 @@ async function processImage(img: PdfImage): Promise<File | null> {
     }
 
     // Draw Onto Canvas
-    const imgData = ctx.createImageData(img.width, img.height);
-    imgData.data.set(img.data);
-    ctx.putImageData(imgData, 0, 0);
+    ctx.drawImage(img.bitmap, 0, 0);
 
     // Convert to Blob
     const blob: Blob = await new Promise((resolve, reject) => {
@@ -73,7 +79,7 @@ async function processImage(img: PdfImage): Promise<File | null> {
     if (!blob) return null;
 
     // Return file
-    const fileName = 'File Name Sample';
+    const fileName = `page_${pageNum}_img_${img.ref}_${imageNum}`;
     return new File([blob], fileName, { type: 'image/png' });
   } catch (error) {
     console.log('Error converting toBlob', error);
