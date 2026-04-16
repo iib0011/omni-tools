@@ -20,7 +20,6 @@ export default function PdfToEpub({ title }: ToolComponentProps) {
       setIsProcessing(true);
       setResult([]);
       const returnedImages = await processPDF(input);
-      console.log('Processed Images are', returnedImages);
 
       // No result
       if (!returnedImages) {
