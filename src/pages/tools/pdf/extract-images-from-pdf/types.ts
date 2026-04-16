@@ -5,3 +5,10 @@ export interface PdfImageObject {
   bitmap: ImageBitmap;
   ref: string;
 }
+
+// Used For Easier Iterations Prior to Drawing on Canvas
+export interface PreProcessImageObject {
+  img: PdfImageObject;
+  pageNum: number;
+  imageNum: number;
+}
