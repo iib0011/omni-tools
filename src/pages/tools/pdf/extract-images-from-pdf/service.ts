@@ -1,13 +1,17 @@
 import * as pdfjsLib from 'pdfjs-dist';
 import pdfWorker from 'pdfjs-dist/legacy/build/pdf.worker.min.mjs?url';
 import { PdfImageObject } from './types';
+import JSZip from 'jszip';
 
 // Initialise The PDF JS Worker
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
-export async function processPDF(input: File) {
+export async function processPDF(
+  input: File
+): Promise<{ extractedImages: File[]; zipFile: File | null } | null> {
   // Decode File
   const url = URL.createObjectURL(input);
+  const extractedImages: File[] = [];
 
   try {
     // Wait for fully processed
@@ -27,20 +31,45 @@ export async function processPDF(input: File) {
         if (fn === pdfjsLib.OPS.paintImageXObject) {
           // Extract Data
           const imgName = await ops.argsArray[i][0];
+          // Wait for the callback to finish
           const img = (await new Promise((resolve) => {
             page.objs.get(imgName, resolve);
           })) as PdfImageObject;
 
           // Retrieve File
           const file = await processImage(img, pageNum, imageNum);
-          console.log('File is ', file);
-        }
 
-        imageNum++;
+          // Add into End
+          if (file) extractedImages.push(file);
+
+          // Add Image Counter
+          imageNum++;
+        }
       }
+    }
+
+    // Bundle Together as Zip
+    // Checking the Need to Convert
+    if (extractedImages.length === 0) return null;
+
+    if (extractedImages.length === 1) return { extractedImages, zipFile: null };
+
+    // Converting Into Zip File
+    const zip = new JSZip();
+    extractedImages.forEach((file) => zip.file(file.name, file));
+    const zipBlob = await zip.generateAsync({ type: 'blob' });
+    const zipFile = new File([zipBlob], 'compressed-images.zip', {
+      type: 'application/zip'
+    });
+
+    if (extractedImages) {
+      return { extractedImages, zipFile };
+    } else {
+      return null;
     }
   } catch (error) {
     console.log('Error processing pdf', error);
+    return null;
   } finally {
     URL.revokeObjectURL(url);
   }
@@ -51,8 +80,6 @@ async function processImage(
   pageNum: number,
   imageNum: number
 ): Promise<File | null> {
-  console.log('Image Received is ', img);
-
   try {
     // Create Canvas
     const canvas = document.createElement('canvas');

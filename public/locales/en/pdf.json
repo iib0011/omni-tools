@@ -131,6 +131,7 @@
   "extractImagesFromPdf": {
     "description": "Extract images from your PDF file.",
     "shortDescription": "Extract images from your PDF file.",
-    "title": "Extract Images from PDF"
+    "title": "Extract Images from PDF",
+    "resultTitle": "Extracted Images Here"
   }
 }
