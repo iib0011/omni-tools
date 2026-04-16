@@ -1,33 +1,46 @@
 import * as pdfjsLib from 'pdfjs-dist';
-import pdfWorker from 'pdfjs-dist/build/pdf.worker?url';
+import pdfWorker from 'pdfjs-dist/legacy/build/pdf.worker.min.mjs?url';
 import { PdfImage } from './types';
 
 // Initialise The PDF JS Worker
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
-export async function processPDF(url: string) {
-  // Wait for fully processed
-  const pdf = await pdfjsLib.getDocument(url).promise;
+export async function processPDF(input: File) {
+  // Decode File
+  const url = URL.createObjectURL(input);
 
-  // Iterate through pages
-  for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-    const page = await pdf.getPage(pageNum);
-    const ops = await page.getOperatorList();
+  try {
+    // Wait for fully processed
+    const pdf = await pdfjsLib.getDocument(url).promise;
 
-    // Look through commands
-    for (let i = 0; i < ops.fnArray.length; i++) {
-      const fn = ops.fnArray[i];
+    // Iterate through pages
+    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+      const page = await pdf.getPage(pageNum);
+      const ops = await page.getOperatorList();
 
-      // Matches Image Object
-      if (fn === pdfjsLib.OPS.paintImageXObject) {
-        // Extract Data
-        const imgName = ops.argsArray[i][0];
-        const img = (await page.objs.get(imgName)) as PdfImage;
+      // Look through commands
+      for (let i = 0; i < ops.fnArray.length; i++) {
+        const fn = ops.fnArray[i];
 
-        // Retrieve File
-        const file = await processImage(img);
+        // Matches Image Object
+        if (fn === pdfjsLib.OPS.paintImageXObject) {
+          // Extract Data
+          const imgName = await ops.argsArray[i][0];
+          const img = await page.objs.get(imgName);
+
+          // TODO: Img Null? - Need to Wait Longer
+          console.log('Image created is ', img);
+
+          // Retrieve File
+          const file = await processImage(img);
+          console.log('File is ', file);
+        }
       }
     }
+  } catch (error) {
+    console.log('Error processing pdf', error);
+  } finally {
+    URL.revokeObjectURL(url);
   }
 }
 
