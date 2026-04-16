@@ -1,6 +1,6 @@
 {
   "changeColors": {
-    "description": "World",
+    "description": "Change specific colors in an image by selecting a source color and replacing it with a new one.",
     "shortDescription": "Quickly swap colors in a image",
     "title": "Change colors in image"
   },
@@ -36,7 +36,7 @@
     "title": "Convert JPG to PNG"
   },
   "createTransparent": {
-    "description": "World",
+    "description": "Create a transparent version of an image by removing the chosen background color.",
     "shortDescription": "Quickly make an image transparent",
     "title": "Create transparent PNG"
   },
@@ -84,7 +84,7 @@
     "title": "QR Code Generator"
   },
   "removeBackground": {
-    "description": "World",
+    "description": "Remove the background from an image to isolate the main subject with transparency.",
     "shortDescription": "Automatically remove backgrounds from images",
     "title": "Remove Background from Image"
   },
