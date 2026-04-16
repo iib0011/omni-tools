@@ -127,5 +127,10 @@
       "description": "This tool allows you to extract specific pages from a PDF document. You can specify individual pages or ranges of pages to extract.",
       "title": "Split PDF"
     }
+  },
+  "extractImagesFromPdf": {
+    "description": "Extract images from your PDF file.",
+    "shortDescription": "Extract images from your PDF file.",
+    "title": "Extract Images from PDF"
   }
 }
