@@ -231,11 +231,18 @@
   },
   "toolMultipleAudioInput": {
     "inputTitle": "输入 {{type}}",
-    "noFilesSelected": "未选择任何文件"
+    "noFilesSelected": "未选择任何文件",
+    "deleteFile": "删除文件"
+  },
+  "toolMultipleVideoInput": {
+    "inputTitle": "输入 {{type}}",
+    "noFilesSelected": "未选择任何文件",
+    "deleteFile": "删除文件"
   },
   "toolMultiplePdfInput": {
     "inputTitle": "输入 {{type}}",
-    "noFilesSelected": "未选择任何文件"
+    "noFilesSelected": "未选择任何文件",
+    "deleteFile": "删除文件"
   },
   "toolOptions": {
     "title": "工具选项"
