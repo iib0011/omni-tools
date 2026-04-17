@@ -1,11 +1,12 @@
 import { ReactNode, useContext, useEffect, useRef, useState } from 'react';
-import { Box, useTheme } from '@mui/material';
+import { Box, IconButton, Tooltip, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import { isArray } from 'lodash';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import ClearIcon from '@mui/icons-material/Clear';
 import { useTranslation } from 'react-i18next';
 
 interface MultiPdfInputComponentProps {
@@ -65,7 +66,6 @@ export default function ToolMultiFileInput({
   };
 
   const reorderList = (sourceIndex: number, destinationIndex: number) => {
-    console.log(sourceIndex, destinationIndex);
     if (destinationIndex === sourceIndex) {
       return;
     }
@@ -144,21 +144,39 @@ export default function ToolMultiFileInput({
                   padding: 1
                 }}
               >
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <PictureAsPdfIcon />
-                  <Typography sx={{ marginLeft: 1 }}>
-                    {fileNameTruncate(file.file.name)}
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{ cursor: 'pointer' }}
-                  onClick={() => {
-                    const updatedFiles = value.filter((_, i) => i !== index);
-                    onChange(updatedFiles);
-                  }}
-                >
-                  ✖
-                </Box>
+                <Tooltip title={file.file.name}>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      overflow: 'hidden'
+                    }}
+                  >
+                    <PictureAsPdfIcon />
+                    <Typography
+                      sx={{
+                        marginLeft: 1,
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
+                      {fileNameTruncate(file.file.name)}
+                    </Typography>
+                  </Box>
+                </Tooltip>
+                <Tooltip title={t('toolMultiplePdfInput.deleteFile')}>
+                  <IconButton
+                    size="small"
+                    aria-label={t('toolMultiplePdfInput.deleteFile')}
+                    onClick={() => {
+                      const updatedFiles = value.filter((_, i) => i !== index);
+                      onChange(updatedFiles);
+                    }}
+                  >
+                    <ClearIcon fontSize="small" />
+                  </IconButton>
+                </Tooltip>
               </Box>
             ))
           ) : (

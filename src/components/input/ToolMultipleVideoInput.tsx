@@ -1,11 +1,13 @@
 import { ReactNode, useContext, useEffect, useRef, useState } from 'react';
-import { Box, useTheme } from '@mui/material';
+import { Box, IconButton, Tooltip, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import { isArray } from 'lodash';
 import VideoFileIcon from '@mui/icons-material/VideoFile';
+import ClearIcon from '@mui/icons-material/Clear';
+import { useTranslation } from 'react-i18next';
 
 interface MultiVideoInputComponentProps {
   accept: string[];
@@ -27,13 +29,11 @@ export default function ToolMultipleVideoInput({
   title,
   type
 }: MultiVideoInputComponentProps) {
-  console.log('ToolMultipleVideoInput rendering with value:', value);
-
+  const { t } = useTranslation();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
-    console.log('File change event:', files);
     if (files)
       onChange([
         ...value,
@@ -42,12 +42,10 @@ export default function ToolMultipleVideoInput({
   };
 
   const handleImportClick = () => {
-    console.log('Import clicked');
     fileInputRef.current?.click();
   };
 
   function handleClear() {
-    console.log('Clear clicked');
     onChange([]);
   }
 
@@ -98,7 +96,12 @@ export default function ToolMultipleVideoInput({
   return (
     <Box>
       <InputHeader
-        title={title || 'Input ' + type.charAt(0).toUpperCase() + type.slice(1)}
+        title={
+          title ||
+          t('toolMultipleVideoInput.inputTitle', {
+            type: type.charAt(0).toUpperCase() + type.slice(1)
+          })
+        }
       />
       <Box
         sx={{
@@ -138,26 +141,44 @@ export default function ToolMultipleVideoInput({
                   padding: 1
                 }}
               >
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <VideoFileIcon />
-                  <Typography sx={{ marginLeft: 1 }}>
-                    {fileNameTruncate(file.file.name)}
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{ cursor: 'pointer' }}
-                  onClick={() => {
-                    const updatedFiles = value.filter((_, i) => i !== index);
-                    onChange(updatedFiles);
-                  }}
-                >
-                  ✖
-                </Box>
+                <Tooltip title={file.file.name}>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      overflow: 'hidden'
+                    }}
+                  >
+                    <VideoFileIcon />
+                    <Typography
+                      sx={{
+                        marginLeft: 1,
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
+                      {fileNameTruncate(file.file.name)}
+                    </Typography>
+                  </Box>
+                </Tooltip>
+                <Tooltip title={t('toolMultipleVideoInput.deleteFile')}>
+                  <IconButton
+                    size="small"
+                    aria-label={t('toolMultipleVideoInput.deleteFile')}
+                    onClick={() => {
+                      const updatedFiles = value.filter((_, i) => i !== index);
+                      onChange(updatedFiles);
+                    }}
+                  >
+                    <ClearIcon fontSize="small" />
+                  </IconButton>
+                </Tooltip>
               </Box>
             ))
           ) : (
             <Typography variant="body2" color="text.secondary">
-              No files selected
+              {t('toolMultipleVideoInput.noFilesSelected')}
             </Typography>
           )}
         </Box>

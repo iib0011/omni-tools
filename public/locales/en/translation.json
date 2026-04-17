@@ -239,7 +239,13 @@
   },
   "toolMultipleAudioInput": {
     "inputTitle": "Input {{type}}",
-    "noFilesSelected": "No files selected"
+    "noFilesSelected": "No files selected",
+    "deleteFile": "Delete file"
+  },
+  "toolMultipleVideoInput": {
+    "inputTitle": "Input {{type}}",
+    "noFilesSelected": "No files selected",
+    "deleteFile": "Delete file"
   },
   "toolMultipleImageInput": {
     "inputTitle": "Images Input",
@@ -247,7 +253,8 @@
   },
   "toolMultiplePdfInput": {
     "inputTitle": "Input {{type}}",
-    "noFilesSelected": "No files selected"
+    "noFilesSelected": "No files selected",
+    "deleteFile": "Delete file"
   },
   "toolOptions": {
     "title": "Tool options"
