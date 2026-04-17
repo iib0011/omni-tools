@@ -231,6 +231,10 @@
   "toolLayout": {
     "allToolsTitle": "All {{type}}"
   },
+  "toolsByCategory": {
+    "noResultsTitle": "No tools found",
+    "noResultsDescription": "Try adjusting your search or filter criteria"
+  },
   "toolMultiFileResult": {
     "copied": "File copied",
     "copyFailed": "Failed to copy: {{error}}",

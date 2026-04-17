@@ -88,7 +88,8 @@ export default function ToolsByCategory() {
             </Typography>
           </Stack>
           <TextField
-            placeholder={'Search'}
+            placeholder={t('translation:hero.searchPlaceholder')}
+            aria-label={t('translation:hero.searchPlaceholder')}
             InputProps={{
               endAdornment: <SearchIcon />,
               sx: {
@@ -113,53 +114,78 @@ export default function ToolsByCategory() {
             onUserTypesChange={setSelectedUserTypes}
           />
         </Box>
-        <Grid container spacing={2}>
-          {categoryTools.map((tool, index) => (
-            <Grid item xs={12} md={6} lg={4} key={tool.path}>
-              <Stack
-                sx={{
-                  backgroundColor: 'background.paper',
-                  boxShadow: `5px 4px 2px ${
-                    theme.palette.mode === 'dark' ? 'black' : '#E9E9ED'
-                  }`,
-                  cursor: 'pointer',
-                  height: '100%',
-                  '&:hover': {
-                    backgroundColor: theme.palette.background.hover
-                  }
-                }}
-                onClick={() => navigate('/' + tool.path)}
-                direction={'row'}
-                alignItems={'center'}
-                spacing={2}
-                padding={2}
-                border={`1px solid ${theme.palette.background.default}`}
-                borderRadius={2}
-              >
-                <Icon
-                  icon={tool.icon ?? 'ph:compass-tool-thin'}
-                  fontSize={'60px'}
-                  color={categoriesColors[index % categoriesColors.length]}
-                />
-                <Box>
-                  <StyledLink
-                    style={{
-                      fontSize: 20
-                    }}
-                    to={'/' + tool.path}
-                  >
-                    {/*@ts-ignore*/}
-                    {t(tool.name)}
-                  </StyledLink>
-                  <Typography sx={{ mt: 2 }}>
-                    {/*@ts-ignore*/}
-                    {t(tool.shortDescription)}
-                  </Typography>
-                </Box>
-              </Stack>
-            </Grid>
-          ))}
-        </Grid>
+        {categoryTools.length > 0 ? (
+          <Grid container spacing={2}>
+            {categoryTools.map((tool, index) => (
+              <Grid item xs={12} md={6} lg={4} key={tool.path}>
+                <Stack
+                  sx={{
+                    backgroundColor: 'background.paper',
+                    boxShadow: `5px 4px 2px ${
+                      theme.palette.mode === 'dark' ? 'black' : '#E9E9ED'
+                    }`,
+                    cursor: 'pointer',
+                    height: '100%',
+                    '&:hover': {
+                      backgroundColor: theme.palette.background.hover
+                    }
+                  }}
+                  onClick={() => navigate('/' + tool.path)}
+                  direction={'row'}
+                  alignItems={'center'}
+                  spacing={2}
+                  padding={2}
+                  border={`1px solid ${theme.palette.background.default}`}
+                  borderRadius={2}
+                >
+                  <Icon
+                    icon={tool.icon ?? 'ph:compass-tool-thin'}
+                    fontSize={'60px'}
+                    color={categoriesColors[index % categoriesColors.length]}
+                  />
+                  <Box>
+                    <StyledLink
+                      style={{
+                        fontSize: 20
+                      }}
+                      to={'/' + tool.path}
+                    >
+                      {/*@ts-ignore*/}
+                      {t(tool.name)}
+                    </StyledLink>
+                    <Typography sx={{ mt: 2 }}>
+                      {/*@ts-ignore*/}
+                      {t(tool.shortDescription)}
+                    </Typography>
+                  </Box>
+                </Stack>
+              </Grid>
+            ))}
+          </Grid>
+        ) : (
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              py: 8,
+              textAlign: 'center'
+            }}
+          >
+            <Icon
+              icon="ph:magnifying-glass"
+              fontSize="80px"
+              color={theme.palette.grey[400]}
+            />
+            <Typography variant="h6" sx={{ mt: 2, mb: 1 }}>
+              {t('translation:toolsByCategory.noResultsTitle')}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {t('translation:toolsByCategory.noResultsDescription')}
+            </Typography>
+          </Box>
+        )}
       </Box>
     </Box>
   );
