@@ -225,13 +225,10 @@
     "loading": "लोड हो रहा है... इसमें कुछ समय लग सकता है।",
     "result": "परिणाम"
   },
-  "toolMultipleAudioInput": {
-    "inputTitle": "इनपुट {{type}}",
-    "noFilesSelected": "कोई फ़ाइल चयनित नहीं"
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "इनपुट {{type}}",
-    "noFilesSelected": "कोई फ़ाइल चयनित नहीं"
+  "toolMultipleInput": {
+    "inputTitle": "{{type}} इनपुट करें",
+    "noFilesSelected": "कोई फ़ाइल नहीं चुनी गई",
+    "deleteFile": "फ़ाइल हटाएं"
   },
   "toolOptions": {
     "title": "टूल विकल्प"
