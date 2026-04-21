@@ -237,21 +237,7 @@
     "loading": "Loading... This may take a moment.",
     "result": "Result"
   },
-  "toolMultipleAudioInput": {
-    "inputTitle": "Input {{type}}",
-    "noFilesSelected": "No files selected",
-    "deleteFile": "Delete file"
-  },
-  "toolMultipleVideoInput": {
-    "inputTitle": "Input {{type}}",
-    "noFilesSelected": "No files selected",
-    "deleteFile": "Delete file"
-  },
-  "toolMultipleImageInput": {
-    "inputTitle": "Images Input",
-    "noFilesSelected": "No files selected"
-  },
-  "toolMultiplePdfInput": {
+  "toolMultipleInput": {
     "inputTitle": "Input {{type}}",
     "noFilesSelected": "No files selected",
     "deleteFile": "Delete file"
