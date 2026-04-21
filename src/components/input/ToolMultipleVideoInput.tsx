@@ -1,10 +1,8 @@
-import { ReactNode, useContext, useEffect, useRef, useState } from 'react';
-import { Box, IconButton, Tooltip, useTheme } from '@mui/material';
+import { useRef } from 'react';
+import { Box, IconButton, Tooltip } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
-import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
-import { isArray } from 'lodash';
 import VideoFileIcon from '@mui/icons-material/VideoFile';
 import ClearIcon from '@mui/icons-material/Clear';
 import { useTranslation } from 'react-i18next';
@@ -98,7 +96,7 @@ export default function ToolMultipleVideoInput({
       <InputHeader
         title={
           title ||
-          t('toolMultipleVideoInput.inputTitle', {
+          t('toolMultipleInput.inputTitle', {
             type: type.charAt(0).toUpperCase() + type.slice(1)
           })
         }
@@ -162,10 +160,10 @@ export default function ToolMultipleVideoInput({
                     </Typography>
                   </Box>
                 </Tooltip>
-                <Tooltip title={t('toolMultipleVideoInput.deleteFile')}>
+                <Tooltip title={t('toolMultipleInput.deleteFile')}>
                   <IconButton
                     size="small"
-                    aria-label={t('toolMultipleVideoInput.deleteFile')}
+                    aria-label={t('toolMultipleInput.deleteFile')}
                     onClick={() => {
                       const updatedFiles = value.filter((_, i) => i !== index);
                       onChange(updatedFiles);
@@ -178,7 +176,7 @@ export default function ToolMultipleVideoInput({
             ))
           ) : (
             <Typography variant="body2" color="text.secondary">
-              {t('toolMultipleVideoInput.noFilesSelected')}
+              {t('toolMultipleInput.noFilesSelected')}
             </Typography>
           )}
         </Box>

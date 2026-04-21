@@ -1,12 +1,10 @@
-import { ReactNode, useContext, useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { Box, IconButton, Tooltip, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
-import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
-import { isArray } from 'lodash';
-import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import ClearIcon from '@mui/icons-material/Clear';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { useTranslation } from 'react-i18next';
 
 interface MultiPdfInputComponentProps {
@@ -32,7 +30,6 @@ export default function ToolMultiFileInput({
   const { t } = useTranslation();
   const theme = useTheme();
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const { showSnackBar } = useContext(CustomSnackBarContext);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -100,7 +97,7 @@ export default function ToolMultiFileInput({
       <InputHeader
         title={
           title ||
-          t('toolMultiplePdfInput.inputTitle', {
+          t('toolMultipleInput.inputTitle', {
             type: type.charAt(0).toUpperCase() + type.slice(1)
           })
         }
@@ -165,10 +162,10 @@ export default function ToolMultiFileInput({
                     </Typography>
                   </Box>
                 </Tooltip>
-                <Tooltip title={t('toolMultiplePdfInput.deleteFile')}>
+                <Tooltip title={t('toolMultipleInput.deleteFile')}>
                   <IconButton
                     size="small"
-                    aria-label={t('toolMultiplePdfInput.deleteFile')}
+                    aria-label={t('toolMultipleInput.deleteFile')}
                     onClick={() => {
                       const updatedFiles = value.filter((_, i) => i !== index);
                       onChange(updatedFiles);
@@ -181,7 +178,7 @@ export default function ToolMultiFileInput({
             ))
           ) : (
             <Typography variant="body2" color="text.secondary">
-              {t('toolMultiplePdfInput.noFilesSelected')}
+              {t('toolMultipleInput.noFilesSelected')}
             </Typography>
           )}
         </Box>
