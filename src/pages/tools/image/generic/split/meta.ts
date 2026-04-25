@@ -7,8 +7,8 @@ export const tool = defineTool('image-generic', {
     description: 'image:split.description',
     shortDescription: 'image:split.shortDescription'
   },
-  path: 'split',
+  path: 'split-to-pages',
   icon: 'mdi:scissors',
-  keywords: ['split'],
+  keywords: ['split', 'images', 'pages', 'large', 'map'],
   component: lazy(() => import('./index'))
 });
