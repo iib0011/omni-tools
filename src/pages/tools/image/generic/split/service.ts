@@ -1,6 +1,7 @@
-import { units } from './types';
+import { InitialValuesType, units } from './types';
+import { PDFDocument, PageSizes } from 'pdf-lib';
 
-export async function splitImage(
+async function splitImage(
   initImg: HTMLImageElement,
   widthOfEachPart: number,
   heightOfEachPart: number
@@ -9,44 +10,94 @@ export async function splitImage(
   const horParts = Math.ceil(width / widthOfEachPart);
   const verParts = Math.ceil(height / heightOfEachPart);
 
-  const canvas = document.createElement('canvas');
-  const ctx = canvas.getContext('2d');
-  if (!ctx) throw new Error('Canvas not supported');
-
   const promises: Promise<File>[] = [];
 
   for (let y = 0; y < verParts; y++) {
     for (let x = 0; x < horParts; x++) {
-      canvas.width = widthOfEachPart;
-      canvas.height = heightOfEachPart;
+      const tileW = Math.min(widthOfEachPart, width - x * widthOfEachPart);
+      const tileH = Math.min(heightOfEachPart, height - y * heightOfEachPart);
 
-      ctx.clearRect(0, 0, widthOfEachPart, heightOfEachPart);
+      const canvas = document.createElement('canvas');
+      canvas.width = tileW;
+      canvas.height = tileH;
+
+      const ctx = canvas.getContext('2d');
+      if (!ctx) throw new Error('Canvas not supported');
+
       ctx.drawImage(
         initImg,
         x * widthOfEachPart,
         y * heightOfEachPart,
-        widthOfEachPart,
-        heightOfEachPart,
+        tileW,
+        tileH,
         0,
         0,
-        widthOfEachPart,
-        heightOfEachPart
+        tileW,
+        tileH
       );
 
-      const promise = canvasToFile(canvas, `part-${x}-${y}.png`);
-      promises.push(promise);
+      promises.push(canvasToFile(canvas, `part-${x}-${y}.png`));
     }
   }
 
   return Promise.all(promises);
 }
 
+export async function splitImagesToPDF(
+  input: File,
+  values: InitialValuesType
+): Promise<File> {
+  const initImg = await loadImage(input);
+
+  const [pageWidth, pageHeight] = PageSizes[values.pageFormat];
+  const ptPerOneSquare = toPts(values.unitsPerOneSquare, values.unitKind);
+  const pxPerPt =
+    values.pxPerSquareQuantity / (ptPerOneSquare * values.squareQuantity);
+  const paddingInPts = toPts(values.padding, values.unitKind);
+  const pageWidthWithPadding = pageWidth - 2 * paddingInPts;
+  const pageHeightWithPadding = pageHeight - 2 * paddingInPts;
+
+  const imgParts = await splitImage(
+    initImg,
+    Math.round(pageWidthWithPadding * pxPerPt),
+    Math.round(pageHeightWithPadding * pxPerPt)
+  );
+
+  const pdfDoc = await PDFDocument.create();
+
+  for (const imgFile of imgParts) {
+    const img = await pdfDoc.embedPng(await imgFile.arrayBuffer());
+    const page = pdfDoc.addPage([pageWidth, pageHeight]);
+    page.drawImage(img, {
+      x: paddingInPts,
+      y: paddingInPts,
+      width: pageWidthWithPadding,
+      height: pageHeightWithPadding
+    });
+  }
+
+  const pdfBytes = await pdfDoc.save();
+
+  return new File(
+    [pdfBytes as BlobPart],
+    input.name.replace(/\.([^.]+)?$/i, `-${Date.now()}.pdf`),
+    { type: 'application/pdf' }
+  );
+}
+
 export function loadImage(input: File): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const img = new Image();
-    img.src = URL.createObjectURL(input);
-    img.onload = () => resolve(img);
-    img.onerror = (err) => reject(err);
+    const url = URL.createObjectURL(input);
+    img.src = url;
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+      resolve(img);
+    };
+    img.onerror = (err) => {
+      URL.revokeObjectURL(url);
+      reject(err);
+    };
   });
 }
 
