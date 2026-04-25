@@ -1,6 +1,6 @@
 {
   "changeColors": {
-    "description": "Welt",
+    "description": "Ersetze ausgewahlte Farben in einem Bild schnell und prazise durch neue Farben.",
     "shortDescription": "Schnelles Austauschen der Farben in einem Bild",
     "title": "Farben im Bild ändern"
   },
@@ -33,13 +33,8 @@
     "shortDescription": "Konvertieren Sie Ihre JPG-Bilder schnell in PNG",
     "title": "Konvertieren Sie JPG in PNG"
   },
-  "convertToJpg": {
-    "description": "Konvertieren Sie verschiedene Bildformate (PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW) in JPG mit anpassbaren Qualitäts- und Hintergrundfarbeinstellungen.",
-    "shortDescription": "Konvertieren Sie Bilder mit Qualitätskontrolle in JPG",
-    "title": "Bilder in JPG konvertieren"
-  },
   "createTransparent": {
-    "description": "Welt",
+    "description": "Mache den Hintergrund eines Bildes transparent, indem du die ausgewahlte Farbe entfernst.",
     "shortDescription": "Machen Sie ein Bild schnell transparent",
     "title": "Transparentes PNG erstellen"
   },
@@ -66,7 +61,7 @@
     "title": "QR-Code-Generator"
   },
   "removeBackground": {
-    "description": "Welt",
+    "description": "Entferne den Hintergrund eines Bildes automatisch und behalte das Hauptmotiv transparent bei.",
     "shortDescription": "Hintergründe automatisch aus Bildern entfernen",
     "title": "Hintergrund aus Bild entfernen"
   },

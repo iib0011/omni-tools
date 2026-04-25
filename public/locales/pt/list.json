@@ -113,37 +113,6 @@
     "trimItemsDescription": "Remova os espaços iniciais e finais antes de comparar itens.",
     "uniqueItemOptions": "Opções de itens exclusivos"
   },
-  "group": {
-    "deleteEmptyItems": "Excluir itens vazios",
-    "deleteEmptyItemsDescription": "Ignore itens vazios e não os inclua nos grupos.",
-    "description": "O utilitário baseado em navegador mais simples do mundo para agrupar itens de lista. Insira sua lista e especifique critérios de agrupamento para organizar os itens em grupos lógicos. Perfeito para categorizar dados, organizar informações ou criar listas estruturadas. Suporta separadores personalizados e diversas opções de agrupamento.",
-    "emptyItemsAndPadding": "Itens vazios e preenchimento",
-    "groupNumberDescription": "Número de itens em um grupo",
-    "groupSeparatorDescription": "Caractere separador de grupo",
-    "groupSizeAndSeparators": "Tamanho do grupo e separadores",
-    "inputItemSeparator": "Separador de itens de entrada",
-    "inputTitle": "Lista de entrada",
-    "itemSeparatorDescription": "Caractere separador de itens",
-    "leftWrapDescription": "Símbolo de envoltório esquerdo do grupo.",
-    "padNonFullGroups": "Grupos não completos",
-    "padNonFullGroupsDescription": "Preencha grupos não completos com um item personalizado (insira abaixo).",
-    "paddingCharDescription": "Use este caractere ou item para preencher grupos não completos.",
-    "resultTitle": "Itens agrupados",
-    "rightWrapDescription": "Símbolo de envoltório direito do grupo.",
-    "shortDescription": "Agrupar itens da lista por propriedades comuns",
-    "splitOperators": {
-      "regex": {
-        "description": "Delimite itens da lista de entrada com uma expressão regular.",
-        "title": "Use um Regex para Divisão"
-      },
-      "symbol": {
-        "description": "Delimitar itens da lista de entrada com um caractere.",
-        "title": "Use um símbolo para dividir"
-      }
-    },
-    "splitSeparatorDescription": "Defina um símbolo delimitador ou uma expressão regular.",
-    "title": "Grupo"
-  },
   "reverse": {
     "description": "Este é um aplicativo super simples baseado em navegador que imprime todos os itens da lista em ordem inversa. Os itens de entrada podem ser separados por qualquer símbolo e você também pode alterar o separador dos itens da lista em ordem inversa.",
     "inputTitle": "Lista de entrada",

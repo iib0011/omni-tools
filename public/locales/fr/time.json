@@ -58,10 +58,30 @@
       "title": "Convertir le temps en secondes"
     }
   },
+  "convertUnixToDate": {
+    "addUtcLabel": "Ajouter le suffixe 'UTC'",
+    "addUtcLabelDescription": "Affiche 'UTC' après la date convertie (uniquement en mode UTC)",
+    "date-to-unix": "Date → Unix",
+    "description": "Convertir les horodatages Unix en dates lisibles et reconvertir les dates formatées en horodatages Unix (dans les deux directions).",
+    "optionsTitle": "Mode de conversion",
+    "outputOptions": "Options de sortie",
+    "shortDescription": "Convertir les horodatages Unix et les dates dans les deux directions.",
+    "title": "Convertir Unix ↔ Date",
+    "toolInfo": {
+      "description": "Cet outil convertit les horodatages Unix (en secondes) en formats de date lisibles par l'homme tels que YYYY-MM-DD HH:MM:SS, et convertit également les dates formatées en horodatages Unix. Vous pouvez choisir la sortie UTC, la sortie du fuseau horaire local ou fournir un décalage UTC personnalisé (par exemple : YYYY-MM-DD HH:MM:SS +XX:XX). Si aucun décalage n'est fourni et que le fuseau horaire local n'est pas sélectionné, UTC (+00:00) est utilisé par défaut.",
+      "title": "Convertir Unix ↔ Date"
+    },
+    "tzOptions": "Options de fuseau horaire",
+    "unix-to-date": "Unix → Date",
+    "useLocalTime": "Utiliser l'heure locale",
+    "useLocalTimeDescription": "Affiche la date convertie dans votre fuseau horaire local au lieu de l'heure UTC",
+    "useUTC": "Utiliser l'UTC"
+  },
   "crontabGuru": {
-    "description": "Générez et comprenez les expressions Cron. Créez des planifications Cron pour les tâches automatisées et les tâches système.",
-    "shortDescription": "Générer et comprendre les expressions cron",
-    "title": "Crontab Guru"
+    "title": "Crontab Guru",
+    "description": "Analysez et expliquez les expressions cron en français. Comprenez instantanément ce que fait un planning cron, validez la syntaxe et traitez plusieurs expressions à la fois.",
+    "shortDescription": "Analysez et expliquez les expressions cron en clair",
+    "longDescription": "Crontab Guru est un analyseur et validateur d'expressions cron qui traduit la syntaxe complexe des crons en descriptions claires et lisibles. Que vous planifiiez des sauvegardes automatiques, des tâches de maintenance système ou des pipelines CI/CD, cet outil vous aide à comprendre exactement quand vos tâches s'exécuteront. Prend en charge les expressions cron standard à 5 champs, valide la syntaxe en temps réel et traite plusieurs expressions à la fois — une par ligne. Disponible en anglais, français, espagnol, allemand, japonais, chinois, portugais, néerlandais et russe."
   },
   "timeBetweenDates": {
     "description": "Calculez le décalage horaire entre deux dates. Obtenez la durée exacte en jours, heures, minutes et secondes.",
@@ -98,21 +118,5 @@
     "zeroPaddingDescription": "Faites en sorte que tous les composants de temps aient toujours une largeur de deux chiffres.",
     "zeroPrintDescription": "Afficher les parties supprimées sous forme de valeurs nulles « 00 ».",
     "zeroPrintTruncatedParts": "Parties tronquées sans impression"
-  },
-  "convertUnixToDate": {
-    "title": "Convertir un timestamp Unix en date",
-    "description": "Convertit un timestamp Unix en une date lisible par un humain.",
-    "shortDescription": "Conversion de timestamp Unix en date",
-    "longDescription": "Cet outil permet de convertir un timestamp Unix (en secondes) en une date lisible au format AAAA-MM-JJ HH:MM:SS. Il prend en charge l'affichage en UTC ou dans le fuseau horaire local, ce qui est pratique pour interpréter rapidement des horodatages issus de journaux, d'API ou de systèmes utilisant le temps Unix.",
-    "withLabel": "Options",
-    "outputOptions": "Options de sortie",
-    "addUtcLabel": "Ajouter le suffixe 'UTC'",
-    "addUtcLabelDescription": "Affiche 'UTC' après la date convertie (uniquement en mode UTC)",
-    "useLocalTime": "Utiliser l’heure locale",
-    "useLocalTimeDescription": "Affiche la date convertie dans votre fuseau horaire local au lieu de l’heure UTC",
-    "toolInfo": {
-      "title": "Convertir un timestamp Unix en date",
-      "description": "Cet outil convertit un timestamp Unix (en secondes) en une date lisible (par ex. AAAA-MM-JJ HH:MM:SS). Il prend en charge l'affichage en heure locale ou en UTC, ce qui le rend utile pour analyser rapidement des données issues de journaux ou d’APIs."
-    }
   }
 }

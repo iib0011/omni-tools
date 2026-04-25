@@ -14,11 +14,8 @@ const initialValues: InitialValuesType = {
   outputFormat: 'mp3'
 };
 
-export default function AudioConverter({
-  title,
-  longDescription
-}: ToolComponentProps) {
-  const { t } = useTranslation('audio');
+export default function AudioConverter({ title }: ToolComponentProps) {
+  const { t } = useTranslation('converters');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -47,12 +44,7 @@ export default function AudioConverter({
     updateField
   }) => [
     {
-      id: 'output-format',
-      title: t('audioConverter.outputFormat', 'Output Format'),
-      description: t(
-        'audioConverter.outputFormatDescription',
-        'Select the desired output audio format'
-      ),
+      title: t('audioConverter.outputFormat'),
       component: (
         <Box>
           <SelectWithDesc
@@ -62,10 +54,7 @@ export default function AudioConverter({
               label: value.toUpperCase(),
               value: value as AudioFormat
             }))}
-            description={t(
-              'audioConverter.outputFormatDescription',
-              'Select the desired output audio format'
-            )}
+            description={t('audioConverter.outputFormatDescription')}
           />
         </Box>
       )
@@ -80,13 +69,13 @@ export default function AudioConverter({
         <ToolAudioInput
           value={input}
           onChange={setInput}
-          title={t('audioConverter.uploadAudio', 'Upload Your Audio File')}
+          title={t('audioConverter.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
           value={result}
-          title={t('audioConverter.outputTitle', 'Converted Audio')}
+          title={t('audioConverter.outputTitle')}
           loading={loading}
         />
       }
@@ -95,8 +84,8 @@ export default function AudioConverter({
       setInput={setInput}
       compute={compute}
       toolInfo={{
-        title: `What is a ${title}?`,
-        description: longDescription
+        title: t('audioConverter.title'),
+        description: t('audioConverter.longDescription')
       }}
     />
   );

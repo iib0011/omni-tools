@@ -276,6 +276,22 @@
     },
     "truncationSide": "截断侧"
   },
+  "unicode": {
+    "caseOptionsTitle": "大小写选项",
+    "decode": "解码",
+    "description": "将文本转换为 Unicode 转义序列，或将其解码回可读文本。",
+    "encode": "编码",
+    "inputTitle": "输入",
+    "optionsTitle": "模式",
+    "resultTitle": "处理结果",
+    "shortDescription": "使用 Unicode 转义序列对文本进行编码或解码。",
+    "title": "Unicode 编码器 / 解码器",
+    "toolInfo": {
+      "description": "此工具可让您将纯文本转换为 Unicode 转义序列（例如，\\uXXXX），以及将 Unicode 转义序列解码回标准文本。您还可以选择编码时十六进制输出以大写或小写格式显示。",
+      "title": "Unicode 编码器 / 解码器"
+    },
+    "uppercase": "大写十六进制"
+  },
   "uppercase": {
     "description": "将文本转换为大写字母。",
     "inputTitle": "输入文本",
