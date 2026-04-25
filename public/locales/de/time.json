@@ -59,24 +59,29 @@
     }
   },
   "convertUnixToDate": {
-    "addUtcLabel": "Suffix „UTC“ hinzufügen",
-    "addUtcLabelDescription": "Anzeige „UTC“ nach dem konvertierten Datum (nur für den UTC-Modus)",
-    "description": "Konvertieren Sie einen Unix-Zeitstempel in ein für Menschen lesbares Datum.",
+    "addUtcLabel": "Suffix \"UTC\" hinzufügen",
+    "addUtcLabelDescription": "Anzeige \"UTC\" nach dem konvertierten Datum (nur für den UTC-Modus)",
+    "date-to-unix": "Datum → Unix",
+    "description": "Unix-Zeitstempel in lesbare Daten und Datumsangaben in Unix-Zeitstempel konvertieren (beide Richtungen).",
+    "optionsTitle": "Konvertierungsmodus",
     "outputOptions": "Ausgabeoptionen",
-    "shortDescription": "Unix-Zeitstempel in Datum konvertieren",
-    "title": "Konvertieren Sie Unix in Datum",
+    "shortDescription": "Unix-Zeitstempel und Daten in beide Richtungen konvertieren.",
+    "title": "Unix ↔ Datum konvertieren",
     "toolInfo": {
-      "description": "Dieses Tool konvertiert einen Unix-Zeitstempel (in Sekunden) in ein lesbares Datumsformat (z. B. JJJJ-MM-TT HH:MM:SS). Es unterstützt sowohl die lokale als auch die UTC-Ausgabe und eignet sich daher für die schnelle Interpretation von Zeitstempeln aus Protokollen, APIs oder Systemen, die Unix-Zeit verwenden.",
-      "title": "Konvertieren Sie Unix in Datum"
+      "description": "Dieses Tool konvertiert Unix-Zeitstempel (in Sekunden) in menschenlesbare Datumsformate wie YYYY-MM-DD HH:MM:SS und konvertiert auch formatierte Daten zurück in Unix-Zeitstempel. Sie können UTF-Ausgabe, lokale Zeitzone oder einen benutzerdefinierten UTC-Offset wählen (z.B.: YYYY-MM-DD HH:MM:SS +XX:XX). Wenn kein Offset angegeben und lokale Zeitzone nicht ausgewählt ist, wird standardmäßig UTC (+00:00) verwendet.",
+      "title": "Unix ↔ Datum konvertieren"
     },
+    "tzOptions": "Zeitzonen-Optionen",
+    "unix-to-date": "Unix → Datum",
     "useLocalTime": "Lokale Zeit verwenden",
-    "useLocalTimeDescription": "Zeigen Sie das konvertierte Datum in Ihrer lokalen Zeitzone anstelle von UTC an",
-    "withLabel": "Optionen"
+    "useLocalTimeDescription": "Zeige das konvertierte Datum in deiner lokalen Zeitzone statt UTC an",
+    "useUTC": "UTC verwenden"
   },
   "crontabGuru": {
-    "description": "Generieren und verstehen Sie Cron-Ausdrücke. Erstellen Sie Cron-Zeitpläne für automatisierte Aufgaben und Systemjobs.",
-    "shortDescription": "Cron-Ausdrücke generieren und verstehen",
-    "title": "Crontab Guru"
+    "title": "Crontab Guru",
+    "description": "Analysieren und erklären Sie Cron-Ausdrücke auf Deutsch. Verstehen Sie sofort, was ein Cron-Zeitplan bewirkt, validieren Sie die Syntax und verarbeiten Sie mehrere Ausdrücke gleichzeitig.",
+    "shortDescription": "Cron-Ausdrücke analysieren und verständlich erklären",
+    "longDescription": "Crontab Guru ist ein Cron-Ausdruck-Parser und -Validator, der komplexe Cron-Syntax in klare, lesbare Beschreibungen übersetzt. Egal ob Sie automatische Backups, Systemwartungsaufgaben oder CI/CD-Pipelines planen – dieses Tool hilft Ihnen zu verstehen, wann genau Ihre Jobs ausgeführt werden. Unterstützt standardmäßige 5-Feld-Cron-Ausdrücke, validiert die Syntax in Echtzeit und verarbeitet mehrere Ausdrücke gleichzeitig – einen pro Zeile. Verfügbar auf Englisch, Französisch, Spanisch, Deutsch, Japanisch, Chinesisch, Portugiesisch, Niederländisch und Russisch."
   },
   "timeBetweenDates": {
     "description": "Berechnen Sie die Zeitdifferenz zwischen zwei Daten. Ermitteln Sie die genaue Dauer in Tagen, Stunden, Minuten und Sekunden.",

@@ -22,6 +22,10 @@
       "description": "Tools for working with audio – extract audio from video, adjusting audio speed, merging multiple audio files and much more.",
       "title": "Audio Tools"
     },
+    "converters": {
+      "description": "Tools for converting data between different formats – convert images, audio, video, text, and more.",
+      "title": "Converter Tools"
+    },
     "csv": {
       "description": "Tools for working with CSV files - convert CSV to different formats, manipulate CSV data, validate CSV structure, and process CSV files efficiently.",
       "title": "CSV Tools"
@@ -71,6 +75,14 @@
     "xml": {
       "description": "Tools for working with XML data structures - viewer, beautifier, validator and much more",
       "title": "XML Tools"
+    }
+  },
+  "converters": {
+    "audioconverter": {
+      "description": "Convert audio files between different formats.",
+      "longDescription": "This tool allows you to convert audio files from one format to another, supporting a wide range of audio formats for seamless conversion.",
+      "shortDescription": "Convert audio files to various formats.",
+      "title": "Audio Converter"
     }
   },
   "csv": {
@@ -225,13 +237,10 @@
     "loading": "Loading... This may take a moment.",
     "result": "Result"
   },
-  "toolMultipleAudioInput": {
+  "toolMultipleInput": {
     "inputTitle": "Input {{type}}",
-    "noFilesSelected": "No files selected"
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "Input {{type}}",
-    "noFilesSelected": "No files selected"
+    "noFilesSelected": "No files selected",
+    "deleteFile": "Delete file"
   },
   "toolOptions": {
     "title": "Tool options"

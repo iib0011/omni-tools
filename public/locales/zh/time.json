@@ -47,6 +47,12 @@
       "title": "什么是 {{title}}？"
     }
   },
+  "convertTimeToDecimal": {
+    "description": "将格式化的时间长度（HH:MM:SS）转换为小数小时值。",
+    "longDescription": "将格式化的时间字符串（HH:MM:SS 或 HH:MM）转换为其等效的小数小时值。小时可以是任意正数，而分钟和秒接受 0-59 之间的值，可以是一位或两位数字（例如，'12:5' 或 '12:05'）。此函数解析小时、分钟和秒，然后将总时长计算为单一小数值。它适用于生产力追踪、薪资计算、按时计费、数据分析，或任何需要将人类可读时间转换为易于求和、比较或处理的数值格式的工作流程。例如，'03:26:00' 转换为 3.43 小时，'12:5' 转换为 12.08 小时。",
+    "shortDescription": "把时段转化为小数小时值",
+    "title": "把时间转换至十进制格式"
+  },
   "convertTimeToSeconds": {
     "description": "将格式化的时间（HH：MM：SS）转换为秒。",
     "inputTitle": "输入时间",
@@ -59,24 +65,56 @@
     }
   },
   "convertUnixToDate": {
-    "addUtcLabel": "添加“UTC”后缀",
-    "addUtcLabelDescription": "转换后的日期后显示“UTC”（仅适用于 UTC 模式）",
-    "description": "将 Unix 时间戳转换为人类可读的日期。",
+    "addUtcLabel": "添加 \"UTC\" 后缀",
+    "addUtcLabelDescription": "在转换的日期后显示 \"UTC\"（仅限 UTC 模式）",
+    "date-to-unix": "日期 → Unix",
+    "description": "将 Unix 时间戳转换为可读日期，并将格式化日期转换回 Unix 时间戳（双向转换）。",
+    "optionsTitle": "转换模式",
     "outputOptions": "输出选项",
-    "shortDescription": "将 Unix 时间戳转换为日期",
-    "title": "将 Unix 转换为日期",
+    "shortDescription": "双向转换 Unix 时间戳和日期。",
+    "title": "转换 Unix ↔ 日期",
     "toolInfo": {
-      "description": "此工具可将 Unix 时间戳（以秒为单位）转换为人类可读的日期格式（例如 YYYY-MM-DD HH:MM:SS）。它支持本地和 UTC 输出，因此可用于快速解释来自日志、API 或使用 Unix 时间的系统的时间戳。",
-      "title": "将 Unix 转换为日期"
+      "description": "此工具将 Unix 时间戳（以秒为单位）转换为人类可读的日期格式（例如，YYYY-MM-DD HH:MM:SS），并将格式化日期转换回 Unix 时间戳。您可以选择 UTC 输出、本地时区输出，或提供自定义 UTC 偏移（例如，YYYY-MM-DD HH:MM:SS +XX:XX）。如果未提供偏移且未选择本地时区，则默认使用 UTC (+00:00)。",
+      "title": "转换 Unix ↔ 日期"
     },
-    "useLocalTime": "使用当地时间",
-    "useLocalTimeDescription": "显示以当地时区而非 UTC 转换的日期",
-    "withLabel": "选项"
+    "tzOptions": "时区选项",
+    "unix-to-date": "Unix → 日期",
+    "useLocalTime": "使用本地时间",
+    "useLocalTimeDescription": "显示使用本地时区而非 UTC 转换的日期",
+    "useUTC": "使用 UTC"
   },
   "crontabGuru": {
-    "description": "生成并理解 cron 表达式。为自动化任务和系统作业创建 cron 计划。",
-    "shortDescription": "生成并理解 cron 表达式",
-    "title": "Crontab 大师"
+    "title": "Crontab Guru",
+    "description": "用中文解析和解释 cron 表达式。即时了解任何 cron 计划的作用，验证语法，并一次处理多个表达式。",
+    "shortDescription": "用简单语言解析和解释 cron 表达式",
+    "longDescription": "Crontab Guru 是一个 cron 表达式解析器和验证器，可将复杂的 cron 语法转换为清晰易读的描述。无论您是在安排自动备份、系统维护任务还是 CI/CD 流水线，此工具都能帮助您准确了解您的任务何时运行。支持标准的 5 字段 cron 表达式，实时验证语法，并一次处理多个表达式——每行一个。支持英语、法语、西班牙语、德语、日语、中文、葡萄牙语、荷兰语和俄语。"
+  },
+  "discordTimestamp": {
+    "description": "将日期和时间转换为 Discord 的特殊时间戳格式，自动适应每位用户的本地时区和语言",
+    "formats": {
+      "description": "选择时间戳在 Discord 中的显示方式 — 悬停在每个选项上可查看示例",
+      "long_date": "长日期（例：2025年1月1日）",
+      "long_datetime": "长日期和时间（例：2025年1月1日 星期一 14:30）",
+      "long_time": "长时间（例：14:30:00）",
+      "relative": "相对时间（例：2小时前）",
+      "short_date": "短日期（例：01/01/2025）",
+      "short_datetime": "短日期和时间（例：2025年1月1日 14:30）",
+      "short_time": "短时间（例：14:30）",
+      "title": "时间戳格式"
+    },
+    "inputTitle": "输入日期时间",
+    "name": "Discord 时间戳生成器",
+    "outputTitle": "Discord 时间戳",
+    "shortDescription": "从日期生成 Discord 时间戳",
+    "toolInfo": {
+      "description": "Discord 时间戳是一种动态显示日期和时间的特殊语法。它不显示固定时间，而是自动转换为每位查看者的本地时区和语言 — 让每个人都能看到适合其所在位置的正确时间。只需每行输入一个日期时间，选择格式，然后将结果直接粘贴到 Discord 中。该工具独立处理每一行 — 空行在输出中保留，无效行以 ❌ 标记，有效的日期时间即时转换。启用 UTC 模式可确保结果不受本地时区影响。",
+      "title": "什么是 Discord 时间戳？"
+    },
+    "utc": {
+      "description": "将输入的日期时间视为 UTC。禁用则使用您的本地时区",
+      "label": "强制使用 UTC",
+      "title": "输入选项"
+    }
   },
   "timeBetweenDates": {
     "description": "计算两个日期之间的时差。获取精确的天、小时、分钟和秒数。",

@@ -13,6 +13,7 @@ import { timeTools } from '../pages/tools/time';
 import { IconifyIcon } from '@iconify/react';
 import { pdfTools } from '../pages/tools/pdf';
 import { xmlTools } from '../pages/tools/xml';
+import { convertersTools } from '../pages/tools/converters';
 import { TFunction } from 'i18next';
 import { FullI18nKey, I18nNamespaces } from '../i18n';
 
@@ -28,9 +29,9 @@ const toolCategoriesOrder: ToolCategory[] = [
   'csv',
   'number',
   'png',
-  'time',
   'xml',
-  'gif'
+  'gif',
+  'converters'
 ];
 export const tools: DefinedTool[] = [
   ...imageTools,
@@ -43,7 +44,8 @@ export const tools: DefinedTool[] = [
   ...numberTools,
   ...timeTools,
   ...audioTools,
-  ...xmlTools
+  ...xmlTools,
+  ...convertersTools
 ];
 const categoriesConfig: {
   type: ToolCategory;
@@ -88,12 +90,6 @@ const categoriesConfig: {
     title: 'translation:categories.json.title'
   },
   {
-    type: 'time',
-    icon: 'mdi:clock-time-five',
-    value: 'translation:categories.time.description',
-    title: 'translation:categories.time.title'
-  },
-  {
     type: 'csv',
     icon: 'material-symbols-light:csv-outline',
     value: 'translation:categories.csv.description',
@@ -134,6 +130,12 @@ const categoriesConfig: {
     icon: 'mdi-light:xml',
     value: 'translation:categories.xml.description',
     title: 'translation:categories.xml.title'
+  },
+  {
+    type: 'converters',
+    icon: 'streamline-plump:convert-pdf-1',
+    value: 'translation:categories.converters.description',
+    title: 'translation:categories.converters.title'
   }
 ];
 const CATEGORIES_USER_TYPES_MAPPINGS: Partial<Record<ToolCategory, UserType>> =
@@ -145,7 +147,8 @@ const CATEGORIES_USER_TYPES_MAPPINGS: Partial<Record<ToolCategory, UserType>> =
     png: 'generalUsers',
     'image-generic': 'generalUsers',
     video: 'generalUsers',
-    audio: 'generalUsers'
+    audio: 'generalUsers',
+    converters: 'generalUsers'
   };
 // Filter tools by user types
 export const filterToolsByUserTypes = (
@@ -166,11 +169,132 @@ export const filterToolsByUserTypes = (
   });
 };
 
-// use for changelogs
-// console.log(
-//   'tools',
-//   tools.map(({ name, type }) => ({ type, name }))
-// );
+/**
+ * Returns the Levenshtein distance between two strings.
+ * @param a - First string.
+ * @param b - Second string.
+ * @returns Minimum number of single-character edits (insert, delete, substitute).
+ */
+const levenshtein = (a: string, b: string): number => {
+  if (a === b) return 0;
+  const aLen = a.length;
+  const bLen = b.length;
+
+  if (aLen === 0) return bLen;
+  if (bLen === 0) return aLen;
+
+  const dp: number[][] = Array.from({ length: aLen + 1 }, () =>
+    Array<number>(bLen + 1).fill(0)
+  );
+
+  for (let i = 0; i <= aLen; i += 1) dp[i][0] = i;
+  for (let j = 0; j <= bLen; j += 1) dp[0][j] = j;
+
+  for (let i = 1; i <= aLen; i += 1) {
+    for (let j = 1; j <= bLen; j += 1) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + cost
+      );
+    }
+  }
+
+  return dp[aLen][bLen];
+};
+
+type SearchField = {
+  text: string;
+  words: string[];
+  weight: number;
+};
+
+const splitWords = (text: string): string[] =>
+  text.split(/[^a-z0-9]+/g).filter(Boolean);
+
+/**
+ * Normalizes a string by converting it to lowercase and removing diacritics
+ * (accent marks). Useful for locale-insensitive string comparison and search.
+ *
+ * @param text - The string to normalize
+ * @returns The normalized string with lowercase letters and no diacritics
+ */
+const normalizeText = (text: string): string =>
+  text
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/\p{Diacritic}/gu, '')
+    .trim()
+    .replace(/\s+/g, ' ');
+
+const computeToolScore = (
+  tool: DefinedTool,
+  tokens: string[],
+  t: TFunction<I18nNamespaces[]>
+): number => {
+  const name = normalizeText(t(tool.name));
+  const shortDescription = normalizeText(t(tool.shortDescription));
+  const description = normalizeText(t(tool.description));
+
+  const fields: SearchField[] = [
+    { text: name, words: splitWords(name), weight: 5 },
+    { text: shortDescription, words: splitWords(shortDescription), weight: 3 },
+    { text: description, words: splitWords(description), weight: 2 },
+    ...(tool.keywords ?? []).map((kw) => {
+      const normalized = normalizeText(kw);
+      return {
+        text: normalized,
+        words: splitWords(normalized),
+        weight: 4
+      };
+    })
+  ];
+
+  let totalScore = 0;
+
+  for (const token of tokens) {
+    if (!token) continue;
+
+    let bestForToken = 0;
+
+    for (const field of fields) {
+      let fieldScore = 0;
+
+      if (field.text.includes(token)) {
+        // Base score for substring match
+        fieldScore = field.weight * 2;
+
+        if (field.words.includes(token)) {
+          // Boost whole-word matches
+          fieldScore += field.weight;
+        }
+      } else {
+        for (const word of field.words) {
+          // Quick length check before full distance calculation
+          if (Math.abs(word.length - token.length) > 1) continue;
+
+          const dist = levenshtein(token, word);
+          if (dist === 1) {
+            fieldScore = Math.max(fieldScore, field.weight);
+          }
+        }
+      }
+
+      if (fieldScore > bestForToken) {
+        bestForToken = fieldScore;
+      }
+    }
+    // If any token fails to match (exact or fuzzy), treat the tool as a non-match.
+    if (bestForToken === 0) return 0;
+
+    totalScore += bestForToken;
+  }
+
+  return totalScore;
+};
+
 export const filterTools = (
   tools: DefinedTool[],
   query: string,
@@ -184,20 +308,44 @@ export const filterTools = (
     filteredTools = filterToolsByUserTypes(tools, userTypes);
   }
 
-  // Then filter by search query
-  if (!query) return filteredTools;
+  const normalizedQuery = normalizeText(query);
 
-  const lowerCaseQuery = query.toLowerCase();
+  // If query is empty after normalization, return all tools (after user-type filtering)
+  if (!normalizedQuery) return filteredTools;
 
-  return filteredTools.filter(
-    (tool) =>
-      t(tool.name).toLowerCase().includes(lowerCaseQuery) ||
-      t(tool.description).toLowerCase().includes(lowerCaseQuery) ||
-      t(tool.shortDescription).toLowerCase().includes(lowerCaseQuery) ||
-      tool.keywords.some((keyword) =>
-        keyword.toLowerCase().includes(lowerCaseQuery)
-      )
-  );
+  const rawTokens = normalizedQuery.split(' ').filter(Boolean);
+  if (rawTokens.length === 0) return filteredTools;
+
+  // Expand tokens with simple alpha+digit concatenation variants, e.g. "base" + "64" -> "base64".
+  // This, combined with per-tool `keywords`, allows us to support aliases like
+  // "base 64" / "base64" / "b64" without requiring every form in every keyword list.
+  const tokens: string[] = [...rawTokens];
+
+  for (let i = 0; i < rawTokens.length - 1; i += 1) {
+    const current = rawTokens[i];
+    const next = rawTokens[i + 1];
+
+    if (/^[a-zA-Z]+$/.test(current) && /^\d+$/.test(next)) {
+      tokens.push(`${current}${next}`);
+    }
+  }
+
+  const scored = filteredTools
+    .map((tool) => ({
+      tool,
+      score: computeToolScore(tool, tokens, t)
+    }))
+    .filter(({ score }) => score > 0)
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+
+      const aName = t(a.tool.name).toLowerCase();
+      const bName = t(b.tool.name).toLowerCase();
+
+      return aName.localeCompare(bName);
+    });
+
+  return scored.map(({ tool }) => tool);
 };
 
 export const getToolsByCategory = (

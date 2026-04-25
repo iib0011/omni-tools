@@ -225,13 +225,10 @@
     "loading": "読み込み中... 少々時間がかかる場合があります。",
     "result": "結果"
   },
-  "toolMultipleAudioInput": {
-    "inputTitle": "入力 {{type}}",
-    "noFilesSelected": "ファイルが選択されていません"
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "入力 {{type}}",
-    "noFilesSelected": "ファイルが選択されていません"
+  "toolMultipleInput": {
+    "inputTitle": "{{type}}を入力",
+    "noFilesSelected": "ファイルが選択されていません",
+    "deleteFile": "ファイルを削除"
   },
   "toolOptions": {
     "title": "ツールオプション"

@@ -98,7 +98,7 @@
     "title": "Faites avancer les choses rapidement avec"
   },
   "inputFooter": {
-    "clear": "Clair",
+    "clear": "Supprimer les fichiers",
     "copyToClipboard": "Copier dans le presse-papiers",
     "importFromFile": "Importer à partir d'un fichier"
   },
@@ -225,13 +225,10 @@
     "loading": "Chargement... Cela peut prendre un moment.",
     "result": "Résultat"
   },
-  "toolMultipleAudioInput": {
-    "inputTitle": "Saisir {{type}}",
-    "noFilesSelected": "Aucun fichier sélectionné"
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "Saisir {{type}}",
-    "noFilesSelected": "Aucun fichier sélectionné"
+  "toolMultipleInput": {
+    "inputTitle": "Entrée {{type}}",
+    "noFilesSelected": "Aucun fichier sélectionné",
+    "deleteFile": "Supprimer le fichier"
   },
   "toolOptions": {
     "title": "Options d'outils"
