@@ -158,16 +158,6 @@
         "mm": "Millimeters (mm)",
         "in": "Inches (in)"
       }
-    },
-    "input": {
-      "imagePlaceholder": "Drop or select an image with a tactical map"
-    },
-    "pdfOptions": {
-      "downloadLabel": "Download PDF"
-    },
-    "toolInfo": {
-      "title": "About Split",
-      "description": "This tool slices a large image into pages of the selected paper format and packs them into a PDF. Useful for printing maps across multiple sheets."
     }
   }
 }

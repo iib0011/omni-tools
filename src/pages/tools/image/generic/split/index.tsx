@@ -160,6 +160,7 @@ export default function Split({ title, longDescription }: ToolComponentProps) {
       resultComponent={
         <ToolFileResult
           title={t('image:split.resultTitle')}
+          extension={'pdf'}
           value={result}
           loading={isProcessing}
           loadingText={t('image:split.loadingText')}
