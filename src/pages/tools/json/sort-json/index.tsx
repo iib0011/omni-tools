@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, MenuItem, TextField } from '@mui/material';
 import ToolCodeInput from '@components/input/ToolCodeInput';
 import ToolTextResult from '@components/result/ToolTextResult';
@@ -9,12 +9,16 @@ import ToolExamples, {
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolContent from '@components/ToolContent';
 
+type SortMode = 'value' | 'key';
+
 type InitialValuesType = {
+  sortMode: SortMode;
   sortKey: string;
   order: 'asc' | 'desc';
 };
 
 const initialValues: InitialValuesType = {
+  sortMode: 'value',
   sortKey: '',
   order: 'asc'
 };
@@ -25,19 +29,81 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
     description:
       'Sort a JSON array of objects alphabetically by the "name" key.',
     sampleText: `[{"name":"Charlie","age":30},{"name":"Alice","age":25},{"name":"Bob","age":35}]`,
-    sampleResult: `[\n  {\n    "name": "Alice",\n    "age": 25\n  },\n  {\n    "name": "Bob",\n    "age": 35\n  },\n  {\n    "name": "Charlie",\n    "age": 30\n  }\n]`,
-    sampleOptions: { sortKey: 'name', order: 'asc' }
+    sampleResult: `[
+  {
+    "name": "Alice",
+    "age": 25
+  },
+  {
+    "name": "Bob",
+    "age": 35
+  },
+  {
+    "name": "Charlie",
+    "age": 30
+  }
+]`,
+    sampleOptions: { sortMode: 'value', sortKey: 'name', order: 'asc' }
+  },
+  {
+    title: 'Sort object keys alphabetically',
+    description:
+      'Sort the keys of a JSON object alphabetically in ascending order.',
+    sampleText: `{"zebra":1,"apple":2,"mango":3}`,
+    sampleResult: `{
+  "apple": 2,
+  "mango": 3,
+  "zebra": 1
+}`,
+    sampleOptions: { sortMode: 'key', sortKey: '', order: 'asc' }
   }
 ];
 
 export default function SortJson({ title }: ToolComponentProps) {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
+  const [availableKeys, setAvailableKeys] = useState<string[]>([]);
+  const [inputError, setInputError] = useState('');
+
+  useEffect(() => {
+    if (!input.trim()) {
+      setAvailableKeys([]);
+      setInputError('');
+      return;
+    }
+    try {
+      const parsed = JSON.parse(input);
+      const keys = new Set<string>();
+      if (Array.isArray(parsed)) {
+        parsed.forEach((item) => {
+          if (item && typeof item === 'object') {
+            Object.keys(item).forEach((k) => keys.add(k));
+          }
+        });
+      } else if (parsed && typeof parsed === 'object') {
+        Object.keys(parsed).forEach((k) => keys.add(k));
+      }
+      setAvailableKeys(Array.from(keys).sort());
+      setInputError('');
+    } catch {
+      setAvailableKeys([]);
+      setInputError('Invalid JSON');
+    }
+  }, [input]);
 
   const compute = (optionsValues: InitialValuesType, input: string) => {
-    const { sortKey, order } = optionsValues;
-    if (input && sortKey) {
-      setResult(sortJson(input, sortKey, order));
+    const { sortMode, sortKey, order } = optionsValues;
+    if (!input.trim()) return;
+
+    if (sortMode === 'value') {
+      if (availableKeys.length === 0) return;
+      if (!sortKey) {
+        setResult('');
+        return;
+      }
+      setResult(sortJson(input, sortKey, order, 'value'));
+    } else {
+      setResult(sortJson(input, sortKey, order, 'key'));
     }
   };
 
@@ -46,10 +112,10 @@ export default function SortJson({ title }: ToolComponentProps) {
       title={title}
       inputComponent={
         <ToolCodeInput
-          title={'Input JSON array'}
+          title={'Input JSON'}
           value={input}
           onChange={setInput}
-          lang={'json'}
+          language={'json'}
         />
       }
       resultComponent={<ToolTextResult title={'Sorted JSON'} value={result} />}
@@ -60,12 +126,45 @@ export default function SortJson({ title }: ToolComponentProps) {
           component: (
             <Box display={'flex'} flexDirection={'column'} gap={2}>
               <TextField
-                label={'Sort key'}
+                label={'Sort mode'}
                 size={'small'}
-                value={values.sortKey}
-                onChange={(e) => setFieldValue('sortKey', e.target.value)}
-                placeholder={'e.g. name, age, date'}
-              />
+                select
+                value={values.sortMode}
+                onChange={(e) => {
+                  setFieldValue('sortMode', e.target.value);
+                  setFieldValue('sortKey', '');
+                }}
+              >
+                <MenuItem value={'value'}>Sort array by key value</MenuItem>
+                <MenuItem value={'key'}>
+                  Sort object keys alphabetically
+                </MenuItem>
+              </TextField>
+              {values.sortMode === 'value' && (
+                <TextField
+                  label={'Sort key'}
+                  size={'small'}
+                  select
+                  value={values.sortKey}
+                  onChange={(e) => setFieldValue('sortKey', e.target.value)}
+                  error={!!inputError}
+                  helperText={inputError}
+                >
+                  {availableKeys.length === 0 ? (
+                    <MenuItem value={''} disabled>
+                      {input.trim()
+                        ? 'No keys found'
+                        : 'Enter JSON to see keys'}
+                    </MenuItem>
+                  ) : (
+                    availableKeys.map((key) => (
+                      <MenuItem key={key} value={key}>
+                        {key}
+                      </MenuItem>
+                    ))
+                  )}
+                </TextField>
+              )}
               <TextField
                 label={'Order'}
                 size={'small'}
@@ -73,8 +172,8 @@ export default function SortJson({ title }: ToolComponentProps) {
                 value={values.order}
                 onChange={(e) => setFieldValue('order', e.target.value)}
               >
-                <MenuItem value={'asc'}>Ascending</MenuItem>
-                <MenuItem value={'desc'}>Descending</MenuItem>
+                <MenuItem value={'asc'}>Ascending (A → Z)</MenuItem>
+                <MenuItem value={'desc'}>Descending (Z → A)</MenuItem>
               </TextField>
             </Box>
           )
@@ -85,9 +184,9 @@ export default function SortJson({ title }: ToolComponentProps) {
       input={input}
       exampleCards={exampleCards}
       toolInfo={{
-        title: 'Sort JSON Array',
+        title: 'Sort JSON',
         description:
-          'Sort a JSON array of objects by any key in ascending or descending order.'
+          'Sort a JSON array of objects by any key, or sort the keys of a JSON object alphabetically.'
       }}
     />
   );
