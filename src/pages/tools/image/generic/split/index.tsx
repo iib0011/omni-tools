@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { useEffect, useState } from 'react';
+import { useState, useCallback } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
@@ -8,9 +8,9 @@ import ToolImageInput from '@components/input/ToolImageInput';
 import { t } from 'i18next';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { updateNumberField } from '@utils/string';
-import { fromPts, loadImage, splitImage, toPts } from './service';
+import { splitImagesToPDF, fromPts, toPts } from './service';
 import { debounce } from 'lodash';
-import { PDFDocument, PageSizes } from 'pdf-lib';
+import { PageSizes } from 'pdf-lib';
 import ToolFileResult from '@components/result/ToolFileResult';
 import SelectWithDesc from '@components/options/SelectWithDesc';
 
@@ -28,52 +28,22 @@ const initialValues: InitialValuesType = {
 export default function Split({ title, longDescription }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
+  const [isProcessing, setIsProcessing] = useState<boolean>(false);
 
   const compute = async (values: InitialValuesType, input: File | null) => {
-    if (input) {
-      const initImg = await loadImage(input);
+    if (!input) return;
 
-      const [pageWidth, pageHeight] = PageSizes[values.pageFormat];
-      const ptPerOneSquare = toPts(values.unitsPerOneSquare, values.unitKind);
-      const pxPerPt =
-        values.pxPerSquareQuantity / (ptPerOneSquare * values.squareQuantity);
-      const paddingInPts = toPts(values.padding, values.unitKind);
-      const pageWidthWithPadding = pageWidth - 2 * paddingInPts;
-      const pageHeightWithPadding = pageHeight - 2 * paddingInPts;
-      const widthOfEachPart = Math.round(pageWidthWithPadding * pxPerPt);
-      console.log('widthOfEachPart', widthOfEachPart);
-      const heightOfEachPart = Math.round(pageHeightWithPadding * pxPerPt);
-      const imgParts = await splitImage(
-        initImg,
-        widthOfEachPart,
-        heightOfEachPart
-      );
+    setIsProcessing(true);
 
-      const pdfDoc = await PDFDocument.create();
-
-      for (const imgFile of imgParts) {
-        const imgArrayBuffer = await imgFile.arrayBuffer();
-        const img = await pdfDoc.embedPng(imgArrayBuffer);
-        const page = pdfDoc.addPage([pageWidth, pageHeight]);
-        page.drawImage(img, {
-          x: paddingInPts,
-          y: paddingInPts,
-          width: pageWidthWithPadding,
-          height: pageHeightWithPadding
-        });
-      }
-
-      const pdfBytes = await pdfDoc.save();
-      const pdfFile = new File(
-        [pdfBytes as BlobPart],
-        input.name.replace(/\.([^.]+)?$/i, `-${Date.now()}.pdf`),
-        { type: 'application/pdf' }
-      );
+    try {
+      const pdfFile = await splitImagesToPDF(input, values);
       setResult(pdfFile);
+    } finally {
+      setIsProcessing(false);
     }
   };
 
-  const debouncedCompute = debounce(compute, 800);
+  const debouncedCompute = useCallback(debounce(compute, 1000), []);
 
   const getGroups: GetGroupsType<InitialValuesType> | null = ({
     values,
@@ -89,7 +59,7 @@ export default function Split({ title, longDescription }: ToolComponentProps) {
               updateField('pageFormat', val as keyof typeof PageSizes);
             }}
             description={t('image:split.pageParameters.selectPageFormat')}
-            options={Object.entries(PageSizes).map(([key, value]) => ({
+            options={Object.keys(PageSizes).map((key) => ({
               value: key,
               label: key
             }))}
@@ -188,7 +158,12 @@ export default function Split({ title, longDescription }: ToolComponentProps) {
         />
       }
       resultComponent={
-        <ToolFileResult title={t('image:split.resultTitle')} value={result} />
+        <ToolFileResult
+          title={t('image:split.resultTitle')}
+          value={result}
+          loading={isProcessing}
+          loadingText={t('image:split.loadingText')}
+        />
       }
       initialValues={initialValues}
       getGroups={getGroups}
