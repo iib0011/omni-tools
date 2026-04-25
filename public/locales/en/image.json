@@ -108,6 +108,7 @@
     "description": "Split a map or large image into pages matching the selected paper format and padding. Specify pixels per printing square and square count to scale the image correctly.",
     "inputTitle": "Input image",
     "resultTitle": "Split PDF",
+    "loadingText": "Loading... This may take a moment.",
     "pageParameters": {
       "title": "Page parameters",
       "selectPageFormat": "Select page format",
