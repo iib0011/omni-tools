@@ -98,7 +98,10 @@
       "splitText": "拆分文本",
       "trimVideo": "修剪视频"
     },
-    "searchPlaceholder": "搜索所有工具",
+    "search": {
+      "placeholder": "搜索所有工具",
+      "noResult": "未找到结果 请尝试调整搜索或筛选条件"
+    },
     "title": "快速完成工作"
   },
   "inputFooter": {
@@ -222,6 +225,10 @@
   },
   "toolLayout": {
     "allToolsTitle": "全部 {{type}}"
+  },
+  "toolsByCategory": {
+    "noResultsTitle": "未找到工具",
+    "noResultsDescription": "请尝试调整搜索条件或筛选条件"
   },
   "toolMultiFileResult": {
     "copied": "文件已复制",
