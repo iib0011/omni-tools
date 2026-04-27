@@ -1,8 +1,23 @@
 {
   "changeColors": {
-    "description": "World",
+    "description": "Change specific colors in an image by selecting a source color and replacing it with a new one.",
     "shortDescription": "Quickly swap colors in a image",
-    "title": "Change colors in image"
+    "title": "Change colors in image",
+    "inputTitle": "Input image",
+    "resultTitle": "Result image",
+    "fromColor": {
+      "title": "From color",
+      "colorOption": "Replace a specific color",
+      "transparentOption": "Replace transparent pixels",
+      "selectorDescription": "Replace this color (from color)",
+      "similarityDescription": "Match this % of similar colors of the from color. For example, 10% white will match white and a little bit of gray."
+    },
+    "toColor": {
+      "title": "To color",
+      "colorOption": "Replace with a specific color",
+      "transparentOption": "Replace with transparent",
+      "selectorDescription": "With this color (to color)"
+    }
   },
   "changeOpacity": {
     "description": "Easily adjust the transparency of your images. Simply upload your image, use the slider to set the desired opacity level between 0 (fully transparent) and 1 (fully opaque), and download the modified image.",
@@ -36,7 +51,7 @@
     "title": "Convert JPG to PNG"
   },
   "createTransparent": {
-    "description": "World",
+    "description": "Create a transparent version of an image by removing the chosen background color.",
     "shortDescription": "Quickly make an image transparent",
     "title": "Create transparent PNG"
   },
@@ -84,7 +99,7 @@
     "title": "QR Code Generator"
   },
   "removeBackground": {
-    "description": "World",
+    "description": "Remove the background from an image to isolate the main subject with transparency.",
     "shortDescription": "Automatically remove backgrounds from images",
     "title": "Remove Background from Image"
   },
@@ -119,5 +134,45 @@
     "description": "Rotate an image by a specified angle.",
     "shortDescription": "Rotate an image easily.",
     "title": "Rotate Image"
+  },
+  "split": {
+    "title": "Split Image into Pages",
+    "shortDescription": "Split a large image into multiple pages (PDF).",
+    "description": "Split a map or large image into pages matching the selected paper format and padding. Specify pixels per printing square and square count to scale the image correctly.",
+    "inputTitle": "Input image",
+    "resultTitle": "Split PDF",
+    "loadingText": "Loading... This may take a moment.",
+    "pageParameters": {
+      "title": "Page parameters",
+      "selectPageFormat": "Select page format",
+      "padding": {
+        "label": "Padding",
+        "description": "Padding around the map on each page (in selected units)"
+      }
+    },
+    "scaleParameters": {
+      "title": "Scale parameters",
+      "pxPerSquareQuantity": {
+        "label": "Pixels per squares quantity",
+        "description": "How many pixels correspond to the specified number of squares on the original image (horizontal or vertical)"
+      },
+      "squareQuantity": {
+        "label": "Squares quantity",
+        "description": "Number of play squares across (horizontal or vertical) used for scaling"
+      },
+      "unitsPerOneSquare": {
+        "label": "Units per square",
+        "description": "Physical size of one square in the selected units"
+      }
+    },
+    "units": {
+      "title": "Units",
+      "select": "Select measurement units",
+      "options": {
+        "pt": "Points (pt)",
+        "mm": "Millimeters (mm)",
+        "in": "Inches (in)"
+      }
+    }
   }
 }

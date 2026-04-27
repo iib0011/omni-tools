@@ -228,13 +228,10 @@
     "loading": "Bezig met laden... Dit kan even duren.",
     "result": "Resultaat"
   },
-  "toolMultipleAudioInput": {
+  "toolMultipleInput": {
     "inputTitle": "Invoer {{type}}",
-    "noFilesSelected": "Geen bestanden geselecteerd"
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "Invoer {{type}}",
-    "noFilesSelected": "Geen bestanden geselecteerd"
+    "noFilesSelected": "Geen bestanden geselecteerd",
+    "deleteFile": "Bestand verwijderen"
   },
   "toolOptions": {
     "title": "Gereedschapsopties"

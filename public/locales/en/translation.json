@@ -240,17 +240,10 @@
     "loading": "Loading... This may take a moment.",
     "result": "Result"
   },
-  "toolMultipleAudioInput": {
+  "toolMultipleInput": {
     "inputTitle": "Input {{type}}",
-    "noFilesSelected": "No files selected"
-  },
-  "toolMultipleImageInput": {
-    "inputTitle": "Images Input",
-    "noFilesSelected": "No files selected"
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "Input {{type}}",
-    "noFilesSelected": "No files selected"
+    "noFilesSelected": "No files selected",
+    "deleteFile": "Delete file"
   },
   "toolOptions": {
     "title": "Tool options"

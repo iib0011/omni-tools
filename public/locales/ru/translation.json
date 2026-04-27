@@ -228,13 +228,10 @@
     "loading": "Загрузка... Это может занять некоторое время.",
     "result": "Результат"
   },
-  "toolMultipleAudioInput": {
-    "inputTitle": "Вход {{type}}",
-    "noFilesSelected": "Файлы не выбраны."
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "Вход {{type}}",
-    "noFilesSelected": "Файлы не выбраны."
+  "toolMultipleInput": {
+    "inputTitle": "Ввод {{type}}",
+    "noFilesSelected": "Файлы не выбраны",
+    "deleteFile": "Удалить файл"
   },
   "toolOptions": {
     "title": "Параметры инструмента"

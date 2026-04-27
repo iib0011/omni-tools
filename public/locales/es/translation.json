@@ -228,13 +228,10 @@
     "loading": "Cargando... Esto puede tardar un momento.",
     "result": "Resultado"
   },
-  "toolMultipleAudioInput": {
-    "inputTitle": "Aporte {{type}}",
-    "noFilesSelected": "No hay archivos seleccionados"
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "Aporte {{type}}",
-    "noFilesSelected": "No hay archivos seleccionados"
+  "toolMultipleInput": {
+    "inputTitle": "Entrada {{type}}",
+    "noFilesSelected": "Ningún archivo seleccionado",
+    "deleteFile": "Eliminar archivo"
   },
   "toolOptions": {
     "title": "Opciones de herramientas"
