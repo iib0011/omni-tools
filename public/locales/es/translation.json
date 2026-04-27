@@ -94,7 +94,10 @@
       "splitText": "Dividir un texto",
       "trimVideo": "Recortar vídeo"
     },
-    "searchPlaceholder": "Buscar en todas las herramientas",
+    "search": {
+      "placeholder": "Buscar todas las herramientas",
+      "noResult": "No se encontraron resultados, intenta ajustar tu búsqueda o los criterios de filtro"
+    },
     "title": "Haga las cosas rápidamente con"
   },
   "inputFooter": {

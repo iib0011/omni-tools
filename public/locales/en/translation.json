@@ -106,7 +106,10 @@
       "splitText": "Split a text",
       "trimVideo": "Trim video"
     },
-    "searchPlaceholder": "Search all tools",
+    "search": {
+      "placeholder": "Search all tools",
+      "noResult": "No results found, Try adjusting your search or filter criteria"
+    },
     "title": "Get Things Done Quickly with"
   },
   "inputFooter": {
@@ -230,10 +233,6 @@
   },
   "toolLayout": {
     "allToolsTitle": "All {{type}}"
-  },
-  "toolsByCategory": {
-    "noResultsTitle": "No tools found",
-    "noResultsDescription": "Try adjusting your search or filter criteria"
   },
   "toolMultiFileResult": {
     "copied": "File copied",

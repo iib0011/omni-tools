@@ -94,7 +94,10 @@
       "splitText": "テキストを分割する",
       "trimVideo": "ビデオをトリミングする"
     },
-    "searchPlaceholder": "すべてのツールを検索",
+    "search": {
+      "placeholder": "すべてのツールを検索",
+      "noResult": "結果が見つかりません。検索条件またはフィルター条件を調整してみてください"
+    },
     "title": "物事を素早く終わらせる"
   },
   "inputFooter": {
