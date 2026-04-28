@@ -92,7 +92,7 @@
   "sortJson": {
     "title": "Sort JSON",
     "description": "Sort JSON data by organizing arrays of objects based on a selected key in ascending or descending order, or alphabetically sort the keys of a JSON object.",
-    "shortDescription": "Sort JSON by key or alphabetically",
+    "shortDescription": "Sort JSON arrays by value or object keys alphabetically",
     "longDescription": "This tool allows you to easily sort JSON data in a structured and predictable way. You can sort an array of objects by any key, choosing either ascending or descending order, which is useful for organizing data such as lists of users, products, or records. Alternatively, you can sort the keys of a JSON object alphabetically to improve readability and consistency. The tool supports flexible sorting modes and handles common JSON structures, making it ideal for developers, data analysts, and anyone working with JSON data who needs clean, ordered output.",
     "inputTitle": "Input JSON",
     "resultTitle": "Sorted JSON",
