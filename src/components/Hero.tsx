@@ -150,6 +150,7 @@ export default function Hero() {
         sx={{ mb: 2 }}
         autoHighlight
         options={filteredTools}
+        noOptionsText={t('translation:hero.search.noResult')}
         // Disable default MUI filtering since we already apply custom filterTools
         filterOptions={(options) => options}
         groupBy={(option) => option.type}
@@ -167,7 +168,7 @@ export default function Hero() {
           <TextField
             {...params}
             fullWidth
-            placeholder={t('translation:hero.searchPlaceholder')}
+            placeholder={t('translation:hero.search.placeholder')}
             InputProps={{
               ...params.InputProps,
               endAdornment: <SearchIcon />,
