@@ -14,21 +14,19 @@ export default function PdfToEpub({ title }: ToolComponentProps) {
   const [zipFile, setZipFile] = useState<File | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
 
-  const compute = async (options: {}, input: File | null) => {
+  const compute = async (
+    _options: Record<string, never>,
+    input: File | null
+  ) => {
     if (!input) return;
-    try {
-      setIsProcessing(true);
-      setResult([]);
-      const returnedImages = await processPDF(input);
 
-      // No result
-      if (!returnedImages) {
-        setResult([]);
-        setZipFile(null);
-      } else {
-        setResult(returnedImages.extractedImages);
-        setZipFile(returnedImages.zipFile);
-      }
+    setIsProcessing(true);
+    setResult([]);
+    setZipFile(null);
+    try {
+      const returnedImages = await processPDF(input);
+      setResult(returnedImages?.extractedImages ?? []);
+      setZipFile(returnedImages?.zipFile ?? null);
     } catch (error) {
       console.error('Failed to extract images from PDF:', error);
     } finally {
@@ -46,9 +44,9 @@ export default function PdfToEpub({ title }: ToolComponentProps) {
       inputComponent={
         <ToolPdfInput
           value={input}
-          onChange={(file) => setInput(file)}
+          onChange={setInput}
           accept={['application/pdf']}
-          title={'Input PDF'}
+          title={t('extractImagesFromPdf.inputTitle')}
         />
       }
       getGroups={null}
@@ -70,8 +68,8 @@ export default function PdfToEpub({ title }: ToolComponentProps) {
         )
       }
       toolInfo={{
-        title: 'How to Extract Images from PDF File?',
-        description: `Upload a PDF file and this tool will extract its images for you to download.`
+        title: t('extractImagesFromPdf.title'),
+        description: t('extractImagesFromPdf.longDescription')
       }}
     />
   );
