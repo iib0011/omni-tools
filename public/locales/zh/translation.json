@@ -98,7 +98,10 @@
       "splitText": "拆分文本",
       "trimVideo": "修剪视频"
     },
-    "searchPlaceholder": "搜索所有工具",
+    "search": {
+      "placeholder": "搜索所有工具",
+      "noResult": "未找到结果 请尝试调整搜索或筛选条件"
+    },
     "title": "快速完成工作"
   },
   "inputFooter": {
@@ -223,19 +226,20 @@
   "toolLayout": {
     "allToolsTitle": "全部 {{type}}"
   },
+  "toolsByCategory": {
+    "noResultsTitle": "未找到工具",
+    "noResultsDescription": "请尝试调整搜索条件或筛选条件"
+  },
   "toolMultiFileResult": {
     "copied": "文件已复制",
     "copyFailed": "复制失败： {{error}}",
     "loading": "正在加载...这可能需要一点时间。",
     "result": "结果"
   },
-  "toolMultipleAudioInput": {
+  "toolMultipleInput": {
     "inputTitle": "输入 {{type}}",
-    "noFilesSelected": "未选择任何文件"
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "输入 {{type}}",
-    "noFilesSelected": "未选择任何文件"
+    "noFilesSelected": "未选择任何文件",
+    "deleteFile": "删除文件"
   },
   "toolOptions": {
     "title": "工具选项"

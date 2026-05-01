@@ -94,7 +94,10 @@
       "splitText": "Dividir um texto",
       "trimVideo": "Cortar vídeo"
     },
-    "searchPlaceholder": "Pesquisar todas as ferramentas",
+    "search": {
+      "placeholder": "Pesquisar todas as ferramentas",
+      "noResult": "Nenhum resultado encontrado, tente ajustar a sua pesquisa ou os critérios de filtro"
+    },
     "title": "Faça as coisas rapidamente com"
   },
   "inputFooter": {
@@ -225,13 +228,10 @@
     "loading": "Carregando... Isso pode demorar um momento.",
     "result": "Resultado"
   },
-  "toolMultipleAudioInput": {
+  "toolMultipleInput": {
     "inputTitle": "Entrada {{type}}",
-    "noFilesSelected": "Nenhum arquivo selecionado"
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "Entrada {{type}}",
-    "noFilesSelected": "Nenhum arquivo selecionado"
+    "noFilesSelected": "Nenhum ficheiro selecionado",
+    "deleteFile": "Eliminar ficheiro"
   },
   "toolOptions": {
     "title": "Opções de ferramentas"

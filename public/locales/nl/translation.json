@@ -94,7 +94,10 @@
       "splitText": "Een tekst splitsen",
       "trimVideo": "Video bijsnijden"
     },
-    "searchPlaceholder": "Zoek in alle tools",
+    "search": {
+      "placeholder": "Alle tools doorzoeken",
+      "noResult": "Geen resultaten gevonden, probeer uw zoekopdracht of filtercriteria aan te passen"
+    },
     "title": "Krijg dingen snel gedaan met"
   },
   "inputFooter": {
@@ -225,13 +228,10 @@
     "loading": "Bezig met laden... Dit kan even duren.",
     "result": "Resultaat"
   },
-  "toolMultipleAudioInput": {
+  "toolMultipleInput": {
     "inputTitle": "Invoer {{type}}",
-    "noFilesSelected": "Geen bestanden geselecteerd"
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "Invoer {{type}}",
-    "noFilesSelected": "Geen bestanden geselecteerd"
+    "noFilesSelected": "Geen bestanden geselecteerd",
+    "deleteFile": "Bestand verwijderen"
   },
   "toolOptions": {
     "title": "Gereedschapsopties"
