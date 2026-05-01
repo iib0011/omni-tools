@@ -13,6 +13,14 @@ export default function PdfEditor({ title }: ToolComponentProps) {
       input={null}
       inputComponent={
         <Box sx={{ width: '100%', height: '80vh' }}>
+          {/* Warning message */}
+          <Box
+            sx={{ mb: 1, color: '#ff9800', fontSize: '14px', fontWeight: 500 }}
+          >
+            Note: Long signatures may be cut in exported PDF.
+          </Box>
+
+          {/* PDF Editor */}
           <EmbedPDF mode="inline" style={{ width: '100%', height: '100%' }} />
         </Box>
       }
