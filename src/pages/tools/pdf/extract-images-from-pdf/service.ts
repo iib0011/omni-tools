@@ -1,85 +1,94 @@
 import * as pdfjsLib from 'pdfjs-dist';
 import pdfWorker from 'pdfjs-dist/legacy/build/pdf.worker.min.mjs?url';
-import { PdfImageObject, PreProcessImageObject } from './types';
 import JSZip from 'jszip';
+import { PreProcessImageObject, PdfImageObject } from './types';
 
-// Initialise The PDF JS Worker
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
+
+const RESOLVE_TIMEOUT_MS = 3000;
 
 export async function processPDF(
   input: File
 ): Promise<{ extractedImages: File[]; zipFile: File | null } | null> {
-  // Decode File
   const url = URL.createObjectURL(input);
-  const preProcessImages: PreProcessImageObject[] = [];
+  const seenImages = new Set<string>();
 
   try {
-    // Wait for fully processed
     const pdf = await pdfjsLib.getDocument(url).promise;
+    const extractedImages: File[] = [];
 
-    // Iterate through pages
     for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
       const page = await pdf.getPage(pageNum);
       const ops = await page.getOperatorList();
       let imageNum = 1;
 
-      // Look through commands
       for (let i = 0; i < ops.fnArray.length; i++) {
         const fn = ops.fnArray[i];
 
-        // Matches Image Object
-        if (fn === pdfjsLib.OPS.paintImageXObject) {
-          // Extract Data
-          const imgName = ops.argsArray[i][0];
+        try {
+          let img: PdfImageObject | null = null;
 
-          // Wait for the callback to finish
-          const img = (await new Promise((resolve) => {
-            page.objs.get(imgName, resolve);
-          })) as PdfImageObject;
+          if (fn === pdfjsLib.OPS.paintImageXObject) {
+            const imgName = ops.argsArray[i][0];
+            if (seenImages.has(imgName)) continue;
+            seenImages.add(imgName);
 
-          // Add File into Array (Map this later to draw on canvas concurrently)
-          const preProcessImage: PreProcessImageObject = {
-            img,
-            pageNum,
-            imageNum
-          };
+            img = (await Promise.race([
+              new Promise((resolve) => page.objs.get(imgName, resolve)),
+              new Promise((_, reject) =>
+                setTimeout(
+                  () =>
+                    reject(new Error(`Timeout resolving image: ${imgName}`)),
+                  RESOLVE_TIMEOUT_MS
+                )
+              )
+            ])) as PdfImageObject;
+          } else if (fn === pdfjsLib.OPS.paintInlineImageXObject) {
+            img = ops.argsArray[i][0];
+            if (!img) continue;
 
-          preProcessImages.push(preProcessImage);
+            const key = `${img.width}-${img.height}-${img.data?.length || 0}`;
+            if (seenImages.has(key)) continue;
+            seenImages.add(key);
+          } else {
+            continue;
+          }
 
-          // Add Image Counter
-          imageNum++;
+          if (!img || !img.width || !img.height) continue;
+
+          const file = await processImage({ img, pageNum, imageNum });
+          if (file) {
+            extractedImages.push(file);
+            imageNum++;
+          }
+        } catch {
+          // skip failed images silently
         }
       }
     }
-    // Draw All Images concurrently, then drop the null values
-    const extractedImages = (
-      await Promise.all(
-        preProcessImages.map((preProcessImage) => processImage(preProcessImage))
-      )
-    ).filter((i) => i !== null);
 
-    // Bundle Together as Zip
-    // Checking the Need to Convert
     if (extractedImages.length === 0) return null;
-
-    if (extractedImages.length === 1) return { extractedImages, zipFile: null };
-
-    // Converting Into Zip File
-    const zip = new JSZip();
-
-    extractedImages.forEach((file) => zip.file(file.name, file));
-    const zipBlob = await zip.generateAsync({ type: 'blob' });
-    const zipFile = new File([zipBlob], 'compressed-images.zip', {
-      type: 'application/zip'
-    });
-
-    return { extractedImages, zipFile };
-  } catch (error) {
-    console.log('Error processing pdf', error);
+    return await bundleResult(extractedImages);
+  } catch {
     return null;
   } finally {
     URL.revokeObjectURL(url);
   }
+}
+
+async function bundleResult(
+  extractedImages: File[]
+): Promise<{ extractedImages: File[]; zipFile: File | null }> {
+  if (extractedImages.length === 1) return { extractedImages, zipFile: null };
+
+  const zip = new JSZip();
+  extractedImages.forEach((file) => zip.file(file.name, file));
+  const zipBlob = await zip.generateAsync({ type: 'blob' });
+  const zipFile = new File([zipBlob], 'images.zip', {
+    type: 'application/zip'
+  });
+
+  return { extractedImages, zipFile };
 }
 
 async function processImage(
@@ -88,35 +97,34 @@ async function processImage(
   const { img, pageNum, imageNum } = preProcessImage;
 
   try {
-    // Create Canvas
     const canvas = document.createElement('canvas');
     canvas.width = img.width;
     canvas.height = img.height;
 
     const ctx = canvas.getContext('2d');
+    if (!ctx) return null;
 
-    if (!ctx) {
+    if (img.bitmap) {
+      ctx.drawImage(img.bitmap, 0, 0);
+    } else if (img.data) {
+      const imageData = ctx.createImageData(img.width, img.height);
+      imageData.data.set(img.data);
+      ctx.putImageData(imageData, 0, 0);
+    } else {
       return null;
     }
 
-    // Draw Onto Canvas
-    ctx.drawImage(img.bitmap, 0, 0);
-
-    // Convert to Blob
     const blob: Blob = await new Promise((resolve, reject) => {
       canvas.toBlob(
-        (b) => (b ? resolve(b) : reject('Canvas toBlob returned null')),
+        (b) => (b ? resolve(b) : reject(new Error('Canvas toBlob failed'))),
         'image/png'
       );
     });
 
-    if (!blob) return null;
-
-    // Return file
-    const fileName = `page_${pageNum}_img_${img.ref}_${imageNum}`;
-    return new File([blob], fileName, { type: 'image/png' });
-  } catch (error) {
-    console.log('Error converting toBlob', error);
+    return new File([blob], `page_${pageNum}_img_${imageNum}.png`, {
+      type: 'image/png'
+    });
+  } catch {
     return null;
   }
 }
