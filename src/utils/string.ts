@@ -138,3 +138,49 @@ export const getI18nNamespaceFromToolCategory = (
 
   return 'translation';
 };
+
+/**
+ * Strips HTML tags from a string and decodes HTML entities into plain text.
+ *
+ * This function parses the provided HTML string using the browser's DOMParser,
+ * extracts the text content, and returns a clean, human-readable string.
+ *
+ * @param html - A string containing HTML markup
+ * @returns A plain text string with all HTML tags removed and entities decoded
+ *
+ * @example
+ * stripAndDecodeHtml('<p>Hello <strong>world</strong></p>')
+ * // returns: 'Hello world'
+ *
+ * @example
+ * stripAndDecodeHtml('&lt;div&gt;Test&lt;/div&gt;')
+ * // returns: '<div>Test</div>'
+ */
+export function stripAndDecodeHtml(html: string): string {
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  return doc.body.textContent ?? '';
+}
+
+/**
+ * Escapes special HTML characters in a string to prevent HTML injection.
+ *
+ * Replaces the following characters with their corresponding HTML entities:
+ * - &  → &amp;
+ * - <  → &lt;
+ * - >  → &gt;
+ * - "  → &quot;
+ *
+ * @param {string} str - The input string to escape.
+ * @returns {string} The escaped string safe for insertion into HTML.
+ *
+ * @example
+ * escapeHtml('<div class="test">Hello & welcome</div>');
+ * // Returns: '&lt;div class=&quot;test&quot;&gt;Hello &amp; welcome&lt;/div&gt;'
+ */
+export function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
