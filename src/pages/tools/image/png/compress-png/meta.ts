@@ -12,6 +12,6 @@ export const tool = defineTool('png', {
   path: 'compress-png',
   icon: 'material-symbols-light:compress',
 
-  keywords: ['compress', 'png'],
+  keywords: ['compress', 'png', 'downsample', 'resize'],
   component: lazy(() => import('./index'))
 });

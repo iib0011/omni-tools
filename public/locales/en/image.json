@@ -41,9 +41,9 @@
     "title": "Compress Images"
   },
   "compressPng": {
-    "description": "This is a program that compresses PNG pictures. As soon as you paste your PNG picture in the input area, the program will compress it and show the result in the output area. In the options, you can adjust the compression level, as well as find the old and new picture file sizes.",
-    "shortDescription": "Quickly compress a PNG",
-    "title": "Compress png"
+    "description": "Reduces PNG file size by downsampling (lowering) image resolution and dimensions. Warning: This is a destructive operation that permanently reduces image quality — it cannot be undone. Unlike lossless compression, downsampling permanently removes pixel data.",
+    "shortDescription": "Reduce PNG size by downsampling resolution",
+    "title": "Downsample PNG"
   },
   "convertJgpToPng": {
     "description": "Quickly convert your JPG images to PNG. Just import your PNG image in the editor on the left",

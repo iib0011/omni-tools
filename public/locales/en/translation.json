@@ -98,7 +98,7 @@
     "examples": {
       "calculateNumberSum": "Calculate number sum",
       "changeGifSpeed": "Change GIF speed",
-      "compressPng": "Compress PNG",
+      "compressPng": "Downsample PNG",
       "createTransparentImage": "Create a transparent image",
       "prettifyJson": "Prettify JSON",
       "sortList": "Sort a list",
