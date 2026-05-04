@@ -339,18 +339,16 @@
   },
   "textCompare": {
     "title": "Compare Texts",
-    "description": "Identify differences between two text blocks, highlighting insertions, deletions, and modifications.",
-    "shortDescription": "Compare two texts",
-    "longDescription": "",
-    "withLabel": "Options",
-    "outputOptions": "Comparison Options",
-    "addDiffHighlight": "Highlight differences",
-    "addDiffHighlightDescription": "Enable syntax highlighting to better visualize changes between texts",
-    "ignoreWhitespace": "Ignore Whitespace",
-    "ignoreWhitespaceDescription": "Ignore changes that are only due to whitespace (e.g., spaces, tabs, line breaks)",
-    "toolInfo": {
-      "title": "Compare Texts",
-      "description": "This tool compares two text inputs and highlights the differences (insertions, deletions, and substitutions). It's useful for reviewing code changes, document revisions, or analyzing updates between versions of a file or message."
+    "description": "Analyze two text blocks to highlight differences, including additions, deletions, and changes.",
+    "shortDescription": "Compare two texts and spot differences instantly",
+    "longDescription": "This tool helps you quickly identify differences between two versions of a text. It highlights inserted, removed, and modified content, making it ideal for reviewing edits, tracking changes, or comparing documents. You can choose the level of precision to detect differences at the word or character level depending on your needs.",
+    "inputTitle": "Input Text",
+    "resultTitle": "Highlighted differences",
+    "options": {
+      "title": "Comparison Settings",
+      "wordLevel": "Word level",
+      "charLevel": "Character level",
+      "levelDesc": "Choose how detailed the comparison should be. Word level highlights changes by words, while character level detects more granular differences."
     }
   }
 }
