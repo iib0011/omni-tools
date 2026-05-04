@@ -14,7 +14,8 @@
     }
   },
   "censor": {
-    "description": "Dienstprogramm zum Zensieren von Wörtern in Texten. Laden Sie Ihren Text in das Eingabeformular links, geben Sie alle Schimpfwörter in den Optionen an, und Sie erhalten sofort zensierten Text im Ausgabebereich., longDescription: 'Mit diesem Online-Tool können Sie bestimmte Wörter in jedem Text zensieren. Sie können eine Liste unerwünschter Wörter (z. B. Schimpfwörter oder Geheimwörter) angeben, die das Programm durch alternative Wörter ersetzt und einen lesbaren Text erstellt. Die Wörter können in einem mehrzeiligen Textfeld in den Optionen angegeben werden, indem Sie pro Zeile ein Wort eingeben.', keywords: ['text', 'zensieren', 'wörter', 'zeichen'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
+    "description": "Dienstprogramm zum Zensieren von Wörtern in Texten. Laden Sie Ihren Text in das Eingabeformular links, geben Sie alle Schimpfwörter in den Optionen an, und Sie erhalten sofort zensierten Text im Ausgabebereich.",
+    "longDescription": "Mit diesem Online-Tool können Sie bestimmte Wörter in jedem Text zensieren. Sie können eine Liste unerwünschter Wörter (z. B. Schimpfwörter oder Geheimwörter) angeben, die das Programm durch alternative Wörter ersetzt und einen lesbaren Text erstellt. Die Wörter können in einem mehrzeiligen Textfeld in den Optionen angegeben werden, indem Sie pro Zeile ein Wort eingeben.', keywords: ['text', 'zensieren', 'wörter', 'zeichen'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
     "shortDescription": "Maskieren Sie Schimpfwörter schnell oder ersetzen Sie sie durch alternative Wörter.",
     "title": "Textzensur"
   },
