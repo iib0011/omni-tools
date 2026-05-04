@@ -60,7 +60,7 @@ export async function cropVideo(
 
   const croppedData = await ffmpeg.readFile(outputName);
   return await new File(
-    [new Blob([croppedData], { type: 'video/mp4' })],
+    [new Blob([croppedData as any], { type: 'video/mp4' })],
     `${input.name.replace(/\.[^/.]+$/, '')}_cropped.mp4`,
     { type: 'video/mp4' }
   );

@@ -1,11 +1,10 @@
-import { ReactNode, useContext, useEffect, useRef, useState } from 'react';
-import { Box, useTheme } from '@mui/material';
+import { useRef } from 'react';
+import { Box, IconButton, Tooltip, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
-import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
-import { isArray } from 'lodash';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import ClearIcon from '@mui/icons-material/Clear';
 import { useTranslation } from 'react-i18next';
 
 interface MultiAudioInputComponentProps {
@@ -31,7 +30,6 @@ export default function ToolMultipleAudioInput({
   const { t } = useTranslation();
   const theme = useTheme();
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const { showSnackBar } = useContext(CustomSnackBarContext);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -99,7 +97,7 @@ export default function ToolMultipleAudioInput({
       <InputHeader
         title={
           title ||
-          t('toolMultipleAudioInput.inputTitle', {
+          t('toolMultipleInput.inputTitle', {
             type: type.charAt(0).toUpperCase() + type.slice(1)
           })
         }
@@ -142,26 +140,44 @@ export default function ToolMultipleAudioInput({
                   padding: 1
                 }}
               >
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <MusicNoteIcon />
-                  <Typography sx={{ marginLeft: 1 }}>
-                    {fileNameTruncate(file.file.name)}
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{ cursor: 'pointer' }}
-                  onClick={() => {
-                    const updatedFiles = value.filter((_, i) => i !== index);
-                    onChange(updatedFiles);
-                  }}
-                >
-                  ✖
-                </Box>
+                <Tooltip title={file.file.name}>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      overflow: 'hidden'
+                    }}
+                  >
+                    <MusicNoteIcon />
+                    <Typography
+                      sx={{
+                        marginLeft: 1,
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
+                      {fileNameTruncate(file.file.name)}
+                    </Typography>
+                  </Box>
+                </Tooltip>
+                <Tooltip title={t('toolMultipleInput.deleteFile')}>
+                  <IconButton
+                    size="small"
+                    aria-label={t('toolMultipleInput.deleteFile')}
+                    onClick={() => {
+                      const updatedFiles = value.filter((_, i) => i !== index);
+                      onChange(updatedFiles);
+                    }}
+                  >
+                    <ClearIcon fontSize="small" />
+                  </IconButton>
+                </Tooltip>
               </Box>
             ))
           ) : (
             <Typography variant="body2" color="text.secondary">
-              {t('toolMultipleAudioInput.noFilesSelected')}
+              {t('toolMultipleInput.noFilesSelected')}
             </Typography>
           )}
         </Box>

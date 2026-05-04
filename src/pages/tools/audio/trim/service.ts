@@ -98,7 +98,7 @@ export async function trimAudio(
 
   return new File(
     [
-      new Blob([trimmedAudio], {
+      new Blob([trimmedAudio as any], {
         type: mimeType
       })
     ],

@@ -101,7 +101,7 @@ export default function ChangeSpeed({
         const data = await ffmpeg.readFile(outputName);
 
         // Create new file from processed data
-        const blob = new Blob([data], { type: 'video/mp4' });
+        const blob = new Blob([data as any], { type: 'video/mp4' });
         const newFile = new File(
           [blob],
           file.name.replace('.mp4', `-${newSpeed}x.mp4`),

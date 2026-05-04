@@ -113,37 +113,6 @@
     "trimItemsDescription": "Verwijder spaties voor en na de items voordat u ze vergelijkt.",
     "uniqueItemOptions": "Unieke itemopties"
   },
-  "group": {
-    "deleteEmptyItems": "Lege items verwijderen",
-    "deleteEmptyItemsDescription": "Negeer lege items en neem ze niet op in de groepen.",
-    "description": "'s Werelds eenvoudigste browsergebaseerde hulpprogramma voor het groeperen van lijstitems. Voer uw lijst in en specificeer groeperingscriteria om items in logische groepen te ordenen. Perfect voor het categoriseren van gegevens, het organiseren van informatie of het maken van gestructureerde lijsten. Ondersteunt aangepaste scheidingstekens en diverse groeperingsopties.",
-    "emptyItemsAndPadding": "Lege items en opvulling",
-    "groupNumberDescription": "Aantal items in een groep",
-    "groupSeparatorDescription": "Groepsscheidingsteken",
-    "groupSizeAndSeparators": "Groepsgrootte en scheidingstekens",
-    "inputItemSeparator": "Scheidingsteken voor invoeritems",
-    "inputTitle": "Invoerlijst",
-    "itemSeparatorDescription": "Itemscheidingsteken",
-    "leftWrapDescription": "Linksomloopsymbool van de groep.",
-    "padNonFullGroups": "Pad Niet-volledige groepen",
-    "padNonFullGroupsDescription": "Vul niet-volledige groepen met een aangepast item (voer hieronder in).",
-    "paddingCharDescription": "Gebruik dit karakter of item om groepen aan te vullen die niet vol zijn.",
-    "resultTitle": "Gegroepeerde items",
-    "rightWrapDescription": "Symbool voor de rechteromslag van de groep.",
-    "shortDescription": "Groepeer lijstitems op basis van gemeenschappelijke eigenschappen",
-    "splitOperators": {
-      "regex": {
-        "description": "Beperk de items in de invoerlijst met een reguliere expressie.",
-        "title": "Gebruik een Regex voor het splitsen"
-      },
-      "symbol": {
-        "description": "Beperk de items in de invoerlijst met een teken.",
-        "title": "Gebruik een symbool voor splitsen"
-      }
-    },
-    "splitSeparatorDescription": "Stel een scheidingsteken of reguliere expressie in.",
-    "title": "Groep"
-  },
   "reverse": {
     "description": "Dit is een supereenvoudige browserapplicatie die alle items in de lijst in spiegelbeeld afdrukt. De invoeritems kunnen worden gescheiden door een willekeurig symbool en u kunt ook de scheidingstekens van de omgekeerde items in de lijst wijzigen.",
     "inputTitle": "Invoerlijst",

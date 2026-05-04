@@ -116,5 +116,10 @@
     "longDescription": "Deze tool transponeert Comma Separated Values (CSV). Het behandelt de CSV als een matrix met data en draait alle elementen om over de hoofddiagonaal. De uitvoer bevat dezelfde CSV-data als de invoer, maar nu zijn alle rijen kolommen en alle kolommen rijen geworden. Na transpositie heeft het CSV-bestand tegengestelde afmetingen. Als het invoerbestand bijvoorbeeld 4 kolommen en 3 rijen heeft, heeft het uitvoerbestand 3 kolommen en 4 rijen. Tijdens de conversie zuivert het programma de data ook van onnodige regels en corrigeert het onvolledige data. De tool verwijdert automatisch alle lege records en opmerkingen die beginnen met een specifiek teken, dat u in de optie kunt instellen. Bovendien, in gevallen waarin de CSV-data beschadigd of verloren zijn, vult het hulpprogramma het bestand aan met lege velden of aangepaste velden die u in de opties kunt opgeven. Csv-abulous!",
     "shortDescription": "Snel een CSV-bestand transponeren.",
     "title": "CSV transponeren"
+  },
+  "tsvToJson": {
+    "description": "Converteer TSV-gegevens (Tab-Separated Values) naar JSON-formaat. Transformeer tabelgegevens naar gestructureerde JSON-objecten.",
+    "shortDescription": "Converteer TSV naar JSON-formaat",
+    "title": "TSV naar JSON"
   }
 }

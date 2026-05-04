@@ -28,7 +28,7 @@ export async function convertPdfToPngImages(pdfFile: File): Promise<{
     canvas.width = viewport.width;
     canvas.height = viewport.height;
 
-    await page.render({ canvasContext: context, viewport }).promise;
+    await page.render({ canvas, canvasContext: context, viewport }).promise;
 
     const blob = await new Promise<Blob>((resolve) =>
       canvas.toBlob((b) => b && resolve(b), 'image/png')

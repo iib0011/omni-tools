@@ -46,11 +46,6 @@
     "shortDescription": "Objecten converteren naar JSON-string",
     "title": "Stringify JSON"
   },
-  "tsvToJson": {
-    "description": "Converteer TSV-gegevens (Tab-Separated Values) naar JSON-formaat. Transformeer tabelgegevens naar gestructureerde JSON-objecten.",
-    "shortDescription": "Converteer TSV naar JSON-formaat",
-    "title": "TSV naar JSON"
-  },
   "validateJson": {
     "description": "Controleer of JSON geldig en correct is geformuleerd.",
     "inputTitle": "Invoer JSON",

@@ -34,7 +34,7 @@ export async function loopVideo(
 
   const loopedData = await ffmpeg.readFile(outputName);
   return await new File(
-    [new Blob([loopedData], { type: 'video/mp4' })],
+    [new Blob([loopedData as any], { type: 'video/mp4' })],
     `${input.name.replace(/\.[^/.]+$/, '')}_looped.mp4`,
     { type: 'video/mp4' }
   );

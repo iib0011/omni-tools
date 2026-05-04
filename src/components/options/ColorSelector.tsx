@@ -27,7 +27,7 @@ const ColorSelector: React.FC<ColorSelectorProps & TextFieldProps> = ({
   };
 
   return (
-    <Box mb={1}>
+    <Box mb={3}>
       <Stack direction={'row'}>
         <TextField
           sx={{ backgroundColor: 'background.paper' }}
@@ -46,7 +46,7 @@ const ColorSelector: React.FC<ColorSelectorProps & TextFieldProps> = ({
           onChange={handleColorChange}
         />
       </Stack>
-      <Typography fontSize={globalDescriptionFontSize}>
+      <Typography fontSize={globalDescriptionFontSize} mt={1}>
         {description}
       </Typography>
     </Box>

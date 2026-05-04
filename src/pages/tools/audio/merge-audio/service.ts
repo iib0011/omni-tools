@@ -105,7 +105,7 @@ export async function mergeAudioFiles(
 
   return new File(
     [
-      new Blob([mergedAudio], {
+      new Blob([mergedAudio as any], {
         type: mimeType
       })
     ],

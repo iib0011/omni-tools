@@ -85,7 +85,12 @@ export default function SplitPdf({ title }: ToolComponentProps) {
     }
     try {
       const count = parsePageRanges(pageRanges, totalPages).length;
-      setPageRangePreview(t('splitPdf.pageExtractionPreview', { count }));
+      setPageRangePreview(
+        t('splitPdf.pageExtractionPreview', {
+          count,
+          plural: count === 1 ? '' : 's'
+        })
+      );
     } catch (error) {
       setPageRangePreview('');
     }
@@ -137,7 +142,10 @@ export default function SplitPdf({ title }: ToolComponentProps) {
             <Box>
               {totalPages > 0 && (
                 <Typography variant="body2" sx={{ mb: 1 }}>
-                  {t('splitPdf.pdfPageCount', { count: totalPages })}
+                  {t('splitPdf.pdfPageCount', {
+                    count: totalPages,
+                    plural: totalPages === 1 ? '' : 's'
+                  })}
                 </Typography>
               )}
               <TextFieldWithDesc

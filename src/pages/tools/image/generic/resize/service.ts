@@ -1,8 +1,9 @@
 import { InitialValuesType } from './types';
 import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile, toBlobURL } from '@ffmpeg/util';
+import { fetchFile } from '@ffmpeg/util';
+import JSZip from 'jszip';
 
-export const processImage = async (
+const processImage = async (
   file: File,
   options: InitialValuesType
 ): Promise<File | null> => {
@@ -148,7 +149,7 @@ export const processImage = async (
       const data = await ffmpeg.readFile('output.gif');
 
       // Create a new File object
-      return new File([data], file.name, { type: 'image/gif' });
+      return new File([data as any], file.name, { type: 'image/gif' });
     } catch (error) {
       console.error('Error processing GIF with FFmpeg:', error);
       // Fall back to canvas method if FFmpeg processing fails
@@ -215,4 +216,40 @@ export const processImage = async (
       }
     }, outputType);
   });
+};
+
+export const resizeImages = async (
+  files: File[],
+  options: InitialValuesType
+): Promise<{ results: File[]; zipFile: File | null } | null> => {
+  try {
+    const processed = await Promise.all(
+      files.map(async (file) => {
+        try {
+          return await processImage(file, options);
+        } catch (error) {
+          console.error(`Error processing ${file.name}:`, error);
+          return null;
+        }
+      })
+    );
+
+    const results = processed.filter((f): f is File => f !== null);
+
+    if (results.length === 0) return null;
+
+    if (results.length === 1) return { results, zipFile: null };
+
+    const zip = new JSZip();
+    results.forEach((file) => zip.file(file.name, file));
+    const zipBlob = await zip.generateAsync({ type: 'blob' });
+    const zipFile = new File([zipBlob], 'resized-images.zip', {
+      type: 'application/zip'
+    });
+
+    return { results, zipFile };
+  } catch (error) {
+    console.error('Error processing images:', error);
+    return null;
+  }
 };

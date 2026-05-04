@@ -4,7 +4,7 @@
 <a href="https://trendshift.io/repositories/13055" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13055" alt="iib0011%2Fomni-tools | Trendshift" style="width: 200px;" width="200"/></a>
    <br /><br />
 <a href="https://github.com/iib0011/omni-tools/releases">
-          <img src="https://img.shields.io/badge/version-0.5.0-blue?style=for-the-badge" />
+          <img src="https://img.shields.io/badge/version-0.6.0-blue?style=for-the-badge" />
         </a>
         <a href="https://hub.docker.com/r/iib0011/omni-tools">
           <img src="https://img.shields.io/docker/pulls/iib0011/omni-tools?style=for-the-badge&logo=docker" />

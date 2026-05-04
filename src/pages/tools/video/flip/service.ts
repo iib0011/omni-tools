@@ -36,7 +36,7 @@ export async function flipVideo(
 
   const flippedData = await ffmpeg.readFile(outputName);
   return new File(
-    [new Blob([flippedData], { type: 'video/mp4' })],
+    [new Blob([flippedData as any], { type: 'video/mp4' })],
     `${input.name.replace(/\.[^/.]+$/, '')}_flipped.mp4`,
     { type: 'video/mp4' }
   );

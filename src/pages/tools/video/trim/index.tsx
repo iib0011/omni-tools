@@ -67,7 +67,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
       ]);
       // Retrieve the processed file
       const trimmedData = await ffmpeg.readFile(outputName);
-      const trimmedBlob = new Blob([trimmedData], { type: 'video/mp4' });
+      const trimmedBlob = new Blob([trimmedData as any], { type: 'video/mp4' });
       const trimmedFile = new File(
         [trimmedBlob],
         `${input.name.replace(/\.[^/.]+$/, '')}_trimmed.mp4`,

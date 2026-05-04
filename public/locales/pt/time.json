@@ -61,22 +61,27 @@
   "convertUnixToDate": {
     "addUtcLabel": "Adicionar sufixo 'UTC'",
     "addUtcLabelDescription": "Exibir 'UTC' após a data convertida (somente para o modo UTC)",
-    "description": "Converta um registro de data e hora Unix em uma data legível por humanos.",
+    "date-to-unix": "Data → Unix",
+    "description": "Converta registros de data e hora Unix em datas legíveis e converta datas formatadas de volta para registros de data e hora Unix (em ambas as direções).",
+    "optionsTitle": "Modo de conversão",
     "outputOptions": "Opções de saída",
-    "shortDescription": "Converter registro de data e hora Unix em data",
-    "title": "Converter Unix para Data",
+    "shortDescription": "Converta registros de data e hora Unix e datas em ambas as direções.",
+    "title": "Converter Unix ↔ Data",
     "toolInfo": {
-      "description": "Esta ferramenta converte um registro de data e hora Unix (em segundos) em um formato de data legível (por exemplo, AAAA-MM-DD HH:MM:SS). Ela suporta saída local e UTC, o que a torna útil para interpretar rapidamente registros de data e hora de logs, APIs ou sistemas que utilizam o horário Unix.",
-      "title": "Converter Unix para Data"
+      "description": "Esta ferramenta converte registros de data e hora Unix (em segundos) em formatos de data legíveis para humanos, como AAAA-MM-DD HH:MM:SS, e também converte datas formatadas de volta para registros de data e hora Unix. Você pode escolher saída UTC, saída de fuso horário local ou fornecer um deslocamento UTC personalizado (por exemplo: AAAA-MM-DD HH:MM:SS +XX:XX). Se nenhum deslocamento for fornecido e o fuso horário local não estiver selecionado, UTC (+00:00) será usado por padrão.",
+      "title": "Converter Unix ↔ Data"
     },
+    "tzOptions": "Opções de fuso horário",
+    "unix-to-date": "Unix → Data",
     "useLocalTime": "Usar hora local",
     "useLocalTimeDescription": "Mostrar a data convertida no seu fuso horário local em vez de UTC",
-    "withLabel": "Opções"
+    "useUTC": "Usar UTC"
   },
   "crontabGuru": {
-    "description": "Gere e compreenda expressões cron. Crie agendamentos cron para tarefas automatizadas e trabalhos do sistema.",
-    "shortDescription": "Gerar e compreender expressões cron",
-    "title": "Guru Crontab"
+    "title": "Crontab Guru",
+    "description": "Analise e explique expressões cron em português. Entenda instantaneamente o que qualquer agendamento cron faz, valide a sintaxe e processe múltiplas expressões de uma vez.",
+    "shortDescription": "Analise e explique expressões cron em linguagem simples",
+    "longDescription": "O Crontab Guru é um analisador e validador de expressões cron que traduz a sintaxe complexa do cron em descrições claras e legíveis. Seja para agendar backups automáticos, tarefas de manutenção do sistema ou pipelines de CI/CD, esta ferramenta ajuda-o a perceber exatamente quando os seus trabalhos serão executados. Suporta expressões cron padrão de 5 campos, valida a sintaxe em tempo real e processa múltiplas expressões de uma vez — uma por linha. Disponível em inglês, francês, espanhol, alemão, japonês, chinês, português, neerlandês e russo."
   },
   "timeBetweenDates": {
     "description": "Calcule a diferença de tempo entre duas datas. Obtenha a duração exata em dias, horas, minutos e segundos.",

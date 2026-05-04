@@ -1,3 +1,4 @@
+import { tool as stringSlugGenerator } from './slug-generator/meta';
 import { tool as stringHiddenCharacterDetector } from './hidden-character-detector/meta';
 import { tool as stringRemoveDuplicateLines } from './remove-duplicate-lines/meta';
 import { tool as stringRotate } from './rotate/meta';
@@ -22,6 +23,7 @@ import { tool as stringPasswordGenerator } from './password-generator/meta';
 import { tool as stringEncodeUrl } from './url-encode/meta';
 import { tool as stringDecodeUrl } from './url-decode/meta';
 import { tool as stringCompare } from './text-compare/meta';
+import { tool as stringUnicode } from './unicode/meta';
 
 export const stringTools = [
   stringSplit,
@@ -46,6 +48,8 @@ export const stringTools = [
   stringPasswordGenerator,
   stringEncodeUrl,
   stringDecodeUrl,
+  stringUnicode,
   stringHiddenCharacterDetector,
-  stringCompare
+  stringCompare,
+  stringSlugGenerator
 ];

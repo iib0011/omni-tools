@@ -57,7 +57,7 @@ export async function extractAudioFromVideo(
 
   return new File(
     [
-      new Blob([extractedAudio], {
+      new Blob([extractedAudio as any], {
         type: `audio/${configuredOutputAudioFormat}`
       })
     ],

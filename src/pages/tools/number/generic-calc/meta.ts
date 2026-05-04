@@ -19,7 +19,7 @@ allGenericCalcs.forEach((x) => {
     defineTool('number', {
       ...x,
       path: 'generic-calc/' + x.path,
-      keywords: ['calculator', 'math', ...x.keywords],
+      keywords: [...x.keywords],
       component: lazy(importComponent2)
     })
   );

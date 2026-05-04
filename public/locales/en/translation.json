@@ -22,6 +22,10 @@
       "description": "Tools for working with audio – extract audio from video, adjusting audio speed, merging multiple audio files and much more.",
       "title": "Audio Tools"
     },
+    "converters": {
+      "description": "Tools for converting data between different formats – convert images, audio, video, text, and more.",
+      "title": "Converter Tools"
+    },
     "csv": {
       "description": "Tools for working with CSV files - convert CSV to different formats, manipulate CSV data, validate CSV structure, and process CSV files efficiently.",
       "title": "CSV Tools"
@@ -73,6 +77,14 @@
       "title": "XML Tools"
     }
   },
+  "converters": {
+    "audioconverter": {
+      "description": "Convert audio files between different formats.",
+      "longDescription": "This tool allows you to convert audio files from one format to another, supporting a wide range of audio formats for seamless conversion.",
+      "shortDescription": "Convert audio files to various formats.",
+      "title": "Audio Converter"
+    }
+  },
   "csv": {
     "findIncompleteCsvRecords": {
       "description": "Just upload your CSV file in the form below and this tool will automatically check if none of the rows or columns are missing values. In the tool options, you can adjust the input file format (specify the delimiter, quote character, and comment character). Additionally, you can enable checking for empty values, skip empty lines, and set a limit on the number of error messages in the output.",
@@ -94,7 +106,10 @@
       "splitText": "Split a text",
       "trimVideo": "Trim video"
     },
-    "searchPlaceholder": "Search all tools",
+    "search": {
+      "placeholder": "Search all tools",
+      "noResult": "No results found, Try adjusting your search or filter criteria"
+    },
     "title": "Get Things Done Quickly with"
   },
   "inputFooter": {
@@ -121,6 +136,7 @@
   },
   "navbar": {
     "buyMeACoffee": "Buy me a coffee",
+    "hireMe": "Hire me",
     "home": "Home",
     "tools": "Tools"
   },
@@ -224,13 +240,10 @@
     "loading": "Loading... This may take a moment.",
     "result": "Result"
   },
-  "toolMultipleAudioInput": {
+  "toolMultipleInput": {
     "inputTitle": "Input {{type}}",
-    "noFilesSelected": "No files selected"
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "Input {{type}}",
-    "noFilesSelected": "No files selected"
+    "noFilesSelected": "No files selected",
+    "deleteFile": "Delete file"
   },
   "toolOptions": {
     "title": "Tool options"
