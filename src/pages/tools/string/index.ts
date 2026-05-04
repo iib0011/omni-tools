@@ -21,7 +21,8 @@ import { tool as stringStatistic } from './statistic/meta';
 import { tool as stringCensor } from './censor/meta';
 import { tool as stringPasswordGenerator } from './password-generator/meta';
 import { tool as stringEncodeUrl } from './url-encode/meta';
-import { tool as StringDecodeUrl } from './url-decode/meta';
+import { tool as stringDecodeUrl } from './url-decode/meta';
+import { tool as stringCompare } from './text-compare/meta';
 import { tool as stringUnicode } from './unicode/meta';
 
 export const stringTools = [
@@ -46,8 +47,9 @@ export const stringTools = [
   stringCensor,
   stringPasswordGenerator,
   stringEncodeUrl,
-  StringDecodeUrl,
+  stringDecodeUrl,
   stringUnicode,
   stringHiddenCharacterDetector,
+  stringCompare,
   stringSlugGenerator
 ];
