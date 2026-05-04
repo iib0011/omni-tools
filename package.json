@@ -52,6 +52,7 @@
     "cronstrue": "^3.0.0",
     "dayjs": "^1.11.13",
     "diff": "^8.0.2",
+    "dompurify": "^3.4.2",
     "fast-xml-parser": "^5.2.5",
     "formik": "^2.4.6",
     "heic-to": "^1.4.2",
