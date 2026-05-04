@@ -1,22 +1,29 @@
-import { diffWordsWithSpace } from 'diff';
+import { diffWordsWithSpace, diffChars } from 'diff';
+import { level } from './types';
+import { escapeHtml } from 'utils/string';
 
-function escapeHtml(str: string): string {
-  return str.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
+const DIFF_FN = {
+  word: diffWordsWithSpace,
+  char: diffChars
+} as const;
 
-export function compareTextsHtml(textA: string, textB: string): string {
-  const diffs = diffWordsWithSpace(textA, textB);
+export function compareTextsHtml(
+  textA: string,
+  textB: string,
+  level: level
+): string {
+  const diffs = DIFF_FN[level](textA, textB);
 
   const html = diffs
     .map((part) => {
-      const val = escapeHtml(part.value).replace(/ /g, '&nbsp;');
+      const val = escapeHtml(part.value).replace(/\n/g, '<br>');
       if (part.added) {
         return `<span class="diff-added">${val}</span>`;
       }
       if (part.removed) {
         return `<span class="diff-removed">${val}</span>`;
       }
-      return `<span>${val}</span>`;
+      return val;
     })
     .join('');
 
