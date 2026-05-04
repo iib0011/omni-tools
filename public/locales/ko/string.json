@@ -1,0 +1,311 @@
+{
+  "base64": {
+    "decode": "Base64 디코딩",
+    "description": "Base64 인코딩을 사용하여 텍스트를 인코딩하거나 디코딩합니다.",
+    "encode": "Base64 인코딩",
+    "inputTitle": "입력 데이터",
+    "optionsTitle": "Base64 옵션",
+    "resultTitle": "결과",
+    "shortDescription": "Base64를 사용하여 데이터 인코딩 또는 디코딩",
+    "title": "Base64 인코더/디코더",
+    "toolInfo": {
+      "description": "Base64는 데이터를 ASCII 문자열 형식으로 표현하는 인코딩 체계로, 데이터를 기수-64 표현으로 변환합니다. 문자열을 인코딩하는 데 사용할 수 있지만 일반적으로 텍스트 데이터를 처리하도록 설계된 미디어를 통해 이진 데이터를 전송하는 데 사용됩니다.",
+      "title": "Base64란?"
+    }
+  },
+  "censor": {
+    "description": "텍스트의 단어를 검열하는 유틸리티입니다. 왼쪽 입력 양식에 텍스트를 로드하고 옵션에서 모든 부적절한 단어를 지정하면 출력 영역에 즉시 검열된 텍스트가 표시됩니다.",
+    "shortDescription": "부적절한 단어를 빠르게 가리거나 다른 단어로 바꿉니다.",
+    "title": "텍스트 검열"
+  },
+  "createPalindrome": {
+    "description": "모든 텍스트에서 회문을 만드는 세계에서 가장 간단한 브라우저 기반 유틸리티입니다. 텍스트를 입력하고 즉시 앞으로나 뒤로 똑같이 읽히는 회문으로 변환합니다. 단어 게임, 대칭 텍스트 패턴 생성 또는 언어적 호기심 탐구에 적합합니다.",
+    "shortDescription": "앞으로나 뒤로 똑같이 읽히는 텍스트 만들기",
+    "title": "회문 만들기"
+  },
+  "extractSubstring": {
+    "description": "텍스트에서 부분 문자열을 추출하는 세계에서 가장 간단한 브라우저 기반 유틸리티입니다. 텍스트를 입력하고 시작 및 끝 위치를 지정하여 원하는 부분을 추출합니다. 데이터 처리, 텍스트 분석 또는 더 큰 텍스트 블록에서 특정 콘텐츠를 추출하는 데 적합합니다.",
+    "shortDescription": "지정된 위치 사이의 텍스트 일부 추출",
+    "title": "부분 문자열 추출"
+  },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "분석 옵션",
+    "category": "범주",
+    "description": "숨겨진 유니코드 문자, 특히 공격에 사용될 수 있는 RTL 재정의 문자를 감지합니다.",
+    "foundChars": "{{count}}개의 숨겨진 문자를 찾았습니다.",
+    "inputPlaceholder": "숨겨진 문자를 확인할 텍스트를 입력하세요...",
+    "inputTitle": "분석할 텍스트",
+    "invisibleChar": "보이지 않는 문자",
+    "invisibleFound": "보이지 않는 문자를 찾았습니다.",
+    "longDescription": "이 도구는 텍스트에서 숨겨진 유니코드 문자, 특히 공격에 사용될 수 있는 오른쪽에서 왼쪽(RTL) 재정의 문자를 감지하는 데 도움이 됩니다. 겉보기에는 무해해 보이는 텍스트에 숨겨져 있을 수 있는 보이지 않는 문자, 너비가 0인 문자 및 기타 잠재적으로 악의적인 유니코드 시퀀스를 식별할 수 있습니다.",
+    "noHiddenChars": "텍스트에서 숨겨진 문자가 감지되지 않았습니다.",
+    "optionsDescription": "감지할 숨겨진 문자의 유형과 결과를 표시하는 방법을 구성합니다.",
+    "position": "위치",
+    "rtlAlert": "⚠️ RTL 재정의 문자가 감지되었습니다! 이 텍스트에는 악의적인 숨겨진 문자가 포함될 수 있습니다.",
+    "rtlFound": "RTL 재정의를 찾았습니다.",
+    "rtlOverride": "RTL 재정의 문자",
+    "rtlWarning": "경고: RTL 재정의 문자가 감지되었습니다! 공격에 사용될 수 있습니다.",
+    "shortDescription": "텍스트에서 숨겨진 유니코드 문자 찾기",
+    "summary": "분석 요약",
+    "title": "숨겨진 문자 감지기",
+    "totalChars": "총 숨겨진 문자: {{count}}",
+    "unicode": "유니코드",
+    "zeroWidthChar": "너비가 0인 문자",
+    "zeroWidthFound": "너비가 0인 문자를 찾았습니다."
+  },
+  "join": {
+    "blankLinesAndTrailingSpaces": "빈 줄 및 후행 공백",
+    "deleteBlankDescription": "텍스트 기호가 없는 줄을 삭제합니다.",
+    "deleteBlankTitle": "빈 줄 삭제",
+    "deleteTrailingDescription": "줄 끝에 있는 공백과 탭을 제거합니다.",
+    "deleteTrailingTitle": "후행 공백 삭제",
+    "description": "사용자 정의 가능한 구분 기호로 텍스트 조각을 함께 결합합니다.",
+    "inputTitle": "텍스트 조각",
+    "joinCharacterDescription": "끊어진 텍스트 조각을 연결하는 기호입니다. (기본값은 공백입니다.)",
+    "joinCharacterPlaceholder": "결합 문자",
+    "resultTitle": "결합된 텍스트",
+    "shortDescription": "지정된 구분 기호로 텍스트 요소 결합",
+    "textMergedOptions": "병합된 텍스트 옵션",
+    "title": "텍스트 결합",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 텍스트의 일부를 함께 결합할 수 있습니다. 줄 바꿈으로 구분된 텍스트 값 목록을 가져와 병합합니다. 결합된 텍스트 부분 사이에 배치될 문자를 설정할 수 있습니다. 또한 모든 빈 줄을 무시하고 모든 줄 끝에 있는 공백과 탭을 제거할 수 있습니다. 텍스트처럼!",
+      "title": "텍스트 결합기란?"
+    }
+  },
+  "palindrome": {
+    "description": "텍스트가 회문인지 확인하는 세계에서 가장 간단한 브라우저 기반 유틸리티입니다. 텍스트가 앞으로나 뒤로 똑같이 읽히는지 즉시 확인합니다. 단어 퍼즐, 언어 분석 또는 대칭 텍스트 패턴 확인에 적합합니다. 다양한 구분 기호 및 여러 단어 회문 감지를 지원합니다.",
+    "shortDescription": "텍스트가 앞으로나 뒤로 똑같이 읽히는지 확인",
+    "title": "회문"
+  },
+  "passwordGenerator": {
+    "avoidAmbiguous": "모호한 문자(i, I, l, 0, O) 피하기",
+    "description": "사용자 정의 가능한 길이 및 문자 유형으로 안전한 임의의 암호를 생성합니다. 소문자, 대문자, 숫자 및 특수 문자 중에서 선택합니다. 가독성을 높이기 위해 모호한 문자를 피하는 옵션입니다.",
+    "includeLowercase": "소문자 포함(a-z)",
+    "includeNumbers": "숫자 포함(0-9)",
+    "includeSymbols": "특수 문자 포함",
+    "includeUppercase": "대문자 포함(A-Z)",
+    "lengthDesc": "암호 길이",
+    "lengthPlaceholder": "예: 12",
+    "optionsTitle": "암호 옵션",
+    "resultTitle": "생성된 암호",
+    "shortDescription": "사용자 정의 옵션으로 안전한 임의의 암호 생성",
+    "title": "암호 생성기",
+    "toolInfo": {
+      "description": "이 도구는 선택한 기준에 따라 안전한 임의의 암호를 생성합니다. 길이를 사용자 정의하고, 다른 문자 유형을 포함하거나 제외하고, 가독성을 높이기 위해 모호한 문자를 피할 수 있습니다. 계정, 응용 프로그램 또는 모든 보안 요구에 대한 강력한 암호를 만드는 데 적합합니다.",
+      "title": "암호 생성기 정보"
+    }
+  },
+  "quote": {
+    "allowDoubleQuotation": "큰따옴표 허용",
+    "description": "사용자 정의 가능한 옵션으로 텍스트 주위에 따옴표를 추가합니다.",
+    "inputTitle": "입력 텍스트",
+    "leftQuoteDescription": "왼쪽 따옴표 문자",
+    "processAsMultiLine": "여러 줄 텍스트로 처리",
+    "quoteEmptyLines": "빈 줄에 따옴표 추가",
+    "quoteOptions": "따옴표 옵션",
+    "resultTitle": "따옴표 붙은 텍스트",
+    "rightQuoteDescription": "오른쪽 따옴표 문자",
+    "shortDescription": "다양한 스타일로 텍스트 주위에 따옴표 추가",
+    "title": "텍스트 인용기",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 텍스트 주위에 따옴표를 추가할 수 있습니다. 다른 따옴표 문자를 선택하고, 여러 줄 텍스트를 처리하고, 빈 줄 처리 방법을 제어할 수 있습니다. 프로그래밍용 텍스트 준비, 데이터 서식 지정 또는 스타일화된 텍스트 생성에 유용합니다.",
+      "title": "텍스트 인용기"
+    }
+  },
+  "randomizeCase": {
+    "description": "텍스트 대소문자를 무작위로 바꾸는 세계에서 가장 간단한 브라우저 기반 유틸리티입니다. 텍스트를 입력하고 즉시 임의의 대문자와 소문자로 변환합니다. 고유한 텍스트 효과 생성, 대소문자 구분 테스트 또는 다양한 텍스트 패턴 생성에 적합합니다.",
+    "shortDescription": "텍스트의 문자 대소문자를 무작위로 바꾸기",
+    "title": "대소문자 무작위화"
+  },
+  "removeDuplicateLines": {
+    "description": "왼쪽 입력 양식에 텍스트를 로드하면 출력 영역에 중복 줄이 없는 텍스트가 즉시 표시됩니다. 강력하고 무료이며 빠릅니다. 텍스트 줄 로드 – 고유한 텍스트 줄 가져오기",
+    "shortDescription": "텍스트에서 반복되는 모든 줄을 빠르게 삭제",
+    "title": "중복 줄 제거"
+  },
+  "repeat": {
+    "delimiterDescription": "출력 복사본의 구분 기호입니다.",
+    "delimiterPlaceholder": "구분 기호",
+    "description": "사용자 정의 가능한 구분 기호로 텍스트를 여러 번 반복합니다.",
+    "inputTitle": "입력 텍스트",
+    "numberPlaceholder": "숫자",
+    "repeatAmountDescription": "반복 횟수입니다.",
+    "repetitionsDelimiter": "반복 구분 기호",
+    "resultTitle": "반복된 텍스트",
+    "shortDescription": "텍스트를 여러 번 반복",
+    "textRepetitions": "텍스트 반복",
+    "title": "텍스트 반복",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 선택적 구분 기호로 지정된 텍스트를 여러 번 반복할 수 있습니다.",
+      "title": "텍스트 반복"
+    }
+  },
+  "reverse": {
+    "description": "텍스트를 뒤집는 세계에서 가장 간단한 브라우저 기반 유틸리티입니다. 모든 텍스트를 입력하고 즉시 문자별로 뒤집습니다. 미러 텍스트 생성, 회문 분석 또는 텍스트 패턴 놀이에 적합합니다. 뒤집는 동안 공백과 특수 문자를 유지합니다.",
+    "inputTitle": "뒤집을 텍스트",
+    "processMultiLine": "여러 줄 텍스트 처리",
+    "processMultiLineDescription": "각 줄이 독립적으로 뒤집힙니다.",
+    "resultTitle": "뒤집힌 text",
+    "reversalOptions": "뒤집기 옵션",
+    "shortDescription": "모든 텍스트를 문자별로 뒤집기",
+    "skipEmptyLines": "빈 줄 건너뛰기",
+    "skipEmptyLinesDescription": "출력에서 빈 줄이 제거됩니다.",
+    "title": "뒤집기",
+    "trimWhitespace": "공백 다듬기",
+    "trimWhitespaceDescription": "각 줄의 앞뒤 공백 제거"
+  },
+  "rot13": {
+    "description": "ROT13 암호를 사용하여 텍스트를 인코딩하거나 디코딩합니다.",
+    "inputTitle": "입력 텍스트",
+    "resultTitle": "ROT13 결과",
+    "shortDescription": "ROT13 암호를 사용하여 텍스트 인코딩 또는 디코딩",
+    "title": "ROT13 인코더/디코더",
+    "toolInfo": {
+      "description": "ROT13(13자리 회전)은 문자를 알파벳에서 13번째 문자 뒤에 있는 문자로 바꾸는 간단한 문자 대체 암호입니다. ROT13은 고대 로마에서 개발된 카이사르 암호의 특별한 경우입니다. 영어 알파벳에는 26개의 문자가 있기 때문에 ROT13은 자체 역함수입니다. 즉, ROT13을 취소하려면 동일한 알고리즘이 적용되므로 인코딩 및 디코딩에 동일한 작업을 사용할 수 있습니다.",
+      "title": "ROT13이란?"
+    }
+  },
+  "rotate": {
+    "description": "지정된 위치만큼 텍스트의 문자를 회전합니다.",
+    "inputTitle": "입력 텍스트",
+    "processAsMultiLine": "여러 줄 텍스트로 처리(각 줄을 별도로 회전)",
+    "resultTitle": "회전된 텍스트",
+    "rotateLeft": "왼쪽으로 회전",
+    "rotateRight": "오른쪽으로 회전",
+    "rotationOptions": "회전 옵션",
+    "shortDescription": "위치별로 텍스트의 문자 이동",
+    "stepDescription": "회전할 위치 수",
+    "title": "텍스트 회전",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 문자열의 문자를 지정된 위치 수만큼 회전할 수 있습니다. 왼쪽이나 오른쪽으로 회전하고 각 줄을 별도로 회전하여 여러 줄 텍스트를 처리할 수 있습니다. 문자열 회전은 간단한 텍스트 변환, 패턴 생성 또는 기본 암호화 기술 구현에 유용합니다.",
+      "title": "문자열 회전"
+    }
+  },
+  "split": {
+    "charAfterChunkDescription": "각 청크 뒤의 문자",
+    "charBeforeChunkDescription": "각 청크 앞의 문자",
+    "chunksDescription": "출력에서 동일한 길이의 청크 수입니다.",
+    "chunksTitle": "청크 수 사용",
+    "description": "텍스트를 분할하는 세계에서 가장 간단한 브라우저 기반 유틸리티입니다. 텍스트를 입력하고 구분 기호를 지정하여 여러 부분으로 분할합니다. 데이터 처리, 텍스트 조작 또는 더 큰 텍스트 블록에서 특정 콘텐츠를 추출하는 데 적합합니다.",
+    "lengthDescription": "각 출력 청크에 넣을 문자 수입니다.",
+    "lengthTitle": "분할에 길이 사용",
+    "outputSeparatorDescription": "분할된 청크 사이에 넣을 문자입니다. (기본값은 줄 바꿈 \"\\n\"입니다.)",
+    "outputSeparatorOptions": "출력 구분 기호 옵션",
+    "regexDescription": "텍스트를 여러 부분으로 나누는 데 사용할 정규식입니다. (기본값은 여러 공백입니다.)",
+    "regexTitle": "분할에 정규식 사용",
+    "resultTitle": "분할 결과",
+    "shortDescription": "구분 기호를 사용하여 텍스트를 여러 부분으로 분할",
+    "splitSeparatorOptions": "분할 구분 기호 옵션",
+    "symbolDescription": "텍스트를 여러 부분으로 나누는 데 사용할 문자입니다. (기본값은 공백입니다.)",
+    "symbolTitle": "분할에 기호 사용",
+    "title": "분할"
+  },
+  "statistic": {
+    "characterFrequencyAnalysis": "문자 빈도 분석",
+    "characterFrequencyAnalysisDescription": "각 문자가 텍스트에 나타나는 횟수를 계산합니다.",
+    "delimitersOptions": "구분 기호 옵션",
+    "description": "텍스트를 분석하고 포괄적인 통계를 생성합니다.",
+    "includeEmptyLines": "빈 줄 포함",
+    "includeEmptyLinesDescription": "줄을 셀 때 빈 줄 포함",
+    "inputTitle": "입력 텍스트",
+    "resultTitle": "텍스트 통계",
+    "sentenceDelimitersDescription": "언어에서 문장을 구분하는 데 사용되는 사용자 정의 문자를 입력하거나(쉼표로 구분) 기본값으로 비워 둡니다.",
+    "sentenceDelimitersPlaceholder": "예: ., !, ?, ...",
+    "shortDescription": "텍스트에 대한 통계 가져오기",
+    "statisticsOptions": "통계 옵션",
+    "title": "텍스트 통계",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 텍스트를 분석하고 문자 수, 단어 수, 줄 수, 문자 및 단어의 빈도 분석을 포함한 포괄적인 통계를 생성할 수 있습니다.",
+      "title": "{{title}}란?"
+    },
+    "wordDelimitersDescription": "단어를 세기 위한 사용자 정의 정규식을 입력하거나 기본값으로 비워 둡니다.",
+    "wordDelimitersPlaceholder": "예: \\s.,;:!?\"«»()…",
+    "wordFrequencyAnalysis": "단어 빈도 분석",
+    "wordFrequencyAnalysisDescription": "각 단어가 텍스트에 나타나는 횟수를 계산합니다."
+  },
+  "textReplacer": {
+    "description": "텍스트 패턴을 새 콘텐츠로 바꿉니다.",
+    "findPatternInText": "텍스트에서 이 패턴 찾기",
+    "findPatternUsingRegexp": "정규식을 사용하여 패턴 찾기",
+    "inputTitle": "바꿀 텍스트",
+    "newTextPlaceholder": "새 텍스트",
+    "regexpDescription": "바꿀 정규식을 입력합니다.",
+    "replacePatternDescription": "바꾸기에 사용할 패턴을 입력합니다.",
+    "replaceText": "텍스트 바꾸기",
+    "resultTitle": "바뀐 텍스트",
+    "searchPatternDescription": "바꿀 텍스트 패턴을 입력합니다.",
+    "searchText": "텍스트 검색",
+    "shortDescription": "콘텐츠의 텍스트를 빠르게 바꾸기",
+    "title": "텍스트 바꾸기",
+    "toolInfo": {
+      "description": "이 간단한 브라우저 기반 도구를 사용하여 콘텐츠의 특정 텍스트를 쉽게 바꿀 수 있습니다. 텍스트를 입력하고 바꿀 텍스트와 바꿀 값을 설정하면 즉시 업데이트된 버전을 얻을 수 있습니다.",
+      "title": "텍스트 바꾸기"
+    }
+  },
+  "toMorse": {
+    "dashSymbolDescription": "모스 부호의 대시에 해당하는 기호입니다.",
+    "description": "텍스트를 모스 부호로 변환합니다.",
+    "dotSymbolDescription": "모스 부호의 점에 해당하는 기호입니다.",
+    "longSignal": "긴 신호",
+    "resultTitle": "모스 부호",
+    "shortDescription": "텍스트를 모스 부호로 빠르게 인코딩",
+    "shortSignal": "짧은 신호",
+    "title": "문자열을 모스 부호로"
+  },
+  "truncate": {
+    "addTruncationIndicator": "잘림 표시기 추가",
+    "charactersPlaceholder": "문자",
+    "description": "텍스트를 지정된 길이로 줄입니다.",
+    "indicatorDescription": "텍스트 끝(또는 시작)에 추가할 문자입니다. 참고: 길이에 포함됩니다.",
+    "inputTitle": "입력 텍스트",
+    "leftSideDescription": "텍스트 시작 부분에서 문자 제거",
+    "leftSideTruncation": "왼쪽 잘림",
+    "lengthAndLines": "길이 및 줄",
+    "lineByLineDescription": "각 줄을 별도로 자르기",
+    "lineByLineTruncating": "줄별 잘림",
+    "maxLengthDescription": "텍스트에 남길 문자 수입니다.",
+    "numberPlaceholder": "숫자",
+    "resultTitle": "잘린 텍스트",
+    "rightSideDescription": "텍스트 끝에서 문자 제거",
+    "rightSideTruncation": "오른쪽 잘림",
+    "shortDescription": "텍스트를 지정된 길이로 자르기",
+    "suffixAndAffix": "접미사 및 접두사",
+    "title": "텍스트 자르기",
+    "toolInfo": {
+      "description": "왼쪽 입력 양식에 텍스트를 로드하면 오른쪽에 자동으로 잘린 텍스트가 표시됩니다.",
+      "title": "텍스트 자르기"
+    },
+    "truncationSide": "잘림 쪽"
+  },
+  "uppercase": {
+    "description": "텍스트를 대문자로 변환합니다.",
+    "inputTitle": "입력 텍스트",
+    "resultTitle": "대문자 텍스트",
+    "shortDescription": "텍스트를 대문자로 변환",
+    "title": "대문자로 변환"
+  },
+  "urlDecode": {
+    "inputTitle": "입력 문자열(URL 이스케이프됨)",
+    "resultTitle": "출력 문자열",
+    "toolInfo": {
+      "description": "문자열을 로드하면 자동으로 URL 이스케이프가 해제됩니다.",
+      "longDescription": "이 도구는 이전에 URL 인코딩된 문자열을 URL 디코딩합니다. URL 디코딩은 URL 인코딩의 역연산입니다. 모든 퍼센트 인코딩된 문자는 이해할 수 있는 문자로 디코딩됩니다. 가장 잘 알려진 퍼센트 인코딩 값 중 일부는 공백의 경우 %20, 콜론의 경우 %3a, 슬래시의 경우 %2f, 물음표의 경우 %3f입니다. 퍼센트 기호 뒤에 오는 두 자리는 16진수 문자의 문자 코드 값입니다.",
+      "shortDescription": "문자열의 URL 이스케이프를 빠르게 해제합니다.",
+      "title": "문자열 URL 디코더"
+    }
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "선택하면 입력 문자열의 모든 문자가 URL 인코딩으로 변환됩니다(특수 문자뿐만 아니라).",
+      "nonSpecialCharPlaceholder": "특수하지 않은 문자 인코딩",
+      "title": "인코딩 옵션"
+    },
+    "inputTitle": "입력 문자열",
+    "resultTitle": "URL 이스케이프된 문자열",
+    "toolInfo": {
+      "description": "문자열을 로드하면 자동으로 URL 이스케이프됩니다.",
+      "longDescription": "이 도구는 문자열을 URL 인코딩합니다. 특수 URL 문자는 퍼센트 기호 인코딩으로 변환됩니다. 이 인코딩은 각 문자의 숫자 값이 퍼센트 기호와 두 자리 16진수 값으로 변환되기 때문에 퍼센트 인코딩이라고 합니다. 16진수 값은 문자의 코드 포인트 값을 기준으로 결정됩니다. 예를 들어 공백은 %20, 콜론은 %3a, 슬래시는 %2f로 이스케이프됩니다. 특수하지 않은 문자는 변경되지 않습니다. 특수하지 않은 문자도 퍼센트 인코딩으로 변환해야 하는 경우를 대비하여 그렇게 할 수 있는 추가 옵션도 추가했습니다. 이 동작을 활성화하려면 encode-non-special-chars 옵션을 선택합니다.",
+      "shortDescription": "문자열을 빠르게 URL 이스케이프합니다.",
+      "title": "문자열 URL 인코더"
+    }
+  }
+}
