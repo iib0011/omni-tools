@@ -9,7 +9,7 @@ export const tool = defineTool('string', {
     longDescription: 'string:textCompare.longDescription'
   },
   path: 'text-compare',
-  icon: 'material-symbols-light:search',
+  icon: 'ic:twotone-difference',
   keywords: ['text', 'compare'],
   component: lazy(() => import('./index'))
 });
