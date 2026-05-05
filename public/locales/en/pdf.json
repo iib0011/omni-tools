@@ -135,5 +135,10 @@
     "title": "Extract Images from PDF",
     "inputTitle": "Input PDF",
     "resultTitle": "Extracted Images"
+  },
+  "pdfToWord": {
+    "title": "PDF to Word",
+    "description": "Convert PDF documents into editable Word (.docx) files.",
+    "shortDescription": "Convert PDF files to Word format"
   }
 }
