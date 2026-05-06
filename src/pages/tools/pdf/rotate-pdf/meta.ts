@@ -13,6 +13,14 @@ export const tool = defineTool('pdf', {
   path: 'rotate-pdf',
   icon: 'carbon:rotate',
 
-  keywords: ['pdf', 'rotate', 'rotation', 'document', 'pages', 'orientation'],
+  keywords: [
+    'rotation',
+    'document',
+    'pages',
+    'orientation',
+    'oritent',
+    'spin',
+    'flip'
+  ],
   component: lazy(() => import('./index'))
 });

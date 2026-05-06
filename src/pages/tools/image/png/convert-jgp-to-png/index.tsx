@@ -6,7 +6,6 @@ import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
 import ToolFileResult from 'components/result/ToolFileResult';
 import Color from 'color';
 import React, { useState } from 'react';
-import * as Yup from 'yup';
 import { areColorsSimilar } from 'utils/color';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -16,9 +15,7 @@ const initialValues = {
   color: 'white',
   similarity: '10'
 };
-const validationSchema = Yup.object({
-  // splitSeparator: Yup.string().required('The separator is required')
-});
+
 export default function ConvertJgpToPng({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);

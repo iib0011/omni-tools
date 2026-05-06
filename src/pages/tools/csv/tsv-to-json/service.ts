@@ -1,6 +1,6 @@
 import { InitialValuesType } from './types';
-import { beautifyJson } from '../prettify/service';
-import { minifyJson } from '../minify/service';
+import { beautifyJson } from '../../json/prettify/service';
+import { minifyJson } from '../../json/minify/service';
 
 export function convertTsvToJson(
   input: string,

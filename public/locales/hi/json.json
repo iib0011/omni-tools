@@ -82,19 +82,6 @@
     "stringifyOptions": "स्ट्रिंगिफाई विकल्प",
     "title": "JSON स्ट्रिंगिफाई"
   },
-  "tsvToJson": {
-    "arrayFormat": "सरणी प्रारूप",
-    "conversionOptions": "रूपांतरण विकल्प",
-    "description": "TSV डेटा को JSON प्रारूप में बदलें।",
-    "firstRowAsHeaders": "पहली पंक्ति शीर्षक के रूप में",
-    "includeHeaders": "शीर्षक शामिल करें",
-    "inputTitle": "इनपुट TSV",
-    "objectFormat": "ऑब्जेक्ट प्रारूप",
-    "outputFormat": "आउटपुट प्रारूप",
-    "resultTitle": "JSON परिणाम",
-    "shortDescription": "TSV को JSON प्रारूप में परिवर्तित करें",
-    "title": "TSV से JSON"
-  },
   "validateJson": {
     "allowComments": "टिप्पणियां अनुमति दें",
     "allowTrailingCommas": "अनुगामी कॉमा अनुमति दें",

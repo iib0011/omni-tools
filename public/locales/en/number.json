@@ -15,6 +15,19 @@
       "title": "What is an Arithmetic Sequence?"
     }
   },
+  "byteConverter": {
+    "description": "Convert data values between different byte units, supporting both SI (decimal) and IEC (binary) systems. It supports multiple lines conversion.",
+    "inputTitle": "Input Values",
+    "outputTitle": "Converted Output",
+    "shortDescription": "Quickly convert values between byte units",
+    "title": "Byte Converter",
+    "unit": {
+      "from": "Select the unit of the input values you are providing (e.g., KB, MB, GiB).",
+      "precision": "Number of decimal places to display in the converted output.",
+      "title": "Conversion Options",
+      "to": "Select the unit you want the input values to be converted into."
+    }
+  },
   "generate": {
     "arithmeticSequenceOption": "Arithmetic sequence option",
     "description": "Generate a sequence of numbers with customizable parameters.",

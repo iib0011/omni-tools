@@ -94,7 +94,10 @@
       "splitText": "Разделить текст",
       "trimVideo": "Обрезать видео"
     },
-    "searchPlaceholder": "Найти инструмент…",
+    "search": {
+      "placeholder": "Поиск по всем инструментам",
+      "noResult": "Результаты не найдены, попробуйте изменить параметры поиска или фильтрации"
+    },
     "title": "Выполняйте задачи быстро с помощью"
   },
   "inputFooter": {
@@ -225,13 +228,10 @@
     "loading": "Загрузка... Это может занять некоторое время.",
     "result": "Результат"
   },
-  "toolMultipleAudioInput": {
-    "inputTitle": "Вход {{type}}",
-    "noFilesSelected": "Файлы не выбраны."
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "Вход {{type}}",
-    "noFilesSelected": "Файлы не выбраны."
+  "toolMultipleInput": {
+    "inputTitle": "Ввод {{type}}",
+    "noFilesSelected": "Файлы не выбраны",
+    "deleteFile": "Удалить файл"
   },
   "toolOptions": {
     "title": "Параметры инструмента"

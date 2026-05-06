@@ -1,6 +1,6 @@
 {
   "changeColors": {
-    "description": "世界",
+    "description": "画像内の選択した色をすばやく正確に新しい色へ置き換えます。",
     "shortDescription": "画像内の色を素早く入れ替える",
     "title": "画像の色を変更する"
   },
@@ -33,13 +33,8 @@
     "shortDescription": "JPG画像をPNGに素早く変換",
     "title": "JPGをPNGに変換する"
   },
-  "convertToJpg": {
-    "description": "さまざまな画像形式 (PNG、GIF、TIF、PSD、SVG、WEBP、HEIC、RAW) を、カスタマイズ可能な品質と背景色の設定で JPG に変換します。",
-    "shortDescription": "品質管理しながら画像をJPGに変換する",
-    "title": "画像をJPGに変換する"
-  },
   "createTransparent": {
-    "description": "世界",
+    "description": "選択した色を削除して、画像の背景を透明にします。",
     "shortDescription": "画像を素早く透明にする",
     "title": "透明なPNGを作成する"
   },
@@ -66,7 +61,7 @@
     "title": "QRコードジェネレーター"
   },
   "removeBackground": {
-    "description": "世界",
+    "description": "画像の背景を自動で削除し、主要な被写体を透過状態で残します。",
     "shortDescription": "画像から背景を自動的に削除する",
     "title": "画像から背景を削除する"
   },

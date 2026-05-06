@@ -6,8 +6,6 @@ export const tool = defineTool('pdf', {
   icon: 'material-symbols:lock',
 
   keywords: [
-    'pdf',
-    'protect',
     'password',
     'secure',
     'encrypt',

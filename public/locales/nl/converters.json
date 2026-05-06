@@ -1,0 +1,26 @@
+{
+  "audioConverter": {
+    "description": "Converteer audiobestanden tussen verschillende indelingen.",
+    "inputTitle": "Audio-invoer",
+    "longDescription": "Met deze tool kunt u audiobestanden van het ene naar het andere formaat converteren, met ondersteuning voor een breed scala aan audioformaten voor naadloze conversie.",
+    "outputFormat": "Uitvoerindeling",
+    "outputFormatDescription": "Selecteer het gewenste audio-uitvoerformat",
+    "outputTitle": "Geconverteerde Audio",
+    "shortDescription": "Converteer audiobestanden naar verschillende indelingen.",
+    "title": "Audio Converter"
+  },
+  "convertToWebp": {
+    "description": "Converteer verschillende afbeeldingsindelingen naar WebP-indeling met aanpasbare instellingen voor kwaliteit en achtergrondkleur.",
+    "failedToConvert": "Conversie van afbeelding(en) naar WebP mislukt. Probeer het opnieuw.",
+    "inputTitle": "Invoerafbeeldingen",
+    "options": {
+      "colorDescription": "Achtergrondkleur (voor transparante afbeeldingen)",
+      "quality": "Conversiekwaliteit:",
+      "qualityDescription": "Hogere waarden = betere kwaliteit, groter bestandsformaat",
+      "title": "Conversie-instellingen"
+    },
+    "resultTitle": "WEBP-afbeeldingen",
+    "shortDescription": "Converteer afbeeldingen naar WebP-indeling met kwaliteitsbeheer.",
+    "title": "Afbeeldingen naar WebP converteren"
+  }
+}

@@ -1,6 +1,6 @@
 export interface BaseFileInputProps {
   value: File | null;
-  onChange: (file: File) => void;
+  onChange: (file: File | null) => void;
   accept: string[];
   title?: string;
 }

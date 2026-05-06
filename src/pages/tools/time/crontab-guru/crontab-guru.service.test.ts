@@ -1,5 +1,5 @@
 import { expect, describe, it } from 'vitest';
-import { validateCrontab, explainCrontab } from './service';
+import { validateCrontab, explainCrontab, main } from './service';
 
 describe('crontab-guru service', () => {
   it('validates correct crontab expressions', () => {
@@ -19,8 +19,8 @@ describe('crontab-guru service', () => {
   });
 
   it('returns error for invalid crontab explanation', () => {
-    expect(explainCrontab('invalid expression')).toMatch(
-      /Invalid crontab expression/
+    expect(main('invalid expression')).toContain(
+      'Invalid crontab expression: "invalid expression"'
     );
   });
 });

@@ -46,11 +46,6 @@
     "shortDescription": "将对象转换为 JSON 字符串",
     "title": "字符串化 JSON"
   },
-  "tsvToJson": {
-    "description": "将 TSV（制表符分隔值）数据转换为 JSON 格式。将表格数据转换为结构化的 JSON 对象。",
-    "shortDescription": "将 TSV 转换为 JSON 格式",
-    "title": "TSV 到 JSON"
-  },
   "validateJson": {
     "description": "检查 JSON 是否有效且格式正确。",
     "inputTitle": "输入 JSON",

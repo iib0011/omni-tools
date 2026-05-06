@@ -1,8 +1,40 @@
 {
-  "audioconverter": {
-    "title": "Audio Converter",
+  "audioConverter": {
     "description": "Convert audio files between different formats.",
+    "inputTitle": "Audio Input",
+    "longDescription": "This tool allows you to convert audio files from one format to another, supporting a wide range of audio formats for seamless conversion.",
+    "outputFormat": "output Format",
+    "outputFormatDescription": "Select the desired output audio format",
+    "outputTitle": "Converted Audio",
     "shortDescription": "Convert audio files to various formats.",
-    "longDescription": "This tool allows you to convert audio files from one format to another, supporting a wide range of audio formats for seamless conversion."
+    "title": "Audio Converter"
+  },
+  "convertToJPG": {
+    "description": "Convert various image formats to JPG with customizable quality and background color settings.",
+    "failedToConvert": "Conversion of image(s) to JPG failed. Please try again.",
+    "inputTitle": "Input Images",
+    "options": {
+      "colorDescription": "Background color (for transparent images)",
+      "quality": "Conversion Quality:",
+      "qualityDescription": "Higher values = better quality, larger file size",
+      "title": "Conversion Settings"
+    },
+    "resultTitle": "JPG Images",
+    "shortDescription": "Convert images to JPG Format with quality control",
+    "title": "Convert Images to JPG"
+  },
+  "convertToWebp": {
+    "description": "Convert various image formats to WebP format with customizable quality and background color settings.",
+    "failedToConvert": "Conversion of image(s) to WebP failed. Please try again.",
+    "inputTitle": "Input Images",
+    "options": {
+      "colorDescription": "Background color (for transparent images)",
+      "quality": "Conversion Quality:",
+      "qualityDescription": "Higher values = better quality, larger file size",
+      "title": "Conversion Settings"
+    },
+    "resultTitle": "WEBP Images",
+    "shortDescription": "Convert Images to WebP Format with quality control.",
+    "title": "Convert Images to WebP"
   }
 }

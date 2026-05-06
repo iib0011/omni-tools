@@ -9,6 +9,31 @@
     "shortDescription": "Escape special characters in JSON",
     "title": "Escape JSON"
   },
+  "jsonToCsv": {
+    "delimiterOption": "Delimiter",
+    "description": "Convert JSON data to CSV format. Supports nested objects and arrays, automatic header detection, and configurable delimiters and quoting — ready for Excel, Google Sheets, or any spreadsheet application.",
+    "headerOption": "Headers",
+    "inputTitle": "Input JSON",
+    "options": {
+      "alwaysQuote": {
+        "description": "Wrap every cell in double-quotes, regardless of its content.",
+        "label": "Always quote"
+      },
+      "autoQuote": {
+        "description": "Only quote cells that contain the delimiter, a double-quote, or a newline. Keeps output clean and minimal.",
+        "label": "Auto (recommended)"
+      },
+      "delimiter": "Character used to separate values in each row (e.g. comma, semicolon, tab)",
+      "header": {
+        "description": "Use JSON keys as column names in the first row. Recommended for readability and import compatibility.",
+        "label": "Include header row"
+      }
+    },
+    "outputTitle": "Output CSV",
+    "quotingOption": "String Quoting",
+    "shortDescription": "Convert JSON to CSV format",
+    "title": "JSON to CSV"
+  },
   "jsonToXml": {
     "description": "Convert JSON data to XML format. Transform structured JSON objects into well-formed XML documents.",
     "shortDescription": "Convert JSON to XML format",
@@ -63,5 +88,23 @@
       "title": "What is JSON Validation?"
     },
     "validJson": "✅ Valid JSON"
+  },
+  "sortJson": {
+    "title": "Sort JSON",
+    "description": "Sort JSON data by organizing arrays of objects based on a selected key in ascending or descending order, or alphabetically sort the keys of a JSON object.",
+    "shortDescription": "Sort JSON arrays by value or object keys alphabetically",
+    "longDescription": "This tool allows you to easily sort JSON data in a structured and predictable way. You can sort an array of objects by any key, choosing either ascending or descending order, which is useful for organizing data such as lists of users, products, or records. Alternatively, you can sort the keys of a JSON object alphabetically to improve readability and consistency. The tool supports flexible sorting modes and handles common JSON structures, making it ideal for developers, data analysts, and anyone working with JSON data who needs clean, ordered output.",
+    "inputTitle": "Input JSON",
+    "resultTitle": "Sorted JSON",
+    "options": {
+      "title": "Sorting Options",
+      "sortByKey": "Sort object keys alphabetically",
+      "sortByValue": "Sort array by key value",
+      "ascending": "Ascending (A → Z)",
+      "descending": "Descending (Z → A)",
+      "modeDescription": "Choose whether to sort array items by a key's value, or sort the keys of an object alphabetically",
+      "keyDescription": "Select the key to sort by",
+      "orderDescription": "Choose the sort order"
+    }
   }
 }

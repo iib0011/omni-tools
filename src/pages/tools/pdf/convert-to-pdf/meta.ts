@@ -19,14 +19,10 @@ export const tool = defineTool('pdf', {
     'jpeg',
     'png',
     'gif',
-    'tiff',
     'webp',
     'heic',
-    'raw',
-    'psd',
-    'svg',
-    'quality',
-    'compression'
+    'heif',
+    'quality'
   ],
   component: lazy(() => import('./index'))
 });
