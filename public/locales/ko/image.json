@@ -1,0 +1,105 @@
+{
+  "changeColors": {
+    "description": "세계",
+    "shortDescription": "이미지의 색상을 빠르게 교체",
+    "title": "이미지 색상 변경"
+  },
+  "changeOpacity": {
+    "description": "이미지의 투명도를 쉽게 조정합니다. 이미지를 업로드하고 슬라이더를 사용하여 원하는 불투명도 수준을 0(완전 투명)에서 1(완전 불투명) 사이로 설정한 다음 수정된 이미지를 다운로드하십시오.",
+    "shortDescription": "이미지 투명도 조정",
+    "title": "이미지 불투명도 변경"
+  },
+  "compress": {
+    "compressedSize": "압축된 크기",
+    "compressionOptions": "압축 옵션",
+    "description": "품질을 유지하면서 이미지 파일 크기를 줄입니다.",
+    "failedToCompress": "이미지를 압축하지 못했습니다. 다시 시도하십시오.",
+    "fileSizes": "파일 크기",
+    "inputTitle": "입력 이미지",
+    "maxFileSizeDescription": "최대 파일 크기(메가바이트)",
+    "originalSize": "원본 크기",
+    "qualityDescription": "이미지 품질 백분율(낮을수록 파일 크기가 작아짐)",
+    "resultTitle": "압축된 이미지",
+    "shortDescription": "합리적인 품질을 유지하면서 파일 크기를 줄이기 위해 이미지를 압축합니다.",
+    "title": "이미지 압축"
+  },
+  "compressPng": {
+    "description": "PNG 사진을 압축하는 프로그램입니다. 입력 영역에 PNG 사진을 붙여넣으면 프로그램이 압축하여 출력 영역에 결과를 표시합니다. 옵션에서 압축 수준을 조정하고 이전 및 새 사진 파일 크기를 찾을 수 있습니다.",
+    "shortDescription": "PNG를 빠르게 압축",
+    "title": "PNG 압축"
+  },
+  "convertJgpToPng": {
+    "description": "JPG 이미지를 PNG로 빠르게 변환합니다. 왼쪽 편집기에서 PNG 이미지를 가져오기만 하면 됩니다.",
+    "shortDescription": "JPG 이미지를 PNG로 빠르게 변환",
+    "title": "JPG를 PNG로 변환"
+  },
+  "convertToJpg": {
+    "description": "다양한 이미지 형식(PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW)을 사용자 정의 가능한 품질 및 배경색 설정으로 JPG로 변환합니다.",
+    "shortDescription": "품질 관리 기능으로 이미지를 JPG로 변환",
+    "title": "이미지를 JPG로 변환"
+  },
+  "createTransparent": {
+    "description": "세계",
+    "shortDescription": "이미지를 빠르게 투명하게 만들기",
+    "title": "투명배경 PNG 만들기"
+  },
+  "crop": {
+    "description": "원하지 않는 영역을 제거하기 위해 이미지를 자릅니다.",
+    "inputTitle": "입력 이미지",
+    "resultTitle": "잘린 이미지",
+    "shortDescription": "이미지를 빠르게 자릅니다.",
+    "title": "이미지 자르기"
+  },
+  "editor": {
+    "description": "자르기, 회전, 주석 달기, 색상 조정 및 워터마크 추가를 위한 도구가 포함된 고급 이미지 편집기입니다. 브라우저에서 직접 전문가 수준의 도구로 이미지를 편집하십시오.",
+    "shortDescription": "고급 도구 및 기능으로 이미지 편집",
+    "title": "이미지 편집기"
+  },
+  "imageToText": {
+    "description": "광학 문자 인식(OCR)을 사용하여 이미지(JPG, PNG)에서 텍스트를 추출합니다.",
+    "shortDescription": "OCR을 사용하여 이미지에서 텍스트 추출",
+    "title": "이미지를 텍스트로 (OCR)"
+  },
+  "qrCode": {
+    "description": "URL, 텍스트, 이메일, 전화, SMS, WiFi, vCard 등 다양한 데이터 유형에 대한 QR 코드를 생성합니다.",
+    "shortDescription": "다양한 데이터 형식에 대한 맞춤형 QR 코드 생성",
+    "title": "QR 코드 생성기"
+  },
+  "removeBackground": {
+    "description": "세계",
+    "shortDescription": "이미지에서 배경 자동 제거",
+    "title": "이미지에서 배경 제거"
+  },
+  "resize": {
+    "description": "이미지를 다른 크기로 조정합니다.",
+    "dimensionType": "치수 유형",
+    "heightDescription": "높이 (픽셀 단위)",
+    "inputTitle": "입력 이미지",
+    "maintainAspectRatio": "종횡비 유지",
+    "maintainAspectRatioDescription": "이미지의 원래 종횡비를 유지합니다.",
+    "percentage": "백분율",
+    "percentageDescription": "원본 크기의 백분율 (예: 절반 크기는 50, 두 배 크기는 200)",
+    "resizeByPercentage": "백분율로 크기 조정",
+    "resizeByPercentageDescription": "원본 크기의 백분율을 지정하여 크기를 조정합니다.",
+    "resizeByPixels": "픽셀로 크기 조정",
+    "resizeByPixelsDescription": "픽셀 단위로 치수를 지정하여 크기를 조정합니다.",
+    "resizeMethod": "크기 조정 방법",
+    "resultTitle": "크기가 조정된 이미지",
+    "setHeight": "높이 설정",
+    "setHeightDescription": "높이를 픽셀 단위로 지정하고 종횡비에 따라 너비를 계산합니다.",
+    "setWidth": "너비 설정",
+    "setWidthDescription": "너비를 픽셀 단위로 지정하고 종횡비에 따라 높이를 계산합니다.",
+    "shortDescription": "이미지 크기를 쉽게 조정합니다.",
+    "title": "이미지 크기 조정",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 JPG, PNG, SVG 또는 GIF 이미지의 크기를 조정할 수 있습니다. 픽셀 단위로 치수를 지정하거나 백분율로 크기를 조정할 수 있으며 원래 종횡비를 유지하는 옵션이 있습니다.",
+      "title": "이미지 크기 조정"
+    },
+    "widthDescription": "너비 (픽셀 단위)"
+  },
+  "rotate": {
+    "description": "지정된 각도로 이미지를 회전합니다.",
+    "shortDescription": "이미지를 쉽게 회전합니다.",
+    "title": "이미지 회전"
+  }
+}
