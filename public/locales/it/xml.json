@@ -1,0 +1,38 @@
+{
+  "xmlBeautifier": {
+    "description": "Formatta il codice XML con indentazione e spaziatura corrette.",
+    "indentation": "Indentazione",
+    "inputTitle": "Inserisci codice XML",
+    "resultTitle": "XML abbellito",
+    "shortDescription": "Formatta e abbellisci il codice XML",
+    "title": "Abbellitore XML",
+    "toolInfo": {
+      "description": "Questo strumento ti consente di formattare i dati XML con indentazione e spaziatura corrette, rendendoli più leggibili e facili da utilizzare.",
+      "title": "Abbellitore XML"
+    },
+    "useSpaces": "Usa spazi",
+    "useSpacesDescription": "Indenta l'output con spazi",
+    "useTabs": "Usa tabulazioni",
+    "useTabsDescription": "Indenta l'output con tabulazioni."
+  },
+  "xmlValidator": {
+    "description": "Convalida la sintassi e la struttura XML.",
+    "placeholder": "Incolla o importa XML qui...",
+    "shortDescription": "Convalida il codice XML per individuare eventuali errori",
+    "title": "Validatore XML",
+    "toolInfo": {
+      "description": "Questo strumento consente di convalidare la sintassi e la struttura XML. Verifica che il codice XML sia ben formato e fornisce messaggi di errore dettagliati per eventuali problemi riscontrati.",
+      "title": "Validatore XML"
+    }
+  },
+  "xmlViewer": {
+    "description": "Visualizza ed esplora la struttura XML in formato ad albero.",
+    "inputTitle": "Inserisci XML",
+    "resultTitle": "Visualizzazione ad albero XML",
+    "title": "Visualizzatore XML",
+    "toolInfo": {
+      "description": "Questo strumento consente di visualizzare i dati XML in un formato ad albero gerarchico, rendendo più facile esplorare e comprendere la struttura dei documenti XML.",
+      "title": "Visualizzatore XML"
+    }
+  }
+}

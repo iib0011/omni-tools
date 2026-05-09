@@ -14,7 +14,8 @@
     }
   },
   "censor": {
-    "description": "Utilitário para censurar palavras em texto. Carregue seu texto no formulário de entrada à esquerda, especifique todos os palavrões nas opções e você obterá instantaneamente o texto censurado na área de saída.\", longDescription: \"Com esta ferramenta online, você pode censurar certas palavras em qualquer texto. Você pode especificar uma lista de palavras indesejadas (como palavrões ou palavras secretas) e o programa as substituirá por palavras alternativas e criará um texto seguro para leitura. As palavras podem ser especificadas em um campo de texto de várias linhas nas opções, inserindo uma palavra por linha.\", keywords: ['text', 'censor', 'words', 'characters'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
+    "description": "Utilitário para censurar palavras em texto. Carregue seu texto no formulário de entrada à esquerda, especifique todos os palavrões nas opções e você obterá instantaneamente o texto censurado na área de saída.",
+    "longDescription": "Com esta ferramenta online, você pode censurar certas palavras em qualquer texto. Você pode especificar uma lista de palavras indesejadas (como palavrões ou palavras secretas) e o programa as substituirá por palavras alternativas e criará um texto seguro para leitura. As palavras podem ser especificadas em um campo de texto de várias linhas nas opções, inserindo uma palavra por linha.\", keywords: ['text', 'censor', 'words', 'characters'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
     "shortDescription": "Mascare rapidamente palavras ruins ou substitua-as por palavras alternativas.",
     "title": "Censor de texto"
   },

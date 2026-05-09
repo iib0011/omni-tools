@@ -14,7 +14,8 @@
     }
   },
   "censor": {
-    "description": "用于审查文本中单词的实用程序。在左侧的输入表单中加载您的文本，并在选项中指定所有脏话，您将立即在输出区域获得已审查的文本。\", longDescription: '使用此在线工具，您可以审查任何文本中的某些单词。您可以指定不想要的单词列表（例如脏话或秘密单词），程序会用替代单词替换它们，并创建可安全阅读的文本。您可以在选项中的多行文本字段中通过每行输入一个单词来指定这些单词。', keywords: ['text', 'censor', 'words', 'characters'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
+    "description": "用于审查文本中单词的实用程序。在左侧的输入表单中加载您的文本，并在选项中指定所有脏话，您将立即在输出区域获得已审查的文本。",
+    "longDescription": "使用此在线工具，您可以审查任何文本中的某些单词。您可以指定不想要的单词列表（例如脏话或秘密单词），程序会用替代单词替换它们，并创建可安全阅读的文本。您可以在选项中的多行文本字段中通过每行输入一个单词来指定这些单词。', keywords: ['text', 'censor', 'words', 'characters'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
     "shortDescription": "快速掩盖脏话或用替代词代替。",
     "title": "文本审查"
   },
