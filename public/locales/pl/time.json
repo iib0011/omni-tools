@@ -1,0 +1,117 @@
+{
+  "checkLeapYears": {
+    "description": "Sprawdź, czy rok jest przestępny i uzyskaj informacje o latach przestępnych.",
+    "exampleDescription": "Jedna z naszych znajomych urodziła się w roku przestępnym 29 lutego, przez co ma urodziny tylko raz na 4 lata. Ponieważ nigdy tak naprawdę nie pamiętamy, kiedy są jej urodziny, używamy naszego programu do stworzenia listy przypomnień o nadchodzących latach przestępnych. Aby stworzyć listę jej kolejnych urodzin, ładujemy sekwencję lat od 2025 do 2040 do wejścia i uzyskujemy status każdego roku. Jeśli program powie, że to rok przestępny, wtedy wiemy, że zostaniemy zaproszeni na imprezę urodzinową 29 lutego.",
+    "exampleTitle": "Znajdź urodziny 29 lutego",
+    "inputTitle": "Rok wejściowy",
+    "resultTitle": "Wynik roku przestępnego",
+    "shortDescription": "Sprawdź, czy rok jest przestępny",
+    "title": "Sprawdź lata przestępne",
+    "toolInfo": {
+      "description": "Rok przestępny to rok zawierający jeden dodatkowy dzień (29 lutego), aby zsynchronizować rok kalendarzowy z rokiem astronomicznym. Lata przestępne występują co 4 lata, z wyjątkiem lat podzielnych przez 100, ale nie przez 400.",
+      "title": "Czym jest rok przestępny?"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "Dodaj nazwę 'godziny'",
+    "addHoursNameDescription": "Dołącz słowo 'godziny' do wartości wyjściowych",
+    "description": "Konwertuj dni na godziny z możliwością dostosowania opcji.",
+    "hoursName": "Nazwa godzin",
+    "shortDescription": "Konwertuj dni na godziny",
+    "title": "Konwertuj dni na godziny",
+    "toolInfo": {
+      "description": "To narzędzie pozwala przekonwertować dni na godziny. Możesz wprowadzić dni jako liczby lub z jednostkami, a narzędzie przeliczy je na godziny. Możesz także wybrać opcję dołączenia sufiksu 'godziny' do wartości wyjściowych.",
+      "title": "Konwertuj dni na godziny"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "Dodaj nazwę 'dni'",
+    "addDaysNameDescription": "Dołącz słowo 'dni' do wartości wyjściowych",
+    "daysName": "Nazwa dni",
+    "description": "Konwertuj godziny na dni z możliwością dostosowania opcji.",
+    "shortDescription": "Konwertuj godziny na dni",
+    "title": "Konwertuj godziny na dni",
+    "toolInfo": {
+      "description": "To narzędzie pozwala przekonwertować godziny na dni. Możesz wprowadzić godziny jako liczby lub z jednostkami, a narzędzie przeliczy je na dni. Możesz także wybrać opcję dołączenia sufiksu 'dni' do wartości wyjściowych.",
+      "title": "Konwertuj godziny na dni"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "Dodaj dopełnienie",
+    "addPaddingDescription": "Dodaj dopełnienie zerami do godzin, minut i sekund.",
+    "description": "Konwertuj sekundy na czytelny format czasu (godziny:minuty:sekundy). Wprowadź liczbę sekund, aby uzyskać sformatowany czas.",
+    "shortDescription": "Konwertuj sekundy na format czasu",
+    "timePadding": "Dopełnienie czasu",
+    "title": "Konwertuj sekundy na czas",
+    "toolInfo": {
+      "title": "Czym jest {{title}}?"
+    }
+  },
+  "convertTimeToSeconds": {
+    "description": "Konwertuj sformatowany czas (GG:MM:SS) na sekundy.",
+    "inputTitle": "Czas wejściowy",
+    "resultTitle": "Sekundy",
+    "shortDescription": "Konwertuj format czasu na sekundy",
+    "title": "Konwertuj czas na sekundy",
+    "toolInfo": {
+      "description": "To narzędzie pozwala przekonwertować sformatowane ciągi czasu (GG:MM:SS) na sekundy. Jest przydatne do obliczania czasu trwania i interwałów czasowych.",
+      "title": "Konwertuj czas na sekundy"
+    }
+  },
+  "convertUnixToDate": {
+    "addUtcLabel": "Dodaj sufiks 'UTC'",
+    "addUtcLabelDescription": "Wyświetl 'UTC' po przekonwertowanej dacie (tylko dla trybu UTC)",
+    "description": "Konwertuj znacznik czasu Unix na czytelną datę.",
+    "outputOptions": "Opcje wyjściowe",
+    "shortDescription": "Konwertuj znacznik czasu Unix na datę",
+    "title": "Konwertuj Unix na datę",
+    "toolInfo": {
+      "description": "To narzędzie konwertuje znacznik czasu Unix (w sekundach) na czytelny dla człowieka format daty (np. RRRR-MM-DD GG:MM:SS). Obsługuje zarówno wyjście lokalne, jak i UTC, co czyni je przydatnym do szybkiej interpretacji znaczników czasu z logów, API lub systemów używających czasu Unix.",
+      "title": "Konwertuj Unix na datę"
+    },
+    "useLocalTime": "Użyj czasu lokalnego",
+    "useLocalTimeDescription": "Pokaż przekonwertowaną datę w lokalnej strefie czasowej zamiast UTC",
+    "withLabel": "Opcje"
+  },
+  "crontabGuru": {
+    "description": "Generuj i zrozum wyrażenia cron. Twórz harmonogramy cron dla zautomatyzowanych zadań i prac systemowych.",
+    "shortDescription": "Generuj i zrozum wyrażenia cron",
+    "title": "Crontab Guru"
+  },
+  "timeBetweenDates": {
+    "description": "Oblicz różnicę czasu między dwiema datami. Uzyskaj dokładny czas trwania w dniach, godzinach, minutach i sekundach.",
+    "endDate": "Data końcowa",
+    "endDateTime": "Data i czas końcowy",
+    "endTime": "Czas końcowy",
+    "endTimezone": "Strefa czasowa końcowa",
+    "shortDescription": "Oblicz czas między dwiema datami",
+    "startDate": "Data początkowa",
+    "startDateTime": "Data i czas początkowy",
+    "startTime": "Czas początkowy",
+    "startTimezone": "Strefa czasowa początkowa",
+    "title": "Czas między datami",
+    "toolInfo": {
+      "description": "Oblicz dokładną różnicę czasu między dwiema datami i godzinami, z obsługą różnych stref czasowych. To narzędzie zapewnia szczegółowe zestawienie różnicy czasu w różnych jednostkach (lata, miesiące, dni, godziny, minuty i sekundy).",
+      "title": "Kalkulator czasu między datami"
+    }
+  },
+  "truncateClockTime": {
+    "description": "Przytnij czas zegarowy, aby usunąć sekundy lub minuty. Zaokrąglij czas do najbliższej godziny, minuty lub niestandardowego interwału.",
+    "printDroppedComponents": "Drukuj odrzucone składniki",
+    "shortDescription": "Przytnij czas zegarowy do określonej precyzji",
+    "timePadding": "Dopełnienie czasu",
+    "title": "Przytnij czas zegarowy",
+    "toolInfo": {
+      "title": "Czym jest {{title}}?"
+    },
+    "truncateMinutesAndSeconds": "Przytnij minuty i sekundy",
+    "truncateMinutesAndSecondsDescription": "Odrzuć oba składniki – minuty i sekundy z każdego czasu zegarowego.",
+    "truncateOnlySeconds": "Przytnij tylko sekundy",
+    "truncateOnlySecondsDescription": "Odrzuć składnik sekund z każdego czasu zegarowego.",
+    "truncationSide": "Strona przycięcia",
+    "useZeroPadding": "Użyj dopełnienia zerami",
+    "zeroPaddingDescription": "Spraw, aby wszystkie składniki czasu miały zawsze dwie cyfry.",
+    "zeroPrintDescription": "Wyświetl odrzucone części jako wartości zerowe \"00\".",
+    "zeroPrintTruncatedParts": "Wydrukuj zera dla przyciętych części"
+  }
+}

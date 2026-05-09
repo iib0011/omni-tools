@@ -1,0 +1,258 @@
+{
+  "duplicate": {
+    "concatenate": "Połącz",
+    "concatenateDescription": "Połącz kopie (jeśli odznaczone, elementy będą przeplatane)",
+    "copyDescription": "Liczba kopii (może być ułamkowa)",
+    "description": "Narzędzie przeglądarkowe do duplikowania elementów listy. Wprowadź listę i określ kryteria powielania, aby utworzyć kopie elementów. Idealne do rozszerzania danych, testowania lub tworzenia powtarzalnych wzorców.",
+    "duplicationOptions": "Opcje duplikacji",
+    "error": "Błąd",
+    "example1Description": "Ten przykład pokazuje, jak zduplikować listę słów.",
+    "example1Title": "Prosta duplikacja",
+    "example2Description": "Ten przykład pokazuje, jak zduplikować listę w odwrotnej kolejności.",
+    "example2Title": "Duplikacja odwrotna",
+    "example3Description": "Ten przykład pokazuje, jak przeplatać elementy zamiast je łączyć.",
+    "example3Title": "Przeplatanie elementów",
+    "example4Description": "Ten przykład pokazuje, jak zduplikować listę z ułamkową liczbą kopii.",
+    "example4Title": "Duplikacja ułamkowa",
+    "examples": {
+      "fractional": {
+        "description": "Ten przykład pokazuje, jak zduplikować listę z ułamkową liczbą kopii.",
+        "title": "Duplikacja ułamkowa"
+      },
+      "interweave": {
+        "description": "Ten przykład pokazuje, jak przeplatać elementy zamiast je łączyć.",
+        "title": "Przeplatanie elementów"
+      },
+      "reverse": {
+        "description": "Ten przykład pokazuje, jak zduplikować listę w odwrotnej kolejności.",
+        "title": "Duplikacja odwrotna"
+      },
+      "simple": {
+        "description": "Ten przykład pokazuje, jak zduplikować listę słów.",
+        "title": "Prosta duplikacja"
+      }
+    },
+    "inputTitle": "Lista wejściowa",
+    "joinSeparatorDescription": "Separator łączący zduplikowaną listę",
+    "resultTitle": "Lista zduplikowana",
+    "reverse": "Odwróć",
+    "reverseDescription": "Odwróć kolejność zduplikowanych elementów",
+    "shortDescription": "Duplikuj elementy listy według określonych kryteriów",
+    "splitByRegex": "Podziel wyrażeniem regularnym",
+    "splitBySymbol": "Podziel symbolem",
+    "splitOptions": "Opcje podziału",
+    "splitSeparatorDescription": "Separator do podziału listy",
+    "title": "Duplikuj",
+    "toolInfo": {
+      "description": "To narzędzie pozwala na duplikowanie elementów listy. Możesz określić liczbę kopii (w tym wartości ułamkowe), kontrolować czy elementy są łączone czy przeplatane, a także odwracać zduplikowane elementy. Przydatne do tworzenia powtarzalnych wzorców, generowania danych testowych lub rozszerzania list o przewidywalną zawartość.",
+      "title": "Duplikacja listy"
+    },
+    "unknownError": "Wystąpił nieznany błąd",
+    "validation": {
+      "copyMustBeNumber": "Liczba kopii musi być liczbą",
+      "copyMustBePositive": "Liczba kopii musi być dodatnia",
+      "copyRequired": "Liczba kopii jest wymagana",
+      "joinSeparatorRequired": "Separator łączenia jest wymagany",
+      "separatorRequired": "Separator jest wymagany"
+    }
+  },
+  "findMostPopular": {
+    "description": "Narzędzie przeglądarkowe do znajdowania najpopularniejszych elementów na liście. Wprowadź listę, aby natychmiast otrzymać elementy, które pojawiają się najczęściej. Idealne do analizy danych, identyfikacji trendów lub znajdowania wspólnych elementów.",
+    "displayFormatDescription": "Jak wyświetlać najpopularniejsze elementy listy?",
+    "displayOptions": {
+      "count": "Pokaż liczbę wystąpień",
+      "percentage": "Pokaż procentowy udział",
+      "total": "Pokaż sumę"
+    },
+    "extractListItems": "Jak wyodrębnić elementy listy?",
+    "ignoreItemCase": "Ignoruj wielkość liter",
+    "ignoreItemCaseDescription": "Porównuj wszystkie elementy listy jako małe litery.",
+    "inputTitle": "Lista wejściowa",
+    "itemComparison": "Porównywanie elementów",
+    "outputFormat": "Format wyjściowy czołowych elementów",
+    "removeEmptyItems": "Usuń puste elementy",
+    "removeEmptyItemsDescription": "Ignoruj puste elementy podczas porównywania.",
+    "resultTitle": "Najpopularniejsze elementy",
+    "shortDescription": "Znajdź najczęściej występujące elementy",
+    "sortOptions": {
+      "alphabetic": "Sortuj alfabetycznie",
+      "count": "Sortuj wg liczby wystąpień"
+    },
+    "sortingMethodDescription": "Wybierz metodę sortowania.",
+    "splitOperators": {
+      "regex": {
+        "description": "Rozdziel elementy listy wejściowej wyrażeniem regularnym.",
+        "title": "Użyj RegEx do podziału"
+      },
+      "symbol": {
+        "description": "Rozdziel elementy listy wejściowej znakiem.",
+        "title": "Użyj symbolu do podziału"
+      }
+    },
+    "splitSeparatorDescription": "Ustaw symbol rozdzielający lub wyrażenie regularne.",
+    "title": "Znajdź najpopularniejsze",
+    "trimItems": "Przytnij czołowe elementy listy",
+    "trimItemsDescription": "Usuń spacje wiodące i końcowe przed porównaniem elementów"
+  },
+  "findUnique": {
+    "caseSensitiveItems": "Rozróżniaj wielkość liter",
+    "caseSensitiveItemsDescription": "Traktuj elementy o różnej wielkości liter jako unikalne.",
+    "delimiterDescription": "Ustaw symbol rozdzielający lub wyrażenie regularne.",
+    "description": "Narzędzie przeglądarkowe do znajdowania unikalnych elementów na liście. Wprowadź listę, aby natychmiast otrzymać wszystkie unikalne wartości z usuniętymi duplikatami. Idealne do czyszczenia danych, deduplikacji lub znajdowania odrębnych elementów.",
+    "findAbsolutelyUniqueItems": "Znajdź elementy absolutnie unikalne",
+    "findAbsolutelyUniqueItemsDescription": "Wyświetl tylko te elementy listy, które występują w jednej kopii.",
+    "inputListDelimiter": "Separator listy wejściowej",
+    "inputTitle": "Lista wejściowa",
+    "outputListDelimiter": "Separator listy wynikowej",
+    "resultTitle": "Unikalne elementy",
+    "shortDescription": "Znajdź unikalne elementy na liście",
+    "skipEmptyItems": "Pomiń puste elementy",
+    "skipEmptyItemsDescription": "Nie uwzględniaj pustych elementów listy w wyniku.",
+    "title": "Znajdź unikalne",
+    "trimItems": "Przytnij elementy listy",
+    "trimItemsDescription": "Usuń spacje wiodące i końcowe przed porównaniem elementów.",
+    "uniqueItemOptions": "Opcje unikalnych elementów"
+  },
+  "group": {
+    "deleteEmptyItems": "Usuń puste elementy",
+    "deleteEmptyItemsDescription": "Ignoruj puste elementy i nie uwzględniaj ich w grupach.",
+    "description": "Narzędzie przeglądarkowe do grupowania elementów listy. Wprowadź listę i określ kryteria grupowania, aby zorganizować elementy w logiczne zbiory. Idealne do kategoryzowania danych, organizowania informacji lub tworzenia list strukturalnych. Obsługuje niestandardowe separatory i różne opcje grupowania.",
+    "emptyItemsAndPadding": "Puste elementy i dopełnianie",
+    "groupNumberDescription": "Liczba elementów w grupie",
+    "groupSeparatorDescription": "Znak separatora grup",
+    "groupSizeAndSeparators": "Rozmiar grupy i separatory",
+    "inputItemSeparator": "Separator elementów wejściowych",
+    "inputTitle": "Lista wejściowa",
+    "itemSeparatorDescription": "Znak separatora elementów",
+    "leftWrapDescription": "Lewy symbol otaczający grupę.",
+    "padNonFullGroups": "Dopełnij niepełne grupy",
+    "padNonFullGroupsDescription": "Wypełnij niepełne grupy niestandardowym elementem (wpisz poniżej).",
+    "paddingCharDescription": "Użyj tego znaku lub elementu do dopełnienia niepełnych grup.",
+    "resultTitle": "Zgrupowane elementy",
+    "rightWrapDescription": "Prawy symbol otaczający grupę.",
+    "shortDescription": "Grupuj elementy listy według wspólnych właściwości",
+    "splitOperators": {
+      "regex": {
+        "description": "Rozdziel elementy listy wejściowej wyrażeniem regularnym.",
+        "title": "Użyj RegEx do podziału"
+      },
+      "symbol": {
+        "description": "Rozdziel elementy listy wejściowej znakiem.",
+        "title": "Użyj symbolu do podziału"
+      }
+    },
+    "splitSeparatorDescription": "Ustaw symbol rozdzielający lub wyrażenie regularne.",
+    "title": "Grupuj"
+  },
+  "reverse": {
+    "description": "Prosta aplikacja przeglądarkowa, która wypisuje wszystkie elementy listy w odwrotnej kolejności. Elementy wejściowe mogą być oddzielone dowolnym symbolem; można również zmienić separator elementów listy odwróconej.",
+    "inputTitle": "Lista wejściowa",
+    "itemSeparator": "Separator elementów",
+    "itemSeparatorDescription": "Ustaw symbol rozdzielający lub wyrażenie regularne.",
+    "outputListOptions": "Opcje listy wynikowej",
+    "outputSeparatorDescription": "Separator elementów listy wynikowej.",
+    "resultTitle": "Odwrócona lista",
+    "shortDescription": "Szybko odwróć listę",
+    "splitOperators": {
+      "regex": {
+        "description": "Rozdziel elementy listy wejściowej wyrażeniem regularnym.",
+        "title": "Użyj RegEx do podziału"
+      },
+      "symbol": {
+        "description": "Rozdziel elementy listy wejściowej znakiem.",
+        "title": "Użyj symbolu do podziału"
+      }
+    },
+    "splitterMode": "Tryb podziału",
+    "title": "Odwróć",
+    "toolInfo": {
+      "description": "Dzięki temu narzędziu możesz odwrócić kolejność elementów na liście. Narzędzie najpierw dzieli listę wejściową na poszczególne elementy, a następnie iteruje przez nie od ostatniego do pierwszego, wypisując każdy element. Lista wejściowa może zawierać dowolne dane tekstowe, w tym cyfry, liczby, wyrazy, zdania itp. Separator elementów wejściowych może być również wyrażeniem regularnym. Przykładowo, regex /[;,]/ pozwoli na użycie elementów oddzielonych przecinkiem lub średnikiem. Separatory listy wejściowej i wyjściowej można dostosować w opcjach. Domyślnie obie listy są oddzielone przecinkami.",
+      "title": "Czym jest odwracanie listy?"
+    }
+  },
+  "rotate": {
+    "description": "Narzędzie przeglądarkowe do rotacji elementów listy. Wprowadź listę i określ wartość rotacji, aby przesunąć elementy o zadaną liczbę pozycji. Idealne do manipulacji danymi, przesunięć cyklicznych lub zmiany kolejności list.",
+    "shortDescription": "Obróć elementy listy o określoną liczbę pozycji",
+    "title": "Obróć"
+  },
+  "shuffle": {
+    "delimiterDescription": "Ustaw symbol rozdzielający lub wyrażenie regularne.",
+    "description": "Narzędzie przeglądarkowe do tasowania elementów listy. Wprowadź listę, aby natychmiast otrzymać losową wersję z elementami w przypadkowej kolejności. Idealne do wprowadzania różnorodności, testowania losowości lub mieszania uporządkowanych danych.",
+    "inputListSeparator": "Separator listy wejściowej",
+    "inputTitle": "Lista wejściowa",
+    "joinSeparatorDescription": "Użyj tego separatora w losowej liście.",
+    "outputLengthDescription": "Liczba losowych elementów na wyjściu",
+    "resultTitle": "Potasowana lista",
+    "shortDescription": "Losowa kolejność elementów listy",
+    "shuffledListLength": "Długość potasowanej listy",
+    "shuffledListSeparator": "Separator potasowanej listy",
+    "title": "Tasuj"
+  },
+  "sort": {
+    "caseSensitive": "Sortowanie z uwzględnieniem wielkości liter",
+    "caseSensitiveDescription": "Sortuj wielkie i małe litery oddzielnie. Wielkie litery poprzedzają małe na liście rosnącej. (Działa tylko w trybie sortowania alfabetycznego).",
+    "description": "Narzędzie przeglądarkowe do sortowania elementów listy. Wprowadź listę i określ kryteria sortowania, aby zorganizować elementy w kolejności rosnącej lub malejącej. Idealne do organizacji danych, przetwarzania tekstu lub tworzenia uporządkowanych list.",
+    "inputItemSeparator": "Separator elementów wejściowych",
+    "inputTitle": "Lista wejściowa",
+    "joinSeparatorDescription": "Użyj tego symbolu jako łącznika między elementami posortowanej listy.",
+    "orderDescription": "Wybierz kolejność sortowania.",
+    "orderOptions": {
+      "decreasing": "Kolejność malejąca",
+      "increasing": "Kolejność rosnąca"
+    },
+    "removeDuplicates": "Usuń duplikaty",
+    "removeDuplicatesDescription": "Usuń zduplikowane elementy listy.",
+    "resultTitle": "Posortowana lista",
+    "shortDescription": "Sortuj elementy listy w określonej kolejności",
+    "sortMethod": "Metoda sortowania",
+    "sortMethodDescription": "Wybierz metodę sortowania.",
+    "sortOptions": {
+      "alphabetic": "Sortuj alfabetycznie",
+      "length": "Sortuj wg długości",
+      "numeric": "Sortuj numerycznie"
+    },
+    "sortedItemProperties": "Właściwości posortowanych elementów",
+    "splitOperators": {
+      "regex": {
+        "description": "Rozdziel elementy listy wejściowej wyrażeniem regularnym.",
+        "title": "Użyj RegEx do podziału"
+      },
+      "symbol": {
+        "description": "Rozdziel elementy listy wejściowej znakiem.",
+        "title": "Użyj symbolu do podziału"
+      }
+    },
+    "splitSeparatorDescription": "Ustaw symbol rozdzielający lub wyrażenie regularne.",
+    "title": "Sortuj"
+  },
+  "truncate": {
+    "description": "Narzędzie przeglądarkowe do przycinania list. Wprowadź listę i określ maksymalną liczbę elementów do zachowania. Idealne do przetwarzania danych, zarządzania listami lub ograniczania długości treści.",
+    "shortDescription": "Przytnij listę do określonej liczby elementów",
+    "title": "Przytnij"
+  },
+  "unwrap": {
+    "description": "Narzędzie przeglądarkowe do odpakowywania elementów listy. Wprowadź zapakowaną listę i określ kryteria odpakowania, aby spłaszczyć zorganizowane elementy. Idealne do przetwarzania danych, manipulacji tekstem lub wyodrębniania treści z list strukturalnych.",
+    "shortDescription": "Odpakuj elementy listy z formatu strukturalnego",
+    "title": "Odpakuj"
+  },
+  "wrap": {
+    "description": "Dodaj tekst przed i po każdym elemencie listy.",
+    "inputTitle": "Lista wejściowa",
+    "joinSeparatorDescription": "Separator łączący zapakowaną listę",
+    "leftTextDescription": "Tekst do dodania przed każdym elementem",
+    "removeEmptyItems": "Usuń puste elementy",
+    "resultTitle": "Zapakowana lista",
+    "rightTextDescription": "Tekst do dodania po każdym elemencie",
+    "shortDescription": "Zapakuj elementy listy według określonych kryteriów",
+    "splitByRegex": "Podziel wyrażeniem regularnym",
+    "splitBySymbol": "Podziel symbolem",
+    "splitOptions": "Opcje podziału",
+    "splitSeparatorDescription": "Separator do podziału listy",
+    "title": "Zapakuj",
+    "toolInfo": {
+      "description": "To narzędzie pozwala na dodanie tekstu przed i po każdym elemencie listy. Możesz określić różny tekst dla lewej i prawej strony oraz kontrolować sposób przetwarzania listy. Przydatne do dodawania cudzysłowów, nawiasów lub innego formatowania do elementów listy, przygotowywania danych do różnych formatów lub tworzenia tekstu strukturalnego.",
+      "title": "Pakowanie listy"
+    },
+    "wrapOptions": "Opcje pakowania"
+  }
+}

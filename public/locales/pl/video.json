@@ -1,0 +1,120 @@
+{
+  "changeSpeed": {
+    "defaultMultiplier": "Domyślny mnożnik: 2 oznacza 2x szybciej",
+    "description": "Zmień prędkość odtwarzania plików wideo. Przyspiesz lub zwolnij wideo, zachowując synchronizację dźwięku. Obsługuje różne mnożniki prędkości i popularne formaty wideo.",
+    "inputTitle": "Wejściowe wideo",
+    "newVideoSpeed": "Nowa prędkość wideo",
+    "resultTitle": "Edytowane wideo",
+    "settingSpeed": "Ustawianie prędkości",
+    "shortDescription": "Zmień prędkość odtwarzania wideo",
+    "title": "Zmień prędkość wideo",
+    "toolInfo": {
+      "title": "Czym jest {{title}}?"
+    }
+  },
+  "compress": {
+    "default": "Domyślny",
+    "description": "Kompresuj wideo poprzez skalowanie do różnych rozdzielczości, takich jak 240p, 480p, 720p itp. To narzędzie pomaga zmniejszyć rozmiar pliku przy zachowaniu akceptowalnej jakości. Obsługuje popularne formaty wideo, takie jak MP4, WebM i OGG.",
+    "inputTitle": "Wejściowe wideo",
+    "loadingText": "Kompresowanie wideo...",
+    "lossless": "Bezstratny",
+    "quality": "Jakość (CRF)",
+    "resolution": "Rozdzielczość",
+    "resultTitle": "Skompresowane wideo",
+    "shortDescription": "Kompresuj wideo poprzez skalowanie do różnych rozdzielczości",
+    "title": "Kompresuj wideo",
+    "worst": "Najgorszy"
+  },
+  "cropVideo": {
+    "cropCoordinates": "Współrzędne przycięcia",
+    "croppingVideo": "Przycinanie wideo",
+    "description": "Przytnij wideo, aby usunąć niechciane obszary.",
+    "errorBeyondHeight": "Obszar przycięcia wykracza poza wysokość wideo ({{height}}px)",
+    "errorBeyondWidth": "Obszar przycięcia wykracza poza szerokość wideo ({{width}}px)",
+    "errorCroppingVideo": "Błąd przycinania wideo. Sprawdź parametry i plik wideo.",
+    "errorLoadingDimensions": "Nie udało się załadować wymiarów wideo",
+    "errorNonNegativeCoordinates": "Współrzędne X i Y muszą być nieujemne",
+    "errorPositiveDimensions": "Szerokość i wysokość muszą być dodatnie",
+    "height": "Wysokość",
+    "inputTitle": "Wejściowe wideo",
+    "loadVideoForDimensions": "Wczytaj wideo, aby zobaczyć wymiary",
+    "longDescription": "To narzędzie pozwala przycinać pliki wideo, aby usunąć niechciane obszary lub skupić się na określonych częściach filmu. Przydatne do usuwania czarnych pasów, dostosowywania proporcji lub skupiania się na ważnych treściach. Obsługuje różne formaty wideo, w tym MP4, MOV i AVI.",
+    "resultTitle": "Przycięte wideo",
+    "shortDescription": "Przytnij wideo, aby usunąć niechciane obszary",
+    "title": "Przytnij wideo",
+    "toolInfo": {
+      "description": "To narzędzie pozwala przycinać pliki wideo, aby usunąć niechciane obszary. Możesz określić obszar przycięcia, ustawiając współrzędne X, Y oraz szerokość i wysokość.",
+      "title": "Przytnij wideo"
+    },
+    "videoDimensions": "Wymiary wideo: {{width}} × {{height}} pikseli",
+    "videoInformation": "Informacje o wideo",
+    "width": "Szerokość",
+    "xCoordinate": "X (lewo)",
+    "yCoordinate": "Y (góra)"
+  },
+  "flip": {
+    "description": "Odbij pliki wideo w poziomie lub pionie. Twórz lustrzane odbicia filmów dla efektów specjalnych lub popraw orientację.",
+    "flippingVideo": "Odbijanie wideo",
+    "horizontalLabel": "Poziomo (Lustro)",
+    "inputTitle": "Wejściowe wideo",
+    "orientation": "Orientacja",
+    "resultTitle": "Odbite wideo",
+    "shortDescription": "Odbij wideo w poziomie lub pionie",
+    "title": "Odbij wideo",
+    "verticalLabel": "Pionowo (Do góry nogami)"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "Zmień prędkość odtwarzania animacji GIF. Przyspiesz lub zwolnij GIF-y, zachowując płynność animacji.",
+      "shortDescription": "Zmień prędkość animacji GIF",
+      "title": "Zmień prędkość GIF"
+    }
+  },
+  "loop": {
+    "description": "Utwórz zapętlone wideo, powtarzając oryginalny film wielokrotnie.",
+    "inputTitle": "Wejściowe wideo",
+    "loopingVideo": "Zapętlanie wideo",
+    "loops": "Pętle",
+    "numberOfLoops": "Liczba pętli",
+    "resultTitle": "Zapętlone wideo",
+    "shortDescription": "Utwórz zapętlone pliki wideo",
+    "title": "Zapętl wideo",
+    "toolInfo": {
+      "description": "To narzędzie pozwala utworzyć zapętlone wideo poprzez wielokrotne powtórzenie oryginalnego filmu. Możesz określić, ile razy wideo ma zostać zapętlone.",
+      "title": "Czym jest {{title}}?"
+    }
+  },
+  "mergeVideo": {
+    "description": "Połącz wiele plików wideo w jeden ciągły film.",
+    "longDescription": "To narzędzie pozwala łączyć lub dołączać wiele plików wideo w jeden ciągły film. Po prostu prześlij pliki wideo, ułóż je w żądanej kolejności i połącz w jeden plik, aby łatwo go udostępniać lub edytować.",
+    "shortDescription": "Łatwo łącz i dołączaj filmy.",
+    "title": "Połącz wideo"
+  },
+  "rotate": {
+    "180Degrees": "180° (Do góry nogami)",
+    "270Degrees": "270° (90° Przeciwnie do ruchu wskazówek zegara)",
+    "90Degrees": "90° Zgodnie z ruchem wskazówek zegara",
+    "description": "Obróć pliki wideo o 90, 180 lub 270 stopni. Popraw orientację wideo lub twórz efekty specjalne dzięki precyzyjnej kontroli obrotu.",
+    "inputTitle": "Wejściowe wideo",
+    "resultTitle": "Obrócone wideo",
+    "rotatingVideo": "Obracanie wideo",
+    "rotation": "Obrót",
+    "shortDescription": "Obróć wideo o określoną liczbę stopni",
+    "title": "Obróć wideo"
+  },
+  "trim": {
+    "description": "Przytnij pliki wideo, określając czas rozpoczęcia i zakończenia. Usuń niechciane sekcje z początku lub końca filmów.",
+    "endTime": "Czas zakończenia",
+    "inputTitle": "Wejściowe wideo",
+    "resultTitle": "Przycięte wideo",
+    "shortDescription": "Przytnij wideo, usuwając niechciane sekcje",
+    "startTime": "Czas rozpoczęcia",
+    "timestamps": "Znaczniki czasu",
+    "title": "Przytnij wideo"
+  },
+  "videoToGif": {
+    "description": "Konwertuj pliki wideo na animowany format GIF. Wyodrębnij określone zakresy czasowe i twórz animowane obrazy gotowe do udostępnienia.",
+    "shortDescription": "Konwertuj wideo na animowany GIF",
+    "title": "Wideo na GIF"
+  }
+}
