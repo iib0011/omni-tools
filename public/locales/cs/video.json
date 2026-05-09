@@ -1,0 +1,120 @@
+{
+  "changeSpeed": {
+    "defaultMultiplier": "Výchozí násobitel: 2 znamená 2× rychleji",
+    "description": "Změňte rychlost přehrávání video souborů. Zrychlete nebo zpomalte video při zachování synchronizace s audiem. Podporuje různé násobitele rychlosti a běžné video formáty.",
+    "inputTitle": "Vstupní video",
+    "newVideoSpeed": "Nová rychlost videa",
+    "resultTitle": "Upravené video",
+    "settingSpeed": "Nastavuji rychlost",
+    "shortDescription": "Změnit rychlost přehrávání videa",
+    "title": "Změnit rychlost videa",
+    "toolInfo": {
+      "title": "Co je {{title}}?"
+    }
+  },
+  "compress": {
+    "default": "Výchozí",
+    "description": "Komprimujte videa změnou rozlišení na např. 240p, 480p, 720p atd. Tento nástroj pomáhá zmenšit velikost souboru při zachování přijatelné kvality. Podporuje běžné video formáty jako MP4, WebM a OGG.",
+    "inputTitle": "Vstupní video",
+    "loadingText": "Komprimuji video…",
+    "lossless": "Bezztrátově",
+    "quality": "Kvalita (CRF)",
+    "resolution": "Rozlišení",
+    "resultTitle": "Komprimované video",
+    "shortDescription": "Komprimovat videa změnou rozlišení",
+    "title": "Komprimovat video",
+    "worst": "Nejhorší"
+  },
+  "cropVideo": {
+    "cropCoordinates": "Souřadnice ořezu",
+    "croppingVideo": "Ořezávám video",
+    "description": "Ořízněte video pro odstranění nežádoucích částí.",
+    "errorBeyondHeight": "Ořez přesahuje výšku videa ({{height}}px)",
+    "errorBeyondWidth": "Ořez přesahuje šířku videa ({{width}}px)",
+    "errorCroppingVideo": "Chyba při ořezávání videa. Zkontrolujte parametry a soubor videa.",
+    "errorLoadingDimensions": "Nepodařilo se načíst rozměry videa",
+    "errorNonNegativeCoordinates": "Souřadnice X a Y musí být nezáporné",
+    "errorPositiveDimensions": "Šířka a výška musí být kladné",
+    "height": "Výška",
+    "inputTitle": "Vstupní video",
+    "loadVideoForDimensions": "Načtěte video pro zobrazení rozměrů",
+    "longDescription": "Tento nástroj umožňuje oříznout video pro odstranění nežádoucích částí nebo zaměření na konkrétní části videa. Vhodné pro odstranění černých pruhů, úpravu poměru stran nebo zdůraznění obsahu. Podporuje formáty MP4, MOV a AVI.",
+    "resultTitle": "Oříznuté video",
+    "shortDescription": "Oříznout video pro odstranění nežádoucích částí",
+    "title": "Oříznout video",
+    "toolInfo": {
+      "description": "Tento nástroj umožňuje oříznout video soubory. Lze specifikovat oblast ořezu zadáním souřadnic X, Y a rozměrů šířky a výšky.",
+      "title": "Oříznout video"
+    },
+    "videoDimensions": "Rozměry videa: {{width}} × {{height}} pixelů",
+    "videoInformation": "Informace o videu",
+    "width": "Šířka",
+    "xCoordinate": "X (vlevo)",
+    "yCoordinate": "Y (nahoře)"
+  },
+  "flip": {
+    "description": "Otočte video horizontálně nebo vertikálně. Zrcadlení videa pro speciální efekty nebo opravu orientace.",
+    "flippingVideo": "Otočení videa",
+    "horizontalLabel": "Horizontálně (zrcadlově)",
+    "inputTitle": "Vstupní video",
+    "orientation": "Orientace",
+    "resultTitle": "Otočené video",
+    "shortDescription": "Otočit video horizontálně nebo vertikálně",
+    "title": "Otočit video",
+    "verticalLabel": "Vertikálně (naruby)"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "Změňte rychlost přehrávání GIF animací. Zrychlete nebo zpomalte GIF při zachování plynulosti animace.",
+      "shortDescription": "Změnit rychlost GIF animace",
+      "title": "Změnit rychlost GIFu"
+    }
+  },
+  "loop": {
+    "description": "Vytvořte video ve smyčce opakováním původního videa několikrát.",
+    "inputTitle": "Vstupní video",
+    "loopingVideo": "Video ve smyčce",
+    "loops": "Smyčky",
+    "numberOfLoops": "Počet smyček",
+    "resultTitle": "Video ve smyčce",
+    "shortDescription": "Vytvořit smyčková videa",
+    "title": "Video ve smyčce",
+    "toolInfo": {
+      "description": "Tento nástroj umožňuje vytvořit video ve smyčce opakováním původního videa několikrát. Lze specifikovat, kolikrát se má video opakovat.",
+      "title": "Co je {{title}}?"
+    }
+  },
+  "mergeVideo": {
+    "description": "Spojte více video souborů do jednoho souvislého videa.",
+    "longDescription": "Tento nástroj umožňuje sloučit nebo připojit více video souborů do jednoho souvislého videa. Nahrajte soubory, seřaďte je v požadovaném pořadí a sloučte do jednoho souboru pro snadné sdílení nebo úpravy.",
+    "shortDescription": "Snadné spojení a připojení videí.",
+    "title": "Sloučit videa"
+  },
+  "rotate": {
+    "180Degrees": "180° (naruby)",
+    "270Degrees": "270° (90° proti směru hodin)",
+    "90Degrees": "90° po směru hodin",
+    "description": "Otočte video o 90, 180 nebo 270 stupňů. Opravte orientaci videa nebo vytvořte speciální efekty s přesnou kontrolou otočení.",
+    "inputTitle": "Vstupní video",
+    "resultTitle": "Otočené video",
+    "rotatingVideo": "Otočení videa",
+    "rotation": "Otočení",
+    "shortDescription": "Otočit video o zadaný počet stupňů",
+    "title": "Otočit video"
+  },
+  "trim": {
+    "description": "Ořízněte video zadáním časů začátku a konce. Odstraňte nežádoucí části na začátku nebo konci videa.",
+    "endTime": "Konec",
+    "inputTitle": "Vstupní video",
+    "resultTitle": "Oříznuté video",
+    "shortDescription": "Oříznout video odstraněním nežádoucích částí",
+    "startTime": "Začátek",
+    "timestamps": "Časové značky",
+    "title": "Oříznout video"
+  },
+  "videoToGif": {
+    "description": "Převést video soubory do animovaného GIF formátu. Extrahujte konkrétní časové úseky a vytvořte sdílitelné animované obrázky.",
+    "shortDescription": "Převést video na animovaný GIF",
+    "title": "Video do GIFu"
+  }
+}

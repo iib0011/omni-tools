@@ -1,0 +1,120 @@
+{
+  "changeCsvSeparator": {
+    "description": "Změňte oddělovač v CSV souborech. Převádějte mezi různými formáty CSV, jako je čárka, středník, tabulátor nebo vlastní oddělovače.",
+    "shortDescription": "Změnit oddělovač v CSV souboru",
+    "title": "Změnit oddělovač CSV"
+  },
+  "csvRowsToColumns": {
+    "description": "Tento nástroj převádí řádky CSV souboru (Comma Separated Values) na sloupce. Extrahuje jednotlivé horizontální řádky ze vstupního CSV, otočí je o 90 stupňů a uloží jako svislé sloupce jeden po druhém, oddělené čárkami.",
+    "longDescription": "Tento nástroj převádí řádky CSV souboru (Comma Separated Values) na sloupce. Například pokud má vstupní CSV 6 řádků, výstup bude mít 6 sloupců a prvky řádků budou uspořádány shora dolů. Ve správně vytvořeném CSV má každý řádek stejný počet hodnot. Pokud ale některým řádkům hodnoty chybí, nástroj je dokáže doplnit – buď prázdnými poli, nebo vlastními symboly (např. „missing“, „?“, „x“). Nástroj také čistí CSV od prázdných řádků a komentářů. Pro správné rozpoznání komentářů lze nastavit symbol začátku komentáře (typicky „#“ nebo „//“).",
+    "shortDescription": "Převést řádky CSV na sloupce.",
+    "title": "Převést řádky CSV na sloupce"
+  },
+  "csvToJson": {
+    "columnSeparator": "Oddělovač sloupců (např. , ; \\t)",
+    "commentSymbol": "Symbol komentáře (např. #)",
+    "conversionOptions": "Možnosti převodu",
+    "description": "Převeďte CSV soubory do formátu JSON s nastavitelnými možnostmi pro oddělovače, uvozovky a formátování výstupu. Podpora záhlaví, komentářů a dynamické konverze typů.",
+    "dynamicTypes": "Dynamické typy",
+    "dynamicTypesDescription": "Automaticky převádět čísla a logické hodnoty",
+    "error": "Chyba",
+    "errorParsing": "Chyba při zpracování CSV: {{error}}",
+    "fieldQuote": "Uvozovky pole (např. \")",
+    "inputCsvFormat": "Formát vstupního CSV",
+    "inputTitle": "Vstupní CSV",
+    "invalidCsvFormat": "Neplatný formát CSV",
+    "resultTitle": "Výstupní JSON",
+    "shortDescription": "Převést data CSV do formátu JSON.",
+    "skipEmptyLines": "Přeskočit prázdné řádky",
+    "skipEmptyLinesDescription": "Ignorovat prázdné řádky ve vstupním CSV",
+    "title": "Převést CSV na JSON",
+    "toolInfo": {
+      "description": "Tento nástroj převádí CSV (Comma Separated Values) do datové struktury JSON (JavaScript Object Notation). Podporuje různé formáty CSV s nastavitelnými oddělovači, uvozovacími znaky a symboly komentářů. Umí použít první řádek jako hlavičky, přeskočit prázdné řádky a automaticky detekovat typy dat, jako jsou čísla nebo logické hodnoty. Výsledný JSON lze použít pro migraci dat, zálohy nebo jako vstup do jiných aplikací.",
+      "title": "Co je převodník CSV na JSON?"
+    },
+    "useHeaders": "Použít hlavičky",
+    "useHeadersDescription": "Použít první řádek jako názvy sloupců"
+  },
+  "csvToTsv": {
+    "description": "Nahrajte svůj CSV soubor a automaticky se převede na TSV soubor. V možnostech nástroje můžete přizpůsobit vstupní formát CSV – určit oddělovač polí, znak uvozovek, symbol komentáře, vynechat prázdné řádky a zvolit, zda zachovat hlavičky sloupců.",
+    "longDescription": "Tento nástroj převádí CSV (Comma Separated Values) na TSV (Tab Separated Values). Oba formáty slouží pro ukládání tabulkových dat, ale používají různé oddělovače – CSV čárku, TSV tabulátor.",
+    "shortDescription": "Převést data CSV na TSV.",
+    "title": "Převést CSV na TSV"
+  },
+  "csvToXml": {
+    "description": "Převeďte CSV soubory do formátu XML s nastavitelnými možnostmi.",
+    "shortDescription": "Převést data CSV na XML.",
+    "title": "Převést CSV na XML"
+  },
+  "csvToYaml": {
+    "description": "Nahrajte svůj CSV soubor a automaticky se převede na YAML soubor. V možnostech nástroje můžete nastavit oddělovač polí, uvozovací znak a symbol komentáře pro práci s vlastními formáty CSV. Také můžete vybrat, zda má YAML obsahovat hlavičky z CSV.",
+    "longDescription": "Tento nástroj převádí CSV (Comma Separated Values) na YAML (Yet Another Markup Language). CSV je jednoduchý tabulkový formát, zatímco YAML je pokročilejší a více čitelný, podporuje seznamy, slovníky a vnořené objekty. Podporovány jsou různé formáty CSV – oddělené čárkou (výchozí), středníkem, svislou čarou nebo jiným znakem. Lze také určit uvozovací znak a symbol komentáře. YAML výstup může být ve formě seznamu nebo objektů s klíči podle hlaviček CSV. Možné je také nastavit počet mezer pro odsazení. Obrácený převod (YAML → CSV) je možný pomocí nástroje „Převést YAML na CSV“.",
+    "shortDescription": "Rychle převést CSV na YAML.",
+    "title": "Převést CSV na YAML"
+  },
+  "findIncompleteCsvRecords": {
+    "checkingOptions": "Možnosti kontroly",
+    "commentCharacterDescription": "Zadejte znak, který označuje začátek komentáře. Řádky začínající tímto znakem budou vynechány.",
+    "csvInputOptions": "Možnosti vstupního CSV",
+    "csvSeparatorDescription": "Zadejte znak, který odděluje sloupce ve vstupním CSV souboru.",
+    "deleteLinesWithNoData": "Odstranit řádky bez dat",
+    "deleteLinesWithNoDataDescription": "Odebrat prázdné řádky ze vstupního CSV souboru.",
+    "description": "Nahrajte svůj CSV soubor a tento nástroj automaticky zkontroluje, zda v řádcích nebo sloupcích nechybí hodnoty. V možnostech lze nastavit formát vstupního souboru (oddělovač, uvozovací znak, symbol komentáře). Lze také povolit kontrolu prázdných hodnot, vynechat prázdné řádky a omezit počet chybových hlášení.",
+    "findEmptyValues": "Najít prázdné hodnoty",
+    "findEmptyValuesDescription": "Zobrazit zprávu o polích CSV, která jsou prázdná (ne chybějící, ale prázdná).",
+    "inputTitle": "Vstupní CSV",
+    "limitNumberOfMessages": "Omezit počet zpráv",
+    "messageLimitDescription": "Nastavit maximální počet zpráv ve výstupu.",
+    "quoteCharacterDescription": "Zadejte uvozovací znak použitý pro pole CSV.",
+    "resultTitle": "Stav CSV",
+    "shortDescription": "Rychle najít řádky a sloupce v CSV s chybějícími hodnotami.",
+    "title": "Najít neúplné záznamy CSV",
+    "toolInfo": {
+      "title": "Co je {{title}}?"
+    }
+  },
+  "insertCsvColumns": {
+    "appendColumns": "Přidat sloupce na konec",
+    "commentCharacterDescription": "Zadejte znak, který označuje začátek komentáře. Řádky začínající tímto znakem budou vynechány.",
+    "csvOptions": "Možnosti CSV",
+    "csvSeparator": "Oddělovač CSV",
+    "csvToInsert": "CSV k vložení",
+    "csvToInsertDescription": "Zadejte jeden nebo více sloupců, které chcete vložit do CSV. Oddělovač musí být stejný jako ve vstupním souboru CSV. Poznámka: prázdné řádky budou ignorovány.",
+    "customFillDescription": "Pokud je vstupní CSV neúplné (chybí hodnoty), má nástroj doplnit prázdná pole nebo vlastní symboly, aby vzniklo validní CSV?",
+    "customFillValueDescription": "Použijte tento vlastní symbol pro doplnění chybějících hodnot. (Funguje pouze v režimu „Vlastní hodnoty“ výše.)",
+    "customPosition": "Vlastní pozice",
+    "customPositionOptionsDescription": "Vyberte způsob vložení sloupců do CSV souboru.",
+    "description": "Přidejte nové sloupce do CSV na určená místa.",
+    "fillWithCustomValues": "Doplnit vlastními hodnotami",
+    "fillWithEmptyValues": "Doplnit prázdnými hodnotami",
+    "headerName": "Název hlavičky",
+    "headerNameDescription": "Hlavička sloupce, za který chcete vložit nové sloupce.",
+    "inputTitle": "Vstupní CSV",
+    "insertingPositionDescription": "Určete, kam vložit nové sloupce v CSV souboru.",
+    "position": "Pozice",
+    "positionOptions": "Možnosti pozice",
+    "prependColumns": "Přidat sloupce na začátek",
+    "quoteCharDescription": "Zadejte uvozovací znak použitý pro pole CSV.",
+    "resultTitle": "Výstupní CSV",
+    "rowNumberDescription": "Číslo sloupce, za který chcete vložit nové sloupce.",
+    "separatorDescription": "Zadejte znak, který odděluje sloupce ve vstupním CSV.",
+    "shortDescription": "Rychle vložit jeden nebo více nových sloupců do CSV.",
+    "title": "Vložit sloupce do CSV",
+    "toolInfo": {
+      "description": "Tento nástroj umožňuje vložit nové sloupce do CSV na určená místa. Sloupce lze přidat na začátek, na konec nebo podle názvu hlavičky či čísla sloupce.",
+      "title": "Vložit sloupce do CSV"
+    }
+  },
+  "swapCsvColumns": {
+    "description": "Nahrajte svůj CSV soubor, zadejte sloupce k prohození a nástroj automaticky změní jejich pořadí ve výstupním souboru. V možnostech můžete určit pozice nebo názvy sloupců, které chcete prohodit, opravit neúplná data a volitelně odstranit prázdné nebo zakomentované záznamy.",
+    "longDescription": "Tento nástroj reorganizuje CSV data prohozením sloupců. Prohazování sloupců může zlepšit čitelnost CSV, např. umístěním často používaných dat vedle sebe. Lze prohodit první a poslední sloupec nebo třeba druhý a třetí. Sloupce lze vybírat podle pozice i názvu.",
+    "shortDescription": "Změnit pořadí sloupců v CSV.",
+    "title": "Prohodit sloupce v CSV"
+  },
+  "transposeCsv": {
+    "description": "Nahrajte svůj CSV soubor a tento nástroj jej automaticky transponuje. V možnostech můžete určit znak komentáře, aby se tyto řádky odstranily. Pokud je CSV neúplné, můžete chybějící hodnoty nahradit prázdným znakem nebo vlastním symbolem.",
+    "longDescription": "Tento nástroj transponuje CSV (Comma Separated Values). CSV chápe jako matici dat a překlápí ji podle hlavní diagonály. Výstup obsahuje stejná data jako vstup, ale řádky se stanou sloupci a sloupce řádky. Např. pokud má vstupní soubor 4 sloupce a 3 řádky, výstup bude mít 3 sloupce a 4 řádky. Při konverzi se soubor čistí od prázdných řádků a komentářů a doplňují se chybějící hodnoty prázdnými nebo vlastními poli podle nastavení.",
+    "shortDescription": "Rychle transponovat CSV soubor.",
+    "title": "Transponovat CSV"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "xmlBeautifier": {
+    "description": "Formátujte XML s správným odsazením a mezerami.",
+    "indentation": "Odsazení",
+    "inputTitle": "Vstupní XML",
+    "resultTitle": "Naformátované XML",
+    "shortDescription": "Formátovat a zkrášlit XML kód",
+    "title": "XML Beautifier",
+    "toolInfo": {
+      "description": "Tento nástroj umožňuje formátovat XML data se správným odsazením a mezerami, aby byla čitelnější a snadněji použitelná.",
+      "title": "XML Beautifier"
+    },
+    "useSpaces": "Použít mezery",
+    "useSpacesDescription": "Odsadit výstup pomocí mezer",
+    "useTabs": "Použít tabulátory",
+    "useTabsDescription": "Odsadit výstup pomocí tabulátorů"
+  },
+  "xmlValidator": {
+    "description": "Ověřte syntaxi a strukturu XML.",
+    "placeholder": "Vložte nebo importujte XML zde…",
+    "shortDescription": "Ověřit XML kód pro chyby",
+    "title": "XML Validator",
+    "toolInfo": {
+      "description": "Tento nástroj umožňuje ověřit syntaxi a strukturu XML. Kontroluje, zda je XML správně strukturované, a poskytuje podrobné chybové zprávy pro nalezené problémy.",
+      "title": "XML Validator"
+    }
+  },
+  "xmlViewer": {
+    "description": "Zobrazte a prozkoumejte strukturu XML ve stromovém formátu.",
+    "inputTitle": "Vstupní XML",
+    "resultTitle": "Stromová struktura XML",
+    "title": "XML Prohlížeč",
+    "toolInfo": {
+      "description": "Tento nástroj umožňuje zobrazit XML data ve hierarchickém stromovém formátu, což usnadňuje prozkoumání a pochopení struktury XML dokumentů.",
+      "title": "XML Prohlížeč"
+    }
+  }
+}
