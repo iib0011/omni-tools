@@ -74,6 +74,31 @@ function quoteCell(value: string, options: InitialValuesType): string {
 }
 
 /**
+ * Parses standard JSON first, then falls back to newline-delimited JSON
+ * where each non-empty line is a standalone JSON object.
+ */
+function parseJsonInput(input: string): unknown {
+  try {
+    return JSON.parse(input);
+  } catch (jsonError) {
+    const lines = input
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean);
+
+    if (lines.length <= 1) {
+      throw jsonError;
+    }
+
+    try {
+      return lines.map((line) => JSON.parse(line));
+    } catch {
+      throw jsonError;
+    }
+  }
+}
+
+/**
  * Converts JSON string to CSV
  */
 export function convertJsonToCsv(
@@ -87,7 +112,7 @@ export function convertJsonToCsv(
   let parsed: unknown;
 
   try {
-    parsed = JSON.parse(input);
+    parsed = parseJsonInput(input);
   } catch {
     throw new Error('Invalid JSON input.');
   }

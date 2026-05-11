@@ -68,6 +68,18 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
     sampleOptions: {
       ...initialValues
     }
+  },
+  {
+    title: 'Newline-delimited JSON',
+    description:
+      'Convert multiple JSON objects pasted one per line without wrapping them in an array.',
+    sampleText: `{"name":"Alice","city":"Paris"}
+{"name":"Bob","city":"Berlin"}
+{"name":"Carol","city":"Rome"}`,
+    sampleResult: `name,city\nAlice,Paris\nBob,Berlin\nCarol,Rome`,
+    sampleOptions: {
+      ...initialValues
+    }
   }
 ];
 
