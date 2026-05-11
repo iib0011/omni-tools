@@ -28,6 +28,18 @@ describe('convertJsonToCsv', () => {
       );
     });
 
+    it('converts newline-delimited JSON objects', () => {
+      const input = [
+        '{"key1":"AAA","key2":"XXX"}',
+        '{"key1":"BBB","key2":"YYY"}',
+        '{"key1":"CCC","key2":"ZZZ"}'
+      ].join('\n');
+
+      expect(convertJsonToCsv(input, defaultOptions)).toBe(
+        `key1,key2\r\nAAA,XXX\r\nBBB,YYY\r\nCCC,ZZZ`
+      );
+    });
+
     it('excludes header row when includeHeaders is false', () => {
       const input = JSON.stringify([{ name: 'Alice', age: 30 }]);
 
@@ -153,6 +165,14 @@ describe('convertJsonToCsv', () => {
   describe('errors', () => {
     it('throws on invalid JSON', () => {
       expect(() => convertJsonToCsv('invalid json', defaultOptions)).toThrow(
+        'Invalid JSON input.'
+      );
+    });
+
+    it('throws when one newline-delimited JSON row is invalid', () => {
+      const input = '{"name":"Alice"}\n{name:"Bob"}';
+
+      expect(() => convertJsonToCsv(input, defaultOptions)).toThrow(
         'Invalid JSON input.'
       );
     });
