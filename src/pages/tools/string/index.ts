@@ -44,6 +44,8 @@ export const stringTools = [
   stringRot13,
   stringBase64,
   stringStatistic,
+  stringBcrypt,
+  stringStatistic,
   stringCensor,
   stringPasswordGenerator,
   stringEncodeUrl,
