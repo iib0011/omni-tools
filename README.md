@@ -27,8 +27,8 @@ forget to
 star the repo to support us.
 Here is the [demo](https://omnitools.app) website.
 
-All files are processed entirely on the client side: nothing ever leaves your device.
-Plus, the Docker image is super lightweight at just 28MB, making it fast to deploy and easy to self-host.
+Most tools are processed entirely on the client side. The Markdown-to-PDF renderer uses a server-side Playwright print pipeline to produce browser-quality PDFs.
+This increases the runtime footprint compared with the previous static-only deployment, but it enables production-grade pagination, tables, typography, and code rendering.
 
 ![img.png](docs-images/img.png)
 
