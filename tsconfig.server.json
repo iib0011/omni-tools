@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "noEmit": false,
+    "outDir": "./dist-server",
+    "rootDir": ".",
+    "types": ["node"]
+  },
+  "include": [
+    "server/**/*.ts",
+    "src/pages/tools/pdf/markdown-to-pdf/analysis.ts",
+    "src/pages/tools/pdf/markdown-to-pdf/html.ts",
+    "src/pages/tools/pdf/markdown-to-pdf/printCss.ts",
+    "src/pages/tools/pdf/markdown-to-pdf/shared.ts",
+    "src/pages/tools/pdf/markdown-to-pdf/types.ts"
+  ],
+  "exclude": ["node_modules", "**/*.test.ts"]
+}
