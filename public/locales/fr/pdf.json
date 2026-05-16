@@ -115,5 +115,42 @@
       "description": "Cet outil vous permet d'extraire des pages spécifiques d'un document PDF. Vous pouvez spécifier des pages individuelles ou des plages de pages à extraire.",
       "title": "Diviser le PDF"
     }
+  },
+  "markdownToPdf": {
+    "options": {
+      "theme": "Document Theme",
+      "fontScale": "Font scale",
+      "landscape": "Landscape",
+      "a4": "A4",
+      "orientation": "Orientation",
+      "generate": "Generate PDF",
+      "minimal": "Minimal document",
+      "regenerate": "Regenerate PDF",
+      "letter": "Letter",
+      "title": "Export Settings",
+      "professional": "Professional report",
+      "pageFormat": "Page Format",
+      "portrait": "Portrait"
+    },
+    "shortDescription": "Turn Markdown files into styled PDF documents",
+    "status": {
+      "sourceFile": "Imported file: {{sourceName}}",
+      "summary": "Characters: {{chars}} | Lines: {{lines}} | Headings: {{headings}} | Code blocks: {{codeBlocks}} | Estimated pages: {{estimatedPages}} | Render chunks: {{estimatedChunks}}",
+      "staleResult": "The current PDF preview is stale. Generate again to include the latest Markdown changes."
+    },
+    "errors": {
+      "generationFailed": "Failed to generate the Markdown PDF.",
+      "tooLarge": "This Markdown document is too large to render safely in the browser. Keep it below {{maxChars}} characters and {{maxLines}} lines, or split the report into sections before exporting."
+    },
+    "resultTitle": "Output PDF",
+    "inputTitle": "Input Markdown",
+    "longDescription": "Import or paste Markdown content and export it as a clean PDF document with typography, table formatting, code block styling, and browser-side privacy. Large reports are rendered with extra safeguards to reduce the risk of browser freezes.",
+    "placeholder": "Paste Markdown here or import a .md file",
+    "description": "Convert Markdown documents into polished PDF reports directly in your browser.",
+    "title": "Markdown to PDF",
+    "loadingText": "Rendering Markdown PDF...",
+    "warnings": {
+      "largeDocument": "This Markdown file is large, so automatic rerendering is paused after edits. Use Generate PDF when you are ready. Relative image paths from imported Markdown cannot be embedded unless the image is converted to a data URL."
+    }
   }
 }
