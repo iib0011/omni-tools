@@ -5,7 +5,26 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config https://vitest.dev/config
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    {
+      name: 'markdown-pdf-api',
+      configureServer(server) {
+        server.middlewares.use(async (req, res, next) => {
+          const { handleMarkdownPdfRequest } = await server.ssrLoadModule(
+            '/server/markdown-to-pdf/http.ts'
+          );
+
+          if (await handleMarkdownPdfRequest(req, res)) {
+            return;
+          }
+
+          next();
+        });
+      }
+    }
+  ],
   define: {
     'process.env': {}
   },
