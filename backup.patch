@@ -1,0 +1,82 @@
+diff --git a/public/locales/en/video.json b/public/locales/en/video.json
+index 3be86a6..6b37b38 100644
+--- a/public/locales/en/video.json
++++ b/public/locales/en/video.json
+@@ -97,6 +97,16 @@
+       "description": "Change the playback speed of GIF animations. Speed up or slow down GIFs while maintaining smooth animation.",
+       "shortDescription": "Change GIF animation speed",
+       "title": "Change GIF Speed"
++    },
++    "imagesToGif": {
++      "title": "Images to GIF",
++      "description": "Convert multiple images into an animated GIF directly in your browser. Upload your images, set the frame delay, and download the resulting animation — no server needed.",
++      "shortDescription": "Convert multiple images into an animated GIF",
++      "inputTitle": "Input Images",
++      "resultTitle": "Animated GIF",
++      "loadingText": "Creating GIF...",
++      "frameOptions": "Frame Options",
++      "frameDelayDescription": "How long each frame is displayed, in milliseconds (e.g. 500 = 0.5 s per frame)"
+     }
+   },
+   "loop": {
+diff --git a/src/components/Navbar/index.tsx b/src/components/Navbar/index.tsx
+index dbacb3a..7c1cbef 100644
+--- a/src/components/Navbar/index.tsx
++++ b/src/components/Navbar/index.tsx
+@@ -112,12 +112,14 @@ const Navbar: React.FC<NavbarProps> = ({
+       }
+     />,
+     <Icon
++      key="discord"
+       onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
+       style={{ cursor: 'pointer' }}
+       fontSize={30}
+       icon={'ic:baseline-discord'}
+     />,
+     <iframe
++      key="github"
+       src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
+       frameBorder="0"
+       scrolling="0"
+@@ -126,6 +128,7 @@ const Navbar: React.FC<NavbarProps> = ({
+       title="GitHub"
+     ></iframe>,
+     <Button
++      key="hire-me"
+       onClick={() => {
+         window.open(
+           'https://drive.google.com/file/d/1-r9-rDYnDJic9dnDywKTAsueehIAVp5F/view?usp=sharing',
+@@ -155,8 +158,8 @@ const Navbar: React.FC<NavbarProps> = ({
+           <ListItemText primary={navItem.label} />
+         </ListItemButton>
+       ))}
+-      {buttons.map((button) => (
+-        <ListItem>{button}</ListItem>
++      {buttons.map((button, index) => (
++        <ListItem key={index}>{button}</ListItem>
+       ))}
+     </List>
+   );
+diff --git a/src/pages/tools/video/gif/change-speed/index.tsx b/src/pages/tools/video/gif/change-speed/index.tsx
+index 1970412..a542fbc 100644
+--- a/src/pages/tools/video/gif/change-speed/index.tsx
++++ b/src/pages/tools/video/gif/change-speed/index.tsx
+@@ -32,6 +32,8 @@ export default function ChangeSpeed({ title }: ToolComponentProps) {
+ 
+       if (!ffmpegLoaded) {
+         await ffmpeg.load({
++          coreURL:
++            'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.js',
+           wasmURL:
+             'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
+         });
+diff --git a/src/pages/tools/video/gif/index.ts b/src/pages/tools/video/gif/index.ts
+index 92e5375..fd6b9b5 100644
+--- a/src/pages/tools/video/gif/index.ts
++++ b/src/pages/tools/video/gif/index.ts
+@@ -1,3 +1,4 @@
+ import { tool as gifChangeSpeed } from './change-speed/meta';
++import { tool as imagesToGif } from './images-to-gif/meta';
+ 
+-export const gifTools = [gifChangeSpeed];
++export const gifTools = [gifChangeSpeed, imagesToGif];

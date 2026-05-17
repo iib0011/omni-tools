@@ -97,6 +97,16 @@
       "description": "Change the playback speed of GIF animations. Speed up or slow down GIFs while maintaining smooth animation.",
       "shortDescription": "Change GIF animation speed",
       "title": "Change GIF Speed"
+    },
+    "imagesToGif": {
+      "title": "Images to GIF",
+      "description": "Convert multiple images into an animated GIF directly in your browser. Upload your images, set the frame delay, and download the resulting animation — no server needed.",
+      "shortDescription": "Convert multiple images into an animated GIF",
+      "inputTitle": "Input Images",
+      "resultTitle": "Animated GIF",
+      "loadingText": "Creating GIF...",
+      "frameOptions": "Frame Options",
+      "frameDelayDescription": "How long each frame is displayed, in milliseconds (e.g. 500 = 0.5 s per frame)"
     }
   },
   "loop": {
