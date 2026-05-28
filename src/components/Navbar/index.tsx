@@ -38,6 +38,7 @@ const languages = [
   { code: 'hi', label: 'हिंदी' },
   { code: 'nl', label: 'Nederlands' },
   { code: 'ru', label: 'Русский' },
+  { code: 'uk', label: 'Українська' },
   { code: 'zh', label: '中文' }
 ];
 
