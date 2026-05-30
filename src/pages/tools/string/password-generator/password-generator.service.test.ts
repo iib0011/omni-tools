@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { generatePassword } from './service';
 import { initialValues } from './initialValues';
 
@@ -139,5 +139,14 @@ describe('generatePassword', () => {
     const options = { ...initialValues, length: '-5' };
     const result = generatePassword(options);
     expect(result).toBe('');
+  });
+
+  it('should not use Math.random for password generation', () => {
+    const mathRandomSpy = vi.spyOn(Math, 'random');
+
+    generatePassword({ ...initialValues, length: '10' });
+
+    expect(mathRandomSpy).not.toHaveBeenCalled();
+    mathRandomSpy.mockRestore();
   });
 });

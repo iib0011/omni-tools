@@ -1,5 +1,16 @@
 import type { InitialValuesType } from './initialValues';
 
+function getSecureRandomIndex(max: number): number {
+  const randomValue = new Uint32Array(1);
+  const maxUnbiasedValue = Math.floor(0x100000000 / max) * max;
+
+  do {
+    globalThis.crypto.getRandomValues(randomValue);
+  } while (randomValue[0] >= maxUnbiasedValue);
+
+  return randomValue[0] % max;
+}
+
 export function generatePassword(options: InitialValuesType): string {
   const length = parseInt(options.length || '', 10);
   if (isNaN(length) || length <= 0) {
@@ -31,7 +42,7 @@ export function generatePassword(options: InitialValuesType): string {
 
   let pwd = '';
   for (let i = 0; i < length; i++) {
-    const idx = Math.floor(Math.random() * charset.length);
+    const idx = getSecureRandomIndex(charset.length);
     pwd += charset[idx];
   }
   return pwd;
