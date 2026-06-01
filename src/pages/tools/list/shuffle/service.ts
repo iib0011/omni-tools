@@ -23,9 +23,22 @@ export function shuffleList(
     case 'symbol':
       array = input.split(splitSeparator);
       break;
-    case 'regex':
-      array = input.split(new RegExp(splitSeparator));
+    case 'regex': {
+      const MAX_REGEX_LENGTH = 200;
+      if (splitSeparator.length > MAX_REGEX_LENGTH) {
+        throw new Error(
+          `Regex pattern must be ${MAX_REGEX_LENGTH} characters or fewer to prevent excessive backtracking.`
+        );
+      }
+      let regex: RegExp;
+      try {
+        regex = new RegExp(splitSeparator);
+      } catch (e) {
+        throw new Error(`Invalid regular expression: ${(e as Error).message}`);
+      }
+      array = input.split(regex);
       break;
+    }
   }
   shuffledArray = shuffleArray(array);
   if (length !== undefined) {
