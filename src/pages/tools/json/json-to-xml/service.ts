@@ -23,11 +23,27 @@ const getIndentation = (options: JsonToXmlOptions, depth: number): string => {
   }
 };
 
+const MAX_DEPTH = 100;
+
+const sanitizeXmlTagName = (key: string): string => {
+  // Prefix numeric-start keys so they become valid XML names
+  let tag = /^[0-9]/.test(key) ? `_${key}` : key;
+  // Replace any character that is not a letter, digit, underscore, or hyphen
+  tag = tag.replace(/[^a-zA-Z0-9_-]/g, '_');
+  return tag || '_';
+};
+
 const convertObjectToXml = (
   obj: any,
   options: JsonToXmlOptions,
   depth: number = 0
 ): string => {
+  if (depth >= MAX_DEPTH) {
+    throw new Error(
+      `JSON nesting exceeds maximum depth of ${MAX_DEPTH} levels`
+    );
+  }
+
   let xml = '';
 
   const newline = options.indentationType === 'none' ? '' : '\n';
@@ -41,7 +57,9 @@ const convertObjectToXml = (
 
   for (const key in obj) {
     const value = obj[key];
-    const keyString = isNaN(Number(key)) ? key : `row-${key}`;
+    const keyString = sanitizeXmlTagName(
+      isNaN(Number(key)) ? key : `row-${key}`
+    );
 
     // Handle null values
     if (value === null) {
