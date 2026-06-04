@@ -169,4 +169,38 @@ describe('convertJsonToCsv', () => {
       ).toThrow('No data found in the provided JSON.');
     });
   });
+
+  describe('NDJSON (newline-delimited JSON)', () => {
+    it('converts objects on separate lines without an array wrapper', () => {
+      const input = [
+        '{"key1": "AAA", "key2": "XXX"}',
+        '{"key1": "BBB", "key2": "YYY"}',
+        '{"key1": "CCC", "key2": "ZZZ"}'
+      ].join('\n');
+
+      expect(convertJsonToCsv(input, defaultOptions)).toBe(
+        `key1,key2\r\nAAA,XXX\r\nBBB,YYY\r\nCCC,ZZZ`
+      );
+    });
+
+    it('ignores blank lines between NDJSON records', () => {
+      const input = '{"a": 1}\n\n{"a": 2}\n';
+
+      expect(convertJsonToCsv(input, defaultOptions)).toBe(`a\r\n1\r\n2`);
+    });
+
+    it('handles sparse keys across NDJSON records', () => {
+      const input = '{"a": 1}\n{"b": 2}';
+
+      expect(convertJsonToCsv(input, defaultOptions)).toBe(`a,b\r\n1,\r\n,2`);
+    });
+
+    it('still throws when one NDJSON line is not valid JSON', () => {
+      const input = '{"a": 1}\nnot json';
+
+      expect(() => convertJsonToCsv(input, defaultOptions)).toThrow(
+        'Invalid JSON input.'
+      );
+    });
+  });
 });
