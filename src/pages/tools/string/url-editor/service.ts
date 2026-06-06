@@ -5,8 +5,19 @@ export const URL_PARSE_ERRORS = {
   CREDENTIALS: 'URLs with credentials are not supported'
 } as const;
 
+let fallbackParamIdCounter = 0;
+
+function createParamId(): string {
+  if (globalThis.crypto?.randomUUID) {
+    return globalThis.crypto.randomUUID();
+  }
+
+  fallbackParamIdCounter += 1;
+  return `param-${fallbackParamIdCounter}-${Date.now()}`;
+}
+
 export function createQueryParam(key = '', value = ''): QueryParam {
-  return { id: crypto.randomUUID(), key, value };
+  return { id: createParamId(), key, value };
 }
 
 function detectOriginTrailingSlash(input: string, url: URL): boolean {
@@ -15,9 +26,17 @@ function detectOriginTrailingSlash(input: string, url: URL): boolean {
   }
 
   const beforeQueryOrHash = input.split(/[?#]/)[0];
-  const origin = `${url.protocol}//${url.host}`;
+  const schemeEnd = beforeQueryOrHash.indexOf('://');
+  if (schemeEnd === -1) {
+    return false;
+  }
 
-  return beforeQueryOrHash.slice(origin.length) === '/';
+  const firstSlashAfterScheme = beforeQueryOrHash.indexOf('/', schemeEnd + 3);
+  if (firstSlashAfterScheme === -1) {
+    return false;
+  }
+
+  return firstSlashAfterScheme === beforeQueryOrHash.length - 1;
 }
 
 export function parseUrl(input: string): ParsedUrl {

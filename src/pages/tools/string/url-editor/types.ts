@@ -1,3 +1,5 @@
+export type EditableUrlField = 'protocol' | 'host' | 'pathname' | 'hash';
+
 export interface QueryParam {
   id: string;
   key: string;

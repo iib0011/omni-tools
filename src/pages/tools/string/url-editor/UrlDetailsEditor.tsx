@@ -1,4 +1,4 @@
-import { useId } from 'react';
+import { useId, useMemo } from 'react';
 import {
   Box,
   FormControl,
@@ -9,15 +9,23 @@ import {
   Select,
   TextField
 } from '@mui/material';
-import { ParsedUrl } from './types';
+import { EditableUrlField, ParsedUrl } from './types';
 
 const PROTOCOLS = ['https:', 'http:'] as const;
 
-export type UrlDetailField = keyof Omit<ParsedUrl, 'params'>;
+export type { EditableUrlField as UrlDetailField };
+
+function getProtocolOptions(protocol: string): string[] {
+  if (PROTOCOLS.includes(protocol as (typeof PROTOCOLS)[number])) {
+    return [...PROTOCOLS];
+  }
+
+  return [protocol, ...PROTOCOLS];
+}
 
 type UrlDetailsEditorProps = {
   value: ParsedUrl;
-  onChange: (field: UrlDetailField, value: string) => void;
+  onChange: (field: EditableUrlField, value: string) => void;
   labels: {
     protocol: string;
     host: string;
@@ -36,6 +44,10 @@ export default function UrlDetailsEditor({
 }: UrlDetailsEditorProps) {
   const protocolLabelId = useId();
   const hashValue = value.hash.replace(/^#/, '');
+  const protocolOptions = useMemo(
+    () => getProtocolOptions(value.protocol),
+    [value.protocol]
+  );
 
   return (
     <Box
@@ -54,14 +66,10 @@ export default function UrlDetailsEditor({
             <Select
               labelId={protocolLabelId}
               label={labels.protocol}
-              value={
-                PROTOCOLS.includes(value.protocol as (typeof PROTOCOLS)[number])
-                  ? value.protocol
-                  : 'https:'
-              }
+              value={value.protocol}
               onChange={(event) => onChange('protocol', event.target.value)}
             >
-              {PROTOCOLS.map((protocol) => (
+              {protocolOptions.map((protocol) => (
                 <MenuItem key={protocol} value={protocol}>
                   {protocol.replace(':', '')}
                 </MenuItem>

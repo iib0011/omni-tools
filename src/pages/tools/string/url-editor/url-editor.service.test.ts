@@ -41,6 +41,17 @@ describe('url-editor', () => {
     expect(parseUrl('https://example.com').originTrailingSlash).toBe(false);
   });
 
+  it('tracks trailing slash using input path, not normalized host', () => {
+    expect(parseUrl('https://example.com:443/').originTrailingSlash).toBe(true);
+    expect(parseUrl('https://example.com:443').originTrailingSlash).toBe(false);
+    expect(parseUrl('http://example.com:80/').originTrailingSlash).toBe(true);
+  });
+
+  it('preserves unsupported protocols in round-trip generation', () => {
+    const input = 'ftp://files.example.com/resource';
+    expect(generateUrl(parseUrl(input))).toBe(input);
+  });
+
   it('parses URLs with a hash', () => {
     const parsed = parseUrl('https://example.com/page#section1');
 
@@ -134,5 +145,18 @@ describe('url-editor', () => {
     parsed.host = '   ';
 
     expect(() => generateUrl(parsed)).toThrow(URL_PARSE_ERRORS.INVALID);
+  });
+
+  it('creates query param ids without randomUUID', () => {
+    const randomUUID = globalThis.crypto.randomUUID;
+    // @ts-expect-error test override
+    globalThis.crypto.randomUUID = undefined;
+
+    try {
+      const parsed = parseUrl('https://example.com?q=test');
+      expect(parsed.params[0]?.id).toMatch(/^param-\d+-\d+$/);
+    } finally {
+      globalThis.crypto.randomUUID = randomUUID;
+    }
   });
 });
