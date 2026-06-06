@@ -30,6 +30,7 @@ import {
 import { ParsedUrl } from './types';
 
 const initialValues = {};
+const noop = () => {};
 
 export default function UrlEditor({
   title,
@@ -123,7 +124,7 @@ export default function UrlEditor({
       title={title}
       initialValues={initialValues}
       getGroups={null}
-      compute={() => {}}
+      compute={noop}
       input={inputUrl}
       setInput={setInputUrl}
       inputComponent={

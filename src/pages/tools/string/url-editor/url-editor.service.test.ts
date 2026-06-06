@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { generateUrl, parseUrl, URL_PARSE_ERRORS } from './service';
 
 function paramEntries(parsed: ReturnType<typeof parseUrl>) {
@@ -147,16 +147,21 @@ describe('url-editor', () => {
     expect(() => generateUrl(parsed)).toThrow(URL_PARSE_ERRORS.INVALID);
   });
 
+  it('throws when host contains credentials', () => {
+    const parsed = parseUrl('https://example.com');
+    parsed.host = 'user:pass@example.com';
+
+    expect(() => generateUrl(parsed)).toThrow(URL_PARSE_ERRORS.CREDENTIALS);
+  });
+
   it('creates query param ids without randomUUID', () => {
-    const randomUUID = globalThis.crypto.randomUUID;
-    // @ts-expect-error test override
-    globalThis.crypto.randomUUID = undefined;
+    vi.stubGlobal('crypto', { randomUUID: undefined });
 
     try {
       const parsed = parseUrl('https://example.com?q=test');
       expect(parsed.params[0]?.id).toMatch(/^param-\d+-\d+$/);
     } finally {
-      globalThis.crypto.randomUUID = randomUUID;
+      vi.unstubAllGlobals();
     }
   });
 });

@@ -71,10 +71,14 @@ export function parseUrl(input: string): ParsedUrl {
 }
 
 export function generateUrl(parsed: ParsedUrl): string {
-  const protocol = parsed.protocol || 'https:';
+  const rawProtocol = parsed.protocol || 'https';
+  const protocol = rawProtocol.endsWith(':') ? rawProtocol : `${rawProtocol}:`;
   const host = parsed.host.trim();
   if (!host) {
     throw new Error(URL_PARSE_ERRORS.INVALID);
+  }
+  if (host.includes('@')) {
+    throw new Error(URL_PARSE_ERRORS.CREDENTIALS);
   }
 
   let pathname = parsed.pathname || '/';
