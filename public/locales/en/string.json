@@ -312,6 +312,32 @@
     "shortDescription": "Convert text to uppercase",
     "title": "Convert to Uppercase"
   },
+  "urlEditor": {
+    "addParameter": "Add Parameter",
+    "delete": "Delete",
+    "generatedUrl": "Generated URL",
+    "hash": "Fragment",
+    "hashPlaceholder": "section",
+    "host": "Host",
+    "hostPlaceholder": "example.com",
+    "inputTitle": "Enter URL",
+    "invalidUrl": "Invalid URL",
+    "key": "Key",
+    "noParameters": "No query parameters",
+    "parseButton": "Parse URL",
+    "path": "Path",
+    "pathPlaceholder": "search",
+    "protocol": "Protocol",
+    "queryParameters": "Query Parameters",
+    "toolInfo": {
+      "description": "Paste a URL to inspect and edit its query parameters, then copy the updated link.",
+      "longDescription": "This tool parses a URL into its components and lets you edit the protocol, host, path, fragment, and query parameters visually. Add, remove, or change any part and the generated URL updates in real time. Everything runs in your browser with no server requests.",
+      "shortDescription": "Inspect and edit URL query parameters.",
+      "title": "URL Editor"
+    },
+    "urlDetails": "URL Details",
+    "value": "Value"
+  },
   "urlDecode": {
     "inputTitle": "Input String(URL-escaped)",
     "resultTitle": "Output string",
