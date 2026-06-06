@@ -21,7 +21,12 @@ import InputHeader from '@components/InputHeader';
 import { ToolComponentProps } from '@tools/defineTool';
 import { useTranslation } from 'react-i18next';
 import UrlDetailsEditor, { UrlDetailField } from './UrlDetailsEditor';
-import { generateUrl, parseUrl } from './service';
+import {
+  createQueryParam,
+  generateUrl,
+  parseUrl,
+  URL_PARSE_ERRORS
+} from './service';
 import { ParsedUrl } from './types';
 
 const initialValues = {};
@@ -57,9 +62,16 @@ export default function UrlEditor({
     try {
       setParsedUrl(parseUrl(inputUrl));
       setParseError(null);
-    } catch {
+    } catch (error) {
       setParsedUrl(null);
-      setParseError(t('urlEditor.invalidUrl'));
+      if (
+        error instanceof Error &&
+        error.message === URL_PARSE_ERRORS.CREDENTIALS
+      ) {
+        setParseError(t('urlEditor.credentialsNotSupported'));
+      } else {
+        setParseError(t('urlEditor.invalidUrl'));
+      }
     }
   }, [inputUrl, t]);
 
@@ -75,29 +87,29 @@ export default function UrlEditor({
   const handleAddParam = useCallback(() => {
     setParsedUrl((current) =>
       current
-        ? { ...current, params: [...current.params, { key: '', value: '' }] }
+        ? { ...current, params: [...current.params, createQueryParam()] }
         : current
     );
   }, []);
 
-  const handleRemoveParam = useCallback((index: number) => {
+  const handleRemoveParam = useCallback((id: string) => {
     setParsedUrl((current) =>
       current
         ? {
             ...current,
-            params: current.params.filter((_, i) => i !== index)
+            params: current.params.filter((param) => param.id !== id)
           }
         : current
     );
   }, []);
 
   const handleParamChange = useCallback(
-    (index: number, field: 'key' | 'value', value: string) => {
+    (id: string, field: 'key' | 'value', value: string) => {
       setParsedUrl((current) => {
         if (!current) return current;
 
-        const params = current.params.map((param, i) =>
-          i === index ? { ...param, [field]: value } : param
+        const params = current.params.map((param) =>
+          param.id === id ? { ...param, [field]: value } : param
         );
 
         return { ...current, params };
@@ -166,19 +178,24 @@ export default function UrlEditor({
                     </TableHead>
                     <TableBody>
                       {parsedUrl.params.map((param, index) => (
-                        <TableRow key={index}>
+                        <TableRow key={param.id}>
                           <TableCell>
                             <TextField
                               value={param.key}
                               onChange={(event) =>
                                 handleParamChange(
-                                  index,
+                                  param.id,
                                   'key',
                                   event.target.value
                                 )
                               }
                               size="small"
                               fullWidth
+                              inputProps={{
+                                'aria-label': t('urlEditor.paramKeyAriaLabel', {
+                                  row: index + 1
+                                })
+                              }}
                             />
                           </TableCell>
                           <TableCell>
@@ -186,19 +203,27 @@ export default function UrlEditor({
                               value={param.value}
                               onChange={(event) =>
                                 handleParamChange(
-                                  index,
+                                  param.id,
                                   'value',
                                   event.target.value
                                 )
                               }
                               size="small"
                               fullWidth
+                              inputProps={{
+                                'aria-label': t(
+                                  'urlEditor.paramValueAriaLabel',
+                                  { row: index + 1 }
+                                )
+                              }}
                             />
                           </TableCell>
                           <TableCell align="center">
                             <IconButton
-                              aria-label={t('urlEditor.delete')}
-                              onClick={() => handleRemoveParam(index)}
+                              aria-label={t('urlEditor.deleteParamAriaLabel', {
+                                row: index + 1
+                              })}
+                              onClick={() => handleRemoveParam(param.id)}
                               size="small"
                             >
                               <DeleteIcon fontSize="small" />

@@ -1,3 +1,4 @@
+import { useId } from 'react';
 import {
   Box,
   FormControl,
@@ -33,6 +34,7 @@ export default function UrlDetailsEditor({
   onChange,
   labels
 }: UrlDetailsEditorProps) {
+  const protocolLabelId = useId();
   const hashValue = value.hash.replace(/^#/, '');
 
   return (
@@ -48,9 +50,9 @@ export default function UrlDetailsEditor({
       <Grid container spacing={2}>
         <Grid item xs={12} sm={4} md={3}>
           <FormControl fullWidth size="small">
-            <InputLabel id="url-editor-protocol">{labels.protocol}</InputLabel>
+            <InputLabel id={protocolLabelId}>{labels.protocol}</InputLabel>
             <Select
-              labelId="url-editor-protocol"
+              labelId={protocolLabelId}
               label={labels.protocol}
               value={
                 PROTOCOLS.includes(value.protocol as (typeof PROTOCOLS)[number])

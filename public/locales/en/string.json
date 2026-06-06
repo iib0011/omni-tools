@@ -314,7 +314,9 @@
   },
   "urlEditor": {
     "addParameter": "Add Parameter",
+    "credentialsNotSupported": "URLs with username or password are not supported.",
     "delete": "Delete",
+    "deleteParamAriaLabel": "Delete parameter row {{row}}",
     "generatedUrl": "Generated URL",
     "hash": "Fragment",
     "hashPlaceholder": "section",
@@ -325,6 +327,8 @@
     "key": "Key",
     "noParameters": "No query parameters",
     "parseButton": "Parse URL",
+    "paramKeyAriaLabel": "Parameter key, row {{row}}",
+    "paramValueAriaLabel": "Parameter value, row {{row}}",
     "path": "Path",
     "pathPlaceholder": "search",
     "protocol": "Protocol",

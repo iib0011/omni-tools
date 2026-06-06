@@ -1,22 +1,27 @@
 import { describe, expect, it } from 'vitest';
-import { generateUrl, parseUrl } from './service';
+import { generateUrl, parseUrl, URL_PARSE_ERRORS } from './service';
+
+function paramEntries(parsed: ReturnType<typeof parseUrl>) {
+  return parsed.params.map(({ key, value }) => ({ key, value }));
+}
 
 describe('url-editor', () => {
   it('parses a valid URL with query parameters', () => {
-    expect(parseUrl('https://example.com/search?q=iphone&page=2')).toEqual({
-      protocol: 'https:',
-      host: 'example.com',
-      pathname: '/search',
-      hash: '',
-      params: [
-        { key: 'q', value: 'iphone' },
-        { key: 'page', value: '2' }
-      ]
-    });
+    const parsed = parseUrl('https://example.com/search?q=iphone&page=2');
+
+    expect(parsed.protocol).toBe('https:');
+    expect(parsed.host).toBe('example.com');
+    expect(parsed.pathname).toBe('/search');
+    expect(parsed.hash).toBe('');
+    expect(parsed.originTrailingSlash).toBe(false);
+    expect(paramEntries(parsed)).toEqual([
+      { key: 'q', value: 'iphone' },
+      { key: 'page', value: '2' }
+    ]);
   });
 
   it('parses multiple query parameters', () => {
-    expect(parseUrl('https://example.com?a=1&b=2&c=3').params).toEqual([
+    expect(paramEntries(parseUrl('https://example.com?a=1&b=2&c=3'))).toEqual([
       { key: 'a', value: '1' },
       { key: 'b', value: '2' },
       { key: 'c', value: '3' }
@@ -24,39 +29,63 @@ describe('url-editor', () => {
   });
 
   it('parses URLs without query parameters', () => {
-    expect(parseUrl('https://example.com')).toEqual({
-      protocol: 'https:',
-      host: 'example.com',
-      pathname: '/',
-      hash: '',
-      params: []
-    });
+    const parsed = parseUrl('https://example.com');
+
+    expect(parsed.pathname).toBe('/');
+    expect(parsed.originTrailingSlash).toBe(false);
+    expect(parsed.params).toEqual([]);
+  });
+
+  it('tracks trailing slash on origin-only URLs', () => {
+    expect(parseUrl('https://example.com/').originTrailingSlash).toBe(true);
+    expect(parseUrl('https://example.com').originTrailingSlash).toBe(false);
   });
 
   it('parses URLs with a hash', () => {
-    expect(parseUrl('https://example.com/page#section1')).toEqual({
-      protocol: 'https:',
-      host: 'example.com',
-      pathname: '/page',
-      hash: '#section1',
-      params: []
-    });
+    const parsed = parseUrl('https://example.com/page#section1');
+
+    expect(parsed.pathname).toBe('/page');
+    expect(parsed.hash).toBe('#section1');
+    expect(parsed.originTrailingSlash).toBe(false);
   });
 
   it('throws for invalid URLs', () => {
-    expect(() => parseUrl('abc123')).toThrow('Invalid URL');
-    expect(() => parseUrl('')).toThrow('Invalid URL');
+    expect(() => parseUrl('abc123')).toThrow(URL_PARSE_ERRORS.INVALID);
+    expect(() => parseUrl('')).toThrow(URL_PARSE_ERRORS.INVALID);
+  });
+
+  it('rejects URLs with credentials', () => {
+    expect(() => parseUrl('https://user:pass@example.com/')).toThrow(
+      URL_PARSE_ERRORS.CREDENTIALS
+    );
   });
 
   it('generates an updated URL from parsed components', () => {
     const parsed = parseUrl('https://example.com/search?q=iphone&page=2');
-    parsed.params = [
-      { key: 'q', value: 'samsung' },
-      { key: 'page', value: '5' }
-    ];
+    parsed.params = parsed.params.map((param, index) =>
+      index === 0 ? { ...param, value: 'samsung' } : { ...param, value: '5' }
+    );
 
     expect(generateUrl(parsed)).toBe(
       'https://example.com/search?q=samsung&page=5'
+    );
+  });
+
+  it('preserves origin-only URLs without a trailing slash', () => {
+    expect(generateUrl(parseUrl('https://example.com'))).toBe(
+      'https://example.com'
+    );
+  });
+
+  it('preserves origin-only URLs with a trailing slash', () => {
+    expect(generateUrl(parseUrl('https://example.com/'))).toBe(
+      'https://example.com/'
+    );
+  });
+
+  it('preserves hash on origin-only URLs without inserting a slash', () => {
+    expect(generateUrl(parseUrl('https://example.com#top'))).toBe(
+      'https://example.com#top'
     );
   });
 
@@ -89,10 +118,21 @@ describe('url-editor', () => {
     expect(generateUrl(parsed)).toBe('https://example.com/page#section1');
   });
 
+  it('ignores whitespace-only query keys', () => {
+    const parsed = parseUrl('https://example.com?q=test');
+    parsed.params.push({
+      id: 'temp-id',
+      key: '   ',
+      value: 'ignored'
+    });
+
+    expect(generateUrl(parsed)).toBe('https://example.com?q=test');
+  });
+
   it('throws when host is empty', () => {
     const parsed = parseUrl('https://example.com');
     parsed.host = '   ';
 
-    expect(() => generateUrl(parsed)).toThrow('Invalid URL');
+    expect(() => generateUrl(parsed)).toThrow(URL_PARSE_ERRORS.INVALID);
   });
 });

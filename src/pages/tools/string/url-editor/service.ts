@@ -1,20 +1,44 @@
 import { ParsedUrl, QueryParam } from './types';
 
+export const URL_PARSE_ERRORS = {
+  INVALID: 'Invalid URL',
+  CREDENTIALS: 'URLs with credentials are not supported'
+} as const;
+
+export function createQueryParam(key = '', value = ''): QueryParam {
+  return { id: crypto.randomUUID(), key, value };
+}
+
+function detectOriginTrailingSlash(input: string, url: URL): boolean {
+  if (url.pathname !== '/') {
+    return false;
+  }
+
+  const beforeQueryOrHash = input.split(/[?#]/)[0];
+  const origin = `${url.protocol}//${url.host}`;
+
+  return beforeQueryOrHash.slice(origin.length) === '/';
+}
+
 export function parseUrl(input: string): ParsedUrl {
   const trimmed = input.trim();
   if (!trimmed) {
-    throw new Error('Invalid URL');
+    throw new Error(URL_PARSE_ERRORS.INVALID);
   }
 
   let url: URL;
   try {
     url = new URL(trimmed);
   } catch {
-    throw new Error('Invalid URL');
+    throw new Error(URL_PARSE_ERRORS.INVALID);
+  }
+
+  if (url.username || url.password) {
+    throw new Error(URL_PARSE_ERRORS.CREDENTIALS);
   }
 
   const params: QueryParam[] = Array.from(url.searchParams.entries()).map(
-    ([key, value]) => ({ key, value })
+    ([key, value]) => createQueryParam(key, value)
   );
 
   return {
@@ -22,6 +46,7 @@ export function parseUrl(input: string): ParsedUrl {
     host: url.host,
     pathname: url.pathname,
     hash: url.hash,
+    originTrailingSlash: detectOriginTrailingSlash(trimmed, url),
     params
   };
 }
@@ -30,7 +55,7 @@ export function generateUrl(parsed: ParsedUrl): string {
   const protocol = parsed.protocol || 'https:';
   const host = parsed.host.trim();
   if (!host) {
-    throw new Error('Invalid URL');
+    throw new Error(URL_PARSE_ERRORS.INVALID);
   }
 
   let pathname = parsed.pathname || '/';
@@ -38,19 +63,30 @@ export function generateUrl(parsed: ParsedUrl): string {
     pathname = `/${pathname}`;
   }
 
-  const url = new URL(`${protocol}//${host}${pathname}`);
+  let base: string;
+  if (pathname === '/' && !parsed.originTrailingSlash) {
+    base = `${protocol}//${host}`;
+  } else if (pathname === '/') {
+    base = `${protocol}//${host}/`;
+  } else {
+    base = `${protocol}//${host}${pathname}`;
+  }
+
+  const searchParams = new URLSearchParams();
+  parsed.params.forEach(({ key, value }) => {
+    const trimmedKey = key.trim();
+    if (trimmedKey) {
+      searchParams.append(trimmedKey, value);
+    }
+  });
+
+  const search = searchParams.toString();
+  const query = search ? `?${search}` : '';
 
   let hash = parsed.hash.trim();
   if (hash && !hash.startsWith('#')) {
     hash = `#${hash}`;
   }
-  url.hash = hash;
 
-  parsed.params.forEach(({ key, value }) => {
-    if (key) {
-      url.searchParams.append(key, value);
-    }
-  });
-
-  return url.toString();
+  return `${base}${query}${hash}`;
 }
