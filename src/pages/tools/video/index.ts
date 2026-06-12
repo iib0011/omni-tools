@@ -9,6 +9,7 @@ import { tool as compressVideo } from './compress/meta';
 import { tool as loopVideo } from './loop/meta';
 import { tool as cropVideo } from './crop-video/meta';
 import { tool as addAudio } from './add-audio/meta';
+import { tool as resizeVideo } from './resize/meta';
 
 export const videoTools = [
   ...gifTools,
@@ -18,6 +19,7 @@ export const videoTools = [
   loopVideo,
   flipVideo,
   cropVideo,
+  resizeVideo,
   changeSpeed,
   videoToGif,
   videoMergeVideo,
