@@ -31,6 +31,7 @@ import {
   InitialValuesType,
   WcagResult
 } from './types';
+import ImageColorPicker from './ImageColorPicker';
 
 const initialValues: InitialValuesType = { exportName: 'primary' };
 
@@ -330,6 +331,11 @@ export default function ColorConverter({ title }: ToolComponentProps) {
   const [result, setResult] = useState<string>('#3b82f6');
   const [exportName, setExportName] = useState('primary');
 
+  function handleImageColorPicked(pickedHex: string) {
+    setHex(pickedHex);
+    setResult(pickedHex);
+  }
+
   const compute = useCallback((values: InitialValuesType, inputHex: string) => {
     setExportName(values.exportName);
     setResult(inputHex);
@@ -392,6 +398,9 @@ export default function ColorConverter({ title }: ToolComponentProps) {
               inputProps={{ style: { fontFamily: 'monospace', fontSize: 14 } }}
               sx={{ width: 160 }}
             />
+          </Box>
+          <Box mt={2}>
+            <ImageColorPicker onColorPicked={handleImageColorPicked} />
           </Box>
         </Box>
       }
