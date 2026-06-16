@@ -1,4 +1,14 @@
 {
+  "unitConverter": {
+    "title": "Unit Converter",
+    "description": "Convert values between units of length, weight, temperature, speed, area and volume. All results are shown simultaneously with the conversion formula.",
+    "shortDescription": "Convert between length, weight, temperature, speed, area and volume units.",
+    "inputTitle": "Value to Convert",
+    "categoryTitle": "Conversion Settings",
+    "categoryDescription": "Select the measurement category.",
+    "fromUnitDescription": "Select the unit of the input value.",
+    "precisionDescription": "Number of decimal places in the results."
+  },
   "audioConverter": {
     "description": "Convert audio files between different formats.",
     "inputTitle": "Audio Input",
