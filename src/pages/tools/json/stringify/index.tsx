@@ -26,8 +26,8 @@ const initialValues: InitialValuesType = {
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Simple Object to JSON',
-    description: 'Convert a basic JavaScript object into a JSON string.',
-    sampleText: `{ name: "John", age: 30 }`,
+    description: 'Convert a basic JSON object into a JSON string.',
+    sampleText: `{"name": "John", "age": 30}`,
     sampleResult: `{
   "name": "John",
   "age": 30
@@ -41,15 +41,15 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Array with Mixed Types',
     description:
-      'Convert an array containing different types of values into JSON.',
-    sampleText: `[1, "hello", true, null, { x: 10 }]`,
+      'Convert a JSON array containing different types of values into JSON.',
+    sampleText: `[1, "hello", true, null, { "x": 10 }]`,
     sampleResult: `[
     1,
     "hello",
-    true,
+      description: 'Convert JSON to a string with HTML characters escaped.',
     null,
-    {
-        "x": 10
+    "html": "<div>Hello & Welcome</div>",
+    "message": "Special chars: < > & ' \""
     }
 ]`,
     sampleOptions: {
@@ -104,7 +104,7 @@ export default function StringifyJson({ title }: ToolComponentProps) {
       exampleCards={exampleCards}
       inputComponent={
         <ToolCodeInput
-          title="JavaScript Object/Array"
+          title="JSON Object/Array"
           value={input}
           onChange={setInput}
           language="json"
@@ -153,7 +153,7 @@ export default function StringifyJson({ title }: ToolComponentProps) {
       toolInfo={{
         title: 'What Is JSON Stringify?',
         description:
-          'JSON Stringify is a tool that converts JavaScript objects and arrays into their JSON string representation. It properly formats the output with customizable indentation and offers the option to escape HTML special characters, making it safe for web usage. This tool is particularly useful when you need to serialize data structures for storage or transmission, or when you need to prepare JSON data for HTML embedding.'
+          'JSON Stringify is a tool that converts valid JSON objects and arrays into their JSON string representation. It properly formats the output with customizable indentation and offers the option to escape HTML special characters, making it safe for web usage. This tool is particularly useful when you need to serialize data structures for storage or transmission, or when you need to prepare JSON data for HTML embedding.'
       }}
     />
   );

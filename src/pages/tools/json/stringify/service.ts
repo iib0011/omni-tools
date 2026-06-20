@@ -4,25 +4,23 @@ export const stringifyJson = (
   spacesCount: number,
   escapeHtml: boolean
 ): string => {
-  let parsedInput;
   try {
-    // Safely evaluate the input string as JavaScript
-    parsedInput = eval('(' + input + ')');
+    const parsedInput = JSON.parse(input);
+
+    const indent = indentationType === 'tab' ? '\t' : ' '.repeat(spacesCount);
+    let result = JSON.stringify(parsedInput, null, indent);
+
+    if (escapeHtml) {
+      result = result
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    return result;
   } catch (e) {
-    throw new Error('Invalid JavaScript object/array');
+    throw new Error('Invalid JSON input');
   }
-
-  const indent = indentationType === 'tab' ? '\t' : ' '.repeat(spacesCount);
-  let result = JSON.stringify(parsedInput, null, indent);
-
-  if (escapeHtml) {
-    result = result
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  }
-
-  return result;
 };
