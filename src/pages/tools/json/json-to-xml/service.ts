@@ -3,6 +3,8 @@ type JsonToXmlOptions = {
   addMetaTag: boolean;
 };
 
+const MAX_XML_DEPTH = 100;
+
 export const convertJsonToXml = (
   json: string,
   options: JsonToXmlOptions
@@ -28,6 +30,10 @@ const convertObjectToXml = (
   options: JsonToXmlOptions,
   depth: number = 0
 ): string => {
+  if (depth > MAX_XML_DEPTH) {
+    throw new Error(`JSON nesting exceeds maximum depth of ${MAX_XML_DEPTH}.`);
+  }
+
   let xml = '';
 
   const newline = options.indentationType === 'none' ? '' : '\n';
@@ -41,7 +47,7 @@ const convertObjectToXml = (
 
   for (const key in obj) {
     const value = obj[key];
-    const keyString = isNaN(Number(key)) ? key : `row-${key}`;
+    const keyString = normalizeXmlTagName(key);
 
     // Handle null values
     if (value === null) {
@@ -96,4 +102,15 @@ const escapeXml = (str: string): string => {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&apos;');
+};
+
+const normalizeXmlTagName = (key: string): string => {
+  const tagName = key !== '' && !isNaN(Number(key)) ? `row-${key}` : key;
+  const sanitizedTagName = tagName.replace(/[^a-zA-Z0-9_.-]/g, '_');
+
+  if (/^[a-zA-Z_]/.test(sanitizedTagName)) {
+    return sanitizedTagName;
+  }
+
+  return `_${sanitizedTagName}`;
 };
