@@ -337,6 +337,11 @@
       "title": "String URL encoder"
     }
   },
+  "emailExtractor": {
+    "description": "Extract all email addresses from any text. Simply paste your text and instantly get a clean list of all email addresses found. Supports unique filtering to remove duplicates.",
+    "shortDescription": "Extract email addresses from text",
+    "title": "Email Extractor"
+  },
   "textCompare": {
     "title": "Compare Texts",
     "description": "Analyze two text blocks to highlight differences, including additions, deletions, and changes.",

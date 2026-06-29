@@ -24,6 +24,7 @@ import { tool as stringEncodeUrl } from './url-encode/meta';
 import { tool as stringDecodeUrl } from './url-decode/meta';
 import { tool as stringCompare } from './text-compare/meta';
 import { tool as stringUnicode } from './unicode/meta';
+import { tool as stringEmailExtractor } from './email-extractor/meta';
 
 export const stringTools = [
   stringSplit,
@@ -50,6 +51,7 @@ export const stringTools = [
   stringDecodeUrl,
   stringUnicode,
   stringHiddenCharacterDetector,
+  stringEmailExtractor,
   stringCompare,
   stringSlugGenerator
 ];
