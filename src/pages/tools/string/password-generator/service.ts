@@ -1,4 +1,5 @@
 import type { InitialValuesType } from './initialValues';
+import { getSecureRandomInt } from '../../../../lib/secureRandom';
 
 export function generatePassword(options: InitialValuesType): string {
   const length = parseInt(options.length || '', 10);
@@ -31,7 +32,7 @@ export function generatePassword(options: InitialValuesType): string {
 
   let pwd = '';
   for (let i = 0; i < length; i++) {
-    const idx = Math.floor(Math.random() * charset.length);
+    const idx = getSecureRandomInt(charset.length);
     pwd += charset[idx];
   }
   return pwd;
