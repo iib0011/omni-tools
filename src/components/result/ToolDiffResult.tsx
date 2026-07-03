@@ -10,7 +10,9 @@ import DOMPurify from 'dompurify';
 
 const DOMPURIFY_CONFIG = {
   ALLOWED_TAGS: ['div', 'span', 'br'],
-  ALLOWED_ATTR: ['class']
+  ALLOWED_ATTR: ['class'],
+  ALLOW_DATA_ATTR: false,
+  FORBID_ATTR: ['style', 'onclick', 'onload', 'onerror', 'onmouseover', 'href']
 };
 
 export default function ToolDiffResult({

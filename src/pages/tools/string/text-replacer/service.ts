@@ -17,6 +17,26 @@ export function replaceText(options: InitialValuesType, text: string) {
   }
 }
 
+function hasNestedQuantifiers(pattern: string): boolean {
+  // Detect patterns like (a+)+, (b*)*, (c+d+)+ that cause catastrophic backtracking
+  let depth = 0;
+  let lastGroupHadQuantifier = false;
+  for (let i = 0; i < pattern.length; i++) {
+    if (pattern[i] === '(') depth++;
+    else if (pattern[i] === ')') {
+      const nextChar = pattern[i + 1];
+      if (nextChar === '+' || nextChar === '*' || nextChar === '?') {
+        if (lastGroupHadQuantifier && depth > 0) return true;
+        lastGroupHadQuantifier = true;
+      } else {
+        lastGroupHadQuantifier = false;
+      }
+      depth = Math.max(0, depth - 1);
+    }
+  }
+  return false;
+}
+
 function replaceTextWithRegexp(
   text: string,
   searchRegexp: string,
@@ -25,16 +45,23 @@ function replaceTextWithRegexp(
   try {
     const match = searchRegexp.match(/^\/(.*)\/([a-z]*)$/i);
 
+    let pattern: string;
+    let flags: string;
+
     if (match) {
-      // Input is in /pattern/flags format
-      const [, pattern, flags] = match;
-      return text.replace(new RegExp(pattern, flags), replaceValue);
+      pattern = match[1];
+      flags = match[2];
     } else {
-      // Input is a raw pattern - don't escape it
-      return text.replace(new RegExp(searchRegexp, 'g'), replaceValue);
+      pattern = searchRegexp;
+      flags = 'g';
     }
+
+    if (hasNestedQuantifiers(pattern)) {
+      return text;
+    }
+
+    return text.replace(new RegExp(pattern, flags), replaceValue);
   } catch (err) {
-    // console.error('Invalid regular expression:', err);
     return text;
   }
 }
