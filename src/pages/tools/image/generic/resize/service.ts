@@ -1,6 +1,5 @@
 import { InitialValuesType } from './types';
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { getFFmpeg, fetchFile } from '@lib/ffmpeg/ffmpegSingleton';
 import JSZip from 'jszip';
 
 const processImage = async (
@@ -102,12 +101,7 @@ const processImage = async (
     }
   } else if (file.type === 'image/gif') {
     try {
-      const ffmpeg = new FFmpeg();
-
-      await ffmpeg.load({
-        wasmURL:
-          'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
-      });
+      const ffmpeg = await getFFmpeg();
 
       // Write the input file to memory
       await ffmpeg.writeFile('input.gif', await fetchFile(file));

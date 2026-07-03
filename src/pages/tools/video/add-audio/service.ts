@@ -1,17 +1,5 @@
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { getFFmpeg, fetchFile } from '@lib/ffmpeg/ffmpegSingleton';
 import { initialValuesType } from './types';
-
-const ffmpeg = new FFmpeg();
-
-async function ensureLoaded() {
-  if (!ffmpeg.loaded) {
-    await ffmpeg.load({
-      wasmURL:
-        'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
-    });
-  }
-}
 
 export function timeToSeconds(time: string): number {
   const parts = time.split(':').map(Number);
@@ -64,7 +52,7 @@ export async function addAudioToVideo(
   audio: File,
   options: initialValuesType
 ): Promise<File> {
-  await ensureLoaded();
+  const ffmpeg = await getFFmpeg();
 
   const inputVideo = 'input.mp4';
   const inputAudio = 'input-audio.mp3';

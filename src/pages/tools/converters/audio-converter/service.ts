@@ -1,21 +1,6 @@
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { getFFmpeg, fetchFile } from '@lib/ffmpeg/ffmpegSingleton';
 import { InitialValuesType, AUDIO_FORMATS } from './types';
 import { getFileExtension } from 'utils/file';
-
-/**
- * optimzed call for FFmpeg instance creation,
- * avoiding to download required FFmpeg binaries on every reload
- */
-const ffmpeg = new FFmpeg();
-let isLoaded = false;
-
-async function loadFFmpeg() {
-  if (!isLoaded) {
-    await ffmpeg.load();
-    isLoaded = true;
-  }
-}
 
 /**
  * Converts input audio file to selected output format ('mp3', 'aac', or 'wav').
@@ -29,7 +14,7 @@ export async function convertAudio(
   input: File,
   options: InitialValuesType
 ): Promise<File> {
-  await loadFFmpeg();
+  const ffmpeg = await getFFmpeg();
 
   // Use the original input extension for input filename
   const inputExt = getFileExtension(input.name);
@@ -43,8 +28,6 @@ export async function convertAudio(
   await ffmpeg.writeFile(inputFileName, await fetchFile(input));
 
   // Build the FFmpeg args depending on the output format
-  // You can customize the codec and bitrate options per format here
-
   const format = AUDIO_FORMATS[options.outputFormat];
   const { codec, bitrate, mimeType } = format;
 

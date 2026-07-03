@@ -1,29 +1,20 @@
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
-import { FlipOrientation } from './types';
-
-const ffmpeg = new FFmpeg();
+import { getFFmpeg, fetchFile } from '@lib/ffmpeg/ffmpegSingleton';
 
 export async function flipVideo(
   input: File,
-  orientation: FlipOrientation
+  flipDirection: 'horizontal' | 'vertical'
 ): Promise<File> {
-  if (!ffmpeg.loaded) {
-    await ffmpeg.load({
-      wasmURL:
-        'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
-    });
-  }
+  const ffmpeg = await getFFmpeg();
 
   const inputName = 'input.mp4';
   const outputName = 'output.mp4';
   await ffmpeg.writeFile(inputName, await fetchFile(input));
 
-  const flipMap: Record<FlipOrientation, string> = {
+  const flipMap: Record<string, string> = {
     horizontal: 'hflip',
     vertical: 'vflip'
   };
-  const flipFilter = flipMap[orientation];
+  const flipFilter = flipMap[flipDirection];
 
   const args = ['-i', inputName];
   if (flipFilter) {

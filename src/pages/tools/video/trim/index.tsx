@@ -7,13 +7,10 @@ import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { updateNumberField } from '@utils/string';
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { getFFmpeg, fetchFile } from '@lib/ffmpeg/ffmpegSingleton';
 import { debounce } from 'lodash';
 import ToolVideoInput from '@components/input/ToolVideoInput';
 import { useTranslation } from 'react-i18next';
-
-const ffmpeg = new FFmpeg();
 
 const initialValues = {
   trimStart: 0,
@@ -42,12 +39,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
     const { trimStart, trimEnd } = optionsValues;
 
     try {
-      if (!ffmpeg.loaded) {
-        await ffmpeg.load({
-          wasmURL:
-            'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
-        });
-      }
+      const ffmpeg = await getFFmpeg();
 
       const inputName = 'input.mp4';
       const outputName = 'output.mp4';

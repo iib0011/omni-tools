@@ -7,8 +7,7 @@ import { InitialValuesType } from './types';
 import ToolVideoInput from '@components/input/ToolVideoInput';
 import ToolFileResult from '@components/result/ToolFileResult';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { getFFmpeg, fetchFile } from '@lib/ffmpeg/ffmpegSingleton';
 import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
@@ -49,9 +48,6 @@ export default function ChangeSpeed({
   const compute = (optionsValues: InitialValuesType, input: File | null) => {
     if (!input) return;
     const { newSpeed } = optionsValues;
-    let ffmpeg: FFmpeg | null = null;
-    let ffmpegLoaded = false;
-
     const processVideo = async (
       file: File,
       newSpeed: number
@@ -59,17 +55,7 @@ export default function ChangeSpeed({
       if (newSpeed === 0) return;
       setLoading(true);
 
-      if (!ffmpeg) {
-        ffmpeg = new FFmpeg();
-      }
-
-      if (!ffmpegLoaded) {
-        await ffmpeg.load({
-          wasmURL:
-            'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
-        });
-        ffmpegLoaded = true;
-      }
+      const ffmpeg = await getFFmpeg();
 
       // Write file to FFmpeg FS
       const fileName = file.name;

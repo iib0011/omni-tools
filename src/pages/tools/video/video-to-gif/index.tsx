@@ -10,8 +10,7 @@ import { InitialValuesType } from './types';
 import ToolVideoInput from '@components/input/ToolVideoInput';
 import ToolFileResult from '@components/result/ToolFileResult';
 import SimpleRadio from '@components/options/SimpleRadio';
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { getFFmpeg, fetchFile } from '@lib/ffmpeg/ffmpegSingleton';
 
 const initialValues: InitialValuesType = {
   quality: 'mid',
@@ -40,8 +39,6 @@ export default function VideoToGif({
   const compute = (values: InitialValuesType, input: File | null) => {
     if (!input) return;
     const { fps, scale, start, end } = values;
-    let ffmpeg: FFmpeg | null = null;
-    let ffmpegLoaded = false;
 
     const convertVideoToGif = async (
       file: File,
@@ -52,17 +49,7 @@ export default function VideoToGif({
     ): Promise<void> => {
       setLoading(true);
 
-      if (!ffmpeg) {
-        ffmpeg = new FFmpeg();
-      }
-
-      if (!ffmpegLoaded) {
-        await ffmpeg.load({
-          wasmURL:
-            'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
-        });
-        ffmpegLoaded = true;
-      }
+      const ffmpeg = await getFFmpeg();
 
       const fileName = file.name;
       const outputName = 'output.gif';
