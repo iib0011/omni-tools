@@ -52,23 +52,27 @@ export default function RemoveBackgroundFromImage({
       // Convert the file to a Blob URL
       const inputUrl = URL.createObjectURL(fileToProcess);
 
-      // Process the image with the background removal library
-      const blob = await removeBackground(inputUrl, {
-        progress: (progress) => {
-          console.log(`Background removal progress: ${progress}`);
-        }
-      });
+      try {
+        // Process the image with the background removal library
+        const blob = await removeBackground(inputUrl, {
+          progress: (progress) => {
+            console.log(`Background removal progress: ${progress}`);
+          }
+        });
 
-      // Create a new file from the blob
-      const newFile = new File(
-        [blob],
-        fileToProcess.name.replace(/\.[^/.]+$/, '') + '-no-bg.png',
-        {
-          type: 'image/png'
-        }
-      );
+        // Create a new file from the blob
+        const newFile = new File(
+          [blob],
+          fileToProcess.name.replace(/\.[^/.]+$/, '') + '-no-bg.png',
+          {
+            type: 'image/png'
+          }
+        );
 
-      setResult(newFile);
+        setResult(newFile);
+      } finally {
+        URL.revokeObjectURL(inputUrl);
+      }
     } catch (err) {
       console.error('Error removing background:', err);
       throw new Error(
