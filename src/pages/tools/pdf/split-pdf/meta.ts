@@ -1,7 +1,7 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
-export const meta = defineTool('pdf', {
+export const tool = defineTool('pdf', {
   icon: 'material-symbols-light:call-split-rounded',
   component: lazy(() => import('./index')),
   keywords: ['extract', 'pages', 'range', 'document', 'remove'],

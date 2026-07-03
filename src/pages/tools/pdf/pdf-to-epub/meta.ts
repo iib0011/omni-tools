@@ -1,7 +1,7 @@
 import { defineTool } from '@tools/defineTool';
 import { lazy } from 'react';
 
-export const meta = defineTool('pdf', {
+export const tool = defineTool('pdf', {
   icon: 'material-symbols:import-contacts',
   component: lazy(() => import('./index')),
   keywords: ['pdf', 'epub', 'convert', 'ebook'],
