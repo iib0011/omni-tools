@@ -103,6 +103,15 @@ const Navbar: React.FC<NavbarProps> = ({
       onClick={onChangeMode}
       style={{ cursor: 'pointer' }}
       fontSize={30}
+      aria-label={`Switch theme (current: ${mode})`}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e: React.KeyboardEvent) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onChangeMode();
+        }
+      }}
       icon={
         mode === 'dark'
           ? 'ic:round-dark-mode'
@@ -115,6 +124,15 @@ const Navbar: React.FC<NavbarProps> = ({
       onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
       style={{ cursor: 'pointer' }}
       fontSize={30}
+      aria-label="Join us on Discord"
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e: React.KeyboardEvent) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          window.open('https://discord.gg/SDbbn3hT4b', '_blank');
+        }
+      }}
       icon={'ic:baseline-discord'}
     />,
     <iframe
