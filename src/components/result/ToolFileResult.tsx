@@ -159,6 +159,7 @@ export default function ToolFileResult({
                   width="100%"
                   height="100%"
                   style={{ maxWidth: '500px' }}
+                  sandbox=""
                 />
               )}
               {fileType === 'unknown' && (
