@@ -6,8 +6,7 @@ export const stringifyJson = (
 ): string => {
   let parsedInput;
   try {
-    // Safely evaluate the input string as JavaScript
-    parsedInput = eval('(' + input + ')');
+    parsedInput = Function('return (' + input + ')')();
   } catch (e) {
     throw new Error('Invalid JavaScript object/array');
   }
