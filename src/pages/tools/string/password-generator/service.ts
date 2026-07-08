@@ -30,9 +30,15 @@ export function generatePassword(options: InitialValuesType): string {
   }
 
   let pwd = '';
+  const array = new Uint32Array(length);
+
+  const cryptoInstance =
+    typeof window !== 'undefined' ? window.crypto : globalThis.crypto;
+  cryptoInstance.getRandomValues(array);
+
   for (let i = 0; i < length; i++) {
-    const idx = Math.floor(Math.random() * charset.length);
-    pwd += charset[idx];
+    const charIndex = array[i] % charset.length;
+    pwd += charset[charIndex];
   }
   return pwd;
 }
