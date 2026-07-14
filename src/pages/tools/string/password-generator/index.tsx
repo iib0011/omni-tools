@@ -77,8 +77,26 @@ export default function PasswordGenerator({ title }: ToolComponentProps) {
             description={t('passwordGenerator.lengthDesc')}
             placeholder={t('passwordGenerator.lengthPlaceholder')}
             value={values.length}
-            onOwnChange={(val) => updateField('length', val)}
+            onOwnChange={(val) => {
+              const length = Number(val);
+
+              if (length > 256) {
+                updateField('length', '256');
+                return;
+              }
+
+              if (length < 4 && val !== '') {
+                updateField('length', '4');
+                return;
+              }
+
+              updateField('length', val);
+            }}
             type="number"
+            inputProps={{
+              min: 4,
+              max: 256
+            }}
           />
 
           <FormGroup>
