@@ -84,7 +84,7 @@
     "includeNumbers": "包含数字 (0-9)",
     "includeSymbols": "包含特殊字符",
     "includeUppercase": "包含大写字母（A-Z）",
-    "lengthDesc": "密码长度 (<= 256)",
+    "lengthDesc": "密码长度 (>3 & <257)",
     "lengthPlaceholder": "例如 12",
     "optionsTitle": "密码选项",
     "resultTitle": "生成的密码",

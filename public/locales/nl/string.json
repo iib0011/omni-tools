@@ -84,7 +84,7 @@
     "includeNumbers": "Inclusief cijfers (0-9)",
     "includeSymbols": "Speciale tekens toevoegen",
     "includeUppercase": "Inclusief hoofdletters (A-Z)",
-    "lengthDesc": "Lengte van het wachtwoord (<= 256)",
+    "lengthDesc": "Lengte van het wachtwoord (>3 & <257)",
     "lengthPlaceholder": "bijv. 12",
     "optionsTitle": "Wachtwoordopties",
     "resultTitle": "gegenereerd wachtwoord",

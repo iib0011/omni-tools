@@ -84,7 +84,7 @@
     "includeNumbers": "数字を含める（0～9）",
     "includeSymbols": "特殊文字を含める",
     "includeUppercase": "大文字（A～Z）を含める",
-    "lengthDesc": "パスワードの長さ (<= 256)",
+    "lengthDesc": "パスワードの長さ (>3 & <257)",
     "lengthPlaceholder": "例：12",
     "optionsTitle": "パスワードオプション",
     "resultTitle": "生成されたパスワード",

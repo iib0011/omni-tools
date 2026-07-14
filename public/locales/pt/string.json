@@ -84,7 +84,7 @@
     "includeNumbers": "Incluir números (0-9)",
     "includeSymbols": "Incluir caracteres especiais",
     "includeUppercase": "Incluir letras maiúsculas (A-Z)",
-    "lengthDesc": "Comprimento da senha (<= 256)",
+    "lengthDesc": "Comprimento da senha (>3 & <257)",
     "lengthPlaceholder": "por exemplo 12",
     "optionsTitle": "Opções de senha",
     "resultTitle": "Senha gerada",

@@ -84,7 +84,7 @@
     "includeNumbers": "Включить цифры (0-9)",
     "includeSymbols": "Включить специальные символы",
     "includeUppercase": "Включайте заглавные буквы (A–Z)",
-    "lengthDesc": "Длина пароля (<= 256)",
+    "lengthDesc": "Длина пароля (>3 & <257)",
     "lengthPlaceholder": "например, 12",
     "optionsTitle": "Параметры пароля",
     "resultTitle": "Сгенерированный пароль",

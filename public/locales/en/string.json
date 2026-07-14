@@ -84,7 +84,7 @@
     "includeNumbers": "Include numbers (0-9)",
     "includeSymbols": "Include special characters",
     "includeUppercase": "Include uppercase letters (A-Z)",
-    "lengthDesc": "Length of the password (<= 256)",
+    "lengthDesc": "Length of the password (>3 & <257)",
     "lengthPlaceholder": "e.g. 12",
     "optionsTitle": "Password Options",
     "resultTitle": "Generated Password",
