@@ -84,7 +84,7 @@
     "includeNumbers": "संख्याएँ शामिल करें (0-9)",
     "includeSymbols": "विशेष वर्ण शामिल करें",
     "includeUppercase": "बड़े अक्षर (A-Z) शामिल करें",
-    "lengthDesc": "पासवर्ड की लंबाई",
+    "lengthDesc": "पासवर्ड की लंबाई (<= 256)",
     "lengthPlaceholder": "उदाहरणार्थ 12",
     "optionsTitle": "पासवर्ड विकल्प",
     "resultTitle": "जनरेट किया गया पासवर्ड",

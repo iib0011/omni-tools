@@ -84,7 +84,7 @@
     "includeNumbers": "Zahlen einschließen (0-9)",
     "includeSymbols": "Sonderzeichen einschließen",
     "includeUppercase": "Großbuchstaben einschließen (A-Z)",
-    "lengthDesc": "Länge des Passwortes",
+    "lengthDesc": "Länge des Passwortes (<= 256)",
     "lengthPlaceholder": "z.B. 12",
     "optionsTitle": "Passwortoptionen",
     "resultTitle": "Generiertes Passwort",

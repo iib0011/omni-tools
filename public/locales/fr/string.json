@@ -84,7 +84,7 @@
     "includeNumbers": "Inclure des chiffres (0-9)",
     "includeSymbols": "Inclure des caractères spéciaux",
     "includeUppercase": "Inclure des lettres majuscules (A-Z)",
-    "lengthDesc": "Longueur du mot de passe",
+    "lengthDesc": "Longueur du mot de passe (<= 256)",
     "lengthPlaceholder": "par exemple 12",
     "optionsTitle": "Options de mot de passe",
     "resultTitle": "Mot de passe généré",
