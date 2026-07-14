@@ -7,6 +7,7 @@ import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolContent from '@components/ToolContent';
+import { useTranslation } from 'react-i18next';
 
 const initialValues = {
   unique: true
@@ -33,6 +34,7 @@ const exampleCards: CardExampleType<typeof initialValues>[] = [
 ];
 
 export default function EmailExtractor({ title }: ToolComponentProps) {
+  const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -49,13 +51,13 @@ export default function EmailExtractor({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'Extraction options',
+      title: t('emailExtractor.options.title'),
       component: [
         <CheckboxWithDesc
           key="unique"
           checked={values.unique}
-          title="Unique results only"
-          description="Remove duplicate email addresses from the output"
+          title={t('emailExtractor.options.uniqueTitle')}
+          description={t('emailExtractor.options.uniqueDesc')}
           onChange={(val) => updateField('unique', val)}
         />
       ]

@@ -340,7 +340,12 @@
   "emailExtractor": {
     "description": "Extract all email addresses from any text. Simply paste your text and instantly get a clean list of all email addresses found. Supports unique filtering to remove duplicates.",
     "shortDescription": "Extract email addresses from text",
-    "title": "Email Extractor"
+    "title": "Email Extractor",
+    "options": {
+      "title": "Extraction options",
+      "uniqueTitle": "Unique results only",
+      "uniqueDesc": "Remove duplicate email addresses from the output"
+    }
   },
   "textCompare": {
     "title": "Compare Texts",
