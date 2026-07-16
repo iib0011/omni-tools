@@ -10,6 +10,7 @@ import { tools } from '../tools';
 import './index.css';
 import { darkTheme, lightTheme } from '../config/muiConfig';
 import ScrollToTopButton from './ScrollToTopButton';
+import ReloadPrompt from './ReloadPrompt';
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../i18n';
 import { UserTypeFilterProvider } from 'providers/UserTypeFilterProvider';
@@ -75,6 +76,7 @@ function App() {
           </CustomSnackBarProvider>
         </SnackbarProvider>
         <ScrollToTopButton />
+        <ReloadPrompt />
       </ThemeProvider>
     </I18nextProvider>
   );
