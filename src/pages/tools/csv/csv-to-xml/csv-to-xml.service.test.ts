@@ -1,8 +1,9 @@
 import { describe, it, expect } from 'vitest';
 import { convertCsvToXml } from './service';
+import { InitialValuesType } from './index';
 
 describe('CsvToXml Service', () => {
-  const defaultOptions = {
+  const defaultOptions: InitialValuesType = {
     delimiter: ',',
     quote: '"',
     comment: '#',
