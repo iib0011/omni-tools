@@ -23,9 +23,45 @@ export default function ToolTextResult({
 }) {
   const { t } = useTranslation();
   const { showSnackBar } = useContext(CustomSnackBarContext);
+  const copyToClipboardFallback = async (text: string) => {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.setAttribute('readonly', 'true');
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-9999px';
+    textArea.style.opacity = '0';
+    document.body.appendChild(textArea);
+    textArea.select();
+
+    const copied = document.execCommand('copy');
+    document.body.removeChild(textArea);
+
+    if (!copied) {
+      throw new Error('Clipboard copy is not supported in this browser.');
+    }
+  };
+
   const handleCopy = () => {
-    navigator.clipboard
-      .writeText(value)
+    const copyAction = navigator.clipboard?.writeText(value);
+
+    if (copyAction) {
+      copyAction
+        .then(() => showSnackBar(t('toolTextResult.copied'), 'success'))
+        .catch(async (err) => {
+          try {
+            await copyToClipboardFallback(value);
+            showSnackBar(t('toolTextResult.copied'), 'success');
+          } catch {
+            showSnackBar(
+              t('toolTextResult.copyFailed', { error: err }),
+              'error'
+            );
+          }
+        });
+      return;
+    }
+
+    copyToClipboardFallback(value)
       .then(() => showSnackBar(t('toolTextResult.copied'), 'success'))
       .catch((err) => {
         showSnackBar(t('toolTextResult.copyFailed', { error: err }), 'error');
