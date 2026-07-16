@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import {
   Alert,
   Box,
@@ -39,25 +39,18 @@ export default function UrlEditor({
   const { t } = useTranslation('string');
   const [inputUrl, setInputUrl] = useState('');
   const [parsedUrl, setParsedUrl] = useState<ParsedUrl | null>(null);
-  const [generatedUrl, setGeneratedUrl] = useState('');
   const [parseError, setParseError] = useState<string | null>(null);
-  const [generateError, setGenerateError] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (!parsedUrl) {
-      setGeneratedUrl('');
-      setGenerateError(null);
-      return;
-    }
+  let generatedUrl = '';
+  let generateError: string | null = null;
 
+  if (parsedUrl) {
     try {
-      setGeneratedUrl(generateUrl(parsedUrl));
-      setGenerateError(null);
+      generatedUrl = generateUrl(parsedUrl);
     } catch {
-      setGeneratedUrl('');
-      setGenerateError(t('urlEditor.invalidUrl'));
+      generateError = t('urlEditor.invalidUrl');
     }
-  }, [parsedUrl, t]);
+  }
 
   const handleParse = useCallback(() => {
     try {
