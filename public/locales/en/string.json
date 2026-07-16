@@ -312,6 +312,36 @@
     "shortDescription": "Convert text to uppercase",
     "title": "Convert to Uppercase"
   },
+  "urlEditor": {
+    "addParameter": "Add Parameter",
+    "credentialsNotSupported": "URLs with username or password are not supported.",
+    "delete": "Delete",
+    "deleteParamAriaLabel": "Delete parameter row {{row}}",
+    "generatedUrl": "Generated URL",
+    "hash": "Fragment",
+    "hashPlaceholder": "section",
+    "host": "Host",
+    "hostPlaceholder": "example.com",
+    "inputTitle": "Enter URL",
+    "invalidUrl": "Invalid URL",
+    "key": "Key",
+    "noParameters": "No query parameters",
+    "parseButton": "Parse URL",
+    "paramKeyAriaLabel": "Parameter key, row {{row}}",
+    "paramValueAriaLabel": "Parameter value, row {{row}}",
+    "path": "Path",
+    "pathPlaceholder": "search",
+    "protocol": "Protocol",
+    "queryParameters": "Query Parameters",
+    "toolInfo": {
+      "description": "Paste a URL and click \"Parse URL\" to inspect and edit its components.",
+      "longDescription": "This tool parses a URL into its components and lets you edit the protocol, host, path, fragment, and query parameters visually. After changing the input URL, click \"Parse URL\" again to refresh the parsed details. You can add, remove, or modify any part and copy the generated URL. No server requests.",
+      "shortDescription": "Inspect and edit URL components and query parameters.",
+      "title": "URL Editor"
+    },
+    "urlDetails": "URL Details",
+    "value": "Value"
+  },
   "urlDecode": {
     "inputTitle": "Input String(URL-escaped)",
     "resultTitle": "Output string",
