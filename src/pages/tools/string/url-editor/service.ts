@@ -77,7 +77,10 @@ export function generateUrl(parsed: ParsedUrl): string {
   if (!host) {
     throw new Error(URL_PARSE_ERRORS.INVALID);
   }
-  if (host.includes('@')) {
+
+  const checkUrl = new URL(`${protocol}//${host}`);
+
+  if (checkUrl.username || checkUrl.password) {
     throw new Error(URL_PARSE_ERRORS.CREDENTIALS);
   }
 
