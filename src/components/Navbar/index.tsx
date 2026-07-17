@@ -195,7 +195,16 @@ const Navbar: React.FC<NavbarProps> = ({
               whiteSpace: 'nowrap'
             }}
           >
-            v{__APP_VERSION__}
+            v{__APP_VERSION__} (
+            <a
+              href={`https://github.com/iib0011/omni-tools/tree/${__COMMIT_HASH__}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'inherit' }}
+            >
+              {__COMMIT_HASH__}
+            </a>
+            )
           </Typography>
         </Stack>
         {isMobile ? (
