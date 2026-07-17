@@ -84,7 +84,7 @@
     "includeNumbers": "Include numbers (0-9)",
     "includeSymbols": "Include special characters",
     "includeUppercase": "Include uppercase letters (A-Z)",
-    "lengthDesc": "Length of the password",
+    "lengthDesc": "Length of the password (>3 & <257)",
     "lengthPlaceholder": "e.g. 12",
     "optionsTitle": "Password Options",
     "resultTitle": "Generated Password",
@@ -312,6 +312,36 @@
     "shortDescription": "Convert text to uppercase",
     "title": "Convert to Uppercase"
   },
+  "urlEditor": {
+    "addParameter": "Add Parameter",
+    "credentialsNotSupported": "URLs with username or password are not supported.",
+    "delete": "Delete",
+    "deleteParamAriaLabel": "Delete parameter row {{row}}",
+    "generatedUrl": "Generated URL",
+    "hash": "Fragment",
+    "hashPlaceholder": "section",
+    "host": "Host",
+    "hostPlaceholder": "example.com",
+    "inputTitle": "Enter URL",
+    "invalidUrl": "Invalid URL",
+    "key": "Key",
+    "noParameters": "No query parameters",
+    "parseButton": "Parse URL",
+    "paramKeyAriaLabel": "Parameter key, row {{row}}",
+    "paramValueAriaLabel": "Parameter value, row {{row}}",
+    "path": "Path",
+    "pathPlaceholder": "search",
+    "protocol": "Protocol",
+    "queryParameters": "Query Parameters",
+    "toolInfo": {
+      "description": "Paste a URL and click \"Parse URL\" to inspect and edit its components.",
+      "longDescription": "This tool parses a URL into its components and lets you edit the protocol, host, path, fragment, and query parameters visually. After changing the input URL, click \"Parse URL\" again to refresh the parsed details. You can add, remove, or modify any part and copy the generated URL. No server requests.",
+      "shortDescription": "Inspect and edit URL components and query parameters.",
+      "title": "URL Editor"
+    },
+    "urlDetails": "URL Details",
+    "value": "Value"
+  },
   "urlDecode": {
     "inputTitle": "Input String(URL-escaped)",
     "resultTitle": "Output string",
@@ -335,6 +365,16 @@
       "longDescription": "This tool URL-encodes a string. Special URL characters get converted to percent-sign encoding. This encoding is called percent-encoding because each character's numeric value gets converted to a percent sign followed by a two-digit hexadecimal value. The hex values are determined based on the character's codepoint value. For example, a space gets escaped to %20, a colon to %3a, a slash to %2f. Characters that are not special stay unchanged. In case you also need to convert non-special characters to percent-encoding, then we've also added an extra option that lets you do that. Select the encode-non-special-chars option to enable this behavior.",
       "shortDescription": "Quickly URL-escape a string.",
       "title": "String URL encoder"
+    }
+  },
+  "emailExtractor": {
+    "description": "Extract all email addresses from any text. Simply paste your text and instantly get a clean list of the email addresses found.",
+    "shortDescription": "Extract email addresses from text",
+    "title": "Email Extractor",
+    "options": {
+      "title": "Extraction options",
+      "uniqueTitle": "Remove duplicates",
+      "uniqueDesc": "Keep only unique email addresses in the results"
     }
   },
   "textCompare": {
