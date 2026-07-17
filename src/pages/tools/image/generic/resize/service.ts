@@ -1,6 +1,5 @@
 import { InitialValuesType } from './types';
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { getFFmpeg, fetchFile } from '@lib/ffmpeg/ffmpegSingleton';
 import JSZip from 'jszip';
 
 const processImage = async (
@@ -102,12 +101,7 @@ const processImage = async (
     }
   } else if (file.type === 'image/gif') {
     try {
-      const ffmpeg = new FFmpeg();
-
-      await ffmpeg.load({
-        wasmURL:
-          'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
-      });
+      const ffmpeg = await getFFmpeg();
 
       // Write the input file to memory
       await ffmpeg.writeFile('input.gif', await fetchFile(file));
@@ -162,60 +156,66 @@ const processImage = async (
 
   // Load image
   const img = new Image();
-  img.src = URL.createObjectURL(file);
-  await img.decode();
+  const objectUrl = URL.createObjectURL(file);
+  img.src = objectUrl;
 
-  // Calculate new dimensions
-  let newWidth = img.width;
-  let newHeight = img.height;
+  try {
+    await img.decode();
 
-  if (resizeMethod === 'pixels') {
-    if (dimensionType === 'width') {
-      newWidth = parseInt(width);
-      if (maintainAspectRatio) {
-        newHeight = Math.round((newWidth / img.width) * img.height);
+    // Calculate new dimensions
+    let newWidth = img.width;
+    let newHeight = img.height;
+
+    if (resizeMethod === 'pixels') {
+      if (dimensionType === 'width') {
+        newWidth = parseInt(width);
+        if (maintainAspectRatio) {
+          newHeight = Math.round((newWidth / img.width) * img.height);
+        } else {
+          newHeight = parseInt(height);
+        }
       } else {
+        // height
         newHeight = parseInt(height);
+        if (maintainAspectRatio) {
+          newWidth = Math.round((newHeight / img.height) * img.width);
+        } else {
+          newWidth = parseInt(width);
+        }
       }
     } else {
-      // height
-      newHeight = parseInt(height);
-      if (maintainAspectRatio) {
-        newWidth = Math.round((newHeight / img.height) * img.width);
-      } else {
-        newWidth = parseInt(width);
-      }
+      // percentage
+      const scale = parseInt(percentage) / 100;
+      newWidth = Math.round(img.width * scale);
+      newHeight = Math.round(img.height * scale);
     }
-  } else {
-    // percentage
-    const scale = parseInt(percentage) / 100;
-    newWidth = Math.round(img.width * scale);
-    newHeight = Math.round(img.height * scale);
+
+    // Set canvas dimensions
+    canvas.width = newWidth;
+    canvas.height = newHeight;
+
+    // Draw resized image
+    ctx.drawImage(img, 0, 0, newWidth, newHeight);
+
+    // Determine output type based on input file
+    let outputType = 'image/png';
+    if (file.type) {
+      outputType = file.type;
+    }
+
+    // Convert canvas to blob and create file
+    return new Promise((resolve) => {
+      canvas.toBlob((blob) => {
+        if (blob) {
+          resolve(new File([blob], file.name, { type: outputType }));
+        } else {
+          resolve(null);
+        }
+      }, outputType);
+    });
+  } finally {
+    URL.revokeObjectURL(objectUrl);
   }
-
-  // Set canvas dimensions
-  canvas.width = newWidth;
-  canvas.height = newHeight;
-
-  // Draw resized image
-  ctx.drawImage(img, 0, 0, newWidth, newHeight);
-
-  // Determine output type based on input file
-  let outputType = 'image/png';
-  if (file.type) {
-    outputType = file.type;
-  }
-
-  // Convert canvas to blob and create file
-  return new Promise((resolve) => {
-    canvas.toBlob((blob) => {
-      if (blob) {
-        resolve(new File([blob], file.name, { type: outputType }));
-      } else {
-        resolve(null);
-      }
-    }, outputType);
-  });
 };
 
 export const resizeImages = async (

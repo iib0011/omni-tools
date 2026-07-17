@@ -1,6 +1,5 @@
 import { InitialValuesType } from './type';
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { getFFmpeg, fetchFile } from '@lib/ffmpeg/ffmpegSingleton';
 
 export const processImage = async (
   file: File,
@@ -46,8 +45,7 @@ export const processImage = async (
 
   // For non-SVG images, use FFmpeg
   try {
-    const ffmpeg = new FFmpeg();
-    await ffmpeg.load();
+    const ffmpeg = await getFFmpeg();
 
     // Write input file
     await ffmpeg.writeFile('input', await fetchFile(file));

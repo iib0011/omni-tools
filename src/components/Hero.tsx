@@ -207,6 +207,9 @@ export default function Hero() {
                   toggleBookmarked(option.path);
                   setBookmarkedToolPaths(getBookmarkedToolPaths());
                 }}
+                aria-label={
+                  isBookmarked(option.path) ? 'Remove bookmark' : 'Add bookmark'
+                }
               >
                 <Icon
                   fontSize={20}
@@ -272,6 +275,7 @@ export default function Hero() {
                       setBookmarkedToolPaths(getBookmarkedToolPaths());
                     }}
                     size={'small'}
+                    aria-label="Remove bookmark"
                   >
                     <Icon
                       icon={'mdi:close'}

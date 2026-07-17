@@ -1,4 +1,10 @@
-import { Box, CircularProgress, Typography, useTheme } from '@mui/material';
+import {
+  Box,
+  CircularProgress,
+  Skeleton,
+  Typography,
+  useTheme
+} from '@mui/material';
 import React, { useContext } from 'react';
 import InputHeader from '../InputHeader';
 import greyPattern from '@assets/grey-pattern.png';
@@ -111,11 +117,14 @@ export default function ToolFileResult({
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              height: '100%'
+              height: '100%',
+              gap: 2,
+              p: 4
             }}
           >
-            <CircularProgress />
-            <Typography variant="body2" sx={{ mt: 2 }}>
+            <Skeleton variant="circular" width={48} height={48} />
+            <Skeleton variant="rectangular" width="60%" height={20} />
+            <Typography variant="body2" sx={{ mt: 1 }}>
               {loadingText || t('toolFileResult.loading')}
             </Typography>
           </Box>
@@ -159,6 +168,7 @@ export default function ToolFileResult({
                   width="100%"
                   height="100%"
                   style={{ maxWidth: '500px' }}
+                  sandbox=""
                 />
               )}
               {fileType === 'unknown' && (

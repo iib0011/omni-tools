@@ -1,6 +1,5 @@
 import { InitialValuesType, MergeVideoInput, MergeVideoOutput } from './types';
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { getFFmpeg, fetchFile } from '@lib/ffmpeg/ffmpegSingleton';
 
 export async function mergeVideos(
   input: MergeVideoInput,
@@ -11,22 +10,12 @@ export async function mergeVideos(
   }
 
   // Create a new FFmpeg instance for each operation to avoid conflicts
-  const ffmpeg = new FFmpeg();
+  const ffmpeg = await getFFmpeg();
 
   const fileNames: string[] = [];
   const outputName = 'output.mp4';
 
   try {
-    // Load FFmpeg with proper error handling
-    if (!ffmpeg.loaded) {
-      await ffmpeg.load({
-        wasmURL:
-          'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm',
-        workerURL:
-          'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.worker.js'
-      });
-    }
-
     // Write all input files to ffmpeg FS with better error handling
     for (let i = 0; i < input.length; i++) {
       const fileName = `input${i}.mp4`;

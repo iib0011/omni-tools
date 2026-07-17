@@ -23,9 +23,23 @@ export async function protectWithGhostScript(dataStruct: {
   return getListener(worker);
 }
 
+const WORKER_TIMEOUT_MS = 30000;
+
 const getListener = (worker: Worker): Promise<string> => {
   return new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => {
+      worker.terminate();
+      reject(new Error('Worker timed out'));
+    }, WORKER_TIMEOUT_MS);
+
+    worker.addEventListener('error', (e) => {
+      clearTimeout(timeout);
+      worker.terminate();
+      reject(new Error(`Worker error: ${e.message}`));
+    });
+
     const listener = (e: MessageEvent) => {
+      clearTimeout(timeout);
       resolve(e.data);
       worker.removeEventListener('message', listener);
       setTimeout(() => worker.terminate(), 0);

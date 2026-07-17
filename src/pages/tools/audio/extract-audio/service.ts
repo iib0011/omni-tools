@@ -1,19 +1,11 @@
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { getFFmpeg, fetchFile } from '@lib/ffmpeg/ffmpegSingleton';
 import { InitialValuesType } from './types';
-
-const ffmpeg = new FFmpeg();
 
 export async function extractAudioFromVideo(
   input: File,
   options: InitialValuesType
 ): Promise<File> {
-  if (!ffmpeg.loaded) {
-    await ffmpeg.load({
-      wasmURL:
-        'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
-    });
-  }
+  const ffmpeg = await getFFmpeg();
 
   const inputName = 'input.mp4';
   await ffmpeg.writeFile(inputName, await fetchFile(input));

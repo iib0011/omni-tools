@@ -1,6 +1,5 @@
 import { InitialValuesType } from './types';
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { getFFmpeg, fetchFile } from '@lib/ffmpeg/ffmpegSingleton';
 
 function computeAudioFilter(speed: number): string {
   if (speed <= 2 && speed >= 0.5) {
@@ -26,17 +25,8 @@ export async function changeAudioSpeed(
 ): Promise<File | null> {
   if (!input) return null;
   const { newSpeed, outputFormat } = options;
-  let ffmpeg: FFmpeg | null = null;
-  let ffmpegLoaded = false;
   try {
-    ffmpeg = new FFmpeg();
-    if (!ffmpegLoaded) {
-      await ffmpeg.load({
-        wasmURL:
-          'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
-      });
-      ffmpegLoaded = true;
-    }
+    const ffmpeg = await getFFmpeg();
     const fileName = input.name;
     const outputName = `output.${outputFormat}`;
     await ffmpeg.writeFile(fileName, await fetchFile(input));

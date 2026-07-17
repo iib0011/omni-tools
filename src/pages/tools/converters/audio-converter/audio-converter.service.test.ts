@@ -3,18 +3,15 @@ import { convertAudio } from './service';
 import { InitialValuesType } from './types';
 
 // Mock FFmpeg since it doesn't support Node.js in tests
-vi.mock('@ffmpeg/ffmpeg', () => ({
-  FFmpeg: vi.fn().mockImplementation(() => ({
+vi.mock('@lib/ffmpeg/ffmpegSingleton', () => ({
+  getFFmpeg: vi.fn().mockResolvedValue({
     loaded: false,
     load: vi.fn().mockResolvedValue(undefined),
     writeFile: vi.fn().mockResolvedValue(undefined),
     exec: vi.fn().mockResolvedValue(undefined),
     readFile: vi.fn().mockResolvedValue(new Uint8Array([10, 20, 30, 40, 50])),
     deleteFile: vi.fn().mockResolvedValue(undefined)
-  }))
-}));
-
-vi.mock('@ffmpeg/util', () => ({
+  }),
   fetchFile: vi.fn().mockResolvedValue(new Uint8Array([10, 20, 30, 40, 50]))
 }));
 

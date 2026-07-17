@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import ToolPdfInput from '@components/input/ToolPdfInput';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -16,14 +16,19 @@ export default function PdfToPng({ title }: ToolComponentProps) {
   const [images, setImages] = useState<ImagePreview[]>([]);
   const [zipBlob, setZipBlob] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
+  const imageUrlsRef = useRef<string[]>([]);
 
   const compute = async (_: {}, file: File | null) => {
     if (!file) return;
     setLoading(true);
+    // Revoke previous preview URLs
+    imageUrlsRef.current.forEach((url) => URL.revokeObjectURL(url));
+    imageUrlsRef.current = [];
     setImages([]);
     setZipBlob(null);
     try {
       const { images, zipFile } = await convertPdfToPngImages(file);
+      imageUrlsRef.current = images.map((img) => img.url);
       setImages(images);
       setZipBlob(zipFile);
     } catch (err) {

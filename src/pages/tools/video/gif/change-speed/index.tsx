@@ -5,8 +5,7 @@ import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolImageInput from '@components/input/ToolImageInput';
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { getFFmpeg, fetchFile } from '@lib/ffmpeg/ffmpegSingleton';
 
 const initialValues = {
   newSpeed: 2
@@ -18,25 +17,11 @@ export default function ChangeSpeed({ title }: ToolComponentProps) {
   const compute = (optionsValues: typeof initialValues, input: File | null) => {
     if (!input) return;
     const { newSpeed } = optionsValues;
-    // Initialize FFmpeg once in your component/app
-    let ffmpeg: FFmpeg | null = null;
-    let ffmpegLoaded = false;
-
     const processImage = async (
       file: File,
       newSpeed: number
     ): Promise<void> => {
-      if (!ffmpeg) {
-        ffmpeg = new FFmpeg();
-      }
-
-      if (!ffmpegLoaded) {
-        await ffmpeg.load({
-          wasmURL:
-            'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
-        });
-        ffmpegLoaded = true;
-      }
+      const ffmpeg = await getFFmpeg();
 
       try {
         await ffmpeg.writeFile('input.gif', await fetchFile(file));

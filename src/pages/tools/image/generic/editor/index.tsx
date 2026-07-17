@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Box } from '@mui/material';
 import ToolImageInput from '@components/input/ToolImageInput';
 import ToolContent from '@components/ToolContent';
@@ -13,22 +13,45 @@ export default function ImageEditor({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [isEditorOpen, setIsEditorOpen] = useState(false);
   const [imageUrl, setImageUrl] = useState<string | null>(null);
+  const currentObjectUrlRef = useRef<string | null>(null);
+
+  // Cleanup ObjectURL on unmount
+  useEffect(() => {
+    return () => {
+      if (currentObjectUrlRef.current) {
+        URL.revokeObjectURL(currentObjectUrlRef.current);
+      }
+    };
+  }, []);
 
   // Handle file input change
   const handleInputChange = useCallback((file: File | null) => {
     setInput(file);
     if (file) {
+      // Revoke previous URL if any
+      if (currentObjectUrlRef.current) {
+        URL.revokeObjectURL(currentObjectUrlRef.current);
+      }
       // Create object URL for the image editor
       const url = URL.createObjectURL(file);
+      currentObjectUrlRef.current = url;
       setImageUrl(url);
       setIsEditorOpen(true);
     } else {
+      if (currentObjectUrlRef.current) {
+        URL.revokeObjectURL(currentObjectUrlRef.current);
+        currentObjectUrlRef.current = null;
+      }
       setImageUrl(null);
     }
   }, []);
 
   const onCloseEditor = (reason: string) => {
     setIsEditorOpen(false);
+    if (currentObjectUrlRef.current) {
+      URL.revokeObjectURL(currentObjectUrlRef.current);
+      currentObjectUrlRef.current = null;
+    }
     setImageUrl(null);
   };
 

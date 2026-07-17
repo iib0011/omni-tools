@@ -67,45 +67,51 @@ export default function CropImage({ title }: ToolComponentProps) {
 
       // Load image
       const img = new Image();
-      img.src = URL.createObjectURL(file);
-      await img.decode();
+      const objectUrl = URL.createObjectURL(file);
+      img.src = objectUrl;
 
-      // Set source canvas dimensions
-      sourceCanvas.width = img.width;
-      sourceCanvas.height = img.height;
+      try {
+        await img.decode();
 
-      // Draw original image on source canvas
-      sourceCtx.drawImage(img, 0, 0);
+        // Set source canvas dimensions
+        sourceCanvas.width = img.width;
+        sourceCanvas.height = img.height;
 
-      // Set destination canvas dimensions to crop size
-      destCanvas.width = width;
-      destCanvas.height = height;
+        // Draw original image on source canvas
+        sourceCtx.drawImage(img, 0, 0);
 
-      if (isCircular) {
-        // For circular crop
-        destCtx.beginPath();
-        // Create a circle with center at half width/height and radius of half the smaller dimension
-        const radius = Math.min(width, height) / 2;
-        destCtx.arc(width / 2, height / 2, radius, 0, Math.PI * 2);
-        destCtx.closePath();
-        destCtx.clip();
+        // Set destination canvas dimensions to crop size
+        destCanvas.width = width;
+        destCanvas.height = height;
 
-        // Draw the cropped portion centered in the circle
-        destCtx.drawImage(img, x, y, width, height, 0, 0, width, height);
-      } else {
-        // For rectangular crop, simply draw the specified region
-        destCtx.drawImage(img, x, y, width, height, 0, 0, width, height);
-      }
+        if (isCircular) {
+          // For circular crop
+          destCtx.beginPath();
+          // Create a circle with center at half width/height and radius of half the smaller dimension
+          const radius = Math.min(width, height) / 2;
+          destCtx.arc(width / 2, height / 2, radius, 0, Math.PI * 2);
+          destCtx.closePath();
+          destCtx.clip();
 
-      // Convert canvas to blob and create file
-      destCanvas.toBlob((blob) => {
-        if (blob) {
-          const newFile = new File([blob], file.name, {
-            type: file.type
-          });
-          setResult(newFile);
+          // Draw the cropped portion centered in the circle
+          destCtx.drawImage(img, x, y, width, height, 0, 0, width, height);
+        } else {
+          // For rectangular crop, simply draw the specified region
+          destCtx.drawImage(img, x, y, width, height, 0, 0, width, height);
         }
-      }, file.type);
+
+        // Convert canvas to blob and create file
+        destCanvas.toBlob((blob) => {
+          if (blob) {
+            const newFile = new File([blob], file.name, {
+              type: file.type
+            });
+            setResult(newFile);
+          }
+        }, file.type);
+      } finally {
+        URL.revokeObjectURL(objectUrl);
+      }
     };
 
     processImage(input, x, y, width, height, isCircular);
