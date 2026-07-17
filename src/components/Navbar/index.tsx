@@ -16,7 +16,8 @@ import {
   Stack,
   Select,
   MenuItem,
-  FormControl
+  FormControl,
+  Typography
 } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -178,12 +179,34 @@ const Navbar: React.FC<NavbarProps> = ({
           mx: { md: '50px', lg: '150px' }
         }}
       >
-        <Link to="/">
-          <img
-            src={theme.palette.mode === 'light' ? logo : logoWhite}
-            width={isMobile ? '120px' : '200px'}
-          />
-        </Link>
+        <Stack direction="row" spacing={1.5} alignItems="center">
+          <Link to="/">
+            <img
+              src={theme.palette.mode === 'light' ? logo : logoWhite}
+              width={isMobile ? '120px' : '200px'}
+            />
+          </Link>
+          <Typography
+            component="span"
+            variant="caption"
+            sx={{
+              color: 'text.secondary',
+              fontWeight: 600,
+              whiteSpace: 'nowrap'
+            }}
+          >
+            v{__APP_VERSION__} (
+            <a
+              href={`https://github.com/iib0011/omni-tools/tree/${__COMMIT_HASH__}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'inherit' }}
+            >
+              {__COMMIT_HASH__}
+            </a>
+            )
+          </Typography>
+        </Stack>
         {isMobile ? (
           <>
             <IconButton
