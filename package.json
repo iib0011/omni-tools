@@ -1,7 +1,7 @@
 {
   "name": "omni-tools",
   "description": "This project offers a variety of online tools to help with everyday tasks, \nall available for free and open for community contributions",
-  "version": "0.1.0",
+  "version": "0.6.0",
   "private": true,
   "author": {
     "name": "Ibrahima Gaye Coulibaly",
