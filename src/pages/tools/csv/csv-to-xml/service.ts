@@ -35,13 +35,34 @@ export const convertCsvToXml = (
     const values = parseCsvLine(line, options);
     xmlResult += `  <row id="${index}">\n`;
     headers.forEach((header, i) => {
-      xmlResult += `    <${header}>${values[i] || ''}</${header}>\n`;
+      const tagName = normalizeXmlTagName(header);
+      xmlResult += `    <${tagName}>${escapeXml(
+        values[i] || ''
+      )}</${tagName}>\n`;
     });
     xmlResult += `  </row>\n`;
   });
 
   xmlResult += `</root>`;
   return xmlResult;
+};
+
+const escapeXml = (value: string): string => {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+};
+
+const normalizeXmlTagName = (header: string): string => {
+  const tagName =
+    header !== '' && !isNaN(Number(header)) ? `column-${header}` : header;
+
+  const sanitized = tagName.replace(/[^a-zA-Z0-9_.-]/g, '_');
+
+  return /^[a-zA-Z_]/.test(sanitized) ? sanitized : `_${sanitized}`;
 };
 
 const parseCsvLine = (line: string, options: CsvToXmlOptions): string[] => {
