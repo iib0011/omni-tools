@@ -120,5 +120,23 @@
       "keyDescription": "Select the key to sort by",
       "orderDescription": "Choose the sort order"
     }
+  },
+  "jsonViewer": {
+    "title": "JSON Viewer",
+    "description": "Visualize and inspect JSON structures interactively with tree rendering, custom search, node copying, and collapse/expand controls.",
+    "shortDescription": "Visualize and inspect JSON files in a collapsible tree",
+    "inputTitle": "Input JSON",
+    "viewerTitle": "JSON Tree Viewer",
+    "invalidJson": "Invalid JSON format. Please check for syntax errors.",
+    "searchPlaceholder": "Search keys, values...",
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "copyPath": "Copy Path",
+    "copyValue": "Copy Value",
+    "copiedPath": "Path copied to clipboard!",
+    "copiedValue": "Value copied to clipboard!",
+    "noMatches": "No matches",
+    "matchCount": "{{current}} of {{total}}",
+    "expandLimited": "Tree is large ({{count}} nodes). Auto-expanded first {{depth}} levels for performance."
   }
 }
