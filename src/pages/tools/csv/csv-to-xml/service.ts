@@ -1,3 +1,5 @@
+import { escapeHtml } from '@utils/string';
+
 type CsvToXmlOptions = {
   delimiter: string;
   quote: string;
@@ -35,7 +37,8 @@ export const convertCsvToXml = (
     const values = parseCsvLine(line, options);
     xmlResult += `  <row id="${index}">\n`;
     headers.forEach((header, i) => {
-      xmlResult += `    <${header}>${values[i] || ''}</${header}>\n`;
+      const safeValue = escapeHtml(values[i] || '');
+      xmlResult += `    <${header}>${safeValue}</${header}>\n`;
     });
     xmlResult += `  </row>\n`;
   });
