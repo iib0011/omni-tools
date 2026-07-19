@@ -9,12 +9,16 @@ export default function ToolTextInput({
   value,
   onChange,
   title = 'Input text',
-  placeholder
+  placeholder,
+  accept = '*',
+  onImportFile
 }: {
   title?: string;
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
+  accept?: string;
+  onImportFile?: (file: File) => void;
 }) {
   const { t } = useTranslation();
   const { showSnackBar } = useContext(CustomSnackBarContext);
@@ -31,6 +35,7 @@ export default function ToolTextInput({
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
+      onImportFile?.(file);
       const reader = new FileReader();
       reader.onload = (e) => {
         const text = e.target?.result;
@@ -67,7 +72,7 @@ export default function ToolTextInput({
       <InputFooter handleCopy={handleCopy} handleImport={handleImportClick} />
       <input
         type="file"
-        accept="*"
+        accept={accept}
         ref={fileInputRef}
         style={{ display: 'none' }}
         onChange={handleFileChange}
