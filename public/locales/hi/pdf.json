@@ -161,5 +161,10 @@
       "description": "यह टूल आपको किसी PDF दस्तावेज़ से विशिष्ट पृष्ठ निकालने की सुविधा देता है। आप निकालने के लिए अलग-अलग पृष्ठ या पृष्ठों की श्रेणी निर्दिष्ट कर सकते हैं।",
       "title": "PDF विभाजित करें"
     }
+  },
+  "pdfToWord": {
+    "title": "PDF to Word",
+    "description": "Convert PDF documents into editable Word (.docx) files.",
+    "shortDescription": "Convert PDF files to Word format"
   }
 }

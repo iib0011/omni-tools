@@ -115,5 +115,10 @@
       "description": "このツールを使うと、PDF文書から特定のページを抽出できます。抽出するページは、個々のページまたはページ範囲で指定できます。",
       "title": "PDFを分割"
     }
+  },
+  "pdfToWord": {
+    "title": "PDF to Word",
+    "description": "Convert PDF documents into editable Word (.docx) files.",
+    "shortDescription": "Convert PDF files to Word format"
   }
 }
