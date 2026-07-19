@@ -132,6 +132,6 @@
     "vitest": "^1.6.0"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx,json}": "prettier --write"
+    "*.{ts,tsx,js,jsx,json}": "node node_modules/prettier/bin/prettier.cjs --write"
   }
 }
