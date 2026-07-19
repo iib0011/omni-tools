@@ -135,6 +135,10 @@
     "shortDescription": "Rotate an image easily.",
     "title": "Rotate Image"
   },
+  "batchWatermark": {
+    "title": "Batch Watermark Images",
+    "description": "Add a text watermark based on each file name. Process multiple images at once.",
+    "shortDescription": "Watermark images from filename"
   "split": {
     "title": "Split Image into Pages",
     "shortDescription": "Split a large image into multiple pages (PDF).",
