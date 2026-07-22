@@ -72,6 +72,44 @@ describe('Random Number Generator Service', () => {
       expect(uniqueNumbers.size).toBe(3);
     });
 
+    it('should generate unique decimals within a narrow range without exceeding the max (#404)', () => {
+      const options: InitialValuesType = {
+        minValue: 0,
+        maxValue: 1,
+        count: 3,
+        allowDecimals: true,
+        allowDuplicates: false,
+        sortResults: false,
+        separator: ', '
+      };
+
+      const result = generateRandomNumbers(options);
+
+      expect(result.numbers).toHaveLength(3);
+      expect(new Set(result.numbers).size).toBe(3);
+      result.numbers.forEach((num) => {
+        expect(num).toBeGreaterThanOrEqual(0);
+        expect(num).toBeLessThanOrEqual(1);
+      });
+    });
+
+    it('should still reject a unique count larger than the decimal domain (#404)', () => {
+      const options: InitialValuesType = {
+        minValue: 0,
+        maxValue: 1,
+        // hundredths in [0, 1] inclusive give 101 distinct values
+        count: 102,
+        allowDecimals: true,
+        allowDuplicates: false,
+        sortResults: false,
+        separator: ', '
+      };
+
+      expect(() => generateRandomNumbers(options)).toThrow(
+        'count exceeds available range'
+      );
+    });
+
     it('should sort results when sortResults is true', () => {
       const options: InitialValuesType = {
         minValue: 1,

@@ -23,12 +23,6 @@ export function generateRandomNumbers(
     throw new Error('Count must be greater than 0');
   }
 
-  if (!allowDuplicates && count > maxValue - minValue + 1) {
-    throw new Error(
-      'Cannot generate unique numbers: count exceeds available range'
-    );
-  }
-
   const numbers: number[] = [];
 
   if (allowDuplicates) {
@@ -42,22 +36,18 @@ export function generateRandomNumbers(
       numbers.push(randomNumber);
     }
   } else {
-    // Generate unique random numbers
-    const availableNumbers = new Set<number>();
+    // Build the bounded domain of distinct values that can be drawn. For
+    // decimals this is every hundredth in [min, max] inclusive; for integers
+    // it is every integer in [min, max] inclusive. The same domain backs the
+    // capacity check, so a valid decimal count is not rejected and no drawn
+    // value ever exceeds the inclusive maximum.
+    const availableArray = buildUniqueDomain(minValue, maxValue, allowDecimals);
 
-    // Create a pool of available numbers
-    for (let i = minValue; i <= maxValue; i++) {
-      if (allowDecimals) {
-        // For decimals, we need to generate more granular values
-        for (let j = 0; j < 100; j++) {
-          availableNumbers.add(i + j / 100);
-        }
-      } else {
-        availableNumbers.add(i);
-      }
+    if (count > availableArray.length) {
+      throw new Error(
+        'Cannot generate unique numbers: count exceeds available range'
+      );
     }
-
-    const availableArray = Array.from(availableNumbers);
 
     // Shuffle the available numbers
     for (let i = availableArray.length - 1; i > 0; i--) {
@@ -87,6 +77,31 @@ export function generateRandomNumbers(
     hasDuplicates: !allowDuplicates && hasDuplicatesInArray(numbers),
     isSorted: sortResults
   };
+}
+
+/**
+ * Build the pool of distinct values that unique generation can draw from,
+ * bounded by [min, max] inclusive. For decimals the granularity is hundredths
+ * (matching the two-decimal display), for integers it is whole numbers.
+ */
+function buildUniqueDomain(
+  min: number,
+  max: number,
+  allowDecimals: boolean
+): number[] {
+  const domain: number[] = [];
+  if (allowDecimals) {
+    const start = Math.round(min * 100);
+    const end = Math.round(max * 100);
+    for (let h = start; h <= end; h++) {
+      domain.push(h / 100);
+    }
+  } else {
+    for (let i = min; i <= max; i++) {
+      domain.push(i);
+    }
+  }
+  return domain;
 }
 
 /**
