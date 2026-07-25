@@ -83,9 +83,7 @@ export default function JsonToCsv({ title }: ToolComponentProps) {
         setResult(csvResult);
       } catch (error) {
         setResult(
-          `Error: ${
-            error instanceof Error ? error.message : 'Invalid JSON format'
-          }`
+          ` ${error instanceof Error ? error.message : 'Invalid JSON format'}`
         );
       }
     }
