@@ -1,56 +1,66 @@
+export type ParsedJson =
+  | Record<string, unknown>
+  | unknown[]
+  | string
+  | number
+  | boolean
+  | null;
+
 /**
- * Parses a JSON string, falling back to NDJSON (newline-delimited JSON, a.k.a.
- * JSON Lines) when the input is not a single valid JSON value.
+ * Parses a JSON string into its JavaScript representation.
  *
- * This lets users paste multiple JSON objects without wrapping them in an
- * array, e.g.:
+ * Supports:
+ * - Standard JSON (objects, arrays, and primitives)
+ * - JSON Lines (NDJSON), where each non-empty line is a valid JSON value
  *
- *   {"key1": "AAA"}
- *   {"key1": "BBB"}
- *
- * Standard JSON (an object or array) is parsed first and returned unchanged.
- * Otherwise each non-empty line must be a valid JSON value, and the values are
- * returned as an array. A single line that is not valid JSON is reported as a
- * plain JSON error rather than being misread as NDJSON.
- *
- * @param input - Raw text to parse
- * @returns The parsed JSON value, or an array of values when NDJSON is detected
- * @throws SyntaxError when the input is neither valid JSON nor valid NDJSON
- *
- * @example
- * parseJsonOrNdjson('{"a":1}\n{"a":2}') // → [{ a: 1 }, { a: 2 }]
+ * @param input - The JSON string to parse.
+ * @returns The parsed JSON value, or an array of parsed values for JSON Lines input.
+ * Returns an empty string if the input is empty or whitespace-only.
+ * @throws {Error} If the input contains invalid JSON.
  */
-export function parseJsonOrNdjson(input: string): unknown {
-  const trimmed = input.trim();
-
+export function parseJsonInput(input: string): ParsedJson {
   try {
-    return JSON.parse(trimmed);
-  } catch (jsonError) {
-    const lines = trimmed
-      .split('\n')
-      .map((line) => line.trim())
-      .filter((line) => line.length > 0);
+    return JSON.parse(input);
+  } catch (originalError) {
+    const lines = input.split(/\r?\n/);
 
-    // A single line that already failed JSON.parse is not NDJSON — surface the
-    // original error instead of masking it.
-    if (lines.length < 2) {
-      throw jsonError;
+    // preserve blank lines numbers
+    const nonBlankLines: { text: string; lineNumber: number }[] = [];
+    lines.forEach((line, index) => {
+      const trimmed = line.trim();
+      if (trimmed) {
+        nonBlankLines.push({ text: trimmed, lineNumber: index + 1 });
+      }
+    });
+
+    // A single line that fails isn't NDJSON, it's just malformed JSON -
+    // surface the original error instead of a misleading one.
+    if (nonBlankLines.length <= 1) {
+      const reason =
+        originalError instanceof Error
+          ? originalError.message
+          : 'Unknown error';
+      throw new Error(`Invalid JSON: ${reason}`);
     }
 
-    const values: unknown[] = [];
-    for (const line of lines) {
+    const parsedLines: unknown[] = [];
+
+    for (const { text, lineNumber } of nonBlankLines) {
       try {
-        values.push(JSON.parse(line));
-      } catch {
-        // Not valid NDJSON either — report the original JSON parse failure.
-        throw jsonError;
+        parsedLines.push(JSON.parse(text));
+      } catch (error) {
+        const reason =
+          error instanceof Error
+            ? error.message.replace(/\s*\(line \d+ column \d+\)$/, '')
+            : 'Unknown error';
+
+        throw new Error(`Invalid JSON at line ${lineNumber}: ${reason}`);
       }
     }
 
-    return values;
+    return parsedLines;
   }
 }
-
 /**
  * Collects all unique keys from an array of row objects, preserving first-encountered order.
  * Handles sparse rows where different rows may have different keys.
@@ -68,8 +78,11 @@ export function getJsonHeaders(
 
   if (typeof input === 'string') {
     try {
-      const parsed = JSON.parse(input);
-      rows = Array.isArray(parsed) ? parsed : [parsed];
+      const parsed = parseJsonInput(input);
+      rows = (Array.isArray(parsed) ? parsed : [parsed]) as Record<
+        string,
+        string
+      >[];
     } catch {
       return [];
     }
@@ -79,7 +92,11 @@ export function getJsonHeaders(
 
   return Array.from(
     rows.reduce<Set<string>>((set, row) => {
-      Object.keys(row).forEach((key) => set.add(key));
+      // Skip anything that isn't a plain object (null, arrays, strings, etc.)
+      // to avoid crashing or pulling in bogus "headers" from those values.
+      if (row && typeof row === 'object' && !Array.isArray(row)) {
+        Object.keys(row).forEach((key) => set.add(key));
+      }
       return set;
     }, new Set())
   );
