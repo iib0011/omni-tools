@@ -152,8 +152,12 @@ describe('convertJsonToCsv', () => {
 
   describe('errors', () => {
     it('throws on invalid JSON', () => {
+      // A single malformed line isn't NDJSON, so parseJsonInput re-throws
+      // its own "Invalid JSON: <reason>" error (the <reason> text itself
+      // comes from the JS engine's JSON.parse and varies across engines,
+      // so we only assert on the stable prefix).
       expect(() => convertJsonToCsv('invalid json', defaultOptions)).toThrow(
-        'Invalid JSON input.'
+        /^Invalid JSON: /
       );
     });
 
@@ -196,10 +200,12 @@ describe('convertJsonToCsv', () => {
     });
 
     it('still throws when one NDJSON line is not valid JSON', () => {
+      // Two non-blank lines triggers the NDJSON path; the failing line's
+      // 1-based line number (2) is reported alongside the parse error.
       const input = '{"a": 1}\nnot json';
 
       expect(() => convertJsonToCsv(input, defaultOptions)).toThrow(
-        'Invalid JSON input.'
+        /^Invalid JSON at line 2: /
       );
     });
   });
