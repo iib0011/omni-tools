@@ -1,0 +1,124 @@
+{
+  "comparison": {
+    "description": "Yapı ve değerlerdeki farklılıkları belirlemek için iki JSON nesnesini karşılaştırın.",
+    "shortDescription": "İki JSON nesnesi arasındaki farkları bulun",
+    "title": "JSON Karşılaştır"
+  },
+  "escapeJson": {
+    "description": "JSON dizelerindeki özel karakterleri kaçış karakteriyle değiştirin. Güvenli iletim veya depolama için JSON verilerini düzgün kaçışlı formata dönüştürün.",
+    "shortDescription": "JSON'daki özel karakterleri kaçış karakteriyle değiştirin",
+    "title": "JSON'ı Kaçışla"
+  },
+  "jsonToCsv": {
+    "delimiterOption": "Ayırıcı",
+    "description": "JSON verilerini CSV formatına dönüştürün. İç içe nesneleri ve dizileri, otomatik başlık algılamayı ve yapılandırılabilir ayırıcı ile tırnaklamayı destekler — Excel, Google E-Tablolar veya herhangi bir hesap tablosu uygulaması için hazır.",
+    "headerOption": "Başlıklar",
+    "inputTitle": "Giriş JSON",
+    "options": {
+      "alwaysQuote": {
+        "description": "İçeriğinden bağımsız olarak her hücreyi çift tırnak içine alın.",
+        "label": "Her zaman tırnakla"
+      },
+      "autoQuote": {
+        "description": "Yalnızca ayırıcı, çift tırnak veya satır sonu içeren hücreleri tırnakla. Çıktıyı temiz ve minimal tutar.",
+        "label": "Otomatik (önerilen)"
+      },
+      "delimiter": "Her satırdaki değerleri ayırmak için kullanılan karakter (örn. virgül, noktalı virgül, sekme)",
+      "header": {
+        "description": "İlk satırda sütun adı olarak JSON anahtarlarını kullan. Okunabilirlik ve içe aktarma uyumluluğu için önerilir.",
+        "label": "Başlık satırını dahil et"
+      }
+    },
+    "outputTitle": "Çıktı CSV",
+    "quotingOption": "Dize Tırnaklama",
+    "shortDescription": "JSON'ı CSV formatına dönüştürün",
+    "title": "JSON'dan CSV'ye"
+  },
+  "jsonToXml": {
+    "description": "JSON verilerini XML formatına dönüştürün. Yapılandırılmış JSON nesnelerini iyi biçimlendirilmiş XML belgelerine dönüştürün.",
+    "shortDescription": "JSON'ı XML formatına dönüştürün",
+    "title": "JSON'dan XML'e",
+    "inputTitle": "Giriş JSON",
+    "outputTitle": "Çıktı XML",
+    "options": {
+      "indentationTitle": "Girinti Seçenekleri",
+      "useSpaceTitle": "Girinti için Boşluk Kullan",
+      "useSpaceDesc": "XML'in hiyerarşik yapısını görselleştirmek için boşluk kullanın.",
+      "useTabTitle": "Girinti için Sekme Kullan",
+      "useTabDesc": "XML'in hiyerarşik yapısını görselleştirmek için sekme kullanın.",
+      "noIdentTitle": "Girinti yok",
+      "noIdentDesc": "XML'i girinti olmadan çıktı ver.",
+      "metaInfoTitle": "XML Meta Bilgisi",
+      "addMetaTagTitle": "XML Meta Etiketi Ekle",
+      "addMetaTagDesc": "XML çıktısının başına bir meta etiketi ekle"
+    }
+  },
+  "minify": {
+    "description": "JSON'dan tüm gereksiz boşlukları kaldırın.",
+    "inputTitle": "Giriş JSON",
+    "resultTitle": "Küçültülmüş JSON",
+    "shortDescription": "Boşlukları kaldırarak JSON'ı küçültün",
+    "title": "JSON'ı Küçült",
+    "toolInfo": {
+      "description": "JSON küçültme, JSON verilerinin geçerliliğini korurken tüm gereksiz boşluk karakterlerini kaldırma işlemidir. Bu, JSON'un doğru şekilde ayrıştırılması için gerekli olmayan boşlukları, satır sonlarını ve girintileri kaldırmayı içerir. Küçültme, aynı veri yapısını ve değerleri korurken JSON verilerinin boyutunu azaltarak depolama ve iletim için daha verimli hale getirir.",
+      "title": "JSON Küçültme Nedir?"
+    }
+  },
+  "prettify": {
+    "description": "JSON'ı uygun girinti ve boşluklarla biçimlendirin.",
+    "indentation": "Girinti",
+    "inputTitle": "Giriş JSON",
+    "resultTitle": "Güzelleştirilmiş JSON",
+    "shortDescription": "JSON kodunu biçimlendirin ve güzelleştirin",
+    "title": "JSON'ı Güzelleştir",
+    "toolInfo": {
+      "description": "Bu araç, JSON verilerini uygun girinti ve boşluklarla biçimlendirerek daha okunabilir ve üzerinde çalışması daha kolay hale getirmenizi sağlar.",
+      "title": "JSON'ı Güzelleştir"
+    },
+    "useSpaces": "Boşluk Kullan",
+    "useSpacesDescription": "Çıktıyı boşluklarla girintile",
+    "useTabs": "Sekme Kullan",
+    "useTabsDescription": "Çıktıyı sekmelerle girintile."
+  },
+  "stringify": {
+    "description": "JavaScript nesnelerini JSON dize formatına dönüştürün. Depolama veya iletim için veri yapılarını JSON dizelerine serileştirin.",
+    "shortDescription": "Nesneleri JSON dizesine dönüştürün",
+    "title": "JSON'a Dönüştür (Stringify)"
+  },
+  "tsvToJson": {
+    "description": "TSV (Sekmeyle Ayrılmış Değerler) verilerini JSON formatına dönüştürün. Tablo verilerini yapılandırılmış JSON nesnelerine dönüştürün.",
+    "shortDescription": "TSV'yi JSON formatına dönüştürün",
+    "title": "TSV'den JSON'a"
+  },
+  "validateJson": {
+    "description": "JSON'un geçerli ve iyi biçimlendirilmiş olup olmadığını kontrol edin.",
+    "inputTitle": "Giriş JSON",
+    "invalidJson": "❌ {{error}}",
+    "resultTitle": "Doğrulama Sonucu",
+    "shortDescription": "JSON kodunu hatalara karşı doğrulayın",
+    "title": "JSON Doğrula",
+    "toolInfo": {
+      "description": "JSON (JavaScript Object Notation), hafif bir veri değişim formatıdır. JSON doğrulaması, verilerin yapısının JSON standardına uygun olmasını sağlar. Geçerli bir JSON nesnesinde şunlar bulunmalıdır: - Çift tırnak içine alınmış özellik adları. - Düzgün dengelenmiş süslü parantezler {}. - Son anahtar-değer çiftinden sonra takip eden virgül olmaması. - Nesnelerin ve dizilerin uygun şekilde iç içe geçmesi. Bu araç, giriş JSON'unu kontrol eder ve yaygın hataları belirlemeye ve düzeltmeye yardımcı olacak geri bildirim sağlar.",
+      "title": "JSON Doğrulama Nedir?"
+    },
+    "validJson": "✅ Geçerli JSON"
+  },
+  "sortJson": {
+    "title": "JSON Sırala",
+    "description": "Nesne dizilerini seçili bir anahtara göre artan veya azalan düzende düzenleyerek JSON verilerini sıralayın ya da bir JSON nesnesinin anahtarlarını alfabetik olarak sıralayın.",
+    "shortDescription": "JSON dizilerini değere veya nesne anahtarlarını alfabetik olarak sıralayın",
+    "longDescription": "Bu araç, JSON verilerini yapılandırılmış ve öngörülebilir bir şekilde kolayca sıralamanızı sağlar. Bir nesne dizisini herhangi bir anahtara göre, artan veya azalan düzen seçerek sıralayabilirsiniz; bu, kullanıcı, ürün veya kayıt listeleri gibi verileri düzenlemek için kullanışlıdır. Alternatif olarak, okunabilirliği ve tutarlılığı artırmak için bir JSON nesnesinin anahtarlarını alfabetik olarak sıralayabilirsiniz. Araç, esnek sıralama modlarını destekler ve yaygın JSON yapılarını işler, bu da onu geliştiriciler, veri analistleri ve temiz, sıralı çıktıya ihtiyaç duyan herkes için ideal kılar.",
+    "inputTitle": "Giriş JSON",
+    "resultTitle": "Sıralanmış JSON",
+    "options": {
+      "title": "Sıralama Seçenekleri",
+      "sortByKey": "Nesne anahtarlarını alfabetik olarak sırala",
+      "sortByValue": "Diziyi anahtar değerine göre sırala",
+      "ascending": "Artan (A → Z)",
+      "descending": "Azalan (Z → A)",
+      "modeDescription": "Dizi öğelerini bir anahtarın değerine göre mi yoksa bir nesnenin anahtarlarını alfabetik olarak mı sıralayacağınızı seçin",
+      "keyDescription": "Sıralanacak anahtarı seçin",
+      "orderDescription": "Sıralama düzenini seçin"
+    }
+  }
+}

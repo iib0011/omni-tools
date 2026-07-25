@@ -1,0 +1,205 @@
+{
+  "arithmeticSequence": {
+    "commonDifferenceDescription": "Terimler arasındaki ortak fark (d)",
+    "description": "Özelleştirilebilir parametrelerle aritmetik diziler oluşturun.",
+    "firstTermDescription": "Dizinin ilk terimi (a₁)",
+    "numberOfTermsDescription": "Oluşturulacak terim sayısı (n)",
+    "outputFormat": "Çıktı Formatı",
+    "resultTitle": "Oluşturulan Dizi",
+    "separatorDescription": "Terimler arasındaki ayırıcı",
+    "sequenceParameters": "Dizi Parametreleri",
+    "shortDescription": "Aritmetik diziler oluşturun",
+    "title": "Aritmetik Dizi",
+    "toolInfo": {
+      "description": "Aritmetik dizi, ardışık her terim arasındaki farkın sabit olduğu bir sayı dizisidir. Bu sabit farka ortak fark denir. İlk terim (a₁) ve ortak fark (d) verildiğinde, her terim önceki terime ortak farkı ekleyerek bulunabilir.",
+      "title": "Aritmetik Dizi Nedir?"
+    }
+  },
+  "byteConverter": {
+    "description": "Veri değerlerini farklı bayt birimleri arasında dönüştürün; hem SI (ondalık) hem de IEC (ikili) sistemlerini destekler. Birden fazla satır dönüşümünü destekler.",
+    "inputTitle": "Giriş Değerleri",
+    "outputTitle": "Dönüştürülmüş Çıktı",
+    "shortDescription": "Değerleri bayt birimleri arasında hızlıca dönüştürün",
+    "title": "Bayt Dönüştürücü",
+    "unit": {
+      "from": "Sağladığınız giriş değerlerinin birimini seçin (örn. KB, MB, GiB).",
+      "precision": "Dönüştürülmüş çıktıda görüntülenecek ondalık basamak sayısı.",
+      "title": "Dönüştürme Seçenekleri",
+      "to": "Giriş değerlerinin dönüştürülmesini istediğiniz birimi seçin."
+    }
+  },
+  "generate": {
+    "arithmeticSequenceOption": "Aritmetik dizi seçeneği",
+    "description": "Özelleştirilebilir parametrelerle bir sayı dizisi oluşturun.",
+    "numberOfElementsDescription": "Dizideki eleman sayısı.",
+    "resultTitle": "Oluşturulan sayılar",
+    "separator": "Ayırıcı",
+    "separatorDescription": "Aritmetik dizideki elemanları bu karakterle ayır.",
+    "shortDescription": "Belirtilen aralıklarda rastgele sayılar oluşturun",
+    "startSequenceDescription": "Diziyi bu sayıdan başlat.",
+    "stepDescription": "Her elemanı bu miktar kadar artır",
+    "title": "Oluştur",
+    "toolInfo": {
+      "description": "Bu araç, özelleştirilebilir parametrelerle bir sayı dizisi oluşturmanızı sağlar. Başlangıç değerini, adım boyutunu ve eleman sayısını belirtebilirsiniz.",
+      "title": "Sayı oluştur"
+    }
+  },
+  "ohmsLaw": {
+    "description": "Voltaj, akım ve direnci hesaplar",
+    "longDescription": "Bu hesaplayıcı, diğer ikisi bilindiğinde üç elektriksel parametreden herhangi birini belirlemek için Ohm Yasasını (V = I × R) uygular. Ohm Yasası, voltaj (V), akım (I) ve direnç (R) arasındaki ilişkiyi tanımlayan elektrik mühendisliğinde temel bir ilkedir. Bu araç, elektronik meraklıları, elektrik mühendisleri ve devrelerle çalışan öğrenciler için elektriksel tasarımlarında bilinmeyen değerleri hızlıca çözmek açısından gereklidir.",
+    "shortDescription": "Ohm Yasasını kullanarak elektrik devrelerinde voltaj, akım veya direnci hesaplayın",
+    "title": "Ohm Yasası"
+  },
+  "randomNumberGenerator": {
+    "description": "Özelleştirilebilir seçeneklerle belirtilen bir aralıkta rastgele sayılar oluşturun.",
+    "error": {
+      "generationFailed": "Rastgele sayılar oluşturulamadı. Lütfen giriş parametrelerinizi kontrol edin."
+    },
+    "info": {
+      "description": "Rastgele sayı üreteci, belirtilen bir aralıkta tahmin edilemeyen sayılar oluşturur. Bu araç, gerçekten rastgele sonuçlar sağlamak için kriptografik olarak güvenli rastgele sayı üretimi kullanır. Simülasyonlar, oyunlar, istatistiksel örnekleme ve test senaryoları için kullanışlıdır.",
+      "title": "Rastgele Sayı Üreteci Nedir?"
+    },
+    "longDescription": "Tam sayı veya ondalık seçenekleri, tekrarlara izin verme veya engelleme ve sonuçları sıralama ile belirtilen bir aralıkta rastgele sayılar oluşturun. Simülasyonlar, test, oyunlar ve istatistiksel analiz için mükemmel.",
+    "options": {
+      "generation": {
+        "allowDecimals": {
+          "description": "Tam sayı yerine ondalık sayılar oluştur",
+          "title": "Ondalık Sayılara İzin Ver"
+        },
+        "allowDuplicates": {
+          "description": "Aynı sayının birden çok kez görünmesine izin ver",
+          "title": "Tekrarlara İzin Ver"
+        },
+        "countDescription": "Oluşturulacak rastgele sayı adedi (1-10.000)",
+        "sortResults": {
+          "description": "Oluşturulan sayıları artan düzende sırala",
+          "title": "Sonuçları Sırala"
+        },
+        "title": "Oluşturma Seçenekleri"
+      },
+      "output": {
+        "separatorDescription": "Oluşturulan sayıları ayırmak için karakter(ler)",
+        "title": "Çıktı Ayarları"
+      },
+      "range": {
+        "maxDescription": "Maksimum değer (dahil)",
+        "minDescription": "Minimum değer (dahil)",
+        "title": "Aralık Ayarları"
+      }
+    },
+    "result": {
+      "count": "Adet",
+      "hasDuplicates": "Tekrar İçeriyor",
+      "isSorted": "Sıralı",
+      "range": "Aralık",
+      "title": "Oluşturulan Rastgele Sayılar"
+    },
+    "shortDescription": "Özel aralıklarda rastgele sayılar oluşturun",
+    "title": "Rastgele Sayı Üreteci"
+  },
+  "randomPortGenerator": {
+    "description": "Özelleştirilebilir seçeneklerle belirtilen aralıklarda rastgele ağ portları oluşturun.",
+    "error": {
+      "generationFailed": "Rastgele portlar oluşturulamadı. Lütfen giriş parametrelerinizi kontrol edin."
+    },
+    "info": {
+      "description": "Rastgele port üreteci, belirtilen aralıklarda tahmin edilemeyen ağ port numaraları oluşturur. Bu araç, IANA port numarası standartlarını takip eder ve yaygın hizmetlerin tanımlanmasını içerir. Geliştirme, test, ağ yapılandırması ve port çakışmalarını önleme için kullanışlıdır.",
+      "title": "Rastgele Port Üreteci Nedir?"
+    },
+    "longDescription": "Belirtilen aralıklarda (iyi bilinen, kayıtlı, dinamik veya özel) rastgele ağ portları oluşturun. Geliştirme, test ve ağ yapılandırması için mükemmel. Yaygın portlar için port hizmet tanımlaması içerir.",
+    "options": {
+      "generation": {
+        "allowDuplicates": {
+          "description": "Aynı portun birden çok kez görünmesine izin ver",
+          "title": "Tekrarlara İzin Ver"
+        },
+        "countDescription": "Oluşturulacak rastgele port adedi (1-1.000)",
+        "sortResults": {
+          "description": "Oluşturulan portları artan düzende sırala",
+          "title": "Sonuçları Sırala"
+        },
+        "title": "Oluşturma Seçenekleri"
+      },
+      "output": {
+        "separatorDescription": "Oluşturulan portları ayırmak için karakter(ler)",
+        "title": "Çıktı Ayarları"
+      },
+      "range": {
+        "custom": "Özel Aralık",
+        "dynamic": "Dinamik Portlar (49152-65535)",
+        "maxPortDescription": "Maksimum port numarası (1-65535)",
+        "minPortDescription": "Minimum port numarası (1-65535)",
+        "registered": "Kayıtlı Portlar (1024-49151)",
+        "title": "Port Aralığı Ayarları",
+        "wellKnown": "İyi Bilinen Portlar (1-1023)"
+      }
+    },
+    "result": {
+      "count": "Adet",
+      "hasDuplicates": "Tekrar İçeriyor",
+      "isSorted": "Sıralı",
+      "portDetails": "Port Detayları",
+      "range": "Port Aralığı",
+      "title": "Oluşturulan Rastgele Portlar"
+    },
+    "shortDescription": "Rastgele ağ portları oluşturun",
+    "title": "Rastgele Port Üreteci"
+  },
+  "slackline": {
+    "description": "Bir slackline'daki gerilimi hesaplar",
+    "longDescription": "Bu hesaplayıcı, halatın merkezinde bir yük olduğunu varsayar",
+    "shortDescription": "Bir slackline veya çamaşır ipinin yaklaşık gerilimini hesaplayın. Güvenlik için buna güvenmeyin.",
+    "title": "Slackline Gerilimi"
+  },
+  "sphereArea": {
+    "description": "Bir Kürenin Alanı",
+    "longDescription": "Bu hesaplayıcı, A = 4πr² formülünü kullanarak bir kürenin yüzey alanını belirler. Yüzey alanını bulmak için yarıçapı girebilir veya gereken yarıçapı hesaplamak için yüzey alanını girebilirsiniz. Bu araç, geometri çalışan öğrenciler, küresel nesnelerle çalışan mühendisler ve küresel yüzeyleri içeren hesaplamalar yapması gereken herkes için kullanışlıdır.",
+    "shortDescription": "Bir kürenin yüzey alanını yarıçapına göre hesaplayın",
+    "title": "Bir Kürenin Alanı"
+  },
+  "sphereVolume": {
+    "description": "Bir Kürenin Hacmi",
+    "longDescription": "Bu hesaplayıcı, V = (4/3)πr³ formülünü kullanarak bir kürenin hacmini hesaplar. Hacmi bulmak için yarıçapı veya çapı girebilir ya da gereken yarıçapı belirlemek için hacmi girebilirsiniz. Araç, fizik, mühendislik ve üretim gibi alanlarda küresel nesnelerle çalışan öğrenciler, mühendisler ve profesyoneller için değerlidir.",
+    "shortDescription": "Bir kürenin hacmini yarıçap veya çap kullanarak hesaplayın",
+    "title": "Bir Kürenin Hacmi"
+  },
+  "sum": {
+    "description": "Bir sayı listesinin toplamını hesaplayın. Toplamlarını almak için virgül veya satır sonlarıyla ayrılmış sayılar girin.",
+    "example1Description": "Bu örnekte, on pozitif tam sayının toplamını hesaplıyoruz. Bu tam sayılar bir sütun olarak listelenmiştir ve toplamları 19494'e eşittir.",
+    "example1Title": "On Pozitif Sayının Toplamı",
+    "example2Description": "Bu örnek, üç heceli yirmi ismin bir sütununu tersine çevirir ve tüm kelimeleri aşağıdan yukarıya yazdırır. Liste öğelerini ayırmak için giriş öğesi ayırıcısı olarak \\n karakterini kullanır, bu da her öğenin kendi satırında olduğu anlamına gelir.",
+    "example2Title": "Parktaki Ağaçları Say",
+    "example3Description": "Bu örnekte, doksan farklı değeri bir araya getiriyoruz – pozitif sayılar, negatif sayılar, tam sayılar ve ondalık kesirler. Giriş ayırıcısını virgül olarak ayarlıyoruz ve hepsini topladıktan sonra çıktı olarak 0 elde ediyoruz.",
+    "example3Title": "Tam Sayıların ve Ondalıkların Toplamı",
+    "example4Description": "Bu örnekte, on rakamın tümünün toplamını hesaplıyoruz ve \"Kümülatif Toplamı Yazdır\" seçeneğini etkinleştiriyoruz. Toplama işlemi sürecinde toplamın ara değerlerini alıyoruz. Böylece çıktıda şu diziyi elde ediyoruz: 0, 1 (0 + 1), 3 (0 + 1 + 2), 6 (0 + 1 + 2 + 3), 10 (0 + 1 + 2 + 3 + 4) ve böyle devam eder.",
+    "example4Title": "Sayıların Kümülatif Toplamı",
+    "extractionTypes": {
+      "delimiter": {
+        "description": "Sayı ayırıcısını buradan özelleştirin. (Varsayılan olarak satır sonu.)",
+        "title": "Sayı Ayırıcı"
+      },
+      "smart": {
+        "description": "Girişteki sayıları otomatik algıla.",
+        "title": "Akıllı Toplam"
+      }
+    },
+    "inputTitle": "Giriş",
+    "numberExtraction": "Sayı Ayıklama",
+    "printRunningSum": "Kümülatif Toplamı Yazdır",
+    "printRunningSumDescription": "Toplamı adım adım hesaplandıkça görüntüle.",
+    "resultTitle": "Toplam",
+    "runningSum": "Kümülatif Toplam",
+    "shortDescription": "Sayıların toplamını hesaplayın",
+    "title": "Topla",
+    "toolInfo": {
+      "description": "Bu, bir grup sayının toplamını hesaplamak için çevrimiçi tarayıcı tabanlı bir araçtır. Sayıları virgül, boşluk veya satır sonu dahil herhangi bir karakterle ayırarak girebilirsiniz. Ayrıca, toplamak istediğiniz sayısal değerler içeren metinsel bir veri parçasını yapıştırmanız yeterli; araç bunları ayıklar ve toplamlarını bulur.",
+      "title": "Sayı Toplamı Hesaplayıcı Nedir?"
+    }
+  },
+  "voltageDropInWire": {
+    "description": "2 iletkenli bir kabloda gidiş-dönüş voltajını ve güç kaybını hesaplar",
+    "longDescription": "Bu hesaplayıcı, iki iletkenli bir elektrik kablosundaki voltaj düşüşünü ve güç kaybını belirlemeye yardımcı olur. Kablo uzunluğunu, tel kalınlığını (kesit alanı), malzeme özdirencini ve akım akışını dikkate alır. Araç, gidiş-dönüş voltaj düşüşünü, kablonun toplam direncini ve ısı olarak dağılan gücü hesaplar. Bu, elektrik sistemleri tasarlarken voltaj seviyelerinin yükte kabul edilebilir sınırlar içinde kalmasını sağlamak açısından elektrik mühendisleri, elektrikçiler ve meraklılar için özellikle kullanışlıdır.",
+    "shortDescription": "Uzunluk, malzeme ve akıma göre elektrik kablolarındaki voltaj düşüşünü ve güç kaybını hesaplayın",
+    "title": "Kabloda gidiş-dönüş voltaj düşüşü"
+  }
+}

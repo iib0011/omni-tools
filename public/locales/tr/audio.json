@@ -1,0 +1,61 @@
+{
+  "changeSpeed": {
+    "description": "Ses dosyalarının oynatma hızını değiştirin. Perdeyi koruyarak sesi hızlandırın veya yavaşlatın.",
+    "inputTitle": "Giriş Sesi",
+    "newAudioSpeed": "Yeni Ses Hızı",
+    "outputFormat": "Çıktı Formatı",
+    "resultTitle": "Düzenlenmiş Ses",
+    "settingSpeed": "Hız Ayarlanıyor",
+    "shortDescription": "Ses dosyalarının hızını değiştirin",
+    "speedDescription": "Varsayılan çarpan: 2, 2 kat daha hızlı anlamına gelir",
+    "title": "Ses hızını değiştir",
+    "toolInfo": {
+      "title": "{{title}} nedir?"
+    }
+  },
+  "extractAudio": {
+    "description": "Video dosyalarından ses parçasını ayıklayın.",
+    "extractingAudio": "Ses Ayıklanıyor",
+    "inputTitle": "Giriş Videosu",
+    "outputFormat": "Çıktı Formatı",
+    "outputFormatDescription": "Sesin ayıklanacağı formatı seçin.",
+    "resultTitle": "Ayıklanan Ses",
+    "shortDescription": "Videolardan (MP4, MOV vb.) sesi AAC, MP3 veya WAV formatına ayıklayın.",
+    "title": "Videodan Ses Ayıkla",
+    "toolInfo": {
+      "description": "Bu araç, video dosyalarından ses parçasını ayıklamanızı sağlar. AAC, MP3 ve WAV dahil farklı ses formatları arasından seçim yapabilirsiniz.",
+      "title": "{{title}} nedir?"
+    }
+  },
+  "mergeAudio": {
+    "description": "Birden fazla ses dosyasını sırayla art arda ekleyerek tek bir ses dosyasında birleştirin.",
+    "inputTitle": "Giriş Ses Dosyaları",
+    "longDescription": "Bu araç, birden fazla ses dosyasını yüklediğiniz sırayla art arda ekleyerek tek bir dosyada birleştirmenizi sağlar. Podcast bölümlerini, müzik parçalarını veya birleştirilmesi gereken herhangi bir ses dosyasını bir araya getirmek için mükemmel. MP3, AAC ve WAV dahil çeşitli ses formatlarını destekler.",
+    "mergingAudio": "Ses Birleştiriliyor",
+    "outputFormat": "Çıktı Formatı",
+    "resultTitle": "Birleştirilmiş Ses",
+    "shortDescription": "Birden fazla ses dosyasını tek bir dosyada birleştirin (MP3, AAC, WAV).",
+    "title": "Sesleri Birleştir",
+    "toolInfo": {
+      "title": "{{title}} nedir?"
+    }
+  },
+  "trim": {
+    "description": "Başlangıç ve bitiş sürelerini saniyenin altında hassasiyetle belirterek belirli segmentleri ayıklamak için ses dosyalarını kesin ve kırpın.",
+    "endTime": "Bitiş Zamanı",
+    "endTimeDescription": "SS:DD:ss.mmm formatında bitiş zamanı (örn. 00:01:30.450)",
+    "inputTitle": "Giriş Sesi",
+    "longDescription": "Bu araç, başlangıç ve bitiş sürelerini saniyenin altında hassasiyetle belirterek ses dosyalarını kırpmanızı sağlar. Daha uzun ses dosyalarından belirli segmentleri ayıklayabilir, istenmeyen kısımları kaldırabilir veya daha kısa klipler oluşturabilirsiniz. MP3, AAC ve WAV dahil çeşitli ses formatlarını destekler. Podcast düzenleme, müzik prodüksiyonu veya her türlü ses düzenleme ihtiyacı için mükemmel.",
+    "outputFormat": "Çıktı Formatı",
+    "resultTitle": "Kırpılmış Ses",
+    "shortDescription": "Belirli zaman segmentlerini saniyenin altında hassasiyetle ayıklamak için ses dosyalarını kırpın (MP3, AAC, WAV).",
+    "startTime": "Başlangıç Zamanı",
+    "startTimeDescription": "SS:DD:ss.mmm formatında başlangıç zamanı (örn. 00:00:30.820)",
+    "timeSettings": "Zaman Ayarları",
+    "title": "Sesi Kırp",
+    "toolInfo": {
+      "title": "{{title}} nedir?"
+    },
+    "trimmingAudio": "Ses Kırpılıyor"
+  }
+}

@@ -218,6 +218,9 @@
       "shortDescription": "Convert text to uppercase letters"
     }
   },
+  "toolBreadcrumb": {
+    "allTools": "All tools"
+  },
   "toolExamples": {
     "subtitle": "Click to try!",
     "title": "{{title}} Examples"

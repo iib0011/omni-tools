@@ -101,7 +101,7 @@ export default function ToolHeader({
     <Box my={4}>
       <ToolBreadcrumb
         items={[
-          { title: 'All tools', link: '/' },
+          { title: t('toolBreadcrumb.allTools'), link: '/' },
           {
             title: getToolsByCategory([], t).find(
               (category) => category.type === type

@@ -1,0 +1,394 @@
+{
+  "base64": {
+    "decode": "Base64 Çöz",
+    "description": "Base64 kodlaması kullanarak metni kodlayın veya çözün.",
+    "encode": "Base64 Kodla",
+    "inputTitle": "Giriş Verisi",
+    "optionsTitle": "Base64 Seçenekleri",
+    "resultTitle": "Sonuç",
+    "shortDescription": "Base64 kullanarak veriyi kodlayın veya çözün.",
+    "title": "Base64 Kodlayıcı/Çözücü",
+    "toolInfo": {
+      "description": "Base64, veriyi radix-64 gösterimine çevirerek ASCII dize formatında temsil eden bir kodlama şemasıdır. Dizeleri kodlamak için kullanılabilse de, genellikle metinsel verilerle çalışacak şekilde tasarlanmış ortamlar üzerinden iletim için ikili verileri kodlamak amacıyla kullanılır.",
+      "title": "Base64 Nedir?"
+    }
+  },
+  "censor": {
+    "description": "metindeki kelimeleri sansürlemek için bir araç. Metninizi soldaki giriş formuna yükleyin, seçeneklerde tüm kötü kelimeleri belirtin, çıktı alanında anında sansürlenmiş metni alacaksınız.\", longDescription: 'Bu çevrimiçi araçla herhangi bir metindeki belirli kelimeleri sansürleyebilirsiniz. İstenmeyen kelimelerin bir listesini (küfür veya gizli kelimeler gibi) belirtebilirsiniz ve program bunları alternatif kelimelerle değiştirerek okunması güvenli bir metin oluşturur. Kelimeler, seçeneklerde her satıra bir kelime girilerek çok satırlı bir metin alanında belirtilebilir.', keywords: ['text', 'censor', 'words', 'characters'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
+    "shortDescription": "Kötü kelimeleri hızlıca maskeleyin veya alternatif kelimelerle değiştirin.",
+    "title": "Metin Sansürleyici"
+  },
+  "createPalindrome": {
+    "description": "Herhangi bir metinden palindrom oluşturmak için dünyanın en basit tarayıcı tabanlı aracı. Metin girin ve anında öne ve arkaya doğru aynı okunan bir palindroma dönüştürün. Kelime oyunları, simetrik metin desenleri oluşturma veya dilsel meraklar için mükemmel.",
+    "shortDescription": "Öne ve arkaya doğru aynı okunan metin oluşturun",
+    "title": "Palindrom oluştur"
+  },
+  "extractSubstring": {
+    "description": "Metinden alt dizeler ayıklamak için dünyanın en basit tarayıcı tabanlı aracı. Metninizi girin ve istenen bölümü ayıklamak için başlangıç ve bitiş konumlarını belirtin. Veri işleme, metin analizi veya daha büyük metin bloklarından belirli içerik ayıklamak için mükemmel.",
+    "shortDescription": "Belirtilen konumlar arasındaki metin bölümünü ayıklayın",
+    "title": "Alt dize ayıkla"
+  },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "Analiz Seçenekleri",
+    "category": "Kategori",
+    "description": "Gizli Unicode karakterlerini, özellikle saldırılarda kullanılabilecek RTL Geçersiz Kılma karakterlerini tespit edin.",
+    "foundChars": "{{count}} gizli karakter bulundu:",
+    "inputPlaceholder": "Gizli karakterleri kontrol etmek için metin girin...",
+    "inputTitle": "Analiz Edilecek Metin",
+    "invisibleChar": "Görünmez Karakter",
+    "invisibleFound": "Görünmez karakterler bulundu",
+    "longDescription": "Bu araç, metindeki gizli Unicode karakterlerini, özellikle saldırılarda kullanılabilecek Sağdan Sola (RTL) Geçersiz Kılma karakterlerini tespit etmenize yardımcı olur. Görünmez karakterleri, sıfır genişlikli karakterleri ve masum görünen metinlerde gizlenmiş olabilecek diğer potansiyel olarak kötü niyetli Unicode dizilerini tanımlayabilir.",
+    "noHiddenChars": "Metinde gizli karakter tespit edilmedi.",
+    "optionsDescription": "Hangi tür gizli karakterlerin tespit edileceğini ve sonuçların nasıl görüntüleneceğini yapılandırın.",
+    "position": "Konum",
+    "rtlAlert": "⚠️ RTL Geçersiz Kılma karakterleri tespit edildi! Bu metin kötü niyetli gizli karakterler içerebilir.",
+    "rtlFound": "RTL Geçersiz Kılma bulundu",
+    "rtlOverride": "RTL Geçersiz Kılma Karakteri",
+    "rtlWarning": "UYARI: RTL Geçersiz Kılma karakterleri tespit edildi! Bu, saldırılarda kullanılabilir.",
+    "shortDescription": "Metindeki gizli Unicode karakterlerini bulun",
+    "summary": "Analiz Özeti",
+    "title": "Gizli Karakter Dedektörü",
+    "totalChars": "Toplam gizli karakter: {{count}}",
+    "unicode": "Unicode",
+    "zeroWidthChar": "Sıfır Genişlikli Karakter",
+    "zeroWidthFound": "Sıfır genişlikli karakterler bulundu"
+  },
+  "join": {
+    "blankLinesAndTrailingSpaces": "Boş Satırlar ve Sondaki Boşluklar",
+    "deleteBlankDescription": "Metin sembolü olmayan satırları sil.",
+    "deleteBlankTitle": "Boş Satırları Sil",
+    "deleteTrailingDescription": "Satırların sonundaki boşlukları ve sekmeleri kaldır.",
+    "deleteTrailingTitle": "Sondaki Boşlukları Sil",
+    "description": "Metin parçalarını özelleştirilebilir ayırıcılarla birleştirin.",
+    "inputTitle": "Metin Parçaları",
+    "joinCharacterDescription": "Kırık metin parçalarını birbirine bağlayan sembol. (Varsayılan olarak boşluk.)",
+    "joinCharacterPlaceholder": "Birleştirme Karakteri",
+    "resultTitle": "Birleştirilmiş Metin",
+    "shortDescription": "Metin öğelerini belirtilen bir ayırıcıyla birleştirin",
+    "textMergedOptions": "Metin Birleştirme Seçenekleri",
+    "title": "Metni Birleştir",
+    "toolInfo": {
+      "description": "Bu araçla metnin parçalarını birbirine birleştirebilirsiniz. Satır sonlarıyla ayrılmış bir metin değerleri listesi alır ve bunları birleştirir. Birleştirilen metnin parçaları arasına yerleştirilecek karakteri ayarlayabilirsiniz. Ayrıca tüm boş satırları yok sayabilir ve tüm satırların sonundaki boşlukları ve sekmeleri kaldırabilirsiniz. Metin-müthiş!",
+      "title": "Metin Birleştirici Nedir?"
+    }
+  },
+  "palindrome": {
+    "description": "Bir metnin palindrom olup olmadığını kontrol etmek için dünyanın en basit tarayıcı tabanlı aracı. Metninizin öne ve arkaya doğru aynı okunup okunmadığını anında doğrulayın. Kelime bulmacaları, dilsel analiz veya simetrik metin desenlerini doğrulamak için mükemmel. Çeşitli ayırıcıları ve çok kelimeli palindrom tespitini destekler.",
+    "shortDescription": "Metnin öne ve arkaya doğru aynı okunup okunmadığını kontrol edin",
+    "title": "Palindrom"
+  },
+  "passwordGenerator": {
+    "avoidAmbiguous": "Belirsiz karakterlerden kaçın (i, I, l, 0, O)",
+    "description": "Özelleştirilebilir uzunluk ve karakter türleriyle güvenli rastgele parolalar oluşturun. Küçük harf, büyük harf, sayılar ve özel karakterler arasından seçim yapın. Daha iyi okunabilirlik için belirsiz karakterlerden kaçınma seçeneği.",
+    "includeLowercase": "Küçük harfleri dahil et (a-z)",
+    "includeNumbers": "Sayıları dahil et (0-9)",
+    "includeSymbols": "Özel karakterleri dahil et",
+    "includeUppercase": "Büyük harfleri dahil et (A-Z)",
+    "lengthDesc": "Parolanın uzunluğu (>3 & <257)",
+    "lengthPlaceholder": "örn. 12",
+    "optionsTitle": "Parola Seçenekleri",
+    "resultTitle": "Oluşturulan Parola",
+    "shortDescription": "Özel seçeneklerle güvenli rastgele parolalar oluşturun",
+    "title": "Parola Oluşturucu",
+    "toolInfo": {
+      "description": "Bu araç, seçtiğiniz kriterlere göre güvenli rastgele parolalar oluşturur. Uzunluğu özelleştirebilir, farklı karakter türlerini dahil edebilir veya hariç tutabilir ve daha iyi okunabilirlik için belirsiz karakterlerden kaçınabilirsiniz. Hesaplar, uygulamalar veya her türlü güvenlik ihtiyacı için güçlü parolalar oluşturmak açısından mükemmel.",
+      "title": "Parola Oluşturucu Hakkında"
+    }
+  },
+  "quote": {
+    "allowDoubleQuotation": "Çift tırnağa izin ver",
+    "description": "Özelleştirilebilir seçeneklerle metnin etrafına tırnak ekleyin.",
+    "inputTitle": "Giriş Metni",
+    "leftQuoteDescription": "Sol tırnak karakter(ler)i",
+    "processAsMultiLine": "Çok satırlı metin olarak işle",
+    "quoteEmptyLines": "Boş satırları tırnakla",
+    "quoteOptions": "Tırnak Seçenekleri",
+    "resultTitle": "Tırnaklı Metin",
+    "rightQuoteDescription": "Sağ tırnak karakter(ler)i",
+    "shortDescription": "Metnin etrafına çeşitli stillerde tırnak ekleyin",
+    "title": "Metin Tırnaklayıcı",
+    "toolInfo": {
+      "description": "Bu araç, metnin etrafına tırnak eklemenizi sağlar. Farklı tırnak karakterleri seçebilir, çok satırlı metni işleyebilir ve boş satırların nasıl işleneceğini kontrol edebilirsiniz. Programlama için metin hazırlamak, verileri biçimlendirmek veya stilize metin oluşturmak için kullanışlıdır.",
+      "title": "Metin Tırnaklayıcı"
+    }
+  },
+  "randomizeCase": {
+    "description": "Metin büyük/küçük harfini rastgeleleştirmek için dünyanın en basit tarayıcı tabanlı aracı. Metninizi girin ve anında rastgele büyük ve küçük harflerle dönüştürün. Benzersiz metin efektleri oluşturmak, büyük/küçük harf duyarlılığını test etmek veya çeşitli metin desenleri üretmek için mükemmel.",
+    "shortDescription": "Metindeki harflerin büyük/küçük halini rastgeleleştirin",
+    "title": "Büyük/küçük harfi rastgeleleştir"
+  },
+  "removeDuplicateLines": {
+    "description": "Metninizi soldaki giriş formuna yükleyin, çıktı alanında anında tekrarlanan satır içermeyen metni alacaksınız. Güçlü, ücretsiz ve hızlı. Metin satırlarını yükle – benzersiz metin satırlarını al",
+    "shortDescription": "Metinden tüm tekrarlanan satırları hızlıca silin",
+    "title": "Tekrarlanan satırları kaldır"
+  },
+  "repeat": {
+    "delimiterDescription": "Çıktı kopyaları için ayırıcı.",
+    "delimiterPlaceholder": "Ayırıcı",
+    "description": "Metni özelleştirilebilir ayırıcılarla birden çok kez tekrarlayın.",
+    "inputTitle": "Giriş metni",
+    "numberPlaceholder": "Sayı",
+    "repeatAmountDescription": "Tekrar sayısı.",
+    "repetitionsDelimiter": "Tekrar Ayırıcı",
+    "resultTitle": "Tekrarlanan metin",
+    "shortDescription": "Metni birden çok kez tekrarlayın",
+    "textRepetitions": "Metin Tekrarları",
+    "title": "Metni Tekrarla",
+    "toolInfo": {
+      "description": "Bu araç, verilen bir metni isteğe bağlı bir ayırıcıyla birden çok kez tekrarlamanızı sağlar.",
+      "title": "Metni tekrarla"
+    }
+  },
+  "reverse": {
+    "description": "Metni tersine çevirmek için dünyanın en basit tarayıcı tabanlı aracı. Herhangi bir metin girin ve karakter karakter anında tersine çevrilmiş halini alın. Ayna metin oluşturmak, palindromları analiz etmek veya metin desenleriyle oynamak için mükemmel. Tersine çevirirken boşlukları ve özel karakterleri korur.",
+    "inputTitle": "Tersine çevrilecek metin",
+    "processMultiLine": "Çok satırlı metni işle",
+    "processMultiLineDescription": "Her satır bağımsız olarak tersine çevrilir",
+    "resultTitle": "Tersine çevrilmiş metin",
+    "reversalOptions": "Tersine çevirme seçenekleri",
+    "shortDescription": "Herhangi bir metni karakter karakter tersine çevirin",
+    "skipEmptyLines": "Boş satırları atla",
+    "skipEmptyLinesDescription": "Boş satırlar çıktıdan kaldırılır",
+    "title": "Tersine çevir",
+    "trimWhitespace": "Boşlukları kırp",
+    "trimWhitespaceDescription": "Her satırın başındaki ve sonundaki boşlukları kaldır"
+  },
+  "rot13": {
+    "description": "ROT13 şifresi kullanarak metni kodlayın veya çözün.",
+    "inputTitle": "Giriş Metni",
+    "resultTitle": "ROT13 Sonucu",
+    "shortDescription": "ROT13 şifresi kullanarak metni kodlayın veya çözün.",
+    "title": "ROT13 Kodlayıcı/Çözücü",
+    "toolInfo": {
+      "description": "ROT13 (13 basamak döndür), bir harfi alfabede kendisinden sonraki 13. harfle değiştiren basit bir harf değiştirme şifresidir. ROT13, antik Roma'da geliştirilen Sezar şifresinin özel bir halidir. İngiliz alfabesinde 26 harf olduğu için ROT13 kendi tersidir; yani ROT13'ü geri almak için aynı algoritma uygulanır, böylece kodlama ve çözme için aynı işlem kullanılabilir.",
+      "title": "ROT13 Nedir?"
+    }
+  },
+  "rotate": {
+    "description": "Metindeki karakterleri belirtilen konumlarda döndürün.",
+    "inputTitle": "Giriş Metni",
+    "processAsMultiLine": "Çok satırlı metin olarak işle (her satırı ayrı ayrı döndür)",
+    "resultTitle": "Döndürülmüş Metin",
+    "rotateLeft": "Sola Döndür",
+    "rotateRight": "Sağa Döndür",
+    "rotationOptions": "Döndürme Seçenekleri",
+    "shortDescription": "Metindeki karakterleri konuma göre kaydırın.",
+    "stepDescription": "Döndürülecek konum sayısı",
+    "title": "Metni Döndür",
+    "toolInfo": {
+      "description": "Bu araç, bir dizedeki karakterleri belirtilen sayıda konum döndürmenizi sağlar. Sola veya sağa döndürebilir ve her satırı ayrı ayrı döndürerek çok satırlı metni işleyebilirsiniz. Dize döndürme, basit metin dönüşümleri, desenler oluşturma veya temel şifreleme teknikleri uygulamak için kullanışlıdır.",
+      "title": "Dize Döndürme"
+    }
+  },
+  "slugGenerator": {
+    "description": "Herhangi bir metni URL dostu bir slug'a dönüştürün.",
+    "inputTitle": "Giriş Metni",
+    "longDescription": "Herhangi bir metni URL'lerde kullanılmak üzere temiz, SEO dostu slug'lara dönüştürün. Araç boşlukları, özel karakterleri, aksanlı harfleri ve birden fazla satırı tek seferde işler — böylece blog yazısı başlıklarını, ürün adlarını veya sayfa başlıklarını tutarlı, okunabilir URL segmentlerine toplu olarak dönüştürmeyi kolaylaştırır.",
+    "options": {
+      "caseDescription": "Küçük harfe dönüştürmek yerine girişin orijinal büyük/küçük harf halini koru",
+      "caseLabel": "Büyük/Küçük Harfe Duyarlı",
+      "title": "Slug Seçenekleri"
+    },
+    "resultTitle": "URL Slug'ları",
+    "shortDescription": "Metinden URL dostu slug'lar oluşturun.",
+    "title": "Slug Oluşturucu"
+  },
+  "split": {
+    "charAfterChunkDescription": "Her parçadan sonraki karakter",
+    "charBeforeChunkDescription": "Her parçadan önceki karakter",
+    "chunksDescription": "Çıktıda eşit uzunlukta parça sayısı.",
+    "chunksTitle": "Parça Sayısı Kullan",
+    "description": "Metni bölmek için dünyanın en basit tarayıcı tabanlı aracı. Metninizi girin ve birden fazla parçaya bölmek için bir ayırıcı belirtin. Veri işleme, metin düzenleme veya daha büyük metin bloklarından belirli içerik ayıklamak için mükemmel.",
+    "lengthDescription": "Her çıktı parçasına konulacak karakter sayısı.",
+    "lengthTitle": "Bölme İçin Uzunluk Kullan",
+    "outputSeparatorDescription": "Bölünmüş parçalar arasına konulacak karakter. (Varsayılan olarak satır sonu \"\\n\".)",
+    "outputSeparatorOptions": "Çıktı Ayırıcı Seçenekleri",
+    "regexDescription": "Metni parçalara ayırmak için kullanılacak düzenli ifade. (Varsayılan olarak birden fazla boşluk.)",
+    "regexTitle": "Bölme İçin Regex Kullan",
+    "resultTitle": "Bölme Sonucu",
+    "shortDescription": "Bir ayırıcı kullanarak metni birden fazla parçaya bölün",
+    "splitSeparatorOptions": "Bölme ayırıcı seçenekleri",
+    "symbolDescription": "Metni parçalara ayırmak için kullanılacak karakter. (Varsayılan olarak boşluk.)",
+    "symbolTitle": "Bölme İçin Sembol Kullan",
+    "title": "Böl"
+  },
+  "statistic": {
+    "characterFrequencyAnalysis": "Karakter Sıklığı Analizi",
+    "characterFrequencyAnalysisDescription": "Metinde her karakterin ne sıklıkla göründüğünü say",
+    "delimitersOptions": "Ayırıcı Seçenekleri",
+    "description": "Metni analiz edin ve kapsamlı istatistikler oluşturun.",
+    "includeEmptyLines": "Boş Satırları Dahil Et",
+    "includeEmptyLinesDescription": "Satırları sayarken boş satırları dahil et",
+    "inputTitle": "Giriş metni",
+    "resultTitle": "Metin İstatistikleri",
+    "sentenceDelimitersDescription": "Dilinizde cümleleri ayırmak için kullanılan özel karakterleri girin (virgülle ayrılmış) veya varsayılan için boş bırakın.",
+    "sentenceDelimitersPlaceholder": "örn. ., !, ?, ...",
+    "shortDescription": "Metniniz hakkında istatistikler alın",
+    "statisticsOptions": "İstatistik Seçenekleri",
+    "title": "Metin İstatistikleri",
+    "toolInfo": {
+      "description": "Bu araç, metni analiz etmenizi ve karakter sayısı, kelime sayısı, satır sayısı ve karakterlerin ve kelimelerin sıklık analizi dahil kapsamlı istatistikler oluşturmanızı sağlar.",
+      "title": "{{title}} nedir?"
+    },
+    "wordDelimitersDescription": "Kelimeleri saymak için özel Regex girin veya varsayılan için boş bırakın.",
+    "wordDelimitersPlaceholder": "örn. \\s.,;:!?\"«»()…",
+    "wordFrequencyAnalysis": "Kelime Sıklığı Analizi",
+    "wordFrequencyAnalysisDescription": "Metinde her kelimenin ne sıklıkla göründüğünü say"
+  },
+  "textReplacer": {
+    "description": "Metin desenlerini yeni içerikle değiştirin.",
+    "findPatternInText": "Metinde Bu Deseni Bul",
+    "findPatternUsingRegexp": "Bir RegExp Kullanarak Desen Bul",
+    "inputTitle": "Değiştirilecek metin",
+    "newTextPlaceholder": "Yeni metin",
+    "regexpDescription": "Değiştirmek istediğiniz düzenli ifadeyi girin.",
+    "replacePatternDescription": "Değiştirme için kullanılacak deseni girin.",
+    "replaceText": "Metni Değiştir",
+    "resultTitle": "Değiştirilmiş metin",
+    "searchPatternDescription": "Değiştirmek istediğiniz metin desenini girin.",
+    "searchText": "Metin ara",
+    "shortDescription": "İçeriğinizdeki metni hızlıca değiştirin",
+    "title": "Metin Değiştirici",
+    "toolInfo": {
+      "description": "Bu basit, tarayıcı tabanlı araçla içeriğinizdeki belirli metni kolayca değiştirin. Metninizi girin, değiştirmek istediğiniz metni ve değiştirme değerini ayarlayın, güncellenmiş versiyonu anında alın.",
+      "title": "Metin Değiştirici"
+    }
+  },
+  "toMorse": {
+    "dashSymbolDescription": "Mors kodundaki tireye karşılık gelecek sembol.",
+    "description": "Metni Mors koduna dönüştürün.",
+    "dotSymbolDescription": "Mors kodundaki noktaya karşılık gelecek sembol.",
+    "longSignal": "Uzun Sinyal",
+    "resultTitle": "Mors kodu",
+    "shortDescription": "Metni hızlıca Mors koduna dönüştürün",
+    "shortSignal": "Kısa Sinyal",
+    "title": "Metinden Mors'a"
+  },
+  "truncate": {
+    "addTruncationIndicator": "Kırpma Göstergesi Ekle",
+    "charactersPlaceholder": "Karakterler",
+    "description": "Metni belirtilen bir uzunluğa kısaltın.",
+    "indicatorDescription": "Metnin sonuna (veya başına) eklenecek karakterler. Not: Uzunluğa dahil edilirler.",
+    "inputTitle": "Giriş metni",
+    "leftSideDescription": "Metnin başından karakterleri kaldır.",
+    "leftSideTruncation": "Sol Taraf Kırpma",
+    "lengthAndLines": "Uzunluk ve Satırlar",
+    "lineByLineDescription": "Her satırı ayrı ayrı kırp.",
+    "lineByLineTruncating": "Satır Satır Kırpma",
+    "maxLengthDescription": "Metinde bırakılacak karakter sayısı.",
+    "numberPlaceholder": "Sayı",
+    "resultTitle": "Kırpılmış metin",
+    "rightSideDescription": "Metnin sonundan karakterleri kaldır.",
+    "rightSideTruncation": "Sağ Taraf Kırpma",
+    "shortDescription": "Metni belirtilen bir uzunluğa kırpın",
+    "suffixAndAffix": "Son Ek ve Ek",
+    "title": "Metni Kırp",
+    "toolInfo": {
+      "description": "Metninizi soldaki giriş formuna yükleyin, sağda otomatik olarak kırpılmış metni alacaksınız.",
+      "title": "Metni kırp"
+    },
+    "truncationSide": "Kırpma Tarafı"
+  },
+  "unicode": {
+    "caseOptionsTitle": "Büyük/Küçük Harf Seçenekleri",
+    "decode": "Çöz",
+    "description": "Metni Unicode kaçış dizilerine dönüştürün veya okunabilir metne geri çözün.",
+    "encode": "Kodla",
+    "inputTitle": "Giriş",
+    "optionsTitle": "Mod",
+    "resultTitle": "İşlenmiş Çıktı",
+    "shortDescription": "Unicode kaçış dizilerini kullanarak metni kodlayın veya çözün.",
+    "title": "Unicode Kodlayıcı / Çözücü",
+    "toolInfo": {
+      "description": "Bu araç, düz metni Unicode kaçış dizilerine (örn. \\uXXXX) dönüştürmenizi ve Unicode kaçış dizilerini tekrar standart metne çözmenizi sağlar. Ayrıca kodlama sırasında onaltılık çıktının büyük harf mi yoksa küçük harf mi olarak biçimlendirileceğini seçebilirsiniz.",
+      "title": "Unicode Kodlayıcı / Çözücü"
+    },
+    "uppercase": "Büyük Harf Onaltılık"
+  },
+  "uppercase": {
+    "description": "Metni büyük harflere dönüştürün.",
+    "inputTitle": "Giriş metni",
+    "resultTitle": "Büyük harfli metin",
+    "shortDescription": "Metni büyük harfe dönüştürün",
+    "title": "Büyük Harfe Dönüştür"
+  },
+  "urlEditor": {
+    "addParameter": "Parametre Ekle",
+    "credentialsNotSupported": "Kullanıcı adı veya parola içeren URL'ler desteklenmez.",
+    "delete": "Sil",
+    "deleteParamAriaLabel": "{{row}}. parametre satırını sil",
+    "generatedUrl": "Oluşturulan URL",
+    "hash": "Parça",
+    "hashPlaceholder": "bölüm",
+    "host": "Ana Bilgisayar",
+    "hostPlaceholder": "ornek.com",
+    "inputTitle": "URL Girin",
+    "invalidUrl": "Geçersiz URL",
+    "key": "Anahtar",
+    "noParameters": "Sorgu parametresi yok",
+    "parseButton": "URL'yi Ayrıştır",
+    "paramKeyAriaLabel": "Parametre anahtarı, satır {{row}}",
+    "paramValueAriaLabel": "Parametre değeri, satır {{row}}",
+    "path": "Yol",
+    "pathPlaceholder": "arama",
+    "protocol": "Protokol",
+    "queryParameters": "Sorgu Parametreleri",
+    "toolInfo": {
+      "description": "Bir URL yapıştırın ve bileşenlerini incelemek ve düzenlemek için \"URL'yi Ayrıştır\"a tıklayın.",
+      "longDescription": "Bu araç, bir URL'yi bileşenlerine ayrıştırır ve protokolü, ana bilgisayarı, yolu, parçayı ve sorgu parametrelerini görsel olarak düzenlemenizi sağlar. Giriş URL'sini değiştirdikten sonra, ayrıştırılan detayları yenilemek için tekrar \"URL'yi Ayrıştır\"a tıklayın. Herhangi bir kısmı ekleyebilir, kaldırabilir veya değiştirebilir ve oluşturulan URL'yi kopyalayabilirsiniz. Sunucu isteği yok.",
+      "shortDescription": "URL bileşenlerini ve sorgu parametrelerini inceleyin ve düzenleyin.",
+      "title": "URL Düzenleyici"
+    },
+    "urlDetails": "URL Detayları",
+    "value": "Değer"
+  },
+  "urlDecode": {
+    "inputTitle": "Giriş Dizesi (URL-kaçışlı)",
+    "resultTitle": "Çıktı dizesi",
+    "toolInfo": {
+      "description": "Dizenizi yükleyin, otomatik olarak URL-kaçışı geri alınacaktır.",
+      "longDescription": "Bu araç, daha önce URL-kodlanmış bir dizenin URL-çözmesini yapar. URL-çözme, URL-kodlamanın ters işlemidir. Tüm yüzde-kodlanmış karakterler anlayabileceğiniz karakterlere çözülür. En bilinen yüzde-kodlanmış değerlerden bazıları boşluk için %20, iki nokta üst üste için %3a, eğik çizgi için %2f ve soru işareti için %3f'dir. Yüzde işaretini takip eden iki basamak, karakterin onaltılık char code değerleridir.",
+      "shortDescription": "Bir dizenin URL-kaçışını hızlıca geri alın.",
+      "title": "Dize URL çözücü"
+    }
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "Seçilirse, giriş dizesindeki tüm karakterler URL-kodlamasına dönüştürülür (yalnızca özel olanlar değil).",
+      "nonSpecialCharPlaceholder": "Özel olmayan karakterleri kodla",
+      "title": "Kodlama Seçenekleri"
+    },
+    "inputTitle": "Giriş Dizesi (URL-kaçışlı)",
+    "resultTitle": "Çıktı dizesi",
+    "toolInfo": {
+      "description": "Dizenizi yükleyin, otomatik olarak URL-kaçışlı hale getirilecektir.",
+      "longDescription": "Bu araç, bir dizeyi URL-kodlar. Özel URL karakterleri yüzde-işareti kodlamasına dönüştürülür. Bu kodlamaya yüzde-kodlama denir çünkü her karakterin sayısal değeri, yüzde işaretini takip eden iki basamaklı bir onaltılık değere dönüştürülür. Onaltılık değerler, karakterin kod noktası değerine göre belirlenir. Örneğin, bir boşluk %20'ye, iki nokta üst üste %3a'ya, eğik çizgi %2f'ye kaçışlanır. Özel olmayan karakterler değişmeden kalır. Özel olmayan karakterleri de yüzde-kodlamasına dönüştürmeniz gerekirse, bunu yapmanızı sağlayan ekstra bir seçenek de ekledik. Bu davranışı etkinleştirmek için özel-olmayan-karakterleri-kodla seçeneğini seçin.",
+      "shortDescription": "Bir dizeyi hızlıca URL-kaçışlı hale getirin.",
+      "title": "Dize URL kodlayıcı"
+    }
+  },
+  "emailExtractor": {
+    "description": "Herhangi bir metinden tüm e-posta adreslerini ayıklayın. Metninizi yapıştırmanız yeterli, bulunan e-posta adreslerinin temiz bir listesini anında alın.",
+    "shortDescription": "Metinden e-posta adreslerini ayıklayın",
+    "title": "E-posta Ayıklayıcı",
+    "options": {
+      "title": "Ayıklama seçenekleri",
+      "uniqueTitle": "Tekrarları kaldır",
+      "uniqueDesc": "Sonuçlarda yalnızca benzersiz e-posta adreslerini tut"
+    }
+  },
+  "textCompare": {
+    "title": "Metinleri Karşılaştır",
+    "description": "Eklemeler, silmeler ve değişiklikler dahil farklılıkları vurgulamak için iki metin bloğunu analiz edin.",
+    "shortDescription": "İki metni karşılaştırın ve farkları anında tespit edin",
+    "longDescription": "Bu araç, bir metnin iki sürümü arasındaki farklılıkları hızlıca belirlemenize yardımcı olur. Eklenen, kaldırılan ve değiştirilen içeriği vurgular, bu da düzenlemeleri gözden geçirmek, değişiklikleri izlemek veya belgeleri karşılaştırmak için ideal kılar. İhtiyaçlarınıza bağlı olarak kelime veya karakter düzeyinde farklılıkları tespit etmek için hassasiyet düzeyini seçebilirsiniz.",
+    "inputTitle": "Giriş Metni",
+    "resultTitle": "Vurgulanan farklılıklar",
+    "options": {
+      "title": "Karşılaştırma Ayarları",
+      "wordLevel": "Kelime düzeyi",
+      "charLevel": "Karakter düzeyi",
+      "levelDesc": "Karşılaştırmanın ne kadar ayrıntılı olması gerektiğini seçin. Kelime düzeyi değişiklikleri kelimelere göre vurgular, karakter düzeyi ise daha ayrıntılı farklılıkları tespit eder."
+    }
+  }
+}

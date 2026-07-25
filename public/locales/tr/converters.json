@@ -1,0 +1,40 @@
+{
+  "audioConverter": {
+    "description": "Ses dosyalarını farklı formatlar arasında dönüştürün.",
+    "inputTitle": "Ses Girişi",
+    "longDescription": "Bu araç, ses dosyalarını bir formattan diğerine dönüştürmenizi sağlar ve sorunsuz dönüşüm için geniş bir ses formatı yelpazesini destekler.",
+    "outputFormat": "Çıktı Formatı",
+    "outputFormatDescription": "İstenen çıktı ses formatını seçin",
+    "outputTitle": "Dönüştürülen Ses",
+    "shortDescription": "Ses dosyalarını çeşitli formatlara dönüştürün.",
+    "title": "Ses Dönüştürücü"
+  },
+  "convertToJPG": {
+    "description": "Çeşitli görsel formatlarını özelleştirilebilir kalite ve arka plan rengi ayarlarıyla JPG'ye dönüştürün.",
+    "failedToConvert": "Görsellerin JPG'ye dönüştürülmesi başarısız oldu. Lütfen tekrar deneyin.",
+    "inputTitle": "Giriş Görselleri",
+    "options": {
+      "colorDescription": "Arka plan rengi (şeffaf görseller için)",
+      "quality": "Dönüştürme Kalitesi:",
+      "qualityDescription": "Daha yüksek değerler = daha iyi kalite, daha büyük dosya boyutu",
+      "title": "Dönüştürme Ayarları"
+    },
+    "resultTitle": "JPG Görselleri",
+    "shortDescription": "Görselleri kalite kontrolüyle JPG formatına dönüştürün",
+    "title": "Görselleri JPG'ye Dönüştür"
+  },
+  "convertToWebp": {
+    "description": "Çeşitli görsel formatlarını özelleştirilebilir kalite ve arka plan rengi ayarlarıyla WebP formatına dönüştürün.",
+    "failedToConvert": "Görsellerin WebP'ye dönüştürülmesi başarısız oldu. Lütfen tekrar deneyin.",
+    "inputTitle": "Giriş Görselleri",
+    "options": {
+      "colorDescription": "Arka plan rengi (şeffaf görseller için)",
+      "quality": "Dönüştürme Kalitesi:",
+      "qualityDescription": "Daha yüksek değerler = daha iyi kalite, daha büyük dosya boyutu",
+      "title": "Dönüştürme Ayarları"
+    },
+    "resultTitle": "WEBP Görselleri",
+    "shortDescription": "Görselleri kalite kontrolüyle WebP formatına dönüştürün.",
+    "title": "Görselleri WebP'ye Dönüştür"
+  }
+}
