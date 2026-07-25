@@ -1,11 +1,27 @@
 import { InitialValuesType, RandomNumberResult } from './types';
 
 /**
+ * Internal precision used for decimal generation (2 = hundredths).
+ * Change this single constant to support a different precision everywhere.
+ */
+const DECIMAL_PRECISION = 2;
+const DECIMAL_SCALE = 10 ** DECIMAL_PRECISION;
+
+/** Safety valve for the random-sampling path (rejection sampling). */
+const MAX_SAMPLING_ATTEMPTS_MULTIPLIER = 50;
+
+/**
  * Generate random numbers within a specified range
  */
 export function generateRandomNumbers(
   options: InitialValuesType
 ): RandomNumberResult {
+  const validationError = validateInput(options);
+
+  if (validationError) {
+    throw new Error(validationError);
+  }
+
   const {
     minValue,
     maxValue,
@@ -15,56 +31,32 @@ export function generateRandomNumbers(
     sortResults
   } = options;
 
-  if (minValue >= maxValue) {
-    throw new Error('Minimum value must be less than maximum value');
-  }
-
-  if (count <= 0) {
-    throw new Error('Count must be greater than 0');
-  }
-
   const numbers: number[] = [];
 
   if (allowDuplicates) {
-    // Generate random numbers with possible duplicates
     for (let i = 0; i < count; i++) {
-      const randomNumber = generateRandomNumber(
-        minValue,
-        maxValue,
-        allowDecimals
-      );
-      numbers.push(randomNumber);
+      numbers.push(generateRandomNumber(minValue, maxValue, allowDecimals));
     }
   } else {
-    // Build the bounded domain of distinct values that can be drawn. For
-    // decimals this is every hundredth in [min, max] inclusive; for integers
-    // it is every integer in [min, max] inclusive. The same domain backs the
-    // capacity check, so a valid decimal count is not rejected and no drawn
-    // value ever exceeds the inclusive maximum.
-    const availableArray = buildUniqueDomain(minValue, maxValue, allowDecimals);
+    const domainSize = getUniqueDomainSize(minValue, maxValue, allowDecimals);
 
-    if (count > availableArray.length) {
-      throw new Error(
-        'Cannot generate unique numbers: count exceeds available range'
+    /**
+     * If we need only a small part of the domain,
+     * avoid creating the whole array.
+     */
+    if (count < domainSize / 4) {
+      numbers.push(
+        ...generateUniqueRandomValues(minValue, maxValue, count, allowDecimals)
       );
-    }
+    } else {
+      const domain = buildUniqueDomain(minValue, maxValue, allowDecimals);
 
-    // Shuffle the available numbers
-    for (let i = availableArray.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [availableArray[i], availableArray[j]] = [
-        availableArray[j],
-        availableArray[i]
-      ];
-    }
+      shuffle(domain);
 
-    // Take the first 'count' numbers
-    for (let i = 0; i < Math.min(count, availableArray.length); i++) {
-      numbers.push(availableArray[i]);
+      numbers.push(...domain.slice(0, count));
     }
   }
 
-  // Sort if requested
   if (sortResults) {
     numbers.sort((a, b) => a - b);
   }
@@ -74,15 +66,65 @@ export function generateRandomNumbers(
     min: minValue,
     max: maxValue,
     count,
-    hasDuplicates: !allowDuplicates && hasDuplicatesInArray(numbers),
+    // Only worth checking when duplicates were actually allowed;
+    // otherwise they're guaranteed unique by construction.
+    hasDuplicates: allowDuplicates ? hasDuplicatesInArray(numbers) : false,
     isSorted: sortResults
   };
 }
 
 /**
- * Build the pool of distinct values that unique generation can draw from,
- * bounded by [min, max] inclusive. For decimals the granularity is hundredths
- * (matching the two-decimal display), for integers it is whole numbers.
+ * Calculate the amount of possible unique values
+ * without creating the domain.
+ */
+function getUniqueDomainSize(
+  min: number,
+  max: number,
+  allowDecimals: boolean
+): number {
+  if (allowDecimals) {
+    return (
+      Math.round(max * DECIMAL_SCALE) - Math.round(min * DECIMAL_SCALE) + 1
+    );
+  }
+
+  return Math.floor(max) - Math.ceil(min) + 1;
+}
+
+/**
+ * Generate unique values using random sampling.
+ * Optimized when count is small compared to the domain.
+ * Includes a safety valve in case of unexpectedly high collision rates.
+ */
+function generateUniqueRandomValues(
+  min: number,
+  max: number,
+  count: number,
+  allowDecimals: boolean
+): number[] {
+  const result = new Set<number>();
+  const maxAttempts = Math.max(count * MAX_SAMPLING_ATTEMPTS_MULTIPLIER, 1000);
+  let attempts = 0;
+
+  while (result.size < count) {
+    if (attempts >= maxAttempts) {
+      // Extremely unlikely given the count < domainSize/4 guard upstream,
+      // but this prevents an infinite loop if that invariant is ever broken.
+      throw new Error(
+        'Unable to generate enough unique values within a reasonable number of attempts'
+      );
+    }
+
+    result.add(generateRandomNumber(min, max, allowDecimals));
+    attempts++;
+  }
+
+  return [...result];
+}
+
+/**
+ * Build bounded unique domain.
+ * Decimal values use DECIMAL_PRECISION internally.
  */
 function buildUniqueDomain(
   min: number,
@@ -90,22 +132,36 @@ function buildUniqueDomain(
   allowDecimals: boolean
 ): number[] {
   const domain: number[] = [];
+
   if (allowDecimals) {
-    const start = Math.round(min * 100);
-    const end = Math.round(max * 100);
-    for (let h = start; h <= end; h++) {
-      domain.push(h / 100);
+    const start = Math.round(min * DECIMAL_SCALE);
+    const end = Math.round(max * DECIMAL_SCALE);
+
+    for (let value = start; value <= end; value++) {
+      domain.push(value / DECIMAL_SCALE);
     }
   } else {
-    for (let i = min; i <= max; i++) {
-      domain.push(i);
+    for (let value = Math.ceil(min); value <= Math.floor(max); value++) {
+      domain.push(value);
     }
   }
+
   return domain;
 }
 
 /**
- * Generate a single random number within the specified range
+ * Fisher-Yates shuffle
+ */
+function shuffle(array: number[]): void {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+/**
+ * Generate a single random number
  */
 function generateRandomNumber(
   min: number,
@@ -113,24 +169,19 @@ function generateRandomNumber(
   allowDecimals: boolean
 ): number {
   if (allowDecimals) {
-    return Math.random() * (max - min) + min;
-  } else {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Number(
+      (Math.random() * (max - min) + min).toFixed(DECIMAL_PRECISION)
+    );
   }
+
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**
- * Check if an array has duplicate values
+ * Check duplicate values
  */
 function hasDuplicatesInArray(arr: number[]): boolean {
-  const seen = new Set<number>();
-  for (const num of arr) {
-    if (seen.has(num)) {
-      return true;
-    }
-    seen.add(num);
-  }
-  return false;
+  return new Set(arr).size !== arr.length;
 }
 
 /**
@@ -142,15 +193,26 @@ export function formatNumbers(
   allowDecimals: boolean
 ): string {
   return numbers
-    .map((num) => (allowDecimals ? num.toFixed(2) : Math.round(num).toString()))
+    .map((num) =>
+      allowDecimals
+        ? num.toFixed(DECIMAL_PRECISION)
+        : Math.round(num).toString()
+    )
     .join(separator);
 }
 
 /**
- * Validate input parameters
+ * Validate input parameters.
+ * This is the single source of truth for input constraints and is
+ * enforced both here (for early/explicit checks) and internally by
+ * generateRandomNumbers (so it's safe to call standalone).
  */
 export function validateInput(options: InitialValuesType): string | null {
   const { minValue, maxValue, count } = options;
+
+  if (Number.isNaN(minValue) || Number.isNaN(maxValue) || Number.isNaN(count)) {
+    return 'Please enter valid numbers for min, max, and count';
+  }
 
   if (minValue >= maxValue) {
     return 'Minimum value must be less than maximum value';
@@ -166,6 +228,18 @@ export function validateInput(options: InitialValuesType): string | null {
 
   if (maxValue - minValue > 1000000) {
     return 'Range cannot exceed 1,000,000';
+  }
+
+  if (!options.allowDuplicates) {
+    const domainSize = getUniqueDomainSize(
+      minValue,
+      maxValue,
+      options.allowDecimals
+    );
+
+    if (count > domainSize) {
+      return 'Count exceeds the number of unique values available in this range';
+    }
   }
 
   return null;
