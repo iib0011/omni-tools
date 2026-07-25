@@ -106,7 +106,7 @@ describe('Random Number Generator Service', () => {
       };
 
       expect(() => generateRandomNumbers(options)).toThrow(
-        'count exceeds available range'
+        'Count exceeds the number of unique values available in this range'
       );
     });
 
@@ -176,7 +176,7 @@ describe('Random Number Generator Service', () => {
       };
 
       expect(() => generateRandomNumbers(options)).toThrow(
-        'Cannot generate unique numbers: count exceeds available range'
+        'Count exceeds the number of unique values available in this range'
       );
     });
   });
