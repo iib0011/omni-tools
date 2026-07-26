@@ -1,11 +1,11 @@
-import { parseJsonInput } from '@utils/json';
+import { parseJsonInput, JsonFormat } from '@utils/json';
 
 export const validateJson = (
   input: string
-): { valid: boolean; error?: string } => {
+): { valid: boolean; error?: string; format?: JsonFormat } => {
   try {
-    parseJsonInput(input);
-    return { valid: true };
+    const { format } = parseJsonInput(input);
+    return { valid: true, format: format };
   } catch (error) {
     if (error instanceof Error) {
       return { valid: false, error: error.message };

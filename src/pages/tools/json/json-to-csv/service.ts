@@ -1,5 +1,5 @@
 import { InitialValuesType } from './types';
-import { getJsonHeaders, parseJsonInput } from 'utils/json';
+import { getJsonHeaders, parseJsonInput, JsonFormat } from 'utils/json';
 
 /**
  * Recursively flattens any JSON value into a flat object.
@@ -79,12 +79,12 @@ function quoteCell(value: string, options: InitialValuesType): string {
 export function convertJsonToCsv(
   input: string,
   options: InitialValuesType
-): string {
+): { result: string; inputFormat: JsonFormat } {
   const { delimiter, includeHeaders } = options;
 
   if (!delimiter) throw new Error('No CSV delimiter.');
 
-  const { data } = parseJsonInput(input);
+  const { data, format } = parseJsonInput(input);
 
   const rows = flattenToRows(data).filter((row) => Object.keys(row).length > 0);
 
@@ -108,5 +108,5 @@ export function convertJsonToCsv(
     lines.push(line);
   }
 
-  return lines.join('\r\n');
+  return { result: lines.join('\r\n'), inputFormat: format };
 }

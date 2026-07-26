@@ -1,4 +1,5 @@
 import { InitialValuesType } from './types';
+import { parseJsonInput, JsonFormat } from '@utils/json';
 
 type JsonObject = Record<string, any>;
 
@@ -7,8 +8,8 @@ const MAX_JSON_DEPTH = 100;
 export const convertJsonToXml = (
   json: string,
   options: InitialValuesType
-): string => {
-  const parsed = JSON.parse(json);
+): { result: string; inputFormat: JsonFormat } => {
+  const { data: parsed, format: inputFormat } = parseJsonInput(json);
 
   if (typeof parsed !== 'object' || parsed === null) {
     throw new Error('JSON root value must be an object or array.');
@@ -33,7 +34,7 @@ export const convertJsonToXml = (
 
   chunks.push('</root>');
 
-  return chunks.join('');
+  return { result: chunks.join(''), inputFormat: inputFormat };
 };
 
 const convertArrayItemToXml = (
