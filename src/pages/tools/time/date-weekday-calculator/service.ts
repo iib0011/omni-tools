@@ -27,7 +27,9 @@ const WEEKDAY_TO_DAYJS: Record<Weekday, number> = {
 };
 
 /** Max valid day per month; February allows 29 (skipped in non-leap years). */
-const MAX_DAY_BY_MONTH = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+export const MAX_DAY_BY_MONTH = [
+  31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
+];
 
 const MIN_YEAR = 1;
 const MAX_YEAR = 9999;
@@ -165,14 +167,16 @@ export function parseAndFindMatchingYears(values: {
   startYear: string;
   endYear: string;
 }): FindMatchingYearsResult {
-  if (values.weekday.trim() === '') {
+  const weekday = values.weekday.trim();
+
+  if (weekday === '') {
     throw new Error(DATE_WEEKDAY_ERRORS.EMPTY_INPUT);
   }
 
   return findMatchingYears({
     month: parseRequiredInt(values.month),
     day: parseRequiredInt(values.day),
-    weekday: values.weekday as Weekday,
+    weekday: weekday as Weekday,
     startYear: parseRequiredInt(values.startYear),
     endYear: parseRequiredInt(values.endYear)
   });

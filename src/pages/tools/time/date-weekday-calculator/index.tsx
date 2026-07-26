@@ -10,7 +10,8 @@ import { useTranslation } from 'react-i18next';
 import {
   DATE_WEEKDAY_ERRORS,
   formatMatchingYearsResult,
-  parseAndFindMatchingYears
+  parseAndFindMatchingYears,
+  MAX_DAY_BY_MONTH
 } from './service';
 import { InitialValuesType, Weekday } from './types';
 
@@ -37,10 +38,14 @@ const MONTH_VALUES = [
   '12'
 ] as const;
 
-const DAY_OPTIONS = Array.from({ length: 31 }, (_, index) => {
-  const day = String(index + 1);
-  return { value: day, label: day };
-});
+const getDayOptions = (month: string) => {
+  const maxDay = MAX_DAY_BY_MONTH[Number(month) - 1] ?? 31;
+
+  return Array.from({ length: maxDay }, (_, index) => {
+    const day = String(index + 1);
+    return { value: day, label: day };
+  });
+};
 
 const WEEKDAY_VALUES: Weekday[] = [
   'monday',
@@ -155,57 +160,72 @@ export default function DateWeekdayCalculator({
         title: t('dateWeekdayCalculator.toolInfo.title', { title }),
         description: longDescription
       }}
-      getGroups={({ values, updateField }) => [
-        {
-          title: t('dateWeekdayCalculator.dateSelection'),
-          component: (
-            <Box>
+      getGroups={({ values, updateField }) => {
+        const dayOptions = getDayOptions(values.month);
+
+        return [
+          {
+            title: t('dateWeekdayCalculator.dateSelection'),
+            component: (
+              <Box>
+                <SelectWithDesc
+                  description={t('dateWeekdayCalculator.monthDescription')}
+                  selected={values.month}
+                  onChange={(value) => {
+                    updateField('month', value);
+
+                    // Clamp the selected day down if it no longer fits
+                    // the newly selected month (e.g. switching from
+                    // January 31 to February should land on 29, not
+                    // leave an out-of-range day selected).
+                    const newMaxDay = MAX_DAY_BY_MONTH[Number(value) - 1];
+                    if (newMaxDay && Number(values.day) > newMaxDay) {
+                      updateField('day', String(newMaxDay));
+                    }
+                  }}
+                  options={monthOptions}
+                />
+                <SelectWithDesc
+                  description={t('dateWeekdayCalculator.dayDescription')}
+                  selected={values.day}
+                  onChange={(value) => updateField('day', value)}
+                  options={dayOptions}
+                />
+              </Box>
+            )
+          },
+          {
+            title: t('dateWeekdayCalculator.weekdaySelection'),
+            component: (
               <SelectWithDesc
-                description={t('dateWeekdayCalculator.monthDescription')}
-                selected={values.month}
-                onChange={(value) => updateField('month', value)}
-                options={monthOptions}
+                description={t('dateWeekdayCalculator.weekdayDescription')}
+                selected={values.weekday}
+                onChange={(value) => updateField('weekday', value)}
+                options={weekdayOptions}
               />
-              <SelectWithDesc
-                description={t('dateWeekdayCalculator.dayDescription')}
-                selected={values.day}
-                onChange={(value) => updateField('day', value)}
-                options={DAY_OPTIONS}
-              />
-            </Box>
-          )
-        },
-        {
-          title: t('dateWeekdayCalculator.weekdaySelection'),
-          component: (
-            <SelectWithDesc
-              description={t('dateWeekdayCalculator.weekdayDescription')}
-              selected={values.weekday}
-              onChange={(value) => updateField('weekday', value)}
-              options={weekdayOptions}
-            />
-          )
-        },
-        {
-          title: t('dateWeekdayCalculator.yearRange'),
-          component: (
-            <Box>
-              <TextFieldWithDesc
-                description={t('dateWeekdayCalculator.startYearDescription')}
-                value={values.startYear}
-                onOwnChange={(value) => updateField('startYear', value)}
-                type="number"
-              />
-              <TextFieldWithDesc
-                description={t('dateWeekdayCalculator.endYearDescription')}
-                value={values.endYear}
-                onOwnChange={(value) => updateField('endYear', value)}
-                type="number"
-              />
-            </Box>
-          )
-        }
-      ]}
+            )
+          },
+          {
+            title: t('dateWeekdayCalculator.yearRange'),
+            component: (
+              <Box>
+                <TextFieldWithDesc
+                  description={t('dateWeekdayCalculator.startYearDescription')}
+                  value={values.startYear}
+                  onOwnChange={(value) => updateField('startYear', value)}
+                  type="number"
+                />
+                <TextFieldWithDesc
+                  description={t('dateWeekdayCalculator.endYearDescription')}
+                  value={values.endYear}
+                  onOwnChange={(value) => updateField('endYear', value)}
+                  type="number"
+                />
+              </Box>
+            )
+          }
+        ];
+      }}
       compute={(values) => {
         try {
           const matches = parseAndFindMatchingYears(values);
