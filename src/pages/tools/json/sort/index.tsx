@@ -11,6 +11,7 @@ import { InitialValuesType } from './types';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import { getJsonHeaders } from '@utils/json';
 import { useTranslation } from 'react-i18next';
+import { JsonFormat } from '@utils/json';
 
 const initialValues: InitialValuesType = {
   mode: 'value',
@@ -61,10 +62,20 @@ export default function SortJson({
   const { t } = useTranslation('json');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
+  const [format, setFormat] = useState<JsonFormat>('json');
 
   const compute = (values: InitialValuesType, input: string) => {
-    if (!input.trim()) return;
-    setResult(sortJson(input, values));
+    if (input) {
+      try {
+        const { result, format } = sortJson(input, values);
+        setResult(result);
+        setFormat(format);
+      } catch (error) {
+        setResult(
+          ` ${error instanceof Error ? error.message : 'Invalid JSON format'}`
+        );
+      }
+    }
   };
 
   const keys = getJsonHeaders(input);
@@ -148,7 +159,7 @@ export default function SortJson({
         <ToolTextResult
           title={t('sortJson.resultTitle')}
           value={result}
-          extension={'json'}
+          extension={format}
         />
       }
       initialValues={initialValues}

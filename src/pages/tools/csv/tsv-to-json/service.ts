@@ -48,7 +48,7 @@ export function convertTsvToJson(
   }
 
   return options.indentationType === 'none'
-    ? minifyJson(JSON.stringify(result))
+    ? minifyJson(JSON.stringify(result)).result
     : beautifyJson(
         JSON.stringify(result),
         options.indentationType,

@@ -1,5 +1,5 @@
 import { InitialValuesType } from './types';
-import { getJsonHeaders } from 'utils/json';
+import { getJsonHeaders, parseJsonInput } from 'utils/json';
 
 /**
  * Recursively flattens any JSON value into a flat object.
@@ -84,17 +84,9 @@ export function convertJsonToCsv(
 
   if (!delimiter) throw new Error('No CSV delimiter.');
 
-  let parsed: unknown;
+  const { data } = parseJsonInput(input);
 
-  try {
-    parsed = JSON.parse(input);
-  } catch {
-    throw new Error('Invalid JSON input.');
-  }
-
-  const rows = flattenToRows(parsed).filter(
-    (row) => Object.keys(row).length > 0
-  );
+  const rows = flattenToRows(data).filter((row) => Object.keys(row).length > 0);
 
   if (rows.length === 0) {
     throw new Error('No data found in the provided JSON.');
