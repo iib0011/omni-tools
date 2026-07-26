@@ -1,4 +1,5 @@
 import { InitialValuesType } from './types';
+import { parseJsonInput } from '@utils/json';
 
 type JsonObject = Record<string, any>;
 
@@ -8,7 +9,7 @@ export const convertJsonToXml = (
   json: string,
   options: InitialValuesType
 ): string => {
-  const parsed = JSON.parse(json);
+  const { data: parsed } = parseJsonInput(json);
 
   if (typeof parsed !== 'object' || parsed === null) {
     throw new Error('JSON root value must be an object or array.');

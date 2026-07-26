@@ -65,9 +65,7 @@ export default function JsonToXml({ title }: ToolComponentProps) {
         setResult(xmlResult);
       } catch (error) {
         setResult(
-          `Error: ${
-            error instanceof Error ? error.message : 'Invalid Json format'
-          }`
+          `${error instanceof Error ? error.message : 'Invalid Json format'}`
         );
       }
     }
