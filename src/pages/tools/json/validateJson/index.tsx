@@ -52,12 +52,14 @@ export default function ValidateJson({ title }: ToolComponentProps) {
   const [result, setResult] = useState<string>('');
 
   const compute = (options: any, input: string) => {
-    const { valid, error } = validateJson(input);
+    if (input) {
+      const { valid, error } = validateJson(input);
 
-    if (valid) {
-      setResult(t('validateJson.validJson'));
-    } else {
-      setResult(t('validateJson.invalidJson', { error }));
+      if (valid) {
+        setResult(t('validateJson.validJson'));
+      } else {
+        setResult(t('validateJson.invalidJson', { error }));
+      }
     }
   };
 
