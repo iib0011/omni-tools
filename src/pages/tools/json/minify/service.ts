@@ -1,10 +1,19 @@
-export const minifyJson = (text: string) => {
-  let parsedJson;
-  try {
-    parsedJson = JSON.parse(text);
-  } catch (e) {
-    throw new Error('Invalid JSON string');
+import { parseJsonInput, JsonFormat } from '@utils/json';
+
+export interface MinifyJsonResult {
+  result: string;
+  format: JsonFormat;
+}
+
+export const minifyJson = (text: string): MinifyJsonResult => {
+  const { data, format } = parseJsonInput(text);
+
+  if (format === 'jsonl' && Array.isArray(data)) {
+    return {
+      result: data.map((item) => JSON.stringify(item)).join('\n'),
+      format
+    };
   }
 
-  return JSON.stringify(parsedJson);
+  return { result: JSON.stringify(data), format };
 };
