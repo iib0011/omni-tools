@@ -1,4 +1,7 @@
 import { InitialValuesType } from './types';
+import { escapeMarkup } from '@utils/string';
+import { normalizeXmlTagName } from '@utils/xml';
+import { parseJsonInput, JsonFormat } from '@utils/json';
 
 type JsonObject = Record<string, any>;
 
@@ -7,8 +10,8 @@ const MAX_JSON_DEPTH = 100;
 export const convertJsonToXml = (
   json: string,
   options: InitialValuesType
-): string => {
-  const parsed = JSON.parse(json);
+): { result: string; inputFormat: JsonFormat } => {
+  const { data: parsed, format: inputFormat } = parseJsonInput(json);
 
   if (typeof parsed !== 'object' || parsed === null) {
     throw new Error('JSON root value must be an object or array.');
@@ -33,7 +36,7 @@ export const convertJsonToXml = (
 
   chunks.push('</root>');
 
-  return chunks.join('');
+  return { result: chunks.join(''), inputFormat: inputFormat };
 };
 
 const convertArrayItemToXml = (
@@ -52,7 +55,7 @@ const convertArrayItemToXml = (
     )}${indentation}</item>${newline}`;
   }
 
-  return `${indentation}<item>${escapeXml(String(item))}</item>${newline}`;
+  return `${indentation}<item>${escapeMarkup(String(item))}</item>${newline}`;
 };
 
 const convertObjectToXml = (
@@ -85,7 +88,7 @@ const convertObjectToXml = (
           chunks.push(convertObjectToXml(item, options, depth + 1));
           chunks.push(indentation);
         } else {
-          chunks.push(escapeXml(String(item)));
+          chunks.push(escapeMarkup(String(item)));
         }
 
         chunks.push(`</${tagName}>${newline}`);
@@ -105,7 +108,7 @@ const convertObjectToXml = (
     }
 
     chunks.push(
-      `${indentation}<${tagName}>${escapeXml(
+      `${indentation}<${tagName}>${escapeMarkup(
         String(value)
       )}</${tagName}>${newline}`
     );
@@ -123,21 +126,4 @@ const getIndentation = (options: InitialValuesType, depth: number): string => {
     default:
       return '';
   }
-};
-
-const escapeXml = (value: string): string => {
-  return value
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-};
-
-const normalizeXmlTagName = (key: string): string => {
-  const tagName = key !== '' && !isNaN(Number(key)) ? `row-${key}` : key;
-
-  const sanitized = tagName.replace(/[^a-zA-Z0-9_.-]/g, '_');
-
-  return /^[a-zA-Z_]/.test(sanitized) ? sanitized : `_${sanitized}`;
 };

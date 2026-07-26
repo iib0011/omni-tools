@@ -11,6 +11,7 @@ import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import SimpleRadio from '@components/options/SimpleRadio';
 import { InitialValuesType } from './types';
 import { useTranslation } from 'react-i18next';
+import { JsonFormat } from 'utils/json';
 
 const initialValues: InitialValuesType = {
   delimiter: ',',
@@ -75,17 +76,17 @@ export default function JsonToCsv({ title }: ToolComponentProps) {
   const { t } = useTranslation('json');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
+  const [inputFormat, setInputFormat] = useState<JsonFormat>('json');
 
   const compute = (values: InitialValuesType, input: string) => {
     if (input) {
       try {
-        const csvResult = convertJsonToCsv(input, values);
-        setResult(csvResult);
+        const { result, inputFormat } = convertJsonToCsv(input, values);
+        setResult(result);
+        setInputFormat(inputFormat);
       } catch (error) {
         setResult(
-          `Error: ${
-            error instanceof Error ? error.message : 'Invalid JSON format'
-          }`
+          ` ${error instanceof Error ? error.message : 'Invalid JSON format'}`
         );
       }
     }
@@ -104,7 +105,7 @@ export default function JsonToCsv({ title }: ToolComponentProps) {
           title={t('jsonToCsv.inputTitle')}
           value={input}
           onChange={setInput}
-          language="json"
+          language={inputFormat}
         />
       }
       resultComponent={

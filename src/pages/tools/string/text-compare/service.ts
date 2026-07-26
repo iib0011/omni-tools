@@ -1,6 +1,6 @@
 import { diffWordsWithSpace, diffChars } from 'diff';
 import { level } from './types';
-import { escapeHtml } from 'utils/string';
+import { escapeMarkup } from 'utils/string';
 
 const DIFF_FN = {
   word: diffWordsWithSpace,
@@ -16,7 +16,7 @@ export function compareTextsHtml(
 
   const html = diffs
     .map((part) => {
-      const val = escapeHtml(part.value).replace(/\n/g, '<br>');
+      const val = escapeMarkup(part.value).replace(/\n/g, '<br>');
       if (part.added) {
         return `<span class="diff-added">${val}</span>`;
       }

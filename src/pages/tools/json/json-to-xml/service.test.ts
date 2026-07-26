@@ -11,7 +11,7 @@ describe('convertJsonToXml', () => {
     const result = convertJsonToXml(
       JSON.stringify({ name: 'Alice', active: true }),
       defaultOptions
-    );
+    ).result;
 
     expect(result).toBe('<root><name>Alice</name><active>true</active></root>');
   });
@@ -25,7 +25,7 @@ describe('convertJsonToXml', () => {
         '': 'empty'
       }),
       defaultOptions
-    );
+    ).result;
 
     expect(result).toBe(
       '<root><hello_world>value</hello_world><_1st_place>gold</_1st_place><a_b>xss</a_b><_>empty</_></root>'
