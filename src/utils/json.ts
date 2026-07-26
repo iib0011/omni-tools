@@ -6,6 +6,13 @@ export type ParsedJson =
   | boolean
   | null;
 
+export type JsonFormat = 'json' | 'jsonl';
+
+export interface ParseJsonResult {
+  data: ParsedJson;
+  format: JsonFormat;
+}
+
 /**
  * Parses a JSON string into its JavaScript representation.
  *
@@ -18,9 +25,9 @@ export type ParsedJson =
  * Returns an empty string if the input is empty or whitespace-only.
  * @throws {Error} If the input contains invalid JSON.
  */
-export function parseJsonInput(input: string): ParsedJson {
+export function parseJsonInput(input: string): ParseJsonResult {
   try {
-    return JSON.parse(input);
+    return { data: JSON.parse(input), format: 'json' };
   } catch (originalError) {
     const lines = input.split(/\r?\n/);
 
@@ -58,7 +65,7 @@ export function parseJsonInput(input: string): ParsedJson {
       }
     }
 
-    return parsedLines;
+    return { data: parsedLines, format: 'jsonl' };
   }
 }
 /**
@@ -78,11 +85,8 @@ export function getJsonHeaders(
 
   if (typeof input === 'string') {
     try {
-      const parsed = parseJsonInput(input);
-      rows = (Array.isArray(parsed) ? parsed : [parsed]) as Record<
-        string,
-        string
-      >[];
+      const { data } = parseJsonInput(input);
+      rows = (Array.isArray(data) ? data : [data]) as Record<string, string>[];
     } catch {
       return [];
     }

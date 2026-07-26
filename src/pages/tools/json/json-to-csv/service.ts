@@ -84,11 +84,9 @@ export function convertJsonToCsv(
 
   if (!delimiter) throw new Error('No CSV delimiter.');
 
-  const parsed = parseJsonInput(input);
+  const { data } = parseJsonInput(input);
 
-  const rows = flattenToRows(parsed).filter(
-    (row) => Object.keys(row).length > 0
-  );
+  const rows = flattenToRows(data).filter((row) => Object.keys(row).length > 0);
 
   if (rows.length === 0) {
     throw new Error('No data found in the provided JSON.');
