@@ -76,7 +76,7 @@ export default function MinifyJson({ title }: ToolComponentProps) {
           title={t('minify.inputTitle')}
           value={input}
           onChange={setInput}
-          language="json"
+          language={format}
         />
       }
       resultComponent={

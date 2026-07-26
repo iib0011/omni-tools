@@ -152,7 +152,7 @@ export default function SortJson({
           title={t('sortJson.inputTitle')}
           value={input}
           onChange={setInput}
-          language={'json'}
+          language={format}
         />
       }
       resultComponent={

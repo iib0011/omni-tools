@@ -6,6 +6,7 @@ import { validateJson } from './service';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolContent from '@components/ToolContent';
 import { useTranslation } from 'react-i18next';
+import { JsonFormat } from '@utils/json';
 
 const exampleCards: CardExampleType<{}>[] = [
   {
@@ -50,13 +51,15 @@ export default function ValidateJson({ title }: ToolComponentProps) {
   const { t } = useTranslation('json');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
+  const [format, setFormat] = useState<JsonFormat | undefined>('json');
 
   const compute = (options: any, input: string) => {
     if (input) {
-      const { valid, error } = validateJson(input);
+      const { valid, error, format } = validateJson(input);
 
       if (valid) {
         setResult(t('validateJson.validJson'));
+        setFormat(format);
       } else {
         setResult(t('validateJson.invalidJson', { error }));
       }
@@ -71,7 +74,7 @@ export default function ValidateJson({ title }: ToolComponentProps) {
           title={t('validateJson.inputTitle')}
           value={input}
           onChange={setInput}
-          language="json"
+          language={format ? format : 'json'}
         />
       }
       resultComponent={
