@@ -10,6 +10,7 @@ import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import SimpleRadio from '@components/options/SimpleRadio';
 import { InitialValuesType } from './types';
 import { useTranslation } from 'react-i18next';
+import { JsonFormat } from 'utils/json';
 
 const initialValues: InitialValuesType = {
   indentationType: 'space',
@@ -57,12 +58,14 @@ export default function JsonToXml({ title }: ToolComponentProps) {
   const { t } = useTranslation('json');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
+  const [inputFormat, setInputFormat] = useState<JsonFormat>('json');
 
   const compute = (values: InitialValuesType, input: string) => {
     if (input) {
       try {
-        const xmlResult = convertJsonToXml(input, values);
-        setResult(xmlResult);
+        const { result, inputFormat } = convertJsonToXml(input, values);
+        setResult(result);
+        setInputFormat(inputFormat);
       } catch (error) {
         setResult(
           `${error instanceof Error ? error.message : 'Invalid Json format'}`
@@ -84,7 +87,7 @@ export default function JsonToXml({ title }: ToolComponentProps) {
           title={t('jsonToXml.inputTitle')}
           value={input}
           onChange={setInput}
-          language="json"
+          language={inputFormat}
         />
       }
       resultComponent={
