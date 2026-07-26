@@ -1,38 +1,10 @@
-type CsvToXmlOptions = {
-  delimiter: string;
-  quote: string;
-  comment: string;
-  useHeaders: boolean;
-  skipEmptyLines: boolean;
-};
-
-/**
- * Escape special XML characters in text content.
- */
-const escapeXml = (text: string): string => {
-  return text
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-};
-
-/**
- * Sanitize a string so it can be used as a valid XML element name.
- * Replaces characters that are not allowed in XML names with underscores.
- */
-const sanitizeXmlElementName = (name: string): string => {
-  // XML element names must start with a letter or underscore,
-  // and may only contain letters, digits, hyphens, underscores, and periods.
-  return name
-    .replace(/^[^a-zA-Z_]+/, '')
-    .replace(/[^a-zA-Z0-9_\-.]/g, '_');
-};
+import { InitialValuesType } from './types';
+import { escapeMarkup } from '@utils/string';
+import { normalizeXmlTagName } from '@utils/xml';
 
 export const convertCsvToXml = (
   csv: string,
-  options: CsvToXmlOptions
+  options: InitialValuesType
 ): string => {
   const lines = csv.split('\n').map((line) => line.trim());
 
@@ -51,15 +23,23 @@ export const convertCsvToXml = (
   }
 
   if (options.useHeaders) {
-    headers = parseCsvLine(validLines[0], options).map(sanitizeXmlElementName);
+    headers = parseCsvLine(validLines[0], options).map(normalizeXmlTagName);
     validLines.shift();
+  } else {
+    // No header row to source tag names from - fall back to positional
+    // column names (col1, col2, ...) based on the first data row's width,
+    // so rows still get real field tags instead of coming out empty.
+    const columnCount = parseCsvLine(validLines[0], options).length;
+    headers = Array.from({ length: columnCount }, (_, i) => `col${i + 1}`);
   }
 
   validLines.forEach((line, index) => {
     const values = parseCsvLine(line, options);
     xmlResult += `  <row id="${index}">\n`;
     headers.forEach((header, i) => {
-      xmlResult += `    <${header}>${escapeXml(values[i] || '')}</${header}>\n`;
+      xmlResult += `    <${header}>${escapeMarkup(
+        values[i] || ''
+      )}</${header}>\n`;
     });
     xmlResult += `  </row>\n`;
   });
@@ -68,7 +48,7 @@ export const convertCsvToXml = (
   return xmlResult;
 };
 
-const parseCsvLine = (line: string, options: CsvToXmlOptions): string[] => {
+const parseCsvLine = (line: string, options: InitialValuesType): string[] => {
   const values: string[] = [];
   let currentValue = '';
   let inQuotes = false;
@@ -76,9 +56,25 @@ const parseCsvLine = (line: string, options: CsvToXmlOptions): string[] => {
   for (let i = 0; i < line.length; i++) {
     const char = line[i];
 
-    if (char === options.quote) {
-      inQuotes = !inQuotes;
-    } else if (char === options.delimiter && !inQuotes) {
+    if (inQuotes) {
+      if (char === options.quote) {
+        // A doubled quote ("") inside a quoted field is an escaped
+        // literal quote, not the end of the field.
+        if (line[i + 1] === options.quote) {
+          currentValue += options.quote;
+          i++;
+        } else {
+          inQuotes = false;
+        }
+      } else {
+        currentValue += char;
+      }
+    } else if (char === options.quote && currentValue === '') {
+      // Only treat a quote as opening a quoted field when it's the very
+      // first character of the field - a quote appearing mid-field
+      // (e.g. `say "hello"`) is just literal text, not a CSV delimiter.
+      inQuotes = true;
+    } else if (char === options.delimiter) {
       values.push(currentValue.trim());
       currentValue = '';
     } else {

@@ -11,7 +11,10 @@ const defaultOptions = {
 
 describe('convertCsvToXml', () => {
   it('should convert basic CSV to XML with headers', () => {
-    const result = convertCsvToXml('name,age\nJohn,30\nAlice,25', defaultOptions);
+    const result = convertCsvToXml(
+      'name,age\nJohn,30\nAlice,25',
+      defaultOptions
+    );
     expect(result).toContain('<name>John</name>');
     expect(result).toContain('<name>Alice</name>');
     expect(result).toContain('<age>30</age>');
@@ -35,14 +38,20 @@ describe('convertCsvToXml', () => {
   });
 
   it('should handle normal data without corruption', () => {
-    const result = convertCsvToXml('name,age,city\nJohn,30,New York', defaultOptions);
+    const result = convertCsvToXml(
+      'name,age,city\nJohn,30,New York',
+      defaultOptions
+    );
     expect(result).toContain('<name>John</name>');
     expect(result).toContain('<age>30</age>');
     expect(result).toContain('<city>New York</city>');
   });
 
   it('should sanitize header names containing spaces', () => {
-    const result = convertCsvToXml('first name,last name\nJohn,Doe', defaultOptions);
+    const result = convertCsvToXml(
+      'first name,last name\nJohn,Doe',
+      defaultOptions
+    );
     expect(result).toContain('<first_name>John</first_name>');
     expect(result).toContain('<last_name>Doe</last_name>');
   });
@@ -56,7 +65,9 @@ describe('convertCsvToXml', () => {
 
   it('should return empty root element for empty input', () => {
     const result = convertCsvToXml('', defaultOptions);
-    expect(result).toBe('<?xml version="1.0" encoding="UTF-8" ?>\n<root></root>');
+    expect(result).toBe(
+      '<?xml version="1.0" encoding="UTF-8" ?>\n<root></root>'
+    );
   });
 
   it('should include XML declaration', () => {
@@ -70,6 +81,6 @@ describe('convertCsvToXml', () => {
     expect(result).toContain('&lt;');
     expect(result).toContain('&gt;');
     expect(result).toContain('&quot;');
-    expect(result).toContain('&apos;');
+    expect(result).toContain('&#039;');
   });
 });
