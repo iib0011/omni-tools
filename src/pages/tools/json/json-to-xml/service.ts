@@ -1,4 +1,6 @@
 import { InitialValuesType } from './types';
+import { escapeMarkup } from '@utils/string';
+import { normalizeXmlTagName } from '@utils/xml';
 import { parseJsonInput, JsonFormat } from '@utils/json';
 
 type JsonObject = Record<string, any>;
@@ -53,7 +55,7 @@ const convertArrayItemToXml = (
     )}${indentation}</item>${newline}`;
   }
 
-  return `${indentation}<item>${escapeXml(String(item))}</item>${newline}`;
+  return `${indentation}<item>${escapeMarkup(String(item))}</item>${newline}`;
 };
 
 const convertObjectToXml = (
@@ -86,7 +88,7 @@ const convertObjectToXml = (
           chunks.push(convertObjectToXml(item, options, depth + 1));
           chunks.push(indentation);
         } else {
-          chunks.push(escapeXml(String(item)));
+          chunks.push(escapeMarkup(String(item)));
         }
 
         chunks.push(`</${tagName}>${newline}`);
@@ -106,7 +108,7 @@ const convertObjectToXml = (
     }
 
     chunks.push(
-      `${indentation}<${tagName}>${escapeXml(
+      `${indentation}<${tagName}>${escapeMarkup(
         String(value)
       )}</${tagName}>${newline}`
     );
@@ -124,21 +126,4 @@ const getIndentation = (options: InitialValuesType, depth: number): string => {
     default:
       return '';
   }
-};
-
-const escapeXml = (value: string): string => {
-  return value
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-};
-
-const normalizeXmlTagName = (key: string): string => {
-  const tagName = key !== '' && !isNaN(Number(key)) ? `row-${key}` : key;
-
-  const sanitized = tagName.replace(/[^a-zA-Z0-9_.-]/g, '_');
-
-  return /^[a-zA-Z_]/.test(sanitized) ? sanitized : `_${sanitized}`;
 };
