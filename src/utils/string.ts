@@ -88,7 +88,7 @@ export function unquoteIfQuoted(value: string, quoteCharacter: string): string {
 }
 
 /**
- * Count the occurence of items.
+ * Count the occurrence of items.
  * @param array - array get from user with a custom delimiter.
  * @param ignoreItemCase - boolean status to ignore the case i .
  * @returns Dict of Items count {[Item]: occcurence}.
