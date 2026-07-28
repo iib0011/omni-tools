@@ -1,0 +1,205 @@
+{
+  "arithmeticSequence": {
+    "commonDifferenceDescription": "Differenza comune tra i termini (d)",
+    "description": "Genera progressioni aritmetiche con parametri personalizzabili.",
+    "firstTermDescription": "Primo termine della progressione (a₁)",
+    "numberOfTermsDescription": "Numero di termini da generare (n)",
+    "outputFormat": "Formato di output",
+    "resultTitle": "Progressione generata",
+    "separatorDescription": "Separatore tra i termini",
+    "sequenceParameters": "Parametri della progressione",
+    "shortDescription": "Genera progressioni aritmetiche",
+    "title": "Progressione aritmetica",
+    "toolInfo": {
+      "description": "Una progressione aritmetica è una successione di numeri in cui la differenza tra due termini consecutivi è costante. Questa costante è chiamata ragione o differenza comune. Conoscendo il primo termine (a₁) e la differenza comune (d), ogni termine si ottiene aggiungendo d al precedente.",
+      "title": "Che cos'è una progressione aritmetica?"
+    }
+  },
+  "byteConverter": {
+    "description": "Converti valori tra diverse unità di byte, usando sia il sistema SI decimale sia quello IEC binario. Supporta la conversione di più righe.",
+    "inputTitle": "Valori di input",
+    "outputTitle": "Output convertito",
+    "shortDescription": "Converti rapidamente valori tra unità di byte",
+    "title": "Convertitore di byte",
+    "unit": {
+      "from": "Seleziona l'unità dei valori di input, ad esempio KB, MB o GiB.",
+      "precision": "Numero di cifre decimali da mostrare nell'output convertito.",
+      "title": "Opzioni di conversione",
+      "to": "Seleziona l'unità in cui convertire i valori di input."
+    }
+  },
+  "generate": {
+    "arithmeticSequenceOption": "Opzione progressione aritmetica",
+    "description": "Genera una sequenza di numeri con parametri personalizzabili.",
+    "numberOfElementsDescription": "Numero di elementi nella sequenza.",
+    "resultTitle": "Numeri generati",
+    "separator": "Separatore",
+    "separatorDescription": "Separa gli elementi della progressione con questo carattere.",
+    "shortDescription": "Genera numeri negli intervalli indicati",
+    "startSequenceDescription": "Inizia la sequenza da questo numero.",
+    "stepDescription": "Incrementa ogni elemento di questo valore",
+    "title": "Genera",
+    "toolInfo": {
+      "description": "Questo strumento genera una sequenza di numeri con parametri personalizzabili. Puoi indicare valore iniziale, incremento e numero di elementi.",
+      "title": "Genera numeri"
+    }
+  },
+  "ohmsLaw": {
+    "description": "Calcola tensione, corrente e resistenza",
+    "longDescription": "Questa calcolatrice applica la legge di Ohm (V = I × R) per determinare uno dei tre parametri elettrici quando sono noti gli altri due. È utile per appassionati di elettronica, tecnici, ingegneri e studenti che lavorano con circuiti elettrici.",
+    "shortDescription": "Calcola tensione, corrente o resistenza nei circuiti usando la legge di Ohm",
+    "title": "Legge di Ohm"
+  },
+  "randomNumberGenerator": {
+    "description": "Genera numeri casuali in un intervallo specificato con opzioni personalizzabili.",
+    "error": {
+      "generationFailed": "Impossibile generare i numeri casuali. Controlla i parametri inseriti."
+    },
+    "info": {
+      "description": "Un generatore di numeri casuali produce valori imprevedibili in un intervallo specificato. Questo strumento usa una generazione casuale crittograficamente sicura ed è utile per simulazioni, giochi, campionamento statistico e test.",
+      "title": "Che cos'è un generatore di numeri casuali?"
+    },
+    "longDescription": "Genera numeri casuali in un intervallo specificato, scegliendo interi o decimali, consentendo o impedendo duplicati e ordinando facoltativamente i risultati.",
+    "options": {
+      "generation": {
+        "allowDecimals": {
+          "description": "Genera numeri decimali anziché interi",
+          "title": "Consenti numeri decimali"
+        },
+        "allowDuplicates": {
+          "description": "Consenti che lo stesso numero compaia più volte",
+          "title": "Consenti duplicati"
+        },
+        "countDescription": "Numero di valori casuali da generare (1-10.000)",
+        "sortResults": {
+          "description": "Ordina i numeri generati in ordine crescente",
+          "title": "Ordina risultati"
+        },
+        "title": "Opzioni di generazione"
+      },
+      "output": {
+        "separatorDescription": "Caratteri usati per separare i numeri generati",
+        "title": "Impostazioni di output"
+      },
+      "range": {
+        "maxDescription": "Valore massimo, incluso",
+        "minDescription": "Valore minimo, incluso",
+        "title": "Impostazioni dell'intervallo"
+      }
+    },
+    "result": {
+      "count": "Quantità",
+      "hasDuplicates": "Contiene duplicati",
+      "isSorted": "Ordinato",
+      "range": "Intervallo",
+      "title": "Numeri casuali generati"
+    },
+    "shortDescription": "Genera numeri casuali in intervalli personalizzati",
+    "title": "Generatore di numeri casuali"
+  },
+  "randomPortGenerator": {
+    "description": "Genera porte di rete casuali negli intervalli indicati con opzioni personalizzabili.",
+    "error": {
+      "generationFailed": "Impossibile generare le porte casuali. Controlla i parametri inseriti."
+    },
+    "info": {
+      "description": "Un generatore di porte casuali crea numeri di porta di rete imprevedibili negli intervalli indicati. Segue gli standard IANA e identifica i servizi più comuni. È utile per sviluppo, test e configurazione di rete.",
+      "title": "Che cos'è un generatore di porte casuali?"
+    },
+    "longDescription": "Genera porte di rete casuali negli intervalli well-known, registrato, dinamico o personalizzato. È utile per sviluppo, test e configurazione di rete e include l'identificazione dei servizi associati alle porte comuni.",
+    "options": {
+      "generation": {
+        "allowDuplicates": {
+          "description": "Consenti che la stessa porta compaia più volte",
+          "title": "Consenti duplicati"
+        },
+        "countDescription": "Numero di porte casuali da generare (1-1.000)",
+        "sortResults": {
+          "description": "Ordina le porte generate in ordine crescente",
+          "title": "Ordina risultati"
+        },
+        "title": "Opzioni di generazione"
+      },
+      "output": {
+        "separatorDescription": "Caratteri usati per separare le porte generate",
+        "title": "Impostazioni di output"
+      },
+      "range": {
+        "custom": "Intervallo personalizzato",
+        "dynamic": "Porte dinamiche (49152-65535)",
+        "maxPortDescription": "Numero di porta massimo (1-65535)",
+        "minPortDescription": "Numero di porta minimo (1-65535)",
+        "registered": "Porte registrate (1024-49151)",
+        "title": "Impostazioni dell'intervallo di porte",
+        "wellKnown": "Porte note (1-1023)"
+      }
+    },
+    "result": {
+      "count": "Quantità",
+      "hasDuplicates": "Contiene duplicati",
+      "isSorted": "Ordinato",
+      "portDetails": "Dettagli delle porte",
+      "range": "Intervallo di porte",
+      "title": "Porte casuali generate"
+    },
+    "shortDescription": "Genera porte di rete casuali",
+    "title": "Generatore di porte casuali"
+  },
+  "slackline": {
+    "description": "Calcola la tensione di una slackline",
+    "longDescription": "Questa calcolatrice presuppone che il carico sia applicato al centro della fune.",
+    "shortDescription": "Calcola la tensione approssimativa di una slackline o di una corda per il bucato. Non usarla per valutazioni di sicurezza.",
+    "title": "Tensione della slackline"
+  },
+  "sphereArea": {
+    "description": "Area di una sfera",
+    "longDescription": "Calcola la superficie di una sfera con la formula A = 4πr². Puoi inserire il raggio per trovare l'area oppure l'area per calcolare il raggio necessario.",
+    "shortDescription": "Calcola la superficie di una sfera in base al raggio",
+    "title": "Area di una sfera"
+  },
+  "sphereVolume": {
+    "description": "Volume di una sfera",
+    "longDescription": "Calcola il volume di una sfera con la formula V = (4/3)πr³. Puoi inserire raggio o diametro per trovare il volume oppure il volume per determinare il raggio necessario.",
+    "shortDescription": "Calcola il volume di una sfera usando raggio o diametro",
+    "title": "Volume di una sfera"
+  },
+  "sum": {
+    "description": "Calcola la somma di un elenco di numeri. Inserisci valori separati da virgole o nuove righe per ottenerne il totale.",
+    "example1Description": "In questo esempio calcoliamo la somma di dieci numeri interi positivi disposti in colonna, ottenendo un totale di 19494.",
+    "example1Title": "Somma di dieci numeri positivi",
+    "example2Description": "In questo esempio vengono estratti e conteggiati valori numerici da un elenco separato da ritorni a capo.",
+    "example2Title": "Conteggio degli alberi nel parco",
+    "example3Description": "In questo esempio sommiamo novanta valori diversi, tra numeri positivi, negativi, interi e decimali. Usando la virgola come separatore, il risultato è 0.",
+    "example3Title": "Somma di interi e decimali",
+    "example4Description": "In questo esempio sommiamo tutte le dieci cifre e attiviamo l'opzione «Mostra somma progressiva», ottenendo i valori intermedi durante l'addizione.",
+    "example4Title": "Somma progressiva dei numeri",
+    "extractionTypes": {
+      "delimiter": {
+        "description": "Personalizza qui il separatore dei numeri. Per impostazione predefinita è un ritorno a capo.",
+        "title": "Delimitatore dei numeri"
+      },
+      "smart": {
+        "description": "Rileva automaticamente i numeri nell'input.",
+        "title": "Somma intelligente"
+      }
+    },
+    "inputTitle": "Input",
+    "numberExtraction": "Estrazione dei numeri",
+    "printRunningSum": "Mostra somma progressiva",
+    "printRunningSumDescription": "Visualizza la somma mentre viene calcolata, passaggio per passaggio.",
+    "resultTitle": "Totale",
+    "runningSum": "Somma progressiva",
+    "shortDescription": "Calcola la somma di numeri",
+    "title": "Somma",
+    "toolInfo": {
+      "description": "Questa utilità calcola la somma di un insieme di numeri. Puoi inserire valori separati da virgola, spazio, ritorno a capo o qualsiasi altro carattere, oppure incollare testo contenente numeri che verranno estratti automaticamente.",
+      "title": "Che cos'è un calcolatore della somma?"
+    }
+  },
+  "voltageDropInWire": {
+    "description": "Calcola la caduta di tensione complessiva e la perdita di potenza in un cavo a due conduttori",
+    "longDescription": "Questa calcolatrice determina la caduta di tensione e la perdita di potenza in un cavo elettrico a due conduttori. Considera lunghezza, sezione del conduttore, resistività del materiale e corrente, calcolando resistenza totale, caduta di tensione di andata e ritorno e potenza dissipata in calore.",
+    "shortDescription": "Calcola caduta di tensione e perdita di potenza nei cavi in base a lunghezza, materiale e corrente",
+    "title": "Caduta di tensione complessiva nel cavo"
+  }
+}
