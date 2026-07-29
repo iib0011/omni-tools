@@ -4,6 +4,7 @@ dist-ssr
 
 # dependencies
 /node_modules
+public/pdf-workbench/runtime/
 /.pnp
 .pnp.js
 

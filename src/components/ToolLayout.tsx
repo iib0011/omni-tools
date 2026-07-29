@@ -13,6 +13,7 @@ import { IconifyIcon } from '@iconify/react';
 import { useTranslation } from 'react-i18next';
 import { ToolCategory } from '@tools/defineTool';
 import { FullI18nKey } from '../i18n';
+import { isPdfWorkbenchRoute } from '../lib/pdf-workbench/routes';
 
 export default function ToolLayout({
   children,
@@ -52,6 +53,7 @@ export default function ToolLayout({
         link: '/' + tool.path,
         icon: tool.icon
       })) ?? [];
+  const localPdfWorkbench = isPdfWorkbenchRoute(fullPath);
 
   return (
     <Box
@@ -71,19 +73,22 @@ export default function ToolLayout({
           icon={icon}
           type={type}
           path={fullPath}
+          localIconMode={localPdfWorkbench}
         />
         {children}
         <Separator backgroundColor="#5581b5" margin="50px" />
-        <AllTools
-          title={t('translation:toolLayout.allToolsTitle', '', {
-            type: capitalizeFirstLetter(
-              getToolsByCategory([], t).find(
-                (category) => category.type === type
-              )!.title
-            )
-          })}
-          toolCards={otherCategoryTools}
-        />
+        {!localPdfWorkbench && (
+          <AllTools
+            title={t('translation:toolLayout.allToolsTitle', '', {
+              type: capitalizeFirstLetter(
+                getToolsByCategory([], t).find(
+                  (category) => category.type === type
+                )!.title
+              )
+            })}
+            toolCards={otherCategoryTools}
+          />
+        )}
       </Box>
     </Box>
   );

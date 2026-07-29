@@ -4,7 +4,12 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link, useNavigate } from 'react-router-dom';
+import ContrastIcon from '@mui/icons-material/Contrast';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from 'assets/logo.png';
 import logoWhite from 'assets/logo-white.png';
 import {
@@ -24,6 +29,7 @@ import { useTheme } from '@mui/material/styles';
 import { Icon } from '@iconify/react';
 import { Mode } from 'components/App';
 import { useTranslation } from 'react-i18next';
+import { isPdfWorkbenchRoute } from '../../lib/pdf-workbench/routes';
 
 interface NavbarProps {
   mode: Mode;
@@ -48,9 +54,11 @@ const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const isLocalPdfWorkbenchRoute = isPdfWorkbenchRoute(location.pathname);
   const toggleDrawer = (open: boolean) => () => {
     setDrawerOpen(open);
   };
@@ -65,9 +73,15 @@ const Navbar: React.FC<NavbarProps> = ({
     // { label: 'Features', path: '/features' }
     // { label: 'About Us', path: '/about-us' }
   ];
+  const LocalModeIcon =
+    mode === 'dark'
+      ? DarkModeIcon
+      : mode === 'light'
+        ? LightModeIcon
+        : ContrastIcon;
 
   const languageSelector = (
-    <FormControl size="small" sx={{ minWidth: 120 }}>
+    <FormControl key="language-selector" size="small" sx={{ minWidth: 120 }}>
       <Select
         value={i18n.language}
         onChange={handleLanguageChange}
@@ -99,34 +113,70 @@ const Navbar: React.FC<NavbarProps> = ({
 
   const buttons: ReactNode[] = [
     languageSelector,
-    <Icon
-      key={mode}
-      onClick={onChangeMode}
-      style={{ cursor: 'pointer' }}
-      fontSize={30}
-      icon={
-        mode === 'dark'
-          ? 'ic:round-dark-mode'
-          : mode === 'light'
-            ? 'ic:round-light-mode'
-            : 'ic:round-contrast'
-      }
-    />,
-    <Icon
-      onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
-      style={{ cursor: 'pointer' }}
-      fontSize={30}
-      icon={'ic:baseline-discord'}
-    />,
-    <iframe
-      src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
-      frameBorder="0"
-      scrolling="0"
-      width="150"
-      height="30"
-      title="GitHub"
-    ></iframe>,
+    isLocalPdfWorkbenchRoute ? (
+      <IconButton
+        key="local-mode"
+        aria-label="Change color mode"
+        onClick={onChangeMode}
+      >
+        <LocalModeIcon sx={{ fontSize: 30 }} />
+      </IconButton>
+    ) : (
+      <Icon
+        key={mode}
+        onClick={onChangeMode}
+        style={{ cursor: 'pointer' }}
+        fontSize={30}
+        icon={
+          mode === 'dark'
+            ? 'ic:round-dark-mode'
+            : mode === 'light'
+              ? 'ic:round-light-mode'
+              : 'ic:round-contrast'
+        }
+      />
+    ),
+    isLocalPdfWorkbenchRoute ? (
+      <IconButton
+        key="local-discord"
+        aria-label="Open Discord"
+        onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
+      >
+        <ForumOutlinedIcon sx={{ fontSize: 30 }} />
+      </IconButton>
+    ) : (
+      <Icon
+        key="discord"
+        onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
+        style={{ cursor: 'pointer' }}
+        fontSize={30}
+        icon={'ic:baseline-discord'}
+      />
+    ),
+    isLocalPdfWorkbenchRoute ? (
+      <Button
+        key="github-link"
+        component="a"
+        href="https://github.com/iib0011/omni-tools"
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="outlined"
+      >
+        GitHub
+      </Button>
+    ) : (
+      <iframe
+        key="github-button"
+        src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
+        frameBorder="0"
+        scrolling="0"
+        width="150"
+        height="30"
+        title="GitHub"
+      ></iframe>
+    ),
     <Button
+      key="hire-me"
       onClick={() => {
         window.open(
           'https://drive.google.com/file/d/1-r9-rDYnDJic9dnDywKTAsueehIAVp5F/view?usp=sharing',
@@ -136,11 +186,15 @@ const Navbar: React.FC<NavbarProps> = ({
       sx={{ borderRadius: '100px' }}
       variant={'contained'}
       startIcon={
-        <Icon
-          style={{ cursor: 'pointer' }}
-          fontSize={25}
-          icon={'hugeicons:job-search'}
-        />
+        isLocalPdfWorkbenchRoute ? (
+          <WorkOutlineIcon />
+        ) : (
+          <Icon
+            style={{ cursor: 'pointer' }}
+            fontSize={25}
+            icon={'hugeicons:job-search'}
+          />
+        )
       }
     >
       {t('navbar.hireMe')}
@@ -156,8 +210,8 @@ const Navbar: React.FC<NavbarProps> = ({
           <ListItemText primary={navItem.label} />
         </ListItemButton>
       ))}
-      {buttons.map((button) => (
-        <ListItem>{button}</ListItem>
+      {buttons.map((button, index) => (
+        <ListItem key={`navbar-button-${index}`}>{button}</ListItem>
       ))}
     </List>
   );

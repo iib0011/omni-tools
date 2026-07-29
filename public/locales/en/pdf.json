@@ -135,5 +135,595 @@
     "title": "Extract Images from PDF",
     "inputTitle": "Input PDF",
     "resultTitle": "Extracted Images"
+  },
+  "ocrPdf": {
+    "title": "OCR PDF / Make PDF Searchable",
+    "description": "Recognize text in scanned PDF pages and add a searchable text layer entirely in your browser.",
+    "shortDescription": "Make scanned PDFs searchable with local OCR",
+    "longDescription": "Run OCR on selected PDF pages using locally hosted Tesseract language data. Download a verified searchable PDF plus UTF-8 text and structured JSON results.",
+    "localNotice": "PDF rendering, OCR, and output generation happen locally in this browser. Document data is not sent to an external service.",
+    "inputTitle": "Input PDF",
+    "inputDescription": "Choose one PDF. Processing starts only when you select Run OCR.",
+    "optionsTitle": "OCR options",
+    "pageCount": "PDF has {{count}} page(s)",
+    "pageRange": "Pages",
+    "pageRangeHelp": "Leave blank for all pages, or enter values such as 1,3-5.",
+    "language": "Recognition language",
+    "dpi": "Render resolution",
+    "dpiValue": "{{dpi}} DPI",
+    "autoOrient": "Automatically detect text orientation",
+    "skipTextPages": "Skip pages with meaningful extractable text",
+    "run": "Run OCR",
+    "cancel": "Cancel",
+    "download": "Download",
+    "resultTitle": "OCR results",
+    "success": "The searchable PDF reopened successfully and its searchable text was verified.",
+    "failedPages": "OCR failed on page(s) {{pages}}. They remain in the PDF unchanged and are identified in the text and JSON results.",
+    "skippedPages": "Text-native page(s) {{pages}} were copied without rasterization.",
+    "unsupportedGlyphs": "{{count}} unrecognized glyph(s) could not be embedded in the PDF text layer; they remain in the TXT and JSON results.",
+    "filePicker": {
+      "select": "Choose PDF",
+      "drop": "Drop one PDF here",
+      "clear": "Clear",
+      "invalidType": "Choose a PDF file.",
+      "tooMany": "Choose only one PDF."
+    },
+    "languages": {
+      "english": "English",
+      "french": "French",
+      "german": "German",
+      "spanish": "Spanish",
+      "italian": "Italian",
+      "portuguese": "Portuguese",
+      "russian": "Russian",
+      "japanese": "Japanese",
+      "chineseSimplified": "Chinese (Simplified)",
+      "chineseTraditional": "Chinese (Traditional)",
+      "korean": "Korean",
+      "arabic": "Arabic"
+    },
+    "signature": {
+      "title": "Digital signature fields detected",
+      "message": "Adding a searchable text layer rewrites the PDF and can invalidate existing signatures."
+    },
+    "progress": {
+      "stage": "OCR progress",
+      "page": "Page {{page}}",
+      "extracting": "Checking the existing text layer",
+      "skipping": "Copying a text-native page",
+      "rendering": "Rendering a page for OCR",
+      "recognizing": "Recognizing text",
+      "building": "Building the searchable PDF",
+      "verifying": "Verifying searchable output",
+      "loadingLanguage": "Loading the selected local language pack",
+      "loadingCore": "Loading the local OCR engine",
+      "initializing": "Initializing OCR",
+      "working": "Working",
+      "complete": "OCR and output verification complete"
+    },
+    "results": {
+      "pdf": "Verified searchable PDF",
+      "text": "UTF-8 text with page status",
+      "json": "Structured page, line, word, confidence, and bounding-box data"
+    },
+    "errors": {
+      "title": "OCR could not complete",
+      "invalidPdf": "The selected file could not be opened as a valid PDF.",
+      "emptyRange": "Choose at least one page.",
+      "cancelled": "OCR was cancelled and no partial output was kept.",
+      "noSearchableText": "No searchable text was produced. Review the failed pages or try different OCR settings.",
+      "downloadFailed": "The generated OCR file could not be downloaded.",
+      "failed": "The PDF could not be processed."
+    }
+  },
+  "organizePdf": {
+    "title": "Organize PDF Pages",
+    "description": "Reorder, duplicate, delete, and insert blank PDF pages locally in your browser.",
+    "shortDescription": "Reorder and organize pages in one PDF",
+    "longDescription": "Organize a single PDF with drag-and-drop, keyboard controls, multi-selection, undo, and redo while preserving page dimensions and rotation.",
+    "localProcessing": "This PDF stays in your browser. Page previews and the organized output are created locally.",
+    "inputTitle": "Input PDF",
+    "openPdf": "Open PDF",
+    "cancel": "Cancel",
+    "signatureWarning": "Digital signature fields were detected. Reorganizing pages rewrites the document and can invalidate signatures.",
+    "signatureAcknowledge": "I understand that existing digital signatures may become invalid",
+    "pageSummary": "{{count}} page(s)",
+    "selectedSummary": "{{selected}} of {{total}} selected",
+    "keepOnePage": "An organized PDF must retain at least one page.",
+    "keyboardHint": "Select a page, then use the move earlier/later controls or Alt+Arrow keys.",
+    "pageGrid": "Page organization grid",
+    "export": "Create organized PDF",
+    "outputVerified": "Verified {{count}} page(s): {{textPages}} source page(s), {{blankPages}} blank page(s).",
+    "outputSize": "Output size: {{size}}",
+    "outputDescription": "Organized PDF document",
+    "download": "Download",
+    "input": {
+      "hint": "Choose one PDF. Selection alone does not render previews or start processing.",
+      "choose": "Choose PDF",
+      "replace": "Replace PDF",
+      "clear": "Clear",
+      "selected": "{{name}} — {{size}}"
+    },
+    "progress": {
+      "reading": "Reading PDF",
+      "inspecting": "Inspecting pages",
+      "copying": "Copying organized pages",
+      "saving": "Saving output",
+      "verifying": "Verifying page order",
+      "count": "{{current}} of {{total}}"
+    },
+    "errors": {
+      "invalidFile": "Choose a PDF file.",
+      "oneFileOnly": "Choose only one PDF.",
+      "openFailed": "The PDF could not be opened.",
+      "verificationFailed": "The organized PDF did not match the requested page order.",
+      "exportFailed": "The organized PDF could not be created.",
+      "downloadFailed": "The organized PDF could not be downloaded.",
+      "invalidPdf": "The selected file is not a valid PDF.",
+      "passwordRequired": "Password-protected PDFs cannot be organized in this browser tool.",
+      "emptyDocument": "The PDF does not contain any pages.",
+      "invalidOrganization": "The requested page organization is invalid.",
+      "workerFailed": "The organization worker stopped unexpectedly."
+    },
+    "selection": {
+      "selectAll": "Select all",
+      "clear": "Clear selection",
+      "odd": "Select odd pages",
+      "even": "Select even pages"
+    },
+    "actions": {
+      "undo": "Undo",
+      "redo": "Redo",
+      "delete": "Delete selected",
+      "duplicate": "Duplicate selected",
+      "reverse": "Reverse all",
+      "earlier": "Move earlier",
+      "later": "Move later",
+      "moveBeginning": "Move to beginning",
+      "moveEnd": "Move to end",
+      "blankBefore": "Insert blank before",
+      "blankAfter": "Insert blank after"
+    },
+    "thumbnail": {
+      "page": "Page {{page}}",
+      "originalPage": "Source page {{page}}",
+      "blankPage": "Blank page",
+      "thumbnail": "Thumbnail for page {{page}}",
+      "thumbnailError": "Preview unavailable"
+    }
+  },
+  "stampPdf": {
+    "title": "Stamp PDF",
+    "description": "Add watermarks, page numbers, Bates numbers, headers, or footers to a PDF locally.",
+    "shortDescription": "Add configurable text and image stamps to PDFs",
+    "localNotice": "Your PDF and stamp assets are processed locally in this browser and are not uploaded.",
+    "inputTitle": "Input PDF",
+    "inputDescription": "Choose one PDF. A preview is rendered locally; output is created only after you select Run.",
+    "optionsTitle": "Stamp options",
+    "allPages": "Apply to all pages",
+    "pageRange": "Page range",
+    "pageCount": "PDF has {{count}} page(s)",
+    "horizontalMargin": "Horizontal margin",
+    "verticalMargin": "Vertical margin",
+    "rotation": "Rotation (degrees)",
+    "fontSize": "Font size",
+    "opacity": "Opacity: {{value}}%",
+    "color": "Text color",
+    "text": "Watermark text",
+    "header": "Header text",
+    "footer": "Footer text",
+    "run": "Apply stamp",
+    "cancel": "Cancel",
+    "download": "Download",
+    "resultTitle": "Stamped PDF",
+    "resultDescription": "Verified stamped PDF",
+    "success": "The stamped PDF has the original page count and reopened successfully.",
+    "filePicker": {
+      "select": "Choose PDF",
+      "drop": "Drop one PDF here",
+      "clear": "Clear",
+      "invalidType": "Choose a PDF file.",
+      "tooMany": "Choose only one PDF."
+    },
+    "mode": {
+      "label": "Stamp mode",
+      "text": "Text watermark",
+      "image": "Image watermark",
+      "page-numbers": "Page numbers",
+      "bates": "Bates numbering",
+      "header-footer": "Header and footer"
+    },
+    "layer": {
+      "label": "Layer",
+      "above": "Above page content",
+      "below": "Below page content"
+    },
+    "position": {
+      "label": "Placement",
+      "top-left": "Top left",
+      "top-center": "Top center",
+      "top-right": "Top right",
+      "middle-left": "Middle left",
+      "middle-center": "Center",
+      "middle-right": "Middle right",
+      "bottom-left": "Bottom left",
+      "bottom-center": "Bottom center",
+      "bottom-right": "Bottom right"
+    },
+    "image": {
+      "select": "Choose PNG or JPEG",
+      "clear": "Clear image",
+      "scale": "Image scale (%)",
+      "preserveAspect": "Preserve image aspect ratio"
+    },
+    "pageNumbers": {
+      "format": "Page number format",
+      "start": "Starting page number"
+    },
+    "bates": {
+      "prefix": "Bates prefix",
+      "suffix": "Bates suffix",
+      "start": "Starting Bates number",
+      "padding": "Zero-padding digits"
+    },
+    "preview": {
+      "title": "Live preview",
+      "description": "Choose a representative page and adjust the controls to preview placement.",
+      "page": "Representative page",
+      "notSelected": "This representative page is outside the selected page range, so no stamp will be applied to it."
+    },
+    "signature": {
+      "title": "Digital signature fields detected",
+      "message": "Stamping rewrites the PDF and can invalidate existing signatures."
+    },
+    "progress": {
+      "stage": "Stamp progress",
+      "page": "Page {{page}}",
+      "preparing": "Preparing local assets",
+      "stamping": "Stamping pages",
+      "verifying": "Verifying output",
+      "complete": "Stamping and verification complete"
+    },
+    "errors": {
+      "title": "Stamping could not complete",
+      "invalidPdf": "The selected file could not be opened as a valid PDF.",
+      "previewFailed": "The selected preview page could not be rendered.",
+      "missingValue": "Complete the required stamp value.",
+      "invalidImage": "Choose a PNG or JPEG watermark image.",
+      "invalidColor": "Choose a valid six-digit stamp color.",
+      "invalidNumber": "Enter finite, positive sizes and valid non-negative margins.",
+      "invalidTemplate": "The page-number format must include {current} or {total}.",
+      "cancelled": "Stamping was cancelled and no partial output was kept.",
+      "downloadFailed": "The stamped PDF could not be downloaded.",
+      "failed": "The PDF could not be stamped."
+    }
+  },
+  "comparePdf": {
+    "title": "Compare PDFs",
+    "description": "Compare two PDFs visually, structurally, and by extracted text entirely in your browser.",
+    "shortDescription": "Compare visual, text, page, and metadata differences",
+    "longDescription": "Pair PDF pages by number, review ranked visual differences in five views, compare extracted text and metadata, and export a JSON report.",
+    "localProcessing": "Both PDFs are opened, rendered, and compared locally in this browser. No document bytes, names, text, or metadata are uploaded.",
+    "inputs": {
+      "documentA": "Document A",
+      "documentB": "Document B",
+      "choosePdf": "Choose PDF",
+      "replacePdf": "Replace PDF",
+      "clearPdf": "Clear PDF",
+      "emptyA": "Choose or drop the first PDF. Selection alone does not start processing.",
+      "emptyB": "Choose or drop the second PDF. Pages are paired by page number."
+    },
+    "options": {
+      "tolerance": "Visual tolerance",
+      "toleranceHelp": "Higher values ignore larger color-channel changes, reducing antialiasing noise. Run again after changing this value."
+    },
+    "actions": {
+      "run": "Run comparison",
+      "cancel": "Cancel",
+      "downloadJson": "Download JSON report",
+      "reportDescription": "PDF comparison report"
+    },
+    "errors": {
+      "missing-inputs": "Choose both Document A and Document B before running the comparison.",
+      "invalid-file-type": "Both inputs must be PDF files.",
+      "empty-file": "Empty PDF files cannot be compared.",
+      "invalid-tolerance": "Visual tolerance must be a whole number between 0 and 64.",
+      "invalid-input": "The comparison inputs are invalid.",
+      "pdf-load-failed": "The selected PDF documents could not be opened in the browser.",
+      "render-failed": "A PDF page could not be rendered for visual comparison.",
+      "text-extraction-failed": "Extracted text differences could not be calculated.",
+      "worker-failed": "The visual comparison worker stopped unexpectedly on page {{page}}.",
+      "cancelled": "PDF comparison was cancelled.",
+      "unknown": "PDF comparison failed unexpectedly.",
+      "unexpected": "PDF comparison failed unexpectedly.",
+      "download": "The JSON comparison report could not be saved."
+    },
+    "progress": {
+      "loading": "Opening PDFs",
+      "reading-metadata": "Comparing document information",
+      "rendering": "Rendering page",
+      "comparing-visuals": "Comparing page pixels",
+      "extracting-text": "Comparing extracted text",
+      "finalizing": "Preparing report",
+      "pageSuffix": " · Page {{page}}"
+    },
+    "states": {
+      "cancelled": "Comparison cancelled. No partial report was kept."
+    },
+    "summary": {
+      "identical": "No visual, text, page-structure, or metadata differences were detected at tolerance {{tolerance}}.",
+      "different": "{{changed}} of {{total}} paired page positions contain a difference.",
+      "pageCounts": "Pages: {{a}} vs {{b}}",
+      "changedPages": "Changed pages: {{count}}",
+      "maximumVisual": "Highest pixel change: {{value}}",
+      "metadataChanges": "Metadata changes: {{count}}"
+    },
+    "pageList": {
+      "title": "Pages ranked by difference",
+      "reviewed": "{{reviewed}} of {{total}} reviewed",
+      "markUnreviewed": "Mark unreviewed",
+      "markReviewed": "Mark reviewed",
+      "reviewPage": "Review page {{page}}",
+      "page": "Page {{page}}",
+      "score": "{{value}} score"
+    },
+    "review": {
+      "pageTitle": "Page {{page}}",
+      "reviewed": "Reviewed",
+      "changedPixels": "Changed pixels: {{value}}",
+      "changedText": "Changed text: {{value}}",
+      "notAvailable": "not available",
+      "pageSizeDiffers": "Page size differs",
+      "rotationDiffers": "Rotation differs",
+      "missingFromA": "Missing from Document A",
+      "missingFromB": "Missing from Document B",
+      "selectPage": "Choose a page from the ranked list to review it."
+    },
+    "views": {
+      "label": "PDF comparison views",
+      "sideBySide": "Side by side",
+      "overlay": "Overlay",
+      "swipe": "Swipe / reveal",
+      "differenceMask": "Difference mask",
+      "textDiff": "Extracted text diff",
+      "overlayOpacity": "Document B opacity",
+      "swipePosition": "Reveal position",
+      "differenceMaskPage": "Difference mask, page {{page}}",
+      "textDiffLabel": "Extracted text differences"
+    },
+    "text": {
+      "noLayer": "Neither page has an extractable text layer. OCR is not run automatically.",
+      "onlyA": "Only Document A has extractable text on this page.",
+      "onlyB": "Only Document B has extractable text on this page.",
+      "limited": "The word-level diff reached its processing limit; the report marks the page for review.",
+      "previewTruncated": "The on-screen preview is truncated. The downloaded JSON includes the complete extracted diff data.",
+      "identical": "Extracted text is identical."
+    },
+    "metadata": {
+      "title": "Document and metadata comparison",
+      "field": "Field",
+      "fileName": "File name",
+      "fileSize": "File size",
+      "pageCount": "Page count",
+      "noDifferences": "No metadata field differences were found."
+    }
+  },
+  "inspectPdf": {
+    "title": "Inspect PDF",
+    "description": "Inspect PDF structure, metadata, privacy details, links, attachments, forms, and active-content indicators locally in your browser.",
+    "shortDescription": "Inspect PDF metadata, structure, and privacy findings",
+    "localProcessing": "Your PDF is inspected locally in this browser. Its name, bytes, hash, text, and metadata are not uploaded.",
+    "scopeStatement": "This is a document inspector and privacy report—not a malware scanner, signature validator, compliance validator, or security guarantee.",
+    "toolInfo": "Choose one PDF, optionally enter its password, then run the inspection. The source PDF is never modified; download the complete report as JSON.",
+    "input": {
+      "title": "PDF to inspect",
+      "dropHint": "Drop one PDF here, or choose a file. Selection does not start inspection.",
+      "selected": "{{name}} — {{size}} bytes",
+      "choose": "Choose PDF",
+      "clear": "Clear",
+      "password": "PDF password (optional)",
+      "passwordHelp": "Used only in this browser for this run; it is never included in the report."
+    },
+    "actions": {
+      "run": "Run inspection",
+      "cancel": "Cancel",
+      "downloadJson": "Download JSON report"
+    },
+    "errors": {
+      "fileType": "Choose a PDF file.",
+      "cancelled": "Inspection was cancelled.",
+      "emptyFile": "Choose a non-empty PDF.",
+      "notPdf": "The selected file does not contain a recognizable PDF header.",
+      "passwordRequired": "This PDF requires a password. Enter it above and run again.",
+      "incorrectPassword": "The supplied PDF password is incorrect.",
+      "malformedPdf": "The file could not be parsed as a valid PDF.",
+      "workerError": "The inspection worker stopped unexpectedly.",
+      "inspectionFailed": "The PDF inspection could not be completed.",
+      "downloadFailed": "The JSON report could not be downloaded."
+    },
+    "progress": {
+      "reading-file": "Reading the local file",
+      "hashing": "Calculating SHA-256",
+      "scanning-structure": "Scanning PDF structure",
+      "loading-document": "Opening the PDF parser",
+      "document-properties": "Inspecting document properties",
+      "pages": "Inspecting pages",
+      "finalizing": "Building the report",
+      "page": "Page {{current}} of {{total}}",
+      "label": "Inspection progress"
+    },
+    "categories": {
+      "potentially-active": "Potentially active: {{count}}",
+      "privacy-related": "Privacy-related: {{count}}",
+      "informational": "Informational: {{count}}"
+    },
+    "categoryHeadings": {
+      "potentially-active": "Potentially active",
+      "privacy-related": "Privacy-related",
+      "informational": "Informational"
+    },
+    "certainty": {
+      "confirmed": "Confirmed",
+      "likely": "Likely",
+      "uncertain": "Uncertain"
+    },
+    "fields": {
+      "name": "File name",
+      "size": "Byte size",
+      "sha256": "SHA-256",
+      "mimeType": "File type",
+      "pdfVersion": "PDF version",
+      "pageCount": "Pages",
+      "encryption": "Encryption",
+      "passwordRequired": "Password required",
+      "linearization": "Linearization",
+      "permissions": "Exposed permissions"
+    },
+    "values": {
+      "unknown": "Unknown",
+      "yes": "Yes",
+      "no": "No",
+      "lowText": "Low text",
+      "documentOutline": "Document outline",
+      "document": "Document",
+      "page": "Page {{page}}",
+      "external": "External",
+      "internal": "Internal",
+      "noneReported": "None reported",
+      "notExposed": "Not exposed",
+      "points": "{{width}} × {{height}} pt",
+      "encryption": {
+        "detected": "Detected",
+        "not-detected": "Not detected",
+        "uncertain": "Uncertain"
+      },
+      "linearization": {
+        "appears-linearized": "Appears linearized",
+        "not-detected": "Not detected",
+        "uncertain": "Conflicting evidence"
+      },
+      "orientation": {
+        "portrait": "Portrait",
+        "landscape": "Landscape",
+        "square": "Square"
+      }
+    },
+    "permissions": {
+      "print": "Print",
+      "modify-contents": "Modify contents",
+      "copy": "Copy",
+      "modify-annotations": "Modify annotations",
+      "fill-forms": "Fill forms",
+      "accessibility-copy": "Copy for accessibility",
+      "assemble": "Assemble pages",
+      "high-quality-print": "High-quality print"
+    },
+    "actionSources": {
+      "annotation": "Annotation",
+      "page": "Page",
+      "document": "Document",
+      "raw-marker": "Raw marker"
+    },
+    "result": {
+      "title": "Inspection report",
+      "jsonDescription": "PDF inspection report",
+      "file": "File",
+      "document": "Document",
+      "findings": "Findings",
+      "noneInCategory": "No findings in this category.",
+      "pages": "Pages",
+      "content": "Forms, annotations, links, and resources",
+      "forms": "Forms and signature fields",
+      "annotations": "Annotations",
+      "links": "Links",
+      "attachments": "Attachments",
+      "activeContent": "Potentially active content",
+      "resources": "Approximate resources",
+      "jsonDetail": "Download the JSON report for complete evidence and parser notes.",
+      "metadata": "Metadata",
+      "uncertainties": "Uncertainty and limitations",
+      "uncertaintySummary": "The report records {{count}} parser limitation or uncertainty note(s).",
+      "generated": "Generated {{time}} with PDF.js {{version}}"
+    },
+    "table": {
+      "page": "Page",
+      "dimensions": "Dimensions",
+      "orientation": "Orientation",
+      "rotation": "Rotation",
+      "text": "Text characters",
+      "annotations": "Annotations",
+      "images": "Image paints",
+      "fonts": "Fonts"
+    },
+    "counts": {
+      "forms": "{{count}} field(s), {{signatures}} signature field(s)",
+      "annotations": "{{count}} annotation(s)",
+      "links": "{{count}} link(s), {{external}} external target(s)",
+      "attachments": "{{count}} embedded attachment(s)",
+      "activeContent": "{{javascript}} JavaScript event(s), {{actions}} other action(s); open action: {{openAction}}",
+      "resources": "{{images}} image paint operation(s), {{fonts}} approximate font name(s)",
+      "metadata": "{{fields}} document-information field(s); XMP present: {{xmp}}",
+      "fieldDetail": "{{widgets}} widget(s); pages: {{pages}}",
+      "annotationType": "{{count}} annotation(s)",
+      "linkDetail": "{{location}}; {{external}}",
+      "attachmentDetail": "{{size}} bytes; {{source}}",
+      "javascriptDetail": "{{scope}}; {{count}} script(s); {{characters}} characters",
+      "actionDetail": "{{source}}; {{location}}",
+      "fontNames": "Names observed: {{names}}"
+    },
+    "findings": {
+      "document-summary": {
+        "title": "Document structure",
+        "summary": "PDF.js parsed the document and page structure."
+      },
+      "document-metadata": {
+        "title": "Document metadata is present",
+        "summary": "Metadata can contain authoring software, organization, author, or timestamp information."
+      },
+      "embedded-attachments": {
+        "title": "Embedded attachments are present",
+        "summary": "Embedded files may contain information beyond the visible pages."
+      },
+      "external-links": {
+        "title": "External link targets are present",
+        "summary": "Opening a target can leave the browser and disclose network information."
+      },
+      "javascript": {
+        "title": "JavaScript actions were reported",
+        "summary": "The inspector lists script events and sizes but never executes scripts."
+      },
+      "open-action": {
+        "title": "A document-open action or destination is present",
+        "summary": "PDF.js exposed behavior associated with opening the document."
+      },
+      "other-actions": {
+        "title": "Additional PDF actions are present",
+        "summary": "Actions may navigate, submit data, launch a target, or request another viewer operation."
+      },
+      "raw-active-markers": {
+        "title": "Raw active-content tokens were observed",
+        "summary": "The byte scan found action-related tokens. They can support parsed findings, but raw matches are not conclusive by themselves."
+      },
+      "forms": {
+        "title": "Interactive form fields are present",
+        "summary": "PDF.js reported form content; named field types, widget counts, and page locations are included where available."
+      },
+      "signature-fields": {
+        "title": "Signature fields are present",
+        "summary": "Field presence does not establish that a signature is valid, trusted, or unchanged."
+      },
+      "xfa-form": {
+        "title": "XFA form content is present",
+        "summary": "XFA field coverage can differ from ordinary AcroForm fields."
+      },
+      "annotations": {
+        "title": "Annotations are present",
+        "summary": "Annotation appearance and behavior can vary by viewer."
+      },
+      "low-text-pages": {
+        "title": "Some pages have little or no extractable text",
+        "summary": "Pages may be image-based, sparsely labeled, or use text encodings the parser cannot expose."
+      }
+    }
   }
 }

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import { Icon } from '@iconify/react';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { isPdfWorkbenchRoute } from '../lib/pdf-workbench/routes';
 
 export default function ScrollToTopButton() {
   const [visible, setVisible] = useState(false);
@@ -41,7 +43,11 @@ export default function ScrollToTopButton() {
       }}
       aria-label="Scroll to top"
     >
-      <Icon icon="mdi:arrow-up" fontSize={24} style={{ color: 'white' }} />
+      {isPdfWorkbenchRoute(window.location.pathname) ? (
+        <ArrowUpwardIcon sx={{ fontSize: 24, color: 'white' }} />
+      ) : (
+        <Icon icon="mdi:arrow-up" fontSize={24} style={{ color: 'white' }} />
+      )}
     </Button>
   );
 }

@@ -1,7 +1,6 @@
 import { Box, Button, Stack, styled, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import ToolBreadcrumb from './ToolBreadcrumb';
-import { capitalizeFirstLetter } from '../utils/string';
 import Grid from '@mui/material/Grid';
 import { Icon, IconifyIcon } from '@iconify/react';
 import { categoriesColors } from '../config/uiConfig';
@@ -11,7 +10,8 @@ import { isBookmarked, toggleBookmarked } from '@utils/bookmark';
 import IconButton from '@mui/material/IconButton';
 import { useTranslation } from 'react-i18next';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { validNamespaces } from '../i18n';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: 'white',
@@ -27,6 +27,7 @@ interface ToolHeaderProps {
   icon?: IconifyIcon | string;
   type: string;
   path: string;
+  localIconMode?: boolean;
 }
 
 function ToolLinks() {
@@ -92,7 +93,8 @@ export default function ToolHeader({
   title,
   description,
   type,
-  path
+  path,
+  localIconMode = false
 }: ToolHeaderProps) {
   const theme = useTheme();
   const { t } = useTranslation();
@@ -118,27 +120,41 @@ export default function ToolHeader({
               {title}
             </Typography>
             <IconButton
-              onClick={(e) => {
+              onClick={() => {
                 toggleBookmarked(path);
                 setBookmarked(!bookmarked);
               }}
             >
-              <Icon
-                fontSize={30}
-                color={
-                  bookmarked
-                    ? theme.palette.primary.main
-                    : theme.palette.grey[500]
-                }
-                icon={bookmarked ? 'mdi:bookmark' : 'mdi:bookmark-plus-outline'}
-              />
+              {localIconMode ? (
+                bookmarked ? (
+                  <BookmarkIcon
+                    sx={{ fontSize: 30, color: theme.palette.primary.main }}
+                  />
+                ) : (
+                  <BookmarkBorderIcon
+                    sx={{ fontSize: 30, color: theme.palette.grey[500] }}
+                  />
+                )
+              ) : (
+                <Icon
+                  fontSize={30}
+                  color={
+                    bookmarked
+                      ? theme.palette.primary.main
+                      : theme.palette.grey[500]
+                  }
+                  icon={
+                    bookmarked ? 'mdi:bookmark' : 'mdi:bookmark-plus-outline'
+                  }
+                />
+              )}
             </IconButton>
           </Stack>
           <Typography fontSize={20}>{description}</Typography>
           <ToolLinks />
         </Grid>
 
-        {icon && (
+        {icon && !localIconMode && (
           <Grid item xs={12} md={4}>
             <Box sx={{ display: 'flex', justifyContent: 'center' }}>
               <Icon
