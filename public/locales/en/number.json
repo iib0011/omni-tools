@@ -204,20 +204,20 @@
   },
   "numberToWords": {
     "title": "Number to Words",
-    "description": "Convert numbers into words in your language. Supports 132 locales — the output automatically matches your selected UI language.",
+    "description": "Convert numbers into words in your selected language. The output automatically matches your current app language.",
     "shortDescription": "Convert numbers to words",
     "inputTitle": "Numbers",
     "outputTitle": "Words",
     "options": {
       "title": "Options",
       "uppercase": "Uppercase",
-      "uppercaseDescription": "Output the words in uppercase, as used on cheques and legal documents.",
+      "uppercaseDescription": "Display the converted words in uppercase, commonly used for cheques, invoices, and legal documents.",
       "useAnd": "Include \"and\"",
-      "useAndDescription": "Insert \"and\" between hundreds and tens (e.g. \"One Hundred And Twenty\")."
+      "useAndDescription": "Insert \"and\" where appropriate (for example, \"One Hundred and Twenty\" in English)."
     },
     "toolInfo": {
       "title": "What Is a Number to Words Converter?",
-      "description": "This utility spells out numbers in words using the to-words library, which supports 132 locales. The output language automatically matches your selected UI language — switch the app language and the conversion follows. Enter one number per line and each is converted independently. Useful for writing cheques, legal documents, and educational purposes."
+      "description": "This tool converts numeric values into their written form. The output automatically follows your current app language, so no additional configuration is required. Enter one number per line to convert multiple values independently."
     }
   }
 }
