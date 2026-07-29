@@ -3,7 +3,7 @@ import { lazy } from 'react';
 
 export const tool = defineTool('number', {
   path: 'number-to-words',
-  icon: 'material-symbols:spellcheck',
+  icon: 'fluent:text-number-format-24-regular',
 
   keywords: ['number', 'words', 'spell', 'text', 'convert', 'cheque'],
   component: lazy(() => import('./index')),
