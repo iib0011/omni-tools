@@ -105,4 +105,20 @@ describe('numberToWords', () => {
       ''
     );
   });
+
+  it('supports a leading decimal point', () => {
+    expect(numberToWords('.25', { uppercase: false, includeAnd: true })).toBe(
+      'zero point two five'
+    );
+  });
+
+  it('supports a trailing decimal point', () => {
+    expect(numberToWords('5.', { uppercase: false, includeAnd: true })).toBe(
+      'five'
+    );
+  });
+
+  it('rejects a lone dot', () => {
+    expect(numberToWords('.', { uppercase: false, includeAnd: true })).toBe('');
+  });
 });

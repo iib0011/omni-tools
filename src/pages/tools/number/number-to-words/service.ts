@@ -114,9 +114,15 @@ function convertSingle(raw: string, options: NumberToWordsOptions): string {
   if (trimmed === '') return '';
 
   const negative = trimmed.startsWith('-');
-  const unsigned = negative ? trimmed.slice(1) : trimmed;
+  let unsigned = negative ? trimmed.slice(1) : trimmed;
 
-  // Validate: optional integer part, optional decimal part
+  // Normalize edge-case decimal forms: a trailing dot ("5." -> "5") or a
+  // leading dot (".25" -> "0.25"). Order matters: strip the trailing dot first
+  // so a lone "." becomes "" and is rejected by the validation below.
+  if (unsigned.endsWith('.')) unsigned = unsigned.slice(0, -1);
+  if (unsigned.startsWith('.')) unsigned = `0${unsigned}`;
+
+  // Validate: integer part required, optional decimal part
   if (!/^\d+(\.\d+)?$/.test(unsigned)) return '';
 
   const [intPart, fracPart] = unsigned.split('.');
