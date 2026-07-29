@@ -10,7 +10,7 @@ import { numberToWords, NumberToWordsOptions } from './service';
 
 const initialValues: NumberToWordsOptions = {
   uppercase: false,
-  useAnd: true
+  includeAnd: true
 };
 
 type InitialValuesType = typeof initialValues;
@@ -24,7 +24,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
     sampleResult: `Twelve Lakh Thirty Four Thousand Five Hundred And Sixty Seven`,
     sampleOptions: {
       uppercase: false,
-      useAnd: true
+      includeAnd: true
     }
   },
   {
@@ -35,7 +35,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
     sampleResult: `Three Point Fourteen`,
     sampleOptions: {
       uppercase: false,
-      useAnd: true
+      includeAnd: true
     }
   },
   {
@@ -46,7 +46,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
     sampleResult: `NINE THOUSAND FIVE HUNDRED`,
     sampleOptions: {
       uppercase: true,
-      useAnd: true
+      includeAnd: true
     }
   },
   {
@@ -63,7 +63,7 @@ Zero
 Minus Seven`,
     sampleOptions: {
       uppercase: false,
-      useAnd: true
+      includeAnd: true
     }
   }
 ];
@@ -109,10 +109,10 @@ export default function NumberToWords({ title }: ToolComponentProps) {
                 onChange={(value) => updateField('uppercase', value)}
               />
               <CheckboxWithDesc
-                title={t('numberToWords.options.useAnd')}
-                description={t('numberToWords.options.useAndDescription')}
-                checked={values.useAnd}
-                onChange={(value) => updateField('useAnd', value)}
+                title={t('numberToWords.options.includeAnd')}
+                description={t('numberToWords.options.includeAndDescription')}
+                checked={values.includeAnd}
+                onChange={(value) => updateField('includeAnd', value)}
               />
             </React.Fragment>
           )

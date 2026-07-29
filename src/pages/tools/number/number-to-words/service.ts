@@ -25,7 +25,7 @@ const getLocaleCode = (): string => {
 
 export type NumberToWordsOptions = {
   uppercase: boolean;
-  useAnd: boolean;
+  includeAnd: boolean;
 };
 
 /**
@@ -52,7 +52,7 @@ export function numberToWords(
       try {
         let result = toWords(trimmed, {
           localeCode,
-          useAnd: options.useAnd
+          useAnd: options.includeAnd
         });
         if (options.uppercase) result = result.toUpperCase();
         return result;

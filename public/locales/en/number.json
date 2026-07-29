@@ -212,8 +212,8 @@
       "title": "Options",
       "uppercase": "Uppercase",
       "uppercaseDescription": "Output the words in uppercase, as used on cheques and legal documents.",
-      "useAnd": "Include \"and\"",
-      "useAndDescription": "Insert \"and\" between hundreds and tens (e.g. \"One Hundred And Twenty\")."
+      "includeAnd": "Include \"and\"",
+      "includeAndDescription": "Insert \"and\" between hundreds and tens (e.g. \"One Hundred And Twenty\")."
     },
     "toolInfo": {
       "title": "What Is a Number to Words Converter?",
