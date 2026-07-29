@@ -1,4 +1,5 @@
 import { toWords } from 'to-words';
+import { InitialValuesType } from './types';
 
 /**
  * Maps omni-tools' i18n language codes (stored in localStorage under 'lang')
@@ -6,7 +7,7 @@ import { toWords } from 'to-words';
  * Mirrors the pattern used in tools/time/crontab-guru/service.ts.
  */
 const LANG_MAP: Record<string, string> = {
-  en: 'en-IN',
+  en: 'en-US',
   de: 'de-DE',
   es: 'es-ES',
   fr: 'fr-FR',
@@ -20,12 +21,7 @@ const LANG_MAP: Record<string, string> = {
 
 const getLocaleCode = (): string => {
   const lang = localStorage.getItem('lang') || 'en';
-  return LANG_MAP[lang] || 'en-IN';
-};
-
-export type NumberToWordsOptions = {
-  uppercase: boolean;
-  useAnd: boolean;
+  return LANG_MAP[lang] || 'en-US';
 };
 
 /**
@@ -37,7 +33,7 @@ export type NumberToWordsOptions = {
  */
 export function numberToWords(
   input: string,
-  options: NumberToWordsOptions
+  options: InitialValuesType
 ): string {
   if (!input) return '';
 
