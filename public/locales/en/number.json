@@ -201,5 +201,23 @@
     "longDescription": "This calculator helps determine the voltage drop and power loss in a two-conductor electrical cable. It takes into account the cable length, wire gauge (cross-sectional area), material resistivity, and current flow. The tool calculates the round-trip voltage drop, total resistance of the cable, and the power dissipated as heat. This is particularly useful for electrical engineers, electricians, and hobbyists when designing electrical systems to ensure voltage levels remain within acceptable limits at the load.",
     "shortDescription": "Calculate voltage drop and power loss in electrical cables based on length, material, and current",
     "title": "Round trip voltage drop in cable"
+  },
+  "numberToWords": {
+    "title": "Number to Words",
+    "description": "Convert numbers into their English word representation. Supports integers, decimals, and negative values.",
+    "shortDescription": "Convert numbers to words",
+    "inputTitle": "Numbers",
+    "outputTitle": "Words",
+    "options": {
+      "title": "Options",
+      "uppercase": "Uppercase",
+      "uppercaseDescription": "Output the words in uppercase, as used on cheques and legal documents.",
+      "includeAnd": "Include \"and\"",
+      "includeAndDescription": "Insert \"and\" between hundreds and tens (e.g. \"one hundred and twenty\")."
+    },
+    "toolInfo": {
+      "title": "What Is a Number to Words Converter?",
+      "description": "This utility spells out numbers in English words. Enter one number per line and each is converted independently. The integer part is read with the correct scale words (thousand, million, billion), while the fractional part is read digit by digit after \"point\". Useful for writing cheques, legal documents, and educational purposes."
+    }
   }
 }
