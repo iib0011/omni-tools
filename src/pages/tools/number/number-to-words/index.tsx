@@ -10,7 +10,7 @@ import { numberToWords, NumberToWordsOptions } from './service';
 
 const initialValues: NumberToWordsOptions = {
   uppercase: false,
-  includeAnd: true
+  useAnd: true
 };
 
 type InitialValuesType = typeof initialValues;
@@ -19,51 +19,51 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Spell Out a Large Number',
     description:
-      'This example converts the number 1,234,567 into its English word form. The tool reads each group of three digits and appends the correct scale word (thousand, million, etc.).',
+      'This example converts 1,234,567 into words. The output language matches your selected UI language automatically.',
     sampleText: `1234567`,
-    sampleResult: `one million two hundred and thirty-four thousand five hundred and sixty-seven`,
+    sampleResult: `Twelve Lakh Thirty Four Thousand Five Hundred And Sixty Seven`,
     sampleOptions: {
       uppercase: false,
-      includeAnd: true
+      useAnd: true
     }
   },
   {
     title: 'Convert Decimal Numbers',
     description:
-      'In this example, we convert a decimal number into words. The integer part is spelled normally, followed by "point" and each fractional digit read individually.',
+      'Decimal numbers are converted with the fractional part read after the decimal point word.',
     sampleText: `3.14`,
-    sampleResult: `three point one four`,
+    sampleResult: `Three Point Fourteen`,
     sampleOptions: {
       uppercase: false,
-      includeAnd: true
+      useAnd: true
     }
   },
   {
     title: 'Uppercase Output for Cheques',
     description:
-      'This example spells out a number in uppercase, which is the format commonly required on bank cheques and legal documents to prevent alteration.',
+      'Uppercase output is commonly required on bank cheques and legal documents to prevent alteration.',
     sampleText: `9500`,
-    sampleResult: `NINE THOUSAND FIVE HUNDRED AND`,
+    sampleResult: `NINE THOUSAND FIVE HUNDRED`,
     sampleOptions: {
       uppercase: true,
-      includeAnd: true
+      useAnd: true
     }
   },
   {
     title: 'Batch Convert a List of Numbers',
     description:
-      'This example converts multiple numbers at once, one per line. Each line is processed independently, preserving the line structure in the output.',
+      'Each line is processed independently, preserving the line structure in the output.',
     sampleText: `42
 100
 0
 -7`,
-    sampleResult: `forty-two
-one hundred
-zero
-negative seven`,
+    sampleResult: `Forty Two
+One Hundred
+Zero
+Minus Seven`,
     sampleOptions: {
       uppercase: false,
-      includeAnd: true
+      useAnd: true
     }
   }
 ];
@@ -92,7 +92,10 @@ export default function NumberToWords({ title }: ToolComponentProps) {
         />
       }
       resultComponent={
-        <ToolTextResult title={t('numberToWords.outputTitle')} value={result} />
+        <ToolTextResult
+          title={t('numberToWords.outputTitle')}
+          value={result}
+        />
       }
       getGroups={({ values, updateField }) => [
         {
@@ -106,10 +109,10 @@ export default function NumberToWords({ title }: ToolComponentProps) {
                 onChange={(value) => updateField('uppercase', value)}
               />
               <CheckboxWithDesc
-                title={t('numberToWords.options.includeAnd')}
-                description={t('numberToWords.options.includeAndDescription')}
-                checked={values.includeAnd}
-                onChange={(value) => updateField('includeAnd', value)}
+                title={t('numberToWords.options.useAnd')}
+                description={t('numberToWords.options.useAndDescription')}
+                checked={values.useAnd}
+                onChange={(value) => updateField('useAnd', value)}
               />
             </React.Fragment>
           )

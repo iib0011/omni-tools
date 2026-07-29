@@ -204,7 +204,7 @@
   },
   "numberToWords": {
     "title": "Number to Words",
-    "description": "Convert numbers into their English word representation. Supports integers, decimals, and negative values.",
+    "description": "Convert numbers into words in your language. Supports 132 locales — the output automatically matches your selected UI language.",
     "shortDescription": "Convert numbers to words",
     "inputTitle": "Numbers",
     "outputTitle": "Words",
@@ -212,12 +212,12 @@
       "title": "Options",
       "uppercase": "Uppercase",
       "uppercaseDescription": "Output the words in uppercase, as used on cheques and legal documents.",
-      "includeAnd": "Include \"and\"",
-      "includeAndDescription": "Insert \"and\" between hundreds and tens (e.g. \"one hundred and twenty\")."
+      "useAnd": "Include \"and\"",
+      "useAndDescription": "Insert \"and\" between hundreds and tens (e.g. \"One Hundred And Twenty\")."
     },
     "toolInfo": {
       "title": "What Is a Number to Words Converter?",
-      "description": "This utility spells out numbers in English words. Enter one number per line and each is converted independently. The integer part is read with the correct scale words (thousand, million, billion), while the fractional part is read digit by digit after \"point\". Useful for writing cheques, legal documents, and educational purposes."
+      "description": "This utility spells out numbers in words using the to-words library, which supports 132 locales. The output language automatically matches your selected UI language — switch the app language and the conversion follows. Enter one number per line and each is converted independently. Useful for writing cheques, legal documents, and educational purposes."
     }
   }
 }
