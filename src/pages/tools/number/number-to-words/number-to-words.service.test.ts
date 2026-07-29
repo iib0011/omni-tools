@@ -3,9 +3,7 @@ import { numberToWords } from './service';
 
 describe('numberToWords', () => {
   it('converts zero', () => {
-    expect(numberToWords('0', { uppercase: false, useAnd: true })).toBe(
-      'Zero'
-    );
+    expect(numberToWords('0', { uppercase: false, useAnd: true })).toBe('Zero');
   });
 
   it('converts single-digit numbers', () => {
@@ -45,17 +43,15 @@ describe('numberToWords', () => {
   });
 
   it('converts large numbers', () => {
-    expect(
-      numberToWords('1234567', { uppercase: false, useAnd: true })
-    ).toBe(
-      'Twelve Lakh Thirty Four Thousand Five Hundred And Sixty Seven'
+    expect(numberToWords('1234567', { uppercase: false, useAnd: true })).toBe(
+      'One Million Two Hundred And Thirty Four Thousand Five Hundred And Sixty Seven'
     );
   });
 
   it('handles zero groups within large numbers', () => {
-    expect(
-      numberToWords('1000001', { uppercase: false, useAnd: true })
-    ).toBe('Ten Lakh And One');
+    expect(numberToWords('1000001', { uppercase: false, useAnd: true })).toBe(
+      'One Million And One'
+    );
   });
 
   it('converts decimal numbers', () => {
@@ -101,9 +97,7 @@ describe('numberToWords', () => {
   });
 
   it('returns empty string for non-numeric input', () => {
-    expect(
-      numberToWords('hello', { uppercase: false, useAnd: true })
-    ).toBe('');
+    expect(numberToWords('hello', { uppercase: false, useAnd: true })).toBe('');
   });
 
   it('supports a leading decimal point', () => {
