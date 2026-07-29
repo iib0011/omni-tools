@@ -6,14 +6,13 @@ import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import { useTranslation } from 'react-i18next';
-import { numberToWords, NumberToWordsOptions } from './service';
+import { numberToWords } from './service';
+import { InitialValuesType } from './types';
 
-const initialValues: NumberToWordsOptions = {
+const initialValues: InitialValuesType = {
   uppercase: false,
   useAnd: true
 };
-
-type InitialValuesType = typeof initialValues;
 
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
@@ -21,7 +20,7 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
     description:
       'This example converts 1,234,567 into words. The output language matches your selected UI language automatically.',
     sampleText: `1234567`,
-    sampleResult: `Twelve Lakh Thirty Four Thousand Five Hundred And Sixty Seven`,
+    sampleResult: `One Million Two Hundred And Thirty Four Thousand Five Hundred And Sixty Seven`,
     sampleOptions: {
       uppercase: false,
       useAnd: true
@@ -92,10 +91,7 @@ export default function NumberToWords({ title }: ToolComponentProps) {
         />
       }
       resultComponent={
-        <ToolTextResult
-          title={t('numberToWords.outputTitle')}
-          value={result}
-        />
+        <ToolTextResult title={t('numberToWords.outputTitle')} value={result} />
       }
       getGroups={({ values, updateField }) => [
         {
