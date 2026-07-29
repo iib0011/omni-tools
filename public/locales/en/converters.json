@@ -1,4 +1,22 @@
 {
+  "colorConverter": {
+    "title": "Color Converter",
+    "description": "Convert colors between HEX, RGB, HSL, HSV and OKLCH formats. Generates a complementary color palette, analyzes WCAG contrast ratios and exports variables for CSS, Tailwind and SCSS.",
+    "shortDescription": "Convert colors between HEX, RGB, HSL, HSV and OKLCH with WCAG contrast analysis.",
+    "inputTitle": "Color",
+    "optionsTitle": "Export Settings",
+    "exportNameDescription": "Variable name used in the exported CSS, Tailwind and SCSS snippets."
+  },
+  "unitConverter": {
+    "title": "Unit Converter",
+    "description": "Convert values between units of length, weight, temperature, speed, area and volume. All results are shown simultaneously with the conversion formula.",
+    "shortDescription": "Convert between length, weight, temperature, speed, area and volume units.",
+    "inputTitle": "Value to Convert",
+    "categoryTitle": "Conversion Settings",
+    "categoryDescription": "Select the measurement category.",
+    "fromUnitDescription": "Select the unit of the input value.",
+    "precisionDescription": "Number of decimal places in the results."
+  },
   "audioConverter": {
     "description": "Convert audio files between different formats.",
     "inputTitle": "Audio Input",
