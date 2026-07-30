@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import ToolCodeInput from '@components/input/ToolCodeInput';
-import ToolTextResult from '@components/result/ToolTextResult';
+import ToolCodeResult from '@components/result/ToolCodeResult';
 import { convertJsonToXml } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -91,10 +91,10 @@ export default function JsonToXml({ title }: ToolComponentProps) {
         />
       }
       resultComponent={
-        <ToolTextResult
+        <ToolCodeResult
           title={t('jsonToXml.outputTitle')}
           value={result}
-          extension={'xml'}
+          language={'xml'}
         />
       }
       getGroups={({ values, updateField }) => [

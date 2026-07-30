@@ -49,11 +49,7 @@ export function convertTsvToJson(
 
   return options.indentationType === 'none'
     ? minifyJson(JSON.stringify(result)).result
-    : beautifyJson(
-        JSON.stringify(result),
-        options.indentationType,
-        options.spacesCount
-      );
+    : beautifyJson(JSON.stringify(result), options);
 }
 
 const parseCsvLine = (line: string, options: InitialValuesType): string[] => {

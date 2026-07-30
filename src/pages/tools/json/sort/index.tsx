@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import ToolCodeInput from '@components/input/ToolCodeInput';
-import ToolTextResult from '@components/result/ToolTextResult';
+import ToolCodeResult from '@components/result/ToolCodeResult';
 import { sortJson } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import SelectWithDesc from '@components/options/SelectWithDesc';
@@ -156,10 +156,10 @@ export default function SortJson({
         />
       }
       resultComponent={
-        <ToolTextResult
+        <ToolCodeResult
           title={t('sortJson.resultTitle')}
           value={result}
-          extension={format}
+          language={format}
         />
       }
       initialValues={initialValues}
