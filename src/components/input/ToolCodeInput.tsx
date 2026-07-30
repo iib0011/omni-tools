@@ -65,7 +65,8 @@ export default function ToolCodeInput({
       >
         <Box
           sx={(theme) => ({
-            height: '100%',
+            flex: 1,
+            minHeight: 0,
             display: 'flex',
             flexDirection: 'column',
             backgroundColor: 'background.paper',
@@ -105,6 +106,9 @@ export default function ToolCodeInput({
             value={value}
             onChange={(value) => onChange(value ?? '')}
             options={{
+              automaticLayout: true,
+              folding: true,
+              showFoldingControls: 'always',
               scrollbar: {
                 vertical: 'visible',
                 horizontal: 'visible',
