@@ -83,7 +83,23 @@
   "stringify": {
     "description": "Convert JavaScript objects to JSON string format. Serialize data structures into JSON strings for storage or transmission.",
     "shortDescription": "Convert objects to JSON string",
-    "title": "Stringify JSON"
+    "title": "Stringify JSON",
+    "inputTitle": "JavaScript Object/Array",
+    "resultTitle": "JSON String",
+    "options": {
+      "indentationTitle": "Indentation Options",
+      "optionsTitle": "Options",
+      "useSpaceTitle": "Use Spaces",
+      "useSpaceDesc": "Indent output with spaces",
+      "useTabTitle": "Use Tabs for indentation",
+      "useTabDesc": "Indent output with tabs",
+      "escapeHtmlTitle": "Escape HTML Characters",
+      "escapeHtmlDesc": "Convert HTML special characters to their entity references"
+    },
+    "toolInfo": {
+      "title": "What Is JSON Stringify ?",
+      "description": "JSON Stringify is a tool that converts JavaScript objects and arrays into their JSON string representation. It properly formats the output with customizable indentation and offers the option to escape HTML special characters, making it safe for web usage. This tool is particularly useful when you need to serialize data structures for storage or transmission, or when you need to prepare JSON data for HTML embedding."
+    }
   },
   "tsvToJson": {
     "description": "Convert TSV (Tab-Separated Values) data to JSON format. Transform tabular data into structured JSON objects.",
