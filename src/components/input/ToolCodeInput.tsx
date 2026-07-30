@@ -92,6 +92,9 @@ export default function ToolCodeInput({
             },
             '.decorationsOverviewRuler': {
               display: 'none !important'
+            },
+            '.codicon': {
+              fontFamily: 'codicon !important'
             }
           })}
         >
