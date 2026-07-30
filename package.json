@@ -62,6 +62,7 @@
     "i18next-http-backend": "^3.0.2",
     "jimp": "^0.22.12",
     "js-quantities": "^1.8.0",
+    "json5": "^2.2.3",
     "jspdf": "^3.0.3",
     "jszip": "^3.10.1",
     "lint-staged": "^15.4.3",
