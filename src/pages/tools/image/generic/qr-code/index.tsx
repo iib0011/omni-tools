@@ -107,7 +107,7 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
             <TextFieldWithDesc
               value={values.size}
               onOwnChange={(val) => updateField('size', val)}
-              description="Size in pixels (100-1000)"
+              description={t('qrCode.groups.settings.size.description')}
               inputProps={{
                 type: 'number',
                 min: 100,
@@ -165,7 +165,7 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
               <TextFieldWithDesc
                 value={values.url}
                 onOwnChange={(val) => updateField('url', val)}
-                description="Enter the URL"
+                description={t('qrCode.groups.details.url.description')}
                 inputProps={{
                   placeholder: t('qrCode.groups.details.url.placeholder')
                 }}
@@ -176,11 +176,11 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
               <TextFieldWithDesc
                 value={values.text}
                 onOwnChange={(val) => updateField('text', val)}
-                description="Enter the text"
+                description={t('qrCode.groups.details.text.description')}
                 multiline
                 rows={4}
                 inputProps={{
-                  placeholder: 'Enter your text here'
+                  placeholder: t('qrCode.groups.details.text.placeholder')
                 }}
               />
             )}
@@ -190,7 +190,9 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.emailAddress}
                   onOwnChange={(val) => updateField('emailAddress', val)}
-                  description="Email Address"
+                  description={t(
+                    'qrCode.groups.details.email.address.description'
+                  )}
                   inputProps={{
                     placeholder: t(
                       'qrCode.groups.details.email.address.placeholder'
@@ -201,7 +203,9 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.emailSubject}
                   onOwnChange={(val) => updateField('emailSubject', val)}
-                  description="Email Subject (optional)"
+                  description={t(
+                    'qrCode.groups.details.email.subject.description'
+                  )}
                   inputProps={{
                     placeholder: t(
                       'qrCode.groups.details.email.subject.placeholder'
@@ -211,7 +215,9 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.emailBody}
                   onOwnChange={(val) => updateField('emailBody', val)}
-                  description="Email Body (optional)"
+                  description={t(
+                    'qrCode.groups.details.email.body.description'
+                  )}
                   multiline
                   rows={4}
                   inputProps={{
@@ -227,7 +233,7 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
               <TextFieldWithDesc
                 value={values.phoneNumber}
                 onOwnChange={(val) => updateField('phoneNumber', val)}
-                description="Phone Number"
+                description={t('qrCode.groups.details.phone.description')}
                 inputProps={{
                   placeholder: t('qrCode.groups.details.phone.placeholder'),
                   type: 'tel'
@@ -240,7 +246,9 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.smsNumber}
                   onOwnChange={(val) => updateField('smsNumber', val)}
-                  description="Phone Number"
+                  description={t(
+                    'qrCode.groups.details.sms.number.description'
+                  )}
                   inputProps={{
                     placeholder: t(
                       'qrCode.groups.details.sms.number.placeholder'
@@ -251,11 +259,15 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.smsMessage}
                   onOwnChange={(val) => updateField('smsMessage', val)}
-                  description="Message (optional)"
+                  description={t(
+                    'qrCode.groups.details.sms.message.description'
+                  )}
                   multiline
                   rows={4}
                   inputProps={{
-                    placeholder: 'Your message here'
+                    placeholder: t(
+                      'qrCode.groups.details.sms.message.placeholder'
+                    )
                   }}
                 />
               </>
@@ -266,17 +278,23 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.wifiSsid}
                   onOwnChange={(val) => updateField('wifiSsid', val)}
-                  description="Network Name (SSID)"
+                  description={t('qrCode.groups.details.wifi.ssid.description')}
                   inputProps={{
-                    placeholder: 'Network name'
+                    placeholder: t(
+                      'qrCode.groups.details.wifi.ssid.placeholder'
+                    )
                   }}
                 />
                 <TextFieldWithDesc
                   value={values.wifiPassword}
                   onOwnChange={(val) => updateField('wifiPassword', val)}
-                  description="Password"
+                  description={t(
+                    'qrCode.groups.details.wifi.password.description'
+                  )}
                   inputProps={{
-                    placeholder: 'Password',
+                    placeholder: t(
+                      'qrCode.groups.details.wifi.password.placeholder'
+                    ),
                     type: 'password'
                   }}
                 />
@@ -290,12 +308,18 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                       e.target.value as WifiEncryptionType
                     )
                   }
-                  label="Encryption Type"
+                  label={t('qrCode.groups.details.wifi.encryption.label')}
                   margin="normal"
                 >
-                  <MenuItem value="WPA">WPA</MenuItem>
-                  <MenuItem value="WEP">WEP</MenuItem>
-                  <MenuItem value="None">None</MenuItem>
+                  <MenuItem value="WPA">
+                    {t('qrCode.groups.details.wifi.encryption.options.wpa')}
+                  </MenuItem>
+                  <MenuItem value="WEP">
+                    {t('qrCode.groups.details.wifi.encryption.options.wep')}
+                  </MenuItem>
+                  <MenuItem value="None">
+                    {t('qrCode.groups.details.wifi.encryption.options.none')}
+                  </MenuItem>
                 </TextField>
               </>
             )}
@@ -305,7 +329,9 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardName}
                   onOwnChange={(val) => updateField('vCardName', val)}
-                  description="Full Name"
+                  description={t(
+                    'qrCode.groups.details.vcard.name.description'
+                  )}
                   inputProps={{
                     placeholder: t(
                       'qrCode.groups.details.vcard.name.placeholder'
@@ -315,7 +341,9 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardEmail}
                   onOwnChange={(val) => updateField('vCardEmail', val)}
-                  description="Email"
+                  description={t(
+                    'qrCode.groups.details.vcard.email.description'
+                  )}
                   inputProps={{
                     placeholder: t(
                       'qrCode.groups.details.vcard.email.placeholder'
@@ -326,7 +354,9 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardPhone}
                   onOwnChange={(val) => updateField('vCardPhone', val)}
-                  description="Phone"
+                  description={t(
+                    'qrCode.groups.details.vcard.phone.description'
+                  )}
                   inputProps={{
                     placeholder: t(
                       'qrCode.groups.details.vcard.phone.placeholder'
@@ -337,7 +367,9 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardAddress}
                   onOwnChange={(val) => updateField('vCardAddress', val)}
-                  description="Address"
+                  description={t(
+                    'qrCode.groups.details.vcard.address.description'
+                  )}
                   inputProps={{
                     placeholder: t(
                       'qrCode.groups.details.vcard.address.placeholder'
@@ -347,7 +379,9 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardCompany}
                   onOwnChange={(val) => updateField('vCardCompany', val)}
-                  description="Company (optional)"
+                  description={t(
+                    'qrCode.groups.details.vcard.company.description'
+                  )}
                   inputProps={{
                     placeholder: t(
                       'qrCode.groups.details.vcard.company.placeholder'
@@ -357,7 +391,9 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardTitle}
                   onOwnChange={(val) => updateField('vCardTitle', val)}
-                  description="Job Title (optional)"
+                  description={t(
+                    'qrCode.groups.details.vcard.title.description'
+                  )}
                   inputProps={{
                     placeholder: t(
                       'qrCode.groups.details.vcard.title.placeholder'
@@ -367,7 +403,9 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
                 <TextFieldWithDesc
                   value={values.vCardWebsite}
                   onOwnChange={(val) => updateField('vCardWebsite', val)}
-                  description="Website (optional)"
+                  description={t(
+                    'qrCode.groups.details.vcard.website.description'
+                  )}
                   inputProps={{
                     placeholder: t(
                       'qrCode.groups.details.vcard.website.placeholder'
@@ -401,12 +439,11 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
       getGroups={getGroups}
       compute={debouncedCompute}
       resultComponent={
-        <ToolFileResult title={'Generated QR code'} value={result} />
+        <ToolFileResult title={t('qrCode.result.title')} value={result} />
       }
       toolInfo={{
-        title: 'QR Code Generator',
-        description:
-          'Generate QR codes for different data types: URL, Text, Email, Phone, SMS, WiFi, vCard, and more. Customize the size and colors to create the perfect QR code for your needs.'
+        title: t('qrCode.title'),
+        description: t('qrCode.longDescription')
       }}
     />
   );
