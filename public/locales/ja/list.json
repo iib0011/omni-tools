@@ -113,37 +113,6 @@
     "trimItemsDescription": "項目を比較する前に先頭と末尾のスペースを削除します。",
     "uniqueItemOptions": "ユニークなアイテムオプション"
   },
-  "group": {
-    "deleteEmptyItems": "空のアイテムを削除する",
-    "deleteEmptyItemsDescription": "空の項目は無視し、グループに含めません。",
-    "description": "リスト項目をグループ化するための、世界で最もシンプルなブラウザベースのユーティリティです。リストを入力し、グループ化の条件を指定するだけで、項目を論理的なグループに整理できます。データの分類、情報の整理、構造化されたリストの作成に最適です。カスタムセパレーターと様々なグループ化オプションをサポートしています。",
-    "emptyItemsAndPadding": "空の項目とパディング",
-    "groupNumberDescription": "グループ内のアイテム数",
-    "groupSeparatorDescription": "グループ区切り文字",
-    "groupSizeAndSeparators": "グループサイズと区切り",
-    "inputItemSeparator": "入力項目セパレーター",
-    "inputTitle": "入力リスト",
-    "itemSeparatorDescription": "項目区切り文字",
-    "leftWrapDescription": "グループの左折り返し記号。",
-    "padNonFullGroups": "非フルグループのパディング",
-    "padNonFullGroupsDescription": "いっぱいでないグループをカスタム項目で埋めます (以下に入力)。",
-    "paddingCharDescription": "この文字または項目を使用して、完全でないグループを埋め込みます。",
-    "resultTitle": "グループ化されたアイテム",
-    "rightWrapDescription": "グループの右折り返し記号。",
-    "shortDescription": "共通のプロパティでリスト項目をグループ化する",
-    "splitOperators": {
-      "regex": {
-        "description": "入力リスト項目を正規表現で区切ります。",
-        "title": "正規表現を使用して分割する"
-      },
-      "symbol": {
-        "description": "入力リスト項目を文字で区切ります。",
-        "title": "分割にシンボルを使用する"
-      }
-    },
-    "splitSeparatorDescription": "区切り記号または正規表現を設定します。",
-    "title": "グループ"
-  },
   "reverse": {
     "description": "これは、すべてのリスト項目を逆順に表示する、非常にシンプルなブラウザベースのアプリケーションです。入力項目は任意の記号で区切ることができ、逆順に表示するリスト項目の区切り文字を変更することもできます。",
     "inputTitle": "入力リスト",

@@ -130,44 +130,15 @@
     "uniqueOptions": "अद्वितीय विकल्प"
   },
   "group": {
-    "deleteEmptyItems": "खाली आइटम हटाएं",
-    "deleteEmptyItemsDescription": "खाली आइटमों को अनदेखा करें और उन्हें समूहों में शामिल न करें।",
-    "description": "सूची आइटम को समूहित करने के लिए सरल उपकरण।",
-    "emptyItemsAndPadding": "खाली आइटम और पैडिंग",
     "groupByFirstChar": "पहले वर्ण के अनुसार समूहित करें",
     "groupByLastChar": "अंतिम वर्ण के अनुसार समूहित करें",
     "groupByLength": "लंबाई के अनुसार समूहित करें",
     "groupByPattern": "पैटर्न के अनुसार समूहित करें",
     "groupHeaders": "समूह शीर्षक जोड़ें",
-    "groupNumberDescription": "एक समूह में वस्तुओं की संख्या",
-    "groupSeparatorDescription": "समूह विभाजक वर्ण",
-    "groupSizeAndSeparators": "समूह का आकार और विभाजक",
     "groupingOptions": "समूहीकरण विकल्प",
-    "inputItemSeparator": "इनपुट आइटम विभाजक",
-    "inputTitle": "इनपुट सूची",
-    "itemSeparatorDescription": "आइटम विभाजक वर्ण",
-    "leftWrapDescription": "समूह का बायां आवरण प्रतीक.",
     "outputFormat": "आउटपुट प्रारूप",
-    "padNonFullGroups": "पैड गैर-पूर्ण समूह",
-    "padNonFullGroupsDescription": "गैर-पूर्ण समूहों को कस्टम आइटम से भरें (नीचे दर्ज करें).",
-    "paddingCharDescription": "गैर-पूर्ण समूहों को पैड करने के लिए इस वर्ण या आइटम का उपयोग करें.",
     "patternPlaceholder": "रेगेक्स पैटर्न",
-    "resultTitle": "समूहित सूची",
-    "rightWrapDescription": "समूह का दायाँ आवरण प्रतीक.",
-    "separatorPlaceholder": "विभाजक",
-    "shortDescription": "सामान्य गुणों द्वारा सूची आइटम को समूहित करें",
-    "splitOperators": {
-      "regex": {
-        "description": "नियमित अभिव्यक्ति के साथ इनपुट सूची आइटम को सीमांकित करें.",
-        "title": "विभाजन के लिए रेगेक्स का उपयोग करें"
-      },
-      "symbol": {
-        "description": "इनपुट सूची आइटम को किसी वर्ण से सीमांकित करें.",
-        "title": "विभाजन के लिए प्रतीक का उपयोग करें"
-      }
-    },
-    "splitSeparatorDescription": "एक सीमांकक प्रतीक या नियमित अभिव्यक्ति सेट करें.",
-    "title": "सूची समूहित करें"
+    "separatorPlaceholder": "विभाजक"
   },
   "reverse": {
     "description": "सूची में आइटम के क्रम को उलटा करें।",

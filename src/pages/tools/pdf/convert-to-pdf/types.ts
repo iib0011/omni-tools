@@ -8,14 +8,15 @@ export interface ImageSize {
   heightPx: number;
 }
 
-export interface FormValues {
+export interface InitialValuesType {
   pageType: PageType;
   orientation: Orientation;
   scale: number;
 }
 
-export const initialValues: FormValues = {
-  pageType: 'full',
-  orientation: 'portrait',
-  scale: 100
-};
+export interface LoadedImage {
+  image: HTMLImageElement;
+  objectUrl: string;
+  format: 'PNG' | 'JPEG';
+  filename: string;
+}

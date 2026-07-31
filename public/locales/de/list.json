@@ -113,37 +113,6 @@
     "trimItemsDescription": "Entfernen Sie vor dem Vergleichen von Elementen führende und nachfolgende Leerzeichen.",
     "uniqueItemOptions": "Einzigartige Artikeloptionen"
   },
-  "group": {
-    "deleteEmptyItems": "Leere Elemente löschen",
-    "deleteEmptyItemsDescription": "Ignorieren Sie leere Elemente und nehmen Sie sie nicht in die Gruppen auf.",
-    "description": "Das weltweit einfachste browserbasierte Dienstprogramm zum Gruppieren von Listenelementen. Geben Sie Ihre Liste ein und legen Sie Gruppierungskriterien fest, um Elemente in logische Gruppen zu ordnen. Ideal zum Kategorisieren von Daten, Organisieren von Informationen oder Erstellen strukturierter Listen. Unterstützt benutzerdefinierte Trennzeichen und verschiedene Gruppierungsoptionen.",
-    "emptyItemsAndPadding": "Leere Elemente und Polsterung",
-    "groupNumberDescription": "Anzahl der Elemente in einer Gruppe",
-    "groupSeparatorDescription": "Gruppentrennzeichen",
-    "groupSizeAndSeparators": "Gruppengröße und Trennzeichen",
-    "inputItemSeparator": "Eingabeelement-Trennzeichen",
-    "inputTitle": "Eingabeliste",
-    "itemSeparatorDescription": "Elementtrennzeichen",
-    "leftWrapDescription": "Linkes Umbruchsymbol der Gruppe.",
-    "padNonFullGroups": "Nicht volle Gruppen auffüllen",
-    "padNonFullGroupsDescription": "Füllen Sie nicht volle Gruppen mit einem benutzerdefinierten Element (unten eingeben).",
-    "paddingCharDescription": "Verwenden Sie dieses Zeichen oder Element, um nicht volle Gruppen aufzufüllen.",
-    "resultTitle": "Gruppierte Elemente",
-    "rightWrapDescription": "Rechtes Umbruchsymbol der Gruppe.",
-    "shortDescription": "Gruppieren Sie Listenelemente nach gemeinsamen Eigenschaften",
-    "splitOperators": {
-      "regex": {
-        "description": "Begrenzen Sie die Elemente der Eingabeliste mit einem regulären Ausdruck.",
-        "title": "Verwenden Sie einen regulären Ausdruck zum Aufteilen"
-      },
-      "symbol": {
-        "description": "Begrenzen Sie die Elemente der Eingabeliste durch ein Zeichen.",
-        "title": "Verwenden Sie ein Symbol zum Teilen"
-      }
-    },
-    "splitSeparatorDescription": "Legen Sie ein Trennsymbol oder einen regulären Ausdruck fest.",
-    "title": "Gruppe"
-  },
   "reverse": {
     "description": "Diese einfache browserbasierte Anwendung druckt alle Listenelemente rückwärts. Die Eingabeelemente können durch ein beliebiges Symbol getrennt werden. Sie können auch das Trennzeichen der umgekehrten Listenelemente ändern.",
     "inputTitle": "Eingabeliste",

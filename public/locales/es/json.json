@@ -46,11 +46,6 @@
     "shortDescription": "Convertir objetos en cadena JSON",
     "title": "Convertir JSON en cadenas"
   },
-  "tsvToJson": {
-    "description": "Convierte datos TSV (Valores Separados por Tabulaciones) a formato JSON. Transforma datos tabulares en objetos JSON estructurados.",
-    "shortDescription": "Convertir TSV a formato JSON",
-    "title": "TSV a JSON"
-  },
   "validateJson": {
     "description": "Comprueba si JSON es válido y está bien formado.",
     "inputTitle": "Entrada JSON",

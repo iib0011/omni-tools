@@ -21,6 +21,11 @@
     "shortDescription": "Compacte arquivos PDF com segurança no seu navegador",
     "title": "Comprimir PDF"
   },
+  "convertToPdf": {
+    "description": "Converter vários formatos de imagem (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) em PDF, com opções para redimensionar a imagem e escolher a orientação da página.",
+    "shortDescription": "Converter imagens em PDF com controle de escala e orientação",
+    "title": "Imagens para PDF"
+  },
   "editor": {
     "description": "Editor de PDF avançado com recursos de anotação, preenchimento de formulários, destaque e exportação. Edite seus PDFs diretamente no navegador com ferramentas de nível profissional, incluindo inserção de texto, desenho, destaque, assinatura e preenchimento de formulários.",
     "shortDescription": "Edite PDFs com ferramentas avançadas de anotação, assinatura e edição",
@@ -63,11 +68,6 @@
     "shortDescription": "Converter PDF em imagens PNG",
     "title": "PDF para PNG"
   },
-  "convertToPdf": {
-    "title": "Imagens para PDF",
-    "description": "Converter vários formatos de imagem (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) em PDF, com opções para redimensionar a imagem e escolher a orientação da página.",
-    "shortDescription": "Converter imagens em PDF com controle de escala e orientação"
-  },
   "protectPdf": {
     "description": "Adicione proteção por senha aos seus arquivos PDF com segurança no seu navegador",
     "shortDescription": "Proteja arquivos PDF com senha com segurança",
@@ -86,8 +86,8 @@
     "longDescription": "Altere a orientação das páginas do PDF girando-as 90, 180 ou 270 graus. Útil para corrigir documentos digitalizados incorretamente ou preparar PDFs para impressão.",
     "pageRangesDescription": "Insira números de página ou intervalos separados por vírgulas (por exemplo, 1,3,5-7)",
     "pageRangesPlaceholder": "por exemplo, 1,5-8",
-    "pagesWillBeRotated": "{{count}} página{{count !== 1 ? 's' : ''}} será girado",
-    "pdfPageCount": "PDF tem {{count}} página{{count !== 1 ? 's' : ''}}",
+    "pagesWillBeRotated": "{{count}} página{{plural}} será girado",
+    "pdfPageCount": "PDF tem {{count}} página{{plural}}",
     "resultTitle": "PDF girado",
     "rotatingPages": "Páginas rotativas",
     "rotationAngle": "Ângulo de rotação",
@@ -103,11 +103,11 @@
     "description": "Extraia páginas específicas de um documento PDF.",
     "extractingPages": "Extraindo páginas",
     "inputTitle": "PDF de entrada",
-    "pageExtractionPreview": "{{count}} página{{count !== 1 ? 's' : ''}} será extraído",
+    "pageExtractionPreview": "{{count}} página{{ plural }} será extraído",
     "pageRangesDescription": "Insira números de página ou intervalos separados por vírgulas (por exemplo, 1,3,5-7)",
     "pageRangesPlaceholder": "por exemplo, 1,5-8",
     "pageSelection": "Seleção de página",
-    "pdfPageCount": "PDF tem {{count}} página{{count !== 1 ? 's' : ''}}",
+    "pdfPageCount": "PDF tem {{count}} página{{plural}}",
     "resultTitle": "PDF extraído",
     "shortDescription": "Extrair páginas específicas de um arquivo PDF",
     "title": "Dividir PDF",

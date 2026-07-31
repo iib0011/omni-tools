@@ -1,25 +1,25 @@
 export type SplitOperatorType = 'symbol' | 'regex';
 
 // function that split the array into an array of subarray of desired length
-function groupMaker(array: string[], groupNumber: number): string[][] {
+function chunkMaker(array: string[], chunkNumber: number): string[][] {
   const result: string[][] = [];
-  for (let i = 0; i < array.length; i += groupNumber) {
-    result.push(array.slice(i, i + groupNumber));
+  for (let i = 0; i < array.length; i += chunkNumber) {
+    result.push(array.slice(i, i + chunkNumber));
   }
   return result;
 }
 
-// function use to handle the case paddingNonFullGroup is enable
-function groupFiller(
+// function use to handle the case paddingNonFullChunk is enable
+function chunkFiller(
   array: string[][],
-  groupNumber: number,
-  padNonFullGroup: boolean,
+  chunkNumber: number,
+  padNonFullChunk: boolean,
   paddingChar: string = ''
 ): string[][] {
-  if (padNonFullGroup) {
+  if (padNonFullChunk) {
     const lastSubArray: string[] = array[array.length - 1];
-    if (lastSubArray.length < groupNumber) {
-      for (let i = lastSubArray.length; i < groupNumber; i++) {
+    if (lastSubArray.length < chunkNumber) {
+      for (let i = lastSubArray.length; i < chunkNumber; i++) {
         lastSubArray.push(paddingChar);
       }
     }
@@ -29,7 +29,7 @@ function groupFiller(
 }
 
 // function that join with the item separator and wrap with left and right each subArray of the Array
-function groupJoinerAndWrapper(
+function chunkJoinerAndWrapper(
   array: string[][],
   itemSeparator: string = '',
   leftWrap: string = '',
@@ -40,23 +40,23 @@ function groupJoinerAndWrapper(
   });
 }
 
-export function groupList(
+export function chunkList(
   splitOperatorType: SplitOperatorType,
   splitSeparator: string,
   input: string,
-  groupNumber: number,
+  chunkNumber: number,
   itemSeparator: string = '',
   leftWrap: string = '',
   rightWrap: string = '',
-  groupSeparator: string,
+  chunkSeparator: string,
   deleteEmptyItems: boolean,
-  padNonFullGroup: boolean,
+  padNonFullChunk: boolean,
   paddingChar: string = ''
 ): string {
+  if (!splitSeparator) return '';
+
   let array: string[];
-  let splitedArray: string[][];
-  let fullSplitedArray: string[][];
-  let result: string[];
+
   switch (splitOperatorType) {
     case 'symbol':
       array = input.split(splitSeparator);
@@ -71,24 +71,24 @@ export function groupList(
   }
 
   // split the input into an array of subArray with the desired length
-  splitedArray = groupMaker(array, groupNumber);
+  const splitedArray = chunkMaker(array, chunkNumber);
 
-  // fill the last subArray is PadNonFullGroup is enabled
-  fullSplitedArray = groupFiller(
+  // fill the last subArray is PadNonFullChunk is enabled
+  const fullSplitedArray = chunkFiller(
     splitedArray,
-    groupNumber,
-    padNonFullGroup,
+    chunkNumber,
+    padNonFullChunk,
     paddingChar
   );
 
   // get the list of formated subArray with the item separator and left and right wrapper
-  result = groupJoinerAndWrapper(
+  const result = chunkJoinerAndWrapper(
     fullSplitedArray,
     itemSeparator,
     leftWrap,
     rightWrap
   );
 
-  // finnaly join the group separator before returning
-  return result.join(groupSeparator);
+  // finnaly join the chunk separator before returning
+  return result.join(chunkSeparator);
 }

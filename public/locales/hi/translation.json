@@ -94,7 +94,10 @@
       "splitText": "टेक्स्ट विभाजित करें",
       "trimVideo": "वीडियो ट्रिम करें"
     },
-    "searchPlaceholder": "सभी टूल्स खोजें",
+    "search": {
+      "placeholder": "सभी टूल खोजें",
+      "noResult": "कोई परिणाम नहीं मिला, अपनी खोज या फ़िल्टर मानदंड समायोजित करने का प्रयास करें"
+    },
     "title": "के साथ जल्दी काम करें"
   },
   "inputFooter": {
@@ -225,13 +228,10 @@
     "loading": "लोड हो रहा है... इसमें कुछ समय लग सकता है।",
     "result": "परिणाम"
   },
-  "toolMultipleAudioInput": {
-    "inputTitle": "इनपुट {{type}}",
-    "noFilesSelected": "कोई फ़ाइल चयनित नहीं"
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "इनपुट {{type}}",
-    "noFilesSelected": "कोई फ़ाइल चयनित नहीं"
+  "toolMultipleInput": {
+    "inputTitle": "{{type}} इनपुट करें",
+    "noFilesSelected": "कोई फ़ाइल नहीं चुनी गई",
+    "deleteFile": "फ़ाइल हटाएं"
   },
   "toolOptions": {
     "title": "टूल विकल्प"

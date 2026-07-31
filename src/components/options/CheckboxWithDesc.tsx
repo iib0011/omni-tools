@@ -19,7 +19,7 @@ const CheckboxWithDesc = ({
   };
 
   return (
-    <Box>
+    <Box mb={3}>
       <FormControlLabel
         control={
           <Checkbox

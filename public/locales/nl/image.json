@@ -1,6 +1,6 @@
 {
   "changeColors": {
-    "description": "Wereld",
+    "description": "Vervang geselecteerde kleuren in een afbeelding snel en nauwkeurig door nieuwe kleuren.",
     "shortDescription": "Snel kleuren in een afbeelding verwisselen",
     "title": "Kleuren in afbeelding wijzigen"
   },
@@ -33,13 +33,8 @@
     "shortDescription": "Converteer uw JPG-afbeeldingen snel naar PNG",
     "title": "JPG naar PNG converteren"
   },
-  "convertToJpg": {
-    "description": "Converteer verschillende afbeeldingsformaten (PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW) naar JPG met aanpasbare instellingen voor de kwaliteit en achtergrondkleur.",
-    "shortDescription": "Converteer afbeeldingen naar JPG met kwaliteitscontrole",
-    "title": "Afbeeldingen naar JPG converteren"
-  },
   "createTransparent": {
-    "description": "Wereld",
+    "description": "Maak de achtergrond van een afbeelding transparant door de gekozen kleur te verwijderen.",
     "shortDescription": "Snel een afbeelding transparant maken",
     "title": "Transparante PNG maken"
   },
@@ -66,7 +61,7 @@
     "title": "QR-codegenerator"
   },
   "removeBackground": {
-    "description": "Wereld",
+    "description": "Verwijder automatisch de achtergrond van een afbeelding en behoud het hoofdonderwerp met transparantie.",
     "shortDescription": "Achtergronden automatisch uit afbeeldingen verwijderen",
     "title": "Achtergrond uit afbeelding verwijderen"
   },

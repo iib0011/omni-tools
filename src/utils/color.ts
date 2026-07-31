@@ -1,24 +1,21 @@
 export function areColorsSimilar(
-  color1: [number, number, number],
-  color2: [number, number, number],
+  color1: [number, number, number, number?],
+  color2: [number, number, number, number?],
   similarity: number
 ): boolean {
-  const colorDistance = (
-    c1: [number, number, number],
-    c2: [number, number, number]
-  ) => {
-    return Math.sqrt(
-      Math.pow(c1[0] - c2[0], 2) +
-        Math.pow(c1[1] - c2[1], 2) +
-        Math.pow(c1[2] - c2[2], 2)
-    );
-  };
-  const maxColorDistance = Math.sqrt(
-    Math.pow(255, 2) + Math.pow(255, 2) + Math.pow(255, 2)
-  );
-  const similarityThreshold = (similarity / 100) * maxColorDistance;
+  const a1 = color1[3] ?? 255;
+  const a2 = color2[3] ?? 255;
 
-  return colorDistance(color1, color2) <= similarityThreshold;
+  const distance = Math.sqrt(
+    Math.pow(color1[0] - color2[0], 2) +
+      Math.pow(color1[1] - color2[1], 2) +
+      Math.pow(color1[2] - color2[2], 2) +
+      Math.pow(a1 - a2, 2)
+  );
+
+  const maxDistance = Math.sqrt(Math.pow(255, 2) * 4);
+
+  return distance <= (similarity / 100) * maxDistance;
 }
 
 export function convertHexToRGBA(color: string): number {

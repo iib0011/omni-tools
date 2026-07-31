@@ -41,16 +41,16 @@
     }
   },
   "trim": {
-    "description": "Cut and trim audio files to extract specific segments by specifying start and end times.",
+    "description": "Cut and trim audio files to extract specific segments by specifying start and end times with sub-second precision.",
     "endTime": "End Time",
-    "endTimeDescription": "End time in format HH:MM:SS (e.g., 00:01:30)",
+    "endTimeDescription": "End time in format HH:MM:SS.mmm (e.g., 00:01:30.450)",
     "inputTitle": "Input Audio",
-    "longDescription": "This tool allows you to trim audio files by specifying start and end times. You can extract specific segments from longer audio files, remove unwanted parts, or create shorter clips. Supports various audio formats including MP3, AAC, and WAV. Perfect for podcast editing, music production, or any audio editing needs.",
+    "longDescription": "This tool allows you to trim audio files by specifying start and end times with sub-second precision. You can extract specific segments from longer audio files, remove unwanted parts, or create shorter clips. Supports various audio formats including MP3, AAC, and WAV. Perfect for podcast editing, music production, or any audio editing needs.",
     "outputFormat": "Output Format",
     "resultTitle": "Trimmed Audio",
-    "shortDescription": "Trim audio files to extract specific time segments (MP3, AAC, WAV).",
+    "shortDescription": "Trim audio files to extract specific time segments with sub-second precision (MP3, AAC, WAV).",
     "startTime": "Start Time",
-    "startTimeDescription": "Start time in format HH:MM:SS (e.g., 00:00:30)",
+    "startTimeDescription": "Start time in format HH:MM:SS.mmm (e.g., 00:00:30.820)",
     "timeSettings": "Time Settings",
     "title": "Trim Audio",
     "toolInfo": {

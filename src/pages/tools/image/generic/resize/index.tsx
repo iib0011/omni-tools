@@ -1,15 +1,18 @@
 import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import * as Yup from 'yup';
-import ToolImageInput from '@components/input/ToolImageInput';
-import ToolFileResult from '@components/result/ToolFileResult';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
 import SimpleRadio from '@components/options/SimpleRadio';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
-import { processImage } from './service';
+import ToolMultipleImageInput, {
+  MultiImageInput
+} from '@components/input/ToolMultipleImageInput';
+import ToolMultiFileResult from '@components/result/ToolMultiFileResult';
+import ToolFileResult from '@components/result/ToolFileResult';
+import { resizeImages } from './service';
 import { InitialValuesType } from './types';
 import { useTranslation } from 'react-i18next';
 
@@ -47,12 +50,35 @@ const validationSchema = Yup.object({
 
 export default function ResizeImage({ title }: ToolComponentProps) {
   const { t } = useTranslation('image');
-  const [input, setInput] = useState<File | null>(null);
-  const [result, setResult] = useState<File | null>(null);
+  const [input, setInput] = useState<MultiImageInput[]>([]);
+  const [results, setResults] = useState<File[]>([]);
+  const [zipFile, setZipFile] = useState<File | null>(null);
+  const [isProcessing, setIsProcessing] = useState<boolean>(false);
 
-  const compute = async (optionsValues: InitialValuesType, input: any) => {
+  const compute = async (
+    optionsValues: InitialValuesType,
+    input: MultiImageInput[]
+  ) => {
     if (!input) return;
-    setResult(await processImage(input, optionsValues));
+    try {
+      setIsProcessing(true);
+
+      const output = await resizeImages(
+        input.map((img) => img.file),
+        optionsValues
+      );
+
+      if (!output) {
+        return;
+      }
+
+      setResults(output.results);
+      setZipFile(output.zipFile);
+    } catch (err) {
+      console.error('Error in resizing:', err);
+    } finally {
+      setIsProcessing(false);
+    }
   };
 
   const getGroups: GetGroupsType<InitialValuesType> = ({
@@ -171,19 +197,35 @@ export default function ResizeImage({ title }: ToolComponentProps) {
       input={input}
       validationSchema={validationSchema}
       inputComponent={
-        <ToolImageInput
+        <ToolMultipleImageInput
           value={input}
           onChange={setInput}
-          accept={['image/jpeg', 'image/png', 'image/svg+xml', 'image/gif']}
+          type="image"
+          accept={[
+            'image/jpeg',
+            'image/png',
+            'image/svg+xml',
+            'image/gif',
+            'image/webp'
+          ]}
           title={t('resize.inputTitle')}
         />
       }
       resultComponent={
-        <ToolFileResult
-          title={t('resize.resultTitle')}
-          value={result}
-          extension={input?.name.split('.').pop() || 'png'}
-        />
+        zipFile ? (
+          <ToolMultiFileResult
+            title={t('resize.resultTitle')}
+            value={results}
+            zipFile={zipFile}
+            loading={isProcessing}
+          />
+        ) : (
+          <ToolFileResult
+            title={t('resize.resultTitle')}
+            value={results[0] ?? null}
+            extension={results[0]?.name.split('.').pop() || 'png'}
+          />
+        )
       }
       toolInfo={{
         title: t('resize.toolInfo.title'),

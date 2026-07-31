@@ -22,7 +22,7 @@ const RadioWithTextField = ({
   radioDescription?: string;
 }) => {
   return (
-    <Box>
+    <Box mb={3}>
       <SimpleRadio
         checked={checked}
         onClick={onRadioClick}

@@ -1,18 +1,21 @@
+import { InitialValuesType } from './types';
+import JSON5 from 'json5';
+
 export const stringifyJson = (
   input: string,
-  indentationType: 'tab' | 'space',
-  spacesCount: number,
-  escapeHtml: boolean
+  options: InitialValuesType
 ): string => {
+  const { indentationType, spacesCount, escapeHtml } = options;
   let parsedInput;
   try {
-    // Safely evaluate the input string as JavaScript
-    parsedInput = eval('(' + input + ')');
+    // Json5 safer than eval
+    parsedInput = JSON5.parse(input);
   } catch (e) {
     throw new Error('Invalid JavaScript object/array');
   }
 
   const indent = indentationType === 'tab' ? '\t' : ' '.repeat(spacesCount);
+
   let result = JSON.stringify(parsedInput, null, indent);
 
   if (escapeHtml) {

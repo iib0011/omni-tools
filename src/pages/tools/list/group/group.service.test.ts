@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
 
-import { groupList, SplitOperatorType } from './service';
+import { chunkList, SplitOperatorType } from './service';
 
-describe('groupList', () => {
+describe('chunkList', () => {
   it('splits by symbol, groups, pads, and formats correctly', () => {
     const input = 'a,b,c,d,e,f,g,h,i,j';
     const splitOperatorType: SplitOperatorType = 'symbol';
@@ -18,7 +18,7 @@ describe('groupList', () => {
 
     const expectedOutput = '[a-b-c] | [d-e-f] | [g-h-i] | [j-x-x]';
 
-    const result = groupList(
+    const result = chunkList(
       splitOperatorType,
       splitSeparator,
       input,
@@ -49,7 +49,7 @@ describe('groupList', () => {
 
     const expectedOutput = '(a,b,c,d) / (e,f,g,h) / (i,j)';
 
-    const result = groupList(
+    const result = chunkList(
       splitOperatorType,
       splitSeparator,
       input,
@@ -80,7 +80,7 @@ describe('groupList', () => {
 
     const expectedOutput = '<a:b> & <c:d> & <e:z>';
 
-    const result = groupList(
+    const result = chunkList(
       splitOperatorType,
       splitSeparator,
       input,

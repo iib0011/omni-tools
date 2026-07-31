@@ -61,22 +61,27 @@
   "convertUnixToDate": {
     "addUtcLabel": "「UTC」サフィックスを追加",
     "addUtcLabelDescription": "変換された日付の後に「UTC」を表示します（UTCモードのみ）",
-    "description": "Unix タイムスタンプを人間が読める日付に変換します。",
+    "date-to-unix": "日付 → Unix",
+    "description": "Unix タイムスタンプを読み取り可能な日付に変換し、フォーマットされた日付を Unix タイムスタンプに変換します（両方向）。",
+    "optionsTitle": "変換モード",
     "outputOptions": "出力オプション",
-    "shortDescription": "Unixタイムスタンプを日付に変換する",
-    "title": "Unix を日付に変換する",
+    "shortDescription": "Unix タイムスタンプと日付を両方向に変換します。",
+    "title": "Unix ↔ 日付を変換する",
     "toolInfo": {
-      "description": "このツールは、Unixタイムスタンプ（秒単位）を人間が判読できる日付形式（例：YYYY-MM-DD HH:MM:SS）に変換します。ローカルタイムスタンプとUTCタイムスタンプの両方の出力をサポートしているため、ログ、API、またはUnixタイムを使用するシステムからのタイムスタンプを素早く解釈するのに役立ちます。",
-      "title": "Unix を日付に変換する"
+      "description": "このツールは、Unix タイムスタンプ（秒単位）を YYYY-MM-DD HH:MM:SS などの人間が判読できる日付形式に変換し、フォーマットされた日付を Unix タイムスタンプに変換します。UTC出力、ローカルタイムゾーン出力、またはカスタム UTC オフセット（例：YYYY-MM-DD HH:MM:SS +XX:XX）を選択できます。オフセットが提供されず、ローカル タイムゾーンが選択されていない場合、デフォルトで UTC (+00:00) が使用されます。",
+      "title": "Unix ↔ 日付を変換する"
     },
+    "tzOptions": "タイムゾーンオプション",
+    "unix-to-date": "Unix → 日付",
     "useLocalTime": "現地時間を使用する",
     "useLocalTimeDescription": "UTC ではなくローカルタイムゾーンで変換された日付を表示します",
-    "withLabel": "オプション"
+    "useUTC": "UTC を使用する"
   },
   "crontabGuru": {
-    "description": "cron式を生成し、理解します。自動化されたタスクやシステムジョブのcronスケジュールを作成します。",
-    "shortDescription": "cron式を生成して理解する",
-    "title": "クロンタブの達人"
+    "title": "Crontab Guru",
+    "description": "cron式を日本語で解析・説明します。任意のcronスケジュールの動作を即座に理解し、構文を検証し、複数の式を一度に処理できます。",
+    "shortDescription": "cron式をわかりやすく解析・説明する",
+    "longDescription": "Crontab Guruは、複雑なcron構文をわかりやすい説明に変換するcron式パーサー・バリデーターです。自動バックアップ、システムメンテナンスタスク、CI/CDパイプラインのスケジュール設定など、ジョブがいつ実行されるかを正確に把握できます。標準的な5フィールドのcron式をサポートし、構文をリアルタイムで検証し、複数の式を一度に処理します（1行に1つ）。英語、フランス語、スペイン語、ドイツ語、日本語、中国語、ポルトガル語、オランダ語、ロシア語に対応しています。"
   },
   "timeBetweenDates": {
     "description": "2つの日付間の時差を計算します。正確な日数、時間、分、秒を取得します。",
