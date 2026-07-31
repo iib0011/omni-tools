@@ -96,7 +96,131 @@
     },
     "resultOutput": "Generated QR code",
     "shortDescription": "Create customized QR codes for various data formats.",
-    "title": "QR Code Generator"
+    "longDescription": "Generate QR codes for different data types: URL, Text, Email, Phone, SMS, WiFi, vCard, and more. Customize the size and colors to create the perfect QR code for your needs.",
+    "title": "QR Code Generator",
+    "result": {
+      "title": "Generated QR code"
+    },
+    "groups": {
+      "type": {
+        "title": "QR Code Type",
+        "label": "Select QR Code Type",
+        "options": {
+          "url": "URL",
+          "text": "Text",
+          "email": "Email",
+          "phone": "Phone",
+          "sms": "SMS",
+          "wifi": "WiFi",
+          "vcard": "vCard (Contact)"
+        }
+      },
+      "settings": {
+        "title": "QR Code Settings",
+        "size": {
+          "description": "Size in pixels (100-1000)"
+        },
+        "correctionLevel": {
+          "label": "Error Correction Level",
+          "helperText": "Higher levels survive more damage but encode less data",
+          "options": {
+            "l": "L (~7%)",
+            "m": "M (~15%)",
+            "q": "Q (~25%)",
+            "h": "H (~30%)"
+          }
+        },
+        "bgColor": "Background Color",
+        "fgColor": "Foreground Color"
+      },
+      "details": {
+        "title": "{{type}} Details",
+        "url": {
+          "description": "Enter the URL",
+          "placeholder": "https://example.com"
+        },
+        "text": {
+          "description": "Enter the text",
+          "placeholder": "Enter your text here"
+        },
+        "email": {
+          "address": {
+            "description": "Email Address",
+            "placeholder": "example@example.com"
+          },
+          "subject": {
+            "description": "Email Subject (optional)",
+            "placeholder": "Subject line"
+          },
+          "body": {
+            "description": "Email Body (optional)",
+            "placeholder": "Body text"
+          }
+        },
+        "phone": {
+          "description": "Phone Number",
+          "placeholder": "+1234567890"
+        },
+        "sms": {
+          "number": {
+            "description": "Phone Number",
+            "placeholder": "+1234567890"
+          },
+          "message": {
+            "description": "Message (optional)",
+            "placeholder": "Your message here"
+          }
+        },
+        "wifi": {
+          "ssid": {
+            "description": "Network Name (SSID)",
+            "placeholder": "Network name"
+          },
+          "password": {
+            "description": "Password",
+            "placeholder": "Password"
+          },
+          "encryption": {
+            "label": "Encryption Type",
+            "options": {
+              "wpa": "WPA",
+              "wep": "WEP",
+              "none": "None"
+            }
+          }
+        },
+        "vcard": {
+          "name": {
+            "description": "Full Name",
+            "placeholder": "John Doe"
+          },
+          "email": {
+            "description": "Email",
+            "placeholder": "john@example.com"
+          },
+          "phone": {
+            "description": "Phone",
+            "placeholder": "+1234567890"
+          },
+          "address": {
+            "description": "Address",
+            "placeholder": "123 Main St, City, Country"
+          },
+          "company": {
+            "description": "Company (optional)",
+            "placeholder": "Company name"
+          },
+          "title": {
+            "description": "Job Title (optional)",
+            "placeholder": "Software Developer"
+          },
+          "website": {
+            "description": "Website (optional)",
+            "placeholder": "https://example.com"
+          }
+        }
+      }
+    }
   },
   "removeBackground": {
     "description": "Remove the background from an image to isolate the main subject with transparency.",
