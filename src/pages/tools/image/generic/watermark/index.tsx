@@ -84,25 +84,20 @@ export default function Watermark({ title }: ToolComponentProps) {
       title: t('watermark.options.watermarkTitle'),
       component: (
         <Box>
-          <SimpleRadio
-            onClick={() => updateField('filename', true)}
-            checked={values.filename === true}
-            title={t('watermark.options.filenameWatermarkTitle')}
-            description={t('watermark.options.filenameWatermarkDesc')}
-          />
-          <SimpleRadio
-            onClick={() => updateField('filename', false)}
-            checked={values.filename === false}
-            title={t('watermark.options.customStringWatermarkTitle')}
-            description={t('watermark.options.customStringWatermarkDesc')}
-          />
-        </Box>
-      )
-    },
-    {
-      title: t('watermark.options.styleTitle'),
-      component: (
-        <Box>
+          <Box mb={3}>
+            <SimpleRadio
+              onClick={() => updateField('filename', true)}
+              checked={values.filename === true}
+              title={t('watermark.options.filenameWatermarkTitle')}
+              description={t('watermark.options.filenameWatermarkDesc')}
+            />
+            <SimpleRadio
+              onClick={() => updateField('filename', false)}
+              checked={values.filename === false}
+              title={t('watermark.options.customStringWatermarkTitle')}
+              description={t('watermark.options.customStringWatermarkDesc')}
+            />
+          </Box>
           {!values.filename && (
             <TextFieldWithDesc
               value={values.watermark}
@@ -114,6 +109,13 @@ export default function Watermark({ title }: ToolComponentProps) {
               }}
             />
           )}
+        </Box>
+      )
+    },
+    {
+      title: t('watermark.options.styleTitle'),
+      component: (
+        <Box>
           <TextFieldWithDesc
             value={String(values.watermarkOpacity)}
             onOwnChange={(val) => updateField('watermarkOpacity', Number(val))}
