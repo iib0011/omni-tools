@@ -1,8 +1,7 @@
-export const beautifyJson = (
-  text: string,
-  indentationType: 'tab' | 'space',
-  spacesCount: number
-) => {
+import { InitialValuesType } from './types';
+export const beautifyJson = (text: string, options: InitialValuesType) => {
+  const { indentationType, spacesCount } = options;
+
   let parsedJson;
   try {
     parsedJson = JSON.parse(text);

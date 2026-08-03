@@ -162,25 +162,29 @@ export function stripAndDecodeHtml(html: string): string {
 }
 
 /**
- * Escapes special HTML characters in a string to prevent HTML injection.
+ * Escapes special characters shared by HTML and XML into their
+ * corresponding entities, making a string safe for insertion into
+ * either markup language.
  *
- * Replaces the following characters with their corresponding HTML entities:
+ * Replaces:
  * - &  → &amp;
  * - <  → &lt;
  * - >  → &gt;
  * - "  → &quot;
+ * - '  → &#039;
  *
  * @param {string} str - The input string to escape.
- * @returns {string} The escaped string safe for insertion into HTML.
+ * @returns {string} The escaped string, safe for insertion into HTML or XML.
  *
  * @example
- * escapeHtml('<div class="test">Hello & welcome</div>');
+ * escapeMarkup('<div class="test">Hello & welcome</div>');
  * // Returns: '&lt;div class=&quot;test&quot;&gt;Hello &amp; welcome&lt;/div&gt;'
  */
-export function escapeHtml(str: string): string {
+export function escapeMarkup(str: string): string {
   return str
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
 }

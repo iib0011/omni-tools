@@ -1,11 +1,13 @@
+import { parseJsonInput, JsonFormat } from '@utils/json';
+
 export const validateJson = (
   input: string
-): { valid: boolean; error?: string } => {
+): { valid: boolean; error?: string; format?: JsonFormat } => {
   try {
-    JSON.parse(input);
-    return { valid: true };
+    const { format } = parseJsonInput(input);
+    return { valid: true, format: format };
   } catch (error) {
-    if (error instanceof SyntaxError) {
+    if (error instanceof Error) {
       return { valid: false, error: error.message };
     }
     return { valid: false, error: 'Unknown error occurred' };

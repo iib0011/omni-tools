@@ -151,6 +151,60 @@
       "description": "Discord timestamps are a special syntax that displays dates and times dynamically. Instead of showing a fixed time, they automatically convert to each viewer's local timezone and language — so everyone sees the correct time for their location. Simply enter one datetime per line, choose a format, and paste the results directly into Discord. The tool processes each line independently — blank lines are preserved in the output, invalid lines are flagged with ❌, and valid datetimes are converted instantly. Enable UTC mode to ensure consistent results regardless of your local timezone."
     }
   },
+  "dateWeekdayCalculator": {
+    "title": "Date Weekday Calculator",
+    "description": "Find every year in a range where a month and day fall on a chosen weekday.",
+    "shortDescription": "Find years when a date falls on a weekday",
+    "longDescription": "Select a month, day, and target weekday, then choose a start and end year. The calculator scans each year in the range and lists every match as a full formatted date. February 29 is supported: non-leap years are skipped automatically. Invalid dates (such as April 31) and invalid year ranges show clear error messages.",
+    "resultTitle": "Matching years",
+    "dateSelection": "Date",
+    "monthDescription": "Month",
+    "dayDescription": "Day",
+    "weekdaySelection": "Weekday",
+    "weekdayDescription": "Target weekday",
+    "yearRange": "Year range",
+    "startYearDescription": "Start year",
+    "endYearDescription": "End year",
+    "noMatches": "No matching years found in the selected range.",
+    "foundMatches_one": "Found {{count}} matching year",
+    "foundMatches_other": "Found {{count}} matching years",
+    "months": {
+      "1": "January",
+      "2": "February",
+      "3": "March",
+      "4": "April",
+      "5": "May",
+      "6": "June",
+      "7": "July",
+      "8": "August",
+      "9": "September",
+      "10": "October",
+      "11": "November",
+      "12": "December"
+    },
+    "weekdays": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "errors": {
+      "invalidMonth": "Month must be between 1 and 12",
+      "invalidDay": "Day must be between 1 and 31",
+      "invalidDate": "Invalid day for the selected month",
+      "invalidWeekday": "Invalid weekday",
+      "invalidYear": "Years must be integers between 1 and 9999",
+      "invalidYearRange": "Start year must be less than or equal to end year",
+      "emptyInput": "All fields are required",
+      "fallback": "Invalid input"
+    },
+    "toolInfo": {
+      "title": "What is a {{title}}?"
+    }
+  },
   "convertDateToUnix": {
     "description": "Convert a human-readable date to a Unix Timestamp.",
     "outputOptions": "Output Options",

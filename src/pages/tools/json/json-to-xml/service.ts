@@ -1,99 +1,129 @@
-type JsonToXmlOptions = {
-  indentationType: 'space' | 'tab' | 'none';
-  addMetaTag: boolean;
-};
+import { InitialValuesType } from './types';
+import { escapeMarkup } from '@utils/string';
+import { normalizeXmlTagName } from '@utils/xml';
+import { parseJsonInput, JsonFormat } from '@utils/json';
+
+type JsonObject = Record<string, any>;
+
+const MAX_JSON_DEPTH = 100;
 
 export const convertJsonToXml = (
   json: string,
-  options: JsonToXmlOptions
-): string => {
-  const obj = JSON.parse(json);
-  return convertObjectToXml(obj, options);
+  options: InitialValuesType
+): { result: string; inputFormat: JsonFormat } => {
+  const { data: parsed, format: inputFormat } = parseJsonInput(json);
+
+  if (typeof parsed !== 'object' || parsed === null) {
+    throw new Error('JSON root value must be an object or array.');
+  }
+
+  const chunks: string[] = [];
+  const newline = options.indentationType === 'none' ? '' : '\n';
+
+  if (options.addMetaTag) {
+    chunks.push(`<?xml version="1.0" encoding="UTF-8"?>${newline}`);
+  }
+
+  chunks.push(`<root>${newline}`);
+
+  if (Array.isArray(parsed)) {
+    parsed.forEach((item) => {
+      chunks.push(convertArrayItemToXml(item, options, 1));
+    });
+  } else {
+    chunks.push(convertObjectToXml(parsed, options, 1));
+  }
+
+  chunks.push('</root>');
+
+  return { result: chunks.join(''), inputFormat: inputFormat };
 };
 
-const getIndentation = (options: JsonToXmlOptions, depth: number): string => {
-  switch (options.indentationType) {
-    case 'space':
-      return '  '.repeat(depth + 1);
-    case 'tab':
-      return '\t'.repeat(depth + 1);
-    case 'none':
-    default:
-      return '';
+const convertArrayItemToXml = (
+  item: any,
+  options: InitialValuesType,
+  depth: number
+): string => {
+  const indentation = getIndentation(options, depth);
+  const newline = options.indentationType === 'none' ? '' : '\n';
+
+  if (typeof item === 'object' && item !== null && !Array.isArray(item)) {
+    return `${indentation}<item>${newline}${convertObjectToXml(
+      item,
+      options,
+      depth + 1
+    )}${indentation}</item>${newline}`;
   }
+
+  return `${indentation}<item>${escapeMarkup(String(item))}</item>${newline}`;
 };
 
 const convertObjectToXml = (
-  obj: any,
-  options: JsonToXmlOptions,
-  depth: number = 0
+  obj: JsonObject,
+  options: InitialValuesType,
+  depth: number
 ): string => {
-  let xml = '';
+  if (depth > MAX_JSON_DEPTH) {
+    throw new Error(`JSON nesting exceeds maximum depth of ${MAX_JSON_DEPTH}.`);
+  }
 
+  const chunks: string[] = [];
   const newline = options.indentationType === 'none' ? '' : '\n';
 
-  if (depth === 0) {
-    if (options.addMetaTag) {
-      xml += '<?xml version="1.0" encoding="UTF-8"?>' + newline;
-    }
-    xml += '<root>' + newline;
-  }
+  for (const [key, value] of Object.entries(obj)) {
+    const tagName = normalizeXmlTagName(key);
+    const indentation = getIndentation(options, depth);
 
-  for (const key in obj) {
-    const value = obj[key];
-    const keyString = isNaN(Number(key)) ? key : `row-${key}`;
-
-    // Handle null values
     if (value === null) {
-      xml += `${getIndentation(
-        options,
-        depth
-      )}<${keyString}></${keyString}>${newline}`;
+      chunks.push(`${indentation}<${tagName}></${tagName}>${newline}`);
       continue;
     }
 
-    // Handle arrays
     if (Array.isArray(value)) {
       value.forEach((item) => {
-        xml += `${getIndentation(options, depth)}<${keyString}>`;
-        if (item === null) {
-          xml += `</${keyString}>${newline}`;
-        } else if (typeof item === 'object') {
-          xml += `${newline}${convertObjectToXml(
-            item,
-            options,
-            depth + 1
-          )}${getIndentation(options, depth)}`;
-          xml += `</${keyString}>${newline}`;
+        chunks.push(`${indentation}<${tagName}>`);
+
+        if (typeof item === 'object' && item !== null && !Array.isArray(item)) {
+          chunks.push(newline);
+          chunks.push(convertObjectToXml(item, options, depth + 1));
+          chunks.push(indentation);
         } else {
-          xml += `${escapeXml(String(item))}</${keyString}>${newline}`;
+          chunks.push(escapeMarkup(String(item)));
         }
+
+        chunks.push(`</${tagName}>${newline}`);
       });
+
       continue;
     }
 
-    // Handle objects
     if (typeof value === 'object') {
-      xml += `${getIndentation(options, depth)}<${keyString}>${newline}`;
-      xml += convertObjectToXml(value, options, depth + 1);
-      xml += `${getIndentation(options, depth)}</${keyString}>${newline}`;
+      chunks.push(`${indentation}<${tagName}>${newline}`);
+
+      chunks.push(convertObjectToXml(value, options, depth + 1));
+
+      chunks.push(`${indentation}</${tagName}>${newline}`);
+
       continue;
     }
 
-    // Handle primitive values (string, number, boolean, etc.)
-    xml += `${getIndentation(options, depth)}<${keyString}>${escapeXml(
-      String(value)
-    )}</${keyString}>${newline}`;
+    chunks.push(
+      `${indentation}<${tagName}>${escapeMarkup(
+        String(value)
+      )}</${tagName}>${newline}`
+    );
   }
 
-  return depth === 0 ? `${xml}</root>` : xml;
+  return chunks.join('');
 };
 
-const escapeXml = (str: string): string => {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
+const getIndentation = (options: InitialValuesType, depth: number): string => {
+  switch (options.indentationType) {
+    case 'space':
+      return '  '.repeat(depth);
+    case 'tab':
+      return '\t'.repeat(depth);
+    default:
+      return '';
+  }
 };
