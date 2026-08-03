@@ -259,6 +259,38 @@
     "shortDescription": "Rotate an image easily.",
     "title": "Rotate Image"
   },
+  "watermark": {
+    "title": "Watermark Images",
+    "description": "Add text watermarks to one or more images using each filename or custom text.",
+    "shortDescription": "Add text watermarks to images",
+    "inputTitle": "Input Images",
+    "outputTitle": "Watermarked Images",
+    "failedToProcess": "Failed to watermark one or more images. Please try again.",
+    "options": {
+      "watermarkTitle": "Source",
+      "filenameWatermarkTitle": "Use Filename",
+      "filenameWatermarkDesc": "Use each image's filename as the watermark.",
+      "customStringWatermarkTitle": "Use Custom Watermark",
+      "customStringWatermarkDesc": "Apply the same custom text to every image.",
+      "styleTitle": "Style",
+      "watermark": "Watermark text.",
+      "fontSize": "Font size.",
+      "opacity": "Watermark transparency.",
+      "color": "Watermark color.",
+      "positionTitle": "Position",
+      "position": {
+        "bottomLeft": "Bottom Left",
+        "bottomRight": "Bottom Right",
+        "topLeft": "Top Left",
+        "topRight": "Top Right",
+        "center": "Center"
+      }
+    },
+    "toolInfo": {
+      "title": "What is Watermark Images ?",
+      "longDescription": "An image watermark tool lets you add customizable text watermarks to one or more images. You can automatically use each image's filename as the watermark or apply the same custom text to every image. Watermarks help protect your work, identify ownership, promote your brand, and organize image collections. Customize the font size, opacity, color, and position while preserving the original image quality."
+    }
+  },
   "split": {
     "title": "Split Image into Pages",
     "shortDescription": "Split a large image into multiple pages (PDF).",
