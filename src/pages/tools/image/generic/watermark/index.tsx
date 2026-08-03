@@ -84,21 +84,25 @@ export default function Watermark({ title }: ToolComponentProps) {
       title: t('watermark.options.watermarkTitle'),
       component: (
         <Box>
-          <Box mb={3}>
-            <SimpleRadio
-              onClick={() => updateField('filename', true)}
-              checked={values.filename === true}
-              title={t('watermark.options.filenameWatermarkTitle')}
-              description={t('watermark.options.filenameWatermarkDesc')}
-            />
-            <SimpleRadio
-              onClick={() => updateField('filename', false)}
-              checked={values.filename === false}
-              title={t('watermark.options.customStringWatermarkTitle')}
-              description={t('watermark.options.customStringWatermarkDesc')}
-            />
-          </Box>
-
+          <SimpleRadio
+            onClick={() => updateField('filename', true)}
+            checked={values.filename === true}
+            title={t('watermark.options.filenameWatermarkTitle')}
+            description={t('watermark.options.filenameWatermarkDesc')}
+          />
+          <SimpleRadio
+            onClick={() => updateField('filename', false)}
+            checked={values.filename === false}
+            title={t('watermark.options.customStringWatermarkTitle')}
+            description={t('watermark.options.customStringWatermarkDesc')}
+          />
+        </Box>
+      )
+    },
+    {
+      title: t('watermark.options.styleTitle'),
+      component: (
+        <Box>
           {!values.filename && (
             <TextFieldWithDesc
               value={values.watermark}
