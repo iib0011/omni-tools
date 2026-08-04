@@ -29,16 +29,16 @@
     "volumeDesc": "Volume level for the new audio track."
   },
   "changeSpeed": {
-    "defaultMultiplier": "Default multiplier: 2 means 2x faster",
     "description": "Change the playback speed of video files. Speed up or slow down videos while maintaining audio synchronization. Supports various speed multipliers and common video formats.",
     "inputTitle": "Input Video",
-    "newVideoSpeed": "New Video Speed",
     "resultTitle": "Edited Video",
-    "settingSpeed": "Setting Speed",
+    "options": "Options",
+    "speedLabel": "Speed : x",
     "shortDescription": "Change video playback speed",
     "title": "Change Video Speed",
     "toolInfo": {
-      "title": "What is a {{title}}?"
+      "title": "What is a {{title}}?",
+      "longDescription": "{{title}} allows you to adjust the playback speed of your videos directly in your browser. Speed up videos for fast-motion effects or slow them down for slow-motion playback while keeping the audio synchronized. Choose a speed multiplier between 0.25x and 4x to customize your video, then process it easily without installing additional software. This tool supports common video formats and preserves the original video quality as much as possible during processing."
     }
   },
   "compress": {
