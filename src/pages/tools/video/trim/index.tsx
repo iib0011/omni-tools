@@ -7,23 +7,21 @@ import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { updateNumberField } from '@utils/string';
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { trimVideo } from './service';
+import { InitialValuesType } from './types';
 import { debounce } from 'lodash';
 import ToolVideoInput from '@components/input/ToolVideoInput';
 import { useTranslation } from 'react-i18next';
 
-const ffmpeg = new FFmpeg();
-
-const initialValues = {
-  trimStart: 0,
-  trimEnd: 100
+const initialValues: InitialValuesType = {
+  start: 0,
+  end: 100
 };
 
 const validationSchema = Yup.object({
-  trimStart: Yup.number().min(0, 'Start time must be positive'),
-  trimEnd: Yup.number().min(
-    Yup.ref('trimStart'),
+  start: Yup.number().min(0, 'Start time must be positive'),
+  end: Yup.number().min(
+    Yup.ref('start'),
     'End time must be greater than start time'
   )
 });
@@ -32,57 +30,27 @@ export default function TrimVideo({ title }: ToolComponentProps) {
   const { t } = useTranslation('video');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const compute = async (
-    optionsValues: typeof initialValues,
+    optionsValues: InitialValuesType,
     input: File | null
   ) => {
     if (!input) return;
-
-    const { trimStart, trimEnd } = optionsValues;
+    setLoading(true);
 
     try {
-      if (!ffmpeg.loaded) {
-        await ffmpeg.load({
-          wasmURL:
-            'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
-        });
-      }
-
-      const inputName = 'input.mp4';
-      const outputName = 'output.mp4';
-      // Load file into FFmpeg's virtual filesystem
-      await ffmpeg.writeFile(inputName, await fetchFile(input));
-      // Run FFmpeg command to trim video
-      await ffmpeg.exec([
-        '-i',
-        inputName,
-        '-ss',
-        trimStart.toString(),
-        '-to',
-        trimEnd.toString(),
-        '-c',
-        'copy',
-        outputName
-      ]);
-      // Retrieve the processed file
-      const trimmedData = await ffmpeg.readFile(outputName);
-      const trimmedBlob = new Blob([trimmedData as any], { type: 'video/mp4' });
-      const trimmedFile = new File(
-        [trimmedBlob],
-        `${input.name.replace(/\.[^/.]+$/, '')}_trimmed.mp4`,
-        {
-          type: 'video/mp4'
-        }
-      );
-
-      setResult(trimmedFile);
+      const resultFile = await trimVideo(input, optionsValues);
+      setResult(resultFile);
     } catch (error) {
       console.error('Error trimming video:', error);
+    } finally {
+      setLoading(false);
     }
   };
+
   const debouncedCompute = useCallback(debounce(compute, 1000), []);
-  const getGroups: GetGroupsType<typeof initialValues> = ({
+  const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
     updateField
   }) => [
@@ -92,17 +60,17 @@ export default function TrimVideo({ title }: ToolComponentProps) {
         <Box>
           <TextFieldWithDesc
             onOwnChange={(value) =>
-              updateNumberField(value, 'trimStart', updateField)
+              updateNumberField(value, 'start', updateField)
             }
-            value={values.trimStart}
+            value={Number(values.start)}
             label={t('trim.startTime')}
             sx={{ mb: 2, backgroundColor: 'background.paper' }}
           />
           <TextFieldWithDesc
             onOwnChange={(value) =>
-              updateNumberField(value, 'trimEnd', updateField)
+              updateNumberField(value, 'end', updateField)
             }
-            value={values.trimEnd}
+            value={Number(values.end)}
             label={t('trim.endTime')}
           />
         </Box>
@@ -113,19 +81,19 @@ export default function TrimVideo({ title }: ToolComponentProps) {
     <ToolContent
       title={title}
       input={input}
-      renderCustomInput={({ trimStart, trimEnd }, setFieldValue) => {
+      renderCustomInput={({ start, end }, setFieldValue) => {
         return (
           <ToolVideoInput
             value={input}
             onChange={setInput}
             title={t('trim.inputTitle')}
             showTrimControls={true}
-            onTrimChange={(trimStart, trimEnd) => {
-              setFieldValue('trimStart', trimStart);
-              setFieldValue('trimEnd', trimEnd);
+            onTrimChange={(start, end) => {
+              setFieldValue('start', start);
+              setFieldValue('end', end);
             }}
-            trimStart={trimStart}
-            trimEnd={trimEnd}
+            trimStart={Number(start)}
+            trimEnd={Number(end)}
           />
         );
       }}
@@ -133,6 +101,7 @@ export default function TrimVideo({ title }: ToolComponentProps) {
         <ToolFileResult
           title={t('trim.resultTitle')}
           value={result}
+          loading={loading}
           extension={'mp4'}
         />
       }
