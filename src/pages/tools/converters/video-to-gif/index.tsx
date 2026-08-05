@@ -20,7 +20,7 @@ const initialValues: InitialValuesType = {
 };
 
 export default function VideoToGif({ title }: ToolComponentProps) {
-  const { t } = useTranslation('video');
+  const { t } = useTranslation('converters');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);

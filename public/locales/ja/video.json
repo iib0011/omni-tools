@@ -111,10 +111,5 @@
     "startTime": "開始時間",
     "timestamps": "タイムスタンプ",
     "title": "ビデオをトリムする"
-  },
-  "videoToGif": {
-    "description": "ビデオファイルをアニメーションGIF形式に変換します。特定の時間範囲を抽出し、共有可能なアニメーション画像を作成します。",
-    "shortDescription": "ビデオをアニメーションGIFに変換する",
-    "title": "ビデオをGIFに変換"
   }
 }

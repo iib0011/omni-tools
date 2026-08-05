@@ -111,10 +111,5 @@
     "startTime": "Startzeit",
     "timestamps": "Zeitstempel",
     "title": "Video trimmen"
-  },
-  "videoToGif": {
-    "description": "Konvertieren Sie Videodateien in das animierte GIF-Format. Extrahieren Sie bestimmte Zeitbereiche und erstellen Sie gemeinsam nutzbare animierte Bilder.",
-    "shortDescription": "Video in animiertes GIF konvertieren",
-    "title": "Video zu GIF"
   }
 }
