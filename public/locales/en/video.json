@@ -83,7 +83,6 @@
   },
   "flip": {
     "description": "Flip video files horizontally or vertically. Mirror videos for special effects or correct orientation issues.",
-    "flippingVideo": "Flipping Video",
     "horizontalLabel": "Horizontal (Mirror)",
     "inputTitle": "Input Video",
     "orientation": "Orientation",
