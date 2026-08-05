@@ -29,7 +29,7 @@ export async function loopVideo(
     const blob = new Blob([new Uint8Array(loopedData as Uint8Array)], {
       type: 'video/mp4'
     });
-    return await new File(
+    return new File(
       [blob],
       `${input.name.replace(/\.[^/.]+$/, '')}_looped.mp4`,
       { type: 'video/mp4' }
