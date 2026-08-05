@@ -95,7 +95,13 @@
     "changeSpeed": {
       "description": "Change the playback speed of GIF animations. Speed up or slow down GIFs while maintaining smooth animation.",
       "shortDescription": "Change GIF animation speed",
-      "title": "Change GIF Speed"
+      "title": "Change GIF Speed",
+      "inputTitle": "Input GIF",
+      "resultTitle": "output GIF",
+      "options": {
+        "title": "Options",
+        "speedLabel": "Speed : x"
+      }
     }
   },
   "loop": {
