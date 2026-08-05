@@ -2,10 +2,6 @@ import { fetchFile } from '@ffmpeg/util';
 import { runFFmpegTask } from 'lib/ffmpeg';
 
 export async function mergeVideos(input: File[]): Promise<File> {
-  if (!Array.isArray(input) || input.length < 2) {
-    throw new Error('Please provide at least two video files to merge.');
-  }
-
   return runFFmpegTask(async ({ ffmpeg, tempFile }) => {
     const fileNames: string[] = [];
     const outputName = tempFile('.mp4');
