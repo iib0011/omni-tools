@@ -8,10 +8,7 @@
     "settingSpeed": "Setting Speed",
     "shortDescription": "Change the speed of audio files",
     "speedDescription": "Default multiplier: 2 means 2x faster",
-    "title": "Change audio speed",
-    "toolInfo": {
-      "title": "What is {{title}}?"
-    }
+    "title": "Change audio speed"
   },
   "extractAudio": {
     "description": "Extract audio track from video files.",
