@@ -87,6 +87,10 @@ export default function Loop({ title }: ToolComponentProps) {
       getGroups={getGroups}
       setInput={setInput}
       compute={debouncedCompute}
+      toolInfo={{
+        title: t('loop.toolInfo.title', { title }),
+        description: t('loop.toolInfo.description')
+      }}
     />
   );
 }
