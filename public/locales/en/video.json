@@ -126,7 +126,6 @@
     "description": "Rotate video files by 90, 180, or 270 degrees. Correct video orientation or create special effects with precise rotation control.",
     "inputTitle": "Input Video",
     "resultTitle": "Rotated Video",
-    "rotatingVideo": "Rotating Video",
     "rotation": "Rotation",
     "shortDescription": "Rotate video by specified degrees",
     "title": "Rotate Video"
