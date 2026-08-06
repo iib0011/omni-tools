@@ -9,15 +9,13 @@ import { GetGroupsType } from '@components/options/ToolOptions';
 import ToolFileResult from '@components/result/ToolFileResult';
 import SelectWithDesc from '@components/options/SelectWithDesc';
 import { useTranslation } from 'react-i18next';
+import { getFileExtension } from '@utils/file';
 
 const initialValues: InitialValuesType = {
   outputFormat: 'aac'
 };
 
-export default function ExtractAudio({
-  title,
-  longDescription
-}: ToolComponentProps) {
+export default function ExtractAudio({ title }: ToolComponentProps) {
   const { t } = useTranslation('audio');
   const [file, setFile] = useState<File | null>(null);
   const [audioFile, setAudioFile] = useState<File | null>(null);
@@ -35,7 +33,7 @@ export default function ExtractAudio({
             <SelectWithDesc
               selected={values.outputFormat}
               onChange={(value) => {
-                updateField('outputFormat', value.toString());
+                updateField('outputFormat', value);
               }}
               options={[
                 { label: 'AAC', value: 'aac' },
@@ -75,25 +73,19 @@ export default function ExtractAudio({
         />
       }
       resultComponent={
-        loading ? (
-          <ToolFileResult
-            title={t('extractAudio.extractingAudio')}
-            value={null}
-            loading={true}
-          />
-        ) : (
-          <ToolFileResult
-            title={t('extractAudio.resultTitle')}
-            value={audioFile}
-          />
-        )
+        <ToolFileResult
+          title={t('extractAudio.resultTitle')}
+          loading={loading}
+          value={audioFile}
+          extension={audioFile ? getFileExtension(audioFile.name) : undefined}
+        />
       }
       initialValues={initialValues}
       getGroups={getGroups}
       compute={compute}
       toolInfo={{
         title: t('extractAudio.toolInfo.title', { title }),
-        description: longDescription
+        description: t('extractAudio.toolInfo.description')
       }}
       setInput={setFile}
     />
