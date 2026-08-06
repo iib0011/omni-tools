@@ -8,14 +8,18 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx:alpine
+FROM mcr.microsoft.com/playwright:v1.45.0-jammy
 
-COPY --from=build /app/dist /usr/share/nginx/html
+WORKDIR /app
 
-RUN sed -i 's/application\/javascript.*js;/application\/javascript                js mjs;/' /etc/nginx/mime.types
+ENV NODE_ENV=production
+ENV PORT=3000
 
-RUN sed -i 's|index  index.html index.htm;|index  index.html index.htm;\n        try_files $uri $uri/ /index.html;|' /etc/nginx/conf.d/default.conf
+COPY package.json package-lock.json ./
+RUN npm install --omit=dev
+COPY --from=build /app/dist ./dist
+COPY --from=build /app/dist-server ./dist-server
 
-EXPOSE 80
+EXPOSE 3000
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "dist-server/server.js"]

@@ -12,13 +12,17 @@ export default function ToolFileResult({
   value,
   extension,
   loading,
-  loadingText
+  loadingText,
+  hidePreview = false,
+  emptyMessage
 }: {
   title?: string;
   value: File | null;
   extension?: string;
   loading?: boolean;
   loadingText?: string;
+  hidePreview?: boolean;
+  emptyMessage?: string;
 }) {
   const { t } = useTranslation();
   const [preview, setPreview] = React.useState<string | null>(null);
@@ -94,83 +98,90 @@ export default function ToolFileResult({
   return (
     <Box>
       <InputHeader title={title || t('toolFileResult.result')} />
-      <Box
-        sx={{
-          width: '100%',
-          height: globalInputHeight,
-          border: preview ? 0 : 1,
-          borderRadius: 2,
-          boxShadow: '5',
-          bgcolor: 'background.paper'
-        }}
-      >
-        {loading ? (
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              height: '100%'
-            }}
-          >
-            <CircularProgress />
-            <Typography variant="body2" sx={{ mt: 2 }}>
-              {loadingText || t('toolFileResult.loading')}
-            </Typography>
-          </Box>
-        ) : (
-          preview && (
+      {!hidePreview && (
+        <Box
+          sx={{
+            width: '100%',
+            height: globalInputHeight,
+            border: preview ? 0 : 1,
+            borderRadius: 2,
+            boxShadow: '5',
+            bgcolor: 'background.paper'
+          }}
+        >
+          {loading ? (
             <Box
-              width={'100%'}
-              height={'100%'}
               sx={{
                 display: 'flex',
+                flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundImage:
-                  theme.palette.mode === 'dark' ? null : `url(${greyPattern})`
+                height: '100%'
               }}
             >
-              {fileType === 'image' && (
-                <img
-                  src={preview}
-                  alt="Result"
-                  style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
-                />
-              )}
-              {fileType === 'video' && (
-                <video
-                  src={preview}
-                  controls
-                  style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
-                />
-              )}
-              {fileType === 'audio' && (
-                <audio
-                  src={preview}
-                  controls
-                  style={{ width: '100%', maxWidth: '500px' }}
-                />
-              )}
-              {fileType === 'pdf' && (
-                <iframe
-                  src={preview}
-                  width="100%"
-                  height="100%"
-                  style={{ maxWidth: '500px' }}
-                />
-              )}
-              {fileType === 'unknown' && (
-                <Box sx={{ padding: 2, textAlign: 'center' }}>
-                  File processed successfully. Click download to save the
-                  result.
-                </Box>
-              )}
+              <CircularProgress />
+              <Typography variant="body2" sx={{ mt: 2 }}>
+                {loadingText || t('toolFileResult.loading')}
+              </Typography>
             </Box>
-          )
-        )}
-      </Box>
+          ) : (
+            preview && (
+              <Box
+                width={'100%'}
+                height={'100%'}
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundImage:
+                    theme.palette.mode === 'dark' ? null : `url(${greyPattern})`
+                }}
+              >
+                {fileType === 'image' && (
+                  <img
+                    src={preview}
+                    alt="Result"
+                    style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
+                  />
+                )}
+                {fileType === 'video' && (
+                  <video
+                    src={preview}
+                    controls
+                    style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
+                  />
+                )}
+                {fileType === 'audio' && (
+                  <audio
+                    src={preview}
+                    controls
+                    style={{ width: '100%', maxWidth: '500px' }}
+                  />
+                )}
+                {fileType === 'pdf' && (
+                  <iframe
+                    src={preview}
+                    width="100%"
+                    height="100%"
+                    style={{ maxWidth: '500px' }}
+                  />
+                )}
+                {fileType === 'unknown' && (
+                  <Box sx={{ padding: 2, textAlign: 'center' }}>
+                    File processed successfully. Click download to save the
+                    result.
+                  </Box>
+                )}
+              </Box>
+            )
+          )}
+        </Box>
+      )}
+      {hidePreview && !loading && (
+        <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
+          {emptyMessage || 'Your PDF is ready. Use Download to save it.'}
+        </Typography>
+      )}
       <ResultFooter
         disabled={!value}
         handleCopy={handleCopy}
