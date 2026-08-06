@@ -1,0 +1,120 @@
+{
+  "changeSpeed": {
+    "defaultMultiplier": "Moltiplicatore predefinito: 2 significa 2 volte più veloce",
+    "description": "Modifica la velocità di riproduzione dei file video. Accelera o rallenta i video mantenendo la sincronizzazione audio. Supporta vari moltiplicatori di velocità e formati video comuni.",
+    "inputTitle": "Video di input",
+    "newVideoSpeed": "Nuova velocità video",
+    "resultTitle": "Video modificato",
+    "settingSpeed": "Impostazione velocità",
+    "shortDescription": "Modifica la velocità di riproduzione video",
+    "title": "Modifica velocità video",
+    "toolInfo": {
+      "title": "Che cos'è un {{title}}?"
+    }
+  },
+  "compress": {
+    "default": "Predefinito",
+    "description": "Comprimi i video ridimensionandoli a diverse risoluzioni come 240p, 480p, 720p, ecc. Questo strumento aiuta a ridurre le dimensioni dei file mantenendo una qualità accettabile. Supporta i formati video più comuni come MP4, WebM e OGG.",
+    "inputTitle": "Video di input",
+    "loadingText": "Compressione video in corso...",
+    "lossless": "Senza perdita di dati",
+    "quality": "Qualità (CRF)",
+    "resolution": "Risoluzione",
+    "resultTitle": "Video compresso",
+    "shortDescription": "Comprimi i video ridimensionandoli a diverse risoluzioni",
+    "title": "Comprimi video",
+    "worst": "Peggiore"
+  },
+  "cropVideo": {
+    "cropCoordinates": "Coordinate di ritaglio",
+    "croppingVideo": "Ritaglio video",
+    "description": "Ritaglia il video per rimuovere le aree indesiderate.",
+    "errorBeyondHeight": "L'area di ritaglio supera l'altezza del video ({{height}}px)",
+    "errorBeyondWidth": "L'area di ritaglio supera la larghezza del video ({{width}}px)",
+    "errorCroppingVideo": "Errore durante il ritaglio del video. Controllare i parametri e il file video.",
+    "errorLoadingDimensions": "Impossibile caricare le dimensioni del video",
+    "errorNonNegativeCoordinates": "Le coordinate X e Y devono essere non negative",
+    "errorPositiveDimensions": "Larghezza e altezza devono essere positive",
+    "height": "Altezza",
+    "inputTitle": "Video di input",
+    "loadVideoForDimensions": "Carica un video per visualizzarne le dimensioni",
+    "longDescription": "Questo strumento consente di ritagliare i file video per rimuovere le aree indesiderate o concentrarsi su parti specifiche del video. Utile per rimuovere le barre nere, regolare le proporzioni o concentrarsi sui contenuti importanti. Supporta vari formati video, tra cui MP4, MOV e AVI.",
+    "resultTitle": "Video ritagliato",
+    "shortDescription": "Ritaglia il video per rimuovere le aree indesiderate",
+    "title": "Ritaglia video",
+    "toolInfo": {
+      "description": "Questo strumento consente di ritagliare i file video per rimuovere le aree indesiderate. È possibile specificare l'area di ritaglio impostando le coordinate X, Y e le dimensioni di larghezza e altezza.",
+      "title": "Ritaglia video"
+    },
+    "videoDimensions": "Dimensioni video: {{width}} × {{height}} pixel",
+    "videoInformation": "Informazioni video",
+    "width": "Larghezza",
+    "xCoordinate": "X (sinistra)",
+    "yCoordinate": "Y (alto)"
+  },
+  "flip": {
+    "description": "Capovolgi i file video orizzontalmente o verticalmente. Specchia i video per ottenere effetti speciali o correggere problemi di orientamento.",
+    "flippingVideo": "Capovolgimento video",
+    "horizontalLabel": "Orizzontale (specchio)",
+    "inputTitle": "Video di input",
+    "orientation": "Orientamento",
+    "resultTitle": "Video capovolto",
+    "shortDescription": "Capovolgi il video orizzontalmente o verticalmente",
+    "title": "Capovolgi video",
+    "verticalLabel": "Verticale (capovolto)"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "Modifica la velocità di riproduzione delle animazioni GIF. Accelera o rallenta le GIF mantenendo un'animazione fluida.",
+      "shortDescription": "Modifica la velocità dell'animazione GIF",
+      "title": "Modifica la velocità GIF"
+    }
+  },
+  "loop": {
+    "description": "Crea un video in loop ripetendo più volte il video originale.",
+    "inputTitle": "Video di input",
+    "loopingVideo": "Video in loop",
+    "loops": "Loop",
+    "numberOfLoops": "Numero di loop",
+    "resultTitle": "Video in loop",
+    "shortDescription": "Crea file video in loop",
+    "title": "Video in loop",
+    "toolInfo": {
+      "description": "Questo strumento consente di creare un video in loop ripetendo più volte il video originale. È possibile specificare il numero di volte in cui il video deve essere riprodotto in loop.",
+      "title": "Che cos'è un {{title}}?"
+    }
+  },
+  "mergeVideo": {
+    "description": "Combina più file video in un unico video continuo.",
+    "longDescription": "Questo strumento ti consente di unire o aggiungere più file video in un unico video continuo. Basta caricare i tuoi file video, disporli nell'ordine desiderato e unirli in un unico file per facilitarne la condivisione o la modifica.",
+    "shortDescription": "Aggiungi e unisci video facilmente.",
+    "title": "Unisci video"
+  },
+  "rotate": {
+    "180Degrees": "180° (capovolto)",
+    "270Degrees": "270° (90° in senso antiorario)",
+    "90Degrees": "90° in senso orario",
+    "description": "Ruota i file video di 90,180 o 270 gradi. Correggi l'orientamento del video o crea effetti speciali con un controllo preciso della rotazione.",
+    "inputTitle": "Video di input",
+    "resultTitle": "Video ruotato",
+    "rotatingVideo": "Rotazione video",
+    "rotation": "Rotazione",
+    "shortDescription": "Ruota il video di un numero di gradi specificato",
+    "title": "Ruota video"
+  },
+  "trim": {
+    "description": "Ritaglia i file video specificando l'ora di inizio e di fine. Rimuovi le sezioni indesiderate dall'inizio o dalla fine dei video.",
+    "endTime": "Ora di fine",
+    "inputTitle": "Video di input",
+    "resultTitle": "Video tagliato",
+    "shortDescription": "Taglia il video rimuovendo le sezioni indesiderate",
+    "startTime": "Ora di inizio",
+    "timestamps": "Timestamp",
+    "title": "Taglia video"
+  },
+  "videoToGif": {
+    "description": "Converti i file video in formato GIF animato. Estrai intervalli di tempo specifici e crea immagini animate condivisibili.",
+    "shortDescription": "Converti video in GIF animato",
+    "title": "Da video a GIF"
+  }
+}

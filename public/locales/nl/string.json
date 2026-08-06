@@ -14,7 +14,8 @@
     }
   },
   "censor": {
-    "description": "Hulpprogramma voor het censureren van woorden in tekst. Laad uw tekst in het invoerformulier aan de linkerkant, specificeer alle ongewenste woorden in de opties en u krijgt direct gecensureerde tekst in het uitvoergebied.\", longDescription: 'Met deze online tool kunt u bepaalde woorden in elke tekst censureren. U kunt een lijst met ongewenste woorden (zoals scheldwoorden of geheime woorden) opgeven en het programma vervangt deze door alternatieve woorden en creëert een veilig leesbare tekst. De woorden kunnen worden opgegeven in een tekstveld van meerdere regels in de opties door één woord per regel in te voeren.', keywords: ['tekst', 'censureren', 'woorden', 'tekens'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
+    "description": "Hulpprogramma voor het censureren van woorden in tekst. Laad uw tekst in het invoerformulier aan de linkerkant, specificeer alle ongewenste woorden in de opties en u krijgt direct gecensureerde tekst in het uitvoergebied.",
+    "longDescription": "Met deze online tool kunt u bepaalde woorden in elke tekst censureren. U kunt een lijst met ongewenste woorden (zoals scheldwoorden of geheime woorden) opgeven en het programma vervangt deze door alternatieve woorden en creëert een veilig leesbare tekst. De woorden kunnen worden opgegeven in een tekstveld van meerdere regels in de opties door één woord per regel in te voeren.', keywords: ['tekst', 'censureren', 'woorden', 'tekens'], component: lazy(() => import('./index')), i18n: { name: 'string:censor.title', description: 'string:censor.description",
     "shortDescription": "Maskeer snel slechte woorden of vervang ze door alternatieve woorden.",
     "title": "Tekstcensor"
   },
