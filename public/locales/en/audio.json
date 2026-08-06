@@ -28,7 +28,6 @@
     "description": "Combine multiple audio files into a single audio file by concatenating them in sequence.",
     "inputTitle": "Input Audio Files",
     "longDescription": "This tool allows you to merge multiple audio files into a single file by concatenating them in the order you upload them. Perfect for combining podcast segments, music tracks, or any audio files that need to be joined together. Supports various audio formats including MP3, AAC, and WAV.",
-    "mergingAudio": "Merging Audio",
     "outputFormat": "Output Format",
     "resultTitle": "Merged Audio",
     "shortDescription": "Merge multiple audio files into one (MP3, AAC, WAV).",
