@@ -1,0 +1,120 @@
+{
+  "changeCsvSeparator": {
+    "description": "CSV 파일의 구분 기호를 변경합니다. 쉼표, 세미콜론, 탭 또는 사용자 지정 구분 기호로 변환할 수 있습니다.",
+    "shortDescription": "CSV 파일 구분 기호 변경",
+    "title": "CSV 구분 기호 변경"
+  },
+  "csvRowsToColumns": {
+    "description": "CSV(쉼표로 구분된 값) 파일의 행을 열로 변환합니다. 입력 CSV의 가로 데이터를 세로 열로 회전하여 출력합니다.",
+    "longDescription": "이 도구는 CSV 파일의 행을 열로 변환합니다. 예를 들어, 입력 CSV 데이터에 6개의 행이 있으면 출력에는 6개의 열이 생성되며 행의 요소가 위에서 아래로 정렬됩니다. 잘 형성된 CSV에서는 각 행의 값 수가 동일합니다. 그러나 행에 필드가 누락된 경우, 프로그램은 이를 수정할 수 있으며, 빈 요소로 채우거나 \"누락\", \"?\", \"x\"와 같은 사용자 지정 요소로 대체할 수 있습니다. 변환 과정에서 도구는 불필요한 정보(빈 줄 및 주석)를 제거합니다.",
+    "shortDescription": "CSV 행을 열로 변환",
+    "title": "CSV 행을 열로 변환"
+  },
+  "csvToJson": {
+    "columnSeparator": "열 구분 기호 (예: , ; \t)",
+    "commentSymbol": "주석 기호 (예: #)",
+    "conversionOptions": "변환 옵션",
+    "description": "CSV 파일을 JSON 형식으로 변환합니다. 구분 기호, 따옴표 및 출력 형식을 사용자 지정할 수 있습니다.",
+    "dynamicTypes": "동적 유형",
+    "dynamicTypesDescription": "숫자 및 불리언을 자동으로 변환",
+    "error": "오류",
+    "errorParsing": "CSV 구문 분석 오류: {{error}}",
+    "fieldQuote": "필드 따옴표 (예: \"",
+    "inputCsvFormat": "입력 CSV 형식",
+    "inputTitle": "입력 CSV",
+    "invalidCsvFormat": "잘못된 CSV 형식",
+    "resultTitle": "출력 JSON",
+    "shortDescription": "CSV 데이터를 JSON 형식으로 변환",
+    "skipEmptyLines": "빈 줄 건너뛰기",
+    "skipEmptyLinesDescription": "입력 CSV의 빈 줄 무시",
+    "title": "CSV를 JSON으로 변환",
+    "toolInfo": {
+      "description": "이 도구는 CSV 파일을 JSON 데이터 구조로 변환합니다. 다양한 CSV 형식을 지원하며, 구분 기호, 따옴표 문자 및 주석 기호를 사용자 지정할 수 있습니다. 변환기는 첫 번째 행을 헤더로 처리하고, 빈 줄을 건너뛰며, 숫자 및 불리언과 같은 데이터 유형을 자동으로 감지할 수 있습니다.",
+      "title": "CSV를 JSON으로 변환하는 도구란?"
+    },
+    "useHeaders": "헤더 사용",
+    "useHeadersDescription": "첫 번째 행을 열 헤더로 처리"
+  },
+  "csvToTsv": {
+    "description": "CSV 파일을 업로드하면 자동으로 TSV 파일로 변환됩니다. 도구 옵션에서 입력 CSV 형식을 사용자 지정할 수 있습니다.",
+    "longDescription": "이 도구는 CSV 데이터를 TSV(탭으로 구분된 값) 데이터로 변환합니다. CSV와 TSV는 모두 표 형식 데이터를 저장하는 데 사용되지만 서로 다른 구분 기호를 사용합니다.",
+    "shortDescription": "CSV 데이터를 TSV 형식으로 변환",
+    "title": "CSV를 TSV로 변환"
+  },
+  "csvToXml": {
+    "description": "CSV 파일을 XML 형식으로 변환합니다.",
+    "shortDescription": "CSV 데이터를 XML 형식으로 변환",
+    "title": "CSV를 XML로 변환"
+  },
+  "csvToYaml": {
+    "description": "CSV 파일을 업로드하면 자동으로 YAML 파일로 변환됩니다. 도구 옵션에서 입력 CSV 형식을 사용자 지정할 수 있습니다.",
+    "longDescription": "이 도구는 CSV 데이터를 YAML 데이터로 변환합니다. CSV는 간단한 표 형식이고, YAML은 더 읽기 쉬운 데이터 형식입니다.",
+    "shortDescription": "CSV 파일을 YAML 파일로 빠르게 변환",
+    "title": "CSV를 YAML로 변환"
+  },
+  "findIncompleteCsvRecords": {
+    "checkingOptions": "검사 옵션",
+    "commentCharacterDescription": "주석 줄의 시작을 나타내는 문자를 입력하세요.",
+    "csvInputOptions": "CSV 입력 옵션",
+    "csvSeparatorDescription": "CSV 입력 파일에서 열을 구분하는 문자를 입력하세요.",
+    "deleteLinesWithNoData": "데이터가 없는 줄 삭제",
+    "deleteLinesWithNoDataDescription": "CSV 입력 파일에서 빈 줄 제거.",
+    "description": "CSV 파일을 업로드하면 이 도구가 행이나 열에 값이 누락되지 않았는지 자동으로 확인합니다.",
+    "findEmptyValues": "빈 값 찾기",
+    "findEmptyValuesDescription": "빈 CSV 필드에 대한 메시지를 표시합니다.",
+    "inputTitle": "입력 CSV",
+    "limitNumberOfMessages": "메시지 수 제한",
+    "messageLimitDescription": "출력 메시지 수 제한 설정.",
+    "quoteCharacterDescription": "CSV 입력 필드를 인용하는 데 사용된 문자를 입력하세요.",
+    "resultTitle": "CSV 상태",
+    "shortDescription": "CSV에서 누락된 값을 빠르게 찾습니다.",
+    "title": "불완전한 CSV 레코드 찾기",
+    "toolInfo": {
+      "title": "{{title}}란 무엇인가요?"
+    }
+  },
+  "insertCsvColumns": {
+    "appendColumns": "열 추가",
+    "commentCharacterDescription": "주석 줄의 시작을 나타내는 문자를 입력하세요.",
+    "csvOptions": "CSV 옵션",
+    "csvSeparator": "CSV 구분 기호",
+    "csvToInsert": "삽입할 CSV",
+    "csvToInsertDescription": "CSV에 삽입할 열을 입력하세요. 열을 구분하는 문자는 CSV 입력 파일과 동일해야 합니다. 빈 줄은 무시됩니다.",
+    "customFillDescription": "입력 CSV 파일이 불완전한 경우(값이 누락된 경우) 빈 필드 또는 사용자 지정 기호로 레코드를 채울까요?",
+    "customFillValueDescription": "누락된 필드를 채우는 데 사용할 사용자 지정 값을 입력하세요.",
+    "customPosition": "사용자 지정 위치",
+    "customPositionOptionsDescription": "CSV 파일에 열을 삽입할 방법을 선택하세요.",
+    "description": "지정된 위치에 CSV 데이터에 새 열을 추가합니다.",
+    "fillWithCustomValues": "사용자 지정 값으로 채우기",
+    "fillWithEmptyValues": "빈 값으로 채우기",
+    "headerName": "헤더 이름",
+    "headerNameDescription": "열을 삽입할 위치의 헤더를 선택하세요.",
+    "inputTitle": "입력 CSV",
+    "insertingPositionDescription": "CSV 파일에 열을 삽입할 위치를 지정하세요.",
+    "position": "위치",
+    "positionOptions": "위치 옵션",
+    "prependColumns": "열 앞에 추가",
+    "quoteCharDescription": "CSV 입력 필드를 인용하는 데 사용된 문자를 입력하세요.",
+    "resultTitle": "출력 CSV",
+    "rowNumberDescription": "열을 삽입할 위치의 열 번호를 입력하세요.",
+    "separatorDescription": "CSV 입력 파일에서 열을 구분하는 문자를 입력하세요.",
+    "shortDescription": "CSV 파일의 원하는 위치에 새 열을 빠르게 삽입합니다.",
+    "title": "CSV 열 삽입",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 지정된 위치에 CSV 데이터에 새 열을 삽입할 수 있습니다. 열을 추가할 위치로는 파일의 처음, 끝 또는 사용자 지정 위치가 있습니다.",
+      "title": "CSV 열 삽입 도구"
+    }
+  },
+  "swapCsvColumns": {
+    "description": "CSV 파일을 업로드하고 교환할 열을 지정하면 도구가 자동으로 지정된 열의 위치를 변경합니다.",
+    "longDescription": "이 도구는 CSV 데이터의 열 위치를 바꿉니다. 열을 바꾸면 자주 사용하는 데이터를 함께 배치하거나 데이터 비교 및 수정을 쉽게 할 수 있습니다. 예를 들어, 첫 번째 열과 마지막 열을 바꾸거나 두 번째 열과 세 번째 열을 바꿀 수 있습니다. 열의 위치를 기준으로 바꾸려면 열 번호 또는 이름을 선택하고, 필요한 경우 누락된 데이터를 수정하고 빈 레코드 및 주석 처리된 레코드를 선택적으로 제거할 수 있습니다.",
+    "shortDescription": "CSV 열의 순서 변경",
+    "title": "CSV 열 바꾸기"
+  },
+  "transposeCsv": {
+    "description": "CSV 파일을 업로드하면 도구가 자동으로 CSV를 전치합니다.",
+    "longDescription": "이 도구는 CSV(쉼표로 구분된 값)를 전치합니다. CSV를 데이터 행렬로 취급하고 주대각선을 따라 모든 요소를 뒤집습니다. 출력은 입력과 동일한 CSV 데이터를 포함하지만 이제 모든 행이 열이 되고 모든 열이 행이 됩니다. 전치 후 CSV 파일은 반대 차원을 갖게 됩니다. 예를 들어, 입력 파일에 4개의 열과 3개의 행이 있으면 출력 파일에는 3개의 열과 4개의 행이 생성됩니다. 변환 과정에서 도구는 불필요한 줄(빈 줄 및 주석)을 자동으로 제거하고, 누락된 데이터가 있는 경우 빈 필드 또는 사용자 지정 필드로 파일을 채웁니다.",
+    "shortDescription": "CSV 파일을 빠르게 전치",
+    "title": "CSV 전치"
+  }
+}
