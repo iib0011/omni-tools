@@ -23,6 +23,16 @@
     "shortDescription": "Create text that reads the same forward and backward",
     "title": "Create palindrome"
   },
+  "emailExtractor": {
+    "description": "Extract all email addresses from any text. Simply paste your text and instantly get a clean list of the email addresses found.",
+    "options": {
+      "title": "Extraction options",
+      "uniqueDesc": "Keep only unique email addresses in the results",
+      "uniqueTitle": "Remove duplicates"
+    },
+    "shortDescription": "Extract email addresses from text",
+    "title": "Email Extractor"
+  },
   "extractSubstring": {
     "description": "World's simplest browser-based utility for extracting substrings from text. Input your text and specify start and end positions to extract the desired portion. Perfect for data processing, text analysis, or extracting specific content from larger text blocks.",
     "shortDescription": "Extract a portion of text between specified positions",
@@ -235,6 +245,20 @@
     "wordFrequencyAnalysis": "Word Frequency Analysis",
     "wordFrequencyAnalysisDescription": "Count how often each word appears in the text"
   },
+  "textCompare": {
+    "description": "Analyze two text blocks to highlight differences, including additions, deletions, and changes.",
+    "inputTitle": "Input Text",
+    "longDescription": "This tool helps you quickly identify differences between two versions of a text. It highlights inserted, removed, and modified content, making it ideal for reviewing edits, tracking changes, or comparing documents. You can choose the level of precision to detect differences at the word or character level depending on your needs.",
+    "options": {
+      "charLevel": "Character level",
+      "levelDesc": "Choose how detailed the comparison should be. Word level highlights changes by words, while character level detects more granular differences.",
+      "title": "Comparison Settings",
+      "wordLevel": "Word level"
+    },
+    "resultTitle": "Highlighted differences",
+    "shortDescription": "Compare two texts and spot differences instantly",
+    "title": "Compare Texts"
+  },
   "textReplacer": {
     "description": "Replace text patterns with new content.",
     "findPatternInText": "Find This Pattern in Text",
@@ -312,6 +336,16 @@
     "shortDescription": "Convert text to uppercase",
     "title": "Convert to Uppercase"
   },
+  "urlDecode": {
+    "inputTitle": "Input String(URL-escaped)",
+    "resultTitle": "Output string",
+    "toolInfo": {
+      "description": "Load your string and it will automatically get URL-unescaped.",
+      "longDescription": "This tool URL-decodes a previously URL-encoded string. URL-decoding is the inverse operation of URL-encoding. All percent-encoded characters get decoded to characters that you can understand. Some of the most well known percent-encoded values are %20 for a space, %3a for a colon, %2f for a slash, and %3f for a question mark. The two digits following the percent sign are character's char code values in hex.",
+      "shortDescription": "Quickly URL-unescape a string.",
+      "title": "String URL decoder"
+    }
+  },
   "urlEditor": {
     "addParameter": "Add Parameter",
     "credentialsNotSupported": "URLs with username or password are not supported.",
@@ -326,9 +360,9 @@
     "invalidUrl": "Invalid URL",
     "key": "Key",
     "noParameters": "No query parameters",
-    "parseButton": "Parse URL",
     "paramKeyAriaLabel": "Parameter key, row {{row}}",
     "paramValueAriaLabel": "Parameter value, row {{row}}",
+    "parseButton": "Parse URL",
     "path": "Path",
     "pathPlaceholder": "search",
     "protocol": "Protocol",
@@ -341,16 +375,6 @@
     },
     "urlDetails": "URL Details",
     "value": "Value"
-  },
-  "urlDecode": {
-    "inputTitle": "Input String(URL-escaped)",
-    "resultTitle": "Output string",
-    "toolInfo": {
-      "description": "Load your string and it will automatically get URL-unescaped.",
-      "longDescription": "This tool URL-decodes a previously URL-encoded string. URL-decoding is the inverse operation of URL-encoding. All percent-encoded characters get decoded to characters that you can understand. Some of the most well known percent-encoded values are %20 for a space, %3a for a colon, %2f for a slash, and %3f for a question mark. The two digits following the percent sign are character's char code values in hex.",
-      "shortDescription": "Quickly URL-unescape a string.",
-      "title": "String URL decoder"
-    }
   },
   "urlEncode": {
     "encodingOption": {
@@ -365,30 +389,6 @@
       "longDescription": "This tool URL-encodes a string. Special URL characters get converted to percent-sign encoding. This encoding is called percent-encoding because each character's numeric value gets converted to a percent sign followed by a two-digit hexadecimal value. The hex values are determined based on the character's codepoint value. For example, a space gets escaped to %20, a colon to %3a, a slash to %2f. Characters that are not special stay unchanged. In case you also need to convert non-special characters to percent-encoding, then we've also added an extra option that lets you do that. Select the encode-non-special-chars option to enable this behavior.",
       "shortDescription": "Quickly URL-escape a string.",
       "title": "String URL encoder"
-    }
-  },
-  "emailExtractor": {
-    "description": "Extract all email addresses from any text. Simply paste your text and instantly get a clean list of the email addresses found.",
-    "shortDescription": "Extract email addresses from text",
-    "title": "Email Extractor",
-    "options": {
-      "title": "Extraction options",
-      "uniqueTitle": "Remove duplicates",
-      "uniqueDesc": "Keep only unique email addresses in the results"
-    }
-  },
-  "textCompare": {
-    "title": "Compare Texts",
-    "description": "Analyze two text blocks to highlight differences, including additions, deletions, and changes.",
-    "shortDescription": "Compare two texts and spot differences instantly",
-    "longDescription": "This tool helps you quickly identify differences between two versions of a text. It highlights inserted, removed, and modified content, making it ideal for reviewing edits, tracking changes, or comparing documents. You can choose the level of precision to detect differences at the word or character level depending on your needs.",
-    "inputTitle": "Input Text",
-    "resultTitle": "Highlighted differences",
-    "options": {
-      "title": "Comparison Settings",
-      "wordLevel": "Word level",
-      "charLevel": "Character level",
-      "levelDesc": "Choose how detailed the comparison should be. Word level highlights changes by words, while character level detects more granular differences."
     }
   }
 }

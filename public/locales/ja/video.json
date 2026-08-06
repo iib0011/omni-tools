@@ -1,11 +1,8 @@
 {
   "changeSpeed": {
-    "defaultMultiplier": "デフォルトの乗数: 2は2倍速を意味します",
     "description": "動画ファイルの再生速度を変更できます。音声の同期を維持しながら、動画の再生速度を上げたり下げたりできます。様々な速度調整機能と一般的な動画形式に対応しています。",
     "inputTitle": "入力ビデオ",
-    "newVideoSpeed": "新しいビデオ速度",
     "resultTitle": "編集されたビデオ",
-    "settingSpeed": "速度設定",
     "shortDescription": "ビデオの再生速度を変更する",
     "title": "ビデオ速度の変更",
     "toolInfo": {
@@ -54,7 +51,6 @@
   },
   "flip": {
     "description": "ビデオファイルを水平または垂直に反転します。特殊効果や向きの問題を修正するためにビデオをミラーリングします。",
-    "flippingVideo": "反転ビデオ",
     "horizontalLabel": "水平（ミラー）",
     "inputTitle": "入力ビデオ",
     "orientation": "オリエンテーション",
@@ -73,7 +69,6 @@
   "loop": {
     "description": "元のビデオを複数回繰り返してループビデオを作成します。",
     "inputTitle": "入力ビデオ",
-    "loopingVideo": "ループビデオ",
     "loops": "ループ",
     "numberOfLoops": "ループ数",
     "resultTitle": "ループ動画",
@@ -97,7 +92,6 @@
     "description": "ビデオファイルを90度、180度、または270度回転できます。正確な回転制御により、ビデオの向きを修正したり、特殊効果を作成したりできます。",
     "inputTitle": "入力ビデオ",
     "resultTitle": "回転したビデオ",
-    "rotatingVideo": "回転するビデオ",
     "rotation": "回転",
     "shortDescription": "指定した角度でビデオを回転する",
     "title": "ビデオを回転する"

@@ -39,19 +39,19 @@
   },
   "videoToGif": {
     "description": "Convert video files to animated GIF format. Extract specific time ranges and create shareable animated images.",
-    "shortDescription": "Convert video to animated GIF",
-    "title": "Video to GIF",
     "inputTitle": "Input Video",
-    "resultTitle": "Output GIF",
     "options": {
-      "quality": "Quality",
+      "endTime": "End Time",
+      "high": "High",
       "low": "Low",
       "mid": "Medium",
-      "high": "High",
-      "ultra": "Ultra",
-      "timestamps": "Timestamps",
+      "quality": "Quality",
       "startTime": "Start Time",
-      "endTime": "End Time"
-    }
+      "timestamps": "Timestamps",
+      "ultra": "Ultra"
+    },
+    "resultTitle": "Output GIF",
+    "shortDescription": "Convert video to animated GIF",
+    "title": "Video to GIF"
   }
 }

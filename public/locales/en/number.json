@@ -44,6 +44,24 @@
       "title": "Generate numbers"
     }
   },
+  "numberToWords": {
+    "description": "Convert numbers into words in your selected language. The output automatically matches your current app language.",
+    "inputTitle": "Numbers",
+    "options": {
+      "title": "Options",
+      "uppercase": "Uppercase",
+      "uppercaseDescription": "Display the converted words in uppercase, commonly used for cheques, invoices, and legal documents.",
+      "useAnd": "Include \"and\"",
+      "useAndDescription": "Insert \"and\" where appropriate (for example, \"One Hundred and Twenty\" in English)."
+    },
+    "outputTitle": "Words",
+    "shortDescription": "Convert numbers to words",
+    "title": "Number to Words",
+    "toolInfo": {
+      "description": "This tool converts numeric values into their written form. The output automatically follows your current app language, so no additional configuration is required. Enter one number per line to convert multiple values independently.",
+      "title": "What Is a Number to Words Converter?"
+    }
+  },
   "ohmsLaw": {
     "description": "Calculates voltage, current and resistance",
     "longDescription": "This calculator applies Ohm's Law (V = I × R) to determine any of the three electrical parameters when the other two are known. Ohm's Law is a fundamental principle in electrical engineering that describes the relationship between voltage (V), current (I), and resistance (R). This tool is essential for electronics hobbyists, electrical engineers, and students working with circuits to quickly solve for unknown values in their electrical designs.",
@@ -201,23 +219,5 @@
     "longDescription": "This calculator helps determine the voltage drop and power loss in a two-conductor electrical cable. It takes into account the cable length, wire gauge (cross-sectional area), material resistivity, and current flow. The tool calculates the round-trip voltage drop, total resistance of the cable, and the power dissipated as heat. This is particularly useful for electrical engineers, electricians, and hobbyists when designing electrical systems to ensure voltage levels remain within acceptable limits at the load.",
     "shortDescription": "Calculate voltage drop and power loss in electrical cables based on length, material, and current",
     "title": "Round trip voltage drop in cable"
-  },
-  "numberToWords": {
-    "title": "Number to Words",
-    "description": "Convert numbers into words in your selected language. The output automatically matches your current app language.",
-    "shortDescription": "Convert numbers to words",
-    "inputTitle": "Numbers",
-    "outputTitle": "Words",
-    "options": {
-      "title": "Options",
-      "uppercase": "Uppercase",
-      "uppercaseDescription": "Display the converted words in uppercase, commonly used for cheques, invoices, and legal documents.",
-      "useAnd": "Include \"and\"",
-      "useAndDescription": "Insert \"and\" where appropriate (for example, \"One Hundred and Twenty\" in English)."
-    },
-    "toolInfo": {
-      "title": "What Is a Number to Words Converter?",
-      "description": "This tool converts numeric values into their written form. The output automatically follows your current app language, so no additional configuration is required. Enter one number per line to convert multiple values independently."
-    }
   }
 }

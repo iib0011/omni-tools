@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix(i18n): Correct &quot;hireMe&quot; translation in navbar&#10;&#10;This commit corrects the translation of &quot;hireMe&quot; in the&#10;navigation bar across all supported languages. The order of&#10;the elements was also fixed to be consistent.">
+    <list default="true" id="b30e2810-c4c1-4aad-b134-794e52cc1c7d" name="Changes" comment="fix(ci): update image name for GitHub Container Registry">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/es/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/es/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/fr/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/fr/translation.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/Ibrahima/IdeaProjects/omni-tools" value="2i6g3WkUxdCURKYvUIJ9LMY5Qsc" />
+    </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="808" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -366,11 +372,15 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="ProjectColorInfo">{
     &quot;associatedIndex&quot;: 0
     }</component>
   <component name="ProjectId" id="2i6g3WkUxdCURKYvUIJ9LMY5Qsc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -391,9 +401,12 @@
     &quot;Playwright.Create transparent PNG.should make png color transparent.executor&quot;: &quot;Run&quot;,
     &quot;Playwright.JoinText Component.executor&quot;: &quot;Run&quot;,
     &quot;Playwright.JoinText Component.should merge text pieces with specified join character.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;Vitest.compute function (1).executor&quot;: &quot;Run&quot;,
     &quot;Vitest.compute function.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.generatePassword.executor&quot;: &quot;Run&quot;,
@@ -407,8 +420,10 @@
     &quot;Vitest.replaceText function (regexp mode).should return the original text when passed an invalid regexp.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.replaceText function.executor&quot;: &quot;Run&quot;,
     &quot;Vitest.timeBetweenDates.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Ibrahima/IdeaProjects/omni-tools&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -434,6 +449,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Ibrahima\\IdeaProjects\\omni-tools\\node_modules\\typescript\\lib&quot;,
     &quot;ts.rename.search.for.js.occurrences&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -464,7 +480,7 @@
       <recent name="C:\Users\Ibrahima\IdeaProjects\omni-tools\src\pages\categories" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.i18n:sync">
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
         <settings />
@@ -527,16 +543,16 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.i18n:sync" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.test:e2e" />
       <item itemvalue="npm.typecheck" />
-      <item itemvalue="npm.i18n:sync" />
-      <item itemvalue="npm.dev" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.i18n:sync" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.test:e2e" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.typecheck" />
@@ -546,8 +562,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.138" />
       </set>
     </attachedChunks>
   </component>
@@ -660,31 +676,12 @@
       <workItem from="1753206561770" duration="119000" />
       <workItem from="1753206717510" duration="3599000" />
       <workItem from="1759497758761" duration="1012000" />
-      <workItem from="1759502144651" duration="1106000" />
-    </task>
-    <task id="LOCAL-00210" summary="feat: convert to jpg">
-      <option name="closed" value="true" />
-      <created>1752026153328</created>
-      <option name="number" value="00210" />
-      <option name="presentableId" value="LOCAL-00210" />
-      <option name="project" value="LOCAL" />
-      <updated>1752026153328</updated>
-    </task>
-    <task id="LOCAL-00211" summary="feat: edit image">
-      <option name="closed" value="true" />
-      <created>1752032092273</created>
-      <option name="number" value="00211" />
-      <option name="presentableId" value="LOCAL-00211" />
-      <option name="project" value="LOCAL" />
-      <updated>1752032092274</updated>
-    </task>
-    <task id="LOCAL-00212" summary="fix: favicons">
-      <option name="closed" value="true" />
-      <created>1752071147050</created>
-      <option name="number" value="00212" />
-      <option name="presentableId" value="LOCAL-00212" />
-      <option name="project" value="LOCAL" />
-      <updated>1752071147050</updated>
+      <workItem from="1759502144651" duration="2547000" />
+      <workItem from="1764631688250" duration="3567000" />
+      <workItem from="1764673514058" duration="21000" />
+      <workItem from="1766438480352" duration="697000" />
+      <workItem from="1775675776674" duration="2613000" />
+      <workItem from="1775761585858" duration="4794000" />
     </task>
     <task id="LOCAL-00213" summary="chore: examples button visibility">
       <option name="closed" value="true" />
@@ -1054,7 +1051,31 @@
       <option name="project" value="LOCAL" />
       <updated>1759503051936</updated>
     </task>
-    <option name="localTasksCounter" value="259" />
+    <task id="LOCAL-00259" summary="fix(i18n): Correct &quot;hireMe&quot; translation in navbar (main)&#10;&#10;This commit corrects the translation of &quot;hireMe&quot; in the&#10;navigation bar across all supported languages. The order of&#10;the elements was also fixed to be consistent.">
+      <option name="closed" value="true" />
+      <created>1759503311355</created>
+      <option name="number" value="00259" />
+      <option name="presentableId" value="LOCAL-00259" />
+      <option name="project" value="LOCAL" />
+      <updated>1759503311355</updated>
+    </task>
+    <task id="LOCAL-00260" summary="chore(i18n): sync">
+      <option name="closed" value="true" />
+      <created>1775676005437</created>
+      <option name="number" value="00260" />
+      <option name="presentableId" value="LOCAL-00260" />
+      <option name="project" value="LOCAL" />
+      <updated>1775676005437</updated>
+    </task>
+    <task id="LOCAL-00261" summary="fix(ci): update image name for GitHub Container Registry">
+      <option name="closed" value="true" />
+      <created>1775769625178</created>
+      <option name="number" value="00261" />
+      <option name="presentableId" value="LOCAL-00261" />
+      <option name="project" value="LOCAL" />
+      <updated>1775769625180</updated>
+    </task>
+    <option name="localTasksCounter" value="262" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1118,11 +1139,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: Upgrade Node.js versions in CI (main)&#10;&#10;This commit updates the Node.js versions used in the CI&#10;workflows to version 20. This ensures that the CI&#10;environment uses a more up-to-date and supported version&#10;of Node.js." />
-    <MESSAGE value="feat" />
-    <MESSAGE value="feat: Upgrade onnxruntime-web and onnxruntime-common (main)&#10;&#10;Up" />
-    <MESSAGE value="feat: Upgrade onnxruntime-web and onnxruntime-common (main)&#10;&#10;Upgrades onnxruntime-web and onnxruntime-common to versions&#10;1" />
-    <MESSAGE value="feat: Upgrade onnxruntime-web and onnxruntime-common (main)&#10;&#10;Upgrades onnxruntime-web and onnxruntime-common to versions&#10;1.23.0. This includes updates to dependencies and related&#10;packages.&#10;" />
     <MESSAGE value="feat: Upgrade onnxruntime-web and onnxruntime-common (main)&#10;&#10;Upgrades onnxruntime-web and onnxruntime-common to versions&#10;1.23.0. This includes updates to dependencies and related&#10;packages." />
     <MESSAGE value="```&#10;feat: Replace &quot;Buy me a coffee&quot; with &quot;Hire me&quot; (main)&#10;&#10;" />
     <MESSAGE value="```&#10;feat: Replace &quot;Buy me a coffee&quot; with &quot;Hire me&quot; (main)&#10;&#10;This commit replaces the &quot;Buy me a coffee&quot; button with a&#10;&quot;Hire" />
@@ -1138,12 +1154,17 @@
     <MESSAGE value="```&#10;feat: Update workspace and translation files (main)&#10;&#10;This commit includes the following changes:&#10;&#10;- Updated the workspace configuration in .idea/workspace.xml to&#10;  reflect the recent npm script execution.&#10;- Modified the English translation file (translation.json) by&#10;  reordering the &quot;navbar&quot; keys.&#10;-" />
     <MESSAGE value="```&#10;feat: Update workspace and translation files (main)&#10;&#10;This commit includes the following changes:&#10;&#10;- Updated the workspace configuration in .idea/workspace.xml to&#10;  reflect the recent npm script execution.&#10;- Modified the English translation file (translation.json) by&#10;  reordering the &quot;navbar&quot; keys.&#10;- Updated translation files in other languages with &quot;hireMe&quot;.&#10;```&#10;" />
     <MESSAGE value="feat: Update workspace and translation files (main)&#10;&#10;This commit includes the following changes:&#10;&#10;- Updated the workspace configuration in .idea/workspace.xml to&#10;  reflect the recent npm script execution.&#10;- Modified the English translation file (translation.json) by&#10;  reordering the &quot;navbar&quot; keys.&#10;- Updated translation files in other languages with &quot;hireMe&quot;." />
-    <MESSAGE value="```" />
-    <MESSAGE value="```&#10;fix(i18n): Correct &quot;hireMe&quot; translation in navbar" />
     <MESSAGE value="```&#10;fix(i18n): Correct &quot;hireMe&quot; translation in navbar&#10;&#10;This commit corrects the translation of &quot;hireMe&quot; in the&#10;navigation bar" />
     <MESSAGE value="```&#10;fix(i18n): Correct &quot;hireMe&quot; translation in navbar&#10;&#10;This commit corrects the translation of &quot;hireMe&quot; in the&#10;navigation bar across all supported languages. The order of&#10;the elements was also fixed to be consistent.&#10;```&#10;" />
     <MESSAGE value="fix(i18n): Correct &quot;hireMe&quot; translation in navbar&#10;&#10;This commit corrects the translation of &quot;hireMe&quot; in the&#10;navigation bar across all supported languages. The order of&#10;the elements was also fixed to be consistent." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(i18n): Correct &quot;hireMe&quot; translation in navbar&#10;&#10;This commit corrects the translation of &quot;hireMe&quot; in the&#10;navigation bar across all supported languages. The order of&#10;the elements was also fixed to be consistent." />
+    <MESSAGE value="```" />
+    <MESSAGE value="```&#10;fix(i18n): Correct &quot;hireMe&quot; translation in navbar" />
+    <MESSAGE value="```&#10;fix(i18n): Correct &quot;hireMe&quot; translation in navbar (main)&#10;&#10;This commit corrects the translation of &quot;hireMe&quot; in the" />
+    <MESSAGE value="```&#10;fix(i18n): Correct &quot;hireMe&quot; translation in navbar (main)&#10;&#10;This commit corrects the translation of &quot;hireMe&quot; in the&#10;navigation bar across all supported languages. The order of&#10;the elements was also fixed to be consistent.&#10;```&#10;" />
+    <MESSAGE value="fix(i18n): Correct &quot;hireMe&quot; translation in navbar (main)&#10;&#10;This commit corrects the translation of &quot;hireMe&quot; in the&#10;navigation bar across all supported languages. The order of&#10;the elements was also fixed to be consistent." />
+    <MESSAGE value="chore(i18n): sync" />
+    <MESSAGE value="fix(ci): update image name for GitHub Container Registry" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(ci): update image name for GitHub Container Registry" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
@@ -1152,5 +1173,13 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

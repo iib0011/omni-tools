@@ -64,7 +64,6 @@
     "date-to-unix": "Datum → Unix",
     "description": "Unix-Zeitstempel in lesbare Daten und Datumsangaben in Unix-Zeitstempel konvertieren (beide Richtungen).",
     "optionsTitle": "Konvertierungsmodus",
-    "outputOptions": "Ausgabeoptionen",
     "shortDescription": "Unix-Zeitstempel und Daten in beide Richtungen konvertieren.",
     "title": "Unix ↔ Datum konvertieren",
     "toolInfo": {
@@ -78,10 +77,10 @@
     "useUTC": "UTC verwenden"
   },
   "crontabGuru": {
-    "title": "Crontab Guru",
     "description": "Analysieren und erklären Sie Cron-Ausdrücke auf Deutsch. Verstehen Sie sofort, was ein Cron-Zeitplan bewirkt, validieren Sie die Syntax und verarbeiten Sie mehrere Ausdrücke gleichzeitig.",
+    "longDescription": "Crontab Guru ist ein Cron-Ausdruck-Parser und -Validator, der komplexe Cron-Syntax in klare, lesbare Beschreibungen übersetzt. Egal ob Sie automatische Backups, Systemwartungsaufgaben oder CI/CD-Pipelines planen – dieses Tool hilft Ihnen zu verstehen, wann genau Ihre Jobs ausgeführt werden. Unterstützt standardmäßige 5-Feld-Cron-Ausdrücke, validiert die Syntax in Echtzeit und verarbeitet mehrere Ausdrücke gleichzeitig – einen pro Zeile. Verfügbar auf Englisch, Französisch, Spanisch, Deutsch, Japanisch, Chinesisch, Portugiesisch, Niederländisch und Russisch.",
     "shortDescription": "Cron-Ausdrücke analysieren und verständlich erklären",
-    "longDescription": "Crontab Guru ist ein Cron-Ausdruck-Parser und -Validator, der komplexe Cron-Syntax in klare, lesbare Beschreibungen übersetzt. Egal ob Sie automatische Backups, Systemwartungsaufgaben oder CI/CD-Pipelines planen – dieses Tool hilft Ihnen zu verstehen, wann genau Ihre Jobs ausgeführt werden. Unterstützt standardmäßige 5-Feld-Cron-Ausdrücke, validiert die Syntax in Echtzeit und verarbeitet mehrere Ausdrücke gleichzeitig – einen pro Zeile. Verfügbar auf Englisch, Französisch, Spanisch, Deutsch, Japanisch, Chinesisch, Portugiesisch, Niederländisch und Russisch."
+    "title": "Crontab Guru"
   },
   "timeBetweenDates": {
     "description": "Berechnen Sie die Zeitdifferenz zwischen zwei Daten. Ermitteln Sie die genaue Dauer in Tagen, Stunden, Minuten und Sekunden.",

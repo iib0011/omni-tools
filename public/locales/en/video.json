@@ -31,14 +31,14 @@
   "changeSpeed": {
     "description": "Change the playback speed of video files. Speed up or slow down videos while maintaining audio synchronization. Supports various speed multipliers and common video formats.",
     "inputTitle": "Input Video",
-    "resultTitle": "Edited Video",
     "options": "Options",
-    "speedLabel": "Speed : x",
+    "resultTitle": "Edited Video",
     "shortDescription": "Change video playback speed",
+    "speedLabel": "Speed : x",
     "title": "Change Video Speed",
     "toolInfo": {
-      "title": "What is a {{title}}?",
-      "longDescription": "{{title}} allows you to adjust the playback speed of your videos directly in your browser. Speed up videos for fast-motion effects or slow them down for slow-motion playback while keeping the audio synchronized. Choose a speed multiplier between 0.25x and 4x to customize your video, then process it easily without installing additional software. This tool supports common video formats and preserves the original video quality as much as possible during processing."
+      "longDescription": "{{title}} allows you to adjust the playback speed of your videos directly in your browser. Speed up videos for fast-motion effects or slow them down for slow-motion playback while keeping the audio synchronized. Choose a speed multiplier between 0.25x and 4x to customize your video, then process it easily without installing additional software. This tool supports common video formats and preserves the original video quality as much as possible during processing.",
+      "title": "What is a {{title}}?"
     }
   },
   "compress": {
@@ -94,14 +94,14 @@
   "gif": {
     "changeSpeed": {
       "description": "Change the playback speed of GIF animations. Speed up or slow down GIFs while maintaining smooth animation.",
-      "shortDescription": "Change GIF animation speed",
-      "title": "Change GIF Speed",
       "inputTitle": "Input GIF",
-      "resultTitle": "output GIF",
       "options": {
-        "title": "Options",
-        "speedLabel": "Speed : x"
-      }
+        "speedLabel": "Speed : x",
+        "title": "Options"
+      },
+      "resultTitle": "output GIF",
+      "shortDescription": "Change GIF animation speed",
+      "title": "Change GIF Speed"
     }
   },
   "loop": {
@@ -119,11 +119,11 @@
   },
   "mergeVideo": {
     "description": "Combine multiple video files into one continuous video.",
-    "longDescription": "This tool allows you to merge or append multiple video files into a single continuous video. Simply upload your video files, arrange them in the desired order, and merge them into one file for easy sharing or editing.",
-    "shortDescription": "Append and merge videos easily.",
-    "title": "Merge videos",
     "inputTitle": "Input Videos",
-    "resultTitle": "Merged Video"
+    "longDescription": "This tool allows you to merge or append multiple video files into a single continuous video. Simply upload your video files, arrange them in the desired order, and merge them into one file for easy sharing or editing.",
+    "resultTitle": "Merged Video",
+    "shortDescription": "Append and merge videos easily.",
+    "title": "Merge videos"
   },
   "rotate": {
     "180Degrees": "180° (Upside down)",
