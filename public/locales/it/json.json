@@ -1,0 +1,124 @@
+{
+  "comparison": {
+    "description": "Confronta due oggetti JSON per individuare differenze nella struttura e nei valori.",
+    "shortDescription": "Trova le differenze tra due oggetti JSON",
+    "title": "Confronta JSON"
+  },
+  "escapeJson": {
+    "description": "Esegui l'escape dei caratteri speciali nelle stringhe JSON. Converti i dati JSON in un formato correttamente sottoposto a escape per trasmissione o archiviazione sicure.",
+    "shortDescription": "Esegui l'escape dei caratteri speciali nel JSON",
+    "title": "Escape JSON"
+  },
+  "jsonToCsv": {
+    "delimiterOption": "Delimitatore",
+    "description": "Converti dati JSON in formato CSV. Supporta oggetti e array annidati, rilevamento automatico delle intestazioni, delimitatori e virgolette configurabili, con risultati pronti per Excel, Google Fogli o altri fogli di calcolo.",
+    "headerOption": "Intestazioni",
+    "inputTitle": "JSON di input",
+    "options": {
+      "alwaysQuote": {
+        "description": "Racchiudi ogni cella tra virgolette doppie, indipendentemente dal contenuto.",
+        "label": "Usa sempre le virgolette"
+      },
+      "autoQuote": {
+        "description": "Usa le virgolette solo per le celle che contengono il delimitatore, una virgoletta doppia o una nuova riga. Mantiene l'output pulito e minimale.",
+        "label": "Automatico (consigliato)"
+      },
+      "delimiter": "Carattere usato per separare i valori in ogni riga (ad esempio virgola, punto e virgola, tabulazione)",
+      "header": {
+        "description": "Usa le chiavi JSON come nomi delle colonne nella prima riga. Consigliato per leggibilità e compatibilità di importazione.",
+        "label": "Includi riga di intestazione"
+      }
+    },
+    "outputTitle": "CSV di output",
+    "quotingOption": "Virgolette per le stringhe",
+    "shortDescription": "Converti JSON in formato CSV",
+    "title": "Da JSON a CSV"
+  },
+  "jsonToXml": {
+    "description": "Converti dati JSON in formato XML. Trasforma oggetti JSON strutturati in documenti XML ben formati.",
+    "shortDescription": "Converti JSON in formato XML",
+    "title": "Da JSON a XML",
+    "inputTitle": "JSON di input",
+    "outputTitle": "XML di output",
+    "options": {
+      "indentationTitle": "Opzioni di indentazione",
+      "useSpaceTitle": "Usa spazi per l'indentazione",
+      "useSpaceDesc": "Usa spazi per rappresentare la struttura gerarchica dell'XML.",
+      "useTabTitle": "Usa tabulazioni per l'indentazione",
+      "useTabDesc": "Usa tabulazioni per rappresentare la struttura gerarchica dell'XML.",
+      "noIdentTitle": "Nessuna indentazione",
+      "noIdentDesc": "Genera XML senza indentazione.",
+      "metaInfoTitle": "Metadati XML",
+      "addMetaTagTitle": "Aggiungi dichiarazione XML",
+      "addMetaTagDesc": "Aggiungi una dichiarazione all'inizio dell'output XML"
+    }
+  },
+  "minify": {
+    "description": "Rimuovi dal JSON tutti gli spazi non necessari.",
+    "inputTitle": "JSON di input",
+    "resultTitle": "JSON minimizzato",
+    "shortDescription": "Minimizza il JSON rimuovendo gli spazi",
+    "title": "Minimizza JSON",
+    "toolInfo": {
+      "description": "La minimizzazione JSON rimuove tutti gli spazi non necessari mantenendo il documento valido. Vengono eliminati spazi, ritorni a capo e indentazione non necessari, riducendo la dimensione dei dati senza modificarne struttura o valori.",
+      "title": "Che cos'è la minimizzazione JSON?"
+    }
+  },
+  "prettify": {
+    "description": "Formatta JSON con indentazione e spaziatura corrette.",
+    "indentation": "Indentazione",
+    "inputTitle": "JSON di input",
+    "resultTitle": "JSON formattato",
+    "shortDescription": "Formatta e rendi leggibile il codice JSON",
+    "title": "Formatta JSON",
+    "toolInfo": {
+      "description": "Questo strumento consente di formattare dati JSON con indentazione e spaziatura corrette, rendendoli più leggibili e facili da usare.",
+      "title": "Formatta JSON"
+    },
+    "useSpaces": "Usa spazi",
+    "useSpacesDescription": "Indenta l'output con spazi",
+    "useTabs": "Usa tabulazioni",
+    "useTabsDescription": "Indenta l'output con tabulazioni."
+  },
+  "stringify": {
+    "description": "Converti oggetti JavaScript in stringhe JSON. Serializza le strutture dati in stringhe JSON per archiviarle o trasmetterle.",
+    "shortDescription": "Converti oggetti in stringhe JSON",
+    "title": "Converti JSON in stringa"
+  },
+  "tsvToJson": {
+    "description": "Converti dati TSV (valori separati da tabulazioni) in formato JSON. Trasforma dati tabellari in oggetti JSON strutturati.",
+    "shortDescription": "Converti TSV in formato JSON",
+    "title": "Da TSV a JSON"
+  },
+  "validateJson": {
+    "description": "Controlla che il JSON sia valido e ben formato.",
+    "inputTitle": "JSON di input",
+    "invalidJson": "❌ {{error}}",
+    "resultTitle": "Risultato della convalida",
+    "shortDescription": "Controlla la presenza di errori nel codice JSON",
+    "title": "Convalida JSON",
+    "toolInfo": {
+      "description": "JSON (JavaScript Object Notation) è un formato leggero per lo scambio di dati. La convalida controlla che la struttura rispetti lo standard: nomi delle proprietà tra virgolette doppie, parentesi bilanciate, nessuna virgola finale e annidamento corretto di oggetti e array.",
+      "title": "Che cos'è la convalida JSON?"
+    },
+    "validJson": "✅ JSON valido"
+  },
+  "sortJson": {
+    "title": "Ordina JSON",
+    "description": "Ordina i dati JSON organizzando array di oggetti in base a una chiave, in ordine crescente o decrescente, oppure ordinando alfabeticamente le chiavi di un oggetto JSON.",
+    "shortDescription": "Ordina gli array JSON per valore o le chiavi degli oggetti in ordine alfabetico",
+    "longDescription": "Questo strumento consente di ordinare dati JSON in modo strutturato e prevedibile. Puoi ordinare un array di oggetti in base a qualsiasi chiave, scegliendo l'ordine crescente o decrescente, oppure ordinare alfabeticamente le chiavi di un oggetto per migliorarne leggibilità e coerenza.",
+    "inputTitle": "JSON di input",
+    "resultTitle": "JSON ordinato",
+    "options": {
+      "title": "Opzioni di ordinamento",
+      "sortByKey": "Ordina alfabeticamente le chiavi dell'oggetto",
+      "sortByValue": "Ordina l'array in base al valore di una chiave",
+      "ascending": "Crescente (A → Z)",
+      "descending": "Decrescente (Z → A)",
+      "modeDescription": "Scegli se ordinare gli elementi di un array in base al valore di una chiave o le chiavi di un oggetto in ordine alfabetico",
+      "keyDescription": "Seleziona la chiave in base alla quale ordinare",
+      "orderDescription": "Scegli l'ordinamento"
+    }
+  }
+}

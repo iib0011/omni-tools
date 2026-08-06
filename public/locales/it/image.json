@@ -1,0 +1,178 @@
+{
+  "changeColors": {
+    "description": "Modifica colori specifici in un'immagine selezionando un colore sorgente e sostituendolo con uno nuovo.",
+    "shortDescription": "Sostituisci rapidamente i colori in un'immagine",
+    "title": "Cambia i colori nell'immagine",
+    "inputTitle": "Immagine di input",
+    "resultTitle": "Immagine risultante",
+    "fromColor": {
+      "title": "Colore da sostituire",
+      "colorOption": "Sostituisci un colore specifico",
+      "transparentOption": "Sostituisci i pixel trasparenti",
+      "selectorDescription": "Sostituisci questo colore (colore sorgente)",
+      "similarityDescription": "Corrispondenza con questa percentuale di colori simili al colore sorgente. Ad esempio, con il 10% il bianco comprenderà anche una piccola quantità di grigio."
+    },
+    "toColor": {
+      "title": "Colore sostitutivo",
+      "colorOption": "Sostituisci con un colore specifico",
+      "transparentOption": "Sostituisci con trasparenza",
+      "selectorDescription": "Con questo colore (colore di destinazione)"
+    }
+  },
+  "changeOpacity": {
+    "description": "Regola facilmente la trasparenza delle immagini. Carica un'immagine, usa il cursore per impostare l'opacità tra 0 (completamente trasparente) e 1 (completamente opaca), quindi scarica il risultato.",
+    "shortDescription": "Regola la trasparenza delle immagini",
+    "title": "Modifica opacità immagine"
+  },
+  "compress": {
+    "compressedSize": "Dimensione compressa totale",
+    "compressing": "Compressione immagini...",
+    "compressionOptions": "Opzioni di compressione",
+    "description": "Riduci la dimensione di una o più immagini preservandone la qualità visiva. Carica più immagini e scaricale insieme in un archivio ZIP.",
+    "failedToCompress": "Compressione delle immagini non riuscita. Riprova.",
+    "fileSizes": "Dimensioni dei file",
+    "inputTitle": "Immagini di input",
+    "maxFileSizeDescription": "Dimensione massima di output per immagine, in megabyte",
+    "originalSize": "Dimensione originale totale",
+    "qualityDescription": "Percentuale di qualità dell'immagine: un valore inferiore produce file più piccoli",
+    "resultTitle": "Immagini compresse",
+    "shortDescription": "Comprimi una o più immagini contemporaneamente.",
+    "someFailedToCompress": "Alcune immagini non sono state compresse e sono state ignorate.",
+    "title": "Comprimi immagini"
+  },
+  "compressPng": {
+    "description": "Comprimi immagini PNG. Incolla o carica un'immagine e il programma mostrerà il risultato compresso. Nelle opzioni puoi regolare il livello di compressione e confrontare le dimensioni del file originale e di quello nuovo.",
+    "shortDescription": "Comprimi rapidamente un PNG",
+    "title": "Comprimi PNG"
+  },
+  "convertJgpToPng": {
+    "description": "Converti rapidamente immagini JPG in PNG. Importa l'immagine nell'editor per ottenere il risultato.",
+    "shortDescription": "Converti rapidamente immagini JPG in PNG",
+    "title": "Converti JPG in PNG"
+  },
+  "createTransparent": {
+    "description": "Crea una versione trasparente di un'immagine rimuovendo il colore di sfondo scelto.",
+    "shortDescription": "Rendi rapidamente trasparente un'immagine",
+    "title": "Crea PNG trasparente"
+  },
+  "crop": {
+    "description": "Ritaglia le immagini per rimuovere le aree indesiderate.",
+    "inputTitle": "Immagine di input",
+    "resultTitle": "Immagine ritagliata",
+    "shortDescription": "Ritaglia rapidamente le immagini.",
+    "title": "Ritaglia immagine"
+  },
+  "editor": {
+    "description": "Editor di immagini avanzato con strumenti per ritaglio, rotazione, annotazione, regolazione dei colori e filigrane. Modifica le immagini direttamente nel browser con strumenti professionali.",
+    "shortDescription": "Modifica immagini con strumenti e funzioni avanzate",
+    "title": "Editor immagini"
+  },
+  "imageToText": {
+    "description": "Estrai testo dalle immagini (JPG, PNG) tramite riconoscimento ottico dei caratteri (OCR).",
+    "shortDescription": "Estrai testo dalle immagini tramite OCR.",
+    "title": "Da immagine a testo (OCR)"
+  },
+  "qrCode": {
+    "description": "Genera codici QR per diversi tipi di dati: URL, testo, email, telefono, SMS, Wi-Fi, vCard e altro.",
+    "options": {
+      "address": "Indirizzo",
+      "company": "Azienda (facoltativo)",
+      "email": "Email",
+      "emailBody": "Corpo dell'email (facoltativo)",
+      "emailSubject": "Oggetto dell'email (facoltativo)",
+      "encryptionType": "Tipo di crittografia",
+      "fullName": "Nome completo",
+      "job": "Qualifica professionale (facoltativa)",
+      "message": "Messaggio (facoltativo)",
+      "name": "Nome",
+      "password": "Password",
+      "phone": "Numero di telefono",
+      "qrType": "Seleziona il tipo di codice QR",
+      "size": "Dimensione in pixel (100-1000)",
+      "ssid": "Nome della rete (SSID)",
+      "text": "Inserisci il testo",
+      "url": "Inserisci l'URL",
+      "website": "Sito web (facoltativo)"
+    },
+    "resultOutput": "Codice QR generato",
+    "shortDescription": "Crea codici QR personalizzati per vari formati di dati.",
+    "title": "Generatore di codici QR"
+  },
+  "removeBackground": {
+    "description": "Rimuovi lo sfondo da un'immagine per isolare il soggetto principale su trasparenza.",
+    "shortDescription": "Rimuovi automaticamente lo sfondo dalle immagini",
+    "title": "Rimuovi sfondo dall'immagine"
+  },
+  "resize": {
+    "description": "Ridimensiona le immagini indicando dimensioni in pixel o una percentuale. Mantieni le proporzioni e imposta larghezza o altezza con regolazione automatica. Scarica i risultati singolarmente o come archivio ZIP.",
+    "dimensionType": "Tipo di dimensione",
+    "heightDescription": "Altezza (in pixel)",
+    "inputTitle": "Immagini di input",
+    "maintainAspectRatio": "Mantieni proporzioni",
+    "maintainAspectRatioDescription": "Mantieni le proporzioni originali dell'immagine.",
+    "percentage": "Percentuale",
+    "percentageDescription": "Percentuale della dimensione originale (ad esempio 50 per dimezzare, 200 per raddoppiare)",
+    "resizeByPercentage": "Ridimensiona in percentuale",
+    "resizeByPercentageDescription": "Ridimensiona specificando una percentuale della dimensione originale.",
+    "resizeByPixels": "Ridimensiona in pixel",
+    "resizeByPixelsDescription": "Ridimensiona specificando le dimensioni in pixel.",
+    "resizeMethod": "Metodo di ridimensionamento",
+    "resultTitle": "Immagini ridimensionate",
+    "setHeight": "Imposta altezza",
+    "setHeightDescription": "Specifica l'altezza in pixel e calcola la larghezza in base alle proporzioni.",
+    "setWidth": "Imposta larghezza",
+    "setWidthDescription": "Specifica la larghezza in pixel e calcola l'altezza in base alle proporzioni.",
+    "shortDescription": "Ridimensiona una o più immagini contemporaneamente.",
+    "title": "Ridimensiona immagine",
+    "toolInfo": {
+      "description": "Questo strumento consente di ridimensionare una o più immagini JPG, PNG, SVG o GIF. Puoi indicare dimensioni in pixel o una percentuale e mantenere le proporzioni originali. Quando elabori più immagini, i risultati vengono raccolti in un archivio ZIP.",
+      "title": "Ridimensiona immagini"
+    },
+    "widthDescription": "Larghezza (in pixel)"
+  },
+  "rotate": {
+    "description": "Ruota un'immagine dell'angolo specificato.",
+    "shortDescription": "Ruota facilmente un'immagine.",
+    "title": "Ruota immagine"
+  },
+  "split": {
+    "title": "Dividi immagine in pagine",
+    "shortDescription": "Dividi un'immagine grande in più pagine (PDF).",
+    "description": "Dividi una mappa o un'immagine grande in pagine corrispondenti al formato carta e ai margini selezionati. Specifica i pixel per riquadro di stampa e il numero di riquadri per impostare correttamente la scala.",
+    "inputTitle": "Immagine di input",
+    "resultTitle": "PDF suddiviso",
+    "loadingText": "Caricamento... Potrebbe richiedere qualche istante.",
+    "pageParameters": {
+      "title": "Parametri della pagina",
+      "selectPageFormat": "Seleziona il formato pagina",
+      "padding": {
+        "label": "Margine",
+        "description": "Margine intorno alla mappa su ogni pagina (nell'unità selezionata)"
+      }
+    },
+    "scaleParameters": {
+      "title": "Parametri di scala",
+      "pxPerSquareQuantity": {
+        "label": "Pixel per quantità di riquadri",
+        "description": "Numero di pixel corrispondente alla quantità indicata di riquadri nell'immagine originale (in orizzontale o verticale)"
+      },
+      "squareQuantity": {
+        "label": "Numero di riquadri",
+        "description": "Numero di riquadri di gioco in orizzontale o verticale usato per la scala"
+      },
+      "unitsPerOneSquare": {
+        "label": "Unità per riquadro",
+        "description": "Dimensione fisica di un riquadro nell'unità selezionata"
+      }
+    },
+    "units": {
+      "title": "Unità",
+      "select": "Seleziona l'unità di misura",
+      "options": {
+        "pt": "Punti (pt)",
+        "mm": "Millimetri (mm)",
+        "in": "Pollici (in)"
+      }
+    }
+  }
+}

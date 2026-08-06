@@ -1,0 +1,40 @@
+{
+  "audioConverter": {
+    "description": "Converti file audio tra formati diversi.",
+    "inputTitle": "Audio di input",
+    "longDescription": "Questo strumento consente di convertire file audio da un formato a un altro e supporta numerosi formati per una conversione semplice e immediata.",
+    "outputFormat": "Formato di output",
+    "outputFormatDescription": "Seleziona il formato audio di output desiderato",
+    "outputTitle": "Audio convertito",
+    "shortDescription": "Converti file audio in vari formati.",
+    "title": "Convertitore audio"
+  },
+  "convertToJPG": {
+    "description": "Converti vari formati di immagine in JPG, scegliendo qualità e colore di sfondo.",
+    "failedToConvert": "Conversione delle immagini in JPG non riuscita. Riprova.",
+    "inputTitle": "Immagini di input",
+    "options": {
+      "colorDescription": "Colore di sfondo (per le immagini trasparenti)",
+      "quality": "Qualità di conversione:",
+      "qualityDescription": "Valori più alti = qualità migliore e file più grande",
+      "title": "Impostazioni di conversione"
+    },
+    "resultTitle": "Immagini JPG",
+    "shortDescription": "Converti immagini in JPG controllandone la qualità",
+    "title": "Converti immagini in JPG"
+  },
+  "convertToWebp": {
+    "description": "Converti vari formati di immagine in WebP, scegliendo qualità e colore di sfondo.",
+    "failedToConvert": "Conversione delle immagini in WebP non riuscita. Riprova.",
+    "inputTitle": "Immagini di input",
+    "options": {
+      "colorDescription": "Colore di sfondo (per le immagini trasparenti)",
+      "quality": "Qualità di conversione:",
+      "qualityDescription": "Valori più alti = qualità migliore e file più grande",
+      "title": "Impostazioni di conversione"
+    },
+    "resultTitle": "Immagini WebP",
+    "shortDescription": "Converti immagini in WebP controllandone la qualità.",
+    "title": "Converti immagini in WebP"
+  }
+}
