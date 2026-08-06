@@ -115,5 +115,10 @@
       "description": "Этот инструмент позволяет извлекать определённые страницы из PDF-документа. Вы можете указать отдельные страницы или диапазоны страниц для извлечения.",
       "title": "Разделить PDF"
     }
+  },
+  "pdfToWord": {
+    "title": "PDF to Word",
+    "description": "Convert PDF documents into editable Word (.docx) files.",
+    "shortDescription": "Convert PDF files to Word format"
   }
 }

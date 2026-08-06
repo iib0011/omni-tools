@@ -115,5 +115,10 @@
       "description": "Esta ferramenta permite extrair páginas específicas de um documento PDF. Você pode especificar páginas individuais ou intervalos de páginas para extrair.",
       "title": "Dividir PDF"
     }
+  },
+  "pdfToWord": {
+    "title": "PDF to Word",
+    "description": "Convert PDF documents into editable Word (.docx) files.",
+    "shortDescription": "Convert PDF files to Word format"
   }
 }
