@@ -111,10 +111,5 @@
     "startTime": "Hora de início",
     "timestamps": "Carimbos de data e hora",
     "title": "Cortar vídeo"
-  },
-  "videoToGif": {
-    "description": "Converta arquivos de vídeo para o formato GIF animado. Extraia intervalos de tempo específicos e crie imagens animadas compartilháveis.",
-    "shortDescription": "Converter vídeo em GIF animado",
-    "title": "Vídeo para GIF"
   }
 }

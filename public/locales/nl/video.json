@@ -111,10 +111,5 @@
     "startTime": "Starttijd",
     "timestamps": "Tijdstempels",
     "title": "Video bijsnijden"
-  },
-  "videoToGif": {
-    "description": "Converteer videobestanden naar geanimeerde GIF-indeling. Extraheer specifieke tijdsperioden en maak deelbare geanimeerde afbeeldingen.",
-    "shortDescription": "Converteer video naar geanimeerde GIF",
-    "title": "Video naar GIF"
   }
 }

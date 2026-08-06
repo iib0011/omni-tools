@@ -178,24 +178,5 @@
     "timestamps": "मुहर",
     "title": "वीडियो ट्रिम करें",
     "trimOptions": "ट्रिम विकल्प"
-  },
-  "videoToGif": {
-    "conversionOptions": "रूपांतरण विकल्प",
-    "description": "वीडियो को GIF एनिमेटेड फ़ाइल में बदलें।",
-    "frameRate": "फ्रेम दर",
-    "frameRatePlaceholder": "FPS",
-    "height": "ऊंचाई",
-    "heightPlaceholder": "पिक्सेल",
-    "inputTitle": "इनपुट वीडियो",
-    "quality": "गुणवत्ता",
-    "qualityHigh": "उच्च",
-    "qualityLow": "कम",
-    "qualityMedium": "मध्यम",
-    "resize": "आकार बदलें",
-    "resultTitle": "GIF फ़ाइल",
-    "shortDescription": "वीडियो को एनिमेटेड GIF में बदलें",
-    "title": "वीडियो से GIF",
-    "width": "चौड़ाई",
-    "widthPlaceholder": "पिक्सेल"
   }
 }

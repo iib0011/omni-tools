@@ -1,12 +1,13 @@
 import { InitialValuesType } from './type';
-import { FFmpeg } from '@ffmpeg/ffmpeg';
+import { runFFmpegTask } from 'lib/ffmpeg';
 import { fetchFile } from '@ffmpeg/util';
+import { getFileExtension } from '@utils/file';
 
 export const processImage = async (
   file: File,
   options: InitialValuesType
 ): Promise<File | null> => {
-  const { rotateAngle, rotateMethod } = options;
+  const { rotateAngle } = options;
   if (file.type === 'image/svg+xml') {
     try {
       // Read the SVG file
@@ -45,30 +46,32 @@ export const processImage = async (
   }
 
   // For non-SVG images, use FFmpeg
-  try {
-    const ffmpeg = new FFmpeg();
-    await ffmpeg.load();
+  return runFFmpegTask(async ({ ffmpeg, tempFile }) => {
+    const extension = getFileExtension(file.name) ?? 'png';
 
-    // Write input file
-    await ffmpeg.writeFile('input', await fetchFile(file));
+    const inputName = tempFile(`.${extension}`);
+    const outputName = tempFile('.png');
 
-    // Determine rotation command
-    const rotateCmd = `rotate=${rotateAngle}*PI/180`;
+    await ffmpeg.writeFile(inputName, await fetchFile(file));
 
-    // Execute FFmpeg command
+    const radians = `${Number(rotateAngle)}*PI/180`;
+
     await ffmpeg.exec([
       '-i',
-      'input',
+      inputName,
       '-vf',
-      rotateCmd,
-      'output.' + file.name.split('.').pop()
+      `rotate=${radians}:ow=rotw(${radians}):oh=roth(${radians}):fillcolor=none`,
+      outputName
     ]);
 
-    // Read the output file
-    const data = await ffmpeg.readFile('output.' + file.name.split('.').pop());
-    return new File([data as any], file.name, { type: file.type });
-  } catch (error) {
-    console.error('Error processing image:', error);
-    return null;
-  }
+    const data = await ffmpeg.readFile(outputName);
+
+    return new File(
+      [new Uint8Array(data as Uint8Array)],
+      `rotated_${file.name.replace(/\.[^/.]+$/, '.png')}`,
+      {
+        type: 'image/png'
+      }
+    );
+  });
 };

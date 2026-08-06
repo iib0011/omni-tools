@@ -257,7 +257,17 @@
   "rotate": {
     "description": "Rotate an image by a specified angle.",
     "shortDescription": "Rotate an image easily.",
-    "title": "Rotate Image"
+    "title": "Rotate Image",
+    "inputTitle": "Input Images",
+    "resultTitle": "Rotated images",
+    "options": {
+      "method": "Rotation Method",
+      "presetTitle": "Preset Angle",
+      "presetDesc": "Rotate by a specific angle in degrees.",
+      "customTitle": "Custom Angle",
+      "customDesc": "Rotate by a custom angle in degrees.",
+      "angle": "Angle"
+    }
   },
   "watermark": {
     "title": "Watermark Images",

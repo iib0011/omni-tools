@@ -9,6 +9,7 @@ import ToolAudioInput from '@components/input/ToolAudioInput';
 import ToolFileResult from '@components/result/ToolFileResult';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { trimAudio } from './service';
+import { getFileExtension } from '@utils/file';
 
 const initialValues: InitialValuesType = {
   startTime: '00:00:00',
@@ -22,7 +23,7 @@ const formatOptions = [
   { label: 'WAV', value: 'wav' }
 ];
 
-export default function Trim({ title, longDescription }: ToolComponentProps) {
+export default function Trim({ title }: ToolComponentProps) {
   const { t } = useTranslation('audio');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
@@ -110,19 +111,12 @@ export default function Trim({ title, longDescription }: ToolComponentProps) {
         />
       }
       resultComponent={
-        loading ? (
-          <ToolFileResult
-            title={t('trim.trimmingAudio')}
-            value={null}
-            loading={true}
-          />
-        ) : (
-          <ToolFileResult
-            title={t('trim.resultTitle')}
-            value={result}
-            extension={result ? result.name.split('.').pop() : undefined}
-          />
-        )
+        <ToolFileResult
+          title={t('trim.resultTitle')}
+          loading={loading}
+          value={result}
+          extension={result ? getFileExtension(result.name) : undefined}
+        />
       }
       initialValues={initialValues}
       getGroups={getGroups}
@@ -130,7 +124,7 @@ export default function Trim({ title, longDescription }: ToolComponentProps) {
       compute={compute}
       toolInfo={{
         title: t('trim.toolInfo.title', { title }),
-        description: longDescription
+        description: t('trim.toolInfo.longDescription')
       }}
     />
   );

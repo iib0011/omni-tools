@@ -111,10 +111,5 @@
     "startTime": "Heure de début",
     "timestamps": "Horodatages",
     "title": "Découper la vidéo"
-  },
-  "videoToGif": {
-    "description": "Convertissez des fichiers vidéo au format GIF animé. Extrayez des plages horaires spécifiques et créez des images animées partageables.",
-    "shortDescription": "Convertir une vidéo en GIF animé",
-    "title": "Vidéo en GIF"
   }
 }

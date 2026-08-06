@@ -1,44 +1,46 @@
-import { FFmpeg } from '@ffmpeg/ffmpeg';
+import { runFFmpegTask } from 'lib/ffmpeg';
 import { fetchFile } from '@ffmpeg/util';
+import { RotationAngle, InitialValuesType } from './types';
 
-const ffmpeg = new FFmpeg();
+const rotateMap: Record<RotationAngle, string> = {
+  90: 'transpose=1',
+  180: 'transpose=2,transpose=2',
+  270: 'transpose=2'
+};
 
 export async function rotateVideo(
   input: File,
-  rotation: number
+  options: InitialValuesType
 ): Promise<File> {
-  if (!ffmpeg.loaded) {
-    await ffmpeg.load({
-      wasmURL:
-        'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
+  return runFFmpegTask(async ({ ffmpeg, tempFile }) => {
+    const inputName = tempFile('.mp4');
+    const outputName = tempFile('.mp4');
+
+    await ffmpeg.writeFile(inputName, await fetchFile(input));
+
+    const { rotation } = options;
+
+    const rotateFilter = rotateMap[rotation];
+
+    const args = ['-i', inputName];
+    if (rotateFilter) {
+      args.push('-vf', rotateFilter);
+    }
+
+    args.push('-c:v', 'libx264', '-preset', 'ultrafast', outputName);
+
+    await ffmpeg.exec(args);
+
+    const rotatedData = await ffmpeg.readFile(outputName);
+
+    const blob = new Blob([new Uint8Array(rotatedData as Uint8Array)], {
+      type: 'video/mp4'
     });
-  }
 
-  const inputName = 'input.mp4';
-  const outputName = 'output.mp4';
-  await ffmpeg.writeFile(inputName, await fetchFile(input));
-
-  const rotateMap: Record<number, string> = {
-    90: 'transpose=1',
-    180: 'transpose=2,transpose=2',
-    270: 'transpose=2',
-    0: ''
-  };
-  const rotateFilter = rotateMap[rotation];
-
-  const args = ['-i', inputName];
-  if (rotateFilter) {
-    args.push('-vf', rotateFilter);
-  }
-
-  args.push('-c:v', 'libx264', '-preset', 'ultrafast', outputName);
-
-  await ffmpeg.exec(args);
-
-  const rotatedData = await ffmpeg.readFile(outputName);
-  return new File(
-    [new Blob([rotatedData as any], { type: 'video/mp4' })],
-    `${input.name.replace(/\.[^/.]+$/, '')}_rotated.mp4`,
-    { type: 'video/mp4' }
-  );
+    return new File(
+      [blob],
+      `${input.name.replace(/\.[^/.]+$/, '')}_rotated.mp4`,
+      { type: 'video/mp4' }
+    );
+  });
 }

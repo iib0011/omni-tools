@@ -111,10 +111,5 @@
     "startTime": "开始时间",
     "timestamps": "时间戳",
     "title": "修剪视频"
-  },
-  "videoToGif": {
-    "description": "将视频文件转换为 GIF 动画格式。提取特定时间范围并创建可共享的动画图像。",
-    "shortDescription": "将视频转换为动画 GIF",
-    "title": "视频转GIF"
   }
 }
