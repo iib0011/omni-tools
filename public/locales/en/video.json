@@ -105,7 +105,7 @@
     },
     "imagesToGif": {
       "title": "Images to GIF",
-      "description": "Convert multiple images into an animated GIF directly in your browser. Upload your images, set the frame delay, and download the resulting animation — no server needed.",
+      "description": "Create animated GIFs from multiple images. Arrange your frames, adjust the timing, and generate a smooth animation in just a few clicks.",
       "shortDescription": "Convert multiple images into an animated GIF",
       "inputTitle": "Input Images",
       "resultTitle": "Animated GIF",
