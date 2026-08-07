@@ -4,6 +4,7 @@ import { tool as numberSum } from './sum/meta';
 import { tool as numberGenerate } from './generate/meta';
 import { tool as numberArithmeticSequence } from './arithmetic-sequence/meta';
 import { tool as numberByteConverter } from './byte-converter/meta';
+import { tool as numberNumberToWords } from './number-to-words/meta';
 import { tools as genericCalcTools } from './generic-calc/meta';
 
 export const numberTools = [
@@ -13,5 +14,6 @@ export const numberTools = [
   numberRandomPortGenerator,
   numberRandomNumberGenerator,
   numberByteConverter,
+  numberNumberToWords,
   ...genericCalcTools
 ];

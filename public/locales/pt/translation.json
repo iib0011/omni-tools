@@ -95,8 +95,8 @@
       "trimVideo": "Cortar vídeo"
     },
     "search": {
-      "placeholder": "Pesquisar todas as ferramentas",
-      "noResult": "Nenhum resultado encontrado, tente ajustar a sua pesquisa ou os critérios de filtro"
+      "noResult": "Nenhum resultado encontrado, tente ajustar a sua pesquisa ou os critérios de filtro",
+      "placeholder": "Pesquisar todas as ferramentas"
     },
     "title": "Faça as coisas rapidamente com"
   },
@@ -229,9 +229,9 @@
     "result": "Resultado"
   },
   "toolMultipleInput": {
+    "deleteFile": "Eliminar ficheiro",
     "inputTitle": "Entrada {{type}}",
-    "noFilesSelected": "Nenhum ficheiro selecionado",
-    "deleteFile": "Eliminar ficheiro"
+    "noFilesSelected": "Nenhum ficheiro selecionado"
   },
   "toolOptions": {
     "title": "Opções de ferramentas"

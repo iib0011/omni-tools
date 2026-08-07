@@ -12,6 +12,19 @@
       "title": "What is a Leap Year?"
     }
   },
+  "convertDateToUnix": {
+    "description": "Convert a human-readable date to a Unix Timestamp.",
+    "options": "Options",
+    "outputOptions": "Output Options",
+    "shortDescription": "Convert date to Unix timestamp.",
+    "title": "Convert Date to Unix",
+    "toolInfo": {
+      "description": "This tool converts a human-readable date format (e.g., YYYY-MM-DD HH:MM:SS) into a Unix Timestamp. The user can choose to specify a given UTC offset (e.g., YYYY-MM-DD HH:MM:SS +XX:XX) or use the local timezone. If the user doesn't provide either an offset or choose to use the local timezone, the result is given with an offset of +00:00. ",
+      "title": "Convert Date to Unix"
+    },
+    "useLocalTime": "Use Local Time",
+    "useLocalTimeDescription": "The input time and date is processed as your browser's time zone. Additional specifications will be ignored."
+  },
   "convertDaysToHours": {
     "addHoursName": "Add Hours Name",
     "addHoursNameDescription": "Append the string hours to output values",
@@ -67,26 +80,108 @@
   "convertUnixToDate": {
     "addUtcLabel": "Add 'UTC' suffix",
     "addUtcLabelDescription": "Append 'UTC' after the converted date (available only in UTC mode)",
+    "date-to-unix": "Date → Unix",
     "description": "Convert Unix timestamps to readable dates and convert dates back to Unix timestamps.",
+    "optionsTitle": "Conversion Mode",
     "shortDescription": "Convert Unix timestamps and dates in both directions.",
     "title": "Convert Unix ↔ Date",
     "toolInfo": {
-      "title": "Convert Unix ↔ Date",
-      "description": "This tool converts Unix timestamps (in seconds) into human-readable date formats such as YYYY-MM-DD HH:MM:SS, and also converts formatted dates back into Unix timestamps. You can choose UTC output, local timezone output, or provide a custom UTC offset (for example: YYYY-MM-DD HH:MM:SS +XX:XX). If no offset is provided and local timezone is not selected, UTC (+00:00) is used by default."
+      "description": "This tool converts Unix timestamps (in seconds) into human-readable date formats such as YYYY-MM-DD HH:MM:SS, and also converts formatted dates back into Unix timestamps. You can choose UTC output, local timezone output, or provide a custom UTC offset (for example: YYYY-MM-DD HH:MM:SS +XX:XX). If no offset is provided and local timezone is not selected, UTC (+00:00) is used by default.",
+      "title": "Convert Unix ↔ Date"
     },
-    "useLocalTime": "Use Local Time",
-    "useUTC": "Use UTC",
-    "useLocalTimeDescription": "Display the converted date in your local timezone instead of UTC",
     "tzOptions": "Timezone Options",
-    "optionsTitle": "Conversion Mode",
-    "date-to-unix": "Date → Unix",
-    "unix-to-date": "Unix → Date"
+    "unix-to-date": "Unix → Date",
+    "useLocalTime": "Use Local Time",
+    "useLocalTimeDescription": "Display the converted date in your local timezone instead of UTC",
+    "useUTC": "Use UTC"
   },
   "crontabGuru": {
-    "title": "Crontab Guru",
     "description": "Parse and explain cron expressions in plain English. Instantly understand what any cron schedule does, validate syntax, and process multiple expressions at once.",
+    "longDescription": "Crontab Guru is a cron expression parser and validator that translates complex cron syntax into plain, human-readable descriptions. Whether you're scheduling automated backups, system maintenance tasks, or CI/CD pipelines, this tool helps you understand exactly when your jobs will run. Supports standard 5-field cron expressions, validates syntax in real time, and processes multiple expressions at once — one per line. Available in English, French, Spanish, German, Japanese, Chinese, Portuguese, Dutch, and Russian.",
     "shortDescription": "Parse and explain cron expressions in plain English",
-    "longDescription": "Crontab Guru is a cron expression parser and validator that translates complex cron syntax into plain, human-readable descriptions. Whether you're scheduling automated backups, system maintenance tasks, or CI/CD pipelines, this tool helps you understand exactly when your jobs will run. Supports standard 5-field cron expressions, validates syntax in real time, and processes multiple expressions at once — one per line. Available in English, French, Spanish, German, Japanese, Chinese, Portuguese, Dutch, and Russian."
+    "title": "Crontab Guru"
+  },
+  "dateWeekdayCalculator": {
+    "dateSelection": "Date",
+    "dayDescription": "Day",
+    "description": "Find every year in a range where a month and day fall on a chosen weekday.",
+    "endYearDescription": "End year",
+    "errors": {
+      "emptyInput": "All fields are required",
+      "fallback": "Invalid input",
+      "invalidDate": "Invalid day for the selected month",
+      "invalidDay": "Day must be between 1 and 31",
+      "invalidMonth": "Month must be between 1 and 12",
+      "invalidWeekday": "Invalid weekday",
+      "invalidYear": "Years must be integers between 1 and 9999",
+      "invalidYearRange": "Start year must be less than or equal to end year"
+    },
+    "foundMatches_one": "Found {{count}} matching year",
+    "foundMatches_other": "Found {{count}} matching years",
+    "longDescription": "Select a month, day, and target weekday, then choose a start and end year. The calculator scans each year in the range and lists every match as a full formatted date. February 29 is supported: non-leap years are skipped automatically. Invalid dates (such as April 31) and invalid year ranges show clear error messages.",
+    "monthDescription": "Month",
+    "months": [
+      null,
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "noMatches": "No matching years found in the selected range.",
+    "resultTitle": "Matching years",
+    "shortDescription": "Find years when a date falls on a weekday",
+    "startYearDescription": "Start year",
+    "title": "Date Weekday Calculator",
+    "toolInfo": {
+      "title": "What is a {{title}}?"
+    },
+    "weekdayDescription": "Target weekday",
+    "weekdaySelection": "Weekday",
+    "weekdays": {
+      "friday": "Friday",
+      "monday": "Monday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "thursday": "Thursday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday"
+    },
+    "yearRange": "Year range"
+  },
+  "discordTimestamp": {
+    "description": "Convert dates and times into Discord's special timestamp format that automatically adapts to each user's local timezone and language",
+    "formats": {
+      "description": "Choose how the timestamp will appear in Discord — hover over each option to see an example",
+      "long_date": "Long Date (ex: 1 January 2025)",
+      "long_datetime": "Long Date & Time (ex: Monday, 1 January 2025 14:30)",
+      "long_time": "Long Time (ex: 14:30:00)",
+      "relative": "Relative (ex: 2 hours ago)",
+      "short_date": "Short Date (ex: 01/01/2025)",
+      "short_datetime": "Short Date & Time (ex: 1 January 2025 14:30)",
+      "short_time": "Short Time (ex: 14:30)",
+      "title": "Timestamp Format"
+    },
+    "inputTitle": "Input Datetimes",
+    "name": "Discord Timestamp Generator",
+    "outputTitle": "Discord Timestamps",
+    "shortDescription": "Generate Discord timestamps from dates",
+    "toolInfo": {
+      "description": "Discord timestamps are a special syntax that displays dates and times dynamically. Instead of showing a fixed time, they automatically convert to each viewer's local timezone and language — so everyone sees the correct time for their location. Simply enter one datetime per line, choose a format, and paste the results directly into Discord. The tool processes each line independently — blank lines are preserved in the output, invalid lines are flagged with ❌, and valid datetimes are converted instantly. Enable UTC mode to ensure consistent results regardless of your local timezone.",
+      "title": "What is a Discord Timestamp?"
+    },
+    "utc": {
+      "description": "Treat input datetimes as UTC. Disable to use your local timezone instead",
+      "label": "Enforce UTC",
+      "title": "Input Options"
+    }
   },
   "timeBetweenDates": {
     "description": "Calculate the time difference between two dates. Get the exact duration in days, hours, minutes, and seconds.",
@@ -123,45 +218,5 @@
     "zeroPaddingDescription": "Make all time components always be two digits wide.",
     "zeroPrintDescription": "Display the dropped parts as zero values \"00\".",
     "zeroPrintTruncatedParts": "Zero-print Truncated Parts"
-  },
-  "discordTimestamp": {
-    "name": "Discord Timestamp Generator",
-    "description": "Convert dates and times into Discord's special timestamp format that automatically adapts to each user's local timezone and language",
-    "shortDescription": "Generate Discord timestamps from dates",
-    "inputTitle": "Input Datetimes",
-    "outputTitle": "Discord Timestamps",
-    "formats": {
-      "title": "Timestamp Format",
-      "description": "Choose how the timestamp will appear in Discord — hover over each option to see an example",
-      "short_time": "Short Time (ex: 14:30)",
-      "long_time": "Long Time (ex: 14:30:00)",
-      "short_date": "Short Date (ex: 01/01/2025)",
-      "long_date": "Long Date (ex: 1 January 2025)",
-      "short_datetime": "Short Date & Time (ex: 1 January 2025 14:30)",
-      "long_datetime": "Long Date & Time (ex: Monday, 1 January 2025 14:30)",
-      "relative": "Relative (ex: 2 hours ago)"
-    },
-    "utc": {
-      "title": "Input Options",
-      "label": "Enforce UTC",
-      "description": "Treat input datetimes as UTC. Disable to use your local timezone instead"
-    },
-    "toolInfo": {
-      "title": "What is a Discord Timestamp?",
-      "description": "Discord timestamps are a special syntax that displays dates and times dynamically. Instead of showing a fixed time, they automatically convert to each viewer's local timezone and language — so everyone sees the correct time for their location. Simply enter one datetime per line, choose a format, and paste the results directly into Discord. The tool processes each line independently — blank lines are preserved in the output, invalid lines are flagged with ❌, and valid datetimes are converted instantly. Enable UTC mode to ensure consistent results regardless of your local timezone."
-    }
-  },
-  "convertDateToUnix": {
-    "description": "Convert a human-readable date to a Unix Timestamp.",
-    "outputOptions": "Output Options",
-    "shortDescription": "Convert date to Unix timestamp.",
-    "title": "Convert Date to Unix",
-    "toolInfo": {
-      "description": "This tool converts a human-readable date format (e.g., YYYY-MM-DD HH:MM:SS) into a Unix Timestamp. The user can choose to specify a given UTC offset (e.g., YYYY-MM-DD HH:MM:SS +XX:XX) or use the local timezone. If the user doesn't provide either an offset or choose to use the local timezone, the result is given with an offset of +00:00. ",
-      "title": "Convert Date to Unix"
-    },
-    "useLocalTime": "Use Local Time",
-    "useLocalTimeDescription": "The input time and date is processed as your browser's time zone. Additional specifications will be ignored.",
-    "options": "Options"
   }
 }

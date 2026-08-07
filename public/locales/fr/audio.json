@@ -8,10 +8,7 @@
     "settingSpeed": "Réglage de la vitesse",
     "shortDescription": "Modifier la vitesse des fichiers audio",
     "speedDescription": "Multiplicateur par défaut : 2 signifie 2x plus rapide",
-    "title": "Changer la vitesse audio",
-    "toolInfo": {
-      "title": "Qu'est-ce que {{title}}?"
-    }
+    "title": "Changer la vitesse audio"
   },
   "extractAudio": {
     "description": "Extraire la piste audio des fichiers vidéo.",
@@ -31,7 +28,6 @@
     "description": "Combinez plusieurs fichiers audio en un seul fichier audio en les concaténant en séquence.",
     "inputTitle": "Fichiers audio d'entrée",
     "longDescription": "Cet outil vous permet de fusionner plusieurs fichiers audio en un seul fichier en les concaténant dans l'ordre de leur mise en ligne. Idéal pour combiner des segments de podcast, des morceaux de musique ou tout autre fichier audio à assembler. Compatible avec différents formats audio, dont MP3, AAC et WAV.",
-    "mergingAudio": "Fusion audio",
     "outputFormat": "Format de sortie",
     "resultTitle": "Audio fusionné",
     "shortDescription": "Fusionnez plusieurs fichiers audio en un seul (MP3, AAC, WAV).",
@@ -55,7 +51,6 @@
     "title": "Couper le son",
     "toolInfo": {
       "title": "Qu'est-ce que {{title}}?"
-    },
-    "trimmingAudio": "Découpage audio"
+    }
   }
 }

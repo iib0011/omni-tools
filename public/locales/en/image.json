@@ -1,22 +1,22 @@
 {
   "changeColors": {
     "description": "Change specific colors in an image by selecting a source color and replacing it with a new one.",
-    "shortDescription": "Quickly swap colors in a image",
-    "title": "Change colors in image",
+    "fromColor": {
+      "colorOption": "Replace a specific color",
+      "selectorDescription": "Replace this color (from color)",
+      "similarityDescription": "Match this % of similar colors of the from color. For example, 10% white will match white and a little bit of gray.",
+      "title": "From color",
+      "transparentOption": "Replace transparent pixels"
+    },
     "inputTitle": "Input image",
     "resultTitle": "Result image",
-    "fromColor": {
-      "title": "From color",
-      "colorOption": "Replace a specific color",
-      "transparentOption": "Replace transparent pixels",
-      "selectorDescription": "Replace this color (from color)",
-      "similarityDescription": "Match this % of similar colors of the from color. For example, 10% white will match white and a little bit of gray."
-    },
+    "shortDescription": "Quickly swap colors in a image",
+    "title": "Change colors in image",
     "toColor": {
-      "title": "To color",
       "colorOption": "Replace with a specific color",
-      "transparentOption": "Replace with transparent",
-      "selectorDescription": "With this color (to color)"
+      "selectorDescription": "With this color (to color)",
+      "title": "To color",
+      "transparentOption": "Replace with transparent"
     }
   },
   "changeOpacity": {
@@ -74,6 +74,127 @@
   },
   "qrCode": {
     "description": "Generate QR codes for different data types: URL, Text, Email, Phone, SMS, WiFi, vCard, and more.",
+    "groups": {
+      "details": {
+        "email": {
+          "address": {
+            "description": "Email Address",
+            "placeholder": "example@example.com"
+          },
+          "body": {
+            "description": "Email Body (optional)",
+            "placeholder": "Body text"
+          },
+          "subject": {
+            "description": "Email Subject (optional)",
+            "placeholder": "Subject line"
+          }
+        },
+        "phone": {
+          "description": "Phone Number",
+          "placeholder": "+1234567890"
+        },
+        "sms": {
+          "message": {
+            "description": "Message (optional)",
+            "placeholder": "Your message here"
+          },
+          "number": {
+            "description": "Phone Number",
+            "placeholder": "+1234567890"
+          }
+        },
+        "text": {
+          "description": "Enter the text",
+          "placeholder": "Enter your text here"
+        },
+        "title": "{{type}} Details",
+        "url": {
+          "description": "Enter the URL",
+          "placeholder": "https://example.com"
+        },
+        "vcard": {
+          "address": {
+            "description": "Address",
+            "placeholder": "123 Main St, City, Country"
+          },
+          "company": {
+            "description": "Company (optional)",
+            "placeholder": "Company name"
+          },
+          "email": {
+            "description": "Email",
+            "placeholder": "john@example.com"
+          },
+          "name": {
+            "description": "Full Name",
+            "placeholder": "John Doe"
+          },
+          "phone": {
+            "description": "Phone",
+            "placeholder": "+1234567890"
+          },
+          "title": {
+            "description": "Job Title (optional)",
+            "placeholder": "Software Developer"
+          },
+          "website": {
+            "description": "Website (optional)",
+            "placeholder": "https://example.com"
+          }
+        },
+        "wifi": {
+          "encryption": {
+            "label": "Encryption Type",
+            "options": {
+              "none": "None",
+              "wep": "WEP",
+              "wpa": "WPA"
+            }
+          },
+          "password": {
+            "description": "Password",
+            "placeholder": "Password"
+          },
+          "ssid": {
+            "description": "Network Name (SSID)",
+            "placeholder": "Network name"
+          }
+        }
+      },
+      "settings": {
+        "bgColor": "Background Color",
+        "correctionLevel": {
+          "helperText": "Higher levels survive more damage but encode less data",
+          "label": "Error Correction Level",
+          "options": {
+            "h": "H (~30%)",
+            "l": "L (~7%)",
+            "m": "M (~15%)",
+            "q": "Q (~25%)"
+          }
+        },
+        "fgColor": "Foreground Color",
+        "size": {
+          "description": "Size in pixels (100-1000)"
+        },
+        "title": "QR Code Settings"
+      },
+      "type": {
+        "label": "Select QR Code Type",
+        "options": {
+          "email": "Email",
+          "phone": "Phone",
+          "sms": "SMS",
+          "text": "Text",
+          "url": "URL",
+          "vcard": "vCard (Contact)",
+          "wifi": "WiFi"
+        },
+        "title": "QR Code Type"
+      }
+    },
+    "longDescription": "Generate QR codes for different data types: URL, Text, Email, Phone, SMS, WiFi, vCard, and more. Customize the size and colors to create the perfect QR code for your needs.",
     "options": {
       "address": "Address",
       "company": "Company (optional)",
@@ -93,6 +214,9 @@
       "text": "Enter the text",
       "url": "Enter the URL",
       "website": "Website (optional)"
+    },
+    "result": {
+      "title": "Generated QR code"
     },
     "resultOutput": "Generated QR code",
     "shortDescription": "Create customized QR codes for various data formats.",
@@ -132,47 +256,89 @@
   },
   "rotate": {
     "description": "Rotate an image by a specified angle.",
+    "inputTitle": "Input Images",
+    "options": {
+      "angle": "Angle",
+      "customDesc": "Rotate by a custom angle in degrees.",
+      "customTitle": "Custom Angle",
+      "method": "Rotation Method",
+      "presetDesc": "Rotate by a specific angle in degrees.",
+      "presetTitle": "Preset Angle"
+    },
+    "resultTitle": "Rotated images",
     "shortDescription": "Rotate an image easily.",
     "title": "Rotate Image"
   },
   "split": {
-    "title": "Split Image into Pages",
-    "shortDescription": "Split a large image into multiple pages (PDF).",
     "description": "Split a map or large image into pages matching the selected paper format and padding. Specify pixels per printing square and square count to scale the image correctly.",
     "inputTitle": "Input image",
-    "resultTitle": "Split PDF",
     "loadingText": "Loading... This may take a moment.",
     "pageParameters": {
-      "title": "Page parameters",
-      "selectPageFormat": "Select page format",
       "padding": {
-        "label": "Padding",
-        "description": "Padding around the map on each page (in selected units)"
-      }
+        "description": "Padding around the map on each page (in selected units)",
+        "label": "Padding"
+      },
+      "selectPageFormat": "Select page format",
+      "title": "Page parameters"
     },
+    "resultTitle": "Split PDF",
     "scaleParameters": {
-      "title": "Scale parameters",
       "pxPerSquareQuantity": {
-        "label": "Pixels per squares quantity",
-        "description": "How many pixels correspond to the specified number of squares on the original image (horizontal or vertical)"
+        "description": "How many pixels correspond to the specified number of squares on the original image (horizontal or vertical)",
+        "label": "Pixels per squares quantity"
       },
       "squareQuantity": {
-        "label": "Squares quantity",
-        "description": "Number of play squares across (horizontal or vertical) used for scaling"
+        "description": "Number of play squares across (horizontal or vertical) used for scaling",
+        "label": "Squares quantity"
       },
+      "title": "Scale parameters",
       "unitsPerOneSquare": {
-        "label": "Units per square",
-        "description": "Physical size of one square in the selected units"
+        "description": "Physical size of one square in the selected units",
+        "label": "Units per square"
       }
     },
+    "shortDescription": "Split a large image into multiple pages (PDF).",
+    "title": "Split Image into Pages",
     "units": {
-      "title": "Units",
-      "select": "Select measurement units",
       "options": {
-        "pt": "Points (pt)",
+        "in": "Inches (in)",
         "mm": "Millimeters (mm)",
-        "in": "Inches (in)"
-      }
+        "pt": "Points (pt)"
+      },
+      "select": "Select measurement units",
+      "title": "Units"
+    }
+  },
+  "watermark": {
+    "description": "Add text watermarks to one or more images using each filename or custom text.",
+    "failedToProcess": "Failed to watermark one or more images. Please try again.",
+    "inputTitle": "Input Images",
+    "options": {
+      "color": "Watermark color.",
+      "customStringWatermarkDesc": "Apply the same custom text to every image.",
+      "customStringWatermarkTitle": "Use Custom Watermark",
+      "filenameWatermarkDesc": "Use each image's filename as the watermark.",
+      "filenameWatermarkTitle": "Use Filename",
+      "fontSize": "Font size.",
+      "opacity": "Watermark transparency.",
+      "position": {
+        "bottomLeft": "Bottom Left",
+        "bottomRight": "Bottom Right",
+        "center": "Center",
+        "topLeft": "Top Left",
+        "topRight": "Top Right"
+      },
+      "positionTitle": "Position",
+      "styleTitle": "Style",
+      "watermark": "Watermark text.",
+      "watermarkTitle": "Source"
+    },
+    "outputTitle": "Watermarked Images",
+    "shortDescription": "Add text watermarks to images",
+    "title": "Watermark Images",
+    "toolInfo": {
+      "longDescription": "An image watermark tool lets you add customizable text watermarks to one or more images. You can automatically use each image's filename as the watermark or apply the same custom text to every image. Watermarks help protect your work, identify ownership, promote your brand, and organize image collections. Customize the font size, opacity, color, and position while preserving the original image quality.",
+      "title": "What is Watermark Images ?"
     }
   }
 }

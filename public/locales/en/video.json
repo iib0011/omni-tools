@@ -29,15 +29,15 @@
     "volumeDesc": "Volume level for the new audio track."
   },
   "changeSpeed": {
-    "defaultMultiplier": "Default multiplier: 2 means 2x faster",
     "description": "Change the playback speed of video files. Speed up or slow down videos while maintaining audio synchronization. Supports various speed multipliers and common video formats.",
     "inputTitle": "Input Video",
-    "newVideoSpeed": "New Video Speed",
+    "options": "Options",
     "resultTitle": "Edited Video",
-    "settingSpeed": "Setting Speed",
     "shortDescription": "Change video playback speed",
+    "speedLabel": "Speed : x",
     "title": "Change Video Speed",
     "toolInfo": {
+      "longDescription": "{{title}} allows you to adjust the playback speed of your videos directly in your browser. Speed up videos for fast-motion effects or slow them down for slow-motion playback while keeping the audio synchronized. Choose a speed multiplier between 0.25x and 4x to customize your video, then process it easily without installing additional software. This tool supports common video formats and preserves the original video quality as much as possible during processing.",
       "title": "What is a {{title}}?"
     }
   },
@@ -83,7 +83,6 @@
   },
   "flip": {
     "description": "Flip video files horizontally or vertically. Mirror videos for special effects or correct orientation issues.",
-    "flippingVideo": "Flipping Video",
     "horizontalLabel": "Horizontal (Mirror)",
     "inputTitle": "Input Video",
     "orientation": "Orientation",
@@ -95,6 +94,12 @@
   "gif": {
     "changeSpeed": {
       "description": "Change the playback speed of GIF animations. Speed up or slow down GIFs while maintaining smooth animation.",
+      "inputTitle": "Input GIF",
+      "options": {
+        "speedLabel": "Speed : x",
+        "title": "Options"
+      },
+      "resultTitle": "output GIF",
       "shortDescription": "Change GIF animation speed",
       "title": "Change GIF Speed"
     },
@@ -112,7 +117,6 @@
   "loop": {
     "description": "Create a looping video by repeating the original video multiple times.",
     "inputTitle": "Input Video",
-    "loopingVideo": "Looping Video",
     "loops": "Loops",
     "numberOfLoops": "Number of Loops",
     "resultTitle": "Looped Video",
@@ -120,12 +124,14 @@
     "title": "Loop Video",
     "toolInfo": {
       "description": "This tool allows you to create a looping video by repeating the original video multiple times. You can specify how many times the video should loop.",
-      "title": "What is a {{title}}?"
+      "title": "What is {{title}}?"
     }
   },
   "mergeVideo": {
     "description": "Combine multiple video files into one continuous video.",
+    "inputTitle": "Input Videos",
     "longDescription": "This tool allows you to merge or append multiple video files into a single continuous video. Simply upload your video files, arrange them in the desired order, and merge them into one file for easy sharing or editing.",
+    "resultTitle": "Merged Video",
     "shortDescription": "Append and merge videos easily.",
     "title": "Merge videos"
   },
@@ -136,7 +142,6 @@
     "description": "Rotate video files by 90, 180, or 270 degrees. Correct video orientation or create special effects with precise rotation control.",
     "inputTitle": "Input Video",
     "resultTitle": "Rotated Video",
-    "rotatingVideo": "Rotating Video",
     "rotation": "Rotation",
     "shortDescription": "Rotate video by specified degrees",
     "title": "Rotate Video"
@@ -150,10 +155,5 @@
     "startTime": "Start Time",
     "timestamps": "Timestamps",
     "title": "Trim Video"
-  },
-  "videoToGif": {
-    "description": "Convert video files to animated GIF format. Extract specific time ranges and create shareable animated images.",
-    "shortDescription": "Convert video to animated GIF",
-    "title": "Video to GIF"
   }
 }

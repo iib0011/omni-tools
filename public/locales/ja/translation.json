@@ -95,8 +95,8 @@
       "trimVideo": "ビデオをトリミングする"
     },
     "search": {
-      "placeholder": "すべてのツールを検索",
-      "noResult": "結果が見つかりません。検索条件またはフィルター条件を調整してみてください"
+      "noResult": "結果が見つかりません。検索条件またはフィルター条件を調整してみてください",
+      "placeholder": "すべてのツールを検索"
     },
     "title": "物事を素早く終わらせる"
   },
@@ -229,9 +229,9 @@
     "result": "結果"
   },
   "toolMultipleInput": {
+    "deleteFile": "ファイルを削除",
     "inputTitle": "{{type}}を入力",
-    "noFilesSelected": "ファイルが選択されていません",
-    "deleteFile": "ファイルを削除"
+    "noFilesSelected": "ファイルが選択されていません"
   },
   "toolOptions": {
     "title": "ツールオプション"

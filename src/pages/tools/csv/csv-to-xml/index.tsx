@@ -8,14 +8,7 @@ import { ToolComponentProps } from '@tools/defineTool';
 import { Box } from '@mui/material';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
-
-type InitialValuesType = {
-  delimiter: string;
-  quote: string;
-  comment: string;
-  useHeaders: boolean;
-  skipEmptyLines: boolean;
-};
+import { InitialValuesType } from './types';
 
 const initialValues: InitialValuesType = {
   delimiter: ',',
