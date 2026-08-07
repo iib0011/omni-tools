@@ -1,0 +1,119 @@
+{
+  "compressPdf": {
+    "compressedFileSize": "Rozmiar pliku po kompresji",
+    "compressingPdf": "Kompresowanie PDF...",
+    "compressionLevel": "Poziom kompresji",
+    "compressionSettings": "Ustawienia kompresji",
+    "description": "Zmniejsz rozmiar pliku PDF przy zachowaniu jakości używając Ghostscript",
+    "errorCompressingPdf": "Nie udało się skompresować PDF: {{error}}",
+    "errorReadingPdf": "Nie udało się odczytać pliku PDF. Upewnij się, że jest to prawidłowy plik PDF.",
+    "fileSize": "Oryginalny rozmiar pliku",
+    "highCompression": "Wysoka kompresja",
+    "highCompressionDescription": "Maksymalna redukcja rozmiaru pliku z pewną utratą jakości",
+    "inputTitle": "Wejściowy PDF",
+    "longDescription": "Kompresuj pliki PDF bezpiecznie w przeglądarce używając Ghostscript. Twoje pliki nigdy nie opuszczają urządzenia, zapewniając pełną prywatność przy jednoczesnym zmniejszeniu rozmiaru plików do wysyłania e-mailem, przesyłania na strony internetowe lub oszczędzania miejsca. Zasilane technologią WebAssembly.",
+    "lowCompression": "Niska kompresja",
+    "lowCompressionDescription": "Nieznaczna redukcja rozmiaru pliku przy minimalnej utracie jakości",
+    "mediumCompression": "Średnia kompresja",
+    "mediumCompressionDescription": "Równowaga między rozmiarem pliku a jakością",
+    "pages": "Liczba stron",
+    "resultTitle": "Skompresowany PDF",
+    "shortDescription": "Kompresuj pliki PDF bezpiecznie w przeglądarce",
+    "title": "Kompresuj PDF"
+  },
+  "editor": {
+    "description": "Zaawansowany edytor PDF z możliwością adnotacji, wypełniania formularzy, zakreślania i eksportu. Edytuj pliki PDF bezpośrednio w przeglądarce za pomocą profesjonalnych narzędzi, w tym wstawiania tekstu, rysowania, zakreślania, podpisywania i wypełniania formularzy.",
+    "shortDescription": "Edytuj PDF za pomocą zaawansowanych narzędzi do adnotacji i podpisywania",
+    "title": "Edytor PDF"
+  },
+  "merge": {
+    "inputTitle": "Wejściowy PDF",
+    "loadingText": "Wyodrębnianie stron",
+    "resultTitle": "Połączony plik PDF",
+    "toolInfo": {
+      "description": "To narzędzie pozwala połączyć wiele plików PDF w jeden dokument. Aby skorzystać z narzędzia, po prostu prześlij pliki PDF, które chcesz połączyć. Narzędzie połączy wszystkie strony z plików wejściowych w jeden dokument PDF.",
+      "title": "Jak używać narzędzia do łączenia PDF?"
+    }
+  },
+  "mergePdf": {
+    "description": "Połącz wiele plików PDF w jeden dokument.",
+    "inputTitle": "Wejściowe pliki PDF",
+    "mergingPdfs": "Łączenie PDF",
+    "pdfOptions": "Opcje PDF",
+    "resultTitle": "Połączony PDF",
+    "shortDescription": "Połącz wiele plików PDF w jeden dokument",
+    "sortByFileName": "Sortuj według nazwy pliku",
+    "sortByFileNameDescription": "Sortuj PDF-y alfabetycznie według nazwy pliku",
+    "sortByUploadOrder": "Sortuj według kolejności przesyłania",
+    "sortByUploadOrderDescription": "Zachowaj PDF-y w kolejności ich przesłania",
+    "title": "Połącz PDF",
+    "toolInfo": {
+      "description": "To narzędzie pozwala połączyć wiele plików PDF w jeden dokument. Możesz wybrać sposób sortowania plików PDF, a narzędzie połączy je w określonej kolejności.",
+      "title": "Połącz pliki PDF"
+    }
+  },
+  "pdfToEpub": {
+    "description": "Przekształć dokumenty PDF w pliki EPUB dla lepszej kompatybilności z czytnikami e-booków.",
+    "shortDescription": "Konwertuj pliki PDF na format EPUB",
+    "title": "PDF na EPUB"
+  },
+  "pdfToPng": {
+    "description": "Przekształć dokumenty PDF w panele PNG.",
+    "longDescription": "Prześlij plik PDF i przekonwertuj każdą stronę na wysokiej jakości obraz PNG bezpośrednio w przeglądarce. To narzędzie jest idealne do wyodrębniania treści wizualnych lub udostępniania poszczególnych stron. Żadne dane nie są przesyłane — wszystko działa lokalnie.",
+    "shortDescription": "Konwertuj PDF na obrazy PNG",
+    "title": "PDF na PNG"
+  },
+  "convertToPdf": {
+    "title": "Obrazy na PDF",
+    "description": "Konwertuj różne formaty obrazów (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) na PDF, z opcjami skalowania obrazu i wyboru orientacji strony.",
+    "shortDescription": "Konwertuj obrazy na PDF z kontrolą skali i orientacji"
+  },
+  "protectPdf": {
+    "description": "Dodaj hasło do swoich plików PDF bezpiecznie w przeglądarce",
+    "shortDescription": "Zabezpiecz pliki PDF hasłem",
+    "title": "Zabezpiecz PDF"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "Wszystkie {{count}} strony zostaną obrócone",
+    "angleOptions": {
+      "clockwise90": "90° Zgodnie z ruchem wskazówek zegara",
+      "counterClockwise270": "270° (90° Przeciwnie do ruchu wskazówek zegara)",
+      "upsideDown180": "180° (Do góry nogami)"
+    },
+    "applyToAllPages": "Zastosuj do wszystkich stron",
+    "description": "Obróć strony w dokumencie PDF.",
+    "inputTitle": "Wejściowy PDF",
+    "longDescription": "Zmień orientację stron PDF, obracając je o 90, 180 lub 270 stopni. Przydatne do naprawiania nieprawidłowo zeskanowanych dokumentów lub przygotowania plików PDF do druku.",
+    "pageRangesDescription": "Wprowadź numery stron lub zakresy oddzielone przecinkami (np. 1,3,5-7)",
+    "pageRangesPlaceholder": "np. 1,5-8",
+    "pagesWillBeRotated": "{{count}} strona(y) zostanie obrócona",
+    "pdfPageCount": "PDF ma {{count}} stron(y)",
+    "resultTitle": "Obrócony PDF",
+    "rotatingPages": "Obracanie stron",
+    "rotationAngle": "Kąt obrotu",
+    "rotationSettings": "Ustawienia obrotu",
+    "shortDescription": "Obróć strony w dokumencie PDF",
+    "title": "Obróć PDF",
+    "toolInfo": {
+      "description": "To narzędzie pozwala na obracanie stron w dokumencie PDF. Możesz obrócić wszystkie strony lub określić poszczególne strony do obrotu. Wybierz kąt obrotu: 90° zgodnie z ruchem wskazówek zegara, 180° (do góry nogami) lub 270° (90° przeciwnie do ruchu wskazówek zegara). Aby obrócić określone strony, odznacz \"Zastosuj do wszystkich stron\" i wprowadź numery stron lub zakresy oddzielone przecinkami (np. 1,3,5-7).",
+      "title": "Jak używać narzędzia Obróć PDF"
+    }
+  },
+  "splitPdf": {
+    "description": "Wyodrębnij określone strony z dokumentu PDF.",
+    "extractingPages": "Wyodrębnianie stron",
+    "inputTitle": "Wejściowy PDF",
+    "pageExtractionPreview": "{{count}} strona(y) zostanie wyodrębniona",
+    "pageRangesDescription": "Wprowadź numery stron lub zakresy oddzielone przecinkami (np. 1,3,5-7)",
+    "pageRangesPlaceholder": "np. 1,5-8",
+    "pageSelection": "Wybór stron",
+    "pdfPageCount": "PDF ma {{count}} stron(y)",
+    "resultTitle": "Wyodrębniony PDF",
+    "shortDescription": "Wyodrębnij określone strony z pliku PDF",
+    "title": "Podziel PDF",
+    "toolInfo": {
+      "description": "To narzędzie pozwala na wyodrębnienie określonych stron z dokumentu PDF. Możesz określić pojedyncze strony lub zakresy stron do wyodrębnienia.",
+      "title": "Podziel PDF"
+    }
+  }
+}
