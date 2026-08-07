@@ -102,6 +102,16 @@
       "resultTitle": "output GIF",
       "shortDescription": "Change GIF animation speed",
       "title": "Change GIF Speed"
+    },
+    "imagesToGif": {
+      "title": "Images to GIF",
+      "description": "Create animated GIFs from multiple images. Arrange your frames, adjust the timing, and generate a smooth animation in just a few clicks.",
+      "shortDescription": "Convert multiple images into an animated GIF",
+      "inputTitle": "Input Images",
+      "resultTitle": "Animated GIF",
+      "loadingText": "Creating GIF...",
+      "frameOptions": "Frame Options",
+      "frameDelayDescription": "How long each frame is displayed, in milliseconds (e.g. 500 = 0.5 s per frame)"
     }
   },
   "loop": {
