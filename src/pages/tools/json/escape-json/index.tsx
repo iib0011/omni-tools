@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
+import { Box } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import ToolContent from '@components/ToolContent';
 import ToolCodeInput from '@components/input/ToolCodeInput';
 import ToolTextResult from '@components/result/ToolTextResult';
+import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import { escapeJson } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
-import { Box } from '@mui/material';
-import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 
 const initialValues = {
   wrapInQuotesFlag: false
@@ -18,16 +19,18 @@ type InitialValuesType = typeof initialValues;
 const exampleCards: CardExampleType<InitialValuesType>[] = [
   {
     title: 'Escape a Simple JSON Object',
-    description: `In this example, we escape all quotes (") around the keys and values in a simple JSON object. This ensures that the JSON data is interpreted correctly if it's used in another JSON object or assigned to a variable as a string.`,
+    description:
+      'In this example, we escape all double quotes in a JSON object. This makes the JSON safe to use as a string inside another JSON object or in source code.',
     sampleText: `{"country": "Spain", "capital": "Madrid"}`,
-    sampleResult: `{{\\"country\\": \\"Spain\\", \\"capital\\": \\"Madrid\\"}`,
+    sampleResult: `{\\"country\\": \\"Spain\\", \\"capital\\": \\"Madrid\\"}`,
     sampleOptions: {
       wrapInQuotesFlag: false
     }
   },
   {
     title: 'Escape a Complex JSON Object',
-    description: `In this example, we escape a more complex JSON object with nested elements containing data about the Margherita pizza recipe. We escape all quotes within the object as well as convert all line breaks into special "\n" characters. Additionally, we wrap the entire output in double quotes by enabling the "Wrap Output in Quotes" option.`,
+    description:
+      'In this example, we escape quotes and line breaks from a formatted JSON object. The output is wrapped in double quotes to create a JSON string value.',
     sampleText: `{
   "name": "Pizza Margherita",
   "ingredients": [
@@ -38,14 +41,15 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   "price": 12.50,
   "vegetarian": true
 }`,
-    sampleResult: `"{\\n  \\"name\\": \\"Pizza Margherita\\",\\n  \\"ingredients\\": [\\n\\"tomato sauce\\",\\n    \\"mozzarella cheese\\",\\n    \\"fresh basil\\"\\n  ],\\n  \\"price\\": 12.50,\\n  \\"vegetarian\\": true\\n}"`,
+    sampleResult: `"{\\n  \\"name\\": \\"Pizza Margherita\\",\\n  \\"ingredients\\": [\\n    \\"tomato sauce\\",\\n    \\"mozzarella cheese\\",\\n    \\"fresh basil\\"\\n  ],\\n  \\"price\\": 12.50,\\n  \\"vegetarian\\": true\\n}"`,
     sampleOptions: {
       wrapInQuotesFlag: true
     }
   },
   {
-    title: 'Escape a JSON Array of Numbers',
-    description: `This example showcases that escaping isn't necessary for JSON arrays containing only numbers. Since numbers themselves don't hold special meaning in JSON, the tool doesn't modify the input and the output remains the same as the original JSON array.`,
+    title: 'Escape a JSON Array',
+    description:
+      'This example shows that JSON arrays containing only numbers do not require escaping because they do not contain characters that need special handling.',
     sampleText: `[1, 2, 3]`,
     sampleResult: `[1, 2, 3]`,
     sampleOptions: {
@@ -54,10 +58,8 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
   }
 ];
 
-export default function EscapeJsonTool({
-  title,
-  longDescription
-}: ToolComponentProps) {
+export default function EscapeJsonTool({ title }: ToolComponentProps) {
+  const { t } = useTranslation('json');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
 
@@ -70,14 +72,14 @@ export default function EscapeJsonTool({
     updateField
   }) => [
     {
-      title: 'Quote Output',
+      title: t('escapeJson.wrapOutputTitle'),
       component: (
         <Box>
           <CheckboxWithDesc
             onChange={(val) => updateField('wrapInQuotesFlag', val)}
             checked={values.wrapInQuotesFlag}
-            title={'Wrap Output In Quotes'}
-            description={'Add double quotes around the output JSON data.'}
+            title={t('escapeJson.wrapOutputTitle')}
+            description={t('escapeJson.wrapOutputDescription')}
           />
         </Box>
       )
@@ -89,7 +91,7 @@ export default function EscapeJsonTool({
       title={title}
       inputComponent={
         <ToolCodeInput
-          title="Input JSON"
+          title={t('escapeJson.inputTitle')}
           value={input}
           onChange={setInput}
           language="json"
@@ -97,17 +99,17 @@ export default function EscapeJsonTool({
       }
       resultComponent={
         <ToolTextResult
-          title="Escaped JSON"
+          title={t('escapeJson.resultTitle')}
           value={result}
           keepSpecialCharacters
-          extension={'json'}
+          extension="txt"
         />
       }
       initialValues={initialValues}
       getGroups={getGroups}
       toolInfo={{
-        title: 'What is a JSON Escaper?',
-        description: longDescription
+        title: t('escapeJson.title'),
+        description: t('escapeJson.longDescription')
       }}
       exampleCards={exampleCards}
       input={input}

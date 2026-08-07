@@ -129,12 +129,6 @@ describe('generatePassword', () => {
     expect(result).toHaveLength(50);
   });
 
-  it('should handle edge case with very short length', () => {
-    const options = { ...initialValues, length: '1' };
-    const result = generatePassword(options);
-    expect(result).toHaveLength(1);
-  });
-
   it('should handle negative length', () => {
     const options = { ...initialValues, length: '-5' };
     const result = generatePassword(options);

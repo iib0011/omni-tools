@@ -8,17 +8,17 @@ import { GetGroupsType } from '@components/options/ToolOptions';
 import { debounce } from 'lodash';
 import ToolVideoInput from '@components/input/ToolVideoInput';
 import { rotateVideo } from './service';
-import { RotationAngle } from '../../pdf/rotate-pdf/types';
 import SimpleRadio from '@components/options/SimpleRadio';
 import { useTranslation } from 'react-i18next';
+import { InitialValuesType, RotationAngle } from './types';
 
-export const initialValues = {
+export const initialValues: InitialValuesType = {
   rotation: 90
 };
 
 export const validationSchema = Yup.object({
   rotation: Yup.number()
-    .oneOf([0, 90, 180, 270], 'Rotation must be 0, 90, 180, or 270 degrees')
+    .oneOf([90, 180, 270], 'Rotation must be 90, 180, or 270 degrees')
     .required('Rotation is required')
 });
 
@@ -34,14 +34,14 @@ export default function RotateVideo({ title }: ToolComponentProps) {
   const [loading, setLoading] = useState(false);
 
   const compute = async (
-    optionsValues: typeof initialValues,
+    optionsValues: InitialValuesType,
     input: File | null
   ) => {
     if (!input) return;
     setLoading(true);
 
     try {
-      const rotatedFile = await rotateVideo(input, optionsValues.rotation);
+      const rotatedFile = await rotateVideo(input, optionsValues);
       setResult(rotatedFile);
     } catch (error) {
       console.error('Error rotating video:', error);
@@ -52,7 +52,7 @@ export default function RotateVideo({ title }: ToolComponentProps) {
 
   const debouncedCompute = useCallback(debounce(compute, 1000), []);
 
-  const getGroups: GetGroupsType<typeof initialValues> = ({
+  const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
     updateField
   }) => [
@@ -87,20 +87,12 @@ export default function RotateVideo({ title }: ToolComponentProps) {
         />
       }
       resultComponent={
-        loading ? (
-          <ToolFileResult
-            title={t('rotate.rotatingVideo')}
-            value={null}
-            loading={true}
-            extension={''}
-          />
-        ) : (
-          <ToolFileResult
-            title={t('rotate.resultTitle')}
-            value={result}
-            extension={'mp4'}
-          />
-        )
+        <ToolFileResult
+          title={t('rotate.resultTitle')}
+          loading={loading}
+          value={result}
+          extension={'mp4'}
+        />
       }
       initialValues={initialValues}
       getGroups={getGroups}

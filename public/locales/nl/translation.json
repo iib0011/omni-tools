@@ -95,8 +95,8 @@
       "trimVideo": "Video bijsnijden"
     },
     "search": {
-      "placeholder": "Alle tools doorzoeken",
-      "noResult": "Geen resultaten gevonden, probeer uw zoekopdracht of filtercriteria aan te passen"
+      "noResult": "Geen resultaten gevonden, probeer uw zoekopdracht of filtercriteria aan te passen",
+      "placeholder": "Alle tools doorzoeken"
     },
     "title": "Krijg dingen snel gedaan met"
   },
@@ -229,9 +229,9 @@
     "result": "Resultaat"
   },
   "toolMultipleInput": {
+    "deleteFile": "Bestand verwijderen",
     "inputTitle": "Invoer {{type}}",
-    "noFilesSelected": "Geen bestanden geselecteerd",
-    "deleteFile": "Bestand verwijderen"
+    "noFilesSelected": "Geen bestanden geselecteerd"
   },
   "toolOptions": {
     "title": "Gereedschapsopties"

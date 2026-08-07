@@ -1,4 +1,5 @@
-import { order, InitialValuesType } from './types';
+import { order, InitialValuesType, SortJsonResult } from './types';
+import { parseJsonInput, JsonFormat } from '@utils/json';
 
 const sortObject = (
   obj: Record<string, unknown>,
@@ -13,37 +14,50 @@ const sortObject = (
   return result;
 };
 
-export const sortJson = (text: string, options: InitialValuesType): string => {
-  const { mode, order, key } = options;
-  let parsed;
-  try {
-    parsed = JSON.parse(text);
-  } catch (e) {
-    throw new Error('Invalid JSON string');
+/**
+ * Serializes the final value back to a string, matching the shape of the
+ * original input: NDJSON (one compact JSON value per line) for 'jsonl'
+ * input, pretty-printed JSON otherwise.
+ */
+const serialize = (value: unknown, format: JsonFormat): string => {
+  if (format === 'jsonl' && Array.isArray(value)) {
+    return value.map((item) => JSON.stringify(item)).join('\n');
   }
+  return JSON.stringify(value, null, 2);
+};
+
+export const sortJson = (
+  text: string,
+  options: InitialValuesType
+): SortJsonResult => {
+  const { mode, order, key } = options;
+
+  const { data, format } = parseJsonInput(text);
 
   if (mode === 'key') {
-    if (Array.isArray(parsed)) {
-      if (parsed.length === 0) throw new Error('Array is empty');
-      return JSON.stringify(
-        parsed.map((item) => sortObject(item, order)),
-        null,
-        2
+    if (Array.isArray(data)) {
+      if (data.length === 0) throw new Error('Array is empty');
+      const sortedArray = data.map((item) =>
+        sortObject(item as Record<string, unknown>, order)
       );
+      return { result: serialize(sortedArray, format), format };
     }
-    if (typeof parsed !== 'object' || parsed === null) {
+    if (typeof data !== 'object' || data === null) {
       throw new Error('Input must be a JSON object or array of objects');
     }
-    return JSON.stringify(sortObject(parsed, order), null, 2);
+    return { result: serialize(sortObject(data, order), format), format };
   }
 
   // value mode
-  if (!Array.isArray(parsed)) throw new Error('Input must be a JSON array');
-  if (parsed.length === 0) throw new Error('Array is empty');
+  if (!Array.isArray(data)) throw new Error('Input must be a JSON array');
+  if (data.length === 0) throw new Error('Array is empty');
 
-  const sorted = [...parsed].sort((a, b) => {
-    const aVal = a[key];
-    const bVal = b[key];
+  const sorted = [...data].sort((a, b) => {
+    const aRow = a as Record<string, unknown>;
+    const bRow = b as Record<string, unknown>;
+    const aVal = aRow[key];
+    const bVal = bRow[key];
+    if (aVal == null && bVal == null) return 0;
     if (aVal == null) return 1;
     if (bVal == null) return -1;
     if (typeof aVal === 'object' && typeof bVal === 'object') {
@@ -58,5 +72,5 @@ export const sortJson = (text: string, options: InitialValuesType): string => {
     return 0;
   });
 
-  return JSON.stringify(sorted, null, 2);
+  return { result: serialize(sorted, format), format };
 };

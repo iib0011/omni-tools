@@ -1,43 +1,41 @@
-import { FFmpeg } from '@ffmpeg/ffmpeg';
+import { runFFmpegTask } from 'lib/ffmpeg';
 import { fetchFile } from '@ffmpeg/util';
 import { FlipOrientation } from './types';
 
-const ffmpeg = new FFmpeg();
+const flipMap: Record<FlipOrientation, string> = {
+  horizontal: 'hflip',
+  vertical: 'vflip'
+};
 
 export async function flipVideo(
   input: File,
   orientation: FlipOrientation
 ): Promise<File> {
-  if (!ffmpeg.loaded) {
-    await ffmpeg.load({
-      wasmURL:
-        'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
+  return runFFmpegTask(async ({ ffmpeg, tempFile }) => {
+    const inputName = tempFile('.mp4');
+    const outputName = tempFile('.mp4');
+    await ffmpeg.writeFile(inputName, await fetchFile(input));
+
+    const flipFilter = flipMap[orientation];
+
+    const args = ['-i', inputName];
+    if (flipFilter) {
+      args.push('-vf', flipFilter);
+    }
+
+    args.push('-c:v', 'libx264', '-preset', 'ultrafast', outputName);
+
+    await ffmpeg.exec(args);
+
+    const flippedData = await ffmpeg.readFile(outputName);
+
+    const blob = new Blob([new Uint8Array(flippedData as Uint8Array)], {
+      type: 'video/mp4'
     });
-  }
-
-  const inputName = 'input.mp4';
-  const outputName = 'output.mp4';
-  await ffmpeg.writeFile(inputName, await fetchFile(input));
-
-  const flipMap: Record<FlipOrientation, string> = {
-    horizontal: 'hflip',
-    vertical: 'vflip'
-  };
-  const flipFilter = flipMap[orientation];
-
-  const args = ['-i', inputName];
-  if (flipFilter) {
-    args.push('-vf', flipFilter);
-  }
-
-  args.push('-c:v', 'libx264', '-preset', 'ultrafast', outputName);
-
-  await ffmpeg.exec(args);
-
-  const flippedData = await ffmpeg.readFile(outputName);
-  return new File(
-    [new Blob([flippedData as any], { type: 'video/mp4' })],
-    `${input.name.replace(/\.[^/.]+$/, '')}_flipped.mp4`,
-    { type: 'video/mp4' }
-  );
+    return new File(
+      [blob],
+      `${input.name.replace(/\.[^/.]+$/, '')}_flipped.mp4`,
+      { type: 'video/mp4' }
+    );
+  });
 }

@@ -1,11 +1,8 @@
 {
   "changeSpeed": {
-    "defaultMultiplier": "Multiplicador padrão: 2 significa 2x mais rápido",
     "description": "Altere a velocidade de reprodução de arquivos de vídeo. Acelere ou desacelere vídeos, mantendo a sincronização do áudio. Suporta vários multiplicadores de velocidade e formatos de vídeo comuns.",
     "inputTitle": "Entrada de vídeo",
-    "newVideoSpeed": "Nova velocidade de vídeo",
     "resultTitle": "Vídeo editado",
-    "settingSpeed": "Definindo a velocidade",
     "shortDescription": "Alterar a velocidade de reprodução do vídeo",
     "title": "Alterar velocidade do vídeo",
     "toolInfo": {
@@ -54,7 +51,6 @@
   },
   "flip": {
     "description": "Inverta arquivos de vídeo horizontal ou verticalmente. Espelhe vídeos para obter efeitos especiais ou corrigir problemas de orientação.",
-    "flippingVideo": "Invertendo o vídeo",
     "horizontalLabel": "Horizontal (Espelho)",
     "inputTitle": "Entrada de vídeo",
     "orientation": "Orientação",
@@ -73,7 +69,6 @@
   "loop": {
     "description": "Crie um vídeo em loop repetindo o vídeo original várias vezes.",
     "inputTitle": "Entrada de vídeo",
-    "loopingVideo": "Vídeo em loop",
     "loops": "Laços",
     "numberOfLoops": "Número de Loops",
     "resultTitle": "Vídeo em loop",
@@ -97,7 +92,6 @@
     "description": "Gire arquivos de vídeo em 90, 180 ou 270 graus. Corrija a orientação do vídeo ou crie efeitos especiais com controle de rotação preciso.",
     "inputTitle": "Entrada de vídeo",
     "resultTitle": "Vídeo girado",
-    "rotatingVideo": "Vídeo rotativo",
     "rotation": "Rotação",
     "shortDescription": "Girar o vídeo em graus especificados",
     "title": "Girar vídeo"
@@ -111,10 +105,5 @@
     "startTime": "Hora de início",
     "timestamps": "Carimbos de data e hora",
     "title": "Cortar vídeo"
-  },
-  "videoToGif": {
-    "description": "Converta arquivos de vídeo para o formato GIF animado. Extraia intervalos de tempo específicos e crie imagens animadas compartilháveis.",
-    "shortDescription": "Converter vídeo em GIF animado",
-    "title": "Vídeo para GIF"
   }
 }
