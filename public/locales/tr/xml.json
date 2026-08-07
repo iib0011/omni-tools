@@ -1,0 +1,38 @@
+{
+  "xmlBeautifier": {
+    "description": "XML'i uygun girinti ve boşluklarla biçimlendirin.",
+    "indentation": "Girinti",
+    "inputTitle": "Giriş XML",
+    "resultTitle": "Güzelleştirilmiş XML",
+    "shortDescription": "XML kodunu biçimlendirin ve güzelleştirin",
+    "title": "XML Güzelleştirici",
+    "toolInfo": {
+      "description": "Bu araç, XML verilerini uygun girinti ve boşluklarla biçimlendirerek daha okunabilir ve üzerinde çalışması daha kolay hale getirmenizi sağlar.",
+      "title": "XML Güzelleştirici"
+    },
+    "useSpaces": "Boşluk Kullan",
+    "useSpacesDescription": "Çıktıyı boşluklarla girintile",
+    "useTabs": "Sekme Kullan",
+    "useTabsDescription": "Çıktıyı sekmelerle girintile."
+  },
+  "xmlValidator": {
+    "description": "XML sözdizimini ve yapısını doğrulayın.",
+    "placeholder": "XML'i buraya yapıştırın veya içe aktarın...",
+    "shortDescription": "XML kodunu hatalara karşı doğrulayın",
+    "title": "XML Doğrulayıcı",
+    "toolInfo": {
+      "description": "Bu araç, XML sözdizimini ve yapısını doğrulamanızı sağlar. XML'in düzgün biçimlendirilip biçimlendirilmediğini kontrol eder ve bulunan sorunlar için ayrıntılı hata mesajları sunar.",
+      "title": "XML Doğrulayıcı"
+    }
+  },
+  "xmlViewer": {
+    "description": "XML yapısını ağaç formatında görüntüleyin ve keşfedin.",
+    "inputTitle": "Giriş XML",
+    "resultTitle": "XML Ağaç Görünümü",
+    "title": "XML Görüntüleyici",
+    "toolInfo": {
+      "description": "Bu araç, XML verilerini hiyerarşik bir ağaç formatında görüntülemenizi sağlar, böylece XML belgelerinin yapısını keşfetmeyi ve anlamayı kolaylaştırır.",
+      "title": "XML Görüntüleyici"
+    }
+  }
+}

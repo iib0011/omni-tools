@@ -1,0 +1,167 @@
+{
+  "checkLeapYears": {
+    "description": "Bir yılın artık yıl olup olmadığını kontrol edin ve artık yıl bilgisi alın.",
+    "exampleDescription": "Arkadaşlarımızdan biri 29 Şubat'ta bir artık yılda doğdu ve bunun sonucunda yalnızca her 4 yılda bir doğum günü kutluyor. Doğum gününün ne zaman olduğunu asla tam olarak hatırlayamadığımız için, yaklaşan artık yılların bir hatırlatma listesini oluşturmak amacıyla programımızı kullanıyoruz. Sonraki doğum günlerinin bir listesini oluşturmak için, girişe 2025'ten 2040'a kadar bir yıl dizisi yükler ve her yılın durumunu alırız. Program bunun artık yıl olduğunu söylerse, 29 Şubat'ta bir doğum günü partisine davet edileceğimizi biliriz.",
+    "exampleTitle": "29 Şubat'taki Doğum Günlerini Bul",
+    "inputTitle": "Giriş yılı",
+    "resultTitle": "Artık yıl sonucu",
+    "shortDescription": "Bir yılın artık yıl olup olmadığını kontrol edin",
+    "title": "Artık Yılları Kontrol Et",
+    "toolInfo": {
+      "description": "Artık yıl, takvim yılını astronomik yılla senkronize tutmak için fazladan bir gün (29 Şubat) içeren bir yıldır. Artık yıllar, 100'e bölünebilen ancak 400'e bölünemeyen yıllar hariç, her 4 yılda bir gelir.",
+      "title": "Artık Yıl Nedir?"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "Saat Adı Ekle",
+    "addHoursNameDescription": "Çıktı değerlerine 'saat' dizesini ekle",
+    "description": "Günleri özelleştirilebilir seçeneklerle saate dönüştürün.",
+    "hoursName": "Saat Adı",
+    "shortDescription": "Günleri saate dönüştürün",
+    "title": "Günleri Saate Dönüştür",
+    "toolInfo": {
+      "description": "Bu araç, günleri saate dönüştürmenizi sağlar. Günleri sayı olarak veya birimlerle girebilirsiniz, araç bunları saate dönüştürür. Ayrıca çıktı değerlerine 'saat' son ekini eklemeyi seçebilirsiniz.",
+      "title": "Günleri Saate Dönüştür"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "Gün Adı Ekle",
+    "addDaysNameDescription": "Çıktı değerlerine 'gün' dizesini ekle",
+    "daysName": "Gün Adı",
+    "description": "Saatleri özelleştirilebilir seçeneklerle güne dönüştürün.",
+    "shortDescription": "Saatleri güne dönüştürün",
+    "title": "Saatleri Güne Dönüştür",
+    "toolInfo": {
+      "description": "Bu araç, saatleri güne dönüştürmenizi sağlar. Saatleri sayı olarak veya birimlerle girebilirsiniz, araç bunları güne dönüştürür. Ayrıca çıktı değerlerine 'gün' son ekini eklemeyi seçebilirsiniz.",
+      "title": "Saatleri Güne Dönüştür"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "Dolgu Ekle",
+    "addPaddingDescription": "Saat, dakika ve saniyelere sıfır dolgu ekle.",
+    "description": "Saniyeleri okunabilir bir zaman formatına (saat:dakika:saniye) dönüştürün. Biçimlendirilmiş zamanı almak için saniye sayısını girin.",
+    "shortDescription": "Saniyeleri zaman formatına dönüştürün",
+    "timePadding": "Zaman Dolgusu",
+    "title": "Saniyeleri Zamana Dönüştür",
+    "toolInfo": {
+      "title": "{{title}} nedir?"
+    }
+  },
+  "convertTimeToDecimal": {
+    "description": "Biçimlendirilmiş bir zaman süresini (SS:DD:ss) ondalık saat değerine dönüştürün.",
+    "longDescription": "Biçimlendirilmiş bir zaman dizesini (SS:DD:ss veya SS:DD) ondalık saat eşdeğerine dönüştürün. Saatler herhangi bir pozitif sayı olabilir, dakikalar ve saniyeler ise 0-59 arası değerler kabul eder ve tek veya çift haneli olabilir (örn. '12:5' veya '12:05'). Bu işlev saat, dakika ve saniyeleri yorumlar, ardından toplam süreyi tek bir ondalık değer olarak hesaplar. Üretkenlik takibi, bordro hesaplamaları, zaman bazlı faturalama, veri analizi veya insanların okuyabileceği zamanı kolayca toplanabilen, karşılaştırılabilen veya işlenebilen sayısal bir formata dönüştürmeyi gerektiren her türlü iş akışı için kullanışlıdır. Örneğin, '03:26:00' 3.43 saat olur ve '12:5' 12.08 saat olur.",
+    "shortDescription": "İnsan zamanını ondalık zamana dönüştürün",
+    "title": "Zamanı ondalığa dönüştür"
+  },
+  "convertTimeToSeconds": {
+    "description": "Biçimlendirilmiş zamanı (SS:DD:ss) saniyeye dönüştürün.",
+    "inputTitle": "Giriş zamanı",
+    "resultTitle": "Saniye",
+    "shortDescription": "Zaman formatını saniyeye dönüştürün",
+    "title": "Zamanı Saniyeye Dönüştür",
+    "toolInfo": {
+      "description": "Bu araç, biçimlendirilmiş zaman dizelerini (SS:DD:ss) saniyeye dönüştürmenizi sağlar. Süreleri ve zaman aralıklarını hesaplamak için kullanışlıdır.",
+      "title": "Zamanı Saniyeye Dönüştür"
+    }
+  },
+  "convertUnixToDate": {
+    "addUtcLabel": "'UTC' son eki ekle",
+    "addUtcLabelDescription": "Dönüştürülen tarihin ardına 'UTC' ekle (yalnızca UTC modunda kullanılabilir)",
+    "description": "Unix zaman damgalarını okunabilir tarihlere ve tarihleri tekrar Unix zaman damgalarına dönüştürün.",
+    "shortDescription": "Unix zaman damgalarını ve tarihleri her iki yönde dönüştürün.",
+    "title": "Unix ↔ Tarih Dönüştür",
+    "toolInfo": {
+      "title": "Unix ↔ Tarih Dönüştür",
+      "description": "Bu araç, Unix zaman damgalarını (saniye cinsinden) YYYY-AA-GG SS:DD:ss gibi insanların okuyabileceği tarih formatlarına dönüştürür ve biçimlendirilmiş tarihleri tekrar Unix zaman damgalarına dönüştürür. UTC çıktısı, yerel saat dilimi çıktısı seçebilir veya özel bir UTC ofseti sağlayabilirsiniz (örneğin: YYYY-AA-GG SS:DD:ss +XX:XX). Ofset sağlanmazsa ve yerel saat dilimi seçilmezse, varsayılan olarak UTC (+00:00) kullanılır."
+    },
+    "useLocalTime": "Yerel Saati Kullan",
+    "useUTC": "UTC Kullan",
+    "useLocalTimeDescription": "Dönüştürülen tarihi UTC yerine yerel saat diliminizde görüntüleyin",
+    "tzOptions": "Saat Dilimi Seçenekleri",
+    "optionsTitle": "Dönüştürme Modu",
+    "date-to-unix": "Tarih → Unix",
+    "unix-to-date": "Unix → Tarih"
+  },
+  "crontabGuru": {
+    "title": "Crontab Guru",
+    "description": "Cron ifadelerini sade bir dille ayrıştırın ve açıklayın. Herhangi bir cron zamanlamasının ne yaptığını anında anlayın, sözdizimini doğrulayın ve birden fazla ifadeyi aynı anda işleyin.",
+    "shortDescription": "Cron ifadelerini sade bir dille ayrıştırın ve açıklayın",
+    "longDescription": "Crontab Guru, karmaşık cron sözdizimini sade, insanların okuyabileceği açıklamalara çeviren bir cron ifadesi ayrıştırıcısı ve doğrulayıcısıdır. Otomatik yedeklemeleri, sistem bakım görevlerini veya CI/CD hatlarını zamanlıyor olun, bu araç işlerinizin tam olarak ne zaman çalışacağını anlamanıza yardımcı olur. Standart 5 alanlı cron ifadelerini destekler, sözdizimini gerçek zamanlı doğrular ve birden fazla ifadeyi aynı anda işler — her satırda bir tane. İngilizce, Fransızca, İspanyolca, Almanca, Japonca, Çince, Portekizce, Felemenkçe ve Rusça olarak kullanılabilir."
+  },
+  "timeBetweenDates": {
+    "description": "İki tarih arasındaki zaman farkını hesaplayın. Gün, saat, dakika ve saniye cinsinden tam süreyi alın.",
+    "endDate": "Bitiş Tarihi",
+    "endDateTime": "Bitiş Tarihi ve Saati",
+    "endTime": "Bitiş Zamanı",
+    "endTimezone": "Bitiş Saat Dilimi",
+    "shortDescription": "İki tarih arasındaki zamanı hesaplayın",
+    "startDate": "Başlangıç Tarihi",
+    "startDateTime": "Başlangıç Tarihi ve Saati",
+    "startTime": "Başlangıç Zamanı",
+    "startTimezone": "Başlangıç Saat Dilimi",
+    "title": "Tarihler Arası Zaman",
+    "toolInfo": {
+      "description": "Farklı saat dilimleri desteğiyle iki tarih ve saat arasındaki tam zaman farkını hesaplayın. Bu araç, zaman farkının çeşitli birimlerde (yıl, ay, gün, saat, dakika ve saniye) ayrıntılı bir dökümünü sunar.",
+      "title": "Tarihler Arası Zaman Hesaplayıcı"
+    }
+  },
+  "truncateClockTime": {
+    "description": "Saniyeleri veya dakikaları kaldırmak için saat zamanını kırpın. Zamanı en yakın saate, dakikaya veya özel aralığa yuvarlayın.",
+    "printDroppedComponents": "Kaldırılan Bileşenleri Yazdır",
+    "shortDescription": "Saat zamanını belirtilen hassasiyete kırpın",
+    "timePadding": "Zaman Dolgusu",
+    "title": "Saat Zamanını Kırp",
+    "toolInfo": {
+      "title": "{{title}} nedir?"
+    },
+    "truncateMinutesAndSeconds": "Dakika ve Saniyeleri Kırp",
+    "truncateMinutesAndSecondsDescription": "Her saat zamanından hem dakika hem de saniye bileşenlerini kaldır.",
+    "truncateOnlySeconds": "Yalnızca Saniyeleri Kırp",
+    "truncateOnlySecondsDescription": "Her saat zamanından saniye bileşenini kaldır.",
+    "truncationSide": "Kırpma Tarafı",
+    "useZeroPadding": "Sıfır Dolgu Kullan",
+    "zeroPaddingDescription": "Tüm zaman bileşenlerini her zaman iki hane genişliğinde yap.",
+    "zeroPrintDescription": "Kaldırılan kısımları sıfır değerleri \"00\" olarak görüntüle.",
+    "zeroPrintTruncatedParts": "Kırpılan Kısımları Sıfırla Yazdır"
+  },
+  "discordTimestamp": {
+    "name": "Discord Zaman Damgası Oluşturucu",
+    "description": "Tarih ve saatleri, her kullanıcının yerel saat dilimine ve diline otomatik olarak uyum sağlayan Discord'un özel zaman damgası formatına dönüştürün",
+    "shortDescription": "Tarihlerden Discord zaman damgaları oluşturun",
+    "inputTitle": "Giriş Tarih-Saatleri",
+    "outputTitle": "Discord Zaman Damgaları",
+    "formats": {
+      "title": "Zaman Damgası Formatı",
+      "description": "Zaman damgasının Discord'da nasıl görüneceğini seçin — bir örnek görmek için her seçeneğin üzerine gelin",
+      "short_time": "Kısa Saat (örn: 14:30)",
+      "long_time": "Uzun Saat (örn: 14:30:00)",
+      "short_date": "Kısa Tarih (örn: 01/01/2025)",
+      "long_date": "Uzun Tarih (örn: 1 Ocak 2025)",
+      "short_datetime": "Kısa Tarih ve Saat (örn: 1 Ocak 2025 14:30)",
+      "long_datetime": "Uzun Tarih ve Saat (örn: Pazartesi, 1 Ocak 2025 14:30)",
+      "relative": "Göreli (örn: 2 saat önce)"
+    },
+    "utc": {
+      "title": "Giriş Seçenekleri",
+      "label": "UTC'yi Zorunlu Kıl",
+      "description": "Giriş tarih-saatlerini UTC olarak ele al. Bunun yerine yerel saat diliminizi kullanmak için devre dışı bırakın"
+    },
+    "toolInfo": {
+      "title": "Discord Zaman Damgası Nedir?",
+      "description": "Discord zaman damgaları, tarih ve saatleri dinamik olarak görüntüleyen özel bir sözdizimidir. Sabit bir zaman göstermek yerine, otomatik olarak her izleyicinin yerel saat dilimine ve diline dönüşürler — böylece herkes kendi konumu için doğru saati görür. Her satıra bir tarih-saat girin, bir format seçin ve sonuçları doğrudan Discord'a yapıştırın. Araç her satırı bağımsız olarak işler — boş satırlar çıktıda korunur, geçersiz satırlar ❌ ile işaretlenir ve geçerli tarih-saatler anında dönüştürülür. Yerel saat diliminizden bağımsız olarak tutarlı sonuçlar sağlamak için UTC modunu etkinleştirin."
+    }
+  },
+  "convertDateToUnix": {
+    "description": "İnsanların okuyabileceği bir tarihi Unix Zaman Damgasına dönüştürün.",
+    "outputOptions": "Çıktı Seçenekleri",
+    "shortDescription": "Tarihi Unix zaman damgasına dönüştürün.",
+    "title": "Tarihi Unix'e Dönüştür",
+    "toolInfo": {
+      "description": "Bu araç, insanların okuyabileceği bir tarih formatını (örn. YYYY-AA-GG SS:DD:ss) bir Unix Zaman Damgasına dönüştürür. Kullanıcı belirli bir UTC ofseti belirtmeyi (örn. YYYY-AA-GG SS:DD:ss +XX:XX) veya yerel saat dilimini kullanmayı seçebilir. Kullanıcı ne bir ofset sağlar ne de yerel saat dilimini kullanmayı seçerse, sonuç +00:00 ofsetiyle verilir. ",
+      "title": "Tarihi Unix'e Dönüştür"
+    },
+    "useLocalTime": "Yerel Saati Kullan",
+    "useLocalTimeDescription": "Giriş saati ve tarihi, tarayıcınızın saat dilimi olarak işlenir. Ek belirtmeler yok sayılır.",
+    "options": "Seçenekler"
+  }
+}

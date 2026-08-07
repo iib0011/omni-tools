@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 export default function ToolTextInput({
   value,
   onChange,
-  title = 'Input text',
+  title,
   placeholder
 }: {
   title?: string;

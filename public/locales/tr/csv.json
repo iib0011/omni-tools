@@ -1,0 +1,125 @@
+{
+  "changeCsvSeparator": {
+    "description": "CSV dosyalarındaki ayırıcıyı/sınırlayıcıyı değiştirin. Virgül, noktalı virgül, sekme veya özel ayırıcılar gibi farklı CSV formatları arasında dönüştürün.",
+    "shortDescription": "CSV dosyası ayırıcısını değiştirin",
+    "title": "CSV Ayırıcısını Değiştir"
+  },
+  "csvRowsToColumns": {
+    "description": "Bu araç, bir CSV (Virgülle Ayrılmış Değerler) dosyasının satırlarını sütunlara dönüştürür. Giriş CSV'sinden yatay satırları tek tek alır, 90 derece döndürür ve virgülle ayrılmış olarak birbiri ardına dikey sütunlar olarak çıktı verir.', longDescription: 'Bu araç, bir CSV (Virgülle Ayrılmış Değerler) dosyasının satırlarını sütunlara dönüştürür. Örneğin, giriş CSV verisinde 6 satır varsa, çıktıda 6 sütun olur ve satırların öğeleri yukarıdan aşağıya doğru düzenlenir. İyi biçimlendirilmiş bir CSV'de her satırdaki değer sayısı aynıdır. Ancak satırlarda eksik alanlar olduğunda program bunları düzeltebilir ve mevcut seçeneklerden birini seçebilirsiniz: eksik verileri boş öğelerle doldurun veya eksik verileri \"missing\", \"?\" ya da \"x\" gibi özel öğelerle değiştirin. Dönüştürme sürecinde araç, CSV dosyasını boş satırlar (görünür bilgi içermeyen satırlar) ve yorumlar gibi gereksiz bilgilerden de temizler. Aracın yorumları doğru bir şekilde tanımlamasına yardımcı olmak için seçeneklerde bir yorumu başlatan satır başındaki sembolü belirtebilirsiniz. Bu sembol genellikle bir kare işareti \"#\" veya çift eğik çizgidir \"//\". Csv-müthiş!.",
+    "longDescription": "Bu araç, bir CSV (Virgülle Ayrılmış Değerler) dosyasının satırlarını sütunlara dönüştürür. Örneğin, giriş CSV verisinde 6 satır varsa, çıktıda 6 sütun olur ve satırların öğeleri yukarıdan aşağıya doğru düzenlenir. İyi biçimlendirilmiş bir CSV'de her satırdaki değer sayısı aynıdır. Ancak satırlarda eksik alanlar olduğunda program bunları düzeltebilir ve mevcut seçeneklerden birini seçebilirsiniz: eksik verileri boş öğelerle doldurun veya eksik verileri şununla değiştirin:",
+    "shortDescription": "CSV satırlarını sütunlara dönüştürün.",
+    "title": "CSV Satırlarını Sütunlara Dönüştür"
+  },
+  "csvToJson": {
+    "columnSeparator": "Sütun Ayırıcı (örn. , ; \\t)",
+    "commentSymbol": "Yorum Sembolü (örn. #)",
+    "conversionOptions": "Dönüştürme Seçenekleri",
+    "description": "CSV dosyalarını, ayırıcılar, tırnaklar ve çıktı biçimlendirmesi için özelleştirilebilir seçeneklerle JSON formatına dönüştürün. Başlıklar, yorumlar ve dinamik tür dönüşümü desteği.",
+    "dynamicTypes": "Dinamik Türler",
+    "dynamicTypesDescription": "Sayıları ve mantıksal değerleri otomatik olarak dönüştür",
+    "error": "Hata",
+    "errorParsing": "CSV ayrıştırılırken hata: {{error}}",
+    "fieldQuote": "Alan Tırnağı (örn. \")",
+    "inputCsvFormat": "Giriş CSV Formatı",
+    "inputTitle": "Giriş CSV",
+    "invalidCsvFormat": "Geçersiz CSV formatı",
+    "resultTitle": "Çıktı JSON",
+    "shortDescription": "CSV verilerini JSON formatına dönüştürün.",
+    "skipEmptyLines": "Boş Satırları Atla",
+    "skipEmptyLinesDescription": "Giriş CSV'sindeki boş satırları yok say",
+    "title": "CSV'yi JSON'a Dönüştür",
+    "toolInfo": {
+      "description": "Bu araç, Virgülle Ayrılmış Değerler (CSV) dosyalarını JavaScript Nesne Gösterimi (JSON) veri yapılarına dönüştürür. Özelleştirilebilir ayırıcılar, tırnak karakterleri ve yorum sembolleriyle çeşitli CSV formatlarını destekler. Dönüştürücü, ilk satırı başlık olarak ele alabilir, boş satırları atlayabilir ve sayılar ile mantıksal değerler gibi veri türlerini otomatik olarak algılayabilir. Elde edilen JSON, veri taşıma, yedekleme veya diğer uygulamalar için girdi olarak kullanılabilir.",
+      "title": "CSV'den JSON'a Dönüştürücü Nedir?"
+    },
+    "useHeaders": "Başlıkları Kullan",
+    "useHeadersDescription": "İlk satırı sütun başlıkları olarak ele al"
+  },
+  "csvToTsv": {
+    "description": "CSV dosyanızı aşağıdaki forma yükleyin, otomatik olarak TSV dosyasına dönüştürülecektir. Araç seçeneklerinde giriş CSV formatını özelleştirebilirsiniz – alan ayırıcısını, tırnak karakterini ve yorum sembolünü belirtin, ayrıca boş CSV satırlarını atlayın ve CSV sütun başlıklarının korunup korunmayacağını seçin.",
+    "longDescription": "Bu araç, Virgülle Ayrılmış Değerler (CSV) verilerini Sekmeyle Ayrılmış Değerler (TSV) verilerine dönüştürür. Hem CSV hem de TSV, tablo verilerini depolamak için popüler dosya formatlarıdır ancak değerleri ayırmak için farklı ayırıcılar kullanırlar – CSV virgül kullanır (",
+    "shortDescription": "CSV verilerini TSV formatına dönüştürün.",
+    "title": "CSV'yi TSV'ye Dönüştür"
+  },
+  "csvToXml": {
+    "description": "CSV dosyalarını özelleştirilebilir seçeneklerle XML formatına dönüştürün.",
+    "shortDescription": "CSV verilerini XML formatına dönüştürün.",
+    "title": "CSV'yi XML'e Dönüştür"
+  },
+  "csvToYaml": {
+    "description": "CSV dosyanızı aşağıdaki forma yükleyin, otomatik olarak YAML dosyasına dönüştürülecektir. Araç seçeneklerinde, aracı özel CSV formatlarına uyarlamak için alan ayırıcı karakterini, alan tırnak karakterini ve yorum karakterini belirtebilirsiniz. Ayrıca çıktı YAML formatını seçebilirsiniz: CSV başlıklarını koruyan ya da CSV başlıklarını hariç tutan.",
+    "longDescription": "Bu araç, CSV (Virgülle Ayrılmış Değerler) verilerini YAML (Yet Another Markup Language) verilerine dönüştürür. CSV, satırlardan ve sütunlardan oluşan matris benzeri veri türlerini temsil etmek için kullanılan basit, tablo formatındadır. YAML ise daha gelişmiş bir formattır (aslında JSON'un bir üst kümesidir), serileştirme için daha okunabilir veriler oluşturur ve listeleri, sözlükleri ve iç içe nesneleri destekler. Bu program çeşitli giriş CSV formatlarını destekler – giriş verisi virgülle ayrılmış (varsayılan), noktalı virgülle ayrılmış, dikey çizgiyle ayrılmış olabilir veya tamamen farklı bir ayırıcı kullanabilir. Seçeneklerde verilerinizin kullandığı tam ayırıcıyı belirtebilirsiniz. Benzer şekilde, seçeneklerde CSV alanlarını sarmak için kullanılan tırnak karakterini (varsayılan olarak çift tırnak sembolü) belirtebilirsiniz. Ayrıca seçeneklerde yorum sembollerini belirterek yorumla başlayan satırları atlayabilirsiniz. Bu, gereksiz satırları atlayarak verilerinizi temiz tutmanızı sağlar. CSV'yi YAML'a dönüştürmenin iki yolu vardır. İlk yöntem her CSV satırını bir YAML listesine dönüştürür. İkinci yöntem ilk CSV satırından başlıkları çıkarır ve bu başlıklara dayalı anahtarlarla YAML nesneleri oluşturur. Ayrıca YAML yapılarını girintilemek için boşluk sayısını belirterek çıktı YAML formatını özelleştirebilirsiniz. Ters dönüşümü yapmanız gerekiyorsa, yani YAML'ı CSV'ye dönüştürmek isterseniz, YAML'ı CSV'ye Dönüştür aracımızı kullanabilirsiniz. Csv-müthiş!",
+    "shortDescription": "Bir CSV dosyasını hızlıca YAML dosyasına dönüştürün.",
+    "title": "CSV'yi YAML'a Dönüştür"
+  },
+  "findIncompleteCsvRecords": {
+    "checkingOptions": "Kontrol Seçenekleri",
+    "commentCharacterDescription": "Bir yorum satırının başlangıcını belirten karakteri girin. Bu sembolle başlayan satırlar atlanır.",
+    "csvInputOptions": "CSV Giriş Seçenekleri",
+    "csvSeparatorDescription": "CSV giriş dosyasındaki sütunları ayırmak için kullanılan karakteri girin.",
+    "deleteLinesWithNoData": "Veri İçermeyen Satırları Sil",
+    "deleteLinesWithNoDataDescription": "CSV giriş dosyasından boş satırları kaldır.",
+    "description": "CSV dosyanızı aşağıdaki forma yükleyin, bu araç satır veya sütunlardan hiçbirinde eksik değer olup olmadığını otomatik olarak kontrol eder. Araç seçeneklerinde giriş dosyası formatını ayarlayabilirsiniz (ayırıcı, tırnak karakteri ve yorum karakterini belirtin). Ayrıca boş değer kontrolünü etkinleştirebilir, boş satırları atlayabilir ve çıktıdaki hata mesajı sayısına bir sınır koyabilirsiniz.",
+    "findEmptyValues": "Boş Değerleri Bul",
+    "findEmptyValuesDescription": "Boş olan CSV alanları hakkında bir mesaj göster (Bunlar eksik alanlar değil, hiçbir şey içermeyen alanlardır).",
+    "inputTitle": "Giriş CSV",
+    "limitNumberOfMessages": "Mesaj sayısını sınırla",
+    "messageLimitDescription": "Çıktıdaki mesaj sayısının sınırını ayarlayın.",
+    "quoteCharacterDescription": "CSV giriş alanlarını tırnak içine almak için kullanılan tırnak karakterini girin.",
+    "resultTitle": "CSV Durumu",
+    "shortDescription": "CSV'de eksik değeri olan satır ve sütunları hızlıca bulun.",
+    "title": "Eksik CSV kayıtlarını bul",
+    "toolInfo": {
+      "title": "{{title}} nedir?"
+    }
+  },
+  "insertCsvColumns": {
+    "appendColumns": "Sütunları sona ekle",
+    "commentCharacterDescription": "Bir yorum satırının başlangıcını belirten karakteri girin. Bu sembolle başlayan satırlar atlanır.",
+    "csvOptions": "CSV Seçenekleri",
+    "csvSeparator": "CSV ayırıcı",
+    "csvToInsert": "Eklenecek CSV",
+    "csvToInsertDescription": "CSV'ye eklemek istediğiniz bir veya daha fazla sütunu girin. Sütunları ayırmak için kullanılan karakter, CSV giriş dosyasındakiyle aynı olmalıdır. Not: Boş satırlar yok sayılır",
+    "customFillDescription": "Giriş CSV dosyası eksikse (eksik değerler), iyi biçimlendirilmiş bir CSV oluşturmak için kayıtlara boş alanlar mı yoksa özel semboller mi eklensin?",
+    "customFillValueDescription": "Eksik alanları doldurmak için bu özel değeri kullanın. (Yalnızca yukarıdaki \"Özel Değerler\" moduyla çalışır.)",
+    "customPosition": "Özel konum",
+    "customPositionOptionsDescription": "Sütunları CSV dosyasına ekleme yöntemini seçin.",
+    "description": "CSV verilerine belirtilen konumlarda yeni sütunlar ekleyin.",
+    "fillWithCustomValues": "Özel Değerlerle Doldur",
+    "fillWithEmptyValues": "Boş Değerlerle Doldur",
+    "headerName": "Başlık adı",
+    "headerNameDescription": "Sütunları sonrasına eklemek istediğiniz sütunun başlığı.",
+    "inputTitle": "Giriş CSV",
+    "insertingPositionDescription": "Sütunları CSV dosyasında nereye ekleyeceğinizi belirtin.",
+    "position": "Konum",
+    "positionOptions": "Konum Seçenekleri",
+    "prependColumns": "Sütunları başa ekle",
+    "quoteCharDescription": "CSV giriş alanlarını tırnak içine almak için kullanılan tırnak karakterini girin.",
+    "resultTitle": "Çıktı CSV",
+    "rowNumberDescription": "Sütunları sonrasına eklemek istediğiniz sütunun numarası.",
+    "separatorDescription": "CSV giriş dosyasındaki sütunları ayırmak için kullanılan karakteri girin.",
+    "shortDescription": "Bir CSV dosyasının herhangi bir yerine hızlıca bir veya daha fazla yeni sütun ekleyin.",
+    "title": "CSV sütunları ekle",
+    "toolInfo": {
+      "description": "Bu araç, CSV verilerine belirtilen konumlarda yeni sütunlar eklemenizi sağlar. Başlık adlarına veya sütun numaralarına göre sütunları başa, sona ekleyebilir veya özel konumlara yerleştirebilirsiniz.",
+      "title": "CSV Sütunları Ekle"
+    }
+  },
+  "swapCsvColumns": {
+    "description": "CSV dosyanızı aşağıdaki forma yükleyin, değiştirilecek sütunları belirtin, araç otomatik olarak belirtilen sütunların çıktı dosyasındaki konumlarını değiştirir. Araç seçeneklerinde, değiştirmek istediğiniz sütun konumlarını veya adlarını belirtebilir, ayrıca eksik verileri düzeltebilir ve isteğe bağlı olarak boş kayıtları ve yorum satırına alınmış kayıtları kaldırabilirsiniz.",
+    "longDescription": "Bu araç, sütunlarının konumlarını değiştirerek CSV verilerini yeniden düzenler. Sütunları değiştirmek, sık kullanılan verileri bir arada veya daha kolay veri karşılaştırması ve düzenlemesi için öne yerleştirerek bir CSV dosyasının okunabilirliğini artırabilir. Örneğin, ilk sütunu sonuncuyla veya ikinci sütunu üçüncüyle değiştirebilirsiniz. Sütunları konumlarına göre değiştirmek için şunu seçin:",
+    "shortDescription": "CSV sütunlarını yeniden sıralayın.",
+    "title": "CSV Sütunlarını Değiştir"
+  },
+  "transposeCsv": {
+    "description": "CSV dosyanızı aşağıdaki forma yükleyin, bu araç CSV'nizi otomatik olarak devrik hale getirir. Araç seçeneklerinde, kaldırmak için CSV'deki yorum satırlarını başlatan karakteri belirtebilirsiniz. Ayrıca CSV eksikse (eksik değerler), eksik değerleri boş karakterle veya özel bir karakterle değiştirebilirsiniz.",
+    "longDescription": "Bu araç, Virgülle Ayrılmış Değerleri (CSV) devrik hale getirir. CSV'yi bir veri matrisi olarak ele alır ve tüm öğeleri ana köşegen boyunca çevirir. Çıktı, girişle aynı CSV verilerini içerir, ancak artık tüm satırlar sütun, tüm sütunlar satır olmuştur. Devrik alma işleminden sonra CSV dosyası ters boyutlara sahip olur. Örneğin, giriş dosyasında 4 sütun ve 3 satır varsa, çıktı dosyasında 3 sütun ve 4 satır olur. Dönüştürme sırasında program, verileri gereksiz satırlardan da temizler ve eksik verileri düzeltir. Özellikle araç, tüm boş kayıtları ve seçenekte ayarlayabileceğiniz belirli bir karakterle başlayan yorumları otomatik olarak siler. Ayrıca CSV verileri bozuk veya kayıp olduğunda, yardımcı program dosyayı boş alanlarla veya seçeneklerde belirtilebilen özel alanlarla tamamlar. Csv-müthiş!",
+    "shortDescription": "Bir CSV dosyasını hızlıca devrik hale getirin.",
+    "title": "CSV'yi Devrik Yap"
+  },
+  "tsvToJson": {
+    "description": "TSV (Sekmeyle Ayrılmış Değerler) verilerini JSON formatına dönüştürün. Tablo verilerini yapılandırılmış JSON nesnelerine dönüştürün.",
+    "shortDescription": "TSV'yi JSON formatına dönüştürün",
+    "title": "TSV'den JSON'a"
+  }
+}

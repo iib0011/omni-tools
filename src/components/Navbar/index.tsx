@@ -39,7 +39,8 @@ const languages = [
   { code: 'hi', label: 'हिंदी' },
   { code: 'nl', label: 'Nederlands' },
   { code: 'ru', label: 'Русский' },
-  { code: 'zh', label: '中文' }
+  { code: 'zh', label: '中文' },
+  { code: 'tr', label: 'Türkçe' }
 ];
 
 const Navbar: React.FC<NavbarProps> = ({

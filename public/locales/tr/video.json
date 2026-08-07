@@ -1,0 +1,149 @@
+{
+  "addAudio": {
+    "audioFile": "Ses Dosyası",
+    "audioInputTitle": "Giriş Sesi",
+    "description": "Herhangi bir video dosyasına kolayca bir ses parçası ekleyin. Orijinal sesi tamamen değiştirmeyi veya yeni bir parçayı mevcut olanla karıştırmayı seçebilirsiniz. Ses seviyesini ayarlayın, döngü seçeneklerini belirleyin ve sesi hassas başlangıç ve bitiş süreleriyle kırpın. Esnek düzenleme ve hızlı sonuçlar için tüm yaygın video ve ses formatlarını destekler.",
+    "durationMode": "Zaman Aralığı",
+    "endTime": "Bitiş Zamanı",
+    "endTimeDesc": "Yeni sesin çalmayı durdurduğu an (SS:DD:ss.mm).",
+    "loadingText": "Videoya ses ekleniyor...",
+    "loop": "Döngü (video bitene veya belirlenen bitiş zamanına kadar sesi tekrarla)",
+    "loopOption": "Döngü seçenekleri",
+    "mode": "Ses Modu",
+    "modeMix": "Karıştır (Orijinali Koru + Yeni Ekle)",
+    "modeReplace": "Orijinal Sesi Değiştir",
+    "noLoop": "Döngü Yok (sesi yalnızca bir kez çal)",
+    "resultTitle": "İşlenmiş Video",
+    "shortDescription": "Videoya ses parçası ekleyin veya değiştirin",
+    "startTime": "Başlangıç Zamanı",
+    "startTimeDesc": "Yeni sesin çalmaya başladığı an (SS:DD:ss.mm).",
+    "timing": "Ses Zamanlaması",
+    "timingDefault": "Varsayılan (tüm video)",
+    "timingEnd": "Bitiş Zamanı Ayarla",
+    "timingModeDesc": "Yeni sesin video zaman çizelgesinde ne zaman çalacağını seçin.",
+    "timingStart": "Başlangıç Zamanı Ayarla",
+    "timingStartEnd": "Başlangıç ve Bitiş Zamanı Ayarla",
+    "title": "Videoya Ses Ekle",
+    "videoInputTitle": "Giriş Videosu",
+    "volume": "Yeni Ses Seviyesi",
+    "volumeDesc": "Yeni ses parçası için ses seviyesi."
+  },
+  "changeSpeed": {
+    "defaultMultiplier": "Varsayılan çarpan: 2, 2 kat daha hızlı anlamına gelir",
+    "description": "Video dosyalarının oynatma hızını değiştirin. Ses senkronizasyonunu koruyarak videoları hızlandırın veya yavaşlatın. Çeşitli hız çarpanlarını ve yaygın video formatlarını destekler.",
+    "inputTitle": "Giriş Videosu",
+    "newVideoSpeed": "Yeni Video Hızı",
+    "resultTitle": "Düzenlenmiş Video",
+    "settingSpeed": "Hız Ayarlanıyor",
+    "shortDescription": "Video oynatma hızını değiştirin",
+    "title": "Video Hızını Değiştir",
+    "toolInfo": {
+      "title": "{{title}} nedir?"
+    }
+  },
+  "compress": {
+    "default": "Varsayılan",
+    "description": "Videoları 240p, 480p, 720p vb. farklı çözünürlüklere ölçekleyerek sıkıştırın. Bu araç, kabul edilebilir kaliteyi korurken dosya boyutunu azaltmaya yardımcı olur. MP4, WebM ve OGG gibi yaygın video formatlarını destekler.",
+    "inputTitle": "Giriş Videosu",
+    "loadingText": "Video sıkıştırılıyor...",
+    "lossless": "Kayıpsız",
+    "quality": "Kalite (CRF)",
+    "resolution": "Çözünürlük",
+    "resultTitle": "Sıkıştırılmış Video",
+    "shortDescription": "Videoları farklı çözünürlüklere ölçekleyerek sıkıştırın",
+    "title": "Videoyu Sıkıştır",
+    "worst": "En Kötü"
+  },
+  "cropVideo": {
+    "cropCoordinates": "Kırpma Koordinatları",
+    "croppingVideo": "Video Kırpılıyor",
+    "description": "İstenmeyen alanları kaldırmak için videoyu kırpın.",
+    "errorBeyondHeight": "Kırpma alanı video yüksekliğini aşıyor ({{height}}px)",
+    "errorBeyondWidth": "Kırpma alanı video genişliğini aşıyor ({{width}}px)",
+    "errorCroppingVideo": "Video kırpılırken hata oluştu. Lütfen parametreleri ve video dosyasını kontrol edin.",
+    "errorLoadingDimensions": "Video boyutları yüklenemedi",
+    "errorNonNegativeCoordinates": "X ve Y koordinatları negatif olmamalıdır",
+    "errorPositiveDimensions": "Genişlik ve yükseklik pozitif olmalıdır",
+    "height": "Yükseklik",
+    "inputTitle": "Giriş Videosu",
+    "loadVideoForDimensions": "Boyutları görmek için bir video yükleyin",
+    "longDescription": "Bu araç, istenmeyen alanları kaldırmak veya videonun belirli kısımlarına odaklanmak için video dosyalarını kırpmanızı sağlar. Siyah çubukları kaldırmak, en boy oranlarını ayarlamak veya önemli içeriğe odaklanmak için kullanışlıdır. MP4, MOV ve AVI dahil çeşitli video formatlarını destekler.",
+    "resultTitle": "Kırpılmış Video",
+    "shortDescription": "İstenmeyen alanları kaldırmak için videoyu kırpın",
+    "title": "Videoyu Kırp",
+    "toolInfo": {
+      "description": "Bu araç, istenmeyen alanları kaldırmak için video dosyalarını kırpmanızı sağlar. X, Y koordinatlarını ve genişlik, yükseklik boyutlarını ayarlayarak kırpma alanını belirtebilirsiniz.",
+      "title": "Videoyu Kırp"
+    },
+    "videoDimensions": "Video boyutları: {{width}} × {{height}} piksel",
+    "videoInformation": "Video Bilgisi",
+    "width": "Genişlik",
+    "xCoordinate": "X (sol)",
+    "yCoordinate": "Y (üst)"
+  },
+  "flip": {
+    "description": "Video dosyalarını yatay veya dikey olarak çevirin. Özel efektler için videoları aynalayın veya yönlendirme sorunlarını düzeltin.",
+    "flippingVideo": "Video Çevriliyor",
+    "horizontalLabel": "Yatay (Ayna)",
+    "inputTitle": "Giriş Videosu",
+    "orientation": "Yönlendirme",
+    "resultTitle": "Çevrilmiş Video",
+    "shortDescription": "Videoyu yatay veya dikey olarak çevirin",
+    "title": "Videoyu Çevir",
+    "verticalLabel": "Dikey (Baş Aşağı)"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "GIF animasyonlarının oynatma hızını değiştirin. Akıcı animasyonu koruyarak GIF'leri hızlandırın veya yavaşlatın.",
+      "shortDescription": "GIF animasyon hızını değiştirin",
+      "title": "GIF Hızını Değiştir"
+    }
+  },
+  "loop": {
+    "description": "Orijinal videoyu birden çok kez tekrarlayarak döngülü bir video oluşturun.",
+    "inputTitle": "Giriş Videosu",
+    "loopingVideo": "Video Döngüye Alınıyor",
+    "loops": "Döngüler",
+    "numberOfLoops": "Döngü Sayısı",
+    "resultTitle": "Döngülü Video",
+    "shortDescription": "Döngülü video dosyaları oluşturun",
+    "title": "Videoyu Döngüye Al",
+    "toolInfo": {
+      "description": "Bu araç, orijinal videoyu birden çok kez tekrarlayarak döngülü bir video oluşturmanızı sağlar. Videonun kaç kez döngüye alınacağını belirtebilirsiniz.",
+      "title": "{{title}} nedir?"
+    }
+  },
+  "mergeVideo": {
+    "description": "Birden fazla video dosyasını tek bir kesintisiz videoda birleştirin.",
+    "longDescription": "Bu araç, birden fazla video dosyasını tek bir kesintisiz videoda birleştirmenizi veya art arda eklemenizi sağlar. Video dosyalarınızı yükleyin, istediğiniz sıraya dizin ve kolay paylaşım veya düzenleme için tek bir dosyada birleştirin.",
+    "shortDescription": "Videoları kolayca art arda ekleyin ve birleştirin.",
+    "title": "Videoları birleştir"
+  },
+  "rotate": {
+    "180Degrees": "180° (Baş aşağı)",
+    "270Degrees": "270° (90° Saat Yönünün Tersine)",
+    "90Degrees": "90° Saat Yönünde",
+    "description": "Video dosyalarını 90, 180 veya 270 derece döndürün. Hassas döndürme kontrolüyle video yönlendirmesini düzeltin veya özel efektler oluşturun.",
+    "inputTitle": "Giriş Videosu",
+    "resultTitle": "Döndürülmüş Video",
+    "rotatingVideo": "Video Döndürülüyor",
+    "rotation": "Döndürme",
+    "shortDescription": "Videoyu belirtilen derecelerde döndürün",
+    "title": "Videoyu Döndür"
+  },
+  "trim": {
+    "description": "Başlangıç ve bitiş sürelerini belirterek video dosyalarını kırpın. Videoların başından veya sonundan istenmeyen bölümleri kaldırın.",
+    "endTime": "Bitiş Zamanı",
+    "inputTitle": "Giriş Videosu",
+    "resultTitle": "Kırpılmış Video",
+    "shortDescription": "İstenmeyen bölümleri kaldırarak videoyu kırpın",
+    "startTime": "Başlangıç Zamanı",
+    "timestamps": "Zaman Damgaları",
+    "title": "Videoyu Kırp"
+  },
+  "videoToGif": {
+    "description": "Video dosyalarını animasyonlu GIF formatına dönüştürün. Belirli zaman aralıklarını ayıklayın ve paylaşılabilir animasyonlu görseller oluşturun.",
+    "shortDescription": "Videoyu animasyonlu GIF'e dönüştürün",
+    "title": "Videodan GIF'e"
+  }
+}

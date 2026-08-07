@@ -1,0 +1,270 @@
+{
+  "audio": {
+    "changeSpeed": {
+      "description": "Ses dosyalarının oynatma hızını değiştirin. Perdeyi koruyarak sesi hızlandırın veya yavaşlatın.",
+      "name": "Ses hızını değiştir",
+      "shortDescription": "Ses dosyalarının hızını değiştirin"
+    },
+    "extractAudio": {
+      "description": "Bir video dosyasından ses parçasını ayıklayın ve seçtiğiniz formatta (AAC, MP3, WAV) ayrı bir ses dosyası olarak kaydedin.",
+      "name": "Ses ayıkla",
+      "shortDescription": "Videolardan (MP4, MOV vb.) sesi AAC, MP3 veya WAV formatına ayıklayın."
+    }
+  },
+  "baseFileInput": {
+    "copyFailed": "Kopyalama başarısız: {{error}}",
+    "dropFileHere": "{{type}} dosyanızı buraya bırakın",
+    "fileCopied": "Dosya kopyalandı",
+    "selectFileDescription": "Cihazınızdan bir {{type}} seçmek için buraya tıklayın, panonuzdaki bir {{type}} kullanmak için Ctrl+V'ye basın veya masaüstünden bir dosyayı sürükleyip bırakın"
+  },
+  "categories": {
+    "audio": {
+      "description": "Ses ile çalışmak için araçlar – videodan ses ayıklama, ses hızını ayarlama, birden fazla ses dosyasını birleştirme ve çok daha fazlası.",
+      "title": "Ses Araçları"
+    },
+    "converters": {
+      "description": "Verileri farklı formatlar arasında dönüştürmek için araçlar – görselleri, sesleri, videoları, metinleri ve daha fazlasını dönüştürün.",
+      "title": "Dönüştürücü Araçları"
+    },
+    "csv": {
+      "description": "CSV dosyalarıyla çalışmak için araçlar - CSV'yi farklı formatlara dönüştürün, CSV verilerini düzenleyin, CSV yapısını doğrulayın ve CSV dosyalarını verimli şekilde işleyin.",
+      "title": "CSV Araçları"
+    },
+    "gif": {
+      "description": "GIF animasyonlarıyla çalışmak için araçlar – şeffaf GIF'ler oluşturun, GIF karelerini ayıklayın, GIF'e metin ekleyin, kırpın, döndürün, GIF'leri tersine çevirin ve çok daha fazlası.",
+      "title": "GIF Araçları"
+    },
+    "image-generic": {
+      "description": "Resimlerle çalışmak için araçlar – sıkıştırma, yeniden boyutlandırma, kırpma, JPG'ye dönüştürme, döndürme, arka plan kaldırma ve çok daha fazlası.",
+      "title": "Görsel Araçları"
+    },
+    "json": {
+      "description": "JSON veri yapılarıyla çalışmak için araçlar – JSON nesnelerini güzelleştirin ve küçültün, JSON dizilerini düzleştirin, JSON değerlerini metne dönüştürün, verileri analiz edin ve çok daha fazlası",
+      "title": "JSON Araçları"
+    },
+    "list": {
+      "description": "Listelerle çalışmak için araçlar – listeleri sıralayın, tersine çevirin, karıştırın, benzersiz ve tekrarlanan öğeleri bulun, liste öğesi ayırıcılarını değiştirin ve çok daha fazlası.",
+      "title": "Liste Araçları"
+    },
+    "number": {
+      "description": "Sayılarla çalışmak için araçlar – sayı dizileri oluşturun, sayıları kelimelere ve kelimeleri sayılara dönüştürün, sıralayın, yuvarlayın, çarpanlarına ayırın ve çok daha fazlası.",
+      "title": "Sayı Araçları"
+    },
+    "pdf": {
+      "description": "PDF dosyalarıyla çalışmak için araçlar - PDF'lerden metin ayıklayın, PDF'leri diğer formatlara dönüştürün, PDF'leri düzenleyin ve çok daha fazlası.",
+      "title": "PDF Araçları"
+    },
+    "png": {
+      "description": "PNG görselleriyle çalışmak için araçlar – PNG'leri JPG'ye dönüştürün, şeffaf PNG'ler oluşturun, PNG renklerini değiştirin, kırpın, döndürün, yeniden boyutlandırın ve çok daha fazlası.",
+      "title": "PNG Araçları"
+    },
+    "seeAll": "Tüm {{title}} görüntüle",
+    "string": {
+      "description": "Metinle çalışmak için araçlar – metni görsele dönüştürün, metin bulup değiştirin, metni parçalara bölün, satırları birleştirin, metni tekrarlayın ve çok daha fazlası.",
+      "title": "Metin Araçları"
+    },
+    "time": {
+      "description": "Saat ve tarihle çalışmak için araçlar – zaman farklarını hesaplayın, saat dilimleri arasında dönüştürün, tarihleri biçimlendirin, tarih dizileri oluşturun ve çok daha fazlası.",
+      "title": "Zaman Araçları"
+    },
+    "try": "{{title}} deneyin",
+    "video": {
+      "description": "Videolarla çalışmak için araçlar – videolardan kare ayıklayın, videolardan GIF oluşturun, videoları farklı formatlara dönüştürün ve çok daha fazlası.",
+      "title": "Video Araçları"
+    },
+    "xml": {
+      "description": "XML veri yapılarıyla çalışmak için araçlar - görüntüleyici, güzelleştirici, doğrulayıcı ve çok daha fazlası",
+      "title": "XML Araçları"
+    }
+  },
+  "converters": {
+    "audioconverter": {
+      "description": "Ses dosyalarını farklı formatlar arasında dönüştürün.",
+      "longDescription": "Bu araç, ses dosyalarını bir formattan diğerine dönüştürmenizi sağlar ve sorunsuz dönüşüm için geniş bir ses formatı yelpazesini destekler.",
+      "shortDescription": "Ses dosyalarını çeşitli formatlara dönüştürün.",
+      "title": "Ses Dönüştürücü"
+    }
+  },
+  "csv": {
+    "findIncompleteCsvRecords": {
+      "description": "CSV dosyanızı aşağıdaki forma yükleyin, bu araç satır veya sütunlardan hiçbirinde eksik değer olup olmadığını otomatik olarak kontrol eder. Araç seçeneklerinde giriş dosyası formatını ayarlayabilirsiniz (ayırıcı, tırnak karakteri ve yorum karakterini belirtin). Ayrıca boş değer kontrolünü etkinleştirebilir, boş satırları atlayabilir ve çıktıdaki hata mesajı sayısına bir sınır koyabilirsiniz.",
+      "name": "Eksik CSV kayıtlarını bul",
+      "shortDescription": "CSV'de eksik değeri olan satır ve sütunları hızlıca bulun."
+    }
+  },
+  "hero": {
+    "brand": "OmniTools",
+    "description": "İşleri hızlıca halletmenin en iyi araç seti OmniTools ile üretkenliğinizi artırın! Görselleri, metinleri, listeleri ve verileri düzenlemek için binlerce kullanıcı dostu aracı doğrudan tarayıcınızdan kullanın.",
+    "examples": {
+      "calculateNumberSum": "Sayı toplamını hesapla",
+      "changeGifSpeed": "GIF hızını değiştir",
+      "compressPng": "PNG'yi sıkıştır",
+      "createTransparentImage": "Şeffaf görsel oluştur",
+      "prettifyJson": "JSON'ı güzelleştir",
+      "sortList": "Bir listeyi sırala",
+      "splitPdf": "PDF'yi böl",
+      "splitText": "Bir metni böl",
+      "trimVideo": "Videoyu kırp"
+    },
+    "search": {
+      "placeholder": "Tüm araçlarda ara",
+      "noResult": "Sonuç bulunamadı. Aramanızı veya filtre kriterlerinizi değiştirmeyi deneyin"
+    },
+    "title": "İşleri Hızlıca Halledin:"
+  },
+  "inputFooter": {
+    "clear": "Temizle",
+    "copyToClipboard": "Panoya kopyala",
+    "importFromFile": "Dosyadan içe aktar"
+  },
+  "list": {
+    "group": {
+      "description": "Liste öğelerini gruplamak için dünyanın en basit tarayıcı tabanlı aracı. Listenizi girin ve öğeleri mantıksal gruplara ayırmak için gruplama kriterlerini belirtin. Verileri kategorilere ayırmak, bilgileri düzenlemek veya yapılandırılmış listeler oluşturmak için mükemmel. Özel ayırıcıları ve çeşitli gruplama seçeneklerini destekler.",
+      "name": "Grupla",
+      "shortDescription": "Liste öğelerini ortak özelliklerine göre gruplayın"
+    },
+    "reverse": {
+      "description": "Bu, tüm liste öğelerini ters sırayla yazdıran süper basit bir tarayıcı tabanlı uygulamadır. Giriş öğeleri herhangi bir sembolle ayrılabilir ve ters çevrilmiş liste öğelerinin ayırıcısını da değiştirebilirsiniz.",
+      "name": "Tersine çevir",
+      "shortDescription": "Bir listeyi hızlıca tersine çevirin"
+    },
+    "sort": {
+      "description": "Bu, bir listedeki öğeleri sıralayan ve artan veya azalan düzende düzenleyen süper basit bir tarayıcı tabanlı uygulamadır. Öğeleri alfabetik, sayısal veya uzunluklarına göre sıralayabilirsiniz. Ayrıca tekrarlanan ve boş öğeleri kaldırabilir, çevresinde boşluk olan öğeleri kırpabilirsiniz. Giriş liste öğelerini ayırmak için herhangi bir ayırıcı karakter kullanabilir veya bunları ayırmak için düzenli ifade kullanabilirsiniz. Ayrıca sıralanmış çıktı listesi için yeni bir ayırıcı oluşturabilirsiniz.",
+      "name": "Sırala",
+      "shortDescription": "Bir listeyi hızlıca sıralayın"
+    }
+  },
+  "navbar": {
+    "buyMeACoffee": "Bana bir kahve ısmarla",
+    "hireMe": "Beni işe al",
+    "home": "Ana Sayfa",
+    "tools": "Araçlar"
+  },
+  "number": {
+    "generate": {
+      "description": "Tarayıcınızda hızlıca bir tam sayı listesi hesaplayın. Listenizi almak için, aşağıdaki seçeneklerde ilk tam sayıyı, değişim değerini ve toplam sayıyı belirtmeniz yeterli; bu araç o kadar tam sayı oluşturur.",
+      "name": "Sayı oluştur",
+      "shortDescription": "Tarayıcınızda hızlıca bir tam sayı listesi hesaplayın"
+    },
+    "sum": {
+      "description": "Bu, sayıları toplayan süper basit bir tarayıcı tabanlı uygulamadır. Giriş sayıları herhangi bir sembolle ayrılabilir ve toplanan sayıların ayırıcısını da değiştirebilirsiniz.",
+      "name": "Sayıları topla",
+      "shortDescription": "Bir sayı listesini hızlıca toplayın"
+    }
+  },
+  "numericInputWithUnit": {
+    "unit": "Birim"
+  },
+  "pdf": {
+    "compressPdf": {
+      "description": "Ghostscript kullanarak kaliteyi korurken PDF dosya boyutunu küçültün",
+      "name": "PDF'yi sıkıştır",
+      "shortDescription": "PDF dosyalarını tarayıcınızda güvenle sıkıştırın"
+    },
+    "mergePdf": {
+      "description": "Birden fazla PDF dosyasını tek bir belgede birleştirin.",
+      "name": "PDF'leri birleştir",
+      "shortDescription": "Birden fazla PDF dosyasını tek bir belgede birleştirin"
+    },
+    "pdfToEpub": {
+      "description": "Daha iyi e-okuyucu uyumluluğu için PDF belgelerini EPUB dosyalarına dönüştürün.",
+      "name": "PDF'ten EPUB'a",
+      "shortDescription": "PDF dosyalarını EPUB formatına dönüştürün"
+    },
+    "protectPdf": {
+      "description": "PDF dosyalarınıza tarayıcınızda güvenle parola koruması ekleyin",
+      "name": "PDF'yi koru",
+      "shortDescription": "PDF dosyalarını güvenle parolayla koruyun"
+    },
+    "splitPdf": {
+      "description": "Sayfa numaraları veya aralıkları kullanarak bir PDF dosyasından belirli sayfaları ayıklayın (örn. 1,5-8)",
+      "name": "PDF'yi böl",
+      "shortDescription": "Bir PDF dosyasından belirli sayfaları ayıklayın"
+    }
+  },
+  "resultFooter": {
+    "copy": "Panoya kopyala",
+    "download": "İndir"
+  },
+  "string": {
+    "createPalindrome": {
+      "description": "Herhangi bir metinden palindrom oluşturmak için dünyanın en basit tarayıcı tabanlı aracı. Metin girin ve anında öne ve arkaya doğru aynı okunan bir palindroma dönüştürün. Kelime oyunları, simetrik metin desenleri oluşturma veya dilsel meraklar için mükemmel.",
+      "name": "Palindrom oluştur",
+      "shortDescription": "Öne ve arkaya doğru aynı okunan metin oluşturun"
+    },
+    "palindrome": {
+      "description": "Bir metnin palindrom olup olmadığını kontrol etmek için dünyanın en basit tarayıcı tabanlı aracı. Metninizin öne ve arkaya doğru aynı okunup okunmadığını anında doğrulayın. Kelime bulmacaları, dilsel analiz veya simetrik metin desenlerini doğrulamak için mükemmel. Çeşitli ayırıcıları ve çok kelimeli palindrom tespitini destekler.",
+      "name": "Palindrom",
+      "shortDescription": "Metnin öne ve arkaya doğru aynı okunup okunmadığını kontrol edin"
+    },
+    "repeat": {
+      "description": "Bu araç, verilen bir metni isteğe bağlı bir ayırıcıyla birden çok kez tekrarlamanızı sağlar.",
+      "name": "Metni tekrarla",
+      "shortDescription": "Metni birden çok kez tekrarlayın"
+    },
+    "reverse": {
+      "description": "Metni tersine çevirmek için dünyanın en basit tarayıcı tabanlı aracı. Herhangi bir metin girin ve karakter karakter anında tersine çevrilmiş halini alın. Ayna metin oluşturmak, palindromları analiz etmek veya metin desenleriyle oynamak için mükemmel. Tersine çevirirken boşlukları ve özel karakterleri korur.",
+      "name": "Tersine çevir",
+      "shortDescription": "Herhangi bir metni karakter karakter tersine çevirin"
+    },
+    "toMorse": {
+      "description": "Metni Mors koduna dönüştürmek için dünyanın en basit tarayıcı tabanlı aracı. Metninizi soldaki giriş formuna yükleyin, çıktı alanında anında Mors kodunu alın. Güçlü, ücretsiz ve hızlı. Metni yükle – Mors kodunu al.",
+      "name": "Metinden Mors'a",
+      "shortDescription": "Metni hızlıca Mors koduna dönüştürün"
+    },
+    "uppercase": {
+      "description": "Metni büyük harfe dönüştürmek için dünyanın en basit tarayıcı tabanlı aracı. Metninizi girmeniz yeterli, otomatik olarak tümü büyük harfe dönüştürülür. Başlıklar oluşturmak, metni vurgulamak veya metin formatını standartlaştırmak için mükemmel. Çeşitli metin formatlarını destekler ve özel karakterleri korur.",
+      "name": "Büyük harf",
+      "shortDescription": "Metni büyük harflere dönüştürün"
+    }
+  },
+  "toolBreadcrumb": {
+    "allTools": "Tüm araçlar"
+  },
+  "toolExamples": {
+    "subtitle": "Denemek için tıklayın!",
+    "title": "{{title}} Örnekleri"
+  },
+  "toolFileResult": {
+    "copied": "Dosya kopyalandı",
+    "copyFailed": "Kopyalama başarısız: {{error}}",
+    "loading": "Yükleniyor... Bu biraz zaman alabilir.",
+    "result": "Sonuç"
+  },
+  "toolHeader": {
+    "seeExamples": "Örnekleri Gör"
+  },
+  "toolLayout": {
+    "allToolsTitle": "Tüm {{type}}"
+  },
+  "toolMultiFileResult": {
+    "copied": "Dosya kopyalandı",
+    "copyFailed": "Kopyalama başarısız: {{error}}",
+    "loading": "Yükleniyor... Bu biraz zaman alabilir.",
+    "result": "Sonuç"
+  },
+  "toolMultipleInput": {
+    "inputTitle": "Giriş {{type}}",
+    "noFilesSelected": "Dosya seçilmedi",
+    "deleteFile": "Dosyayı sil"
+  },
+  "toolOptions": {
+    "title": "Araç seçenekleri"
+  },
+  "toolTextInput": {
+    "copied": "Metin kopyalandı",
+    "copyFailed": "Kopyalama başarısız: {{error}}",
+    "input": "Giriş metni",
+    "placeholder": "Metninizi buraya girin..."
+  },
+  "toolTextResult": {
+    "copied": "Metin kopyalandı",
+    "copyFailed": "Kopyalama başarısız: {{error}}",
+    "loading": "Yükleniyor... Bu biraz zaman alabilir.",
+    "result": "Sonuç"
+  },
+  "userTypes": {
+    "developers": "Geliştiriciler",
+    "generalUsers": "Genel kullanıcılar"
+  }
+}
