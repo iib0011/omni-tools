@@ -11,14 +11,7 @@ export const tool = defineTool('video', {
     'resolution',
     'dimensions',
     'width',
-    'height',
-    '240p',
-    '360p',
-    '480p',
-    '720p',
-    '1080p',
-    'mp4',
-    'video editing'
+    'height'
   ],
   component: lazy(() => import('./index')),
   i18n: {
