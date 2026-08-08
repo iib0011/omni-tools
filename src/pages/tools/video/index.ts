@@ -18,8 +18,8 @@ export const videoTools = [
   loopVideo,
   flipVideo,
   cropVideo,
-  resizeVideo,
   changeSpeed,
   videoMergeVideo,
-  addAudio
+  addAudio,
+  resizeVideo
 ];
