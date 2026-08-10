@@ -25,6 +25,8 @@ const AppRoutes = () => {
 };
 
 function App() {
+  const basename =
+    new URL(document.baseURI).pathname.replace(/\/+$/, '') || '/';
   const [mode, setMode] = useState<Mode>(
     () => (localStorage.getItem('theme') || 'system') as Mode
   );
@@ -59,7 +61,7 @@ function App() {
         >
           <CustomSnackBarProvider>
             <UserTypeFilterProvider>
-              <BrowserRouter>
+              <BrowserRouter basename={basename}>
                 <Navbar
                   mode={mode}
                   onChangeMode={() => {
