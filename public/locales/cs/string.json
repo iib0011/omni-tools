@@ -1,0 +1,115 @@
+{
+  "base64": {
+    "decode": "Dekódovat Base64",
+    "description": "Kódujte nebo dekódujte text pomocí Base64.",
+    "encode": "Kódovat Base64",
+    "inputTitle": "Vstupní data",
+    "optionsTitle": "Možnosti Base64",
+    "resultTitle": "Výsledek",
+    "shortDescription": "Kódujte nebo dekódujte data pomocí Base64.",
+    "title": "Base64 Kódér/Dekódér",
+    "toolInfo": {
+      "description": "Base64 je kódovací schéma, které reprezentuje data v ASCII řetězci tím, že je převádí do reprezentace s 64 znaky. I když lze kódovat textové řetězce, běžně se používá k zakódování binárních dat pro přenos přes média určená pro textová data.",
+      "title": "Co je Base64?"
+    }
+  },
+  "censor": {
+    "description": "Nástroj pro cenzurování slov v textu. Nahrajte text do vstupního pole vlevo, zadejte nevhodná slova v možnostech a okamžitě získáte cenzurovaný text ve výstupu.",
+    "shortDescription": "Rychle zakryjte nevhodná slova nebo je nahraďte alternativními.",
+    "title": "Cenzura textu"
+  },
+  "createPalindrome": {
+    "description": "Nejjednodušší online nástroj pro vytváření palindromů z libovolného textu. Zadejte text a okamžitě jej transformujte na palindrom, který se čte stejně dopředu i dozadu. Ideální pro slovní hry a jazykové kuriozity.",
+    "shortDescription": "Vytvořit text, který se čte stejně dopředu i dozadu",
+    "title": "Vytvořit palindrom"
+  },
+  "extractSubstring": {
+    "description": "Nejjednodušší nástroj pro extrahování podřetězců z textu. Zadejte text a určete začátek a konec pro získání požadované části.",
+    "shortDescription": "Extrahovat část textu mezi zadanými pozicemi",
+    "title": "Extrahovat podřetězec"
+  },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "Možnosti analýzy",
+    "category": "Kategorie",
+    "description": "Detekuje skryté Unicode znaky, zejména RTL Override, které mohou být zneužity.",
+    "foundChars": "Nalezeno {{count}} skrytých znaků:",
+    "inputPlaceholder": "Zadejte text pro kontrolu skrytých znaků...",
+    "inputTitle": "Text k analýze",
+    "invisibleChar": "Neviditelný znak",
+    "invisibleFound": "Nalezeny neviditelné znaky",
+    "longDescription": "Tento nástroj pomáhá detekovat skryté Unicode znaky v textu, zejména znaky Right-to-Left (RTL) Override, které mohou být použity v útocích. Dokáže identifikovat neviditelné znaky, znaky nulové šířky a další potenciálně škodlivé sekvence.",
+    "noHiddenChars": "V textu nebyly detekovány žádné skryté znaky.",
+    "optionsDescription": "Nastavte, které typy skrytých znaků detekovat a jak zobrazit výsledky.",
+    "position": "Pozice",
+    "rtlAlert": "⚠️ Detekovány RTL Override znaky! Text může obsahovat škodlivé skryté znaky.",
+    "rtlFound": "RTL Override nalezeno",
+    "rtlOverride": "RTL Override znak",
+    "rtlWarning": "UPOZORNĚNÍ: Detekovány RTL Override znaky! Mohou být zneužity.",
+    "shortDescription": "Najít skryté Unicode znaky v textu",
+    "summary": "Shrnutí analýzy",
+    "title": "Detektor skrytých znaků",
+    "totalChars": "Celkem skrytých znaků: {{count}}",
+    "unicode": "Unicode",
+    "zeroWidthChar": "Znak nulové šířky",
+    "zeroWidthFound": "Nalezeny znaky nulové šířky"
+  },
+  "join": {
+    "blankLinesAndTrailingSpaces": "Prázdné řádky a mezery na konci",
+    "deleteBlankDescription": "Odstranit řádky bez textových znaků.",
+    "deleteBlankTitle": "Odstranit prázdné řádky",
+    "deleteTrailingDescription": "Odstranit mezery a tabulátory na konci řádků.",
+    "deleteTrailingTitle": "Odstranit mezery na konci",
+    "description": "Spojte části textu s volitelnými oddělovači.",
+    "inputTitle": "Části textu",
+    "joinCharacterDescription": "Symbol, který spojuje části textu (výchozí mezera).",
+    "joinCharacterPlaceholder": "Oddělovač",
+    "resultTitle": "Spojený text",
+    "shortDescription": "Spojit textové prvky s určeným oddělovačem",
+    "textMergedOptions": "Možnosti spojení textu",
+    "title": "Spojit text",
+    "toolInfo": {
+      "description": "Tento nástroj umožňuje spojit části textu. Zadejte seznam textových hodnot, oddělených novými řádky, a spojí je dohromady. Můžete nastavit znak, který bude vložen mezi části textu, ignorovat prázdné řádky a odstranit mezery na konci.",
+      "title": "Co je spojovač textu?"
+    }
+  },
+  "palindrome": {
+    "description": "Jednoduchý nástroj pro ověření, zda je text palindrom. Okamžitě zjistíte, zda se text čte stejně dopředu i dozadu.",
+    "shortDescription": "Ověřit, zda se text čte stejně dopředu i dozadu",
+    "title": "Palindrom"
+  },
+  "passwordGenerator": {
+    "avoidAmbiguous": "Vyhnout se nejasným znakům (i, I, l, 0, O)",
+    "description": "Generujte bezpečná náhodná hesla s možností volby délky a typů znaků.",
+    "includeLowercase": "Zahrnout malá písmena (a-z)",
+    "includeNumbers": "Zahrnout čísla (0-9)",
+    "includeSymbols": "Zahrnout speciální znaky",
+    "includeUppercase": "Zahrnout velká písmena (A-Z)",
+    "lengthDesc": "Délka hesla",
+    "lengthPlaceholder": "např. 12",
+    "optionsTitle": "Možnosti hesla",
+    "resultTitle": "Vygenerované heslo",
+    "shortDescription": "Generovat bezpečná náhodná hesla s možnostmi",
+    "title": "Generátor hesel",
+    "toolInfo": {
+      "description": "Tento nástroj generuje bezpečná hesla podle zvolených kritérií. Můžete nastavit délku, zahrnout nebo vyloučit různé typy znaků a vyhnout se nejasným znakům.",
+      "title": "O generátoru hesel"
+    }
+  },
+  "quote": {
+    "allowDoubleQuotation": "Povolit dvojité uvozovky",
+    "description": "Přidat uvozovky kolem textu s různými možnostmi.",
+    "inputTitle": "Vstupní text",
+    "leftQuoteDescription": "Levý znak uvozovky",
+    "processAsMultiLine": "Zpracovat jako víceřádkový text",
+    "quoteEmptyLines": "Uvozovat prázdné řádky",
+    "quoteOptions": "Možnosti uvozování",
+    "resultTitle": "Text s uvozovkami",
+    "rightQuoteDescription": "Pravý znak uvozovky",
+    "shortDescription": "Přidat uvozovky k textu různými způsoby",
+    "title": "Uvozovat text",
+    "toolInfo": {
+      "description": "Tento nástroj přidá uvozovky kolem textu. Můžete zvolit různé znaky uvozovek, zpracovat víceřádkový text a nastavit, jak se mají zpracovat prázdné řádky.",
+      "title": "Uvozování textu"
+    }
+  }
+}
