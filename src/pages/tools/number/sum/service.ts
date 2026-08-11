@@ -16,7 +16,10 @@ export const compute = (
   if (extractionType === 'smart') {
     numbers = getAllNumbers(input);
   } else {
-    const parts = input.split(separator);
+    // The UI advertises a literal "\n" option as a line break; normalize it to an actual newline
+    // so multiline inputs split correctly instead of being treated as a single part.
+    const normalizedSeparator = separator.replace(/\\n/g, '\n');
+    const parts = input.split(normalizedSeparator);
     // Filter out and convert parts that are numbers
     numbers = parts
       .filter((part) => !isNaN(Number(part)) && part.trim() !== '')
