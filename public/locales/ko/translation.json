@@ -1,0 +1,255 @@
+{
+  "audio": {
+    "changeSpeed": {
+      "description": "오디오 파일의 재생 속도를 변경합니다. 음높이를 유지하면서 오디오 속도를 높이거나 낮춥니다.",
+      "name": "오디오 속도 변경",
+      "shortDescription": "오디오 파일의 속도를 변경합니다."
+    },
+    "extractAudio": {
+      "description": "비디오 파일에서 오디오 트랙을 추출하여 선택한 형식(AAC, MP3, WAV)의 별도 오디오 파일로 저장합니다.",
+      "name": "오디오 추출",
+      "shortDescription": "비디오 파일(MP4, MOV 등)에서 오디오를 AAC, MP3 또는 WAV로 추출합니다."
+    }
+  },
+  "baseFileInput": {
+    "copyFailed": "복사 실패: {{error}}",
+    "dropFileHere": "여기에 {{type}} 파일을 드롭하세요",
+    "fileCopied": "파일이 복사되었습니다",
+    "selectFileDescription": "여기를 클릭하여 장치에서 {{type}} 파일을 선택하거나, Ctrl+V를 눌러 클립보드의 {{type}} 파일을 사용하거나, 바탕화면에서 파일을 드래그 앤 드롭하세요."
+  },
+  "categories": {
+    "audio": {
+      "description": "오디오 작업을 위한 도구 – 비디오에서 오디오 추출, 오디오 속도 조절, 여러 오디오 파일 병합 등 다양한 기능을 제공합니다.",
+      "title": "오디오 도구"
+    },
+    "csv": {
+      "description": "CSV 파일 작업을 위한 도구 - CSV를 다른 형식으로 변환, CSV 데이터 조작, CSV 구조 유효성 검사 및 CSV 파일을 효율적으로 처리합니다.",
+      "title": "CSV 도구"
+    },
+    "gif": {
+      "description": "GIF 애니메이션 작업을 위한 도구 – 투명배경 GIF 만들기, GIF 프레임 추출, GIF에 텍스트 추가, GIF 자르기, 회전, 반전 등 다양한 기능을 제공합니다.",
+      "title": "GIF 도구"
+    },
+    "image-generic": {
+      "description": "사진 작업을 위한 도구 – 압축, 크기 조정, 자르기, JPG로 변환, 회전, 배경 제거 등 다양한 기능을 제공합니다.",
+      "title": "이미지 도구"
+    },
+    "json": {
+      "description": "JSON 데이터 구조 작업을 위한 도구 – JSON 객체 정돈 및 축소화, JSON 배열 평탄화, JSON 값 문자열화, 데이터 분석 등 다양한 기능을 제공합니다.",
+      "title": "JSON 도구"
+    },
+    "list": {
+      "description": "리스트 작업을 위한 도구 – 리스트 정렬, 반전, 무작위화, 고유 및 중복 리스트 요소 찾기, 리스트 요소 구분 기호 변경 등 다양한 기능을 제공합니다.",
+      "title": "리스트 도구"
+    },
+    "number": {
+      "description": "숫자 작업을 위한 도구 – 숫자 시퀀스 생성, 숫자를 단어로 변환 및 단어를 숫자로 변환, 숫자 정렬, 반올림, 인수분해 등 다양한 기능을 제공합니다.",
+      "title": "숫자 도구"
+    },
+    "pdf": {
+      "description": "PDF 파일 작업을 위한 도구 - PDF에서 텍스트 추출, PDF를 다른 형식으로 변환, PDF 조작 등 다양한 기능을 제공합니다.",
+      "title": "PDF 도구"
+    },
+    "png": {
+      "description": "PNG 이미지 작업을 위한 도구 – PNG를 JPG로 변환, 투명배경 PNG 만들기, PNG 색상 변경, PNG 자르기, 회전, 크기 조정 등 다양한 기능을 제공합니다.",
+      "title": "PNG 도구"
+    },
+    "seeAll": "{{title}} 모두 보기",
+    "string": {
+      "description": "텍스트 작업을 위한 도구 – 텍스트를 이미지로 변환, 텍스트 찾기 및 바꾸기, 텍스트를 조각으로 분할, 텍스트 줄 결합, 텍스트 반복 등 다양한 기능을 제공합니다.",
+      "title": "텍스트 도구"
+    },
+    "time": {
+      "description": "시간 및 날짜 작업을 위한 도구 – 시간 차이 계산, 시간대 간 변환, 날짜 서식 지정, 날짜 시퀀스 생성 등 다양한 기능을 제공합니다.",
+      "title": "시간 도구"
+    },
+    "try": "{{title}} 사용해보기",
+    "video": {
+      "description": "비디오 작업을 위한 도구 – 비디오에서 프레임 추출, 비디오로 GIF 만들기, 비디오를 다른 형식으로 변환 등 다양한 기능을 제공합니다.",
+      "title": "비디오 도구"
+    },
+    "xml": {
+      "description": "XML 데이터 구조 작업을 위한 도구 - 뷰어, 정리기, 유효성 검사기 등 다양한 기능을 제공합니다.",
+      "title": "XML 도구"
+    }
+  },
+  "csv": {
+    "findIncompleteCsvRecords": {
+      "description": "아래 양식에 CSV 파일을 업로드하기만 하면 이 도구가 행이나 열에 누락된 값이 없는지 자동으로 확인합니다. 도구 옵션에서 입력 파일 형식을 조정할 수 있습니다(구분 기호, 따옴표 문자 및 주석 문자 지정). 또한 빈 값 확인, 빈 줄 건너뛰기 및 출력의 오류 메시지 수 제한을 활성화할 수 있습니다.",
+      "name": "불완전한 CSV 레코드 찾기",
+      "shortDescription": "CSV에서 값이 누락된 행과 열을 빠르게 찾습니다."
+    }
+  },
+  "hero": {
+    "brand": "OmniTools",
+    "description": "궁극의 툴킷인 OmniTools로 생산성을 높여보세요! 브라우저에서 직접 이미지, 텍스트, 리스트 및 데이터 편집을 위한 수천 개의 사용자 친화적인 유틸리티에 액세스하세요.",
+    "examples": {
+      "calculateNumberSum": "숫자 합계 계산",
+      "changeGifSpeed": "GIF 속도 변경",
+      "compressPng": "PNG 압축",
+      "createTransparentImage": "투명배경 이미지 만들기",
+      "prettifyJson": "JSON 정돈",
+      "sortList": "리스트 정렬",
+      "splitPdf": "PDF 분할",
+      "splitText": "텍스트 분할",
+      "trimVideo": "비디오 자르기"
+    },
+    "searchPlaceholder": "모든 도구 검색",
+    "title": "작업을 빠르게 처리하는 방법, "
+  },
+  "inputFooter": {
+    "clear": "지우기",
+    "copyToClipboard": "클립보드에 복사",
+    "importFromFile": "파일에서 가져오기"
+  },
+  "list": {
+    "group": {
+      "description": "리스트 요소를 그룹화하기 위한 세계에서 가장 간단한 브라우저 기반 유틸리티입니다. 리스트를 입력하고 그룹화 기준을 지정하여 요소를 논리적 그룹으로 구성하세요. 데이터 분류, 정보 구성 또는 구조화된 리스트 생성에 적합합니다. 사용자 정의 구분 기호 및 다양한 그룹화 옵션을 지원합니다.",
+      "name": "그룹화",
+      "shortDescription": "공통 속성별로 리스트 요소 그룹화"
+    },
+    "reverse": {
+      "description": "이것은 모든 리스트 요소를 역순으로 출력하는 매우 간단한 브라우저 기반 애플리케이션입니다. 입력 요소는 모든 기호로 구분할 수 있으며 역순 리스트 요소의 구분 기호도 변경할 수 있습니다.",
+      "name": "역순 정렬",
+      "shortDescription": "리스트를 빠르게 역순으로 정렬"
+    },
+    "sort": {
+      "description": "이것은 리스트의 요소를 정렬하고 오름차순 또는 내림차순으로 배열하는 매우 간단한 브라우저 기반 애플리케이션입니다. 요소를 알파벳순, 숫자순 또는 길이순으로 정렬할 수 있습니다. 중복 및 빈 요소를 제거하고 주변에 공백이 있는 개별 요소를 다듬을 수도 있습니다. 모든 구분 문자를 사용하여 입력 리스트 요소를 구분하거나 정규식을 사용하여 구분할 수 있습니다. 또한 정렬된 출력 리스트에 대한 새 구분 기호를 만들 수 있습니다.",
+      "name": "정렬",
+      "shortDescription": "리스트를 빠르게 정렬"
+    }
+  },
+  "navbar": {
+    "buyMeACoffee": "커피 한 잔 사주기",
+    "hireMe": "고용하기",
+    "home": "홈",
+    "tools": "도구"
+  },
+  "number": {
+    "generate": {
+      "description": "브라우저에서 정수 리스트를 빠르게 계산합니다. 리스트를 얻으려면 아래 옵션에서 첫 번째 정수, 변경 값 및 총 개수를 지정하기만 하면 이 유틸리티가 해당 개수의 정수를 생성합니다.",
+      "name": "숫자 생성",
+      "shortDescription": "브라우저에서 정수 리스트를 빠르게 계산"
+    },
+    "sum": {
+      "description": "이것은 숫자를 합산하는 매우 간단한 브라우저 기반 애플리케이션입니다. 입력 숫자는 모든 기호로 구분할 수 있으며 합산된 숫자의 구분 기호도 변경할 수 있습니다.",
+      "name": "숫자 합산",
+      "shortDescription": "숫자 리스트를 빠르게 합산"
+    }
+  },
+  "numericInputWithUnit": {
+    "unit": "단위"
+  },
+  "pdf": {
+    "compressPdf": {
+      "description": "Ghostscript를 사용하여 품질을 유지하면서 PDF 파일 크기를 줄입니다.",
+      "name": "PDF 압축",
+      "shortDescription": "브라우저에서 안전하게 PDF 파일 압축"
+    },
+    "mergePdf": {
+      "description": "여러 PDF 파일을 단일 문서로 결합합니다.",
+      "name": "PDF 병합",
+      "shortDescription": "여러 PDF 파일을 단일 문서로 병합"
+    },
+    "pdfToEpub": {
+      "description": "더 나은 전자책 리더 호환성을 위해 PDF 문서를 EPUB 파일로 변환합니다.",
+      "name": "PDF를 EPUB로",
+      "shortDescription": "PDF 파일을 EPUB 형식으로 변환"
+    },
+    "protectPdf": {
+      "description": "브라우저에서 안전하게 PDF 파일에 암호 보호를 추가합니다.",
+      "name": "PDF 보호",
+      "shortDescription": "안전하게 PDF 파일 암호 보호"
+    },
+    "splitPdf": {
+      "description": "페이지 번호 또는 범위(예: 1,5-8)를 사용하여 PDF 파일에서 특정 페이지를 추출합니다.",
+      "name": "PDF 분할",
+      "shortDescription": "PDF 파일에서 특정 페이지 추출"
+    }
+  },
+  "resultFooter": {
+    "copy": "클립보드에 복사",
+    "download": "다운로드"
+  },
+  "string": {
+    "createPalindrome": {
+      "description": "모든 텍스트에서 회문(palindrome)을 만드는 세계에서 가장 간단한 브라우저 기반 유틸리티입니다. 텍스트를 입력하고 즉시 앞으로 읽으나 뒤로 읽으나 똑같은 회문으로 변환하세요. 단어 게임, 대칭 텍스트 패턴 생성 또는 언어적 호기심 탐구에 적합합니다.",
+      "name": "회문 만들기",
+      "shortDescription": "앞으로 읽으나 뒤로 읽으나 똑같은 텍스트 만들기"
+    },
+    "palindrome": {
+      "description": "텍스트가 회문인지 확인하는 세계에서 가장 간단한 브라우저 기반 유틸리티입니다. 텍스트가 앞으로 읽으나 뒤로 읽으나 똑같은지 즉시 확인하세요. 단어 퍼즐, 언어 분석 또는 대칭 텍스트 패턴 검증에 적합합니다. 다양한 구분 기호 및 여러 단어 회문 탐지를 지원합니다.",
+      "name": "회문 검사기",
+      "shortDescription": "텍스트가 앞으로 읽으나 뒤로 읽으나 똑같은지 확인"
+    },
+    "repeat": {
+      "description": "이 도구를 사용하면 선택적 구분 기호로 주어진 텍스트를 여러 번 반복할 수 있습니다.",
+      "name": "텍스트 반복",
+      "shortDescription": "텍스트를 여러 번 반복"
+    },
+    "reverse": {
+      "description": "텍스트를 뒤집는 세계에서 가장 간단한 브라우저 기반 유틸리티입니다. 모든 텍스트를 입력하고 즉시 문자 단위로 뒤집으세요. 미러 텍스트를 만들거나, 회문을 분석하거나, 텍스트 패턴으로 노는 데 적합합니다. 뒤집는 동안 공백과 특수 문자를 보존합니다.",
+      "name": "텍스트 뒤집기",
+      "shortDescription": "모든 텍스트를 문자 단위로 뒤집기"
+    },
+    "toMorse": {
+      "description": "텍스트를 모스 부호로 변환하는 세계에서 가장 간단한 브라우저 기반 유틸리티입니다. 왼쪽 입력 양식에 텍스트를 로드하면 출력 영역에 즉시 모스 부호가 표시됩니다. 강력하고, 무료이며, 빠릅니다. 텍스트를 로드하면 모스 부호를 얻을 수 있습니다.",
+      "name": "모스 부호로 변환",
+      "shortDescription": "텍스트를 모스 부호로 빠르게 인코딩"
+    },
+    "uppercase": {
+      "description": "텍스트를 대문자로 변환하는 세계에서 가장 간단한 브라우저 기반 유틸리티입니다. 텍스트를 입력하기만 하면 자동으로 모두 대문자로 변환됩니다. 헤드라인을 만들거나, 텍스트를 강조하거나, 텍스트 형식을 표준화하는 데 적합합니다. 다양한 텍스트 형식을 지원하고 특수 문자를 보존합니다.",
+      "name": "대문자로 변환",
+      "shortDescription": "텍스트를 대문자로 변환"
+    }
+  },
+  "toolExamples": {
+    "subtitle": "클릭하여 사용해보세요!",
+    "title": "{{title}} 예시"
+  },
+  "toolFileResult": {
+    "copied": "파일이 복사되었습니다",
+    "copyFailed": "복사 실패: {{error}}",
+    "loading": "로딩 중... 잠시만 기다려 주세요.",
+    "result": "결과"
+  },
+  "toolHeader": {
+    "seeExamples": "예시 보기"
+  },
+  "toolLayout": {
+    "allToolsTitle": "모든 {{type}}"
+  },
+  "toolMultiFileResult": {
+    "copied": "파일이 복사되었습니다",
+    "copyFailed": "복사 실패: {{error}}",
+    "loading": "로딩 중... 잠시만 기다려 주세요.",
+    "result": "결과"
+  },
+  "toolMultipleAudioInput": {
+    "inputTitle": "{{type}} 입력",
+    "noFilesSelected": "선택된 파일 없음"
+  },
+  "toolMultiplePdfInput": {
+    "inputTitle": "{{type}} 입력",
+    "noFilesSelected": "선택된 파일 없음"
+  },
+  "toolOptions": {
+    "title": "도구 옵션"
+  },
+  "toolTextInput": {
+    "copied": "텍스트가 복사되었습니다",
+    "copyFailed": "복사 실패: {{error}}",
+    "input": "텍스트 입력",
+    "placeholder": "여기에 텍스트를 입력하세요..."
+  },
+  "toolTextResult": {
+    "copied": "텍스트가 복사되었습니다",
+    "copyFailed": "복사 실패: {{error}}",
+    "loading": "로딩 중... 잠시만 기다려 주세요.",
+    "result": "결과"
+  },
+  "userTypes": {
+    "developers": "개발자",
+    "generalUsers": "일반 사용자"
+  }
+}

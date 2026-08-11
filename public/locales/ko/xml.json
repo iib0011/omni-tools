@@ -1,0 +1,38 @@
+{
+  "xmlBeautifier": {
+    "description": "적절한 들여쓰기와 간격으로 XML 서식을 지정합니다.",
+    "indentation": "들여쓰기",
+    "inputTitle": "입력 XML",
+    "resultTitle": "정돈된 XML",
+    "shortDescription": "XML 코드 서식 지정 및 정돈",
+    "title": "XML 정돈기",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 XML 데이터의 서식을 적절한 들여쓰기와 간격으로 지정하여 더 읽기 쉽고 작업하기 쉽게 만들 수 있습니다.",
+      "title": "XML 정돈기"
+    },
+    "useSpaces": "공백 사용",
+    "useSpacesDescription": "공백으로 출력 들여쓰기",
+    "useTabs": "탭 사용",
+    "useTabsDescription": "탭으로 출력 들여쓰기"
+  },
+  "xmlValidator": {
+    "description": "XML 구문 및 구조의 유효성을 검사합니다.",
+    "placeholder": "여기에 XML을 붙여넣거나 가져오세요...",
+    "shortDescription": "XML 코드 오류 유효성 검사",
+    "title": "XML 유효성 검사기",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 XML 구문 및 구조의 유효성을 검사할 수 있습니다. XML이 올바른 형식인지 확인하고 발견된 모든 문제에 대한 자세한 오류 메시지를 제공합니다.",
+      "title": "XML 유효성 검사기"
+    }
+  },
+  "xmlViewer": {
+    "description": "트리 형식으로 XML 구조를 보고 탐색합니다.",
+    "inputTitle": "입력 XML",
+    "resultTitle": "XML 트리 뷰",
+    "title": "XML 뷰어",
+    "toolInfo": {
+      "description": "이 도구를 사용하면 계층적 트리 형식으로 XML 데이터를 볼 수 있으므로 XML 문서의 구조를 더 쉽게 탐색하고 이해할 수 있습니다.",
+      "title": "XML 뷰어"
+    }
+  }
+}
