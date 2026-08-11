@@ -1,0 +1,258 @@
+{
+  "chunk": {
+    "deleteEmptyItems": "Elimina elementi vuoti",
+    "deleteEmptyItemsDescription": "Ignora gli elementi vuoti ed escludili dal risultato.",
+    "description": "Dividi un elenco in gruppi consecutivi di dimensione fissa. Gli elementi vengono separati e raggruppati in sequenza; puoi completare i gruppi incompleti e personalizzare separatori e caratteri di apertura e chiusura.",
+    "emptyItemsAndPadding": "Elementi vuoti e riempimento",
+    "groupNumberDescription": "Numero di elementi per gruppo",
+    "groupSeparatorDescription": "Separatore inserito tra i gruppi",
+    "groupSizeAndSeparators": "Dimensione dei gruppi e formato di output",
+    "inputItemSeparator": "Separatore degli elementi di input",
+    "inputTitle": "Elenco di input",
+    "itemSeparatorDescription": "Separatore inserito tra gli elementi di un gruppo",
+    "leftWrapDescription": "Simbolo aggiunto prima di ogni gruppo",
+    "padNonFullGroups": "Completa i gruppi incompleti",
+    "padNonFullGroupsDescription": "Completa l'ultimo gruppo se contiene meno elementi del previsto.",
+    "paddingCharDescription": "Carattere o valore usato per completare i gruppi incompleti.",
+    "resultTitle": "Output raggruppato",
+    "rightWrapDescription": "Simbolo aggiunto dopo ogni gruppo",
+    "shortDescription": "Dividi un elenco in gruppi di dimensione fissa",
+    "splitOperators": {
+      "regex": {
+        "description": "Separa gli elementi di input usando un'espressione regolare.",
+        "title": "Usa un'espressione regolare"
+      },
+      "symbol": {
+        "description": "Separa gli elementi di input usando un singolo carattere.",
+        "title": "Usa un simbolo"
+      }
+    },
+    "splitSeparatorDescription": "Simbolo delimitatore o espressione regolare usata per separare gli elementi di input.",
+    "title": "Dividi elenco in gruppi"
+  },
+  "duplicate": {
+    "concatenate": "Concatena",
+    "concatenateDescription": "Concatena le copie; se disattivato, gli elementi verranno intercalati",
+    "copyDescription": "Numero di copie, anche frazionario",
+    "description": "Duplica gli elementi di un elenco secondo i criteri indicati. È utile per espandere dati, creare test o generare sequenze ripetute.",
+    "duplicationOptions": "Opzioni di duplicazione",
+    "error": "Errore",
+    "example1Description": "Questo esempio mostra come duplicare un elenco di parole.",
+    "example1Title": "Duplicazione semplice",
+    "example2Description": "Questo esempio mostra come duplicare un elenco in ordine inverso.",
+    "example2Title": "Duplicazione inversa",
+    "example3Description": "Questo esempio mostra come intercalare gli elementi anziché concatenarli.",
+    "example3Title": "Elementi intercalati",
+    "example4Description": "Questo esempio mostra come duplicare un elenco con un numero frazionario di copie.",
+    "example4Title": "Duplicazione frazionaria",
+    "examples": {
+      "fractional": {
+        "description": "Questo esempio mostra come duplicare un elenco con un numero frazionario di copie.",
+        "title": "Duplicazione frazionaria"
+      },
+      "interweave": {
+        "description": "Questo esempio mostra come intercalare gli elementi anziché concatenarli.",
+        "title": "Elementi intercalati"
+      },
+      "reverse": {
+        "description": "Questo esempio mostra come duplicare un elenco in ordine inverso.",
+        "title": "Duplicazione inversa"
+      },
+      "simple": {
+        "description": "Questo esempio mostra come duplicare un elenco di parole.",
+        "title": "Duplicazione semplice"
+      }
+    },
+    "inputTitle": "Elenco di input",
+    "joinSeparatorDescription": "Separatore usato per unire l'elenco duplicato",
+    "resultTitle": "Elenco duplicato",
+    "reverse": "Inverti",
+    "reverseDescription": "Inverti gli elementi duplicati",
+    "shortDescription": "Duplica gli elementi di un elenco secondo i criteri indicati",
+    "splitByRegex": "Dividi con espressione regolare",
+    "splitBySymbol": "Dividi con simbolo",
+    "splitOptions": "Opzioni di separazione",
+    "splitSeparatorDescription": "Separatore usato per dividere l'elenco",
+    "title": "Duplica",
+    "toolInfo": {
+      "description": "Questo strumento consente di duplicare gli elementi di un elenco. Puoi indicare il numero di copie, anche frazionario, scegliere se concatenare o intercalare gli elementi e invertirne l'ordine.",
+      "title": "Duplicazione di elenchi"
+    },
+    "unknownError": "Si è verificato un errore sconosciuto",
+    "validation": {
+      "copyMustBeNumber": "Il numero di copie deve essere un numero",
+      "copyMustBePositive": "Il numero di copie deve essere positivo",
+      "copyRequired": "Il numero di copie è obbligatorio",
+      "joinSeparatorRequired": "Il separatore di unione è obbligatorio",
+      "separatorRequired": "Il separatore è obbligatorio"
+    }
+  },
+  "findMostPopular": {
+    "description": "Trova gli elementi più frequenti in un elenco. È utile per analizzare dati, individuare tendenze o identificare valori ricorrenti.",
+    "displayFormatDescription": "Come visualizzare gli elementi più frequenti?",
+    "displayOptions": {
+      "count": "Mostra il conteggio dell'elemento",
+      "percentage": "Mostra la percentuale dell'elemento",
+      "total": "Mostra il totale dell'elemento"
+    },
+    "extractListItems": "Come estrarre gli elementi dell'elenco?",
+    "ignoreItemCase": "Ignora maiuscole e minuscole",
+    "ignoreItemCaseDescription": "Confronta tutti gli elementi convertendoli in minuscolo.",
+    "inputTitle": "Elenco di input",
+    "itemComparison": "Confronto degli elementi",
+    "outputFormat": "Formato di output degli elementi principali",
+    "removeEmptyItems": "Rimuovi elementi vuoti",
+    "removeEmptyItemsDescription": "Ignora gli elementi vuoti durante il confronto.",
+    "resultTitle": "Elementi più frequenti",
+    "shortDescription": "Trova gli elementi che ricorrono più spesso",
+    "sortOptions": {
+      "alphabetic": "Ordina alfabeticamente",
+      "count": "Ordina per conteggio"
+    },
+    "sortingMethodDescription": "Seleziona un metodo di ordinamento.",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimita gli elementi dell'elenco con un'espressione regolare.",
+        "title": "Usa un'espressione regolare"
+      },
+      "symbol": {
+        "description": "Delimita gli elementi dell'elenco con un carattere.",
+        "title": "Usa un simbolo"
+      }
+    },
+    "splitSeparatorDescription": "Imposta un simbolo delimitatore o un'espressione regolare.",
+    "title": "Trova i più frequenti",
+    "trimItems": "Rimuovi gli spazi dagli elementi principali",
+    "trimItemsDescription": "Rimuovi gli spazi iniziali e finali prima di confrontare gli elementi"
+  },
+  "findUnique": {
+    "caseSensitiveItems": "Distingui maiuscole e minuscole",
+    "caseSensitiveItemsDescription": "Considera unici gli elementi che differiscono soltanto per maiuscole e minuscole.",
+    "delimiterDescription": "Imposta un simbolo delimitatore o un'espressione regolare.",
+    "description": "Trova gli elementi unici di un elenco rimuovendo i duplicati. È utile per pulire dati e ottenere valori distinti.",
+    "findAbsolutelyUniqueItems": "Trova elementi presenti una sola volta",
+    "findAbsolutelyUniqueItemsDescription": "Mostra soltanto gli elementi che compaiono una sola volta nell'elenco.",
+    "inputListDelimiter": "Delimitatore dell'elenco di input",
+    "inputTitle": "Elenco di input",
+    "outputListDelimiter": "Delimitatore dell'elenco di output",
+    "resultTitle": "Elementi unici",
+    "shortDescription": "Trova gli elementi unici in un elenco",
+    "skipEmptyItems": "Ignora elementi vuoti",
+    "skipEmptyItemsDescription": "Non includere nell'output gli elementi vuoti.",
+    "title": "Trova unici",
+    "trimItems": "Rimuovi spazi dagli elementi",
+    "trimItemsDescription": "Rimuovi gli spazi iniziali e finali prima di confrontare gli elementi.",
+    "uniqueItemOptions": "Opzioni per gli elementi unici"
+  },
+  "reverse": {
+    "description": "Inverte l'ordine degli elementi di un elenco. Gli elementi possono essere separati da qualsiasi simbolo e puoi scegliere un nuovo separatore per l'output.",
+    "inputTitle": "Elenco di input",
+    "itemSeparator": "Separatore degli elementi",
+    "itemSeparatorDescription": "Imposta un simbolo delimitatore o un'espressione regolare.",
+    "outputListOptions": "Opzioni dell'elenco di output",
+    "outputSeparatorDescription": "Separatore degli elementi nell'elenco di output.",
+    "resultTitle": "Elenco invertito",
+    "shortDescription": "Inverti rapidamente un elenco",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimita gli elementi dell'elenco con un'espressione regolare.",
+        "title": "Usa un'espressione regolare"
+      },
+      "symbol": {
+        "description": "Delimita gli elementi dell'elenco con un carattere.",
+        "title": "Usa un simbolo"
+      }
+    },
+    "splitterMode": "Modalità di separazione",
+    "title": "Inverti",
+    "toolInfo": {
+      "description": "Questo strumento divide l'elenco di input nei singoli elementi e li restituisce partendo dall'ultimo. Il separatore può essere un carattere o un'espressione regolare.",
+      "title": "Che cos'è un invertitore di elenchi?"
+    }
+  },
+  "rotate": {
+    "description": "Ruota gli elementi di un elenco spostandoli circolarmente del numero di posizioni indicato.",
+    "shortDescription": "Ruota gli elementi dell'elenco del numero di posizioni indicato",
+    "title": "Ruota"
+  },
+  "shuffle": {
+    "delimiterDescription": "Imposta un simbolo delimitatore o un'espressione regolare.",
+    "description": "Mescola gli elementi di un elenco e li restituisce in ordine casuale. È utile per creare varianti, testare casualità o riorganizzare dati ordinati.",
+    "inputListSeparator": "Separatore dell'elenco di input",
+    "inputTitle": "Elenco di input",
+    "joinSeparatorDescription": "Usa questo separatore nell'elenco mescolato.",
+    "outputLengthDescription": "Numero di elementi casuali da restituire",
+    "resultTitle": "Elenco mescolato",
+    "shortDescription": "Disponi casualmente gli elementi dell'elenco",
+    "shuffledListLength": "Lunghezza dell'elenco mescolato",
+    "shuffledListSeparator": "Separatore dell'elenco mescolato",
+    "title": "Mescola"
+  },
+  "sort": {
+    "caseSensitive": "Ordinamento con distinzione maiuscole/minuscole",
+    "caseSensitiveDescription": "Ordina separatamente maiuscole e minuscole. In ordine crescente, le lettere maiuscole precedono le minuscole. Funziona solo con l'ordinamento alfabetico.",
+    "description": "Ordina gli elementi di un elenco in ordine crescente o decrescente. È utile per organizzare dati e testi.",
+    "inputItemSeparator": "Separatore degli elementi di input",
+    "inputTitle": "Elenco di input",
+    "joinSeparatorDescription": "Usa questo simbolo per unire gli elementi nell'elenco ordinato.",
+    "orderDescription": "Seleziona l'ordine.",
+    "orderOptions": {
+      "decreasing": "Ordine decrescente",
+      "increasing": "Ordine crescente"
+    },
+    "removeDuplicates": "Rimuovi duplicati",
+    "removeDuplicatesDescription": "Elimina gli elementi duplicati.",
+    "resultTitle": "Elenco ordinato",
+    "shortDescription": "Ordina gli elementi dell'elenco nell'ordine indicato",
+    "sortMethod": "Metodo di ordinamento",
+    "sortMethodDescription": "Seleziona un metodo di ordinamento.",
+    "sortOptions": {
+      "alphabetic": "Ordina alfabeticamente",
+      "length": "Ordina per lunghezza",
+      "numeric": "Ordina numericamente"
+    },
+    "sortedItemProperties": "Proprietà degli elementi ordinati",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimita gli elementi dell'elenco con un'espressione regolare.",
+        "title": "Usa un'espressione regolare"
+      },
+      "symbol": {
+        "description": "Delimita gli elementi dell'elenco con un carattere.",
+        "title": "Usa un simbolo"
+      }
+    },
+    "splitSeparatorDescription": "Imposta un simbolo delimitatore o un'espressione regolare.",
+    "title": "Ordina"
+  },
+  "truncate": {
+    "description": "Tronca un elenco mantenendo soltanto il numero massimo di elementi indicato.",
+    "shortDescription": "Tronca l'elenco al numero di elementi indicato",
+    "title": "Tronca"
+  },
+  "unwrap": {
+    "description": "Rimuovi i caratteri che racchiudono gli elementi di un elenco e appiattisci la struttura.",
+    "shortDescription": "Rimuovi i caratteri di apertura e chiusura dagli elementi",
+    "title": "Rimuovi delimitatori"
+  },
+  "wrap": {
+    "description": "Aggiungi testo prima e dopo ogni elemento di un elenco.",
+    "inputTitle": "Elenco di input",
+    "joinSeparatorDescription": "Separatore usato per unire l'elenco risultante",
+    "leftTextDescription": "Testo da aggiungere prima di ogni elemento",
+    "removeEmptyItems": "Rimuovi elementi vuoti",
+    "resultTitle": "Elenco racchiuso",
+    "rightTextDescription": "Testo da aggiungere dopo ogni elemento",
+    "shortDescription": "Racchiudi gli elementi dell'elenco secondo i criteri indicati",
+    "splitByRegex": "Dividi con espressione regolare",
+    "splitBySymbol": "Dividi con simbolo",
+    "splitOptions": "Opzioni di separazione",
+    "splitSeparatorDescription": "Separatore usato per dividere l'elenco",
+    "title": "Racchiudi",
+    "toolInfo": {
+      "description": "Questo strumento consente di aggiungere testo prima e dopo ogni elemento di un elenco. È utile per aggiungere virgolette, parentesi o altra formattazione e preparare dati per formati diversi.",
+      "title": "Formattazione degli elementi di un elenco"
+    },
+    "wrapOptions": "Opzioni di formattazione"
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "checkLeapYears": {
+    "description": "Controlla se un anno è bisestile e visualizza le informazioni relative.",
+    "exampleDescription": "Una nostra amica è nata il 29 febbraio. Per ricordare i suoi prossimi compleanni, inseriamo gli anni dal 2025 al 2040 e controlliamo quali sono bisestili.",
+    "exampleTitle": "Trova i compleanni del 29 febbraio",
+    "inputTitle": "Anno di input",
+    "resultTitle": "Risultato anno bisestile",
+    "shortDescription": "Controlla se un anno è bisestile",
+    "title": "Controlla anni bisestili",
+    "toolInfo": {
+      "description": "Un anno bisestile contiene un giorno aggiuntivo, il 29 febbraio, per mantenere sincronizzato il calendario con l'anno astronomico. In genere ricorre ogni quattro anni, con eccezioni per gli anni divisibili per 100 ma non per 400.",
+      "title": "Che cos'è un anno bisestile?"
+    }
+  },
+  "convertDaysToHours": {
+    "addHoursName": "Aggiungi il nome delle ore",
+    "addHoursNameDescription": "Aggiungi la parola «ore» ai valori di output",
+    "description": "Converti giorni in ore con opzioni personalizzabili.",
+    "hoursName": "Nome delle ore",
+    "shortDescription": "Converti giorni in ore",
+    "title": "Converti giorni in ore",
+    "toolInfo": {
+      "description": "Questo strumento converte giorni in ore. Puoi inserire numeri semplici o valori con unità e scegliere di aggiungere il suffisso «ore» al risultato.",
+      "title": "Converti giorni in ore"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "Aggiungi il nome dei giorni",
+    "addDaysNameDescription": "Aggiungi la parola «giorni» ai valori di output",
+    "daysName": "Nome dei giorni",
+    "description": "Converti ore in giorni con opzioni personalizzabili.",
+    "shortDescription": "Converti ore in giorni",
+    "title": "Converti ore in giorni",
+    "toolInfo": {
+      "description": "Questo strumento converte ore in giorni. Puoi inserire numeri semplici o valori con unità e scegliere di aggiungere il suffisso «giorni» al risultato.",
+      "title": "Converti ore in giorni"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "Aggiungi zeri iniziali",
+    "addPaddingDescription": "Aggiungi zeri iniziali a ore, minuti e secondi.",
+    "description": "Converti un numero di secondi in un formato leggibile, ore:minuti:secondi.",
+    "shortDescription": "Converti secondi in formato orario",
+    "timePadding": "Zeri iniziali",
+    "title": "Converti secondi in tempo",
+    "toolInfo": { "title": "Che cos'è {{title}}?" }
+  },
+  "convertTimeToDecimal": {
+    "description": "Converti una durata nel formato HH:MM:SS in un valore decimale espresso in ore.",
+    "longDescription": "Converti una stringa oraria HH:MM:SS o HH:MM nel corrispondente numero decimale di ore. È utile per presenze, paghe, fatturazione a tempo, analisi dei dati e per sommare o confrontare durate. Ad esempio, 03:26:00 diventa 3,43 ore e 12:5 diventa 12,08 ore.",
+    "shortDescription": "Converti un orario leggibile in ore decimali",
+    "title": "Converti tempo in decimale"
+  },
+  "convertTimeToSeconds": {
+    "description": "Converti un orario nel formato HH:MM:SS in secondi.",
+    "inputTitle": "Orario di input",
+    "resultTitle": "Secondi",
+    "shortDescription": "Converti il formato orario in secondi",
+    "title": "Converti tempo in secondi",
+    "toolInfo": {
+      "description": "Questo strumento converte stringhe orarie nel formato HH:MM:SS in secondi. È utile per calcolare durate e intervalli.",
+      "title": "Converti tempo in secondi"
+    }
+  },
+  "convertUnixToDate": {
+    "addUtcLabel": "Aggiungi suffisso «UTC»",
+    "addUtcLabelDescription": "Aggiungi «UTC» dopo la data convertita, disponibile soltanto in modalità UTC",
+    "description": "Converti timestamp Unix in date leggibili e date in timestamp Unix.",
+    "shortDescription": "Converti timestamp Unix e date in entrambe le direzioni.",
+    "title": "Converti Unix ↔ Data",
+    "toolInfo": {
+      "title": "Converti Unix ↔ Data",
+      "description": "Questo strumento converte timestamp Unix, espressi in secondi, in date leggibili e viceversa. Puoi usare UTC, il fuso orario locale o indicare uno scostamento UTC personalizzato. Se non scegli il fuso locale e non indichi uno scostamento, viene usato UTC (+00:00)."
+    },
+    "useLocalTime": "Usa ora locale",
+    "useUTC": "Usa UTC",
+    "useLocalTimeDescription": "Mostra la data convertita nel fuso orario locale anziché in UTC",
+    "tzOptions": "Opzioni del fuso orario",
+    "optionsTitle": "Modalità di conversione",
+    "date-to-unix": "Data → Unix",
+    "unix-to-date": "Unix → Data"
+  },
+  "crontabGuru": {
+    "title": "Crontab Guru",
+    "description": "Analizza e spiega espressioni cron in linguaggio comprensibile. Controlla la sintassi e interpreta più espressioni contemporaneamente.",
+    "shortDescription": "Analizza e spiega espressioni cron in linguaggio comprensibile",
+    "longDescription": "Crontab Guru traduce la sintassi cron in descrizioni leggibili e ne convalida la correttezza. È utile per backup automatici, manutenzione dei sistemi e pipeline CI/CD. Supporta le espressioni cron standard a cinque campi ed elabora una voce per riga. Le descrizioni automatiche della libreria possono non essere disponibili in italiano."
+  },
+  "timeBetweenDates": {
+    "description": "Calcola la differenza tra due date in giorni, ore, minuti e secondi.",
+    "endDate": "Data finale",
+    "endDateTime": "Data e ora finali",
+    "endTime": "Ora finale",
+    "endTimezone": "Fuso orario finale",
+    "shortDescription": "Calcola il tempo tra due date",
+    "startDate": "Data iniziale",
+    "startDateTime": "Data e ora iniziali",
+    "startTime": "Ora iniziale",
+    "startTimezone": "Fuso orario iniziale",
+    "title": "Tempo tra due date",
+    "toolInfo": {
+      "description": "Calcola la differenza esatta tra due date e orari, anche con fusi orari diversi, e mostra il risultato in anni, mesi, giorni, ore, minuti e secondi.",
+      "title": "Calcolatore del tempo tra due date"
+    }
+  },
+  "truncateClockTime": {
+    "description": "Tronca gli orari rimuovendo secondi o minuti e riducendoli alla precisione desiderata.",
+    "printDroppedComponents": "Mostra componenti rimossi",
+    "shortDescription": "Tronca gli orari alla precisione indicata",
+    "timePadding": "Zeri iniziali dell'orario",
+    "title": "Tronca orario",
+    "toolInfo": { "title": "Che cos'è {{title}}?" },
+    "truncateMinutesAndSeconds": "Tronca minuti e secondi",
+    "truncateMinutesAndSecondsDescription": "Rimuovi sia i minuti sia i secondi da ogni orario.",
+    "truncateOnlySeconds": "Tronca soltanto i secondi",
+    "truncateOnlySecondsDescription": "Rimuovi i secondi da ogni orario.",
+    "truncationSide": "Lato di troncamento",
+    "useZeroPadding": "Usa zeri iniziali",
+    "zeroPaddingDescription": "Mostra sempre ogni componente dell'orario con due cifre.",
+    "zeroPrintDescription": "Mostra le parti rimosse come valori zero «00».",
+    "zeroPrintTruncatedParts": "Mostra come zero le parti troncate"
+  },
+  "discordTimestamp": {
+    "name": "Generatore di timestamp Discord",
+    "description": "Converti date e orari nel formato timestamp di Discord, che si adatta automaticamente al fuso orario e alla lingua di ogni utente",
+    "shortDescription": "Genera timestamp Discord dalle date",
+    "inputTitle": "Date e orari di input",
+    "outputTitle": "Timestamp Discord",
+    "formats": {
+      "title": "Formato del timestamp",
+      "description": "Scegli come apparirà il timestamp in Discord; passa il mouse sulle opzioni per vedere un esempio",
+      "short_time": "Ora breve (es. 14:30)",
+      "long_time": "Ora estesa (es. 14:30:00)",
+      "short_date": "Data breve (es. 01/01/2025)",
+      "long_date": "Data estesa (es. 1 gennaio 2025)",
+      "short_datetime": "Data e ora brevi (es. 1 gennaio 2025 14:30)",
+      "long_datetime": "Data e ora estese (es. lunedì 1 gennaio 2025 14:30)",
+      "relative": "Relativo (es. 2 ore fa)"
+    },
+    "utc": {
+      "title": "Opzioni di input",
+      "label": "Forza UTC",
+      "description": "Considera le date e gli orari di input come UTC. Disattiva per usare il fuso orario locale"
+    },
+    "toolInfo": {
+      "title": "Che cos'è un timestamp Discord?",
+      "description": "I timestamp Discord sono una sintassi speciale che mostra date e orari in modo dinamico, convertendoli automaticamente nel fuso orario e nella lingua di chi legge. Inserisci una data e ora per riga, scegli il formato e incolla il risultato in Discord. Le righe vuote vengono preservate e quelle non valide sono indicate con ❌."
+    }
+  },
+  "dateWeekdayCalculator": {
+    "title": "Calcolatore del giorno della settimana",
+    "description": "Trova tutti gli anni di un intervallo nei quali un determinato giorno e mese cade nel giorno della settimana scelto.",
+    "shortDescription": "Trova gli anni in cui una data cade in un determinato giorno della settimana",
+    "longDescription": "Seleziona mese, giorno e giorno della settimana, quindi indica l'anno iniziale e finale. Il calcolatore esamina ogni anno e restituisce tutte le corrispondenze. Il 29 febbraio è supportato e gli anni non bisestili vengono ignorati automaticamente.",
+    "resultTitle": "Anni corrispondenti",
+    "dateSelection": "Data",
+    "monthDescription": "Mese",
+    "dayDescription": "Giorno",
+    "weekdaySelection": "Giorno della settimana",
+    "weekdayDescription": "Giorno della settimana da trovare",
+    "yearRange": "Intervallo di anni",
+    "startYearDescription": "Anno iniziale",
+    "endYearDescription": "Anno finale",
+    "noMatches": "Nessun anno corrispondente trovato nell'intervallo selezionato.",
+    "foundMatches_one": "Trovato {{count}} anno corrispondente",
+    "foundMatches_other": "Trovati {{count}} anni corrispondenti",
+    "months": {
+      "1": "Gennaio",
+      "2": "Febbraio",
+      "3": "Marzo",
+      "4": "Aprile",
+      "5": "Maggio",
+      "6": "Giugno",
+      "7": "Luglio",
+      "8": "Agosto",
+      "9": "Settembre",
+      "10": "Ottobre",
+      "11": "Novembre",
+      "12": "Dicembre"
+    },
+    "weekdays": {
+      "monday": "Lunedì",
+      "tuesday": "Martedì",
+      "wednesday": "Mercoledì",
+      "thursday": "Giovedì",
+      "friday": "Venerdì",
+      "saturday": "Sabato",
+      "sunday": "Domenica"
+    },
+    "errors": {
+      "invalidMonth": "Il mese deve essere compreso tra 1 e 12",
+      "invalidDay": "Il giorno deve essere compreso tra 1 e 31",
+      "invalidDate": "Il giorno non è valido per il mese selezionato",
+      "invalidWeekday": "Giorno della settimana non valido",
+      "invalidYear": "Gli anni devono essere numeri interi compresi tra 1 e 9999",
+      "invalidYearRange": "L'anno iniziale deve essere minore o uguale all'anno finale",
+      "emptyInput": "Tutti i campi sono obbligatori",
+      "fallback": "Input non valido"
+    },
+    "toolInfo": { "title": "Che cos'è {{title}}?" }
+  },
+  "convertDateToUnix": {
+    "description": "Converti una data leggibile in un timestamp Unix.",
+    "outputOptions": "Opzioni di output",
+    "shortDescription": "Converti una data in timestamp Unix.",
+    "title": "Converti data in Unix",
+    "toolInfo": {
+      "description": "Questo strumento converte una data nel formato YYYY-MM-DD HH:MM:SS in un timestamp Unix. Puoi specificare uno scostamento UTC o usare il fuso orario locale; in assenza di entrambe le opzioni viene usato +00:00.",
+      "title": "Converti data in Unix"
+    },
+    "useLocalTime": "Usa ora locale",
+    "useLocalTimeDescription": "La data e l'ora di input vengono elaborate usando il fuso orario del browser. Le altre indicazioni di fuso verranno ignorate.",
+    "options": "Opzioni"
+  }
+}
