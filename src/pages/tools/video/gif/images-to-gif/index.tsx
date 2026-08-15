@@ -28,6 +28,7 @@ export default function ImagesToGif({ title }: ToolComponentProps) {
     input: MultiImageInput[]
   ) => {
     if (!input || input.length === 0) return;
+    setLoading(true);
     try {
       const convertedGif = await imagesToGif(
         input.map((item) => item.file),
