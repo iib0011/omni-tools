@@ -71,22 +71,39 @@ export default function ImagesToGif({ title }: ToolComponentProps) {
         {
           title: t('gif.imagesToGif.frameOptions'),
           component: (
-            <Box>
-              <TextFieldWithDesc
-                name="frameDelay"
-                type="number"
-                inputProps={{ min: 50, max: 10000, step: 50 }}
-                description={t('gif.imagesToGif.frameDelayDescription')}
-                onOwnChange={(value) => {
-                  const clamped = Math.min(
-                    10000,
-                    Math.max(50, Number(value))
-                  ).toString();
-                  updateNumberField(clamped, 'frameDelay', updateField);
-                }}
-                value={values.frameDelay}
-              />
-            </Box>
+            <>
+              <Box>
+                <TextFieldWithDesc
+                  name="frameDelay"
+                  type="number"
+                  inputProps={{ min: 50, max: 10000, step: 50 }}
+                  description={t('gif.imagesToGif.frameDelayDescription')}
+                  onOwnChange={(value) => {
+                    const clamped = Math.min(
+                      10000,
+                      Math.max(50, Number(value))
+                    ).toString();
+                    updateNumberField(clamped, 'frameDelay', updateField);
+                  }}
+                  value={values.frameDelay}
+                />
+              </Box>
+              <Box>
+                <TextFieldWithDesc
+                  name="frameDelayInFPS"
+                  type="number"
+                  inputProps={{ min: 1, max: 60 }}
+                  description={t('gif.imagesToGif.frameDelayMStoFPS')}
+                  onOwnChange={(value) => {
+                    const fps = Math.min(60, Math.max(1, Number(value)));
+                    const ms = 1000 / fps;
+                    const msString = ms.toString();
+                    updateNumberField(msString, 'frameDelay', updateField);
+                  }}
+                  value={1000 / values.frameDelay}
+                />
+              </Box>
+            </>
           )
         }
       ]}

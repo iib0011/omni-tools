@@ -111,7 +111,8 @@
       "resultTitle": "Animated GIF",
       "loadingText": "Creating GIF...",
       "frameOptions": "Frame Options",
-      "frameDelayDescription": "How long each frame is displayed, in milliseconds (e.g. 500 = 0.5 s per frame)"
+      "frameDelayDescription": "How long each frame is displayed, in milliseconds (e.g. 500 = 0.5 s per frame)",
+      "frameDelayMStoFPS": "Alternative way to set frame delay, in frames per second"
     }
   },
   "loop": {
