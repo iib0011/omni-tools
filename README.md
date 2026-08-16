@@ -151,6 +151,11 @@ npm run test:e2e
 ### i18n (Translations)
 The translation files are [here](public/locales). Only edit these if you are a developer. For non developers, use [Locize](https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK).
 
+**Supported Languages**
+
+<!-- I18N-COVERAGE:START -->
+<!-- I18N-COVERAGE:END -->
+
 ## ⭐ Star History
 
 <img src="https://star-history.dera.page/svg?repos=iib0011/omni-tools&type=Date"/>
