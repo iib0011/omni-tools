@@ -124,7 +124,7 @@
     "title": "Loop Video",
     "toolInfo": {
       "description": "This tool allows you to create a looping video by repeating the original video multiple times. You can specify how many times the video should loop.",
-      "title": "What is {{title}} ?"
+      "title": "What is {{title}}?"
     }
   },
   "mergeVideo": {
