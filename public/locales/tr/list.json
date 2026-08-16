@@ -1,0 +1,258 @@
+{
+  "chunk": {
+    "deleteEmptyItems": "Boş Öğeleri Sil",
+    "deleteEmptyItemsDescription": "Boş öğeleri yok say ve sonuca dahil etme.",
+    "description": "Bir listeyi sabit boyutlu ardışık parçalara bölün. Bu araç giriş öğelerini ayırır, sırayla parçalara böler, isteğe bağlı olarak tamamlanmamış parçaları doldurur ve çıktıyı özel ayırıcılar ve sarmalayıcılar kullanarak biçimlendirir.",
+    "emptyItemsAndPadding": "Boş Öğeler ve Dolgu",
+    "groupNumberDescription": "Grup başına öğe sayısı",
+    "groupSeparatorDescription": "Gruplar arasına yerleştirilen ayırıcı",
+    "groupSizeAndSeparators": "Grup Boyutu ve Çıktı Formatı",
+    "inputItemSeparator": "Giriş Öğe Ayırıcı",
+    "inputTitle": "Giriş listesi",
+    "itemSeparatorDescription": "Bir grup içindeki öğeler arasına yerleştirilen ayırıcı",
+    "leftWrapDescription": "Her grubun önüne eklenen sembol",
+    "padNonFullGroups": "Tamamlanmamış Grupları Doldur",
+    "padNonFullGroupsDescription": "Son grup gerekenden az öğeye sahipse doldur.",
+    "paddingCharDescription": "Tamamlanmamış grupları doldurmak için kullanılan karakter veya değer.",
+    "resultTitle": "Gruplanmış çıktı",
+    "rightWrapDescription": "Her grubun sonuna eklenen sembol",
+    "shortDescription": "Bir listeyi sabit boyutlu parçalara bölün",
+    "splitOperators": {
+      "regex": {
+        "description": "Giriş öğelerini düzenli ifade kullanarak böl.",
+        "title": "Regex Bölme Kullan"
+      },
+      "symbol": {
+        "description": "Giriş öğelerini tek bir karakter kullanarak böl.",
+        "title": "Sembol Bölme Kullan"
+      }
+    },
+    "splitSeparatorDescription": "Giriş öğelerini bölmek için kullanılan ayırıcı sembol veya düzenli ifade.",
+    "title": "Listeyi Parçala"
+  },
+  "duplicate": {
+    "concatenate": "Birleştir",
+    "concatenateDescription": "Kopyaları art arda birleştir (işaretlenmezse öğeler iç içe geçirilir)",
+    "copyDescription": "Kopya sayısı (kesirli olabilir)",
+    "description": "Liste öğelerini çoğaltmak için dünyanın en basit tarayıcı tabanlı aracı. Listenizi girin ve öğelerin kopyalarını oluşturmak için çoğaltma kriterlerini belirtin. Veri genişletme, test veya tekrarlanan desenler oluşturmak için mükemmel.",
+    "duplicationOptions": "Çoğaltma Seçenekleri",
+    "error": "Hata",
+    "example1Description": "Bu örnek, bir kelime listesinin nasıl çoğaltılacağını gösterir.",
+    "example1Title": "Basit çoğaltma",
+    "example2Description": "Bu örnek, bir listenin ters sırada nasıl çoğaltılacağını gösterir.",
+    "example2Title": "Ters çoğaltma",
+    "example3Description": "Bu örnek, öğeleri birleştirmek yerine nasıl iç içe geçireceğinizi gösterir.",
+    "example3Title": "Öğeleri iç içe geçirme",
+    "example4Description": "Bu örnek, kesirli sayıda kopyayla bir listenin nasıl çoğaltılacağını gösterir.",
+    "example4Title": "Kesirli çoğaltma",
+    "examples": {
+      "fractional": {
+        "description": "Bu örnek, kesirli sayıda kopyayla bir listenin nasıl çoğaltılacağını gösterir.",
+        "title": "Kesirli çoğaltma"
+      },
+      "interweave": {
+        "description": "Bu örnek, öğeleri birleştirmek yerine nasıl iç içe geçireceğinizi gösterir.",
+        "title": "Öğeleri iç içe geçirme"
+      },
+      "reverse": {
+        "description": "Bu örnek, bir listenin ters sırada nasıl çoğaltılacağını gösterir.",
+        "title": "Ters çoğaltma"
+      },
+      "simple": {
+        "description": "Bu örnek, bir kelime listesinin nasıl çoğaltılacağını gösterir.",
+        "title": "Basit çoğaltma"
+      }
+    },
+    "inputTitle": "Giriş Listesi",
+    "joinSeparatorDescription": "Çoğaltılmış listeyi birleştirmek için ayırıcı",
+    "resultTitle": "Çoğaltılmış Liste",
+    "reverse": "Tersine çevir",
+    "reverseDescription": "Çoğaltılmış öğeleri tersine çevir",
+    "shortDescription": "Liste öğelerini belirtilen kriterlerle çoğaltın",
+    "splitByRegex": "Düzenli İfadeye Göre Böl",
+    "splitBySymbol": "Sembole Göre Böl",
+    "splitOptions": "Bölme Seçenekleri",
+    "splitSeparatorDescription": "Listeyi bölmek için ayırıcı",
+    "title": "Çoğalt",
+    "toolInfo": {
+      "description": "Bu araç, bir listedeki öğeleri çoğaltmanızı sağlar. Kopya sayısını (kesirli değerler dahil) belirtebilir, öğelerin birleştirilip birleştirilmeyeceğini veya iç içe geçirileceğini kontrol edebilir ve hatta çoğaltılmış öğeleri tersine çevirebilirsiniz. Tekrarlanan desenler oluşturmak, test verisi üretmek veya öngörülebilir içerikle listeleri genişletmek için kullanışlıdır.",
+      "title": "Liste Çoğaltma"
+    },
+    "unknownError": "Bilinmeyen bir hata oluştu",
+    "validation": {
+      "copyMustBeNumber": "Kopya sayısı bir sayı olmalıdır",
+      "copyMustBePositive": "Kopya sayısı pozitif olmalıdır",
+      "copyRequired": "Kopya sayısı gereklidir",
+      "joinSeparatorRequired": "Birleştirme ayırıcısı gereklidir",
+      "separatorRequired": "Ayırıcı gereklidir"
+    }
+  },
+  "findMostPopular": {
+    "description": "Bir listedeki en popüler öğeleri bulmak için dünyanın en basit tarayıcı tabanlı aracı. Listenizi girin ve en sık görünen öğeleri anında alın. Veri analizi, trend belirleme veya ortak öğeleri bulmak için mükemmel.",
+    "displayFormatDescription": "En popüler liste öğeleri nasıl görüntülensin?",
+    "displayOptions": {
+      "count": "Öğe sayısını göster",
+      "percentage": "Öğe yüzdesini göster",
+      "total": "Öğe toplamını göster"
+    },
+    "extractListItems": "Liste Öğeleri Nasıl Ayıklanır?",
+    "ignoreItemCase": "Öğe Büyük/Küçük Harfini Yoksay",
+    "ignoreItemCaseDescription": "Tüm liste öğelerini küçük harfle karşılaştır.",
+    "inputTitle": "Giriş listesi",
+    "itemComparison": "Öğe karşılaştırması",
+    "outputFormat": "En üst öğe çıktı formatı",
+    "removeEmptyItems": "Boş öğeleri kaldır",
+    "removeEmptyItemsDescription": "Boş öğeleri karşılaştırmadan hariç tut.",
+    "resultTitle": "En popüler öğeler",
+    "shortDescription": "En sık görünen öğeleri bulun",
+    "sortOptions": {
+      "alphabetic": "Alfabetik Sırala",
+      "count": "Sayıya göre sırala"
+    },
+    "sortingMethodDescription": "Bir sıralama yöntemi seçin.",
+    "splitOperators": {
+      "regex": {
+        "description": "Giriş liste öğelerini bir düzenli ifadeyle ayır.",
+        "title": "Bölme İçin Regex Kullan"
+      },
+      "symbol": {
+        "description": "Giriş liste öğelerini bir karakterle ayır.",
+        "title": "Bölme İçin Sembol Kullan"
+      }
+    },
+    "splitSeparatorDescription": "Bir ayırıcı sembol veya düzenli ifade ayarlayın.",
+    "title": "En popüleri bul",
+    "trimItems": "En üst liste öğelerini kırp",
+    "trimItemsDescription": "Öğeleri karşılaştırmadan önce baştaki ve sondaki boşlukları kaldır"
+  },
+  "findUnique": {
+    "caseSensitiveItems": "Büyük/Küçük Harfe Duyarlı Öğeler",
+    "caseSensitiveItemsDescription": "Farklı büyük/küçük harfe sahip öğeleri listede benzersiz elemanlar olarak çıktı ver.",
+    "delimiterDescription": "Bir ayırıcı sembol veya düzenli ifade ayarlayın.",
+    "description": "Bir listedeki benzersiz öğeleri bulmak için dünyanın en basit tarayıcı tabanlı aracı. Listenizi girin ve tekrarlar kaldırılmış tüm benzersiz değerleri anında alın. Veri temizleme, tekilleştirme veya farklı elemanları bulmak için mükemmel.",
+    "findAbsolutelyUniqueItems": "Kesinlikle Benzersiz Öğeleri Bul",
+    "findAbsolutelyUniqueItemsDescription": "Listede yalnızca tek bir kopya halinde bulunan öğeleri görüntüle.",
+    "inputListDelimiter": "Giriş Listesi Ayırıcı",
+    "inputTitle": "Giriş Listesi",
+    "outputListDelimiter": "Çıktı Listesi Ayırıcı",
+    "resultTitle": "Benzersiz Öğeler",
+    "shortDescription": "Bir listedeki benzersiz öğeleri bulun",
+    "skipEmptyItems": "Boş Öğeleri Atla",
+    "skipEmptyItemsDescription": "Boş liste öğelerini çıktıya dahil etme.",
+    "title": "Benzersizi bul",
+    "trimItems": "Liste Öğelerini Kırp",
+    "trimItemsDescription": "Öğeleri karşılaştırmadan önce baştaki ve sondaki boşlukları kaldır.",
+    "uniqueItemOptions": "Benzersiz Öğe Seçenekleri"
+  },
+  "reverse": {
+    "description": "Bu, tüm liste öğelerini ters sırayla yazdıran süper basit bir tarayıcı tabanlı uygulamadır. Giriş öğeleri herhangi bir sembolle ayrılabilir ve ters çevrilmiş liste öğelerinin ayırıcısını da değiştirebilirsiniz.",
+    "inputTitle": "Giriş listesi",
+    "itemSeparator": "Öğe Ayırıcı",
+    "itemSeparatorDescription": "Bir ayırıcı sembol veya düzenli ifade ayarlayın.",
+    "outputListOptions": "Çıktı Listesi Seçenekleri",
+    "outputSeparatorDescription": "Çıktı liste öğesi ayırıcısı.",
+    "resultTitle": "Ters çevrilmiş liste",
+    "shortDescription": "Bir listeyi hızlıca tersine çevirin",
+    "splitOperators": {
+      "regex": {
+        "description": "Giriş liste öğelerini bir düzenli ifadeyle ayır.",
+        "title": "Bölme İçin Regex Kullan"
+      },
+      "symbol": {
+        "description": "Giriş liste öğelerini bir karakterle ayır.",
+        "title": "Bölme İçin Sembol Kullan"
+      }
+    },
+    "splitterMode": "Bölücü Modu",
+    "title": "Tersine çevir",
+    "toolInfo": {
+      "description": "Bu yardımcı programla, bir listedeki öğelerin sırasını tersine çevirebilirsiniz. Program önce giriş listesini tek tek öğelere böler, ardından son öğeden ilk öğeye doğru üzerlerinde ilerler ve yineleme sırasında her öğeyi çıktıya yazdırır. Giriş listesi, rakamlar, sayılar, dizeler, kelimeler, cümleler vb. dahil metinsel veri olarak temsil edilebilecek her şeyi içerebilir. Giriş öğesi ayırıcısı bir düzenli ifade de olabilir. Örneğin, /[;,]/ regex'i, virgül veya noktalı virgülle ayrılmış öğeleri kullanmanıza olanak tanır. Giriş ve çıktı liste öğesi ayırıcıları seçeneklerde özelleştirilebilir. Varsayılan olarak hem giriş hem de çıktı listeleri virgülle ayrılır. Liste-müthiş!",
+      "title": "Liste Tersine Çevirici Nedir?"
+    }
+  },
+  "rotate": {
+    "description": "Liste öğelerini döndürmek için dünyanın en basit tarayıcı tabanlı aracı. Listenizi girin ve öğeleri belirtilen sayıda konum kaydırmak için döndürme miktarını belirtin. Veri düzenleme, dairesel kaydırmalar veya listeleri yeniden sıralamak için mükemmel.",
+    "shortDescription": "Liste öğelerini belirtilen konumlarda döndürün",
+    "title": "Döndür"
+  },
+  "shuffle": {
+    "delimiterDescription": "Bir ayırıcı sembol veya düzenli ifade ayarlayın.",
+    "description": "Liste öğelerini karıştırmak için dünyanın en basit tarayıcı tabanlı aracı. Listenizi girin ve öğeleri rastgele sırada içeren rastgeleleştirilmiş bir versiyonu anında alın. Çeşitlilik oluşturmak, rastgeleliği test etmek veya sıralı verileri karıştırmak için mükemmel.",
+    "inputListSeparator": "Giriş listesi ayırıcı",
+    "inputTitle": "Giriş listesi",
+    "joinSeparatorDescription": "Rastgeleleştirilmiş listede bu ayırıcıyı kullan.",
+    "outputLengthDescription": "Bu kadar rastgele öğe çıktı ver",
+    "resultTitle": "Karıştırılmış liste",
+    "shortDescription": "Liste öğelerinin sırasını rastgeleleştirin",
+    "shuffledListLength": "Karıştırılmış Liste Uzunluğu",
+    "shuffledListSeparator": "Karıştırılmış Liste Ayırıcı",
+    "title": "Karıştır"
+  },
+  "sort": {
+    "caseSensitive": "Büyük/Küçük Harfe Duyarlı Sıralama",
+    "caseSensitiveDescription": "Büyük ve küçük harfli öğeleri ayrı ayrı sırala. Artan bir listede büyük harfler küçük harflerden önce gelir. (Yalnızca alfabetik sıralama modunda çalışır.)",
+    "description": "Liste öğelerini sıralamak için dünyanın en basit tarayıcı tabanlı aracı. Listenizi girin ve öğeleri artan veya azalan düzende düzenlemek için sıralama kriterlerini belirtin. Veri düzenleme, metin işleme veya sıralı listeler oluşturmak için mükemmel.",
+    "inputItemSeparator": "Giriş öğe ayırıcı",
+    "inputTitle": "Giriş listesi",
+    "joinSeparatorDescription": "Sıralanmış bir listede öğeler arasında birleştirici olarak bu sembolü kullan.",
+    "orderDescription": "Bir sıralama düzeni seçin.",
+    "orderOptions": {
+      "decreasing": "Azalan düzen",
+      "increasing": "Artan düzen"
+    },
+    "removeDuplicates": "Tekrarları kaldır",
+    "removeDuplicatesDescription": "Tekrarlanan liste öğelerini sil.",
+    "resultTitle": "Sıralanmış liste",
+    "shortDescription": "Liste öğelerini belirtilen düzende sıralayın",
+    "sortMethod": "Sıralama yöntemi",
+    "sortMethodDescription": "Bir sıralama yöntemi seçin.",
+    "sortOptions": {
+      "alphabetic": "Alfabetik Sırala",
+      "length": "Uzunluğa Göre Sırala",
+      "numeric": "Sayısal Sırala"
+    },
+    "sortedItemProperties": "Sıralanmış öğe özellikleri",
+    "splitOperators": {
+      "regex": {
+        "description": "Giriş liste öğelerini bir düzenli ifadeyle ayır.",
+        "title": "Bölme İçin Regex Kullan"
+      },
+      "symbol": {
+        "description": "Giriş liste öğelerini bir karakterle ayır.",
+        "title": "Bölme İçin Sembol Kullan"
+      }
+    },
+    "splitSeparatorDescription": "Bir ayırıcı sembol veya düzenli ifade ayarlayın.",
+    "title": "Sırala"
+  },
+  "truncate": {
+    "description": "Listeleri kırpmak için dünyanın en basit tarayıcı tabanlı aracı. Listenizi girin ve tutulacak maksimum öğe sayısını belirtin. Veri işleme, liste yönetimi veya içerik uzunluğunu sınırlamak için mükemmel.",
+    "shortDescription": "Listeyi belirtilen öğe sayısına kırpın",
+    "title": "Kırp"
+  },
+  "unwrap": {
+    "description": "Liste öğelerini sarmalamadan çıkarmak için dünyanın en basit tarayıcı tabanlı aracı. Sarmalanmış listenizi girin ve düzenlenmiş öğeleri düzleştirmek için sarmalama açma kriterlerini belirtin. Veri işleme, metin düzenleme veya yapılandırılmış listelerden içerik ayıklamak için mükemmel.",
+    "shortDescription": "Liste öğelerini yapılandırılmış formattan sarmalamadan çıkarın",
+    "title": "Sarmalamayı Aç"
+  },
+  "wrap": {
+    "description": "Her liste öğesinin önüne ve sonuna metin ekleyin.",
+    "inputTitle": "Giriş Listesi",
+    "joinSeparatorDescription": "Sarmalanmış listeyi birleştirmek için ayırıcı",
+    "leftTextDescription": "Her öğenin önüne eklenecek metin",
+    "removeEmptyItems": "Boş öğeleri kaldır",
+    "resultTitle": "Sarmalanmış Liste",
+    "rightTextDescription": "Her öğenin sonuna eklenecek metin",
+    "shortDescription": "Liste öğelerini belirtilen kriterlerle sarmalayın",
+    "splitByRegex": "Düzenli İfadeye Göre Böl",
+    "splitBySymbol": "Sembole Göre Böl",
+    "splitOptions": "Bölme Seçenekleri",
+    "splitSeparatorDescription": "Listeyi bölmek için ayırıcı",
+    "title": "Sarmala",
+    "toolInfo": {
+      "description": "Bu araç, bir listedeki her öğenin önüne ve sonuna metin eklemenizi sağlar. Sol ve sağ taraflar için farklı metin belirtebilir ve listenin nasıl işleneceğini kontrol edebilirsiniz. Liste öğelerine tırnak, parantez veya diğer biçimlendirmeleri eklemek, verileri farklı formatlar için hazırlamak veya yapılandırılmış metin oluşturmak için kullanışlıdır.",
+      "title": "Liste Sarmalama"
+    },
+    "wrapOptions": "Sarmalama Seçenekleri"
+  }
+}

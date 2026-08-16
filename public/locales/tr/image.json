@@ -1,0 +1,178 @@
+{
+  "changeColors": {
+    "description": "Bir kaynak renk seçip yenisiyle değiştirerek bir görseldeki belirli renkleri değiştirin.",
+    "shortDescription": "Bir görseldeki renkleri hızlıca değiştirin",
+    "title": "Görseldeki renkleri değiştir",
+    "inputTitle": "Giriş görseli",
+    "resultTitle": "Sonuç görseli",
+    "fromColor": {
+      "title": "Kaynak renk",
+      "colorOption": "Belirli bir rengi değiştir",
+      "transparentOption": "Şeffaf pikselleri değiştir",
+      "selectorDescription": "Bu rengi değiştir (kaynak renk)",
+      "similarityDescription": "Kaynak rengin benzer renklerinin bu %'sini eşleştir. Örneğin, %10 beyaz, beyazı ve biraz griyi eşleştirir."
+    },
+    "toColor": {
+      "title": "Hedef renk",
+      "colorOption": "Belirli bir renkle değiştir",
+      "transparentOption": "Şeffafla değiştir",
+      "selectorDescription": "Bu renkle (hedef renk)"
+    }
+  },
+  "changeOpacity": {
+    "description": "Görsellerinizin şeffaflığını kolayca ayarlayın. Görselinizi yükleyin, kaydırıcıyı kullanarak 0 (tamamen şeffaf) ile 1 (tamamen opak) arasında istediğiniz opaklık düzeyini ayarlayın ve değiştirilmiş görseli indirin.",
+    "shortDescription": "Görsellerin şeffaflığını ayarlayın",
+    "title": "Görsel Opaklığını Değiştir"
+  },
+  "compress": {
+    "compressedSize": "Toplam sıkıştırılmış boyut",
+    "compressing": "Görseller sıkıştırılıyor...",
+    "compressionOptions": "Sıkıştırma seçenekleri",
+    "description": "Görsel kaliteyi korurken bir veya birden fazla görselin dosya boyutunu küçültün. Bir grup görsel yükleyin ve hepsini tek seferde ZIP arşivi olarak indirin.",
+    "failedToCompress": "Görsel sıkıştırma başarısız oldu. Lütfen tekrar deneyin.",
+    "fileSizes": "Dosya boyutları",
+    "inputTitle": "Görsel Girişi",
+    "maxFileSizeDescription": "Görsel başına megabayt cinsinden maksimum çıktı dosya boyutu",
+    "originalSize": "Toplam orijinal boyut",
+    "qualityDescription": "Görsel kalite yüzdesi — düşük değer daha küçük dosya boyutu demektir",
+    "resultTitle": "Sıkıştırılmış görseller",
+    "shortDescription": "Bir veya birden fazla görseli tek seferde sıkıştırın.",
+    "someFailedToCompress": "Bazı görseller sıkıştırılamadı ve atlandı.",
+    "title": "Görselleri Sıkıştır"
+  },
+  "compressPng": {
+    "description": "Bu, PNG resimlerini sıkıştıran bir programdır. PNG resminizi giriş alanına yapıştırır yapıştırmaz, program onu sıkıştırır ve sonucu çıktı alanında gösterir. Seçeneklerde sıkıştırma düzeyini ayarlayabilir, ayrıca eski ve yeni resim dosya boyutlarını görebilirsiniz.",
+    "shortDescription": "Bir PNG'yi hızlıca sıkıştırın",
+    "title": "PNG'yi sıkıştır"
+  },
+  "convertJgpToPng": {
+    "description": "JPG görsellerinizi hızlıca PNG'ye dönüştürün. PNG görselinizi soldaki düzenleyiciye içe aktarmanız yeterli",
+    "shortDescription": "JPG görsellerinizi hızlıca PNG'ye dönüştürün",
+    "title": "JPG'yi PNG'ye Dönüştür"
+  },
+  "createTransparent": {
+    "description": "Seçilen arka plan rengini kaldırarak bir görselin şeffaf bir versiyonunu oluşturun.",
+    "shortDescription": "Bir görseli hızlıca şeffaf yapın",
+    "title": "Şeffaf PNG Oluştur"
+  },
+  "crop": {
+    "description": "İstenmeyen alanları kaldırmak için görselleri kırpın.",
+    "inputTitle": "Giriş görseli",
+    "resultTitle": "Kırpılmış görsel",
+    "shortDescription": "Görselleri hızlıca kırpın.",
+    "title": "Görseli Kırp"
+  },
+  "editor": {
+    "description": "Kırpma, döndürme, not ekleme, renk ayarlama ve filigran ekleme araçlarına sahip gelişmiş görsel düzenleyici. Görsellerinizi profesyonel düzeyde araçlarla doğrudan tarayıcınızda düzenleyin.",
+    "shortDescription": "Görselleri gelişmiş araçlar ve özelliklerle düzenleyin",
+    "title": "Görsel Düzenleyici"
+  },
+  "imageToText": {
+    "description": "Optik karakter tanıma (OCR) kullanarak görsellerden (JPG, PNG) metin ayıklayın.",
+    "shortDescription": "OCR kullanarak görsellerden metin ayıklayın.",
+    "title": "Görselden Metne (OCR)"
+  },
+  "qrCode": {
+    "description": "Farklı veri türleri için QR kodları oluşturun: URL, Metin, E-posta, Telefon, SMS, WiFi, vCard ve daha fazlası.",
+    "options": {
+      "address": "Adres",
+      "company": "Şirket (isteğe bağlı)",
+      "email": "E-posta",
+      "emailBody": "E-posta Gövdesi (isteğe bağlı)",
+      "emailSubject": "E-posta Konusu (isteğe bağlı)",
+      "encryptionType": "Şifreleme Türü",
+      "fullName": "Tam Ad",
+      "job": "Ünvan (isteğe bağlı)",
+      "message": "Mesaj (isteğe bağlı)",
+      "name": "Ad",
+      "password": "Parola",
+      "phone": "Telefon Numarası",
+      "qrType": "QR Kodu Türünü Seçin",
+      "size": "Piksel cinsinden boyut (100-1000)",
+      "ssid": "Ağ Adı (SSID)",
+      "text": "Metni girin",
+      "url": "URL'yi girin",
+      "website": "Web Sitesi (isteğe bağlı)"
+    },
+    "resultOutput": "Oluşturulan QR kodu",
+    "shortDescription": "Çeşitli veri formatları için özelleştirilmiş QR kodları oluşturun.",
+    "title": "QR Kodu Oluşturucu"
+  },
+  "removeBackground": {
+    "description": "Ana konuyu şeffaflıkla izole etmek için bir görselin arka planını kaldırın.",
+    "shortDescription": "Görsellerden arka planları otomatik olarak kaldırın",
+    "title": "Görselden Arka Planı Kaldır"
+  },
+  "resize": {
+    "description": "Görselleri piksel boyutları veya yüzde ölçekleme kullanarak yeniden boyutlandırın. En boy oranını koruyun ve otomatik ayarlama ile genişlik veya yükseklik belirleyin. Sonuçları tek tek veya ZIP arşivi olarak indirin.",
+    "dimensionType": "Boyut Türü",
+    "heightDescription": "Yükseklik (piksel cinsinden)",
+    "inputTitle": "Giriş Görselleri",
+    "maintainAspectRatio": "En Boy Oranını Koru",
+    "maintainAspectRatioDescription": "Görselin orijinal en boy oranını koruyun.",
+    "percentage": "Yüzde",
+    "percentageDescription": "Orijinal boyutun yüzdesi (örn. yarım boyut için 50, iki katı boyut için 200)",
+    "resizeByPercentage": "Yüzdeye Göre Yeniden Boyutlandır",
+    "resizeByPercentageDescription": "Orijinal boyutun bir yüzdesini belirterek yeniden boyutlandırın.",
+    "resizeByPixels": "Piksele Göre Yeniden Boyutlandır",
+    "resizeByPixelsDescription": "Piksel cinsinden boyutları belirterek yeniden boyutlandırın.",
+    "resizeMethod": "Yeniden Boyutlandırma Yöntemi",
+    "resultTitle": "Yeniden Boyutlandırılmış Görsel(ler)",
+    "setHeight": "Yükseklik Ayarla",
+    "setHeightDescription": "Yüksekliği piksel cinsinden belirtin ve genişliği en boy oranına göre hesaplayın.",
+    "setWidth": "Genişlik Ayarla",
+    "setWidthDescription": "Genişliği piksel cinsinden belirtin ve yüksekliği en boy oranına göre hesaplayın.",
+    "shortDescription": "Bir veya birden fazla görseli tek seferde yeniden boyutlandırın.",
+    "title": "Görseli Yeniden Boyutlandır",
+    "toolInfo": {
+      "description": "Bu araç, bir veya birden fazla JPG, PNG, SVG veya GIF görselini tek seferde yeniden boyutlandırmanızı sağlar. Tek bir görsel veya bir grup görsel yükleyin ve orijinal en boy oranını koruma seçenekleriyle piksel cinsinden boyutları veya yüzdeyi belirterek yeniden boyutlandırın. Birden fazla görsel işlenirken sonuçlar kolay indirme için bir ZIP dosyasında toplanır.",
+      "title": "Görsel(ler)i Yeniden Boyutlandır"
+    },
+    "widthDescription": "Genişlik (piksel cinsinden)"
+  },
+  "rotate": {
+    "description": "Bir görseli belirtilen açıyla döndürün.",
+    "shortDescription": "Bir görseli kolayca döndürün.",
+    "title": "Görseli Döndür"
+  },
+  "split": {
+    "title": "Görseli Sayfalara Böl",
+    "shortDescription": "Büyük bir görseli birden fazla sayfaya bölün (PDF).",
+    "description": "Bir haritayı veya büyük görseli, seçilen kağıt formatına ve dolguya uyacak şekilde sayfalara bölün. Görseli doğru şekilde ölçeklemek için baskı karesi başına piksel ve kare sayısını belirtin.",
+    "inputTitle": "Giriş görseli",
+    "resultTitle": "Bölünmüş PDF",
+    "loadingText": "Yükleniyor... Bu biraz zaman alabilir.",
+    "pageParameters": {
+      "title": "Sayfa parametreleri",
+      "selectPageFormat": "Sayfa formatını seçin",
+      "padding": {
+        "label": "Dolgu",
+        "description": "Her sayfada haritanın çevresindeki dolgu (seçilen birimlerde)"
+      }
+    },
+    "scaleParameters": {
+      "title": "Ölçek parametreleri",
+      "pxPerSquareQuantity": {
+        "label": "Kare miktarı başına piksel",
+        "description": "Orijinal görselde belirtilen kare sayısına kaç pikselin karşılık geldiği (yatay veya dikey)"
+      },
+      "squareQuantity": {
+        "label": "Kare miktarı",
+        "description": "Ölçekleme için kullanılan enine (yatay veya dikey) oyun karesi sayısı"
+      },
+      "unitsPerOneSquare": {
+        "label": "Kare başına birim",
+        "description": "Seçilen birimlerde bir karenin fiziksel boyutu"
+      }
+    },
+    "units": {
+      "title": "Birimler",
+      "select": "Ölçü birimlerini seçin",
+      "options": {
+        "pt": "Punto (pt)",
+        "mm": "Milimetre (mm)",
+        "in": "İnç (in)"
+      }
+    }
+  }
+}

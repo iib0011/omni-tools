@@ -1,0 +1,139 @@
+{
+  "compressPdf": {
+    "compressedFileSize": "Sıkıştırılmış Dosya Boyutu",
+    "compressingPdf": "PDF sıkıştırılıyor...",
+    "compressionLevel": "Sıkıştırma Düzeyi",
+    "compressionSettings": "Sıkıştırma Ayarları",
+    "description": "Ghostscript kullanarak kaliteyi korurken PDF dosya boyutunu küçültün",
+    "errorCompressingPdf": "PDF sıkıştırılamadı: {{error}}",
+    "errorReadingPdf": "PDF dosyası okunamadı. Lütfen geçerli bir PDF olduğundan emin olun.",
+    "fileSize": "Orijinal Dosya Boyutu",
+    "highCompression": "Yüksek Sıkıştırma",
+    "highCompressionDescription": "Bir miktar kalite kaybıyla maksimum dosya boyutu azaltma",
+    "inputTitle": "Giriş PDF",
+    "longDescription": "Ghostscript kullanarak PDF dosyalarını tarayıcınızda güvenle sıkıştırın. Dosyalarınız cihazınızdan asla ayrılmaz; e-posta ile paylaşım, web sitelerine yükleme veya depolama alanı tasarrufu için dosya boyutlarını küçültürken tam gizlilik sağlar. WebAssembly teknolojisiyle desteklenir.",
+    "lowCompression": "Düşük Sıkıştırma",
+    "lowCompressionDescription": "Minimum kalite kaybıyla dosya boyutunu biraz azaltın",
+    "mediumCompression": "Orta Sıkıştırma",
+    "mediumCompressionDescription": "Dosya boyutu ve kalite arasında denge",
+    "pages": "Sayfa Sayısı",
+    "resultTitle": "Sıkıştırılmış PDF",
+    "shortDescription": "PDF dosyalarını tarayıcınızda güvenle sıkıştırın",
+    "title": "PDF'yi Sıkıştır"
+  },
+  "convertToPdf": {
+    "description": "Çeşitli görsel formatlarını (PNG, GIF, JPG, WEBP, HEIC, HEIF), görseli ölçekleme ve sayfa yönlendirmesini seçme seçenekleriyle PDF'ye dönüştürün.",
+    "inputTitle": "Giriş Görselleri",
+    "options": {
+      "a4": "A4 Sayfa",
+      "fullsize": "Tam Boyut (Görsel boyutu)",
+      "image": "Görsel",
+      "landscape": "Yatay",
+      "orientation": "Yönlendirme",
+      "portrait": "Dikey",
+      "scale": "Ölçek",
+      "type": "PDF Türü"
+    },
+    "resultTitle": "Çıktı PDF",
+    "shortDescription": "Görselleri ölçek ve yönlendirme kontrolüyle PDF'ye dönüştürün",
+    "title": "Görsellerden PDF'ye"
+  },
+  "editor": {
+    "description": "Not ekleme, form doldurma, vurgulama ve dışa aktarma özelliklerine sahip gelişmiş PDF düzenleyici. Metin ekleme, çizim, vurgulama, imzalama ve form doldurma dahil profesyonel düzeyde araçlarla PDF'lerinizi doğrudan tarayıcıda düzenleyin.",
+    "shortDescription": "PDF'leri gelişmiş not ekleme, imzalama ve düzenleme araçlarıyla düzenleyin",
+    "title": "PDF Düzenleyici"
+  },
+  "merge": {
+    "inputTitle": "Giriş PDF",
+    "loadingText": "Sayfalar ayıklanıyor",
+    "resultTitle": "Çıktı birleştirilmiş PDF",
+    "toolInfo": {
+      "description": "Bu araç, birden fazla PDF dosyasını tek bir belgede birleştirmenizi sağlar. Aracı kullanmak için birleştirmek istediğiniz PDF dosyalarını yüklemeniz yeterli. Araç, giriş dosyalarındaki tüm sayfaları tek bir PDF belgesinde birleştirir.",
+      "title": "PDF Birleştirme Aracı Nasıl Kullanılır?"
+    }
+  },
+  "mergePdf": {
+    "description": "Birden fazla PDF dosyasını tek bir belgede birleştirin.",
+    "inputTitle": "Giriş PDF'leri",
+    "mergingPdfs": "PDF'ler birleştiriliyor",
+    "pdfOptions": "PDF Seçenekleri",
+    "resultTitle": "Birleştirilmiş PDF",
+    "shortDescription": "Birden fazla PDF dosyasını tek bir belgede birleştirin",
+    "sortByFileName": "Dosya adına göre sırala",
+    "sortByFileNameDescription": "PDF'leri dosya adına göre alfabetik olarak sırala",
+    "sortByUploadOrder": "Yükleme sırasına göre sırala",
+    "sortByUploadOrderDescription": "PDF'leri yüklendikleri sırada tut",
+    "title": "PDF'leri Birleştir",
+    "toolInfo": {
+      "description": "Bu araç, birden fazla PDF dosyasını tek bir belgede birleştirmenizi sağlar. PDF'lerin nasıl sıralanacağını seçebilirsiniz, araç bunları belirtilen sırada birleştirir.",
+      "title": "PDF Dosyalarını Birleştir"
+    }
+  },
+  "pdfToEpub": {
+    "description": "Daha iyi e-okuyucu uyumluluğu için PDF belgelerini EPUB dosyalarına dönüştürün.",
+    "shortDescription": "PDF dosyalarını EPUB formatına dönüştürün",
+    "title": "PDF'ten EPUB'a"
+  },
+  "pdfToPng": {
+    "description": "PDF belgelerini PNG panellerine dönüştürün.",
+    "longDescription": "Bir PDF yükleyin ve her sayfayı doğrudan tarayıcınızda yüksek kaliteli bir PNG görseline dönüştürün. Bu araç, görsel içeriği ayıklamak veya tek tek sayfaları paylaşmak için idealdir. Hiçbir veri yüklenmez — her şey yerel olarak çalışır.",
+    "shortDescription": "PDF'yi PNG görsellerine dönüştürün",
+    "title": "PDF'ten PNG'ye"
+  },
+  "protectPdf": {
+    "description": "PDF dosyalarınıza tarayıcınızda güvenle parola koruması ekleyin",
+    "shortDescription": "PDF dosyalarını güvenle parolayla koruyun",
+    "title": "PDF'yi Koru"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "Tüm {{count}} sayfa döndürülecek",
+    "angleOptions": {
+      "clockwise90": "90° Saat Yönünde",
+      "counterClockwise270": "270° (90° Saat Yönünün Tersine)",
+      "upsideDown180": "180° (Baş aşağı)"
+    },
+    "applyToAllPages": "Tüm sayfalara uygula",
+    "description": "Bir PDF belgesindeki sayfaları döndürün.",
+    "inputTitle": "Giriş PDF",
+    "longDescription": "PDF sayfalarını 90, 180 veya 270 derece döndürerek yönlendirmelerini değiştirin. Yanlış taranmış belgeleri düzeltmek veya PDF'leri yazdırmaya hazırlamak için kullanışlıdır.",
+    "pageRangesDescription": "Virgülle ayrılmış sayfa numaraları veya aralıkları girin (örn. 1,3,5-7)",
+    "pageRangesPlaceholder": "örn. 1,5-8",
+    "pagesWillBeRotated": "{{count}} sayfa{{plural}} döndürülecek",
+    "pdfPageCount": "PDF'te {{count}} sayfa{{plural}} var",
+    "resultTitle": "Döndürülmüş PDF",
+    "rotatingPages": "Sayfalar döndürülüyor",
+    "rotationAngle": "Döndürme Açısı",
+    "rotationSettings": "Döndürme Ayarları",
+    "shortDescription": "Bir PDF belgesindeki sayfaları döndürün",
+    "title": "PDF'yi Döndür",
+    "toolInfo": {
+      "description": "Bu araç, bir PDF belgesindeki sayfaları döndürmenizi sağlar. Tüm sayfaları döndürebilir veya döndürülecek belirli sayfaları belirtebilirsiniz. Bir döndürme açısı seçin: 90° Saat Yönünde, 180° (Baş aşağı) veya 270° (90° Saat Yönünün Tersine). Belirli sayfaları döndürmek için \"Tüm sayfalara uygula\" seçeneğinin işaretini kaldırın ve virgülle ayrılmış sayfa numaraları veya aralıkları girin (örn. 1,3,5-7).",
+      "title": "PDF Döndürme Aracı Nasıl Kullanılır"
+    }
+  },
+  "splitPdf": {
+    "description": "Bir PDF belgesinden belirli sayfaları ayıklayın.",
+    "extractingPages": "Sayfalar ayıklanıyor",
+    "inputTitle": "Giriş PDF",
+    "pageExtractionPreview": "{{count}} sayfa{{ plural }} ayıklanacak",
+    "pageRangesDescription": "Virgülle ayrılmış sayfa numaraları veya aralıkları girin (örn. 1,3,5-7)",
+    "pageRangesPlaceholder": "örn. 1,5-8",
+    "pageSelection": "Sayfa Seçimi",
+    "pdfPageCount": "PDF'te {{count}} sayfa{{plural}} var",
+    "resultTitle": "Ayıklanmış PDF",
+    "shortDescription": "Bir PDF dosyasından belirli sayfaları ayıklayın",
+    "title": "PDF'yi Böl",
+    "toolInfo": {
+      "description": "Bu araç, bir PDF belgesinden belirli sayfaları ayıklamanızı sağlar. Ayıklanacak tek tek sayfaları veya sayfa aralıklarını belirtebilirsiniz.",
+      "title": "PDF'yi Böl"
+    }
+  },
+  "extractImagesFromPdf": {
+    "description": "PDF dosyanızdaki tüm gömülü görselleri orijinal kalitesinde ayıklayın.",
+    "shortDescription": "Bir PDF dosyasından görselleri ayıklayın.",
+    "longDescription": "Tüm gömülü görselleri otomatik olarak ayıklamak için bir PDF belgesi yükleyin. Araç, orijinal görsel kalitesini korur ve JPG, PNG ve daha fazlası gibi yaygın formatları destekler. PDF belgelerinden çizimleri, fotoğrafları, taranmış sayfaları veya varlıkları kurtarmak için idealdir.",
+    "title": "PDF'ten Görsel Ayıkla",
+    "inputTitle": "Giriş PDF",
+    "resultTitle": "Ayıklanan Görseller"
+  }
+}
