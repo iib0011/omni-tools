@@ -10,6 +10,13 @@ describe('xml-beautifier', () => {
     expect(result).toContain('  <b>2</b>');
   });
 
+  it('preserves attributes while beautifying XML', () => {
+    const input = '<root><user id="42" role="admin">Alice</user></root>';
+    const result = beautifyXml(input, {});
+
+    expect(result).toContain('<user id="42" role="admin">Alice</user>');
+  });
+
   it('returns error for invalid XML', () => {
     const input = '<root><a>1</b></root>';
     const result = beautifyXml(input, {});
