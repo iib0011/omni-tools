@@ -1,11 +1,8 @@
 {
   "changeSpeed": {
-    "defaultMultiplier": "Multiplicateur par défaut : 2 signifie 2x plus rapide",
     "description": "Modifiez la vitesse de lecture des fichiers vidéo. Accélérez ou ralentissez les vidéos tout en conservant la synchronisation audio. Prise en charge de divers multiplicateurs de vitesse et formats vidéo courants.",
     "inputTitle": "Entrée vidéo",
-    "newVideoSpeed": "Nouvelle vitesse vidéo",
     "resultTitle": "Vidéo éditée",
-    "settingSpeed": "Réglage de la vitesse",
     "shortDescription": "Modifier la vitesse de lecture vidéo",
     "title": "Modifier la vitesse de la vidéo",
     "toolInfo": {
@@ -54,7 +51,6 @@
   },
   "flip": {
     "description": "Retournez les fichiers vidéo horizontalement ou verticalement. Inversez les vidéos pour obtenir des effets spéciaux ou corriger les problèmes d'orientation.",
-    "flippingVideo": "Retournement vidéo",
     "horizontalLabel": "Horizontal (miroir)",
     "inputTitle": "Entrée vidéo",
     "orientation": "Orientation",
@@ -73,7 +69,6 @@
   "loop": {
     "description": "Créez une vidéo en boucle en répétant la vidéo originale plusieurs fois.",
     "inputTitle": "Entrée vidéo",
-    "loopingVideo": "Vidéo en boucle",
     "loops": "Boucles",
     "numberOfLoops": "Nombre de boucles",
     "resultTitle": "Vidéo en boucle",
@@ -97,7 +92,6 @@
     "description": "Faites pivoter vos fichiers vidéo de 90, 180 ou 270 degrés. Corrigez l'orientation de vos vidéos ou créez des effets spéciaux grâce à un contrôle précis de la rotation.",
     "inputTitle": "Entrée vidéo",
     "resultTitle": "Vidéo tournée",
-    "rotatingVideo": "Vidéo rotative",
     "rotation": "Rotation",
     "shortDescription": "Faire pivoter la vidéo selon les degrés spécifiés",
     "title": "Faire pivoter la vidéo"
@@ -111,10 +105,5 @@
     "startTime": "Heure de début",
     "timestamps": "Horodatages",
     "title": "Découper la vidéo"
-  },
-  "videoToGif": {
-    "description": "Convertissez des fichiers vidéo au format GIF animé. Extrayez des plages horaires spécifiques et créez des images animées partageables.",
-    "shortDescription": "Convertir une vidéo en GIF animé",
-    "title": "Vidéo en GIF"
   }
 }

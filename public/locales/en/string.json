@@ -23,6 +23,16 @@
     "shortDescription": "Create text that reads the same forward and backward",
     "title": "Create palindrome"
   },
+  "emailExtractor": {
+    "description": "Extract all email addresses from any text. Simply paste your text and instantly get a clean list of the email addresses found.",
+    "options": {
+      "title": "Extraction options",
+      "uniqueDesc": "Keep only unique email addresses in the results",
+      "uniqueTitle": "Remove duplicates"
+    },
+    "shortDescription": "Extract email addresses from text",
+    "title": "Email Extractor"
+  },
   "extractSubstring": {
     "description": "World's simplest browser-based utility for extracting substrings from text. Input your text and specify start and end positions to extract the desired portion. Perfect for data processing, text analysis, or extracting specific content from larger text blocks.",
     "shortDescription": "Extract a portion of text between specified positions",
@@ -84,7 +94,7 @@
     "includeNumbers": "Include numbers (0-9)",
     "includeSymbols": "Include special characters",
     "includeUppercase": "Include uppercase letters (A-Z)",
-    "lengthDesc": "Length of the password",
+    "lengthDesc": "Length of the password (>3 & <257)",
     "lengthPlaceholder": "e.g. 12",
     "optionsTitle": "Password Options",
     "resultTitle": "Generated Password",
@@ -235,6 +245,20 @@
     "wordFrequencyAnalysis": "Word Frequency Analysis",
     "wordFrequencyAnalysisDescription": "Count how often each word appears in the text"
   },
+  "textCompare": {
+    "description": "Analyze two text blocks to highlight differences, including additions, deletions, and changes.",
+    "inputTitle": "Input Text",
+    "longDescription": "This tool helps you quickly identify differences between two versions of a text. It highlights inserted, removed, and modified content, making it ideal for reviewing edits, tracking changes, or comparing documents. You can choose the level of precision to detect differences at the word or character level depending on your needs.",
+    "options": {
+      "charLevel": "Character level",
+      "levelDesc": "Choose how detailed the comparison should be. Word level highlights changes by words, while character level detects more granular differences.",
+      "title": "Comparison Settings",
+      "wordLevel": "Word level"
+    },
+    "resultTitle": "Highlighted differences",
+    "shortDescription": "Compare two texts and spot differences instantly",
+    "title": "Compare Texts"
+  },
   "textReplacer": {
     "description": "Replace text patterns with new content.",
     "findPatternInText": "Find This Pattern in Text",
@@ -322,6 +346,36 @@
       "title": "String URL decoder"
     }
   },
+  "urlEditor": {
+    "addParameter": "Add Parameter",
+    "credentialsNotSupported": "URLs with username or password are not supported.",
+    "delete": "Delete",
+    "deleteParamAriaLabel": "Delete parameter row {{row}}",
+    "generatedUrl": "Generated URL",
+    "hash": "Fragment",
+    "hashPlaceholder": "section",
+    "host": "Host",
+    "hostPlaceholder": "example.com",
+    "inputTitle": "Enter URL",
+    "invalidUrl": "Invalid URL",
+    "key": "Key",
+    "noParameters": "No query parameters",
+    "paramKeyAriaLabel": "Parameter key, row {{row}}",
+    "paramValueAriaLabel": "Parameter value, row {{row}}",
+    "parseButton": "Parse URL",
+    "path": "Path",
+    "pathPlaceholder": "search",
+    "protocol": "Protocol",
+    "queryParameters": "Query Parameters",
+    "toolInfo": {
+      "description": "Paste a URL and click \"Parse URL\" to inspect and edit its components.",
+      "longDescription": "This tool parses a URL into its components and lets you edit the protocol, host, path, fragment, and query parameters visually. After changing the input URL, click \"Parse URL\" again to refresh the parsed details. You can add, remove, or modify any part and copy the generated URL. No server requests.",
+      "shortDescription": "Inspect and edit URL components and query parameters.",
+      "title": "URL Editor"
+    },
+    "urlDetails": "URL Details",
+    "value": "Value"
+  },
   "urlEncode": {
     "encodingOption": {
       "nonSpecialCharDescription": "If selected, then all characters in the input string will be converted to URL-encoding (not just special).",
@@ -337,18 +391,20 @@
       "title": "String URL encoder"
     }
   },
-  "textCompare": {
-    "title": "Compare Texts",
-    "description": "Analyze two text blocks to highlight differences, including additions, deletions, and changes.",
-    "shortDescription": "Compare two texts and spot differences instantly",
-    "longDescription": "This tool helps you quickly identify differences between two versions of a text. It highlights inserted, removed, and modified content, making it ideal for reviewing edits, tracking changes, or comparing documents. You can choose the level of precision to detect differences at the word or character level depending on your needs.",
-    "inputTitle": "Input Text",
-    "resultTitle": "Highlighted differences",
+  "bcrypt": {
+    "title": "Bcrypt",
+    "inputTitle": "Input String",
+    "resultTitle": "Hashed String",
+    "shortDescription": "Hash strings with Bcrypt",
+    "description": "Securely hash a string using the Bcrypt algorithm.",
     "options": {
-      "title": "Comparison Settings",
-      "wordLevel": "Word level",
-      "charLevel": "Character level",
-      "levelDesc": "Choose how detailed the comparison should be. Word level highlights changes by words, while character level detects more granular differences."
+      "title": "Options",
+      "saltTitle": "Salt Rounds",
+      "saltDesc": "Set the number of salt rounds used for hashing."
+    },
+    "toolInfo": {
+      "title": "What is Bcrypt?",
+      "longDescription": "Bcrypt is a password hashing algorithm designed to securely hash passwords and other sensitive strings. The number of salt rounds controls the computational cost of the hashing process."
     }
   }
 }

@@ -151,7 +151,23 @@ npm run test:e2e
 ### i18n (Translations)
 The translation files are [here](public/locales). Only edit these if you are a developer. For non developers, use [Locize](https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK).
 
-<img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date"/>
+<!-- I18N-COVERAGE:START -->
+| Language | Translation status | Missing keys |
+|----------|--------------------|--------------|
+| 🇨🇳 zh | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░ 72%` | 478 |
+| 🇮🇳 hi | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 71%` | 505 |
+| 🇷🇺 ru | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 71%` | 493 |
+| 🇩🇪 de | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 70%` | 515 |
+| 🇪🇸 es | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 70%` | 515 |
+| 🇫🇷 fr | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 70%` | 515 |
+| 🇯🇵 ja | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 70%` | 515 |
+| 🇳🇱 nl | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 70%` | 515 |
+| 🇵🇹 pt | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 70%` | 515 |
+<!-- I18N-COVERAGE:END -->
+
+## ⭐ Star History
+
+<img src="https://star-history.dera.page/svg?repos=iib0011/omni-tools&type=Date"/>
 
 ## 🤝 Looking to contribute?
 

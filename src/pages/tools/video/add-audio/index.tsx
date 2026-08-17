@@ -12,7 +12,7 @@ import SelectWithDesc from '@components/options/SelectWithDesc';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
 import { useTranslation } from 'react-i18next';
 import { addAudioToVideo } from './service';
-import { AudioMode, timingMode, initialValuesType } from './types';
+import { AudioMode, initialValuesType } from './types';
 import debounce from 'lodash/debounce';
 
 const initialValues: initialValuesType = {

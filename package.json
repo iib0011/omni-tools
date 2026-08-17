@@ -1,7 +1,7 @@
 {
   "name": "omni-tools",
   "description": "This project offers a variety of online tools to help with everyday tasks, \nall available for free and open for community contributions",
-  "version": "0.1.0",
+  "version": "0.6.0",
   "private": true,
   "author": {
     "name": "Ibrahima Gaye Coulibaly",
@@ -44,6 +44,7 @@
     "@types/lodash": "^4.17.5",
     "@types/morsee": "^1.0.2",
     "@types/omggif": "^1.0.5",
+    "bcryptjs": "^2.4.3",
     "@types/react-i18next": "^7.8.3",
     "browser-image-compression": "^2.0.2",
     "buffer": "^6.0.3",
@@ -62,6 +63,7 @@
     "i18next-http-backend": "^3.0.2",
     "jimp": "^0.22.12",
     "js-quantities": "^1.8.0",
+    "json5": "^2.2.3",
     "jspdf": "^3.0.3",
     "jszip": "^3.10.1",
     "lint-staged": "^15.4.3",
@@ -88,6 +90,7 @@
     "react-router-dom": "^6.23.1",
     "styled-components": "^6.1.19",
     "tesseract.js": "^6.0.0",
+    "to-words": "^5.6.1",
     "type-fest": "^4.35.0",
     "use-deep-compare-effect": "^1.8.1",
     "yup": "^1.4.0"
@@ -98,6 +101,7 @@
     "@iconify/react": "^5.2.0",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^14.3.1",
+    "@types/bcryptjs": "^2.4.6",
     "@types/color": "^3.0.6",
     "@types/color-rgba": "^2.1.2",
     "@types/node": "^20.12.12",

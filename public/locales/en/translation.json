@@ -107,8 +107,8 @@
       "trimVideo": "Trim video"
     },
     "search": {
-      "placeholder": "Search all tools",
-      "noResult": "No results found, Try adjusting your search or filter criteria"
+      "noResult": "No results found, Try adjusting your search or filter criteria",
+      "placeholder": "Search all tools"
     },
     "title": "Get Things Done Quickly with"
   },
@@ -241,9 +241,9 @@
     "result": "Result"
   },
   "toolMultipleInput": {
+    "deleteFile": "Delete file",
     "inputTitle": "Input {{type}}",
-    "noFilesSelected": "No files selected",
-    "deleteFile": "Delete file"
+    "noFilesSelected": "No files selected"
   },
   "toolOptions": {
     "title": "Tool options"

@@ -43,6 +43,14 @@
     "shortDescription": "Edit PDFs with advanced annotation, signing and editing tools",
     "title": "PDF Editor"
   },
+  "extractImagesFromPdf": {
+    "description": "Extract all embedded images from your PDF file in their original quality.",
+    "inputTitle": "Input PDF",
+    "longDescription": "Upload a PDF document to automatically extract all embedded images. The tool preserves the original image quality and supports common formats such as JPG, PNG, and more. Ideal for recovering illustrations, photos, scanned pages, or assets from PDF documents.",
+    "resultTitle": "Extracted Images",
+    "shortDescription": "Extract images from a PDF file.",
+    "title": "Extract Images from PDF"
+  },
   "merge": {
     "inputTitle": "Input PDF",
     "loadingText": "Extracting pages",
@@ -127,13 +135,5 @@
       "description": "This tool allows you to extract specific pages from a PDF document. You can specify individual pages or ranges of pages to extract.",
       "title": "Split PDF"
     }
-  },
-  "extractImagesFromPdf": {
-    "description": "Extract all embedded images from your PDF file in their original quality.",
-    "shortDescription": "Extract images from a PDF file.",
-    "longDescription": "Upload a PDF document to automatically extract all embedded images. The tool preserves the original image quality and supports common formats such as JPG, PNG, and more. Ideal for recovering illustrations, photos, scanned pages, or assets from PDF documents.",
-    "title": "Extract Images from PDF",
-    "inputTitle": "Input PDF",
-    "resultTitle": "Extracted Images"
   }
 }

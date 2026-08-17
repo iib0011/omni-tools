@@ -7,16 +7,16 @@ import { ToolComponentProps } from '@tools/defineTool';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import { debounce } from 'lodash';
 import ToolVideoInput from '@components/input/ToolVideoInput';
-import { compressVideo, VideoResolution } from './service';
+import { compressVideo } from './service';
+import { InitialValuesType } from './types';
 import SimpleRadio from '@components/options/SimpleRadio';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { useTranslation } from 'react-i18next';
 
-export const initialValues = {
-  width: 480 as VideoResolution,
-  crf: 23,
-  preset: 'medium'
+export const initialValues: InitialValuesType = {
+  width: 480,
+  crf: 23
 };
 
 export const validationSchema = Yup.object({
@@ -29,43 +29,18 @@ export const validationSchema = Yup.object({
   crf: Yup.number()
     .min(0, 'CRF must be at least 0')
     .max(51, 'CRF must be at most 51')
-    .required('CRF is required'),
-  preset: Yup.string()
-    .oneOf(
-      [
-        'ultrafast',
-        'superfast',
-        'veryfast',
-        'faster',
-        'fast',
-        'medium',
-        'slow',
-        'slower',
-        'veryslow'
-      ],
-      'Preset must be a valid ffmpeg preset'
-    )
-    .required('Preset is required')
+    .required('CRF is required')
 });
 
-const resolutionOptions: { value: VideoResolution; label: string }[] = [
+const resolutionOptions: {
+  value: InitialValuesType['width'];
+  label: string;
+}[] = [
   { value: 240, label: '240p' },
   { value: 360, label: '360p' },
   { value: 480, label: '480p' },
   { value: 720, label: '720p' },
   { value: 1080, label: '1080p' }
-];
-
-const presetOptions = [
-  { value: 'ultrafast', label: 'Ultrafast (Lowest Quality, Smallest Size)' },
-  { value: 'superfast', label: 'Superfast' },
-  { value: 'veryfast', label: 'Very Fast' },
-  { value: 'faster', label: 'Faster' },
-  { value: 'fast', label: 'Fast' },
-  { value: 'medium', label: 'Medium (Balanced)' },
-  { value: 'slow', label: 'Slow' },
-  { value: 'slower', label: 'Slower' },
-  { value: 'veryslow', label: 'Very Slow (Highest Quality, Largest Size)' }
 ];
 
 export default function CompressVideo({ title }: ToolComponentProps) {
@@ -82,11 +57,7 @@ export default function CompressVideo({ title }: ToolComponentProps) {
     setLoading(true);
 
     try {
-      const compressedFile = await compressVideo(input, {
-        width: optionsValues.width,
-        crf: optionsValues.crf,
-        preset: optionsValues.preset
-      });
+      const compressedFile = await compressVideo(input, optionsValues);
       setResult(compressedFile);
     } catch (error) {
       console.error('Error compressing video:', error);
@@ -139,19 +110,6 @@ export default function CompressVideo({ title }: ToolComponentProps) {
         </Box>
       )
     }
-    // {
-    //   title: 'Encoding Preset',
-    //   component: (
-    //     <SelectWithDesc
-    //       selected={values.preset}
-    //       onChange={(value) => updateField('preset', value)}
-    //       options={presetOptions}
-    //       description={
-    //         'Determines the compression speed. Slower presets provide better compression (quality per filesize) but take more time.'
-    //       }
-    //     />
-    //   )
-    // }
   ];
 
   return (

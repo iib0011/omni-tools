@@ -6,8 +6,13 @@
   },
   "escapeJson": {
     "description": "Escape special characters in JSON strings. Convert JSON data to properly escaped format for safe transmission or storage.",
+    "inputTitle": "Input JSON",
+    "longDescription": "JSON escaping converts special characters inside JSON data into escaped sequences that can be safely stored, transmitted, or embedded inside another JSON document or programming language string. This tool escapes characters such as double quotes, backslashes, and line breaks while preserving the original data structure. Use it when you need to transform JSON into a string-safe representation for APIs, configuration files, databases, or source code.",
+    "resultTitle": "Escaped JSON String",
     "shortDescription": "Escape special characters in JSON",
-    "title": "Escape JSON"
+    "title": "Escape JSON",
+    "wrapOutputDescription": "Add double quotes around the escaped JSON output to create a JSON string.",
+    "wrapOutputTitle": "Wrap Output In Quotes"
   },
   "jsonToCsv": {
     "delimiterOption": "Delimiter",
@@ -36,6 +41,20 @@
   },
   "jsonToXml": {
     "description": "Convert JSON data to XML format. Transform structured JSON objects into well-formed XML documents.",
+    "inputTitle": "Input JSON",
+    "options": {
+      "addMetaTagDesc": "Add a meta tag at the beginning of the XML output",
+      "addMetaTagTitle": "Add an XML Meta Tag",
+      "indentationTitle": "Indentation Options",
+      "metaInfoTitle": "XML Meta Information",
+      "noIdentDesc": "Output XML without any indentation.",
+      "noIdentTitle": "No indentation",
+      "useSpaceDesc": "Use spaces to visualize the hierarchical structure of XML.",
+      "useSpaceTitle": "Use Spaces for indentation",
+      "useTabDesc": "Use tabs to visualize the hierarchical structure of XML.",
+      "useTabTitle": "Use Tabs for indentation"
+    },
+    "outputTitle": "Output XML",
     "shortDescription": "Convert JSON to XML format",
     "title": "JSON to XML"
   },
@@ -66,10 +85,44 @@
     "useTabs": "Use Tabs",
     "useTabsDescription": "Indent output with tabs."
   },
+  "sortJson": {
+    "description": "Sort JSON data by organizing arrays of objects based on a selected key in ascending or descending order, or alphabetically sort the keys of a JSON object.",
+    "inputTitle": "Input JSON",
+    "longDescription": "This tool allows you to easily sort JSON data in a structured and predictable way. You can sort an array of objects by any key, choosing either ascending or descending order, which is useful for organizing data such as lists of users, products, or records. Alternatively, you can sort the keys of a JSON object alphabetically to improve readability and consistency. The tool supports flexible sorting modes and handles common JSON structures, making it ideal for developers, data analysts, and anyone working with JSON data who needs clean, ordered output.",
+    "options": {
+      "ascending": "Ascending (A → Z)",
+      "descending": "Descending (Z → A)",
+      "keyDescription": "Select the key to sort by",
+      "modeDescription": "Choose whether to sort array items by a key's value, or sort the keys of an object alphabetically",
+      "orderDescription": "Choose the sort order",
+      "sortByKey": "Sort object keys alphabetically",
+      "sortByValue": "Sort array by key value",
+      "title": "Sorting Options"
+    },
+    "resultTitle": "Sorted JSON",
+    "shortDescription": "Sort JSON arrays by value or object keys alphabetically",
+    "title": "Sort JSON"
+  },
   "stringify": {
     "description": "Convert JavaScript objects to JSON string format. Serialize data structures into JSON strings for storage or transmission.",
+    "inputTitle": "JavaScript Object/Array",
+    "options": {
+      "escapeHtmlDesc": "Convert HTML special characters to their entity references",
+      "escapeHtmlTitle": "Escape HTML Characters",
+      "indentationTitle": "Indentation Options",
+      "optionsTitle": "Options",
+      "useSpaceDesc": "Indent output with spaces",
+      "useSpaceTitle": "Use Spaces",
+      "useTabDesc": "Indent output with tabs",
+      "useTabTitle": "Use Tabs for indentation"
+    },
+    "resultTitle": "JSON String",
     "shortDescription": "Convert objects to JSON string",
-    "title": "Stringify JSON"
+    "title": "Stringify JSON",
+    "toolInfo": {
+      "description": "JSON Stringify is a tool that converts JavaScript objects and arrays into their JSON string representation. It properly formats the output with customizable indentation and offers the option to escape HTML special characters, making it safe for web usage. This tool is particularly useful when you need to serialize data structures for storage or transmission, or when you need to prepare JSON data for HTML embedding.",
+      "title": "What Is JSON Stringify ?"
+    }
   },
   "tsvToJson": {
     "description": "Convert TSV (Tab-Separated Values) data to JSON format. Transform tabular data into structured JSON objects.",
@@ -88,23 +141,5 @@
       "title": "What is JSON Validation?"
     },
     "validJson": "✅ Valid JSON"
-  },
-  "sortJson": {
-    "title": "Sort JSON",
-    "description": "Sort JSON data by organizing arrays of objects based on a selected key in ascending or descending order, or alphabetically sort the keys of a JSON object.",
-    "shortDescription": "Sort JSON arrays by value or object keys alphabetically",
-    "longDescription": "This tool allows you to easily sort JSON data in a structured and predictable way. You can sort an array of objects by any key, choosing either ascending or descending order, which is useful for organizing data such as lists of users, products, or records. Alternatively, you can sort the keys of a JSON object alphabetically to improve readability and consistency. The tool supports flexible sorting modes and handles common JSON structures, making it ideal for developers, data analysts, and anyone working with JSON data who needs clean, ordered output.",
-    "inputTitle": "Input JSON",
-    "resultTitle": "Sorted JSON",
-    "options": {
-      "title": "Sorting Options",
-      "sortByKey": "Sort object keys alphabetically",
-      "sortByValue": "Sort array by key value",
-      "ascending": "Ascending (A → Z)",
-      "descending": "Descending (Z → A)",
-      "modeDescription": "Choose whether to sort array items by a key's value, or sort the keys of an object alphabetically",
-      "keyDescription": "Select the key to sort by",
-      "orderDescription": "Choose the sort order"
-    }
   }
 }
