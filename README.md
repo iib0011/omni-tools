@@ -154,7 +154,7 @@ The translation files are [here](public/locales). Only edit these if you are a d
 <!-- I18N-COVERAGE:START -->
 | Language | Translation status | Missing keys |
 |----------|--------------------|--------------|
-| uk - Ukrainian  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░ 84%` | 273 |
+| uk - Ukrainian  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100%` | 0 |
 | zh - Chinese  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░ 72%` | 478 |
 | hi - Hindi  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 71%` | 505 |
 | ru - Russian  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 71%` | 493 |
