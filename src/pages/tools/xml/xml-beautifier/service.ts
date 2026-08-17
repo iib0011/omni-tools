@@ -13,9 +13,13 @@ export function beautifyXml(
     return 'Invalid XML';
   }
   try {
-    const parser = new XMLParser();
+    const parser = new XMLParser({ ignoreAttributes: false });
     const obj = parser.parse(input);
-    const builder = new XMLBuilder({ format: true, indentBy: '  ' });
+    const builder = new XMLBuilder({
+      format: true,
+      indentBy: '  ',
+      ignoreAttributes: false
+    });
     return builder.build(obj);
   } catch (e: any) {
     return `Invalid XML: ${e.message}`;
