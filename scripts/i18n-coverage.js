@@ -5,17 +5,18 @@ const localesDir = 'public/locales';
 const referenceLang = 'en';
 const readmePath = 'README.md';
 
-const FLAGS = {
-  en: '🇬🇧',
-  de: '🇩🇪',
-  es: '🇪🇸',
-  fr: '🇫🇷',
-  pt: '🇵🇹',
-  ja: '🇯🇵',
-  hi: '🇮🇳',
-  nl: '🇳🇱',
-  ru: '🇷🇺',
-  zh: '🇨🇳'
+const LABELS = {
+  en: 'English',
+  de: 'German',
+  es: 'Spanish',
+  fr: 'French',
+  pt: 'Portuguese',
+  ja: 'Japanese',
+  hi: 'Hindi',
+  nl: 'Dutch',
+  ru: 'Russian',
+  uk: 'Ukrainian',
+  zh: 'Chinese'
 };
 
 function flatten(obj, prefix = '') {
@@ -58,7 +59,7 @@ function statusBar(pct, size = 40) {
 }
 
 function langLabel(lang) {
-  return `${FLAGS[lang] || ''} ${lang}`;
+  return `${lang} - ${LABELS[lang] || ''} `;
 }
 
 const refFlat = loadLangFlat(referenceLang);
