@@ -1,0 +1,27 @@
+#!/bin/sh
+
+base_url="${BASE_URL:-/}"
+
+case "$base_url" in
+  /*) ;;
+  *) base_url="/$base_url" ;;
+esac
+
+case "$base_url" in
+  */) ;;
+  *) base_url="$base_url/" ;;
+esac
+
+if ! printf '%s\n' "$base_url" | grep -Eq '^/$|^/([A-Za-z0-9._~-]+/)+$'; then
+  echo "error: BASE_URL contains unsupported path characters" >&2
+  return 1
+fi
+
+export BASE_URL="$base_url"
+
+if [ "$BASE_URL" = "/" ]; then
+  export BASE_URL_PATTERN='a^(?<resource_path>.*)'
+else
+  escaped_base_url=$(printf '%s\n' "$BASE_URL" | sed 's/\./\\./g')
+  export BASE_URL_PATTERN="^${escaped_base_url}(?<resource_path>.*)$"
+fi
