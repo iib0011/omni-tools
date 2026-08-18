@@ -1,5 +1,21 @@
 export type SplitOperatorType = 'symbol' | 'regex';
 
+const MAX_REGEX_SEPARATOR_LENGTH = 100;
+const NESTED_QUANTIFIER_PATTERN =
+  /\((?:[^()\\]|\\.)*[+*](?:[^()\\]|\\.)*\)[+*?{]/;
+
+function createSplitRegex(pattern: string): RegExp {
+  if (pattern.length > MAX_REGEX_SEPARATOR_LENGTH) {
+    throw new Error(
+      `Regex pattern is too long (max ${MAX_REGEX_SEPARATOR_LENGTH} characters).`
+    );
+  }
+  if (NESTED_QUANTIFIER_PATTERN.test(pattern)) {
+    throw new Error('Regex pattern is too complex.');
+  }
+  return new RegExp(pattern);
+}
+
 // function that randomize the array
 function shuffleArray(array: string[]): string[] {
   const shuffledArray = array.slice(); // Create a copy of the array
@@ -24,7 +40,7 @@ export function shuffleList(
       array = input.split(splitSeparator);
       break;
     case 'regex':
-      array = input.split(new RegExp(splitSeparator));
+      array = input.split(createSplitRegex(splitSeparator));
       break;
   }
   shuffledArray = shuffleArray(array);
