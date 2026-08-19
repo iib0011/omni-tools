@@ -14,7 +14,8 @@ COPY --from=build /app/dist /usr/share/nginx/html
 
 RUN sed -i 's/application\/javascript.*js;/application\/javascript                js mjs;/' /etc/nginx/mime.types
 
-RUN sed -i 's|index  index.html index.htm;|index  index.html index.htm;\n        try_files $uri $uri/ /index.html;|' /etc/nginx/conf.d/default.conf
+COPY docker/40-enable-spa-routing.sh /docker-entrypoint.d/
+RUN chmod +x /docker-entrypoint.d/40-enable-spa-routing.sh
 
 EXPOSE 80
 
