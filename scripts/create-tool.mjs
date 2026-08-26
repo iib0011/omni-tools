@@ -1,6 +1,6 @@
 import { readFile, writeFile } from 'fs/promises';
 import fs from 'fs';
-import { dirname, join, sep } from 'path';
+import { dirname, join, relative, sep } from 'path';
 import { fileURLToPath } from 'url';
 
 const currentDirname = dirname(fileURLToPath(import.meta.url));
@@ -62,7 +62,7 @@ const toolNameTitleCase =
   toolName[0].toUpperCase() + toolName.slice(1).replace(/-/g, ' ');
 const toolDir = join(toolsDir, toolName);
 const type = folder.split(sep)[folder.split(sep).length - 1];
-await createFolderStructure(toolDir, folder.split(sep).length);
+await createFolderStructure(relative('.', toolDir), folder.split(sep).length);
 console.log(`Directory created: ${toolDir}`);
 
 const createToolFile = async (name, content) => {
