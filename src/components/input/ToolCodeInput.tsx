@@ -1,6 +1,7 @@
 import { Box, useTheme } from '@mui/material';
 import React, { useContext, useRef } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
+import { copyToClipboard } from '../../utils/clipboard';
 import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
 import { useTranslation } from 'react-i18next';
@@ -27,8 +28,7 @@ export default function ToolCodeInput({
   const theme = useTheme();
 
   const handleCopy = () => {
-    navigator.clipboard
-      .writeText(value)
+    copyToClipboard(value)
       .then(() => showSnackBar(t('toolTextInput.copied'), 'success'))
       .catch((err) => {
         showSnackBar(t('toolTextInput.copyFailed', { error: err }), 'error');
