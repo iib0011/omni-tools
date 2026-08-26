@@ -24,37 +24,25 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+/**
+ * Creates the folder structure for the new tool and adds index.ts files in parent directories.
+ * @param {string} basePath - The full path to the new tool's directory.
+ * @param {number} foldersToCreateIndexCount - The number of parent levels to create an index.ts file in.
+ */
 function createFolderStructure(basePath, foldersToCreateIndexCount) {
-  const folderArray = basePath.split(sep);
-
-  function recursiveCreate(currentBase, index) {
-    if (index >= folderArray.length) {
-      return;
-    }
-    const currentPath = join(currentBase, folderArray[index]);
-    if (!fs.existsSync(currentPath)) {
-      fs.mkdirSync(currentPath, { recursive: true });
-    }
-    const indexPath = join(currentPath, 'index.ts');
-    if (
-      !fs.existsSync(indexPath) &&
-      index < folderArray.length - 1 &&
-      index >= folderArray.length - 1 - foldersToCreateIndexCount
-    ) {
-      fs.writeFileSync(
-        indexPath,
-        `export const ${
-          currentPath.split(sep)[currentPath.split(sep).length - 1]
-        }Tools = [];\n`
-      );
+  fs.mkdirSync(basePath, { recursive: true });
+  let parentDir = dirname(basePath);
+  for (let i = 0; i < foldersToCreateIndexCount; i++) {
+    if (!parentDir || parentDir === dirname(parentDir)) break;
+    const indexPath = join(parentDir, 'index.ts');
+    if (!fs.existsSync(indexPath)) {
+      const dirName = parentDir.split(sep).pop() || '';
+      const content = `export const ${dirName}Tools = [];\n`;
+      fs.writeFileSync(indexPath, content);
       console.log(`File created: ${indexPath}`);
     }
-    // Recursively create the next folder
-    recursiveCreate(currentPath, index + 1);
+    parentDir = dirname(parentDir);
   }
-
-  // Start the recursive folder creation
-  recursiveCreate('.', 0);
 }
 
 const toolNameCamelCase = toolName.replace(/-./g, (x) => x[1].toUpperCase());
@@ -62,7 +50,7 @@ const toolNameTitleCase =
   toolName[0].toUpperCase() + toolName.slice(1).replace(/-/g, ' ');
 const toolDir = join(toolsDir, toolName);
 const type = folder.split(sep)[folder.split(sep).length - 1];
-await createFolderStructure(toolDir, folder.split(sep).length);
+await createFolderStructure(toolDir, folder ? folder.split(sep).length : 0);
 console.log(`Directory created: ${toolDir}`);
 
 const createToolFile = async (name, content) => {
