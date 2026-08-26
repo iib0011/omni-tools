@@ -4,6 +4,7 @@ import ToolFileResult from '@components/result/ToolFileResult';
 import { changeOpacity } from './service';
 import ToolContent from '@components/ToolContent';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
+import ColorSelector from '@components/options/ColorSelector';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import { updateNumberField } from '@utils/string';
@@ -15,6 +16,8 @@ type InitialValuesType = {
   mode: 'solid' | 'gradient';
   gradientType: 'linear' | 'radial';
   gradientDirection: 'left-to-right' | 'inside-out';
+  backgroundMode: 'transparent' | 'color';
+  backgroundColor: string;
   areaLeft: number;
   areaTop: number;
   areaWidth: number;
@@ -26,6 +29,8 @@ const initialValues: InitialValuesType = {
   mode: 'solid',
   gradientType: 'linear',
   gradientDirection: 'left-to-right',
+  backgroundMode: 'transparent',
+  backgroundColor: '#ffffff',
   areaLeft: 0,
   areaTop: 0,
   areaWidth: 100,
@@ -41,6 +46,8 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
       mode: 'solid',
       gradientType: 'linear',
       gradientDirection: 'left-to-right',
+      backgroundMode: 'transparent',
+      backgroundColor: '#ffffff',
       areaLeft: 0,
       areaTop: 0,
       areaWidth: 100,
@@ -56,6 +63,8 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
       mode: 'solid',
       gradientType: 'linear',
       gradientDirection: 'left-to-right',
+      backgroundMode: 'transparent',
+      backgroundColor: '#ffffff',
       areaLeft: 0,
       areaTop: 0,
       areaWidth: 100,
@@ -71,6 +80,8 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
       mode: 'gradient',
       gradientType: 'radial',
       gradientDirection: 'inside-out',
+      backgroundMode: 'transparent',
+      backgroundColor: '#ffffff',
       areaLeft: 25,
       areaTop: 25,
       areaWidth: 50,
@@ -132,6 +143,33 @@ export default function ChangeOpacity({ title }: ToolComponentProps) {
                 description={'Change opacity in a gradient'}
                 title={'Apply Gradient Opacity'}
               />
+            </Box>
+          )
+        },
+        {
+          title: 'Background Options',
+          component: (
+            <Box>
+              <SimpleRadio
+                onClick={() => updateField('backgroundMode', 'transparent')}
+                checked={values.backgroundMode === 'transparent'}
+                description={'Preserve image transparency (default)'}
+                title={'Transparent (Alpha)'}
+              />
+              <SimpleRadio
+                onClick={() => updateField('backgroundMode', 'color')}
+                checked={values.backgroundMode === 'color'}
+                description={'Composite image over a solid background color'}
+                title={'Solid Color'}
+              />
+              {values.backgroundMode === 'color' && (
+                <ColorSelector
+                  value={values.backgroundColor}
+                  onColorChange={(val) => updateField('backgroundColor', val)}
+                  description={'Choose background color'}
+                  inputProps={{ 'data-testid': 'background-color-input' }}
+                />
+              )}
             </Box>
           )
         },
