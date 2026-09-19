@@ -113,6 +113,34 @@ services:
 
 ```
 
+### npm (CLI)
+
+Prefer not to use Docker? OmniTools ships a small `omniroute` CLI that serves a
+production build with no dependencies beyond Node.js (18+):
+
+```bash
+git clone https://github.com/iib0011/omni-tools.git
+cd omni-tools
+npm install
+npm run build
+npm run omniroute   # -> http://localhost:8080
+```
+
+Once this package is published to npm, the same CLI will be available globally:
+
+```bash
+npm install -g omni-tools
+omniroute
+```
+
+Options:
+
+```bash
+omniroute --port 3000    # serve on a different port (default: 8080, or $PORT)
+omniroute --host 0.0.0.0 # listen on all network interfaces instead of localhost only
+omniroute --open         # open the app in your default browser
+```
+
 ## Contribute
 
 This is a React Project with Typescript Material UI. We use icons from [Iconify](https://icon-sets.iconify.design)

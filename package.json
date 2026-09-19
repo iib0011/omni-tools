@@ -12,10 +12,21 @@
     "url": "https://github.com/iib0011/omni-tools/issues",
     "email": "ibracool99@gmail.com"
   },
+  "bin": {
+    "omniroute": "bin/omniroute.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
+    "omniroute": "node bin/omniroute.js",
     "test": "vitest",
     "test:e2e": "playwright test",
     "test:ui": "vitest --ui",
@@ -23,6 +34,7 @@
     "lint": "eslint src --max-warnings=0 --fix",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "prepare": "husky install",
+    "prepublishOnly": "npm run build",
     "i18n:pull": "locize download --project-id e7156a3e-66fb-4035-a0f0-cebf1c63a3ba --path ./public/locales",
     "i18n:sync": "locize sync --project-id e7156a3e-66fb-4035-a0f0-cebf1c63a3ba --path ./public/locales --update-values true --reference-language-only false -compare-modification-time true"
   },
