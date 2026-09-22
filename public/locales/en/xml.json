@@ -6,6 +6,11 @@
     "resultTitle": "Beautified XML",
     "shortDescription": "Format and beautify XML code",
     "title": "XML Beautifier",
+    "options": {
+      "title": "Options",
+      "preserveAttributesTitle": "Preserve Attributes",
+      "preserveAttributesDesc": "Preserve the original XML attribute formatting and order."
+    },
     "toolInfo": {
       "description": "This tool allows you to format XML data with proper indentation and spacing, making it more readable and easier to work with.",
       "title": "XML Beautifier"

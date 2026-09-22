@@ -53,5 +53,18 @@
       "longDescription": "This tool allows you to trim audio files by specifying start and end times with sub-second precision. You can extract specific segments from longer audio files, remove unwanted parts, or create shorter clips. Supports various audio formats including MP3, AAC, and WAV. Perfect for podcast editing, music production, or any audio editing needs.",
       "title": "What is {{title}}?"
     }
+  },
+  "loop": {
+    "description": "Create a looping audio file by repeating the original audio multiple times.",
+    "inputTitle": "Input Audio",
+    "loops": "Loops",
+    "numberOfLoops": "Number of Loops",
+    "resultTitle": "Looped Audio",
+    "shortDescription": "Create looping audio files",
+    "title": "Loop Audio",
+    "toolInfo": {
+      "description": "This tool allows you to create a looping audio file by repeating the original audio multiple times. You can specify how many times the audio should loop.",
+      "title": "What is {{title}}?"
+    }
   }
 }
