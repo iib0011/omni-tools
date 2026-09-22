@@ -1,10 +1,7 @@
 import { InitialValuesType } from './types';
 import { XMLParser, XMLBuilder, XMLValidator } from 'fast-xml-parser';
 
-export function beautifyXml(
-  input: string,
-  _options: InitialValuesType
-): string {
+export function beautifyXml(input: string, options: InitialValuesType): string {
   const valid = XMLValidator.validate(input);
   if (valid !== true) {
     if (typeof valid === 'object' && valid.err) {
@@ -12,13 +9,15 @@ export function beautifyXml(
     }
     return 'Invalid XML';
   }
+
+  const { preserveAttributes } = options;
   try {
-    const parser = new XMLParser({ ignoreAttributes: false });
+    const parser = new XMLParser({ ignoreAttributes: !preserveAttributes });
     const obj = parser.parse(input);
     const builder = new XMLBuilder({
       format: true,
       indentBy: '  ',
-      ignoreAttributes: false
+      ignoreAttributes: !preserveAttributes
     });
     return builder.build(obj);
   } catch (e: any) {
