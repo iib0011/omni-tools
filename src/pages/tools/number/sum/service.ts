@@ -25,13 +25,6 @@ export const compute = (
   printRunningSum: boolean,
   separator: string
 ): string => {
-  console.log(
-    'COMPUTE CALLED WITH:',
-    JSON.stringify(input),
-    'separator:',
-    JSON.stringify(separator)
-  );
-
   const numbers =
     extractionType === 'smart'
       ? getAllNumbers(input)
