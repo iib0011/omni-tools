@@ -242,8 +242,10 @@
   },
   "toolMultipleInput": {
     "deleteFile": "Delete file",
+    "dropFilesHere": "Drop your files here",
     "inputTitle": "Input {{type}}",
-    "noFilesSelected": "No files selected"
+    "noFilesSelected": "No files selected",
+    "selectFilesDescription": "Click here to select files from your device, or drag and drop files here"
   },
   "toolOptions": {
     "title": "Tool options"
