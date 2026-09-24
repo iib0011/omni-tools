@@ -390,5 +390,21 @@
       "shortDescription": "Quickly URL-escape a string.",
       "title": "String URL encoder"
     }
+  },
+  "bcrypt": {
+    "title": "Bcrypt",
+    "inputTitle": "Input String",
+    "resultTitle": "Hashed String",
+    "shortDescription": "Hash strings with Bcrypt",
+    "description": "Securely hash a string using the Bcrypt algorithm.",
+    "options": {
+      "title": "Options",
+      "saltTitle": "Salt Rounds",
+      "saltDesc": "Set the number of salt rounds used for hashing."
+    },
+    "toolInfo": {
+      "title": "What is Bcrypt?",
+      "longDescription": "Bcrypt is a password hashing algorithm designed to securely hash passwords and other sensitive strings. The number of salt rounds controls the computational cost of the hashing process."
+    }
   }
 }

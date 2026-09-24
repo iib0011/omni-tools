@@ -1,3 +1,3 @@
 export type InitialValuesType = {
-  preserveAttributes: boolean;
+  saltRounds: number;
 };

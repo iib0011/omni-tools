@@ -26,6 +26,7 @@ import { tool as stringUrlEditor } from './url-editor/meta';
 import { tool as stringCompare } from './text-compare/meta';
 import { tool as stringUnicode } from './unicode/meta';
 import { tool as stringEmailExtractor } from './email-extractor/meta';
+import { tool as stringBcrypt } from './bcrypt/meta';
 
 export const stringTools = [
   stringSplit,
@@ -46,6 +47,7 @@ export const stringTools = [
   stringRot13,
   stringBase64,
   stringStatistic,
+  stringStatistic,
   stringCensor,
   stringPasswordGenerator,
   stringEncodeUrl,
@@ -55,5 +57,6 @@ export const stringTools = [
   stringHiddenCharacterDetector,
   stringEmailExtractor,
   stringCompare,
-  stringSlugGenerator
+  stringSlugGenerator,
+  stringBcrypt
 ];
