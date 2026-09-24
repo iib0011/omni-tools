@@ -1,0 +1,192 @@
+{
+  "arithmeticSequence": {
+    "commonDifferenceDescription": "Różnica wspólna między wyrazami (d)",
+    "description": "Generuj ciągi arytmetyczne z konfigurowalnymi parametrami.",
+    "firstTermDescription": "Pierwszy wyraz ciągu (a₁)",
+    "numberOfTermsDescription": "Liczba wyrazów do wygenerowania (n)",
+    "outputFormat": "Format wyjściowy",
+    "resultTitle": "Wygenerowany ciąg",
+    "separatorDescription": "Separator między wyrazami",
+    "sequenceParameters": "Parametry ciągu",
+    "shortDescription": "Generuj ciągi arytmetyczne",
+    "title": "Ciąg arytmetyczny",
+    "toolInfo": {
+      "description": "Ciąg arytmetyczny to ciąg liczb, w którym różnica między każdym kolejnym wyrazem jest stała. Ta stała różnica nazywana jest różnicą wspólną. Mając pierwszy wyraz (a₁) i różnicę wspólną (d), każdy kolejny wyraz można znaleźć, dodając różnicę wspólną do poprzedniego wyrazu.",
+      "title": "Czym jest ciąg arytmetyczny?"
+    }
+  },
+  "generate": {
+    "arithmeticSequenceOption": "Opcja ciągu arytmetycznego",
+    "description": "Generuj ciąg liczb z konfigurowalnymi parametrami.",
+    "numberOfElementsDescription": "Liczba elementów w ciągu.",
+    "resultTitle": "Wygenerowane liczby",
+    "separator": "Separator",
+    "separatorDescription": "Oddziel elementy w ciągu arytmetycznym tym znakiem.",
+    "shortDescription": "Generuj losowe liczby w określonych zakresach",
+    "startSequenceDescription": "Rozpocznij ciąg od tej liczby.",
+    "stepDescription": "Zwiększ każdy element o tę wartość",
+    "title": "Generuj",
+    "toolInfo": {
+      "description": "To narzędzie pozwala wygenerować ciąg liczb z konfigurowalnymi parametrami. Możesz określić wartość początkową, wielkość kroku i liczbę elementów.",
+      "title": "Generuj liczby"
+    }
+  },
+  "ohmsLaw": {
+    "description": "Oblicza napięcie, prąd i rezystancję",
+    "longDescription": "Ten kalkulator wykorzystuje prawo Ohma (V = I × R) do określenia dowolnego z trzech parametrów elektrycznych, gdy znane są dwa pozostałe. Prawo Ohma to fundamentalna zasada w inżynierii elektrycznej opisująca relację między napięciem (V), prądem (I) i rezystancją (R). To narzędzie jest niezbędne dla hobbystów elektroniki, inżynierów elektryków i studentów pracujących z obwodami, aby szybko rozwiązywać nieznane wartości w ich projektach elektrycznych.",
+    "shortDescription": "Oblicz napięcie, prąd lub rezystancję w obwodach elektrycznych używając prawa Ohma",
+    "title": "Prawo Ohma"
+  },
+  "randomNumberGenerator": {
+    "description": "Generuj liczby losowe w określonym zakresie z konfigurowalnymi opcjami.",
+    "error": {
+      "generationFailed": "Nie udało się wygenerować liczb losowych. Sprawdź parametry wejściowe."
+    },
+    "info": {
+      "description": "Generator liczb losowych tworzy nieprzewidywalne liczby w określonym zakresie. To narzędzie wykorzystuje bezpieczne kryptograficznie generowanie liczb losowych, aby zapewnić prawdziwie losowe wyniki. Przydatne do symulacji, gier, próbkowania statystycznego i scenariuszy testowych.",
+      "title": "Czym jest generator liczb losowych?"
+    },
+    "longDescription": "Generuj liczby losowe w określonym zakresie z opcjami dla liczb całkowitych lub dziesiętnych, zezwalając lub zapobiegając duplikatom i sortując wyniki. Idealne do symulacji, testowania, gier i analizy statystycznej.",
+    "options": {
+      "generation": {
+        "allowDecimals": {
+          "description": "Generuj liczby dziesiętne zamiast całkowitych",
+          "title": "Zezwalaj na liczby dziesiętne"
+        },
+        "allowDuplicates": {
+          "description": "Zezwalaj, aby ta sama liczba pojawiła się wiele razy",
+          "title": "Zezwalaj na duplikaty"
+        },
+        "countDescription": "Liczba losowych liczb do wygenerowania (1-10 000)",
+        "sortResults": {
+          "description": "Sortuj wygenerowane liczby rosnąco",
+          "title": "Sortuj wyniki"
+        },
+        "title": "Opcje generowania"
+      },
+      "output": {
+        "separatorDescription": "Znak(i) do oddzielania wygenerowanych liczb",
+        "title": "Ustawienia wyjściowe"
+      },
+      "range": {
+        "maxDescription": "Wartość maksymalna (włącznie)",
+        "minDescription": "Wartość minimalna (włącznie)",
+        "title": "Ustawienia zakresu"
+      }
+    },
+    "result": {
+      "count": "Liczba",
+      "hasDuplicates": "Zawiera duplikaty",
+      "isSorted": "Posortowane",
+      "range": "Zakres",
+      "title": "Wygenerowane liczby losowe"
+    },
+    "shortDescription": "Generuj liczby losowe w niestandardowych zakresach",
+    "title": "Generator liczb losowych"
+  },
+  "randomPortGenerator": {
+    "description": "Generuj losowe porty sieciowe w określonych zakresach z konfigurowalnymi opcjami.",
+    "error": {
+      "generationFailed": "Nie udało się wygenerować losowych portów. Sprawdź parametry wejściowe."
+    },
+    "info": {
+      "description": "Generator losowych portów tworzy nieprzewidywalne numery portów sieciowych w określonych zakresach. To narzędzie postępuje zgodnie ze standardami numeracji portów IANA i obejmuje identyfikację popularnych usług. Przydatne do rozwoju, testowania, konfiguracji sieci i unikania konfliktów portów.",
+      "title": "Czym jest generator losowych portów?"
+    },
+    "longDescription": "Generuj losowe porty sieciowe w określonych zakresach (dobrze znane, zarejestrowane, dynamiczne lub niestandardowe). Idealne do rozwoju, testowania i konfiguracji sieci. Zawiera identyfikację usług portów dla popularnych portów.",
+    "options": {
+      "generation": {
+        "allowDuplicates": {
+          "description": "Zezwalaj, aby ten sam port pojawił się wiele razy",
+          "title": "Zezwalaj na duplikaty"
+        },
+        "countDescription": "Liczba losowych portów do wygenerowania (1-1 000)",
+        "sortResults": {
+          "description": "Sortuj wygenerowane porty rosnąco",
+          "title": "Sortuj wyniki"
+        },
+        "title": "Opcje generowania"
+      },
+      "output": {
+        "separatorDescription": "Znak(i) do oddzielania wygenerowanych portów",
+        "title": "Ustawienia wyjściowe"
+      },
+      "range": {
+        "custom": "Zakres niestandardowy",
+        "dynamic": "Porty dynamiczne (49152-65535)",
+        "maxPortDescription": "Maksymalny numer portu (1-65535)",
+        "minPortDescription": "Minimalny numer portu (1-65535)",
+        "registered": "Porty zarejestrowane (1024-49151)",
+        "title": "Ustawienia zakresu portów",
+        "wellKnown": "Porty dobrze znane (1-1023)"
+      }
+    },
+    "result": {
+      "count": "Liczba",
+      "hasDuplicates": "Zawiera duplikaty",
+      "isSorted": "Posortowane",
+      "portDetails": "Szczegóły portu",
+      "range": "Zakres portów",
+      "title": "Wygenerowane losowe porty"
+    },
+    "shortDescription": "Generuj losowe porty sieciowe",
+    "title": "Generator losowych portów"
+  },
+  "slackline": {
+    "description": "Oblicza napięcie w taśmie slackline",
+    "longDescription": "Ten kalkulator zakłada obciążenie na środku liny",
+    "shortDescription": "Oblicz przybliżone napięcie taśmy slackline lub sznura na bieliznę. Nie polegaj na tym dla celów bezpieczeństwa.",
+    "title": "Napięcie Slackline"
+  },
+  "sphereArea": {
+    "description": "Pole powierzchni kuli",
+    "longDescription": "Ten kalkulator wyznacza pole powierzchni kuli przy użyciu wzoru A = 4πr². Możesz wprowadzić promień, aby znaleźć pole powierzchni, lub wprowadzić pole powierzchni, aby obliczyć wymagany promień. To narzędzie jest przydatne dla studentów uczących się geometrii, inżynierów pracujących z obiektami sferycznymi i każdego, kto musi wykonywać obliczenia dotyczące powierzchni sferycznych.",
+    "shortDescription": "Oblicz pole powierzchni kuli na podstawie jej promienia",
+    "title": "Pole powierzchni kuli"
+  },
+  "sphereVolume": {
+    "description": "Objętość kuli",
+    "longDescription": "Ten kalkulator oblicza objętość kuli przy użyciu wzoru V = (4/3)πr³. Możesz wprowadzić promień lub średnicę, aby znaleźć objętość, lub wprowadzić objętość, aby określić wymagany promień. Narzędzie jest cenne dla studentów, inżynierów i profesjonalistów pracujących z obiektami sferycznymi w dziedzinach takich jak fizyka, inżynieria i produkcja.",
+    "shortDescription": "Oblicz objętość kuli używając promienia lub średnicy",
+    "title": "Objętość kuli"
+  },
+  "sum": {
+    "description": "Oblicz sumę listy liczb. Wprowadź liczby oddzielone przecinkami lub nowymi liniami, aby uzyskać ich całkowitą sumę.",
+    "example1Description": "W tym przykładzie obliczamy sumę dziesięciu dodatnich liczb całkowitych. Liczby te są wymienione w kolumnie, a ich całkowita suma wynosi 19494.",
+    "example1Title": "Suma dziesięciu liczb dodatnich",
+    "example2Description": "Ten przykład odwraca kolumnę dwudziestu trzysylabowych rzeczowników i drukuje wszystkie słowa od dołu do góry. Aby oddzielić elementy listy, używa znaku \\n jako separatora elementów wejściowych, co oznacza, że każdy element znajduje się w osobnym wierszu.",
+    "example2Title": "Policz drzewa w parku",
+    "example3Description": "W tym przykładzie dodajemy do siebie dziewięćdziesiąt różnych wartości – liczby dodatnie, ujemne, całkowite i ułamki dziesiętne. Ustawiamy separator wejściowy na przecinek i po dodaniu ich wszystkich do siebie otrzymujemy 0 jako wynik.",
+    "example3Title": "Suma liczb całkowitych i dziesiętnych",
+    "example4Description": "W tym przykładzie obliczamy sumę wszystkich dziesięciu cyfr i włączamy opcję \"Drukuj sumę bieżącą\". Otrzymujemy wartości pośrednie sumy w procesie dodawania. Tym samym mamy następującą sekwencję w wyniku: 0, 1 (0 + 1), 3 (0 + 1 + 2), 6 (0 + 1 + 2 + 3), 10 (0 + 1 + 2 + 3 + 4) itd.",
+    "example4Title": "Bieżąca suma liczb",
+    "extractionTypes": {
+      "delimiter": {
+        "description": "Dostosuj separator liczb tutaj. (Domyślnie podział wiersza.)",
+        "title": "Separator liczb"
+      },
+      "smart": {
+        "description": "Automatycznie wykrywaj liczby w danych wejściowych.",
+        "title": "Inteligentna suma"
+      }
+    },
+    "inputTitle": "Wejście",
+    "numberExtraction": "Wyodrębnianie liczb",
+    "printRunningSum": "Drukuj sumę bieżącą",
+    "printRunningSumDescription": "Wyświetl sumę obliczaną krok po kroku.",
+    "resultTitle": "Suma",
+    "runningSum": "Suma bieżąca",
+    "shortDescription": "Oblicz sumę liczb",
+    "title": "Suma",
+    "toolInfo": {
+      "description": "To internetowe narzędzie przeglądarkowe do obliczania sumy grupy liczb. Możesz wprowadzić liczby oddzielone przecinkiem, spacją lub dowolnym innym znakiem, w tym podziałem wiersza. Możesz także po prostu wkleić fragment danych tekstowych zawierających wartości liczbowe, które chcesz zsumować, a narzędzie wyodrębni je i znajdzie ich sumę.",
+      "title": "Czym jest kalkulator sumy liczb?"
+    }
+  },
+  "voltageDropInWire": {
+    "description": "Oblicza spadek napięcia w obie strony i straty mocy w kablu 2-przewodowym",
+    "longDescription": "Ten kalkulator pomaga określić spadek napięcia i stratę mocy w dwuprzewodowym kablu elektrycznym. Bierze pod uwagę długość kabla, przekrój przewodu (powierzchnię przekroju), rezystywność materiału i przepływ prądu. Narzędzie oblicza spadek napięcia w obie strony, całkowitą rezystancję kabla i moc rozproszoną w postaci ciepła. Jest to szczególnie przydatne dla inżynierów elektryków, elektryków i hobbystów podczas projektowania systemów elektrycznych, aby zapewnić, że poziomy napięcia pozostaną w dopuszczalnych granicach przy obciążeniu.",
+    "shortDescription": "Oblicz spadek napięcia i stratę mocy w kablach elektrycznych na podstawie długości, materiału i prądu",
+    "title": "Spadek napięcia w kablu (w obie strony)"
+  }
+}

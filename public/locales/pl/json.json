@@ -1,0 +1,67 @@
+{
+  "comparison": {
+    "description": "Porównaj dwa obiekty JSON, aby zidentyfikować różnice w strukturze i wartościach.",
+    "shortDescription": "Znajdź różnice między dwoma obiektami JSON",
+    "title": "Porównaj JSON"
+  },
+  "escapeJson": {
+    "description": "Escapuj znaki specjalne w tekstach JSON. Konwertuj dane JSON na odpowiednio escapowany format w celu bezpiecznej transmisji lub przechowywania.",
+    "shortDescription": "Escapuj znaki specjalne w JSON",
+    "title": "Escapuj JSON"
+  },
+  "jsonToXml": {
+    "description": "Konwertuj dane JSON na format XML. Przekształć ustrukturyzowane obiekty JSON w poprawnie sformatowane dokumenty XML.",
+    "shortDescription": "Konwertuj JSON na format XML",
+    "title": "JSON na XML"
+  },
+  "minify": {
+    "description": "Usuń wszystkie niepotrzebne białe znaki z JSON.",
+    "inputTitle": "Wejściowy JSON",
+    "resultTitle": "Zminifikowany JSON",
+    "shortDescription": "Minifikuj JSON, usuwając białe znaki",
+    "title": "Minifikuj JSON",
+    "toolInfo": {
+      "description": "Minifikacja JSON to proces usuwania wszystkich niepotrzebnych białych znaków z danych JSON przy zachowaniu ich poprawności. Obejmuje to usuwanie spacji, znaków nowej linii i wcięć, które nie są wymagane do poprawnego parsowania JSON. Minifikacja zmniejsza rozmiar danych JSON, czyniąc je bardziej wydajnymi w przechowywaniu i transmisji, zachowując dokładnie tę samą strukturę danych i wartości.",
+      "title": "Czym jest minifikacja JSON?"
+    }
+  },
+  "prettify": {
+    "description": "Formatuj JSON z odpowiednimi wcięciami i odstępami.",
+    "indentation": "Wcięcie",
+    "inputTitle": "Wejściowy JSON",
+    "resultTitle": "Sformatowany JSON",
+    "shortDescription": "Formatuj i upiększ kod JSON",
+    "title": "Formatuj JSON",
+    "toolInfo": {
+      "description": "To narzędzie pozwala sformatować dane JSON z odpowiednimi wcięciami i odstępami, czyniąc je bardziej czytelnymi i łatwiejszymi w obsłudze.",
+      "title": "Formatuj JSON"
+    },
+    "useSpaces": "Użyj spacji",
+    "useSpacesDescription": "Wcinaj wynik spacjami",
+    "useTabs": "Użyj tabulatorów",
+    "useTabsDescription": "Wcinaj wynik tabulatorami."
+  },
+  "stringify": {
+    "description": "Konwertuj obiekty JavaScript na format tekstowy JSON. Serializuj struktury danych do tekstów JSON w celu przechowywania lub transmisji.",
+    "shortDescription": "Konwertuj obiekty na tekst JSON",
+    "title": "Konwertuj na tekst JSON"
+  },
+  "tsvToJson": {
+    "description": "Konwertuj dane TSV (wartości rozdzielane tabulatorami) na format JSON. Przekształć dane tabelaryczne w ustrukturyzowane obiekty JSON.",
+    "shortDescription": "Konwertuj TSV na format JSON",
+    "title": "TSV na JSON"
+  },
+  "validateJson": {
+    "description": "Sprawdź, czy JSON jest poprawny i dobrze sformatowany.",
+    "inputTitle": "Wejściowy JSON",
+    "invalidJson": "❌ {{error}}",
+    "resultTitle": "Wynik walidacji",
+    "shortDescription": "Sprawdź poprawność kodu JSON pod kątem błędów",
+    "title": "Waliduj JSON",
+    "toolInfo": {
+      "description": "JSON (JavaScript Object Notation) to lekki format wymiany danych. Walidacja JSON zapewnia, że struktura danych jest zgodna ze standardem JSON. Prawidłowy obiekt JSON musi mieć: - Nazwy właściwości ujęte w podwójne cudzysłowy. - Prawidłowo zbalansowane nawiasy klamrowe {}. - Brak przecinków końcowych po ostatniej parze klucz-wartość. - Prawidłowe zagnieżdżanie obiektów i tablic. To narzędzie sprawdza wejściowy JSON i dostarcza informacji zwrotnych, aby pomóc zidentyfikować i naprawić typowe błędy.",
+      "title": "Czym jest walidacja JSON?"
+    },
+    "validJson": "✅ Poprawny JSON"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "changeCsvSeparator": {
+    "description": "Zmień separator w plikach CSV. Konwertuj między różnymi formatami CSV, takimi jak przecinek, średnik, tabulator lub separatory niestandardowe.",
+    "shortDescription": "Zmień separator pliku CSV",
+    "title": "Zmień separator CSV"
+  },
+  "csvRowsToColumns": {
+    "description": "To narzędzie konwertuje wiersze pliku CSV na kolumny. Wyodrębnia poziome linie z wejściowego pliku CSV jedna po drugiej, obraca je o 90 stopni i wyprowadza jako pionowe kolumny jedna po drugiej, oddzielone przecinkami.",
+    "longDescription": "To narzędzie konwertuje wiersze pliku CSV na kolumny. Przykładowo, jeśli dane wejściowe CSV mają 6 wierszy, wynik będzie miał 6 kolumn, a elementy wierszy będą ułożone od góry do dołu. W poprawnie sformatowanym CSV liczba wartości w każdym wierszu jest taka sama. Jednak w przypadkach, gdy w wierszach brakuje pól, program może je naprawić - możesz wybrać spośród dostępnych opcji: wypełnij brakujące dane pustymi elementami lub zastąp brakujące dane niestandardowymi elementami, takimi jak \"brak\", \"?\" lub \"x\". Podczas procesu konwersji narzędzie czyści również plik CSV z niepotrzebnych informacji, takich jak puste linie (linie bez widocznych informacji) i komentarze. Aby pomóc narzędziu poprawnie zidentyfikować komentarze, w opcjach możesz określić symbol na początku linii, który rozpoczyna komentarz. Zazwyczaj jest to krzyżyk \"#\" lub podwójny ukośnik \"//\".",
+    "shortDescription": "Konwertuj wiersze CSV na kolumny.",
+    "title": "Konwertuj wiersze CSV na kolumny"
+  },
+  "csvToJson": {
+    "columnSeparator": "Separator kolumn (np. , ; \\t)",
+    "commentSymbol": "Symbol komentarza (np. #)",
+    "conversionOptions": "Opcje konwersji",
+    "description": "Konwertuj pliki CSV na format JSON z możliwością dostosowania separatorów, cudzysłowów i formatowania wyjściowego. Obsługa nagłówków, komentarzy i dynamicznej konwersji typów.",
+    "dynamicTypes": "Typy dynamiczne",
+    "dynamicTypesDescription": "Automatycznie konwertuj liczby i wartości logiczne",
+    "error": "Błąd",
+    "errorParsing": "Błąd parsowania CSV: {{error}}",
+    "fieldQuote": "Cudzysłów pola (np. \")",
+    "inputCsvFormat": "Format wejściowy CSV",
+    "inputTitle": "Wejściowy CSV",
+    "invalidCsvFormat": "Nieprawidłowy format CSV",
+    "resultTitle": "Wyjściowy JSON",
+    "shortDescription": "Konwertuj dane CSV na format JSON.",
+    "skipEmptyLines": "Pomiń puste linie",
+    "skipEmptyLinesDescription": "Ignoruj puste linie w wejściowym CSV",
+    "title": "Konwertuj CSV na JSON",
+    "toolInfo": {
+      "description": "To narzędzie przekształca pliki CSV (wartości rozdzielane przecinkami) na struktury danych JSON. Obsługuje różne formaty CSV z konfigurowalnymi separatorami, znakami cytowania i symbolami komentarzy. Konwerter może traktować pierwszy wiersz jako nagłówki, pomijać puste linie i automatycznie wykrywać typy danych, takie jak liczby i wartości logiczne. Wynikowy JSON może być używany do migracji danych, tworzenia kopii zapasowych lub jako dane wejściowe dla innych aplikacji.",
+      "title": "Czym jest konwerter CSV na JSON?"
+    },
+    "useHeaders": "Użyj nagłówków",
+    "useHeadersDescription": "Traktuj pierwszy wiersz jako nagłówki kolumn"
+  },
+  "csvToTsv": {
+    "description": "Prześlij plik CSV w formularzu poniżej, a zostanie on automatycznie przekonwertowany na plik TSV. W opcjach narzędzia możesz dostosować format wejściowy CSV – określić separator pól, znak cytowania i symbol komentarza, a także pominąć puste linie CSV i wybrać, czy zachować nagłówki kolumn CSV.",
+    "longDescription": "To narzędzie przekształca dane CSV na dane TSV (wartości rozdzielane tabulatorami). Zarówno CSV, jak i TSV to popularne formaty plików do przechowywania danych tabelarycznych, ale używają różnych separatorów do oddzielania wartości – CSV używa przecinków (",
+    "shortDescription": "Konwertuj dane CSV na format TSV.",
+    "title": "Konwertuj CSV na TSV"
+  },
+  "csvToXml": {
+    "description": "Konwertuj pliki CSV na format XML z konfigurowalnymi opcjami.",
+    "shortDescription": "Konwertuj dane CSV na format XML.",
+    "title": "Konwertuj CSV na XML"
+  },
+  "csvToYaml": {
+    "description": "Po prostu prześlij plik CSV w formularzu poniżej, a zostanie on automatycznie przekonwertowany na plik YAML. W opcjach narzędzia możesz określić znak separatora pól, znak cytowania pól i znak komentarza, aby dostosować narzędzie do niestandardowych formatów CSV. Dodatkowo możesz wybrać wyjściowy format YAML: zachowujący nagłówki CSV lub wykluczający je.",
+    "longDescription": "To narzędzie przekształca dane CSV na dane YAML. CSV to prosty format tabelaryczny używany do reprezentowania danych macierzowych składających się z wierszy i kolumn. YAML z kolei to bardziej zaawansowany format (nadzbiór JSON), który tworzy bardziej czytelne dla człowieka dane do serializacji i obsługuje listy, słowniki oraz obiekty zagnieżdżone. Ten program obsługuje różne formaty wejściowe CSV – dane mogą być oddzielone przecinkami (domyślnie), średnikami, pionowymi kreskami lub używać zupełnie innego separatora. W opcjach możesz określić dokładny separator używany przez Twoje dane. Podobnie, w opcjach możesz określić znak cytowania używany do otaczania pól CSV (domyślnie podwójny cudzysłów). Możesz również pomijać linie rozpoczynające się od komentarzy, określając symbole komentarza w opcjach. Pozwala to na utrzymanie czystości danych poprzez pomijanie niepotrzebnych linii. Istnieją dwa sposoby konwersji CSV na YAML. Pierwsza metoda konwertuje każdy wiersz CSV na listę YAML. Druga metoda wyodrębnia nagłówki z pierwszego wiersza CSV i tworzy obiekty YAML z kluczami opartymi na tych nagłówkach. Możesz również dostosować format wyjściowy YAML, określając liczbę spacji do wcięć struktur YAML. Jeśli potrzebujesz wykonać odwrotną konwersję, czyli przekształcić YAML na CSV, możesz skorzystać z naszego narzędzia Konwertuj YAML na CSV.",
+    "shortDescription": "Szybko konwertuj plik CSV na plik YAML.",
+    "title": "Konwertuj CSV na YAML"
+  },
+  "findIncompleteCsvRecords": {
+    "checkingOptions": "Opcje sprawdzania",
+    "commentCharacterDescription": "Wprowadź znak wskazujący początek linii komentarza. Linie rozpoczynające się od tego symbolu zostaną pominięte.",
+    "csvInputOptions": "Opcje wejściowe CSV",
+    "csvSeparatorDescription": "Wprowadź znak używany do oddzielania kolumn w pliku wejściowym CSV.",
+    "deleteLinesWithNoData": "Usuń linie bez danych",
+    "deleteLinesWithNoDataDescription": "Usuń puste linie z pliku wejściowego CSV.",
+    "description": "Po prostu prześlij plik CSV w formularzu poniżej, a to narzędzie automatycznie sprawdzi, czy w żadnym z wierszy lub kolumn nie brakuje wartości. W opcjach narzędzia możesz dostosować format pliku wejściowego (określić separator, znak cytowania i znak komentarza). Dodatkowo możesz włączyć sprawdzanie pustych wartości, pomijać puste linie i ustawić limit liczby komunikatów o błędach w wyniku.",
+    "findEmptyValues": "Znajdź puste wartości",
+    "findEmptyValuesDescription": "Wyświetl komunikat o polach CSV, które są puste (nie są to brakujące pola, ale pola, które nic nie zawierają).",
+    "inputTitle": "Wejściowy CSV",
+    "limitNumberOfMessages": "Ogranicz liczbę wiadomości",
+    "messageLimitDescription": "Ustaw limit liczby wiadomości w wyniku.",
+    "quoteCharacterDescription": "Wprowadź znak cytowania używany do otaczania pól wejściowych CSV.",
+    "resultTitle": "Status CSV",
+    "shortDescription": "Szybko znajdź wiersze i kolumny w CSV, w których brakuje wartości.",
+    "title": "Znajdź niekompletne rekordy CSV",
+    "toolInfo": {
+      "title": "Czym jest {{title}}?"
+    }
+  },
+  "insertCsvColumns": {
+    "appendColumns": "Dołącz kolumny na końcu",
+    "commentCharacterDescription": "Wprowadź znak wskazujący początek linii komentarza. Linie rozpoczynające się od tego symbolu zostaną pominięte.",
+    "csvOptions": "Opcje CSV",
+    "csvSeparator": "Separator CSV",
+    "csvToInsert": "CSV do wstawienia",
+    "csvToInsertDescription": "Wprowadź jedną lub więcej kolumn, które chcesz wstawić do pliku CSV. Znak używany do oddzielania kolumn musi być taki sam jak w pliku wejściowym CSV. Ps: Puste linie zostaną zignorowane",
+    "customFillDescription": "Jeśli wejściowy plik CSV jest niekompletny (brakuje wartości), czy dodać puste pola lub niestandardowe symbole do rekordów, aby utworzyć poprawny CSV?",
+    "customFillValueDescription": "Użyj tej niestandardowej wartości, aby wypełnić brakujące pola. (Działa tylko w trybie \"Wartości niestandardowe\" powyżej).",
+    "customPosition": "Pozycja niestandardowa",
+    "customPositionOptionsDescription": "Wybierz metodę wstawiania kolumn do pliku CSV.",
+    "description": "Dodaj nowe kolumny do danych CSV w określonych pozycjach.",
+    "fillWithCustomValues": "Wypełnij wartościami niestandardowymi",
+    "fillWithEmptyValues": "Wypełnij pustymi wartościami",
+    "headerName": "Nazwa nagłówka",
+    "headerNameDescription": "Nagłówek kolumny, po której chcesz wstawić kolumny.",
+    "inputTitle": "Wejściowy CSV",
+    "insertingPositionDescription": "Określ, gdzie wstawić kolumny w pliku CSV.",
+    "position": "Pozycja",
+    "positionOptions": "Opcje pozycji",
+    "prependColumns": "Wstaw kolumny na początku",
+    "quoteCharDescription": "Wprowadź znak cytowania używany do otaczania pól wejściowych CSV.",
+    "resultTitle": "Wyjściowy CSV",
+    "rowNumberDescription": "Numer kolumny, po której chcesz wstawić kolumny.",
+    "separatorDescription": "Wprowadź znak używany do oddzielania kolumn w pliku wejściowym CSV.",
+    "shortDescription": "Szybko wstaw jedną lub więcej nowych kolumn w dowolnym miejscu pliku CSV.",
+    "title": "Wstaw kolumny CSV",
+    "toolInfo": {
+      "description": "To narzędzie pozwala wstawiać nowe kolumny do danych CSV w określonych pozycjach. Możesz wstawiać kolumny na początku, na końcu lub w niestandardowych pozycjach na podstawie nazw nagłówków lub numerów kolumn.",
+      "title": "Wstaw kolumny CSV"
+    }
+  },
+  "swapCsvColumns": {
+    "description": "Po prostu prześlij plik CSV w formularzu poniżej, określ kolumny do zamiany, a narzędzie automatycznie zmieni pozycje określonych kolumn w pliku wynikowym. W opcjach narzędzia możesz określić pozycje lub nazwy kolumn, które chcesz zamienić, a także naprawić niekompletne dane i opcjonalnie usunąć puste rekordy oraz rekordy zakomentowane.",
+    "longDescription": "To narzędzie reorganizuje dane CSV, zamieniając pozycje kolumn. Zamiana kolumn może poprawić czytelność pliku CSV, umieszczając często używane dane razem lub na początku, co ułatwia porównywanie i edycję danych. Na przykład możesz zamienić pierwszą kolumnę z ostatnią lub drugą z trzecią. Aby zamienić kolumny na podstawie ich pozycji, wybierz",
+    "shortDescription": "Zmień kolejność kolumn CSV.",
+    "title": "Zamień kolumny CSV"
+  },
+  "transposeCsv": {
+    "description": "Po prostu prześlij plik CSV w formularzu poniżej, a to narzędzie automatycznie dokona transpozycji CSV. W opcjach narzędzia możesz określić znak, który rozpoczyna linie komentarza w CSV, aby je usunąć. Dodatkowo, jeśli CSV jest niekompletny (brakuje wartości), możesz zastąpić brakujące wartości pustym znakiem lub znakiem niestandardowym.",
+    "longDescription": "To narzędzie dokonuje transpozycji wartości rozdzielanych przecinkami (CSV). Traktuje CSV jako macierz danych i odbija wszystkie elementy względem głównej przekątnej. Wynik zawiera te same dane CSV co wejście, ale wszystkie wiersze stają się kolumnami, a wszystkie kolumny wierszami. Po transpozycji plik CSV będzie miał odwrotne wymiary. Na przykład, jeśli plik wejściowy ma 4 kolumny i 3 wiersze, plik wyjściowy będzie miał 3 kolumny i 4 wiersze. Podczas konwersji program czyści również dane z niepotrzebnych linii i koryguje niekompletne dane. W szczególności narzędzie automatycznie usuwa wszystkie puste rekordy i komentarze rozpoczynające się od określonego znaku, który można ustawić w opcjach. Dodatkowo, w przypadkach, gdy dane CSV są uszkodzone lub utracone, narzędzie uzupełnia plik pustymi polami lub polami niestandardowymi, które można określić w opcjach.",
+    "shortDescription": "Szybka transpozycja pliku CSV.",
+    "title": "Transpozycja CSV"
+  }
+}
