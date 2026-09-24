@@ -1,7 +1,7 @@
 import { ToolComponentProps } from '@tools/defineTool';
 import { InitialValuesType } from './type';
 import * as Yup from 'yup';
-
+import { getFileExtension } from '@utils/file';
 import { useState } from 'react';
 import { GetGroupsType } from '@components/options/ToolOptions';
 import SimpleRadio from '@components/options/SimpleRadio';
@@ -12,6 +12,7 @@ import ToolContent from '@components/ToolContent';
 import ToolImageInput from '@components/input/ToolImageInput';
 import ToolFileResult from '@components/result/ToolFileResult';
 import { processImage } from './service';
+import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
   rotateAngle: '90',
@@ -30,32 +31,43 @@ const validationSchema = Yup.object({
 });
 
 export default function RotateImage({ title }: ToolComponentProps) {
+  const { t } = useTranslation('image');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const compute = async (optionsValues: InitialValuesType, input: any) => {
     if (!input) return;
-    setResult(await processImage(input, optionsValues));
+    setLoading(true);
+    try {
+      const rotatedFile = await processImage(input, optionsValues);
+      setResult(rotatedFile);
+    } catch (err) {
+      console.error(`Failed to rotate image input: ${err}`);
+      setResult(null);
+    } finally {
+      setLoading(false);
+    }
   };
   const getGroups: GetGroupsType<InitialValuesType> = ({
     values,
     updateField
   }) => [
     {
-      title: 'Rotate Method',
+      title: t('rotate.options.method'),
       component: (
         <Box>
           <SimpleRadio
             onClick={() => updateField('rotateMethod', 'Preset')}
             checked={values.rotateMethod === 'Preset'}
-            description={'Rotate by a specific angle in degrees.'}
-            title={'Preset angle'}
+            description={t('rotate.options.presetDesc')}
+            title={t('rotate.options.presetTitle')}
           />
           <SimpleRadio
             onClick={() => updateField('rotateMethod', 'Custom')}
             checked={values.rotateMethod === 'Custom'}
-            description={'Rotate by a custom angle in degrees.'}
-            title={'Custom angle'}
+            description={t('rotate.options.customDesc')}
+            title={t('rotate.options.customTitle')}
           />
         </Box>
       )
@@ -63,13 +75,13 @@ export default function RotateImage({ title }: ToolComponentProps) {
     ...(values.rotateMethod === 'Preset'
       ? [
           {
-            title: 'Preset angle',
+            title: t('rotate.options.angle'),
             component: (
               <Box>
                 <SelectWithDesc
                   selected={values.rotateAngle}
                   onChange={(val) => updateField('rotateAngle', val)}
-                  description={'Rotate by a specific angle in degrees.'}
+                  description={''}
                   options={[
                     { label: '90 degrees', value: '90' },
                     { label: '180 degrees', value: '180' },
@@ -82,15 +94,13 @@ export default function RotateImage({ title }: ToolComponentProps) {
         ]
       : [
           {
-            title: 'Custom angle',
+            title: t('rotate.options.angle'),
             component: (
               <Box>
                 <TextFieldWithDesc
                   value={values.rotateAngle}
                   onOwnChange={(val) => updateField('rotateAngle', val)}
-                  description={
-                    'Rotate by a custom angle in degrees(from -360 to 360).'
-                  }
+                  description={'- 360 ↔ 360'}
                   inputProps={{
                     type: 'number',
                     min: -360,
@@ -115,22 +125,18 @@ export default function RotateImage({ title }: ToolComponentProps) {
         <ToolImageInput
           value={input}
           onChange={setInput}
-          title={'Input Image'}
+          title={t('rotate.inputTitle')}
           accept={['image/*']}
         />
       }
       resultComponent={
         <ToolFileResult
           value={result}
-          title={'Rotated Image'}
-          extension={input?.name.split('.').pop() || 'png'}
+          title={t('rotate.resultTitle')}
+          loading={loading}
+          extension={result ? getFileExtension(result.name) : undefined}
         />
       }
-      toolInfo={{
-        title: 'Rotate Image',
-        description:
-          'This tool allows you to rotate images by a specific angle in any degrees.'
-      }}
     />
   );
 }

@@ -116,5 +116,10 @@
     "longDescription": "Esta herramienta transpone valores separados por comas (CSV). Trata el CSV como una matriz de datos e invierte todos los elementos a lo largo de la diagonal principal. El resultado contiene los mismos datos CSV que la entrada, pero ahora todas las filas se han convertido en columnas y todas las columnas en filas. Tras la transposición, el archivo CSV tendrá dimensiones opuestas. Por ejemplo, si el archivo de entrada tiene 4 columnas y 3 filas, el archivo de salida tendrá 3 columnas y 4 filas. Durante la conversión, el programa también elimina las líneas innecesarias y corrige los datos incompletos. En concreto, la herramienta elimina automáticamente todos los registros vacíos y los comentarios que empiezan por un carácter específico, que se puede configurar en la opción. Además, si los datos CSV se corrompen o se pierden, la utilidad completa el archivo con campos vacíos o campos personalizados que se pueden especificar en las opciones. ¡Csv-abuloso!",
     "shortDescription": "Transponer rápidamente un archivo CSV.",
     "title": "Transponer CSV"
+  },
+  "tsvToJson": {
+    "description": "Convierte datos TSV (Valores Separados por Tabulaciones) a formato JSON. Transforma datos tabulares en objetos JSON estructurados.",
+    "shortDescription": "Convertir TSV a formato JSON",
+    "title": "TSV a JSON"
   }
 }

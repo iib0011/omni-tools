@@ -1,25 +1,16 @@
 import { Box } from '@mui/material';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import ToolCodeInput from '@components/input/ToolCodeInput';
-import ToolTextResult from '@components/result/ToolTextResult';
+import ToolCodeResult from '@components/result/ToolCodeResult';
 import { beautifyJson } from './service';
-import ToolInfo from '@components/ToolInfo';
-import Separator from '@components/Separator';
-import ToolExamples, {
-  CardExampleType
-} from '@components/examples/ToolExamples';
-import { FormikProps } from 'formik';
+import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import RadioWithTextField from '@components/options/RadioWithTextField';
 import SimpleRadio from '@components/options/SimpleRadio';
-import { isNumber, updateNumberField } from '../../../../utils/string';
+import { updateNumberField } from '../../../../utils/string';
 import ToolContent from '@components/ToolContent';
 import { useTranslation } from 'react-i18next';
-
-type InitialValuesType = {
-  indentationType: 'tab' | 'space';
-  spacesCount: number;
-};
+import { InitialValuesType } from './types';
 
 const initialValues: InitialValuesType = {
   indentationType: 'space',
@@ -121,8 +112,7 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
   const [result, setResult] = useState<string>('');
 
   const compute = (optionsValues: InitialValuesType, input: any) => {
-    const { indentationType, spacesCount } = optionsValues;
-    if (input) setResult(beautifyJson(input, indentationType, spacesCount));
+    if (input) setResult(beautifyJson(input, optionsValues));
   };
 
   return (
@@ -138,10 +128,10 @@ export default function PrettifyJson({ title }: ToolComponentProps) {
         />
       }
       resultComponent={
-        <ToolTextResult
+        <ToolCodeResult
           title={t('prettify.resultTitle')}
           value={result}
-          extension={'json'}
+          language="json"
         />
       }
       initialValues={initialValues}

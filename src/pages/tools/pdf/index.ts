@@ -8,6 +8,7 @@ import { tool as protectPdfTool } from './protect-pdf/meta';
 import { meta as pdfToEpub } from './pdf-to-epub/meta';
 import { tool as pdfEditor } from './editor/meta';
 import { tool as convertToPdf } from './convert-to-pdf/meta';
+import { meta as extractImageFromPdf } from './extract-images-from-pdf/meta';
 
 export const pdfTools: DefinedTool[] = [
   pdfEditor,
@@ -18,5 +19,6 @@ export const pdfTools: DefinedTool[] = [
   mergePdf,
   pdfToEpub,
   pdfPdfToPng,
-  convertToPdf
+  convertToPdf,
+  extractImageFromPdf
 ];

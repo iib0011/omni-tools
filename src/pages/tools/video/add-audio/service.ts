@@ -1,0 +1,141 @@
+import { fetchFile } from '@ffmpeg/util';
+import { runFFmpegTask } from 'lib/ffmpeg';
+import { initialValuesType } from './types';
+
+export function timeToSeconds(time: string): number {
+  const parts = time.split(':').map(Number);
+
+  if (parts.length === 3) {
+    return parts[0] * 3600 + parts[1] * 60 + parts[2];
+  }
+
+  if (parts.length === 2) {
+    return parts[0] * 60 + parts[1];
+  }
+
+  return parts[0] || 0;
+}
+
+function hasDurationConstraint(options: initialValuesType): boolean {
+  const start = timeToSeconds(options.startTime);
+  const end = timeToSeconds(options.endTime);
+
+  return start > 0 || end > 0;
+}
+
+function buildAudioFilterChain(options: initialValuesType): string {
+  const volumeScale = (options.volume / 100).toFixed(2);
+
+  const start = timeToSeconds(options.startTime);
+  const end = timeToSeconds(options.endTime);
+
+  const hasConstraint = start > 0 || end > 0;
+  const delay = start * 1000;
+
+  const filters: string[] = [];
+
+  filters.push(`volume=${volumeScale}`);
+
+  if (hasConstraint) {
+    if (start > 0 && end > 0) {
+      filters.push(`atrim=start=0:end=${end - start}`);
+      filters.push(`adelay=${delay}|${delay}`);
+    } else if (start > 0) {
+      filters.push(`adelay=${delay}|${delay}`);
+    } else if (end > 0) {
+      filters.push(`atrim=start=0:end=${end}`);
+    }
+
+    filters.push('apad');
+  }
+
+  return filters.join(',');
+}
+
+function buildAudioModeFilter(options: initialValuesType): string {
+  const chain = buildAudioFilterChain(options);
+
+  return options.mode === 'replace'
+    ? `[1:a]${chain}[aout]`
+    : `[1:a]${chain}[a1];[0:a][a1]amix=inputs=2:duration=longest[aout]`;
+}
+
+export async function addAudioToVideo(
+  video: File,
+  audio: File,
+  options: initialValuesType
+): Promise<File> {
+  return runFFmpegTask(async ({ ffmpeg, tempFile }) => {
+    const inputVideo = tempFile('.mp4');
+    const inputAudio = tempFile('.mp3');
+    const outputName = tempFile('.mp4');
+
+    await ffmpeg.writeFile(inputVideo, await fetchFile(video));
+
+    await ffmpeg.writeFile(inputAudio, await fetchFile(audio));
+
+    const audioModeFilter = buildAudioModeFilter(options);
+
+    const inputArgs: string[] = ['-i', inputVideo];
+
+    if (options.loop) {
+      inputArgs.push('-stream_loop', '-1');
+    }
+
+    inputArgs.push('-i', inputAudio);
+
+    const hasConstraint = hasDurationConstraint(options);
+
+    const args =
+      options.mode === 'replace'
+        ? [
+            ...inputArgs,
+            '-c:v',
+            'copy',
+            '-filter_complex',
+            audioModeFilter,
+            '-map',
+            '0:v:0',
+            '-map',
+            '[aout]',
+            '-shortest',
+            '-y',
+            outputName
+          ]
+        : [
+            ...inputArgs,
+            '-c:v',
+            'copy',
+            '-filter_complex',
+            audioModeFilter,
+            '-map',
+            '0:v',
+            '-map',
+            '[aout]',
+            ...(hasConstraint ? [] : ['-shortest']),
+            '-y',
+            outputName
+          ];
+
+    try {
+      await ffmpeg.exec(args);
+
+      const data = await ffmpeg.readFile(outputName);
+
+      return new File(
+        [
+          new Blob([new Uint8Array(data as Uint8Array)], {
+            type: 'video/mp4'
+          })
+        ],
+        `${video.name.replace(/\.[^/.]+$/, '')}_with_audio.mp4`,
+        {
+          type: 'video/mp4'
+        }
+      );
+    } catch (error) {
+      console.error('FFmpeg execution failed:', error);
+      throw error;
+    }
+  });
+}

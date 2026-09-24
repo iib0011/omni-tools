@@ -116,5 +116,10 @@
     "longDescription": "Cet outil transpose les fichiers CSV (valeurs séparées par des virgules). Il traite le fichier CSV comme une matrice de données et inverse tous les éléments sur la diagonale principale. Le fichier CSV de sortie contient les mêmes données CSV que le fichier d'entrée, mais toutes les lignes sont désormais des colonnes, et toutes les colonnes des lignes. Après la transposition, le fichier CSV aura des dimensions opposées. Par exemple, si le fichier d'entrée comporte 4 colonnes et 3 lignes, le fichier de sortie comportera 3 colonnes et 4 lignes. Lors de la conversion, le programme supprime également les lignes inutiles et corrige les données incomplètes. Plus précisément, l'outil supprime automatiquement tous les enregistrements vides et les commentaires commençant par un caractère spécifique, que vous pouvez définir dans l'option. De plus, en cas de corruption ou de perte des données CSV, l'utilitaire complète le fichier avec des champs vides ou personnalisés, que vous pouvez spécifier dans les options. Csv-abulous !",
     "shortDescription": "Transposer rapidement un fichier CSV.",
     "title": "Transposer CSV"
+  },
+  "tsvToJson": {
+    "description": "Convertissez les données TSV (valeurs séparées par des tabulations) au format JSON. Transformez les données tabulaires en objets JSON structurés.",
+    "shortDescription": "Convertir le format TSV au format JSON",
+    "title": "TSV vers JSON"
   }
 }

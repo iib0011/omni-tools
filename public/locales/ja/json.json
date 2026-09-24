@@ -46,11 +46,6 @@
     "shortDescription": "オブジェクトをJSON文字列に変換する",
     "title": "JSONを文字列化する"
   },
-  "tsvToJson": {
-    "description": "TSV（タブ区切り値）データをJSON形式に変換します。表形式のデータを構造化されたJSONオブジェクトに変換します。",
-    "shortDescription": "TSVをJSON形式に変換する",
-    "title": "TSVからJSONへ"
-  },
   "validateJson": {
     "description": "JSON が有効かつ整形式であるかどうかを確認します。",
     "inputTitle": "入力JSON",

@@ -1,6 +1,7 @@
 import { InitialValuesType } from './types';
-import { FFmpeg } from '@ffmpeg/ffmpeg';
+import { runFFmpegTask } from 'lib/ffmpeg';
 import { fetchFile } from '@ffmpeg/util';
+import { getFileExtension } from '@utils/file';
 
 function computeAudioFilter(speed: number): string {
   if (speed <= 2 && speed >= 0.5) {
@@ -21,27 +22,19 @@ function computeAudioFilter(speed: number): string {
 }
 
 export async function changeAudioSpeed(
-  input: File | null,
+  input: File,
   options: InitialValuesType
-): Promise<File | null> {
-  if (!input) return null;
-  const { newSpeed, outputFormat } = options;
-  let ffmpeg: FFmpeg | null = null;
-  let ffmpegLoaded = false;
-  try {
-    ffmpeg = new FFmpeg();
-    if (!ffmpegLoaded) {
-      await ffmpeg.load({
-        wasmURL:
-          'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
-      });
-      ffmpegLoaded = true;
-    }
-    const fileName = input.name;
-    const outputName = `output.${outputFormat}`;
+): Promise<File> {
+  return runFFmpegTask(async ({ ffmpeg, tempFile }) => {
+    const { speed, outputFormat } = options;
+
+    const fileName = tempFile(`.${getFileExtension(input.name)}`);
+    const outputName = tempFile(`.${outputFormat}`);
+
     await ffmpeg.writeFile(fileName, await fetchFile(input));
-    const audioFilter = computeAudioFilter(newSpeed);
+    const audioFilter = computeAudioFilter(speed);
     const args = ['-i', fileName, '-filter:a', audioFilter];
+
     if (outputFormat === 'mp3') {
       args.push('-b:a', '192k', '-f', 'mp3', outputName);
     } else if (outputFormat === 'aac') {
@@ -61,20 +54,19 @@ export async function changeAudioSpeed(
     }
     await ffmpeg.exec(args);
     const data = await ffmpeg.readFile(outputName);
+
     let mimeType = 'audio/mp3';
     if (outputFormat === 'aac') mimeType = 'audio/aac';
     if (outputFormat === 'wav') mimeType = 'audio/wav';
-    const blob = new Blob([data as any], { type: mimeType });
-    const newFile = new File(
+
+    const blob = new Blob([new Uint8Array(data as Uint8Array)], {
+      type: mimeType
+    });
+
+    return new File(
       [blob],
-      fileName.replace(/\.[^/.]+$/, `-${newSpeed}x.${outputFormat}`),
+      fileName.replace(/\.[^/.]+$/, `-${speed}x.${outputFormat}`),
       { type: mimeType }
     );
-    await ffmpeg.deleteFile(fileName);
-    await ffmpeg.deleteFile(outputName);
-    return newFile;
-  } catch (err) {
-    console.error(`Failed to process audio: ${err}`);
-    return null;
-  }
+  });
 }

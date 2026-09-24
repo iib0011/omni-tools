@@ -21,6 +21,11 @@
     "shortDescription": "在浏览器中安全地压缩 PDF 文件",
     "title": "压缩PDF"
   },
+  "convertToPdf": {
+    "description": "将各种图像格式（PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW）转换为 PDF，并可调整图像大小和页面方向。",
+    "shortDescription": "将图像转换为 PDF，可调整大小和方向",
+    "title": "将图像转换为 PDF"
+  },
   "editor": {
     "description": "高级 PDF 编辑器，具备注释、表单填写、高亮显示和导出功能。您可以使用专业级工具（包括文本插入、绘图、高亮显示、签名和表单填写）直接在浏览器中编辑 PDF。",
     "shortDescription": "使用高级注释、签名和编辑工具编辑 PDF",
@@ -63,11 +68,6 @@
     "shortDescription": "将 PDF 转换为 PNG 图像",
     "title": "PDF 转 PNG"
   },
-  "convertToPdf": {
-    "title": "将图像转换为 PDF",
-    "description": "将各种图像格式（PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW）转换为 PDF，并可调整图像大小和页面方向。",
-    "shortDescription": "将图像转换为 PDF，可调整大小和方向"
-  },
   "protectPdf": {
     "description": "在浏览器中安全地为 PDF 文件添加密码保护",
     "shortDescription": "使用密码安全地保护 PDF 文件",
@@ -86,8 +86,8 @@
     "longDescription": "通过将 PDF 页面旋转 90 度、180 度或 270 度来更改其方向。这对于修复扫描错误的文档或准备打印 PDF 非常有用。",
     "pageRangesDescription": "输入页码或范围，以逗号分隔（例如，1,3,5-7）",
     "pageRangesPlaceholder": "例如，1.5-8",
-    "pagesWillBeRotated": "{{count}} 页{{count !== 1 ? 's' : ''}} 将会轮换",
-    "pdfPageCount": "PDF 有 {{count}} 页{{count !== 1 ? 's' : ''}}",
+    "pagesWillBeRotated": "{{count}} 页 将会轮换",
+    "pdfPageCount": "PDF 有 {{count}} 页",
     "resultTitle": "旋转的 PDF",
     "rotatingPages": "旋转页面",
     "rotationAngle": "旋转角度",
@@ -103,11 +103,11 @@
     "description": "从 PDF 文档中提取特定页面。",
     "extractingPages": "提取页面",
     "inputTitle": "输入 PDF",
-    "pageExtractionPreview": "{{count}} 页{{count !== 1 ? 's' : ''}} 将被提取",
+    "pageExtractionPreview": "{{count}} 页 将被提取",
     "pageRangesDescription": "输入页码或范围，以逗号分隔（例如，1,3,5-7）",
     "pageRangesPlaceholder": "例如，1.5-8",
     "pageSelection": "页面选择",
-    "pdfPageCount": "PDF 有 {{count}} 页{{count !== 1 ? 's' : ''}}",
+    "pdfPageCount": "PDF 有 {{count}} 页",
     "resultTitle": "提取的 PDF",
     "shortDescription": "从 PDF 文件中提取特定页面",
     "title": "拆分 PDF",

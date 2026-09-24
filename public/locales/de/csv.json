@@ -116,5 +116,10 @@
     "longDescription": "Dieses Tool transponiert Komma-getrennte Werte (CSV). Es behandelt die CSV-Datei wie eine Datenmatrix und spiegelt alle Elemente entlang der Hauptdiagonale. Die Ausgabe enthält dieselben CSV-Daten wie die Eingabe, wobei nun alle Zeilen zu Spalten und alle Spalten zu Zeilen werden. Nach der Transposition weist die CSV-Datei entgegengesetzte Dimensionen auf. Wenn die Eingabedatei beispielsweise 4 Spalten und 3 Zeilen enthält, enthält die Ausgabedatei 3 Spalten und 4 Zeilen. Während der Konvertierung bereinigt das Programm die Daten außerdem von unnötigen Zeilen und korrigiert unvollständige Daten. Insbesondere löscht das Tool automatisch alle leeren Datensätze und Kommentare, die mit einem bestimmten Zeichen beginnen, das Sie in den Optionen festlegen können. Sollten die CSV-Daten beschädigt oder verloren gehen, ergänzt das Dienstprogramm die Datei zusätzlich mit leeren Feldern oder benutzerdefinierten Feldern, die Sie in den Optionen festlegen können. CSV-unverständlich!",
     "shortDescription": "Transponieren Sie schnell eine CSV-Datei.",
     "title": "CSV transponieren"
+  },
+  "tsvToJson": {
+    "description": "Konvertieren Sie TSV-Daten (Tab-Separated Values) in das JSON-Format. Transformieren Sie tabellarische Daten in strukturierte JSON-Objekte.",
+    "shortDescription": "Konvertieren Sie TSV in das JSON-Format",
+    "title": "TSV zu JSON"
   }
 }

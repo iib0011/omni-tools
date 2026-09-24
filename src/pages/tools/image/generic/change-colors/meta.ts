@@ -11,6 +11,6 @@ export const tool = defineTool('image-generic', {
   path: 'change-colors',
   icon: 'cil:color-fill',
 
-  keywords: ['change', 'colors', 'in', 'png', 'image', 'jpg'],
+  keywords: ['png', 'jpg', 'replace', 'swap'],
   component: lazy(() => import('./index'))
 });

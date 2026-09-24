@@ -7,12 +7,11 @@ import { InitialValuesType } from './types';
 import ToolAudioInput from '@components/input/ToolAudioInput';
 import ToolFileResult from '@components/result/ToolFileResult';
 import TextFieldWithDesc from '@components/options/TextFieldWithDesc';
-import RadioWithTextField from '@components/options/RadioWithTextField';
 import { changeAudioSpeed } from './service';
 import { useTranslation } from 'react-i18next';
 
 const initialValues: InitialValuesType = {
-  newSpeed: 2,
+  speed: 2,
   outputFormat: 'mp3'
 };
 
@@ -22,10 +21,7 @@ const formatOptions = [
   { label: 'WAV', value: 'wav' }
 ];
 
-export default function ChangeSpeed({
-  title,
-  longDescription
-}: ToolComponentProps) {
+export default function ChangeSpeed({ title }: ToolComponentProps) {
   const { t } = useTranslation('audio');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
@@ -35,10 +31,12 @@ export default function ChangeSpeed({
     optionsValues: InitialValuesType,
     input: File | null
   ) => {
+    if (!input) return;
+
     setLoading(true);
     try {
-      const newFile = await changeAudioSpeed(input, optionsValues);
-      setResult(newFile);
+      const resultFile = await changeAudioSpeed(input, optionsValues);
+      setResult(resultFile);
     } catch (err) {
       setResult(null);
     } finally {
@@ -55,9 +53,10 @@ export default function ChangeSpeed({
       component: (
         <Box>
           <TextFieldWithDesc
-            value={values.newSpeed.toString()}
-            onOwnChange={(val) => updateField('newSpeed', Number(val))}
+            value={values.speed.toString()}
+            onOwnChange={(val) => updateField('speed', Number(val))}
             description={t('changeSpeed.speedDescription')}
+            inputProps={{ min: 0 }}
             type="number"
           />
         </Box>
@@ -102,28 +101,17 @@ export default function ChangeSpeed({
         />
       }
       resultComponent={
-        loading ? (
-          <ToolFileResult
-            title={t('changeSpeed.settingSpeed')}
-            value={null}
-            loading={true}
-          />
-        ) : (
-          <ToolFileResult
-            title={t('changeSpeed.resultTitle')}
-            value={result}
-            extension={result ? result.name.split('.').pop() : undefined}
-          />
-        )
+        <ToolFileResult
+          title={t('changeSpeed.resultTitle')}
+          loading={loading}
+          value={result}
+          extension={result ? result.name.split('.').pop() : undefined}
+        />
       }
       initialValues={initialValues}
       getGroups={getGroups}
       setInput={setInput}
       compute={compute}
-      toolInfo={{
-        title: t('changeSpeed.toolInfo.title', { title }),
-        description: longDescription
-      }}
     />
   );
 }
