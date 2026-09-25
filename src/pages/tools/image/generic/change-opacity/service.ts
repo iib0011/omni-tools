@@ -1,17 +1,9 @@
-interface OpacityOptions {
-  opacity: number;
-  mode: 'solid' | 'gradient';
-  gradientType: 'linear' | 'radial';
-  gradientDirection: 'left-to-right' | 'inside-out';
-  areaLeft: number;
-  areaTop: number;
-  areaWidth: number;
-  areaHeight: number;
-}
+import { InitialValuesType } from './types';
+import { parseColorToRgb } from '@utils/color';
 
 export async function changeOpacity(
   file: File,
-  options: OpacityOptions
+  options: InitialValuesType
 ): Promise<File> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -50,20 +42,33 @@ export async function changeOpacity(
   });
 }
 
+function getGradientRgbTriplet(options: InitialValuesType): string {
+  if (options.backgroundMode === 'color' && options.backgroundColor) {
+    const { r, g, b } = parseColorToRgb(options.backgroundColor);
+    return `${r},${g},${b}`;
+  }
+  return '255,255,255'; // fallback: white
+}
+
 function applySolidOpacity(
   ctx: CanvasRenderingContext2D,
   img: HTMLImageElement,
-  options: OpacityOptions
+  options: InitialValuesType
 ) {
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  if (options.backgroundMode === 'color' && options.backgroundColor) {
+    ctx.fillStyle = options.backgroundColor;
+    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  }
   ctx.globalAlpha = options.opacity;
   ctx.drawImage(img, 0, 0);
+  ctx.globalAlpha = 1.0;
 }
 
 function applyGradientOpacity(
   ctx: CanvasRenderingContext2D,
   img: HTMLImageElement,
-  options: OpacityOptions
+  options: InitialValuesType
 ) {
   const { areaLeft, areaTop, areaWidth, areaHeight } = options;
 
@@ -81,28 +86,30 @@ function applyGradientOpacity(
 
 function createLinearGradient(
   ctx: CanvasRenderingContext2D,
-  options: OpacityOptions
+  options: InitialValuesType
 ) {
-  const { areaLeft, areaTop, areaWidth, areaHeight } = options;
+  const { areaLeft, areaTop, areaWidth } = options;
+  const rgb = getGradientRgbTriplet(options);
   const gradient = ctx.createLinearGradient(
     areaLeft,
     areaTop,
     areaLeft + areaWidth,
     areaTop
   );
-  gradient.addColorStop(0, `rgba(255,255,255,${options.opacity})`);
-  gradient.addColorStop(1, 'rgba(255,255,255,0)');
+  gradient.addColorStop(0, `rgba(${rgb},${options.opacity})`);
+  gradient.addColorStop(1, `rgba(${rgb},0)`);
   return gradient;
 }
 
 function createRadialGradient(
   ctx: CanvasRenderingContext2D,
-  options: OpacityOptions
+  options: InitialValuesType
 ) {
   const { areaLeft, areaTop, areaWidth, areaHeight } = options;
   const centerX = areaLeft + areaWidth / 2;
   const centerY = areaTop + areaHeight / 2;
   const radius = Math.min(areaWidth, areaHeight) / 2;
+  const rgb = getGradientRgbTriplet(options);
 
   const gradient = ctx.createRadialGradient(
     centerX,
@@ -114,11 +121,11 @@ function createRadialGradient(
   );
 
   if (options.gradientDirection === 'inside-out') {
-    gradient.addColorStop(0, `rgba(255,255,255,${options.opacity})`);
-    gradient.addColorStop(1, 'rgba(255,255,255,0)');
+    gradient.addColorStop(0, `rgba(${rgb},${options.opacity})`);
+    gradient.addColorStop(1, `rgba(${rgb},0)`);
   } else {
-    gradient.addColorStop(0, 'rgba(255,255,255,0)');
-    gradient.addColorStop(1, `rgba(255,255,255,${options.opacity})`);
+    gradient.addColorStop(0, `rgba(${rgb},0)`);
+    gradient.addColorStop(1, `rgba(${rgb},${options.opacity})`);
   }
 
   return gradient;

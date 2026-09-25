@@ -22,7 +22,34 @@
   "changeOpacity": {
     "description": "Easily adjust the transparency of your images. Simply upload your image, use the slider to set the desired opacity level between 0 (fully transparent) and 1 (fully opaque), and download the modified image.",
     "shortDescription": "Adjust transparency of images",
-    "title": "Change image Opacity"
+    "title": "Change image Opacity",
+    "inputTitle": "Input image",
+    "resultTitle": "Processed Image",
+    "options": {
+      "opacitySettings": "Opacity Settings",
+      "opacityDescription": "Set opacity between 0 (transparent) and 1 (opaque)",
+      "solidOpacityTitle": "Apply Solid Opacity",
+      "solidOpacityDescription": "Set the same opacity level for all pixels",
+      "gradientOpacityTitle": "Apply Gradient Opacity",
+      "gradientOpacityDescription": "Change opacity in a gradient",
+      "gradientType": "Gradient Type",
+      "linearOpacity": "Linear opacity",
+      "radialOpacity": "Radial opacity",
+      "opacityArea": "Opacity Area",
+      "leftPosition": "Left position",
+      "topPosition": "Top position",
+      "width": "Width",
+      "height": "Height",
+      "backgroundOptions": "Background Options",
+      "transparentAlpha": "Transparent (Alpha)",
+      "transparentAlphaDescription": "Preserve image transparency (default)",
+      "solidColor": "Solid Color",
+      "solidColorDescription": "Composite image over a solid background color",
+      "chooseBackgroundColor": "Choose background color",
+      "insideOut": "Inside -> Outside",
+      "outsideIn": "Outside -> Inside",
+      "gradientDirection": "Gradient Direction"
+    }
   },
   "compress": {
     "compressedSize": "Total compressed size",
