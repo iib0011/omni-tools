@@ -29,3 +29,27 @@ export function convertHexToRGBA(color: string): number {
   const alphaChannel = 0xff;
   return (colorValue << 8) | alphaChannel;
 }
+
+/**
+ * Parses any valid CSS color string into its RGB components,
+ * using the canvas's own color parser for correctness across
+ * hex (#fff, #ffffff), rgb()/rgba(), hsl(), and named colors.
+ */
+export function parseColorToRgb(color: string): {
+  r: number;
+  g: number;
+  b: number;
+} {
+  const canvas = document.createElement('canvas');
+  canvas.width = canvas.height = 1;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) {
+    throw new Error('Canvas context not supported');
+  }
+
+  ctx.fillStyle = color; // browser validates & normalizes the color here
+  ctx.fillRect(0, 0, 1, 1);
+
+  const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
+  return { r, g, b };
+}
