@@ -88,7 +88,8 @@ export default function ToolsByCategory() {
             </Typography>
           </Stack>
           <TextField
-            placeholder={'Search'}
+            placeholder={t('translation:hero.search.placeholder')}
+            aria-label={t('translation:hero.search.placeholder')}
             InputProps={{
               endAdornment: <SearchIcon />,
               sx: {

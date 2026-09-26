@@ -15,7 +15,7 @@ describe('convertJsonToCsv', () => {
         { name: 'Bob', age: 25 }
       ]);
 
-      expect(convertJsonToCsv(input, defaultOptions)).toBe(
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
         `name,age\r\nAlice,30\r\nBob,25`
       );
     });
@@ -23,7 +23,7 @@ describe('convertJsonToCsv', () => {
     it('converts a single object', () => {
       const input = JSON.stringify({ name: 'Alice', age: 30 });
 
-      expect(convertJsonToCsv(input, defaultOptions)).toBe(
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
         `name,age\r\nAlice,30`
       );
     });
@@ -33,6 +33,7 @@ describe('convertJsonToCsv', () => {
 
       expect(
         convertJsonToCsv(input, { ...defaultOptions, includeHeaders: false })
+          .result
       ).toBe(`Alice,30`);
     });
   });
@@ -43,7 +44,7 @@ describe('convertJsonToCsv', () => {
         { name: 'Alice', address: { city: 'Paris', zip: '75000' } }
       ]);
 
-      expect(convertJsonToCsv(input, defaultOptions)).toBe(
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
         `name,address.city,address.zip\r\nAlice,Paris,75000`
       );
     });
@@ -53,7 +54,7 @@ describe('convertJsonToCsv', () => {
         { name: 'Alice', tags: ['admin', 'user'] }
       ]);
 
-      expect(convertJsonToCsv(input, defaultOptions)).toBe(
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
         `name,tags[0],tags[1]\r\nAlice,admin,user`
       );
     });
@@ -63,7 +64,7 @@ describe('convertJsonToCsv', () => {
         { user: { address: { geo: { lat: 48.8566, lng: 2.3522 } } } }
       ]);
 
-      expect(convertJsonToCsv(input, defaultOptions)).toBe(
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
         `user.address.geo.lat,user.address.geo.lng\r\n48.8566,2.3522`
       );
     });
@@ -76,7 +77,7 @@ describe('convertJsonToCsv', () => {
         { name: 'Bob', city: 'Paris' }
       ]);
 
-      expect(convertJsonToCsv(input, defaultOptions)).toBe(
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
         `name,age,city\r\nAlice,30,\r\nBob,,Paris`
       );
     });
@@ -84,7 +85,9 @@ describe('convertJsonToCsv', () => {
     it('filters out empty objects', () => {
       const input = JSON.stringify([{}, { name: 'Alice' }]);
 
-      expect(convertJsonToCsv(input, defaultOptions)).toBe(`name\r\nAlice`);
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
+        `name\r\nAlice`
+      );
     });
   });
 
@@ -92,7 +95,7 @@ describe('convertJsonToCsv', () => {
     it('quotes cells containing the delimiter', () => {
       const input = JSON.stringify([{ name: 'Smith, John' }]);
 
-      expect(convertJsonToCsv(input, defaultOptions)).toBe(
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
         `name\r\n"Smith, John"`
       );
     });
@@ -100,7 +103,7 @@ describe('convertJsonToCsv', () => {
     it('escapes double-quotes by doubling them', () => {
       const input = JSON.stringify([{ name: 'He said "hello"' }]);
 
-      expect(convertJsonToCsv(input, defaultOptions)).toBe(
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
         `name\r\n"He said ""hello"""`
       );
     });
@@ -110,13 +113,14 @@ describe('convertJsonToCsv', () => {
 
       expect(
         convertJsonToCsv(input, { ...defaultOptions, quoteStrings: 'always' })
+          .result
       ).toBe(`"name","age"\r\n"Alice","30"`);
     });
 
     it('quotes cells containing newlines', () => {
       const input = JSON.stringify([{ notes: 'line1\nline2' }]);
 
-      expect(convertJsonToCsv(input, defaultOptions)).toBe(
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
         `notes\r\n"line1\nline2"`
       );
     });
@@ -127,7 +131,7 @@ describe('convertJsonToCsv', () => {
       const input = JSON.stringify([{ name: 'Alice', age: 30 }]);
 
       expect(
-        convertJsonToCsv(input, { ...defaultOptions, delimiter: ';' })
+        convertJsonToCsv(input, { ...defaultOptions, delimiter: ';' }).result
       ).toBe(`name;age\r\nAlice;30`);
     });
 
@@ -135,7 +139,7 @@ describe('convertJsonToCsv', () => {
       const input = JSON.stringify([{ name: 'Alice', age: 30 }]);
 
       expect(
-        convertJsonToCsv(input, { ...defaultOptions, delimiter: '\t' })
+        convertJsonToCsv(input, { ...defaultOptions, delimiter: '\t' }).result
       ).toBe(`name\tage\r\nAlice\t30`);
     });
   });
@@ -144,7 +148,7 @@ describe('convertJsonToCsv', () => {
     it('converts null values to empty strings', () => {
       const input = JSON.stringify([{ name: 'Alice', age: null }]);
 
-      expect(convertJsonToCsv(input, defaultOptions)).toBe(
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
         `name,age\r\nAlice,`
       );
     });
@@ -152,9 +156,13 @@ describe('convertJsonToCsv', () => {
 
   describe('errors', () => {
     it('throws on invalid JSON', () => {
-      expect(() => convertJsonToCsv('invalid json', defaultOptions)).toThrow(
-        'Invalid JSON input.'
-      );
+      // A single malformed line isn't NDJSON, so parseJsonInput re-throws
+      // its own "Invalid JSON: <reason>" error (the <reason> text itself
+      // comes from the JS engine's JSON.parse and varies across engines,
+      // so we only assert on the stable prefix).
+      expect(
+        () => convertJsonToCsv('invalid json', defaultOptions).result
+      ).toThrow(/^Invalid JSON: /);
     });
 
     it('throws on bare primitive', () => {
@@ -164,9 +172,49 @@ describe('convertJsonToCsv', () => {
     });
 
     it('throws when no data rows are found', () => {
-      expect(() =>
-        convertJsonToCsv(JSON.stringify([{}, {}]), defaultOptions)
+      expect(
+        () => convertJsonToCsv(JSON.stringify([{}, {}]), defaultOptions).result
       ).toThrow('No data found in the provided JSON.');
+    });
+  });
+
+  describe('NDJSON (newline-delimited JSON)', () => {
+    it('converts objects on separate lines without an array wrapper', () => {
+      const input = [
+        '{"key1": "AAA", "key2": "XXX"}',
+        '{"key1": "BBB", "key2": "YYY"}',
+        '{"key1": "CCC", "key2": "ZZZ"}'
+      ].join('\n');
+
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
+        `key1,key2\r\nAAA,XXX\r\nBBB,YYY\r\nCCC,ZZZ`
+      );
+    });
+
+    it('ignores blank lines between NDJSON records', () => {
+      const input = '{"a": 1}\n\n{"a": 2}\n';
+
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
+        `a\r\n1\r\n2`
+      );
+    });
+
+    it('handles sparse keys across NDJSON records', () => {
+      const input = '{"a": 1}\n{"b": 2}';
+
+      expect(convertJsonToCsv(input, defaultOptions).result).toBe(
+        `a,b\r\n1,\r\n,2`
+      );
+    });
+
+    it('still throws when one NDJSON line is not valid JSON', () => {
+      // Two non-blank lines triggers the NDJSON path; the failing line's
+      // 1-based line number (2) is reported alongside the parse error.
+      const input = '{"a": 1}\nnot json';
+
+      expect(() => convertJsonToCsv(input, defaultOptions).result).toThrow(
+        /^Invalid JSON at line 2: /
+      );
     });
   });
 });

@@ -90,10 +90,6 @@ Stay tuned as we continue to expand and improve our collection!
 
 ## Self-host/Run
 
-> [!TIP]
-> You can use either the DockerHub Image `iib0011/omni-tools` <br />
-> or use the GitHub Container Registry `ghcr.io/iib0011/omni-tools`
-
 ### Docker
 
 ```bash
@@ -183,7 +179,24 @@ npm run test:e2e
 ### i18n (Translations)
 The translation files are [here](public/locales). Only edit these if you are a developer. For non developers, use [Locize](https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK).
 
-<img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date"/>
+<!-- I18N-COVERAGE:START -->
+| Language | Translation status | Missing keys |
+|----------|--------------------|--------------|
+| uk - Ukrainian  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 98%` | 28 |
+| zh - Chinese  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 71%` | 506 |
+| ru - Russian  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 70%` | 521 |
+| de - German  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 69%` | 543 |
+| es - Spanish  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 69%` | 543 |
+| fr - French  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 69%` | 543 |
+| hi - Hindi  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 69%` | 533 |
+| ja - Japanese  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 69%` | 543 |
+| nl - Dutch  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 69%` | 543 |
+| pt - Portuguese  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 69%` | 543 |
+<!-- I18N-COVERAGE:END -->
+
+## ⭐ Star History
+
+<img src="https://star-history.dera.page/svg?repos=iib0011/omni-tools&type=Date"/>
 
 ## 🤝 Looking to contribute?
 

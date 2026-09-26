@@ -8,10 +8,7 @@
     "settingSpeed": "速度設定",
     "shortDescription": "オーディオファイルの速度を変更する",
     "speedDescription": "デフォルトの乗数: 2は2倍速を意味します",
-    "title": "オーディオ速度を変更する",
-    "toolInfo": {
-      "title": "何ですか {{title}}？"
-    }
+    "title": "オーディオ速度を変更する"
   },
   "extractAudio": {
     "description": "ビデオ ファイルからオーディオ トラックを抽出します。",
@@ -31,7 +28,6 @@
     "description": "複数のオーディオ ファイルを順番に連結して 1 つのオーディオ ファイルに結合します。",
     "inputTitle": "入力オーディオファイル",
     "longDescription": "このツールを使えば、複数のオーディオファイルをアップロード順に連結し、1つのファイルにまとめることができます。ポッドキャストのセグメント、音楽トラック、その他様々なオーディオファイルを結合するのに最適です。MP3、AAC、WAVなど、様々なオーディオ形式に対応しています。",
-    "mergingAudio": "オーディオの結合",
     "outputFormat": "出力形式",
     "resultTitle": "統合オーディオ",
     "shortDescription": "複数のオーディオ ファイルを 1 つに結合します (MP3、AAC、WAV)。",
@@ -55,7 +51,6 @@
     "title": "オーディオをトリムする",
     "toolInfo": {
       "title": "何ですか {{title}}？"
-    },
-    "trimmingAudio": "オーディオのトリミング"
+    }
   }
 }

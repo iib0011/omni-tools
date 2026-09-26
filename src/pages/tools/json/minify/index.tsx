@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import ToolCodeInput from '@components/input/ToolCodeInput';
-import ToolTextResult from '@components/result/ToolTextResult';
+import ToolCodeResult from '@components/result/ToolCodeResult';
 import { minifyJson } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import { useTranslation } from 'react-i18next';
+import { JsonFormat } from '@utils/json';
 
 type InitialValuesType = Record<string, never>;
 
@@ -51,9 +52,20 @@ export default function MinifyJson({ title }: ToolComponentProps) {
   const { t } = useTranslation('json');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
+  const [format, setFormat] = useState<JsonFormat>('json');
 
   const compute = (_: InitialValuesType, input: string) => {
-    if (input) setResult(minifyJson(input));
+    if (input) {
+      try {
+        const { result, format } = minifyJson(input);
+        setResult(result);
+        setFormat(format);
+      } catch (error) {
+        setResult(
+          ` ${error instanceof Error ? error.message : 'Invalid JSON format'}`
+        );
+      }
+    }
   };
 
   return (
@@ -64,14 +76,14 @@ export default function MinifyJson({ title }: ToolComponentProps) {
           title={t('minify.inputTitle')}
           value={input}
           onChange={setInput}
-          language="json"
+          language={format}
         />
       }
       resultComponent={
-        <ToolTextResult
+        <ToolCodeResult
           title={t('minify.resultTitle')}
           value={result}
-          extension={'json'}
+          language={format}
         />
       }
       initialValues={initialValues}

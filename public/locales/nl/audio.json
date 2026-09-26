@@ -8,10 +8,7 @@
     "settingSpeed": "Snelheid instellen",
     "shortDescription": "De snelheid van audiobestanden wijzigen",
     "speedDescription": "Standaardvermenigvuldiger: 2 betekent 2x sneller",
-    "title": "Wijzig audiosnelheid",
-    "toolInfo": {
-      "title": "Wat is {{title}}?"
-    }
+    "title": "Wijzig audiosnelheid"
   },
   "extractAudio": {
     "description": "Haal een audiotrack uit videobestanden.",
@@ -31,7 +28,6 @@
     "description": "Combineer meerdere audiobestanden tot één audiobestand door ze in volgorde te plaatsen.",
     "inputTitle": "Invoer audiobestanden",
     "longDescription": "Met deze tool kun je meerdere audiobestanden samenvoegen tot één bestand door ze te combineren in de volgorde waarin je ze uploadt. Perfect voor het combineren van podcastfragmenten, muzieknummers of andere audiobestanden die moeten worden samengevoegd. Ondersteunt diverse audioformaten, waaronder MP3, AAC en WAV.",
-    "mergingAudio": "Audio samenvoegen",
     "outputFormat": "Uitvoerformaat",
     "resultTitle": "Samengevoegde audio",
     "shortDescription": "Voeg meerdere audiobestanden samen tot één bestand (MP3, AAC, WAV).",
@@ -55,7 +51,6 @@
     "title": "Audio bijsnijden",
     "toolInfo": {
       "title": "Wat is {{title}}?"
-    },
-    "trimmingAudio": "Audio bijsnijden"
+    }
   }
 }

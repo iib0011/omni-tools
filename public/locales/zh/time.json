@@ -70,7 +70,6 @@
     "date-to-unix": "日期 → Unix",
     "description": "将 Unix 时间戳转换为可读日期，并将格式化日期转换回 Unix 时间戳（双向转换）。",
     "optionsTitle": "转换模式",
-    "outputOptions": "输出选项",
     "shortDescription": "双向转换 Unix 时间戳和日期。",
     "title": "转换 Unix ↔ 日期",
     "toolInfo": {
@@ -84,10 +83,10 @@
     "useUTC": "使用 UTC"
   },
   "crontabGuru": {
-    "title": "Crontab Guru",
     "description": "用中文解析和解释 cron 表达式。即时了解任何 cron 计划的作用，验证语法，并一次处理多个表达式。",
+    "longDescription": "Crontab Guru 是一个 cron 表达式解析器和验证器，可将复杂的 cron 语法转换为清晰易读的描述。无论您是在安排自动备份、系统维护任务还是 CI/CD 流水线，此工具都能帮助您准确了解您的任务何时运行。支持标准的 5 字段 cron 表达式，实时验证语法，并一次处理多个表达式——每行一个。支持英语、法语、西班牙语、德语、日语、中文、葡萄牙语、荷兰语和俄语。",
     "shortDescription": "用简单语言解析和解释 cron 表达式",
-    "longDescription": "Crontab Guru 是一个 cron 表达式解析器和验证器，可将复杂的 cron 语法转换为清晰易读的描述。无论您是在安排自动备份、系统维护任务还是 CI/CD 流水线，此工具都能帮助您准确了解您的任务何时运行。支持标准的 5 字段 cron 表达式，实时验证语法，并一次处理多个表达式——每行一个。支持英语、法语、西班牙语、德语、日语、中文、葡萄牙语、荷兰语和俄语。"
+    "title": "Crontab Guru"
   },
   "discordTimestamp": {
     "description": "将日期和时间转换为 Discord 的特殊时间戳格式，自动适应每位用户的本地时区和语言",

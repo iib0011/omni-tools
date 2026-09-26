@@ -104,7 +104,7 @@ export default function ToolMultiImageInput({
       <InputHeader
         title={
           title ||
-          t('toolMultipleImageInput.inputTitle', {
+          t('toolMultipleInput.inputTitle', {
             type: type.charAt(0).toUpperCase() + type.slice(1)
           })
         }
@@ -187,7 +187,7 @@ export default function ToolMultiImageInput({
             ))
           ) : (
             <Typography variant="body2" color="text.secondary">
-              {t('toolMultipleImageInput.noFilesSelected')}
+              {t('toolMultipleInput.noFilesSelected')}
             </Typography>
           )}
         </Box>

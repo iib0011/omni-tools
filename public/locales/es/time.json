@@ -64,7 +64,6 @@
     "date-to-unix": "Fecha → Unix",
     "description": "Convierte marcas de tiempo de Unix en fechas legibles y convierte fechas formateadas nuevamente en marcas de tiempo de Unix (en ambas direcciones).",
     "optionsTitle": "Modo de conversión",
-    "outputOptions": "Opciones de salida",
     "shortDescription": "Convierte marcas de tiempo de Unix y fechas en ambas direcciones.",
     "title": "Convertir Unix ↔ Fecha",
     "toolInfo": {
@@ -78,10 +77,10 @@
     "useUTC": "Usar UTC"
   },
   "crontabGuru": {
-    "title": "Crontab Guru",
     "description": "Analiza y explica expresiones cron en español. Entiende al instante qué hace cualquier programación cron, valida la sintaxis y procesa múltiples expresiones a la vez.",
+    "longDescription": "Crontab Guru es un analizador y validador de expresiones cron que traduce la compleja sintaxis cron en descripciones claras y legibles. Ya sea que estés programando copias de seguridad automáticas, tareas de mantenimiento del sistema o pipelines CI/CD, esta herramienta te ayuda a entender exactamente cuándo se ejecutarán tus tareas. Admite expresiones cron estándar de 5 campos, valida la sintaxis en tiempo real y procesa múltiples expresiones a la vez — una por línea. Disponible en inglés, francés, español, alemán, japonés, chino, portugués, neerlandés y ruso.",
     "shortDescription": "Analiza y explica expresiones cron en lenguaje claro",
-    "longDescription": "Crontab Guru es un analizador y validador de expresiones cron que traduce la compleja sintaxis cron en descripciones claras y legibles. Ya sea que estés programando copias de seguridad automáticas, tareas de mantenimiento del sistema o pipelines CI/CD, esta herramienta te ayuda a entender exactamente cuándo se ejecutarán tus tareas. Admite expresiones cron estándar de 5 campos, valida la sintaxis en tiempo real y procesa múltiples expresiones a la vez — una por línea. Disponible en inglés, francés, español, alemán, japonés, chino, portugués, neerlandés y ruso."
+    "title": "Crontab Guru"
   },
   "timeBetweenDates": {
     "description": "Calcula la diferencia horaria entre dos fechas. Obtén la duración exacta en días, horas, minutos y segundos.",

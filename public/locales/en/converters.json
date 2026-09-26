@@ -36,5 +36,22 @@
     "resultTitle": "WEBP Images",
     "shortDescription": "Convert Images to WebP Format with quality control.",
     "title": "Convert Images to WebP"
+  },
+  "videoToGif": {
+    "description": "Convert video files to animated GIF format. Extract specific time ranges and create shareable animated images.",
+    "inputTitle": "Input Video",
+    "options": {
+      "endTime": "End Time",
+      "high": "High",
+      "low": "Low",
+      "mid": "Medium",
+      "quality": "Quality",
+      "startTime": "Start Time",
+      "timestamps": "Timestamps",
+      "ultra": "Ultra"
+    },
+    "resultTitle": "Output GIF",
+    "shortDescription": "Convert video to animated GIF",
+    "title": "Video to GIF"
   }
 }

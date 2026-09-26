@@ -223,6 +223,7 @@ export default function ResizeImage({ title }: ToolComponentProps) {
           <ToolFileResult
             title={t('resize.resultTitle')}
             value={results[0] ?? null}
+            loading={isProcessing}
             extension={results[0]?.name.split('.').pop() || 'png'}
           />
         )

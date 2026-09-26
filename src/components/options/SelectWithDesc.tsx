@@ -33,7 +33,7 @@ const SelectWithDesc = <T extends string | boolean>({
 
   return (
     <Box mb={3}>
-      <Select value={selected} onChange={handleChange}>
+      <Select displayEmpty value={selected} onChange={handleChange}>
         {options.map((option) => (
           <MenuItem key={option.label} value={option.value.toString()}>
             {option.label}

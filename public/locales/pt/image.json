@@ -1,6 +1,6 @@
 {
   "changeColors": {
-    "description": "Mundo",
+    "description": "Substitua cores selecionadas em uma imagem por novas cores de forma rapida e precisa.",
     "shortDescription": "Troque cores rapidamente em uma imagem",
     "title": "Alterar cores na imagem"
   },
@@ -34,7 +34,7 @@
     "title": "Converter JPG para PNG"
   },
   "createTransparent": {
-    "description": "Mundo",
+    "description": "Torne o fundo de uma imagem transparente removendo a cor escolhida.",
     "shortDescription": "Tornar uma imagem transparente rapidamente",
     "title": "Criar PNG transparente"
   },
@@ -61,7 +61,7 @@
     "title": "Gerador de código QR"
   },
   "removeBackground": {
-    "description": "Mundo",
+    "description": "Remova automaticamente o fundo de uma imagem e mantenha o assunto principal com transparencia.",
     "shortDescription": "Remover fundos de imagens automaticamente",
     "title": "Remover fundo da imagem"
   },

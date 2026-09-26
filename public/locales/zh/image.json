@@ -1,6 +1,6 @@
 {
   "changeColors": {
-    "description": "世界",
+    "description": "快速准确地将图像中的选定颜色替换为新颜色。",
     "shortDescription": "快速交换图像中的颜色",
     "title": "改变图像的颜色"
   },
@@ -34,7 +34,7 @@
     "title": "JPG 转换为 PNG"
   },
   "createTransparent": {
-    "description": "世界",
+    "description": "通过移除所选颜色，使图像背景变为透明。",
     "shortDescription": "快速使图像透明",
     "title": "创建透明 PNG"
   },
@@ -61,7 +61,7 @@
     "title": "二维码生成器"
   },
   "removeBackground": {
-    "description": "世界",
+    "description": "自动移除图像背景，并保留主体为透明背景。",
     "shortDescription": "自动删除图像的背景",
     "title": "从图像中删除背景"
   },

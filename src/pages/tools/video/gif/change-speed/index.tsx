@@ -1,98 +1,72 @@
-import { Box } from '@mui/material';
-import React, { useState } from 'react';
+import { Box, Typography, Slider } from '@mui/material';
+import React, { useState, useCallback } from 'react';
 import ToolFileResult from '@components/result/ToolFileResult';
-import TextFieldWithDesc from 'components/options/TextFieldWithDesc';
 import ToolContent from '@components/ToolContent';
+import { GetGroupsType } from '@components/options/ToolOptions';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolImageInput from '@components/input/ToolImageInput';
-import { FFmpeg } from '@ffmpeg/ffmpeg';
-import { fetchFile } from '@ffmpeg/util';
+import { InitialValuesType } from './types';
+import { changeGifSpeed } from './service';
+import { useTranslation } from 'react-i18next';
+import { debounce } from 'lodash';
 
-const initialValues = {
-  newSpeed: 2
+const initialValues: InitialValuesType = {
+  speed: 2
 };
 export default function ChangeSpeed({ title }: ToolComponentProps) {
+  const { t } = useTranslation('video');
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
 
-  const compute = (optionsValues: typeof initialValues, input: File | null) => {
+  const compute = async (
+    optionsValues: InitialValuesType,
+    input: File | null
+  ) => {
     if (!input) return;
-    const { newSpeed } = optionsValues;
-    // Initialize FFmpeg once in your component/app
-    let ffmpeg: FFmpeg | null = null;
-    let ffmpegLoaded = false;
+    setLoading(true);
 
-    const processImage = async (
-      file: File,
-      newSpeed: number
-    ): Promise<void> => {
-      if (!ffmpeg) {
-        ffmpeg = new FFmpeg();
-      }
-
-      if (!ffmpegLoaded) {
-        await ffmpeg.load({
-          wasmURL:
-            'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.9/dist/esm/ffmpeg-core.wasm'
-        });
-        ffmpegLoaded = true;
-      }
-
-      try {
-        await ffmpeg.writeFile('input.gif', await fetchFile(file));
-
-        // Process the GIF to change playback speed while preserving quality
-        // The filter_complex does three main operations:
-        // 1. [0:v]setpts=${1/newSpeed}*PTS - Adjusts frame timing:
-        //    - PTS (Presentation Time Stamp) controls when each frame is displayed
-        //    - Dividing by speed factor (e.g., 2 for 2x speed) reduces display time
-        //    - Example: 1/2 = 0.5 → frames show for half their normal duration
-        // 2. split[a][b] - Creates two identical streams for parallel processing:
-        //    - [a] goes to palettegen to create an optimized color palette
-        //    - [b] contains the speed-adjusted frames
-        // 3. [b][p]paletteuse - Applies the generated palette to maintain:
-        //    - Color accuracy
-        //    - Transparency handling
-        //    - Reduced file size
-        // This approach prevents visual artifacts that occur with simple re-encoding
-        await ffmpeg.exec([
-          '-i',
-          'input.gif',
-          '-filter_complex',
-          `[0:v]setpts=${
-            1 / newSpeed
-          }*PTS,split[a][b];[a]palettegen[p];[b][p]paletteuse`,
-          '-f',
-          'gif',
-          'output.gif'
-        ]);
-
-        // Read the result
-        const data = await ffmpeg.readFile('output.gif');
-
-        // Create a new file from the processed data
-        const blob = new Blob([data as any], { type: 'image/gif' });
-        const newFile = new File(
-          [blob],
-          file.name.replace('.gif', `-${newSpeed}x.gif`),
-          {
-            type: 'image/gif'
-          }
-        );
-
-        // Clean up to free memory
-        await ffmpeg.deleteFile('input.gif');
-        await ffmpeg.deleteFile('output.gif');
-
-        setResult(newFile);
-      } catch (error) {
-        console.error('Error processing GIF:', error);
-        throw error;
-      }
-    };
-
-    processImage(input, newSpeed);
+    try {
+      const resultFile = await changeGifSpeed(input, optionsValues);
+      setResult(resultFile);
+    } catch (error) {
+      console.error('Error while processing video:', error);
+    } finally {
+      setLoading(false);
+    }
   };
+
+  const debouncedCompute = useCallback(debounce(compute, 1000), []);
+
+  const getGroups: GetGroupsType<InitialValuesType> = ({
+    values,
+    updateField
+  }) => [
+    {
+      title: t('gif.changeSpeed.options.title'),
+      component: (
+        <Box>
+          <Box>
+            <Typography variant="body2" color="text.secondary" gutterBottom>
+              {t('gif.changeSpeed.options.speedLabel')} {values.speed}
+            </Typography>
+            <Slider
+              value={values.speed}
+              onChange={(_, value) =>
+                updateField('speed', Array.isArray(value) ? value[0] : value)
+              }
+              min={0.25}
+              max={4}
+              step={0.25}
+              valueLabelDisplay="auto"
+              valueLabelFormat={(value) => `x ${value}`}
+              sx={{ mt: 1 }}
+            />
+          </Box>
+        </Box>
+      )
+    }
+  ];
   return (
     <ToolContent
       title={title}
@@ -102,33 +76,20 @@ export default function ChangeSpeed({ title }: ToolComponentProps) {
           value={input}
           onChange={setInput}
           accept={['image/gif']}
-          title={'Input GIF'}
+          title={t('gif.changeSpeed.inputTitle')}
         />
       }
       resultComponent={
         <ToolFileResult
-          title={'Output GIF with new speed'}
+          title={t('gif.changeSpeed.resultTitle')}
           value={result}
+          loading={loading}
           extension={'gif'}
         />
       }
       initialValues={initialValues}
-      getGroups={({ values, updateField }) => [
-        {
-          title: 'New GIF speed',
-          component: (
-            <Box>
-              <TextFieldWithDesc
-                value={values.newSpeed}
-                onOwnChange={(val) => updateField('newSpeed', Number(val))}
-                description={'Default multiplier: 2 means 2x faster'}
-                type={'number'}
-              />
-            </Box>
-          )
-        }
-      ]}
-      compute={compute}
+      getGroups={getGroups}
+      compute={debouncedCompute}
       setInput={setInput}
     />
   );
