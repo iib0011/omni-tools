@@ -8,6 +8,13 @@ import UserTypeFilter from '@components/UserTypeFilter';
 export default function Home() {
   const theme = useTheme();
   const { selectedUserTypes, setSelectedUserTypes } = useUserTypeFilter();
+  const backgroundUrl = new URL(
+    `assets/${
+      theme.palette.mode === 'dark' ? 'background-dark.png' : 'background.svg'
+    }`,
+    document.baseURI
+  ).toString();
+
   return (
     <Box
       padding={{
@@ -16,11 +23,7 @@ export default function Home() {
         lg: 5
       }}
       sx={{
-        background: `url(/assets/${
-          theme.palette.mode === 'dark'
-            ? 'background-dark.png'
-            : 'background.svg'
-        })`,
+        background: `url(${backgroundUrl})`,
         backgroundColor: 'background.default'
       }}
       display={'flex'}
