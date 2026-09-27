@@ -1,0 +1,255 @@
+{
+  "audio": {
+    "changeSpeed": {
+      "description": "Zmień prędkość odtwarzania plików audio. Przyspiesz lub zwolnij dźwięk, zachowując wysokość tonu.",
+      "name": "Zmień prędkość audio",
+      "shortDescription": "Zmień prędkość plików audio"
+    },
+    "extractAudio": {
+      "description": "Wyodrębnij ścieżkę dźwiękową z pliku wideo i zapisz ją jako oddzielny plik audio w wybranym formacie (AAC, MP3, WAV).",
+      "name": "Wyodrębnij audio",
+      "shortDescription": "Wyodrębnij dźwięk z plików wideo (MP4, MOV itp.) do AAC, MP3 lub WAV."
+    }
+  },
+  "baseFileInput": {
+    "copyFailed": "Kopiowanie nie powiodło się: {{error}}",
+    "dropFileHere": "Upuść {{type}} tutaj",
+    "fileCopied": "Plik skopiowany",
+    "selectFileDescription": "Kliknij tutaj, aby wybrać {{type}} z urządzenia, naciśnij Ctrl+V, aby użyć {{type}} ze schowka, lub przeciągnij i upuść plik z pulpitu"
+  },
+  "categories": {
+    "audio": {
+      "description": "Narzędzia do pracy z dźwiękiem – wyodrębnianie dźwięku z wideo, dostosowywanie prędkości dźwięku, łączenie wielu plików audio i wiele więcej.",
+      "title": "Narzędzia Audio"
+    },
+    "csv": {
+      "description": "Narzędzia do pracy z plikami CSV - konwertuj CSV na różne formaty, manipuluj danymi CSV, waliduj strukturę CSV i wydajnie przetwarzaj pliki CSV.",
+      "title": "Narzędzia CSV"
+    },
+    "gif": {
+      "description": "Narzędzia do pracy z animacjami GIF – twórz przezroczyste GIF-y, wyodrębniaj klatki GIF, dodawaj tekst do GIF, przycinaj, obracaj, odwracaj GIF-y i wiele więcej.",
+      "title": "Narzędzia GIF"
+    },
+    "image-generic": {
+      "description": "Narzędzia do pracy ze zdjęciami – kompresuj, zmieniaj rozmiar, przycinaj, konwertuj na JPG, obracaj, usuwaj tło i wiele więcej.",
+      "title": "Narzędzia Obrazu"
+    },
+    "json": {
+      "description": "Narzędzia do pracy ze strukturami danych JSON – formatuj i minifikuj obiekty JSON, spłaszczaj tablice JSON, konwertuj wartości JSON na tekst, analizuj dane i wiele więcej.",
+      "title": "Narzędzia JSON"
+    },
+    "list": {
+      "description": "Narzędzia do pracy z listami – sortuj, odwracaj, losuj listy, znajduj unikalne i zduplikowane elementy listy, zmieniaj separatory elementów listy i wiele więcej.",
+      "title": "Narzędzia List"
+    },
+    "number": {
+      "description": "Narzędzia do pracy z liczbami – generuj ciągi liczbowe, konwertuj liczby na słowa i słowa na liczby, sortuj, zaokrąglaj, rozkładaj liczby na czynniki i wiele więcej.",
+      "title": "Narzędzia Liczbowe"
+    },
+    "pdf": {
+      "description": "Narzędzia do pracy z plikami PDF - wyodrębniaj tekst z plików PDF, konwertuj pliki PDF na inne formaty, manipuluj plikami PDF i wiele więcej.",
+      "title": "Narzędzia PDF"
+    },
+    "png": {
+      "description": "Narzędzia do pracy z obrazami PNG – konwertuj PNG na JPG, twórz przezroczyste PNG, zmieniaj kolory PNG, przycinaj, obracaj, zmieniaj rozmiar PNG i wiele więcej.",
+      "title": "Narzędzia PNG"
+    },
+    "seeAll": "Zobacz wszystkie {{title}}",
+    "string": {
+      "description": "Narzędzia do pracy z tekstem – konwertuj tekst na obrazy, znajdź i zamień tekst, dziel tekst na fragmenty, łącz linie tekstu, powtarzaj tekst i wiele więcej.",
+      "title": "Narzędzia Tekstowe"
+    },
+    "time": {
+      "description": "Narzędzia do pracy z czasem i datą – obliczaj różnice czasu, konwertuj między strefami czasowymi, formatuj daty, generuj sekwencje dat i wiele więcej.",
+      "title": "Narzędzia Czasu"
+    },
+    "try": "Wypróbuj {{title}}",
+    "video": {
+      "description": "Narzędzia do pracy z wideo – wyodrębniaj klatki z wideo, twórz GIF-y z wideo, konwertuj wideo na różne formaty i wiele więcej.",
+      "title": "Narzędzia Wideo"
+    },
+    "xml": {
+      "description": "Narzędzia do pracy ze strukturami danych XML - przeglądarka, upiększacz, walidator i wiele więcej",
+      "title": "Narzędzia XML"
+    }
+  },
+  "csv": {
+    "findIncompleteCsvRecords": {
+      "description": "Po prostu prześlij plik CSV w formularzu poniżej, a to narzędzie automatycznie sprawdzi, czy w żadnym z wierszy lub kolumn nie brakuje wartości. W opcjach narzędzia możesz dostosować format pliku wejściowego (określić separator, znak cytowania i znak komentarza). Dodatkowo możesz włączyć sprawdzanie pustych wartości, pomijać puste linie i ustawić limit liczby komunikatów o błędach w wyniku.",
+      "name": "Znajdź niekompletne rekordy CSV",
+      "shortDescription": "Szybko znajdź wiersze i kolumny w CSV, w których brakuje wartości."
+    }
+  },
+  "hero": {
+    "brand": "OmniTools",
+    "description": "Zwiększ swoją produktywność dzięki OmniTools, ostatecznemu zestawowi narzędzi do szybkiego załatwiania spraw! Uzyskaj dostęp do tysięcy przyjaznych dla użytkownika narzędzi do edycji obrazów, tekstu, list i danych, bezpośrednio z przeglądarki.",
+    "examples": {
+      "calculateNumberSum": "Oblicz sumę liczb",
+      "changeGifSpeed": "Zmień prędkość GIF",
+      "compressPng": "Kompresuj PNG",
+      "createTransparentImage": "Utwórz przezroczysty obraz",
+      "prettifyJson": "Sformatuj JSON",
+      "sortList": "Sortuj listę",
+      "splitPdf": "Podziel PDF",
+      "splitText": "Podziel tekst",
+      "trimVideo": "Przytnij wideo"
+    },
+    "searchPlaceholder": "Szukaj wszystkich narzędzi",
+    "title": "Załatwiaj sprawy szybko z"
+  },
+  "inputFooter": {
+    "clear": "Wyczyść",
+    "copyToClipboard": "Kopiuj do schowka",
+    "importFromFile": "Importuj z pliku"
+  },
+  "list": {
+    "group": {
+      "description": "Narzędzie przeglądarkowe do grupowania elementów listy. Wprowadź listę i określ kryteria grupowania, aby zorganizować elementy w logiczne zbiory. Idealne do kategoryzowania danych, organizowania informacji lub tworzenia list strukturalnych. Obsługuje niestandardowe separatory i różne opcje grupowania.",
+      "name": "Grupuj",
+      "shortDescription": "Grupuj elementy listy według wspólnych właściwości"
+    },
+    "reverse": {
+      "description": "Prosta aplikacja przeglądarkowa, która wypisuje wszystkie elementy listy w odwrotnej kolejności. Elementy wejściowe mogą być oddzielone dowolnym symbolem; można również zmienić separator elementów listy odwróconej.",
+      "name": "Odwróć",
+      "shortDescription": "Szybko odwróć listę"
+    },
+    "sort": {
+      "description": "Prosta aplikacja przeglądarkowa, która sortuje elementy na liście i układa je w kolejności rosnącej lub malejącej. Możesz sortować elementy alfabetycznie, numerycznie lub według ich długości. Możesz także usuwać zduplikowane i puste elementy, a także przycinać poszczególne elementy, które mają białe znaki wokół nich. Możesz użyć dowolnego znaku separatora do oddzielenia elementów listy wejściowej lub alternatywnie użyć wyrażenia regularnego. Dodatkowo możesz utworzyć nowy separator dla posortowanej listy wynikowej.",
+      "name": "Sortuj",
+      "shortDescription": "Szybko posortuj listę"
+    }
+  },
+  "navbar": {
+    "buyMeACoffee": "Postaw mi kawę",
+    "hireMe": "Zatrudnij mnie",
+    "home": "Strona główna",
+    "tools": "Narzędzia"
+  },
+  "number": {
+    "generate": {
+      "description": "Szybko oblicz listę liczb całkowitych w przeglądarce. Aby uzyskać listę, po prostu określ pierwszą liczbę całkowitą, zmień wartość i całkowitą liczbę w opcjach poniżej, a to narzędzie wygeneruje tyle liczb całkowitych.",
+      "name": "Generuj liczby",
+      "shortDescription": "Szybko oblicz listę liczb całkowitych w przeglądarce"
+    },
+    "sum": {
+      "description": "Prosta aplikacja przeglądarkowa, która sumuje liczby. Liczby wejściowe mogą być oddzielone dowolnym symbolem; można również zmienić separator zsumowanych liczb.",
+      "name": "Sumuj liczby",
+      "shortDescription": "Szybko zsumuj listę liczb"
+    }
+  },
+  "numericInputWithUnit": {
+    "unit": "Jednostka"
+  },
+  "pdf": {
+    "compressPdf": {
+      "description": "Zmniejsz rozmiar pliku PDF przy zachowaniu jakości używając Ghostscript",
+      "name": "Kompresuj PDF",
+      "shortDescription": "Kompresuj pliki PDF bezpiecznie w przeglądarce"
+    },
+    "mergePdf": {
+      "description": "Połącz wiele plików PDF w jeden dokument.",
+      "name": "Połącz PDF",
+      "shortDescription": "Połącz wiele plików PDF w jeden dokument"
+    },
+    "pdfToEpub": {
+      "description": "Przekształć dokumenty PDF w pliki EPUB dla lepszej kompatybilności z czytnikami e-booków.",
+      "name": "PDF na EPUB",
+      "shortDescription": "Konwertuj pliki PDF na format EPUB"
+    },
+    "protectPdf": {
+      "description": "Dodaj hasło do swoich plików PDF bezpiecznie w przeglądarce",
+      "name": "Zabezpiecz PDF",
+      "shortDescription": "Zabezpiecz pliki PDF hasłem"
+    },
+    "splitPdf": {
+      "description": "Wyodrębnij określone strony z pliku PDF używając numerów stron lub zakresów (np. 1,5-8)",
+      "name": "Podziel PDF",
+      "shortDescription": "Wyodrębnij określone strony z pliku PDF"
+    }
+  },
+  "resultFooter": {
+    "copy": "Kopiuj do schowka",
+    "download": "Pobierz"
+  },
+  "string": {
+    "createPalindrome": {
+      "description": "Narzędzie przeglądarkowe do tworzenia palindromów z dowolnego tekstu. Wprowadź tekst i natychmiast przekształć go w palindrom, który czyta się tak samo od przodu i od tyłu. Idealne do gier słownych, tworzenia symetrycznych wzorców tekstowych lub odkrywania ciekawostek językowych.",
+      "name": "Utwórz palindrom",
+      "shortDescription": "Utwórz tekst, który czyta się tak samo od przodu i od tyłu"
+    },
+    "palindrome": {
+      "description": "Narzędzie przeglądarkowe do sprawdzania, czy tekst jest palindromem. Natychmiast zweryfikuj, czy Twój tekst czyta się tak samo od przodu i od tyłu. Idealne do łamigłówek słownych, analizy językowej lub walidacji symetrycznych wzorców tekstowych. Obsługuje różne separatory i wykrywanie palindromów wielowyrazowych.",
+      "name": "Palindrom",
+      "shortDescription": "Sprawdź, czy tekst czyta się tak samo od przodu i od tyłu"
+    },
+    "repeat": {
+      "description": "To narzędzie pozwala na wielokrotne powtórzenie danego tekstu z opcjonalnym separatorem.",
+      "name": "Powtórz tekst",
+      "shortDescription": "Powtórz tekst wielokrotnie"
+    },
+    "reverse": {
+      "description": "Narzędzie przeglądarkowe do odwracania tekstu. Wprowadź dowolny tekst, aby natychmiast go odwrócić, znak po znaku. Idealne do tworzenia lustrzanego tekstu, analizowania palindromów lub zabawy wzorcami tekstowymi. Zachowuje spacje i znaki specjalne podczas odwracania.",
+      "name": "Odwróć",
+      "shortDescription": "Odwróć dowolny tekst znak po znaku"
+    },
+    "toMorse": {
+      "description": "Narzędzie przeglądarkowe do konwersji tekstu na kod Morse'a. Wczytaj tekst w formularzu wejściowym po lewej stronie, a w obszarze wyjściowym natychmiast otrzymasz kod Morse'a. Potężne, darmowe i szybkie. Wczytaj tekst – otrzymaj kod Morse'a.",
+      "name": "Tekst na Morse'a",
+      "shortDescription": "Szybko zakoduj tekst na alfabet Morse'a"
+    },
+    "uppercase": {
+      "description": "Narzędzie przeglądarkowe do konwersji tekstu na wielkie litery. Po prostu wprowadź tekst, a zostanie on automatycznie przekonwertowany na wielkie litery. Idealne do tworzenia nagłówków, podkreślania tekstu lub standaryzacji formatu tekstu. Obsługuje różne formaty tekstu i zachowuje znaki specjalne.",
+      "name": "Wielkie litery",
+      "shortDescription": "Konwertuj tekst na wielkie litery"
+    }
+  },
+  "toolExamples": {
+    "subtitle": "Kliknij, aby wypróbować!",
+    "title": "Przykłady {{title}}"
+  },
+  "toolFileResult": {
+    "copied": "Plik skopiowany",
+    "copyFailed": "Kopiowanie nie powiodło się: {{error}}",
+    "loading": "Ładowanie... To może chwilę potrwać.",
+    "result": "Wynik"
+  },
+  "toolHeader": {
+    "seeExamples": "Zobacz przykłady"
+  },
+  "toolLayout": {
+    "allToolsTitle": "Wszystkie {{type}}"
+  },
+  "toolMultiFileResult": {
+    "copied": "Plik skopiowany",
+    "copyFailed": "Kopiowanie nie powiodło się: {{error}}",
+    "loading": "Ładowanie... To może chwilę potrwać.",
+    "result": "Wynik"
+  },
+  "toolMultipleAudioInput": {
+    "inputTitle": "Wejściowe {{type}}",
+    "noFilesSelected": "Nie wybrano plików"
+  },
+  "toolMultiplePdfInput": {
+    "inputTitle": "Wejściowe {{type}}",
+    "noFilesSelected": "Nie wybrano plików"
+  },
+  "toolOptions": {
+    "title": "Opcje narzędzia"
+  },
+  "toolTextInput": {
+    "copied": "Tekst skopiowany",
+    "copyFailed": "Kopiowanie nie powiodło się: {{error}}",
+    "input": "Tekst wejściowy",
+    "placeholder": "Wpisz swój tekst tutaj..."
+  },
+  "toolTextResult": {
+    "copied": "Tekst skopiowany",
+    "copyFailed": "Kopiowanie nie powiodło się: {{error}}",
+    "loading": "Ładowanie... To może chwilę potrwać.",
+    "result": "Wynik"
+  },
+  "userTypes": {
+    "developers": "Programiści",
+    "generalUsers": "Użytkownicy ogólni"
+  }
+}
