@@ -42,6 +42,8 @@ const languages = [
   { code: 'uk', label: 'Українська' },
   { code: 'zh', label: '中文' }
 ];
+const translationContributionUrl =
+  'https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK';
 
 const Navbar: React.FC<NavbarProps> = ({
   mode,
@@ -58,6 +60,8 @@ const Navbar: React.FC<NavbarProps> = ({
 
   const handleLanguageChange = (event: any) => {
     const newLanguage = event.target.value;
+    if (!newLanguage) return;
+
     i18n.changeLanguage(newLanguage);
     localStorage.setItem('lang', newLanguage);
   };
@@ -89,6 +93,13 @@ const Navbar: React.FC<NavbarProps> = ({
           }
         }}
       >
+        <MenuItem
+          href={translationContributionUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Help translate OmniTools
+        </MenuItem>
         {languages.map((lang) => (
           <MenuItem key={lang.code} value={lang.code}>
             {lang.label}
