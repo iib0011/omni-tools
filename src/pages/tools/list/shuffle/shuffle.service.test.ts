@@ -82,4 +82,28 @@ describe('shuffle function', () => {
     );
     expect(result).toBe('');
   });
+
+  it('should split using a valid regex separator', () => {
+    const result = shuffleList('regex', 'apple,banana;orange', '[,;]', ' ');
+
+    expect(result.split(' ').sort()).toEqual(['apple', 'banana', 'orange']);
+  });
+
+  it('should reject regex separators that are too long', () => {
+    expect(() => shuffleList('regex', 'a,b,c', 'a'.repeat(101), ' ')).toThrow(
+      /Regex pattern is too long/
+    );
+  });
+
+  it('should reject nested quantified regex separators', () => {
+    expect(() =>
+      shuffleList('regex', 'aaaaaaaaaaaaaaaaaaaaab', '(a+)+$', ' ')
+    ).toThrow(/Regex pattern is too complex/);
+  });
+
+  it('should reject invalid regex separators', () => {
+    expect(() => shuffleList('regex', 'a,b,c', '[', ' ')).toThrow(
+      /Invalid regular expression/
+    );
+  });
 });
