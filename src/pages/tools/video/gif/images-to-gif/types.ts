@@ -1,3 +1,4 @@
 export interface InitialValuesType {
-  frameDelay: number;
+  frameRateMode: 'fps' | 'delay';
+  frameRateValue: number;
 }
