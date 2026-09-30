@@ -37,7 +37,36 @@ export default function ToolMultiImageInput({
     const files = event.target.files;
     if (!files) return;
 
-    await processFiles(Array.from(files));
+    const newFiles: MultiImageInput[] = await Promise.all(
+      Array.from(files).map(async (file, index) => {
+        let processedFile = file;
+
+        try {
+          if (await isHeic(file)) {
+            const convertedBlob = await heicTo({
+              blob: file,
+              type: 'image/jpeg'
+            });
+
+            processedFile = new File(
+              [convertedBlob],
+              file.name.replace(/\.[^/.]+$/, '') + '.jpg',
+              { type: 'image/jpeg' }
+            );
+          }
+        } catch (err) {
+          console.warn('HEIC conversion failed:', file.name, err);
+        }
+
+        return {
+          file: processedFile,
+          order: value.length + index,
+          preview: URL.createObjectURL(processedFile)
+        };
+      })
+    );
+
+    onChange([...value, ...newFiles]);
 
     event.target.value = '';
   };
@@ -70,44 +99,6 @@ export default function ToolMultiImageInput({
       : fileName;
   }
 
-  const processFiles = async (files: File[]) => {
-    const newFiles: MultiImageInput[] = await Promise.all(
-      Array.from(files).map(async (file, index) => {
-        let processedFile = file;
-
-        try {
-          if (await isHeic(file)) {
-            const convertedBlob = await heicTo({
-              blob: file,
-              type: 'image/jpeg'
-            });
-            processedFile = new File(
-              [convertedBlob],
-              file.name.replace(/\.[^/.]+$/, '') + '.jpg',
-              { type: 'image/jpeg' }
-            );
-          }
-        } catch (err) {
-          console.warn('HEIC conversion failed:', file.name, err);
-        }
-
-        return {
-          file: processedFile,
-          order: value.length + index,
-          preview: URL.createObjectURL(processedFile)
-        };
-      })
-    );
-
-    onChange([...value, ...newFiles]);
-  };
-
-  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    const files = e.dataTransfer.files;
-    processFiles(Array.from(files));
-  };
-
   return (
     <Box>
       <InputHeader
@@ -128,8 +119,6 @@ export default function ToolMultiImageInput({
           bgcolor: 'background.paper',
           position: 'relative'
         }}
-        onDragOver={(e: React.DragEvent<HTMLDivElement>) => e.preventDefault()}
-        onDrop={handleDrop}
       >
         <Box
           width="100%"
