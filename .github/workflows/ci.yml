@@ -24,6 +24,7 @@ jobs:
         run: npm run test
       - name: Build project
         run: npm run build
+
   e2e-test:
     name: 'Playwright Tests'
     runs-on: ubuntu-latest
@@ -44,6 +45,7 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+
   build-and-push-docker:
     name: Build and Push Multi-Platform Docker Image
     runs-on: ubuntu-latest
@@ -84,6 +86,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
   deploy:
     if: github.ref == 'refs/heads/main'
     needs:
@@ -114,3 +117,42 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 20
+
+  update-i18n-readme:
+    name: Update i18n Coverage in README
+    runs-on: ubuntu-latest
+    needs:
+      - test-and-build
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check for locale changes
+        id: changed
+        uses: tj-actions/changed-files@v44
+        with:
+          files: public/locales/**
+
+      - name: Generate coverage table
+        if: steps.changed.outputs.any_changed == 'true'
+        run: node scripts/i18n-coverage.js
+
+      - name: Create Pull Request
+        if: steps.changed.outputs.any_changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: update i18n coverage table"
+          title: "chore: update i18n coverage table"
+          body: "Auto-generated update to the i18n coverage table in README.md."
+          branch: "chore/i18n-coverage-update"
+          base: main
+          delete-branch: true

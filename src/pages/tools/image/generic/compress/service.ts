@@ -14,6 +14,7 @@ export const compressImages = async (
       maxSizeMB: maxFileSizeInMB,
       maxWidthOrHeight: 1920, // Reasonable default for most use cases
       useWebWorker: true,
+      preserveExif: true,
       initialQuality: quality / 100 // Convert percentage to decimal
     };
 
