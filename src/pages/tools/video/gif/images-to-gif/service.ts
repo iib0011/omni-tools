@@ -43,7 +43,7 @@ export async function imagesToGif(
       '-i',
       listName,
       '-vf',
-      'scale=480:-2:flags=lanczos',
+      'scale=iw:-2:flags=lanczos',
       '-loop',
       '0',
       outputName
