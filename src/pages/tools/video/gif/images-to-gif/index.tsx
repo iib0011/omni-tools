@@ -7,6 +7,7 @@ import { ToolComponentProps } from '@tools/defineTool';
 import ToolMultipleImageInput, {
   MultiImageInput
 } from '@components/input/ToolMultipleImageInput';
+import SimpleRadio from '@components/options/SimpleRadio';
 import { InitialValuesType } from './types';
 import { updateNumberField } from '@utils/string';
 import { useTranslation } from 'react-i18next';
@@ -14,7 +15,8 @@ import { imagesToGif } from './service';
 import { debounce } from 'lodash';
 
 const initialValues: InitialValuesType = {
-  frameDelay: 500
+  frameRateMode: 'fps',
+  frameRateValue: 10
 };
 
 export default function ImagesToGif({ title }: ToolComponentProps) {
@@ -28,6 +30,7 @@ export default function ImagesToGif({ title }: ToolComponentProps) {
     input: MultiImageInput[]
   ) => {
     if (!input || input.length === 0) return;
+    setLoading(true);
     try {
       const convertedGif = await imagesToGif(
         input.map((item) => item.file),
@@ -71,20 +74,46 @@ export default function ImagesToGif({ title }: ToolComponentProps) {
           title: t('gif.imagesToGif.frameOptions'),
           component: (
             <Box>
-              <TextFieldWithDesc
-                name="frameDelay"
-                type="number"
-                inputProps={{ min: 50, max: 10000, step: 50 }}
-                description={t('gif.imagesToGif.frameDelayDescription')}
-                onOwnChange={(value) => {
-                  const clamped = Math.min(
-                    10000,
-                    Math.max(50, Number(value))
-                  ).toString();
-                  updateNumberField(clamped, 'frameDelay', updateField);
-                }}
-                value={values.frameDelay}
+              <SimpleRadio
+                checked={values.frameRateMode === 'fps'}
+                title={t('gif.imagesToGif.frameRate')}
+                description={t('gif.imagesToGif.frameRateDescription')}
+                onClick={() => updateField('frameRateMode', 'fps')}
               />
+
+              <SimpleRadio
+                checked={values.frameRateMode === 'delay'}
+                title={t('gif.imagesToGif.frameDelay')}
+                description={t('gif.imagesToGif.frameDelayDescription')}
+                onClick={() => updateField('frameRateMode', 'delay')}
+              />
+
+              <Box mt={2}>
+                <TextFieldWithDesc
+                  name="frameRate"
+                  type="number"
+                  inputProps={
+                    values.frameRateMode === 'fps'
+                      ? { min: 1, max: 60, step: 1 }
+                      : { min: 50, max: 10000, step: 50 }
+                  }
+                  description={t('gif.imagesToGif.frameRateValueDescription')}
+                  onOwnChange={(value) => {
+                    const { min, max } =
+                      values.frameRateMode === 'fps'
+                        ? { min: 1, max: 60 }
+                        : { min: 50, max: 10000 };
+
+                    const clamped = Math.min(
+                      max,
+                      Math.max(min, Number(value))
+                    ).toString();
+
+                    updateNumberField(clamped, 'frameRateValue', updateField);
+                  }}
+                  value={values.frameRateValue}
+                />
+              </Box>
             </Box>
           )
         }
