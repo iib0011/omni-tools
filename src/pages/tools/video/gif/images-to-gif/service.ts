@@ -8,12 +8,14 @@ export async function imagesToGif(
   optionsValues: InitialValuesType
 ): Promise<File> {
   return runFFmpegTask(async ({ ffmpeg, tempFile }) => {
-    const { frameDelay } = optionsValues;
+    const { frameRateMode, frameRateValue } = optionsValues;
+
     const fileNames: string[] = [];
     const listName = tempFile('.txt');
     const outputName = tempFile('.gif');
 
-    const durationSeconds = frameDelay / 1000;
+    const durationSeconds =
+      frameRateMode === 'fps' ? 1 / frameRateValue : frameRateValue / 1000;
 
     for (let i = 0; i < input.length; i++) {
       const file = input[i];
