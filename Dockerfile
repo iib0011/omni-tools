@@ -11,10 +11,13 @@ RUN npm run build
 FROM nginx:alpine
 
 COPY --from=build /app/dist /usr/share/nginx/html
+COPY nginx.conf.template /etc/nginx/templates/default.conf.template
+COPY docker/10-normalize-base-url.envsh /docker-entrypoint.d/10-normalize-base-url.envsh
+COPY docker/40-generate-index.sh /docker-entrypoint.d/40-generate-index.sh
 
-RUN sed -i 's/application\/javascript.*js;/application\/javascript                js mjs;/' /etc/nginx/mime.types
-
-RUN sed -i 's|index  index.html index.htm;|index  index.html index.htm;\n        try_files $uri $uri/ /index.html;|' /etc/nginx/conf.d/default.conf
+RUN mv /usr/share/nginx/html/index.html /usr/share/nginx/html/index.html.template \
+    && chmod +x /docker-entrypoint.d/10-normalize-base-url.envsh \
+    /docker-entrypoint.d/40-generate-index.sh
 
 EXPOSE 80
 

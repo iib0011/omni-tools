@@ -1,0 +1,22 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name _;
+
+    root /usr/share/nginx/html;
+    index index.html;
+
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+
+    location ~* \.mjs$ {
+        rewrite ${BASE_URL_PATTERN} /$resource_path break;
+        try_files $uri =404;
+        default_type application/javascript;
+    }
+
+    location / {
+        rewrite ${BASE_URL_PATTERN} /$resource_path break;
+        try_files $uri $uri/ /index.html;
+    }
+}
