@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box } from '@mui/material';
+import { Box, FormControlLabel, Switch } from '@mui/material';
 import ToolContent from '@components/ToolContent';
 import ToolTextInput from '@components/input/ToolTextInput';
 import ToolTextResult from '@components/result/ToolTextResult';
@@ -10,9 +10,9 @@ import { ToolComponentProps } from '@tools/defineTool';
 import { useTranslation } from 'react-i18next';
 import { convertTable } from './service';
 import { InitialValuesType, TableFormat } from './types';
-
 const initialValues: InitialValuesType = {
-  inputFormat: 'auto',
+  autodetect: true,
+  inputFormat: 'csv',
   outputFormat: 'markdown'
 };
 
@@ -36,7 +36,11 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
     sampleResult: `Name,Age,City
 John,30,New York
 Alice,25,London`,
-    sampleOptions: { inputFormat: 'markdown', outputFormat: 'csv' }
+    sampleOptions: {
+      autodetect: false,
+      inputFormat: 'markdown',
+      outputFormat: 'csv'
+    }
   },
   {
     title: 'HTML table to Markdown',
@@ -50,7 +54,11 @@ Alice,25,London`,
 | --- | --- |
 | Apple | 1.99 |
 | Banana | 0.99 |`,
-    sampleOptions: { inputFormat: 'html', outputFormat: 'markdown' }
+    sampleOptions: {
+      autodetect: false,
+      inputFormat: 'html',
+      outputFormat: 'markdown'
+    }
   },
   {
     title: 'MySQL output to Markdown',
@@ -65,9 +73,22 @@ Alice,25,London`,
 | --- | --- |
 | 1 | John |
 | 2 | Alice |`,
-    sampleOptions: { inputFormat: 'mysql', outputFormat: 'markdown' }
+    sampleOptions: {
+      autodetect: false,
+      inputFormat: 'mysql',
+      outputFormat: 'markdown'
+    }
   }
 ];
+
+const extensionByFormat: Record<TableFormat, string> = {
+  markdown: 'md',
+  csv: 'csv',
+  tsv: 'tsv',
+  html: 'html',
+  mysql: 'txt',
+  json: 'json'
+};
 
 export default function TableTextConverter({
   title,
@@ -76,6 +97,7 @@ export default function TableTextConverter({
   const { t } = useTranslation('string');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
+  const [extension, setExtension] = useState<string>('txt');
 
   const compute = (values: InitialValuesType, input: string) => {
     if (!input) {
@@ -83,13 +105,15 @@ export default function TableTextConverter({
       return;
     }
     try {
-      setResult(convertTable(input, values.inputFormat, values.outputFormat));
+      setResult(convertTable(input, values));
+      setExtension(extensionByFormat[values.outputFormat]);
     } catch (error) {
       setResult(
         `${t('tableTextConverter.error')}: ${
           error instanceof Error ? error.message : String(error)
         }`
       );
+      setExtension('txt');
     }
   };
 
@@ -101,15 +125,27 @@ export default function TableTextConverter({
       title: t('tableTextConverter.options'),
       component: (
         <Box>
-          <SelectWithDesc
-            selected={values.inputFormat}
-            options={[
-              { label: t('tableTextConverter.autoDetect'), value: 'auto' },
-              ...formatOptions
-            ]}
-            onChange={(value) => updateField('inputFormat', value)}
-            description={t('tableTextConverter.inputFormat')}
-          />
+          <Box sx={{ mb: 2 }}>
+            <FormControlLabel
+              control={
+                <Switch
+                  checked={values.autodetect}
+                  onChange={(e) => {
+                    updateField('autodetect', e.target.checked);
+                  }}
+                />
+              }
+              label={t('tableTextConverter.autoDetect')}
+            />
+          </Box>
+          {!values.autodetect && (
+            <SelectWithDesc
+              selected={values.inputFormat}
+              options={formatOptions}
+              onChange={(value) => updateField('inputFormat', value)}
+              description={t('tableTextConverter.inputFormat')}
+            />
+          )}
           <SelectWithDesc
             selected={values.outputFormat}
             options={formatOptions}
@@ -140,6 +176,7 @@ export default function TableTextConverter({
         <ToolTextResult
           title={t('tableTextConverter.resultTitle')}
           value={result}
+          extension={extension}
         />
       }
       getGroups={getGroups}
