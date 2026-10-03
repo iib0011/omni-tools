@@ -68,8 +68,26 @@
     "title": "Compress Images"
   },
   "compressPng": {
-    "description": "This is a program that compresses PNG pictures. As soon as you paste your PNG picture in the input area, the program will compress it and show the result in the output area. In the options, you can adjust the compression level, as well as find the old and new picture file sizes.",
+    "alreadyOptimized": "This PNG is already smaller than anything we can produce, so it was left untouched.",
+    "colors": "Colors in the palette",
+    "compressedSize": "Compressed size",
+    "compressing": "Compressing PNG...",
+    "compressionOptions": "Compression options",
+    "description": "This is a program that compresses PNG pictures without ever resizing them. As soon as you paste your PNG picture in the input area, the program reduces its color palette and re-encodes it, so the output keeps the exact width and height of the input. In the options, you can adjust the compression level, ask for a maximum output size, and find the old and new picture file sizes.",
+    "dimensions": "Dimensions",
+    "dimensionsUnchanged": "(unchanged)",
+    "dithering": "Dithering",
+    "ditheringDescription": "Spread the color error over neighboring pixels to hide banding in gradients, at the cost of a bigger file",
+    "failed": "The PNG could not be compressed. Please try again.",
+    "fileSizes": "File sizes",
+    "inputTitle": "Input PNG",
+    "maxOutputSizeDescription": "Maximum output size in kilobytes. The palette is shrunk until the PNG fits. Use 0 for no limit",
+    "noStatsYet": "Upload a PNG to see how much was saved",
+    "originalSize": "Original size",
+    "qualityDescription": "Quality percentage (1-100) — lower values keep fewer colors and give a smaller file",
+    "resultTitle": "Compressed PNG",
     "shortDescription": "Quickly compress a PNG",
+    "targetNotReached": "The maximum output size could not be reached, even with the smallest palette. The picture was compressed as much as possible.",
     "title": "Compress png"
   },
   "convertJgpToPng": {
