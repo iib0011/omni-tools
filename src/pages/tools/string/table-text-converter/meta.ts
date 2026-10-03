@@ -3,7 +3,7 @@ import { lazy } from 'react';
 
 export const tool = defineTool('string', {
   path: 'table-text-converter',
-  icon: 'material-symbols-light:table-convert',
+  icon: 'fluent:table-cell-center-arrow-repeat-all-20-regular',
   keywords: [
     'table',
     'text',
