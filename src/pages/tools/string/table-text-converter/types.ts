@@ -7,6 +7,7 @@ export type TableFormat =
   | 'json';
 
 export type InitialValuesType = {
-  inputFormat: TableFormat | 'auto';
+  autodetect: boolean;
+  inputFormat: TableFormat;
   outputFormat: TableFormat;
 };
