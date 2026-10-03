@@ -255,7 +255,7 @@
     "options": "Conversion Options",
     "inputFormat": "Input format",
     "outputFormat": "Output format",
-    "autoDetect": "Auto-detect",
+    "autoDetect": "Auto-detect Input format (recommanded)",
     "error": "Error"
   },
   "textCompare": {
