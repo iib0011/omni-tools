@@ -1,10 +1,48 @@
 import { splitCsv } from '@utils/csv';
-import { TableFormat } from './types';
+import { parseJsonInput } from '@utils/json';
+import { escapeMarkup } from '@utils/string';
+import { InitialValuesType, TableFormat } from './types';
 
 type TableRows = string[][];
 
+function assertNever(value: never): never {
+  throw new Error(`Unsupported format: ${String(value)}`);
+}
+
+/** Pads every row to the widest one so all formats get a rectangular table. */
+function normalizeRows(rows: TableRows): TableRows {
+  const width = rows.reduce((max, row) => Math.max(max, row.length), 0);
+  return rows.map((row) =>
+    Array.from({ length: width }, (_, i) => row[i] ?? '')
+  );
+}
+
+function uniqueHeaders(headers: string[]): string[] {
+  const seen = new Map<string, number>();
+  return headers.map((header) => {
+    const count = (seen.get(header) ?? 0) + 1;
+    seen.set(header, count);
+    return count === 1 ? header : `${header}_${count}`;
+  });
+}
+
+const displayLength = (text: string): number => Array.from(text).length;
+const singleLine = (text: string): string => text.replace(/\r?\n/g, ' ');
+
+function cellToString(value: unknown): string {
+  if (value === undefined || value === null) return '';
+  if (typeof value === 'object') return JSON.stringify(value);
+  return String(value);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Parsing                                                                    */
+/* -------------------------------------------------------------------------- */
+
+const SEPARATOR_CELL = /^:?-+:?$/;
+
 function isSeparatorRow(cells: string[]): boolean {
-  return cells.every((cell) => /^:?-+:?$/.test(cell.trim()));
+  return cells.length > 0 && cells.every((cell) => SEPARATOR_CELL.test(cell));
 }
 
 function parseDelimited(input: string, delimiter: string): TableRows {
@@ -13,24 +51,30 @@ function parseDelimited(input: string, delimiter: string): TableRows {
   );
 }
 
+function splitPipeRow(line: string): string[] {
+  return line
+    .replace(/^\|/, '')
+    .replace(/(?<!\\)\|$/, '')
+    .split(/(?<!\\)\|/) // split on unescaped pipes only
+    .map((cell) =>
+      cell
+        .trim()
+        .replace(/\\\|/g, '|')
+        .replace(/<br\s*\/?>/gi, '\n')
+    );
+}
+
 function parsePipeDelimited(input: string): TableRows {
   const rows: TableRows = [];
-  for (const line of input.split('\n')) {
+  for (const line of input.split(/\r?\n/)) {
     const trimmed = line.trim();
-    if (!trimmed || /^[+|][-+|]*[+|]$/.test(trimmed)) {
-      // skip empty lines and mysql/ascii border lines like +---+---+
-      continue;
-    }
-    const cells = trimmed
-      .replace(/^\|/, '')
-      .replace(/\|$/, '')
-      .split('|')
-      .map((cell) => cell.trim());
-    if (isSeparatorRow(cells)) {
-      // skip markdown header separator row, e.g. |---|---|
-      continue;
-    }
-    rows.push(cells);
+    // skip empty lines and mysql/ascii border lines like +---+---+
+    if (!trimmed || /^\+[-+]*\+$/.test(trimmed)) continue;
+    rows.push(splitPipeRow(trimmed));
+  }
+  // markdown separator row (|---|:---:|) is only valid right after the header
+  if (rows.length > 1 && isSeparatorRow(rows[1])) {
+    rows.splice(1, 1);
   }
   return rows;
 }
@@ -41,61 +85,44 @@ function parseHtml(input: string): TableRows {
   if (!table) {
     throw new Error('No <table> element found in the input');
   }
-  const rows: TableRows = [];
-  table.querySelectorAll('tr').forEach((tr) => {
-    const cells = Array.from(tr.querySelectorAll('th,td')).map((cell) =>
-      (cell.textContent ?? '').trim()
-    );
-    if (cells.length > 0) {
-      rows.push(cells);
-    }
-  });
-  return rows;
+
+  return Array.from(table.rows)
+    .map((tr) =>
+      Array.from(tr.cells).map((cell) => (cell.textContent ?? '').trim())
+    )
+    .filter((cells) => cells.length > 0);
 }
 
 function parseJson(input: string): TableRows {
-  const data = JSON.parse(input);
-  if (!Array.isArray(data)) {
-    throw new Error('JSON input must be an array of objects');
-  }
-  const headers: string[] = [];
-  data.forEach((item) => {
-    if (item && typeof item === 'object') {
-      Object.keys(item).forEach((key) => {
-        if (!headers.includes(key)) {
-          headers.push(key);
-        }
-      });
-    }
-  });
-  const body = data.map((item) =>
-    headers.map((header) => {
-      const value = item?.[header];
-      return value === undefined || value === null ? '' : String(value);
-    })
-  );
-  return [headers, ...body];
-}
+  const { data } = parseJsonInput(input);
+  const items = Array.isArray(data) ? data : [data];
 
-export function detectTableFormat(input: string): TableFormat {
-  const trimmed = input.trim();
-  if (/<table[\s>]/i.test(trimmed)) {
-    return 'html';
+  // array of arrays: already rows
+  if (items.length > 0 && items.every(Array.isArray)) {
+    return (items as unknown[][]).map((row) => row.map(cellToString));
   }
-  if (trimmed.startsWith('[') || trimmed.startsWith('{')) {
-    return 'json';
+
+  // array of primitives: single column
+  if (items.every((item) => item === null || typeof item !== 'object')) {
+    return [['value'], ...items.map((item) => [cellToString(item)])];
   }
-  const firstLine = trimmed.split('\n')[0]?.trim() ?? '';
-  if (/^\+[-+]+\+$/.test(firstLine)) {
-    return 'mysql';
+
+  const headers = new Set<string>();
+  for (const item of items) {
+    if (item && typeof item === 'object' && !Array.isArray(item)) {
+      Object.keys(item).forEach((key) => headers.add(key));
+    }
   }
-  if (firstLine.includes('|')) {
-    return 'markdown';
-  }
-  if (firstLine.includes('\t')) {
-    return 'tsv';
-  }
-  return 'csv';
+  const columns = [...headers];
+
+  return [
+    columns,
+    ...items.map((item) =>
+      columns.map((key) =>
+        cellToString((item as Record<string, unknown> | null)?.[key])
+      )
+    )
+  ];
 }
 
 export function parseTable(input: string, format: TableFormat): TableRows {
@@ -111,18 +138,58 @@ export function parseTable(input: string, format: TableFormat): TableRows {
       return parseHtml(input);
     case 'json':
       return parseJson(input);
+    default:
+      return assertNever(format);
   }
 }
 
-function escapeCsvField(field: string, delimiter: string): string {
+/* -------------------------------------------------------------------------- */
+/* Detection                                                                  */
+/* -------------------------------------------------------------------------- */
+
+const MARKDOWN_SEPARATOR_LINE = /^\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)*\|?$/;
+
+const countChar = (text: string, char: string): number =>
+  text.split(char).length - 1;
+
+export function detectTableFormat(input: string): TableFormat {
+  const trimmed = input.trim();
+
+  if (/<table[\s>]/i.test(trimmed)) return 'html';
+  if (trimmed.startsWith('[') || trimmed.startsWith('{')) return 'json';
+
+  const [firstLine = '', secondLine = ''] = trimmed
+    .split(/\r?\n/)
+    .map((line) => line.trim());
+
+  if (/^\+[-+]+\+$/.test(firstLine)) return 'mysql';
+
+  // a lone pipe in a CSV field is not enough: require a leading pipe
+  // or a separator row right below the header
   if (
-    field.includes(delimiter) ||
-    field.includes('"') ||
-    field.includes('\n')
+    firstLine.startsWith('|') ||
+    (firstLine.includes('|') &&
+      secondLine.includes('-') &&
+      MARKDOWN_SEPARATOR_LINE.test(secondLine))
   ) {
-    return `"${field.replace(/"/g, '""')}"`;
+    return 'markdown';
   }
-  return field;
+
+  // whichever delimiter appears most often wins
+  if (countChar(firstLine, '\t') > countChar(firstLine, ',')) return 'tsv';
+  return 'csv';
+}
+
+/* -------------------------------------------------------------------------- */
+/* Formatting                                                                 */
+/* -------------------------------------------------------------------------- */
+
+function escapeCsvField(field: string, delimiter: string): string {
+  const needsQuotes =
+    field.includes(delimiter) ||
+    /["\r\n]/.test(field) ||
+    field !== field.trim();
+  return needsQuotes ? `"${field.replace(/"/g, '""')}"` : field;
 }
 
 function toDelimited(rows: TableRows, delimiter: string): string {
@@ -133,28 +200,32 @@ function toDelimited(rows: TableRows, delimiter: string): string {
     .join('\n');
 }
 
+function escapeMarkdownCell(cell: string): string {
+  return cell.replace(/\|/g, '\\|').replace(/\r?\n/g, '<br>');
+}
+
 function toMarkdown(rows: TableRows): string {
   if (rows.length === 0) return '';
-  const [header, ...body] = rows;
-  const headerLine = `| ${header.join(' | ')} |`;
-  const separatorLine = `| ${header.map(() => '---').join(' | ')} |`;
-  const bodyLines = body.map((row) => `| ${row.join(' | ')} |`);
-  return [headerLine, separatorLine, ...bodyLines].join('\n');
+  const [header, ...body] = rows.map((row) => row.map(escapeMarkdownCell));
+  const line = (cells: string[]) => `| ${cells.join(' | ')} |`;
+  return [line(header), line(header.map(() => '---')), ...body.map(line)].join(
+    '\n'
+  );
 }
 
 function toMysql(rows: TableRows): string {
   if (rows.length === 0) return '';
-  const columnCount = rows[0].length;
-  const widths = Array.from({ length: columnCount }, (_, colIndex) =>
-    Math.max(...rows.map((row) => (row[colIndex] ?? '').length))
+  const clean = rows.map((row) => row.map(singleLine));
+  const widths = clean[0].map((_, col) =>
+    clean.reduce((max, row) => Math.max(max, displayLength(row[col])), 0)
   );
-  const border = `+${widths.map((width) => '-'.repeat(width + 2)).join('+')}+`;
+  const border = `+${widths.map((w) => '-'.repeat(w + 2)).join('+')}+`;
   const formatRow = (row: string[]) =>
     `| ${row
-      .map((cell, colIndex) => (cell ?? '').padEnd(widths[colIndex]))
+      .map((cell, col) => cell + ' '.repeat(widths[col] - displayLength(cell)))
       .join(' | ')} |`;
 
-  const [header, ...body] = rows;
+  const [header, ...body] = clean;
   return [
     border,
     formatRow(header),
@@ -167,27 +238,30 @@ function toMysql(rows: TableRows): string {
 function toHtml(rows: TableRows): string {
   if (rows.length === 0) return '';
   const [header, ...body] = rows;
-  const headerRow = `    <tr>\n${header
-    .map((cell) => `      <th>${cell}</th>`)
-    .join('\n')}\n    </tr>`;
-  const bodyRows = body
-    .map(
-      (row) =>
-        `    <tr>\n${row
-          .map((cell) => `      <td>${cell}</td>`)
-          .join('\n')}\n    </tr>`
-    )
-    .join('\n');
-  return `<table>\n  <thead>\n${headerRow}\n  </thead>\n  <tbody>\n${bodyRows}\n  </tbody>\n</table>`;
+  const renderRow = (cells: string[], tag: 'th' | 'td') =>
+    `    <tr>\n${cells
+      .map((cell) => `      <${tag}>${escapeMarkup(cell)}</${tag}>`)
+      .join('\n')}\n    </tr>`;
+
+  const bodyRows = body.map((row) => renderRow(row, 'td')).join('\n');
+  return [
+    '<table>',
+    '  <thead>',
+    renderRow(header, 'th'),
+    '  </thead>',
+    '  <tbody>',
+    bodyRows,
+    '  </tbody>',
+    '</table>'
+  ].join('\n');
 }
 
 function toJson(rows: TableRows): string {
   if (rows.length === 0) return '[]';
   const [header, ...body] = rows;
+  const keys = uniqueHeaders(header);
   const data = body.map((row) =>
-    Object.fromEntries(
-      header.map((key, colIndex) => [key, row[colIndex] ?? ''])
-    )
+    Object.fromEntries(keys.map((key, col) => [key, row[col] ?? '']))
   );
   return JSON.stringify(data, null, 2);
 }
@@ -206,20 +280,22 @@ export function formatTable(rows: TableRows, format: TableFormat): string {
       return toMysql(rows);
     case 'json':
       return toJson(rows);
+    default:
+      return assertNever(format);
   }
 }
 
 export function convertTable(
   input: string,
-  inputFormat: TableFormat | 'auto',
-  outputFormat: TableFormat
+  options: InitialValuesType
 ): string {
-  if (!input.trim()) {
-    return '';
-  }
-  const format =
-    inputFormat === 'auto' ? detectTableFormat(input) : inputFormat;
-  const rows = parseTable(input, format);
+  if (!input.trim()) return '';
+
+  const { autodetect, inputFormat, outputFormat } = options;
+
+  const format = autodetect ? detectTableFormat(input) : inputFormat;
+  const rows = normalizeRows(parseTable(input, format));
+
   if (rows.length === 0) {
     throw new Error('No table data could be parsed from the input');
   }
