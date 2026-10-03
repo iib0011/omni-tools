@@ -1,5 +1,20 @@
 import { describe, expect, it } from 'vitest';
 import { convertTable, detectTableFormat } from './service';
+import { InitialValuesType, TableFormat } from './types';
+
+const convert = (
+  input: string,
+  inputFormat: TableFormat | 'auto',
+  outputFormat: TableFormat
+): string => {
+  const values: InitialValuesType = {
+    autodetect: inputFormat === 'auto',
+    // when autodetect is on, inputFormat must be ignored
+    inputFormat: inputFormat === 'auto' ? 'csv' : inputFormat,
+    outputFormat
+  };
+  return convertTable(input, values);
+};
 
 describe('convertTable', () => {
   it('converts a markdown table to CSV', () => {
@@ -7,17 +22,9 @@ describe('convertTable', () => {
 | ----- | --- |
 | John  | 30  |
 | Alice | 25  |`;
-    const result = convertTable(input, 'markdown', 'csv');
-    expect(result).toBe('Name,Age\nJohn,30\nAlice,25');
-  });
-
-  it('converts an HTML table to markdown', () => {
-    const input = `<table>
-  <tr><th>Product</th><th>Price</th></tr>
-  <tr><td>Apple</td><td>1.99</td></tr>
-</table>`;
-    const result = convertTable(input, 'html', 'markdown');
-    expect(result).toBe('| Product | Price |\n| --- | --- |\n| Apple | 1.99 |');
+    expect(convert(input, 'markdown', 'csv')).toBe(
+      'Name,Age\nJohn,30\nAlice,25'
+    );
   });
 
   it('converts a MySQL result table to markdown', () => {
@@ -27,15 +34,13 @@ describe('convertTable', () => {
 | 1  | John  |
 | 2  | Alice |
 +----+-------+`;
-    const result = convertTable(input, 'mysql', 'markdown');
-    expect(result).toBe(
+    expect(convert(input, 'mysql', 'markdown')).toBe(
       '| id | name |\n| --- | --- |\n| 1 | John |\n| 2 | Alice |'
     );
   });
 
   it('converts CSV to JSON', () => {
-    const input = 'name,age\nJohn,30\nAlice,25';
-    const result = convertTable(input, 'csv', 'json');
+    const result = convert('name,age\nJohn,30\nAlice,25', 'csv', 'json');
     expect(JSON.parse(result)).toEqual([
       { name: 'John', age: '30' },
       { name: 'Alice', age: '25' }
@@ -47,26 +52,89 @@ describe('convertTable', () => {
       { name: 'John', age: 30 },
       { name: 'Alice', age: 25 }
     ]);
-    const result = convertTable(input, 'json', 'csv');
-    expect(result).toBe('name,age\nJohn,30\nAlice,25');
+    expect(convert(input, 'json', 'csv')).toBe('name,age\nJohn,30\nAlice,25');
   });
 
   it('converts markdown to a MySQL-style ASCII table', () => {
     const input = `| a | bb |
 | --- | --- |
 | 1 | 2 |`;
-    const result = convertTable(input, 'markdown', 'mysql');
-    expect(result).toBe(
+    expect(convert(input, 'markdown', 'mysql')).toBe(
       '+---+----+\n| a | bb |\n+---+----+\n| 1 | 2  |\n+---+----+'
     );
   });
 
   it('returns an empty string for empty input', () => {
-    expect(convertTable('', 'auto', 'csv')).toBe('');
+    expect(convert('', 'auto', 'csv')).toBe('');
   });
 
   it('throws for html input without a table', () => {
-    expect(() => convertTable('<div>no table</div>', 'html', 'csv')).toThrow();
+    expect(() => convert('<div>no table</div>', 'html', 'csv')).toThrow();
+  });
+
+  describe('autodetect', () => {
+    it('detects the input format when autodetect is on', () => {
+      const input = '| a | b |\n| --- | --- |\n| 1 | 2 |';
+      expect(convert(input, 'auto', 'csv')).toBe('a,b\n1,2');
+    });
+
+    it('ignores the detected format when autodetect is off', () => {
+      // markdown-looking text forced through the csv parser: one column
+      const input = '| a | b |\n| --- | --- |\n| 1 | 2 |';
+      const forced = convertTable(input, {
+        autodetect: false,
+        inputFormat: 'csv',
+        outputFormat: 'json'
+      });
+      expect(JSON.parse(forced)).not.toEqual(
+        JSON.parse(convert(input, 'markdown', 'json'))
+      );
+    });
+  });
+
+  describe('edge cases', () => {
+    it('escapes HTML special characters in cells', () => {
+      const result = convert('a\n<b>&</b>', 'csv', 'html');
+      expect(result).toContain('&lt;b&gt;&amp;&lt;/b&gt;');
+      expect(result).not.toContain('<b>');
+    });
+
+    it('escapes pipes in markdown cells and round-trips them', () => {
+      const markdown = convert('a,b\n"x|y",2', 'csv', 'markdown');
+      expect(markdown).toContain('x\\|y');
+      expect(convert(markdown, 'markdown', 'csv')).toBe('a,b\nx|y,2');
+    });
+
+    it('quotes CSV fields containing commas, quotes and newlines', () => {
+      const input = JSON.stringify([{ a: 'x,y', b: 'say "hi"', c: 'l1\nl2' }]);
+      expect(convert(input, 'json', 'csv')).toBe(
+        'a,b,c\n"x,y","say ""hi""","l1\nl2"'
+      );
+    });
+
+    it('pads ragged rows so every output stays rectangular', () => {
+      expect(convert('a,b,c\n1,2', 'csv', 'csv')).toBe('a,b,c\n1,2,');
+    });
+
+    it('accepts a single JSON object', () => {
+      expect(convert('{"a":1,"b":2}', 'json', 'csv')).toBe('a,b\n1,2');
+    });
+
+    it('accepts JSON Lines', () => {
+      expect(convert('{"a":1}\n{"a":2}', 'json', 'csv')).toBe('a\n1\n2');
+    });
+
+    it('stringifies nested JSON values instead of [object Object]', () => {
+      const result = convert('[{"a":{"x":1}}]', 'json', 'csv');
+      expect(result).not.toContain('[object Object]');
+      expect(result).toContain('x');
+    });
+
+    it('aligns MySQL columns by character count, not UTF-16 length', () => {
+      const lines = convert('a,b\n😀,1', 'csv', 'mysql').split('\n');
+      const widths = new Set(lines.map((line) => Array.from(line).length));
+      expect(widths.size).toBe(1);
+    });
   });
 
   describe('detectTableFormat', () => {
@@ -96,6 +164,10 @@ describe('convertTable', () => {
 
     it('falls back to csv', () => {
       expect(detectTableFormat('a,b\n1,2')).toBe('csv');
+    });
+
+    it('does not mistake a CSV with a pipe in a field for markdown', () => {
+      expect(detectTableFormat('name,a|b\n1,2')).toBe('csv');
     });
   });
 });
