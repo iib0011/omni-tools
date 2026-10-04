@@ -1,6 +1,6 @@
 import { readFile, writeFile } from 'fs/promises';
 import fs from 'fs';
-import { dirname, join, sep } from 'path';
+import { dirname, isAbsolute, join, parse, sep } from 'path';
 import { fileURLToPath } from 'url';
 
 const currentDirname = dirname(fileURLToPath(import.meta.url));
@@ -25,7 +25,8 @@ function capitalizeFirstLetter(string) {
 }
 
 function createFolderStructure(basePath, foldersToCreateIndexCount) {
-  const folderArray = basePath.split(sep);
+  const { root } = parse(basePath);
+  const folderArray = basePath.slice(root.length).split(sep).filter(Boolean);
 
   function recursiveCreate(currentBase, index) {
     if (index >= folderArray.length) {
@@ -54,7 +55,7 @@ function createFolderStructure(basePath, foldersToCreateIndexCount) {
   }
 
   // Start the recursive folder creation
-  recursiveCreate('.', 0);
+  recursiveCreate(isAbsolute(basePath) ? root : '.', 0);
 }
 
 const toolNameCamelCase = toolName.replace(/-./g, (x) => x[1].toUpperCase());
