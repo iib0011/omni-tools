@@ -1,9 +1,22 @@
 export type NumberExtractionType = 'smart' | 'delimiter';
 
 function getAllNumbers(text: string): number[] {
-  const regex = /\d+/g;
-  const matches = text.match(regex);
+  const matches = text.match(/-?\d+(?:\.\d+)?/g);
   return matches ? matches.map(Number) : [];
+}
+function getDelimitedNumbers(text: string, separator: string): number[] {
+  const normalizedSeparator = separator.replace(/\\n/g, '\n').trim();
+  const pattern = normalizedSeparator
+    ? new RegExp(
+        normalizedSeparator.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*'
+      )
+    : /\s+/;
+
+  return text
+    .split(pattern)
+    .map((part) => part.trim())
+    .filter((part) => part !== '' && !Number.isNaN(Number(part)))
+    .map(Number);
 }
 
 export const compute = (
@@ -12,26 +25,17 @@ export const compute = (
   printRunningSum: boolean,
   separator: string
 ): string => {
-  let numbers: number[] = [];
-  if (extractionType === 'smart') {
-    numbers = getAllNumbers(input);
-  } else {
-    const parts = input.split(separator);
-    // Filter out and convert parts that are numbers
-    numbers = parts
-      .filter((part) => !isNaN(Number(part)) && part.trim() !== '')
-      .map(Number);
-  }
+  const numbers =
+    extractionType === 'smart'
+      ? getAllNumbers(input)
+      : getDelimitedNumbers(input, separator);
+
   if (printRunningSum) {
-    let result: string = '';
-    let sum: number = 0;
-    for (const i of numbers) {
-      sum = sum + i;
-      result = result + sum + '\n';
-    }
-    return result;
-  } else
-    return numbers
-      .reduce((previousValue, currentValue) => previousValue + currentValue, 0)
-      .toString();
+    let sum = 0;
+    return (
+      numbers.map((n) => (sum += n)).join('\n') + (numbers.length ? '\n' : '')
+    );
+  }
+
+  return numbers.reduce((acc, n) => acc + n, 0).toString();
 };

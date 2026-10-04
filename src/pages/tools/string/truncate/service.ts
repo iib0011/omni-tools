@@ -50,7 +50,7 @@ function truncateFromLeft(
   indicator: string,
   truncationSide: truncationSideType
 ) {
-  const result = text.slice(-maxLength);
+  const result = maxLength === 0 ? '' : text.slice(-maxLength);
 
   return addIndicator
     ? addIndicatorToText(result, indicator, truncationSide)

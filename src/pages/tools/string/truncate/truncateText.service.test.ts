@@ -22,6 +22,14 @@ describe('repeatText function (normal mode)', () => {
     expect(result).toBe('labore et dolore magna aliqua.');
   });
 
+  it('should return empty text when truncating from the left to zero characters', () => {
+    const result = truncateText(
+      { ...initialValues, maxLength: '0', truncationSide: 'left' },
+      text
+    );
+    expect(result).toBe('');
+  });
+
   it('should truncate the text and add the indicator correctly on the right side', () => {
     const maxLength = '24';
     const addIndicator = true;

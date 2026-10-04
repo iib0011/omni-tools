@@ -115,7 +115,7 @@
   "inputFooter": {
     "clear": "Clear",
     "copyToClipboard": "Copy to clipboard",
-    "importFromFile": "Import from file"
+    "importFromFile": "Select files"
   },
   "list": {
     "group": {
