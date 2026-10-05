@@ -49,4 +49,10 @@ describe('stringReverser', () => {
     const result = stringReverser(input, true, true, false);
     expect(result).toBe('olleh  \n  dlrow');
   });
+
+  it('should preserve whitespace-only lines when emptyItems is true and trim is false', () => {
+    const input = 'hello\n   \nworld';
+    const result = stringReverser(input, true, true, false);
+    expect(result).toBe('olleh\n   \ndlrow');
+  });
 });
