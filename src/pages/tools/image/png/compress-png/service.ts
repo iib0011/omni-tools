@@ -1,3 +1,4 @@
+import JSZip from 'jszip';
 import { InitialValuesType } from './types';
 
 export interface CompressPngResult {
@@ -16,7 +17,51 @@ export interface CompressPngResult {
   keptOriginal: boolean;
 }
 
+export interface CompressPngsResult {
+  results: CompressPngResult[];
+  /** Zip of every compressed file, only set when there is more than one. */
+  zipFile: File | null;
+  /** Names of the files that could not be compressed. */
+  failed: string[];
+}
+
 const MAX_PALETTE_SIZE = 256;
+
+/** Compresses several PNGs one after the other and zips them when needed. */
+export async function compressPngs(
+  files: File[],
+  options: InitialValuesType
+): Promise<CompressPngsResult> {
+  const results: CompressPngResult[] = [];
+  const failed: string[] = [];
+  let firstError: unknown = null;
+
+  // One at a time: each picture is decoded at full size, so running them in
+  // parallel would multiply memory use.
+  for (const file of files) {
+    try {
+      results.push(await compressPng(file, options));
+    } catch (error) {
+      console.error(`Error compressing ${file.name}:`, error);
+      failed.push(file.name);
+      firstError ??= error;
+    }
+  }
+
+  if (results.length === 0 && firstError) throw firstError;
+
+  let zipFile: File | null = null;
+  if (results.length > 1) {
+    const zip = new JSZip();
+    results.forEach(({ file }) => zip.file(file.name, file));
+    const zipBlob = await zip.generateAsync({ type: 'blob' });
+    zipFile = new File([zipBlob], 'compressed-pngs.zip', {
+      type: 'application/zip'
+    });
+  }
+
+  return { results, zipFile, failed };
+}
 
 /**
  * Compresses a PNG by reducing its color palette, never its dimensions.
