@@ -61,4 +61,16 @@ describe('compute function', () => {
     const result = compute(input, 'delimiter', false, ';');
     expect(result).toBe('13');
   });
+
+  it('should treat a literal \\n separator as a real line break (multiline sum)', () => {
+    const input = '1\n2\n4';
+    const result = compute(input, 'delimiter', false, '\\n');
+    expect(result).toBe('7');
+  });
+
+  it('should return running sum with a literal \\n separator', () => {
+    const input = '1\n2\n4';
+    const result = compute(input, 'delimiter', true, '\\n');
+    expect(result).toBe('1\n3\n7\n');
+  });
 });

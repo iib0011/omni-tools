@@ -60,7 +60,7 @@ function customAlphabeticSort(
     return a.toLowerCase().localeCompare(b.toLowerCase());
   } else {
     // Case-sensitive comparison
-    return a.charCodeAt(0) - b.charCodeAt(0);
+    return a === b ? 0 : a < b ? -1 : 1;
   }
 }
 

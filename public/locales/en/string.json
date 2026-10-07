@@ -245,6 +245,19 @@
     "wordFrequencyAnalysis": "Word Frequency Analysis",
     "wordFrequencyAnalysisDescription": "Count how often each word appears in the text"
   },
+  "tableTextConverter": {
+    "title": "Table Text Converter",
+    "description": "Convert tabular text between Markdown, CSV, TSV, HTML, MySQL query output, and JSON formats.",
+    "shortDescription": "Convert tables between Markdown, CSV, HTML, MySQL, and JSON",
+    "longDescription": "This tool converts tabular text between multiple formats, including Markdown tables, CSV, TSV, HTML tables, MySQL/CLI query result output, and JSON arrays. Paste your table in any supported format, choose the output format (or let the tool auto-detect the input format), and get the converted table instantly. Useful for turning a MySQL query result into a Markdown table for documentation, converting an HTML table into CSV for spreadsheets, or transforming JSON data into a readable table.",
+    "inputTitle": "Input table",
+    "resultTitle": "Converted table",
+    "options": "Conversion Options",
+    "inputFormat": "Input format",
+    "outputFormat": "Output format",
+    "autoDetect": "Auto-detect Input format (recommanded)",
+    "error": "Error"
+  },
   "textCompare": {
     "description": "Analyze two text blocks to highlight differences, including additions, deletions, and changes.",
     "inputTitle": "Input Text",

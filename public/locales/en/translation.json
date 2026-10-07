@@ -115,7 +115,7 @@
   "inputFooter": {
     "clear": "Clear",
     "copyToClipboard": "Copy to clipboard",
-    "importFromFile": "Import from file"
+    "importFromFile": "Select files"
   },
   "list": {
     "group": {
@@ -136,7 +136,7 @@
   },
   "navbar": {
     "buyMeACoffee": "Buy me a coffee",
-    "hireMe": "Hire me",
+    "helpTranslate": "Help translate",
     "home": "Home",
     "tools": "Tools"
   },
