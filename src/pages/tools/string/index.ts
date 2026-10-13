@@ -27,6 +27,7 @@ import { tool as stringCompare } from './text-compare/meta';
 import { tool as stringUnicode } from './unicode/meta';
 import { tool as stringEmailExtractor } from './email-extractor/meta';
 import { tool as stringBcrypt } from './bcrypt/meta';
+import { tool as stringTableTextConverter } from './table-text-converter/meta';
 
 export const stringTools = [
   stringSplit,
@@ -58,5 +59,6 @@ export const stringTools = [
   stringEmailExtractor,
   stringCompare,
   stringSlugGenerator,
-  stringBcrypt
+  stringBcrypt,
+  stringTableTextConverter
 ];

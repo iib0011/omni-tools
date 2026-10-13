@@ -114,12 +114,14 @@ const Navbar: React.FC<NavbarProps> = ({
       }
     />,
     <Icon
+      key="discord"
       onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
       style={{ cursor: 'pointer' }}
       fontSize={30}
       icon={'ic:baseline-discord'}
     />,
     <iframe
+      key="github-star"
       src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
       frameBorder="0"
       scrolling="0"
@@ -128,9 +130,10 @@ const Navbar: React.FC<NavbarProps> = ({
       title="GitHub"
     ></iframe>,
     <Button
+      key="translate"
       onClick={() => {
         window.open(
-          'https://drive.google.com/file/d/1-r9-rDYnDJic9dnDywKTAsueehIAVp5F/view?usp=sharing',
+          'https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK',
           '_blank'
         );
       }}
@@ -140,11 +143,11 @@ const Navbar: React.FC<NavbarProps> = ({
         <Icon
           style={{ cursor: 'pointer' }}
           fontSize={25}
-          icon={'hugeicons:job-search'}
+          icon={'ix:language-filled'}
         />
       }
     >
-      {t('navbar.hireMe')}
+      {t('navbar.helpTranslate')}
     </Button>
   ];
   const drawerList = (
@@ -157,8 +160,8 @@ const Navbar: React.FC<NavbarProps> = ({
           <ListItemText primary={navItem.label} />
         </ListItemButton>
       ))}
-      {buttons.map((button) => (
-        <ListItem>{button}</ListItem>
+      {buttons.map((button, index) => (
+        <ListItem key={index}>{button}</ListItem>
       ))}
     </List>
   );

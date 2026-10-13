@@ -18,8 +18,9 @@ async function splitImage(
       const tileH = Math.min(heightOfEachPart, height - y * heightOfEachPart);
 
       const canvas = document.createElement('canvas');
-      canvas.width = tileW;
-      canvas.height = tileH;
+      // Keep edge tiles page-sized so PDF placement preserves their scale.
+      canvas.width = widthOfEachPart;
+      canvas.height = heightOfEachPart;
 
       const ctx = canvas.getContext('2d');
       if (!ctx) throw new Error('Canvas not supported');
