@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
 import ImageIcon from '@mui/icons-material/Image';
 import { useTranslation } from 'react-i18next';
 import { heicTo, isHeic } from 'heic-to';
+import useFileDrop from '../../hooks/useFileDrop';
 
 interface MultiImageInputComponentProps {
   accept: string[];
@@ -30,6 +31,42 @@ export default function ToolMultiImageInput({
 }: MultiImageInputComponentProps) {
   const { t } = useTranslation();
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const theme = useTheme();
+  const { isDragging, dropHandlers, addFiles } = useFileDrop({
+    accept,
+    onFiles: async (acceptedFiles) => {
+      const newFiles: MultiImageInput[] = await Promise.all(
+        acceptedFiles.map(async (file, index) => {
+          let processedFile = file;
+
+          try {
+            if (await isHeic(file)) {
+              const convertedBlob = await heicTo({
+                blob: file,
+                type: 'image/jpeg'
+              });
+
+              processedFile = new File(
+                [convertedBlob],
+                file.name.replace(/\.[^/.]+$/, '') + '.jpg',
+                { type: 'image/jpeg' }
+              );
+            }
+          } catch (err) {
+            console.warn('HEIC conversion failed:', file.name, err);
+          }
+
+          return {
+            file: processedFile,
+            order: value.length + index,
+            preview: URL.createObjectURL(processedFile)
+          };
+        })
+      );
+
+      onChange([...value, ...newFiles]);
+    }
+  });
 
   const handleFileChange = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -37,36 +74,7 @@ export default function ToolMultiImageInput({
     const files = event.target.files;
     if (!files) return;
 
-    const newFiles: MultiImageInput[] = await Promise.all(
-      Array.from(files).map(async (file, index) => {
-        let processedFile = file;
-
-        try {
-          if (await isHeic(file)) {
-            const convertedBlob = await heicTo({
-              blob: file,
-              type: 'image/jpeg'
-            });
-
-            processedFile = new File(
-              [convertedBlob],
-              file.name.replace(/\.[^/.]+$/, '') + '.jpg',
-              { type: 'image/jpeg' }
-            );
-          }
-        } catch (err) {
-          console.warn('HEIC conversion failed:', file.name, err);
-        }
-
-        return {
-          file: processedFile,
-          order: value.length + index,
-          preview: URL.createObjectURL(processedFile)
-        };
-      })
-    );
-
-    onChange([...value, ...newFiles]);
+    await addFiles(files);
 
     event.target.value = '';
   };
@@ -117,19 +125,25 @@ export default function ToolMultiImageInput({
           borderRadius: 2,
           boxShadow: '5',
           bgcolor: 'background.paper',
-          position: 'relative'
+          position: 'relative',
+          borderColor: isDragging ? theme.palette.primary.main : undefined,
+          borderWidth: isDragging ? 2 : 1,
+          borderStyle: isDragging ? 'dashed' : 'solid'
         }}
+        {...dropHandlers}
       >
         <Box
           width="100%"
           height="100%"
+          onClick={value?.length ? undefined : handleImportClick}
           sx={{
             overflow: 'auto',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             flexWrap: 'wrap',
-            position: 'relative'
+            position: 'relative',
+            cursor: value?.length ? undefined : 'pointer'
           }}
         >
           {value?.length ? (
@@ -185,9 +199,18 @@ export default function ToolMultiImageInput({
                 </Box>
               </Box>
             ))
+          ) : isDragging ? (
+            <Typography variant="body2" color="primary">
+              {t('toolMultipleInput.dropFilesHere')}
+            </Typography>
           ) : (
-            <Typography variant="body2" color="text.secondary">
-              {t('toolMultipleInput.noFilesSelected')}
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              align="center"
+              sx={{ px: 2 }}
+            >
+              {t('toolMultipleInput.selectFilesDescription')}
             </Typography>
           )}
         </Box>

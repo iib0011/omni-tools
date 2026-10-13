@@ -242,8 +242,11 @@
   },
   "toolMultipleInput": {
     "deleteFile": "Delete file",
+    "dropFilesHere": "Drop your files here",
     "inputTitle": "Input {{type}}",
-    "noFilesSelected": "No files selected"
+    "invalidFileType": "Invalid file type. Please select files of a supported type.",
+    "noFilesSelected": "No files selected",
+    "selectFilesDescription": "Click here to select files from your device, or drag and drop files here"
   },
   "toolOptions": {
     "title": "Tool options"
