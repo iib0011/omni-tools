@@ -6,6 +6,7 @@ import InputFooter from './InputFooter';
 import VideoFileIcon from '@mui/icons-material/VideoFile';
 import ClearIcon from '@mui/icons-material/Clear';
 import { useTranslation } from 'react-i18next';
+import useFileDrop from '../../hooks/useFileDrop';
 
 interface MultiVideoInputComponentProps {
   accept: string[];
@@ -30,13 +31,20 @@ export default function ToolMultipleVideoInput({
   const { t } = useTranslation();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = event.target.files;
-    if (files)
+  const { isDragging, dropHandlers, addFiles } = useFileDrop({
+    accept,
+    onFiles: (files) =>
       onChange([
         ...value,
-        ...Array.from(files).map((file) => ({ file, order: value.length }))
-      ]);
+        ...files.map((file, index) => ({ file, order: value.length + index }))
+      ])
+  });
+
+  const handleFileChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    if (event.target.files) await addFiles(event.target.files);
+    event.target.value = '';
   };
 
   const handleImportClick = () => {
@@ -109,19 +117,25 @@ export default function ToolMultipleVideoInput({
           borderRadius: 2,
           boxShadow: '5',
           bgcolor: 'background.paper',
-          position: 'relative'
+          position: 'relative',
+          borderColor: isDragging ? 'primary.main' : undefined,
+          borderWidth: isDragging ? 2 : undefined,
+          borderStyle: isDragging ? 'dashed' : undefined
         }}
+        {...dropHandlers}
       >
         <Box
           width="100%"
           height="100%"
+          onClick={value?.length ? undefined : handleImportClick}
           sx={{
             overflow: 'auto',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             flexWrap: 'wrap',
-            position: 'relative'
+            position: 'relative',
+            cursor: value?.length ? undefined : 'pointer'
           }}
         >
           {value?.length ? (
@@ -174,9 +188,18 @@ export default function ToolMultipleVideoInput({
                 </Tooltip>
               </Box>
             ))
+          ) : isDragging ? (
+            <Typography variant="body2" color="primary">
+              {t('toolMultipleInput.dropFilesHere')}
+            </Typography>
           ) : (
-            <Typography variant="body2" color="text.secondary">
-              {t('toolMultipleInput.noFilesSelected')}
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              align="center"
+              sx={{ px: 2 }}
+            >
+              {t('toolMultipleInput.selectFilesDescription')}
             </Typography>
           )}
         </Box>

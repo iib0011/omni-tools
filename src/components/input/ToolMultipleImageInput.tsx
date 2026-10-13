@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Box, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import InputHeader from '../InputHeader';
@@ -6,7 +6,7 @@ import InputFooter from './InputFooter';
 import ImageIcon from '@mui/icons-material/Image';
 import { useTranslation } from 'react-i18next';
 import { heicTo, isHeic } from 'heic-to';
-import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
+import useFileDrop from '../../hooks/useFileDrop';
 
 interface MultiImageInputComponentProps {
   accept: string[];
@@ -32,61 +32,41 @@ export default function ToolMultiImageInput({
   const { t } = useTranslation();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const theme = useTheme();
-  const { showSnackBar } = useContext(CustomSnackBarContext);
-  const [isDragging, setIsDragging] = useState(false);
+  const { isDragging, dropHandlers, addFiles } = useFileDrop({
+    accept,
+    onFiles: async (acceptedFiles) => {
+      const newFiles: MultiImageInput[] = await Promise.all(
+        acceptedFiles.map(async (file, index) => {
+          let processedFile = file;
 
-  const isAcceptableFile = (file: File) =>
-    accept.some((acceptType) => {
-      // Handle wildcards like "image/*"
-      if (acceptType.endsWith('/*')) {
-        const category = acceptType.split('/')[0];
-        return file.type.startsWith(category);
-      }
-      return acceptType === file.type;
-    });
+          try {
+            if (await isHeic(file)) {
+              const convertedBlob = await heicTo({
+                blob: file,
+                type: 'image/jpeg'
+              });
 
-  const addFiles = async (files: FileList | File[]) => {
-    const acceptedFiles = Array.from(files).filter(isAcceptableFile);
-    const rejectedCount = Array.from(files).length - acceptedFiles.length;
-    if (rejectedCount > 0) {
-      showSnackBar(
-        `Invalid file type. Please use ${accept.join(', ')}`,
-        'error'
-      );
-    }
-    if (acceptedFiles.length === 0) return;
-
-    const newFiles: MultiImageInput[] = await Promise.all(
-      acceptedFiles.map(async (file, index) => {
-        let processedFile = file;
-
-        try {
-          if (await isHeic(file)) {
-            const convertedBlob = await heicTo({
-              blob: file,
-              type: 'image/jpeg'
-            });
-
-            processedFile = new File(
-              [convertedBlob],
-              file.name.replace(/\.[^/.]+$/, '') + '.jpg',
-              { type: 'image/jpeg' }
-            );
+              processedFile = new File(
+                [convertedBlob],
+                file.name.replace(/\.[^/.]+$/, '') + '.jpg',
+                { type: 'image/jpeg' }
+              );
+            }
+          } catch (err) {
+            console.warn('HEIC conversion failed:', file.name, err);
           }
-        } catch (err) {
-          console.warn('HEIC conversion failed:', file.name, err);
-        }
 
-        return {
-          file: processedFile,
-          order: value.length + index,
-          preview: URL.createObjectURL(processedFile)
-        };
-      })
-    );
+          return {
+            file: processedFile,
+            order: value.length + index,
+            preview: URL.createObjectURL(processedFile)
+          };
+        })
+      );
 
-    onChange([...value, ...newFiles]);
-  };
+      onChange([...value, ...newFiles]);
+    }
+  });
 
   const handleFileChange = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -97,33 +77,6 @@ export default function ToolMultiImageInput({
     await addFiles(files);
 
     event.target.value = '';
-  };
-
-  const handleDrop = async (event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    event.stopPropagation();
-    setIsDragging(false);
-
-    if (event.dataTransfer.files && event.dataTransfer.files.length > 0) {
-      await addFiles(event.dataTransfer.files);
-    }
-  };
-
-  const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    event.stopPropagation();
-  };
-
-  const handleDragEnter = (event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    event.stopPropagation();
-    setIsDragging(true);
-  };
-
-  const handleDragLeave = (event: React.DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    event.stopPropagation();
-    setIsDragging(false);
   };
 
   const handleImportClick = () => {
@@ -177,10 +130,7 @@ export default function ToolMultiImageInput({
           borderWidth: isDragging ? 2 : 1,
           borderStyle: isDragging ? 'dashed' : 'solid'
         }}
-        onDrop={handleDrop}
-        onDragOver={handleDragOver}
-        onDragEnter={handleDragEnter}
-        onDragLeave={handleDragLeave}
+        {...dropHandlers}
       >
         <Box
           width="100%"
