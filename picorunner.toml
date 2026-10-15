@@ -1,0 +1,29 @@
+schema = 1
+name = "OmniTools"
+
+[runtime]
+kind = "node"
+version = "24"
+package_manager = "npm"
+
+[[setup.steps]]
+kind = "dependencies"
+locked = true
+
+[[setup.steps]]
+run = ["npm", "run", "build"]
+
+[launch]
+command = ["npm", "run", "serve", "--", "--host", "{host}", "--port", "{port}", "--strictPort"]
+host = "127.0.0.1"
+port = 4311
+
+[health]
+type = "http"
+path = "/"
+timeout_seconds = 90
+
+[persistence]
+# Tools run in the browser; preferences and bookmarks use browser local storage.
+# Downloads are saved by the browser, outside the application checkout.
+paths = []
