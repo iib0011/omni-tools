@@ -2,6 +2,7 @@ import { readFile, writeFile } from 'fs/promises';
 import fs from 'fs';
 import { dirname, join, sep } from 'path';
 import { fileURLToPath } from 'url';
+import { createFolderStructure } from './create-tool-utils.mjs';
 
 const currentDirname = dirname(fileURLToPath(import.meta.url));
 
@@ -22,39 +23,6 @@ if (!toolName) {
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-function createFolderStructure(basePath, foldersToCreateIndexCount) {
-  const folderArray = basePath.split(sep);
-
-  function recursiveCreate(currentBase, index) {
-    if (index >= folderArray.length) {
-      return;
-    }
-    const currentPath = join(currentBase, folderArray[index]);
-    if (!fs.existsSync(currentPath)) {
-      fs.mkdirSync(currentPath, { recursive: true });
-    }
-    const indexPath = join(currentPath, 'index.ts');
-    if (
-      !fs.existsSync(indexPath) &&
-      index < folderArray.length - 1 &&
-      index >= folderArray.length - 1 - foldersToCreateIndexCount
-    ) {
-      fs.writeFileSync(
-        indexPath,
-        `export const ${
-          currentPath.split(sep)[currentPath.split(sep).length - 1]
-        }Tools = [];\n`
-      );
-      console.log(`File created: ${indexPath}`);
-    }
-    // Recursively create the next folder
-    recursiveCreate(currentPath, index + 1);
-  }
-
-  // Start the recursive folder creation
-  recursiveCreate('.', 0);
 }
 
 const toolNameCamelCase = toolName.replace(/-./g, (x) => x[1].toUpperCase());
@@ -157,13 +125,11 @@ const isValidI18nNamespace = (value) => {
 };
 
 const getI18nNamespaceFromToolCategory = (category) => {
-  // Map image-related categories to 'image'
   if (['png', 'image-generic'].includes(category)) {
     return 'image';
   } else if (['gif'].includes(category)) {
     return 'video';
   }
-  // Use type guard to check if category is a valid I18nNamespaces
   if (isValidI18nNamespace(category)) {
     return category;
   }
@@ -259,7 +225,6 @@ indexContent.splice(
 );
 writeFile(toolsIndex, indexContent.join('\n'));
 
-// Update locale JSON file
 const localeFilePath = join(
   currentDirname,
   '..',
@@ -282,6 +247,5 @@ localeData[toolNameCamelCase] = {
   longDescription: ''
 };
 
-// Write updated locale file
 await writeFile(localeFilePath, JSON.stringify(localeData, null, 2));
 console.log(`Added import in: ${toolsIndex}`);
