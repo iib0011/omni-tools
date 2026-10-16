@@ -1,0 +1,105 @@
+{
+  "changeColors": {
+    "description": "Świat",
+    "shortDescription": "Szybko zamień kolory na obrazie",
+    "title": "Zmień kolory na obrazie"
+  },
+  "changeOpacity": {
+    "description": "Łatwo dostosuj przezroczystość swoich obrazów. Po prostu prześlij obraz, użyj suwaka, aby ustawić żądany poziom krycia od 0 (całkowicie przezroczysty) do 1 (całkowicie nieprzezroczysty) i pobierz zmodyfikowany obraz.",
+    "shortDescription": "Dostosuj przezroczystość obrazów",
+    "title": "Zmień przezroczystość obrazu"
+  },
+  "compress": {
+    "compressedSize": "Rozmiar po kompresji",
+    "compressionOptions": "Opcje kompresji",
+    "description": "Zmniejsz rozmiar pliku obrazu przy zachowaniu jakości.",
+    "failedToCompress": "Nie udało się skompresować obrazu. Spróbuj ponownie.",
+    "fileSizes": "Rozmiary plików",
+    "inputTitle": "Obraz wejściowy",
+    "maxFileSizeDescription": "Maksymalny rozmiar pliku w megabajtach",
+    "originalSize": "Oryginalny rozmiar",
+    "qualityDescription": "Procent jakości obrazu (niższa wartość oznacza mniejszy rozmiar pliku)",
+    "resultTitle": "Skompresowany obraz",
+    "shortDescription": "Kompresuj obrazy, aby zmniejszyć rozmiar pliku przy zachowaniu rozsądnej jakości.",
+    "title": "Kompresuj obraz"
+  },
+  "compressPng": {
+    "description": "To program, który kompresuje obrazy PNG. Gdy wkleisz swój obraz PNG w obszarze wejściowym, program skompresuje go i pokaże wynik w obszarze wyjściowym. W opcjach możesz dostosować poziom kompresji, a także sprawdzić stary i nowy rozmiar pliku obrazu.",
+    "shortDescription": "Szybko skompresuj PNG",
+    "title": "Kompresuj PNG"
+  },
+  "convertJgpToPng": {
+    "description": "Szybko konwertuj obrazy JPG na PNG. Po prostu zaimportuj obraz JPG w edytorze po lewej",
+    "shortDescription": "Szybko konwertuj obrazy JPG na PNG",
+    "title": "Konwertuj JPG na PNG"
+  },
+  "convertToJpg": {
+    "description": "Konwertuj różne formaty obrazów (PNG, GIF, TIF, PSD, SVG, WEBP, HEIC, RAW) na JPG z możliwością dostosowania jakości i koloru tła.",
+    "shortDescription": "Konwertuj obrazy na JPG z kontrolą jakości",
+    "title": "Konwertuj obrazy na JPG"
+  },
+  "createTransparent": {
+    "description": "Świat",
+    "shortDescription": "Szybko uczyń obraz przezroczystym",
+    "title": "Utwórz przezroczysty PNG"
+  },
+  "crop": {
+    "description": "Przytnij obrazy, aby usunąć niechciane obszary.",
+    "inputTitle": "Obraz wejściowy",
+    "resultTitle": "Przycięty obraz",
+    "shortDescription": "Szybko przytnij obrazy.",
+    "title": "Przytnij obraz"
+  },
+  "editor": {
+    "description": "Zaawansowany edytor obrazów z narzędziami do przycinania, obracania, adnotacji, dostosowywania kolorów i dodawania znaków wodnych. Edytuj obrazy za pomocą profesjonalnych narzędzi bezpośrednio w przeglądarce.",
+    "shortDescription": "Edytuj obrazy za pomocą zaawansowanych narzędzi i funkcji",
+    "title": "Edytor obrazów"
+  },
+  "imageToText": {
+    "description": "Wyodrębnij tekst z obrazów (JPG, PNG) za pomocą optycznego rozpoznawania znaków (OCR).",
+    "shortDescription": "Wyodrębnij tekst z obrazów za pomocą OCR.",
+    "title": "Obraz na tekst (OCR)"
+  },
+  "qrCode": {
+    "description": "Generuj kody QR dla różnych typów danych: URL, tekst, e-mail, telefon, SMS, WiFi, wizytówka vCard i więcej.",
+    "shortDescription": "Twórz spersonalizowane kody QR dla różnych formatów danych.",
+    "title": "Generator kodów QR"
+  },
+  "removeBackground": {
+    "description": "Świat",
+    "shortDescription": "Automatycznie usuń tła z obrazów",
+    "title": "Usuń tło z obrazu"
+  },
+  "resize": {
+    "description": "Zmień rozmiar obrazów na inne wymiary.",
+    "dimensionType": "Typ wymiaru",
+    "heightDescription": "Wysokość (w pikselach)",
+    "inputTitle": "Obraz wejściowy",
+    "maintainAspectRatio": "Zachowaj proporcje",
+    "maintainAspectRatioDescription": "Zachowaj oryginalne proporcje obrazu.",
+    "percentage": "Procent",
+    "percentageDescription": "Procent oryginalnego rozmiaru (np. 50 dla połowy rozmiaru, 200 dla podwojenia)",
+    "resizeByPercentage": "Zmień rozmiar procentowo",
+    "resizeByPercentageDescription": "Zmień rozmiar, określając procent oryginalnego rozmiaru.",
+    "resizeByPixels": "Zmień rozmiar w pikselach",
+    "resizeByPixelsDescription": "Zmień rozmiar, określając wymiary w pikselach.",
+    "resizeMethod": "Metoda zmiany rozmiaru",
+    "resultTitle": "Zmieniony obraz",
+    "setHeight": "Ustaw wysokość",
+    "setHeightDescription": "Określ wysokość w pikselach i oblicz szerokość na podstawie proporcji.",
+    "setWidth": "Ustaw szerokość",
+    "setWidthDescription": "Określ szerokość w pikselach i oblicz wysokość na podstawie proporcji.",
+    "shortDescription": "Łatwo zmień rozmiar obrazów.",
+    "title": "Zmień rozmiar obrazu",
+    "toolInfo": {
+      "description": "To narzędzie pozwala na zmianę rozmiaru obrazów JPG, PNG, SVG lub GIF. Możesz zmieniać rozmiar, określając wymiary w pikselach lub procentowo, z opcją zachowania oryginalnych proporcji.",
+      "title": "Zmień rozmiar obrazu"
+    },
+    "widthDescription": "Szerokość (w pikselach)"
+  },
+  "rotate": {
+    "description": "Obróć obraz o określony kąt.",
+    "shortDescription": "Łatwo obróć obraz.",
+    "title": "Obróć obraz"
+  }
+}

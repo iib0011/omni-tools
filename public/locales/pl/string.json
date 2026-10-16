@@ -1,0 +1,311 @@
+{
+  "base64": {
+    "decode": "Dekoduj Base64",
+    "description": "Koduj lub dekoduj tekst przy użyciu kodowania Base64.",
+    "encode": "Zakoduj Base64",
+    "inputTitle": "Dane wejściowe",
+    "optionsTitle": "Opcje Base64",
+    "resultTitle": "Wynik",
+    "shortDescription": "Koduj lub dekoduj dane używając Base64.",
+    "title": "Koder/Dekoder Base64",
+    "toolInfo": {
+      "description": "Base64 to schemat kodowania, który reprezentuje dane w formacie tekstowym ASCII, tłumacząc je na reprezentację radix-64. Chociaż może być używany do kodowania tekstów, jest powszechnie stosowany do kodowania danych binarnych w celu przesyłania ich przez media zaprojektowane do obsługi danych tekstowych.",
+      "title": "Czym jest Base64?"
+    }
+  },
+  "censor": {
+    "description": "Narzędzie do cenzurowania słów w tekście. Wczytaj tekst w formularzu wejściowym po lewej stronie, określ wszystkie niepożądane słowa w opcjach, a natychmiast otrzymasz ocenzurowany tekst w obszarze wyjściowym.",
+    "shortDescription": "Szybko maskuj niepożądane słowa lub zastępuj je alternatywnymi.",
+    "title": "Cenzor tekstu"
+  },
+  "createPalindrome": {
+    "description": "Narzędzie przeglądarkowe do tworzenia palindromów z dowolnego tekstu. Wprowadź tekst i natychmiast przekształć go w palindrom, który czyta się tak samo od przodu i od tyłu. Idealne do gier słownych, tworzenia symetrycznych wzorców tekstowych lub odkrywania ciekawostek językowych.",
+    "shortDescription": "Utwórz tekst, który czyta się tak samo od przodu i od tyłu",
+    "title": "Utwórz palindrom"
+  },
+  "extractSubstring": {
+    "description": "Narzędzie przeglądarkowe do wyodrębniania fragmentów z tekstu. Wprowadź tekst i określ pozycję początkową oraz końcową, aby wyodrębnić żądaną część. Idealne do przetwarzania danych, analizy tekstu lub wyodrębniania określonych treści z większych bloków tekstu.",
+    "shortDescription": "Wyodrębnij fragment tekstu między określonymi pozycjami",
+    "title": "Wyodrębnij fragment tekstu"
+  },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "Opcje analizy",
+    "category": "Kategoria",
+    "description": "Wykryj ukryte znaki Unicode, zwłaszcza znaki nadpisania RTL, które mogą być wykorzystywane w atakach.",
+    "foundChars": "Znaleziono {{count}} ukrytych znaków:",
+    "inputPlaceholder": "Wpisz tekst, aby sprawdzić obecność ukrytych znaków...",
+    "inputTitle": "Tekst do analizy",
+    "invisibleChar": "Niewidoczny znak",
+    "invisibleFound": "Znaleziono niewidoczne znaki",
+    "longDescription": "To narzędzie pomaga wykryć ukryte znaki Unicode w tekście, w szczególności znaki nadpisania od prawej do lewej (RTL), które mogą być wykorzystywane w atakach. Może identyfikować niewidoczne znaki, znaki o zerowej szerokości i inne potencjalnie złośliwe sekwencje Unicode, które mogą być ukryte w pozornie niewinnym tekście.",
+    "noHiddenChars": "W tekście nie wykryto ukrytych znaków.",
+    "optionsDescription": "Skonfiguruj, które typy ukrytych znaków mają być wykrywane i jak wyświetlać wyniki.",
+    "position": "Pozycja",
+    "rtlAlert": "⚠️ Wykryto znaki nadpisania RTL! Ten tekst może zawierać złośliwe ukryte znaki.",
+    "rtlFound": "Znaleziono nadpisanie RTL",
+    "rtlOverride": "Znak nadpisania RTL",
+    "rtlWarning": "OSTRZEŻENIE: Wykryto znaki nadpisania RTL! Może to zostać wykorzystane w atakach.",
+    "shortDescription": "Znajdź ukryte znaki Unicode w tekście",
+    "summary": "Podsumowanie analizy",
+    "title": "Wykrywacz ukrytych znaków",
+    "totalChars": "Łącznie ukrytych znaków: {{count}}",
+    "unicode": "Unicode",
+    "zeroWidthChar": "Znak o zerowej szerokości",
+    "zeroWidthFound": "Znaleziono znaki o zerowej szerokości"
+  },
+  "join": {
+    "blankLinesAndTrailingSpaces": "Puste linie i spacje końcowe",
+    "deleteBlankDescription": "Usuń linie, które nie zawierają symboli tekstowych.",
+    "deleteBlankTitle": "Usuń puste linie",
+    "deleteTrailingDescription": "Usuń spacje i tabulatory na końcu linii.",
+    "deleteTrailingTitle": "Usuń spacje końcowe",
+    "description": "Połącz fragmenty tekstu za pomocą konfigurowalnych separatorów.",
+    "inputTitle": "Fragmenty tekstu",
+    "joinCharacterDescription": "Symbol łączący fragmenty tekstu. (Domyślnie spacja).",
+    "joinCharacterPlaceholder": "Znak łączenia",
+    "resultTitle": "Połączony tekst",
+    "shortDescription": "Połącz elementy tekstowe określonym separatorem",
+    "textMergedOptions": "Opcje scalania tekstu",
+    "title": "Połącz tekst",
+    "toolInfo": {
+      "description": "Za pomocą tego narzędzia możesz połączyć części tekstu. Pobiera ono listę wartości tekstowych, oddzielonych nowymi liniami, i scala je. Możesz ustawić znak, który zostanie umieszczony między częściami połączonego tekstu. Możesz także zignorować wszystkie puste linie oraz usunąć spacje i tabulatory na końcu wszystkich linii.",
+      "title": "Czym jest łączenie tekstu?"
+    }
+  },
+  "palindrome": {
+    "description": "Narzędzie przeglądarkowe do sprawdzania, czy tekst jest palindromem. Natychmiast zweryfikuj, czy Twój tekst czyta się tak samo od przodu i od tyłu. Idealne do łamigłówek słownych, analizy językowej lub walidacji symetrycznych wzorców tekstowych. Obsługuje różne separatory i wykrywanie palindromów wielowyrazowych.",
+    "shortDescription": "Sprawdź, czy tekst czyta się tak samo od przodu i od tyłu",
+    "title": "Palindrom"
+  },
+  "passwordGenerator": {
+    "avoidAmbiguous": "Unikaj niejednoznacznych znaków (i, I, l, 0, O)",
+    "description": "Generuj bezpieczne losowe hasła o konfigurowalnej długości i typach znaków. Wybierz spośród małych i wielkich liter, cyfr oraz znaków specjalnych. Opcja unikania niejednoznacznych znaków dla lepszej czytelności.",
+    "includeLowercase": "Uwzględnij małe litery (a-z)",
+    "includeNumbers": "Uwzględnij cyfry (0-9)",
+    "includeSymbols": "Uwzględnij znaki specjalne",
+    "includeUppercase": "Uwzględnij wielkie litery (A-Z)",
+    "lengthDesc": "Długość hasła",
+    "lengthPlaceholder": "np. 12",
+    "optionsTitle": "Opcje hasła",
+    "resultTitle": "Wygenerowane hasło",
+    "shortDescription": "Generuj bezpieczne losowe hasła z własnymi opcjami",
+    "title": "Generator haseł",
+    "toolInfo": {
+      "description": "To narzędzie generuje bezpieczne losowe hasła na podstawie wybranych kryteriów. Możesz dostosować długość, uwzględnić lub wykluczyć różne typy znaków oraz unikać niejednoznacznych znaków dla lepszej czytelności. Idealne do tworzenia silnych haseł do kont, aplikacji lub innych potrzeb związanych z bezpieczeństwem.",
+      "title": "O generatorze haseł"
+    }
+  },
+  "quote": {
+    "allowDoubleQuotation": "Zezwalaj na podwójny cudzysłów",
+    "description": "Dodaj cudzysłowy do tekstu z możliwością dostosowania opcji.",
+    "inputTitle": "Tekst wejściowy",
+    "leftQuoteDescription": "Znak(i) lewego cudzysłowu",
+    "processAsMultiLine": "Przetwarzaj jako tekst wielowierszowy",
+    "quoteEmptyLines": "Cytuj puste linie",
+    "quoteOptions": "Opcje cytowania",
+    "resultTitle": "Tekst w cudzysłowie",
+    "rightQuoteDescription": "Znak(i) prawego cudzysłowu",
+    "shortDescription": "Dodaj cudzysłowy do tekstu w różnych stylach",
+    "title": "Cytowanie tekstu",
+    "toolInfo": {
+      "description": "To narzędzie pozwala na dodanie cudzysłowów wokół tekstu. Możesz wybrać różne znaki cudzysłowu, obsługiwać tekst wielowierszowy i kontrolować sposób przetwarzania pustych linii. Jest przydatne do przygotowywania tekstu do programowania, formatowania danych lub tworzenia stylizowanego tekstu.",
+      "title": "Cytowanie tekstu"
+    }
+  },
+  "randomizeCase": {
+    "description": "Narzędzie przeglądarkowe do losowej zmiany wielkości liter w tekście. Wprowadź tekst i natychmiast przekształć go za pomocą losowych wielkich i małych liter. Idealne do tworzenia unikalnych efektów tekstowych, testowania wrażliwości na wielkość liter lub generowania zróżnicowanych wzorców tekstowych.",
+    "shortDescription": "Losowo zmień wielkość liter w tekście",
+    "title": "Losowa wielkość liter"
+  },
+  "removeDuplicateLines": {
+    "description": "Wczytaj tekst w formularzu wejściowym po lewej stronie, a w obszarze wyjściowym natychmiast otrzymasz tekst bez powtórzonych linii. Potężne, darmowe i szybkie.",
+    "shortDescription": "Szybko usuń wszystkie powtórzone linie z tekstu",
+    "title": "Usuń zduplikowane linie"
+  },
+  "repeat": {
+    "delimiterDescription": "Separator dla kopii wyjściowych.",
+    "delimiterPlaceholder": "Separator",
+    "description": "Powtórz tekst wielokrotnie z konfigurowalnymi separatorami.",
+    "inputTitle": "Tekst wejściowy",
+    "numberPlaceholder": "Liczba",
+    "repeatAmountDescription": "Liczba powtórzeń.",
+    "repetitionsDelimiter": "Separator powtórzeń",
+    "resultTitle": "Powtórzony tekst",
+    "shortDescription": "Powtórz tekst wielokrotnie",
+    "textRepetitions": "Powtórzenia tekstu",
+    "title": "Powtórz tekst",
+    "toolInfo": {
+      "description": "To narzędzie pozwala na wielokrotne powtórzenie danego tekstu z opcjonalnym separatorem.",
+      "title": "Powtórz tekst"
+    }
+  },
+  "reverse": {
+    "description": "Narzędzie przeglądarkowe do odwracania tekstu. Wprowadź dowolny tekst, aby natychmiast go odwrócić, znak po znaku. Idealne do tworzenia lustrzanego tekstu, analizowania palindromów lub zabawy wzorcami tekstowymi. Zachowuje spacje i znaki specjalne podczas odwracania.",
+    "inputTitle": "Tekst do odwrócenia",
+    "processMultiLine": "Przetwarzaj tekst wielowierszowy",
+    "processMultiLineDescription": "Każda linia zostanie odwrócona niezależnie",
+    "resultTitle": "Odwrócony tekst",
+    "reversalOptions": "Opcje odwracania",
+    "shortDescription": "Odwróć dowolny tekst znak po znaku",
+    "skipEmptyLines": "Pomiń puste linie",
+    "skipEmptyLinesDescription": "Puste linie zostaną usunięte z wyniku",
+    "title": "Odwróć",
+    "trimWhitespace": "Przytnij białe znaki",
+    "trimWhitespaceDescription": "Usuń wiodące i końcowe białe znaki z każdej linii"
+  },
+  "rot13": {
+    "description": "Koduj lub dekoduj tekst przy użyciu szyfru ROT13.",
+    "inputTitle": "Tekst wejściowy",
+    "resultTitle": "Wynik ROT13",
+    "shortDescription": "Koduj lub dekoduj tekst przy użyciu szyfru ROT13.",
+    "title": "Koder/Dekoder ROT13",
+    "toolInfo": {
+      "description": "ROT13 (obrót o 13 miejsc) to prosty szyfr podstawieniowy, który zastępuje literę 13. literą po niej w alfabecie. ROT13 jest szczególnym przypadkiem szyfru Cezara, który został opracowany w starożytnym Rzymie. Ponieważ alfabet angielski ma 26 liter, ROT13 jest swoją własną odwrotnością; to znaczy, aby cofnąć ROT13, stosuje się ten sam algorytm, więc ta sama akcja może być używana do kodowania i dekodowania.",
+      "title": "Czym jest ROT13?"
+    }
+  },
+  "rotate": {
+    "description": "Obróć znaki w tekście o określoną liczbę pozycji.",
+    "inputTitle": "Tekst wejściowy",
+    "processAsMultiLine": "Przetwarzaj jako tekst wielowierszowy (obracaj każdą linię osobno)",
+    "resultTitle": "Obrócony tekst",
+    "rotateLeft": "Obróć w lewo",
+    "rotateRight": "Obróć w prawo",
+    "rotationOptions": "Opcje obrotu",
+    "shortDescription": "Przesuń znaki w tekście o pozycję.",
+    "stepDescription": "Liczba pozycji do obrotu",
+    "title": "Obróć tekst",
+    "toolInfo": {
+      "description": "To narzędzie pozwala na obracanie znaków w tekście o określoną liczbę pozycji. Możesz obracać w lewo lub w prawo oraz przetwarzać tekst wielowierszowy, obracając każdą linię osobno. Rotacja tekstu jest przydatna do prostych przekształceń tekstu, tworzenia wzorców lub wdrażania podstawowych technik szyfrowania.",
+      "title": "Rotacja tekstu"
+    }
+  },
+  "split": {
+    "charAfterChunkDescription": "Znak po każdym fragmencie",
+    "charBeforeChunkDescription": "Znak przed każdym fragmentem",
+    "chunksDescription": "Liczba fragmentów o równej długości w wyniku.",
+    "chunksTitle": "Użyj liczby fragmentów",
+    "description": "Narzędzie przeglądarkowe do dzielenia tekstu. Wprowadź tekst i określ separator, aby podzielić go na wiele części. Idealne do przetwarzania danych, manipulacji tekstem lub wyodrębniania określonych treści z większych bloków tekstu.",
+    "lengthDescription": "Liczba znaków, które zostaną umieszczone w każdym fragmencie wyjściowym.",
+    "lengthTitle": "Użyj długości do podziału",
+    "outputSeparatorDescription": "Znak, który zostanie umieszczony między podzielonymi fragmentami. (Domyślnie jest to nowa linia \"\\n\".)",
+    "outputSeparatorOptions": "Opcje separatora wyjściowego",
+    "regexDescription": "Wyrażenie regularne, które zostanie użyte do podziału tekstu na części. (Domyślnie wiele spacji.)",
+    "regexTitle": "Użyj RegEx do podziału",
+    "resultTitle": "Wynik podziału",
+    "shortDescription": "Podziel tekst na wiele części za pomocą separatora",
+    "splitSeparatorOptions": "Opcje separatora podziału",
+    "symbolDescription": "Znak, który zostanie użyty do podziału tekstu na części. (Domyślnie spacja.)",
+    "symbolTitle": "Użyj symbolu do podziału",
+    "title": "Podziel"
+  },
+  "statistic": {
+    "characterFrequencyAnalysis": "Analiza częstotliwości znaków",
+    "characterFrequencyAnalysisDescription": "Policz, jak często każdy znak występuje w tekście",
+    "delimitersOptions": "Opcje separatorów",
+    "description": "Analizuj tekst i generuj kompleksowe statystyki.",
+    "includeEmptyLines": "Uwzględnij puste linie",
+    "includeEmptyLinesDescription": "Uwzględnij puste linie podczas liczenia linii",
+    "inputTitle": "Tekst wejściowy",
+    "resultTitle": "Statystyki tekstu",
+    "sentenceDelimitersDescription": "Wprowadź niestandardowe znaki używane do oddzielania zdań w twoim języku (oddzielone przecinkami) lub pozostaw puste dla wartości domyślnej.",
+    "sentenceDelimitersPlaceholder": "np. ., !, ?, ...",
+    "shortDescription": "Uzyskaj statystyki dotyczące swojego tekstu",
+    "statisticsOptions": "Opcje statystyk",
+    "title": "Statystyki tekstu",
+    "toolInfo": {
+      "description": "To narzędzie pozwala analizować tekst i generować kompleksowe statystyki, w tym liczbę znaków, liczbę słów, liczbę linii oraz analizę częstotliwości znaków i słów.",
+      "title": "Czym są {{title}}?"
+    },
+    "wordDelimitersDescription": "Wprowadź niestandardowy RegEx do liczenia słów lub pozostaw puste dla wartości domyślnej.",
+    "wordDelimitersPlaceholder": "np. \\s.,;:!?\"«»()…",
+    "wordFrequencyAnalysis": "Analiza częstotliwości słów",
+    "wordFrequencyAnalysisDescription": "Policz, jak często każde słowo występuje w tekście"
+  },
+  "textReplacer": {
+    "description": "Zastąp wzorce tekstowe nową treścią.",
+    "findPatternInText": "Znajdź ten wzorzec w tekście",
+    "findPatternUsingRegexp": "Znajdź wzorzec używając wyrażenia regularnego",
+    "inputTitle": "Tekst do zamiany",
+    "newTextPlaceholder": "Nowy tekst",
+    "regexpDescription": "Wprowadź wyrażenie regularne, które chcesz zastąpić.",
+    "replacePatternDescription": "Wprowadź wzorzec do użycia przy zamianie.",
+    "replaceText": "Zamień tekst",
+    "resultTitle": "Tekst po zamianach",
+    "searchPatternDescription": "Wprowadź wzorzec tekstowy, który chcesz zastąpić.",
+    "searchText": "Szukaj tekstu",
+    "shortDescription": "Szybko zastąp tekst w swojej treści",
+    "title": "Zamiana tekstu",
+    "toolInfo": {
+      "description": "Łatwo zastąp określony tekst w swojej treści za pomocą tego prostego narzędzia przeglądarkowego. Po prostu wprowadź tekst, ustaw tekst do zastąpienia oraz wartość zastępczą, a natychmiast otrzymasz zaktualizowaną wersję.",
+      "title": "Zamiana tekstu"
+    }
+  },
+  "toMorse": {
+    "dashSymbolDescription": "Symbol, który będzie odpowiadał kresce w kodzie Morse'a.",
+    "description": "Konwertuj tekst na kod Morse'a.",
+    "dotSymbolDescription": "Symbol, który będzie odpowiadał kropce w kodzie Morse'a.",
+    "longSignal": "Sygnał długi",
+    "resultTitle": "Kod Morse'a",
+    "shortDescription": "Szybko zakoduj tekst na alfabet Morse'a",
+    "shortSignal": "Sygnał krótki",
+    "title": "Tekst na Morse'a"
+  },
+  "truncate": {
+    "addTruncationIndicator": "Dodaj wskaźnik przycięcia",
+    "charactersPlaceholder": "Znaki",
+    "description": "Skróć tekst do określonej długości.",
+    "indicatorDescription": "Znaki do dodania na końcu (lub początku) tekstu. Uwaga: Wliczają się do długości.",
+    "inputTitle": "Tekst wejściowy",
+    "leftSideDescription": "Usuń znaki z początku tekstu.",
+    "leftSideTruncation": "Przycinanie lewostronne",
+    "lengthAndLines": "Długość i linie",
+    "lineByLineDescription": "Przytnij każdą linię osobno.",
+    "lineByLineTruncating": "Przycinanie linia po linii",
+    "maxLengthDescription": "Liczba znaków do pozostawienia w tekście.",
+    "numberPlaceholder": "Liczba",
+    "resultTitle": "Przycięty tekst",
+    "rightSideDescription": "Usuń znaki z końca tekstu.",
+    "rightSideTruncation": "Przycinanie prawostronne",
+    "shortDescription": "Skróć tekst do określonej długości",
+    "suffixAndAffix": "Sufiks i afiks",
+    "title": "Przytnij tekst",
+    "toolInfo": {
+      "description": "Wczytaj tekst w formularzu wejściowym po lewej stronie, a po prawej automatycznie otrzymasz przycięty tekst.",
+      "title": "Przytnij tekst"
+    },
+    "truncationSide": "Strona przycięcia"
+  },
+  "uppercase": {
+    "description": "Konwertuj tekst na wielkie litery.",
+    "inputTitle": "Tekst wejściowy",
+    "resultTitle": "Tekst wielkimi literami",
+    "shortDescription": "Konwertuj tekst na wielkie litery",
+    "title": "Konwertuj na wielkie litery"
+  },
+  "urlDecode": {
+    "inputTitle": "Tekst wejściowy (zakodowany URL)",
+    "resultTitle": "Tekst wyjściowy",
+    "toolInfo": {
+      "description": "Wczytaj tekst, a zostanie on automatycznie odkodowany z formatu URL.",
+      "longDescription": "To narzędzie dekoduje tekst wcześniej zakodowany w formacie URL. Dekodowanie URL jest operacją odwrotną do kodowania URL. Wszystkie znaki zakodowane procentowo są dekodowane do znaków, które możesz zrozumieć. Niektóre z najbardziej znanych wartości zakodowanych procentowo to %20 dla spacji, %3a dla dwukropka, %2f dla ukośnika i %3f dla znaku zapytania. Dwie cyfry po znaku procentu to wartości kodu znaku w systemie szesnastkowym.",
+      "shortDescription": "Szybko odkoduj tekst z formatu URL.",
+      "title": "Dekoder URL tekstu"
+    }
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "Jeśli zaznaczone, wszystkie znaki w tekście wejściowym zostaną zakodowane w formacie URL (nie tylko specjalne).",
+      "nonSpecialCharPlaceholder": "Koduj znaki niespecjalne",
+      "title": "Opcje kodowania"
+    },
+    "inputTitle": "Tekst wejściowy",
+    "resultTitle": "Tekst zakodowany URL",
+    "toolInfo": {
+      "description": "Wczytaj tekst, a zostanie on automatycznie zakodowany w formacie URL.",
+      "longDescription": "To narzędzie koduje tekst w formacie URL. Specjalne znaki URL są konwertowane na kodowanie procentowe. To kodowanie nazywa się kodowaniem procentowym, ponieważ wartość liczbowa każdego znaku jest konwertowana na znak procentu, po którym następują dwie cyfry szesnastkowe. Wartości szesnastkowe są określane na podstawie wartości punktu kodowego znaku. Na przykład spacja jest kodowana jako %20, dwukropek jako %3a, ukośnik jako %2f. Znaki, które nie są specjalne, pozostają niezmienione. Jeśli musisz również przekonwertować znaki niespecjalne na kodowanie procentowe, dodaliśmy dodatkową opcję, która na to pozwala.",
+      "shortDescription": "Szybko zakoduj tekst w formacie URL.",
+      "title": "Koder URL tekstu"
+    }
+  }
+}
