@@ -5,6 +5,7 @@ import InputHeader from '../InputHeader';
 import ResultFooter from './ResultFooter';
 import { useTranslation } from 'react-i18next';
 import Editor from '@monaco-editor/react';
+import { copyToClipboard } from '@utils/clipboard';
 import mime from 'mime';
 import {
   globalInputHeight,
@@ -29,8 +30,7 @@ export default function ToolCodeResult({
   const theme = useTheme();
 
   const handleCopy = () => {
-    navigator.clipboard
-      .writeText(value)
+    copyToClipboard(value)
       .then(() => showSnackBar(t('toolTextResult.copied'), 'success'))
       .catch((err) => {
         showSnackBar(t('toolTextResult.copyFailed', { error: err }), 'error');
