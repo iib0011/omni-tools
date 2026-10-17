@@ -130,7 +130,9 @@ export default function DragDropPdfEditor() {
     }
 
     const pdfBytesOut = await pdfDoc.save();
-    const blob = new Blob([pdfBytesOut], { type: 'application/pdf' });
+    const blob = new Blob([new Uint8Array(pdfBytesOut)], {
+      type: 'application/pdf'
+    });
     const url = URL.createObjectURL(blob);
 
     const a = document.createElement('a');
@@ -176,11 +178,10 @@ export default function DragDropPdfEditor() {
           sx={toolboxItemStyle}
         >
           <input
-            style={{ color: '#000' }}
             type="text"
             placeholder="Text field"
             disabled
-            style={inputStyle}
+            style={{ ...inputStyle, color: '#000' }}
           />
         </Box>
         <Box
@@ -189,10 +190,9 @@ export default function DragDropPdfEditor() {
           sx={toolboxItemStyle}
         >
           <textarea
-            style={{ color: '#000' }}
             placeholder="Textarea"
             disabled
-            style={{ ...inputStyle, height: 60 }}
+            style={{ ...inputStyle, height: 60, color: '#000' }}
           />
         </Box>
         <Box
@@ -308,7 +308,8 @@ export default function DragDropPdfEditor() {
                     }}
                     onDrop={(e) => handleDropField(e, pageNo)}
                     onDragOver={handleDragOver}
-                    ref={(el) => {
+                    ref={(node) => {
+                      const el = node as HTMLDivElement | null;
                       if (el) {
                         pageRectsRef.current[pageNo] = {
                           width: el.clientWidth,
