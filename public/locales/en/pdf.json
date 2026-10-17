@@ -39,8 +39,15 @@
     "title": "Images to PDF"
   },
   "editor": {
-    "description": "Advanced PDF editor with annotation, form-fill, highlight, and export capabilities. Edit your PDFs directly in the browser with professional-grade tools including text insertion, drawing, highlighting, signing and form filling.",
+    "description": "Advanced PDF editor with annotation, form-fill, highlight, and export capabilities, powered by the third-party SimplePDF service (loaded from simplepdf.com only after you opt in). Includes text insertion, drawing, highlighting, signing and form filling.",
     "shortDescription": "Edit PDFs with advanced annotation, signing and editing tools",
+    "thirdParty": {
+      "accept": "I understand, load the SimplePDF editor",
+      "alternatives": "All other OmniTools PDF tools (split, merge, rotate, compress, protect, convert...) process files only in your browser.",
+      "description": "This editor is provided by SimplePDF and runs in an iframe served from simplepdf.com. When it loads, your browser contacts SimplePDF servers. When you open a PDF, SimplePDF receives usage analytics (e.g. page count, whether the PDF has a form) and a SHA-256 fingerprint of the file. Nothing is loaded from SimplePDF until you click the button below.",
+      "privacyPolicy": "SimplePDF privacy policy",
+      "title": "Third-party editor: data is sent to SimplePDF"
+    },
     "title": "PDF Editor"
   },
   "extractImagesFromPdf": {

@@ -27,7 +27,12 @@ forget to
 star the repo to support us.
 Here is the [demo](https://omnitools.app) website.
 
-All files are processed entirely on the client side: nothing ever leaves your device.
+Files are processed on the client side: your files are never uploaded to an OmniTools server.
+Some tools download their processing engine (WebAssembly binaries, models or language data) from a public CDN the first time they are used,
+the interface loads icons from the Iconify API and a GitHub star button,
+and the PDF Editor is the one exception that shares information about your documents with a third party: it embeds the [SimplePDF](https://simplepdf.com) editor,
+which is only loaded after you opt in and then sends usage analytics and a SHA-256 fingerprint of the opened PDF to SimplePDF
+(see their [privacy policy](https://simplepdf.com/privacy-policy)).
 Plus, the Docker image is super lightweight at just 28MB, making it fast to deploy and easy to self-host.
 
 ![img.png](docs-images/img.png)
