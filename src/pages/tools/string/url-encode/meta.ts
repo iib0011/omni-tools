@@ -5,7 +5,7 @@ export const tool = defineTool('string', {
   path: 'url-encode-string',
   icon: 'ic:baseline-percentage',
 
-  keywords: ['url', 'encode', 'string', 'url encode', 'encoding', 'percent'],
+  keywords: ['string', 'encoding', 'percent', 'escape'],
   component: lazy(() => import('./index')),
   i18n: {
     name: 'string:urlEncode.toolInfo.title',

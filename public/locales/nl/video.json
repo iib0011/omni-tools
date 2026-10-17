@@ -1,11 +1,8 @@
 {
   "changeSpeed": {
-    "defaultMultiplier": "Standaardvermenigvuldiger: 2 betekent 2x sneller",
     "description": "Wijzig de afspeelsnelheid van videobestanden. Versnel of vertraag video's met behoud van audiosynchronisatie. Ondersteunt diverse snelheidsvermenigvuldigers en gangbare videoformaten.",
     "inputTitle": "Invoervideo",
-    "newVideoSpeed": "Nieuwe videosnelheid",
     "resultTitle": "Bewerkte video",
-    "settingSpeed": "Snelheid instellen",
     "shortDescription": "Wijzig de afspeelsnelheid van video",
     "title": "Videosnelheid wijzigen",
     "toolInfo": {
@@ -54,7 +51,6 @@
   },
   "flip": {
     "description": "Draai videobestanden horizontaal of verticaal. Spiegel video's voor speciale effecten of om problemen met de oriëntatie te corrigeren.",
-    "flippingVideo": "Flipping Video",
     "horizontalLabel": "Horizontaal (Spiegel)",
     "inputTitle": "Invoervideo",
     "orientation": "Oriëntatie",
@@ -73,7 +69,6 @@
   "loop": {
     "description": "Maak een herhalende video door de originele video meerdere keren te herhalen.",
     "inputTitle": "Invoervideo",
-    "loopingVideo": "Video herhalen",
     "loops": "Lussen",
     "numberOfLoops": "Aantal lussen",
     "resultTitle": "Geloopte video",
@@ -97,7 +92,6 @@
     "description": "Roteer videobestanden 90, 180 of 270 graden. Corrigeer de video-oriëntatie of creëer speciale effecten met nauwkeurige rotatiecontrole.",
     "inputTitle": "Invoervideo",
     "resultTitle": "Gedraaide video",
-    "rotatingVideo": "Roterende video",
     "rotation": "Rotatie",
     "shortDescription": "Video met opgegeven graden roteren",
     "title": "Video roteren"
@@ -111,10 +105,5 @@
     "startTime": "Starttijd",
     "timestamps": "Tijdstempels",
     "title": "Video bijsnijden"
-  },
-  "videoToGif": {
-    "description": "Converteer videobestanden naar geanimeerde GIF-indeling. Extraheer specifieke tijdsperioden en maak deelbare geanimeerde afbeeldingen.",
-    "shortDescription": "Converteer video naar geanimeerde GIF",
-    "title": "Video naar GIF"
   }
 }

@@ -13,7 +13,8 @@ import { GetGroupsType } from '@components/options/ToolOptions';
 
 const initialValues = {
   fromColor: 'white',
-  similarity: '10'
+  similarity: '10',
+  backgroundColor: '#ffffff' // NEW
 };
 
 const validationSchema = Yup.object({
@@ -26,12 +27,16 @@ export default function CreateTransparent({ title }: ToolComponentProps) {
 
   const compute = (optionsValues: typeof initialValues, input: any) => {
     if (!input) return;
-    const { fromColor, similarity } = optionsValues;
+    const { fromColor, similarity, backgroundColor } = optionsValues;
 
     let fromRgb: [number, number, number];
+    let bgRgb: [number, number, number];
+
     try {
       //@ts-ignore
       fromRgb = Color(fromColor).rgb().array();
+      //@ts-ignore
+      bgRgb = Color(backgroundColor).rgb().array();
     } catch (err) {
       return;
     }
@@ -62,7 +67,12 @@ export default function CreateTransparent({ title }: ToolComponentProps) {
           data[i + 2]
         ];
         if (areColorsSimilar(currentColor, fromColor, similarity)) {
-          data[i + 3] = 0; // Set alpha to 0 (transparent)
+          // data[i + 3] = 0; // Set alpha to 0 (transparent)
+          // NEW LOGIC: replace with background color
+          data[i] = bgRgb[0];
+          data[i + 1] = bgRgb[1];
+          data[i + 2] = bgRgb[2];
+          data[i + 3] = 255;
         }
       }
 
@@ -99,6 +109,13 @@ export default function CreateTransparent({ title }: ToolComponentProps) {
             description={
               'Match this % of similar colors of the from color. For example, 10% white will match white and a little bit of gray.'
             }
+          />
+
+          {/* NEW FEATURE */}
+          <ColorSelector
+            value={values.backgroundColor}
+            onColorChange={(val) => updateField('backgroundColor', val)}
+            description={'Background color for replaced pixels'}
           />
         </Box>
       )

@@ -94,11 +94,14 @@
       "splitText": "Diviser un texte",
       "trimVideo": "Découper la vidéo"
     },
-    "searchPlaceholder": "Rechercher tous les outils",
+    "search": {
+      "noResult": "Aucun résultat trouvé, essayez d'ajuster votre recherche ou vos critères de filtre",
+      "placeholder": "Rechercher tous les outils"
+    },
     "title": "Faites avancer les choses rapidement avec"
   },
   "inputFooter": {
-    "clear": "Clair",
+    "clear": "Supprimer les fichiers",
     "copyToClipboard": "Copier dans le presse-papiers",
     "importFromFile": "Importer à partir d'un fichier"
   },
@@ -121,6 +124,7 @@
   },
   "navbar": {
     "buyMeACoffee": "Offre-moi un café",
+    "hireMe": "Embauchez-moi",
     "home": "Maison",
     "tools": "Outils"
   },
@@ -224,12 +228,9 @@
     "loading": "Chargement... Cela peut prendre un moment.",
     "result": "Résultat"
   },
-  "toolMultipleAudioInput": {
-    "inputTitle": "Saisir {{type}}",
-    "noFilesSelected": "Aucun fichier sélectionné"
-  },
-  "toolMultiplePdfInput": {
-    "inputTitle": "Saisir {{type}}",
+  "toolMultipleInput": {
+    "deleteFile": "Supprimer le fichier",
+    "inputTitle": "Entrée {{type}}",
     "noFilesSelected": "Aucun fichier sélectionné"
   },
   "toolOptions": {

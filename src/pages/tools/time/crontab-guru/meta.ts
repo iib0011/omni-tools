@@ -19,6 +19,7 @@ export const tool = defineTool('time', {
     name: 'time:crontabGuru.title',
     description: 'time:crontabGuru.description',
     shortDescription: 'time:crontabGuru.shortDescription',
+    longDescription: 'time:crontabGuru.longDescription',
     userTypes: ['developers']
   }
 });

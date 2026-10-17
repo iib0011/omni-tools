@@ -42,6 +42,11 @@ describe('compute function', () => {
     expect(result).toBe('[hello],[world],[again]');
   });
 
+  it('should return the requested number of uneven chunks', () => {
+    const result = compute('chunks', 'abcdef', '', '', 0, 4, '[', ']', ',');
+    expect(result).toBe('[ab],[cd],[e],[f]');
+  });
+
   it('should handle empty input', () => {
     const result = compute('symbol', '', ' ', '', 0, 0, '', '', ',');
     expect(result).toBe('');

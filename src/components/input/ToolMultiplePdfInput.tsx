@@ -1,12 +1,12 @@
-import { ReactNode, useContext, useEffect, useRef, useState } from 'react';
-import { Box, useTheme } from '@mui/material';
+import { useRef } from 'react';
+import { Box, IconButton, Tooltip, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
-import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
-import { isArray } from 'lodash';
+import ClearIcon from '@mui/icons-material/Clear';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { useTranslation } from 'react-i18next';
+import useFileDrop from '../../hooks/useFileDrop';
 
 interface MultiPdfInputComponentProps {
   accept: string[];
@@ -31,15 +31,21 @@ export default function ToolMultiFileInput({
   const { t } = useTranslation();
   const theme = useTheme();
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const { showSnackBar } = useContext(CustomSnackBarContext);
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = event.target.files;
-    if (files)
+  const { isDragging, dropHandlers, addFiles } = useFileDrop({
+    accept,
+    onFiles: (files) =>
       onChange([
         ...value,
-        ...Array.from(files).map((file) => ({ file, order: value.length }))
-      ]);
+        ...files.map((file, index) => ({ file, order: value.length + index }))
+      ])
+  });
+
+  const handleFileChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    if (event.target.files) await addFiles(event.target.files);
+    event.target.value = '';
   };
 
   const handleImportClick = () => {
@@ -65,7 +71,6 @@ export default function ToolMultiFileInput({
   };
 
   const reorderList = (sourceIndex: number, destinationIndex: number) => {
-    console.log(sourceIndex, destinationIndex);
     if (destinationIndex === sourceIndex) {
       return;
     }
@@ -100,7 +105,7 @@ export default function ToolMultiFileInput({
       <InputHeader
         title={
           title ||
-          t('toolMultiplePdfInput.inputTitle', {
+          t('toolMultipleInput.inputTitle', {
             type: type.charAt(0).toUpperCase() + type.slice(1)
           })
         }
@@ -114,19 +119,25 @@ export default function ToolMultiFileInput({
           borderRadius: 2,
           boxShadow: '5',
           bgcolor: 'background.paper',
-          position: 'relative'
+          position: 'relative',
+          borderColor: isDragging ? 'primary.main' : undefined,
+          borderWidth: isDragging ? 2 : undefined,
+          borderStyle: isDragging ? 'dashed' : undefined
         }}
+        {...dropHandlers}
       >
         <Box
           width="100%"
           height="100%"
+          onClick={value?.length ? undefined : handleImportClick}
           sx={{
             overflow: 'auto',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             flexWrap: 'wrap',
-            position: 'relative'
+            position: 'relative',
+            cursor: value?.length ? undefined : 'pointer'
           }}
         >
           {value?.length ? (
@@ -144,26 +155,53 @@ export default function ToolMultiFileInput({
                   padding: 1
                 }}
               >
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <PictureAsPdfIcon />
-                  <Typography sx={{ marginLeft: 1 }}>
-                    {fileNameTruncate(file.file.name)}
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{ cursor: 'pointer' }}
-                  onClick={() => {
-                    const updatedFiles = value.filter((_, i) => i !== index);
-                    onChange(updatedFiles);
-                  }}
-                >
-                  ✖
-                </Box>
+                <Tooltip title={file.file.name}>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      overflow: 'hidden'
+                    }}
+                  >
+                    <PictureAsPdfIcon />
+                    <Typography
+                      sx={{
+                        marginLeft: 1,
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap'
+                      }}
+                    >
+                      {fileNameTruncate(file.file.name)}
+                    </Typography>
+                  </Box>
+                </Tooltip>
+                <Tooltip title={t('toolMultipleInput.deleteFile')}>
+                  <IconButton
+                    size="small"
+                    aria-label={t('toolMultipleInput.deleteFile')}
+                    onClick={() => {
+                      const updatedFiles = value.filter((_, i) => i !== index);
+                      onChange(updatedFiles);
+                    }}
+                  >
+                    <ClearIcon fontSize="small" />
+                  </IconButton>
+                </Tooltip>
               </Box>
             ))
+          ) : isDragging ? (
+            <Typography variant="body2" color="primary">
+              {t('toolMultipleInput.dropFilesHere')}
+            </Typography>
           ) : (
-            <Typography variant="body2" color="text.secondary">
-              {t('toolMultiplePdfInput.noFilesSelected')}
+            <Typography
+              variant="body2"
+              color="text.secondary"
+              align="center"
+              sx={{ px: 2 }}
+            >
+              {t('toolMultipleInput.selectFilesDescription')}
             </Typography>
           )}
         </Box>

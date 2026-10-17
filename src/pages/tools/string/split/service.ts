@@ -18,17 +18,15 @@ function splitIntoChunks(text: string, numChunks: number) {
       'Text length must be at least as long as the number of chunks'
     );
 
-  const chunkSize = Math.ceil(totalLength / numChunks); // Calculate the chunk size, rounding up to handle remainders
-  let result = [];
+  const chunkSize = Math.floor(totalLength / numChunks);
+  const remainder = totalLength % numChunks;
+  const result: string[] = [];
+  let offset = 0;
 
-  for (let i = 0; i < totalLength; i += chunkSize) {
-    result.push(text.slice(i, i + chunkSize));
-  }
-
-  // Ensure the result contains exactly numChunks, adjusting the last chunk if necessary
-  if (result.length > numChunks) {
-    result[numChunks - 1] = result.slice(numChunks - 1).join(''); // Merge any extra chunks into the last chunk
-    result = result.slice(0, numChunks); // Take only the first numChunks chunks
+  for (let i = 0; i < numChunks; i++) {
+    const currentSize = chunkSize + (i < remainder ? 1 : 0);
+    result.push(text.slice(offset, offset + currentSize));
+    offset += currentSize;
   }
 
   return result;

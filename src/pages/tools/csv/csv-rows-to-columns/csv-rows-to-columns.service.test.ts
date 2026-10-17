@@ -58,4 +58,16 @@ describe('csvRowsToColumns', () => {
       'Variety,Arabica,Robusta,Liberica,Mocha\nOrigin,Ethiopia,Africa,Philippines,1x'
     );
   });
+
+  it('should remove blank lines', () => {
+    const input = 'a,b\n\n1,2\n\nx,y';
+    const result = csvRowsToColumns(input, false, '', '#');
+    expect(result).toBe('a,1,x\nb,2,y');
+  });
+
+  it('should remove lines that contain only whitespace', () => {
+    const input = 'a,b\n   \n1,2';
+    const result = csvRowsToColumns(input, false, '', '#');
+    expect(result).toBe('a,1\nb,2');
+  });
 });

@@ -34,7 +34,7 @@ export default function MergeAudio({
     optionsValues: InitialValuesType,
     input: MultiAudioInput[]
   ) => {
-    if (input.length === 0) return;
+    if (input.length < 2) return;
     setLoading(true);
     try {
       const files = input.map((item) => item.file);
@@ -94,19 +94,12 @@ export default function MergeAudio({
         />
       }
       resultComponent={
-        loading ? (
-          <ToolFileResult
-            title={t('mergeAudio.mergingAudio')}
-            value={null}
-            loading={true}
-          />
-        ) : (
-          <ToolFileResult
-            title={t('mergeAudio.resultTitle')}
-            value={result}
-            extension={result ? result.name.split('.').pop() : undefined}
-          />
-        )
+        <ToolFileResult
+          title={t('mergeAudio.resultTitle')}
+          loading={loading}
+          value={result}
+          extension={result ? result.name.split('.').pop() : undefined}
+        />
       }
       initialValues={initialValues}
       getGroups={getGroups}

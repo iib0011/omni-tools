@@ -8,10 +8,7 @@
     "settingSpeed": "Geschwindigkeit einstellen",
     "shortDescription": "Ändern Sie die Geschwindigkeit von Audiodateien",
     "speedDescription": "Standardmultiplikator: 2 bedeutet 2x schneller",
-    "title": "Audiogeschwindigkeit ändern",
-    "toolInfo": {
-      "title": "Was ist {{title}}?"
-    }
+    "title": "Audiogeschwindigkeit ändern"
   },
   "extractAudio": {
     "description": "Extrahieren Sie Audiospuren aus Videodateien.",
@@ -31,7 +28,6 @@
     "description": "Kombinieren Sie mehrere Audiodateien zu einer einzigen Audiodatei, indem Sie sie der Reihe nach aneinanderreihen.",
     "inputTitle": "Audiodateien eingeben",
     "longDescription": "Mit diesem Tool können Sie mehrere Audiodateien in der Reihenfolge des Hochladens zu einer einzigen Datei zusammenfügen. Ideal zum Kombinieren von Podcast-Segmenten, Musiktiteln oder anderen Audiodateien. Unterstützt verschiedene Audioformate, darunter MP3, AAC und WAV.",
-    "mergingAudio": "Audio zusammenführen",
     "outputFormat": "Ausgabeformat",
     "resultTitle": "Zusammengeführtes Audio",
     "shortDescription": "Mehrere Audiodateien zu einer zusammenführen (MP3, AAC, WAV).",
@@ -55,7 +51,6 @@
     "title": "Audio trimmen",
     "toolInfo": {
       "title": "Was ist {{title}}?"
-    },
-    "trimmingAudio": "Audio trimmen"
+    }
   }
 }

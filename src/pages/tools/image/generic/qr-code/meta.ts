@@ -11,8 +11,9 @@ export const tool = defineTool('image-generic', {
   path: 'qr-code',
   icon: 'mdi:qrcode', // Iconify icon as a string
   keywords: [
-    'qr code',
     'qrcode',
+    'quick',
+    'read',
     'generator',
     'url',
     'text',
@@ -21,7 +22,8 @@ export const tool = defineTool('image-generic', {
     'sms',
     'wifi',
     'vcard',
-    'contact'
+    'contact',
+    'barcode'
   ],
   component: lazy(() => import('./index'))
 });

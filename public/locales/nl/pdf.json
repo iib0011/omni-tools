@@ -21,6 +21,11 @@
     "shortDescription": "Comprimeer PDF-bestanden veilig in uw browser",
     "title": "PDF comprimeren"
   },
+  "convertToPdf": {
+    "description": "Verschillende afbeeldingsformaten (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) naar PDF converteren, met opties om de afbeelding te schalen en de paginaoriëntatie te kiezen.",
+    "shortDescription": "Afbeeldingen naar PDF converteren met schaal- en oriëntatiecontrole",
+    "title": "Afbeeldingen naar PDF"
+  },
   "editor": {
     "description": "Geavanceerde PDF-editor met mogelijkheden voor annotatie, formulieren invullen, markeren en exporteren. Bewerk uw PDF's rechtstreeks in de browser met professionele tools zoals tekst invoegen, tekenen, markeren, ondertekenen en formulieren invullen.",
     "shortDescription": "Bewerk PDF's met geavanceerde hulpmiddelen voor annotatie, ondertekening en bewerking",
@@ -81,8 +86,8 @@
     "longDescription": "Wijzig de oriëntatie van PDF-pagina's door ze 90, 180 of 270 graden te draaien. Handig voor het corrigeren van onjuist gescande documenten of het voorbereiden van PDF's voor afdrukken.",
     "pageRangesDescription": "Voer paginanummers of bereiken in, gescheiden door komma's (bijv. 1, 3, 5-7)",
     "pageRangesPlaceholder": "bijv. 1,5-8",
-    "pagesWillBeRotated": "{{count}} pagina{{count !== 1 ? 's' : ''}} zal worden gedraaid",
-    "pdfPageCount": "PDF heeft {{count}} pagina{{count !== 1 ? 's' : ''}}",
+    "pagesWillBeRotated": "{{count}} pagina{{plural}} zal worden gedraaid",
+    "pdfPageCount": "PDF heeft {{count}} pagina{{plural}}",
     "resultTitle": "Gedraaide PDF",
     "rotatingPages": "Roterende pagina's",
     "rotationAngle": "Rotatiehoek",
@@ -98,11 +103,11 @@
     "description": "Specifieke pagina's uit een PDF-document extraheren.",
     "extractingPages": "Pagina's extraheren",
     "inputTitle": "PDF-invoer",
-    "pageExtractionPreview": "{{count}} pagina{{count !== 1 ? 's' : ''}} zal worden geëxtraheerd",
+    "pageExtractionPreview": "{{count}} pagina{{ plural }} zal worden geëxtraheerd",
     "pageRangesDescription": "Voer paginanummers of bereiken in, gescheiden door komma's (bijv. 1, 3, 5-7)",
     "pageRangesPlaceholder": "bijv. 1,5-8",
     "pageSelection": "Paginaselectie",
-    "pdfPageCount": "PDF heeft {{count}} pagina{{count !== 1 ? 's' : ''}}",
+    "pdfPageCount": "PDF heeft {{count}} pagina{{plural}}",
     "resultTitle": "Geëxtraheerde PDF",
     "shortDescription": "Specifieke pagina's uit een PDF-bestand extraheren",
     "title": "PDF splitsen",

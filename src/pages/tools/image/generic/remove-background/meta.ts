@@ -11,14 +11,6 @@ export const tool = defineTool('image-generic', {
   path: 'remove-background',
   icon: 'mdi:image-remove',
 
-  keywords: [
-    'remove',
-    'background',
-    'png',
-    'transparent',
-    'image',
-    'ai',
-    'jpg'
-  ],
+  keywords: ['png', 'transparent', 'image', 'ai', 'jpg', 'backing', 'backdrop'],
   component: lazy(() => import('./index'))
 });

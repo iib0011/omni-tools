@@ -70,5 +70,7 @@ export async function splitPdf(
 
   const newPdfBytes = await newPdf.save();
   const newFileName = pdfFile.name.replace('.pdf', '-extracted.pdf');
-  return new File([newPdfBytes], newFileName, { type: 'application/pdf' });
+  return new File([newPdfBytes as any], newFileName, {
+    type: 'application/pdf'
+  });
 }

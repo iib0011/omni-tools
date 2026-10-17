@@ -4,7 +4,7 @@
 <a href="https://trendshift.io/repositories/13055" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13055" alt="iib0011%2Fomni-tools | Trendshift" style="width: 200px;" width="200"/></a>
    <br /><br />
 <a href="https://github.com/iib0011/omni-tools/releases">
-          <img src="https://img.shields.io/badge/version-0.5.0-blue?style=for-the-badge" />
+          <img src="https://img.shields.io/badge/version-0.6.0-blue?style=for-the-badge" />
         </a>
         <a href="https://hub.docker.com/r/iib0011/omni-tools">
           <img src="https://img.shields.io/docker/pulls/iib0011/omni-tools?style=for-the-badge&logo=docker" />
@@ -151,7 +151,24 @@ npm run test:e2e
 ### i18n (Translations)
 The translation files are [here](public/locales). Only edit these if you are a developer. For non developers, use [Locize](https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK).
 
-<img src="https://api.star-history.com/svg?repos=iib0011/omni-tools&type=Date"/>
+<!-- I18N-COVERAGE:START -->
+| Language | Translation status | Missing keys |
+|----------|--------------------|--------------|
+| uk - Ukrainian  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 96%` | 68 |
+| zh - Chinese  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░ 69%` | 546 |
+| hi - Hindi  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░ 68%` | 573 |
+| ru - Russian  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░ 68%` | 561 |
+| de - German  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░ 67%` | 583 |
+| es - Spanish  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░ 67%` | 583 |
+| fr - French  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░ 67%` | 583 |
+| ja - Japanese  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░ 67%` | 583 |
+| nl - Dutch  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░ 67%` | 583 |
+| pt - Portuguese  | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░ 67%` | 583 |
+<!-- I18N-COVERAGE:END -->
+
+## ⭐ Star History
+
+<img src="https://star-history.dera.page/svg?repos=iib0011/omni-tools&type=Date"/>
 
 ## 🤝 Looking to contribute?
 

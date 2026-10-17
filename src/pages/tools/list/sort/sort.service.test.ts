@@ -183,6 +183,12 @@ describe('numericSort function', () => {
     });
 
     // CASE SENSITIVE TEST
+    it('should compare the full string when prefixes match', () => {
+      const result = alphabeticSort(['az', 'aa'], true, ',', false, true);
+
+      expect(result).toBe('aa,az');
+    });
+
     it('should sort a list of string (uppercase) in decreasing order with comma separator ', () => {
       const array: string[] = ['Apple', 'Pineaple', 'Lemon', 'Orange'];
       const increasing: boolean = false;

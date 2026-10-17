@@ -16,7 +16,8 @@ import {
   Stack,
   Select,
   MenuItem,
-  FormControl
+  FormControl,
+  Typography
 } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -38,6 +39,7 @@ const languages = [
   { code: 'hi', label: 'हिंदी' },
   { code: 'nl', label: 'Nederlands' },
   { code: 'ru', label: 'Русский' },
+  { code: 'uk', label: 'Українська' },
   { code: 'zh', label: '中文' }
 ];
 
@@ -112,12 +114,14 @@ const Navbar: React.FC<NavbarProps> = ({
       }
     />,
     <Icon
+      key="discord"
       onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
       style={{ cursor: 'pointer' }}
       fontSize={30}
       icon={'ic:baseline-discord'}
     />,
     <iframe
+      key="github-star"
       src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
       frameBorder="0"
       scrolling="0"
@@ -126,8 +130,12 @@ const Navbar: React.FC<NavbarProps> = ({
       title="GitHub"
     ></iframe>,
     <Button
+      key="translate"
       onClick={() => {
-        window.open('https://buymeacoffee.com/iib0011', '_blank');
+        window.open(
+          'https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK',
+          '_blank'
+        );
       }}
       sx={{ borderRadius: '100px' }}
       variant={'contained'}
@@ -135,11 +143,11 @@ const Navbar: React.FC<NavbarProps> = ({
         <Icon
           style={{ cursor: 'pointer' }}
           fontSize={25}
-          icon={'mdi:heart-outline'}
+          icon={'ix:language-filled'}
         />
       }
     >
-      {t('navbar.buyMeACoffee')}
+      {t('navbar.helpTranslate')}
     </Button>
   ];
   const drawerList = (
@@ -152,8 +160,8 @@ const Navbar: React.FC<NavbarProps> = ({
           <ListItemText primary={navItem.label} />
         </ListItemButton>
       ))}
-      {buttons.map((button) => (
-        <ListItem>{button}</ListItem>
+      {buttons.map((button, index) => (
+        <ListItem key={index}>{button}</ListItem>
       ))}
     </List>
   );
@@ -175,12 +183,34 @@ const Navbar: React.FC<NavbarProps> = ({
           mx: { md: '50px', lg: '150px' }
         }}
       >
-        <Link to="/">
-          <img
-            src={theme.palette.mode === 'light' ? logo : logoWhite}
-            width={isMobile ? '120px' : '200px'}
-          />
-        </Link>
+        <Stack direction="row" spacing={1.5} alignItems="center">
+          <Link to="/">
+            <img
+              src={theme.palette.mode === 'light' ? logo : logoWhite}
+              width={isMobile ? '120px' : '200px'}
+            />
+          </Link>
+          <Typography
+            component="span"
+            variant="caption"
+            sx={{
+              color: 'text.secondary',
+              fontWeight: 600,
+              whiteSpace: 'nowrap'
+            }}
+          >
+            v{__APP_VERSION__} (
+            <a
+              href={`https://github.com/iib0011/omni-tools/tree/${__COMMIT_HASH__}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'inherit' }}
+            >
+              {__COMMIT_HASH__}
+            </a>
+            )
+          </Typography>
+        </Stack>
         {isMobile ? (
           <>
             <IconButton

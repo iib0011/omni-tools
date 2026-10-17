@@ -1,18 +1,16 @@
 import { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import ToolCodeInput from '@components/input/ToolCodeInput';
-import ToolTextResult from '@components/result/ToolTextResult';
+import ToolCodeResult from '@components/result/ToolCodeResult';
 import { convertJsonToXml } from './service';
 import { CardExampleType } from '@components/examples/ToolExamples';
 import { ToolComponentProps } from '@tools/defineTool';
 import { Box } from '@mui/material';
 import CheckboxWithDesc from '@components/options/CheckboxWithDesc';
 import SimpleRadio from '@components/options/SimpleRadio';
-
-type InitialValuesType = {
-  indentationType: 'space' | 'tab' | 'none';
-  addMetaTag: boolean;
-};
+import { InitialValuesType } from './types';
+import { useTranslation } from 'react-i18next';
+import { JsonFormat } from 'utils/json';
 
 const initialValues: InitialValuesType = {
   indentationType: 'space',
@@ -57,19 +55,20 @@ const exampleCards: CardExampleType<InitialValuesType>[] = [
 ];
 
 export default function JsonToXml({ title }: ToolComponentProps) {
+  const { t } = useTranslation('json');
   const [input, setInput] = useState<string>('');
   const [result, setResult] = useState<string>('');
+  const [inputFormat, setInputFormat] = useState<JsonFormat>('json');
 
   const compute = (values: InitialValuesType, input: string) => {
     if (input) {
       try {
-        const xmlResult = convertJsonToXml(input, values);
-        setResult(xmlResult);
+        const { result, inputFormat } = convertJsonToXml(input, values);
+        setResult(result);
+        setInputFormat(inputFormat);
       } catch (error) {
         setResult(
-          `Error: ${
-            error instanceof Error ? error.message : 'Invalid Json format'
-          }`
+          `${error instanceof Error ? error.message : 'Invalid Json format'}`
         );
       }
     }
@@ -85,14 +84,18 @@ export default function JsonToXml({ title }: ToolComponentProps) {
       exampleCards={exampleCards}
       inputComponent={
         <ToolCodeInput
-          title="Input Json"
+          title={t('jsonToXml.inputTitle')}
           value={input}
           onChange={setInput}
-          language="json"
+          language={inputFormat}
         />
       }
       resultComponent={
-        <ToolTextResult title="Output XML" value={result} extension={'xml'} />
+        <ToolCodeResult
+          title={t('jsonToXml.outputTitle')}
+          value={result}
+          language={'xml'}
+        />
       }
       getGroups={({ values, updateField }) => [
         {
@@ -101,38 +104,34 @@ export default function JsonToXml({ title }: ToolComponentProps) {
             <Box>
               <SimpleRadio
                 checked={values.indentationType === 'space'}
-                title={'Use Spaces for indentation'}
-                description={
-                  'Use spaces to visualize the hierarchical structure of XML.'
-                }
+                title={t('jsonToXml.options.useSpaceTitle')}
+                description={t('jsonToXml.options.useSpaceDesc')}
                 onClick={() => updateField('indentationType', 'space')}
               />
               <SimpleRadio
                 checked={values.indentationType === 'tab'}
-                title={'Use Tabs for indentation'}
-                description={
-                  'Use tabs to visualize the hierarchical structure of XML.'
-                }
+                title={t('jsonToXml.options.useTabTitle')}
+                description={t('jsonToXml.options.useTabDesc')}
                 onClick={() => updateField('indentationType', 'tab')}
               />
               <SimpleRadio
                 checked={values.indentationType === 'none'}
-                title={'No indentation'}
-                description={'Output XML without any indentation.'}
+                title={t('jsonToXml.options.noIdentTitle')}
+                description={t('jsonToXml.options.noIdentDesc')}
                 onClick={() => updateField('indentationType', 'none')}
               />
             </Box>
           )
         },
         {
-          title: 'XML Meta Information',
+          title: t('jsonToXml.options.metaInfoTitle'),
           component: (
             <Box>
               <CheckboxWithDesc
                 checked={values.addMetaTag}
                 onChange={(value) => updateField('addMetaTag', value)}
-                title="Add an XML Meta Tag"
-                description="Add a meta tag at the beginning of the XML output."
+                title={t('jsonToXml.options.addMetaTagTitle')}
+                description={t('jsonToXml.options.addMetaTagDesc')}
               />
             </Box>
           )

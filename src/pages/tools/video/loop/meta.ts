@@ -3,7 +3,7 @@ import { lazy } from 'react';
 
 export const tool = defineTool('video', {
   path: 'loop',
-  icon: 'material-symbols:loop',
+  icon: 'ic:outline-loop',
 
   keywords: ['video', 'loop', 'repeat', 'continuous'],
   component: lazy(() => import('./index')),

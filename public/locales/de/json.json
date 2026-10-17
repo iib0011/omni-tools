@@ -46,11 +46,6 @@
     "shortDescription": "Konvertieren Sie Objekte in JSON-Zeichenfolgen",
     "title": "Stringify JSON"
   },
-  "tsvToJson": {
-    "description": "Konvertieren Sie TSV-Daten (Tab-Separated Values) in das JSON-Format. Transformieren Sie tabellarische Daten in strukturierte JSON-Objekte.",
-    "shortDescription": "Konvertieren Sie TSV in das JSON-Format",
-    "title": "TSV zu JSON"
-  },
   "validateJson": {
     "description": "Überprüfen Sie, ob JSON gültig und wohlgeformt ist.",
     "inputTitle": "JSON-Eingabe",

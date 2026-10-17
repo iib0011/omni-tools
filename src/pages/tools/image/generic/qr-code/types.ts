@@ -7,7 +7,9 @@ export type QRCodeType =
   | 'WiFi'
   | 'vCard';
 
-export type WifiEncryptionType = 'WPA/WPA2' | 'WEP' | 'None';
+export type QRErrorCorrectionLevel = 'L' | 'M' | 'Q' | 'H';
+
+export type WifiEncryptionType = 'WPA' | 'WEP' | 'None';
 
 export interface InitialValuesType {
   qrCodeType: QRCodeType;
@@ -16,6 +18,7 @@ export interface InitialValuesType {
   size: string;
   bgColor: string;
   fgColor: string;
+  correctionLevel: QRErrorCorrectionLevel;
 
   // URL
   url: string;

@@ -78,5 +78,7 @@ export async function rotatePdf(
   const modifiedPdfBytes = await pdfDoc.save();
   const newFileName = pdfFile.name.replace('.pdf', '-rotated.pdf');
 
-  return new File([modifiedPdfBytes], newFileName, { type: 'application/pdf' });
+  return new File([modifiedPdfBytes as any], newFileName, {
+    type: 'application/pdf'
+  });
 }

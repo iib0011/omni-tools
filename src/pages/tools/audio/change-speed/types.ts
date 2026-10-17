@@ -1,4 +1,4 @@
 export type InitialValuesType = {
-  newSpeed: number;
+  speed: number;
   outputFormat: 'mp3' | 'aac' | 'wav';
 };

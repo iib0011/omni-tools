@@ -8,10 +8,7 @@
     "settingSpeed": "Definindo a velocidade",
     "shortDescription": "Alterar a velocidade dos arquivos de áudio",
     "speedDescription": "Multiplicador padrão: 2 significa 2x mais rápido",
-    "title": "Alterar velocidade do áudio",
-    "toolInfo": {
-      "title": "O que é {{title}}?"
-    }
+    "title": "Alterar velocidade do áudio"
   },
   "extractAudio": {
     "description": "Extraia faixas de áudio de arquivos de vídeo.",
@@ -31,7 +28,6 @@
     "description": "Combine vários arquivos de áudio em um único arquivo de áudio concatenando-os em sequência.",
     "inputTitle": "Arquivos de áudio de entrada",
     "longDescription": "Esta ferramenta permite mesclar vários arquivos de áudio em um único arquivo, concatenando-os na ordem em que foram enviados. Perfeito para combinar segmentos de podcast, faixas de música ou qualquer arquivo de áudio que precise ser unido. Suporta vários formatos de áudio, incluindo MP3, AAC e WAV.",
-    "mergingAudio": "Mesclando áudio",
     "outputFormat": "Formato de saída",
     "resultTitle": "Áudio mesclado",
     "shortDescription": "Mescle vários arquivos de áudio em um (MP3, AAC, WAV).",
@@ -55,7 +51,6 @@
     "title": "Aparar áudio",
     "toolInfo": {
       "title": "O que é {{title}}?"
-    },
-    "trimmingAudio": "Cortando áudio"
+    }
   }
 }

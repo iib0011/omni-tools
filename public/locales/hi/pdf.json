@@ -28,6 +28,11 @@
     "shortDescription": "अपने ब्राउज़र में सुरक्षित रूप से पीडीएफ फ़ाइलों को संपीड़ित करें",
     "title": "PDF संपीड़ित करें"
   },
+  "convertToPdf": {
+    "description": "विभिन्न छवि प्रारूपों (PNG, GIF, JPG, TIF, PSD, SVG, WEBP, HEIC, RAW) को PDF में परिवर्तित करें और छवि का आकार और पृष्ठ की अभिविन्यास समायोजित करें।",
+    "shortDescription": "छवियों को PDF में परिवर्तित करें, आकार और अभिविन्यास समायोजित करने योग्य",
+    "title": "PDF में छवि बदलें"
+  },
   "editor": {
     "description": "एनोटेशन, फ़ॉर्म-फ़िल, हाइलाइट और निर्यात क्षमताओं वाला उन्नत PDF संपादक। टेक्स्ट इंसर्शन, ड्रॉइंग, हाइलाइटिंग, हस्ताक्षर और फ़ॉर्म भरने जैसे पेशेवर-स्तरीय टूल से सीधे ब्राउज़र में अपनी PDF फ़ाइलों को संपादित करें।",
     "shortDescription": "उन्नत एनोटेशन, हस्ताक्षर और संपादन टूल के साथ PDF संपादित करें",
@@ -117,8 +122,8 @@
     "pageRangesDescription": "पृष्ठ संख्या या श्रेणियाँ अल्पविराम से अलग करके दर्ज करें (उदाहरण के लिए, 1,3,5-7)",
     "pageRangesPlaceholder": "उदाहरणार्थ, 1,5-8",
     "pagesPlaceholder": "जैसे 1,3-5,7",
-    "pagesWillBeRotated": "{{count}} पृष्ठ{{count !== 1 ? 's' : ''}} घुमाया जाएगा",
-    "pdfPageCount": "पीडीएफ में है {{count}} पृष्ठ{{count !== 1 ? 's' : ''}}",
+    "pagesWillBeRotated": "{{count}} पृष्ठ घुमाया जाएगा",
+    "pdfPageCount": "पीडीएफ में है {{count}} पृष्ठ",
     "resultTitle": "घुमाया गया PDF",
     "rotatingPages": "घूमते हुए पृष्ठ",
     "rotationAngle": "घुमाने का कोण",
@@ -137,12 +142,12 @@
     "extractingPages": "पृष्ठ निकालना",
     "includeBookmarks": "बुकमार्क शामिल करें",
     "inputTitle": "इनपुट PDF",
-    "pageExtractionPreview": "{{count}} पृष्ठ{{count !== 1 ? 's' : ''}} निकाला जाएगा",
+    "pageExtractionPreview": "{{count}} पृष्ठ निकाला जाएगा",
     "pageRanges": "पेज श्रेणियां",
     "pageRangesDescription": "पृष्ठ संख्या या श्रेणियाँ अल्पविराम से अलग करके दर्ज करें (उदाहरण के लिए, 1,3,5-7)",
     "pageRangesPlaceholder": "उदाहरणार्थ, 1,5-8",
     "pageSelection": "पृष्ठ चयन",
-    "pdfPageCount": "पीडीएफ में है {{count}} पृष्ठ{{count !== 1 ? 's' : ''}}",
+    "pdfPageCount": "पीडीएफ में है {{count}} पृष्ठ",
     "rangesPlaceholder": "जैसे 1,3-5,7",
     "resultTitle": "विभाजित PDF फ़ाइलें",
     "shortDescription": "पीडीएफ फ़ाइल से विशिष्ट पेज निकालें",

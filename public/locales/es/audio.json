@@ -8,10 +8,7 @@
     "settingSpeed": "Ajuste de velocidad",
     "shortDescription": "Cambiar la velocidad de los archivos de audio",
     "speedDescription": "Multiplicador predeterminado: 2 significa 2 veces más rápido",
-    "title": "Cambiar la velocidad del audio",
-    "toolInfo": {
-      "title": "Qué es {{title}}?"
-    }
+    "title": "Cambiar la velocidad del audio"
   },
   "extractAudio": {
     "description": "Extraer pistas de audio de archivos de vídeo.",
@@ -31,7 +28,6 @@
     "description": "Combine varios archivos de audio en un solo archivo de audio concatenándolos en secuencia.",
     "inputTitle": "Archivos de audio de entrada",
     "longDescription": "Esta herramienta te permite fusionar varios archivos de audio en uno solo concatenándolos en el orden en que los subes. Es perfecta para combinar segmentos de podcast, pistas de música o cualquier archivo de audio que necesite unirse. Admite varios formatos de audio, como MP3, AAC y WAV.",
-    "mergingAudio": "Fusión de audio",
     "outputFormat": "Formato de salida",
     "resultTitle": "Audio fusionado",
     "shortDescription": "Fusionar varios archivos de audio en uno (MP3, AAC, WAV).",
@@ -55,7 +51,6 @@
     "title": "Recortar audio",
     "toolInfo": {
       "title": "Qué es {{title}}?"
-    },
-    "trimmingAudio": "Recorte de audio"
+    }
   }
 }

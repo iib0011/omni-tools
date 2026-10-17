@@ -1,4 +1,3 @@
-import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import ToolContent from '@components/ToolContent';
 import { ToolComponentProps } from '@tools/defineTool';
@@ -7,14 +6,17 @@ import ToolMultipleVideoInput, {
   MultiVideoInput
 } from '@components/input/ToolMultipleVideoInput';
 import { mergeVideos } from './service';
-import { InitialValuesType } from './types';
+import { useTranslation } from 'react-i18next';
 
-const initialValues: InitialValuesType = {};
+const initialValues = {};
+
+type InitialValuesType = typeof initialValues;
 
 export default function MergeVideo({
   title,
   longDescription
 }: ToolComponentProps) {
+  const { t } = useTranslation('video');
   const [input, setInput] = useState<MultiVideoInput[]>([]);
   const [result, setResult] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
@@ -28,12 +30,9 @@ export default function MergeVideo({
     }
     setLoading(true);
     try {
-      const files = input.map((item) => item.file);
-      const mergedBlob = await mergeVideos(files, initialValues);
-      const mergedFile = new File([mergedBlob], 'merged-video.mp4', {
-        type: 'video/mp4'
-      });
-      setResult(mergedFile);
+      const resultFile = await mergeVideos(input.map((item) => item.file));
+
+      setResult(resultFile);
     } catch (err) {
       setResult(null);
     } finally {
@@ -51,15 +50,15 @@ export default function MergeVideo({
           onChange={(newInput) => {
             setInput(newInput);
           }}
-          accept={['video/*', '.mp4', '.avi', '.mov', '.mkv']}
-          title="Input Videos"
+          accept={['video/*']}
+          title={t('mergeVideo.inputTitle')}
           type="video"
         />
       }
       resultComponent={
         <ToolFileResult
           value={result}
-          title={loading ? 'Merging Videos...' : 'Merged Video'}
+          title={t('mergeVideo.resultTitle')}
           loading={loading}
           extension={'mp4'}
         />
@@ -68,7 +67,7 @@ export default function MergeVideo({
       getGroups={null}
       setInput={setInput}
       compute={compute}
-      toolInfo={{ title: `What is a ${title}?`, description: longDescription }}
+      toolInfo={{ title: `${title} ?`, description: longDescription }}
     />
   );
 }

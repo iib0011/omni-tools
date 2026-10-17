@@ -20,6 +20,21 @@ const initialValues: InitialValuesType = {
   separator: ', '
 };
 
+/**
+ * Parses a numeric field without silently snapping back to a default.
+ * Empty or non-numeric input becomes NaN so that validateInput can
+ * surface a proper, specific error instead of the field just reverting.
+ */
+const parseNumericField = (value: string): number => {
+  if (value.trim() === '') {
+    return NaN;
+  }
+
+  const parsed = Number(value);
+
+  return Number.isNaN(parsed) ? NaN : parsed;
+};
+
 export default function RandomNumberGenerator({
   title,
   longDescription
@@ -35,7 +50,8 @@ export default function RandomNumberGenerator({
       setResult(null);
       setFormattedResult('');
 
-      // Validate input
+      // Validate input - this is the single source of truth for what
+      // counts as valid, including range/count/domain-size checks.
       const validationError = validateInput(values);
       if (validationError) {
         setError(validationError);
@@ -55,7 +71,13 @@ export default function RandomNumberGenerator({
       setFormattedResult(formatted);
     } catch (err) {
       console.error('Random number generation failed:', err);
-      setError(t('randomNumberGenerator.error.generationFailed'));
+      // Prefer the specific error message when we have one (e.g. thrown
+      // from generateRandomNumbers), falling back to a generic message
+      const message =
+        err instanceof Error && err.message
+          ? err.message
+          : t('randomNumberGenerator.error.generationFailed');
+      setError(message);
     }
   };
 
@@ -70,7 +92,7 @@ export default function RandomNumberGenerator({
           <TextFieldWithDesc
             value={values.minValue.toString()}
             onOwnChange={(value) =>
-              updateField('minValue', parseInt(value) || 1)
+              updateField('minValue', parseNumericField(value))
             }
             description={t(
               'randomNumberGenerator.options.range.minDescription'
@@ -83,7 +105,7 @@ export default function RandomNumberGenerator({
           <TextFieldWithDesc
             value={values.maxValue.toString()}
             onOwnChange={(value) =>
-              updateField('maxValue', parseInt(value) || 100)
+              updateField('maxValue', parseNumericField(value))
             }
             description={t(
               'randomNumberGenerator.options.range.maxDescription'
@@ -102,7 +124,9 @@ export default function RandomNumberGenerator({
         <Box>
           <TextFieldWithDesc
             value={values.count.toString()}
-            onOwnChange={(value) => updateField('count', parseInt(value) || 10)}
+            onOwnChange={(value) =>
+              updateField('count', parseNumericField(value))
+            }
             description={t(
               'randomNumberGenerator.options.generation.countDescription'
             )}

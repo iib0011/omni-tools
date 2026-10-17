@@ -113,37 +113,6 @@
     "trimItemsDescription": "Elimine los espacios iniciales y finales antes de comparar elementos.",
     "uniqueItemOptions": "Opciones de artículos únicos"
   },
-  "group": {
-    "deleteEmptyItems": "Eliminar elementos vacíos",
-    "deleteEmptyItemsDescription": "Ignore los elementos vacíos y no los incluya en los grupos.",
-    "description": "La utilidad basada en navegador más sencilla del mundo para agrupar elementos de listas. Introduce tu lista y especifica los criterios de agrupación para organizar los elementos en grupos lógicos. Perfecta para categorizar datos, organizar información o crear listas estructuradas. Admite separadores personalizados y diversas opciones de agrupación.",
-    "emptyItemsAndPadding": "Elementos vacíos y relleno",
-    "groupNumberDescription": "Número de elementos en un grupo",
-    "groupSeparatorDescription": "Carácter separador de grupo",
-    "groupSizeAndSeparators": "Tamaño del grupo y separadores",
-    "inputItemSeparator": "Separador de elementos de entrada",
-    "inputTitle": "Lista de entrada",
-    "itemSeparatorDescription": "Carácter separador de elementos",
-    "leftWrapDescription": "Símbolo de envoltura izquierda del grupo.",
-    "padNonFullGroups": "Grupos no llenos de Pad",
-    "padNonFullGroupsDescription": "Llene los grupos que no estén completos con un elemento personalizado (ingréselo a continuación).",
-    "paddingCharDescription": "Utilice este carácter o elemento para rellenar grupos que no estén completos.",
-    "resultTitle": "Elementos agrupados",
-    "rightWrapDescription": "Símbolo de envoltura derecha del grupo.",
-    "shortDescription": "Agrupar elementos de la lista por propiedades comunes",
-    "splitOperators": {
-      "regex": {
-        "description": "Delimitar los elementos de la lista de entrada con una expresión regular.",
-        "title": "Utilice una expresión regular para dividir"
-      },
-      "symbol": {
-        "description": "Delimitar los elementos de la lista de entrada con un carácter.",
-        "title": "Utilice un símbolo para dividir"
-      }
-    },
-    "splitSeparatorDescription": "Establezca un símbolo delimitador o una expresión regular.",
-    "title": "Grupo"
-  },
   "reverse": {
     "description": "Esta sencilla aplicación basada en navegador imprime todos los elementos de la lista en orden inverso. Los elementos de entrada se pueden separar con cualquier símbolo y también se puede cambiar el separador de los elementos de la lista invertidos.",
     "inputTitle": "Lista de entrada",

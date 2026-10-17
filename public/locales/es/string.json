@@ -84,7 +84,7 @@
     "includeNumbers": "Incluir números (0-9)",
     "includeSymbols": "Incluir caracteres especiales",
     "includeUppercase": "Incluir letras mayúsculas (A-Z)",
-    "lengthDesc": "Longitud de la contraseña",
+    "lengthDesc": "Longitud de la contraseña (>3 & <257)",
     "lengthPlaceholder": "p. ej. 12",
     "optionsTitle": "Opciones de contraseña",
     "resultTitle": "Contraseña generada",

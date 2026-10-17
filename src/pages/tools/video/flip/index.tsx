@@ -90,20 +90,12 @@ export default function FlipVideo({ title }: ToolComponentProps) {
         />
       }
       resultComponent={
-        loading ? (
-          <ToolFileResult
-            title={t('flip.flippingVideo')}
-            value={null}
-            loading={true}
-            extension={''}
-          />
-        ) : (
-          <ToolFileResult
-            title={t('flip.resultTitle')}
-            value={result}
-            extension={'mp4'}
-          />
-        )
+        <ToolFileResult
+          title={t('flip.resultTitle')}
+          loading={loading}
+          value={result}
+          extension={'mp4'}
+        />
       }
       initialValues={initialValues}
       getGroups={getGroups}
