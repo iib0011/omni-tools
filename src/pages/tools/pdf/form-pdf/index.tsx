@@ -28,6 +28,7 @@ export default function DragDropPdfEditor() {
   const pageRectsRef = useRef<{
     [page: number]: { width: number; height: number };
   }>({});
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -38,6 +39,12 @@ export default function DragDropPdfEditor() {
 
   const handleDragOver = (e: React.DragEvent) => e.preventDefault();
 
+  const handleClear = () => {
+    setFile(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
   const handleDropField = (e: React.DragEvent, pageNo: number) => {
     e.preventDefault();
     if (!draggingField) return;
@@ -167,117 +174,124 @@ export default function DragDropPdfEditor() {
   return (
     <Box sx={{ display: 'flex', height: '100vh', overflow: 'hidden' }}>
       {/* Toolbox */}
-      <Paper sx={{ p: 2, mr: 2, width: 240, overflowY: 'auto' }}>
-        <Typography variant="h6" sx={{ mb: 2 }}>
-          Toolbox
-        </Typography>
-        {/* draggable items */}
-        <Box
-          draggable
-          onDragStart={() => setDraggingField('text')}
-          sx={toolboxItemStyle}
-        >
-          <input
-            type="text"
-            placeholder="Text field"
-            disabled
-            style={{ ...inputStyle, color: '#000' }}
-          />
-        </Box>
-        <Box
-          draggable
-          onDragStart={() => setDraggingField('textarea')}
-          sx={toolboxItemStyle}
-        >
-          <textarea
-            placeholder="Textarea"
-            disabled
-            style={{ ...inputStyle, height: 60, color: '#000' }}
-          />
-        </Box>
-        <Box
-          draggable
-          onDragStart={() => setDraggingField('checkbox')}
-          sx={{
-            ...toolboxItemStyle,
-            display: 'flex',
-            alignItems: 'center',
-            gap: 1
-          }}
-        >
-          <input style={{ color: '#000' }} type="checkbox" disabled />{' '}
-          <span style={{ color: '#000' }}>Checkbox</span>
-        </Box>
-        <Box
-          draggable
-          onDragStart={() => setDraggingField('radio')}
-          sx={{
-            ...toolboxItemStyle,
-            display: 'flex',
-            alignItems: 'center',
-            gap: 1
-          }}
-        >
-          <span
-            style={{
-              width: 18,
-              color: '#000',
-              height: 18,
-              borderRadius: '50%',
-              border: '2px solid #000000ff',
-              display: 'inline-block'
-            }}
-          />{' '}
-          <span style={{ color: '#000' }}>Radio</span>
-        </Box>
-        <Box
-          draggable
-          onDragStart={(e) => {
-            setDraggingField('label');
-
-            const element = document.getElementById('lbl')!;
-            const rect = element.getBoundingClientRect();
-
-            const canvas = document.createElement('canvas');
-            canvas.width = rect.width;
-            canvas.height = rect.height;
-            const ctx = canvas.getContext('2d')!;
-
-            ctx.fillStyle = '#fafafa';
-            ctx.fillRect(0, 0, rect.width, rect.height);
-
-            ctx.fillStyle = '#000';
-            ctx.font = '14px sans-serif';
-            ctx.textBaseline = 'top';
-            ctx.fillText(element.innerText, 6, 6);
-
-            const img = new Image();
-            img.src = canvas.toDataURL();
-            img.onload = () => {
-              e.dataTransfer.setDragImage(img, 0, 0);
-            };
-          }}
-          sx={toolboxItemStyle}
-        >
-          <div
-            id="lbl"
-            style={{
-              padding: '6px',
-              color: '#000',
-              border: '1px dashed #bbb',
-              borderRadius: 4,
-              background: '#fafafa',
-              fontSize: 14
+      {file && (
+        <Paper sx={{ p: 2, mr: 2, width: 240, overflowY: 'auto' }}>
+          <Typography variant="h6" sx={{ mb: 2 }}>
+            Toolbox
+          </Typography>
+          {/* draggable items */}
+          <Box
+            draggable
+            onDragStart={() => setDraggingField('text')}
+            sx={toolboxItemStyle}
+          >
+            <input
+              type="text"
+              placeholder="Text field"
+              disabled
+              style={{ ...inputStyle, color: '#000' }}
+            />
+          </Box>
+          <Box
+            draggable
+            onDragStart={() => setDraggingField('textarea')}
+            sx={toolboxItemStyle}
+          >
+            <textarea
+              placeholder="Textarea"
+              disabled
+              style={{ ...inputStyle, height: 60, color: '#000' }}
+            />
+          </Box>
+          <Box
+            draggable
+            onDragStart={() => setDraggingField('checkbox')}
+            sx={{
+              ...toolboxItemStyle,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 1
             }}
           >
-            Label / Text
-          </div>
-        </Box>
-      </Paper>
+            <input style={{ color: '#000' }} type="checkbox" disabled />{' '}
+            <span style={{ color: '#000' }}>Checkbox</span>
+          </Box>
+          <Box
+            draggable
+            onDragStart={() => setDraggingField('radio')}
+            sx={{
+              ...toolboxItemStyle,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 1
+            }}
+          >
+            <span
+              style={{
+                width: 18,
+                color: '#000',
+                height: 18,
+                borderRadius: '50%',
+                border: '2px solid #000000ff',
+                display: 'inline-block'
+              }}
+            />{' '}
+            <span style={{ color: '#000' }}>Radio</span>
+          </Box>
+          <Box
+            draggable
+            onDragStart={(e) => {
+              setDraggingField('label');
+
+              const element = document.getElementById('lbl')!;
+              const rect = element.getBoundingClientRect();
+
+              const canvas = document.createElement('canvas');
+              canvas.width = rect.width;
+              canvas.height = rect.height;
+              const ctx = canvas.getContext('2d')!;
+
+              ctx.fillStyle = '#fafafa';
+              ctx.fillRect(0, 0, rect.width, rect.height);
+
+              ctx.fillStyle = '#000';
+              ctx.font = '14px sans-serif';
+              ctx.textBaseline = 'top';
+              ctx.fillText(element.innerText, 6, 6);
+
+              const img = new Image();
+              img.src = canvas.toDataURL();
+              img.onload = () => {
+                e.dataTransfer.setDragImage(img, 0, 0);
+              };
+            }}
+            sx={toolboxItemStyle}
+          >
+            <div
+              id="lbl"
+              style={{
+                padding: '6px',
+                color: '#000',
+                border: '1px dashed #bbb',
+                borderRadius: 4,
+                background: '#fafafa',
+                fontSize: 14
+              }}
+            >
+              Label / Text
+            </div>
+          </Box>
+        </Paper>
+      )}
 
       <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         <Box sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
-          <input type="file" accept="application/pdf" onChange={handleUpload} />
+          <input
+            type="file"
+            ref={fileInputRef}
+            accept="application/pdf"
+            onChange={handleUpload}
+          />
 
           <Button
             variant="contained"
@@ -286,6 +300,15 @@ export default function DragDropPdfEditor() {
             onClick={generatePdf}
           >
             Export & Download
+          </Button>
+
+          <Button
+            variant="contained"
+            sx={{ ml: 2 }}
+            disabled={!file}
+            onClick={handleClear}
+          >
+            Clear Input
           </Button>
         </Box>
 
