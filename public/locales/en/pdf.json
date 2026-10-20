@@ -52,7 +52,7 @@
       "checkbox": "Checkbox",
       "radio": "Radio",
       "label": "Label / Text",
-      "text": "Text Field",
+      "text": "Text",
       "textarea": "Textarea"
     },
     "file": {

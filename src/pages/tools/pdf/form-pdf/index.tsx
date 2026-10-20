@@ -449,7 +449,9 @@ export default function DragDropPdfEditor() {
                             <input
                               type="text"
                               placeholder={
-                                f.type === 'textarea' ? 'Textarea' : 'Text'
+                                f.type === 'textarea'
+                                  ? t('formBuilder.toolbox.textarea')
+                                  : t('formBuilder.toolbox.text')
                               }
                               style={{
                                 width: '100%',
