@@ -27,6 +27,7 @@
     "i18n:sync": "locize sync --project-id e7156a3e-66fb-4035-a0f0-cebf1c63a3ba --path ./public/locales --update-values true --reference-language-only false -compare-modification-time true"
   },
   "dependencies": {
+    "@embedpdf/react-pdf-viewer": "^2.15.1",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@ffmpeg/core": "^0.12.10",
@@ -38,14 +39,13 @@
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "@playwright/test": "^1.45.0",
-    "@simplepdf/react-embed-pdf": "^1.9.0",
     "@types/ffmpeg": "^1.0.7",
     "@types/js-quantities": "^1.6.6",
     "@types/lodash": "^4.17.5",
     "@types/morsee": "^1.0.2",
     "@types/omggif": "^1.0.5",
-    "bcryptjs": "^2.4.3",
     "@types/react-i18next": "^7.8.3",
+    "bcryptjs": "^2.4.3",
     "browser-image-compression": "^2.0.2",
     "buffer": "^6.0.3",
     "color": "^4.2.3",
