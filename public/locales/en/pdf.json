@@ -46,7 +46,20 @@
   "formBuilder": {
     "title": "PDF Form Builder",
     "description": "Create and and customize interactive PDF forms directly in your browser. Add text fields, checkboxes, radio buttons, labels, and more, with full drag-and-drop support, styling options, and export capabilities.",
-    "shortDescription": "Design and build interactive PDF forms easily with drag-and-drop tools"
+    "shortDescription": "Design and build interactive PDF forms easily with drag-and-drop tools",
+    "toolbox": {
+      "title": "Toolbox",
+      "checkbox": "Checkbox",
+      "radio": "Radio",
+      "label": "Label / Text",
+      "text": "Text Field",
+      "textarea": "Textarea"
+    },
+    "file": {
+      "upload": "Upload PDF",
+      "export": "Export & Download",
+      "clear": "Clear Input"
+    }
   },
   "extractImagesFromPdf": {
     "description": "Extract all embedded images from your PDF file in their original quality.",

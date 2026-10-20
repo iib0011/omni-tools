@@ -3,6 +3,7 @@ import { Box, Paper, Typography, Button } from '@mui/material';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { Rnd } from 'react-rnd';
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import { useTranslation } from 'react-i18next';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
@@ -21,6 +22,7 @@ interface Field {
 }
 
 export default function DragDropPdfEditor() {
+  const { t } = useTranslation('pdf');
   const [file, setFile] = useState<File | null>(null);
   const [numPages, setNumPages] = useState(0);
   const [fields, setFields] = useState<Field[]>([]);
@@ -177,7 +179,7 @@ export default function DragDropPdfEditor() {
       {file && (
         <Paper sx={{ p: 2, mr: 2, width: 240, overflowY: 'auto' }}>
           <Typography variant="h6" sx={{ mb: 2 }}>
-            Toolbox
+            {t('formBuilder.toolbox.title')}
           </Typography>
           {/* draggable items */}
           <Box
@@ -187,7 +189,7 @@ export default function DragDropPdfEditor() {
           >
             <input
               type="text"
-              placeholder="Text field"
+              placeholder={t('formBuilder.toolbox.text')}
               disabled
               style={{ ...inputStyle, color: '#000' }}
             />
@@ -198,7 +200,7 @@ export default function DragDropPdfEditor() {
             sx={toolboxItemStyle}
           >
             <textarea
-              placeholder="Textarea"
+              placeholder={t('formBuilder.toolbox.textarea')}
               disabled
               style={{ ...inputStyle, height: 60, color: '#000' }}
             />
@@ -214,7 +216,9 @@ export default function DragDropPdfEditor() {
             }}
           >
             <input style={{ color: '#000' }} type="checkbox" disabled />{' '}
-            <span style={{ color: '#000' }}>Checkbox</span>
+            <span style={{ color: '#000' }}>
+              {t('formBuilder.toolbox.checkbox')}
+            </span>
           </Box>
           <Box
             draggable
@@ -236,7 +240,9 @@ export default function DragDropPdfEditor() {
                 display: 'inline-block'
               }}
             />{' '}
-            <span style={{ color: '#000' }}>Radio</span>
+            <span style={{ color: '#000' }}>
+              {t('formBuilder.toolbox.radio')}
+            </span>
           </Box>
           <Box
             draggable
@@ -278,7 +284,7 @@ export default function DragDropPdfEditor() {
                 fontSize: 14
               }}
             >
-              Label / Text
+              {t('formBuilder.toolbox.label')}
             </div>
           </Box>
         </Paper>
@@ -286,12 +292,18 @@ export default function DragDropPdfEditor() {
 
       <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         <Box sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
-          <input
-            type="file"
-            ref={fileInputRef}
-            accept="application/pdf"
-            onChange={handleUpload}
-          />
+          <Button variant="contained" component="label">
+            {t('formBuilder.file.upload')}
+            <input
+              type="file"
+              ref={fileInputRef}
+              accept="application/pdf"
+              onChange={handleUpload}
+              hidden
+            />
+          </Button>
+
+          {file && <span style={{ paddingLeft: 3 }}>{file.name}</span>}
 
           <Button
             variant="contained"
@@ -299,7 +311,7 @@ export default function DragDropPdfEditor() {
             disabled={!fields.length}
             onClick={generatePdf}
           >
-            Export & Download
+            {t('formBuilder.file.export')}
           </Button>
 
           <Button
@@ -308,7 +320,7 @@ export default function DragDropPdfEditor() {
             disabled={!file}
             onClick={handleClear}
           >
-            Clear Input
+            {t('formBuilder.file.clear')}
           </Button>
         </Box>
 
