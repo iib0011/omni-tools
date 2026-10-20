@@ -31,6 +31,7 @@ export default function DragDropPdfEditor() {
     [page: number]: { width: number; height: number };
   }>({});
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
 
   const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -46,6 +47,10 @@ export default function DragDropPdfEditor() {
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
+  };
+
+  const handleRemoveField = (id: string) => {
+    setFields((prev) => prev.filter((f) => f.id !== id));
   };
   const handleDropField = (e: React.DragEvent, pageNo: number) => {
     e.preventDefault();
@@ -324,7 +329,10 @@ export default function DragDropPdfEditor() {
           </Button>
         </Box>
 
-        <Box sx={{ flex: 1, overflow: 'auto' }}>
+        <Box
+          sx={{ flex: 1, overflow: 'auto' }}
+          onMouseDown={() => setSelectedId(null)}
+        >
           {file && (
             <Document
               file={file}
@@ -363,6 +371,11 @@ export default function DragDropPdfEditor() {
                         <Rnd
                           key={f.id}
                           size={{ width: f.width, height: f.height }}
+                          cancel=".delete-btn"
+                          onMouseDown={(e) => {
+                            e.stopPropagation();
+                            setSelectedId(f.id);
+                          }}
                           position={{ x: f.x, y: f.y }}
                           bounds="parent"
                           style={{ zIndex: 10 }}
@@ -426,7 +439,7 @@ export default function DragDropPdfEditor() {
                                 height: '100%',
                                 display: 'flex',
                                 alignItems: 'center',
-                                justifyContent: 'center'
+                                justifyContent: 'flex-start'
                               }}
                             >
                               <span
@@ -443,7 +456,12 @@ export default function DragDropPdfEditor() {
                           ) : f.type === 'checkbox' ? (
                             <input
                               type="checkbox"
-                              style={{ width: '100%', height: '100%' }}
+                              style={{
+                                width: 18,
+                                height: 18,
+                                margin: 0,
+                                display: 'block'
+                              }}
                             />
                           ) : (
                             <input
@@ -463,6 +481,36 @@ export default function DragDropPdfEditor() {
                                 fontSize: 14
                               }}
                             />
+                          )}
+
+                          {selectedId === f.id && (
+                            <button
+                              type="button"
+                              title="Remove"
+                              onMouseDown={(e) => e.stopPropagation()}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleRemoveField(f.id);
+                              }}
+                              style={{
+                                position: 'absolute',
+                                top: -10,
+                                left: -10,
+                                width: 20,
+                                height: 20,
+                                borderRadius: '50%',
+                                border: 'none',
+                                background: '#2e36bf',
+                                color: '#fff',
+                                fontSize: 12,
+                                lineHeight: '20px',
+                                padding: 0,
+                                cursor: 'pointer',
+                                zIndex: 20
+                              }}
+                            >
+                              ×
+                            </button>
                           )}
                         </Rnd>
                       ))}
