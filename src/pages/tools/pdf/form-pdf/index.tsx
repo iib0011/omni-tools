@@ -337,6 +337,8 @@ export default function DragDropPdfEditor() {
                   <Box
                     key={pageNo}
                     sx={{
+                      width: 'fit-content',
+                      mx: 'auto',
                       border: '1px solid #ccc',
                       mb: 2,
                       position: 'relative'
