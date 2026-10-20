@@ -1,6 +1,7 @@
 import { Box, CircularProgress, TextField, Typography } from '@mui/material';
 import React, { useContext } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
+import { copyToClipboard } from '../../utils/clipboard';
 import InputHeader from '../InputHeader';
 import ResultFooter from './ResultFooter';
 import { replaceSpecialCharacters } from '@utils/string';
@@ -24,8 +25,7 @@ export default function ToolTextResult({
   const { t } = useTranslation();
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const handleCopy = () => {
-    navigator.clipboard
-      .writeText(value)
+    copyToClipboard(value)
       .then(() => showSnackBar(t('toolTextResult.copied'), 'success'))
       .catch((err) => {
         showSnackBar(t('toolTextResult.copyFailed', { error: err }), 'error');
