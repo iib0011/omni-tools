@@ -51,6 +51,8 @@ export const getAvailableLanguages = (): { value: string; label: string }[] => {
     { value: 'chi_sim', label: 'Chinese (Simplified)' },
     { value: 'chi_tra', label: 'Chinese (Traditional)' },
     { value: 'kor', label: 'Korean' },
-    { value: 'ara', label: 'Arabic' }
+    { value: 'ara', label: 'Arabic' },
+    { value: 'ukr', label: 'Ukrainian' },
+    { value: 'ukr+eng', label: 'Ukrainian + English' }
   ];
 };
