@@ -11,6 +11,7 @@ export const tool = defineTool('converters', {
   path: 'convert-to-jpg',
   icon: 'ph:file-jpg-thin',
 
+  alternativeCategories: ['image-generic'],
   keywords: ['convert', 'jpg', 'images', 'quality', 'compression'],
   component: lazy(() => import('./index'))
 });

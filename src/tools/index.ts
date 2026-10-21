@@ -348,9 +348,17 @@ export const filterTools = (
   return scored.map(({ tool }) => tool);
 };
 
+/**
+ * Returns every category a tool belongs to: its primary category first,
+ * followed by the alternative categories it declared.
+ */
+export const getToolCategories = (tool: DefinedTool): ToolCategory[] =>
+  Array.from(new Set([tool.type, ...(tool.alternativeCategories ?? [])]));
+
 export const getToolsByCategory = (
   userTypes: UserType[] = [],
-  t: TFunction<I18nNamespaces[]>
+  t: TFunction<I18nNamespaces[]>,
+  allTools: DefinedTool[] = tools
 ): {
   title: string;
   rawTitle: string;
@@ -361,11 +369,28 @@ export const getToolsByCategory = (
   tools: DefinedTool[];
   userTypes: UserType[]; // <-- Add this line
 }[] => {
-  const groupedByType: Partial<Record<ToolCategory, DefinedTool[]>> =
-    Object.groupBy(tools, ({ type }) => type);
+  const groupedByType: Partial<Record<ToolCategory, DefinedTool[]>> = {};
+
+  const addToolToCategory = (category: ToolCategory, tool: DefinedTool) => {
+    groupedByType[category] = groupedByType[category] ?? [];
+    groupedByType[category]!.push(tool);
+  };
+
+  // Native tools come first so the "example" tool of a category stays a native one
+  for (const tool of allTools) {
+    addToolToCategory(tool.type, tool);
+  }
+
+  // Tools are then added to the alternative categories they declared
+  for (const tool of allTools) {
+    for (const category of tool.alternativeCategories ?? []) {
+      if (category === tool.type) continue;
+      addToolToCategory(category, tool);
+    }
+  }
 
   return (Object.entries(groupedByType) as Entries<typeof groupedByType>)
-    .map(([type, tools]) => {
+    .map(([type, categoryTools]) => {
       const categoryConfig = categoriesConfig.find(
         (config) => config.type === type
       );
@@ -373,8 +398,8 @@ export const getToolsByCategory = (
       // Filter tools by user types if specified
       const filteredTools =
         userTypes.length > 0
-          ? filterToolsByUserTypes(tools ?? [], userTypes)
-          : tools ?? [];
+          ? filterToolsByUserTypes(categoryTools ?? [], userTypes)
+          : categoryTools ?? [];
 
       // Aggregate unique userTypes from all tools in this category
       const aggregatedUserTypes = Array.from(

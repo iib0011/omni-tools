@@ -10,6 +10,7 @@ export const tool = defineTool('converters', {
   },
   path: 'audio-converter',
   icon: 'mdi:music-note-outline',
+  alternativeCategories: ['audio'],
   keywords: ['audio', 'converter'],
   component: lazy(() => import('./index'))
 });

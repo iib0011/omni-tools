@@ -6,6 +6,7 @@ export const meta = defineTool('pdf', {
   component: lazy(() => import('./index')),
   keywords: ['pdf', 'image', 'extract'],
   path: 'extract-image-from-pdf',
+  alternativeCategories: ['image-generic'],
   i18n: {
     name: 'pdf:extractImagesFromPdf.title',
     description: 'pdf:extractImagesFromPdf.description',

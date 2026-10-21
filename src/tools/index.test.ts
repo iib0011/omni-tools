@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import type { TFunction } from 'i18next';
-import { filterTools } from './index';
+import { filterTools, getToolCategories, getToolsByCategory } from './index';
 import type { DefinedTool } from './defineTool';
 import type { FullI18nKey, I18nNamespaces } from '../i18n';
 
@@ -45,6 +45,19 @@ const otherPdfTool = {
   shortDescription: 'pdf:otherPdf.shortDescription' as FullI18nKey,
   icon: 'icon',
   keywords: [],
+  component: (() => null) as unknown,
+  userTypes: ['generalUsers']
+} as unknown as DefinedTool;
+
+const pdfToolWithAlternativeCategory = {
+  type: 'pdf',
+  alternativeCategories: ['string'],
+  path: 'pdf/pdf-to-text',
+  name: 'pdf:pdfToText.title' as FullI18nKey,
+  description: 'pdf:pdfToText.description' as FullI18nKey,
+  shortDescription: 'pdf:pdfToText.shortDescription' as FullI18nKey,
+  icon: 'icon',
+  keywords: ['pdf', 'text'],
   component: (() => null) as unknown,
   userTypes: ['generalUsers']
 } as unknown as DefinedTool;
@@ -125,5 +138,46 @@ describe('filterTools token-based search', () => {
   it('ranks tools with title matches above description-only matches', () => {
     const result = filterTools(tools, 'pdf', [], tEn);
     expect(result[0]).toBe(mergePdfTool);
+  });
+});
+
+describe('alternative categories', () => {
+  const tEn = makeT(enTranslations);
+  const tools = [mergePdfTool, base64Tool, pdfToolWithAlternativeCategory];
+
+  it('returns the primary category followed by the alternative ones', () => {
+    expect(getToolCategories(base64Tool)).toEqual(['string']);
+    expect(getToolCategories(pdfToolWithAlternativeCategory)).toEqual([
+      'pdf',
+      'string'
+    ]);
+  });
+
+  it('lists a tool in the alternative categories it declared', () => {
+    const categories = getToolsByCategory([], tEn, tools);
+    const stringCategory = categories.find(({ type }) => type === 'string');
+
+    expect(stringCategory?.tools).toContain(pdfToolWithAlternativeCategory);
+  });
+
+  it('keeps listing a tool in its primary category', () => {
+    const categories = getToolsByCategory([], tEn, tools);
+    const pdfCategory = categories.find(({ type }) => type === 'pdf');
+
+    expect(pdfCategory?.tools).toContain(pdfToolWithAlternativeCategory);
+  });
+
+  it('does not duplicate a tool declaring its own category as alternative', () => {
+    const duplicatedTool = {
+      ...mergePdfTool,
+      alternativeCategories: ['pdf']
+    } as unknown as DefinedTool;
+
+    const categories = getToolsByCategory([], tEn, [duplicatedTool]);
+    const pdfCategory = categories.find(({ type }) => type === 'pdf');
+
+    expect(
+      pdfCategory?.tools.filter((tool) => tool === duplicatedTool)
+    ).toHaveLength(1);
   });
 });

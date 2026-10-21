@@ -13,6 +13,7 @@ export const tool = defineTool('pdf', {
   path: 'pdf-to-png',
   icon: 'mdi:image-multiple', // Iconify icon ID
 
+  alternativeCategories: ['png'],
   keywords: ['pdf', 'png', 'convert', 'image', 'extract', 'pages'],
   component: lazy(() => import('./index'))
 });

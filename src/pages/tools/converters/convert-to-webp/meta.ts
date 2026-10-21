@@ -11,6 +11,7 @@ export const tool = defineTool('converters', {
   path: 'convert-to-webp',
   icon: 'iconoir:webp-format',
 
+  alternativeCategories: ['image-generic'],
   keywords: ['convert', 'jpg', 'jpeg', 'png', 'webp', 'compression'],
   component: lazy(() => import('./index'))
 });
