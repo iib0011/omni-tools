@@ -90,6 +90,20 @@ Stay tuned as we continue to expand and improve our collection!
 
 ## Self-host/Run
 
+### PicoRunner
+
+[![Launch on PicoRunner](https://picorunner.com/badges/launch.svg)](https://picorunner.com/launch/?repository=https%3A%2F%2Fgithub.com%2Fiib0011%2Fomni-tools)
+
+The root `picorunner.toml` installs the locked npm dependencies with Node.js 24,
+builds the app, and serves it on `127.0.0.1` using PicoRunner's assigned port.
+The launch button opens the installation review in [PicoRunner](https://picorunner.com/).
+No account, database, or API key is required for the core tools.
+
+Preferences and bookmarks stay in your browser's local storage, and exported files
+go to your browser's download location. There are no repository data paths to
+preserve during updates. Some advanced tools fetch additional resources from the
+internet when used.
+
 ### Docker
 
 ```bash
