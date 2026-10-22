@@ -1,0 +1,221 @@
+{
+  "checkLeapYears": {
+    "description": "Comprova si un any és de traspàs i obtén informació sobre els anys de traspàs.",
+    "exampleDescription": "Una de les nostres amigues va néixer un any de traspàs el 29 de febrer i, per tant, només fa anys una vegada cada 4 anys. Com que mai no recordem quan és el seu aniversari, utilitzem el nostre programa per crear una llista recordatori dels propers anys de traspàs. Per crear una llista dels seus propers aniversaris, carreguem una seqüència d'anys del 2025 al 2040 a l'entrada i obtenim l'estat de cada any. Si el programa diu que és un any de traspàs, sabem que ens convidaran a una festa d'aniversari el 29 de febrer.",
+    "exampleTitle": "Troba aniversaris el 29 de febrer",
+    "inputTitle": "Any d'entrada",
+    "resultTitle": "Resultat de l'any de traspàs",
+    "shortDescription": "Comprova si un any és de traspàs",
+    "title": "Comprova anys de traspàs",
+    "toolInfo": {
+      "description": "Un any de traspàs és un any que conté un dia addicional (el 29 de febrer) per mantenir l'any del calendari sincronitzat amb l'any astronòmic. Els anys de traspàs es produeixen cada 4 anys, excepte els anys divisibles per 100 però no per 400.",
+      "title": "Què és un any de traspàs?"
+    }
+  },
+  "convertDateToUnix": {
+    "description": "Converteix una data llegible en una marca de temps Unix.",
+    "options": "Opcions",
+    "outputOptions": "Opcions de sortida",
+    "shortDescription": "Converteix una data en una marca de temps Unix.",
+    "title": "Converteix una data a Unix",
+    "toolInfo": {
+      "description": "Aquesta eina converteix una data en format llegible (p. ex., AAAA-MM-DD HH:MM:SS) en una marca de temps Unix. Pots especificar un desplaçament UTC concret (p. ex., AAAA-MM-DD HH:MM:SS +XX:XX) o utilitzar la zona horària local. Si no proporciones cap desplaçament ni tries utilitzar la zona horària local, el resultat es dona amb un desplaçament de +00:00.",
+      "title": "Converteix una data a Unix"
+    },
+    "useLocalTime": "Utilitza l'hora local",
+    "useLocalTimeDescription": "L'hora i la data d'entrada es processen segons la zona horària del navegador. S'ignoraran les especificacions addicionals."
+  },
+  "convertDaysToHours": {
+    "addHoursName": "Afegeix el nom de les hores",
+    "addHoursNameDescription": "Afegeix la paraula hores als valors de sortida",
+    "description": "Converteix dies a hores amb opcions personalitzables.",
+    "hoursName": "Nom de les hores",
+    "shortDescription": "Converteix dies a hores",
+    "title": "Converteix dies a hores",
+    "toolInfo": {
+      "description": "Aquesta eina et permet convertir dies a hores. Pots introduir els dies com a nombres o amb unitats, i l'eina els convertirà a hores. També pots triar afegir el sufix «hores» als valors de sortida.",
+      "title": "Converteix dies a hores"
+    }
+  },
+  "convertHoursToDays": {
+    "addDaysName": "Afegeix el nom dels dies",
+    "addDaysNameDescription": "Afegeix la paraula dies als valors de sortida",
+    "daysName": "Nom dels dies",
+    "description": "Converteix hores a dies amb opcions personalitzables.",
+    "shortDescription": "Converteix hores a dies",
+    "title": "Converteix hores a dies",
+    "toolInfo": {
+      "description": "Aquesta eina et permet convertir hores a dies. Pots introduir les hores com a nombres o amb unitats, i l'eina les convertirà a dies. També pots triar afegir el sufix «dies» als valors de sortida.",
+      "title": "Converteix hores a dies"
+    }
+  },
+  "convertSecondsToTime": {
+    "addPadding": "Afegeix zeros a l'esquerra",
+    "addPaddingDescription": "Afegeix zeros a l'esquerra a les hores, els minuts i els segons.",
+    "description": "Converteix segons a un format d'hora llegible (hores:minuts:segons). Introdueix el nombre de segons per obtenir l'hora formatada.",
+    "shortDescription": "Converteix segons a format d'hora",
+    "timePadding": "Farciment de l'hora",
+    "title": "Converteix segons a hora",
+    "toolInfo": {
+      "title": "Què és {{title}}?"
+    }
+  },
+  "convertTimeToDecimal": {
+    "description": "Converteix una durada formatada (HH:MM:SS) en un valor d'hores decimal.",
+    "longDescription": "Converteix una cadena d'hora formatada (HH:MM:SS o HH:MM) en el seu equivalent en hores decimals. Les hores poden ser qualsevol nombre positiu, mentre que els minuts i els segons accepten valors de 0 a 59 i poden tenir una o dues xifres (p. ex., '12:5' o '12:05'). Aquesta funció interpreta les hores, els minuts i els segons i calcula la durada total com un únic valor decimal. És útil per al seguiment de la productivitat, el càlcul de nòmines, la facturació per temps, l'anàlisi de dades o qualsevol flux de treball que requereixi convertir una hora llegible en un format numèric que es pugui sumar, comparar o processar fàcilment. Per exemple, '03:26:00' es converteix en 3,43 hores, i '12:5' en 12,08 hores.",
+    "shortDescription": "Converteix una hora llegible a hora decimal",
+    "title": "Converteix una hora a decimal"
+  },
+  "convertTimeToSeconds": {
+    "description": "Converteix una hora formatada (HH:MM:SS) a segons.",
+    "inputTitle": "Hora d'entrada",
+    "resultTitle": "Segons",
+    "shortDescription": "Converteix un format d'hora a segons",
+    "title": "Converteix una hora a segons",
+    "toolInfo": {
+      "description": "Aquesta eina et permet convertir cadenes d'hora formatades (HH:MM:SS) a segons. És útil per calcular durades i intervals de temps.",
+      "title": "Converteix una hora a segons"
+    }
+  },
+  "convertUnixToDate": {
+    "addUtcLabel": "Afegeix el sufix 'UTC'",
+    "addUtcLabelDescription": "Afegeix 'UTC' després de la data convertida (només disponible en mode UTC)",
+    "date-to-unix": "Data → Unix",
+    "description": "Converteix marques de temps Unix en dates llegibles i dates en marques de temps Unix.",
+    "optionsTitle": "Mode de conversió",
+    "shortDescription": "Converteix marques de temps Unix i dates en tots dos sentits.",
+    "title": "Converteix Unix ↔ data",
+    "toolInfo": {
+      "description": "Aquesta eina converteix marques de temps Unix (en segons) en formats de data llegibles com AAAA-MM-DD HH:MM:SS, i també converteix dates formatades en marques de temps Unix. Pots triar una sortida en UTC, en la zona horària local o proporcionar un desplaçament UTC personalitzat (per exemple: AAAA-MM-DD HH:MM:SS +XX:XX). Si no es proporciona cap desplaçament i no se selecciona la zona horària local, s'utilitza UTC (+00:00) per defecte.",
+      "title": "Converteix Unix ↔ data"
+    },
+    "tzOptions": "Opcions de zona horària",
+    "unix-to-date": "Unix → Data",
+    "useLocalTime": "Utilitza l'hora local",
+    "useLocalTimeDescription": "Mostra la data convertida en la teva zona horària local en lloc d'UTC",
+    "useUTC": "Utilitza UTC"
+  },
+  "crontabGuru": {
+    "description": "Analitza i explica expressions cron en llenguatge planer. Entén a l'instant què fa qualsevol programació cron, valida'n la sintaxi i processa diverses expressions alhora.",
+    "longDescription": "Crontab Guru és un analitzador i validador d'expressions cron que tradueix la complexa sintaxi cron a descripcions planeres i llegibles. Tant si programes còpies de seguretat automàtiques, tasques de manteniment del sistema o pipelines de CI/CD, aquesta eina t'ajuda a entendre exactament quan s'executaran les teves tasques. Admet expressions cron estàndard de 5 camps, valida la sintaxi en temps real i processa diverses expressions alhora, una per línia. Disponible en català, anglès, francès, castellà, alemany, japonès, xinès, portuguès, neerlandès i rus.",
+    "shortDescription": "Analitza i explica expressions cron en llenguatge planer",
+    "title": "Crontab Guru"
+  },
+  "dateWeekdayCalculator": {
+    "dateSelection": "Data",
+    "dayDescription": "Dia",
+    "description": "Troba tots els anys d'un interval en què un mes i un dia concrets cauen en el dia de la setmana triat.",
+    "endYearDescription": "Any final",
+    "errors": {
+      "emptyInput": "Tots els camps són obligatoris",
+      "fallback": "Entrada no vàlida",
+      "invalidDate": "Dia no vàlid per al mes seleccionat",
+      "invalidDay": "El dia ha d'estar entre 1 i 31",
+      "invalidMonth": "El mes ha d'estar entre 1 i 12",
+      "invalidWeekday": "Dia de la setmana no vàlid",
+      "invalidYear": "Els anys han de ser enters entre 1 i 9999",
+      "invalidYearRange": "L'any inicial ha de ser menor o igual que l'any final"
+    },
+    "foundMatches_one": "S'ha trobat {{count}} any coincident",
+    "foundMatches_other": "S'han trobat {{count}} anys coincidents",
+    "longDescription": "Selecciona un mes, un dia i el dia de la setmana objectiu, i després tria un any inicial i un any final. La calculadora revisa cada any de l'interval i mostra cada coincidència com una data completa formatada. S'admet el 29 de febrer: els anys que no són de traspàs s'ometen automàticament. Les dates no vàlides (com el 31 d'abril) i els intervals d'anys no vàlids mostren missatges d'error clars.",
+    "monthDescription": "Mes",
+    "months": {
+      "1": "Gener",
+      "2": "Febrer",
+      "3": "Març",
+      "4": "Abril",
+      "5": "Maig",
+      "6": "Juny",
+      "7": "Juliol",
+      "8": "Agost",
+      "9": "Setembre",
+      "10": "Octubre",
+      "11": "Novembre",
+      "12": "Desembre"
+    },
+    "noMatches": "No s'ha trobat cap any coincident a l'interval seleccionat.",
+    "resultTitle": "Anys coincidents",
+    "shortDescription": "Troba els anys en què una data cau en un dia de la setmana",
+    "startYearDescription": "Any inicial",
+    "title": "Calculadora del dia de la setmana",
+    "toolInfo": {
+      "title": "Què és {{title}}?"
+    },
+    "weekdayDescription": "Dia de la setmana objectiu",
+    "weekdaySelection": "Dia de la setmana",
+    "weekdays": {
+      "friday": "Divendres",
+      "monday": "Dilluns",
+      "saturday": "Dissabte",
+      "sunday": "Diumenge",
+      "thursday": "Dijous",
+      "tuesday": "Dimarts",
+      "wednesday": "Dimecres"
+    },
+    "yearRange": "Interval d'anys"
+  },
+  "discordTimestamp": {
+    "description": "Converteix dates i hores al format especial de marca de temps de Discord, que s'adapta automàticament a la zona horària i l'idioma locals de cada usuari",
+    "formats": {
+      "description": "Tria com apareixerà la marca de temps a Discord; passa el ratolí per sobre de cada opció per veure'n un exemple",
+      "long_date": "Data llarga (p. ex.: 1 de gener de 2025)",
+      "long_datetime": "Data i hora llargues (p. ex.: dilluns, 1 de gener de 2025 14:30)",
+      "long_time": "Hora llarga (p. ex.: 14:30:00)",
+      "relative": "Relativa (p. ex.: fa 2 hores)",
+      "short_date": "Data curta (p. ex.: 01/01/2025)",
+      "short_datetime": "Data i hora curtes (p. ex.: 1 de gener de 2025 14:30)",
+      "short_time": "Hora curta (p. ex.: 14:30)",
+      "title": "Format de la marca de temps"
+    },
+    "inputTitle": "Dates i hores d'entrada",
+    "name": "Generador de marques de temps de Discord",
+    "outputTitle": "Marques de temps de Discord",
+    "shortDescription": "Genera marques de temps de Discord a partir de dates",
+    "toolInfo": {
+      "description": "Les marques de temps de Discord són una sintaxi especial que mostra dates i hores de manera dinàmica. En lloc de mostrar una hora fixa, es converteixen automàticament a la zona horària i l'idioma locals de cada persona que les veu, de manera que tothom veu l'hora correcta per a la seva ubicació. Només cal que introdueixis una data i hora per línia, triïs un format i enganxis els resultats directament a Discord. L'eina processa cada línia de manera independent: les línies en blanc es conserven a la sortida, les línies no vàlides es marquen amb ❌ i les dates i hores vàlides es converteixen a l'instant. Activa el mode UTC per garantir resultats coherents independentment de la teva zona horària local.",
+      "title": "Què és una marca de temps de Discord?"
+    },
+    "utc": {
+      "description": "Tracta les dates i hores d'entrada com a UTC. Desactiva-ho per utilitzar la zona horària local",
+      "label": "Força UTC",
+      "title": "Opcions d'entrada"
+    }
+  },
+  "timeBetweenDates": {
+    "description": "Calcula la diferència de temps entre dues dates. Obtén la durada exacta en dies, hores, minuts i segons.",
+    "endDate": "Data final",
+    "endDateTime": "Data i hora finals",
+    "endTime": "Hora final",
+    "endTimezone": "Zona horària final",
+    "shortDescription": "Calcula el temps entre dues dates",
+    "startDate": "Data inicial",
+    "startDateTime": "Data i hora inicials",
+    "startTime": "Hora inicial",
+    "startTimezone": "Zona horària inicial",
+    "title": "Temps entre dates",
+    "toolInfo": {
+      "description": "Calcula la diferència de temps exacta entre dues dates i hores, amb compatibilitat per a diferents zones horàries. Aquesta eina proporciona un desglossament detallat de la diferència de temps en diverses unitats (anys, mesos, dies, hores, minuts i segons).",
+      "title": "Calculadora de temps entre dates"
+    }
+  },
+  "truncateClockTime": {
+    "description": "Trunca una hora de rellotge per eliminar-ne els segons o els minuts. Arrodoneix l'hora a l'hora, el minut o l'interval personalitzat més proper.",
+    "printDroppedComponents": "Mostra els components descartats",
+    "shortDescription": "Trunca una hora de rellotge a la precisió especificada",
+    "timePadding": "Farciment de l'hora",
+    "title": "Trunca l'hora de rellotge",
+    "toolInfo": {
+      "title": "Què és {{title}}?"
+    },
+    "truncateMinutesAndSeconds": "Trunca minuts i segons",
+    "truncateMinutesAndSecondsDescription": "Descarta tant els minuts com els segons de cada hora de rellotge.",
+    "truncateOnlySeconds": "Trunca només els segons",
+    "truncateOnlySecondsDescription": "Descarta els segons de cada hora de rellotge.",
+    "truncationSide": "Costat del truncament",
+    "useZeroPadding": "Utilitza zeros a l'esquerra",
+    "zeroPaddingDescription": "Fa que tots els components de l'hora tinguin sempre dues xifres.",
+    "zeroPrintDescription": "Mostra les parts descartades com a valors zero \"00\".",
+    "zeroPrintTruncatedParts": "Mostra les parts truncades com a zeros"
+  }
+}

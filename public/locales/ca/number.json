@@ -1,0 +1,223 @@
+{
+  "arithmeticSequence": {
+    "commonDifferenceDescription": "Diferència comuna entre termes (d)",
+    "description": "Genera progressions aritmètiques amb paràmetres personalitzables.",
+    "firstTermDescription": "Primer terme de la progressió (a₁)",
+    "numberOfTermsDescription": "Nombre de termes a generar (n)",
+    "outputFormat": "Format de sortida",
+    "resultTitle": "Progressió generada",
+    "separatorDescription": "Separador entre termes",
+    "sequenceParameters": "Paràmetres de la progressió",
+    "shortDescription": "Genera progressions aritmètiques",
+    "title": "Progressió aritmètica",
+    "toolInfo": {
+      "description": "Una progressió aritmètica és una successió de nombres en què la diferència entre cada terme consecutiu és constant. Aquesta diferència constant s'anomena diferència comuna. Donats el primer terme (a₁) i la diferència comuna (d), cada terme s'obté sumant la diferència comuna al terme anterior.",
+      "title": "Què és una progressió aritmètica?"
+    }
+  },
+  "byteConverter": {
+    "description": "Converteix valors de dades entre diferents unitats de bytes, amb compatibilitat per als sistemes SI (decimal) i IEC (binari). Admet la conversió de diverses línies.",
+    "inputTitle": "Valors d'entrada",
+    "outputTitle": "Sortida convertida",
+    "shortDescription": "Converteix ràpidament valors entre unitats de bytes",
+    "title": "Convertidor de bytes",
+    "unit": {
+      "from": "Selecciona la unitat dels valors d'entrada que proporciones (p. ex., KB, MB, GiB).",
+      "precision": "Nombre de decimals que es mostraran a la sortida convertida.",
+      "title": "Opcions de conversió",
+      "to": "Selecciona la unitat a la qual vols convertir els valors d'entrada."
+    }
+  },
+  "generate": {
+    "arithmeticSequenceOption": "Opció de progressió aritmètica",
+    "description": "Genera una seqüència de nombres amb paràmetres personalitzables.",
+    "numberOfElementsDescription": "Nombre d'elements de la seqüència.",
+    "resultTitle": "Nombres generats",
+    "separator": "Separador",
+    "separatorDescription": "Separa els elements de la progressió aritmètica amb aquest caràcter.",
+    "shortDescription": "Genera nombres aleatoris en intervals especificats",
+    "startSequenceDescription": "Comença la seqüència des d'aquest nombre.",
+    "stepDescription": "Incrementa cada element en aquesta quantitat",
+    "title": "Genera",
+    "toolInfo": {
+      "description": "Aquesta eina et permet generar una seqüència de nombres amb paràmetres personalitzables. Pots especificar el valor inicial, la mida del pas i el nombre d'elements.",
+      "title": "Genera nombres"
+    }
+  },
+  "numberToWords": {
+    "description": "Converteix nombres en paraules en l'idioma seleccionat. La sortida coincideix automàticament amb l'idioma actual de l'aplicació.",
+    "inputTitle": "Nombres",
+    "options": {
+      "title": "Opcions",
+      "uppercase": "Majúscules",
+      "uppercaseDescription": "Mostra les paraules convertides en majúscules, cosa habitual en xecs, factures i documents legals.",
+      "useAnd": "Inclou \"i\"",
+      "useAndDescription": "Insereix \"i\" on correspongui (per exemple, \"One Hundred and Twenty\" en anglès)."
+    },
+    "outputTitle": "Paraules",
+    "shortDescription": "Converteix nombres en paraules",
+    "title": "Nombres a paraules",
+    "toolInfo": {
+      "description": "Aquesta eina converteix valors numèrics a la seva forma escrita. La sortida segueix automàticament l'idioma actual de l'aplicació, de manera que no cal cap configuració addicional. Introdueix un nombre per línia per convertir diversos valors de manera independent.",
+      "title": "Què és un convertidor de nombres a paraules?"
+    }
+  },
+  "ohmsLaw": {
+    "description": "Calcula la tensió, el corrent i la resistència",
+    "longDescription": "Aquesta calculadora aplica la llei d'Ohm (V = I × R) per determinar qualsevol dels tres paràmetres elèctrics quan es coneixen els altres dos. La llei d'Ohm és un principi fonamental de l'enginyeria elèctrica que descriu la relació entre la tensió (V), el corrent (I) i la resistència (R). Aquesta eina és essencial per a aficionats a l'electrònica, enginyers elèctrics i estudiants que treballen amb circuits per resoldre ràpidament els valors desconeguts dels seus dissenys elèctrics.",
+    "shortDescription": "Calcula la tensió, el corrent o la resistència en circuits elèctrics amb la llei d'Ohm",
+    "title": "Llei d'Ohm"
+  },
+  "randomNumberGenerator": {
+    "description": "Genera nombres aleatoris dins d'un interval especificat amb opcions personalitzables.",
+    "error": {
+      "generationFailed": "No s'han pogut generar nombres aleatoris. Comprova els paràmetres d'entrada."
+    },
+    "info": {
+      "description": "Un generador de nombres aleatoris crea nombres imprevisibles dins d'un interval especificat. Aquesta eina utilitza una generació de nombres aleatoris criptogràficament segura per garantir resultats realment aleatoris. Útil per a simulacions, jocs, mostreig estadístic i escenaris de prova.",
+      "title": "Què és un generador de nombres aleatoris?"
+    },
+    "longDescription": "Genera nombres aleatoris dins d'un interval especificat amb opcions per a enters o decimals, permetre o evitar duplicats i ordenar els resultats. Perfecte per a simulacions, proves, jocs i anàlisi estadística.",
+    "options": {
+      "generation": {
+        "allowDecimals": {
+          "description": "Genera nombres decimals en lloc d'enters",
+          "title": "Permet nombres decimals"
+        },
+        "allowDuplicates": {
+          "description": "Permet que el mateix nombre aparegui diverses vegades",
+          "title": "Permet duplicats"
+        },
+        "countDescription": "Quantitat de nombres aleatoris a generar (1-10.000)",
+        "sortResults": {
+          "description": "Ordena els nombres generats en ordre ascendent",
+          "title": "Ordena els resultats"
+        },
+        "title": "Opcions de generació"
+      },
+      "output": {
+        "separatorDescription": "Caràcter(s) per separar els nombres generats",
+        "title": "Opcions de sortida"
+      },
+      "range": {
+        "maxDescription": "Valor màxim (inclòs)",
+        "minDescription": "Valor mínim (inclòs)",
+        "title": "Opcions de l'interval"
+      }
+    },
+    "result": {
+      "count": "Quantitat",
+      "hasDuplicates": "Conté duplicats",
+      "isSorted": "Ordenat",
+      "range": "Interval",
+      "title": "Nombres aleatoris generats"
+    },
+    "shortDescription": "Genera nombres aleatoris en intervals personalitzats",
+    "title": "Generador de nombres aleatoris"
+  },
+  "randomPortGenerator": {
+    "description": "Genera ports de xarxa aleatoris dins d'intervals especificats amb opcions personalitzables.",
+    "error": {
+      "generationFailed": "No s'han pogut generar ports aleatoris. Comprova els paràmetres d'entrada."
+    },
+    "info": {
+      "description": "Un generador de ports aleatoris crea números de port de xarxa imprevisibles dins d'intervals especificats. Aquesta eina segueix els estàndards de números de port de la IANA i inclou la identificació dels serveis habituals. Útil per al desenvolupament, les proves, la configuració de xarxa i per evitar conflictes de ports.",
+      "title": "Què és un generador de ports aleatoris?"
+    },
+    "longDescription": "Genera ports de xarxa aleatoris dins d'intervals especificats (coneguts, registrats, dinàmics o personalitzats). Perfecte per al desenvolupament, les proves i la configuració de xarxa. Inclou la identificació del servei dels ports habituals.",
+    "options": {
+      "generation": {
+        "allowDuplicates": {
+          "description": "Permet que el mateix port aparegui diverses vegades",
+          "title": "Permet duplicats"
+        },
+        "countDescription": "Quantitat de ports aleatoris a generar (1-1.000)",
+        "sortResults": {
+          "description": "Ordena els ports generats en ordre ascendent",
+          "title": "Ordena els resultats"
+        },
+        "title": "Opcions de generació"
+      },
+      "output": {
+        "separatorDescription": "Caràcter(s) per separar els ports generats",
+        "title": "Opcions de sortida"
+      },
+      "range": {
+        "custom": "Interval personalitzat",
+        "dynamic": "Ports dinàmics (49152-65535)",
+        "maxPortDescription": "Número de port màxim (1-65535)",
+        "minPortDescription": "Número de port mínim (1-65535)",
+        "registered": "Ports registrats (1024-49151)",
+        "title": "Opcions de l'interval de ports",
+        "wellKnown": "Ports coneguts (1-1023)"
+      }
+    },
+    "result": {
+      "count": "Quantitat",
+      "hasDuplicates": "Conté duplicats",
+      "isSorted": "Ordenat",
+      "portDetails": "Detalls dels ports",
+      "range": "Interval de ports",
+      "title": "Ports aleatoris generats"
+    },
+    "shortDescription": "Genera ports de xarxa aleatoris",
+    "title": "Generador de ports aleatoris"
+  },
+  "slackline": {
+    "description": "Calcula la tensió d'una slackline",
+    "longDescription": "Aquesta calculadora suposa una càrrega al centre de la corda",
+    "shortDescription": "Calcula la tensió aproximada d'una slackline o d'una corda d'estendre. No hi confiïs per a qüestions de seguretat.",
+    "title": "Tensió d'una slackline"
+  },
+  "sphereArea": {
+    "description": "Àrea d'una esfera",
+    "longDescription": "Aquesta calculadora determina l'àrea de la superfície d'una esfera amb la fórmula A = 4πr². Pots introduir el radi per obtenir l'àrea de la superfície o introduir l'àrea per calcular el radi necessari. Aquesta eina és útil per a estudiants de geometria, enginyers que treballen amb objectes esfèrics i qualsevol persona que necessiti fer càlculs amb superfícies esfèriques.",
+    "shortDescription": "Calcula l'àrea de la superfície d'una esfera a partir del radi",
+    "title": "Àrea d'una esfera"
+  },
+  "sphereVolume": {
+    "description": "Volum d'una esfera",
+    "longDescription": "Aquesta calculadora calcula el volum d'una esfera amb la fórmula V = (4/3)πr³. Pots introduir el radi o el diàmetre per obtenir el volum, o introduir el volum per determinar el radi necessari. L'eina és valuosa per a estudiants, enginyers i professionals que treballen amb objectes esfèrics en camps com la física, l'enginyeria i la fabricació.",
+    "shortDescription": "Calcula el volum d'una esfera a partir del radi o el diàmetre",
+    "title": "Volum d'una esfera"
+  },
+  "sum": {
+    "description": "Calcula la suma d'una llista de nombres. Introdueix nombres separats per comes o salts de línia per obtenir-ne la suma total.",
+    "example1Description": "En aquest exemple, calculem la suma de deu enters positius. Aquests enters estan en una columna i la seva suma total és 19494.",
+    "example1Title": "Suma de deu nombres positius",
+    "example2Description": "Aquest exemple inverteix una columna de vint substantius de tres síl·labes i mostra totes les paraules de baix a dalt. Per separar els elements de la llista, utilitza el caràcter \\n com a separador d'entrada, cosa que vol dir que cada element és en una línia pròpia.",
+    "example2Title": "Compta els arbres del parc",
+    "example3Description": "En aquest exemple, sumem noranta valors diferents: nombres positius, nombres negatius, enters i fraccions decimals. Definim la coma com a separador d'entrada i, després de sumar-los tots, obtenim 0 com a resultat.",
+    "example3Title": "Suma d'enters i decimals",
+    "example4Description": "En aquest exemple, calculem la suma de les deu xifres i activem l'opció «Mostra la suma acumulada». Obtenim els valors intermedis de la suma durant el procés d'addició. Així, tenim la seqüència següent a la sortida: 0, 1 (0 + 1), 3 (0 + 1 + 2), 6 (0 + 1 + 2 + 3), 10 (0 + 1 + 2 + 3 + 4), etc.",
+    "example4Title": "Suma acumulada de nombres",
+    "extractionTypes": {
+      "delimiter": {
+        "description": "Personalitza aquí el separador de nombres. (Per defecte, un salt de línia.)",
+        "title": "Delimitador de nombres"
+      },
+      "smart": {
+        "description": "Detecta automàticament els nombres de l'entrada.",
+        "title": "Suma intel·ligent"
+      }
+    },
+    "inputTitle": "Entrada",
+    "numberExtraction": "Extracció de nombres",
+    "printRunningSum": "Mostra la suma acumulada",
+    "printRunningSumDescription": "Mostra la suma a mesura que es calcula pas a pas.",
+    "resultTitle": "Total",
+    "runningSum": "Suma acumulada",
+    "shortDescription": "Calcula la suma de nombres",
+    "title": "Suma",
+    "toolInfo": {
+      "description": "Aquesta és una utilitat en línia basada en el navegador per calcular la suma d'un conjunt de nombres. Pots introduir els nombres separats per una coma, un espai o qualsevol altre caràcter, inclòs el salt de línia. També pots enganxar un fragment de text que contingui valors numèrics que vulguis sumar i la utilitat els extraurà i en calcularà la suma.",
+      "title": "Què és una calculadora de suma de nombres?"
+    }
+  },
+  "voltageDropInWire": {
+    "description": "Calcula la caiguda de tensió d'anada i tornada i la pèrdua de potència en un cable de 2 conductors",
+    "longDescription": "Aquesta calculadora ajuda a determinar la caiguda de tensió i la pèrdua de potència en un cable elèctric de dos conductors. Té en compte la longitud del cable, la secció del fil, la resistivitat del material i el corrent. L'eina calcula la caiguda de tensió d'anada i tornada, la resistència total del cable i la potència dissipada en forma de calor. És especialment útil per a enginyers elèctrics, electricistes i aficionats a l'hora de dissenyar sistemes elèctrics per garantir que els nivells de tensió es mantinguin dins de límits acceptables a la càrrega.",
+    "shortDescription": "Calcula la caiguda de tensió i la pèrdua de potència en cables elèctrics segons la longitud, el material i el corrent",
+    "title": "Caiguda de tensió d'anada i tornada en un cable"
+  }
+}

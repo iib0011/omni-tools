@@ -1,0 +1,70 @@
+{
+  "changeSpeed": {
+    "description": "Canvia la velocitat de reproducció dels fitxers d'àudio. Accelera o alenteix l'àudio mantenint el to.",
+    "inputTitle": "Àudio d'entrada",
+    "newAudioSpeed": "Nova velocitat de l'àudio",
+    "outputFormat": "Format de sortida",
+    "resultTitle": "Àudio editat",
+    "settingSpeed": "Configuració de la velocitat",
+    "shortDescription": "Canvia la velocitat dels fitxers d'àudio",
+    "speedDescription": "Multiplicador per defecte: 2 vol dir 2 vegades més ràpid",
+    "title": "Canvia la velocitat de l'àudio"
+  },
+  "extractAudio": {
+    "description": "Extreu la pista d'àudio de fitxers de vídeo.",
+    "extractingAudio": "Extracció de l'àudio",
+    "inputTitle": "Vídeo d'entrada",
+    "outputFormat": "Format de sortida",
+    "outputFormatDescription": "Selecciona el format en què s'extraurà l'àudio.",
+    "resultTitle": "Àudio extret",
+    "shortDescription": "Extreu l'àudio de fitxers de vídeo (MP4, MOV, etc.) a AAC, MP3 o WAV.",
+    "title": "Extreu l'àudio d'un vídeo",
+    "toolInfo": {
+      "description": "Aquesta eina et permet extreure la pista d'àudio de fitxers de vídeo. Pots triar entre diferents formats d'àudio, com ara AAC, MP3 i WAV.",
+      "title": "Què és {{title}}?"
+    }
+  },
+  "mergeAudio": {
+    "description": "Combina diversos fitxers d'àudio en un sol fitxer concatenant-los en seqüència.",
+    "inputTitle": "Fitxers d'àudio d'entrada",
+    "longDescription": "Aquesta eina et permet combinar diversos fitxers d'àudio en un sol fitxer concatenant-los en l'ordre en què els puges. Perfecta per unir segments de pòdcasts, pistes de música o qualsevol fitxer d'àudio que calgui ajuntar. Admet diversos formats d'àudio, com ara MP3, AAC i WAV.",
+    "outputFormat": "Format de sortida",
+    "resultTitle": "Àudio combinat",
+    "shortDescription": "Combina diversos fitxers d'àudio en un de sol (MP3, AAC, WAV).",
+    "title": "Combina àudio",
+    "toolInfo": {
+      "title": "Què és {{title}}?"
+    }
+  },
+  "trim": {
+    "description": "Talla i retalla fitxers d'àudio per extreure'n segments concrets especificant les hores d'inici i de fi amb precisió de mil·lisegons.",
+    "endTime": "Hora de fi",
+    "endTimeDescription": "Hora de fi en format HH:MM:SS.mmm (p. ex., 00:01:30.450)",
+    "inputTitle": "Àudio d'entrada",
+    "longDescription": "Aquesta eina et permet retallar fitxers d'àudio especificant les hores d'inici i de fi amb precisió de mil·lisegons. Pots extreure segments concrets de fitxers d'àudio més llargs, eliminar parts no desitjades o crear clips més curts. Admet diversos formats d'àudio, com ara MP3, AAC i WAV. Perfecta per a l'edició de pòdcasts, la producció musical o qualsevol necessitat d'edició d'àudio.",
+    "outputFormat": "Format de sortida",
+    "resultTitle": "Àudio retallat",
+    "shortDescription": "Retalla fitxers d'àudio per extreure segments de temps concrets amb precisió de mil·lisegons (MP3, AAC, WAV).",
+    "startTime": "Hora d'inici",
+    "startTimeDescription": "Hora d'inici en format HH:MM:SS.mmm (p. ex., 00:00:30.820)",
+    "timeSettings": "Configuració del temps",
+    "title": "Retalla l'àudio",
+    "toolInfo": {
+      "longDescription": "Aquesta eina et permet retallar fitxers d'àudio especificant les hores d'inici i de fi amb precisió de mil·lisegons. Pots extreure segments concrets de fitxers d'àudio més llargs, eliminar parts no desitjades o crear clips més curts. Admet diversos formats d'àudio, com ara MP3, AAC i WAV. Perfecta per a l'edició de pòdcasts, la producció musical o qualsevol necessitat d'edició d'àudio.",
+      "title": "Què és {{title}}?"
+    }
+  },
+  "loop": {
+    "description": "Crea un fitxer d'àudio en bucle repetint l'àudio original diverses vegades.",
+    "inputTitle": "Àudio d'entrada",
+    "loops": "Bucles",
+    "numberOfLoops": "Nombre de bucles",
+    "resultTitle": "Àudio en bucle",
+    "shortDescription": "Crea fitxers d'àudio en bucle",
+    "title": "Àudio en bucle",
+    "toolInfo": {
+      "description": "Aquesta eina et permet crear un fitxer d'àudio en bucle repetint l'àudio original diverses vegades. Pots especificar quantes vegades s'ha de repetir l'àudio.",
+      "title": "Què és {{title}}?"
+    }
+  }
+}
