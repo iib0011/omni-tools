@@ -7,6 +7,7 @@ const readmePath = 'README.md';
 
 const LABELS = {
   en: 'English',
+  ca: 'Catalan',
   de: 'German',
   es: 'Spanish',
   fr: 'French',

@@ -1,0 +1,270 @@
+{
+  "audio": {
+    "changeSpeed": {
+      "description": "Canvia la velocitat de reproducció dels fitxers d'àudio. Accelera o alenteix l'àudio mantenint el to.",
+      "name": "Canvia la velocitat de l'àudio",
+      "shortDescription": "Canvia la velocitat dels fitxers d'àudio"
+    },
+    "extractAudio": {
+      "description": "Extreu la pista d'àudio d'un fitxer de vídeo i desa-la com a fitxer d'àudio independent en el format que triïs (AAC, MP3, WAV).",
+      "name": "Extreu l'àudio",
+      "shortDescription": "Extreu l'àudio de fitxers de vídeo (MP4, MOV, etc.) a AAC, MP3 o WAV."
+    }
+  },
+  "baseFileInput": {
+    "copyFailed": "No s'ha pogut copiar: {{error}}",
+    "dropFileHere": "Deixa anar el teu {{type}} aquí",
+    "fileCopied": "Fitxer copiat",
+    "selectFileDescription": "Fes clic aquí per seleccionar un {{type}} del teu dispositiu, prem Ctrl+V per utilitzar un {{type}} del porta-retalls, o arrossega i deixa anar un fitxer des de l'escriptori"
+  },
+  "categories": {
+    "audio": {
+      "description": "Eines per treballar amb àudio: extreu l'àudio d'un vídeo, ajusta la velocitat de l'àudio, combina diversos fitxers d'àudio i molt més.",
+      "title": "Eines d'àudio"
+    },
+    "converters": {
+      "description": "Eines per convertir dades entre formats diferents: converteix imatges, àudio, vídeo, text i molt més.",
+      "title": "Eines de conversió"
+    },
+    "csv": {
+      "description": "Eines per treballar amb fitxers CSV: converteix CSV a diferents formats, manipula dades CSV, valida l'estructura CSV i processa fitxers CSV de manera eficient.",
+      "title": "Eines CSV"
+    },
+    "gif": {
+      "description": "Eines per treballar amb animacions GIF: crea GIF transparents, extreu fotogrames de GIF, afegeix text a un GIF, retalla, gira, inverteix GIF i molt més.",
+      "title": "Eines GIF"
+    },
+    "image-generic": {
+      "description": "Eines per treballar amb imatges: comprimeix, redimensiona, retalla, converteix a JPG, gira, elimina el fons i molt més.",
+      "title": "Eines d'imatge"
+    },
+    "json": {
+      "description": "Eines per treballar amb estructures de dades JSON: embelleix i minimitza objectes JSON, aplana matrius JSON, converteix valors JSON a cadena, analitza dades i molt més",
+      "title": "Eines JSON"
+    },
+    "list": {
+      "description": "Eines per treballar amb llistes: ordena, inverteix, barreja llistes, troba elements únics i duplicats, canvia els separadors dels elements i molt més.",
+      "title": "Eines de llistes"
+    },
+    "number": {
+      "description": "Eines per treballar amb nombres: genera seqüències de nombres, converteix nombres a paraules i paraules a nombres, ordena, arrodoneix, factoritza nombres i molt més.",
+      "title": "Eines de nombres"
+    },
+    "pdf": {
+      "description": "Eines per treballar amb fitxers PDF: extreu text de PDF, converteix PDF a altres formats, manipula PDF i molt més.",
+      "title": "Eines PDF"
+    },
+    "png": {
+      "description": "Eines per treballar amb imatges PNG: converteix PNG a JPG, crea PNG transparents, canvia els colors d'un PNG, retalla, gira, redimensiona PNG i molt més.",
+      "title": "Eines PNG"
+    },
+    "seeAll": "Mostra totes les {{title}}",
+    "string": {
+      "description": "Eines per treballar amb text: converteix text en imatges, cerca i substitueix text, divideix text en fragments, uneix línies de text, repeteix text i molt més.",
+      "title": "Eines de text"
+    },
+    "time": {
+      "description": "Eines per treballar amb hores i dates: calcula diferències de temps, converteix entre zones horàries, formata dates, genera seqüències de dates i molt més.",
+      "title": "Eines de temps"
+    },
+    "try": "Prova {{title}}",
+    "video": {
+      "description": "Eines per treballar amb vídeos: extreu fotogrames de vídeos, crea GIF a partir de vídeos, converteix vídeos a diferents formats i molt més.",
+      "title": "Eines de vídeo"
+    },
+    "xml": {
+      "description": "Eines per treballar amb estructures de dades XML: visualitzador, embellidor, validador i molt més",
+      "title": "Eines XML"
+    }
+  },
+  "converters": {
+    "audioconverter": {
+      "description": "Converteix fitxers d'àudio entre formats diferents.",
+      "longDescription": "Aquesta eina et permet convertir fitxers d'àudio d'un format a un altre, amb compatibilitat per a una àmplia gamma de formats d'àudio per a una conversió sense complicacions.",
+      "shortDescription": "Converteix fitxers d'àudio a diversos formats.",
+      "title": "Convertidor d'àudio"
+    }
+  },
+  "csv": {
+    "findIncompleteCsvRecords": {
+      "description": "Només cal que pugis el teu fitxer CSV al formulari de sota i aquesta eina comprovarà automàticament que cap fila ni columna tingui valors absents. A les opcions de l'eina, pots ajustar el format del fitxer d'entrada (especificar el delimitador, el caràcter de cometes i el caràcter de comentari). A més, pots activar la comprovació de valors buits, ometre les línies buides i establir un límit al nombre de missatges d'error a la sortida.",
+      "name": "Troba registres CSV incomplets",
+      "shortDescription": "Troba ràpidament files i columnes d'un CSV amb valors absents."
+    }
+  },
+  "hero": {
+    "brand": "OmniTools",
+    "description": "Augmenta la teva productivitat amb OmniTools, el conjunt d'eines definitiu per fer les coses ràpidament! Accedeix a milers d'utilitats fàcils d'utilitzar per editar imatges, text, llistes i dades, directament des del teu navegador.",
+    "examples": {
+      "calculateNumberSum": "Calcula la suma de nombres",
+      "changeGifSpeed": "Canvia la velocitat d'un GIF",
+      "compressPng": "Comprimeix un PNG",
+      "createTransparentImage": "Crea una imatge transparent",
+      "prettifyJson": "Embelleix JSON",
+      "sortList": "Ordena una llista",
+      "splitPdf": "Divideix un PDF",
+      "splitText": "Divideix un text",
+      "trimVideo": "Retalla un vídeo"
+    },
+    "search": {
+      "noResult": "No s'han trobat resultats. Prova d'ajustar la cerca o els criteris de filtre",
+      "placeholder": "Cerca entre totes les eines"
+    },
+    "title": "Fes les coses ràpidament amb"
+  },
+  "inputFooter": {
+    "clear": "Esborra",
+    "copyToClipboard": "Copia al porta-retalls",
+    "importFromFile": "Selecciona fitxers"
+  },
+  "list": {
+    "group": {
+      "description": "La utilitat de navegador més senzilla del món per agrupar elements d'una llista. Introdueix la teva llista i especifica els criteris d'agrupació per organitzar els elements en grups lògics. Perfecta per categoritzar dades, organitzar informació o crear llistes estructurades. Admet separadors personalitzats i diverses opcions d'agrupació.",
+      "name": "Agrupa",
+      "shortDescription": "Agrupa els elements d'una llista per propietats comunes"
+    },
+    "reverse": {
+      "description": "Aquesta és una aplicació de navegador molt senzilla que mostra tots els elements d'una llista en ordre invers. Els elements d'entrada poden estar separats per qualsevol símbol i també pots canviar el separador dels elements de la llista invertida.",
+      "name": "Inverteix",
+      "shortDescription": "Inverteix ràpidament una llista"
+    },
+    "sort": {
+      "description": "Aquesta és una aplicació de navegador molt senzilla que ordena els elements d'una llista en ordre creixent o decreixent. Pots ordenar els elements alfabèticament, numèricament o per longitud. També pots eliminar elements duplicats i buits, així com retallar els espais en blanc al voltant de cada element. Pots utilitzar qualsevol caràcter separador per separar els elements de la llista d'entrada o bé utilitzar una expressió regular. A més, pots definir un nou delimitador per a la llista ordenada de sortida.",
+      "name": "Ordena",
+      "shortDescription": "Ordena ràpidament una llista"
+    }
+  },
+  "navbar": {
+    "buyMeACoffee": "Convida'm a un cafè",
+    "helpTranslate": "Ajuda a traduir",
+    "home": "Inici",
+    "tools": "Eines"
+  },
+  "number": {
+    "generate": {
+      "description": "Calcula ràpidament una llista d'enters al teu navegador. Per obtenir la llista, només cal que especifiquis el primer enter, el valor d'increment i el recompte total a les opcions de sota, i aquesta utilitat generarà aquesta quantitat d'enters",
+      "name": "Genera nombres",
+      "shortDescription": "Calcula ràpidament una llista d'enters al teu navegador"
+    },
+    "sum": {
+      "description": "Aquesta és una aplicació de navegador molt senzilla que suma nombres. Els nombres d'entrada poden estar separats per qualsevol símbol i també pots canviar el separador dels nombres sumats.",
+      "name": "Suma nombres",
+      "shortDescription": "Suma ràpidament una llista de nombres"
+    }
+  },
+  "numericInputWithUnit": {
+    "unit": "Unitat"
+  },
+  "pdf": {
+    "compressPdf": {
+      "description": "Redueix la mida d'un fitxer PDF mantenint-ne la qualitat amb Ghostscript",
+      "name": "Comprimeix PDF",
+      "shortDescription": "Comprimeix fitxers PDF de manera segura al teu navegador"
+    },
+    "mergePdf": {
+      "description": "Combina diversos fitxers PDF en un sol document.",
+      "name": "Combina PDF",
+      "shortDescription": "Combina diversos fitxers PDF en un sol document"
+    },
+    "pdfToEpub": {
+      "description": "Transforma documents PDF en fitxers EPUB per a una millor compatibilitat amb lectors electrònics.",
+      "name": "PDF a EPUB",
+      "shortDescription": "Converteix fitxers PDF a format EPUB"
+    },
+    "protectPdf": {
+      "description": "Afegeix protecció amb contrasenya als teus fitxers PDF de manera segura al navegador",
+      "name": "Protegeix PDF",
+      "shortDescription": "Protegeix fitxers PDF amb contrasenya de manera segura"
+    },
+    "splitPdf": {
+      "description": "Extreu pàgines concretes d'un fitxer PDF mitjançant números o intervals de pàgina (p. ex., 1,5-8)",
+      "name": "Divideix PDF",
+      "shortDescription": "Extreu pàgines concretes d'un fitxer PDF"
+    }
+  },
+  "resultFooter": {
+    "copy": "Copia al porta-retalls",
+    "download": "Baixa"
+  },
+  "string": {
+    "createPalindrome": {
+      "description": "La utilitat de navegador més senzilla del món per crear palíndroms a partir de qualsevol text. Introdueix un text i transforma'l a l'instant en un palíndrom que es llegeix igual d'endavant cap enrere que d'enrere cap endavant. Perfecta per a jocs de paraules, crear patrons de text simètrics o explorar curiositats lingüístiques.",
+      "name": "Crea un palíndrom",
+      "shortDescription": "Crea text que es llegeix igual en tots dos sentits"
+    },
+    "palindrome": {
+      "description": "La utilitat de navegador més senzilla del món per comprovar si un text és un palíndrom. Verifica a l'instant si el teu text es llegeix igual en tots dos sentits. Perfecta per a trencaclosques de paraules, anàlisi lingüística o validació de patrons de text simètrics. Admet diversos delimitadors i la detecció de palíndroms de diverses paraules.",
+      "name": "Palíndrom",
+      "shortDescription": "Comprova si un text es llegeix igual en tots dos sentits"
+    },
+    "repeat": {
+      "description": "Aquesta eina et permet repetir un text diverses vegades amb un separador opcional.",
+      "name": "Repeteix text",
+      "shortDescription": "Repeteix un text diverses vegades"
+    },
+    "reverse": {
+      "description": "La utilitat de navegador més senzilla del món per invertir text. Introdueix qualsevol text i obtén-lo invertit a l'instant, caràcter a caràcter. Perfecta per crear text de mirall, analitzar palíndroms o jugar amb patrons de text. Conserva els espais i els caràcters especials en invertir.",
+      "name": "Inverteix",
+      "shortDescription": "Inverteix qualsevol text caràcter a caràcter"
+    },
+    "toMorse": {
+      "description": "La utilitat de navegador més senzilla del món per convertir text a codi Morse. Carrega el teu text al formulari d'entrada de l'esquerra i obtindràs a l'instant el codi Morse a l'àrea de sortida. Potent, gratuïta i ràpida. Carrega text i obtén codi Morse.",
+      "name": "Text a Morse",
+      "shortDescription": "Codifica ràpidament text a Morse"
+    },
+    "uppercase": {
+      "description": "La utilitat de navegador més senzilla del món per convertir text a majúscules. Només cal que introdueixis el text i es convertirà automàticament a majúscules. Perfecta per crear titulars, destacar text o estandarditzar el format del text. Admet diversos formats de text i conserva els caràcters especials.",
+      "name": "Majúscules",
+      "shortDescription": "Converteix text a lletres majúscules"
+    }
+  },
+  "toolExamples": {
+    "subtitle": "Fes clic per provar-ho!",
+    "title": "Exemples de {{title}}"
+  },
+  "toolFileResult": {
+    "copied": "Fitxer copiat",
+    "copyFailed": "No s'ha pogut copiar: {{error}}",
+    "loading": "S'està carregant... Pot trigar una estona.",
+    "result": "Resultat"
+  },
+  "toolHeader": {
+    "seeExamples": "Mostra exemples"
+  },
+  "toolLayout": {
+    "allToolsTitle": "Totes les {{type}}"
+  },
+  "toolMultiFileResult": {
+    "copied": "Fitxer copiat",
+    "copyFailed": "No s'ha pogut copiar: {{error}}",
+    "loading": "S'està carregant... Pot trigar una estona.",
+    "result": "Resultat"
+  },
+  "toolMultipleInput": {
+    "deleteFile": "Elimina el fitxer",
+    "dropFilesHere": "Deixa anar els fitxers aquí",
+    "inputTitle": "{{type}} d'entrada",
+    "invalidFileType": "Tipus de fitxer no vàlid. Selecciona fitxers d'un tipus compatible.",
+    "noFilesSelected": "No s'ha seleccionat cap fitxer",
+    "selectFilesDescription": "Fes clic aquí per seleccionar fitxers del teu dispositiu, o arrossega i deixa anar fitxers aquí"
+  },
+  "toolOptions": {
+    "title": "Opcions de l'eina"
+  },
+  "toolTextInput": {
+    "copied": "Text copiat",
+    "copyFailed": "No s'ha pogut copiar: {{error}}",
+    "input": "Text d'entrada",
+    "placeholder": "Introdueix el teu text aquí..."
+  },
+  "toolTextResult": {
+    "copied": "Text copiat",
+    "copyFailed": "No s'ha pogut copiar: {{error}}",
+    "loading": "S'està carregant... Pot trigar una estona.",
+    "result": "Resultat"
+  },
+  "userTypes": {
+    "developers": "Desenvolupadors",
+    "generalUsers": "Usuaris generals"
+  }
+}

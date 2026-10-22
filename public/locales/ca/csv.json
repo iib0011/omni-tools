@@ -1,0 +1,125 @@
+{
+  "changeCsvSeparator": {
+    "description": "Canvia el delimitador/separador dels fitxers CSV. Converteix entre diferents formats CSV, com ara coma, punt i coma, tabulació o separadors personalitzats.",
+    "shortDescription": "Canvia el delimitador d'un fitxer CSV",
+    "title": "Canvia el separador CSV"
+  },
+  "csvRowsToColumns": {
+    "description": "Aquesta eina converteix les files d'un fitxer CSV (valors separats per comes) en columnes. Extreu una a una les línies horitzontals del CSV d'entrada, les gira 90 graus i les mostra com a columnes verticals una darrere l'altra, separades per comes.",
+    "longDescription": "Aquesta eina converteix les files d'un fitxer CSV (valors separats per comes) en columnes. Per exemple, si les dades CSV d'entrada tenen 6 files, la sortida tindrà 6 columnes i els elements de les files s'organitzaran de dalt a baix. En un CSV ben format, el nombre de valors de cada fila és el mateix. Tanmateix, quan a les files els falten camps, el programa les pot corregir i pots triar entre les opcions disponibles: omplir les dades absents amb elements buits o substituir-les per elements personalitzats, com ara",
+    "shortDescription": "Converteix les files d'un CSV en columnes.",
+    "title": "Converteix files CSV en columnes"
+  },
+  "csvToJson": {
+    "columnSeparator": "Separador de columnes (p. ex., , ; \\t)",
+    "commentSymbol": "Símbol de comentari (p. ex., #)",
+    "conversionOptions": "Opcions de conversió",
+    "description": "Converteix fitxers CSV a format JSON amb opcions personalitzables de delimitadors, cometes i format de sortida. Compatible amb capçaleres, comentaris i conversió dinàmica de tipus.",
+    "dynamicTypes": "Tipus dinàmics",
+    "dynamicTypesDescription": "Converteix automàticament nombres i booleans",
+    "error": "Error",
+    "errorParsing": "Error en analitzar el CSV: {{error}}",
+    "fieldQuote": "Cometes de camp (p. ex., \")",
+    "inputCsvFormat": "Format del CSV d'entrada",
+    "inputTitle": "CSV d'entrada",
+    "invalidCsvFormat": "Format CSV no vàlid",
+    "resultTitle": "JSON de sortida",
+    "shortDescription": "Converteix dades CSV a format JSON.",
+    "skipEmptyLines": "Omet les línies buides",
+    "skipEmptyLinesDescription": "Ignora les línies buides del CSV d'entrada",
+    "title": "Converteix CSV a JSON",
+    "toolInfo": {
+      "description": "Aquesta eina transforma fitxers CSV (valors separats per comes) en estructures de dades JSON (JavaScript Object Notation). Admet diversos formats CSV amb delimitadors, caràcters de cometes i símbols de comentari personalitzables. El convertidor pot tractar la primera fila com a capçaleres, ometre les línies buides i detectar automàticament tipus de dades com nombres i booleans. El JSON resultant es pot utilitzar per a migracions de dades, còpies de seguretat o com a entrada per a altres aplicacions.",
+      "title": "Què és un convertidor de CSV a JSON?"
+    },
+    "useHeaders": "Utilitza capçaleres",
+    "useHeadersDescription": "Tracta la primera fila com a capçaleres de columna"
+  },
+  "csvToTsv": {
+    "description": "Puja el teu fitxer CSV al formulari de sota i es convertirà automàticament en un fitxer TSV. A les opcions de l'eina, pots personalitzar el format del CSV d'entrada: especificar el delimitador de camps, el caràcter de cometes i el símbol de comentari, així com ometre les línies CSV buides i triar si vols conservar les capçaleres de columna del CSV.",
+    "longDescription": "Aquesta eina transforma dades CSV (valors separats per comes) en dades TSV (valors separats per tabulacions). Tant CSV com TSV són formats de fitxer populars per emmagatzemar dades tabulars, però utilitzen delimitadors diferents per separar els valors: CSV utilitza comes (",
+    "shortDescription": "Converteix dades CSV a format TSV.",
+    "title": "Converteix CSV a TSV"
+  },
+  "csvToXml": {
+    "description": "Converteix fitxers CSV a format XML amb opcions personalitzables.",
+    "shortDescription": "Converteix dades CSV a format XML.",
+    "title": "Converteix CSV a XML"
+  },
+  "csvToYaml": {
+    "description": "Només cal que pugis el teu fitxer CSV al formulari de sota i es convertirà automàticament en un fitxer YAML. A les opcions de l'eina, pots especificar el caràcter delimitador de camps, el caràcter de cometes i el caràcter de comentari per adaptar l'eina a formats CSV personalitzats. A més, pots seleccionar el format YAML de sortida: un que conserva les capçaleres CSV o un que les exclou.",
+    "longDescription": "Aquesta eina transforma dades CSV (valors separats per comes) en dades YAML (Yet Another Markup Language). CSV és un format tabular senzill que s'utilitza per representar dades de tipus matricial formades per files i columnes. YAML, en canvi, és un format més avançat (de fet, un superconjunt de JSON), que crea dades més llegibles per a les persones per a la serialització i admet llistes, diccionaris i objectes imbricats. Aquest programa admet diversos formats CSV d'entrada: les dades poden estar separades per comes (per defecte), per punts i comes, per barres verticals o utilitzar un delimitador completament diferent. Pots especificar el delimitador exacte que utilitzen les teves dades a les opcions. De la mateixa manera, a les opcions pots especificar el caràcter de cometes que s'utilitza per envoltar els camps CSV (per defecte, unes cometes dobles). També pots ometre les línies que comencen amb comentaris especificant els símbols de comentari a les opcions. Això et permet mantenir les dades netes ometent les línies innecessàries. Hi ha dues maneres de convertir CSV a YAML. El primer mètode converteix cada fila CSV en una llista YAML. El segon mètode extreu les capçaleres de la primera fila CSV i crea objectes YAML amb claus basades en aquestes capçaleres. També pots personalitzar el format YAML de sortida especificant el nombre d'espais per sagnar les estructures YAML. Si necessites fer la conversió inversa, és a dir, transformar YAML en CSV, pots utilitzar la nostra eina Converteix YAML a CSV.",
+    "shortDescription": "Converteix ràpidament un fitxer CSV en un fitxer YAML.",
+    "title": "Converteix CSV a YAML"
+  },
+  "findIncompleteCsvRecords": {
+    "checkingOptions": "Opcions de comprovació",
+    "commentCharacterDescription": "Introdueix el caràcter que indica l'inici d'una línia de comentari. Les línies que comencin amb aquest símbol s'ometran.",
+    "csvInputOptions": "Opcions del CSV d'entrada",
+    "csvSeparatorDescription": "Introdueix el caràcter utilitzat per delimitar les columnes al fitxer CSV d'entrada.",
+    "deleteLinesWithNoData": "Elimina les línies sense dades",
+    "deleteLinesWithNoDataDescription": "Elimina les línies buides del fitxer CSV d'entrada.",
+    "description": "Només cal que pugis el teu fitxer CSV al formulari de sota i aquesta eina comprovarà automàticament que cap fila ni columna tingui valors absents. A les opcions de l'eina, pots ajustar el format del fitxer d'entrada (especificar el delimitador, el caràcter de cometes i el caràcter de comentari). A més, pots activar la comprovació de valors buits, ometre les línies buides i establir un límit al nombre de missatges d'error a la sortida.",
+    "findEmptyValues": "Troba valors buits",
+    "findEmptyValuesDescription": "Mostra un missatge sobre els camps CSV que estan buits (no són camps absents, sinó camps que no contenen res).",
+    "inputTitle": "CSV d'entrada",
+    "limitNumberOfMessages": "Limita el nombre de missatges",
+    "messageLimitDescription": "Defineix el límit del nombre de missatges a la sortida.",
+    "quoteCharacterDescription": "Introdueix el caràcter de cometes utilitzat per envoltar els camps del CSV d'entrada.",
+    "resultTitle": "Estat del CSV",
+    "shortDescription": "Troba ràpidament files i columnes d'un CSV amb valors absents.",
+    "title": "Troba registres CSV incomplets",
+    "toolInfo": {
+      "title": "Què és {{title}}?"
+    }
+  },
+  "insertCsvColumns": {
+    "appendColumns": "Afegeix columnes al final",
+    "commentCharacterDescription": "Introdueix el caràcter que indica l'inici d'una línia de comentari. Les línies que comencin amb aquest símbol s'ometran.",
+    "csvOptions": "Opcions CSV",
+    "csvSeparator": "Separador CSV",
+    "csvToInsert": "CSV per inserir",
+    "csvToInsertDescription": "Introdueix una o més columnes que vulguis inserir al CSV. El caràcter utilitzat per delimitar les columnes ha de ser el mateix que el del fitxer CSV d'entrada. Nota: les línies en blanc s'ignoraran",
+    "customFillDescription": "Si el fitxer CSV d'entrada està incomplet (hi falten valors), vols afegir camps buits o símbols personalitzats als registres per obtenir un CSV ben format?",
+    "customFillValueDescription": "Utilitza aquest valor personalitzat per omplir els camps absents. (Només funciona amb el mode «Valors personalitzats» de dalt.)",
+    "customPosition": "Posició personalitzada",
+    "customPositionOptionsDescription": "Selecciona el mètode per inserir les columnes al fitxer CSV.",
+    "description": "Afegeix noves columnes a les dades CSV en posicions especificades.",
+    "fillWithCustomValues": "Omple amb valors personalitzats",
+    "fillWithEmptyValues": "Omple amb valors buits",
+    "headerName": "Nom de la capçalera",
+    "headerNameDescription": "Capçalera de la columna després de la qual vols inserir les columnes.",
+    "inputTitle": "CSV d'entrada",
+    "insertingPositionDescription": "Especifica on vols inserir les columnes al fitxer CSV.",
+    "position": "Posició",
+    "positionOptions": "Opcions de posició",
+    "prependColumns": "Afegeix columnes al principi",
+    "quoteCharDescription": "Introdueix el caràcter de cometes utilitzat per envoltar els camps del CSV d'entrada.",
+    "resultTitle": "CSV de sortida",
+    "rowNumberDescription": "Número de la columna després de la qual vols inserir les columnes.",
+    "separatorDescription": "Introdueix el caràcter utilitzat per delimitar les columnes al fitxer CSV d'entrada.",
+    "shortDescription": "Insereix ràpidament una o més columnes noves en qualsevol lloc d'un fitxer CSV.",
+    "title": "Insereix columnes CSV",
+    "toolInfo": {
+      "description": "Aquesta eina et permet inserir noves columnes a les dades CSV en posicions especificades. Pots afegir columnes al principi, al final o en posicions personalitzades segons els noms de les capçaleres o els números de columna.",
+      "title": "Insereix columnes CSV"
+    }
+  },
+  "swapCsvColumns": {
+    "description": "Només cal que pugis el teu fitxer CSV al formulari de sota, especifiquis les columnes que vols intercanviar i l'eina canviarà automàticament les posicions de les columnes especificades al fitxer de sortida. A les opcions de l'eina, pots especificar les posicions o els noms de les columnes que vols intercanviar, així com corregir dades incompletes i, opcionalment, eliminar els registres buits i els registres comentats.",
+    "longDescription": "Aquesta eina reorganitza les dades CSV intercanviant les posicions de les seves columnes. Intercanviar columnes pot millorar la llegibilitat d'un fitxer CSV, ja que permet agrupar les dades d'ús freqüent o posar-les al davant per comparar-les i editar-les més fàcilment. Per exemple, pots intercanviar la primera columna amb l'última o la segona amb la tercera. Per intercanviar columnes segons les seves posicions, selecciona el",
+    "shortDescription": "Reordena les columnes d'un CSV.",
+    "title": "Intercanvia columnes CSV"
+  },
+  "transposeCsv": {
+    "description": "Només cal que pugis el teu fitxer CSV al formulari de sota i aquesta eina el transposarà automàticament. A les opcions de l'eina, pots especificar el caràcter amb què comencen les línies de comentari del CSV per eliminar-les. A més, si el CSV està incomplet (hi falten valors), pots substituir els valors absents pel caràcter buit o per un caràcter personalitzat.",
+    "longDescription": "Aquesta eina transposa valors separats per comes (CSV). Tracta el CSV com una matriu de dades i capgira tots els elements respecte a la diagonal principal. La sortida conté les mateixes dades CSV que l'entrada, però ara totes les files s'han convertit en columnes i totes les columnes en files. Després de la transposició, el fitxer CSV tindrà les dimensions oposades. Per exemple, si el fitxer d'entrada té 4 columnes i 3 files, el fitxer de sortida tindrà 3 columnes i 4 files. Durant la conversió, el programa també neteja les dades de línies innecessàries i corregeix les dades incompletes. En concret, l'eina elimina automàticament tots els registres buits i els comentaris que comencen amb un caràcter concret, que pots definir a les opcions. A més, en els casos en què les dades CSV estiguin malmeses o perdudes, la utilitat completa el fitxer amb camps buits o camps personalitzats que es poden especificar a les opcions.",
+    "shortDescription": "Transposa ràpidament un fitxer CSV.",
+    "title": "Transposa CSV"
+  },
+  "tsvToJson": {
+    "description": "Converteix dades TSV (valors separats per tabulacions) a format JSON. Transforma dades tabulars en objectes JSON estructurats.",
+    "shortDescription": "Converteix TSV a format JSON",
+    "title": "TSV a JSON"
+  }
+}

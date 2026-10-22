@@ -31,6 +31,7 @@ interface NavbarProps {
 }
 const languages = [
   { code: 'en', label: 'English' },
+  { code: 'ca', label: 'Català' },
   { code: 'de', label: 'Deutsch' },
   { code: 'es', label: 'Español' },
   { code: 'fr', label: 'Français' },
