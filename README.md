@@ -19,6 +19,8 @@
           <img src="https://img.shields.io/discord/1342971141823664179?label=Discord&style=for-the-badge" />
         </a>
         <br /><br />
+<a href="https://app.railyard.run/deploy?repo=https://github.com/iib0011/omni-tools"><img src="https://app.railyard.run/deploy/badge" alt="Deploy to Railyard" /></a>
+        <br /><br />
 </div>
 
 Welcome to OmniTools, a self-hosted web app offering a variety of online tools to simplify everyday tasks.
