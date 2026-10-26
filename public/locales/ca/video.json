@@ -1,0 +1,181 @@
+{
+  "addAudio": {
+    "audioFile": "Fitxer d'àudio",
+    "audioInputTitle": "Àudio d'entrada",
+    "description": "Afegeix fàcilment una pista d'àudio a qualsevol fitxer de vídeo. Pots triar entre substituir completament l'àudio original o barrejar una pista nova amb l'existent. Ajusta el volum, configura les opcions de bucle i retalla l'àudio amb hores d'inici i de fi precises. Admet tots els formats de vídeo i àudio habituals per a una edició flexible i resultats ràpids.",
+    "durationMode": "Interval de temps",
+    "endTime": "Hora de fi",
+    "endTimeDesc": "Quan deixa de sonar el nou àudio (HH:MM:SS.mm).",
+    "loadingText": "S'està afegint l'àudio al vídeo...",
+    "loop": "Bucle (repeteix l'àudio fins al final del vídeo o fins a l'hora de fi definida)",
+    "loopOption": "Opcions de bucle",
+    "mode": "Mode d'àudio",
+    "modeMix": "Barreja (conserva l'original i afegeix el nou)",
+    "modeReplace": "Substitueix l'àudio original",
+    "noLoop": "Sense bucle (reprodueix l'àudio només una vegada)",
+    "resultTitle": "Vídeo processat",
+    "shortDescription": "Afegeix o substitueix la pista d'àudio d'un vídeo",
+    "startTime": "Hora d'inici",
+    "startTimeDesc": "Quan comença a sonar el nou àudio (HH:MM:SS.mm).",
+    "timing": "Temporització de l'àudio",
+    "timingDefault": "Per defecte (tot el vídeo)",
+    "timingEnd": "Defineix l'hora de fi",
+    "timingModeDesc": "Tria quan sona el nou àudio dins de la línia de temps del vídeo.",
+    "timingStart": "Defineix l'hora d'inici",
+    "timingStartEnd": "Defineix les hores d'inici i de fi",
+    "title": "Afegeix àudio a un vídeo",
+    "videoInputTitle": "Vídeo d'entrada",
+    "volume": "Volum del nou àudio",
+    "volumeDesc": "Nivell de volum de la nova pista d'àudio."
+  },
+  "changeSpeed": {
+    "description": "Canvia la velocitat de reproducció dels fitxers de vídeo. Accelera o alenteix els vídeos mantenint la sincronització de l'àudio. Admet diversos multiplicadors de velocitat i els formats de vídeo habituals.",
+    "inputTitle": "Vídeo d'entrada",
+    "options": "Opcions",
+    "resultTitle": "Vídeo editat",
+    "shortDescription": "Canvia la velocitat de reproducció d'un vídeo",
+    "speedLabel": "Velocitat: x",
+    "title": "Canvia la velocitat del vídeo",
+    "toolInfo": {
+      "longDescription": "{{title}} et permet ajustar la velocitat de reproducció dels teus vídeos directament al navegador. Accelera els vídeos per obtenir efectes de càmera ràpida o alenteix-los per a una reproducció a càmera lenta, mantenint l'àudio sincronitzat. Tria un multiplicador de velocitat entre 0,25x i 4x per personalitzar el vídeo i processa'l fàcilment sense instal·lar programari addicional. Aquesta eina admet els formats de vídeo habituals i conserva tant com és possible la qualitat original del vídeo durant el processament.",
+      "title": "Què és {{title}}?"
+    }
+  },
+  "compress": {
+    "default": "Per defecte",
+    "description": "Comprimeix vídeos escalant-los a diferents resolucions com 240p, 480p, 720p, etc. Aquesta eina ajuda a reduir la mida del fitxer mantenint una qualitat acceptable. Admet els formats de vídeo habituals com MP4, WebM i OGG.",
+    "inputTitle": "Vídeo d'entrada",
+    "loadingText": "S'està comprimint el vídeo...",
+    "lossless": "Sense pèrdua",
+    "quality": "Qualitat (CRF)",
+    "resolution": "Resolució",
+    "resultTitle": "Vídeo comprimit",
+    "shortDescription": "Comprimeix vídeos escalant-los a diferents resolucions",
+    "title": "Comprimeix un vídeo",
+    "worst": "La pitjor"
+  },
+  "cropVideo": {
+    "cropCoordinates": "Coordenades del retall",
+    "croppingVideo": "S'està retallant el vídeo",
+    "description": "Retalla un vídeo per eliminar-ne àrees no desitjades.",
+    "errorBeyondHeight": "L'àrea de retall supera l'alçada del vídeo ({{height}}px)",
+    "errorBeyondWidth": "L'àrea de retall supera l'amplada del vídeo ({{width}}px)",
+    "errorCroppingVideo": "Error en retallar el vídeo. Comprova els paràmetres i el fitxer de vídeo.",
+    "errorLoadingDimensions": "No s'han pogut carregar les dimensions del vídeo",
+    "errorNonNegativeCoordinates": "Les coordenades X i Y no poden ser negatives",
+    "errorPositiveDimensions": "L'amplada i l'alçada han de ser positives",
+    "height": "Alçada",
+    "inputTitle": "Vídeo d'entrada",
+    "loadVideoForDimensions": "Carrega un vídeo per veure'n les dimensions",
+    "longDescription": "Aquesta eina et permet retallar fitxers de vídeo per eliminar-ne àrees no desitjades o centrar-te en parts concretes del vídeo. Útil per eliminar franges negres, ajustar la relació d'aspecte o destacar el contingut important. Admet diversos formats de vídeo, com ara MP4, MOV i AVI.",
+    "resultTitle": "Vídeo retallat",
+    "shortDescription": "Retalla un vídeo per eliminar-ne àrees no desitjades",
+    "title": "Retalla un vídeo",
+    "toolInfo": {
+      "description": "Aquesta eina et permet retallar fitxers de vídeo per eliminar-ne àrees no desitjades. Pots especificar l'àrea de retall definint les coordenades X i Y i les dimensions d'amplada i alçada.",
+      "title": "Retalla un vídeo"
+    },
+    "videoDimensions": "Dimensions del vídeo: {{width}} × {{height}} píxels",
+    "videoInformation": "Informació del vídeo",
+    "width": "Amplada",
+    "xCoordinate": "X (esquerra)",
+    "yCoordinate": "Y (dalt)"
+  },
+  "flip": {
+    "description": "Capgira fitxers de vídeo horitzontalment o verticalment. Fes un efecte mirall als vídeos per a efectes especials o corregeix problemes d'orientació.",
+    "horizontalLabel": "Horitzontal (mirall)",
+    "inputTitle": "Vídeo d'entrada",
+    "orientation": "Orientació",
+    "resultTitle": "Vídeo capgirat",
+    "shortDescription": "Capgira un vídeo horitzontalment o verticalment",
+    "title": "Capgira un vídeo",
+    "verticalLabel": "Vertical (cap per avall)"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "Canvia la velocitat de reproducció de les animacions GIF. Accelera o alenteix els GIF mantenint una animació fluida.",
+      "inputTitle": "GIF d'entrada",
+      "options": {
+        "speedLabel": "Velocitat: x",
+        "title": "Opcions"
+      },
+      "resultTitle": "GIF de sortida",
+      "shortDescription": "Canvia la velocitat d'una animació GIF",
+      "title": "Canvia la velocitat d'un GIF"
+    },
+    "imagesToGif": {
+      "title": "Imatges a GIF",
+      "description": "Crea GIF animats a partir de diverses imatges. Organitza els fotogrames, ajusta la temporització i genera una animació fluida en només uns quants clics.",
+      "shortDescription": "Converteix diverses imatges en un GIF animat",
+      "inputTitle": "Imatges d'entrada",
+      "resultTitle": "GIF animat",
+      "loadingText": "S'està creant el GIF...",
+      "frameOptions": "Opcions dels fotogrames",
+      "frameDelayDescription": "Quant de temps es mostra cada fotograma, en mil·lisegons (p. ex., 500 = 0,5 s per fotograma)",
+      "frameRateDescription": "Defineix la velocitat de l'animació en fotogrames per segon (FPS)",
+      "frameRateValueDescription": "Defineix el valor desitjat",
+      "frameDelay": "Retard entre fotogrames",
+      "frameRate": "Fotogrames per segon (FPS)"
+    }
+  },
+  "loop": {
+    "description": "Crea un vídeo en bucle repetint el vídeo original diverses vegades.",
+    "inputTitle": "Vídeo d'entrada",
+    "loops": "Bucles",
+    "numberOfLoops": "Nombre de bucles",
+    "resultTitle": "Vídeo en bucle",
+    "shortDescription": "Crea fitxers de vídeo en bucle",
+    "title": "Vídeo en bucle",
+    "toolInfo": {
+      "description": "Aquesta eina et permet crear un vídeo en bucle repetint el vídeo original diverses vegades. Pots especificar quantes vegades s'ha de repetir el vídeo.",
+      "title": "Què és {{title}}?"
+    }
+  },
+  "mergeVideo": {
+    "description": "Combina diversos fitxers de vídeo en un sol vídeo continu.",
+    "inputTitle": "Vídeos d'entrada",
+    "longDescription": "Aquesta eina et permet combinar o afegir diversos fitxers de vídeo en un sol vídeo continu. Només cal que pugis els fitxers de vídeo, els organitzis en l'ordre desitjat i els combinis en un sol fitxer per compartir-lo o editar-lo fàcilment.",
+    "resultTitle": "Vídeo combinat",
+    "shortDescription": "Afegeix i combina vídeos fàcilment.",
+    "title": "Combina vídeos"
+  },
+  "resize": {
+    "customDimensions": "Dimensions personalitzades",
+    "customMode": "Dimensions personalitzades",
+    "customModeDesc": "Defineix la teva pròpia amplada i alçada",
+    "description": "Redimensiona vídeos a diferents resolucions com 240p, 360p, 480p, 720p i 1080p, o defineix dimensions personalitzades d'amplada i alçada. Per defecte manté la relació d'aspecte per evitar deformacions. Admet els formats de vídeo habituals com MP4, WebM i OGG.",
+    "height": "Alçada (píxels)",
+    "inputTitle": "Vídeo d'entrada",
+    "loadingText": "S'està redimensionant el vídeo...",
+    "maintainAspectRatio": "Mantén la relació d'aspecte",
+    "mode": "Mode de redimensionament",
+    "presetMode": "Resolució predefinida",
+    "presetModeDesc": "Tria entre les resolucions de vídeo estàndard",
+    "resolution": "Resolució",
+    "resultTitle": "Vídeo redimensionat",
+    "shortDescription": "Redimensiona vídeos a diferents resolucions",
+    "title": "Redimensiona un vídeo",
+    "width": "Amplada (píxels)"
+  },
+  "rotate": {
+    "180Degrees": "180° (cap per avall)",
+    "270Degrees": "270° (90° en sentit antihorari)",
+    "90Degrees": "90° en sentit horari",
+    "description": "Gira fitxers de vídeo 90, 180 o 270 graus. Corregeix l'orientació del vídeo o crea efectes especials amb un control de gir precís.",
+    "inputTitle": "Vídeo d'entrada",
+    "resultTitle": "Vídeo girat",
+    "rotation": "Gir",
+    "shortDescription": "Gira un vídeo els graus especificats",
+    "title": "Gira un vídeo"
+  },
+  "trim": {
+    "description": "Retalla fitxers de vídeo especificant les hores d'inici i de fi. Elimina seccions no desitjades del començament o del final dels vídeos.",
+    "endTime": "Hora de fi",
+    "inputTitle": "Vídeo d'entrada",
+    "resultTitle": "Vídeo retallat",
+    "shortDescription": "Retalla un vídeo eliminant-ne les seccions no desitjades",
+    "startTime": "Hora d'inici",
+    "timestamps": "Marques de temps",
+    "title": "Retalla un vídeo"
+  }
+}

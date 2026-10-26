@@ -1,0 +1,159 @@
+{
+  "compressPdf": {
+    "compressedFileSize": "Mida del fitxer comprimit",
+    "compressingPdf": "S'està comprimint el PDF...",
+    "compressionLevel": "Nivell de compressió",
+    "compressionSettings": "Opcions de compressió",
+    "description": "Redueix la mida d'un fitxer PDF mantenint-ne la qualitat amb Ghostscript",
+    "errorCompressingPdf": "No s'ha pogut comprimir el PDF: {{error}}",
+    "errorReadingPdf": "No s'ha pogut llegir el fitxer PDF. Assegura't que sigui un PDF vàlid.",
+    "fileSize": "Mida del fitxer original",
+    "highCompression": "Compressió alta",
+    "highCompressionDescription": "Màxima reducció de mida amb una certa pèrdua de qualitat",
+    "inputTitle": "PDF d'entrada",
+    "longDescription": "Comprimeix fitxers PDF de manera segura al teu navegador amb Ghostscript. Els teus fitxers no surten mai del dispositiu, cosa que garanteix una privadesa total mentre en redueixes la mida per compartir-los per correu electrònic, pujar-los a llocs web o estalviar espai d'emmagatzematge. Funciona amb tecnologia WebAssembly.",
+    "lowCompression": "Compressió baixa",
+    "lowCompressionDescription": "Redueix lleugerament la mida amb una pèrdua de qualitat mínima",
+    "mediumCompression": "Compressió mitjana",
+    "mediumCompressionDescription": "Equilibri entre mida del fitxer i qualitat",
+    "pages": "Nombre de pàgines",
+    "resultTitle": "PDF comprimit",
+    "shortDescription": "Comprimeix fitxers PDF de manera segura al teu navegador",
+    "title": "Comprimeix PDF"
+  },
+  "convertToPdf": {
+    "description": "Converteix diversos formats d'imatge (PNG, GIF, JPG, WEBP, HEIC, HEIF) a PDF, amb opcions per escalar la imatge i triar l'orientació de la pàgina.",
+    "inputTitle": "Imatges d'entrada",
+    "options": {
+      "a4": "Pàgina A4",
+      "fullsize": "Mida completa (mida de la imatge)",
+      "image": "Imatge",
+      "landscape": "Horitzontal",
+      "orientation": "Orientació",
+      "portrait": "Vertical",
+      "scale": "Escala",
+      "type": "Tipus de PDF"
+    },
+    "resultTitle": "PDF de sortida",
+    "shortDescription": "Converteix imatges a PDF amb control d'escala i orientació",
+    "title": "Imatges a PDF"
+  },
+  "editor": {
+    "description": "Editor de PDF avançat amb funcions d'anotació, emplenament de formularis, ressaltat i exportació. Edita els teus PDF directament al navegador amb eines de nivell professional, com ara inserció de text, dibuix, ressaltat, signatura i emplenament de formularis.",
+    "shortDescription": "Edita PDF amb eines avançades d'anotació, signatura i edició",
+    "title": "Editor de PDF",
+    "upload": "Puja un PDF",
+    "clear": "Esborra l'entrada"
+  },
+  "formBuilder": {
+    "title": "Creador de formularis PDF",
+    "description": "Crea i personalitza formularis PDF interactius directament al navegador. Afegeix camps de text, caselles de selecció, botons d'opció, etiquetes i molt més, amb compatibilitat completa per arrossegar i deixar anar, opcions d'estil i funcions d'exportació.",
+    "shortDescription": "Dissenya i crea formularis PDF interactius fàcilment amb eines d'arrossegar i deixar anar",
+    "toolbox": {
+      "title": "Caixa d'eines",
+      "checkbox": "Casella de selecció",
+      "radio": "Botó d'opció",
+      "label": "Etiqueta / Text",
+      "text": "Text",
+      "textarea": "Àrea de text"
+    },
+    "file": {
+      "upload": "Puja un PDF",
+      "export": "Exporta i baixa",
+      "clear": "Esborra l'entrada"
+    }
+  },
+  "extractImagesFromPdf": {
+    "description": "Extreu totes les imatges incrustades del teu fitxer PDF amb la qualitat original.",
+    "inputTitle": "PDF d'entrada",
+    "longDescription": "Puja un document PDF per extreure'n automàticament totes les imatges incrustades. L'eina conserva la qualitat original de les imatges i admet formats habituals com JPG, PNG i altres. Ideal per recuperar il·lustracions, fotos, pàgines escanejades o recursos de documents PDF.",
+    "resultTitle": "Imatges extretes",
+    "shortDescription": "Extreu imatges d'un fitxer PDF.",
+    "title": "Extreu imatges d'un PDF"
+  },
+  "merge": {
+    "inputTitle": "PDF d'entrada",
+    "loadingText": "S'estan extraient les pàgines",
+    "resultTitle": "PDF combinat de sortida",
+    "toolInfo": {
+      "description": "Aquesta eina et permet combinar diversos fitxers PDF en un sol document. Per utilitzar-la, només cal que pugis els fitxers PDF que vols combinar. L'eina unirà totes les pàgines dels fitxers d'entrada en un sol document PDF.",
+      "title": "Com s'utilitza l'eina per combinar PDF?"
+    }
+  },
+  "mergePdf": {
+    "description": "Combina diversos fitxers PDF en un sol document.",
+    "inputTitle": "PDF d'entrada",
+    "mergingPdfs": "S'estan combinant els PDF",
+    "pdfOptions": "Opcions del PDF",
+    "resultTitle": "PDF combinat",
+    "shortDescription": "Combina diversos fitxers PDF en un sol document",
+    "sortByFileName": "Ordena per nom de fitxer",
+    "sortByFileNameDescription": "Ordena els PDF alfabèticament pel nom del fitxer",
+    "sortByUploadOrder": "Ordena per ordre de pujada",
+    "sortByUploadOrderDescription": "Mantén els PDF en l'ordre en què s'han pujat",
+    "title": "Combina PDF",
+    "toolInfo": {
+      "description": "Aquesta eina et permet combinar diversos fitxers PDF en un sol document. Pots triar com s'ordenen els PDF i l'eina els combinarà en l'ordre especificat.",
+      "title": "Combina fitxers PDF"
+    }
+  },
+  "pdfToEpub": {
+    "description": "Transforma documents PDF en fitxers EPUB per a una millor compatibilitat amb lectors electrònics.",
+    "shortDescription": "Converteix fitxers PDF a format EPUB",
+    "title": "PDF a EPUB"
+  },
+  "pdfToPng": {
+    "description": "Transforma documents PDF en imatges PNG.",
+    "longDescription": "Puja un PDF i converteix cada pàgina en una imatge PNG d'alta qualitat directament al navegador. Aquesta eina és ideal per extreure contingut visual o compartir pàgines individuals. No es puja cap dada: tot s'executa localment.",
+    "shortDescription": "Converteix un PDF en imatges PNG",
+    "title": "PDF a PNG"
+  },
+  "protectPdf": {
+    "description": "Afegeix protecció amb contrasenya als teus fitxers PDF de manera segura al navegador",
+    "shortDescription": "Protegeix fitxers PDF amb contrasenya de manera segura",
+    "title": "Protegeix PDF"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "Es giraran totes les {{count}} pàgines",
+    "angleOptions": {
+      "clockwise90": "90° en sentit horari",
+      "counterClockwise270": "270° (90° en sentit antihorari)",
+      "upsideDown180": "180° (cap per avall)"
+    },
+    "applyToAllPages": "Aplica a totes les pàgines",
+    "description": "Gira les pàgines d'un document PDF.",
+    "inputTitle": "PDF d'entrada",
+    "longDescription": "Canvia l'orientació de les pàgines d'un PDF girant-les 90, 180 o 270 graus. Útil per corregir documents mal escanejats o preparar PDF per imprimir.",
+    "pageRangesDescription": "Introdueix números o intervals de pàgina separats per comes (p. ex., 1,3,5-7)",
+    "pageRangesPlaceholder": "p. ex., 1,5-8",
+    "pagesWillBeRotated": "Pàgines que es giraran: {{count}}",
+    "pdfPageCount": "Pàgines del PDF: {{count}}",
+    "resultTitle": "PDF girat",
+    "rotatingPages": "S'estan girant les pàgines",
+    "rotationAngle": "Angle de gir",
+    "rotationSettings": "Opcions de gir",
+    "shortDescription": "Gira les pàgines d'un document PDF",
+    "title": "Gira PDF",
+    "toolInfo": {
+      "description": "Aquesta eina et permet girar les pàgines d'un document PDF. Pots girar totes les pàgines o especificar pàgines concretes. Tria un angle de gir: 90° en sentit horari, 180° (cap per avall) o 270° (90° en sentit antihorari). Per girar pàgines concretes, desmarca «Aplica a totes les pàgines» i introdueix números o intervals de pàgina separats per comes (p. ex., 1,3,5-7).",
+      "title": "Com s'utilitza l'eina per girar PDF"
+    }
+  },
+  "splitPdf": {
+    "description": "Extreu pàgines concretes d'un document PDF.",
+    "extractingPages": "S'estan extraient les pàgines",
+    "inputTitle": "PDF d'entrada",
+    "pageExtractionPreview": "Pàgines que s'extrauran: {{count}}",
+    "pageRangesDescription": "Introdueix números o intervals de pàgina separats per comes (p. ex., 1,3,5-7)",
+    "pageRangesPlaceholder": "p. ex., 1,5-8",
+    "pageSelection": "Selecció de pàgines",
+    "pdfPageCount": "Pàgines del PDF: {{count}}",
+    "resultTitle": "PDF extret",
+    "shortDescription": "Extreu pàgines concretes d'un fitxer PDF",
+    "title": "Divideix PDF",
+    "toolInfo": {
+      "description": "Aquesta eina et permet extreure pàgines concretes d'un document PDF. Pots especificar pàgines individuals o intervals de pàgines per extreure.",
+      "title": "Divideix PDF"
+    }
+  }
+}

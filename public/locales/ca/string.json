@@ -1,0 +1,423 @@
+{
+  "base64": {
+    "decode": "Descodifica Base64",
+    "description": "Codifica o descodifica text amb la codificació Base64.",
+    "encode": "Codifica Base64",
+    "inputTitle": "Dades d'entrada",
+    "optionsTitle": "Opcions de Base64",
+    "resultTitle": "Resultat",
+    "shortDescription": "Codifica o descodifica dades amb Base64.",
+    "title": "Codificador/descodificador Base64",
+    "toolInfo": {
+      "description": "Base64 és un esquema de codificació que representa dades en format de cadena ASCII traduint-les a una representació en base 64. Tot i que es pot utilitzar per codificar cadenes, s'utilitza habitualment per codificar dades binàries per transmetre-les per mitjans dissenyats per gestionar dades textuals.",
+      "title": "Què és Base64?"
+    }
+  },
+  "censor": {
+    "description": "Utilitat per censurar paraules en un text. Carrega el teu text al formulari d'entrada de l'esquerra, especifica totes les paraules no desitjades a les opcions i obtindràs a l'instant el text censurat a l'àrea de sortida.",
+    "shortDescription": "Emmascara ràpidament paraules no desitjades o substitueix-les per paraules alternatives.",
+    "title": "Censor de text"
+  },
+  "createPalindrome": {
+    "description": "La utilitat de navegador més senzilla del món per crear palíndroms a partir de qualsevol text. Introdueix un text i transforma'l a l'instant en un palíndrom que es llegeix igual d'endavant cap enrere que d'enrere cap endavant. Perfecta per a jocs de paraules, crear patrons de text simètrics o explorar curiositats lingüístiques.",
+    "shortDescription": "Crea text que es llegeix igual en tots dos sentits",
+    "title": "Crea un palíndrom"
+  },
+  "emailExtractor": {
+    "description": "Extreu totes les adreces de correu electrònic de qualsevol text. Només cal que enganxis el text i obtindràs a l'instant una llista neta de les adreces de correu trobades.",
+    "options": {
+      "title": "Opcions d'extracció",
+      "uniqueDesc": "Conserva només les adreces de correu úniques als resultats",
+      "uniqueTitle": "Elimina els duplicats"
+    },
+    "shortDescription": "Extreu adreces de correu electrònic d'un text",
+    "title": "Extractor de correus electrònics"
+  },
+  "extractSubstring": {
+    "description": "La utilitat de navegador més senzilla del món per extreure subcadenes d'un text. Introdueix el teu text i especifica les posicions d'inici i de fi per extreure'n la part desitjada. Perfecta per processar dades, analitzar text o extreure contingut concret de blocs de text més grans.",
+    "shortDescription": "Extreu una part del text entre les posicions especificades",
+    "title": "Extreu una subcadena"
+  },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "Opcions d'anàlisi",
+    "category": "Categoria",
+    "description": "Detecta caràcters Unicode ocults, especialment els caràcters de substitució RTL que es podrien utilitzar en atacs.",
+    "foundChars": "S'han trobat {{count}} caràcter(s) ocult(s):",
+    "inputPlaceholder": "Introdueix el text per comprovar si té caràcters ocults...",
+    "inputTitle": "Text per analitzar",
+    "invisibleChar": "Caràcter invisible",
+    "invisibleFound": "S'han trobat caràcters invisibles",
+    "longDescription": "Aquesta eina t'ajuda a detectar caràcters Unicode ocults en un text, especialment els caràcters de substitució de dreta a esquerra (RTL Override) que es poden utilitzar en atacs. Pot identificar caràcters invisibles, caràcters d'amplada zero i altres seqüències Unicode potencialment malicioses que poden estar amagades en un text aparentment innocent.",
+    "noHiddenChars": "No s'ha detectat cap caràcter ocult al text.",
+    "optionsDescription": "Configura quins tipus de caràcters ocults vols detectar i com es mostren els resultats.",
+    "position": "Posició",
+    "rtlAlert": "⚠️ S'han detectat caràcters de substitució RTL! Aquest text pot contenir caràcters ocults maliciosos.",
+    "rtlFound": "S'ha trobat una substitució RTL",
+    "rtlOverride": "Caràcter de substitució RTL",
+    "rtlWarning": "ADVERTIMENT: s'han detectat caràcters de substitució RTL! Es podrien utilitzar en atacs.",
+    "shortDescription": "Troba caràcters Unicode ocults en un text",
+    "summary": "Resum de l'anàlisi",
+    "title": "Detector de caràcters ocults",
+    "totalChars": "Total de caràcters ocults: {{count}}",
+    "unicode": "Unicode",
+    "zeroWidthChar": "Caràcter d'amplada zero",
+    "zeroWidthFound": "S'han trobat caràcters d'amplada zero"
+  },
+  "join": {
+    "blankLinesAndTrailingSpaces": "Línies en blanc i espais finals",
+    "deleteBlankDescription": "Elimina les línies que no tenen cap caràcter de text.",
+    "deleteBlankTitle": "Elimina les línies en blanc",
+    "deleteTrailingDescription": "Elimina els espais i les tabulacions al final de les línies.",
+    "deleteTrailingTitle": "Elimina els espais finals",
+    "description": "Uneix fragments de text amb separadors personalitzables.",
+    "inputTitle": "Fragments de text",
+    "joinCharacterDescription": "Símbol que connecta els fragments de text. (Per defecte, un espai.)",
+    "joinCharacterPlaceholder": "Caràcter d'unió",
+    "resultTitle": "Text unit",
+    "shortDescription": "Uneix elements de text amb un separador especificat",
+    "textMergedOptions": "Opcions d'unió de text",
+    "title": "Uneix text",
+    "toolInfo": {
+      "description": "Amb aquesta eina pots unir parts d'un text. Agafa una llista de valors de text, separats per salts de línia, i els combina. Pots definir el caràcter que es col·locarà entre les parts del text combinat. També pots ignorar totes les línies buides i eliminar els espais i les tabulacions al final de totes les línies.",
+      "title": "Què és un unidor de text?"
+    }
+  },
+  "palindrome": {
+    "description": "La utilitat de navegador més senzilla del món per comprovar si un text és un palíndrom. Verifica a l'instant si el teu text es llegeix igual en tots dos sentits. Perfecta per a trencaclosques de paraules, anàlisi lingüística o validació de patrons de text simètrics. Admet diversos delimitadors i la detecció de palíndroms de diverses paraules.",
+    "shortDescription": "Comprova si un text es llegeix igual en tots dos sentits",
+    "title": "Palíndrom"
+  },
+  "passwordGenerator": {
+    "avoidAmbiguous": "Evita els caràcters ambigus (i, I, l, 0, O)",
+    "description": "Genera contrasenyes aleatòries segures amb una longitud i uns tipus de caràcters personalitzables. Tria entre minúscules, majúscules, nombres i caràcters especials. Opció per evitar caràcters ambigus per a una millor llegibilitat.",
+    "includeLowercase": "Inclou lletres minúscules (a-z)",
+    "includeNumbers": "Inclou nombres (0-9)",
+    "includeSymbols": "Inclou caràcters especials",
+    "includeUppercase": "Inclou lletres majúscules (A-Z)",
+    "lengthDesc": "Longitud de la contrasenya (>3 i <257)",
+    "lengthPlaceholder": "p. ex., 12",
+    "optionsTitle": "Opcions de la contrasenya",
+    "resultTitle": "Contrasenya generada",
+    "shortDescription": "Genera contrasenyes aleatòries segures amb opcions personalitzades",
+    "title": "Generador de contrasenyes",
+    "toolInfo": {
+      "description": "Aquesta eina genera contrasenyes aleatòries segures segons els criteris que triïs. Pots personalitzar la longitud, incloure o excloure diferents tipus de caràcters i evitar els caràcters ambigus per a una millor llegibilitat. Perfecta per crear contrasenyes robustes per a comptes, aplicacions o qualsevol necessitat de seguretat.",
+      "title": "Quant al generador de contrasenyes"
+    }
+  },
+  "quote": {
+    "allowDoubleQuotation": "Permet cometes dobles",
+    "description": "Afegeix cometes al voltant del text amb opcions personalitzables.",
+    "inputTitle": "Text d'entrada",
+    "leftQuoteDescription": "Caràcter(s) de cometes esquerres",
+    "processAsMultiLine": "Processa com a text de diverses línies",
+    "quoteEmptyLines": "Posa cometes a les línies buides",
+    "quoteOptions": "Opcions de cometes",
+    "resultTitle": "Text entre cometes",
+    "rightQuoteDescription": "Caràcter(s) de cometes dretes",
+    "shortDescription": "Afegeix cometes al voltant del text amb diversos estils",
+    "title": "Posa cometes al text",
+    "toolInfo": {
+      "description": "Aquesta eina et permet afegir cometes al voltant del text. Pots triar diferents caràcters de cometes, gestionar text de diverses línies i controlar com es processen les línies buides. És útil per preparar text per a la programació, formatar dades o crear text estilitzat.",
+      "title": "Posa cometes al text"
+    }
+  },
+  "randomizeCase": {
+    "description": "La utilitat de navegador més senzilla del món per alternar aleatòriament majúscules i minúscules en un text. Introdueix el teu text i transforma'l a l'instant amb lletres majúscules i minúscules aleatòries. Perfecta per crear efectes de text únics, provar la distinció entre majúscules i minúscules o generar patrons de text variats.",
+    "shortDescription": "Alterna aleatòriament majúscules i minúscules en un text",
+    "title": "Majúscules i minúscules aleatòries"
+  },
+  "removeDuplicateLines": {
+    "description": "Carrega el teu text al formulari d'entrada de l'esquerra i obtindràs a l'instant el text sense línies duplicades a l'àrea de sortida. Potent, gratuïta i ràpida. Carrega línies de text i obtén línies úniques",
+    "shortDescription": "Elimina ràpidament totes les línies repetides d'un text",
+    "title": "Elimina les línies duplicades"
+  },
+  "repeat": {
+    "delimiterDescription": "Delimitador entre les còpies de sortida.",
+    "delimiterPlaceholder": "Delimitador",
+    "description": "Repeteix un text diverses vegades amb separadors personalitzables.",
+    "inputTitle": "Text d'entrada",
+    "numberPlaceholder": "Nombre",
+    "repeatAmountDescription": "Nombre de repeticions.",
+    "repetitionsDelimiter": "Delimitador de repeticions",
+    "resultTitle": "Text repetit",
+    "shortDescription": "Repeteix un text diverses vegades",
+    "textRepetitions": "Repeticions del text",
+    "title": "Repeteix text",
+    "toolInfo": {
+      "description": "Aquesta eina et permet repetir un text diverses vegades amb un separador opcional.",
+      "title": "Repeteix text"
+    }
+  },
+  "reverse": {
+    "description": "La utilitat de navegador més senzilla del món per invertir text. Introdueix qualsevol text i obtén-lo invertit a l'instant, caràcter a caràcter. Perfecta per crear text de mirall, analitzar palíndroms o jugar amb patrons de text. Conserva els espais i els caràcters especials en invertir.",
+    "inputTitle": "Text per invertir",
+    "processMultiLine": "Processa text de diverses línies",
+    "processMultiLineDescription": "Cada línia s'invertirà de manera independent",
+    "resultTitle": "Text invertit",
+    "reversalOptions": "Opcions d'inversió",
+    "shortDescription": "Inverteix qualsevol text caràcter a caràcter",
+    "skipEmptyLines": "Omet les línies buides",
+    "skipEmptyLinesDescription": "Les línies buides s'eliminaran de la sortida",
+    "title": "Inverteix",
+    "trimWhitespace": "Retalla els espais en blanc",
+    "trimWhitespaceDescription": "Elimina els espais en blanc inicials i finals de cada línia"
+  },
+  "rot13": {
+    "description": "Codifica o descodifica text amb el xifratge ROT13.",
+    "inputTitle": "Text d'entrada",
+    "resultTitle": "Resultat ROT13",
+    "shortDescription": "Codifica o descodifica text amb el xifratge ROT13.",
+    "title": "Codificador/descodificador ROT13",
+    "toolInfo": {
+      "description": "ROT13 (rotació de 13 posicions) és un xifratge de substitució de lletres senzill que substitueix cada lletra per la lletra que hi ha 13 posicions més endavant a l'alfabet. ROT13 és un cas especial del xifratge de Cèsar, desenvolupat a l'antiga Roma. Com que l'alfabet anglès té 26 lletres, ROT13 és el seu propi invers; és a dir, per desfer ROT13 s'aplica el mateix algorisme, de manera que la mateixa acció serveix tant per codificar com per descodificar.",
+      "title": "Què és ROT13?"
+    }
+  },
+  "rotate": {
+    "description": "Rota els caràcters d'un text un nombre determinat de posicions.",
+    "inputTitle": "Text d'entrada",
+    "processAsMultiLine": "Processa com a text de diverses línies (rota cada línia per separat)",
+    "resultTitle": "Text rotat",
+    "rotateLeft": "Rota a l'esquerra",
+    "rotateRight": "Rota a la dreta",
+    "rotationOptions": "Opcions de rotació",
+    "shortDescription": "Desplaça els caràcters d'un text per posició.",
+    "stepDescription": "Nombre de posicions que es rotaran",
+    "title": "Rota el text",
+    "toolInfo": {
+      "description": "Aquesta eina et permet rotar els caràcters d'una cadena un nombre determinat de posicions. Pots rotar cap a l'esquerra o cap a la dreta, i processar text de diverses línies rotant cada línia per separat. La rotació de cadenes és útil per a transformacions de text senzilles, crear patrons o implementar tècniques bàsiques de xifratge.",
+      "title": "Rotació de cadenes"
+    }
+  },
+  "slugGenerator": {
+    "description": "Converteix qualsevol text en un slug adequat per a URL.",
+    "inputTitle": "Text d'entrada",
+    "longDescription": "Converteix qualsevol text en slugs nets i optimitzats per a SEO per utilitzar-los en URL. L'eina gestiona espais, caràcters especials, lletres accentuades i diverses línies alhora, de manera que és fàcil processar per lots títols d'entrades de blog, noms de productes o encapçalaments de pàgina en segments d'URL coherents i llegibles.",
+    "options": {
+      "caseDescription": "Conserva les majúscules i minúscules originals de l'entrada en lloc de convertir-les a minúscules",
+      "caseLabel": "Distingeix majúscules i minúscules",
+      "title": "Opcions del slug"
+    },
+    "resultTitle": "Slugs d'URL",
+    "shortDescription": "Genera slugs adequats per a URL a partir de text.",
+    "title": "Generador de slugs"
+  },
+  "split": {
+    "charAfterChunkDescription": "Caràcter després de cada fragment",
+    "charBeforeChunkDescription": "Caràcter abans de cada fragment",
+    "chunksDescription": "Nombre de fragments d'igual longitud a la sortida.",
+    "chunksTitle": "Utilitza un nombre de fragments",
+    "description": "La utilitat de navegador més senzilla del món per dividir text. Introdueix el teu text i especifica un separador per dividir-lo en diverses parts. Perfecta per processar dades, manipular text o extreure contingut concret de blocs de text més grans.",
+    "lengthDescription": "Nombre de caràcters que es posaran a cada fragment de sortida.",
+    "lengthTitle": "Utilitza la longitud per dividir",
+    "outputSeparatorDescription": "Caràcter que es posarà entre els fragments dividits. (Per defecte, un salt de línia \"\\n\".)",
+    "outputSeparatorOptions": "Opcions del separador de sortida",
+    "regexDescription": "Expressió regular que s'utilitzarà per dividir el text en parts. (Per defecte, diversos espais.)",
+    "regexTitle": "Utilitza una expressió regular per dividir",
+    "resultTitle": "Resultat de la divisió",
+    "shortDescription": "Divideix un text en diverses parts amb un separador",
+    "splitSeparatorOptions": "Opcions del separador de divisió",
+    "symbolDescription": "Caràcter que s'utilitzarà per dividir el text en parts. (Per defecte, un espai.)",
+    "symbolTitle": "Utilitza un símbol per dividir",
+    "title": "Divideix"
+  },
+  "statistic": {
+    "characterFrequencyAnalysis": "Anàlisi de freqüència de caràcters",
+    "characterFrequencyAnalysisDescription": "Compta quantes vegades apareix cada caràcter al text",
+    "delimitersOptions": "Opcions de delimitadors",
+    "description": "Analitza un text i genera estadístiques completes.",
+    "includeEmptyLines": "Inclou les línies buides",
+    "includeEmptyLinesDescription": "Inclou les línies en blanc en comptar les línies",
+    "inputTitle": "Text d'entrada",
+    "resultTitle": "Estadístiques del text",
+    "sentenceDelimitersDescription": "Introdueix els caràcters personalitzats que delimiten les frases en el teu idioma (separats per comes) o deixa-ho en blanc per utilitzar els valors per defecte.",
+    "sentenceDelimitersPlaceholder": "p. ex., ., !, ?, ...",
+    "shortDescription": "Obtén estadístiques sobre el teu text",
+    "statisticsOptions": "Opcions d'estadístiques",
+    "title": "Estadístiques del text",
+    "toolInfo": {
+      "description": "Aquesta eina et permet analitzar un text i generar estadístiques completes, com ara el recompte de caràcters, de paraules i de línies, i l'anàlisi de freqüència de caràcters i paraules.",
+      "title": "Què és {{title}}?"
+    },
+    "wordDelimitersDescription": "Introdueix una expressió regular personalitzada per comptar les paraules o deixa-ho en blanc per utilitzar el valor per defecte.",
+    "wordDelimitersPlaceholder": "p. ex., \\s.,;:!?\"«»()…",
+    "wordFrequencyAnalysis": "Anàlisi de freqüència de paraules",
+    "wordFrequencyAnalysisDescription": "Compta quantes vegades apareix cada paraula al text"
+  },
+  "tableTextConverter": {
+    "title": "Convertidor de taules de text",
+    "description": "Converteix text tabular entre els formats Markdown, CSV, TSV, HTML, sortida de consultes MySQL i JSON.",
+    "shortDescription": "Converteix taules entre Markdown, CSV, HTML, MySQL i JSON",
+    "longDescription": "Aquesta eina converteix text tabular entre diversos formats, com ara taules Markdown, CSV, TSV, taules HTML, la sortida de resultats de consultes MySQL/CLI i matrius JSON. Enganxa la teva taula en qualsevol format compatible, tria el format de sortida (o deixa que l'eina detecti automàticament el format d'entrada) i obtén la taula convertida a l'instant. Útil per convertir el resultat d'una consulta MySQL en una taula Markdown per a documentació, convertir una taula HTML en CSV per a fulls de càlcul o transformar dades JSON en una taula llegible.",
+    "inputTitle": "Taula d'entrada",
+    "resultTitle": "Taula convertida",
+    "options": "Opcions de conversió",
+    "inputFormat": "Format d'entrada",
+    "outputFormat": "Format de sortida",
+    "autoDetect": "Detecta automàticament el format d'entrada (recomanat)",
+    "error": "Error"
+  },
+  "textCompare": {
+    "description": "Analitza dos blocs de text per destacar-ne les diferències, incloses les addicions, les supressions i els canvis.",
+    "inputTitle": "Text d'entrada",
+    "longDescription": "Aquesta eina t'ajuda a identificar ràpidament les diferències entre dues versions d'un text. Destaca el contingut inserit, eliminat i modificat, de manera que és ideal per revisar edicions, fer el seguiment de canvis o comparar documents. Pots triar el nivell de precisió per detectar diferències a nivell de paraula o de caràcter segons les teves necessitats.",
+    "options": {
+      "charLevel": "Nivell de caràcter",
+      "levelDesc": "Tria el grau de detall de la comparació. El nivell de paraula destaca els canvis per paraules, mentre que el nivell de caràcter detecta diferències més detallades.",
+      "title": "Opcions de comparació",
+      "wordLevel": "Nivell de paraula"
+    },
+    "resultTitle": "Diferències destacades",
+    "shortDescription": "Compara dos textos i detecta les diferències a l'instant",
+    "title": "Compara textos"
+  },
+  "textReplacer": {
+    "description": "Substitueix patrons de text per contingut nou.",
+    "findPatternInText": "Cerca aquest patró al text",
+    "findPatternUsingRegexp": "Cerca un patró amb una expressió regular",
+    "inputTitle": "Text per substituir",
+    "newTextPlaceholder": "Text nou",
+    "regexpDescription": "Introdueix l'expressió regular que vols substituir.",
+    "replacePatternDescription": "Introdueix el patró que s'utilitzarà per a la substitució.",
+    "replaceText": "Text de substitució",
+    "resultTitle": "Text amb substitucions",
+    "searchPatternDescription": "Introdueix el patró de text que vols substituir.",
+    "searchText": "Text a cercar",
+    "shortDescription": "Substitueix ràpidament text al teu contingut",
+    "title": "Substituïdor de text",
+    "toolInfo": {
+      "description": "Substitueix fàcilment un text concret del teu contingut amb aquesta eina senzilla basada en el navegador. Només cal que introdueixis el text, defineixis el text que vols substituir i el valor de substitució, i obtindràs a l'instant la versió actualitzada.",
+      "title": "Substituïdor de text"
+    }
+  },
+  "toMorse": {
+    "dashSymbolDescription": "Símbol que correspondrà a la ratlla en codi Morse.",
+    "description": "Converteix text a codi Morse.",
+    "dotSymbolDescription": "Símbol que correspondrà al punt en codi Morse.",
+    "longSignal": "Senyal llarg",
+    "resultTitle": "Codi Morse",
+    "shortDescription": "Codifica ràpidament text a Morse",
+    "shortSignal": "Senyal curt",
+    "title": "Text a Morse"
+  },
+  "truncate": {
+    "addTruncationIndicator": "Afegeix un indicador de truncament",
+    "charactersPlaceholder": "Caràcters",
+    "description": "Escurça un text fins a una longitud especificada.",
+    "indicatorDescription": "Caràcters que s'afegiran al final (o al principi) del text. Nota: compten per a la longitud.",
+    "inputTitle": "Text d'entrada",
+    "leftSideDescription": "Elimina caràcters del principi del text.",
+    "leftSideTruncation": "Truncament per l'esquerra",
+    "lengthAndLines": "Longitud i línies",
+    "lineByLineDescription": "Trunca cada línia per separat.",
+    "lineByLineTruncating": "Truncament línia a línia",
+    "maxLengthDescription": "Nombre de caràcters que es conservaran al text.",
+    "numberPlaceholder": "Nombre",
+    "resultTitle": "Text truncat",
+    "rightSideDescription": "Elimina caràcters del final del text.",
+    "rightSideTruncation": "Truncament per la dreta",
+    "shortDescription": "Trunca un text a una longitud especificada",
+    "suffixAndAffix": "Sufix i afix",
+    "title": "Trunca el text",
+    "toolInfo": {
+      "description": "Carrega el teu text al formulari d'entrada de l'esquerra i obtindràs automàticament el text truncat a la dreta.",
+      "title": "Trunca el text"
+    },
+    "truncationSide": "Costat del truncament"
+  },
+  "unicode": {
+    "caseOptionsTitle": "Opcions de majúscules",
+    "decode": "Descodifica",
+    "description": "Converteix text en seqüències d'escapament Unicode o descodifica-les de nou a text llegible.",
+    "encode": "Codifica",
+    "inputTitle": "Entrada",
+    "optionsTitle": "Mode",
+    "resultTitle": "Sortida processada",
+    "shortDescription": "Codifica o descodifica text amb seqüències d'escapament Unicode.",
+    "title": "Codificador / descodificador Unicode",
+    "toolInfo": {
+      "description": "Aquesta eina et permet convertir text pla en seqüències d'escapament Unicode (p. ex., \\uXXXX) i descodificar seqüències d'escapament Unicode de nou a text estàndard. També pots triar si la sortida hexadecimal es formata en majúscules o en minúscules en codificar.",
+      "title": "Codificador / descodificador Unicode"
+    },
+    "uppercase": "Hexadecimal en majúscules"
+  },
+  "uppercase": {
+    "description": "Converteix text a lletres majúscules.",
+    "inputTitle": "Text d'entrada",
+    "resultTitle": "Text en majúscules",
+    "shortDescription": "Converteix text a majúscules",
+    "title": "Converteix a majúscules"
+  },
+  "urlDecode": {
+    "inputTitle": "Cadena d'entrada (escapada per a URL)",
+    "resultTitle": "Cadena de sortida",
+    "toolInfo": {
+      "description": "Carrega la teva cadena i es desescaparà automàticament per a URL.",
+      "longDescription": "Aquesta eina descodifica una cadena codificada prèviament per a URL. La descodificació d'URL és l'operació inversa de la codificació d'URL. Tots els caràcters codificats amb percentatge es descodifiquen a caràcters comprensibles. Alguns dels valors codificats amb percentatge més coneguts són %20 per a un espai, %3a per a dos punts, %2f per a una barra i %3f per a un signe d'interrogació. Les dues xifres que segueixen el signe de percentatge són el codi del caràcter en hexadecimal.",
+      "shortDescription": "Desescapa ràpidament una cadena d'URL.",
+      "title": "Descodificador d'URL de cadenes"
+    }
+  },
+  "urlEditor": {
+    "addParameter": "Afegeix un paràmetre",
+    "credentialsNotSupported": "No s'admeten URL amb nom d'usuari o contrasenya.",
+    "delete": "Elimina",
+    "deleteParamAriaLabel": "Elimina la fila de paràmetre {{row}}",
+    "generatedUrl": "URL generat",
+    "hash": "Fragment",
+    "hashPlaceholder": "secció",
+    "host": "Amfitrió",
+    "hostPlaceholder": "example.com",
+    "inputTitle": "Introdueix l'URL",
+    "invalidUrl": "URL no vàlid",
+    "key": "Clau",
+    "noParameters": "No hi ha paràmetres de consulta",
+    "paramKeyAriaLabel": "Clau del paràmetre, fila {{row}}",
+    "paramValueAriaLabel": "Valor del paràmetre, fila {{row}}",
+    "parseButton": "Analitza l'URL",
+    "path": "Camí",
+    "pathPlaceholder": "cerca",
+    "protocol": "Protocol",
+    "queryParameters": "Paràmetres de consulta",
+    "toolInfo": {
+      "description": "Enganxa un URL i fes clic a «Analitza l'URL» per inspeccionar-ne i editar-ne els components.",
+      "longDescription": "Aquesta eina analitza un URL en els seus components i et permet editar visualment el protocol, l'amfitrió, el camí, el fragment i els paràmetres de consulta. Després de canviar l'URL d'entrada, torna a fer clic a «Analitza l'URL» per actualitzar els detalls analitzats. Pots afegir, eliminar o modificar qualsevol part i copiar l'URL generat. Sense peticions al servidor.",
+      "shortDescription": "Inspecciona i edita els components i els paràmetres de consulta d'un URL.",
+      "title": "Editor d'URL"
+    },
+    "urlDetails": "Detalls de l'URL",
+    "value": "Valor"
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "Si se selecciona, tots els caràcters de la cadena d'entrada es convertiran a codificació d'URL (no només els especials).",
+      "nonSpecialCharPlaceholder": "Codifica els caràcters no especials",
+      "title": "Opcions de codificació"
+    },
+    "inputTitle": "Cadena d'entrada",
+    "resultTitle": "Cadena de sortida (escapada per a URL)",
+    "toolInfo": {
+      "description": "Carrega la teva cadena i s'escaparà automàticament per a URL.",
+      "longDescription": "Aquesta eina codifica una cadena per a URL. Els caràcters especials d'URL es converteixen a codificació amb signe de percentatge. Aquesta codificació s'anomena codificació percentual perquè el valor numèric de cada caràcter es converteix en un signe de percentatge seguit d'un valor hexadecimal de dues xifres. Els valors hexadecimals es determinen a partir del punt de codi del caràcter. Per exemple, un espai s'escapa com a %20, els dos punts com a %3a i una barra com a %2f. Els caràcters que no són especials no canvien. Si també necessites convertir els caràcters no especials a codificació percentual, hem afegit una opció addicional que t'ho permet. Selecciona l'opció de codificar els caràcters no especials per activar aquest comportament.",
+      "shortDescription": "Escapa ràpidament una cadena per a URL.",
+      "title": "Codificador d'URL de cadenes"
+    }
+  },
+  "bcrypt": {
+    "title": "Bcrypt",
+    "inputTitle": "Cadena d'entrada",
+    "resultTitle": "Cadena amb hash",
+    "shortDescription": "Genera el hash de cadenes amb Bcrypt",
+    "description": "Genera de manera segura el hash d'una cadena amb l'algorisme Bcrypt.",
+    "options": {
+      "title": "Opcions",
+      "saltTitle": "Rondes de salt",
+      "saltDesc": "Defineix el nombre de rondes de salt utilitzades per al hash."
+    },
+    "toolInfo": {
+      "title": "Què és Bcrypt?",
+      "longDescription": "Bcrypt és un algorisme de hash de contrasenyes dissenyat per generar de manera segura el hash de contrasenyes i altres cadenes sensibles. El nombre de rondes de salt controla el cost computacional del procés de hash."
+    }
+  }
+}

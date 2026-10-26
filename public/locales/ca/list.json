@@ -1,0 +1,258 @@
+{
+  "chunk": {
+    "deleteEmptyItems": "Elimina els elements buits",
+    "deleteEmptyItemsDescription": "Ignora els elements buits i exclou-los del resultat.",
+    "description": "Divideix una llista en blocs consecutius d'una mida fixa. Aquesta eina separa els elements d'entrada, els agrupa seqüencialment, opcionalment omple els blocs incomplets i formata la sortida amb separadors i delimitadors personalitzats.",
+    "emptyItemsAndPadding": "Elements buits i farciment",
+    "groupNumberDescription": "Nombre d'elements per grup",
+    "groupSeparatorDescription": "Separador entre grups",
+    "groupSizeAndSeparators": "Mida dels grups i format de sortida",
+    "inputItemSeparator": "Separador d'elements d'entrada",
+    "inputTitle": "Llista d'entrada",
+    "itemSeparatorDescription": "Separador entre els elements d'un grup",
+    "leftWrapDescription": "Símbol afegit abans de cada grup",
+    "padNonFullGroups": "Omple els grups incomplets",
+    "padNonFullGroupsDescription": "Omple l'últim grup si té menys elements dels necessaris.",
+    "paddingCharDescription": "Caràcter o valor utilitzat per omplir els grups incomplets.",
+    "resultTitle": "Sortida agrupada",
+    "rightWrapDescription": "Símbol afegit després de cada grup",
+    "shortDescription": "Divideix una llista en blocs de mida fixa",
+    "splitOperators": {
+      "regex": {
+        "description": "Divideix els elements d'entrada amb una expressió regular.",
+        "title": "Divisió per expressió regular"
+      },
+      "symbol": {
+        "description": "Divideix els elements d'entrada amb un sol caràcter.",
+        "title": "Divisió per símbol"
+      }
+    },
+    "splitSeparatorDescription": "Símbol delimitador o expressió regular utilitzada per dividir els elements d'entrada.",
+    "title": "Divideix la llista en blocs"
+  },
+  "duplicate": {
+    "concatenate": "Concatena",
+    "concatenateDescription": "Concatena les còpies (si es desmarca, els elements s'intercalaran)",
+    "copyDescription": "Nombre de còpies (pot ser fraccionari)",
+    "description": "La utilitat de navegador més senzilla del món per duplicar elements d'una llista. Introdueix la teva llista i especifica els criteris de duplicació per crear còpies dels elements. Perfecta per ampliar dades, fer proves o crear patrons repetits.",
+    "duplicationOptions": "Opcions de duplicació",
+    "error": "Error",
+    "example1Description": "Aquest exemple mostra com duplicar una llista de paraules.",
+    "example1Title": "Duplicació simple",
+    "example2Description": "Aquest exemple mostra com duplicar una llista en ordre invers.",
+    "example2Title": "Duplicació inversa",
+    "example3Description": "Aquest exemple mostra com intercalar els elements en lloc de concatenar-los.",
+    "example3Title": "Intercalació d'elements",
+    "example4Description": "Aquest exemple mostra com duplicar una llista amb un nombre fraccionari de còpies.",
+    "example4Title": "Duplicació fraccionària",
+    "examples": {
+      "fractional": {
+        "description": "Aquest exemple mostra com duplicar una llista amb un nombre fraccionari de còpies.",
+        "title": "Duplicació fraccionària"
+      },
+      "interweave": {
+        "description": "Aquest exemple mostra com intercalar els elements en lloc de concatenar-los.",
+        "title": "Intercalació d'elements"
+      },
+      "reverse": {
+        "description": "Aquest exemple mostra com duplicar una llista en ordre invers.",
+        "title": "Duplicació inversa"
+      },
+      "simple": {
+        "description": "Aquest exemple mostra com duplicar una llista de paraules.",
+        "title": "Duplicació simple"
+      }
+    },
+    "inputTitle": "Llista d'entrada",
+    "joinSeparatorDescription": "Separador per unir la llista duplicada",
+    "resultTitle": "Llista duplicada",
+    "reverse": "Inverteix",
+    "reverseDescription": "Inverteix els elements duplicats",
+    "shortDescription": "Duplica els elements d'una llista amb els criteris especificats",
+    "splitByRegex": "Divideix per expressió regular",
+    "splitBySymbol": "Divideix per símbol",
+    "splitOptions": "Opcions de divisió",
+    "splitSeparatorDescription": "Separador per dividir la llista",
+    "title": "Duplica",
+    "toolInfo": {
+      "description": "Aquesta eina et permet duplicar els elements d'una llista. Pots especificar el nombre de còpies (inclosos valors fraccionaris), controlar si els elements es concatenen o s'intercalen i fins i tot invertir els elements duplicats. És útil per crear patrons repetits, generar dades de prova o ampliar llistes amb contingut previsible.",
+      "title": "Duplicació de llistes"
+    },
+    "unknownError": "S'ha produït un error desconegut",
+    "validation": {
+      "copyMustBeNumber": "El nombre de còpies ha de ser un nombre",
+      "copyMustBePositive": "El nombre de còpies ha de ser positiu",
+      "copyRequired": "El nombre de còpies és obligatori",
+      "joinSeparatorRequired": "El separador d'unió és obligatori",
+      "separatorRequired": "El separador és obligatori"
+    }
+  },
+  "findMostPopular": {
+    "description": "La utilitat de navegador més senzilla del món per trobar els elements més populars d'una llista. Introdueix la teva llista i obtén a l'instant els elements que apareixen amb més freqüència. Perfecta per a l'anàlisi de dades, la identificació de tendències o la cerca d'elements comuns.",
+    "displayFormatDescription": "Com vols mostrar els elements més populars de la llista?",
+    "displayOptions": {
+      "count": "Mostra el recompte d'elements",
+      "percentage": "Mostra el percentatge d'elements",
+      "total": "Mostra el total d'elements"
+    },
+    "extractListItems": "Com s'extreuen els elements de la llista?",
+    "ignoreItemCase": "Ignora majúscules i minúscules",
+    "ignoreItemCaseDescription": "Compara tots els elements de la llista en minúscules.",
+    "inputTitle": "Llista d'entrada",
+    "itemComparison": "Comparació d'elements",
+    "outputFormat": "Format de sortida dels elements principals",
+    "removeEmptyItems": "Elimina els elements buits",
+    "removeEmptyItemsDescription": "Ignora els elements buits en la comparació.",
+    "resultTitle": "Elements més populars",
+    "shortDescription": "Troba els elements que apareixen amb més freqüència",
+    "sortOptions": {
+      "alphabetic": "Ordena alfabèticament",
+      "count": "Ordena per recompte"
+    },
+    "sortingMethodDescription": "Selecciona un mètode d'ordenació.",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimita els elements de la llista d'entrada amb una expressió regular.",
+        "title": "Utilitza una expressió regular per dividir"
+      },
+      "symbol": {
+        "description": "Delimita els elements de la llista d'entrada amb un caràcter.",
+        "title": "Utilitza un símbol per dividir"
+      }
+    },
+    "splitSeparatorDescription": "Defineix un símbol delimitador o una expressió regular.",
+    "title": "Troba els més populars",
+    "trimItems": "Retalla els elements",
+    "trimItemsDescription": "Elimina els espais inicials i finals abans de comparar els elements"
+  },
+  "findUnique": {
+    "caseSensitiveItems": "Distingeix majúscules i minúscules",
+    "caseSensitiveItemsDescription": "Mostra els elements amb majúscules i minúscules diferents com a elements únics de la llista.",
+    "delimiterDescription": "Defineix un símbol delimitador o una expressió regular.",
+    "description": "La utilitat de navegador més senzilla del món per trobar elements únics d'una llista. Introdueix la teva llista i obtén a l'instant tots els valors únics sense duplicats. Perfecta per netejar dades, eliminar duplicats o trobar elements diferents.",
+    "findAbsolutelyUniqueItems": "Troba elements absolutament únics",
+    "findAbsolutelyUniqueItemsDescription": "Mostra només els elements de la llista que hi apareixen una sola vegada.",
+    "inputListDelimiter": "Delimitador de la llista d'entrada",
+    "inputTitle": "Llista d'entrada",
+    "outputListDelimiter": "Delimitador de la llista de sortida",
+    "resultTitle": "Elements únics",
+    "shortDescription": "Troba els elements únics d'una llista",
+    "skipEmptyItems": "Omet els elements buits",
+    "skipEmptyItemsDescription": "No incloguis els elements buits de la llista a la sortida.",
+    "title": "Troba els únics",
+    "trimItems": "Retalla els elements de la llista",
+    "trimItemsDescription": "Elimina els espais inicials i finals abans de comparar els elements.",
+    "uniqueItemOptions": "Opcions d'elements únics"
+  },
+  "reverse": {
+    "description": "Aquesta és una aplicació de navegador molt senzilla que mostra tots els elements d'una llista en ordre invers. Els elements d'entrada poden estar separats per qualsevol símbol i també pots canviar el separador dels elements de la llista invertida.",
+    "inputTitle": "Llista d'entrada",
+    "itemSeparator": "Separador d'elements",
+    "itemSeparatorDescription": "Defineix un símbol delimitador o una expressió regular.",
+    "outputListOptions": "Opcions de la llista de sortida",
+    "outputSeparatorDescription": "Separador dels elements de la llista de sortida.",
+    "resultTitle": "Llista invertida",
+    "shortDescription": "Inverteix ràpidament una llista",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimita els elements de la llista d'entrada amb una expressió regular.",
+        "title": "Utilitza una expressió regular per dividir"
+      },
+      "symbol": {
+        "description": "Delimita els elements de la llista d'entrada amb un caràcter.",
+        "title": "Utilitza un símbol per dividir"
+      }
+    },
+    "splitterMode": "Mode de divisió",
+    "title": "Inverteix",
+    "toolInfo": {
+      "description": "Amb aquesta utilitat pots invertir l'ordre dels elements d'una llista. La utilitat primer divideix la llista d'entrada en elements individuals i després els recorre de l'últim al primer, escrivint cada element a la sortida durant el recorregut. La llista d'entrada pot contenir qualsevol cosa que es pugui representar com a text, com ara xifres, nombres, cadenes, paraules, frases, etc. El separador d'elements d'entrada també pot ser una expressió regular. Per exemple, l'expressió regular /[;,]/ et permetrà utilitzar elements separats per comes o per punts i comes. Els delimitadors dels elements de les llistes d'entrada i de sortida es poden personalitzar a les opcions. Per defecte, tant la llista d'entrada com la de sortida estan separades per comes.",
+      "title": "Què és un inversor de llistes?"
+    }
+  },
+  "rotate": {
+    "description": "La utilitat de navegador més senzilla del món per rotar els elements d'una llista. Introdueix la teva llista i especifica la quantitat de rotació per desplaçar els elements un nombre determinat de posicions. Perfecta per manipular dades, fer desplaçaments circulars o reordenar llistes.",
+    "shortDescription": "Rota els elements d'una llista un nombre determinat de posicions",
+    "title": "Rota"
+  },
+  "shuffle": {
+    "delimiterDescription": "Defineix un símbol delimitador o una expressió regular.",
+    "description": "La utilitat de navegador més senzilla del món per barrejar els elements d'una llista. Introdueix la teva llista i obtén a l'instant una versió amb els elements en ordre aleatori. Perfecta per crear varietat, provar l'aleatorietat o barrejar dades ordenades.",
+    "inputListSeparator": "Separador de la llista d'entrada",
+    "inputTitle": "Llista d'entrada",
+    "joinSeparatorDescription": "Utilitza aquest separador a la llista aleatòria.",
+    "outputLengthDescription": "Mostra aquesta quantitat d'elements aleatoris",
+    "resultTitle": "Llista barrejada",
+    "shortDescription": "Ordena aleatòriament els elements d'una llista",
+    "shuffledListLength": "Longitud de la llista barrejada",
+    "shuffledListSeparator": "Separador de la llista barrejada",
+    "title": "Barreja"
+  },
+  "sort": {
+    "caseSensitive": "Ordenació que distingeix majúscules i minúscules",
+    "caseSensitiveDescription": "Ordena per separat els elements en majúscules i en minúscules. Les majúscules precedeixen les minúscules en una llista ascendent. (Només funciona en el mode d'ordenació alfabètica.)",
+    "description": "La utilitat de navegador més senzilla del món per ordenar els elements d'una llista. Introdueix la teva llista i especifica els criteris d'ordenació per organitzar els elements en ordre ascendent o descendent. Perfecta per organitzar dades, processar text o crear llistes ordenades.",
+    "inputItemSeparator": "Separador d'elements d'entrada",
+    "inputTitle": "Llista d'entrada",
+    "joinSeparatorDescription": "Utilitza aquest símbol per unir els elements de la llista ordenada.",
+    "orderDescription": "Selecciona un ordre d'ordenació.",
+    "orderOptions": {
+      "decreasing": "Ordre decreixent",
+      "increasing": "Ordre creixent"
+    },
+    "removeDuplicates": "Elimina els duplicats",
+    "removeDuplicatesDescription": "Elimina els elements duplicats de la llista.",
+    "resultTitle": "Llista ordenada",
+    "shortDescription": "Ordena els elements d'una llista en l'ordre especificat",
+    "sortMethod": "Mètode d'ordenació",
+    "sortMethodDescription": "Selecciona un mètode d'ordenació.",
+    "sortOptions": {
+      "alphabetic": "Ordena alfabèticament",
+      "length": "Ordena per longitud",
+      "numeric": "Ordena numèricament"
+    },
+    "sortedItemProperties": "Propietats dels elements ordenats",
+    "splitOperators": {
+      "regex": {
+        "description": "Delimita els elements de la llista d'entrada amb una expressió regular.",
+        "title": "Utilitza una expressió regular per dividir"
+      },
+      "symbol": {
+        "description": "Delimita els elements de la llista d'entrada amb un caràcter.",
+        "title": "Utilitza un símbol per dividir"
+      }
+    },
+    "splitSeparatorDescription": "Defineix un símbol delimitador o una expressió regular.",
+    "title": "Ordena"
+  },
+  "truncate": {
+    "description": "La utilitat de navegador més senzilla del món per truncar llistes. Introdueix la teva llista i especifica el nombre màxim d'elements que vols conservar. Perfecta per processar dades, gestionar llistes o limitar la longitud del contingut.",
+    "shortDescription": "Trunca una llista al nombre d'elements especificat",
+    "title": "Trunca"
+  },
+  "unwrap": {
+    "description": "La utilitat de navegador més senzilla del món per desembolcallar els elements d'una llista. Introdueix la teva llista embolcallada i especifica els criteris per aplanar els elements organitzats. Perfecta per processar dades, manipular text o extreure contingut de llistes estructurades.",
+    "shortDescription": "Desembolcalla els elements d'una llista d'un format estructurat",
+    "title": "Desembolcalla"
+  },
+  "wrap": {
+    "description": "Afegeix text abans i després de cada element d'una llista.",
+    "inputTitle": "Llista d'entrada",
+    "joinSeparatorDescription": "Separador per unir la llista embolcallada",
+    "leftTextDescription": "Text que s'afegirà abans de cada element",
+    "removeEmptyItems": "Elimina els elements buits",
+    "resultTitle": "Llista embolcallada",
+    "rightTextDescription": "Text que s'afegirà després de cada element",
+    "shortDescription": "Embolcalla els elements d'una llista amb els criteris especificats",
+    "splitByRegex": "Divideix per expressió regular",
+    "splitBySymbol": "Divideix per símbol",
+    "splitOptions": "Opcions de divisió",
+    "splitSeparatorDescription": "Separador per dividir la llista",
+    "title": "Embolcalla",
+    "toolInfo": {
+      "description": "Aquesta eina et permet afegir text abans i després de cada element d'una llista. Pots especificar un text diferent per als costats esquerre i dret i controlar com es processa la llista. És útil per afegir cometes, claudàtors o altres formats als elements d'una llista, preparar dades per a formats diferents o crear text estructurat.",
+      "title": "Embolcallament de llistes"
+    },
+    "wrapOptions": "Opcions d'embolcallament"
+  }
+}

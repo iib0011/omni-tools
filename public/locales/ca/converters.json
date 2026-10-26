@@ -1,0 +1,57 @@
+{
+  "audioConverter": {
+    "description": "Converteix fitxers d'àudio entre formats diferents.",
+    "inputTitle": "Àudio d'entrada",
+    "longDescription": "Aquesta eina et permet convertir fitxers d'àudio d'un format a un altre, amb compatibilitat per a una àmplia gamma de formats d'àudio per a una conversió sense complicacions.",
+    "outputFormat": "Format de sortida",
+    "outputFormatDescription": "Selecciona el format d'àudio de sortida desitjat",
+    "outputTitle": "Àudio convertit",
+    "shortDescription": "Converteix fitxers d'àudio a diversos formats.",
+    "title": "Convertidor d'àudio"
+  },
+  "convertToJPG": {
+    "description": "Converteix diversos formats d'imatge a JPG amb opcions personalitzables de qualitat i color de fons.",
+    "failedToConvert": "No s'ha pogut convertir la imatge o les imatges a JPG. Torna-ho a provar.",
+    "inputTitle": "Imatges d'entrada",
+    "options": {
+      "colorDescription": "Color de fons (per a imatges transparents)",
+      "quality": "Qualitat de conversió:",
+      "qualityDescription": "Valors més alts = millor qualitat, fitxer més gran",
+      "title": "Opcions de conversió"
+    },
+    "resultTitle": "Imatges JPG",
+    "shortDescription": "Converteix imatges a format JPG amb control de qualitat",
+    "title": "Converteix imatges a JPG"
+  },
+  "convertToWebp": {
+    "description": "Converteix diversos formats d'imatge a format WebP amb opcions personalitzables de qualitat i color de fons.",
+    "failedToConvert": "No s'ha pogut convertir la imatge o les imatges a WebP. Torna-ho a provar.",
+    "inputTitle": "Imatges d'entrada",
+    "options": {
+      "colorDescription": "Color de fons (per a imatges transparents)",
+      "quality": "Qualitat de conversió:",
+      "qualityDescription": "Valors més alts = millor qualitat, fitxer més gran",
+      "title": "Opcions de conversió"
+    },
+    "resultTitle": "Imatges WEBP",
+    "shortDescription": "Converteix imatges a format WebP amb control de qualitat.",
+    "title": "Converteix imatges a WebP"
+  },
+  "videoToGif": {
+    "description": "Converteix fitxers de vídeo a format GIF animat. Extreu intervals de temps concrets i crea imatges animades per compartir.",
+    "inputTitle": "Vídeo d'entrada",
+    "options": {
+      "endTime": "Hora de fi",
+      "high": "Alta",
+      "low": "Baixa",
+      "mid": "Mitjana",
+      "quality": "Qualitat",
+      "startTime": "Hora d'inici",
+      "timestamps": "Marques de temps",
+      "ultra": "Ultra"
+    },
+    "resultTitle": "GIF de sortida",
+    "shortDescription": "Converteix un vídeo en un GIF animat",
+    "title": "Vídeo a GIF"
+  }
+}

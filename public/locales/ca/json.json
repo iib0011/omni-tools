@@ -1,0 +1,145 @@
+{
+  "comparison": {
+    "description": "Compara dos objectes JSON per identificar diferències d'estructura i de valors.",
+    "shortDescription": "Troba les diferències entre dos objectes JSON",
+    "title": "Compara JSON"
+  },
+  "escapeJson": {
+    "description": "Escapa els caràcters especials de les cadenes JSON. Converteix dades JSON a un format correctament escapat per transmetre-les o emmagatzemar-les de manera segura.",
+    "inputTitle": "JSON d'entrada",
+    "longDescription": "L'escapament de JSON converteix els caràcters especials de les dades JSON en seqüències d'escapament que es poden emmagatzemar, transmetre o incrustar de manera segura dins d'un altre document JSON o d'una cadena d'un llenguatge de programació. Aquesta eina escapa caràcters com les cometes dobles, les barres inverses i els salts de línia, tot conservant l'estructura original de les dades. Utilitza-la quan necessitis transformar JSON en una representació segura com a cadena per a API, fitxers de configuració, bases de dades o codi font.",
+    "resultTitle": "Cadena JSON escapada",
+    "shortDescription": "Escapa els caràcters especials en JSON",
+    "title": "Escapa JSON",
+    "wrapOutputDescription": "Afegeix cometes dobles al voltant de la sortida JSON escapada per crear una cadena JSON.",
+    "wrapOutputTitle": "Envolta la sortida amb cometes"
+  },
+  "jsonToCsv": {
+    "delimiterOption": "Delimitador",
+    "description": "Converteix dades JSON a format CSV. Admet objectes i matrius imbricats, detecció automàtica de capçaleres i delimitadors i cometes configurables, a punt per a Excel, Google Sheets o qualsevol aplicació de full de càlcul.",
+    "headerOption": "Capçaleres",
+    "inputTitle": "JSON d'entrada",
+    "options": {
+      "alwaysQuote": {
+        "description": "Envolta cada cel·la amb cometes dobles, independentment del contingut.",
+        "label": "Sempre amb cometes"
+      },
+      "autoQuote": {
+        "description": "Posa cometes només a les cel·les que contenen el delimitador, unes cometes dobles o un salt de línia. Manté la sortida neta i mínima.",
+        "label": "Automàtic (recomanat)"
+      },
+      "delimiter": "Caràcter utilitzat per separar els valors de cada fila (p. ex., coma, punt i coma, tabulació)",
+      "header": {
+        "description": "Utilitza les claus JSON com a noms de columna a la primera fila. Recomanat per a la llegibilitat i la compatibilitat d'importació.",
+        "label": "Inclou la fila de capçalera"
+      }
+    },
+    "outputTitle": "CSV de sortida",
+    "quotingOption": "Cometes de les cadenes",
+    "shortDescription": "Converteix JSON a format CSV",
+    "title": "JSON a CSV"
+  },
+  "jsonToXml": {
+    "description": "Converteix dades JSON a format XML. Transforma objectes JSON estructurats en documents XML ben formats.",
+    "inputTitle": "JSON d'entrada",
+    "options": {
+      "addMetaTagDesc": "Afegeix una etiqueta meta al començament de la sortida XML",
+      "addMetaTagTitle": "Afegeix una etiqueta meta XML",
+      "indentationTitle": "Opcions de sagnat",
+      "metaInfoTitle": "Metainformació XML",
+      "noIdentDesc": "Genera l'XML sense cap sagnat.",
+      "noIdentTitle": "Sense sagnat",
+      "useSpaceDesc": "Utilitza espais per visualitzar l'estructura jeràrquica de l'XML.",
+      "useSpaceTitle": "Utilitza espais per al sagnat",
+      "useTabDesc": "Utilitza tabulacions per visualitzar l'estructura jeràrquica de l'XML.",
+      "useTabTitle": "Utilitza tabulacions per al sagnat"
+    },
+    "outputTitle": "XML de sortida",
+    "shortDescription": "Converteix JSON a format XML",
+    "title": "JSON a XML"
+  },
+  "minify": {
+    "description": "Elimina tots els espais en blanc innecessaris d'un JSON.",
+    "inputTitle": "JSON d'entrada",
+    "resultTitle": "JSON minimitzat",
+    "shortDescription": "Minimitza JSON eliminant els espais en blanc",
+    "title": "Minimitza JSON",
+    "toolInfo": {
+      "description": "La minimització de JSON és el procés d'eliminar tots els caràcters d'espai en blanc innecessaris de les dades JSON mantenint-ne la validesa. Això inclou eliminar espais, salts de línia i sagnats que no són necessaris perquè el JSON s'analitzi correctament. La minimització redueix la mida de les dades JSON, cosa que les fa més eficients per emmagatzemar-les i transmetre-les, tot mantenint exactament la mateixa estructura i els mateixos valors.",
+      "title": "Què és la minimització de JSON?"
+    }
+  },
+  "prettify": {
+    "description": "Formata JSON amb el sagnat i l'espaiat adequats.",
+    "indentation": "Sagnat",
+    "inputTitle": "JSON d'entrada",
+    "resultTitle": "JSON embellit",
+    "shortDescription": "Formata i embelleix codi JSON",
+    "title": "Embelleix JSON",
+    "toolInfo": {
+      "description": "Aquesta eina et permet formatar dades JSON amb el sagnat i l'espaiat adequats, de manera que siguin més llegibles i més fàcils de treballar.",
+      "title": "Embelleix JSON"
+    },
+    "useSpaces": "Utilitza espais",
+    "useSpacesDescription": "Sagna la sortida amb espais",
+    "useTabs": "Utilitza tabulacions",
+    "useTabsDescription": "Sagna la sortida amb tabulacions."
+  },
+  "sortJson": {
+    "description": "Ordena dades JSON organitzant matrius d'objectes segons una clau seleccionada en ordre ascendent o descendent, o ordena alfabèticament les claus d'un objecte JSON.",
+    "inputTitle": "JSON d'entrada",
+    "longDescription": "Aquesta eina et permet ordenar fàcilment dades JSON d'una manera estructurada i previsible. Pots ordenar una matriu d'objectes per qualsevol clau, en ordre ascendent o descendent, cosa útil per organitzar dades com ara llistes d'usuaris, productes o registres. També pots ordenar alfabèticament les claus d'un objecte JSON per millorar-ne la llegibilitat i la coherència. L'eina admet modes d'ordenació flexibles i gestiona les estructures JSON habituals, de manera que és ideal per a desenvolupadors, analistes de dades i qualsevol persona que treballi amb JSON i necessiti una sortida neta i ordenada.",
+    "options": {
+      "ascending": "Ascendent (A → Z)",
+      "descending": "Descendent (Z → A)",
+      "keyDescription": "Selecciona la clau per la qual s'ordenarà",
+      "modeDescription": "Tria si vols ordenar els elements de la matriu pel valor d'una clau o ordenar alfabèticament les claus d'un objecte",
+      "orderDescription": "Tria l'ordre d'ordenació",
+      "sortByKey": "Ordena alfabèticament les claus de l'objecte",
+      "sortByValue": "Ordena la matriu pel valor de la clau",
+      "title": "Opcions d'ordenació"
+    },
+    "resultTitle": "JSON ordenat",
+    "shortDescription": "Ordena matrius JSON per valor o les claus d'un objecte alfabèticament",
+    "title": "Ordena JSON"
+  },
+  "stringify": {
+    "description": "Converteix objectes JavaScript a format de cadena JSON. Serialitza estructures de dades en cadenes JSON per emmagatzemar-les o transmetre-les.",
+    "inputTitle": "Objecte/matriu JavaScript",
+    "options": {
+      "escapeHtmlDesc": "Converteix els caràcters especials d'HTML a les seves referències d'entitat",
+      "escapeHtmlTitle": "Escapa els caràcters HTML",
+      "indentationTitle": "Opcions de sagnat",
+      "optionsTitle": "Opcions",
+      "useSpaceDesc": "Sagna la sortida amb espais",
+      "useSpaceTitle": "Utilitza espais",
+      "useTabDesc": "Sagna la sortida amb tabulacions",
+      "useTabTitle": "Utilitza tabulacions per al sagnat"
+    },
+    "resultTitle": "Cadena JSON",
+    "shortDescription": "Converteix objectes en una cadena JSON",
+    "title": "Converteix a cadena JSON",
+    "toolInfo": {
+      "description": "JSON Stringify és una eina que converteix objectes i matrius de JavaScript a la seva representació com a cadena JSON. Formata correctament la sortida amb un sagnat personalitzable i ofereix l'opció d'escapar els caràcters especials d'HTML, de manera que és segura per a l'ús web. Aquesta eina és especialment útil quan necessites serialitzar estructures de dades per emmagatzemar-les o transmetre-les, o quan has de preparar dades JSON per incrustar-les en HTML.",
+      "title": "Què és JSON Stringify?"
+    }
+  },
+  "tsvToJson": {
+    "description": "Converteix dades TSV (valors separats per tabulacions) a format JSON. Transforma dades tabulars en objectes JSON estructurats.",
+    "shortDescription": "Converteix TSV a format JSON",
+    "title": "TSV a JSON"
+  },
+  "validateJson": {
+    "description": "Comprova si un JSON és vàlid i està ben format.",
+    "inputTitle": "JSON d'entrada",
+    "invalidJson": "❌ {{error}}",
+    "resultTitle": "Resultat de la validació",
+    "shortDescription": "Valida codi JSON per detectar errors",
+    "title": "Valida JSON",
+    "toolInfo": {
+      "description": "JSON (JavaScript Object Notation) és un format lleuger d'intercanvi de dades. La validació de JSON garanteix que l'estructura de les dades s'ajusti a l'estàndard JSON. Un objecte JSON vàlid ha de tenir: - Noms de propietat entre cometes dobles. - Claus {} correctament equilibrades. - Cap coma final després de l'últim parell clau-valor. - Imbricació correcta d'objectes i matrius. Aquesta eina comprova el JSON d'entrada i ofereix comentaris per ajudar a identificar i corregir els errors habituals.",
+      "title": "Què és la validació de JSON?"
+    },
+    "validJson": "✅ JSON vàlid"
+  }
+}

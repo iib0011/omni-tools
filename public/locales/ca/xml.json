@@ -1,0 +1,43 @@
+{
+  "xmlBeautifier": {
+    "description": "Formata XML amb el sagnat i l'espaiat adequats.",
+    "indentation": "Sagnat",
+    "inputTitle": "XML d'entrada",
+    "resultTitle": "XML embellit",
+    "shortDescription": "Formata i embelleix codi XML",
+    "title": "Embellidor d'XML",
+    "options": {
+      "title": "Opcions",
+      "preserveAttributesTitle": "Conserva els atributs",
+      "preserveAttributesDesc": "Conserva el format i l'ordre originals dels atributs XML."
+    },
+    "toolInfo": {
+      "description": "Aquesta eina et permet formatar dades XML amb el sagnat i l'espaiat adequats, de manera que siguin més llegibles i més fàcils de treballar.",
+      "title": "Embellidor d'XML"
+    },
+    "useSpaces": "Utilitza espais",
+    "useSpacesDescription": "Sagna la sortida amb espais",
+    "useTabs": "Utilitza tabulacions",
+    "useTabsDescription": "Sagna la sortida amb tabulacions."
+  },
+  "xmlValidator": {
+    "description": "Valida la sintaxi i l'estructura d'XML.",
+    "placeholder": "Enganxa o importa l'XML aquí...",
+    "shortDescription": "Valida codi XML per detectar errors",
+    "title": "Validador d'XML",
+    "toolInfo": {
+      "description": "Aquesta eina et permet validar la sintaxi i l'estructura d'XML. Comprova si l'XML està ben format i proporciona missatges d'error detallats per a qualsevol problema trobat.",
+      "title": "Validador d'XML"
+    }
+  },
+  "xmlViewer": {
+    "description": "Visualitza i explora l'estructura XML en format d'arbre.",
+    "inputTitle": "XML d'entrada",
+    "resultTitle": "Vista en arbre de l'XML",
+    "title": "Visualitzador d'XML",
+    "toolInfo": {
+      "description": "Aquesta eina et permet visualitzar dades XML en un format d'arbre jeràrquic, de manera que és més fàcil explorar i entendre l'estructura dels documents XML.",
+      "title": "Visualitzador d'XML"
+    }
+  }
+}

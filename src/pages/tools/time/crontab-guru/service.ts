@@ -4,6 +4,7 @@ import { isValidCron } from 'cron-validator';
 const LANG: Record<string, string> = {
   fr: 'fr',
   en: 'en',
+  ca: 'ca',
   es: 'es',
   de: 'de',
   ja: 'ja',

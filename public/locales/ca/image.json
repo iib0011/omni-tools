@@ -1,0 +1,392 @@
+{
+  "changeColors": {
+    "description": "Canvia colors concrets d'una imatge seleccionant un color d'origen i substituint-lo per un de nou.",
+    "fromColor": {
+      "colorOption": "Substitueix un color concret",
+      "selectorDescription": "Substitueix aquest color (color d'origen)",
+      "similarityDescription": "Fes coincidir aquest % de colors similars al color d'origen. Per exemple, un 10% de blanc coincidirà amb el blanc i una mica de gris.",
+      "title": "Color d'origen",
+      "transparentOption": "Substitueix els píxels transparents"
+    },
+    "inputTitle": "Imatge d'entrada",
+    "resultTitle": "Imatge resultant",
+    "shortDescription": "Intercanvia ràpidament els colors d'una imatge",
+    "title": "Canvia els colors d'una imatge",
+    "toColor": {
+      "colorOption": "Substitueix per un color concret",
+      "selectorDescription": "Per aquest color (color de destinació)",
+      "title": "Color de destinació",
+      "transparentOption": "Substitueix per transparent"
+    }
+  },
+  "changeOpacity": {
+    "description": "Ajusta fàcilment la transparència de les teves imatges. Només cal que pugis la imatge, utilitzis el control lliscant per definir el nivell d'opacitat desitjat entre 0 (totalment transparent) i 1 (totalment opac) i baixis la imatge modificada.",
+    "shortDescription": "Ajusta la transparència de les imatges",
+    "title": "Canvia l'opacitat d'una imatge",
+    "inputTitle": "Imatge d'entrada",
+    "resultTitle": "Imatge processada",
+    "options": {
+      "opacitySettings": "Opcions d'opacitat",
+      "opacityDescription": "Defineix l'opacitat entre 0 (transparent) i 1 (opac)",
+      "solidOpacityTitle": "Aplica una opacitat uniforme",
+      "solidOpacityDescription": "Defineix el mateix nivell d'opacitat per a tots els píxels",
+      "gradientOpacityTitle": "Aplica una opacitat en degradat",
+      "gradientOpacityDescription": "Canvia l'opacitat en degradat",
+      "gradientType": "Tipus de degradat",
+      "linearOpacity": "Opacitat lineal",
+      "radialOpacity": "Opacitat radial",
+      "opacityArea": "Àrea d'opacitat",
+      "leftPosition": "Posició esquerra",
+      "topPosition": "Posició superior",
+      "width": "Amplada",
+      "height": "Alçada",
+      "backgroundOptions": "Opcions de fons",
+      "transparentAlpha": "Transparent (alfa)",
+      "transparentAlphaDescription": "Conserva la transparència de la imatge (per defecte)",
+      "solidColor": "Color sòlid",
+      "solidColorDescription": "Superposa la imatge sobre un color de fons sòlid",
+      "chooseBackgroundColor": "Tria el color de fons",
+      "insideOut": "Interior -> Exterior",
+      "outsideIn": "Exterior -> Interior",
+      "gradientDirection": "Direcció del degradat"
+    }
+  },
+  "compress": {
+    "compressedSize": "Mida total comprimida",
+    "compressing": "S'estan comprimint les imatges...",
+    "compressionOptions": "Opcions de compressió",
+    "description": "Redueix la mida d'una o diverses imatges conservant-ne la qualitat visual. Puja un lot d'imatges i baixa-les totes alhora en un arxiu ZIP.",
+    "failedToCompress": "No s'ha pogut comprimir la imatge o les imatges. Torna-ho a provar.",
+    "fileSizes": "Mides dels fitxers",
+    "inputTitle": "Imatges d'entrada",
+    "maxFileSizeDescription": "Mida màxima del fitxer de sortida per imatge en megabytes",
+    "originalSize": "Mida total original",
+    "qualityDescription": "Percentatge de qualitat de la imatge: un valor més baix vol dir un fitxer més petit",
+    "resultTitle": "Imatges comprimides",
+    "shortDescription": "Comprimeix una o diverses imatges alhora.",
+    "someFailedToCompress": "Algunes imatges no s'han pogut comprimir i s'han omès.",
+    "title": "Comprimeix imatges"
+  },
+  "compressPng": {
+    "alreadyOptimized": "Aquest PNG ja és més petit que qualsevol cosa que puguem produir, així que s'ha deixat intacte.",
+    "alreadyOptimizedFiles": "Ja són més petits que qualsevol cosa que puguem produir i s'han deixat intactes: {{files}}",
+    "colors": "Colors de la paleta",
+    "compressedSize": "Mida comprimida",
+    "compressing": "S'està comprimint el PNG...",
+    "compressionOptions": "Opcions de compressió",
+    "description": "Aquest és un programa que comprimeix una o més imatges PNG sense redimensionar-les mai. Tan bon punt afegeixes les imatges PNG a l'àrea d'entrada, el programa en redueix la paleta de colors i les torna a codificar, de manera que cada sortida conserva exactament l'amplada i l'alçada de l'entrada. A les opcions, pots ajustar el nivell de compressió, demanar una mida màxima de sortida i consultar les mides antigues i noves dels fitxers.",
+    "dimensions": "Dimensions",
+    "dimensionsUnchanged": "(sense canvis)",
+    "dithering": "Tramat",
+    "ditheringDescription": "Distribueix l'error de color entre els píxels veïns per amagar les bandes als degradats, a canvi d'un fitxer més gran",
+    "failed": "No s'ha pogut comprimir el PNG. Torna-ho a provar.",
+    "fileSizes": "Mides dels fitxers",
+    "inputTitle": "PNG d'entrada",
+    "maxOutputSizeDescription": "Mida màxima de sortida en kilobytes. La paleta es redueix fins que el PNG hi cap. Utilitza 0 per no posar cap límit",
+    "noStatsYet": "Puja PNG per veure quant s'ha estalviat",
+    "originalSize": "Mida original",
+    "qualityDescription": "Percentatge de qualitat (1-100): els valors més baixos conserven menys colors i donen un fitxer més petit",
+    "resultTitle": "PNG comprimits",
+    "shortDescription": "Comprimeix ràpidament un PNG",
+    "someFailed": "Aquests fitxers no s'han pogut comprimir: {{files}}",
+    "targetNotReached": "No s'ha pogut assolir la mida màxima de sortida, ni tan sols amb la paleta més petita. La imatge s'ha comprimit tant com ha estat possible.",
+    "targetNotReachedFiles": "No s'ha pogut assolir la mida màxima de sortida per a: {{files}}. S'han comprimit tant com ha estat possible.",
+    "title": "Comprimeix PNG"
+  },
+  "convertJgpToPng": {
+    "description": "Converteix ràpidament les teves imatges JPG a PNG. Només cal que importis la imatge JPG a l'editor de l'esquerra",
+    "shortDescription": "Converteix ràpidament les teves imatges JPG a PNG",
+    "title": "Converteix JPG a PNG"
+  },
+  "createTransparent": {
+    "description": "Crea una versió transparent d'una imatge eliminant-ne el color de fons triat.",
+    "shortDescription": "Fes ràpidament una imatge transparent",
+    "title": "Crea un PNG transparent"
+  },
+  "crop": {
+    "description": "Retalla imatges per eliminar-ne àrees no desitjades.",
+    "inputTitle": "Imatge d'entrada",
+    "resultTitle": "Imatge retallada",
+    "shortDescription": "Retalla imatges ràpidament.",
+    "title": "Retalla una imatge"
+  },
+  "editor": {
+    "description": "Editor d'imatges avançat amb eines per retallar, girar, anotar, ajustar colors i afegir marques d'aigua. Edita les teves imatges amb eines de nivell professional directament al navegador.",
+    "shortDescription": "Edita imatges amb eines i funcions avançades",
+    "title": "Editor d'imatges"
+  },
+  "imageToText": {
+    "description": "Extreu text d'imatges (JPG, PNG) mitjançant el reconeixement òptic de caràcters (OCR).",
+    "shortDescription": "Extreu text d'imatges amb OCR.",
+    "title": "Imatge a text (OCR)"
+  },
+  "qrCode": {
+    "description": "Genera codis QR per a diferents tipus de dades: URL, text, correu electrònic, telèfon, SMS, Wi-Fi, vCard i molt més.",
+    "groups": {
+      "details": {
+        "email": {
+          "address": {
+            "description": "Adreça de correu electrònic",
+            "placeholder": "example@example.com"
+          },
+          "body": {
+            "description": "Cos del correu (opcional)",
+            "placeholder": "Text del cos"
+          },
+          "subject": {
+            "description": "Assumpte del correu (opcional)",
+            "placeholder": "Línia d'assumpte"
+          }
+        },
+        "phone": {
+          "description": "Número de telèfon",
+          "placeholder": "+1234567890"
+        },
+        "sms": {
+          "message": {
+            "description": "Missatge (opcional)",
+            "placeholder": "El teu missatge aquí"
+          },
+          "number": {
+            "description": "Número de telèfon",
+            "placeholder": "+1234567890"
+          }
+        },
+        "text": {
+          "description": "Introdueix el text",
+          "placeholder": "Introdueix el teu text aquí"
+        },
+        "title": "Detalls de {{type}}",
+        "url": {
+          "description": "Introdueix l'URL",
+          "placeholder": "https://example.com"
+        },
+        "vcard": {
+          "address": {
+            "description": "Adreça",
+            "placeholder": "Carrer Major, 123, Ciutat, País"
+          },
+          "company": {
+            "description": "Empresa (opcional)",
+            "placeholder": "Nom de l'empresa"
+          },
+          "email": {
+            "description": "Correu electrònic",
+            "placeholder": "joan@example.com"
+          },
+          "name": {
+            "description": "Nom complet",
+            "placeholder": "Joan Garcia"
+          },
+          "phone": {
+            "description": "Telèfon",
+            "placeholder": "+1234567890"
+          },
+          "title": {
+            "description": "Càrrec (opcional)",
+            "placeholder": "Desenvolupador de programari"
+          },
+          "website": {
+            "description": "Lloc web (opcional)",
+            "placeholder": "https://example.com"
+          }
+        },
+        "wifi": {
+          "encryption": {
+            "label": "Tipus de xifratge",
+            "options": {
+              "none": "Cap",
+              "wep": "WEP",
+              "wpa": "WPA"
+            }
+          },
+          "password": {
+            "description": "Contrasenya",
+            "placeholder": "Contrasenya"
+          },
+          "ssid": {
+            "description": "Nom de la xarxa (SSID)",
+            "placeholder": "Nom de la xarxa"
+          }
+        }
+      },
+      "settings": {
+        "bgColor": "Color de fons",
+        "correctionLevel": {
+          "helperText": "Els nivells més alts resisteixen més danys però codifiquen menys dades",
+          "label": "Nivell de correcció d'errors",
+          "options": {
+            "h": "H (~30%)",
+            "l": "L (~7%)",
+            "m": "M (~15%)",
+            "q": "Q (~25%)"
+          }
+        },
+        "fgColor": "Color de primer pla",
+        "size": {
+          "description": "Mida en píxels (100-1000)"
+        },
+        "title": "Opcions del codi QR"
+      },
+      "type": {
+        "label": "Selecciona el tipus de codi QR",
+        "options": {
+          "email": "Correu electrònic",
+          "phone": "Telèfon",
+          "sms": "SMS",
+          "text": "Text",
+          "url": "URL",
+          "vcard": "vCard (contacte)",
+          "wifi": "Wi-Fi"
+        },
+        "title": "Tipus de codi QR"
+      }
+    },
+    "longDescription": "Genera codis QR per a diferents tipus de dades: URL, text, correu electrònic, telèfon, SMS, Wi-Fi, vCard i molt més. Personalitza'n la mida i els colors per crear el codi QR perfecte per a les teves necessitats.",
+    "options": {
+      "address": "Adreça",
+      "company": "Empresa (opcional)",
+      "email": "Correu electrònic",
+      "emailBody": "Cos del correu (opcional)",
+      "emailSubject": "Assumpte del correu (opcional)",
+      "encryptionType": "Tipus de xifratge",
+      "fullName": "Nom complet",
+      "job": "Càrrec (opcional)",
+      "message": "Missatge (opcional)",
+      "name": "Nom",
+      "password": "Contrasenya",
+      "phone": "Número de telèfon",
+      "qrType": "Selecciona el tipus de codi QR",
+      "size": "Mida en píxels (100-1000)",
+      "ssid": "Nom de la xarxa (SSID)",
+      "text": "Introdueix el text",
+      "url": "Introdueix l'URL",
+      "website": "Lloc web (opcional)"
+    },
+    "result": {
+      "title": "Codi QR generat"
+    },
+    "resultOutput": "Codi QR generat",
+    "shortDescription": "Crea codis QR personalitzats per a diversos formats de dades.",
+    "title": "Generador de codis QR"
+  },
+  "removeBackground": {
+    "description": "Elimina el fons d'una imatge per aïllar-ne el subjecte principal amb transparència.",
+    "shortDescription": "Elimina automàticament el fons de les imatges",
+    "title": "Elimina el fons d'una imatge"
+  },
+  "resize": {
+    "description": "Redimensiona imatges per dimensions en píxels o per percentatge d'escala. Mantén la relació d'aspecte i defineix l'amplada o l'alçada amb ajust automàtic. Baixa els resultats individualment o en un arxiu ZIP.",
+    "dimensionType": "Tipus de dimensió",
+    "heightDescription": "Alçada (en píxels)",
+    "inputTitle": "Imatges d'entrada",
+    "maintainAspectRatio": "Mantén la relació d'aspecte",
+    "maintainAspectRatioDescription": "Mantén la relació d'aspecte original de la imatge.",
+    "percentage": "Percentatge",
+    "percentageDescription": "Percentatge de la mida original (p. ex., 50 per a la meitat de la mida, 200 per al doble)",
+    "resizeByPercentage": "Redimensiona per percentatge",
+    "resizeByPercentageDescription": "Redimensiona especificant un percentatge de la mida original.",
+    "resizeByPixels": "Redimensiona per píxels",
+    "resizeByPixelsDescription": "Redimensiona especificant les dimensions en píxels.",
+    "resizeMethod": "Mètode de redimensionament",
+    "resultTitle": "Imatge(s) redimensionada(es)",
+    "setHeight": "Defineix l'alçada",
+    "setHeightDescription": "Especifica l'alçada en píxels i calcula l'amplada segons la relació d'aspecte.",
+    "setWidth": "Defineix l'amplada",
+    "setWidthDescription": "Especifica l'amplada en píxels i calcula l'alçada segons la relació d'aspecte.",
+    "shortDescription": "Redimensiona una o diverses imatges alhora.",
+    "title": "Redimensiona una imatge",
+    "toolInfo": {
+      "description": "Aquesta eina et permet redimensionar una o diverses imatges JPG, PNG, SVG o GIF alhora. Puja una sola imatge o un lot d'imatges i redimensiona-les especificant les dimensions en píxels o per percentatge, amb opcions per mantenir la relació d'aspecte original. Quan es processen diverses imatges, els resultats s'agrupen en un fitxer ZIP per baixar-los fàcilment.",
+      "title": "Redimensiona imatge(s)"
+    },
+    "widthDescription": "Amplada (en píxels)"
+  },
+  "rotate": {
+    "description": "Gira una imatge un angle especificat.",
+    "inputTitle": "Imatges d'entrada",
+    "options": {
+      "angle": "Angle",
+      "customDesc": "Gira un angle personalitzat en graus.",
+      "customTitle": "Angle personalitzat",
+      "method": "Mètode de gir",
+      "presetDesc": "Gira un angle concret en graus.",
+      "presetTitle": "Angle predefinit"
+    },
+    "resultTitle": "Imatges girades",
+    "shortDescription": "Gira una imatge fàcilment.",
+    "title": "Gira una imatge"
+  },
+  "split": {
+    "description": "Divideix un mapa o una imatge gran en pàgines que s'ajusten al format de paper i als marges seleccionats. Especifica els píxels per quadre d'impressió i el nombre de quadres per escalar correctament la imatge.",
+    "inputTitle": "Imatge d'entrada",
+    "loadingText": "S'està carregant... Pot trigar una estona.",
+    "pageParameters": {
+      "padding": {
+        "description": "Marge al voltant del mapa a cada pàgina (en les unitats seleccionades)",
+        "label": "Marge"
+      },
+      "selectPageFormat": "Selecciona el format de pàgina",
+      "title": "Paràmetres de pàgina"
+    },
+    "resultTitle": "PDF dividit",
+    "scaleParameters": {
+      "pxPerSquareQuantity": {
+        "description": "Quants píxels corresponen al nombre de quadres especificat a la imatge original (horitzontalment o verticalment)",
+        "label": "Píxels per quantitat de quadres"
+      },
+      "squareQuantity": {
+        "description": "Nombre de quadres de joc (horitzontalment o verticalment) utilitzats per a l'escalat",
+        "label": "Quantitat de quadres"
+      },
+      "title": "Paràmetres d'escala",
+      "unitsPerOneSquare": {
+        "description": "Mida física d'un quadre en les unitats seleccionades",
+        "label": "Unitats per quadre"
+      }
+    },
+    "shortDescription": "Divideix una imatge gran en diverses pàgines (PDF).",
+    "title": "Divideix una imatge en pàgines",
+    "units": {
+      "options": {
+        "in": "Polzades (in)",
+        "mm": "Mil·límetres (mm)",
+        "pt": "Punts (pt)"
+      },
+      "select": "Selecciona les unitats de mesura",
+      "title": "Unitats"
+    }
+  },
+  "watermark": {
+    "description": "Afegeix marques d'aigua de text a una o més imatges amb el nom de cada fitxer o un text personalitzat.",
+    "failedToProcess": "No s'ha pogut afegir la marca d'aigua a una o més imatges. Torna-ho a provar.",
+    "inputTitle": "Imatges d'entrada",
+    "options": {
+      "color": "Color de la marca d'aigua.",
+      "customStringWatermarkDesc": "Aplica el mateix text personalitzat a totes les imatges.",
+      "customStringWatermarkTitle": "Utilitza una marca d'aigua personalitzada",
+      "filenameWatermarkDesc": "Utilitza el nom de fitxer de cada imatge com a marca d'aigua.",
+      "filenameWatermarkTitle": "Utilitza el nom del fitxer",
+      "fontSize": "Mida de la lletra.",
+      "opacity": "Transparència de la marca d'aigua.",
+      "position": {
+        "bottomLeft": "A baix a l'esquerra",
+        "bottomRight": "A baix a la dreta",
+        "center": "Al centre",
+        "topLeft": "A dalt a l'esquerra",
+        "topRight": "A dalt a la dreta"
+      },
+      "positionTitle": "Posició",
+      "styleTitle": "Estil",
+      "watermark": "Text de la marca d'aigua.",
+      "watermarkTitle": "Origen"
+    },
+    "outputTitle": "Imatges amb marca d'aigua",
+    "shortDescription": "Afegeix marques d'aigua de text a les imatges",
+    "title": "Afegeix marques d'aigua a imatges",
+    "toolInfo": {
+      "longDescription": "Una eina de marques d'aigua per a imatges et permet afegir marques d'aigua de text personalitzables a una o més imatges. Pots utilitzar automàticament el nom de fitxer de cada imatge com a marca d'aigua o aplicar el mateix text personalitzat a totes les imatges. Les marques d'aigua ajuden a protegir la teva feina, identificar-ne l'autoria, promocionar la teva marca i organitzar col·leccions d'imatges. Personalitza la mida de la lletra, l'opacitat, el color i la posició conservant la qualitat original de la imatge.",
+      "title": "Què és afegir marques d'aigua a imatges?"
+    }
+  }
+}
