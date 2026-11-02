@@ -13,6 +13,7 @@ import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import greyPattern from '@assets/grey-pattern.png';
 import { isArray } from 'lodash';
 import { useTranslation } from 'react-i18next';
+import { useSharedContent } from '../../contexts/SharedContentContext';
 
 interface BaseFileInputComponentProps extends BaseFileInputProps {
   children: (props: { preview: string | undefined }) => ReactNode;
@@ -33,6 +34,16 @@ export default function BaseFileInput({
   const theme = useTheme();
   const fileInputRef = React.useRef<HTMLInputElement>(null);
   const { showSnackBar } = useContext(CustomSnackBarContext);
+  const { consumeFile } = useSharedContent();
+
+  useEffect(() => {
+    if (!value) {
+      const sharedFile = consumeFile(accept, type);
+      if (sharedFile) {
+        onChange(sharedFile);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     if (value) {
