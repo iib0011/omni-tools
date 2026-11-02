@@ -1,9 +1,10 @@
 import { Box, TextField } from '@mui/material';
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
 import { useTranslation } from 'react-i18next';
+import { useSharedContent } from '../../contexts/SharedContentContext';
 
 export default function ToolTextInput({
   value,
@@ -19,6 +20,21 @@ export default function ToolTextInput({
   const { t } = useTranslation();
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const { consumeText, consumeFile } = useSharedContent();
+
+  useEffect(() => {
+    if (!value) {
+      const text = consumeText();
+      if (text) {
+        onChange(text);
+      } else {
+        const file = consumeFile();
+        if (file) {
+          file.text().then((content) => onChange(content));
+        }
+      }
+    }
+  }, []);
 
   const handleCopy = () => {
     navigator.clipboard

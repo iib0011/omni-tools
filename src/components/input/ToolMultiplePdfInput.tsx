@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Box, IconButton, Tooltip, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import InputHeader from '../InputHeader';
@@ -7,6 +7,7 @@ import ClearIcon from '@mui/icons-material/Clear';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { useTranslation } from 'react-i18next';
 import useFileDrop from '../../hooks/useFileDrop';
+import { useSharedContent } from '../../contexts/SharedContentContext';
 
 interface MultiPdfInputComponentProps {
   accept: string[];
@@ -31,6 +32,16 @@ export default function ToolMultiFileInput({
   const { t } = useTranslation();
   const theme = useTheme();
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const { consumeFiles } = useSharedContent();
+
+  useEffect(() => {
+    if (value.length === 0) {
+      const files = consumeFiles(accept, type);
+      if (files.length > 0) {
+        onChange(files.map((file, index) => ({ file, order: index })));
+      }
+    }
+  }, []);
 
   const { isDragging, dropHandlers, addFiles } = useFileDrop({
     accept,

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Box, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import InputHeader from '../InputHeader';
@@ -7,6 +7,7 @@ import ImageIcon from '@mui/icons-material/Image';
 import { useTranslation } from 'react-i18next';
 import { heicTo, isHeic } from 'heic-to';
 import useFileDrop from '../../hooks/useFileDrop';
+import { useSharedContent } from '../../contexts/SharedContentContext';
 
 interface MultiImageInputComponentProps {
   accept: string[];
@@ -32,6 +33,16 @@ export default function ToolMultiImageInput({
   const { t } = useTranslation();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const theme = useTheme();
+  const { consumeFiles } = useSharedContent();
+
+  useEffect(() => {
+    if (value.length === 0) {
+      const files = consumeFiles(accept, type);
+      if (files.length > 0) {
+        addFiles(files);
+      }
+    }
+  }, []);
   const { isDragging, dropHandlers, addFiles } = useFileDrop({
     accept,
     onFiles: async (acceptedFiles) => {

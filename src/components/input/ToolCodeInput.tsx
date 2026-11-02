@@ -1,9 +1,10 @@
 import { Box, useTheme } from '@mui/material';
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
 import { useTranslation } from 'react-i18next';
+import { useSharedContent } from '../../contexts/SharedContentContext';
 import Editor from '@monaco-editor/react';
 import {
   globalInputHeight,
@@ -25,6 +26,21 @@ export default function ToolCodeInput({
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const theme = useTheme();
+  const { consumeText, consumeFile } = useSharedContent();
+
+  useEffect(() => {
+    if (!value) {
+      const text = consumeText();
+      if (text) {
+        onChange(text);
+      } else {
+        const file = consumeFile();
+        if (file) {
+          file.text().then((content) => onChange(content));
+        }
+      }
+    }
+  }, []);
 
   const handleCopy = () => {
     navigator.clipboard
