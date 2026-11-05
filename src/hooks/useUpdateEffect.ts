@@ -11,6 +11,7 @@ const useUpdateEffect = (effect: EffectCallback, deps?: DependencyList) => {
   useEffect(() => {
     if (isInitialMount.current) {
       isInitialMount.current = false;
+      return;
     }
     return effect();
   }, deps);
