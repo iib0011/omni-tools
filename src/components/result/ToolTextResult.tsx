@@ -4,6 +4,7 @@ import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import InputHeader from '../InputHeader';
 import ResultFooter from './ResultFooter';
 import { replaceSpecialCharacters } from '@utils/string';
+import { copyToClipboard } from '@utils/clipboard';
 import mime from 'mime';
 import { globalInputHeight } from '../../config/uiConfig';
 import { useTranslation } from 'react-i18next';
@@ -24,8 +25,7 @@ export default function ToolTextResult({
   const { t } = useTranslation();
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const handleCopy = () => {
-    navigator.clipboard
-      .writeText(value)
+    copyToClipboard(value)
       .then(() => showSnackBar(t('toolTextResult.copied'), 'success'))
       .catch((err) => {
         showSnackBar(t('toolTextResult.copyFailed', { error: err }), 'error');
