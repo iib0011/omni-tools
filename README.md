@@ -109,6 +109,12 @@ services:
 
 ```
 
+### Translator (LibreTranslate)
+
+Unlike most tools, the Translator sends text and documents to a [LibreTranslate](https://docs.libretranslate.com/) server. No server is configured by default: users enter a server URL (and an API key if the server requires one) in the tool, and it is stored in their browser.
+
+To pre-fill a server when building from source, set `VITE_LIBRETRANSLATE_URL` (and optionally `VITE_LIBRETRANSLATE_API_KEY`) before `npm run build`; see `.env.example`. These values are embedded in the client bundle, so do not use a key you need to keep secret. The server must allow cross-origin requests from your OmniTools domain (LibreTranslate does by default).
+
 ## Contribute
 
 This is a React Project with Typescript Material UI. We use icons from [Iconify](https://icon-sets.iconify.design)
