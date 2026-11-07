@@ -11,16 +11,13 @@ export const tool = defineTool('string', {
   },
   path: 'translator',
   icon: 'material-symbols:translate',
-  alternativeCategories: ['pdf'],
   keywords: [
     'translator',
     'translate',
     'translation',
     'language',
-    'libretranslate',
     'document',
     'docx',
-    'pdf',
     'srt',
     'subtitles'
   ],

@@ -8,47 +8,63 @@ import {
   within
 } from '@testing-library/react';
 import { CustomSnackBarContext } from '../../../../contexts/CustomSnackBarContext';
+import { resetBrowserEngine } from './engines/browserEngine';
 import Translator from './index';
 
 /*
- * No i18next instance is initialised in tests, so `t()` returns the key.
- * Assertions therefore use translation keys and test ids.
+ * No i18next instance is initialised in tests, so `t()` returns the key and
+ * assertions use translation keys and test ids. The browser's built-in AI
+ * APIs are stubbed, and `fetch` stands in for the MyMemory fallback.
  */
 
-const SERVER = 'https://translate.example.com';
-
-const LANGUAGES = [
-  { code: 'en', name: 'English', targets: ['es', 'fr'] },
-  { code: 'es', name: 'Spanish', targets: ['en', 'fr'] },
-  { code: 'fr', name: 'French', targets: ['en', 'es'] }
-];
-
-const DEFAULT_SETTINGS = {
-  charLimit: 50,
-  keyRequired: false,
-  filesTranslation: true,
-  supportedFilesFormat: ['.txt', '.docx', '.pdf']
-};
-
-const jsonResponse = (body: unknown, status = 200) =>
-  new Response(JSON.stringify(body), {
-    status,
-    headers: { 'Content-Type': 'application/json' }
-  });
-
-type Handler = (init?: RequestInit) => Promise<Response> | Response;
-
-let handlers: Record<string, Handler>;
-const fetchMock = vi.fn(
-  async (input: RequestInfo | URL, init?: RequestInit) => {
-    const path = String(input).replace(SERVER, '');
-    const handler = handlers[path];
-    if (!handler) return jsonResponse({ error: 'Not Found' }, 404);
-    return handler(init);
-  }
-);
-
+const fetchMock = vi.fn<Parameters<typeof fetch>, ReturnType<typeof fetch>>();
 const showSnackBar = vi.fn();
+
+type TranslateImpl = (
+  text: string,
+  source: string,
+  target: string
+) => Promise<string>;
+
+function installBrowserAI({
+  translate = async (text, source, target) => `<${source}>${target}> ${text}`,
+  create
+}: {
+  translate?: TranslateImpl;
+  create?: (options: { monitor?: (m: unknown) => void }) => Promise<unknown>;
+} = {}) {
+  vi.stubGlobal('Translator', {
+    availability: vi.fn(async () => 'available'),
+    create: vi.fn(
+      create ??
+        (async ({ sourceLanguage, targetLanguage }) => ({
+          translate: (text: string) =>
+            translate(text, sourceLanguage, targetLanguage)
+        }))
+    )
+  });
+  vi.stubGlobal('LanguageDetector', {
+    availability: vi.fn(async () => 'available'),
+    create: vi.fn(async () => ({
+      detect: vi.fn(async () => [{ detectedLanguage: 'fr', confidence: 0.91 }])
+    }))
+  });
+}
+
+function myMemoryReplies() {
+  fetchMock.mockImplementation(async (input) => {
+    const params = new URL(String(input)).searchParams;
+    return new Response(
+      JSON.stringify({
+        responseData: {
+          translatedText: `[mm] ${params.get('q')}`,
+          detectedLanguage: 'fr'
+        },
+        responseStatus: 200
+      })
+    );
+  });
+}
 
 function renderTranslator() {
   return render(
@@ -56,12 +72,6 @@ function renderTranslator() {
       <Translator title="Translator" />
     </CustomSnackBarContext.Provider>
   );
-}
-
-async function renderConnected() {
-  const view = renderTranslator();
-  await screen.findByText('translator.connected');
-  return view;
 }
 
 /** Opens an MUI Select by id and picks the option with the given label. */
@@ -79,22 +89,19 @@ async function chooseLanguage(selectId: string, optionLabel: string) {
 const selectedLabel = (selectId: string) =>
   document.getElementById(selectId)?.textContent;
 
-const translateCalls = () =>
-  fetchMock.mock.calls.filter(([url]) => String(url).endsWith('/translate'));
+const typeText = (value: string) =>
+  fireEvent.change(screen.getByTestId('translator-input'), {
+    target: { value }
+  });
+
+const clickTranslate = () =>
+  fireEvent.click(screen.getByRole('button', { name: 'translator.translate' }));
 
 beforeEach(() => {
-  localStorage.clear();
-  localStorage.setItem(
-    'translator.libretranslate',
-    JSON.stringify({ serverUrl: SERVER, apiKey: '' })
-  );
-  handlers = {
-    '/languages': () => jsonResponse(LANGUAGES),
-    '/frontend/settings': () => jsonResponse(DEFAULT_SETTINGS)
-  };
-  fetchMock.mockClear();
-  showSnackBar.mockClear();
+  fetchMock.mockReset();
   vi.stubGlobal('fetch', fetchMock);
+  showSnackBar.mockClear();
+  resetBrowserEngine();
 });
 
 afterEach(() => {
@@ -103,151 +110,160 @@ afterEach(() => {
 });
 
 describe('Translator – setup', () => {
-  it('asks for a server when none is configured and disables translation', () => {
-    localStorage.clear();
+  it('needs no server, URL or API key', () => {
+    installBrowserAI();
     renderTranslator();
-    expect(screen.getByText('translator.notConfigured')).toBeInTheDocument();
-    expect(
-      screen.getByRole('button', { name: 'translator.translate' })
-    ).toBeDisabled();
-    expect(screen.queryByTestId('translator-privacy')).not.toBeInTheDocument();
-    expect(fetchMock).not.toHaveBeenCalled();
+    expect(screen.queryByText(/server/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/api key/i)).not.toBeInTheDocument();
+    expect(screen.getByTestId('translator-input')).toBeInTheDocument();
   });
 
-  it('loads languages from the configured server and shows the privacy notice', async () => {
-    await renderConnected();
-    expect(fetchMock).toHaveBeenCalledWith(
-      `${SERVER}/languages`,
-      expect.anything()
-    );
+  it('explains on-device translation when the browser supports it', () => {
+    installBrowserAI();
+    renderTranslator();
     expect(screen.getByTestId('translator-privacy')).toHaveTextContent(
-      'translator.privacyNotice'
+      'translator.privacyOnDevice'
     );
   });
 
-  it('connects to a newly entered server and saves it', async () => {
-    localStorage.clear();
+  it('explains the online fallback when the browser has no translator', () => {
     renderTranslator();
-    fireEvent.change(screen.getByTestId('translator-server-url'), {
-      target: { value: `${SERVER}/` }
-    });
-    fireEvent.click(screen.getByRole('button', { name: 'translator.connect' }));
-    await screen.findByText('translator.connected');
-    expect(
-      JSON.parse(localStorage.getItem('translator.libretranslate') ?? '{}')
-    ).toEqual({ serverUrl: `${SERVER}/`, apiKey: '' });
-  });
-
-  it('shows a connection error for an unreachable server', async () => {
-    handlers['/languages'] = () => {
-      throw new TypeError('Failed to fetch');
-    };
-    renderTranslator();
-    expect(await screen.findByRole('alert')).toHaveTextContent(
-      'translator.errors.network'
+    expect(screen.getByTestId('translator-privacy')).toHaveTextContent(
+      'translator.privacyOnline'
     );
   });
 });
 
 describe('Translator – text mode', () => {
-  it('renders both translation areas and the character count', async () => {
-    await renderConnected();
-    expect(screen.getByTestId('translator-input')).toBeInTheDocument();
+  it('renders both areas with localized language names', () => {
+    installBrowserAI();
+    renderTranslator();
     expect(screen.getByTestId('translator-output')).toBeInTheDocument();
-    expect(screen.getByTestId('translator-char-count')).toHaveTextContent(
-      'translator.characterCountWithLimit'
-    );
     expect(selectedLabel('translator-source-language')).toBe(
       'translator.autoDetect'
     );
-    // Default target follows the UI language, falling back to English.
     expect(selectedLabel('translator-target-language')).toBe('English');
+    expect(screen.getByTestId('translator-char-count')).toHaveTextContent(
+      'translator.characterCount'
+    );
   });
 
-  it('translates text with automatic detection', async () => {
-    let resolveTranslation: (response: Response) => void = () => undefined;
-    handlers['/translate'] = () =>
-      new Promise<Response>((resolve) => {
-        resolveTranslation = resolve;
-      });
-    await renderConnected();
+  it('translates on the device with automatic detection', async () => {
+    installBrowserAI();
+    renderTranslator();
     await chooseLanguage('translator-target-language', 'Spanish');
+    typeText('Bonjour');
+    clickTranslate();
 
-    fireEvent.change(screen.getByTestId('translator-input'), {
-      target: { value: 'Bonjour' }
-    });
-    fireEvent.click(
-      screen.getByRole('button', { name: 'translator.translate' })
+    await waitFor(() =>
+      expect(screen.getByTestId('translator-output')).toHaveValue(
+        '<fr>es> Bonjour'
+      )
     );
+    expect(screen.getByTestId('translator-engine')).toHaveTextContent(
+      'translator.engineBrowser'
+    );
+    expect(screen.getByText('translator.detectedLanguage')).toBeInTheDocument();
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
 
-    // Loading state
+  it('shows translation progress while working', async () => {
+    let finish: (value: string) => void = () => undefined;
+    installBrowserAI({
+      translate: () => new Promise<string>((resolve) => (finish = resolve))
+    });
+    renderTranslator();
+    typeText('Bonjour');
+    clickTranslate();
+
     expect(
       await screen.findByRole('button', { name: 'translator.translating' })
     ).toBeDisabled();
-    expect(screen.queryByTestId('translator-output')).not.toBeInTheDocument();
+    expect(
+      await screen.findByText('translator.translatingProgress')
+    ).toBeInTheDocument();
 
-    const body = JSON.parse(String(translateCalls()[0][1]?.body));
-    expect(body).toMatchObject({ q: 'Bonjour', source: 'auto', target: 'es' });
+    await act(async () => finish('Hello'));
+    await waitFor(() =>
+      expect(screen.getByTestId('translator-output')).toHaveValue('Hello')
+    );
+  });
 
-    await act(async () =>
-      resolveTranslation(
-        jsonResponse({
-          translatedText: 'Hola',
-          detectedLanguage: { language: 'fr', confidence: 92 }
+  it('shows language model download progress', async () => {
+    installBrowserAI({
+      create: ({ monitor }) => {
+        monitor?.({
+          addEventListener: (_: string, cb: (e: { loaded: number }) => void) =>
+            cb({ loaded: 0.4 })
+        });
+        return new Promise(() => undefined);
+      }
+    });
+    renderTranslator();
+    typeText('Bonjour');
+    clickTranslate();
+    expect(
+      await screen.findByText('translator.downloadingModel')
+    ).toBeInTheDocument();
+  });
+
+  it('falls back to MyMemory when the browser has no translator', async () => {
+    myMemoryReplies();
+    renderTranslator();
+    typeText('Bonjour');
+    clickTranslate();
+    await waitFor(() =>
+      expect(screen.getByTestId('translator-output')).toHaveValue(
+        '[mm] Bonjour'
+      )
+    );
+    expect(screen.getByTestId('translator-engine')).toHaveTextContent(
+      'translator.engineMyMemory'
+    );
+    expect(
+      screen.getByText('translator.detectedLanguageNoConfidence')
+    ).toBeInTheDocument();
+  });
+
+  it('shows errors such as an exhausted online quota', async () => {
+    fetchMock.mockResolvedValue(
+      new Response(
+        JSON.stringify({
+          responseData: { translatedText: 'x' },
+          responseStatus: 200,
+          quotaFinished: true
         })
       )
     );
-
-    expect(await screen.findByTestId('translator-output')).toHaveValue('Hola');
-    expect(screen.getByText('translator.detectedLanguage')).toBeInTheDocument();
-  });
-
-  it('translates with Ctrl+Enter', async () => {
-    handlers['/translate'] = () => jsonResponse({ translatedText: 'Hi' });
-    await renderConnected();
-    const input = screen.getByTestId('translator-input');
-    fireEvent.change(input, { target: { value: 'Hola' } });
-    fireEvent.keyDown(input, { key: 'Enter', ctrlKey: true });
-    await waitFor(() =>
-      expect(screen.getByTestId('translator-output')).toHaveValue('Hi')
+    renderTranslator();
+    typeText('Hello');
+    clickTranslate();
+    expect(await screen.findByRole('alert')).toHaveTextContent(
+      'translator.errors.quotaExceeded'
     );
   });
 
-  it('disables translation for empty input or text over the limit', async () => {
-    await renderConnected();
-    const button = screen.getByRole('button', { name: 'translator.translate' });
-    expect(button).toBeDisabled();
-
-    fireEvent.change(screen.getByTestId('translator-input'), {
-      target: { value: 'x'.repeat(DEFAULT_SETTINGS.charLimit + 1) }
-    });
-    expect(button).toBeDisabled();
-
-    fireEvent.change(screen.getByTestId('translator-input'), {
-      target: { value: 'ok' }
-    });
-    expect(button).toBeEnabled();
-  });
-
-  it('shows API errors', async () => {
-    handlers['/translate'] = () =>
-      jsonResponse({ error: 'Slowdown: 20 per 1 minute' }, 429);
-    await renderConnected();
-    fireEvent.change(screen.getByTestId('translator-input'), {
-      target: { value: 'Hello' }
-    });
-    fireEvent.click(
+  it('disables translation for empty input and translates with Ctrl+Enter', async () => {
+    installBrowserAI();
+    renderTranslator();
+    expect(
       screen.getByRole('button', { name: 'translator.translate' })
+    ).toBeDisabled();
+    typeText('Hola');
+    fireEvent.keyDown(screen.getByTestId('translator-input'), {
+      key: 'Enter',
+      ctrlKey: true
+    });
+    await waitFor(() =>
+      expect(screen.getByTestId('translator-output')).toHaveValue(
+        '<fr>en> Hola'
+      )
     );
-
-    const alert = await screen.findByRole('alert');
-    expect(alert).toHaveTextContent('translator.errors.rateLimited');
-    expect(alert).toHaveTextContent('translator.errorDetails');
   });
 
   it('swaps languages and texts, but not while detecting automatically', async () => {
-    handlers['/translate'] = () => jsonResponse({ translatedText: 'Hola' });
-    await renderConnected();
+    installBrowserAI();
+    renderTranslator();
     const swap = screen.getByRole('button', {
       name: 'translator.swapLanguages'
     });
@@ -257,20 +273,17 @@ describe('Translator – text mode', () => {
     await chooseLanguage('translator-target-language', 'Spanish');
     expect(swap).toBeEnabled();
 
-    fireEvent.change(screen.getByTestId('translator-input'), {
-      target: { value: 'Hello' }
-    });
-    fireEvent.click(
-      screen.getByRole('button', { name: 'translator.translate' })
-    );
+    typeText('Hello');
+    clickTranslate();
     await waitFor(() =>
-      expect(screen.getByTestId('translator-output')).toHaveValue('Hola')
+      expect(screen.getByTestId('translator-output')).toHaveValue(
+        '<en>es> Hello'
+      )
     );
-
     fireEvent.click(swap);
     expect(selectedLabel('translator-source-language')).toBe('Spanish');
     expect(selectedLabel('translator-target-language')).toBe('English');
-    expect(screen.getByTestId('translator-input')).toHaveValue('Hola');
+    expect(screen.getByTestId('translator-input')).toHaveValue('<en>es> Hello');
     expect(screen.getByTestId('translator-output')).toHaveValue('Hello');
   });
 
@@ -280,20 +293,18 @@ describe('Translator – text mode', () => {
       value: { writeText },
       configurable: true
     });
-    handlers['/translate'] = () => jsonResponse({ translatedText: 'Hola' });
-    await renderConnected();
-    fireEvent.change(screen.getByTestId('translator-input'), {
-      target: { value: 'Hello' }
-    });
-    fireEvent.click(
-      screen.getByRole('button', { name: 'translator.translate' })
-    );
+    installBrowserAI();
+    renderTranslator();
+    typeText('Hello');
+    clickTranslate();
     await waitFor(() =>
-      expect(screen.getByTestId('translator-output')).toHaveValue('Hola')
+      expect(screen.getByTestId('translator-output')).not.toHaveValue('')
     );
 
     fireEvent.click(screen.getByRole('button', { name: 'resultFooter.copy' }));
-    await waitFor(() => expect(writeText).toHaveBeenCalledWith('Hola'));
+    await waitFor(() =>
+      expect(writeText).toHaveBeenCalledWith('<fr>en> Hello')
+    );
     expect(showSnackBar).toHaveBeenCalledWith('translator.copied', 'success');
 
     fireEvent.click(screen.getByRole('button', { name: 'inputFooter.clear' }));
@@ -304,7 +315,7 @@ describe('Translator – text mode', () => {
 
 describe('Translator – document mode', () => {
   const openDocumentMode = async () => {
-    await renderConnected();
+    renderTranslator();
     fireEvent.click(
       screen.getByRole('tab', { name: 'translator.documentMode' })
     );
@@ -316,17 +327,14 @@ describe('Translator – document mode', () => {
       target: { files: [file] }
     });
 
-  it('restricts the picker to the formats the server supports', async () => {
+  it('accepts only supported formats', async () => {
+    installBrowserAI();
     await openDocumentMode();
     expect(screen.getByTestId('translator-file-input')).toHaveAttribute(
       'accept',
-      '.txt,.docx,.pdf'
+      '.txt,.srt,.html,.htm,.docx,.pptx,.odt,.odp,.epub'
     );
-  });
-
-  it('rejects unsupported files', async () => {
-    await openDocumentMode();
-    selectFile(new File(['x'], 'slides.pptx'));
+    selectFile(new File(['%PDF'], 'scan.pdf'));
     expect(await screen.findByRole('alert')).toHaveTextContent(
       'translator.errors.unsupportedFormat'
     );
@@ -335,7 +343,8 @@ describe('Translator – document mode', () => {
     ).toBeDisabled();
   });
 
-  it('accepts a dropped document', async () => {
+  it('accepts a dropped document and can remove it', async () => {
+    installBrowserAI();
     await openDocumentMode();
     fireEvent.drop(screen.getByTestId('translator-dropzone'), {
       dataTransfer: { files: [new File(['Hello'], 'notes.txt')] }
@@ -343,14 +352,14 @@ describe('Translator – document mode', () => {
     expect(
       await screen.findByTestId('translator-selected-file')
     ).toHaveTextContent('notes.txt');
+    fireEvent.click(screen.getByRole('button', { name: 'inputFooter.clear' }));
+    expect(
+      screen.queryByTestId('translator-selected-file')
+    ).not.toBeInTheDocument();
   });
 
-  it('translates a document and downloads the result', async () => {
-    handlers['/translate_file'] = () =>
-      jsonResponse({
-        translatedFileUrl: `${SERVER}/download_file/abc.notes.txt`
-      });
-    handlers['/download_file/abc.notes.txt'] = () => new Response('Hola');
+  it('translates a document in the browser and downloads it', async () => {
+    installBrowserAI();
     const createObjectURL = vi.fn(() => 'blob:translated');
     const revokeObjectURL = vi.fn();
     vi.stubGlobal(
@@ -362,21 +371,19 @@ describe('Translator – document mode', () => {
       .mockImplementation(() => undefined);
 
     await openDocumentMode();
-    selectFile(new File(['Hello'], 'notes.txt', { type: 'text/plain' }));
-    expect(
-      await screen.findByTestId('translator-selected-file')
-    ).toHaveTextContent('notes.txt');
-
+    await chooseLanguage('translator-target-language', 'German');
+    selectFile(new File(['Bonjour\n'], 'notes.txt', { type: 'text/plain' }));
+    await screen.findByTestId('translator-selected-file');
     fireEvent.click(
       screen.getByRole('button', { name: 'translator.translateDocument' })
     );
-    expect(
-      await screen.findByText('translator.translatingDocument')
-    ).toBeInTheDocument();
 
     expect(
       await screen.findByTestId('translator-result-file')
-    ).toHaveTextContent('notes.en.txt');
+    ).toHaveTextContent('notes.de.txt');
+    expect(screen.getByTestId('translator-engine')).toHaveTextContent(
+      'translator.engineBrowser'
+    );
     expect(showSnackBar).toHaveBeenCalledWith(
       'translator.documentTranslated',
       'success'
@@ -385,51 +392,46 @@ describe('Translator – document mode', () => {
     fireEvent.click(
       screen.getByRole('button', { name: 'translator.downloadDocument' })
     );
-    expect(createObjectURL).toHaveBeenCalledWith(
-      expect.objectContaining({ name: 'notes.en.txt' })
-    );
+    const downloaded = (createObjectURL.mock.calls[0] as unknown[])[0] as File;
+    expect(downloaded.name).toBe('notes.de.txt');
+    expect(await downloaded.text()).toBe('<fr>de> Bonjour\n');
     expect(click).toHaveBeenCalled();
     await waitFor(() =>
       expect(revokeObjectURL).toHaveBeenCalledWith('blob:translated')
     );
   });
 
-  it('shows document translation failures', async () => {
-    handlers['/translate_file'] = () =>
-      jsonResponse({ error: 'Corrupted file' }, 500);
+  it('reports corrupt documents', async () => {
+    installBrowserAI();
     await openDocumentMode();
-    selectFile(new File(['%PDF-broken'], 'broken.pdf'));
+    selectFile(new File(['not a zip'], 'broken.docx'));
     await screen.findByTestId('translator-selected-file');
     fireEvent.click(
       screen.getByRole('button', { name: 'translator.translateDocument' })
     );
     expect(await screen.findByRole('alert')).toHaveTextContent(
-      'translator.errors.serverError'
+      'translator.errors.corruptDocument'
     );
     expect(
       screen.getByRole('button', { name: 'translator.downloadDocument' })
     ).toBeDisabled();
   });
 
-  it('removes the selected file', async () => {
+  it('blocks documents too long for the online fallback', async () => {
+    myMemoryReplies();
     await openDocumentMode();
-    selectFile(new File(['Hello'], 'notes.txt'));
+    const text = Array.from(
+      { length: 100 },
+      (_, i) => `Line ${i} ${'x'.repeat(60)}`
+    ).join('\n');
+    selectFile(new File([text], 'long.txt'));
     await screen.findByTestId('translator-selected-file');
-    fireEvent.click(screen.getByRole('button', { name: 'inputFooter.clear' }));
-    expect(
-      screen.queryByTestId('translator-selected-file')
-    ).not.toBeInTheDocument();
-  });
-
-  it('explains when the server has document translation disabled', async () => {
-    handlers['/frontend/settings'] = () =>
-      jsonResponse({ ...DEFAULT_SETTINGS, filesTranslation: false });
-    await openDocumentMode();
-    expect(
-      screen.getByText('translator.filesDisabledOnServer')
-    ).toBeInTheDocument();
-    expect(
+    fireEvent.click(
       screen.getByRole('button', { name: 'translator.translateDocument' })
-    ).toBeDisabled();
+    );
+    expect(await screen.findByRole('alert')).toHaveTextContent(
+      'translator.errors.documentTooLongForOnline'
+    );
+    expect(fetchMock).not.toHaveBeenCalled();
   });
 });

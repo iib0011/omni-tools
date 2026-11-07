@@ -1,22 +1,90 @@
-import { AUTO_DETECT, LibreLanguage } from './types';
+import { AUTO_DETECT, Language } from './types';
 
 /**
- * Languages the given source can be translated into. With auto-detection
- * every language is a candidate; otherwise the server's `targets` list is
- * used when present.
+ * Languages offered in the selectors (BCP 47). This is the set supported by
+ * the browser's built-in Translator API; MyMemory supports all of them too.
  */
-export function getTargetOptions(
-  languages: LibreLanguage[],
-  source: string
-): LibreLanguage[] {
-  if (source === AUTO_DETECT) return languages;
-  const sourceLanguage = languages.find((language) => language.code === source);
-  const targets = sourceLanguage?.targets;
-  if (targets && targets.length > 0) {
-    return languages.filter(
-      (language) => language.code !== source && targets.includes(language.code)
-    );
+export const LANGUAGE_CODES = [
+  'ar',
+  'bg',
+  'bn',
+  'cs',
+  'da',
+  'de',
+  'el',
+  'en',
+  'es',
+  'fi',
+  'fr',
+  'he',
+  'hi',
+  'hr',
+  'hu',
+  'id',
+  'it',
+  'ja',
+  'kn',
+  'ko',
+  'lt',
+  'mr',
+  'nl',
+  'no',
+  'pl',
+  'pt',
+  'ro',
+  'ru',
+  'sk',
+  'sl',
+  'sv',
+  'ta',
+  'te',
+  'th',
+  'tr',
+  'uk',
+  'vi',
+  'zh',
+  'zh-Hant'
+] as const;
+
+/** Localized language names, sorted for the UI language. */
+export function getLanguages(uiLanguage: string): Language[] {
+  let displayNames: Intl.DisplayNames | null = null;
+  try {
+    displayNames = new Intl.DisplayNames([uiLanguage, 'en'], {
+      type: 'language'
+    });
+  } catch {
+    // Intl.DisplayNames unavailable: fall back to codes.
   }
+  return LANGUAGE_CODES.map((code) => {
+    const name = displayNames?.of(code) ?? code;
+    return { code, name: name.charAt(0).toLocaleUpperCase() + name.slice(1) };
+  }).sort((a, b) => a.name.localeCompare(b.name, uiLanguage));
+}
+
+/**
+ * Maps an engine-reported code (e.g. `fr-FR`, `zh-Hans`, `iw`) onto one of
+ * {@link LANGUAGE_CODES}, or returns `null` if it is not offered.
+ */
+export function normalizeLanguageCode(code: string): string | null {
+  const supported: readonly string[] = LANGUAGE_CODES;
+  if (supported.includes(code)) return code;
+  const lower = code.toLowerCase();
+  if (lower === 'zh-hant' || lower === 'zh-tw' || lower === 'zh-hk') {
+    return 'zh-Hant';
+  }
+  const base = lower.split(/[-_]/)[0];
+  const aliases: Record<string, string> = { iw: 'he', nb: 'no', nn: 'no' };
+  const resolved = aliases[base] ?? base;
+  return supported.includes(resolved) ? resolved : null;
+}
+
+/** Every language except the selected source (all of them for auto-detect). */
+export function getTargetOptions(
+  languages: Language[],
+  source: string
+): Language[] {
+  if (source === AUTO_DETECT) return languages;
   return languages.filter((language) => language.code !== source);
 }
 
@@ -25,7 +93,7 @@ export function getTargetOptions(
  * language, else English, else the first available option.
  */
 export function pickTarget(
-  options: LibreLanguage[],
+  options: Language[],
   current: string,
   uiLanguage: string
 ): string {

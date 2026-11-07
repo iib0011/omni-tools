@@ -5,68 +5,38 @@ import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import { useTranslation } from 'react-i18next';
 import { ToolComponentProps } from '@tools/defineTool';
 import ToolInfo from '@components/ToolInfo';
-import ServerSettings from './components/ServerSettings';
 import TextTranslator from './components/TextTranslator';
 import DocumentTranslator from './components/DocumentTranslator';
 import { LanguageBarProps } from './components/LanguageBar';
-import { getTargetOptions, pickTarget } from './languages';
-import { loadConfig, saveConfig } from './service';
-import {
-  getServerHost,
-  useLibreTranslateServer
-} from './useLibreTranslateServer';
-import { AUTO_DETECT, TranslatorConfig, TranslatorMode } from './types';
+import { getLanguages, getTargetOptions, pickTarget } from './languages';
+import { getPreferredEngine } from './service';
+import { AUTO_DETECT, TranslatorMode } from './types';
 
 export default function Translator({
   title,
   longDescription
 }: ToolComponentProps) {
   const { t, i18n } = useTranslation('string');
-  const [config, setConfig] = useState<TranslatorConfig>(loadConfig);
+  const uiLanguage = i18n.language ?? 'en';
   const [mode, setMode] = useState<TranslatorMode>('text');
   const [source, setSource] = useState<string>(AUTO_DETECT);
   const [target, setTarget] = useState<string>('');
+  const onDevice = useMemo(() => getPreferredEngine() === 'browser', []);
 
-  const server = useLibreTranslateServer(config);
-  const { languages, settings } = server;
-  const connected = Boolean(server.connectedHost) && languages.length > 0;
-  const host = getServerHost(config.serverUrl);
-
+  const languages = useMemo(() => getLanguages(uiLanguage), [uiLanguage]);
   const targetOptions = useMemo(
     () => getTargetOptions(languages, source),
     [languages, source]
   );
 
-  // Keep the selection valid when the server or source language changes.
   useEffect(() => {
-    if (
-      source !== AUTO_DETECT &&
-      languages.length > 0 &&
-      !languages.some((language) => language.code === source)
-    ) {
-      setSource(AUTO_DETECT);
-    }
-  }, [languages, source]);
-
-  useEffect(() => {
-    setTarget((current) =>
-      pickTarget(targetOptions, current, i18n.language ?? 'en')
-    );
-  }, [targetOptions, i18n.language]);
-
-  const handleConnect = (next: TranslatorConfig) => {
-    saveConfig(next);
-    // Always a new object, so "Connect" also retries an unchanged config.
-    setConfig({ ...next });
-  };
+    setTarget((current) => pickTarget(targetOptions, current, uiLanguage));
+  }, [targetOptions, uiLanguage]);
 
   const handleSwap = () => {
     if (source === AUTO_DETECT) return;
-    const nextSource = target;
-    const nextTarget = source;
-    setSource(nextSource);
-    // The target effect would otherwise keep the old target if still valid.
-    setTarget(nextTarget);
+    setSource(target);
+    setTarget(source);
   };
 
   const languageBarProps: LanguageBarProps = {
@@ -76,32 +46,21 @@ export default function Translator({
     target,
     onSourceChange: setSource,
     onTargetChange: setTarget,
-    onSwap: handleSwap,
-    disabled: !connected
+    onSwap: handleSwap
   };
 
   return (
     <Box>
-      <ServerSettings
-        config={config}
-        onConnect={handleConnect}
-        loading={server.loading}
-        connectedHost={server.connectedHost}
-        languageCount={languages.length}
-        keyRequired={settings?.keyRequired ?? false}
-        error={server.error}
-      />
-
-      {host && (
-        <Alert
-          severity="info"
-          role="note"
-          sx={{ mb: 2 }}
-          data-testid="translator-privacy"
-        >
-          {t('translator.privacyNotice', { server: host })}
-        </Alert>
-      )}
+      <Alert
+        severity={onDevice ? 'success' : 'info'}
+        role="note"
+        sx={{ mb: 2 }}
+        data-testid="translator-privacy"
+      >
+        {onDevice
+          ? t('translator.privacyOnDevice')
+          : t('translator.privacyOnline')}
+      </Alert>
 
       <Tabs
         value={mode}
@@ -134,19 +93,11 @@ export default function Translator({
       >
         {mode === 'text' ? (
           <TextTranslator
-            config={config}
             languages={languages}
             languageBarProps={languageBarProps}
-            charLimit={settings?.charLimit ?? -1}
-            disabled={!connected}
           />
         ) : (
-          <DocumentTranslator
-            config={config}
-            settings={settings}
-            languageBarProps={languageBarProps}
-            disabled={!connected}
-          />
+          <DocumentTranslator languageBarProps={languageBarProps} />
         )}
       </Box>
 

@@ -3,74 +3,66 @@ export const AUTO_DETECT = 'auto';
 
 export type TranslatorMode = 'text' | 'document';
 
-/** Connection settings for a LibreTranslate instance. */
-export interface TranslatorConfig {
-  /** Base URL of the LibreTranslate server, e.g. `https://translate.example.com`. */
-  serverUrl: string;
-  /** Optional API key for instances that require one. */
-  apiKey: string;
-}
+/**
+ * Where a translation was produced:
+ * - `browser`: the browser's built-in, on-device Translator API
+ * - `mymemory`: the free MyMemory web service (fallback)
+ */
+export type TranslationEngine = 'browser' | 'mymemory';
 
-/** Item returned by `GET /languages`. */
-export interface LibreLanguage {
+export interface Language {
   code: string;
   name: string;
-  /** Codes this language can be translated into. */
-  targets?: string[];
-}
-
-/** Subset of `GET /frontend/settings` that the tool relies on. */
-export interface LibreServerSettings {
-  /** Maximum characters per request; `-1` (or missing) means unlimited. */
-  charLimit: number;
-  keyRequired: boolean;
-  filesTranslation: boolean;
-  /** Extensions accepted by `/translate_file`, e.g. `['.txt', '.pdf']`. */
-  supportedFilesFormat: string[];
 }
 
 export interface DetectedLanguage {
   language: string;
-  /** Detection confidence, 0–100. */
-  confidence: number;
+  /** Detection confidence, 0–100, when the engine reports one. */
+  confidence?: number;
 }
 
-export interface TextTranslationRequest {
-  text: string;
+export interface TranslationRequest {
   source: string;
   target: string;
+}
+
+export type TranslationProgress =
+  | { phase: 'downloading'; /** 0–1 */ loaded: number }
+  | { phase: 'translating'; done: number; total: number };
+
+export interface TranslationOptions {
+  signal?: AbortSignal;
+  onProgress?: (progress: TranslationProgress) => void;
 }
 
 export interface TextTranslationResult {
   translatedText: string;
+  engine: TranslationEngine;
   detectedLanguage?: DetectedLanguage;
 }
 
-export interface DocumentTranslationRequest {
+export interface DocumentTranslationResult {
   file: File;
-  source: string;
-  target: string;
+  engine: TranslationEngine;
+  detectedLanguage?: DetectedLanguage;
 }
 
 /** Machine-readable failure categories, mapped to localized messages in the UI. */
 export type TranslatorErrorCode =
-  | 'notConfigured'
-  | 'invalidServerUrl'
   | 'network'
   | 'timeout'
-  | 'endpointNotFound'
-  | 'badRequest'
-  | 'keyRequired'
-  | 'invalidKey'
   | 'rateLimited'
+  | 'quotaExceeded'
   | 'unsupportedLanguage'
-  | 'filesDisabled'
-  | 'unsupportedFormat'
   | 'serverError'
   | 'invalidResponse'
-  | 'downloadFailed'
   | 'emptyInput'
   | 'sameLanguage'
-  | 'textTooLong'
+  | 'detectionFailed'
+  | 'activationRequired'
+  | 'unsupportedFormat'
   | 'fileTooLarge'
-  | 'emptyFile';
+  | 'emptyFile'
+  | 'corruptDocument'
+  | 'noTextFound'
+  | 'documentTooLongForOnline';

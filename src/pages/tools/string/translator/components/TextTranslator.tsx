@@ -16,29 +16,28 @@ import ToolInputAndResult from '@components/ToolInputAndResult';
 import { globalInputHeight } from '../../../../../config/uiConfig';
 import { CustomSnackBarContext } from '../../../../../contexts/CustomSnackBarContext';
 import { isAbortError, translateText } from '../service';
-import { DetectedLanguage, LibreLanguage, TranslatorConfig } from '../types';
+import {
+  DetectedLanguage,
+  Language,
+  TranslationEngine,
+  TranslationProgress
+} from '../types';
 import LanguageBar, { LanguageBarProps } from './LanguageBar';
 import TranslatorErrorAlert from './TranslatorErrorAlert';
+import { EngineLabel, TranslationProgressInfo } from './TranslationStatus';
 
 const textFieldSx = {
   '&.MuiTextField-root': { backgroundColor: 'background.paper' }
 };
 
 export interface TextTranslatorProps {
-  config: TranslatorConfig;
-  languages: LibreLanguage[];
+  languages: Language[];
   languageBarProps: LanguageBarProps;
-  /** Server character limit; values <= 0 mean unlimited. */
-  charLimit: number;
-  disabled?: boolean;
 }
 
 export default function TextTranslator({
-  config,
   languages,
-  languageBarProps,
-  charLimit,
-  disabled
+  languageBarProps
 }: TextTranslatorProps) {
   const { t } = useTranslation('string');
   const { t: tCommon } = useTranslation();
@@ -46,13 +45,14 @@ export default function TextTranslator({
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [detected, setDetected] = useState<DetectedLanguage | null>(null);
+  const [engine, setEngine] = useState<TranslationEngine | null>(null);
   const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState<TranslationProgress | null>(null);
   const [error, setError] = useState<unknown>(null);
   const abortRef = useRef<AbortController | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const { source, target } = languageBarProps;
-  const overLimit = charLimit > 0 && input.length > charLimit;
 
   useEffect(() => () => abortRef.current?.abort(), []);
 
@@ -61,28 +61,31 @@ export default function TextTranslator({
   }, [source, target]);
 
   const handleTranslate = async () => {
-    if (loading || disabled || overLimit) return;
+    if (loading) return;
     abortRef.current?.abort();
     const controller = new AbortController();
     abortRef.current = controller;
 
     setError(null);
     setDetected(null);
+    setProgress(null);
     setLoading(true);
     try {
       const result = await translateText(
-        config,
-        { text: input, source, target },
-        controller.signal
+        input,
+        { source, target },
+        { signal: controller.signal, onProgress: setProgress }
       );
       setOutput(result.translatedText);
       setDetected(result.detectedLanguage ?? null);
+      setEngine(result.engine);
     } catch (err) {
       if (!isAbortError(err)) setError(err);
     } finally {
       if (abortRef.current === controller) {
         abortRef.current = null;
         setLoading(false);
+        setProgress(null);
       }
     }
   };
@@ -101,26 +104,17 @@ export default function TextTranslator({
     setInput('');
     setOutput('');
     setDetected(null);
+    setEngine(null);
     setError(null);
   };
 
-  const handleCopyInput = () => {
+  const copy = (text: string, successMessage: string) =>
     navigator.clipboard
-      .writeText(input)
-      .then(() => showSnackBar(tCommon('toolTextInput.copied'), 'success'))
+      .writeText(text)
+      .then(() => showSnackBar(successMessage, 'success'))
       .catch((err) =>
         showSnackBar(t('translator.copyFailed', { error: err }), 'error')
       );
-  };
-
-  const handleCopyOutput = () => {
-    navigator.clipboard
-      .writeText(output)
-      .then(() => showSnackBar(t('translator.copied'), 'success'))
-      .catch((err) =>
-        showSnackBar(t('translator.copyFailed', { error: err }), 'error')
-      );
-  };
 
   const handleDownload = () => {
     const blob = new Blob([output], { type: 'text/plain;charset=utf-8' });
@@ -131,7 +125,7 @@ export default function TextTranslator({
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 0);
   };
 
   const handleImport = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -174,7 +168,6 @@ export default function TextTranslator({
               multiline
               rows={10}
               sx={textFieldSx}
-              error={overLimit}
               inputProps={{
                 'aria-label': t('translator.inputTitle'),
                 'data-testid': 'translator-input'
@@ -188,22 +181,21 @@ export default function TextTranslator({
             >
               <InputFooter
                 handleImport={() => fileInputRef.current?.click()}
-                handleCopy={input ? handleCopyInput : undefined}
+                handleCopy={
+                  input
+                    ? () => copy(input, tCommon('toolTextInput.copied'))
+                    : undefined
+                }
                 handleClear={input || output ? handleClear : undefined}
               />
               <Typography
                 variant="body2"
                 mt={1}
-                color={overLimit ? 'error' : 'text.secondary'}
+                color="text.secondary"
                 aria-live="polite"
                 data-testid="translator-char-count"
               >
-                {charLimit > 0
-                  ? t('translator.characterCountWithLimit', {
-                      count: input.length,
-                      limit: charLimit
-                    })
-                  : t('translator.characterCount', { count: input.length })}
+                {t('translator.characterCount', { count: input.length })}
               </Typography>
             </Stack>
             <input
@@ -233,9 +225,7 @@ export default function TextTranslator({
                 }}
               >
                 <CircularProgress />
-                <Typography variant="body2" sx={{ mt: 2 }}>
-                  {t('translator.translating')}
-                </Typography>
+                <TranslationProgressInfo progress={progress} />
               </Box>
             ) : (
               <TextField
@@ -254,17 +244,28 @@ export default function TextTranslator({
             )}
             <ResultFooter
               disabled={!output || loading}
-              handleCopy={handleCopyOutput}
+              handleCopy={() => copy(output, t('translator.copied'))}
               handleDownload={handleDownload}
             />
-            {detected && (
-              <Typography variant="body2" color="text.secondary" mt={1}>
-                {t('translator.detectedLanguage', {
-                  language: detectedName,
-                  confidence: Math.round(detected.confidence)
-                })}
-              </Typography>
-            )}
+            <Stack
+              direction={{ xs: 'column', sm: 'row' }}
+              spacing={{ xs: 0.5, sm: 2 }}
+              mt={1}
+            >
+              {output && !loading && <EngineLabel engine={engine} />}
+              {detected && (
+                <Typography variant="body2" color="text.secondary">
+                  {detected.confidence !== undefined
+                    ? t('translator.detectedLanguage', {
+                        language: detectedName,
+                        confidence: detected.confidence
+                      })
+                    : t('translator.detectedLanguageNoConfidence', {
+                        language: detectedName
+                      })}
+                </Typography>
+              )}
+            </Stack>
           </Box>
         }
       />
@@ -278,7 +279,7 @@ export default function TextTranslator({
           variant="contained"
           size="large"
           onClick={handleTranslate}
-          disabled={disabled || loading || overLimit || !input.trim()}
+          disabled={loading || !input.trim()}
           startIcon={
             loading ? (
               <CircularProgress size={20} color="inherit" />

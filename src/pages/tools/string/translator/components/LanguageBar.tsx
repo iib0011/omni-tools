@@ -9,13 +9,13 @@ import {
 } from '@mui/material';
 import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
 import { useTranslation } from 'react-i18next';
-import { AUTO_DETECT, LibreLanguage } from '../types';
+import { AUTO_DETECT, Language } from '../types';
 
 interface LanguageSelectProps {
   id: string;
   label: string;
   value: string;
-  options: LibreLanguage[];
+  options: Language[];
   onChange: (code: string) => void;
   includeAutoDetect?: boolean;
   disabled?: boolean;
@@ -63,8 +63,8 @@ function LanguageSelect({
 }
 
 export interface LanguageBarProps {
-  languages: LibreLanguage[];
-  targetOptions: LibreLanguage[];
+  languages: Language[];
+  targetOptions: Language[];
   source: string;
   target: string;
   onSourceChange: (code: string) => void;

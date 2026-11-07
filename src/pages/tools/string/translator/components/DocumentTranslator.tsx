@@ -1,6 +1,5 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import {
-  Alert,
   Box,
   Button,
   CircularProgress,
@@ -16,22 +15,21 @@ import ToolInputAndResult from '@components/ToolInputAndResult';
 import { globalInputHeight } from '../../../../../config/uiConfig';
 import { CustomSnackBarContext } from '../../../../../contexts/CustomSnackBarContext';
 import {
+  ACCEPTED_EXTENSIONS,
+  DOCUMENT_FORMATS,
   formatFileSize,
-  getAcceptedExtensions,
   MAX_DOCUMENT_SIZE_BYTES,
   validateDocument
 } from '../document';
 import { isAbortError, translateDocument } from '../service';
-import { LibreServerSettings, TranslatorConfig } from '../types';
+import { TranslationEngine, TranslationProgress } from '../types';
 import DocumentDropzone from './DocumentDropzone';
 import LanguageBar, { LanguageBarProps } from './LanguageBar';
 import TranslatorErrorAlert from './TranslatorErrorAlert';
+import { EngineLabel, TranslationProgressInfo } from './TranslationStatus';
 
 export interface DocumentTranslatorProps {
-  config: TranslatorConfig;
-  settings: LibreServerSettings | null;
   languageBarProps: LanguageBarProps;
-  disabled?: boolean;
 }
 
 function downloadFile(file: File) {
@@ -48,22 +46,17 @@ function downloadFile(file: File) {
 }
 
 export default function DocumentTranslator({
-  config,
-  settings,
-  languageBarProps,
-  disabled
+  languageBarProps
 }: DocumentTranslatorProps) {
   const { t } = useTranslation('string');
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const [file, setFile] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
+  const [engine, setEngine] = useState<TranslationEngine | null>(null);
   const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState<TranslationProgress | null>(null);
   const [error, setError] = useState<unknown>(null);
   const abortRef = useRef<AbortController | null>(null);
-
-  const filesDisabled = settings?.filesTranslation === false;
-  const acceptedExtensions = getAcceptedExtensions(settings);
-  const isDisabled = disabled || filesDisabled;
 
   useEffect(() => () => abortRef.current?.abort(), []);
 
@@ -76,7 +69,7 @@ export default function DocumentTranslator({
       return;
     }
     try {
-      validateDocument(selected, acceptedExtensions);
+      validateDocument(selected);
       setFile(selected);
     } catch (err) {
       setError(err);
@@ -84,25 +77,23 @@ export default function DocumentTranslator({
   };
 
   const handleTranslate = async () => {
-    if (!file || loading || isDisabled) return;
+    if (!file || loading) return;
     abortRef.current?.abort();
     const controller = new AbortController();
     abortRef.current = controller;
 
     setError(null);
     setResult(null);
+    setProgress(null);
     setLoading(true);
     try {
       const translated = await translateDocument(
-        config,
-        {
-          file,
-          source: languageBarProps.source,
-          target: languageBarProps.target
-        },
-        controller.signal
+        file,
+        { source: languageBarProps.source, target: languageBarProps.target },
+        { signal: controller.signal, onProgress: setProgress }
       );
-      setResult(translated);
+      setResult(translated.file);
+      setEngine(translated.engine);
       showSnackBar(t('translator.documentTranslated'), 'success');
     } catch (err) {
       if (!isAbortError(err)) setError(err);
@@ -110,32 +101,28 @@ export default function DocumentTranslator({
       if (abortRef.current === controller) {
         abortRef.current = null;
         setLoading(false);
+        setProgress(null);
       }
     }
   };
 
   const formatsHint = t('translator.supportedFormats', {
-    formats: acceptedExtensions.map((ext) => ext.toUpperCase()).join(', '),
+    formats: DOCUMENT_FORMATS.map((ext) => ext.toUpperCase()).join(', '),
     size: formatFileSize(MAX_DOCUMENT_SIZE_BYTES)
   });
 
   return (
     <Box>
-      {filesDisabled && (
-        <Alert severity="warning" role="status" sx={{ mb: 2 }}>
-          {t('translator.filesDisabledOnServer')}
-        </Alert>
-      )}
-      <LanguageBar {...languageBarProps} disabled={isDisabled || loading} />
+      <LanguageBar {...languageBarProps} disabled={loading} />
       <ToolInputAndResult
         input={
           <DocumentDropzone
             title={t('translator.documentInputTitle')}
             file={file}
-            acceptedExtensions={acceptedExtensions}
+            acceptedExtensions={[...ACCEPTED_EXTENSIONS]}
             hint={formatsHint}
             onSelect={handleSelect}
-            disabled={isDisabled || loading}
+            disabled={loading}
           />
         }
         result={
@@ -164,9 +151,7 @@ export default function DocumentTranslator({
               {loading ? (
                 <>
                   <CircularProgress />
-                  <Typography variant="body2" sx={{ mt: 1 }}>
-                    {t('translator.translatingDocument')}
-                  </Typography>
+                  <TranslationProgressInfo progress={progress} />
                 </>
               ) : result ? (
                 <>
@@ -181,6 +166,7 @@ export default function DocumentTranslator({
                   <Typography variant="body2" color="text.secondary">
                     {formatFileSize(result.size)}
                   </Typography>
+                  <EngineLabel engine={engine} />
                 </>
               ) : (
                 <Typography color="text.secondary">
@@ -197,12 +183,15 @@ export default function DocumentTranslator({
           </Box>
         }
       />
+      <Typography variant="body2" color="text.secondary" mt={2}>
+        {t('translator.documentFormattingNote')}
+      </Typography>
       <Stack direction={{ xs: 'column', sm: 'row' }} mt={3}>
         <Button
           variant="contained"
           size="large"
           onClick={handleTranslate}
-          disabled={!file || loading || isDisabled}
+          disabled={!file || loading}
           startIcon={
             loading ? (
               <CircularProgress size={20} color="inherit" />

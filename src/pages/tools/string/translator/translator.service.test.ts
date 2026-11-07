@@ -1,514 +1,314 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { resetBrowserEngine } from './engines/browserEngine';
+import { TranslatorError } from './errors';
 import {
-  buildTranslatedFileName,
-  fetchLanguages,
-  fetchServerSettings,
-  loadConfig,
-  normalizeServerUrl,
-  resolveDownloadUrl,
-  saveConfig,
-  TEXT_TIMEOUT_MS,
+  getPreferredEngine,
   translateDocument,
-  translateText,
-  TranslatorError
+  translateText
 } from './service';
-import { TranslatorConfig } from './types';
+import { TranslationProgress } from './types';
 
-const SERVER = 'https://translate.example.com';
-const config: TranslatorConfig = { serverUrl: SERVER, apiKey: '' };
-const configWithKey: TranslatorConfig = { serverUrl: SERVER, apiKey: 'k-123' };
-
-const jsonResponse = (body: unknown, status = 200) =>
-  new Response(JSON.stringify(body), {
-    status,
-    headers: { 'Content-Type': 'application/json' }
-  });
+/*
+ * External services are mocked: the browser's Translator/LanguageDetector
+ * globals are stubbed, and `fetch` stands in for MyMemory.
+ */
 
 const fetchMock = vi.fn<Parameters<typeof fetch>, ReturnType<typeof fetch>>();
 
-/** Asserts that `promise` rejects with a TranslatorError of the given code. */
-async function expectCode(promise: Promise<unknown>, code: string) {
-  await expect(promise).rejects.toBeInstanceOf(TranslatorError);
-  await promise.catch((error: TranslatorError) =>
-    expect(error.code).toBe(code)
-  );
+/** MyMemory stub: echoes `[source>target] text`. */
+function myMemoryReplies(detected = 'fr') {
+  fetchMock.mockImplementation(async (input) => {
+    const params = new URL(String(input)).searchParams;
+    const [source, target] = (params.get('langpair') ?? '').split('|');
+    return new Response(
+      JSON.stringify({
+        responseData: {
+          translatedText: `[${source}>${target}] ${params.get('q')}`,
+          ...(source === 'autodetect' ? { detectedLanguage: detected } : {})
+        },
+        responseStatus: 200
+      })
+    );
+  });
 }
 
-const lastRequestBody = () =>
-  JSON.parse(String(fetchMock.mock.calls.at(-1)?.[1]?.body));
+interface BrowserStubOptions {
+  available?: (source: string, target: string) => boolean;
+  detected?: { detectedLanguage: string; confidence: number } | null;
+}
+
+/** Built-in AI stub: translates to `<source>target> text`. */
+function installBrowserAI({
+  available = () => true,
+  detected
+}: BrowserStubOptions = {}) {
+  const translate = vi.fn();
+  vi.stubGlobal('Translator', {
+    availability: vi.fn(async ({ sourceLanguage, targetLanguage }) =>
+      available(sourceLanguage, targetLanguage) ? 'available' : 'unavailable'
+    ),
+    create: vi.fn(async ({ sourceLanguage, targetLanguage }) => ({
+      translate: translate.mockImplementation(
+        async (text: string) => `<${sourceLanguage}>${targetLanguage}> ${text}`
+      )
+    }))
+  });
+  if (detected !== null) {
+    vi.stubGlobal('LanguageDetector', {
+      availability: vi.fn(async () => 'available'),
+      create: vi.fn(async () => ({
+        detect: vi.fn(async () => [
+          detected ?? { detectedLanguage: 'fr', confidence: 0.9 }
+        ])
+      }))
+    });
+  }
+  return { translate };
+}
+
+async function expectCode(promise: Promise<unknown>, code: string) {
+  const error = await promise.then(
+    () => null,
+    (e: unknown) => e
+  );
+  expect(error).toBeInstanceOf(TranslatorError);
+  expect((error as TranslatorError).code).toBe(code);
+}
 
 beforeEach(() => {
   fetchMock.mockReset();
   vi.stubGlobal('fetch', fetchMock);
-  localStorage.clear();
+  resetBrowserEngine();
 });
 
 afterEach(() => {
   vi.unstubAllGlobals();
-  vi.useRealTimers();
 });
 
-describe('normalizeServerUrl', () => {
-  it('strips trailing slashes and keeps sub-paths', () => {
-    expect(normalizeServerUrl(' https://x.org/ ')).toBe('https://x.org');
-    expect(normalizeServerUrl('http://x.org/lt//')).toBe('http://x.org/lt');
-  });
-
-  it('requires a URL', () => {
-    expect(() => normalizeServerUrl('  ')).toThrow(
-      expect.objectContaining({ code: 'notConfigured' })
-    );
-  });
-
-  it.each([
-    'not a url',
-    'ftp://x.org',
-    'javascript:alert(1)',
-    'https://x.org/?a=1',
-    'https://user:pw@x.org'
-  ])('rejects %s', (value) => {
-    expect(() => normalizeServerUrl(value)).toThrow(
-      expect.objectContaining({ code: 'invalidServerUrl' })
-    );
+describe('engine selection', () => {
+  it('prefers the on-device translator when the browser has one', () => {
+    expect(getPreferredEngine()).toBe('mymemory');
+    installBrowserAI();
+    expect(getPreferredEngine()).toBe('browser');
   });
 });
 
-describe('config persistence', () => {
-  it('falls back to build-time defaults when nothing is saved', () => {
-    expect(loadConfig()).toEqual({
-      serverUrl: import.meta.env.VITE_LIBRETRANSLATE_URL ?? '',
-      apiKey: import.meta.env.VITE_LIBRETRANSLATE_API_KEY ?? ''
-    });
-  });
-
-  it('round-trips saved settings', () => {
-    saveConfig(configWithKey);
-    expect(loadConfig()).toEqual(configWithKey);
-  });
-
-  it('ignores corrupt stored data', () => {
-    localStorage.setItem('translator.libretranslate', '{oops');
-    expect(loadConfig().serverUrl).toBe(
-      import.meta.env.VITE_LIBRETRANSLATE_URL ?? ''
-    );
-  });
-});
-
-describe('fetchLanguages', () => {
-  it('returns valid languages sorted by name', async () => {
-    fetchMock.mockResolvedValue(
-      jsonResponse([
-        { code: 'fr', name: 'French', targets: ['en'] },
-        { code: 'en', name: 'English', targets: ['fr', 42] },
-        { code: 1, name: 'broken' }
-      ])
-    );
-    const languages = await fetchLanguages(config);
-    expect(fetchMock.mock.calls[0][0]).toBe(`${SERVER}/languages`);
-    expect(languages).toEqual([
-      { code: 'en', name: 'English', targets: ['fr'] },
-      { code: 'fr', name: 'French', targets: ['en'] }
-    ]);
-  });
-
-  it('rejects non-array responses', async () => {
-    fetchMock.mockResolvedValue(jsonResponse({ hello: 'world' }));
-    await expectCode(fetchLanguages(config), 'invalidResponse');
-  });
-
-  it('rejects non-JSON responses', async () => {
-    fetchMock.mockResolvedValue(new Response('<html>proxy</html>'));
-    await expectCode(fetchLanguages(config), 'invalidResponse');
-  });
-
-  it('reports a missing server URL without making a request', async () => {
-    await expectCode(
-      fetchLanguages({ serverUrl: '', apiKey: '' }),
-      'notConfigured'
-    );
-    expect(fetchMock).not.toHaveBeenCalled();
-  });
-});
-
-describe('fetchServerSettings', () => {
-  it('maps the server capabilities', async () => {
-    fetchMock.mockResolvedValue(
-      jsonResponse({
-        charLimit: 5000,
-        keyRequired: true,
-        filesTranslation: true,
-        supportedFilesFormat: ['.TXT', '.pdf']
-      })
-    );
-    expect(await fetchServerSettings(config)).toEqual({
-      charLimit: 5000,
-      keyRequired: true,
-      filesTranslation: true,
-      supportedFilesFormat: ['.txt', '.pdf']
-    });
-  });
-
-  it('returns null when the endpoint does not exist', async () => {
-    fetchMock.mockResolvedValue(jsonResponse({ error: 'Not found' }, 404));
-    expect(await fetchServerSettings(config)).toBeNull();
-  });
-});
-
-describe('translateText', () => {
-  it('translates text and sends the expected request', async () => {
-    fetchMock.mockResolvedValue(jsonResponse({ translatedText: '¡Hola!' }));
-    const result = await translateText(config, {
-      text: 'Hello!',
-      source: 'en',
-      target: 'es'
-    });
-
+describe('translateText – on-device', () => {
+  it('translates on the device without network requests', async () => {
+    installBrowserAI();
+    const result = await translateText('Hello', { source: 'en', target: 'es' });
     expect(result).toEqual({
-      translatedText: '¡Hola!',
+      translatedText: '<en>es> Hello',
+      engine: 'browser',
       detectedLanguage: undefined
     });
-    const [url, init] = fetchMock.mock.calls[0];
-    expect(url).toBe(`${SERVER}/translate`);
-    expect(init?.method).toBe('POST');
-    expect(lastRequestBody()).toEqual({
-      q: 'Hello!',
-      source: 'en',
-      target: 'es',
-      format: 'text'
-    });
+    expect(fetchMock).not.toHaveBeenCalled();
   });
 
-  it('includes the API key only when configured', async () => {
-    fetchMock.mockResolvedValue(jsonResponse({ translatedText: 'x' }));
-    await translateText(configWithKey, {
-      text: 'a',
-      source: 'en',
-      target: 'es'
+  it('detects the source language on the device', async () => {
+    installBrowserAI({
+      detected: { detectedLanguage: 'de', confidence: 0.97 }
     });
-    expect(lastRequestBody().api_key).toBe('k-123');
-  });
-
-  it('returns the detected language for automatic detection', async () => {
-    fetchMock.mockResolvedValue(
-      jsonResponse({
-        translatedText: 'Hello!',
-        detectedLanguage: { confidence: 90, language: 'fr' }
-      })
-    );
-    const result = await translateText(config, {
-      text: 'Bonjour !',
+    const result = await translateText('Guten Tag', {
       source: 'auto',
       target: 'en'
     });
-    expect(lastRequestBody().source).toBe('auto');
-    expect(result.detectedLanguage).toEqual({ language: 'fr', confidence: 90 });
+    expect(result.translatedText).toBe('<de>en> Guten Tag');
+    expect(result.detectedLanguage).toEqual({ language: 'de', confidence: 97 });
   });
 
-  it('rejects empty input without calling the server', async () => {
+  it('rejects when the detected language equals the target', async () => {
+    installBrowserAI({ detected: { detectedLanguage: 'en', confidence: 0.9 } });
     await expectCode(
-      translateText(config, { text: '   ', source: 'en', target: 'es' }),
-      'emptyInput'
-    );
-    expect(fetchMock).not.toHaveBeenCalled();
-  });
-
-  it('rejects identical source and target languages', async () => {
-    await expectCode(
-      translateText(config, { text: 'a', source: 'en', target: 'en' }),
+      translateText('Hello', { source: 'auto', target: 'en' }),
       'sameLanguage'
     );
   });
 
-  it('rejects a missing target language', async () => {
-    await expectCode(
-      translateText(config, { text: 'a', source: 'auto', target: '' }),
-      'unsupportedLanguage'
-    );
-  });
-
-  it.each([
-    [400, { error: 'xx is not supported' }, config, 'unsupportedLanguage'],
-    [
-      400,
-      { error: 'Invalid request: request (6000) exceeds text limit (5000)' },
-      config,
-      'textTooLong'
-    ],
-    [
-      400,
-      { error: 'Please contact the server operator to get an API key' },
-      config,
-      'keyRequired'
-    ],
-    [403, { error: 'Invalid API key' }, configWithKey, 'invalidKey'],
-    [403, { error: 'Forbidden' }, config, 'keyRequired'],
-    [429, { error: 'Slowdown: 20 per 1 minute' }, config, 'rateLimited'],
-    [500, { error: 'boom' }, config, 'serverError'],
-    [502, '<html>Bad gateway</html>', config, 'serverError'],
-    [404, { error: 'Not Found' }, config, 'endpointNotFound'],
-    [400, { error: 'Something else' }, config, 'badRequest']
-  ])('maps HTTP %i %j to %s', async (status, body, cfg, expectedCode) => {
-    fetchMock.mockResolvedValue(
-      typeof body === 'string'
-        ? new Response(body, { status })
-        : jsonResponse(body, status)
-    );
-    await expectCode(
-      translateText(cfg, { text: 'a', source: 'en', target: 'es' }),
-      expectedCode
-    );
-  });
-
-  it('exposes the server error message', async () => {
-    fetchMock.mockResolvedValue(
-      jsonResponse({ error: 'Slowdown: 20 per 1 minute' }, 429)
-    );
-    await translateText(config, { text: 'a', source: 'en', target: 'es' })
-      .then(() => expect.fail('should reject'))
-      .catch((error: TranslatorError) => {
-        expect(error.status).toBe(429);
-        expect(error.serverMessage).toBe('Slowdown: 20 per 1 minute');
-      });
-  });
-
-  it('reports network failures', async () => {
-    fetchMock.mockRejectedValue(new TypeError('Failed to fetch'));
-    await expectCode(
-      translateText(config, { text: 'a', source: 'en', target: 'es' }),
-      'network'
-    );
-  });
-
-  it('rejects responses without translatedText', async () => {
-    fetchMock.mockResolvedValue(jsonResponse({ translation: 'nope' }));
-    await expectCode(
-      translateText(config, { text: 'a', source: 'en', target: 'es' }),
-      'invalidResponse'
-    );
-  });
-
-  it('times out slow requests', async () => {
-    vi.useFakeTimers();
-    fetchMock.mockImplementation(
-      (_url, init) =>
-        new Promise((_resolve, reject) => {
-          init?.signal?.addEventListener('abort', () =>
-            reject(new DOMException('aborted', 'AbortError'))
-          );
-        })
-    );
-    const promise = translateText(config, {
-      text: 'a',
+  it('keeps line breaks, blank lines and indentation; translates duplicates once', async () => {
+    const { translate } = installBrowserAI();
+    const result = await translateText('Hi\n\n  Hi\r\nBye 123\n42', {
       source: 'en',
-      target: 'es'
+      target: 'fr'
     });
-    vi.advanceTimersByTime(TEXT_TIMEOUT_MS);
-    await expectCode(promise, 'timeout');
+    expect(result.translatedText).toBe(
+      '<en>fr> Hi\n\n  <en>fr> Hi\r\n<en>fr> Bye 123\n42'
+    );
+    expect(translate).toHaveBeenCalledTimes(2);
   });
 
-  it('re-throws AbortError when the caller cancels', async () => {
-    fetchMock.mockImplementation(
-      (_url, init) =>
-        new Promise((_resolve, reject) => {
-          init?.signal?.addEventListener('abort', () =>
-            reject(new DOMException('aborted', 'AbortError'))
-          );
+  it('returns text without letters unchanged', async () => {
+    installBrowserAI();
+    const result = await translateText('123 456', {
+      source: 'en',
+      target: 'fr'
+    });
+    expect(result.translatedText).toBe('123 456');
+  });
+});
+
+describe('translateText – MyMemory fallback', () => {
+  it('uses MyMemory when the browser has no translator', async () => {
+    myMemoryReplies();
+    const result = await translateText('Hello', { source: 'en', target: 'es' });
+    expect(result).toEqual({
+      translatedText: '[en>es] Hello',
+      engine: 'mymemory',
+      detectedLanguage: undefined
+    });
+  });
+
+  it('uses MyMemory for language pairs not available on the device', async () => {
+    installBrowserAI({ available: (s, t) => !(s === 'en' && t === 'kn') });
+    myMemoryReplies();
+    const result = await translateText('Hello', { source: 'en', target: 'kn' });
+    expect(result.engine).toBe('mymemory');
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('uses MyMemory when the on-device model cannot be set up', async () => {
+    installBrowserAI();
+    vi.stubGlobal('Translator', {
+      availability: vi.fn(async () => 'downloadable'),
+      create: vi.fn(async () => {
+        throw new DOMException(
+          'Unable to create translator',
+          'NotSupportedError'
+        );
+      })
+    });
+    myMemoryReplies();
+    const result = await translateText('Hello', { source: 'en', target: 'fr' });
+    expect(result).toMatchObject({
+      translatedText: '[en>fr] Hello',
+      engine: 'mymemory'
+    });
+  });
+
+  it('detects online and reuses the detected language for later lines', async () => {
+    myMemoryReplies('fr');
+    const result = await translateText('Bonjour\nMerci', {
+      source: 'auto',
+      target: 'en'
+    });
+    expect(result.translatedText).toBe(
+      '[autodetect>en] Bonjour\n[fr>en] Merci'
+    );
+    expect(result.detectedLanguage).toEqual({ language: 'fr' });
+  });
+
+  it('surfaces quota errors', async () => {
+    fetchMock.mockResolvedValue(
+      new Response(
+        JSON.stringify({
+          responseData: { translatedText: 'x' },
+          responseStatus: 200,
+          quotaFinished: true
         })
-    );
-    const controller = new AbortController();
-    const promise = translateText(
-      config,
-      { text: 'a', source: 'en', target: 'es' },
-      controller.signal
-    );
-    controller.abort();
-    await expect(promise).rejects.toMatchObject({ name: 'AbortError' });
-  });
-});
-
-describe('resolveDownloadUrl', () => {
-  it('keeps same-origin URLs', () => {
-    expect(resolveDownloadUrl(SERVER, `${SERVER}/download_file/abc.docx`)).toBe(
-      `${SERVER}/download_file/abc.docx`
-    );
-  });
-
-  it('re-bases URLs built with an internal host onto the configured server', () => {
-    expect(
-      resolveDownloadUrl(
-        `${SERVER}/lt/`,
-        'http://127.0.0.1:5000/download_file/abc.docx'
       )
-    ).toBe(`${SERVER}/lt/download_file/abc.docx`);
-  });
-
-  it('resolves relative URLs', () => {
-    expect(resolveDownloadUrl(SERVER, '/download_file/abc.txt')).toBe(
-      `${SERVER}/download_file/abc.txt`
     );
-  });
-
-  it.each([
-    'javascript:alert(1)',
-    'https://evil.example.org/malware.exe',
-    'data:text/html,hi'
-  ])('rejects %s', (value) => {
-    expect(() => resolveDownloadUrl(SERVER, value)).toThrow(
-      expect.objectContaining({ code: 'invalidResponse' })
+    await expectCode(
+      translateText('Hello', { source: 'en', target: 'es' }),
+      'quotaExceeded'
     );
   });
 });
 
-describe('buildTranslatedFileName', () => {
+describe('translateText – validation', () => {
   it.each([
-    ['report.docx', 'es', 'report.es.docx'],
-    ['my.notes.v2.pdf', 'fr', 'my.notes.v2.fr.pdf'],
-    ['README', 'de', 'README.de']
-  ])('%s → %s', (name, target, expected) => {
-    expect(buildTranslatedFileName(name, target)).toBe(expected);
+    ['   ', 'en', 'es', 'emptyInput'],
+    ['Hi', 'en', 'en', 'sameLanguage'],
+    ['Hi', 'auto', '', 'unsupportedLanguage']
+  ])('rejects %j %s→%s with %s', async (text, source, target, code) => {
+    await expectCode(translateText(text, { source, target }), code);
+    expect(fetchMock).not.toHaveBeenCalled();
   });
 });
 
 describe('translateDocument', () => {
-  const makeFile = (name = 'report.txt', content = 'Hello world') =>
-    new File([content], name, { type: 'text/plain' });
-
-  it('uploads the document and downloads the translation', async () => {
-    fetchMock
-      .mockResolvedValueOnce(
-        jsonResponse({
-          translatedFileUrl: `${SERVER}/download_file/uuid.report.txt`
-        })
-      )
-      .mockResolvedValueOnce(new Response('Hola mundo'));
-
-    const file = makeFile();
-    const result = await translateDocument(configWithKey, {
-      file,
-      source: 'auto',
-      target: 'es'
+  it('translates a document on the device and reports progress', async () => {
+    installBrowserAI();
+    const file = new File(['Hello\n\nWorld\nHello\n'], 'notes.txt', {
+      type: 'text/plain'
     });
-
-    const [uploadUrl, uploadInit] = fetchMock.mock.calls[0];
-    expect(uploadUrl).toBe(`${SERVER}/translate_file`);
-    expect(uploadInit?.method).toBe('POST');
-    const form = uploadInit?.body as FormData;
-    expect(form.get('source')).toBe('auto');
-    expect(form.get('target')).toBe('es');
-    expect(form.get('api_key')).toBe('k-123');
-    expect((form.get('file') as File).name).toBe('report.txt');
-
-    expect(fetchMock.mock.calls[1][0]).toBe(
-      `${SERVER}/download_file/uuid.report.txt`
+    const progress: TranslationProgress[] = [];
+    const result = await translateDocument(
+      file,
+      { source: 'en', target: 'de' },
+      { onProgress: (p) => progress.push(p) }
     );
-    expect(result.name).toBe('report.es.txt');
-    expect(result.type).toBe('text/plain');
-    expect(await result.text()).toBe('Hola mundo');
-    // The uploaded file is left untouched.
-    expect(file.name).toBe('report.txt');
-    expect(await file.text()).toBe('Hello world');
+
+    expect(result.engine).toBe('browser');
+    expect(result.file.name).toBe('notes.de.txt');
+    expect(await result.file.text()).toBe(
+      '<en>de> Hello\n\n<en>de> World\n<en>de> Hello\n'
+    );
+    expect(progress).toEqual([
+      { phase: 'translating', done: 0, total: 2 },
+      { phase: 'translating', done: 1, total: 2 },
+      { phase: 'translating', done: 2, total: 2 }
+    ]);
+    // The original upload is untouched.
+    expect(await file.text()).toBe('Hello\n\nWorld\nHello\n');
   });
 
-  it('does not send an API key when none is configured', async () => {
-    fetchMock
-      .mockResolvedValueOnce(
-        jsonResponse({ translatedFileUrl: `${SERVER}/download_file/a.txt` })
-      )
-      .mockResolvedValueOnce(new Response('x'));
-    await translateDocument(config, {
-      file: makeFile(),
+  it('refuses documents larger than the online daily quota before sending anything', async () => {
+    myMemoryReplies();
+    const text = Array.from(
+      { length: 80 },
+      (_, i) => `Sentence number ${i} ${'x'.repeat(60)}`
+    ).join('\n');
+    const error = await translateDocument(new File([text], 'big.txt'), {
       source: 'en',
       target: 'es'
-    });
-    expect((fetchMock.mock.calls[0][1]?.body as FormData).has('api_key')).toBe(
-      false
-    );
-  });
-
-  it('rejects empty files without calling the server', async () => {
-    await expectCode(
-      translateDocument(config, {
-        file: makeFile('empty.txt', ''),
-        source: 'en',
-        target: 'es'
-      }),
-      'emptyFile'
-    );
+    }).catch((e: TranslatorError) => e);
+    expect(error).toMatchObject({ code: 'documentTooLongForOnline' });
+    expect(Number((error as TranslatorError).details)).toBeGreaterThan(5000);
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
-  it.each([
-    [400, 'Invalid request: file format not supported', 'unsupportedFormat'],
-    [403, 'Files translation are disabled on this server.', 'filesDisabled'],
-    [500, 'Corrupted document', 'serverError']
-  ])('maps upload failure %i "%s" to %s', async (status, error, code) => {
-    fetchMock.mockResolvedValue(jsonResponse({ error }, status));
+  it('translates small documents online when needed', async () => {
+    myMemoryReplies();
+    const result = await translateDocument(new File(['<p>Hi</p>'], 'a.html'), {
+      source: 'en',
+      target: 'es'
+    });
+    expect(result.engine).toBe('mymemory');
+    // Translated text is escaped when written back into HTML.
+    expect(await result.file.text()).toBe('<p>[en&gt;es] Hi</p>');
+  });
+
+  it('reports documents without text', async () => {
+    installBrowserAI();
     await expectCode(
-      translateDocument(config, {
-        file: makeFile(),
+      translateDocument(new File(['<p>123</p>'], 'a.html'), {
         source: 'en',
         target: 'es'
       }),
-      code
+      'noTextFound'
     );
   });
 
-  it('rejects an upload response without a file URL', async () => {
-    fetchMock.mockResolvedValue(jsonResponse({ ok: true }));
+  it('validates the file before reading it', async () => {
     await expectCode(
-      translateDocument(config, {
-        file: makeFile(),
+      translateDocument(new File(['x'], 'a.pdf'), {
         source: 'en',
         target: 'es'
       }),
-      'invalidResponse'
+      'unsupportedFormat'
     );
   });
 
-  it('reports a failed download of the translated file', async () => {
-    fetchMock
-      .mockResolvedValueOnce(
-        jsonResponse({ translatedFileUrl: `${SERVER}/download_file/a.txt` })
+  it('stops when cancelled', async () => {
+    installBrowserAI();
+    const controller = new AbortController();
+    controller.abort();
+    await expect(
+      translateDocument(
+        new File(['Hello'], 'a.txt'),
+        { source: 'en', target: 'es' },
+        { signal: controller.signal }
       )
-      .mockResolvedValueOnce(new Response('gone', { status: 404 }));
-    await expectCode(
-      translateDocument(config, {
-        file: makeFile(),
-        source: 'en',
-        target: 'es'
-      }),
-      'downloadFailed'
-    );
-  });
-
-  it('reports a network error during download as downloadFailed', async () => {
-    fetchMock
-      .mockResolvedValueOnce(
-        jsonResponse({ translatedFileUrl: `${SERVER}/download_file/a.txt` })
-      )
-      .mockRejectedValueOnce(new TypeError('Failed to fetch'));
-    await expectCode(
-      translateDocument(config, {
-        file: makeFile(),
-        source: 'en',
-        target: 'es'
-      }),
-      'downloadFailed'
-    );
-  });
-
-  it('refuses to download from an unrelated host', async () => {
-    fetchMock.mockResolvedValueOnce(
-      jsonResponse({ translatedFileUrl: 'https://evil.example.org/x.txt' })
-    );
-    await expectCode(
-      translateDocument(config, {
-        file: makeFile(),
-        source: 'en',
-        target: 'es'
-      }),
-      'invalidResponse'
-    );
-    expect(fetchMock).toHaveBeenCalledTimes(1);
+    ).rejects.toMatchObject({ name: 'AbortError' });
   });
 });
