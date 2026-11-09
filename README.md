@@ -109,6 +109,15 @@ services:
 
 ```
 
+### Easypanel
+
+[Easypanel](https://easypanel.io) is a self-hosted Docker deployment platform, and OmniTools has a one-click deployment template there.
+
+[![Deploy on Easypanel][easypanel-btn]][easypanel-deploy]
+
+[easypanel-btn]: https://easypanel.io/img/deploy-on-easypanel-40.svg
+[easypanel-deploy]: https://easypanel.io/templates/omnitools
+
 ## Contribute
 
 This is a React Project with Typescript Material UI. We use icons from [Iconify](https://icon-sets.iconify.design)
