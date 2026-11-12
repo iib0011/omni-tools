@@ -1,7 +1,7 @@
 import { InitialValuesType } from './initialValues';
 
 function isFieldsEmpty(textField: string, searchField: string) {
-  return !textField.trim() || !searchField.trim();
+  return !textField || !searchField;
 }
 
 export function replaceText(options: InitialValuesType, text: string) {

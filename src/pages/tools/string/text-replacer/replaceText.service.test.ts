@@ -5,6 +5,18 @@ import { initialValues } from './initialValues';
 describe('replaceText function (text mode)', () => {
   const mode = 'text';
 
+  it.each([
+    ['order 123 456', 'order-123-456'],
+    ['   ', '---']
+  ])('should replace spaces in %j', (text, expected) => {
+    expect(
+      replaceText(
+        { ...initialValues, searchValue: ' ', replaceValue: '-', mode },
+        text
+      )
+    ).toBe(expected);
+  });
+
   it('should replace the word in the text correctly', () => {
     const text = 'Lorem ipsum odor amet, consectetuer adipiscing elit.';
     const searchValue = 'ipsum';
@@ -83,6 +95,27 @@ describe('replaceText function (text mode)', () => {
 
 describe('replaceText function (regexp mode)', () => {
   const mode = 'regexp';
+
+  it.each([
+    ['order 123 456', ' ', 'order-123-456'],
+    [' \t\n', '/\\s/g', '---']
+  ])('should replace whitespace in %j', (text, searchRegexp, expected) => {
+    expect(
+      replaceText(
+        { ...initialValues, searchRegexp, replaceValue: '-', mode },
+        text
+      )
+    ).toBe(expected);
+  });
+
+  it('should leave text unchanged when the regexp is empty', () => {
+    expect(
+      replaceText(
+        { ...initialValues, searchRegexp: '', replaceValue: '-', mode },
+        'order 123'
+      )
+    ).toBe('order 123');
+  });
 
   it('should replace a word in text using regexp correctly', () => {
     const text = 'Egestas lobortis facilisi convallis rhoncus nunc.';
