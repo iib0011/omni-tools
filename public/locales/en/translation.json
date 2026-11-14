@@ -26,6 +26,10 @@
       "description": "Tools for converting data between different formats – convert images, audio, video, text, and more.",
       "title": "Converter Tools"
     },
+    "currency": {
+      "description": "Tools for working with currencies – convert amounts between different currencies.",
+      "title": "Currency Tools"
+    },
     "csv": {
       "description": "Tools for working with CSV files - convert CSV to different formats, manipulate CSV data, validate CSV structure, and process CSV files efficiently.",
       "title": "CSV Tools"
@@ -266,5 +270,11 @@
   "userTypes": {
     "developers": "Developers",
     "generalUsers": "General users"
+  },
+  "currencyConvertor": {
+    "title": "Currency convertor",
+    "description": "Convert an amount into several currencies at once using exchange rates, including past dates and rate history charts.",
+    "shortDescription": "Convert between currencies with up-to-date exchange rates.",
+    "longDescription": "Convert an amount from one currency into several others at the same time. Reorder the list, add or remove currencies, and show or hide flags. You can also use the exchange rate of a past day, and open a chart of the rate history between any two currencies as a line or candlestick view. Cryptocurrencies are available as an option. Exchange rates come from the Frankfurter API and are meant for information only, so they may differ from the rate your bank or exchange offers. Rates for older dates are only available for some currencies."
   }
 }
