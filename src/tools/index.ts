@@ -1,5 +1,6 @@
 import { stringTools } from '../pages/tools/string';
 import { imageTools } from '../pages/tools/image';
+import { currencyTools } from 'pages/tools/currency';
 import { DefinedTool, ToolCategory, UserType } from './defineTool';
 import { capitalizeFirstLetter } from '@utils/string';
 import { numberTools } from '../pages/tools/number';
@@ -31,7 +32,8 @@ const toolCategoriesOrder: ToolCategory[] = [
   'png',
   'xml',
   'gif',
-  'converters'
+  'converters',
+  'currency'
 ];
 export const tools: DefinedTool[] = [
   ...imageTools,
@@ -45,7 +47,8 @@ export const tools: DefinedTool[] = [
   ...timeTools,
   ...audioTools,
   ...xmlTools,
-  ...convertersTools
+  ...convertersTools,
+  ...currencyTools
 ];
 const categoriesConfig: {
   type: ToolCategory;
@@ -136,6 +139,12 @@ const categoriesConfig: {
     icon: 'streamline-plump:convert-pdf-1',
     value: 'translation:categories.converters.description',
     title: 'translation:categories.converters.title'
+  },
+  {
+    type: 'currency',
+    icon: 'material-symbols:currency-exchange',
+    value: 'translation:categories.currency.description',
+    title: 'translation:categories.currency.title'
   }
 ];
 const CATEGORIES_USER_TYPES_MAPPINGS: Partial<Record<ToolCategory, UserType>> =
@@ -148,7 +157,8 @@ const CATEGORIES_USER_TYPES_MAPPINGS: Partial<Record<ToolCategory, UserType>> =
     'image-generic': 'generalUsers',
     video: 'generalUsers',
     audio: 'generalUsers',
-    converters: 'generalUsers'
+    converters: 'generalUsers',
+    currency: 'generalUsers'
   };
 // Filter tools by user types
 export const filterToolsByUserTypes = (
