@@ -11,6 +11,7 @@ interface ImageFileInputProps extends BaseFileInputProps {
   cropShape?: 'rectangular' | 'circular';
   cropPosition?: { x: number; y: number };
   cropSize?: { width: number; height: number };
+  aspect?: number;
   onCropChange?: (
     position: { x: number; y: number },
     size: { width: number; height: number }
@@ -22,6 +23,7 @@ export default function ToolImageInput({
   cropShape = 'rectangular',
   cropPosition = { x: 0, y: 0 },
   cropSize = { width: 100, height: 100 },
+  aspect,
   onCropChange,
   ...props
 }: ImageFileInputProps) {
@@ -116,6 +118,7 @@ export default function ToolImageInput({
               onChange={handleCropChange}
               onComplete={handleCropComplete}
               circularCrop={cropShape === 'circular'}
+              aspect={aspect}
               style={{ maxWidth: '100%', maxHeight: globalInputHeight }}
             >
               <img

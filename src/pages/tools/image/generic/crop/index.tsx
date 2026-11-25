@@ -1,4 +1,6 @@
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
+import LockIcon from '@mui/icons-material/Lock';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
 import React, { useState } from 'react';
 import * as Yup from 'yup';
 import ToolImageInput from '@components/input/ToolImageInput';
@@ -35,6 +37,8 @@ const validationSchema = Yup.object({
 export default function CropImage({ title }: ToolComponentProps) {
   const [input, setInput] = useState<File | null>(null);
   const [result, setResult] = useState<File | null>(null);
+  const [retainRatio, setRetainRatio] = useState<boolean>(false);
+  const [lockedRatio, setLockedRatio] = useState<number>(1);
 
   const compute = (optionsValues: InitialValuesType, input: any) => {
     if (!input) return;
@@ -130,6 +134,25 @@ export default function CropImage({ title }: ToolComponentProps) {
       title: 'Crop Position and Size',
       component: (
         <Box>
+          <Button
+            variant={retainRatio ? 'contained' : 'outlined'}
+            size="small"
+            startIcon={retainRatio ? <LockIcon /> : <LockOpenIcon />}
+            data-testid="retain-ratio-button"
+            sx={{ mb: 1 }}
+            onClick={() => {
+              if (!retainRatio) {
+                const w = parseFloat(values.cropWidth);
+                const h = parseFloat(values.cropHeight);
+                setLockedRatio(w > 0 && h > 0 ? w / h : 1);
+                setRetainRatio(true);
+              } else {
+                setRetainRatio(false);
+              }
+            }}
+          >
+            {retainRatio ? 'Aspect Ratio Locked' : 'Retain Aspect Ratio'}
+          </Button>
           <TextFieldWithDesc
             value={values.xPosition}
             onOwnChange={(val) => updateField('xPosition', val)}
@@ -152,7 +175,18 @@ export default function CropImage({ title }: ToolComponentProps) {
           />
           <TextFieldWithDesc
             value={values.cropWidth}
-            onOwnChange={(val) => updateField('cropWidth', val)}
+            onOwnChange={(val) => {
+              updateField('cropWidth', val);
+              if (retainRatio) {
+                const parsed = parseFloat(val);
+                if (!Number.isNaN(parsed) && parsed > 0 && lockedRatio > 0) {
+                  updateField(
+                    'cropHeight',
+                    String(Math.max(1, Math.round(parsed / lockedRatio)))
+                  );
+                }
+              }
+            }}
             description={'Crop width (in pixels)'}
             inputProps={{
               'data-testid': 'crop-width-input',
@@ -162,7 +196,18 @@ export default function CropImage({ title }: ToolComponentProps) {
           />
           <TextFieldWithDesc
             value={values.cropHeight}
-            onOwnChange={(val) => updateField('cropHeight', val)}
+            onOwnChange={(val) => {
+              updateField('cropHeight', val);
+              if (retainRatio) {
+                const parsed = parseFloat(val);
+                if (!Number.isNaN(parsed) && parsed > 0 && lockedRatio > 0) {
+                  updateField(
+                    'cropWidth',
+                    String(Math.max(1, Math.round(parsed * lockedRatio)))
+                  );
+                }
+              }
+            }}
             description={'Crop height (in pixels)'}
             inputProps={{
               'data-testid': 'crop-height-input',
@@ -170,6 +215,25 @@ export default function CropImage({ title }: ToolComponentProps) {
               min: 1
             }}
           />
+          <Button
+            variant={retainRatio ? 'contained' : 'outlined'}
+            size="small"
+            startIcon={retainRatio ? <LockIcon /> : <LockOpenIcon />}
+            data-testid="retain-ratio-button"
+            sx={{ mt: 1 }}
+            onClick={() => {
+              if (!retainRatio) {
+                const w = parseFloat(values.cropWidth);
+                const h = parseFloat(values.cropHeight);
+                setLockedRatio(w > 0 && h > 0 ? w / h : 1);
+                setRetainRatio(true);
+              } else {
+                setRetainRatio(false);
+              }
+            }}
+          >
+            {retainRatio ? 'Aspect Ratio Locked' : 'Retain Aspect Ratio'}
+          </Button>
         </Box>
       )
     },
@@ -199,7 +263,11 @@ export default function CropImage({ title }: ToolComponentProps) {
   ) => (
     <ToolImageInput
       value={input}
-      onChange={setInput}
+      onChange={(file) => {
+        setInput(file);
+        setRetainRatio(false);
+        setLockedRatio(1);
+      }}
       accept={['image/*']}
       title={'Input image'}
       showCropOverlay={!!input}
@@ -212,6 +280,7 @@ export default function CropImage({ title }: ToolComponentProps) {
         width: parseInt(values.cropWidth || '100'),
         height: parseInt(values.cropHeight || '100')
       }}
+      aspect={retainRatio ? lockedRatio : undefined}
       onCropChange={handleCropChange(values, updateField)}
     />
   );
